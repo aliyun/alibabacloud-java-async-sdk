@@ -76,11 +76,11 @@ public class CreateAlertContactGroupRequest extends Request {
             super();
         } 
 
-        private Builder(CreateAlertContactGroupRequest response) {
-            super(response);
-            this.contactGroupName = response.contactGroupName;
-            this.contactIds = response.contactIds;
-            this.regionId = response.regionId;
+        private Builder(CreateAlertContactGroupRequest request) {
+            super(request);
+            this.contactGroupName = request.contactGroupName;
+            this.contactIds = request.contactIds;
+            this.regionId = request.regionId;
         } 
 
         /**

@@ -49,9 +49,9 @@ public class ListClusterFromGrafanaRequest extends Request {
             super();
         } 
 
-        private Builder(ListClusterFromGrafanaRequest response) {
-            super(response);
-            this.regionId = response.regionId;
+        private Builder(ListClusterFromGrafanaRequest request) {
+            super(request);
+            this.regionId = request.regionId;
         } 
 
         /**

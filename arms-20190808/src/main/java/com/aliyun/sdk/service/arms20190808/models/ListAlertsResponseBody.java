@@ -460,6 +460,9 @@ public class ListAlertsResponseBody extends TeaModel {
         @NameInMap("AlertEvents")
         private java.util.List < AlertEvents> alertEvents;
 
+        @NameInMap("AlertId")
+        private Long alertId;
+
         @NameInMap("AlertName")
         private String alertName;
 
@@ -481,6 +484,7 @@ public class ListAlertsResponseBody extends TeaModel {
         private ListAlerts(Builder builder) {
             this.activities = builder.activities;
             this.alertEvents = builder.alertEvents;
+            this.alertId = builder.alertId;
             this.alertName = builder.alertName;
             this.createTime = builder.createTime;
             this.dispatchRuleId = builder.dispatchRuleId;
@@ -509,6 +513,13 @@ public class ListAlertsResponseBody extends TeaModel {
          */
         public java.util.List < AlertEvents> getAlertEvents() {
             return this.alertEvents;
+        }
+
+        /**
+         * @return alertId
+         */
+        public Long getAlertId() {
+            return this.alertId;
         }
 
         /**
@@ -556,6 +567,7 @@ public class ListAlertsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List < Activities> activities; 
             private java.util.List < AlertEvents> alertEvents; 
+            private Long alertId; 
             private String alertName; 
             private String createTime; 
             private Float dispatchRuleId; 
@@ -576,6 +588,14 @@ public class ListAlertsResponseBody extends TeaModel {
              */
             public Builder alertEvents(java.util.List < AlertEvents> alertEvents) {
                 this.alertEvents = alertEvents;
+                return this;
+            }
+
+            /**
+             * 告警ID
+             */
+            public Builder alertId(Long alertId) {
+                this.alertId = alertId;
                 return this;
             }
 

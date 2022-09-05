@@ -49,9 +49,9 @@ public class DeleteAlertRuleRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteAlertRuleRequest response) {
-            super(response);
-            this.alertId = response.alertId;
+        private Builder(DeleteAlertRuleRequest request) {
+            super(request);
+            this.alertId = request.alertId;
         } 
 
         /**

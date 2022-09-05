@@ -49,9 +49,9 @@ public class GetRetcodeShareUrlRequest extends Request {
             super();
         } 
 
-        private Builder(GetRetcodeShareUrlRequest response) {
-            super(response);
-            this.pid = response.pid;
+        private Builder(GetRetcodeShareUrlRequest request) {
+            super(request);
+            this.pid = request.pid;
         } 
 
         /**

@@ -63,10 +63,10 @@ public class SetRetcodeShareStatusRequest extends Request {
             super();
         } 
 
-        private Builder(SetRetcodeShareStatusRequest response) {
-            super(response);
-            this.pid = response.pid;
-            this.status = response.status;
+        private Builder(SetRetcodeShareStatusRequest request) {
+            super(request);
+            this.pid = request.pid;
+            this.status = request.status;
         } 
 
         /**

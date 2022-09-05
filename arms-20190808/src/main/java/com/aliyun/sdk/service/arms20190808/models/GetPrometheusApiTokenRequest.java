@@ -49,9 +49,9 @@ public class GetPrometheusApiTokenRequest extends Request {
             super();
         } 
 
-        private Builder(GetPrometheusApiTokenRequest response) {
-            super(response);
-            this.regionId = response.regionId;
+        private Builder(GetPrometheusApiTokenRequest request) {
+            super(request);
+            this.regionId = request.regionId;
         } 
 
         /**

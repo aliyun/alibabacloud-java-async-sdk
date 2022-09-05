@@ -77,11 +77,11 @@ public class DeleteIntegrationRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteIntegrationRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.integration = response.integration;
-            this.regionId = response.regionId;
+        private Builder(DeleteIntegrationRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.integration = request.integration;
+            this.regionId = request.regionId;
         } 
 
         /**

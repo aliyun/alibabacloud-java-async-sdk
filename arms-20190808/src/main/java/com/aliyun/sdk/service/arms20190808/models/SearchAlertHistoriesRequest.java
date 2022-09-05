@@ -127,15 +127,15 @@ public class SearchAlertHistoriesRequest extends Request {
             super();
         } 
 
-        private Builder(SearchAlertHistoriesRequest response) {
-            super(response);
-            this.alertId = response.alertId;
-            this.alertType = response.alertType;
-            this.currentPage = response.currentPage;
-            this.endTime = response.endTime;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.startTime = response.startTime;
+        private Builder(SearchAlertHistoriesRequest request) {
+            super(request);
+            this.alertId = request.alertId;
+            this.alertType = request.alertType;
+            this.currentPage = request.currentPage;
+            this.endTime = request.endTime;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.startTime = request.startTime;
         } 
 
         /**

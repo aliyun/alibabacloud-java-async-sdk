@@ -180,19 +180,19 @@ public class ListAlertsRequest extends Request {
             super();
         } 
 
-        private Builder(ListAlertsRequest response) {
-            super(response);
-            this.alertName = response.alertName;
-            this.dispatchRuleId = response.dispatchRuleId;
-            this.endTime = response.endTime;
-            this.integrationType = response.integrationType;
-            this.page = response.page;
-            this.severity = response.severity;
-            this.showActivities = response.showActivities;
-            this.showEvents = response.showEvents;
-            this.size = response.size;
-            this.startTime = response.startTime;
-            this.state = response.state;
+        private Builder(ListAlertsRequest request) {
+            super(request);
+            this.alertName = request.alertName;
+            this.dispatchRuleId = request.dispatchRuleId;
+            this.endTime = request.endTime;
+            this.integrationType = request.integrationType;
+            this.page = request.page;
+            this.severity = request.severity;
+            this.showActivities = request.showActivities;
+            this.showEvents = request.showEvents;
+            this.size = request.size;
+            this.startTime = request.startTime;
+            this.state = request.state;
         } 
 
         /**

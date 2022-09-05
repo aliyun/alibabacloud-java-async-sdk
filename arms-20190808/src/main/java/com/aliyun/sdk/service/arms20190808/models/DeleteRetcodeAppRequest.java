@@ -63,10 +63,10 @@ public class DeleteRetcodeAppRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteRetcodeAppRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.regionId = response.regionId;
+        private Builder(DeleteRetcodeAppRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.regionId = request.regionId;
         } 
 
         /**

@@ -30,6 +30,10 @@ public class SearchTracesRequest extends Request {
     private String operationName;
 
     @Query
+    @NameInMap("Pid")
+    private String pid;
+
+    @Query
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
@@ -61,6 +65,7 @@ public class SearchTracesRequest extends Request {
         this.exclusionFilters = builder.exclusionFilters;
         this.minDuration = builder.minDuration;
         this.operationName = builder.operationName;
+        this.pid = builder.pid;
         this.regionId = builder.regionId;
         this.reverse = builder.reverse;
         this.serviceIp = builder.serviceIp;
@@ -111,6 +116,13 @@ public class SearchTracesRequest extends Request {
     }
 
     /**
+     * @return pid
+     */
+    public String getPid() {
+        return this.pid;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -157,6 +169,7 @@ public class SearchTracesRequest extends Request {
         private java.util.List < ExclusionFilters> exclusionFilters; 
         private Long minDuration; 
         private String operationName; 
+        private String pid; 
         private String regionId; 
         private Boolean reverse; 
         private String serviceIp; 
@@ -168,18 +181,19 @@ public class SearchTracesRequest extends Request {
             super();
         } 
 
-        private Builder(SearchTracesRequest response) {
-            super(response);
-            this.endTime = response.endTime;
-            this.exclusionFilters = response.exclusionFilters;
-            this.minDuration = response.minDuration;
-            this.operationName = response.operationName;
-            this.regionId = response.regionId;
-            this.reverse = response.reverse;
-            this.serviceIp = response.serviceIp;
-            this.serviceName = response.serviceName;
-            this.startTime = response.startTime;
-            this.tag = response.tag;
+        private Builder(SearchTracesRequest request) {
+            super(request);
+            this.endTime = request.endTime;
+            this.exclusionFilters = request.exclusionFilters;
+            this.minDuration = request.minDuration;
+            this.operationName = request.operationName;
+            this.pid = request.pid;
+            this.regionId = request.regionId;
+            this.reverse = request.reverse;
+            this.serviceIp = request.serviceIp;
+            this.serviceName = request.serviceName;
+            this.startTime = request.startTime;
+            this.tag = request.tag;
         } 
 
         /**
@@ -215,6 +229,15 @@ public class SearchTracesRequest extends Request {
         public Builder operationName(String operationName) {
             this.putQueryParameter("OperationName", operationName);
             this.operationName = operationName;
+            return this;
+        }
+
+        /**
+         * Pid.
+         */
+        public Builder pid(String pid) {
+            this.putQueryParameter("Pid", pid);
+            this.pid = pid;
             return this;
         }
 

@@ -102,13 +102,13 @@ public class ListScenarioRequest extends Request {
             super();
         } 
 
-        private Builder(ListScenarioRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.name = response.name;
-            this.regionId = response.regionId;
-            this.scenario = response.scenario;
-            this.sign = response.sign;
+        private Builder(ListScenarioRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.name = request.name;
+            this.regionId = request.regionId;
+            this.scenario = request.scenario;
+            this.sign = request.sign;
         } 
 
         /**

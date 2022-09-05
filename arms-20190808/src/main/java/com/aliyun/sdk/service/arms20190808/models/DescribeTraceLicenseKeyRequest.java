@@ -48,9 +48,9 @@ public class DescribeTraceLicenseKeyRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeTraceLicenseKeyRequest response) {
-            super(response);
-            this.regionId = response.regionId;
+        private Builder(DescribeTraceLicenseKeyRequest request) {
+            super(request);
+            this.regionId = request.regionId;
         } 
 
         /**

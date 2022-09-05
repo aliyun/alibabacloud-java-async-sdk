@@ -128,15 +128,15 @@ public class UpdateAlertContactRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateAlertContactRequest response) {
-            super(response);
-            this.contactId = response.contactId;
-            this.contactName = response.contactName;
-            this.dingRobotWebhookUrl = response.dingRobotWebhookUrl;
-            this.email = response.email;
-            this.phoneNum = response.phoneNum;
-            this.regionId = response.regionId;
-            this.systemNoc = response.systemNoc;
+        private Builder(UpdateAlertContactRequest request) {
+            super(request);
+            this.contactId = request.contactId;
+            this.contactName = request.contactName;
+            this.dingRobotWebhookUrl = request.dingRobotWebhookUrl;
+            this.email = request.email;
+            this.phoneNum = request.phoneNum;
+            this.regionId = request.regionId;
+            this.systemNoc = request.systemNoc;
         } 
 
         /**

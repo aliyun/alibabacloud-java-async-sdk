@@ -76,11 +76,11 @@ public class DescribeIMRobotsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeIMRobotsRequest response) {
-            super(response);
-            this.page = response.page;
-            this.robotName = response.robotName;
-            this.size = response.size;
+        private Builder(DescribeIMRobotsRequest request) {
+            super(request);
+            this.page = request.page;
+            this.robotName = request.robotName;
+            this.size = request.size;
         } 
 
         /**

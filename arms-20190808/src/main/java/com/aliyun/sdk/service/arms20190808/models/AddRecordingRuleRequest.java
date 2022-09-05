@@ -77,11 +77,11 @@ public class AddRecordingRuleRequest extends Request {
             super();
         } 
 
-        private Builder(AddRecordingRuleRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.regionId = response.regionId;
-            this.ruleYaml = response.ruleYaml;
+        private Builder(AddRecordingRuleRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.regionId = request.regionId;
+            this.ruleYaml = request.ruleYaml;
         } 
 
         /**

@@ -63,10 +63,10 @@ public class GetRecordingRuleRequest extends Request {
             super();
         } 
 
-        private Builder(GetRecordingRuleRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.regionId = response.regionId;
+        private Builder(GetRecordingRuleRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.regionId = request.regionId;
         } 
 
         /**

@@ -102,13 +102,13 @@ public class DescribeContactsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeContactsRequest response) {
-            super(response);
-            this.contactName = response.contactName;
-            this.email = response.email;
-            this.page = response.page;
-            this.phone = response.phone;
-            this.size = response.size;
+        private Builder(DescribeContactsRequest request) {
+            super(request);
+            this.contactName = request.contactName;
+            this.email = request.email;
+            this.page = request.page;
+            this.phone = request.phone;
+            this.size = request.size;
         } 
 
         /**

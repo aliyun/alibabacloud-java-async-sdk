@@ -90,12 +90,12 @@ public class UpdateAlertContactGroupRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateAlertContactGroupRequest response) {
-            super(response);
-            this.contactGroupId = response.contactGroupId;
-            this.contactGroupName = response.contactGroupName;
-            this.contactIds = response.contactIds;
-            this.regionId = response.regionId;
+        private Builder(UpdateAlertContactGroupRequest request) {
+            super(request);
+            this.contactGroupId = request.contactGroupId;
+            this.contactGroupName = request.contactGroupName;
+            this.contactIds = request.contactIds;
+            this.regionId = request.regionId;
         } 
 
         /**

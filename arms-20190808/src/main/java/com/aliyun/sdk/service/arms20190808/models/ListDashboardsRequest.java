@@ -25,6 +25,10 @@ public class ListDashboardsRequest extends Request {
     private String dashboardName;
 
     @Query
+    @NameInMap("Language")
+    private String language;
+
+    @Query
     @NameInMap("Product")
     private String product;
 
@@ -45,6 +49,7 @@ public class ListDashboardsRequest extends Request {
         this.clusterId = builder.clusterId;
         this.clusterType = builder.clusterType;
         this.dashboardName = builder.dashboardName;
+        this.language = builder.language;
         this.product = builder.product;
         this.recreateSwitch = builder.recreateSwitch;
         this.regionId = builder.regionId;
@@ -86,6 +91,13 @@ public class ListDashboardsRequest extends Request {
     }
 
     /**
+     * @return language
+     */
+    public String getLanguage() {
+        return this.language;
+    }
+
+    /**
      * @return product
      */
     public String getProduct() {
@@ -117,6 +129,7 @@ public class ListDashboardsRequest extends Request {
         private String clusterId; 
         private String clusterType; 
         private String dashboardName; 
+        private String language; 
         private String product; 
         private Boolean recreateSwitch; 
         private String regionId; 
@@ -126,15 +139,16 @@ public class ListDashboardsRequest extends Request {
             super();
         } 
 
-        private Builder(ListDashboardsRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.clusterType = response.clusterType;
-            this.dashboardName = response.dashboardName;
-            this.product = response.product;
-            this.recreateSwitch = response.recreateSwitch;
-            this.regionId = response.regionId;
-            this.title = response.title;
+        private Builder(ListDashboardsRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.clusterType = request.clusterType;
+            this.dashboardName = request.dashboardName;
+            this.language = request.language;
+            this.product = request.product;
+            this.recreateSwitch = request.recreateSwitch;
+            this.regionId = request.regionId;
+            this.title = request.title;
         } 
 
         /**
@@ -161,6 +175,15 @@ public class ListDashboardsRequest extends Request {
         public Builder dashboardName(String dashboardName) {
             this.putQueryParameter("DashboardName", dashboardName);
             this.dashboardName = dashboardName;
+            return this;
+        }
+
+        /**
+         * Language.
+         */
+        public Builder language(String language) {
+            this.putQueryParameter("Language", language);
+            this.language = language;
             return this;
         }
 

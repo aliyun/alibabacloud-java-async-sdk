@@ -63,10 +63,10 @@ public class SendTTSVerifyLinkRequest extends Request {
             super();
         } 
 
-        private Builder(SendTTSVerifyLinkRequest response) {
-            super(response);
-            this.contactId = response.contactId;
-            this.phone = response.phone;
+        private Builder(SendTTSVerifyLinkRequest request) {
+            super(request);
+            this.contactId = request.contactId;
+            this.phone = request.phone;
         } 
 
         /**

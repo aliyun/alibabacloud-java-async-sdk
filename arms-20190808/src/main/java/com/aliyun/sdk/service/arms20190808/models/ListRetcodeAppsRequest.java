@@ -62,10 +62,10 @@ public class ListRetcodeAppsRequest extends Request {
             super();
         } 
 
-        private Builder(ListRetcodeAppsRequest response) {
-            super(response);
-            this.regionId = response.regionId;
-            this.securityToken = response.securityToken;
+        private Builder(ListRetcodeAppsRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.securityToken = request.securityToken;
         } 
 
         /**

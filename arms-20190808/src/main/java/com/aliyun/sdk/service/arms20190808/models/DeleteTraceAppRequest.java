@@ -90,12 +90,12 @@ public class DeleteTraceAppRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteTraceAppRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.pid = response.pid;
-            this.regionId = response.regionId;
-            this.type = response.type;
+        private Builder(DeleteTraceAppRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.pid = request.pid;
+            this.regionId = request.regionId;
+            this.type = request.type;
         } 
 
         /**

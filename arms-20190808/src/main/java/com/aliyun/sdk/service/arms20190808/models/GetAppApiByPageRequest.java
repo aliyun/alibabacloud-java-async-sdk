@@ -30,7 +30,7 @@ public class GetAppApiByPageRequest extends Request {
     @Query
     @NameInMap("PId")
     @Validation(required = true)
-    private String PId;
+    private String pId;
 
     @Query
     @NameInMap("PageSize")
@@ -52,7 +52,7 @@ public class GetAppApiByPageRequest extends Request {
         this.currentPage = builder.currentPage;
         this.endTime = builder.endTime;
         this.intervalMills = builder.intervalMills;
-        this.PId = builder.PId;
+        this.pId = builder.pId;
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
         this.startTime = builder.startTime;
@@ -93,10 +93,10 @@ public class GetAppApiByPageRequest extends Request {
     }
 
     /**
-     * @return PId
+     * @return pId
      */
     public String getPId() {
-        return this.PId;
+        return this.pId;
     }
 
     /**
@@ -124,7 +124,7 @@ public class GetAppApiByPageRequest extends Request {
         private Integer currentPage; 
         private Long endTime; 
         private Integer intervalMills; 
-        private String PId; 
+        private String pId; 
         private Integer pageSize; 
         private String regionId; 
         private Long startTime; 
@@ -133,15 +133,15 @@ public class GetAppApiByPageRequest extends Request {
             super();
         } 
 
-        private Builder(GetAppApiByPageRequest response) {
-            super(response);
-            this.currentPage = response.currentPage;
-            this.endTime = response.endTime;
-            this.intervalMills = response.intervalMills;
-            this.PId = response.PId;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.startTime = response.startTime;
+        private Builder(GetAppApiByPageRequest request) {
+            super(request);
+            this.currentPage = request.currentPage;
+            this.endTime = request.endTime;
+            this.intervalMills = request.intervalMills;
+            this.pId = request.pId;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.startTime = request.startTime;
         } 
 
         /**
@@ -174,9 +174,9 @@ public class GetAppApiByPageRequest extends Request {
         /**
          * PId.
          */
-        public Builder PId(String PId) {
-            this.putQueryParameter("PId", PId);
-            this.PId = PId;
+        public Builder pId(String pId) {
+            this.putQueryParameter("PId", pId);
+            this.pId = pId;
             return this;
         }
 

@@ -77,11 +77,11 @@ public class AddGrafanaRequest extends Request {
             super();
         } 
 
-        private Builder(AddGrafanaRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.integration = response.integration;
-            this.regionId = response.regionId;
+        private Builder(AddGrafanaRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.integration = request.integration;
+            this.regionId = request.regionId;
         } 
 
         /**

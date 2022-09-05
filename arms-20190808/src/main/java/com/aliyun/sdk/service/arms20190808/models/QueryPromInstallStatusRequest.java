@@ -61,10 +61,10 @@ public class QueryPromInstallStatusRequest extends Request {
             super();
         } 
 
-        private Builder(QueryPromInstallStatusRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.regionId = response.regionId;
+        private Builder(QueryPromInstallStatusRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.regionId = request.regionId;
         } 
 
         /**

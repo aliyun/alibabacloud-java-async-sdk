@@ -12,14 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SaveTraceAppConfigRequest</p>
  */
 public class SaveTraceAppConfigRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("Pid")
     @Validation(required = true)
     private String pid;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Query
     @NameInMap("Settings")
@@ -27,8 +27,8 @@ public class SaveTraceAppConfigRequest extends Request {
 
     private SaveTraceAppConfigRequest(Builder builder) {
         super(builder);
-        this.pid = builder.pid;
         this.regionId = builder.regionId;
+        this.pid = builder.pid;
         this.settings = builder.settings;
     }
 
@@ -46,17 +46,17 @@ public class SaveTraceAppConfigRequest extends Request {
     }
 
     /**
-     * @return pid
-     */
-    public String getPid() {
-        return this.pid;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return pid
+     */
+    public String getPid() {
+        return this.pid;
     }
 
     /**
@@ -67,29 +67,20 @@ public class SaveTraceAppConfigRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SaveTraceAppConfigRequest, Builder> {
-        private String pid; 
         private String regionId; 
+        private String pid; 
         private java.util.List < Settings> settings; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(SaveTraceAppConfigRequest response) {
-            super(response);
-            this.pid = response.pid;
-            this.regionId = response.regionId;
-            this.settings = response.settings;
+        private Builder(SaveTraceAppConfigRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.pid = request.pid;
+            this.settings = request.settings;
         } 
-
-        /**
-         * Pid.
-         */
-        public Builder pid(String pid) {
-            this.putQueryParameter("Pid", pid);
-            this.pid = pid;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -97,6 +88,15 @@ public class SaveTraceAppConfigRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * Pid.
+         */
+        public Builder pid(String pid) {
+            this.putQueryParameter("Pid", pid);
+            this.pid = pid;
             return this;
         }
 

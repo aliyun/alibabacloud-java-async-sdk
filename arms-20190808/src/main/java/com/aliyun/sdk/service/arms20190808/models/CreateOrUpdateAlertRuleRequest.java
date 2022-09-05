@@ -311,29 +311,29 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
             super();
         } 
 
-        private Builder(CreateOrUpdateAlertRuleRequest response) {
-            super(response);
-            this.alertCheckType = response.alertCheckType;
-            this.alertGroup = response.alertGroup;
-            this.alertId = response.alertId;
-            this.alertName = response.alertName;
-            this.alertRuleContent = response.alertRuleContent;
-            this.alertStatus = response.alertStatus;
-            this.alertType = response.alertType;
-            this.annotations = response.annotations;
-            this.autoAddNewApplication = response.autoAddNewApplication;
-            this.clusterId = response.clusterId;
-            this.duration = response.duration;
-            this.filters = response.filters;
-            this.labels = response.labels;
-            this.level = response.level;
-            this.message = response.message;
-            this.metricsKey = response.metricsKey;
-            this.metricsType = response.metricsType;
-            this.notifyStrategy = response.notifyStrategy;
-            this.pids = response.pids;
-            this.promQL = response.promQL;
-            this.regionId = response.regionId;
+        private Builder(CreateOrUpdateAlertRuleRequest request) {
+            super(request);
+            this.alertCheckType = request.alertCheckType;
+            this.alertGroup = request.alertGroup;
+            this.alertId = request.alertId;
+            this.alertName = request.alertName;
+            this.alertRuleContent = request.alertRuleContent;
+            this.alertStatus = request.alertStatus;
+            this.alertType = request.alertType;
+            this.annotations = request.annotations;
+            this.autoAddNewApplication = request.autoAddNewApplication;
+            this.clusterId = request.clusterId;
+            this.duration = request.duration;
+            this.filters = request.filters;
+            this.labels = request.labels;
+            this.level = request.level;
+            this.message = request.message;
+            this.metricsKey = request.metricsKey;
+            this.metricsType = request.metricsType;
+            this.notifyStrategy = request.notifyStrategy;
+            this.pids = request.pids;
+            this.promQL = request.promQL;
+            this.regionId = request.regionId;
         } 
 
         /**

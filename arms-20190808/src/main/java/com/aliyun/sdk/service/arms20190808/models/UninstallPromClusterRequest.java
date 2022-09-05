@@ -61,10 +61,10 @@ public class UninstallPromClusterRequest extends Request {
             super();
         } 
 
-        private Builder(UninstallPromClusterRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.regionId = response.regionId;
+        private Builder(UninstallPromClusterRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.regionId = request.regionId;
         } 
 
         /**

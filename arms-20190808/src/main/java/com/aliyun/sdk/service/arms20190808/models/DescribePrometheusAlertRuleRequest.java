@@ -49,9 +49,9 @@ public class DescribePrometheusAlertRuleRequest extends Request {
             super();
         } 
 
-        private Builder(DescribePrometheusAlertRuleRequest response) {
-            super(response);
-            this.alertId = response.alertId;
+        private Builder(DescribePrometheusAlertRuleRequest request) {
+            super(request);
+            this.alertId = request.alertId;
         } 
 
         /**

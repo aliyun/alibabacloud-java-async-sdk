@@ -29,12 +29,17 @@ public class CreateOrUpdateContactRequest extends Request {
     @NameInMap("Phone")
     private String phone;
 
+    @Body
+    @NameInMap("ReissueSendNotice")
+    private Long reissueSendNotice;
+
     private CreateOrUpdateContactRequest(Builder builder) {
         super(builder);
         this.contactId = builder.contactId;
         this.contactName = builder.contactName;
         this.email = builder.email;
         this.phone = builder.phone;
+        this.reissueSendNotice = builder.reissueSendNotice;
     }
 
     public static Builder builder() {
@@ -78,22 +83,31 @@ public class CreateOrUpdateContactRequest extends Request {
         return this.phone;
     }
 
+    /**
+     * @return reissueSendNotice
+     */
+    public Long getReissueSendNotice() {
+        return this.reissueSendNotice;
+    }
+
     public static final class Builder extends Request.Builder<CreateOrUpdateContactRequest, Builder> {
         private Long contactId; 
         private String contactName; 
         private String email; 
         private String phone; 
+        private Long reissueSendNotice; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateOrUpdateContactRequest response) {
-            super(response);
-            this.contactId = response.contactId;
-            this.contactName = response.contactName;
-            this.email = response.email;
-            this.phone = response.phone;
+        private Builder(CreateOrUpdateContactRequest request) {
+            super(request);
+            this.contactId = request.contactId;
+            this.contactName = request.contactName;
+            this.email = request.email;
+            this.phone = request.phone;
+            this.reissueSendNotice = request.reissueSendNotice;
         } 
 
         /**
@@ -129,6 +143,15 @@ public class CreateOrUpdateContactRequest extends Request {
         public Builder phone(String phone) {
             this.putBodyParameter("Phone", phone);
             this.phone = phone;
+            return this;
+        }
+
+        /**
+         * 电话通知失败补发类型：0. 不补发   1. 重复拨打一次电话   2. 发送短信通知   3. 使用全局默认值（当前为不补发）
+         */
+        public Builder reissueSendNotice(Long reissueSendNotice) {
+            this.putBodyParameter("ReissueSendNotice", reissueSendNotice);
+            this.reissueSendNotice = reissueSendNotice;
             return this;
         }
 

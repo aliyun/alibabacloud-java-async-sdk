@@ -63,10 +63,10 @@ public class StopAlertRequest extends Request {
             super();
         } 
 
-        private Builder(StopAlertRequest response) {
-            super(response);
-            this.alertId = response.alertId;
-            this.regionId = response.regionId;
+        private Builder(StopAlertRequest request) {
+            super(request);
+            this.alertId = request.alertId;
+            this.regionId = request.regionId;
         } 
 
         /**

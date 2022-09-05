@@ -87,12 +87,16 @@ public class DescribeContactsResponseBody extends TeaModel {
         @NameInMap("Phone")
         private String phone;
 
+        @NameInMap("ReissueSendNotice")
+        private Long reissueSendNotice;
+
         private AlertContacts(Builder builder) {
             this.contactId = builder.contactId;
             this.contactName = builder.contactName;
             this.email = builder.email;
             this.isVerify = builder.isVerify;
             this.phone = builder.phone;
+            this.reissueSendNotice = builder.reissueSendNotice;
         }
 
         public static Builder builder() {
@@ -138,12 +142,20 @@ public class DescribeContactsResponseBody extends TeaModel {
             return this.phone;
         }
 
+        /**
+         * @return reissueSendNotice
+         */
+        public Long getReissueSendNotice() {
+            return this.reissueSendNotice;
+        }
+
         public static final class Builder {
             private Float contactId; 
             private String contactName; 
             private String email; 
             private Boolean isVerify; 
             private String phone; 
+            private Long reissueSendNotice; 
 
             /**
              * 告警联系人ID
@@ -182,6 +194,14 @@ public class DescribeContactsResponseBody extends TeaModel {
              */
             public Builder phone(String phone) {
                 this.phone = phone;
+                return this;
+            }
+
+            /**
+             * 电话通知失败补发类型：0. 不补发   1. 重复拨打一次电话   2. 发送短信通知   3. 使用全局默认值（当前为不补发）
+             */
+            public Builder reissueSendNotice(Long reissueSendNotice) {
+                this.reissueSendNotice = reissueSendNotice;
                 return this;
             }
 

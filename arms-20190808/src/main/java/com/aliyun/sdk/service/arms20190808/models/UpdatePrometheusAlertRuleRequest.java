@@ -198,20 +198,20 @@ public class UpdatePrometheusAlertRuleRequest extends Request {
             super();
         } 
 
-        private Builder(UpdatePrometheusAlertRuleRequest response) {
-            super(response);
-            this.alertId = response.alertId;
-            this.alertName = response.alertName;
-            this.annotations = response.annotations;
-            this.clusterId = response.clusterId;
-            this.dispatchRuleId = response.dispatchRuleId;
-            this.duration = response.duration;
-            this.expression = response.expression;
-            this.labels = response.labels;
-            this.message = response.message;
-            this.notifyType = response.notifyType;
-            this.regionId = response.regionId;
-            this.type = response.type;
+        private Builder(UpdatePrometheusAlertRuleRequest request) {
+            super(request);
+            this.alertId = request.alertId;
+            this.alertName = request.alertName;
+            this.annotations = request.annotations;
+            this.clusterId = request.clusterId;
+            this.dispatchRuleId = request.dispatchRuleId;
+            this.duration = request.duration;
+            this.expression = request.expression;
+            this.labels = request.labels;
+            this.message = request.message;
+            this.notifyType = request.notifyType;
+            this.regionId = request.regionId;
+            this.type = request.type;
         } 
 
         /**

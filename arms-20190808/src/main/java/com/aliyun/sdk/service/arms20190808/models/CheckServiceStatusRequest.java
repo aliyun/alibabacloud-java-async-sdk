@@ -62,10 +62,10 @@ public class CheckServiceStatusRequest extends Request {
             super();
         } 
 
-        private Builder(CheckServiceStatusRequest response) {
-            super(response);
-            this.regionId = response.regionId;
-            this.svcCode = response.svcCode;
+        private Builder(CheckServiceStatusRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.svcCode = request.svcCode;
         } 
 
         /**

@@ -49,9 +49,9 @@ public class GetAgentDownloadUrlRequest extends Request {
             super();
         } 
 
-        private Builder(GetAgentDownloadUrlRequest response) {
-            super(response);
-            this.regionId = response.regionId;
+        private Builder(GetAgentDownloadUrlRequest request) {
+            super(request);
+            this.regionId = request.regionId;
         } 
 
         /**

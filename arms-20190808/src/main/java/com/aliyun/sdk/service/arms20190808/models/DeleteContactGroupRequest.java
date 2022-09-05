@@ -49,9 +49,9 @@ public class DeleteContactGroupRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteContactGroupRequest response) {
-            super(response);
-            this.contactGroupId = response.contactGroupId;
+        private Builder(DeleteContactGroupRequest request) {
+            super(request);
+            this.contactGroupId = request.contactGroupId;
         } 
 
         /**

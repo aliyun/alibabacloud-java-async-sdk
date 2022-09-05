@@ -75,11 +75,11 @@ public class CreateOrUpdateContactGroupRequest extends Request {
             super();
         } 
 
-        private Builder(CreateOrUpdateContactGroupRequest response) {
-            super(response);
-            this.contactGroupId = response.contactGroupId;
-            this.contactGroupName = response.contactGroupName;
-            this.contactIds = response.contactIds;
+        private Builder(CreateOrUpdateContactGroupRequest request) {
+            super(request);
+            this.contactGroupId = request.contactGroupId;
+            this.contactGroupName = request.contactGroupName;
+            this.contactIds = request.contactIds;
         } 
 
         /**

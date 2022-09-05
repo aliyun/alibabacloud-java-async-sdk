@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryReleaseMetricRequest</p>
  */
 public class QueryReleaseMetricRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("ChangeOrderId")
     @Validation(required = true)
@@ -34,11 +39,6 @@ public class QueryReleaseMetricRequest extends Request {
     @NameInMap("ProxyUserId")
     private String proxyUserId;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Query
     @NameInMap("ReleaseEndTime")
     @Validation(required = true)
@@ -55,12 +55,12 @@ public class QueryReleaseMetricRequest extends Request {
 
     private QueryReleaseMetricRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.changeOrderId = builder.changeOrderId;
         this.createTime = builder.createTime;
         this.metricType = builder.metricType;
         this.pid = builder.pid;
         this.proxyUserId = builder.proxyUserId;
-        this.regionId = builder.regionId;
         this.releaseEndTime = builder.releaseEndTime;
         this.releaseStartTime = builder.releaseStartTime;
         this.service = builder.service;
@@ -77,6 +77,13 @@ public class QueryReleaseMetricRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -115,13 +122,6 @@ public class QueryReleaseMetricRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return releaseEndTime
      */
     public Long getReleaseEndTime() {
@@ -143,12 +143,12 @@ public class QueryReleaseMetricRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<QueryReleaseMetricRequest, Builder> {
+        private String regionId; 
         private String changeOrderId; 
         private Long createTime; 
         private String metricType; 
         private String pid; 
         private String proxyUserId; 
-        private String regionId; 
         private Long releaseEndTime; 
         private Long releaseStartTime; 
         private String service; 
@@ -157,18 +157,27 @@ public class QueryReleaseMetricRequest extends Request {
             super();
         } 
 
-        private Builder(QueryReleaseMetricRequest response) {
-            super(response);
-            this.changeOrderId = response.changeOrderId;
-            this.createTime = response.createTime;
-            this.metricType = response.metricType;
-            this.pid = response.pid;
-            this.proxyUserId = response.proxyUserId;
-            this.regionId = response.regionId;
-            this.releaseEndTime = response.releaseEndTime;
-            this.releaseStartTime = response.releaseStartTime;
-            this.service = response.service;
+        private Builder(QueryReleaseMetricRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.changeOrderId = request.changeOrderId;
+            this.createTime = request.createTime;
+            this.metricType = request.metricType;
+            this.pid = request.pid;
+            this.proxyUserId = request.proxyUserId;
+            this.releaseEndTime = request.releaseEndTime;
+            this.releaseStartTime = request.releaseStartTime;
+            this.service = request.service;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * ChangeOrderId.
@@ -212,15 +221,6 @@ public class QueryReleaseMetricRequest extends Request {
         public Builder proxyUserId(String proxyUserId) {
             this.putQueryParameter("ProxyUserId", proxyUserId);
             this.proxyUserId = proxyUserId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

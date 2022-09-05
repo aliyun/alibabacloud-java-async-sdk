@@ -38,6 +38,10 @@ public class SearchTracesByPageRequest extends Request {
     private Integer pageSize;
 
     @Query
+    @NameInMap("Pid")
+    private String pid;
+
+    @Query
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
@@ -59,6 +63,10 @@ public class SearchTracesByPageRequest extends Request {
     @Validation(required = true)
     private Long startTime;
 
+    @Query
+    @NameInMap("Tags")
+    private java.util.List < Tags> tags;
+
     private SearchTracesByPageRequest(Builder builder) {
         super(builder);
         this.endTime = builder.endTime;
@@ -67,11 +75,13 @@ public class SearchTracesByPageRequest extends Request {
         this.operationName = builder.operationName;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.pid = builder.pid;
         this.regionId = builder.regionId;
         this.reverse = builder.reverse;
         this.serviceIp = builder.serviceIp;
         this.serviceName = builder.serviceName;
         this.startTime = builder.startTime;
+        this.tags = builder.tags;
     }
 
     public static Builder builder() {
@@ -130,6 +140,13 @@ public class SearchTracesByPageRequest extends Request {
     }
 
     /**
+     * @return pid
+     */
+    public String getPid() {
+        return this.pid;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -164,6 +181,13 @@ public class SearchTracesByPageRequest extends Request {
         return this.startTime;
     }
 
+    /**
+     * @return tags
+     */
+    public java.util.List < Tags> getTags() {
+        return this.tags;
+    }
+
     public static final class Builder extends Request.Builder<SearchTracesByPageRequest, Builder> {
         private Long endTime; 
         private java.util.List < ExclusionFilters> exclusionFilters; 
@@ -171,29 +195,33 @@ public class SearchTracesByPageRequest extends Request {
         private String operationName; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String pid; 
         private String regionId; 
         private Boolean reverse; 
         private String serviceIp; 
         private String serviceName; 
         private Long startTime; 
+        private java.util.List < Tags> tags; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(SearchTracesByPageRequest response) {
-            super(response);
-            this.endTime = response.endTime;
-            this.exclusionFilters = response.exclusionFilters;
-            this.minDuration = response.minDuration;
-            this.operationName = response.operationName;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.reverse = response.reverse;
-            this.serviceIp = response.serviceIp;
-            this.serviceName = response.serviceName;
-            this.startTime = response.startTime;
+        private Builder(SearchTracesByPageRequest request) {
+            super(request);
+            this.endTime = request.endTime;
+            this.exclusionFilters = request.exclusionFilters;
+            this.minDuration = request.minDuration;
+            this.operationName = request.operationName;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.pid = request.pid;
+            this.regionId = request.regionId;
+            this.reverse = request.reverse;
+            this.serviceIp = request.serviceIp;
+            this.serviceName = request.serviceName;
+            this.startTime = request.startTime;
+            this.tags = request.tags;
         } 
 
         /**
@@ -251,6 +279,15 @@ public class SearchTracesByPageRequest extends Request {
         }
 
         /**
+         * Pid.
+         */
+        public Builder pid(String pid) {
+            this.putQueryParameter("Pid", pid);
+            this.pid = pid;
+            return this;
+        }
+
+        /**
          * RegionId.
          */
         public Builder regionId(String regionId) {
@@ -292,6 +329,15 @@ public class SearchTracesByPageRequest extends Request {
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
             this.startTime = startTime;
+            return this;
+        }
+
+        /**
+         * Tags.
+         */
+        public Builder tags(java.util.List < Tags> tags) {
+            this.putQueryParameter("Tags", tags);
+            this.tags = tags;
             return this;
         }
 
@@ -358,6 +404,67 @@ public class SearchTracesByPageRequest extends Request {
 
             public ExclusionFilters build() {
                 return new ExclusionFilters(this);
+            } 
+
+        } 
+
+    }
+    public static class Tags extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
             } 
 
         } 

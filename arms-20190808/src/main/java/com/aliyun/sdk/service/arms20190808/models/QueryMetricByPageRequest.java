@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryMetricByPageRequest</p>
  */
 public class QueryMetricByPageRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("CurrentPage")
     @Validation(maximum = 2147483647, minimum = 1)
@@ -61,10 +66,6 @@ public class QueryMetricByPageRequest extends Request {
     @Validation(maximum = 2147483647, minimum = 1)
     private Integer pageSize;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("StartTime")
     @Validation(required = true)
@@ -72,6 +73,7 @@ public class QueryMetricByPageRequest extends Request {
 
     private QueryMetricByPageRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.currentPage = builder.currentPage;
         this.customFilters = builder.customFilters;
         this.dimensions = builder.dimensions;
@@ -83,7 +85,6 @@ public class QueryMetricByPageRequest extends Request {
         this.order = builder.order;
         this.orderBy = builder.orderBy;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
         this.startTime = builder.startTime;
     }
 
@@ -98,6 +99,13 @@ public class QueryMetricByPageRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -178,13 +186,6 @@ public class QueryMetricByPageRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return startTime
      */
     public Long getStartTime() {
@@ -192,6 +193,7 @@ public class QueryMetricByPageRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<QueryMetricByPageRequest, Builder> {
+        private String regionId; 
         private Integer currentPage; 
         private java.util.List < String > customFilters; 
         private java.util.List < String > dimensions; 
@@ -203,29 +205,37 @@ public class QueryMetricByPageRequest extends Request {
         private String order; 
         private String orderBy; 
         private Integer pageSize; 
-        private String regionId; 
         private Long startTime; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(QueryMetricByPageRequest response) {
-            super(response);
-            this.currentPage = response.currentPage;
-            this.customFilters = response.customFilters;
-            this.dimensions = response.dimensions;
-            this.endTime = response.endTime;
-            this.filters = response.filters;
-            this.intervalInSec = response.intervalInSec;
-            this.measures = response.measures;
-            this.metric = response.metric;
-            this.order = response.order;
-            this.orderBy = response.orderBy;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.startTime = response.startTime;
+        private Builder(QueryMetricByPageRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.currentPage = request.currentPage;
+            this.customFilters = request.customFilters;
+            this.dimensions = request.dimensions;
+            this.endTime = request.endTime;
+            this.filters = request.filters;
+            this.intervalInSec = request.intervalInSec;
+            this.measures = request.measures;
+            this.metric = request.metric;
+            this.order = request.order;
+            this.orderBy = request.orderBy;
+            this.pageSize = request.pageSize;
+            this.startTime = request.startTime;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * CurrentPage.
@@ -323,15 +333,6 @@ public class QueryMetricByPageRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

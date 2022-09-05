@@ -89,12 +89,12 @@ public class GetExploreUrlRequest extends Request {
             super();
         } 
 
-        private Builder(GetExploreUrlRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.expression = response.expression;
-            this.regionId = response.regionId;
-            this.type = response.type;
+        private Builder(GetExploreUrlRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.expression = request.expression;
+            this.regionId = request.regionId;
+            this.type = request.type;
         } 
 
         /**

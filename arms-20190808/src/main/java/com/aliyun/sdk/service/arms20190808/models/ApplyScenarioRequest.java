@@ -182,19 +182,19 @@ public class ApplyScenarioRequest extends Request {
             super();
         } 
 
-        private Builder(ApplyScenarioRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.config = response.config;
-            this.name = response.name;
-            this.regionId = response.regionId;
-            this.scenario = response.scenario;
-            this.sign = response.sign;
-            this.snDump = response.snDump;
-            this.snForce = response.snForce;
-            this.snStat = response.snStat;
-            this.snTransfer = response.snTransfer;
-            this.updateOption = response.updateOption;
+        private Builder(ApplyScenarioRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.config = request.config;
+            this.name = request.name;
+            this.regionId = request.regionId;
+            this.scenario = request.scenario;
+            this.sign = request.sign;
+            this.snDump = request.snDump;
+            this.snForce = request.snForce;
+            this.snStat = request.snStat;
+            this.snTransfer = request.snTransfer;
+            this.updateOption = request.updateOption;
         } 
 
         /**
@@ -210,7 +210,8 @@ public class ApplyScenarioRequest extends Request {
          * Config.
          */
         public Builder config(java.util.Map < String, ? > config) {
-            this.putQueryParameter("Config", config);
+            String configShrink = shrink(config, "Config", "json");
+            this.putQueryParameter("Config", configShrink);
             this.config = config;
             return this;
         }

@@ -88,12 +88,12 @@ public class SearchRetcodeAppByPageRequest extends Request {
             super();
         } 
 
-        private Builder(SearchRetcodeAppByPageRequest response) {
-            super(response);
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.retcodeAppName = response.retcodeAppName;
+        private Builder(SearchRetcodeAppByPageRequest request) {
+            super(request);
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.retcodeAppName = request.retcodeAppName;
         } 
 
         /**

@@ -49,9 +49,9 @@ public class OpenXtraceDefaultSLRRequest extends Request {
             super();
         } 
 
-        private Builder(OpenXtraceDefaultSLRRequest response) {
-            super(response);
-            this.regionId = response.regionId;
+        private Builder(OpenXtraceDefaultSLRRequest request) {
+            super(request);
+            this.regionId = request.regionId;
         } 
 
         /**

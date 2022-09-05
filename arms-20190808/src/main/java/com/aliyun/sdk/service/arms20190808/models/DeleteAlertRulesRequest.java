@@ -63,10 +63,10 @@ public class DeleteAlertRulesRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteAlertRulesRequest response) {
-            super(response);
-            this.alertIds = response.alertIds;
-            this.regionId = response.regionId;
+        private Builder(DeleteAlertRulesRequest request) {
+            super(request);
+            this.alertIds = request.alertIds;
+            this.regionId = request.regionId;
         } 
 
         /**

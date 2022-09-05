@@ -115,14 +115,14 @@ public class ListPrometheusAlertRulesRequest extends Request {
             super();
         } 
 
-        private Builder(ListPrometheusAlertRulesRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.matchExpressions = response.matchExpressions;
-            this.name = response.name;
-            this.regionId = response.regionId;
-            this.status = response.status;
-            this.type = response.type;
+        private Builder(ListPrometheusAlertRulesRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.matchExpressions = request.matchExpressions;
+            this.name = request.name;
+            this.regionId = request.regionId;
+            this.status = request.status;
+            this.type = request.type;
         } 
 
         /**

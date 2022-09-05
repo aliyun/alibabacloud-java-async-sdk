@@ -22,7 +22,6 @@ public class CreateOrUpdateWebhookContactRequest extends Request {
 
     @Body
     @NameInMap("Body")
-    @Validation(required = true)
     private String body;
 
     @Body
@@ -32,7 +31,6 @@ public class CreateOrUpdateWebhookContactRequest extends Request {
 
     @Body
     @NameInMap("RecoverBody")
-    @Validation(required = true)
     private String recoverBody;
 
     @Body
@@ -144,16 +142,16 @@ public class CreateOrUpdateWebhookContactRequest extends Request {
             super();
         } 
 
-        private Builder(CreateOrUpdateWebhookContactRequest response) {
-            super(response);
-            this.bizHeaders = response.bizHeaders;
-            this.bizParams = response.bizParams;
-            this.body = response.body;
-            this.method = response.method;
-            this.recoverBody = response.recoverBody;
-            this.url = response.url;
-            this.webhookId = response.webhookId;
-            this.webhookName = response.webhookName;
+        private Builder(CreateOrUpdateWebhookContactRequest request) {
+            super(request);
+            this.bizHeaders = request.bizHeaders;
+            this.bizParams = request.bizParams;
+            this.body = request.body;
+            this.method = request.method;
+            this.recoverBody = request.recoverBody;
+            this.url = request.url;
+            this.webhookId = request.webhookId;
+            this.webhookName = request.webhookName;
         } 
 
         /**

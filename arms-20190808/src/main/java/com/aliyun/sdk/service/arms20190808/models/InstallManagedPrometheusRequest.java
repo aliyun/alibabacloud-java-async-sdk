@@ -126,15 +126,15 @@ public class InstallManagedPrometheusRequest extends Request {
             super();
         } 
 
-        private Builder(InstallManagedPrometheusRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.clusterType = response.clusterType;
-            this.kubeConfig = response.kubeConfig;
-            this.regionId = response.regionId;
-            this.securityGroupId = response.securityGroupId;
-            this.vSwitchId = response.vSwitchId;
-            this.vpcId = response.vpcId;
+        private Builder(InstallManagedPrometheusRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.clusterType = request.clusterType;
+            this.kubeConfig = request.kubeConfig;
+            this.regionId = request.regionId;
+            this.securityGroupId = request.securityGroupId;
+            this.vSwitchId = request.vSwitchId;
+            this.vpcId = request.vpcId;
         } 
 
         /**

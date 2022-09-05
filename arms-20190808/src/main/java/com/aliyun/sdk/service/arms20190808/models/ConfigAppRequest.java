@@ -76,11 +76,11 @@ public class ConfigAppRequest extends Request {
             super();
         } 
 
-        private Builder(ConfigAppRequest response) {
-            super(response);
-            this.appIds = response.appIds;
-            this.enable = response.enable;
-            this.regionId = response.regionId;
+        private Builder(ConfigAppRequest request) {
+            super(request);
+            this.appIds = request.appIds;
+            this.enable = request.enable;
+            this.regionId = request.regionId;
         } 
 
         /**

@@ -90,12 +90,12 @@ public class ListActivatedAlertsRequest extends Request {
             super();
         } 
 
-        private Builder(ListActivatedAlertsRequest response) {
-            super(response);
-            this.currentPage = response.currentPage;
-            this.filter = response.filter;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
+        private Builder(ListActivatedAlertsRequest request) {
+            super(request);
+            this.currentPage = request.currentPage;
+            this.filter = request.filter;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
         } 
 
         /**

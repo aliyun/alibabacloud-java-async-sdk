@@ -63,10 +63,10 @@ public class GetTraceAppRequest extends Request {
             super();
         } 
 
-        private Builder(GetTraceAppRequest response) {
-            super(response);
-            this.pid = response.pid;
-            this.regionId = response.regionId;
+        private Builder(GetTraceAppRequest request) {
+            super(request);
+            this.pid = request.pid;
+            this.regionId = request.regionId;
         } 
 
         /**

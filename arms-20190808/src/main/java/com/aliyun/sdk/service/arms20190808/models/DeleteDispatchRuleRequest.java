@@ -63,10 +63,10 @@ public class DeleteDispatchRuleRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteDispatchRuleRequest response) {
-            super(response);
-            this.id = response.id;
-            this.regionId = response.regionId;
+        private Builder(DeleteDispatchRuleRequest request) {
+            super(request);
+            this.id = request.id;
+            this.regionId = request.regionId;
         } 
 
         /**

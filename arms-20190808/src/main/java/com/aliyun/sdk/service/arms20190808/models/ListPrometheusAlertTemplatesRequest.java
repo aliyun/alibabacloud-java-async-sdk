@@ -62,10 +62,10 @@ public class ListPrometheusAlertTemplatesRequest extends Request {
             super();
         } 
 
-        private Builder(ListPrometheusAlertTemplatesRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.regionId = response.regionId;
+        private Builder(ListPrometheusAlertTemplatesRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.regionId = request.regionId;
         } 
 
         /**

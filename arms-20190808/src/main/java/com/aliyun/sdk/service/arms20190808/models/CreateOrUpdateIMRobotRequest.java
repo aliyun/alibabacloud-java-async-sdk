@@ -13,12 +13,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateOrUpdateIMRobotRequest extends Request {
     @Body
+    @NameInMap("CardTemplate")
+    private String cardTemplate;
+
+    @Body
     @NameInMap("DailyNoc")
     private Boolean dailyNoc;
 
     @Body
     @NameInMap("DailyNocTime")
     private String dailyNocTime;
+
+    @Body
+    @NameInMap("EnableOutgoing")
+    private Boolean enableOutgoing;
 
     @Body
     @NameInMap("RobotAddress")
@@ -35,17 +43,23 @@ public class CreateOrUpdateIMRobotRequest extends Request {
     private String robotName;
 
     @Body
+    @NameInMap("Token")
+    private String token;
+
+    @Body
     @NameInMap("Type")
-    @Validation(required = true)
     private String type;
 
     private CreateOrUpdateIMRobotRequest(Builder builder) {
         super(builder);
+        this.cardTemplate = builder.cardTemplate;
         this.dailyNoc = builder.dailyNoc;
         this.dailyNocTime = builder.dailyNocTime;
+        this.enableOutgoing = builder.enableOutgoing;
         this.robotAddress = builder.robotAddress;
         this.robotId = builder.robotId;
         this.robotName = builder.robotName;
+        this.token = builder.token;
         this.type = builder.type;
     }
 
@@ -63,6 +77,13 @@ public class CreateOrUpdateIMRobotRequest extends Request {
     }
 
     /**
+     * @return cardTemplate
+     */
+    public String getCardTemplate() {
+        return this.cardTemplate;
+    }
+
+    /**
      * @return dailyNoc
      */
     public Boolean getDailyNoc() {
@@ -74,6 +95,13 @@ public class CreateOrUpdateIMRobotRequest extends Request {
      */
     public String getDailyNocTime() {
         return this.dailyNocTime;
+    }
+
+    /**
+     * @return enableOutgoing
+     */
+    public Boolean getEnableOutgoing() {
+        return this.enableOutgoing;
     }
 
     /**
@@ -98,6 +126,13 @@ public class CreateOrUpdateIMRobotRequest extends Request {
     }
 
     /**
+     * @return token
+     */
+    public String getToken() {
+        return this.token;
+    }
+
+    /**
      * @return type
      */
     public String getType() {
@@ -105,26 +140,41 @@ public class CreateOrUpdateIMRobotRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateOrUpdateIMRobotRequest, Builder> {
+        private String cardTemplate; 
         private Boolean dailyNoc; 
         private String dailyNocTime; 
+        private Boolean enableOutgoing; 
         private String robotAddress; 
         private Long robotId; 
         private String robotName; 
+        private String token; 
         private String type; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateOrUpdateIMRobotRequest response) {
-            super(response);
-            this.dailyNoc = response.dailyNoc;
-            this.dailyNocTime = response.dailyNocTime;
-            this.robotAddress = response.robotAddress;
-            this.robotId = response.robotId;
-            this.robotName = response.robotName;
-            this.type = response.type;
+        private Builder(CreateOrUpdateIMRobotRequest request) {
+            super(request);
+            this.cardTemplate = request.cardTemplate;
+            this.dailyNoc = request.dailyNoc;
+            this.dailyNocTime = request.dailyNocTime;
+            this.enableOutgoing = request.enableOutgoing;
+            this.robotAddress = request.robotAddress;
+            this.robotId = request.robotId;
+            this.robotName = request.robotName;
+            this.token = request.token;
+            this.type = request.type;
         } 
+
+        /**
+         * 卡片模版配置信息
+         */
+        public Builder cardTemplate(String cardTemplate) {
+            this.putBodyParameter("CardTemplate", cardTemplate);
+            this.cardTemplate = cardTemplate;
+            return this;
+        }
 
         /**
          * 是否发送每日统计信息
@@ -141,6 +191,15 @@ public class CreateOrUpdateIMRobotRequest extends Request {
         public Builder dailyNocTime(String dailyNocTime) {
             this.putBodyParameter("DailyNocTime", dailyNocTime);
             this.dailyNocTime = dailyNocTime;
+            return this;
+        }
+
+        /**
+         * EnableOutgoing.
+         */
+        public Builder enableOutgoing(Boolean enableOutgoing) {
+            this.putBodyParameter("EnableOutgoing", enableOutgoing);
+            this.enableOutgoing = enableOutgoing;
             return this;
         }
 
@@ -168,6 +227,15 @@ public class CreateOrUpdateIMRobotRequest extends Request {
         public Builder robotName(String robotName) {
             this.putBodyParameter("RobotName", robotName);
             this.robotName = robotName;
+            return this;
+        }
+
+        /**
+         * Token.
+         */
+        public Builder token(String token) {
+            this.putBodyParameter("Token", token);
+            this.token = token;
             return this;
         }
 

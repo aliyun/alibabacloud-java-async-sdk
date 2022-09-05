@@ -49,9 +49,9 @@ public class DeleteWebhookContactRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteWebhookContactRequest response) {
-            super(response);
-            this.webhookId = response.webhookId;
+        private Builder(DeleteWebhookContactRequest request) {
+            super(request);
+            this.webhookId = request.webhookId;
         } 
 
         /**

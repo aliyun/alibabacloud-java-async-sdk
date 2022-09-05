@@ -114,14 +114,14 @@ public class SearchAlertContactGroupRequest extends Request {
             super();
         } 
 
-        private Builder(SearchAlertContactGroupRequest response) {
-            super(response);
-            this.contactGroupIds = response.contactGroupIds;
-            this.contactGroupName = response.contactGroupName;
-            this.contactId = response.contactId;
-            this.contactName = response.contactName;
-            this.isDetail = response.isDetail;
-            this.regionId = response.regionId;
+        private Builder(SearchAlertContactGroupRequest request) {
+            super(request);
+            this.contactGroupIds = request.contactGroupIds;
+            this.contactGroupName = request.contactGroupName;
+            this.contactId = request.contactId;
+            this.contactName = request.contactName;
+            this.isDetail = request.isDetail;
+            this.regionId = request.regionId;
         } 
 
         /**

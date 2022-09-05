@@ -87,12 +87,12 @@ public class UninstallManagedPrometheusRequest extends Request {
             super();
         } 
 
-        private Builder(UninstallManagedPrometheusRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.clusterType = response.clusterType;
-            this.regionId = response.regionId;
-            this.vpcId = response.vpcId;
+        private Builder(UninstallManagedPrometheusRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.clusterType = request.clusterType;
+            this.regionId = request.regionId;
+            this.vpcId = request.vpcId;
         } 
 
         /**

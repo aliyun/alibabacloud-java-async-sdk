@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetStackRequest extends Request {
     @Query
+    @NameInMap("EndTime")
+    private Long endTime;
+
+    @Query
     @NameInMap("Pid")
     private String pid;
 
@@ -27,15 +31,21 @@ public class GetStackRequest extends Request {
     private String rpcID;
 
     @Query
+    @NameInMap("StartTime")
+    private Long startTime;
+
+    @Query
     @NameInMap("TraceID")
     @Validation(required = true)
     private String traceID;
 
     private GetStackRequest(Builder builder) {
         super(builder);
+        this.endTime = builder.endTime;
         this.pid = builder.pid;
         this.regionId = builder.regionId;
         this.rpcID = builder.rpcID;
+        this.startTime = builder.startTime;
         this.traceID = builder.traceID;
     }
 
@@ -50,6 +60,13 @@ public class GetStackRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return endTime
+     */
+    public Long getEndTime() {
+        return this.endTime;
     }
 
     /**
@@ -74,6 +91,13 @@ public class GetStackRequest extends Request {
     }
 
     /**
+     * @return startTime
+     */
+    public Long getStartTime() {
+        return this.startTime;
+    }
+
+    /**
      * @return traceID
      */
     public String getTraceID() {
@@ -81,22 +105,35 @@ public class GetStackRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetStackRequest, Builder> {
+        private Long endTime; 
         private String pid; 
         private String regionId; 
         private String rpcID; 
+        private Long startTime; 
         private String traceID; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetStackRequest response) {
-            super(response);
-            this.pid = response.pid;
-            this.regionId = response.regionId;
-            this.rpcID = response.rpcID;
-            this.traceID = response.traceID;
+        private Builder(GetStackRequest request) {
+            super(request);
+            this.endTime = request.endTime;
+            this.pid = request.pid;
+            this.regionId = request.regionId;
+            this.rpcID = request.rpcID;
+            this.startTime = request.startTime;
+            this.traceID = request.traceID;
         } 
+
+        /**
+         * EndTime.
+         */
+        public Builder endTime(Long endTime) {
+            this.putQueryParameter("EndTime", endTime);
+            this.endTime = endTime;
+            return this;
+        }
 
         /**
          * Pid.
@@ -122,6 +159,15 @@ public class GetStackRequest extends Request {
         public Builder rpcID(String rpcID) {
             this.putQueryParameter("RpcID", rpcID);
             this.rpcID = rpcID;
+            return this;
+        }
+
+        /**
+         * StartTime.
+         */
+        public Builder startTime(Long startTime) {
+            this.putQueryParameter("StartTime", startTime);
+            this.startTime = startTime;
             return this;
         }
 

@@ -49,9 +49,9 @@ public class ListTraceAppsRequest extends Request {
             super();
         } 
 
-        private Builder(ListTraceAppsRequest response) {
-            super(response);
-            this.regionId = response.regionId;
+        private Builder(ListTraceAppsRequest request) {
+            super(request);
+            this.regionId = request.regionId;
         } 
 
         /**

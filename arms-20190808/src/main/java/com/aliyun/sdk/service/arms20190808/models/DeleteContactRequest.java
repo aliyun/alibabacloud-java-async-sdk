@@ -49,9 +49,9 @@ public class DeleteContactRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteContactRequest response) {
-            super(response);
-            this.contactId = response.contactId;
+        private Builder(DeleteContactRequest request) {
+            super(request);
+            this.contactId = request.contactId;
         } 
 
         /**

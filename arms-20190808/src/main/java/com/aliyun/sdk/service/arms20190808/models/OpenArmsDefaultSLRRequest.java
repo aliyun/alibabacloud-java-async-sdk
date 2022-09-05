@@ -49,9 +49,9 @@ public class OpenArmsDefaultSLRRequest extends Request {
             super();
         } 
 
-        private Builder(OpenArmsDefaultSLRRequest response) {
-            super(response);
-            this.regionId = response.regionId;
+        private Builder(OpenArmsDefaultSLRRequest request) {
+            super(request);
+            this.regionId = request.regionId;
         } 
 
         /**

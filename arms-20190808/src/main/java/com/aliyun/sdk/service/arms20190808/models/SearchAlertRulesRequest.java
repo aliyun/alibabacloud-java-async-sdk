@@ -140,16 +140,16 @@ public class SearchAlertRulesRequest extends Request {
             super();
         } 
 
-        private Builder(SearchAlertRulesRequest response) {
-            super(response);
-            this.appType = response.appType;
-            this.currentPage = response.currentPage;
-            this.pageSize = response.pageSize;
-            this.pid = response.pid;
-            this.regionId = response.regionId;
-            this.systemRegionId = response.systemRegionId;
-            this.title = response.title;
-            this.type = response.type;
+        private Builder(SearchAlertRulesRequest request) {
+            super(request);
+            this.appType = request.appType;
+            this.currentPage = request.currentPage;
+            this.pageSize = request.pageSize;
+            this.pid = request.pid;
+            this.regionId = request.regionId;
+            this.systemRegionId = request.systemRegionId;
+            this.title = request.title;
+            this.type = request.type;
         } 
 
         /**

@@ -73,10 +73,10 @@ public class DescribeWebhookContactsResponseBody extends TeaModel {
 
     public static class Webhook extends TeaModel {
         @NameInMap("BizHeaders")
-        private String bizHeaders;
+        private java.util.Map < String, ? > bizHeaders;
 
         @NameInMap("BizParams")
-        private String bizParams;
+        private java.util.Map < String, ? > bizParams;
 
         @NameInMap("Body")
         private String body;
@@ -110,14 +110,14 @@ public class DescribeWebhookContactsResponseBody extends TeaModel {
         /**
          * @return bizHeaders
          */
-        public String getBizHeaders() {
+        public java.util.Map < String, ? > getBizHeaders() {
             return this.bizHeaders;
         }
 
         /**
          * @return bizParams
          */
-        public String getBizParams() {
+        public java.util.Map < String, ? > getBizParams() {
             return this.bizParams;
         }
 
@@ -150,8 +150,8 @@ public class DescribeWebhookContactsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private String bizHeaders; 
-            private String bizParams; 
+            private java.util.Map < String, ? > bizHeaders; 
+            private java.util.Map < String, ? > bizParams; 
             private String body; 
             private String method; 
             private String recoverBody; 
@@ -160,7 +160,7 @@ public class DescribeWebhookContactsResponseBody extends TeaModel {
             /**
              * HTTP请求头
              */
-            public Builder bizHeaders(String bizHeaders) {
+            public Builder bizHeaders(java.util.Map < String, ? > bizHeaders) {
                 this.bizHeaders = bizHeaders;
                 return this;
             }
@@ -168,7 +168,7 @@ public class DescribeWebhookContactsResponseBody extends TeaModel {
             /**
              * HTTP请求参数
              */
-            public Builder bizParams(String bizParams) {
+            public Builder bizParams(java.util.Map < String, ? > bizParams) {
                 this.bizParams = bizParams;
                 return this;
             }

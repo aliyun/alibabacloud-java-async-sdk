@@ -89,12 +89,12 @@ public class DescribeContactGroupsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeContactGroupsRequest response) {
-            super(response);
-            this.contactGroupName = response.contactGroupName;
-            this.isDetail = response.isDetail;
-            this.page = response.page;
-            this.size = response.size;
+        private Builder(DescribeContactGroupsRequest request) {
+            super(request);
+            this.contactGroupName = request.contactGroupName;
+            this.isDetail = request.isDetail;
+            this.page = request.page;
+            this.size = request.size;
         } 
 
         /**

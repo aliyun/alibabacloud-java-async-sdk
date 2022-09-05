@@ -166,18 +166,18 @@ public class SearchEventsRequest extends Request {
             super();
         } 
 
-        private Builder(SearchEventsRequest response) {
-            super(response);
-            this.alertId = response.alertId;
-            this.alertType = response.alertType;
-            this.appType = response.appType;
-            this.currentPage = response.currentPage;
-            this.endTime = response.endTime;
-            this.isTrigger = response.isTrigger;
-            this.pageSize = response.pageSize;
-            this.pid = response.pid;
-            this.regionId = response.regionId;
-            this.startTime = response.startTime;
+        private Builder(SearchEventsRequest request) {
+            super(request);
+            this.alertId = request.alertId;
+            this.alertType = request.alertType;
+            this.appType = request.appType;
+            this.currentPage = request.currentPage;
+            this.endTime = request.endTime;
+            this.isTrigger = request.isTrigger;
+            this.pageSize = request.pageSize;
+            this.pid = request.pid;
+            this.regionId = request.regionId;
+            this.startTime = request.startTime;
         } 
 
         /**

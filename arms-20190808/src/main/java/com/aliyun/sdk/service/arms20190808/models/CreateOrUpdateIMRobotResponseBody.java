@@ -72,11 +72,17 @@ public class CreateOrUpdateIMRobotResponseBody extends TeaModel {
     } 
 
     public static class AlertRobot extends TeaModel {
+        @NameInMap("CardTemplate")
+        private String cardTemplate;
+
         @NameInMap("DailyNoc")
         private Boolean dailyNoc;
 
         @NameInMap("DailyNocTime")
         private String dailyNocTime;
+
+        @NameInMap("EnableOutgoing")
+        private Boolean enableOutgoing;
 
         @NameInMap("RobotAddress")
         private String robotAddress;
@@ -87,15 +93,21 @@ public class CreateOrUpdateIMRobotResponseBody extends TeaModel {
         @NameInMap("RobotName")
         private String robotName;
 
+        @NameInMap("Token")
+        private String token;
+
         @NameInMap("Type")
         private String type;
 
         private AlertRobot(Builder builder) {
+            this.cardTemplate = builder.cardTemplate;
             this.dailyNoc = builder.dailyNoc;
             this.dailyNocTime = builder.dailyNocTime;
+            this.enableOutgoing = builder.enableOutgoing;
             this.robotAddress = builder.robotAddress;
             this.robotId = builder.robotId;
             this.robotName = builder.robotName;
+            this.token = builder.token;
             this.type = builder.type;
         }
 
@@ -105,6 +117,13 @@ public class CreateOrUpdateIMRobotResponseBody extends TeaModel {
 
         public static AlertRobot create() {
             return builder().build();
+        }
+
+        /**
+         * @return cardTemplate
+         */
+        public String getCardTemplate() {
+            return this.cardTemplate;
         }
 
         /**
@@ -119,6 +138,13 @@ public class CreateOrUpdateIMRobotResponseBody extends TeaModel {
          */
         public String getDailyNocTime() {
             return this.dailyNocTime;
+        }
+
+        /**
+         * @return enableOutgoing
+         */
+        public Boolean getEnableOutgoing() {
+            return this.enableOutgoing;
         }
 
         /**
@@ -143,6 +169,13 @@ public class CreateOrUpdateIMRobotResponseBody extends TeaModel {
         }
 
         /**
+         * @return token
+         */
+        public String getToken() {
+            return this.token;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
@@ -150,12 +183,23 @@ public class CreateOrUpdateIMRobotResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String cardTemplate; 
             private Boolean dailyNoc; 
             private String dailyNocTime; 
+            private Boolean enableOutgoing; 
             private String robotAddress; 
             private Float robotId; 
             private String robotName; 
+            private String token; 
             private String type; 
+
+            /**
+             * 卡片模版配置信息
+             */
+            public Builder cardTemplate(String cardTemplate) {
+                this.cardTemplate = cardTemplate;
+                return this;
+            }
 
             /**
              * 是否发送每日统计信息
@@ -170,6 +214,14 @@ public class CreateOrUpdateIMRobotResponseBody extends TeaModel {
              */
             public Builder dailyNocTime(String dailyNocTime) {
                 this.dailyNocTime = dailyNocTime;
+                return this;
+            }
+
+            /**
+             * EnableOutgoing.
+             */
+            public Builder enableOutgoing(Boolean enableOutgoing) {
+                this.enableOutgoing = enableOutgoing;
                 return this;
             }
 
@@ -194,6 +246,14 @@ public class CreateOrUpdateIMRobotResponseBody extends TeaModel {
              */
             public Builder robotName(String robotName) {
                 this.robotName = robotName;
+                return this;
+            }
+
+            /**
+             * Token.
+             */
+            public Builder token(String token) {
+                this.token = token;
                 return this;
             }
 

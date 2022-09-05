@@ -103,13 +103,13 @@ public class UpdateAlertRuleRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateAlertRuleRequest response) {
-            super(response);
-            this.alertId = response.alertId;
-            this.contactGroupIds = response.contactGroupIds;
-            this.isAutoStart = response.isAutoStart;
-            this.regionId = response.regionId;
-            this.templageAlertConfig = response.templageAlertConfig;
+        private Builder(UpdateAlertRuleRequest request) {
+            super(request);
+            this.alertId = request.alertId;
+            this.contactGroupIds = request.contactGroupIds;
+            this.isAutoStart = request.isAutoStart;
+            this.regionId = request.regionId;
+            this.templageAlertConfig = request.templageAlertConfig;
         } 
 
         /**

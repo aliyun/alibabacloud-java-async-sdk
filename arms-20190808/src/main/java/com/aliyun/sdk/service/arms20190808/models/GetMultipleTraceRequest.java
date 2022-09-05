@@ -62,10 +62,10 @@ public class GetMultipleTraceRequest extends Request {
             super();
         } 
 
-        private Builder(GetMultipleTraceRequest response) {
-            super(response);
-            this.regionId = response.regionId;
-            this.traceIDs = response.traceIDs;
+        private Builder(GetMultipleTraceRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.traceIDs = request.traceIDs;
         } 
 
         /**

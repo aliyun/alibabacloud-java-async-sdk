@@ -76,11 +76,11 @@ public class DescribeWebhookContactsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeWebhookContactsRequest response) {
-            super(response);
-            this.page = response.page;
-            this.size = response.size;
-            this.webhookName = response.webhookName;
+        private Builder(DescribeWebhookContactsRequest request) {
+            super(request);
+            this.page = request.page;
+            this.size = request.size;
+            this.webhookName = request.webhookName;
         } 
 
         /**

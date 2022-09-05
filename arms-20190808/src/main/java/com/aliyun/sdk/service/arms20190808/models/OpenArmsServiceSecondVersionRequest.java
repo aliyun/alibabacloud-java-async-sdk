@@ -63,10 +63,10 @@ public class OpenArmsServiceSecondVersionRequest extends Request {
             super();
         } 
 
-        private Builder(OpenArmsServiceSecondVersionRequest response) {
-            super(response);
-            this.regionId = response.regionId;
-            this.type = response.type;
+        private Builder(OpenArmsServiceSecondVersionRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.type = request.type;
         } 
 
         /**

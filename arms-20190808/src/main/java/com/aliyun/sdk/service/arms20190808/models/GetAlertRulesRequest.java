@@ -30,6 +30,10 @@ public class GetAlertRulesRequest extends Request {
     private String alertType;
 
     @Query
+    @NameInMap("ClusterId")
+    private String clusterId;
+
+    @Query
     @NameInMap("Page")
     @Validation(required = true)
     private Long page;
@@ -50,6 +54,7 @@ public class GetAlertRulesRequest extends Request {
         this.alertNames = builder.alertNames;
         this.alertStatus = builder.alertStatus;
         this.alertType = builder.alertType;
+        this.clusterId = builder.clusterId;
         this.page = builder.page;
         this.regionId = builder.regionId;
         this.size = builder.size;
@@ -97,6 +102,13 @@ public class GetAlertRulesRequest extends Request {
     }
 
     /**
+     * @return clusterId
+     */
+    public String getClusterId() {
+        return this.clusterId;
+    }
+
+    /**
      * @return page
      */
     public Long getPage() {
@@ -122,6 +134,7 @@ public class GetAlertRulesRequest extends Request {
         private String alertNames; 
         private String alertStatus; 
         private String alertType; 
+        private String clusterId; 
         private Long page; 
         private String regionId; 
         private Long size; 
@@ -130,15 +143,16 @@ public class GetAlertRulesRequest extends Request {
             super();
         } 
 
-        private Builder(GetAlertRulesRequest response) {
-            super(response);
-            this.alertIds = response.alertIds;
-            this.alertNames = response.alertNames;
-            this.alertStatus = response.alertStatus;
-            this.alertType = response.alertType;
-            this.page = response.page;
-            this.regionId = response.regionId;
-            this.size = response.size;
+        private Builder(GetAlertRulesRequest request) {
+            super(request);
+            this.alertIds = request.alertIds;
+            this.alertNames = request.alertNames;
+            this.alertStatus = request.alertStatus;
+            this.alertType = request.alertType;
+            this.clusterId = request.clusterId;
+            this.page = request.page;
+            this.regionId = request.regionId;
+            this.size = request.size;
         } 
 
         /**
@@ -174,6 +188,15 @@ public class GetAlertRulesRequest extends Request {
         public Builder alertType(String alertType) {
             this.putQueryParameter("AlertType", alertType);
             this.alertType = alertType;
+            return this;
+        }
+
+        /**
+         * ClusterId.
+         */
+        public Builder clusterId(String clusterId) {
+            this.putQueryParameter("ClusterId", clusterId);
+            this.clusterId = clusterId;
             return this;
         }
 

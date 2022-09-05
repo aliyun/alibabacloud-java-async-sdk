@@ -14,6 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DescribeDispatchRuleRequest extends Request {
     @Query
     @NameInMap("Id")
+    @Validation(required = true)
     private String id;
 
     @Query
@@ -62,10 +63,10 @@ public class DescribeDispatchRuleRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDispatchRuleRequest response) {
-            super(response);
-            this.id = response.id;
-            this.regionId = response.regionId;
+        private Builder(DescribeDispatchRuleRequest request) {
+            super(request);
+            this.id = request.id;
+            this.regionId = request.regionId;
         } 
 
         /**

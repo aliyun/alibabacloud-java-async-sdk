@@ -89,12 +89,12 @@ public class GetTraceRequest extends Request {
             super();
         } 
 
-        private Builder(GetTraceRequest response) {
-            super(response);
-            this.endTime = response.endTime;
-            this.regionId = response.regionId;
-            this.startTime = response.startTime;
-            this.traceID = response.traceID;
+        private Builder(GetTraceRequest request) {
+            super(request);
+            this.endTime = request.endTime;
+            this.regionId = request.regionId;
+            this.startTime = request.startTime;
+            this.traceID = request.traceID;
         } 
 
         /**

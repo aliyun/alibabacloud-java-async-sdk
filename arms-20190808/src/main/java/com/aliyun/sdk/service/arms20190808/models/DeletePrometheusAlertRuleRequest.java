@@ -49,9 +49,9 @@ public class DeletePrometheusAlertRuleRequest extends Request {
             super();
         } 
 
-        private Builder(DeletePrometheusAlertRuleRequest response) {
-            super(response);
-            this.alertId = response.alertId;
+        private Builder(DeletePrometheusAlertRuleRequest request) {
+            super(request);
+            this.alertId = request.alertId;
         } 
 
         /**

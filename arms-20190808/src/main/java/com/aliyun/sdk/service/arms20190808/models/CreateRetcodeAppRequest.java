@@ -77,11 +77,11 @@ public class CreateRetcodeAppRequest extends Request {
             super();
         } 
 
-        private Builder(CreateRetcodeAppRequest response) {
-            super(response);
-            this.regionId = response.regionId;
-            this.retcodeAppName = response.retcodeAppName;
-            this.retcodeAppType = response.retcodeAppType;
+        private Builder(CreateRetcodeAppRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.retcodeAppName = request.retcodeAppName;
+            this.retcodeAppType = request.retcodeAppType;
         } 
 
         /**

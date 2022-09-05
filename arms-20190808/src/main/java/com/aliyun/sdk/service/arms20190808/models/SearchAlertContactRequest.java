@@ -127,15 +127,15 @@ public class SearchAlertContactRequest extends Request {
             super();
         } 
 
-        private Builder(SearchAlertContactRequest response) {
-            super(response);
-            this.contactIds = response.contactIds;
-            this.contactName = response.contactName;
-            this.currentPage = response.currentPage;
-            this.email = response.email;
-            this.pageSize = response.pageSize;
-            this.phone = response.phone;
-            this.regionId = response.regionId;
+        private Builder(SearchAlertContactRequest request) {
+            super(request);
+            this.contactIds = request.contactIds;
+            this.contactName = request.contactName;
+            this.currentPage = request.currentPage;
+            this.email = request.email;
+            this.pageSize = request.pageSize;
+            this.phone = request.phone;
+            this.regionId = request.regionId;
         } 
 
         /**

@@ -62,10 +62,10 @@ public class SearchTraceAppByNameRequest extends Request {
             super();
         } 
 
-        private Builder(SearchTraceAppByNameRequest response) {
-            super(response);
-            this.regionId = response.regionId;
-            this.traceAppName = response.traceAppName;
+        private Builder(SearchTraceAppByNameRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.traceAppName = request.traceAppName;
         } 
 
         /**

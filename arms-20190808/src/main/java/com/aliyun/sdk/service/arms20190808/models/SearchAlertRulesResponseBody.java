@@ -183,7 +183,7 @@ public class SearchAlertRulesResponseBody extends TeaModel {
         private String measure;
 
         @NameInMap("NValue")
-        private Integer NValue;
+        private Integer nValue;
 
         @NameInMap("Operator")
         private String operator;
@@ -195,7 +195,7 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             this.aggregates = builder.aggregates;
             this.alias = builder.alias;
             this.measure = builder.measure;
-            this.NValue = builder.NValue;
+            this.nValue = builder.nValue;
             this.operator = builder.operator;
             this.value = builder.value;
         }
@@ -230,10 +230,10 @@ public class SearchAlertRulesResponseBody extends TeaModel {
         }
 
         /**
-         * @return NValue
+         * @return nValue
          */
         public Integer getNValue() {
-            return this.NValue;
+            return this.nValue;
         }
 
         /**
@@ -254,7 +254,7 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             private String aggregates; 
             private String alias; 
             private String measure; 
-            private Integer NValue; 
+            private Integer nValue; 
             private String operator; 
             private Float value; 
 
@@ -285,8 +285,8 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             /**
              * NValue.
              */
-            public Builder NValue(Integer NValue) {
-                this.NValue = NValue;
+            public Builder nValue(Integer nValue) {
+                this.nValue = nValue;
                 return this;
             }
 
@@ -696,9 +696,6 @@ public class SearchAlertRulesResponseBody extends TeaModel {
         @NameInMap("AlertVersion")
         private Integer alertVersion;
 
-        @NameInMap("AlertWay")
-        private java.util.List < String > alertWay;
-
         @NameInMap("AlertWays")
         private java.util.List < String > alertWays;
 
@@ -754,7 +751,6 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             this.alertTitle = builder.alertTitle;
             this.alertType = builder.alertType;
             this.alertVersion = builder.alertVersion;
-            this.alertWay = builder.alertWay;
             this.alertWays = builder.alertWays;
             this.config = builder.config;
             this.contactGroupIdList = builder.contactGroupIdList;
@@ -821,13 +817,6 @@ public class SearchAlertRulesResponseBody extends TeaModel {
          */
         public Integer getAlertVersion() {
             return this.alertVersion;
-        }
-
-        /**
-         * @return alertWay
-         */
-        public java.util.List < String > getAlertWay() {
-            return this.alertWay;
         }
 
         /**
@@ -949,7 +938,6 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             private String alertTitle; 
             private Integer alertType; 
             private Integer alertVersion; 
-            private java.util.List < String > alertWay; 
             private java.util.List < String > alertWays; 
             private String config; 
             private String contactGroupIdList; 
@@ -1012,14 +1000,6 @@ public class SearchAlertRulesResponseBody extends TeaModel {
              */
             public Builder alertVersion(Integer alertVersion) {
                 this.alertVersion = alertVersion;
-                return this;
-            }
-
-            /**
-             * AlertWay.
-             */
-            public Builder alertWay(java.util.List < String > alertWay) {
-                this.alertWay = alertWay;
                 return this;
             }
 

@@ -62,10 +62,10 @@ public class DeleteScenarioRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteScenarioRequest response) {
-            super(response);
-            this.regionId = response.regionId;
-            this.scenarioId = response.scenarioId;
+        private Builder(DeleteScenarioRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.scenarioId = request.scenarioId;
         } 
 
         /**

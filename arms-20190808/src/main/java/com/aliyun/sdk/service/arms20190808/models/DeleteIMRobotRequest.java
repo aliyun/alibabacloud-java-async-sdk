@@ -49,9 +49,9 @@ public class DeleteIMRobotRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteIMRobotRequest response) {
-            super(response);
-            this.robotId = response.robotId;
+        private Builder(DeleteIMRobotRequest request) {
+            super(request);
+            this.robotId = request.robotId;
         } 
 
         /**

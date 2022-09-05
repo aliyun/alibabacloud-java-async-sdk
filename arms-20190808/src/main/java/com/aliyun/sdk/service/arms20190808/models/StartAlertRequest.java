@@ -63,10 +63,10 @@ public class StartAlertRequest extends Request {
             super();
         } 
 
-        private Builder(StartAlertRequest response) {
-            super(response);
-            this.alertId = response.alertId;
-            this.regionId = response.regionId;
+        private Builder(StartAlertRequest request) {
+            super(request);
+            this.alertId = request.alertId;
+            this.regionId = request.regionId;
         } 
 
         /**

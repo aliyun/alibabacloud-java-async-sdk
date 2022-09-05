@@ -102,13 +102,13 @@ public class OpenVClusterRequest extends Request {
             super();
         } 
 
-        private Builder(OpenVClusterRequest response) {
-            super(response);
-            this.clusterType = response.clusterType;
-            this.length = response.length;
-            this.product = response.product;
-            this.recreateSwitch = response.recreateSwitch;
-            this.regionId = response.regionId;
+        private Builder(OpenVClusterRequest request) {
+            super(request);
+            this.clusterType = request.clusterType;
+            this.length = request.length;
+            this.product = request.product;
+            this.recreateSwitch = request.recreateSwitch;
+            this.regionId = request.regionId;
         } 
 
         /**

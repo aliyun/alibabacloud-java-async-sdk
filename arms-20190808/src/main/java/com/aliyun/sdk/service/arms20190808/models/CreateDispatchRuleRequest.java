@@ -63,10 +63,10 @@ public class CreateDispatchRuleRequest extends Request {
             super();
         } 
 
-        private Builder(CreateDispatchRuleRequest response) {
-            super(response);
-            this.dispatchRule = response.dispatchRule;
-            this.regionId = response.regionId;
+        private Builder(CreateDispatchRuleRequest request) {
+            super(request);
+            this.dispatchRule = request.dispatchRule;
+            this.regionId = request.regionId;
         } 
 
         /**

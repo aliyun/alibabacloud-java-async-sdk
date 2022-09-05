@@ -77,11 +77,11 @@ public class AddIntegrationRequest extends Request {
             super();
         } 
 
-        private Builder(AddIntegrationRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.integration = response.integration;
-            this.regionId = response.regionId;
+        private Builder(AddIntegrationRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.integration = request.integration;
+            this.regionId = request.regionId;
         } 
 
         /**

@@ -115,14 +115,14 @@ public class ImportAppAlertRulesRequest extends Request {
             super();
         } 
 
-        private Builder(ImportAppAlertRulesRequest response) {
-            super(response);
-            this.contactGroupIds = response.contactGroupIds;
-            this.isAutoStart = response.isAutoStart;
-            this.pids = response.pids;
-            this.regionId = response.regionId;
-            this.templageAlertConfig = response.templageAlertConfig;
-            this.templateAlertId = response.templateAlertId;
+        private Builder(ImportAppAlertRulesRequest request) {
+            super(request);
+            this.contactGroupIds = request.contactGroupIds;
+            this.isAutoStart = request.isAutoStart;
+            this.pids = request.pids;
+            this.regionId = request.regionId;
+            this.templageAlertConfig = request.templageAlertConfig;
+            this.templateAlertId = request.templateAlertId;
         } 
 
         /**

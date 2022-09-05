@@ -75,11 +75,11 @@ public class ListDispatchRuleRequest extends Request {
             super();
         } 
 
-        private Builder(ListDispatchRuleRequest response) {
-            super(response);
-            this.name = response.name;
-            this.regionId = response.regionId;
-            this.system = response.system;
+        private Builder(ListDispatchRuleRequest request) {
+            super(request);
+            this.name = request.name;
+            this.regionId = request.regionId;
+            this.system = request.system;
         } 
 
         /**

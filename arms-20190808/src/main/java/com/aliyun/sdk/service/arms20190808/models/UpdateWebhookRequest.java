@@ -14,6 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class UpdateWebhookRequest extends Request {
     @Query
     @NameInMap("Body")
+    @Validation(required = true)
     private String body;
 
     @Query
@@ -23,6 +24,7 @@ public class UpdateWebhookRequest extends Request {
 
     @Query
     @NameInMap("ContactName")
+    @Validation(required = true)
     private String contactName;
 
     @Query
@@ -35,6 +37,7 @@ public class UpdateWebhookRequest extends Request {
 
     @Query
     @NameInMap("Method")
+    @Validation(required = true)
     private String method;
 
     @Query
@@ -48,6 +51,7 @@ public class UpdateWebhookRequest extends Request {
 
     @Query
     @NameInMap("Url")
+    @Validation(required = true)
     private String url;
 
     private UpdateWebhookRequest(Builder builder) {
@@ -154,17 +158,17 @@ public class UpdateWebhookRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateWebhookRequest response) {
-            super(response);
-            this.body = response.body;
-            this.contactId = response.contactId;
-            this.contactName = response.contactName;
-            this.httpHeaders = response.httpHeaders;
-            this.httpParams = response.httpParams;
-            this.method = response.method;
-            this.recoverBody = response.recoverBody;
-            this.regionId = response.regionId;
-            this.url = response.url;
+        private Builder(UpdateWebhookRequest request) {
+            super(request);
+            this.body = request.body;
+            this.contactId = request.contactId;
+            this.contactName = request.contactName;
+            this.httpHeaders = request.httpHeaders;
+            this.httpParams = request.httpParams;
+            this.method = request.method;
+            this.recoverBody = request.recoverBody;
+            this.regionId = request.regionId;
+            this.url = request.url;
         } 
 
         /**

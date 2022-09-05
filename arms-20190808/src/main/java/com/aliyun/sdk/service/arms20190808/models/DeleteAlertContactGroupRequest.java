@@ -63,10 +63,10 @@ public class DeleteAlertContactGroupRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteAlertContactGroupRequest response) {
-            super(response);
-            this.contactGroupId = response.contactGroupId;
-            this.regionId = response.regionId;
+        private Builder(DeleteAlertContactGroupRequest request) {
+            super(request);
+            this.contactGroupId = request.contactGroupId;
+            this.regionId = request.regionId;
         } 
 
         /**
