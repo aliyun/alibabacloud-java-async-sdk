@@ -113,14 +113,14 @@ public class AssumeRoleWithOIDCRequest extends Request {
             super();
         } 
 
-        private Builder(AssumeRoleWithOIDCRequest response) {
-            super(response);
-            this.durationSeconds = response.durationSeconds;
-            this.OIDCProviderArn = response.OIDCProviderArn;
-            this.OIDCToken = response.OIDCToken;
-            this.policy = response.policy;
-            this.roleArn = response.roleArn;
-            this.roleSessionName = response.roleSessionName;
+        private Builder(AssumeRoleWithOIDCRequest request) {
+            super(request);
+            this.durationSeconds = request.durationSeconds;
+            this.OIDCProviderArn = request.OIDCProviderArn;
+            this.OIDCToken = request.OIDCToken;
+            this.policy = request.policy;
+            this.roleArn = request.roleArn;
+            this.roleSessionName = request.roleSessionName;
         } 
 
         /**

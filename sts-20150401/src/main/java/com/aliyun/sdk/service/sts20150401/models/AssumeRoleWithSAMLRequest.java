@@ -100,13 +100,13 @@ public class AssumeRoleWithSAMLRequest extends Request {
             super();
         } 
 
-        private Builder(AssumeRoleWithSAMLRequest response) {
-            super(response);
-            this.durationSeconds = response.durationSeconds;
-            this.policy = response.policy;
-            this.roleArn = response.roleArn;
-            this.SAMLAssertion = response.SAMLAssertion;
-            this.SAMLProviderArn = response.SAMLProviderArn;
+        private Builder(AssumeRoleWithSAMLRequest request) {
+            super(request);
+            this.durationSeconds = request.durationSeconds;
+            this.policy = request.policy;
+            this.roleArn = request.roleArn;
+            this.SAMLAssertion = request.SAMLAssertion;
+            this.SAMLProviderArn = request.SAMLProviderArn;
         } 
 
         /**

@@ -35,8 +35,8 @@ public class GetCallerIdentityRequest extends Request {
             super();
         } 
 
-        private Builder(GetCallerIdentityRequest response) {
-            super(response);
+        private Builder(GetCallerIdentityRequest request) {
+            super(request);
         } 
 
         @Override

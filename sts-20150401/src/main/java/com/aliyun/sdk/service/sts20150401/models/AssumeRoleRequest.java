@@ -89,12 +89,12 @@ public class AssumeRoleRequest extends Request {
             super();
         } 
 
-        private Builder(AssumeRoleRequest response) {
-            super(response);
-            this.durationSeconds = response.durationSeconds;
-            this.policy = response.policy;
-            this.roleArn = response.roleArn;
-            this.roleSessionName = response.roleSessionName;
+        private Builder(AssumeRoleRequest request) {
+            super(request);
+            this.durationSeconds = request.durationSeconds;
+            this.policy = request.policy;
+            this.roleArn = request.roleArn;
+            this.roleSessionName = request.roleSessionName;
         } 
 
         /**
