@@ -34,6 +34,10 @@ public class PreviewStackRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ResourceConfigRules")
+    private java.util.List < ResourceConfigRules> resourceConfigRules;
+
+    @Query
     @NameInMap("StackId")
     private String stackId;
 
@@ -84,6 +88,7 @@ public class PreviewStackRequest extends Request {
         this.parallelism = builder.parallelism;
         this.parameters = builder.parameters;
         this.regionId = builder.regionId;
+        this.resourceConfigRules = builder.resourceConfigRules;
         this.stackId = builder.stackId;
         this.stackName = builder.stackName;
         this.stackPolicyBody = builder.stackPolicyBody;
@@ -143,6 +148,13 @@ public class PreviewStackRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return resourceConfigRules
+     */
+    public java.util.List < ResourceConfigRules> getResourceConfigRules() {
+        return this.resourceConfigRules;
     }
 
     /**
@@ -228,6 +240,7 @@ public class PreviewStackRequest extends Request {
         private Long parallelism; 
         private java.util.List < Parameters> parameters; 
         private String regionId; 
+        private java.util.List < ResourceConfigRules> resourceConfigRules; 
         private String stackId; 
         private String stackName; 
         private String stackPolicyBody; 
@@ -251,6 +264,7 @@ public class PreviewStackRequest extends Request {
             this.parallelism = request.parallelism;
             this.parameters = request.parameters;
             this.regionId = request.regionId;
+            this.resourceConfigRules = request.resourceConfigRules;
             this.stackId = request.stackId;
             this.stackName = request.stackName;
             this.stackPolicyBody = request.stackPolicyBody;
@@ -306,6 +320,16 @@ public class PreviewStackRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceConfigRules.
+         */
+        public Builder resourceConfigRules(java.util.List < ResourceConfigRules> resourceConfigRules) {
+            String resourceConfigRulesShrink = shrink(resourceConfigRules, "ResourceConfigRules", "json");
+            this.putQueryParameter("ResourceConfigRules", resourceConfigRulesShrink);
+            this.resourceConfigRules = resourceConfigRules;
             return this;
         }
 
@@ -473,6 +497,87 @@ public class PreviewStackRequest extends Request {
 
             public Parameters build() {
                 return new Parameters(this);
+            } 
+
+        } 
+
+    }
+    public static class ResourceConfigRules extends TeaModel {
+        @NameInMap("Identifier")
+        private String identifier;
+
+        @NameInMap("InputParameters")
+        private java.util.Map < String, ? > inputParameters;
+
+        @NameInMap("ResourceType")
+        private String resourceType;
+
+        private ResourceConfigRules(Builder builder) {
+            this.identifier = builder.identifier;
+            this.inputParameters = builder.inputParameters;
+            this.resourceType = builder.resourceType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ResourceConfigRules create() {
+            return builder().build();
+        }
+
+        /**
+         * @return identifier
+         */
+        public String getIdentifier() {
+            return this.identifier;
+        }
+
+        /**
+         * @return inputParameters
+         */
+        public java.util.Map < String, ? > getInputParameters() {
+            return this.inputParameters;
+        }
+
+        /**
+         * @return resourceType
+         */
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+        public static final class Builder {
+            private String identifier; 
+            private java.util.Map < String, ? > inputParameters; 
+            private String resourceType; 
+
+            /**
+             * Identifier.
+             */
+            public Builder identifier(String identifier) {
+                this.identifier = identifier;
+                return this;
+            }
+
+            /**
+             * InputParameters.
+             */
+            public Builder inputParameters(java.util.Map < String, ? > inputParameters) {
+                this.inputParameters = inputParameters;
+                return this;
+            }
+
+            /**
+             * ResourceType.
+             */
+            public Builder resourceType(String resourceType) {
+                this.resourceType = resourceType;
+                return this;
+            }
+
+            public ResourceConfigRules build() {
+                return new ResourceConfigRules(this);
             } 
 
         } 

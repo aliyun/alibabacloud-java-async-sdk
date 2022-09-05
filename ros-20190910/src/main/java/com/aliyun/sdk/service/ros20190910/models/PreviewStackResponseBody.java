@@ -254,9 +254,113 @@ public class PreviewStackResponseBody extends TeaModel {
         } 
 
     }
+    public static class ConfigRuleEvaluations extends TeaModel {
+        @NameInMap("Annotation")
+        private String annotation;
+
+        @NameInMap("ComplianceType")
+        private String complianceType;
+
+        @NameInMap("HelpUrl")
+        private String helpUrl;
+
+        @NameInMap("Identifier")
+        private String identifier;
+
+        private ConfigRuleEvaluations(Builder builder) {
+            this.annotation = builder.annotation;
+            this.complianceType = builder.complianceType;
+            this.helpUrl = builder.helpUrl;
+            this.identifier = builder.identifier;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ConfigRuleEvaluations create() {
+            return builder().build();
+        }
+
+        /**
+         * @return annotation
+         */
+        public String getAnnotation() {
+            return this.annotation;
+        }
+
+        /**
+         * @return complianceType
+         */
+        public String getComplianceType() {
+            return this.complianceType;
+        }
+
+        /**
+         * @return helpUrl
+         */
+        public String getHelpUrl() {
+            return this.helpUrl;
+        }
+
+        /**
+         * @return identifier
+         */
+        public String getIdentifier() {
+            return this.identifier;
+        }
+
+        public static final class Builder {
+            private String annotation; 
+            private String complianceType; 
+            private String helpUrl; 
+            private String identifier; 
+
+            /**
+             * Annotation.
+             */
+            public Builder annotation(String annotation) {
+                this.annotation = annotation;
+                return this;
+            }
+
+            /**
+             * ComplianceType.
+             */
+            public Builder complianceType(String complianceType) {
+                this.complianceType = complianceType;
+                return this;
+            }
+
+            /**
+             * HelpUrl.
+             */
+            public Builder helpUrl(String helpUrl) {
+                this.helpUrl = helpUrl;
+                return this;
+            }
+
+            /**
+             * Identifier.
+             */
+            public Builder identifier(String identifier) {
+                this.identifier = identifier;
+                return this;
+            }
+
+            public ConfigRuleEvaluations build() {
+                return new ConfigRuleEvaluations(this);
+            } 
+
+        } 
+
+    }
     public static class Resources extends TeaModel {
         @NameInMap("Action")
         private String action;
+
+        @NameInMap("ConfigRuleEvaluations")
+        private java.util.List < ConfigRuleEvaluations> configRuleEvaluations;
 
         @NameInMap("Description")
         private String description;
@@ -281,6 +385,7 @@ public class PreviewStackResponseBody extends TeaModel {
 
         private Resources(Builder builder) {
             this.action = builder.action;
+            this.configRuleEvaluations = builder.configRuleEvaluations;
             this.description = builder.description;
             this.logicalResourceId = builder.logicalResourceId;
             this.properties = builder.properties;
@@ -303,6 +408,13 @@ public class PreviewStackResponseBody extends TeaModel {
          */
         public String getAction() {
             return this.action;
+        }
+
+        /**
+         * @return configRuleEvaluations
+         */
+        public java.util.List < ConfigRuleEvaluations> getConfigRuleEvaluations() {
+            return this.configRuleEvaluations;
         }
 
         /**
@@ -356,6 +468,7 @@ public class PreviewStackResponseBody extends TeaModel {
 
         public static final class Builder {
             private String action; 
+            private java.util.List < ConfigRuleEvaluations> configRuleEvaluations; 
             private String description; 
             private String logicalResourceId; 
             private java.util.Map < String, ? > properties; 
@@ -369,6 +482,14 @@ public class PreviewStackResponseBody extends TeaModel {
              */
             public Builder action(String action) {
                 this.action = action;
+                return this;
+            }
+
+            /**
+             * ConfigRuleEvaluations.
+             */
+            public Builder configRuleEvaluations(java.util.List < ConfigRuleEvaluations> configRuleEvaluations) {
+                this.configRuleEvaluations = configRuleEvaluations;
                 return this;
             }
 
