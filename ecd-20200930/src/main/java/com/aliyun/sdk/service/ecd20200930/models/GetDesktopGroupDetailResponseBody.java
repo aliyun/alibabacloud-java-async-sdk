@@ -75,6 +75,9 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         @NameInMap("CronExpression")
         private String cronExpression;
 
+        @NameInMap("Forced")
+        private Boolean forced;
+
         @NameInMap("Status")
         private Integer status;
 
@@ -83,6 +86,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
 
         private TimerInfos(Builder builder) {
             this.cronExpression = builder.cronExpression;
+            this.forced = builder.forced;
             this.status = builder.status;
             this.timerType = builder.timerType;
         }
@@ -103,6 +107,13 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return forced
+         */
+        public Boolean getForced() {
+            return this.forced;
+        }
+
+        /**
          * @return status
          */
         public Integer getStatus() {
@@ -118,6 +129,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private String cronExpression; 
+            private Boolean forced; 
             private Integer status; 
             private Integer timerType; 
 
@@ -126,6 +138,14 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
              */
             public Builder cronExpression(String cronExpression) {
                 this.cronExpression = cronExpression;
+                return this;
+            }
+
+            /**
+             * Forced.
+             */
+            public Builder forced(Boolean forced) {
+                this.forced = forced;
                 return this;
             }
 
@@ -165,6 +185,9 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         @NameInMap("Comments")
         private String comments;
 
+        @NameInMap("ConnectDuration")
+        private Long connectDuration;
+
         @NameInMap("Cpu")
         private Integer cpu;
 
@@ -200,6 +223,9 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
 
         @NameInMap("GpuSpec")
         private String gpuSpec;
+
+        @NameInMap("IdleDisconnectDuration")
+        private Long idleDisconnectDuration;
 
         @NameInMap("KeepDuration")
         private Long keepDuration;
@@ -243,6 +269,9 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         @NameInMap("PolicyGroupName")
         private String policyGroupName;
 
+        @NameInMap("RatioThreshold")
+        private Float ratioThreshold;
+
         @NameInMap("ResType")
         private Integer resType;
 
@@ -251,6 +280,9 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
 
         @NameInMap("Status")
         private Integer status;
+
+        @NameInMap("StopDuration")
+        private Long stopDuration;
 
         @NameInMap("SystemDiskCategory")
         private String systemDiskCategory;
@@ -261,11 +293,15 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         @NameInMap("TimerInfos")
         private java.util.List < TimerInfos> timerInfos;
 
+        @NameInMap("Version")
+        private Long version;
+
         private Desktops(Builder builder) {
             this.allowAutoSetup = builder.allowAutoSetup;
             this.allowBufferCount = builder.allowBufferCount;
             this.bindAmount = builder.bindAmount;
             this.comments = builder.comments;
+            this.connectDuration = builder.connectDuration;
             this.cpu = builder.cpu;
             this.creationTime = builder.creationTime;
             this.creator = builder.creator;
@@ -278,6 +314,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             this.expiredTime = builder.expiredTime;
             this.gpuCount = builder.gpuCount;
             this.gpuSpec = builder.gpuSpec;
+            this.idleDisconnectDuration = builder.idleDisconnectDuration;
             this.keepDuration = builder.keepDuration;
             this.loadPolicy = builder.loadPolicy;
             this.maxDesktopsCount = builder.maxDesktopsCount;
@@ -292,12 +329,15 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             this.payType = builder.payType;
             this.policyGroupId = builder.policyGroupId;
             this.policyGroupName = builder.policyGroupName;
+            this.ratioThreshold = builder.ratioThreshold;
             this.resType = builder.resType;
             this.resetType = builder.resetType;
             this.status = builder.status;
+            this.stopDuration = builder.stopDuration;
             this.systemDiskCategory = builder.systemDiskCategory;
             this.systemDiskSize = builder.systemDiskSize;
             this.timerInfos = builder.timerInfos;
+            this.version = builder.version;
         }
 
         public static Builder builder() {
@@ -334,6 +374,13 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
          */
         public String getComments() {
             return this.comments;
+        }
+
+        /**
+         * @return connectDuration
+         */
+        public Long getConnectDuration() {
+            return this.connectDuration;
         }
 
         /**
@@ -418,6 +465,13 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
          */
         public String getGpuSpec() {
             return this.gpuSpec;
+        }
+
+        /**
+         * @return idleDisconnectDuration
+         */
+        public Long getIdleDisconnectDuration() {
+            return this.idleDisconnectDuration;
         }
 
         /**
@@ -519,6 +573,13 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return ratioThreshold
+         */
+        public Float getRatioThreshold() {
+            return this.ratioThreshold;
+        }
+
+        /**
          * @return resType
          */
         public Integer getResType() {
@@ -537,6 +598,13 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
          */
         public Integer getStatus() {
             return this.status;
+        }
+
+        /**
+         * @return stopDuration
+         */
+        public Long getStopDuration() {
+            return this.stopDuration;
         }
 
         /**
@@ -560,11 +628,19 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             return this.timerInfos;
         }
 
+        /**
+         * @return version
+         */
+        public Long getVersion() {
+            return this.version;
+        }
+
         public static final class Builder {
             private Integer allowAutoSetup; 
             private Integer allowBufferCount; 
             private Integer bindAmount; 
             private String comments; 
+            private Long connectDuration; 
             private Integer cpu; 
             private String creationTime; 
             private String creator; 
@@ -577,6 +653,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             private String expiredTime; 
             private Float gpuCount; 
             private String gpuSpec; 
+            private Long idleDisconnectDuration; 
             private Long keepDuration; 
             private Integer loadPolicy; 
             private Integer maxDesktopsCount; 
@@ -591,12 +668,15 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             private String payType; 
             private String policyGroupId; 
             private String policyGroupName; 
+            private Float ratioThreshold; 
             private Integer resType; 
             private Integer resetType; 
             private Integer status; 
+            private Long stopDuration; 
             private String systemDiskCategory; 
             private Integer systemDiskSize; 
             private java.util.List < TimerInfos> timerInfos; 
+            private Long version; 
 
             /**
              * AllowAutoSetup.
@@ -627,6 +707,14 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
              */
             public Builder comments(String comments) {
                 this.comments = comments;
+                return this;
+            }
+
+            /**
+             * ConnectDuration.
+             */
+            public Builder connectDuration(Long connectDuration) {
+                this.connectDuration = connectDuration;
                 return this;
             }
 
@@ -723,6 +811,14 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
              */
             public Builder gpuSpec(String gpuSpec) {
                 this.gpuSpec = gpuSpec;
+                return this;
+            }
+
+            /**
+             * IdleDisconnectDuration.
+             */
+            public Builder idleDisconnectDuration(Long idleDisconnectDuration) {
+                this.idleDisconnectDuration = idleDisconnectDuration;
                 return this;
             }
 
@@ -839,6 +935,14 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             }
 
             /**
+             * RatioThreshold.
+             */
+            public Builder ratioThreshold(Float ratioThreshold) {
+                this.ratioThreshold = ratioThreshold;
+                return this;
+            }
+
+            /**
              * ResType.
              */
             public Builder resType(Integer resType) {
@@ -863,6 +967,14 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             }
 
             /**
+             * StopDuration.
+             */
+            public Builder stopDuration(Long stopDuration) {
+                this.stopDuration = stopDuration;
+                return this;
+            }
+
+            /**
              * SystemDiskCategory.
              */
             public Builder systemDiskCategory(String systemDiskCategory) {
@@ -883,6 +995,14 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
              */
             public Builder timerInfos(java.util.List < TimerInfos> timerInfos) {
                 this.timerInfos = timerInfos;
+                return this;
+            }
+
+            /**
+             * Version.
+             */
+            public Builder version(Long version) {
+                this.version = version;
                 return this;
             }
 

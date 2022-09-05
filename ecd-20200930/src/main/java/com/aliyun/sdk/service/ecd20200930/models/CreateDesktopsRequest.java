@@ -92,6 +92,10 @@ public class CreateDesktopsRequest extends Request {
     private String userAssignMode;
 
     @Query
+    @NameInMap("UserCommands")
+    private java.util.List < UserCommands> userCommands;
+
+    @Query
     @NameInMap("UserName")
     private String userName;
 
@@ -128,6 +132,7 @@ public class CreateDesktopsRequest extends Request {
         this.regionId = builder.regionId;
         this.tag = builder.tag;
         this.userAssignMode = builder.userAssignMode;
+        this.userCommands = builder.userCommands;
         this.userName = builder.userName;
         this.volumeEncryptionEnabled = builder.volumeEncryptionEnabled;
         this.volumeEncryptionKey = builder.volumeEncryptionKey;
@@ -281,6 +286,13 @@ public class CreateDesktopsRequest extends Request {
     }
 
     /**
+     * @return userCommands
+     */
+    public java.util.List < UserCommands> getUserCommands() {
+        return this.userCommands;
+    }
+
+    /**
      * @return userName
      */
     public String getUserName() {
@@ -328,6 +340,7 @@ public class CreateDesktopsRequest extends Request {
         private String regionId; 
         private java.util.List < Tag> tag; 
         private String userAssignMode; 
+        private java.util.List < UserCommands> userCommands; 
         private String userName; 
         private Boolean volumeEncryptionEnabled; 
         private String volumeEncryptionKey; 
@@ -358,6 +371,7 @@ public class CreateDesktopsRequest extends Request {
             this.regionId = request.regionId;
             this.tag = request.tag;
             this.userAssignMode = request.userAssignMode;
+            this.userCommands = request.userCommands;
             this.userName = request.userName;
             this.volumeEncryptionEnabled = request.volumeEncryptionEnabled;
             this.volumeEncryptionKey = request.volumeEncryptionKey;
@@ -536,6 +550,15 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
+         * UserCommands.
+         */
+        public Builder userCommands(java.util.List < UserCommands> userCommands) {
+            this.putQueryParameter("UserCommands", userCommands);
+            this.userCommands = userCommands;
+            return this;
+        }
+
+        /**
          * UserName.
          */
         public Builder userName(String userName) {
@@ -634,6 +657,88 @@ public class CreateDesktopsRequest extends Request {
 
             public Tag build() {
                 return new Tag(this);
+            } 
+
+        } 
+
+    }
+    public static class UserCommands extends TeaModel {
+        @NameInMap("Content")
+        @Validation(maxLength = 15000)
+        private String content;
+
+        @NameInMap("ContentEncoding")
+        private String contentEncoding;
+
+        @NameInMap("ContentType")
+        private String contentType;
+
+        private UserCommands(Builder builder) {
+            this.content = builder.content;
+            this.contentEncoding = builder.contentEncoding;
+            this.contentType = builder.contentType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static UserCommands create() {
+            return builder().build();
+        }
+
+        /**
+         * @return content
+         */
+        public String getContent() {
+            return this.content;
+        }
+
+        /**
+         * @return contentEncoding
+         */
+        public String getContentEncoding() {
+            return this.contentEncoding;
+        }
+
+        /**
+         * @return contentType
+         */
+        public String getContentType() {
+            return this.contentType;
+        }
+
+        public static final class Builder {
+            private String content; 
+            private String contentEncoding; 
+            private String contentType; 
+
+            /**
+             * Content.
+             */
+            public Builder content(String content) {
+                this.content = content;
+                return this;
+            }
+
+            /**
+             * 自定义脚本命令编码，默认Base64编码
+             */
+            public Builder contentEncoding(String contentEncoding) {
+                this.contentEncoding = contentEncoding;
+                return this;
+            }
+
+            /**
+             * ContentType.
+             */
+            public Builder contentType(String contentType) {
+                this.contentType = contentType;
+                return this;
+            }
+
+            public UserCommands build() {
+                return new UserCommands(this);
             } 
 
         } 

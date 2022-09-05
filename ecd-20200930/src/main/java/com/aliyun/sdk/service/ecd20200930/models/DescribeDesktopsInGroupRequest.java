@@ -18,6 +18,10 @@ public class DescribeDesktopsInGroupRequest extends Request {
     private String desktopGroupId;
 
     @Query
+    @NameInMap("IgnoreDeleted")
+    private Boolean ignoreDeleted;
+
+    @Query
     @NameInMap("MaxResults")
     private Integer maxResults;
 
@@ -38,6 +42,7 @@ public class DescribeDesktopsInGroupRequest extends Request {
     private DescribeDesktopsInGroupRequest(Builder builder) {
         super(builder);
         this.desktopGroupId = builder.desktopGroupId;
+        this.ignoreDeleted = builder.ignoreDeleted;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.payType = builder.payType;
@@ -62,6 +67,13 @@ public class DescribeDesktopsInGroupRequest extends Request {
      */
     public String getDesktopGroupId() {
         return this.desktopGroupId;
+    }
+
+    /**
+     * @return ignoreDeleted
+     */
+    public Boolean getIgnoreDeleted() {
+        return this.ignoreDeleted;
     }
 
     /**
@@ -94,6 +106,7 @@ public class DescribeDesktopsInGroupRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeDesktopsInGroupRequest, Builder> {
         private String desktopGroupId; 
+        private Boolean ignoreDeleted; 
         private Integer maxResults; 
         private String nextToken; 
         private String payType; 
@@ -106,6 +119,7 @@ public class DescribeDesktopsInGroupRequest extends Request {
         private Builder(DescribeDesktopsInGroupRequest request) {
             super(request);
             this.desktopGroupId = request.desktopGroupId;
+            this.ignoreDeleted = request.ignoreDeleted;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.payType = request.payType;
@@ -118,6 +132,15 @@ public class DescribeDesktopsInGroupRequest extends Request {
         public Builder desktopGroupId(String desktopGroupId) {
             this.putQueryParameter("DesktopGroupId", desktopGroupId);
             this.desktopGroupId = desktopGroupId;
+            return this;
+        }
+
+        /**
+         * IgnoreDeleted.
+         */
+        public Builder ignoreDeleted(Boolean ignoreDeleted) {
+            this.putQueryParameter("IgnoreDeleted", ignoreDeleted);
+            this.ignoreDeleted = ignoreDeleted;
             return this;
         }
 

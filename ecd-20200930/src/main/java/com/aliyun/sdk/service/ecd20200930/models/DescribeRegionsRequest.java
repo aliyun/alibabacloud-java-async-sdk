@@ -13,12 +13,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeRegionsRequest extends Request {
     @Query
+    @NameInMap("AcceptLanguage")
+    private String acceptLanguage;
+
+    @Query
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
 
     private DescribeRegionsRequest(Builder builder) {
         super(builder);
+        this.acceptLanguage = builder.acceptLanguage;
         this.regionId = builder.regionId;
     }
 
@@ -36,6 +41,13 @@ public class DescribeRegionsRequest extends Request {
     }
 
     /**
+     * @return acceptLanguage
+     */
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -43,6 +55,7 @@ public class DescribeRegionsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeRegionsRequest, Builder> {
+        private String acceptLanguage; 
         private String regionId; 
 
         private Builder() {
@@ -51,8 +64,18 @@ public class DescribeRegionsRequest extends Request {
 
         private Builder(DescribeRegionsRequest request) {
             super(request);
+            this.acceptLanguage = request.acceptLanguage;
             this.regionId = request.regionId;
         } 
+
+        /**
+         * AcceptLanguage.
+         */
+        public Builder acceptLanguage(String acceptLanguage) {
+            this.putQueryParameter("AcceptLanguage", acceptLanguage);
+            this.acceptLanguage = acceptLanguage;
+            return this;
+        }
 
         /**
          * RegionId.

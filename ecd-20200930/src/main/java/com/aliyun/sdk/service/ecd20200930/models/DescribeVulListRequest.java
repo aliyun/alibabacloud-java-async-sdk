@@ -29,6 +29,10 @@ public class DescribeVulListRequest extends Request {
     private String lang;
 
     @Query
+    @NameInMap("Name")
+    private String name;
+
+    @Query
     @NameInMap("Necessity")
     private String necessity;
 
@@ -57,6 +61,7 @@ public class DescribeVulListRequest extends Request {
         this.currentPage = builder.currentPage;
         this.dealed = builder.dealed;
         this.lang = builder.lang;
+        this.name = builder.name;
         this.necessity = builder.necessity;
         this.officeSiteId = builder.officeSiteId;
         this.pageSize = builder.pageSize;
@@ -106,6 +111,13 @@ public class DescribeVulListRequest extends Request {
     }
 
     /**
+     * @return name
+     */
+    public String getName() {
+        return this.name;
+    }
+
+    /**
      * @return necessity
      */
     public String getNecessity() {
@@ -145,6 +157,7 @@ public class DescribeVulListRequest extends Request {
         private Integer currentPage; 
         private String dealed; 
         private String lang; 
+        private String name; 
         private String necessity; 
         private String officeSiteId; 
         private Integer pageSize; 
@@ -161,6 +174,7 @@ public class DescribeVulListRequest extends Request {
             this.currentPage = request.currentPage;
             this.dealed = request.dealed;
             this.lang = request.lang;
+            this.name = request.name;
             this.necessity = request.necessity;
             this.officeSiteId = request.officeSiteId;
             this.pageSize = request.pageSize;
@@ -201,6 +215,15 @@ public class DescribeVulListRequest extends Request {
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
             this.lang = lang;
+            return this;
+        }
+
+        /**
+         * Name.
+         */
+        public Builder name(String name) {
+            this.putQueryParameter("Name", name);
+            this.name = name;
             return this;
         }
 

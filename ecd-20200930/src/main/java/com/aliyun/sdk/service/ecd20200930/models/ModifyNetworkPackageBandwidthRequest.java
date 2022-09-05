@@ -18,7 +18,7 @@ public class ModifyNetworkPackageBandwidthRequest extends Request {
 
     @Query
     @NameInMap("Bandwidth")
-    @Validation(required = true, maximum = 1000, minimum = 10)
+    @Validation(required = true, maximum = 1000, minimum = 2)
     private Integer bandwidth;
 
     @Query

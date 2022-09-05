@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreatePolicyGroupRequest extends Request {
     @Query
+    @NameInMap("AppContentProtection")
+    private String appContentProtection;
+
+    @Query
     @NameInMap("AuthorizeAccessPolicyRule")
     private java.util.List < AuthorizeAccessPolicyRule> authorizeAccessPolicyRule;
 
@@ -73,12 +77,24 @@ public class CreatePolicyGroupRequest extends Request {
     private String printerRedirection;
 
     @Query
+    @NameInMap("RecordContent")
+    private String recordContent;
+
+    @Query
+    @NameInMap("RecordContentExpires")
+    private Long recordContentExpires;
+
+    @Query
     @NameInMap("Recording")
     private String recording;
 
     @Query
     @NameInMap("RecordingEndTime")
     private String recordingEndTime;
+
+    @Query
+    @NameInMap("RecordingExpires")
+    private Long recordingExpires;
 
     @Query
     @NameInMap("RecordingFps")
@@ -119,6 +135,7 @@ public class CreatePolicyGroupRequest extends Request {
 
     private CreatePolicyGroupRequest(Builder builder) {
         super(builder);
+        this.appContentProtection = builder.appContentProtection;
         this.authorizeAccessPolicyRule = builder.authorizeAccessPolicyRule;
         this.authorizeSecurityPolicyRule = builder.authorizeSecurityPolicyRule;
         this.cameraRedirect = builder.cameraRedirect;
@@ -134,8 +151,11 @@ public class CreatePolicyGroupRequest extends Request {
         this.preemptLogin = builder.preemptLogin;
         this.preemptLoginUser = builder.preemptLoginUser;
         this.printerRedirection = builder.printerRedirection;
+        this.recordContent = builder.recordContent;
+        this.recordContentExpires = builder.recordContentExpires;
         this.recording = builder.recording;
         this.recordingEndTime = builder.recordingEndTime;
+        this.recordingExpires = builder.recordingExpires;
         this.recordingFps = builder.recordingFps;
         this.recordingStartTime = builder.recordingStartTime;
         this.regionId = builder.regionId;
@@ -158,6 +178,13 @@ public class CreatePolicyGroupRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return appContentProtection
+     */
+    public String getAppContentProtection() {
+        return this.appContentProtection;
     }
 
     /**
@@ -266,6 +293,20 @@ public class CreatePolicyGroupRequest extends Request {
     }
 
     /**
+     * @return recordContent
+     */
+    public String getRecordContent() {
+        return this.recordContent;
+    }
+
+    /**
+     * @return recordContentExpires
+     */
+    public Long getRecordContentExpires() {
+        return this.recordContentExpires;
+    }
+
+    /**
      * @return recording
      */
     public String getRecording() {
@@ -277,6 +318,13 @@ public class CreatePolicyGroupRequest extends Request {
      */
     public String getRecordingEndTime() {
         return this.recordingEndTime;
+    }
+
+    /**
+     * @return recordingExpires
+     */
+    public Long getRecordingExpires() {
+        return this.recordingExpires;
     }
 
     /**
@@ -343,6 +391,7 @@ public class CreatePolicyGroupRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreatePolicyGroupRequest, Builder> {
+        private String appContentProtection; 
         private java.util.List < AuthorizeAccessPolicyRule> authorizeAccessPolicyRule; 
         private java.util.List < AuthorizeSecurityPolicyRule> authorizeSecurityPolicyRule; 
         private String cameraRedirect; 
@@ -358,8 +407,11 @@ public class CreatePolicyGroupRequest extends Request {
         private String preemptLogin; 
         private java.util.List < String > preemptLoginUser; 
         private String printerRedirection; 
+        private String recordContent; 
+        private Long recordContentExpires; 
         private String recording; 
         private String recordingEndTime; 
+        private Long recordingExpires; 
         private Long recordingFps; 
         private String recordingStartTime; 
         private String regionId; 
@@ -376,6 +428,7 @@ public class CreatePolicyGroupRequest extends Request {
 
         private Builder(CreatePolicyGroupRequest request) {
             super(request);
+            this.appContentProtection = request.appContentProtection;
             this.authorizeAccessPolicyRule = request.authorizeAccessPolicyRule;
             this.authorizeSecurityPolicyRule = request.authorizeSecurityPolicyRule;
             this.cameraRedirect = request.cameraRedirect;
@@ -391,8 +444,11 @@ public class CreatePolicyGroupRequest extends Request {
             this.preemptLogin = request.preemptLogin;
             this.preemptLoginUser = request.preemptLoginUser;
             this.printerRedirection = request.printerRedirection;
+            this.recordContent = request.recordContent;
+            this.recordContentExpires = request.recordContentExpires;
             this.recording = request.recording;
             this.recordingEndTime = request.recordingEndTime;
+            this.recordingExpires = request.recordingExpires;
             this.recordingFps = request.recordingFps;
             this.recordingStartTime = request.recordingStartTime;
             this.regionId = request.regionId;
@@ -403,6 +459,15 @@ public class CreatePolicyGroupRequest extends Request {
             this.watermarkTransparency = request.watermarkTransparency;
             this.watermarkType = request.watermarkType;
         } 
+
+        /**
+         * AppContentProtection.
+         */
+        public Builder appContentProtection(String appContentProtection) {
+            this.putQueryParameter("AppContentProtection", appContentProtection);
+            this.appContentProtection = appContentProtection;
+            return this;
+        }
 
         /**
          * AuthorizeAccessPolicyRule.
@@ -540,6 +605,24 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
+         * RecordContent.
+         */
+        public Builder recordContent(String recordContent) {
+            this.putQueryParameter("RecordContent", recordContent);
+            this.recordContent = recordContent;
+            return this;
+        }
+
+        /**
+         * RecordContentExpires.
+         */
+        public Builder recordContentExpires(Long recordContentExpires) {
+            this.putQueryParameter("RecordContentExpires", recordContentExpires);
+            this.recordContentExpires = recordContentExpires;
+            return this;
+        }
+
+        /**
          * Recording.
          */
         public Builder recording(String recording) {
@@ -554,6 +637,15 @@ public class CreatePolicyGroupRequest extends Request {
         public Builder recordingEndTime(String recordingEndTime) {
             this.putQueryParameter("RecordingEndTime", recordingEndTime);
             this.recordingEndTime = recordingEndTime;
+            return this;
+        }
+
+        /**
+         * RecordingExpires.
+         */
+        public Builder recordingExpires(Long recordingExpires) {
+            this.putQueryParameter("RecordingExpires", recordingExpires);
+            this.recordingExpires = recordingExpires;
             return this;
         }
 

@@ -72,6 +72,9 @@ public class DescribeRegionsResponseBody extends TeaModel {
     } 
 
     public static class Regions extends TeaModel {
+        @NameInMap("LocalName")
+        private String localName;
+
         @NameInMap("RegionEndpoint")
         private String regionEndpoint;
 
@@ -79,6 +82,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         private String regionId;
 
         private Regions(Builder builder) {
+            this.localName = builder.localName;
             this.regionEndpoint = builder.regionEndpoint;
             this.regionId = builder.regionId;
         }
@@ -89,6 +93,13 @@ public class DescribeRegionsResponseBody extends TeaModel {
 
         public static Regions create() {
             return builder().build();
+        }
+
+        /**
+         * @return localName
+         */
+        public String getLocalName() {
+            return this.localName;
         }
 
         /**
@@ -106,8 +117,17 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String localName; 
             private String regionEndpoint; 
             private String regionId; 
+
+            /**
+             * LocalName.
+             */
+            public Builder localName(String localName) {
+                this.localName = localName;
+                return this;
+            }
 
             /**
              * RegionEndpoint.

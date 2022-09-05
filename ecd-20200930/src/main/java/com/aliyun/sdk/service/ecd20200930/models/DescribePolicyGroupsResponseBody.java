@@ -536,6 +536,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
 
     }
     public static class DescribePolicyGroups extends TeaModel {
+        @NameInMap("AppContentProtection")
+        private String appContentProtection;
+
         @NameInMap("AuthorizeAccessPolicyRules")
         private java.util.List < AuthorizeAccessPolicyRules> authorizeAccessPolicyRules;
 
@@ -593,11 +596,20 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @NameInMap("PrinterRedirection")
         private String printerRedirection;
 
+        @NameInMap("RecordContent")
+        private String recordContent;
+
+        @NameInMap("RecordContentExpires")
+        private Long recordContentExpires;
+
         @NameInMap("Recording")
         private String recording;
 
         @NameInMap("RecordingEndTime")
         private String recordingEndTime;
+
+        @NameInMap("RecordingExpires")
+        private Long recordingExpires;
 
         @NameInMap("RecordingFps")
         private Long recordingFps;
@@ -627,6 +639,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         private String watermarkType;
 
         private DescribePolicyGroups(Builder builder) {
+            this.appContentProtection = builder.appContentProtection;
             this.authorizeAccessPolicyRules = builder.authorizeAccessPolicyRules;
             this.authorizeSecurityPolicyRules = builder.authorizeSecurityPolicyRules;
             this.cameraRedirect = builder.cameraRedirect;
@@ -646,8 +659,11 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             this.preemptLogin = builder.preemptLogin;
             this.preemptLoginUsers = builder.preemptLoginUsers;
             this.printerRedirection = builder.printerRedirection;
+            this.recordContent = builder.recordContent;
+            this.recordContentExpires = builder.recordContentExpires;
             this.recording = builder.recording;
             this.recordingEndTime = builder.recordingEndTime;
+            this.recordingExpires = builder.recordingExpires;
             this.recordingFps = builder.recordingFps;
             this.recordingStartTime = builder.recordingStartTime;
             this.usbRedirect = builder.usbRedirect;
@@ -665,6 +681,13 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
 
         public static DescribePolicyGroups create() {
             return builder().build();
+        }
+
+        /**
+         * @return appContentProtection
+         */
+        public String getAppContentProtection() {
+            return this.appContentProtection;
         }
 
         /**
@@ -801,6 +824,20 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return recordContent
+         */
+        public String getRecordContent() {
+            return this.recordContent;
+        }
+
+        /**
+         * @return recordContentExpires
+         */
+        public Long getRecordContentExpires() {
+            return this.recordContentExpires;
+        }
+
+        /**
          * @return recording
          */
         public String getRecording() {
@@ -812,6 +849,13 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
          */
         public String getRecordingEndTime() {
             return this.recordingEndTime;
+        }
+
+        /**
+         * @return recordingExpires
+         */
+        public Long getRecordingExpires() {
+            return this.recordingExpires;
         }
 
         /**
@@ -878,6 +922,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String appContentProtection; 
             private java.util.List < AuthorizeAccessPolicyRules> authorizeAccessPolicyRules; 
             private java.util.List < AuthorizeSecurityPolicyRules> authorizeSecurityPolicyRules; 
             private String cameraRedirect; 
@@ -897,8 +942,11 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             private String preemptLogin; 
             private java.util.List < String > preemptLoginUsers; 
             private String printerRedirection; 
+            private String recordContent; 
+            private Long recordContentExpires; 
             private String recording; 
             private String recordingEndTime; 
+            private Long recordingExpires; 
             private Long recordingFps; 
             private String recordingStartTime; 
             private String usbRedirect; 
@@ -908,6 +956,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             private String watermarkCustomText; 
             private String watermarkTransparency; 
             private String watermarkType; 
+
+            /**
+             * AppContentProtection.
+             */
+            public Builder appContentProtection(String appContentProtection) {
+                this.appContentProtection = appContentProtection;
+                return this;
+            }
 
             /**
              * AuthorizeAccessPolicyRules.
@@ -1062,6 +1118,22 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
+             * RecordContent.
+             */
+            public Builder recordContent(String recordContent) {
+                this.recordContent = recordContent;
+                return this;
+            }
+
+            /**
+             * RecordContentExpires.
+             */
+            public Builder recordContentExpires(Long recordContentExpires) {
+                this.recordContentExpires = recordContentExpires;
+                return this;
+            }
+
+            /**
              * Recording.
              */
             public Builder recording(String recording) {
@@ -1074,6 +1146,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
              */
             public Builder recordingEndTime(String recordingEndTime) {
                 this.recordingEndTime = recordingEndTime;
+                return this;
+            }
+
+            /**
+             * RecordingExpires.
+             */
+            public Builder recordingExpires(Long recordingExpires) {
+                this.recordingExpires = recordingExpires;
                 return this;
             }
 

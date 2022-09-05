@@ -35,6 +35,10 @@ public class ModifyDesktopGroupRequest extends Request {
     private String comments;
 
     @Query
+    @NameInMap("ConnectDuration")
+    private Long connectDuration;
+
+    @Query
     @NameInMap("DesktopGroupId")
     @Validation(required = true)
     private String desktopGroupId;
@@ -42,6 +46,14 @@ public class ModifyDesktopGroupRequest extends Request {
     @Query
     @NameInMap("DesktopGroupName")
     private String desktopGroupName;
+
+    @Query
+    @NameInMap("DisableSessionConfig")
+    private Boolean disableSessionConfig;
+
+    @Query
+    @NameInMap("IdleDisconnectDuration")
+    private Long idleDisconnectDuration;
 
     @Query
     @NameInMap("ImageId")
@@ -74,6 +86,10 @@ public class ModifyDesktopGroupRequest extends Request {
     private String policyGroupId;
 
     @Query
+    @NameInMap("RatioThreshold")
+    private Float ratioThreshold;
+
+    @Query
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
@@ -86,6 +102,10 @@ public class ModifyDesktopGroupRequest extends Request {
     @NameInMap("ScaleStrategyId")
     private String scaleStrategyId;
 
+    @Query
+    @NameInMap("StopDuration")
+    private Long stopDuration;
+
     private ModifyDesktopGroupRequest(Builder builder) {
         super(builder);
         this.allowAutoSetup = builder.allowAutoSetup;
@@ -93,8 +113,11 @@ public class ModifyDesktopGroupRequest extends Request {
         this.bindAmount = builder.bindAmount;
         this.classify = builder.classify;
         this.comments = builder.comments;
+        this.connectDuration = builder.connectDuration;
         this.desktopGroupId = builder.desktopGroupId;
         this.desktopGroupName = builder.desktopGroupName;
+        this.disableSessionConfig = builder.disableSessionConfig;
+        this.idleDisconnectDuration = builder.idleDisconnectDuration;
         this.imageId = builder.imageId;
         this.keepDuration = builder.keepDuration;
         this.loadPolicy = builder.loadPolicy;
@@ -102,9 +125,11 @@ public class ModifyDesktopGroupRequest extends Request {
         this.minDesktopsCount = builder.minDesktopsCount;
         this.ownBundleId = builder.ownBundleId;
         this.policyGroupId = builder.policyGroupId;
+        this.ratioThreshold = builder.ratioThreshold;
         this.regionId = builder.regionId;
         this.resetType = builder.resetType;
         this.scaleStrategyId = builder.scaleStrategyId;
+        this.stopDuration = builder.stopDuration;
     }
 
     public static Builder builder() {
@@ -156,6 +181,13 @@ public class ModifyDesktopGroupRequest extends Request {
     }
 
     /**
+     * @return connectDuration
+     */
+    public Long getConnectDuration() {
+        return this.connectDuration;
+    }
+
+    /**
      * @return desktopGroupId
      */
     public String getDesktopGroupId() {
@@ -167,6 +199,20 @@ public class ModifyDesktopGroupRequest extends Request {
      */
     public String getDesktopGroupName() {
         return this.desktopGroupName;
+    }
+
+    /**
+     * @return disableSessionConfig
+     */
+    public Boolean getDisableSessionConfig() {
+        return this.disableSessionConfig;
+    }
+
+    /**
+     * @return idleDisconnectDuration
+     */
+    public Long getIdleDisconnectDuration() {
+        return this.idleDisconnectDuration;
     }
 
     /**
@@ -219,6 +265,13 @@ public class ModifyDesktopGroupRequest extends Request {
     }
 
     /**
+     * @return ratioThreshold
+     */
+    public Float getRatioThreshold() {
+        return this.ratioThreshold;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -239,14 +292,24 @@ public class ModifyDesktopGroupRequest extends Request {
         return this.scaleStrategyId;
     }
 
+    /**
+     * @return stopDuration
+     */
+    public Long getStopDuration() {
+        return this.stopDuration;
+    }
+
     public static final class Builder extends Request.Builder<ModifyDesktopGroupRequest, Builder> {
         private Integer allowAutoSetup; 
         private Integer allowBufferCount; 
         private Long bindAmount; 
         private String classify; 
         private String comments; 
+        private Long connectDuration; 
         private String desktopGroupId; 
         private String desktopGroupName; 
+        private Boolean disableSessionConfig; 
+        private Long idleDisconnectDuration; 
         private String imageId; 
         private Long keepDuration; 
         private Long loadPolicy; 
@@ -254,9 +317,11 @@ public class ModifyDesktopGroupRequest extends Request {
         private Integer minDesktopsCount; 
         private String ownBundleId; 
         private String policyGroupId; 
+        private Float ratioThreshold; 
         private String regionId; 
         private Long resetType; 
         private String scaleStrategyId; 
+        private Long stopDuration; 
 
         private Builder() {
             super();
@@ -269,8 +334,11 @@ public class ModifyDesktopGroupRequest extends Request {
             this.bindAmount = request.bindAmount;
             this.classify = request.classify;
             this.comments = request.comments;
+            this.connectDuration = request.connectDuration;
             this.desktopGroupId = request.desktopGroupId;
             this.desktopGroupName = request.desktopGroupName;
+            this.disableSessionConfig = request.disableSessionConfig;
+            this.idleDisconnectDuration = request.idleDisconnectDuration;
             this.imageId = request.imageId;
             this.keepDuration = request.keepDuration;
             this.loadPolicy = request.loadPolicy;
@@ -278,9 +346,11 @@ public class ModifyDesktopGroupRequest extends Request {
             this.minDesktopsCount = request.minDesktopsCount;
             this.ownBundleId = request.ownBundleId;
             this.policyGroupId = request.policyGroupId;
+            this.ratioThreshold = request.ratioThreshold;
             this.regionId = request.regionId;
             this.resetType = request.resetType;
             this.scaleStrategyId = request.scaleStrategyId;
+            this.stopDuration = request.stopDuration;
         } 
 
         /**
@@ -329,6 +399,15 @@ public class ModifyDesktopGroupRequest extends Request {
         }
 
         /**
+         * ConnectDuration.
+         */
+        public Builder connectDuration(Long connectDuration) {
+            this.putQueryParameter("ConnectDuration", connectDuration);
+            this.connectDuration = connectDuration;
+            return this;
+        }
+
+        /**
          * DesktopGroupId.
          */
         public Builder desktopGroupId(String desktopGroupId) {
@@ -343,6 +422,24 @@ public class ModifyDesktopGroupRequest extends Request {
         public Builder desktopGroupName(String desktopGroupName) {
             this.putQueryParameter("DesktopGroupName", desktopGroupName);
             this.desktopGroupName = desktopGroupName;
+            return this;
+        }
+
+        /**
+         * DisableSessionConfig.
+         */
+        public Builder disableSessionConfig(Boolean disableSessionConfig) {
+            this.putQueryParameter("DisableSessionConfig", disableSessionConfig);
+            this.disableSessionConfig = disableSessionConfig;
+            return this;
+        }
+
+        /**
+         * IdleDisconnectDuration.
+         */
+        public Builder idleDisconnectDuration(Long idleDisconnectDuration) {
+            this.putQueryParameter("IdleDisconnectDuration", idleDisconnectDuration);
+            this.idleDisconnectDuration = idleDisconnectDuration;
             return this;
         }
 
@@ -410,6 +507,15 @@ public class ModifyDesktopGroupRequest extends Request {
         }
 
         /**
+         * RatioThreshold.
+         */
+        public Builder ratioThreshold(Float ratioThreshold) {
+            this.putQueryParameter("RatioThreshold", ratioThreshold);
+            this.ratioThreshold = ratioThreshold;
+            return this;
+        }
+
+        /**
          * RegionId.
          */
         public Builder regionId(String regionId) {
@@ -433,6 +539,15 @@ public class ModifyDesktopGroupRequest extends Request {
         public Builder scaleStrategyId(String scaleStrategyId) {
             this.putQueryParameter("ScaleStrategyId", scaleStrategyId);
             this.scaleStrategyId = scaleStrategyId;
+            return this;
+        }
+
+        /**
+         * StopDuration.
+         */
+        public Builder stopDuration(Long stopDuration) {
+            this.putQueryParameter("StopDuration", stopDuration);
+            this.stopDuration = stopDuration;
             return this;
         }
 

@@ -422,6 +422,9 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
         @NameInMap("ExternalInfo")
         private ExternalInfo externalInfo;
 
+        @NameInMap("UserDesktopId")
+        private String userDesktopId;
+
         @NameInMap("UserSetPropertiesModels")
         private java.util.List < UserSetPropertiesModels> userSetPropertiesModels;
 
@@ -435,6 +438,7 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             this.endUserPhone = builder.endUserPhone;
             this.endUserType = builder.endUserType;
             this.externalInfo = builder.externalInfo;
+            this.userDesktopId = builder.userDesktopId;
             this.userSetPropertiesModels = builder.userSetPropertiesModels;
         }
 
@@ -510,6 +514,13 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
         }
 
         /**
+         * @return userDesktopId
+         */
+        public String getUserDesktopId() {
+            return this.userDesktopId;
+        }
+
+        /**
          * @return userSetPropertiesModels
          */
         public java.util.List < UserSetPropertiesModels> getUserSetPropertiesModels() {
@@ -526,6 +537,7 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             private String endUserPhone; 
             private String endUserType; 
             private ExternalInfo externalInfo; 
+            private String userDesktopId; 
             private java.util.List < UserSetPropertiesModels> userSetPropertiesModels; 
 
             /**
@@ -597,6 +609,14 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
              */
             public Builder externalInfo(ExternalInfo externalInfo) {
                 this.externalInfo = externalInfo;
+                return this;
+            }
+
+            /**
+             * UserDesktopId.
+             */
+            public Builder userDesktopId(String userDesktopId) {
+                this.userDesktopId = userDesktopId;
                 return this;
             }
 

@@ -41,6 +41,7 @@ public class CreateDesktopGroupRequest extends Request {
 
     @Query
     @NameInMap("ChargeType")
+    @Validation(required = true)
     private String chargeType;
 
     @Query
@@ -54,6 +55,10 @@ public class CreateDesktopGroupRequest extends Request {
     @Query
     @NameInMap("Comments")
     private String comments;
+
+    @Query
+    @NameInMap("ConnectDuration")
+    private Long connectDuration;
 
     @Query
     @NameInMap("DefaultInitDesktopCount")
@@ -71,6 +76,10 @@ public class CreateDesktopGroupRequest extends Request {
     @Query
     @NameInMap("EndUserIds")
     private java.util.List < String > endUserIds;
+
+    @Query
+    @NameInMap("IdleDisconnectDuration")
+    private Long idleDisconnectDuration;
 
     @Query
     @NameInMap("KeepDuration")
@@ -112,6 +121,10 @@ public class CreateDesktopGroupRequest extends Request {
     private String policyGroupId;
 
     @Query
+    @NameInMap("RatioThreshold")
+    private Float ratioThreshold;
+
+    @Query
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
@@ -123,6 +136,10 @@ public class CreateDesktopGroupRequest extends Request {
     @Query
     @NameInMap("ScaleStrategyId")
     private String scaleStrategyId;
+
+    @Query
+    @NameInMap("StopDuration")
+    private Long stopDuration;
 
     @Query
     @NameInMap("VolumeEncryptionEnabled")
@@ -148,10 +165,12 @@ public class CreateDesktopGroupRequest extends Request {
         this.classify = builder.classify;
         this.clientToken = builder.clientToken;
         this.comments = builder.comments;
+        this.connectDuration = builder.connectDuration;
         this.defaultInitDesktopCount = builder.defaultInitDesktopCount;
         this.desktopGroupName = builder.desktopGroupName;
         this.directoryId = builder.directoryId;
         this.endUserIds = builder.endUserIds;
+        this.idleDisconnectDuration = builder.idleDisconnectDuration;
         this.keepDuration = builder.keepDuration;
         this.loadPolicy = builder.loadPolicy;
         this.maxDesktopsCount = builder.maxDesktopsCount;
@@ -161,9 +180,11 @@ public class CreateDesktopGroupRequest extends Request {
         this.period = builder.period;
         this.periodUnit = builder.periodUnit;
         this.policyGroupId = builder.policyGroupId;
+        this.ratioThreshold = builder.ratioThreshold;
         this.regionId = builder.regionId;
         this.resetType = builder.resetType;
         this.scaleStrategyId = builder.scaleStrategyId;
+        this.stopDuration = builder.stopDuration;
         this.volumeEncryptionEnabled = builder.volumeEncryptionEnabled;
         this.volumeEncryptionKey = builder.volumeEncryptionKey;
         this.vpcId = builder.vpcId;
@@ -253,6 +274,13 @@ public class CreateDesktopGroupRequest extends Request {
     }
 
     /**
+     * @return connectDuration
+     */
+    public Long getConnectDuration() {
+        return this.connectDuration;
+    }
+
+    /**
      * @return defaultInitDesktopCount
      */
     public Integer getDefaultInitDesktopCount() {
@@ -278,6 +306,13 @@ public class CreateDesktopGroupRequest extends Request {
      */
     public java.util.List < String > getEndUserIds() {
         return this.endUserIds;
+    }
+
+    /**
+     * @return idleDisconnectDuration
+     */
+    public Long getIdleDisconnectDuration() {
+        return this.idleDisconnectDuration;
     }
 
     /**
@@ -344,6 +379,13 @@ public class CreateDesktopGroupRequest extends Request {
     }
 
     /**
+     * @return ratioThreshold
+     */
+    public Float getRatioThreshold() {
+        return this.ratioThreshold;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -362,6 +404,13 @@ public class CreateDesktopGroupRequest extends Request {
      */
     public String getScaleStrategyId() {
         return this.scaleStrategyId;
+    }
+
+    /**
+     * @return stopDuration
+     */
+    public Long getStopDuration() {
+        return this.stopDuration;
     }
 
     /**
@@ -396,10 +445,12 @@ public class CreateDesktopGroupRequest extends Request {
         private String classify; 
         private String clientToken; 
         private String comments; 
+        private Long connectDuration; 
         private Integer defaultInitDesktopCount; 
         private String desktopGroupName; 
         private String directoryId; 
         private java.util.List < String > endUserIds; 
+        private Long idleDisconnectDuration; 
         private Long keepDuration; 
         private Long loadPolicy; 
         private Integer maxDesktopsCount; 
@@ -409,9 +460,11 @@ public class CreateDesktopGroupRequest extends Request {
         private Integer period; 
         private String periodUnit; 
         private String policyGroupId; 
+        private Float ratioThreshold; 
         private String regionId; 
         private Long resetType; 
         private String scaleStrategyId; 
+        private Long stopDuration; 
         private Boolean volumeEncryptionEnabled; 
         private String volumeEncryptionKey; 
         private String vpcId; 
@@ -432,10 +485,12 @@ public class CreateDesktopGroupRequest extends Request {
             this.classify = request.classify;
             this.clientToken = request.clientToken;
             this.comments = request.comments;
+            this.connectDuration = request.connectDuration;
             this.defaultInitDesktopCount = request.defaultInitDesktopCount;
             this.desktopGroupName = request.desktopGroupName;
             this.directoryId = request.directoryId;
             this.endUserIds = request.endUserIds;
+            this.idleDisconnectDuration = request.idleDisconnectDuration;
             this.keepDuration = request.keepDuration;
             this.loadPolicy = request.loadPolicy;
             this.maxDesktopsCount = request.maxDesktopsCount;
@@ -445,9 +500,11 @@ public class CreateDesktopGroupRequest extends Request {
             this.period = request.period;
             this.periodUnit = request.periodUnit;
             this.policyGroupId = request.policyGroupId;
+            this.ratioThreshold = request.ratioThreshold;
             this.regionId = request.regionId;
             this.resetType = request.resetType;
             this.scaleStrategyId = request.scaleStrategyId;
+            this.stopDuration = request.stopDuration;
             this.volumeEncryptionEnabled = request.volumeEncryptionEnabled;
             this.volumeEncryptionKey = request.volumeEncryptionKey;
             this.vpcId = request.vpcId;
@@ -544,6 +601,15 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
+         * ConnectDuration.
+         */
+        public Builder connectDuration(Long connectDuration) {
+            this.putQueryParameter("ConnectDuration", connectDuration);
+            this.connectDuration = connectDuration;
+            return this;
+        }
+
+        /**
          * DefaultInitDesktopCount.
          */
         public Builder defaultInitDesktopCount(Integer defaultInitDesktopCount) {
@@ -576,6 +642,15 @@ public class CreateDesktopGroupRequest extends Request {
         public Builder endUserIds(java.util.List < String > endUserIds) {
             this.putQueryParameter("EndUserIds", endUserIds);
             this.endUserIds = endUserIds;
+            return this;
+        }
+
+        /**
+         * IdleDisconnectDuration.
+         */
+        public Builder idleDisconnectDuration(Long idleDisconnectDuration) {
+            this.putQueryParameter("IdleDisconnectDuration", idleDisconnectDuration);
+            this.idleDisconnectDuration = idleDisconnectDuration;
             return this;
         }
 
@@ -661,6 +736,15 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
+         * RatioThreshold.
+         */
+        public Builder ratioThreshold(Float ratioThreshold) {
+            this.putQueryParameter("RatioThreshold", ratioThreshold);
+            this.ratioThreshold = ratioThreshold;
+            return this;
+        }
+
+        /**
          * RegionId.
          */
         public Builder regionId(String regionId) {
@@ -684,6 +768,15 @@ public class CreateDesktopGroupRequest extends Request {
         public Builder scaleStrategyId(String scaleStrategyId) {
             this.putQueryParameter("ScaleStrategyId", scaleStrategyId);
             this.scaleStrategyId = scaleStrategyId;
+            return this;
+        }
+
+        /**
+         * StopDuration.
+         */
+        public Builder stopDuration(Long stopDuration) {
+            this.putQueryParameter("StopDuration", stopDuration);
+            this.stopDuration = stopDuration;
             return this;
         }
 

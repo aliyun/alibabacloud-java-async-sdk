@@ -119,6 +119,9 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
         @NameInMap("OfficeSiteName")
         private String officeSiteName;
 
+        @NameInMap("OfficeSiteVpcType")
+        private String officeSiteVpcType;
+
         private NetworkPackages(Builder builder) {
             this.bandwidth = builder.bandwidth;
             this.createTime = builder.createTime;
@@ -129,6 +132,7 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
             this.networkPackageStatus = builder.networkPackageStatus;
             this.officeSiteId = builder.officeSiteId;
             this.officeSiteName = builder.officeSiteName;
+            this.officeSiteVpcType = builder.officeSiteVpcType;
         }
 
         public static Builder builder() {
@@ -202,6 +206,13 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
             return this.officeSiteName;
         }
 
+        /**
+         * @return officeSiteVpcType
+         */
+        public String getOfficeSiteVpcType() {
+            return this.officeSiteVpcType;
+        }
+
         public static final class Builder {
             private Integer bandwidth; 
             private String createTime; 
@@ -212,6 +223,7 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
             private String networkPackageStatus; 
             private String officeSiteId; 
             private String officeSiteName; 
+            private String officeSiteVpcType; 
 
             /**
              * Bandwidth.
@@ -282,6 +294,14 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
              */
             public Builder officeSiteName(String officeSiteName) {
                 this.officeSiteName = officeSiteName;
+                return this;
+            }
+
+            /**
+             * OfficeSiteVpcType.
+             */
+            public Builder officeSiteVpcType(String officeSiteVpcType) {
+                this.officeSiteVpcType = officeSiteVpcType;
                 return this;
             }
 

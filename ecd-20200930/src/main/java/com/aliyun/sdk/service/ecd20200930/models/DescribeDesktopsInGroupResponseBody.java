@@ -271,8 +271,17 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         @NameInMap("ManagementFlag")
         private String managementFlag;
 
+        @NameInMap("ManagementFlags")
+        private java.util.List < String > managementFlags;
+
+        @NameInMap("MemberEniIp")
+        private String memberEniIp;
+
         @NameInMap("OsType")
         private String osType;
+
+        @NameInMap("PrimaryEniIp")
+        private String primaryEniIp;
 
         @NameInMap("ResetTime")
         private String resetTime;
@@ -294,7 +303,10 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             this.imageId = builder.imageId;
             this.imageName = builder.imageName;
             this.managementFlag = builder.managementFlag;
+            this.managementFlags = builder.managementFlags;
+            this.memberEniIp = builder.memberEniIp;
             this.osType = builder.osType;
+            this.primaryEniIp = builder.primaryEniIp;
             this.resetTime = builder.resetTime;
             this.systemDiskSize = builder.systemDiskSize;
         }
@@ -399,10 +411,31 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         }
 
         /**
+         * @return managementFlags
+         */
+        public java.util.List < String > getManagementFlags() {
+            return this.managementFlags;
+        }
+
+        /**
+         * @return memberEniIp
+         */
+        public String getMemberEniIp() {
+            return this.memberEniIp;
+        }
+
+        /**
          * @return osType
          */
         public String getOsType() {
             return this.osType;
+        }
+
+        /**
+         * @return primaryEniIp
+         */
+        public String getPrimaryEniIp() {
+            return this.primaryEniIp;
         }
 
         /**
@@ -433,7 +466,10 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             private String imageId; 
             private String imageName; 
             private String managementFlag; 
+            private java.util.List < String > managementFlags; 
+            private String memberEniIp; 
             private String osType; 
+            private String primaryEniIp; 
             private String resetTime; 
             private Integer systemDiskSize; 
 
@@ -542,10 +578,34 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
+             * ManagementFlags.
+             */
+            public Builder managementFlags(java.util.List < String > managementFlags) {
+                this.managementFlags = managementFlags;
+                return this;
+            }
+
+            /**
+             * MemberEniIp.
+             */
+            public Builder memberEniIp(String memberEniIp) {
+                this.memberEniIp = memberEniIp;
+                return this;
+            }
+
+            /**
              * OsType.
              */
             public Builder osType(String osType) {
                 this.osType = osType;
+                return this;
+            }
+
+            /**
+             * PrimaryEniIp.
+             */
+            public Builder primaryEniIp(String primaryEniIp) {
+                this.primaryEniIp = primaryEniIp;
                 return this;
             }
 
@@ -618,8 +678,17 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         @NameInMap("ManagementFlag")
         private String managementFlag;
 
+        @NameInMap("ManagementFlags")
+        private java.util.List < String > managementFlags;
+
+        @NameInMap("MemberEniIp")
+        private String memberEniIp;
+
         @NameInMap("OsType")
         private String osType;
+
+        @NameInMap("PrimaryEniIp")
+        private String primaryEniIp;
 
         @NameInMap("ReleaseTime")
         private String releaseTime;
@@ -646,7 +715,10 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             this.imageId = builder.imageId;
             this.imageName = builder.imageName;
             this.managementFlag = builder.managementFlag;
+            this.managementFlags = builder.managementFlags;
+            this.memberEniIp = builder.memberEniIp;
             this.osType = builder.osType;
+            this.primaryEniIp = builder.primaryEniIp;
             this.releaseTime = builder.releaseTime;
             this.resetTime = builder.resetTime;
             this.systemDiskSize = builder.systemDiskSize;
@@ -766,10 +838,31 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         }
 
         /**
+         * @return managementFlags
+         */
+        public java.util.List < String > getManagementFlags() {
+            return this.managementFlags;
+        }
+
+        /**
+         * @return memberEniIp
+         */
+        public String getMemberEniIp() {
+            return this.memberEniIp;
+        }
+
+        /**
          * @return osType
          */
         public String getOsType() {
             return this.osType;
+        }
+
+        /**
+         * @return primaryEniIp
+         */
+        public String getPrimaryEniIp() {
+            return this.primaryEniIp;
         }
 
         /**
@@ -809,7 +902,10 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             private String imageId; 
             private String imageName; 
             private String managementFlag; 
+            private java.util.List < String > managementFlags; 
+            private String memberEniIp; 
             private String osType; 
+            private String primaryEniIp; 
             private String releaseTime; 
             private String resetTime; 
             private Integer systemDiskSize; 
@@ -935,10 +1031,34 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
+             * ManagementFlags.
+             */
+            public Builder managementFlags(java.util.List < String > managementFlags) {
+                this.managementFlags = managementFlags;
+                return this;
+            }
+
+            /**
+             * MemberEniIp.
+             */
+            public Builder memberEniIp(String memberEniIp) {
+                this.memberEniIp = memberEniIp;
+                return this;
+            }
+
+            /**
              * OsType.
              */
             public Builder osType(String osType) {
                 this.osType = osType;
+                return this;
+            }
+
+            /**
+             * PrimaryEniIp.
+             */
+            public Builder primaryEniIp(String primaryEniIp) {
+                this.primaryEniIp = primaryEniIp;
                 return this;
             }
 

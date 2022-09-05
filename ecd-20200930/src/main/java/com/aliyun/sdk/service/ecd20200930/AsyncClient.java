@@ -54,6 +54,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateDiskEncryptionServiceResponse> createDiskEncryptionService(CreateDiskEncryptionServiceRequest request);
 
+    CompletableFuture<CreateDriveResponse> createDrive(CreateDriveRequest request);
+
     CompletableFuture<CreateImageResponse> createImage(CreateImageRequest request);
 
     CompletableFuture<CreateNASFileSystemResponse> createNASFileSystem(CreateNASFileSystemRequest request);
@@ -70,11 +72,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteBundlesResponse> deleteBundles(DeleteBundlesRequest request);
 
+    CompletableFuture<DeleteCloudDriveUsersResponse> deleteCloudDriveUsers(DeleteCloudDriveUsersRequest request);
+
     CompletableFuture<DeleteDesktopGroupResponse> deleteDesktopGroup(DeleteDesktopGroupRequest request);
 
     CompletableFuture<DeleteDesktopsResponse> deleteDesktops(DeleteDesktopsRequest request);
 
     CompletableFuture<DeleteDirectoriesResponse> deleteDirectories(DeleteDirectoriesRequest request);
+
+    CompletableFuture<DeleteDriveResponse> deleteDrive(DeleteDriveRequest request);
 
     CompletableFuture<DeleteImagesResponse> deleteImages(DeleteImagesRequest request);
 
@@ -98,6 +104,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeClientEventsResponse> describeClientEvents(DescribeClientEventsRequest request);
 
+    CompletableFuture<DescribeCloudDrivePermissionsResponse> describeCloudDrivePermissions(DescribeCloudDrivePermissionsRequest request);
+
     CompletableFuture<DescribeDesktopGroupsResponse> describeDesktopGroups(DescribeDesktopGroupsRequest request);
 
     CompletableFuture<DescribeDesktopIdsByVulNamesResponse> describeDesktopIdsByVulNames(DescribeDesktopIdsByVulNamesRequest request);
@@ -109,6 +117,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDesktopsInGroupResponse> describeDesktopsInGroup(DescribeDesktopsInGroupRequest request);
 
     CompletableFuture<DescribeDirectoriesResponse> describeDirectories(DescribeDirectoriesRequest request);
+
+    CompletableFuture<DescribeDrivesResponse> describeDrives(DescribeDrivesRequest request);
 
     CompletableFuture<DescribeFlowMetricResponse> describeFlowMetric(DescribeFlowMetricRequest request);
 
@@ -140,8 +150,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribePolicyGroupsResponse> describePolicyGroups(DescribePolicyGroupsRequest request);
 
-    CompletableFuture<DescribeRecordingsResponse> describeRecordings(DescribeRecordingsRequest request);
-
     CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request);
 
     CompletableFuture<DescribeScanTaskProgressResponse> describeScanTaskProgress(DescribeScanTaskProgressRequest request);
@@ -161,6 +169,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeUserConnectionRecordsResponse> describeUserConnectionRecords(DescribeUserConnectionRecordsRequest request);
 
     CompletableFuture<DescribeUsersInGroupResponse> describeUsersInGroup(DescribeUsersInGroupRequest request);
+
+    CompletableFuture<DescribeUsersPasswordResponse> describeUsersPassword(DescribeUsersPasswordRequest request);
 
     CompletableFuture<DescribeVirtualMFADevicesResponse> describeVirtualMFADevices(DescribeVirtualMFADevicesRequest request);
 
@@ -211,6 +221,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyADConnectorOfficeSiteResponse> modifyADConnectorOfficeSite(ModifyADConnectorOfficeSiteRequest request);
 
     CompletableFuture<ModifyBundleResponse> modifyBundle(ModifyBundleRequest request);
+
+    CompletableFuture<ModifyCloudDrivePermissionResponse> modifyCloudDrivePermission(ModifyCloudDrivePermissionRequest request);
 
     CompletableFuture<ModifyDesktopChargeTypeResponse> modifyDesktopChargeType(ModifyDesktopChargeTypeRequest request);
 
@@ -275,6 +287,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RunCommandResponse> runCommand(RunCommandRequest request);
 
     CompletableFuture<SendVerifyCodeResponse> sendVerifyCode(SendVerifyCodeRequest request);
+
+    CompletableFuture<SetDesktopGroupTimerResponse> setDesktopGroupTimer(SetDesktopGroupTimerRequest request);
+
+    CompletableFuture<SetDesktopGroupTimerStatusResponse> setDesktopGroupTimerStatus(SetDesktopGroupTimerStatusRequest request);
 
     CompletableFuture<SetIdpMetadataResponse> setIdpMetadata(SetIdpMetadataRequest request);
 

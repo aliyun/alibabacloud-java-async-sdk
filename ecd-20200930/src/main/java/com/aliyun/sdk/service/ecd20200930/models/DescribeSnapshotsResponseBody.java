@@ -104,6 +104,9 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         @NameInMap("Progress")
         private String progress;
 
+        @NameInMap("ProtocolType")
+        private String protocolType;
+
         @NameInMap("RemainTime")
         private Integer remainTime;
 
@@ -136,6 +139,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             this.description = builder.description;
             this.desktopId = builder.desktopId;
             this.progress = builder.progress;
+            this.protocolType = builder.protocolType;
             this.remainTime = builder.remainTime;
             this.snapshotId = builder.snapshotId;
             this.snapshotName = builder.snapshotName;
@@ -181,6 +185,13 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
          */
         public String getProgress() {
             return this.progress;
+        }
+
+        /**
+         * @return protocolType
+         */
+        public String getProtocolType() {
+            return this.protocolType;
         }
 
         /**
@@ -251,6 +262,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             private String description; 
             private String desktopId; 
             private String progress; 
+            private String protocolType; 
             private Integer remainTime; 
             private String snapshotId; 
             private String snapshotName; 
@@ -290,6 +302,14 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
              */
             public Builder progress(String progress) {
                 this.progress = progress;
+                return this;
+            }
+
+            /**
+             * ProtocolType.
+             */
+            public Builder protocolType(String protocolType) {
+                this.protocolType = protocolType;
                 return this;
             }
 

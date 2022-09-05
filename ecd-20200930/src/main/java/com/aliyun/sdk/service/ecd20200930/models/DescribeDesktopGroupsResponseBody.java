@@ -98,6 +98,9 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         @NameInMap("Comments")
         private String comments;
 
+        @NameInMap("ConnectDuration")
+        private Long connectDuration;
+
         @NameInMap("Cpu")
         private Integer cpu;
 
@@ -130,6 +133,9 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
 
         @NameInMap("GpuSpec")
         private String gpuSpec;
+
+        @NameInMap("IdleDisconnectDuration")
+        private Long idleDisconnectDuration;
 
         @NameInMap("ImageId")
         private String imageId;
@@ -176,17 +182,26 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         @NameInMap("PolicyGroupName")
         private String policyGroupName;
 
+        @NameInMap("RatioThreshold")
+        private Float ratioThreshold;
+
         @NameInMap("ResetType")
         private Long resetType;
 
         @NameInMap("Status")
         private Integer status;
 
+        @NameInMap("StopDuration")
+        private Long stopDuration;
+
         @NameInMap("SystemDiskCategory")
         private String systemDiskCategory;
 
         @NameInMap("SystemDiskSize")
         private Integer systemDiskSize;
+
+        @NameInMap("Version")
+        private Integer version;
 
         @NameInMap("VolumeEncryptionEnabled")
         private Boolean volumeEncryptionEnabled;
@@ -197,6 +212,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         private DesktopGroups(Builder builder) {
             this.bindAmount = builder.bindAmount;
             this.comments = builder.comments;
+            this.connectDuration = builder.connectDuration;
             this.cpu = builder.cpu;
             this.createTime = builder.createTime;
             this.creator = builder.creator;
@@ -208,6 +224,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             this.expiredTime = builder.expiredTime;
             this.gpuCount = builder.gpuCount;
             this.gpuSpec = builder.gpuSpec;
+            this.idleDisconnectDuration = builder.idleDisconnectDuration;
             this.imageId = builder.imageId;
             this.keepDuration = builder.keepDuration;
             this.loadPolicy = builder.loadPolicy;
@@ -223,10 +240,13 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             this.payType = builder.payType;
             this.policyGroupId = builder.policyGroupId;
             this.policyGroupName = builder.policyGroupName;
+            this.ratioThreshold = builder.ratioThreshold;
             this.resetType = builder.resetType;
             this.status = builder.status;
+            this.stopDuration = builder.stopDuration;
             this.systemDiskCategory = builder.systemDiskCategory;
             this.systemDiskSize = builder.systemDiskSize;
+            this.version = builder.version;
             this.volumeEncryptionEnabled = builder.volumeEncryptionEnabled;
             this.volumeEncryptionKey = builder.volumeEncryptionKey;
         }
@@ -251,6 +271,13 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
          */
         public String getComments() {
             return this.comments;
+        }
+
+        /**
+         * @return connectDuration
+         */
+        public Long getConnectDuration() {
+            return this.connectDuration;
         }
 
         /**
@@ -328,6 +355,13 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
          */
         public String getGpuSpec() {
             return this.gpuSpec;
+        }
+
+        /**
+         * @return idleDisconnectDuration
+         */
+        public Long getIdleDisconnectDuration() {
+            return this.idleDisconnectDuration;
         }
 
         /**
@@ -436,6 +470,13 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return ratioThreshold
+         */
+        public Float getRatioThreshold() {
+            return this.ratioThreshold;
+        }
+
+        /**
          * @return resetType
          */
         public Long getResetType() {
@@ -450,6 +491,13 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return stopDuration
+         */
+        public Long getStopDuration() {
+            return this.stopDuration;
+        }
+
+        /**
          * @return systemDiskCategory
          */
         public String getSystemDiskCategory() {
@@ -461,6 +509,13 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
          */
         public Integer getSystemDiskSize() {
             return this.systemDiskSize;
+        }
+
+        /**
+         * @return version
+         */
+        public Integer getVersion() {
+            return this.version;
         }
 
         /**
@@ -480,6 +535,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         public static final class Builder {
             private Long bindAmount; 
             private String comments; 
+            private Long connectDuration; 
             private Integer cpu; 
             private String createTime; 
             private String creator; 
@@ -491,6 +547,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             private String expiredTime; 
             private Float gpuCount; 
             private String gpuSpec; 
+            private Long idleDisconnectDuration; 
             private String imageId; 
             private Long keepDuration; 
             private Long loadPolicy; 
@@ -506,10 +563,13 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             private String payType; 
             private String policyGroupId; 
             private String policyGroupName; 
+            private Float ratioThreshold; 
             private Long resetType; 
             private Integer status; 
+            private Long stopDuration; 
             private String systemDiskCategory; 
             private Integer systemDiskSize; 
+            private Integer version; 
             private Boolean volumeEncryptionEnabled; 
             private String volumeEncryptionKey; 
 
@@ -526,6 +586,14 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
              */
             public Builder comments(String comments) {
                 this.comments = comments;
+                return this;
+            }
+
+            /**
+             * ConnectDuration.
+             */
+            public Builder connectDuration(Long connectDuration) {
+                this.connectDuration = connectDuration;
                 return this;
             }
 
@@ -614,6 +682,14 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
              */
             public Builder gpuSpec(String gpuSpec) {
                 this.gpuSpec = gpuSpec;
+                return this;
+            }
+
+            /**
+             * IdleDisconnectDuration.
+             */
+            public Builder idleDisconnectDuration(Long idleDisconnectDuration) {
+                this.idleDisconnectDuration = idleDisconnectDuration;
                 return this;
             }
 
@@ -738,6 +814,14 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
+             * RatioThreshold.
+             */
+            public Builder ratioThreshold(Float ratioThreshold) {
+                this.ratioThreshold = ratioThreshold;
+                return this;
+            }
+
+            /**
              * ResetType.
              */
             public Builder resetType(Long resetType) {
@@ -754,6 +838,14 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
+             * StopDuration.
+             */
+            public Builder stopDuration(Long stopDuration) {
+                this.stopDuration = stopDuration;
+                return this;
+            }
+
+            /**
              * SystemDiskCategory.
              */
             public Builder systemDiskCategory(String systemDiskCategory) {
@@ -766,6 +858,14 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
              */
             public Builder systemDiskSize(Integer systemDiskSize) {
                 this.systemDiskSize = systemDiskSize;
+                return this;
+            }
+
+            /**
+             * Version.
+             */
+            public Builder version(Integer version) {
+                this.version = version;
                 return this;
             }
 
