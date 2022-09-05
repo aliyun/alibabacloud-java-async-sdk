@@ -113,14 +113,14 @@ public class ListAlarmHistoriesRequest extends Request {
             super();
         } 
 
-        private Builder(ListAlarmHistoriesRequest response) {
-            super(response);
-            this.endTime = response.endTime;
-            this.keyword = response.keyword;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.productCode = response.productCode;
-            this.startTime = response.startTime;
+        private Builder(ListAlarmHistoriesRequest request) {
+            super(request);
+            this.endTime = request.endTime;
+            this.keyword = request.keyword;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.productCode = request.productCode;
+            this.startTime = request.startTime;
         } 
 
         /**

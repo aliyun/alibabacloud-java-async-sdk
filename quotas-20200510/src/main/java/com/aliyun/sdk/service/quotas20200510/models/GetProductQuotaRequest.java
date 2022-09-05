@@ -76,11 +76,11 @@ public class GetProductQuotaRequest extends Request {
             super();
         } 
 
-        private Builder(GetProductQuotaRequest response) {
-            super(response);
-            this.dimensions = response.dimensions;
-            this.productCode = response.productCode;
-            this.quotaActionCode = response.quotaActionCode;
+        private Builder(GetProductQuotaRequest request) {
+            super(request);
+            this.dimensions = request.dimensions;
+            this.productCode = request.productCode;
+            this.quotaActionCode = request.quotaActionCode;
         } 
 
         /**

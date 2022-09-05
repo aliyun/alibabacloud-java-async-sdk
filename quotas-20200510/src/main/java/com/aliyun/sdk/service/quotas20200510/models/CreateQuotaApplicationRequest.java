@@ -26,6 +26,10 @@ public class CreateQuotaApplicationRequest extends Request {
     private java.util.List < Dimensions> dimensions;
 
     @Body
+    @NameInMap("EnvLanguage")
+    private String envLanguage;
+
+    @Body
     @NameInMap("NoticeType")
     private Integer noticeType;
 
@@ -53,6 +57,7 @@ public class CreateQuotaApplicationRequest extends Request {
         this.auditMode = builder.auditMode;
         this.desireValue = builder.desireValue;
         this.dimensions = builder.dimensions;
+        this.envLanguage = builder.envLanguage;
         this.noticeType = builder.noticeType;
         this.productCode = builder.productCode;
         this.quotaActionCode = builder.quotaActionCode;
@@ -95,6 +100,13 @@ public class CreateQuotaApplicationRequest extends Request {
     }
 
     /**
+     * @return envLanguage
+     */
+    public String getEnvLanguage() {
+        return this.envLanguage;
+    }
+
+    /**
      * @return noticeType
      */
     public Integer getNoticeType() {
@@ -133,6 +145,7 @@ public class CreateQuotaApplicationRequest extends Request {
         private String auditMode; 
         private Float desireValue; 
         private java.util.List < Dimensions> dimensions; 
+        private String envLanguage; 
         private Integer noticeType; 
         private String productCode; 
         private String quotaActionCode; 
@@ -143,16 +156,17 @@ public class CreateQuotaApplicationRequest extends Request {
             super();
         } 
 
-        private Builder(CreateQuotaApplicationRequest response) {
-            super(response);
-            this.auditMode = response.auditMode;
-            this.desireValue = response.desireValue;
-            this.dimensions = response.dimensions;
-            this.noticeType = response.noticeType;
-            this.productCode = response.productCode;
-            this.quotaActionCode = response.quotaActionCode;
-            this.quotaCategory = response.quotaCategory;
-            this.reason = response.reason;
+        private Builder(CreateQuotaApplicationRequest request) {
+            super(request);
+            this.auditMode = request.auditMode;
+            this.desireValue = request.desireValue;
+            this.dimensions = request.dimensions;
+            this.envLanguage = request.envLanguage;
+            this.noticeType = request.noticeType;
+            this.productCode = request.productCode;
+            this.quotaActionCode = request.quotaActionCode;
+            this.quotaCategory = request.quotaCategory;
+            this.reason = request.reason;
         } 
 
         /**
@@ -179,6 +193,15 @@ public class CreateQuotaApplicationRequest extends Request {
         public Builder dimensions(java.util.List < Dimensions> dimensions) {
             this.putBodyParameter("Dimensions", dimensions);
             this.dimensions = dimensions;
+            return this;
+        }
+
+        /**
+         * EnvLanguage.
+         */
+        public Builder envLanguage(String envLanguage) {
+            this.putBodyParameter("EnvLanguage", envLanguage);
+            this.envLanguage = envLanguage;
             return this;
         }
 

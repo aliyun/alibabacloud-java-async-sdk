@@ -63,10 +63,10 @@ public class ListDependentQuotasRequest extends Request {
             super();
         } 
 
-        private Builder(ListDependentQuotasRequest response) {
-            super(response);
-            this.productCode = response.productCode;
-            this.quotaActionCode = response.quotaActionCode;
+        private Builder(ListDependentQuotasRequest request) {
+            super(request);
+            this.productCode = request.productCode;
+            this.quotaActionCode = request.quotaActionCode;
         } 
 
         /**

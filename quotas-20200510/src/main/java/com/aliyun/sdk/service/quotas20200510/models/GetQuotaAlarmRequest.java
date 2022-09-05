@@ -48,9 +48,9 @@ public class GetQuotaAlarmRequest extends Request {
             super();
         } 
 
-        private Builder(GetQuotaAlarmRequest response) {
-            super(response);
-            this.alarmId = response.alarmId;
+        private Builder(GetQuotaAlarmRequest request) {
+            super(request);
+            this.alarmId = request.alarmId;
         } 
 
         /**

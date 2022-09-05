@@ -166,18 +166,18 @@ public class ListProductQuotasRequest extends Request {
             super();
         } 
 
-        private Builder(ListProductQuotasRequest response) {
-            super(response);
-            this.dimensions = response.dimensions;
-            this.groupCode = response.groupCode;
-            this.keyWord = response.keyWord;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.productCode = response.productCode;
-            this.quotaActionCode = response.quotaActionCode;
-            this.quotaCategory = response.quotaCategory;
-            this.sortField = response.sortField;
-            this.sortOrder = response.sortOrder;
+        private Builder(ListProductQuotasRequest request) {
+            super(request);
+            this.dimensions = request.dimensions;
+            this.groupCode = request.groupCode;
+            this.keyWord = request.keyWord;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.productCode = request.productCode;
+            this.quotaActionCode = request.quotaActionCode;
+            this.quotaCategory = request.quotaCategory;
+            this.sortField = request.sortField;
+            this.sortOrder = request.sortOrder;
         } 
 
         /**

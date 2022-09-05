@@ -75,11 +75,11 @@ public class GetProductQuotaDimensionRequest extends Request {
             super();
         } 
 
-        private Builder(GetProductQuotaDimensionRequest response) {
-            super(response);
-            this.dependentDimensions = response.dependentDimensions;
-            this.dimensionKey = response.dimensionKey;
-            this.productCode = response.productCode;
+        private Builder(GetProductQuotaDimensionRequest request) {
+            super(request);
+            this.dependentDimensions = request.dependentDimensions;
+            this.dimensionKey = request.dimensionKey;
+            this.productCode = request.productCode;
         } 
 
         /**

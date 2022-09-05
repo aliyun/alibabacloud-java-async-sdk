@@ -76,11 +76,11 @@ public class ListProductDimensionGroupsRequest extends Request {
             super();
         } 
 
-        private Builder(ListProductDimensionGroupsRequest response) {
-            super(response);
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.productCode = response.productCode;
+        private Builder(ListProductDimensionGroupsRequest request) {
+            super(request);
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.productCode = request.productCode;
         } 
 
         /**

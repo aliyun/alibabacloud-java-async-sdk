@@ -62,10 +62,10 @@ public class ListProductsRequest extends Request {
             super();
         } 
 
-        private Builder(ListProductsRequest response) {
-            super(response);
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
+        private Builder(ListProductsRequest request) {
+            super(request);
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
         } 
 
         /**

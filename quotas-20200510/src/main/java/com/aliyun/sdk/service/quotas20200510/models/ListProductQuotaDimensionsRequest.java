@@ -89,12 +89,12 @@ public class ListProductQuotaDimensionsRequest extends Request {
             super();
         } 
 
-        private Builder(ListProductQuotaDimensionsRequest response) {
-            super(response);
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.productCode = response.productCode;
-            this.quotaCategory = response.quotaCategory;
+        private Builder(ListProductQuotaDimensionsRequest request) {
+            super(request);
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.productCode = request.productCode;
+            this.quotaCategory = request.quotaCategory;
         } 
 
         /**

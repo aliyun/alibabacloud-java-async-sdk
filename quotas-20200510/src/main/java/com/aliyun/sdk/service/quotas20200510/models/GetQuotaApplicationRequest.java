@@ -48,9 +48,9 @@ public class GetQuotaApplicationRequest extends Request {
             super();
         } 
 
-        private Builder(GetQuotaApplicationRequest response) {
-            super(response);
-            this.applicationId = response.applicationId;
+        private Builder(GetQuotaApplicationRequest request) {
+            super(request);
+            this.applicationId = request.applicationId;
         } 
 
         /**

@@ -114,14 +114,14 @@ public class ListQuotaAlarmsRequest extends Request {
             super();
         } 
 
-        private Builder(ListQuotaAlarmsRequest response) {
-            super(response);
-            this.alarmName = response.alarmName;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.productCode = response.productCode;
-            this.quotaActionCode = response.quotaActionCode;
-            this.quotaDimensions = response.quotaDimensions;
+        private Builder(ListQuotaAlarmsRequest request) {
+            super(request);
+            this.alarmName = request.alarmName;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.productCode = request.productCode;
+            this.quotaActionCode = request.quotaActionCode;
+            this.quotaDimensions = request.quotaDimensions;
         } 
 
         /**

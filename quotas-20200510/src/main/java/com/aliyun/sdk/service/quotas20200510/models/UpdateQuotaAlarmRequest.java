@@ -116,14 +116,14 @@ public class UpdateQuotaAlarmRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateQuotaAlarmRequest response) {
-            super(response);
-            this.alarmId = response.alarmId;
-            this.alarmName = response.alarmName;
-            this.threshold = response.threshold;
-            this.thresholdPercent = response.thresholdPercent;
-            this.thresholdType = response.thresholdType;
-            this.webHook = response.webHook;
+        private Builder(UpdateQuotaAlarmRequest request) {
+            super(request);
+            this.alarmId = request.alarmId;
+            this.alarmName = request.alarmName;
+            this.threshold = request.threshold;
+            this.thresholdPercent = request.thresholdPercent;
+            this.thresholdType = request.thresholdType;
+            this.webHook = request.webHook;
         } 
 
         /**

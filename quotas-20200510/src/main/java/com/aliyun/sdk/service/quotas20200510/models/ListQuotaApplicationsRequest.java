@@ -141,16 +141,16 @@ public class ListQuotaApplicationsRequest extends Request {
             super();
         } 
 
-        private Builder(ListQuotaApplicationsRequest response) {
-            super(response);
-            this.dimensions = response.dimensions;
-            this.keyWord = response.keyWord;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.productCode = response.productCode;
-            this.quotaActionCode = response.quotaActionCode;
-            this.quotaCategory = response.quotaCategory;
-            this.status = response.status;
+        private Builder(ListQuotaApplicationsRequest request) {
+            super(request);
+            this.dimensions = request.dimensions;
+            this.keyWord = request.keyWord;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.productCode = request.productCode;
+            this.quotaActionCode = request.quotaActionCode;
+            this.quotaCategory = request.quotaCategory;
+            this.status = request.status;
         } 
 
         /**

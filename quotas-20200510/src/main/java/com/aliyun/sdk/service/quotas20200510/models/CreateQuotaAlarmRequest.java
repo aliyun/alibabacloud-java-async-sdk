@@ -143,16 +143,16 @@ public class CreateQuotaAlarmRequest extends Request {
             super();
         } 
 
-        private Builder(CreateQuotaAlarmRequest response) {
-            super(response);
-            this.alarmName = response.alarmName;
-            this.productCode = response.productCode;
-            this.quotaActionCode = response.quotaActionCode;
-            this.quotaDimensions = response.quotaDimensions;
-            this.threshold = response.threshold;
-            this.thresholdPercent = response.thresholdPercent;
-            this.thresholdType = response.thresholdType;
-            this.webHook = response.webHook;
+        private Builder(CreateQuotaAlarmRequest request) {
+            super(request);
+            this.alarmName = request.alarmName;
+            this.productCode = request.productCode;
+            this.quotaActionCode = request.quotaActionCode;
+            this.quotaDimensions = request.quotaDimensions;
+            this.threshold = request.threshold;
+            this.thresholdPercent = request.thresholdPercent;
+            this.thresholdType = request.thresholdType;
+            this.webHook = request.webHook;
         } 
 
         /**

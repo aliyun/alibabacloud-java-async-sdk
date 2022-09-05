@@ -49,9 +49,9 @@ public class DeleteQuotaAlarmRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteQuotaAlarmRequest response) {
-            super(response);
-            this.alarmId = response.alarmId;
+        private Builder(DeleteQuotaAlarmRequest request) {
+            super(request);
+            this.alarmId = request.alarmId;
         } 
 
         /**
