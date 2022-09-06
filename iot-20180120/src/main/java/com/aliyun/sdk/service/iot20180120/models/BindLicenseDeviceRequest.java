@@ -12,9 +12,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BindLicenseDeviceRequest</p>
  */
 public class BindLicenseDeviceRequest extends Request {
-    @Query
+    @Body
+    @NameInMap("DeviceNameList")
+    private java.util.List < String > deviceNameList;
+
+    @Body
     @NameInMap("IotIdList")
-    @Validation(required = true)
     private java.util.List < String > iotIdList;
 
     @Query
@@ -33,6 +36,7 @@ public class BindLicenseDeviceRequest extends Request {
 
     private BindLicenseDeviceRequest(Builder builder) {
         super(builder);
+        this.deviceNameList = builder.deviceNameList;
         this.iotIdList = builder.iotIdList;
         this.iotInstanceId = builder.iotInstanceId;
         this.licenseCode = builder.licenseCode;
@@ -50,6 +54,13 @@ public class BindLicenseDeviceRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return deviceNameList
+     */
+    public java.util.List < String > getDeviceNameList() {
+        return this.deviceNameList;
     }
 
     /**
@@ -81,6 +92,7 @@ public class BindLicenseDeviceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<BindLicenseDeviceRequest, Builder> {
+        private java.util.List < String > deviceNameList; 
         private java.util.List < String > iotIdList; 
         private String iotInstanceId; 
         private String licenseCode; 
@@ -92,6 +104,7 @@ public class BindLicenseDeviceRequest extends Request {
 
         private Builder(BindLicenseDeviceRequest request) {
             super(request);
+            this.deviceNameList = request.deviceNameList;
             this.iotIdList = request.iotIdList;
             this.iotInstanceId = request.iotInstanceId;
             this.licenseCode = request.licenseCode;
@@ -99,10 +112,19 @@ public class BindLicenseDeviceRequest extends Request {
         } 
 
         /**
+         * DeviceNameList.
+         */
+        public Builder deviceNameList(java.util.List < String > deviceNameList) {
+            this.putBodyParameter("DeviceNameList", deviceNameList);
+            this.deviceNameList = deviceNameList;
+            return this;
+        }
+
+        /**
          * IotIdList.
          */
         public Builder iotIdList(java.util.List < String > iotIdList) {
-            this.putQueryParameter("IotIdList", iotIdList);
+            this.putBodyParameter("IotIdList", iotIdList);
             this.iotIdList = iotIdList;
             return this;
         }

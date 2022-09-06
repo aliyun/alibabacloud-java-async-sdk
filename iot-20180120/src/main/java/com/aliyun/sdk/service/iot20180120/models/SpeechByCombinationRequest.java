@@ -26,6 +26,10 @@ public class SpeechByCombinationRequest extends Request {
     private String deviceName;
 
     @Body
+    @NameInMap("EnforceFlag")
+    private Boolean enforceFlag;
+
+    @Body
     @NameInMap("IotId")
     private String iotId;
 
@@ -46,6 +50,7 @@ public class SpeechByCombinationRequest extends Request {
         this.audioFormat = builder.audioFormat;
         this.combinationList = builder.combinationList;
         this.deviceName = builder.deviceName;
+        this.enforceFlag = builder.enforceFlag;
         this.iotId = builder.iotId;
         this.iotInstanceId = builder.iotInstanceId;
         this.productKey = builder.productKey;
@@ -87,6 +92,13 @@ public class SpeechByCombinationRequest extends Request {
     }
 
     /**
+     * @return enforceFlag
+     */
+    public Boolean getEnforceFlag() {
+        return this.enforceFlag;
+    }
+
+    /**
      * @return iotId
      */
     public String getIotId() {
@@ -118,6 +130,7 @@ public class SpeechByCombinationRequest extends Request {
         private String audioFormat; 
         private java.util.List < String > combinationList; 
         private String deviceName; 
+        private Boolean enforceFlag; 
         private String iotId; 
         private String iotInstanceId; 
         private String productKey; 
@@ -132,6 +145,7 @@ public class SpeechByCombinationRequest extends Request {
             this.audioFormat = request.audioFormat;
             this.combinationList = request.combinationList;
             this.deviceName = request.deviceName;
+            this.enforceFlag = request.enforceFlag;
             this.iotId = request.iotId;
             this.iotInstanceId = request.iotInstanceId;
             this.productKey = request.productKey;
@@ -162,6 +176,15 @@ public class SpeechByCombinationRequest extends Request {
         public Builder deviceName(String deviceName) {
             this.putBodyParameter("DeviceName", deviceName);
             this.deviceName = deviceName;
+            return this;
+        }
+
+        /**
+         * EnforceFlag.
+         */
+        public Builder enforceFlag(Boolean enforceFlag) {
+            this.putBodyParameter("EnforceFlag", enforceFlag);
+            this.enforceFlag = enforceFlag;
             return this;
         }
 

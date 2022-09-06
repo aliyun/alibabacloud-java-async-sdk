@@ -20,6 +20,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AddDataForApiSourceResponse> addDataForApiSource(AddDataForApiSourceRequest request);
 
+    CompletableFuture<AddShareTaskDeviceResponse> addShareTaskDevice(AddShareTaskDeviceRequest request);
+
     CompletableFuture<AttachDestinationResponse> attachDestination(AttachDestinationRequest request);
 
     CompletableFuture<AttachParserDataSourceResponse> attachParserDataSource(AttachParserDataSourceRequest request);
@@ -141,6 +143,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateDeviceGroupResponse> createDeviceGroup(CreateDeviceGroupRequest request);
 
     CompletableFuture<CreateDeviceTunnelResponse> createDeviceTunnel(CreateDeviceTunnelRequest request);
+
+    CompletableFuture<CreateDownloadDataJobResponse> createDownloadDataJob(CreateDownloadDataJobRequest request);
 
     CompletableFuture<CreateEdgeDriverResponse> createEdgeDriver(CreateEdgeDriverRequest request);
 
@@ -266,6 +270,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteSchedulePeriodResponse> deleteSchedulePeriod(DeleteSchedulePeriodRequest request);
 
+    CompletableFuture<DeleteShareTaskDeviceResponse> deleteShareTaskDevice(DeleteShareTaskDeviceRequest request);
+
     CompletableFuture<DeleteSoundCodeResponse> deleteSoundCode(DeleteSoundCodeRequest request);
 
     CompletableFuture<DeleteSoundCodeLabelResponse> deleteSoundCodeLabel(DeleteSoundCodeLabelRequest request);
@@ -320,6 +326,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetDeviceTunnelStatusResponse> getDeviceTunnelStatus(GetDeviceTunnelStatusRequest request);
 
+    CompletableFuture<GetDownloadFileResponse> getDownloadFile(GetDownloadFileRequest request);
+
     CompletableFuture<GetEdgeDriverVersionResponse> getEdgeDriverVersion(GetEdgeDriverVersionRequest request);
 
     CompletableFuture<GetEdgeInstanceResponse> getEdgeInstance(GetEdgeInstanceRequest request);
@@ -342,11 +350,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetSceneRuleResponse> getSceneRule(GetSceneRuleRequest request);
 
+    CompletableFuture<GetShareTaskByDeviceOpenResponse> getShareTaskByDeviceOpen(GetShareTaskByDeviceOpenRequest request);
+
     CompletableFuture<GetSoundCodeAudioResponse> getSoundCodeAudio(GetSoundCodeAudioRequest request);
 
     CompletableFuture<GetSoundCodeScheduleResponse> getSoundCodeSchedule(GetSoundCodeScheduleRequest request);
 
     CompletableFuture<GetSpeechDeviceDetailResponse> getSpeechDeviceDetail(GetSpeechDeviceDetailRequest request);
+
+    CompletableFuture<GetSpeechLicenseDeviceStatisticsResponse> getSpeechLicenseDeviceStatistics(GetSpeechLicenseDeviceStatisticsRequest request);
 
     CompletableFuture<GetSpeechVoiceResponse> getSpeechVoice(GetSpeechVoiceRequest request);
 
@@ -429,6 +441,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<OpenIotServiceResponse> openIotService(OpenIotServiceRequest request);
 
     CompletableFuture<PackageSoundCodeLabelBatchAudioResponse> packageSoundCodeLabelBatchAudio(PackageSoundCodeLabelBatchAudioRequest request);
+
+    CompletableFuture<PageQuerySharedSpeechOpenResponse> pageQuerySharedSpeechOpen(PageQuerySharedSpeechOpenRequest request);
 
     CompletableFuture<PrintByTemplateResponse> printByTemplate(PrintByTemplateRequest request);
 
@@ -518,6 +532,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<QueryDeviceStatisticsResponse> queryDeviceStatistics(QueryDeviceStatisticsRequest request);
 
+    CompletableFuture<QueryDeviceSubTopicResponse> queryDeviceSubTopic(QueryDeviceSubTopicRequest request);
+
     CompletableFuture<QueryDeviceTunnelResponse> queryDeviceTunnel(QueryDeviceTunnelRequest request);
 
     CompletableFuture<QueryDynamicGroupDevicesResponse> queryDynamicGroupDevices(QueryDynamicGroupDevicesRequest request);
@@ -570,9 +586,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<QueryProductTopicResponse> queryProductTopic(QueryProductTopicRequest request);
 
+    CompletableFuture<QueryProjectShareDeviceListResponse> queryProjectShareDeviceList(QueryProjectShareDeviceListRequest request);
+
     CompletableFuture<QuerySceneRuleResponse> querySceneRule(QuerySceneRuleRequest request);
 
     CompletableFuture<QuerySchedulePeriodListResponse> querySchedulePeriodList(QuerySchedulePeriodListRequest request);
+
+    CompletableFuture<QueryShareTaskDeviceListResponse> queryShareTaskDeviceList(QueryShareTaskDeviceListRequest request);
 
     CompletableFuture<QuerySolutionDeviceGroupPageResponse> querySolutionDeviceGroupPage(QuerySolutionDeviceGroupPageRequest request);
 
@@ -589,6 +609,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QuerySpeechResponse> querySpeech(QuerySpeechRequest request);
 
     CompletableFuture<QuerySpeechDeviceResponse> querySpeechDevice(QuerySpeechDeviceRequest request);
+
+    CompletableFuture<QuerySpeechLicenseDeviceListResponse> querySpeechLicenseDeviceList(QuerySpeechLicenseDeviceListRequest request);
 
     CompletableFuture<QuerySpeechListResponse> querySpeechList(QuerySpeechListRequest request);
 
@@ -627,6 +649,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryTopicRouteTableResponse> queryTopicRouteTable(QueryTopicRouteTableRequest request);
 
     CompletableFuture<RRpcResponse> rRpc(RRpcRequest request);
+
+    CompletableFuture<ReBindLicenseDeviceResponse> reBindLicenseDevice(ReBindLicenseDeviceRequest request);
 
     CompletableFuture<RecognizeCarNumResponse> recognizeCarNum(RecognizeCarNumRequest request);
 
@@ -676,11 +700,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<SetupStudioAppAuthModeOpenResponse> setupStudioAppAuthModeOpen(SetupStudioAppAuthModeOpenRequest request);
 
+    CompletableFuture<ShareSpeechByCombinationResponse> shareSpeechByCombination(ShareSpeechByCombinationRequest request);
+
     CompletableFuture<SpeechByCombinationResponse> speechByCombination(SpeechByCombinationRequest request);
 
     CompletableFuture<SpeechBySynthesisResponse> speechBySynthesis(SpeechBySynthesisRequest request);
-
-    CompletableFuture<StartCpuResponse> startCpu(StartCpuRequest request);
 
     CompletableFuture<StartParserResponse> startParser(StartParserRequest request);
 
