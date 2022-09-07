@@ -138,6 +138,9 @@ public class ListIoTCloudConnectorsResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         private Long createTime;
 
+        @NameInMap("GrantAliUid")
+        private String grantAliUid;
+
         @NameInMap("ISP")
         private String ISP;
 
@@ -171,6 +174,9 @@ public class ListIoTCloudConnectorsResponseBody extends TeaModel {
         @NameInMap("RateLimit")
         private Long rateLimit;
 
+        @NameInMap("ServiceType")
+        private String serviceType;
+
         @NameInMap("Type")
         private String type;
 
@@ -186,6 +192,7 @@ public class ListIoTCloudConnectorsResponseBody extends TeaModel {
         private IoTCloudConnectors(Builder builder) {
             this.APN = builder.APN;
             this.createTime = builder.createTime;
+            this.grantAliUid = builder.grantAliUid;
             this.ISP = builder.ISP;
             this.ioTCloudConnectorBusinessStatus = builder.ioTCloudConnectorBusinessStatus;
             this.ioTCloudConnectorDescription = builder.ioTCloudConnectorDescription;
@@ -197,6 +204,7 @@ public class ListIoTCloudConnectorsResponseBody extends TeaModel {
             this.mode = builder.mode;
             this.modifyTime = builder.modifyTime;
             this.rateLimit = builder.rateLimit;
+            this.serviceType = builder.serviceType;
             this.type = builder.type;
             this.vSwitchList = builder.vSwitchList;
             this.vpcId = builder.vpcId;
@@ -223,6 +231,13 @@ public class ListIoTCloudConnectorsResponseBody extends TeaModel {
          */
         public Long getCreateTime() {
             return this.createTime;
+        }
+
+        /**
+         * @return grantAliUid
+         */
+        public String getGrantAliUid() {
+            return this.grantAliUid;
         }
 
         /**
@@ -303,6 +318,13 @@ public class ListIoTCloudConnectorsResponseBody extends TeaModel {
         }
 
         /**
+         * @return serviceType
+         */
+        public String getServiceType() {
+            return this.serviceType;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
@@ -333,6 +355,7 @@ public class ListIoTCloudConnectorsResponseBody extends TeaModel {
         public static final class Builder {
             private String APN; 
             private Long createTime; 
+            private String grantAliUid; 
             private String ISP; 
             private String ioTCloudConnectorBusinessStatus; 
             private String ioTCloudConnectorDescription; 
@@ -344,6 +367,7 @@ public class ListIoTCloudConnectorsResponseBody extends TeaModel {
             private String mode; 
             private Long modifyTime; 
             private Long rateLimit; 
+            private String serviceType; 
             private String type; 
             private java.util.List < String > vSwitchList; 
             private String vpcId; 
@@ -362,6 +386,14 @@ public class ListIoTCloudConnectorsResponseBody extends TeaModel {
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * GrantAliUid.
+             */
+            public Builder grantAliUid(String grantAliUid) {
+                this.grantAliUid = grantAliUid;
                 return this;
             }
 
@@ -450,6 +482,14 @@ public class ListIoTCloudConnectorsResponseBody extends TeaModel {
              */
             public Builder rateLimit(Long rateLimit) {
                 this.rateLimit = rateLimit;
+                return this;
+            }
+
+            /**
+             * ServiceType.
+             */
+            public Builder serviceType(String serviceType) {
+                this.serviceType = serviceType;
                 return this;
             }
 

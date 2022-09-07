@@ -34,6 +34,10 @@ public class ListAPNsRequest extends Request {
     @Validation(required = true)
     private String regionId;
 
+    @Query
+    @NameInMap("Type")
+    private String type;
+
     private ListAPNsRequest(Builder builder) {
         super(builder);
         this.APN = builder.APN;
@@ -41,6 +45,7 @@ public class ListAPNsRequest extends Request {
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.regionId = builder.regionId;
+        this.type = builder.type;
     }
 
     public static Builder builder() {
@@ -91,12 +96,20 @@ public class ListAPNsRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return type
+     */
+    public String getType() {
+        return this.type;
+    }
+
     public static final class Builder extends Request.Builder<ListAPNsRequest, Builder> {
         private String APN; 
         private String ISP; 
         private Integer maxResults; 
         private String nextToken; 
         private String regionId; 
+        private String type; 
 
         private Builder() {
             super();
@@ -109,6 +122,7 @@ public class ListAPNsRequest extends Request {
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.regionId = request.regionId;
+            this.type = request.type;
         } 
 
         /**
@@ -153,6 +167,15 @@ public class ListAPNsRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * Type.
+         */
+        public Builder type(String type) {
+            this.putQueryParameter("Type", type);
+            this.type = type;
             return this;
         }
 

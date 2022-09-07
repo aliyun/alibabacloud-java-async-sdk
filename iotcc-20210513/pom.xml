@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>alibabacloud-iotcc20210513</artifactId>
-  <version>2.1.8</version>
+  <version>2.2.4</version>
   <packaging>jar</packaging>
   <name>alibabacloud-iotcc20210513</name>
   <description>Alibaba Cloud IoTCC (20210513) Async SDK for Java

@@ -153,6 +153,9 @@ public class ListIoTCloudConnectorGroupsResponseBody extends TeaModel {
         @NameInMap("IoTCloudConnectorStatus")
         private String ioTCloudConnectorStatus;
 
+        @NameInMap("ServiceType")
+        private String serviceType;
+
         private IoTCloudConnectors(Builder builder) {
             this.APN = builder.APN;
             this.createTime = builder.createTime;
@@ -161,6 +164,7 @@ public class ListIoTCloudConnectorGroupsResponseBody extends TeaModel {
             this.ioTCloudConnectorId = builder.ioTCloudConnectorId;
             this.ioTCloudConnectorName = builder.ioTCloudConnectorName;
             this.ioTCloudConnectorStatus = builder.ioTCloudConnectorStatus;
+            this.serviceType = builder.serviceType;
         }
 
         public static Builder builder() {
@@ -220,6 +224,13 @@ public class ListIoTCloudConnectorGroupsResponseBody extends TeaModel {
             return this.ioTCloudConnectorStatus;
         }
 
+        /**
+         * @return serviceType
+         */
+        public String getServiceType() {
+            return this.serviceType;
+        }
+
         public static final class Builder {
             private String APN; 
             private Long createTime; 
@@ -228,6 +239,7 @@ public class ListIoTCloudConnectorGroupsResponseBody extends TeaModel {
             private String ioTCloudConnectorId; 
             private String ioTCloudConnectorName; 
             private String ioTCloudConnectorStatus; 
+            private String serviceType; 
 
             /**
              * APN.
@@ -285,6 +297,14 @@ public class ListIoTCloudConnectorGroupsResponseBody extends TeaModel {
                 return this;
             }
 
+            /**
+             * ServiceType.
+             */
+            public Builder serviceType(String serviceType) {
+                this.serviceType = serviceType;
+                return this;
+            }
+
             public IoTCloudConnectors build() {
                 return new IoTCloudConnectors(this);
             } 
@@ -311,6 +331,9 @@ public class ListIoTCloudConnectorGroupsResponseBody extends TeaModel {
         @NameInMap("Name")
         private String name;
 
+        @NameInMap("ServiceType")
+        private String serviceType;
+
         @NameInMap("Type")
         private String type;
 
@@ -321,6 +344,7 @@ public class ListIoTCloudConnectorGroupsResponseBody extends TeaModel {
             this.ioTCloudConnectorGroupStatus = builder.ioTCloudConnectorGroupStatus;
             this.ioTCloudConnectors = builder.ioTCloudConnectors;
             this.name = builder.name;
+            this.serviceType = builder.serviceType;
             this.type = builder.type;
         }
 
@@ -375,6 +399,13 @@ public class ListIoTCloudConnectorGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return serviceType
+         */
+        public String getServiceType() {
+            return this.serviceType;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
@@ -388,6 +419,7 @@ public class ListIoTCloudConnectorGroupsResponseBody extends TeaModel {
             private String ioTCloudConnectorGroupStatus; 
             private java.util.List < IoTCloudConnectors> ioTCloudConnectors; 
             private String name; 
+            private String serviceType; 
             private String type; 
 
             /**
@@ -435,6 +467,14 @@ public class ListIoTCloudConnectorGroupsResponseBody extends TeaModel {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * ServiceType.
+             */
+            public Builder serviceType(String serviceType) {
+                this.serviceType = serviceType;
                 return this;
             }
 

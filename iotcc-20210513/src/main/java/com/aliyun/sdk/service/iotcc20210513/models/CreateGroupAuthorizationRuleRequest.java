@@ -30,6 +30,10 @@ public class CreateGroupAuthorizationRuleRequest extends Request {
     private String destination;
 
     @Query
+    @NameInMap("DestinationPort")
+    private String destinationPort;
+
+    @Query
     @NameInMap("DestinationType")
     @Validation(required = true)
     private String destinationType;
@@ -47,6 +51,10 @@ public class CreateGroupAuthorizationRuleRequest extends Request {
     @NameInMap("Policy")
     @Validation(required = true)
     private String policy;
+
+    @Query
+    @NameInMap("Protocol")
+    private String protocol;
 
     @Query
     @NameInMap("RegionId")
@@ -68,10 +76,12 @@ public class CreateGroupAuthorizationRuleRequest extends Request {
         this.authorizationRuleName = builder.authorizationRuleName;
         this.clientToken = builder.clientToken;
         this.destination = builder.destination;
+        this.destinationPort = builder.destinationPort;
         this.destinationType = builder.destinationType;
         this.dryRun = builder.dryRun;
         this.ioTCloudConnectorGroupId = builder.ioTCloudConnectorGroupId;
         this.policy = builder.policy;
+        this.protocol = builder.protocol;
         this.regionId = builder.regionId;
         this.sourceCidrs = builder.sourceCidrs;
         this.type = builder.type;
@@ -119,6 +129,13 @@ public class CreateGroupAuthorizationRuleRequest extends Request {
     }
 
     /**
+     * @return destinationPort
+     */
+    public String getDestinationPort() {
+        return this.destinationPort;
+    }
+
+    /**
      * @return destinationType
      */
     public String getDestinationType() {
@@ -147,6 +164,13 @@ public class CreateGroupAuthorizationRuleRequest extends Request {
     }
 
     /**
+     * @return protocol
+     */
+    public String getProtocol() {
+        return this.protocol;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -172,10 +196,12 @@ public class CreateGroupAuthorizationRuleRequest extends Request {
         private String authorizationRuleName; 
         private String clientToken; 
         private String destination; 
+        private String destinationPort; 
         private String destinationType; 
         private Boolean dryRun; 
         private String ioTCloudConnectorGroupId; 
         private String policy; 
+        private String protocol; 
         private String regionId; 
         private java.util.List < String > sourceCidrs; 
         private String type; 
@@ -190,10 +216,12 @@ public class CreateGroupAuthorizationRuleRequest extends Request {
             this.authorizationRuleName = request.authorizationRuleName;
             this.clientToken = request.clientToken;
             this.destination = request.destination;
+            this.destinationPort = request.destinationPort;
             this.destinationType = request.destinationType;
             this.dryRun = request.dryRun;
             this.ioTCloudConnectorGroupId = request.ioTCloudConnectorGroupId;
             this.policy = request.policy;
+            this.protocol = request.protocol;
             this.regionId = request.regionId;
             this.sourceCidrs = request.sourceCidrs;
             this.type = request.type;
@@ -236,6 +264,15 @@ public class CreateGroupAuthorizationRuleRequest extends Request {
         }
 
         /**
+         * DestinationPort.
+         */
+        public Builder destinationPort(String destinationPort) {
+            this.putQueryParameter("DestinationPort", destinationPort);
+            this.destinationPort = destinationPort;
+            return this;
+        }
+
+        /**
          * DestinationType.
          */
         public Builder destinationType(String destinationType) {
@@ -268,6 +305,15 @@ public class CreateGroupAuthorizationRuleRequest extends Request {
         public Builder policy(String policy) {
             this.putQueryParameter("Policy", policy);
             this.policy = policy;
+            return this;
+        }
+
+        /**
+         * Protocol.
+         */
+        public Builder protocol(String protocol) {
+            this.putQueryParameter("Protocol", protocol);
+            this.protocol = protocol;
             return this;
         }
 

@@ -33,6 +33,10 @@ public class ListAuthorizationRulesRequest extends Request {
     private java.util.List < String > destination;
 
     @Query
+    @NameInMap("DestinationPort")
+    private java.util.List < String > destinationPort;
+
+    @Query
     @NameInMap("DestinationType")
     private java.util.List < String > destinationType;
 
@@ -55,6 +59,10 @@ public class ListAuthorizationRulesRequest extends Request {
     private java.util.List < String > policy;
 
     @Query
+    @NameInMap("Protocol")
+    private java.util.List < String > protocol;
+
+    @Query
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
@@ -66,11 +74,13 @@ public class ListAuthorizationRulesRequest extends Request {
         this.authorizationRuleStatus = builder.authorizationRuleStatus;
         this.authorizationRuleType = builder.authorizationRuleType;
         this.destination = builder.destination;
+        this.destinationPort = builder.destinationPort;
         this.destinationType = builder.destinationType;
         this.ioTCloudConnectorId = builder.ioTCloudConnectorId;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.policy = builder.policy;
+        this.protocol = builder.protocol;
         this.regionId = builder.regionId;
     }
 
@@ -123,6 +133,13 @@ public class ListAuthorizationRulesRequest extends Request {
     }
 
     /**
+     * @return destinationPort
+     */
+    public java.util.List < String > getDestinationPort() {
+        return this.destinationPort;
+    }
+
+    /**
      * @return destinationType
      */
     public java.util.List < String > getDestinationType() {
@@ -158,6 +175,13 @@ public class ListAuthorizationRulesRequest extends Request {
     }
 
     /**
+     * @return protocol
+     */
+    public java.util.List < String > getProtocol() {
+        return this.protocol;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -170,11 +194,13 @@ public class ListAuthorizationRulesRequest extends Request {
         private java.util.List < String > authorizationRuleStatus; 
         private String authorizationRuleType; 
         private java.util.List < String > destination; 
+        private java.util.List < String > destinationPort; 
         private java.util.List < String > destinationType; 
         private String ioTCloudConnectorId; 
         private Integer maxResults; 
         private String nextToken; 
         private java.util.List < String > policy; 
+        private java.util.List < String > protocol; 
         private String regionId; 
 
         private Builder() {
@@ -188,11 +214,13 @@ public class ListAuthorizationRulesRequest extends Request {
             this.authorizationRuleStatus = request.authorizationRuleStatus;
             this.authorizationRuleType = request.authorizationRuleType;
             this.destination = request.destination;
+            this.destinationPort = request.destinationPort;
             this.destinationType = request.destinationType;
             this.ioTCloudConnectorId = request.ioTCloudConnectorId;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.policy = request.policy;
+            this.protocol = request.protocol;
             this.regionId = request.regionId;
         } 
 
@@ -242,6 +270,15 @@ public class ListAuthorizationRulesRequest extends Request {
         }
 
         /**
+         * DestinationPort.
+         */
+        public Builder destinationPort(java.util.List < String > destinationPort) {
+            this.putQueryParameter("DestinationPort", destinationPort);
+            this.destinationPort = destinationPort;
+            return this;
+        }
+
+        /**
          * DestinationType.
          */
         public Builder destinationType(java.util.List < String > destinationType) {
@@ -283,6 +320,15 @@ public class ListAuthorizationRulesRequest extends Request {
         public Builder policy(java.util.List < String > policy) {
             this.putQueryParameter("Policy", policy);
             this.policy = policy;
+            return this;
+        }
+
+        /**
+         * Protocol.
+         */
+        public Builder protocol(java.util.List < String > protocol) {
+            this.putQueryParameter("Protocol", protocol);
+            this.protocol = protocol;
             return this;
         }
 

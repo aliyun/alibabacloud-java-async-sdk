@@ -150,6 +150,9 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
         @NameInMap("Destination")
         private String destination;
 
+        @NameInMap("DestinationPort")
+        private String destinationPort;
+
         @NameInMap("DestinationType")
         private String destinationType;
 
@@ -158,6 +161,9 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
 
         @NameInMap("Policy")
         private String policy;
+
+        @NameInMap("Protocol")
+        private String protocol;
 
         @NameInMap("SourceCidrs")
         private java.util.List < String > sourceCidrs;
@@ -169,9 +175,11 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
             this.authorizationRuleStatus = builder.authorizationRuleStatus;
             this.authorizationRuleType = builder.authorizationRuleType;
             this.destination = builder.destination;
+            this.destinationPort = builder.destinationPort;
             this.destinationType = builder.destinationType;
             this.ioTCloudConnectorId = builder.ioTCloudConnectorId;
             this.policy = builder.policy;
+            this.protocol = builder.protocol;
             this.sourceCidrs = builder.sourceCidrs;
         }
 
@@ -226,6 +234,13 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
         }
 
         /**
+         * @return destinationPort
+         */
+        public String getDestinationPort() {
+            return this.destinationPort;
+        }
+
+        /**
          * @return destinationType
          */
         public String getDestinationType() {
@@ -247,6 +262,13 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
         }
 
         /**
+         * @return protocol
+         */
+        public String getProtocol() {
+            return this.protocol;
+        }
+
+        /**
          * @return sourceCidrs
          */
         public java.util.List < String > getSourceCidrs() {
@@ -260,9 +282,11 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
             private String authorizationRuleStatus; 
             private String authorizationRuleType; 
             private String destination; 
+            private String destinationPort; 
             private String destinationType; 
             private String ioTCloudConnectorId; 
             private String policy; 
+            private String protocol; 
             private java.util.List < String > sourceCidrs; 
 
             /**
@@ -314,6 +338,14 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
+             * DestinationPort.
+             */
+            public Builder destinationPort(String destinationPort) {
+                this.destinationPort = destinationPort;
+                return this;
+            }
+
+            /**
              * DestinationType.
              */
             public Builder destinationType(String destinationType) {
@@ -334,6 +366,14 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
              */
             public Builder policy(String policy) {
                 this.policy = policy;
+                return this;
+            }
+
+            /**
+             * Protocol.
+             */
+            public Builder protocol(String protocol) {
+                this.protocol = protocol;
                 return this;
             }
 

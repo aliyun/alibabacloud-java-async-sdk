@@ -29,6 +29,10 @@ public class ListGroupAuthorizationRulesRequest extends Request {
     private java.util.List < String > destination;
 
     @Query
+    @NameInMap("DestinationPort")
+    private java.util.List < String > destinationPort;
+
+    @Query
     @NameInMap("DestinationType")
     private java.util.List < String > destinationType;
 
@@ -51,6 +55,10 @@ public class ListGroupAuthorizationRulesRequest extends Request {
     private java.util.List < String > policy;
 
     @Query
+    @NameInMap("Protocol")
+    private java.util.List < String > protocol;
+
+    @Query
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
@@ -65,11 +73,13 @@ public class ListGroupAuthorizationRulesRequest extends Request {
         this.authorizationRuleName = builder.authorizationRuleName;
         this.authorizationRuleStatus = builder.authorizationRuleStatus;
         this.destination = builder.destination;
+        this.destinationPort = builder.destinationPort;
         this.destinationType = builder.destinationType;
         this.ioTCloudConnectorGroupId = builder.ioTCloudConnectorGroupId;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.policy = builder.policy;
+        this.protocol = builder.protocol;
         this.regionId = builder.regionId;
         this.type = builder.type;
     }
@@ -116,6 +126,13 @@ public class ListGroupAuthorizationRulesRequest extends Request {
     }
 
     /**
+     * @return destinationPort
+     */
+    public java.util.List < String > getDestinationPort() {
+        return this.destinationPort;
+    }
+
+    /**
      * @return destinationType
      */
     public java.util.List < String > getDestinationType() {
@@ -151,6 +168,13 @@ public class ListGroupAuthorizationRulesRequest extends Request {
     }
 
     /**
+     * @return protocol
+     */
+    public java.util.List < String > getProtocol() {
+        return this.protocol;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -169,11 +193,13 @@ public class ListGroupAuthorizationRulesRequest extends Request {
         private java.util.List < String > authorizationRuleName; 
         private java.util.List < String > authorizationRuleStatus; 
         private java.util.List < String > destination; 
+        private java.util.List < String > destinationPort; 
         private java.util.List < String > destinationType; 
         private String ioTCloudConnectorGroupId; 
         private Integer maxResults; 
         private String nextToken; 
         private java.util.List < String > policy; 
+        private java.util.List < String > protocol; 
         private String regionId; 
         private String type; 
 
@@ -187,11 +213,13 @@ public class ListGroupAuthorizationRulesRequest extends Request {
             this.authorizationRuleName = request.authorizationRuleName;
             this.authorizationRuleStatus = request.authorizationRuleStatus;
             this.destination = request.destination;
+            this.destinationPort = request.destinationPort;
             this.destinationType = request.destinationType;
             this.ioTCloudConnectorGroupId = request.ioTCloudConnectorGroupId;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.policy = request.policy;
+            this.protocol = request.protocol;
             this.regionId = request.regionId;
             this.type = request.type;
         } 
@@ -229,6 +257,15 @@ public class ListGroupAuthorizationRulesRequest extends Request {
         public Builder destination(java.util.List < String > destination) {
             this.putQueryParameter("Destination", destination);
             this.destination = destination;
+            return this;
+        }
+
+        /**
+         * DestinationPort.
+         */
+        public Builder destinationPort(java.util.List < String > destinationPort) {
+            this.putQueryParameter("DestinationPort", destinationPort);
+            this.destinationPort = destinationPort;
             return this;
         }
 
@@ -274,6 +311,15 @@ public class ListGroupAuthorizationRulesRequest extends Request {
         public Builder policy(java.util.List < String > policy) {
             this.putQueryParameter("Policy", policy);
             this.policy = policy;
+            return this;
+        }
+
+        /**
+         * Protocol.
+         */
+        public Builder protocol(java.util.List < String > protocol) {
+            this.putQueryParameter("Protocol", protocol);
+            this.protocol = protocol;
             return this;
         }
 

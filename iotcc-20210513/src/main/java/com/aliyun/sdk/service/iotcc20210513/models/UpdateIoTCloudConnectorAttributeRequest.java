@@ -34,6 +34,10 @@ public class UpdateIoTCloudConnectorAttributeRequest extends Request {
     private String ioTCloudConnectorName;
 
     @Query
+    @NameInMap("Mode")
+    private String mode;
+
+    @Query
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
@@ -49,6 +53,7 @@ public class UpdateIoTCloudConnectorAttributeRequest extends Request {
         this.ioTCloudConnectorDescription = builder.ioTCloudConnectorDescription;
         this.ioTCloudConnectorId = builder.ioTCloudConnectorId;
         this.ioTCloudConnectorName = builder.ioTCloudConnectorName;
+        this.mode = builder.mode;
         this.regionId = builder.regionId;
         this.wildcardDomainEnabled = builder.wildcardDomainEnabled;
     }
@@ -102,6 +107,13 @@ public class UpdateIoTCloudConnectorAttributeRequest extends Request {
     }
 
     /**
+     * @return mode
+     */
+    public String getMode() {
+        return this.mode;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -121,6 +133,7 @@ public class UpdateIoTCloudConnectorAttributeRequest extends Request {
         private String ioTCloudConnectorDescription; 
         private String ioTCloudConnectorId; 
         private String ioTCloudConnectorName; 
+        private String mode; 
         private String regionId; 
         private Boolean wildcardDomainEnabled; 
 
@@ -135,6 +148,7 @@ public class UpdateIoTCloudConnectorAttributeRequest extends Request {
             this.ioTCloudConnectorDescription = request.ioTCloudConnectorDescription;
             this.ioTCloudConnectorId = request.ioTCloudConnectorId;
             this.ioTCloudConnectorName = request.ioTCloudConnectorName;
+            this.mode = request.mode;
             this.regionId = request.regionId;
             this.wildcardDomainEnabled = request.wildcardDomainEnabled;
         } 
@@ -181,6 +195,15 @@ public class UpdateIoTCloudConnectorAttributeRequest extends Request {
         public Builder ioTCloudConnectorName(String ioTCloudConnectorName) {
             this.putQueryParameter("IoTCloudConnectorName", ioTCloudConnectorName);
             this.ioTCloudConnectorName = ioTCloudConnectorName;
+            return this;
+        }
+
+        /**
+         * Mode.
+         */
+        public Builder mode(String mode) {
+            this.putQueryParameter("Mode", mode);
+            this.mode = mode;
             return this;
         }
 

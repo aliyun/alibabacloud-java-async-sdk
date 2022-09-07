@@ -26,7 +26,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AssociateVSwitchWithIoTCloudConnectorResponse> associateVSwitchWithIoTCloudConnector(AssociateVSwitchWithIoTCloudConnectorRequest request);
 
+    CompletableFuture<ConfirmIoTCloudConnectorResponse> confirmIoTCloudConnector(ConfirmIoTCloudConnectorRequest request);
+
     CompletableFuture<CreateAuthorizationRuleResponse> createAuthorizationRule(CreateAuthorizationRuleRequest request);
+
+    CompletableFuture<CreateAuthorizationRulesResponse> createAuthorizationRules(CreateAuthorizationRulesRequest request);
 
     CompletableFuture<CreateConnectionPoolResponse> createConnectionPool(CreateConnectionPoolRequest request);
 
@@ -36,11 +40,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateGroupDNSServiceRuleResponse> createGroupDNSServiceRule(CreateGroupDNSServiceRuleRequest request);
 
+    CompletableFuture<CreateGroupIpMappingRuleResponse> createGroupIpMappingRule(CreateGroupIpMappingRuleRequest request);
+
     CompletableFuture<CreateIoTCloudConnectorResponse> createIoTCloudConnector(CreateIoTCloudConnectorRequest request);
 
     CompletableFuture<CreateIoTCloudConnectorBackhaulRouteResponse> createIoTCloudConnectorBackhaulRoute(CreateIoTCloudConnectorBackhaulRouteRequest request);
 
     CompletableFuture<CreateIoTCloudConnectorGroupResponse> createIoTCloudConnectorGroup(CreateIoTCloudConnectorGroupRequest request);
+
+    CompletableFuture<CreateIpMappingRuleResponse> createIpMappingRule(CreateIpMappingRuleRequest request);
 
     CompletableFuture<CreateServiceResponse> createService(CreateServiceRequest request);
 
@@ -56,11 +64,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteGroupDNSServiceRuleResponse> deleteGroupDNSServiceRule(DeleteGroupDNSServiceRuleRequest request);
 
+    CompletableFuture<DeleteGroupIpMappingRuleResponse> deleteGroupIpMappingRule(DeleteGroupIpMappingRuleRequest request);
+
     CompletableFuture<DeleteIoTCloudConnectorResponse> deleteIoTCloudConnector(DeleteIoTCloudConnectorRequest request);
 
     CompletableFuture<DeleteIoTCloudConnectorGroupResponse> deleteIoTCloudConnectorGroup(DeleteIoTCloudConnectorGroupRequest request);
 
     CompletableFuture<DeleteIoTCloudConnetorBackhaulRouteResponse> deleteIoTCloudConnetorBackhaulRoute(DeleteIoTCloudConnetorBackhaulRouteRequest request);
+
+    CompletableFuture<DeleteIpMappingRuleResponse> deleteIpMappingRule(DeleteIpMappingRuleRequest request);
 
     CompletableFuture<DeleteServiceResponse> deleteService(DeleteServiceRequest request);
 
@@ -102,15 +114,21 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListGroupDNSServiceRulesResponse> listGroupDNSServiceRules(ListGroupDNSServiceRulesRequest request);
 
+    CompletableFuture<ListGroupIpMappingRulesResponse> listGroupIpMappingRules(ListGroupIpMappingRulesRequest request);
+
     CompletableFuture<ListIoTCloudConnectorAccessSessionLogsResponse> listIoTCloudConnectorAccessSessionLogs(ListIoTCloudConnectorAccessSessionLogsRequest request);
 
     CompletableFuture<ListIoTCloudConnectorAvailableZonesResponse> listIoTCloudConnectorAvailableZones(ListIoTCloudConnectorAvailableZonesRequest request);
+
+    CompletableFuture<ListIoTCloudConnectorEIPsResponse> listIoTCloudConnectorEIPs(ListIoTCloudConnectorEIPsRequest request);
 
     CompletableFuture<ListIoTCloudConnectorGroupsResponse> listIoTCloudConnectorGroups(ListIoTCloudConnectorGroupsRequest request);
 
     CompletableFuture<ListIoTCloudConnectorsResponse> listIoTCloudConnectors(ListIoTCloudConnectorsRequest request);
 
     CompletableFuture<ListIoTCoudConnectorBackhaulRouteResponse> listIoTCoudConnectorBackhaulRoute(ListIoTCoudConnectorBackhaulRouteRequest request);
+
+    CompletableFuture<ListIpMappingRulesResponse> listIpMappingRules(ListIpMappingRulesRequest request);
 
     CompletableFuture<ListRegionsResponse> listRegions(ListRegionsRequest request);
 
@@ -126,6 +144,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<RemoveIoTCloudConnectorFromGroupResponse> removeIoTCloudConnectorFromGroup(RemoveIoTCloudConnectorFromGroupRequest request);
 
+    CompletableFuture<RevertIoTCloudConnectorResponse> revertIoTCloudConnector(RevertIoTCloudConnectorRequest request);
+
     CompletableFuture<SubmitDiagnoseTaskForSingleCardResponse> submitDiagnoseTaskForSingleCard(SubmitDiagnoseTaskForSingleCardRequest request);
 
     CompletableFuture<UpdateAuthorizationRuleAttributeResponse> updateAuthorizationRuleAttribute(UpdateAuthorizationRuleAttributeRequest request);
@@ -138,9 +158,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<UpdateGroupDNSServiceRuleAttributeResponse> updateGroupDNSServiceRuleAttribute(UpdateGroupDNSServiceRuleAttributeRequest request);
 
+    CompletableFuture<UpdateGroupIpMappingRuleResponse> updateGroupIpMappingRule(UpdateGroupIpMappingRuleRequest request);
+
     CompletableFuture<UpdateIoTCloudConnectorAttributeResponse> updateIoTCloudConnectorAttribute(UpdateIoTCloudConnectorAttributeRequest request);
 
     CompletableFuture<UpdateIoTCloudConnectorGroupAttributeResponse> updateIoTCloudConnectorGroupAttribute(UpdateIoTCloudConnectorGroupAttributeRequest request);
+
+    CompletableFuture<UpdateIpMappingRuleResponse> updateIpMappingRule(UpdateIpMappingRuleRequest request);
 
     CompletableFuture<UpdateServiceAttributeResponse> updateServiceAttribute(UpdateServiceAttributeRequest request);
 
