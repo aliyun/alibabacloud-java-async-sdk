@@ -546,6 +546,7 @@ com/aliyun/sdk/service/ros20190910/models/ListTagValuesRequest.class
 com/aliyun/sdk/service/ros20190910/models/ListStackGroupsResponse.class
 com/aliyun/sdk/service/ros20190910/models/GetStackRequest$Builder.class
 com/aliyun/sdk/service/ros20190910/models/DeleteTemplateResponseBody$1.class
+com/aliyun/sdk/service/ros20190910/models/GetStackResponseBody$OperationInfo$Builder.class
 com/aliyun/sdk/service/ros20190910/models/ExecuteChangeSetResponseBody.class
 com/aliyun/sdk/service/ros20190910/models/ListTemplatesResponseBody$Templates$Builder.class
 com/aliyun/sdk/service/ros20190910/models/GetTemplateRequest$1.class
@@ -701,6 +702,7 @@ com/aliyun/sdk/service/ros20190910/models/ListChangeSetsResponse$1.class
 com/aliyun/sdk/service/ros20190910/models/ListStackResourceDriftsResponseBody$ResourceDrifts$Builder.class
 com/aliyun/sdk/service/ros20190910/models/DeleteTemplateScratchResponseBody.class
 com/aliyun/sdk/service/ros20190910/models/SetDeletionProtectionRequest$Builder.class
+com/aliyun/sdk/service/ros20190910/models/ListStacksResponseBody$OperationInfo.class
 com/aliyun/sdk/service/ros20190910/models/DeleteChangeSetResponseBody$1.class
 com/aliyun/sdk/service/ros20190910/models/GetServiceProvisionsResponseBody$Roles$Builder.class
 com/aliyun/sdk/service/ros20190910/models/DeleteStackInstancesResponse.class
@@ -727,6 +729,7 @@ com/aliyun/sdk/service/ros20190910/models/GenerateTemplatePolicyResponse$Builder
 com/aliyun/sdk/service/ros20190910/models/GetStackResponse$Builder.class
 com/aliyun/sdk/service/ros20190910/models/GetStackResponseBody$Tags.class
 com/aliyun/sdk/service/ros20190910/models/ListTemplateScratchesResponseBody$1.class
+com/aliyun/sdk/service/ros20190910/models/ListStacksResponseBody$OperationInfo$Builder.class
 com/aliyun/sdk/service/ros20190910/models/GetTemplateScratchResponseBody$TemplateScratch$Builder.class
 com/aliyun/sdk/service/ros20190910/models/GetServiceProvisionsResponse.class
 com/aliyun/sdk/service/ros20190910/models/ListStacksResponse$1.class
@@ -924,6 +927,7 @@ com/aliyun/sdk/service/ros20190910/models/GetTemplateParameterConstraintsRespons
 com/aliyun/sdk/service/ros20190910/models/GetChangeSetRequest.class
 com/aliyun/sdk/service/ros20190910/models/DeleteTemplateScratchResponse$1.class
 com/aliyun/sdk/service/ros20190910/models/DeleteStackInstancesRequest$DeploymentTargets.class
+com/aliyun/sdk/service/ros20190910/models/GetStackResponseBody$OperationInfo.class
 com/aliyun/sdk/service/ros20190910/models/GetStackResponseBody$Builder.class
 com/aliyun/sdk/service/ros20190910/models/ListResourceTypesResponseBody.class
 com/aliyun/sdk/service/ros20190910/models/ListStackEventsResponseBody$1.class

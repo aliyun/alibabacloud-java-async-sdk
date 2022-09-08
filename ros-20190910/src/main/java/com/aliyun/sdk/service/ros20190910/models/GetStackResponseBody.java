@@ -36,6 +36,9 @@ public class GetStackResponseBody extends TeaModel {
     @NameInMap("NotificationURLs")
     private java.util.List < String > notificationURLs;
 
+    @NameInMap("OperationInfo")
+    private OperationInfo operationInfo;
+
     @NameInMap("Outputs")
     private java.util.List < java.util.Map<String, ?>> outputs;
 
@@ -120,6 +123,7 @@ public class GetStackResponseBody extends TeaModel {
         this._interface = builder._interface;
         this.log = builder.log;
         this.notificationURLs = builder.notificationURLs;
+        this.operationInfo = builder.operationInfo;
         this.outputs = builder.outputs;
         this.parameters = builder.parameters;
         this.parentStackId = builder.parentStackId;
@@ -209,6 +213,13 @@ public class GetStackResponseBody extends TeaModel {
      */
     public java.util.List < String > getNotificationURLs() {
         return this.notificationURLs;
+    }
+
+    /**
+     * @return operationInfo
+     */
+    public OperationInfo getOperationInfo() {
+        return this.operationInfo;
     }
 
     /**
@@ -395,6 +406,7 @@ public class GetStackResponseBody extends TeaModel {
         private String _interface; 
         private Log log; 
         private java.util.List < String > notificationURLs; 
+        private OperationInfo operationInfo; 
         private java.util.List < java.util.Map<String, ?>> outputs; 
         private java.util.List < Parameters> parameters; 
         private String parentStackId; 
@@ -482,6 +494,14 @@ public class GetStackResponseBody extends TeaModel {
          */
         public Builder notificationURLs(java.util.List < String > notificationURLs) {
             this.notificationURLs = notificationURLs;
+            return this;
+        }
+
+        /**
+         * OperationInfo.
+         */
+        public Builder operationInfo(OperationInfo operationInfo) {
+            this.operationInfo = operationInfo;
             return this;
         }
 
@@ -950,6 +970,147 @@ public class GetStackResponseBody extends TeaModel {
 
             public Log build() {
                 return new Log(this);
+            } 
+
+        } 
+
+    }
+    public static class OperationInfo extends TeaModel {
+        @NameInMap("Action")
+        private String action;
+
+        @NameInMap("Code")
+        private String code;
+
+        @NameInMap("LogicalResourceId")
+        private String logicalResourceId;
+
+        @NameInMap("Message")
+        private String message;
+
+        @NameInMap("RequestId")
+        private String requestId;
+
+        @NameInMap("ResourceType")
+        private String resourceType;
+
+        private OperationInfo(Builder builder) {
+            this.action = builder.action;
+            this.code = builder.code;
+            this.logicalResourceId = builder.logicalResourceId;
+            this.message = builder.message;
+            this.requestId = builder.requestId;
+            this.resourceType = builder.resourceType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static OperationInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return action
+         */
+        public String getAction() {
+            return this.action;
+        }
+
+        /**
+         * @return code
+         */
+        public String getCode() {
+            return this.code;
+        }
+
+        /**
+         * @return logicalResourceId
+         */
+        public String getLogicalResourceId() {
+            return this.logicalResourceId;
+        }
+
+        /**
+         * @return message
+         */
+        public String getMessage() {
+            return this.message;
+        }
+
+        /**
+         * @return requestId
+         */
+        public String getRequestId() {
+            return this.requestId;
+        }
+
+        /**
+         * @return resourceType
+         */
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+        public static final class Builder {
+            private String action; 
+            private String code; 
+            private String logicalResourceId; 
+            private String message; 
+            private String requestId; 
+            private String resourceType; 
+
+            /**
+             * Action.
+             */
+            public Builder action(String action) {
+                this.action = action;
+                return this;
+            }
+
+            /**
+             * Code.
+             */
+            public Builder code(String code) {
+                this.code = code;
+                return this;
+            }
+
+            /**
+             * LogicalResourceId.
+             */
+            public Builder logicalResourceId(String logicalResourceId) {
+                this.logicalResourceId = logicalResourceId;
+                return this;
+            }
+
+            /**
+             * Message.
+             */
+            public Builder message(String message) {
+                this.message = message;
+                return this;
+            }
+
+            /**
+             * RequestId.
+             */
+            public Builder requestId(String requestId) {
+                this.requestId = requestId;
+                return this;
+            }
+
+            /**
+             * ResourceType.
+             */
+            public Builder resourceType(String resourceType) {
+                this.resourceType = resourceType;
+                return this;
+            }
+
+            public OperationInfo build() {
+                return new OperationInfo(this);
             } 
 
         } 

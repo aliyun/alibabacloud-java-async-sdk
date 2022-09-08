@@ -131,6 +131,147 @@ public class ListStacksResponseBody extends TeaModel {
 
     } 
 
+    public static class OperationInfo extends TeaModel {
+        @NameInMap("Action")
+        private String action;
+
+        @NameInMap("Code")
+        private String code;
+
+        @NameInMap("LogicalResourceId")
+        private String logicalResourceId;
+
+        @NameInMap("Message")
+        private String message;
+
+        @NameInMap("RequestId")
+        private String requestId;
+
+        @NameInMap("ResourceType")
+        private String resourceType;
+
+        private OperationInfo(Builder builder) {
+            this.action = builder.action;
+            this.code = builder.code;
+            this.logicalResourceId = builder.logicalResourceId;
+            this.message = builder.message;
+            this.requestId = builder.requestId;
+            this.resourceType = builder.resourceType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static OperationInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return action
+         */
+        public String getAction() {
+            return this.action;
+        }
+
+        /**
+         * @return code
+         */
+        public String getCode() {
+            return this.code;
+        }
+
+        /**
+         * @return logicalResourceId
+         */
+        public String getLogicalResourceId() {
+            return this.logicalResourceId;
+        }
+
+        /**
+         * @return message
+         */
+        public String getMessage() {
+            return this.message;
+        }
+
+        /**
+         * @return requestId
+         */
+        public String getRequestId() {
+            return this.requestId;
+        }
+
+        /**
+         * @return resourceType
+         */
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+        public static final class Builder {
+            private String action; 
+            private String code; 
+            private String logicalResourceId; 
+            private String message; 
+            private String requestId; 
+            private String resourceType; 
+
+            /**
+             * Action.
+             */
+            public Builder action(String action) {
+                this.action = action;
+                return this;
+            }
+
+            /**
+             * Code.
+             */
+            public Builder code(String code) {
+                this.code = code;
+                return this;
+            }
+
+            /**
+             * LogicalResourceId.
+             */
+            public Builder logicalResourceId(String logicalResourceId) {
+                this.logicalResourceId = logicalResourceId;
+                return this;
+            }
+
+            /**
+             * Message.
+             */
+            public Builder message(String message) {
+                this.message = message;
+                return this;
+            }
+
+            /**
+             * RequestId.
+             */
+            public Builder requestId(String requestId) {
+                this.requestId = requestId;
+                return this;
+            }
+
+            /**
+             * ResourceType.
+             */
+            public Builder resourceType(String resourceType) {
+                this.resourceType = resourceType;
+                return this;
+            }
+
+            public OperationInfo build() {
+                return new OperationInfo(this);
+            } 
+
+        } 
+
+    }
     public static class Tags extends TeaModel {
         @NameInMap("Key")
         private String key;
@@ -202,6 +343,9 @@ public class ListStacksResponseBody extends TeaModel {
         @NameInMap("DriftDetectionTime")
         private String driftDetectionTime;
 
+        @NameInMap("OperationInfo")
+        private OperationInfo operationInfo;
+
         @NameInMap("ParentStackId")
         private String parentStackId;
 
@@ -248,6 +392,7 @@ public class ListStacksResponseBody extends TeaModel {
             this.createTime = builder.createTime;
             this.disableRollback = builder.disableRollback;
             this.driftDetectionTime = builder.driftDetectionTime;
+            this.operationInfo = builder.operationInfo;
             this.parentStackId = builder.parentStackId;
             this.regionId = builder.regionId;
             this.resourceGroupId = builder.resourceGroupId;
@@ -291,6 +436,13 @@ public class ListStacksResponseBody extends TeaModel {
          */
         public String getDriftDetectionTime() {
             return this.driftDetectionTime;
+        }
+
+        /**
+         * @return operationInfo
+         */
+        public OperationInfo getOperationInfo() {
+            return this.operationInfo;
         }
 
         /**
@@ -395,6 +547,7 @@ public class ListStacksResponseBody extends TeaModel {
             private String createTime; 
             private Boolean disableRollback; 
             private String driftDetectionTime; 
+            private OperationInfo operationInfo; 
             private String parentStackId; 
             private String regionId; 
             private String resourceGroupId; 
@@ -431,6 +584,14 @@ public class ListStacksResponseBody extends TeaModel {
              */
             public Builder driftDetectionTime(String driftDetectionTime) {
                 this.driftDetectionTime = driftDetectionTime;
+                return this;
+            }
+
+            /**
+             * OperationInfo.
+             */
+            public Builder operationInfo(OperationInfo operationInfo) {
+                this.operationInfo = operationInfo;
                 return this;
             }
 
