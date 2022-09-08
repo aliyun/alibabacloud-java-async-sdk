@@ -18,6 +18,7 @@ com/aliyun/sdk/service/quickbi_public20220101/models/DeleteDataLevelRuleConfigRe
 com/aliyun/sdk/service/quickbi_public20220101/models/GetUserGroupInfoRequest.class
 com/aliyun/sdk/service/quickbi_public20220101/models/ListUserGroupsByUserIdResponseBody.class
 com/aliyun/sdk/service/quickbi_public20220101/models/UpdateWorkspaceUsersRoleRequest.class
+com/aliyun/sdk/service/quickbi_public20220101/models/BatchAddFeishuUsersResponseBody$1.class
 com/aliyun/sdk/service/quickbi_public20220101/models/CreateTicketResponseBody$1.class
 com/aliyun/sdk/service/quickbi_public20220101/models/QueryUserListResponse$1.class
 com/aliyun/sdk/service/quickbi_public20220101/models/QueryUserInfoByUserIdResponseBody$Builder.class
@@ -104,7 +105,9 @@ com/aliyun/sdk/service/quickbi_public20220101/models/CancelReportShareRequest$Bu
 com/aliyun/sdk/service/quickbi_public20220101/models/ListPortalMenuAuthorizationResponse$1.class
 com/aliyun/sdk/service/quickbi_public20220101/models/QueryDatasetListResponseBody$DataSource.class
 com/aliyun/sdk/service/quickbi_public20220101/models/QueryDatasetInfoResponseBody$CubeTableList$Builder.class
+com/aliyun/sdk/service/quickbi_public20220101/models/BatchAddFeishuUsersResponseBody.class
 com/aliyun/sdk/service/quickbi_public20220101/models/AddUserGroupMemberResponse$1.class
+com/aliyun/sdk/service/quickbi_public20220101/models/BatchAddFeishuUsersResponse$BuilderImpl.class
 com/aliyun/sdk/service/quickbi_public20220101/models/DeleteUserGroupMembersResponse$BuilderImpl.class
 com/aliyun/sdk/service/quickbi_public20220101/models/ListDataLevelPermissionWhiteListResponseBody.class
 com/aliyun/sdk/service/quickbi_public20220101/models/ListSharedReportsResponseBody$Result.class
@@ -160,6 +163,7 @@ com/aliyun/sdk/service/quickbi_public20220101/models/QueryWorksBloodRelationship
 com/aliyun/sdk/service/quickbi_public20220101/models/AddWorkspaceUsersRequest$Builder.class
 com/aliyun/sdk/service/quickbi_public20220101/models/CancelAuthorizationMenuResponseBody.class
 com/aliyun/sdk/service/quickbi_public20220101/models/UpdateUserGroupRequest.class
+com/aliyun/sdk/service/quickbi_public20220101/models/BatchAddFeishuUsersResponseBody$Result.class
 com/aliyun/sdk/service/quickbi_public20220101/models/CheckReadableRequest$Builder.class
 com/aliyun/sdk/service/quickbi_public20220101/models/AddUserResponse$Builder.class
 com/aliyun/sdk/service/quickbi_public20220101/models/QuerySharesToUserListResponse$BuilderImpl.class
@@ -210,6 +214,7 @@ com/aliyun/sdk/service/quickbi_public20220101/models/QueryDatasetInfoResponse.cl
 com/aliyun/sdk/service/quickbi_public20220101/models/QueryOrganizationWorkspaceListResponseBody$Result.class
 com/aliyun/sdk/service/quickbi_public20220101/models/AuthorizeMenuResponseBody$Builder.class
 com/aliyun/sdk/service/quickbi_public20220101/models/QueryUserGroupListByParentIdRequest$1.class
+com/aliyun/sdk/service/quickbi_public20220101/models/BatchAddFeishuUsersResponseBody$FailInfos.class
 com/aliyun/sdk/service/quickbi_public20220101/models/DeleteUserResponse$BuilderImpl.class
 com/aliyun/sdk/service/quickbi_public20220101/models/AddShareReportRequest.class
 com/aliyun/sdk/service/quickbi_public20220101/models/UpdateDataLevelPermissionStatusResponse$Builder.class
@@ -260,6 +265,7 @@ com/aliyun/sdk/service/quickbi_public20220101/models/AddShareReportResponse$Buil
 com/aliyun/sdk/service/quickbi_public20220101/models/QueryUserInfoByAccountResponse$Builder.class
 com/aliyun/sdk/service/quickbi_public20220101/models/QueryUserTagValueListResponseBody$1.class
 com/aliyun/sdk/service/quickbi_public20220101/models/QueryTicketInfoResponseBody$Result$Builder.class
+com/aliyun/sdk/service/quickbi_public20220101/models/BatchAddFeishuUsersResponse$Builder.class
 com/aliyun/sdk/service/quickbi_public20220101/models/QueryOrganizationWorkspaceListResponseBody$Result$Builder.class
 com/aliyun/sdk/service/quickbi_public20220101/models/QueryDatasetListResponse$BuilderImpl.class
 com/aliyun/sdk/service/quickbi_public20220101/models/DeleteTicketRequest$Builder.class
@@ -291,6 +297,7 @@ com/aliyun/sdk/service/quickbi_public20220101/models/SetDataLevelPermissionRuleC
 com/aliyun/sdk/service/quickbi_public20220101/models/UpdateUserTagValueResponse$BuilderImpl.class
 com/aliyun/sdk/service/quickbi_public20220101/models/DeleteUserTagMetaRequest.class
 com/aliyun/sdk/service/quickbi_public20220101/models/QueryUserRoleInfoInWorkspaceRequest.class
+com/aliyun/sdk/service/quickbi_public20220101/models/BatchAddFeishuUsersResponseBody$Builder.class
 com/aliyun/sdk/service/quickbi_public20220101/models/QueryTicketInfoResponseBody$Builder.class
 com/aliyun/sdk/service/quickbi_public20220101/models/ListByUserGroupIdResponseBody$Builder.class
 com/aliyun/sdk/service/quickbi_public20220101/models/SetDataLevelPermissionRuleConfigResponse$1.class
@@ -335,6 +342,7 @@ com/aliyun/sdk/service/quickbi_public20220101/models/QueryWorksBloodRelationship
 com/aliyun/sdk/service/quickbi_public20220101/models/ListCubeDataLevelPermissionConfigResponse$Builder.class
 com/aliyun/sdk/service/quickbi_public20220101/models/ListCollectionsResponseBody$Result.class
 com/aliyun/sdk/service/quickbi_public20220101/models/CheckReadableResponse$BuilderImpl.class
+com/aliyun/sdk/service/quickbi_public20220101/models/BatchAddFeishuUsersResponseBody$FailResults$Builder.class
 com/aliyun/sdk/service/quickbi_public20220101/models/QueryDataServiceRequest$Builder.class
 com/aliyun/sdk/service/quickbi_public20220101/models/AuthorizeMenuRequest$Builder.class
 com/aliyun/sdk/service/quickbi_public20220101/models/QueryEmbeddedInfoResponseBody$Result.class
@@ -433,6 +441,7 @@ com/aliyun/sdk/service/quickbi_public20220101/models/QueryUserInfoByAccountRespo
 com/aliyun/sdk/service/quickbi_public20220101/models/AddDataLevelPermissionWhiteListRequest.class
 com/aliyun/sdk/service/quickbi_public20220101/models/UpdateUserTagValueRequest$1.class
 com/aliyun/sdk/service/quickbi_public20220101/models/AddWorkspaceUsersRequest.class
+com/aliyun/sdk/service/quickbi_public20220101/models/BatchAddFeishuUsersResponseBody$FailInfos$Builder.class
 com/aliyun/sdk/service/quickbi_public20220101/models/ListRecentViewReportsRequest$1.class
 com/aliyun/sdk/service/quickbi_public20220101/models/QueryUserGroupListByParentIdRequest.class
 com/aliyun/sdk/service/quickbi_public20220101/models/ListDataLevelPermissionWhiteListResponseBody$Result$Builder.class
@@ -462,6 +471,7 @@ com/aliyun/sdk/service/quickbi_public20220101/models/QueryDatasetDetailInfoRespo
 com/aliyun/sdk/service/quickbi_public20220101/models/ListFavoriteReportsResponseBody.class
 com/aliyun/sdk/service/quickbi_public20220101/models/QueryUserInfoByUserIdRequest.class
 com/aliyun/sdk/service/quickbi_public20220101/models/QueryUserGroupListByParentIdResponseBody$Result.class
+com/aliyun/sdk/service/quickbi_public20220101/models/BatchAddFeishuUsersResponseBody$Result$Builder.class
 com/aliyun/sdk/service/quickbi_public20220101/models/DeleteTicketResponse$Builder.class
 com/aliyun/sdk/service/quickbi_public20220101/models/QueryEmbeddedInfoResponseBody$1.class
 com/aliyun/sdk/service/quickbi_public20220101/models/AddUserRequest$Builder.class
@@ -480,6 +490,7 @@ com/aliyun/sdk/service/quickbi_public20220101/models/DeleteDataLevelPermissionRu
 com/aliyun/sdk/service/quickbi_public20220101/models/UpdateWorkspaceUserRoleResponse$Builder.class
 com/aliyun/sdk/service/quickbi_public20220101/models/QueryReadableResourcesListByUserIdRequest$1.class
 com/aliyun/sdk/service/quickbi_public20220101/models/WithdrawAllUserGroupsResponseBody$Builder.class
+com/aliyun/sdk/service/quickbi_public20220101/models/BatchAddFeishuUsersRequest$Builder.class
 com/aliyun/sdk/service/quickbi_public20220101/models/ListFavoriteReportsRequest$1.class
 com/aliyun/sdk/service/quickbi_public20220101/models/GetUserGroupInfoResponse$BuilderImpl.class
 com/aliyun/sdk/service/quickbi_public20220101/models/AddUserToWorkspaceRequest.class
@@ -570,6 +581,7 @@ com/aliyun/sdk/service/quickbi_public20220101/models/AddUserGroupMembersResponse
 com/aliyun/sdk/service/quickbi_public20220101/models/CreateUserGroupResponse$Builder.class
 com/aliyun/sdk/service/quickbi_public20220101/models/QueryEmbeddedStatusResponse$1.class
 com/aliyun/sdk/service/quickbi_public20220101/models/QueryWorksByOrganizationResponse$1.class
+com/aliyun/sdk/service/quickbi_public20220101/models/BatchAddFeishuUsersResponseBody$FailResults.class
 com/aliyun/sdk/service/quickbi_public20220101/models/CancelReportShareRequest.class
 com/aliyun/sdk/service/quickbi_public20220101/models/UpdateWorkspaceUsersRoleResponse$BuilderImpl.class
 com/aliyun/sdk/service/quickbi_public20220101/models/QueryDatasetListResponseBody$Data.class
@@ -664,6 +676,7 @@ com/aliyun/sdk/service/quickbi_public20220101/models/QueryEmbeddedStatusRequest$
 com/aliyun/sdk/service/quickbi_public20220101/models/ListFavoriteReportsResponseBody$Data$Builder.class
 com/aliyun/sdk/service/quickbi_public20220101/models/QueryWorkspaceUserListResponseBody$Builder.class
 com/aliyun/sdk/service/quickbi_public20220101/models/DeleteDataLevelPermissionRuleUsersResponse$1.class
+com/aliyun/sdk/service/quickbi_public20220101/models/BatchAddFeishuUsersResponse$1.class
 com/aliyun/sdk/service/quickbi_public20220101/models/DeleteUserResponseBody$Builder.class
 com/aliyun/sdk/service/quickbi_public20220101/models/CancelAuthorizationMenuResponse$1.class
 com/aliyun/sdk/service/quickbi_public20220101/models/AuthorizeMenuResponse$1.class
@@ -722,6 +735,7 @@ com/aliyun/sdk/service/quickbi_public20220101/models/UpdateUserTagMetaResponseBo
 com/aliyun/sdk/service/quickbi_public20220101/models/CreateTicketResponse.class
 com/aliyun/sdk/service/quickbi_public20220101/models/QueryShareListResponseBody$Result$Builder.class
 com/aliyun/sdk/service/quickbi_public20220101/models/CreateUserGroupRequest$Builder.class
+com/aliyun/sdk/service/quickbi_public20220101/models/BatchAddFeishuUsersRequest$1.class
 com/aliyun/sdk/service/quickbi_public20220101/models/AuthorizeMenuResponse$BuilderImpl.class
 com/aliyun/sdk/service/quickbi_public20220101/models/CancelReportShareResponseBody.class
 com/aliyun/sdk/service/quickbi_public20220101/models/QueryOrganizationWorkspaceListResponse$BuilderImpl.class
@@ -732,6 +746,7 @@ com/aliyun/sdk/service/quickbi_public20220101/models/QueryUserInfoByAccountReque
 com/aliyun/sdk/service/quickbi_public20220101/models/QueryDatasetInfoResponseBody$MeasureList.class
 com/aliyun/sdk/service/quickbi_public20220101/models/CreateTicketResponse$Builder.class
 com/aliyun/sdk/service/quickbi_public20220101/models/UpdateWorkspaceUserRoleResponse$BuilderImpl.class
+com/aliyun/sdk/service/quickbi_public20220101/models/BatchAddFeishuUsersRequest.class
 com/aliyun/sdk/service/quickbi_public20220101/models/QueryUserListResponseBody$1.class
 com/aliyun/sdk/service/quickbi_public20220101/models/QueryUserListResponseBody$Builder.class
 com/aliyun/sdk/service/quickbi_public20220101/models/DelayTicketExpireTimeResponse.class
@@ -753,6 +768,7 @@ com/aliyun/sdk/service/quickbi_public20220101/models/AddUserToWorkspaceResponseB
 com/aliyun/sdk/service/quickbi_public20220101/models/QueryUserListResponseBody$Data.class
 com/aliyun/sdk/service/quickbi_public20220101/models/AddUserRequest.class
 com/aliyun/sdk/service/quickbi_public20220101/models/QueryDataServiceResponseBody$Headers.class
+com/aliyun/sdk/service/quickbi_public20220101/models/BatchAddFeishuUsersResponse.class
 com/aliyun/sdk/service/quickbi_public20220101/models/DeleteUserFromWorkspaceRequest.class
 com/aliyun/sdk/service/quickbi_public20220101/models/SaveFavoritesRequest$1.class
 com/aliyun/sdk/service/quickbi_public20220101/models/DeleteDataLevelRuleConfigRequest$Builder.class

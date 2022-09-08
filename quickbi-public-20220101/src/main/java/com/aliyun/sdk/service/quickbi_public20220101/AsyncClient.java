@@ -38,6 +38,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AuthorizeMenuResponse> authorizeMenu(AuthorizeMenuRequest request);
 
+    CompletableFuture<BatchAddFeishuUsersResponse> batchAddFeishuUsers(BatchAddFeishuUsersRequest request);
+
     CompletableFuture<CancelAuthorizationMenuResponse> cancelAuthorizationMenu(CancelAuthorizationMenuRequest request);
 
     CompletableFuture<CancelCollectionResponse> cancelCollection(CancelCollectionRequest request);
