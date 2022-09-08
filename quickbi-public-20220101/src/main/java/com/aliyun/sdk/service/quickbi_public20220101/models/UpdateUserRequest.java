@@ -14,17 +14,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class UpdateUserRequest extends Request {
     @Query
     @NameInMap("AdminUser")
-    @Validation(required = true)
     private Boolean adminUser;
 
     @Query
     @NameInMap("AuthAdminUser")
-    @Validation(required = true)
     private Boolean authAdminUser;
 
     @Query
     @NameInMap("NickName")
-    @Validation(required = true)
     private String nickName;
 
     @Query
@@ -34,7 +31,7 @@ public class UpdateUserRequest extends Request {
 
     @Query
     @NameInMap("UserType")
-    @Validation(required = true, maximum = 10, minimum = 1)
+    @Validation(maximum = 10, minimum = 1)
     private Integer userType;
 
     private UpdateUserRequest(Builder builder) {
