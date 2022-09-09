@@ -285,6 +285,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("InternetEgressAddress")
         private String internetEgressAddress;
 
+        @NameInMap("IntranetSegments")
+        private String intranetSegments;
+
         @NameInMap("RegionId")
         private String regionId;
 
@@ -339,6 +342,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             this.instanceSpecAttributes = builder.instanceSpecAttributes;
             this.instanceType = builder.instanceType;
             this.internetEgressAddress = builder.internetEgressAddress;
+            this.intranetSegments = builder.intranetSegments;
             this.regionId = builder.regionId;
             this.status = builder.status;
             this.supportIpv6 = builder.supportIpv6;
@@ -481,6 +485,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return intranetSegments
+         */
+        public String getIntranetSegments() {
+            return this.intranetSegments;
+        }
+
+        /**
          * @return regionId
          */
         public String getRegionId() {
@@ -582,6 +593,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private InstanceSpecAttributes instanceSpecAttributes; 
             private String instanceType; 
             private String internetEgressAddress; 
+            private String intranetSegments; 
             private String regionId; 
             private String status; 
             private Boolean supportIpv6; 
@@ -728,6 +740,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
              */
             public Builder internetEgressAddress(String internetEgressAddress) {
                 this.internetEgressAddress = internetEgressAddress;
+                return this;
+            }
+
+            /**
+             * IntranetSegments.
+             */
+            public Builder intranetSegments(String intranetSegments) {
+                this.intranetSegments = intranetSegments;
                 return this;
             }
 

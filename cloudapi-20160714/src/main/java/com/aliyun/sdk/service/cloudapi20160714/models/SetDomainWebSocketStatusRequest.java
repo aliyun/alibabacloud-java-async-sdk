@@ -31,12 +31,17 @@ public class SetDomainWebSocketStatusRequest extends Request {
     @NameInMap("SecurityToken")
     private String securityToken;
 
+    @Query
+    @NameInMap("WSSEnable")
+    private String WSSEnable;
+
     private SetDomainWebSocketStatusRequest(Builder builder) {
         super(builder);
         this.actionValue = builder.actionValue;
         this.domainName = builder.domainName;
         this.groupId = builder.groupId;
         this.securityToken = builder.securityToken;
+        this.WSSEnable = builder.WSSEnable;
     }
 
     public static Builder builder() {
@@ -80,11 +85,19 @@ public class SetDomainWebSocketStatusRequest extends Request {
         return this.securityToken;
     }
 
+    /**
+     * @return WSSEnable
+     */
+    public String getWSSEnable() {
+        return this.WSSEnable;
+    }
+
     public static final class Builder extends Request.Builder<SetDomainWebSocketStatusRequest, Builder> {
         private String actionValue; 
         private String domainName; 
         private String groupId; 
         private String securityToken; 
+        private String WSSEnable; 
 
         private Builder() {
             super();
@@ -96,6 +109,7 @@ public class SetDomainWebSocketStatusRequest extends Request {
             this.domainName = request.domainName;
             this.groupId = request.groupId;
             this.securityToken = request.securityToken;
+            this.WSSEnable = request.WSSEnable;
         } 
 
         /**
@@ -131,6 +145,15 @@ public class SetDomainWebSocketStatusRequest extends Request {
         public Builder securityToken(String securityToken) {
             this.putQueryParameter("SecurityToken", securityToken);
             this.securityToken = securityToken;
+            return this;
+        }
+
+        /**
+         * WSSEnable.
+         */
+        public Builder WSSEnable(String WSSEnable) {
+            this.putQueryParameter("WSSEnable", WSSEnable);
+            this.WSSEnable = WSSEnable;
             return this;
         }
 
