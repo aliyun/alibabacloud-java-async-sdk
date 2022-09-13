@@ -207,9 +207,6 @@ public class GetTopicResponseBody extends TeaModel {
         @NameInMap("remark")
         private String remark;
 
-        @NameInMap("resourceGroupId")
-        private String resourceGroupId;
-
         @NameInMap("status")
         private String status;
 
@@ -225,7 +222,6 @@ public class GetTopicResponseBody extends TeaModel {
             this.messageType = builder.messageType;
             this.regionId = builder.regionId;
             this.remark = builder.remark;
-            this.resourceGroupId = builder.resourceGroupId;
             this.status = builder.status;
             this.topicName = builder.topicName;
             this.updateTime = builder.updateTime;
@@ -275,13 +271,6 @@ public class GetTopicResponseBody extends TeaModel {
         }
 
         /**
-         * @return resourceGroupId
-         */
-        public String getResourceGroupId() {
-            return this.resourceGroupId;
-        }
-
-        /**
          * @return status
          */
         public String getStatus() {
@@ -308,7 +297,6 @@ public class GetTopicResponseBody extends TeaModel {
             private String messageType; 
             private String regionId; 
             private String remark; 
-            private String resourceGroupId; 
             private String status; 
             private String topicName; 
             private String updateTime; 
@@ -350,14 +338,6 @@ public class GetTopicResponseBody extends TeaModel {
              */
             public Builder remark(String remark) {
                 this.remark = remark;
-                return this;
-            }
-
-            /**
-             * 资源组ID
-             */
-            public Builder resourceGroupId(String resourceGroupId) {
-                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 

@@ -30,17 +30,12 @@ public class CreateTopicRequest extends Request {
     @NameInMap("remark")
     private String remark;
 
-    @Body
-    @NameInMap("resourceGroupId")
-    private String resourceGroupId;
-
     private CreateTopicRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
         this.topicName = builder.topicName;
         this.messageType = builder.messageType;
         this.remark = builder.remark;
-        this.resourceGroupId = builder.resourceGroupId;
     }
 
     public static Builder builder() {
@@ -84,19 +79,11 @@ public class CreateTopicRequest extends Request {
         return this.remark;
     }
 
-    /**
-     * @return resourceGroupId
-     */
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
-    }
-
     public static final class Builder extends Request.Builder<CreateTopicRequest, Builder> {
         private String instanceId; 
         private String topicName; 
         private String messageType; 
         private String remark; 
-        private String resourceGroupId; 
 
         private Builder() {
             super();
@@ -108,7 +95,6 @@ public class CreateTopicRequest extends Request {
             this.topicName = request.topicName;
             this.messageType = request.messageType;
             this.remark = request.remark;
-            this.resourceGroupId = request.resourceGroupId;
         } 
 
         /**
@@ -144,15 +130,6 @@ public class CreateTopicRequest extends Request {
         public Builder remark(String remark) {
             this.putBodyParameter("remark", remark);
             this.remark = remark;
-            return this;
-        }
-
-        /**
-         * 资源组ID
-         */
-        public Builder resourceGroupId(String resourceGroupId) {
-            this.putBodyParameter("resourceGroupId", resourceGroupId);
-            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

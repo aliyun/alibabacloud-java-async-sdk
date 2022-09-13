@@ -34,10 +34,6 @@ public class CreateConsumerGroupRequest extends Request {
     @NameInMap("remark")
     private String remark;
 
-    @Body
-    @NameInMap("resourceGroupId")
-    private String resourceGroupId;
-
     private CreateConsumerGroupRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
@@ -45,7 +41,6 @@ public class CreateConsumerGroupRequest extends Request {
         this.consumeRetryPolicy = builder.consumeRetryPolicy;
         this.deliveryOrderType = builder.deliveryOrderType;
         this.remark = builder.remark;
-        this.resourceGroupId = builder.resourceGroupId;
     }
 
     public static Builder builder() {
@@ -96,20 +91,12 @@ public class CreateConsumerGroupRequest extends Request {
         return this.remark;
     }
 
-    /**
-     * @return resourceGroupId
-     */
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
-    }
-
     public static final class Builder extends Request.Builder<CreateConsumerGroupRequest, Builder> {
         private String instanceId; 
         private String consumerGroupId; 
         private ConsumeRetryPolicy consumeRetryPolicy; 
         private String deliveryOrderType; 
         private String remark; 
-        private String resourceGroupId; 
 
         private Builder() {
             super();
@@ -122,7 +109,6 @@ public class CreateConsumerGroupRequest extends Request {
             this.consumeRetryPolicy = request.consumeRetryPolicy;
             this.deliveryOrderType = request.deliveryOrderType;
             this.remark = request.remark;
-            this.resourceGroupId = request.resourceGroupId;
         } 
 
         /**
@@ -167,15 +153,6 @@ public class CreateConsumerGroupRequest extends Request {
         public Builder remark(String remark) {
             this.putBodyParameter("remark", remark);
             this.remark = remark;
-            return this;
-        }
-
-        /**
-         * 资源组ID
-         */
-        public Builder resourceGroupId(String resourceGroupId) {
-            this.putBodyParameter("resourceGroupId", resourceGroupId);
-            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

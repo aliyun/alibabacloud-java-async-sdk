@@ -192,14 +192,10 @@ public class GetInstanceResponseBody extends TeaModel {
     } 
 
     public static class AccountInfo extends TeaModel {
-        @NameInMap("password")
-        private String password;
-
         @NameInMap("username")
         private String username;
 
         private AccountInfo(Builder builder) {
-            this.password = builder.password;
             this.username = builder.username;
         }
 
@@ -212,13 +208,6 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * @return password
-         */
-        public String getPassword() {
-            return this.password;
-        }
-
-        /**
          * @return username
          */
         public String getUsername() {
@@ -226,16 +215,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private String password; 
             private String username; 
-
-            /**
-             * 密码
-             */
-            public Builder password(String password) {
-                this.password = password;
-                return this;
-            }
 
             /**
              * 用户名
@@ -776,6 +756,9 @@ public class GetInstanceResponseBody extends TeaModel {
         @NameInMap("extConfig")
         private ExtConfig extConfig;
 
+        @NameInMap("groupCount")
+        private Long groupCount;
+
         @NameInMap("instanceId")
         private String instanceId;
 
@@ -800,9 +783,6 @@ public class GetInstanceResponseBody extends TeaModel {
         @NameInMap("remark")
         private String remark;
 
-        @NameInMap("resourceGroupId")
-        private String resourceGroupId;
-
         @NameInMap("seriesCode")
         private String seriesCode;
 
@@ -818,6 +798,9 @@ public class GetInstanceResponseBody extends TeaModel {
         @NameInMap("subSeriesCode")
         private String subSeriesCode;
 
+        @NameInMap("topicCount")
+        private Long topicCount;
+
         @NameInMap("updateTime")
         private String updateTime;
 
@@ -831,6 +814,7 @@ public class GetInstanceResponseBody extends TeaModel {
             this.createTime = builder.createTime;
             this.expireTime = builder.expireTime;
             this.extConfig = builder.extConfig;
+            this.groupCount = builder.groupCount;
             this.instanceId = builder.instanceId;
             this.instanceName = builder.instanceName;
             this.instanceQuotas = builder.instanceQuotas;
@@ -839,12 +823,12 @@ public class GetInstanceResponseBody extends TeaModel {
             this.regionId = builder.regionId;
             this.releaseTime = builder.releaseTime;
             this.remark = builder.remark;
-            this.resourceGroupId = builder.resourceGroupId;
             this.seriesCode = builder.seriesCode;
             this.serviceCode = builder.serviceCode;
             this.startTime = builder.startTime;
             this.status = builder.status;
             this.subSeriesCode = builder.subSeriesCode;
+            this.topicCount = builder.topicCount;
             this.updateTime = builder.updateTime;
             this.userId = builder.userId;
         }
@@ -897,6 +881,13 @@ public class GetInstanceResponseBody extends TeaModel {
          */
         public ExtConfig getExtConfig() {
             return this.extConfig;
+        }
+
+        /**
+         * @return groupCount
+         */
+        public Long getGroupCount() {
+            return this.groupCount;
         }
 
         /**
@@ -956,13 +947,6 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * @return resourceGroupId
-         */
-        public String getResourceGroupId() {
-            return this.resourceGroupId;
-        }
-
-        /**
          * @return seriesCode
          */
         public String getSeriesCode() {
@@ -998,6 +982,13 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return topicCount
+         */
+        public Long getTopicCount() {
+            return this.topicCount;
+        }
+
+        /**
          * @return updateTime
          */
         public String getUpdateTime() {
@@ -1018,6 +1009,7 @@ public class GetInstanceResponseBody extends TeaModel {
             private String createTime; 
             private String expireTime; 
             private ExtConfig extConfig; 
+            private Long groupCount; 
             private String instanceId; 
             private String instanceName; 
             private java.util.List < InstanceQuotas> instanceQuotas; 
@@ -1026,12 +1018,12 @@ public class GetInstanceResponseBody extends TeaModel {
             private String regionId; 
             private String releaseTime; 
             private String remark; 
-            private String resourceGroupId; 
             private String seriesCode; 
             private String serviceCode; 
             private String startTime; 
             private String status; 
             private String subSeriesCode; 
+            private Long topicCount; 
             private String updateTime; 
             private String userId; 
 
@@ -1080,6 +1072,14 @@ public class GetInstanceResponseBody extends TeaModel {
              */
             public Builder extConfig(ExtConfig extConfig) {
                 this.extConfig = extConfig;
+                return this;
+            }
+
+            /**
+             * groupCount.
+             */
+            public Builder groupCount(Long groupCount) {
+                this.groupCount = groupCount;
                 return this;
             }
 
@@ -1148,14 +1148,6 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 资源组ID
-             */
-            public Builder resourceGroupId(String resourceGroupId) {
-                this.resourceGroupId = resourceGroupId;
-                return this;
-            }
-
-            /**
              * 系列编码
              */
             public Builder seriesCode(String seriesCode) {
@@ -1192,6 +1184,14 @@ public class GetInstanceResponseBody extends TeaModel {
              */
             public Builder subSeriesCode(String subSeriesCode) {
                 this.subSeriesCode = subSeriesCode;
+                return this;
+            }
+
+            /**
+             * topicCount.
+             */
+            public Builder topicCount(Long topicCount) {
+                this.topicCount = topicCount;
                 return this;
             }
 

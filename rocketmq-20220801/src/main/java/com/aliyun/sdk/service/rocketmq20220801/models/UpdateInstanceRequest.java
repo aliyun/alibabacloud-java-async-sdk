@@ -33,10 +33,6 @@ public class UpdateInstanceRequest extends Request {
     @NameInMap("remark")
     private String remark;
 
-    @Body
-    @NameInMap("resourceGroupId")
-    private String resourceGroupId;
-
     private UpdateInstanceRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
@@ -44,7 +40,6 @@ public class UpdateInstanceRequest extends Request {
         this.instanceName = builder.instanceName;
         this.networkInfo = builder.networkInfo;
         this.remark = builder.remark;
-        this.resourceGroupId = builder.resourceGroupId;
     }
 
     public static Builder builder() {
@@ -95,20 +90,12 @@ public class UpdateInstanceRequest extends Request {
         return this.remark;
     }
 
-    /**
-     * @return resourceGroupId
-     */
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
-    }
-
     public static final class Builder extends Request.Builder<UpdateInstanceRequest, Builder> {
         private String instanceId; 
         private ExtConfig extConfig; 
         private String instanceName; 
         private NetworkInfo networkInfo; 
         private String remark; 
-        private String resourceGroupId; 
 
         private Builder() {
             super();
@@ -121,7 +108,6 @@ public class UpdateInstanceRequest extends Request {
             this.instanceName = request.instanceName;
             this.networkInfo = request.networkInfo;
             this.remark = request.remark;
-            this.resourceGroupId = request.resourceGroupId;
         } 
 
         /**
@@ -166,15 +152,6 @@ public class UpdateInstanceRequest extends Request {
         public Builder remark(String remark) {
             this.putBodyParameter("remark", remark);
             this.remark = remark;
-            return this;
-        }
-
-        /**
-         * 资源组ID
-         */
-        public Builder resourceGroupId(String resourceGroupId) {
-            this.putBodyParameter("resourceGroupId", resourceGroupId);
-            this.resourceGroupId = resourceGroupId;
             return this;
         }
 
