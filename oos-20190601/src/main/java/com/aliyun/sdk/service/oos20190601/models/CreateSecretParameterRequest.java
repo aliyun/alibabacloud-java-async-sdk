@@ -43,7 +43,7 @@ public class CreateSecretParameterRequest extends Request {
 
     @Query
     @NameInMap("Tags")
-    private String tags;
+    private java.util.Map < String, ? > tags;
 
     @Query
     @NameInMap("Type")
@@ -133,7 +133,7 @@ public class CreateSecretParameterRequest extends Request {
     /**
      * @return tags
      */
-    public String getTags() {
+    public java.util.Map < String, ? > getTags() {
         return this.tags;
     }
 
@@ -159,7 +159,7 @@ public class CreateSecretParameterRequest extends Request {
         private String name; 
         private String regionId; 
         private String resourceGroupId; 
-        private String tags; 
+        private java.util.Map < String, ? > tags; 
         private String type; 
         private String value; 
 
@@ -247,8 +247,9 @@ public class CreateSecretParameterRequest extends Request {
         /**
          * Tags.
          */
-        public Builder tags(String tags) {
-            this.putQueryParameter("Tags", tags);
+        public Builder tags(java.util.Map < String, ? > tags) {
+            String tagsShrink = shrink(tags, "Tags", "json");
+            this.putQueryParameter("Tags", tagsShrink);
             this.tags = tags;
             return this;
         }

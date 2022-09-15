@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DeleteApplicationRequest extends Request {
     @Query
+    @NameInMap("Force")
+    private Boolean force;
+
+    @Query
     @NameInMap("Name")
     @Validation(required = true)
     private String name;
@@ -23,6 +27,7 @@ public class DeleteApplicationRequest extends Request {
 
     private DeleteApplicationRequest(Builder builder) {
         super(builder);
+        this.force = builder.force;
         this.name = builder.name;
         this.regionId = builder.regionId;
     }
@@ -41,6 +46,13 @@ public class DeleteApplicationRequest extends Request {
     }
 
     /**
+     * @return force
+     */
+    public Boolean getForce() {
+        return this.force;
+    }
+
+    /**
      * @return name
      */
     public String getName() {
@@ -55,6 +67,7 @@ public class DeleteApplicationRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteApplicationRequest, Builder> {
+        private Boolean force; 
         private String name; 
         private String regionId; 
 
@@ -64,9 +77,19 @@ public class DeleteApplicationRequest extends Request {
 
         private Builder(DeleteApplicationRequest request) {
             super(request);
+            this.force = request.force;
             this.name = request.name;
             this.regionId = request.regionId;
         } 
+
+        /**
+         * Force.
+         */
+        public Builder force(Boolean force) {
+            this.putQueryParameter("Force", force);
+            this.force = force;
+            return this;
+        }
 
         /**
          * Name.

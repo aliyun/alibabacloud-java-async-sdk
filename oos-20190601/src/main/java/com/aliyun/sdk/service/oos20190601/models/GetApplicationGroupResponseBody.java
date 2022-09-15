@@ -102,6 +102,9 @@ public class GetApplicationGroupResponseBody extends TeaModel {
         @NameInMap("Name")
         private String name;
 
+        @NameInMap("Progress")
+        private String progress;
+
         @NameInMap("Status")
         private String status;
 
@@ -122,6 +125,7 @@ public class GetApplicationGroupResponseBody extends TeaModel {
             this.importTagKey = builder.importTagKey;
             this.importTagValue = builder.importTagValue;
             this.name = builder.name;
+            this.progress = builder.progress;
             this.status = builder.status;
             this.statusReason = builder.statusReason;
             this.updateDate = builder.updateDate;
@@ -206,6 +210,13 @@ public class GetApplicationGroupResponseBody extends TeaModel {
         }
 
         /**
+         * @return progress
+         */
+        public String getProgress() {
+            return this.progress;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -237,6 +248,7 @@ public class GetApplicationGroupResponseBody extends TeaModel {
             private String importTagKey; 
             private String importTagValue; 
             private String name; 
+            private String progress; 
             private String status; 
             private String statusReason; 
             private String updateDate; 
@@ -318,6 +330,14 @@ public class GetApplicationGroupResponseBody extends TeaModel {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * Progress.
+             */
+            public Builder progress(String progress) {
+                this.progress = progress;
                 return this;
             }
 

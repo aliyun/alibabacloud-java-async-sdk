@@ -14,7 +14,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListApplicationGroupsRequest extends Request {
     @Query
     @NameInMap("ApplicationName")
-    @Validation(required = true)
     private String applicationName;
 
     @Query
@@ -30,8 +29,20 @@ public class ListApplicationGroupsRequest extends Request {
     private String nextToken;
 
     @Query
+    @NameInMap("Product")
+    private String product;
+
+    @Query
     @NameInMap("RegionId")
     private String regionId;
+
+    @Query
+    @NameInMap("ResourceId")
+    private String resourceId;
+
+    @Query
+    @NameInMap("ResourceType")
+    private String resourceType;
 
     private ListApplicationGroupsRequest(Builder builder) {
         super(builder);
@@ -39,7 +50,10 @@ public class ListApplicationGroupsRequest extends Request {
         this.deployRegionId = builder.deployRegionId;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
+        this.product = builder.product;
         this.regionId = builder.regionId;
+        this.resourceId = builder.resourceId;
+        this.resourceType = builder.resourceType;
     }
 
     public static Builder builder() {
@@ -84,10 +98,31 @@ public class ListApplicationGroupsRequest extends Request {
     }
 
     /**
+     * @return product
+     */
+    public String getProduct() {
+        return this.product;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return resourceId
+     */
+    public String getResourceId() {
+        return this.resourceId;
+    }
+
+    /**
+     * @return resourceType
+     */
+    public String getResourceType() {
+        return this.resourceType;
     }
 
     public static final class Builder extends Request.Builder<ListApplicationGroupsRequest, Builder> {
@@ -95,7 +130,10 @@ public class ListApplicationGroupsRequest extends Request {
         private String deployRegionId; 
         private Integer maxResults; 
         private String nextToken; 
+        private String product; 
         private String regionId; 
+        private String resourceId; 
+        private String resourceType; 
 
         private Builder() {
             super();
@@ -107,7 +145,10 @@ public class ListApplicationGroupsRequest extends Request {
             this.deployRegionId = request.deployRegionId;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
+            this.product = request.product;
             this.regionId = request.regionId;
+            this.resourceId = request.resourceId;
+            this.resourceType = request.resourceType;
         } 
 
         /**
@@ -147,11 +188,38 @@ public class ListApplicationGroupsRequest extends Request {
         }
 
         /**
+         * Product.
+         */
+        public Builder product(String product) {
+            this.putQueryParameter("Product", product);
+            this.product = product;
+            return this;
+        }
+
+        /**
          * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceId.
+         */
+        public Builder resourceId(String resourceId) {
+            this.putQueryParameter("ResourceId", resourceId);
+            this.resourceId = resourceId;
+            return this;
+        }
+
+        /**
+         * ResourceType.
+         */
+        public Builder resourceType(String resourceType) {
+            this.putQueryParameter("ResourceType", resourceType);
+            this.resourceType = resourceType;
             return this;
         }
 

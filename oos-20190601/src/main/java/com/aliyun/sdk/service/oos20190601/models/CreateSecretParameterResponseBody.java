@@ -103,7 +103,7 @@ public class CreateSecretParameterResponseBody extends TeaModel {
         private String shareType;
 
         @NameInMap("Tags")
-        private String tags;
+        private java.util.Map < String, ? > tags;
 
         @NameInMap("Type")
         private String type;
@@ -212,7 +212,7 @@ public class CreateSecretParameterResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public String getTags() {
+        public java.util.Map < String, ? > getTags() {
             return this.tags;
         }
 
@@ -248,7 +248,7 @@ public class CreateSecretParameterResponseBody extends TeaModel {
             private Integer parameterVersion; 
             private String resourceGroupId; 
             private String shareType; 
-            private String tags; 
+            private java.util.Map < String, ? > tags; 
             private String type; 
             private String updatedBy; 
             private String updatedDate; 
@@ -336,7 +336,7 @@ public class CreateSecretParameterResponseBody extends TeaModel {
             /**
              * Tags.
              */
-            public Builder tags(String tags) {
+            public Builder tags(java.util.Map < String, ? > tags) {
                 this.tags = tags;
                 return this;
             }
