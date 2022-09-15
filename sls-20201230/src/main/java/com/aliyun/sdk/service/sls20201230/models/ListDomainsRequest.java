@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.sls.models.*;
  * <p>ListDomainsRequest</p>
  */
 public class ListDomainsRequest extends Request {
+    @Host
+    @NameInMap("project")
+    @Validation(required = true)
+    private String project;
+
     @Query
     @NameInMap("domainName")
     private String domainName;
@@ -20,20 +25,15 @@ public class ListDomainsRequest extends Request {
     @NameInMap("offset")
     private Integer offset;
 
-    @Host
-    @NameInMap("project")
-    @Validation(required = true)
-    private String project;
-
     @Query
     @NameInMap("size")
     private Integer size;
 
     private ListDomainsRequest(Builder builder) {
         super(builder);
+        this.project = builder.project;
         this.domainName = builder.domainName;
         this.offset = builder.offset;
-        this.project = builder.project;
         this.size = builder.size;
     }
 
@@ -51,6 +51,13 @@ public class ListDomainsRequest extends Request {
     }
 
     /**
+     * @return project
+     */
+    public String getProject() {
+        return this.project;
+    }
+
+    /**
      * @return domainName
      */
     public String getDomainName() {
@@ -65,13 +72,6 @@ public class ListDomainsRequest extends Request {
     }
 
     /**
-     * @return project
-     */
-    public String getProject() {
-        return this.project;
-    }
-
-    /**
      * @return size
      */
     public Integer getSize() {
@@ -79,9 +79,9 @@ public class ListDomainsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListDomainsRequest, Builder> {
+        private String project; 
         private String domainName; 
         private Integer offset; 
-        private String project; 
         private Integer size; 
 
         private Builder() {
@@ -90,11 +90,20 @@ public class ListDomainsRequest extends Request {
 
         private Builder(ListDomainsRequest request) {
             super(request);
+            this.project = request.project;
             this.domainName = request.domainName;
             this.offset = request.offset;
-            this.project = request.project;
             this.size = request.size;
         } 
+
+        /**
+         * Project name
+         */
+        public Builder project(String project) {
+            this.putHostParameter("project", project);
+            this.project = project;
+            return this;
+        }
 
         /**
          * 用于搜索匹配的自定义域名
@@ -111,15 +120,6 @@ public class ListDomainsRequest extends Request {
         public Builder offset(Integer offset) {
             this.putQueryParameter("offset", offset);
             this.offset = offset;
-            return this;
-        }
-
-        /**
-         * Project name
-         */
-        public Builder project(String project) {
-            this.putHostParameter("project", project);
-            this.project = project;
             return this;
         }
 

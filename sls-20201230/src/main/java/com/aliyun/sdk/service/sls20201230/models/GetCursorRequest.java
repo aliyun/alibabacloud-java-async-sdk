@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.sls.models.*;
  * <p>GetCursorRequest</p>
  */
 public class GetCursorRequest extends Request {
+    @Host
+    @NameInMap("project")
+    @Validation(required = true)
+    private String project;
+
     @Path
     @NameInMap("logstore")
     @Validation(required = true)
@@ -27,11 +32,6 @@ public class GetCursorRequest extends Request {
     @Validation(required = true)
     private String from;
 
-    @Host
-    @NameInMap("project")
-    @Validation(required = true)
-    private String project;
-
     @Query
     @NameInMap("type")
     @Validation(required = true)
@@ -39,10 +39,10 @@ public class GetCursorRequest extends Request {
 
     private GetCursorRequest(Builder builder) {
         super(builder);
+        this.project = builder.project;
         this.logstore = builder.logstore;
         this.shardId = builder.shardId;
         this.from = builder.from;
-        this.project = builder.project;
         this.type = builder.type;
     }
 
@@ -57,6 +57,13 @@ public class GetCursorRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return project
+     */
+    public String getProject() {
+        return this.project;
     }
 
     /**
@@ -81,13 +88,6 @@ public class GetCursorRequest extends Request {
     }
 
     /**
-     * @return project
-     */
-    public String getProject() {
-        return this.project;
-    }
-
-    /**
      * @return type
      */
     public String getType() {
@@ -95,10 +95,10 @@ public class GetCursorRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetCursorRequest, Builder> {
+        private String project; 
         private String logstore; 
         private Integer shardId; 
         private String from; 
-        private String project; 
         private String type; 
 
         private Builder() {
@@ -107,12 +107,21 @@ public class GetCursorRequest extends Request {
 
         private Builder(GetCursorRequest request) {
             super(request);
+            this.project = request.project;
             this.logstore = request.logstore;
             this.shardId = request.shardId;
             this.from = request.from;
-            this.project = request.project;
             this.type = request.type;
         } 
+
+        /**
+         * project 名称。
+         */
+        public Builder project(String project) {
+            this.putHostParameter("project", project);
+            this.project = project;
+            return this;
+        }
 
         /**
          * logstore 名称。
@@ -138,15 +147,6 @@ public class GetCursorRequest extends Request {
         public Builder from(String from) {
             this.putQueryParameter("from", from);
             this.from = from;
-            return this;
-        }
-
-        /**
-         * project 名称。
-         */
-        public Builder project(String project) {
-            this.putHostParameter("project", project);
-            this.project = project;
             return this;
         }
 

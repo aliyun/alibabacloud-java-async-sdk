@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.sls.models.*;
  * <p>UpdateOdpsShipperRequest</p>
  */
 public class UpdateOdpsShipperRequest extends Request {
+    @Host
+    @NameInMap("project")
+    @Validation(required = true)
+    private String project;
+
     @Path
     @NameInMap("logstore")
     @Validation(required = true)
@@ -22,11 +27,6 @@ public class UpdateOdpsShipperRequest extends Request {
     @NameInMap("shipperName")
     @Validation(required = true)
     private String shipperName;
-
-    @Host
-    @NameInMap("project")
-    @Validation(required = true)
-    private String project;
 
     @Body
     @NameInMap("targetConfiguration")
@@ -40,9 +40,9 @@ public class UpdateOdpsShipperRequest extends Request {
 
     private UpdateOdpsShipperRequest(Builder builder) {
         super(builder);
+        this.project = builder.project;
         this.logstore = builder.logstore;
         this.shipperName = builder.shipperName;
-        this.project = builder.project;
         this.targetConfiguration = builder.targetConfiguration;
         this.targetType = builder.targetType;
     }
@@ -61,6 +61,13 @@ public class UpdateOdpsShipperRequest extends Request {
     }
 
     /**
+     * @return project
+     */
+    public String getProject() {
+        return this.project;
+    }
+
+    /**
      * @return logstore
      */
     public String getLogstore() {
@@ -72,13 +79,6 @@ public class UpdateOdpsShipperRequest extends Request {
      */
     public String getShipperName() {
         return this.shipperName;
-    }
-
-    /**
-     * @return project
-     */
-    public String getProject() {
-        return this.project;
     }
 
     /**
@@ -96,9 +96,9 @@ public class UpdateOdpsShipperRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateOdpsShipperRequest, Builder> {
+        private String project; 
         private String logstore; 
         private String shipperName; 
-        private String project; 
         private TargetConfiguration targetConfiguration; 
         private String targetType; 
 
@@ -108,12 +108,21 @@ public class UpdateOdpsShipperRequest extends Request {
 
         private Builder(UpdateOdpsShipperRequest request) {
             super(request);
+            this.project = request.project;
             this.logstore = request.logstore;
             this.shipperName = request.shipperName;
-            this.project = request.project;
             this.targetConfiguration = request.targetConfiguration;
             this.targetType = request.targetType;
         } 
+
+        /**
+         * Project 名称。
+         */
+        public Builder project(String project) {
+            this.putHostParameter("project", project);
+            this.project = project;
+            return this;
+        }
 
         /**
          * Logstore 名称。
@@ -131,15 +140,6 @@ public class UpdateOdpsShipperRequest extends Request {
             this.putPathParameter("shipperName", shipperName);
             this.putBodyParameter("shipperName", shipperName);
             this.shipperName = shipperName;
-            return this;
-        }
-
-        /**
-         * Project 名称。
-         */
-        public Builder project(String project) {
-            this.putHostParameter("project", project);
-            this.project = project;
             return this;
         }
 

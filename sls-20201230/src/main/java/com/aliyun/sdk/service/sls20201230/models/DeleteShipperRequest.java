@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.sls.models.*;
  * <p>DeleteShipperRequest</p>
  */
 public class DeleteShipperRequest extends Request {
+    @Host
+    @NameInMap("project")
+    @Validation(required = true)
+    private String project;
+
     @Path
     @NameInMap("logstore")
     @Validation(required = true)
@@ -22,16 +27,11 @@ public class DeleteShipperRequest extends Request {
     @Validation(required = true)
     private String shipperName;
 
-    @Host
-    @NameInMap("project")
-    @Validation(required = true)
-    private String project;
-
     private DeleteShipperRequest(Builder builder) {
         super(builder);
+        this.project = builder.project;
         this.logstore = builder.logstore;
         this.shipperName = builder.shipperName;
-        this.project = builder.project;
     }
 
     public static Builder builder() {
@@ -48,6 +48,13 @@ public class DeleteShipperRequest extends Request {
     }
 
     /**
+     * @return project
+     */
+    public String getProject() {
+        return this.project;
+    }
+
+    /**
      * @return logstore
      */
     public String getLogstore() {
@@ -61,17 +68,10 @@ public class DeleteShipperRequest extends Request {
         return this.shipperName;
     }
 
-    /**
-     * @return project
-     */
-    public String getProject() {
-        return this.project;
-    }
-
     public static final class Builder extends Request.Builder<DeleteShipperRequest, Builder> {
+        private String project; 
         private String logstore; 
         private String shipperName; 
-        private String project; 
 
         private Builder() {
             super();
@@ -79,10 +79,19 @@ public class DeleteShipperRequest extends Request {
 
         private Builder(DeleteShipperRequest request) {
             super(request);
+            this.project = request.project;
             this.logstore = request.logstore;
             this.shipperName = request.shipperName;
-            this.project = request.project;
         } 
+
+        /**
+         * Project 名称。
+         */
+        public Builder project(String project) {
+            this.putHostParameter("project", project);
+            this.project = project;
+            return this;
+        }
 
         /**
          * Logstore 名称。
@@ -99,15 +108,6 @@ public class DeleteShipperRequest extends Request {
         public Builder shipperName(String shipperName) {
             this.putPathParameter("shipperName", shipperName);
             this.shipperName = shipperName;
-            return this;
-        }
-
-        /**
-         * Project 名称。
-         */
-        public Builder project(String project) {
-            this.putHostParameter("project", project);
-            this.project = project;
             return this;
         }
 

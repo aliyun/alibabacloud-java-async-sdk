@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.sls.models.*;
  * <p>UpdateOssExternalStoreRequest</p>
  */
 public class UpdateOssExternalStoreRequest extends Request {
+    @Host
+    @NameInMap("project")
+    @Validation(required = true)
+    private String project;
+
     @Path
     @Body
     @NameInMap("externalStoreName")
@@ -28,17 +33,12 @@ public class UpdateOssExternalStoreRequest extends Request {
     @Validation(required = true)
     private String storeType;
 
-    @Host
-    @NameInMap("project")
-    @Validation(required = true)
-    private String project;
-
     private UpdateOssExternalStoreRequest(Builder builder) {
         super(builder);
+        this.project = builder.project;
         this.externalStoreName = builder.externalStoreName;
         this.parameter = builder.parameter;
         this.storeType = builder.storeType;
-        this.project = builder.project;
     }
 
     public static Builder builder() {
@@ -52,6 +52,13 @@ public class UpdateOssExternalStoreRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return project
+     */
+    public String getProject() {
+        return this.project;
     }
 
     /**
@@ -75,18 +82,11 @@ public class UpdateOssExternalStoreRequest extends Request {
         return this.storeType;
     }
 
-    /**
-     * @return project
-     */
-    public String getProject() {
-        return this.project;
-    }
-
     public static final class Builder extends Request.Builder<UpdateOssExternalStoreRequest, Builder> {
+        private String project; 
         private String externalStoreName; 
         private Parameter parameter; 
         private String storeType; 
-        private String project; 
 
         private Builder() {
             super();
@@ -94,11 +94,20 @@ public class UpdateOssExternalStoreRequest extends Request {
 
         private Builder(UpdateOssExternalStoreRequest request) {
             super(request);
+            this.project = request.project;
             this.externalStoreName = request.externalStoreName;
             this.parameter = request.parameter;
             this.storeType = request.storeType;
-            this.project = request.project;
         } 
+
+        /**
+         * project 名称。
+         */
+        public Builder project(String project) {
+            this.putHostParameter("project", project);
+            this.project = project;
+            return this;
+        }
 
         /**
          * 外部存储的名称。
@@ -125,15 +134,6 @@ public class UpdateOssExternalStoreRequest extends Request {
         public Builder storeType(String storeType) {
             this.putBodyParameter("storeType", storeType);
             this.storeType = storeType;
-            return this;
-        }
-
-        /**
-         * project 名称。
-         */
-        public Builder project(String project) {
-            this.putHostParameter("project", project);
-            this.project = project;
             return this;
         }
 

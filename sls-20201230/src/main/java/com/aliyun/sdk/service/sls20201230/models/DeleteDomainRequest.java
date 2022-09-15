@@ -12,20 +12,20 @@ import com.aliyun.sdk.gateway.sls.models.*;
  * <p>DeleteDomainRequest</p>
  */
 public class DeleteDomainRequest extends Request {
-    @Path
-    @NameInMap("domainName")
-    @Validation(required = true)
-    private String domainName;
-
     @Host
     @NameInMap("project")
     @Validation(required = true)
     private String project;
 
+    @Path
+    @NameInMap("domainName")
+    @Validation(required = true)
+    private String domainName;
+
     private DeleteDomainRequest(Builder builder) {
         super(builder);
-        this.domainName = builder.domainName;
         this.project = builder.project;
+        this.domainName = builder.domainName;
     }
 
     public static Builder builder() {
@@ -42,22 +42,22 @@ public class DeleteDomainRequest extends Request {
     }
 
     /**
-     * @return domainName
-     */
-    public String getDomainName() {
-        return this.domainName;
-    }
-
-    /**
      * @return project
      */
     public String getProject() {
         return this.project;
     }
 
+    /**
+     * @return domainName
+     */
+    public String getDomainName() {
+        return this.domainName;
+    }
+
     public static final class Builder extends Request.Builder<DeleteDomainRequest, Builder> {
-        private String domainName; 
         private String project; 
+        private String domainName; 
 
         private Builder() {
             super();
@@ -65,18 +65,9 @@ public class DeleteDomainRequest extends Request {
 
         private Builder(DeleteDomainRequest request) {
             super(request);
-            this.domainName = request.domainName;
             this.project = request.project;
+            this.domainName = request.domainName;
         } 
-
-        /**
-         * 要删除的域名
-         */
-        public Builder domainName(String domainName) {
-            this.putPathParameter("domainName", domainName);
-            this.domainName = domainName;
-            return this;
-        }
 
         /**
          * A short description of struct
@@ -84,6 +75,15 @@ public class DeleteDomainRequest extends Request {
         public Builder project(String project) {
             this.putHostParameter("project", project);
             this.project = project;
+            return this;
+        }
+
+        /**
+         * 要删除的域名
+         */
+        public Builder domainName(String domainName) {
+            this.putPathParameter("domainName", domainName);
+            this.domainName = domainName;
             return this;
         }
 

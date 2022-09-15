@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.sls.models.*;
  * <p>ListMachinesRequest</p>
  */
 public class ListMachinesRequest extends Request {
+    @Host
+    @NameInMap("project")
+    @Validation(required = true)
+    private String project;
+
     @Path
     @NameInMap("machineGroup")
     @Validation(required = true)
@@ -21,20 +26,15 @@ public class ListMachinesRequest extends Request {
     @NameInMap("offset")
     private Integer offset;
 
-    @Host
-    @NameInMap("project")
-    @Validation(required = true)
-    private String project;
-
     @Query
     @NameInMap("size")
     private Integer size;
 
     private ListMachinesRequest(Builder builder) {
         super(builder);
+        this.project = builder.project;
         this.machineGroup = builder.machineGroup;
         this.offset = builder.offset;
-        this.project = builder.project;
         this.size = builder.size;
     }
 
@@ -52,6 +52,13 @@ public class ListMachinesRequest extends Request {
     }
 
     /**
+     * @return project
+     */
+    public String getProject() {
+        return this.project;
+    }
+
+    /**
      * @return machineGroup
      */
     public String getMachineGroup() {
@@ -66,13 +73,6 @@ public class ListMachinesRequest extends Request {
     }
 
     /**
-     * @return project
-     */
-    public String getProject() {
-        return this.project;
-    }
-
-    /**
      * @return size
      */
     public Integer getSize() {
@@ -80,9 +80,9 @@ public class ListMachinesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListMachinesRequest, Builder> {
+        private String project; 
         private String machineGroup; 
         private Integer offset; 
-        private String project; 
         private Integer size; 
 
         private Builder() {
@@ -91,11 +91,20 @@ public class ListMachinesRequest extends Request {
 
         private Builder(ListMachinesRequest request) {
             super(request);
+            this.project = request.project;
             this.machineGroup = request.machineGroup;
             this.offset = request.offset;
-            this.project = request.project;
             this.size = request.size;
         } 
+
+        /**
+         * project 名称。
+         */
+        public Builder project(String project) {
+            this.putHostParameter("project", project);
+            this.project = project;
+            return this;
+        }
 
         /**
          * 机器组名称。
@@ -112,15 +121,6 @@ public class ListMachinesRequest extends Request {
         public Builder offset(Integer offset) {
             this.putQueryParameter("offset", offset);
             this.offset = offset;
-            return this;
-        }
-
-        /**
-         * project 名称。
-         */
-        public Builder project(String project) {
-            this.putHostParameter("project", project);
-            this.project = project;
             return this;
         }
 

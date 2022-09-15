@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.sls.models.*;
  * <p>UpdateLoggingRequest</p>
  */
 public class UpdateLoggingRequest extends Request {
+    @Host
+    @NameInMap("project")
+    @Validation(required = true)
+    private String project;
+
     @Body
     @NameInMap("loggingDetails")
     @Validation(required = true)
@@ -22,16 +27,11 @@ public class UpdateLoggingRequest extends Request {
     @Validation(required = true)
     private String loggingProject;
 
-    @Host
-    @NameInMap("project")
-    @Validation(required = true)
-    private String project;
-
     private UpdateLoggingRequest(Builder builder) {
         super(builder);
+        this.project = builder.project;
         this.loggingDetails = builder.loggingDetails;
         this.loggingProject = builder.loggingProject;
-        this.project = builder.project;
     }
 
     public static Builder builder() {
@@ -48,6 +48,13 @@ public class UpdateLoggingRequest extends Request {
     }
 
     /**
+     * @return project
+     */
+    public String getProject() {
+        return this.project;
+    }
+
+    /**
      * @return loggingDetails
      */
     public java.util.List < LoggingDetails> getLoggingDetails() {
@@ -61,17 +68,10 @@ public class UpdateLoggingRequest extends Request {
         return this.loggingProject;
     }
 
-    /**
-     * @return project
-     */
-    public String getProject() {
-        return this.project;
-    }
-
     public static final class Builder extends Request.Builder<UpdateLoggingRequest, Builder> {
+        private String project; 
         private java.util.List < LoggingDetails> loggingDetails; 
         private String loggingProject; 
-        private String project; 
 
         private Builder() {
             super();
@@ -79,10 +79,19 @@ public class UpdateLoggingRequest extends Request {
 
         private Builder(UpdateLoggingRequest request) {
             super(request);
+            this.project = request.project;
             this.loggingDetails = request.loggingDetails;
             this.loggingProject = request.loggingProject;
-            this.project = request.project;
         } 
+
+        /**
+         * Project 名称。
+         */
+        public Builder project(String project) {
+            this.putHostParameter("project", project);
+            this.project = project;
+            return this;
+        }
 
         /**
          * 服务日志配置列表。
@@ -99,15 +108,6 @@ public class UpdateLoggingRequest extends Request {
         public Builder loggingProject(String loggingProject) {
             this.putBodyParameter("loggingProject", loggingProject);
             this.loggingProject = loggingProject;
-            return this;
-        }
-
-        /**
-         * Project 名称。
-         */
-        public Builder project(String project) {
-            this.putHostParameter("project", project);
-            this.project = project;
             return this;
         }
 

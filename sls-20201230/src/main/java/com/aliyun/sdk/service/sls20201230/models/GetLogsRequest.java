@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.sls.models.*;
  * <p>GetLogsRequest</p>
  */
 public class GetLogsRequest extends Request {
+    @Host
+    @NameInMap("project")
+    @Validation(required = true)
+    private String project;
+
     @Path
     @NameInMap("logstore")
     @Validation(required = true)
@@ -35,14 +40,8 @@ public class GetLogsRequest extends Request {
     @NameInMap("powerSql")
     private Boolean powerSql;
 
-    @Host
-    @NameInMap("project")
-    @Validation(required = true)
-    private String project;
-
     @Query
     @NameInMap("query")
-    @Validation(required = true)
     private String query;
 
     @Query
@@ -58,24 +57,18 @@ public class GetLogsRequest extends Request {
     @NameInMap("topic")
     private String topic;
 
-    @Query
-    @NameInMap("type")
-    @Validation(required = true)
-    private String type;
-
     private GetLogsRequest(Builder builder) {
         super(builder);
+        this.project = builder.project;
         this.logstore = builder.logstore;
         this.from = builder.from;
         this.line = builder.line;
         this.offset = builder.offset;
         this.powerSql = builder.powerSql;
-        this.project = builder.project;
         this.query = builder.query;
         this.reverse = builder.reverse;
         this.to = builder.to;
         this.topic = builder.topic;
-        this.type = builder.type;
     }
 
     public static Builder builder() {
@@ -89,6 +82,13 @@ public class GetLogsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return project
+     */
+    public String getProject() {
+        return this.project;
     }
 
     /**
@@ -127,13 +127,6 @@ public class GetLogsRequest extends Request {
     }
 
     /**
-     * @return project
-     */
-    public String getProject() {
-        return this.project;
-    }
-
-    /**
      * @return query
      */
     public String getQuery() {
@@ -161,25 +154,17 @@ public class GetLogsRequest extends Request {
         return this.topic;
     }
 
-    /**
-     * @return type
-     */
-    public String getType() {
-        return this.type;
-    }
-
     public static final class Builder extends Request.Builder<GetLogsRequest, Builder> {
+        private String project; 
         private String logstore; 
         private Long from; 
         private Long line; 
         private Long offset; 
         private Boolean powerSql; 
-        private String project; 
         private String query; 
         private Boolean reverse; 
         private Long to; 
         private String topic; 
-        private String type; 
 
         private Builder() {
             super();
@@ -187,18 +172,26 @@ public class GetLogsRequest extends Request {
 
         private Builder(GetLogsRequest request) {
             super(request);
+            this.project = request.project;
             this.logstore = request.logstore;
             this.from = request.from;
             this.line = request.line;
             this.offset = request.offset;
             this.powerSql = request.powerSql;
-            this.project = request.project;
             this.query = request.query;
             this.reverse = request.reverse;
             this.to = request.to;
             this.topic = request.topic;
-            this.type = request.type;
         } 
+
+        /**
+         * project 名称。
+         */
+        public Builder project(String project) {
+            this.putHostParameter("project", project);
+            this.project = project;
+            return this;
+        }
 
         /**
          * logstore 名称。
@@ -257,15 +250,6 @@ public class GetLogsRequest extends Request {
         }
 
         /**
-         * project 名称。
-         */
-        public Builder project(String project) {
-            this.putHostParameter("project", project);
-            this.project = project;
-            return this;
-        }
-
-        /**
          * 查询语句或者分析语句。更多信息，请参见查询概述和分析概述。
          * <p>
          * 
@@ -314,15 +298,6 @@ public class GetLogsRequest extends Request {
         public Builder topic(String topic) {
             this.putQueryParameter("topic", topic);
             this.topic = topic;
-            return this;
-        }
-
-        /**
-         * 查询Logstore数据的类型。在该接口中固定取值为log。
-         */
-        public Builder type(String type) {
-            this.putQueryParameter("type", type);
-            this.type = type;
             return this;
         }
 

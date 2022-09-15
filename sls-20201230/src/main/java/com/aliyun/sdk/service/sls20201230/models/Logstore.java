@@ -40,6 +40,9 @@ public class Logstore extends TeaModel {
     @NameInMap("maxSplitShard")
     private Integer maxSplitShard;
 
+    @NameInMap("mode")
+    private String mode;
+
     @NameInMap("shardCount")
     @Validation(required = true)
     private Integer shardCount;
@@ -61,6 +64,7 @@ public class Logstore extends TeaModel {
         this.lastModifyTime = builder.lastModifyTime;
         this.logstoreName = builder.logstoreName;
         this.maxSplitShard = builder.maxSplitShard;
+        this.mode = builder.mode;
         this.shardCount = builder.shardCount;
         this.telemetryType = builder.telemetryType;
         this.ttl = builder.ttl;
@@ -138,6 +142,13 @@ public class Logstore extends TeaModel {
     }
 
     /**
+     * @return mode
+     */
+    public String getMode() {
+        return this.mode;
+    }
+
+    /**
      * @return shardCount
      */
     public Integer getShardCount() {
@@ -168,6 +179,7 @@ public class Logstore extends TeaModel {
         private Integer lastModifyTime; 
         private String logstoreName; 
         private Integer maxSplitShard; 
+        private String mode; 
         private Integer shardCount; 
         private String telemetryType; 
         private Integer ttl; 
@@ -241,6 +253,14 @@ public class Logstore extends TeaModel {
          */
         public Builder maxSplitShard(Integer maxSplitShard) {
             this.maxSplitShard = maxSplitShard;
+            return this;
+        }
+
+        /**
+         * [ standard | query ]
+         */
+        public Builder mode(String mode) {
+            this.mode = mode;
             return this;
         }
 

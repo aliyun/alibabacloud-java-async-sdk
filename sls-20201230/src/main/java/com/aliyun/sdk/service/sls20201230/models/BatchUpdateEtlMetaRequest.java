@@ -12,19 +12,19 @@ import com.aliyun.sdk.gateway.sls.models.*;
  * <p>BatchUpdateEtlMetaRequest</p>
  */
 public class BatchUpdateEtlMetaRequest extends Request {
-    @Body
-    @NameInMap("etlMetaList")
-    private EtlMetaList etlMetaList;
-
     @Host
     @NameInMap("project")
     @Validation(required = true)
     private String project;
 
+    @Body
+    @NameInMap("etlMetaList")
+    private EtlMetaList etlMetaList;
+
     private BatchUpdateEtlMetaRequest(Builder builder) {
         super(builder);
-        this.etlMetaList = builder.etlMetaList;
         this.project = builder.project;
+        this.etlMetaList = builder.etlMetaList;
     }
 
     public static Builder builder() {
@@ -41,22 +41,22 @@ public class BatchUpdateEtlMetaRequest extends Request {
     }
 
     /**
-     * @return etlMetaList
-     */
-    public EtlMetaList getEtlMetaList() {
-        return this.etlMetaList;
-    }
-
-    /**
      * @return project
      */
     public String getProject() {
         return this.project;
     }
 
+    /**
+     * @return etlMetaList
+     */
+    public EtlMetaList getEtlMetaList() {
+        return this.etlMetaList;
+    }
+
     public static final class Builder extends Request.Builder<BatchUpdateEtlMetaRequest, Builder> {
-        private EtlMetaList etlMetaList; 
         private String project; 
+        private EtlMetaList etlMetaList; 
 
         private Builder() {
             super();
@@ -64,18 +64,9 @@ public class BatchUpdateEtlMetaRequest extends Request {
 
         private Builder(BatchUpdateEtlMetaRequest request) {
             super(request);
-            this.etlMetaList = request.etlMetaList;
             this.project = request.project;
+            this.etlMetaList = request.etlMetaList;
         } 
-
-        /**
-         * etlMetaList.
-         */
-        public Builder etlMetaList(EtlMetaList etlMetaList) {
-            this.putBodyParameter("etlMetaList", etlMetaList);
-            this.etlMetaList = etlMetaList;
-            return this;
-        }
 
         /**
          * project 名称
@@ -83,6 +74,15 @@ public class BatchUpdateEtlMetaRequest extends Request {
         public Builder project(String project) {
             this.putHostParameter("project", project);
             this.project = project;
+            return this;
+        }
+
+        /**
+         * etlMetaList.
+         */
+        public Builder etlMetaList(EtlMetaList etlMetaList) {
+            this.putBodyParameter("etlMetaList", etlMetaList);
+            this.etlMetaList = etlMetaList;
             return this;
         }
 

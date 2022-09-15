@@ -12,20 +12,20 @@ import com.aliyun.sdk.gateway.sls.models.*;
  * <p>DeleteSavedSearchRequest</p>
  */
 public class DeleteSavedSearchRequest extends Request {
-    @Path
-    @NameInMap("savedsearchName")
-    @Validation(required = true)
-    private String savedsearchName;
-
     @Host
     @NameInMap("project")
     @Validation(required = true)
     private String project;
 
+    @Path
+    @NameInMap("savedsearchName")
+    @Validation(required = true)
+    private String savedsearchName;
+
     private DeleteSavedSearchRequest(Builder builder) {
         super(builder);
-        this.savedsearchName = builder.savedsearchName;
         this.project = builder.project;
+        this.savedsearchName = builder.savedsearchName;
     }
 
     public static Builder builder() {
@@ -42,22 +42,22 @@ public class DeleteSavedSearchRequest extends Request {
     }
 
     /**
-     * @return savedsearchName
-     */
-    public String getSavedsearchName() {
-        return this.savedsearchName;
-    }
-
-    /**
      * @return project
      */
     public String getProject() {
         return this.project;
     }
 
+    /**
+     * @return savedsearchName
+     */
+    public String getSavedsearchName() {
+        return this.savedsearchName;
+    }
+
     public static final class Builder extends Request.Builder<DeleteSavedSearchRequest, Builder> {
-        private String savedsearchName; 
         private String project; 
+        private String savedsearchName; 
 
         private Builder() {
             super();
@@ -65,18 +65,9 @@ public class DeleteSavedSearchRequest extends Request {
 
         private Builder(DeleteSavedSearchRequest request) {
             super(request);
-            this.savedsearchName = request.savedsearchName;
             this.project = request.project;
+            this.savedsearchName = request.savedsearchName;
         } 
-
-        /**
-         * savedsearchName.
-         */
-        public Builder savedsearchName(String savedsearchName) {
-            this.putPathParameter("savedsearchName", savedsearchName);
-            this.savedsearchName = savedsearchName;
-            return this;
-        }
 
         /**
          * A short description of struct
@@ -84,6 +75,15 @@ public class DeleteSavedSearchRequest extends Request {
         public Builder project(String project) {
             this.putHostParameter("project", project);
             this.project = project;
+            return this;
+        }
+
+        /**
+         * savedsearchName.
+         */
+        public Builder savedsearchName(String savedsearchName) {
+            this.putPathParameter("savedsearchName", savedsearchName);
+            this.savedsearchName = savedsearchName;
             return this;
         }
 

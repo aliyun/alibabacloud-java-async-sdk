@@ -12,20 +12,20 @@ import com.aliyun.sdk.gateway.sls.models.*;
  * <p>UpdateProjectRequest</p>
  */
 public class UpdateProjectRequest extends Request {
-    @Body
-    @NameInMap("description")
-    @Validation(required = true)
-    private String description;
-
     @Host
     @NameInMap("project")
     @Validation(required = true)
     private String project;
 
+    @Body
+    @NameInMap("description")
+    @Validation(required = true)
+    private String description;
+
     private UpdateProjectRequest(Builder builder) {
         super(builder);
-        this.description = builder.description;
         this.project = builder.project;
+        this.description = builder.description;
     }
 
     public static Builder builder() {
@@ -42,22 +42,22 @@ public class UpdateProjectRequest extends Request {
     }
 
     /**
-     * @return description
-     */
-    public String getDescription() {
-        return this.description;
-    }
-
-    /**
      * @return project
      */
     public String getProject() {
         return this.project;
     }
 
+    /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
+    }
+
     public static final class Builder extends Request.Builder<UpdateProjectRequest, Builder> {
-        private String description; 
         private String project; 
+        private String description; 
 
         private Builder() {
             super();
@@ -65,18 +65,9 @@ public class UpdateProjectRequest extends Request {
 
         private Builder(UpdateProjectRequest request) {
             super(request);
-            this.description = request.description;
             this.project = request.project;
+            this.description = request.description;
         } 
-
-        /**
-         * Project description
-         */
-        public Builder description(String description) {
-            this.putBodyParameter("description", description);
-            this.description = description;
-            return this;
-        }
 
         /**
          * Project name
@@ -84,6 +75,15 @@ public class UpdateProjectRequest extends Request {
         public Builder project(String project) {
             this.putHostParameter("project", project);
             this.project = project;
+            return this;
+        }
+
+        /**
+         * Project description
+         */
+        public Builder description(String description) {
+            this.putBodyParameter("description", description);
+            this.description = description;
             return this;
         }
 

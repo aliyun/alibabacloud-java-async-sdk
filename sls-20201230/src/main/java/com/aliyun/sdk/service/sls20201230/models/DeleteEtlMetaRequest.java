@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.sls.models.*;
  * <p>DeleteEtlMetaRequest</p>
  */
 public class DeleteEtlMetaRequest extends Request {
+    @Host
+    @NameInMap("project")
+    @Validation(required = true)
+    private String project;
+
     @Query
     @NameInMap("etlMetaKey")
     @Validation(required = true)
@@ -27,17 +32,12 @@ public class DeleteEtlMetaRequest extends Request {
     @Validation(required = true)
     private String etlMetaTag;
 
-    @Host
-    @NameInMap("project")
-    @Validation(required = true)
-    private String project;
-
     private DeleteEtlMetaRequest(Builder builder) {
         super(builder);
+        this.project = builder.project;
         this.etlMetaKey = builder.etlMetaKey;
         this.etlMetaName = builder.etlMetaName;
         this.etlMetaTag = builder.etlMetaTag;
-        this.project = builder.project;
     }
 
     public static Builder builder() {
@@ -51,6 +51,13 @@ public class DeleteEtlMetaRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return project
+     */
+    public String getProject() {
+        return this.project;
     }
 
     /**
@@ -74,18 +81,11 @@ public class DeleteEtlMetaRequest extends Request {
         return this.etlMetaTag;
     }
 
-    /**
-     * @return project
-     */
-    public String getProject() {
-        return this.project;
-    }
-
     public static final class Builder extends Request.Builder<DeleteEtlMetaRequest, Builder> {
+        private String project; 
         private String etlMetaKey; 
         private String etlMetaName; 
         private String etlMetaTag; 
-        private String project; 
 
         private Builder() {
             super();
@@ -93,11 +93,20 @@ public class DeleteEtlMetaRequest extends Request {
 
         private Builder(DeleteEtlMetaRequest request) {
             super(request);
+            this.project = request.project;
             this.etlMetaKey = request.etlMetaKey;
             this.etlMetaName = request.etlMetaName;
             this.etlMetaTag = request.etlMetaTag;
-            this.project = request.project;
         } 
+
+        /**
+         * A short description of struct
+         */
+        public Builder project(String project) {
+            this.putHostParameter("project", project);
+            this.project = project;
+            return this;
+        }
 
         /**
          * key。由 ascii 可打印字符组成，包括数字、英文大小写字母、下划线、连字符、英文标点符号等组成，长度在[1,255]之间。
@@ -125,15 +134,6 @@ public class DeleteEtlMetaRequest extends Request {
         public Builder etlMetaTag(String etlMetaTag) {
             this.putQueryParameter("etlMetaTag", etlMetaTag);
             this.etlMetaTag = etlMetaTag;
-            return this;
-        }
-
-        /**
-         * A short description of struct
-         */
-        public Builder project(String project) {
-            this.putHostParameter("project", project);
-            this.project = project;
             return this;
         }
 

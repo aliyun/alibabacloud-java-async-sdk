@@ -12,14 +12,14 @@ import com.aliyun.sdk.gateway.sls.models.*;
  * <p>GetProjectLogsRequest</p>
  */
 public class GetProjectLogsRequest extends Request {
-    @Query
-    @NameInMap("powerSql")
-    private Boolean powerSql;
-
     @Host
     @NameInMap("project")
     @Validation(required = true)
     private String project;
+
+    @Query
+    @NameInMap("powerSql")
+    private Boolean powerSql;
 
     @Query
     @NameInMap("query")
@@ -28,8 +28,8 @@ public class GetProjectLogsRequest extends Request {
 
     private GetProjectLogsRequest(Builder builder) {
         super(builder);
-        this.powerSql = builder.powerSql;
         this.project = builder.project;
+        this.powerSql = builder.powerSql;
         this.query = builder.query;
     }
 
@@ -47,17 +47,17 @@ public class GetProjectLogsRequest extends Request {
     }
 
     /**
-     * @return powerSql
-     */
-    public Boolean getPowerSql() {
-        return this.powerSql;
-    }
-
-    /**
      * @return project
      */
     public String getProject() {
         return this.project;
+    }
+
+    /**
+     * @return powerSql
+     */
+    public Boolean getPowerSql() {
+        return this.powerSql;
     }
 
     /**
@@ -68,8 +68,8 @@ public class GetProjectLogsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetProjectLogsRequest, Builder> {
-        private Boolean powerSql; 
         private String project; 
+        private Boolean powerSql; 
         private String query; 
 
         private Builder() {
@@ -78,10 +78,19 @@ public class GetProjectLogsRequest extends Request {
 
         private Builder(GetProjectLogsRequest request) {
             super(request);
-            this.powerSql = request.powerSql;
             this.project = request.project;
+            this.powerSql = request.powerSql;
             this.query = request.query;
         } 
+
+        /**
+         * project 名称。
+         */
+        public Builder project(String project) {
+            this.putHostParameter("project", project);
+            this.project = project;
+            return this;
+        }
 
         /**
          * 是否使用SQL独享版。更多信息，请参见开启SQL独享版。
@@ -94,15 +103,6 @@ public class GetProjectLogsRequest extends Request {
         public Builder powerSql(Boolean powerSql) {
             this.putQueryParameter("powerSql", powerSql);
             this.powerSql = powerSql;
-            return this;
-        }
-
-        /**
-         * project 名称。
-         */
-        public Builder project(String project) {
-            this.putHostParameter("project", project);
-            this.project = project;
             return this;
         }
 

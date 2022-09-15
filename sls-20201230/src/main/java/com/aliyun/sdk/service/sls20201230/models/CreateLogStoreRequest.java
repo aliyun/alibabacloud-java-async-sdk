@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.sls.models.*;
  * <p>CreateLogStoreRequest</p>
  */
 public class CreateLogStoreRequest extends Request {
+    @Host
+    @NameInMap("project")
+    @Validation(required = true)
+    private String project;
+
     @Body
     @NameInMap("appendMeta")
     private Boolean appendMeta;
@@ -42,6 +47,10 @@ public class CreateLogStoreRequest extends Request {
     private Integer maxSplitShard;
 
     @Body
+    @NameInMap("mode")
+    private String mode;
+
+    @Body
     @NameInMap("shardCount")
     @Validation(required = true)
     private Integer shardCount;
@@ -55,13 +64,9 @@ public class CreateLogStoreRequest extends Request {
     @Validation(required = true)
     private Integer ttl;
 
-    @Host
-    @NameInMap("project")
-    @Validation(required = true)
-    private String project;
-
     private CreateLogStoreRequest(Builder builder) {
         super(builder);
+        this.project = builder.project;
         this.appendMeta = builder.appendMeta;
         this.autoSplit = builder.autoSplit;
         this.enableTracking = builder.enableTracking;
@@ -69,10 +74,10 @@ public class CreateLogStoreRequest extends Request {
         this.hotTtl = builder.hotTtl;
         this.logstoreName = builder.logstoreName;
         this.maxSplitShard = builder.maxSplitShard;
+        this.mode = builder.mode;
         this.shardCount = builder.shardCount;
         this.telemetryType = builder.telemetryType;
         this.ttl = builder.ttl;
-        this.project = builder.project;
     }
 
     public static Builder builder() {
@@ -86,6 +91,13 @@ public class CreateLogStoreRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return project
+     */
+    public String getProject() {
+        return this.project;
     }
 
     /**
@@ -138,6 +150,13 @@ public class CreateLogStoreRequest extends Request {
     }
 
     /**
+     * @return mode
+     */
+    public String getMode() {
+        return this.mode;
+    }
+
+    /**
      * @return shardCount
      */
     public Integer getShardCount() {
@@ -158,14 +177,8 @@ public class CreateLogStoreRequest extends Request {
         return this.ttl;
     }
 
-    /**
-     * @return project
-     */
-    public String getProject() {
-        return this.project;
-    }
-
     public static final class Builder extends Request.Builder<CreateLogStoreRequest, Builder> {
+        private String project; 
         private Boolean appendMeta; 
         private Boolean autoSplit; 
         private Boolean enableTracking; 
@@ -173,10 +186,10 @@ public class CreateLogStoreRequest extends Request {
         private Integer hotTtl; 
         private String logstoreName; 
         private Integer maxSplitShard; 
+        private String mode; 
         private Integer shardCount; 
         private String telemetryType; 
         private Integer ttl; 
-        private String project; 
 
         private Builder() {
             super();
@@ -184,6 +197,7 @@ public class CreateLogStoreRequest extends Request {
 
         private Builder(CreateLogStoreRequest request) {
             super(request);
+            this.project = request.project;
             this.appendMeta = request.appendMeta;
             this.autoSplit = request.autoSplit;
             this.enableTracking = request.enableTracking;
@@ -191,11 +205,20 @@ public class CreateLogStoreRequest extends Request {
             this.hotTtl = request.hotTtl;
             this.logstoreName = request.logstoreName;
             this.maxSplitShard = request.maxSplitShard;
+            this.mode = request.mode;
             this.shardCount = request.shardCount;
             this.telemetryType = request.telemetryType;
             this.ttl = request.ttl;
-            this.project = request.project;
         } 
+
+        /**
+         * project.
+         */
+        public Builder project(String project) {
+            this.putHostParameter("project", project);
+            this.project = project;
+            return this;
+        }
 
         /**
          * appendMeta.
@@ -261,6 +284,15 @@ public class CreateLogStoreRequest extends Request {
         }
 
         /**
+         * mode.
+         */
+        public Builder mode(String mode) {
+            this.putBodyParameter("mode", mode);
+            this.mode = mode;
+            return this;
+        }
+
+        /**
          * shardCount.
          */
         public Builder shardCount(Integer shardCount) {
@@ -284,15 +316,6 @@ public class CreateLogStoreRequest extends Request {
         public Builder ttl(Integer ttl) {
             this.putBodyParameter("ttl", ttl);
             this.ttl = ttl;
-            return this;
-        }
-
-        /**
-         * project.
-         */
-        public Builder project(String project) {
-            this.putHostParameter("project", project);
-            this.project = project;
             return this;
         }
 

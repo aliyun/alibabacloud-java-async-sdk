@@ -12,20 +12,20 @@ import com.aliyun.sdk.gateway.sls.models.*;
  * <p>GetMachineGroupRequest</p>
  */
 public class GetMachineGroupRequest extends Request {
-    @Path
-    @NameInMap("machineGroup")
-    @Validation(required = true)
-    private String machineGroup;
-
     @Host
     @NameInMap("project")
     @Validation(required = true)
     private String project;
 
+    @Path
+    @NameInMap("machineGroup")
+    @Validation(required = true)
+    private String machineGroup;
+
     private GetMachineGroupRequest(Builder builder) {
         super(builder);
-        this.machineGroup = builder.machineGroup;
         this.project = builder.project;
+        this.machineGroup = builder.machineGroup;
     }
 
     public static Builder builder() {
@@ -42,22 +42,22 @@ public class GetMachineGroupRequest extends Request {
     }
 
     /**
-     * @return machineGroup
-     */
-    public String getMachineGroup() {
-        return this.machineGroup;
-    }
-
-    /**
      * @return project
      */
     public String getProject() {
         return this.project;
     }
 
+    /**
+     * @return machineGroup
+     */
+    public String getMachineGroup() {
+        return this.machineGroup;
+    }
+
     public static final class Builder extends Request.Builder<GetMachineGroupRequest, Builder> {
-        private String machineGroup; 
         private String project; 
+        private String machineGroup; 
 
         private Builder() {
             super();
@@ -65,18 +65,9 @@ public class GetMachineGroupRequest extends Request {
 
         private Builder(GetMachineGroupRequest request) {
             super(request);
-            this.machineGroup = request.machineGroup;
             this.project = request.project;
+            this.machineGroup = request.machineGroup;
         } 
-
-        /**
-         * 机器组名称。
-         */
-        public Builder machineGroup(String machineGroup) {
-            this.putPathParameter("machineGroup", machineGroup);
-            this.machineGroup = machineGroup;
-            return this;
-        }
 
         /**
          * project 名称。
@@ -84,6 +75,15 @@ public class GetMachineGroupRequest extends Request {
         public Builder project(String project) {
             this.putHostParameter("project", project);
             this.project = project;
+            return this;
+        }
+
+        /**
+         * 机器组名称。
+         */
+        public Builder machineGroup(String machineGroup) {
+            this.putPathParameter("machineGroup", machineGroup);
+            this.machineGroup = machineGroup;
             return this;
         }
 

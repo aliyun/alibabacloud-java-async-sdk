@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.sls.models.*;
  * <p>MergeShardsRequest</p>
  */
 public class MergeShardsRequest extends Request {
+    @Host
+    @NameInMap("project")
+    @Validation(required = true)
+    private String project;
+
     @Path
     @NameInMap("logstore")
     @Validation(required = true)
@@ -27,17 +32,12 @@ public class MergeShardsRequest extends Request {
     @Validation(required = true)
     private String action;
 
-    @Host
-    @NameInMap("project")
-    @Validation(required = true)
-    private String project;
-
     private MergeShardsRequest(Builder builder) {
         super(builder);
+        this.project = builder.project;
         this.logstore = builder.logstore;
         this.shardID = builder.shardID;
         this.action = builder.action;
-        this.project = builder.project;
     }
 
     public static Builder builder() {
@@ -51,6 +51,13 @@ public class MergeShardsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return project
+     */
+    public String getProject() {
+        return this.project;
     }
 
     /**
@@ -74,18 +81,11 @@ public class MergeShardsRequest extends Request {
         return this.action;
     }
 
-    /**
-     * @return project
-     */
-    public String getProject() {
-        return this.project;
-    }
-
     public static final class Builder extends Request.Builder<MergeShardsRequest, Builder> {
+        private String project; 
         private String logstore; 
         private Integer shardID; 
         private String action; 
-        private String project; 
 
         private Builder() {
             super();
@@ -93,11 +93,20 @@ public class MergeShardsRequest extends Request {
 
         private Builder(MergeShardsRequest request) {
             super(request);
+            this.project = request.project;
             this.logstore = request.logstore;
             this.shardID = request.shardID;
             this.action = request.action;
-            this.project = request.project;
         } 
+
+        /**
+         * Project 名称。
+         */
+        public Builder project(String project) {
+            this.putHostParameter("project", project);
+            this.project = project;
+            return this;
+        }
 
         /**
          * Logstore 名称。
@@ -123,15 +132,6 @@ public class MergeShardsRequest extends Request {
         public Builder action(String action) {
             this.putQueryParameter("action", action);
             this.action = action;
-            return this;
-        }
-
-        /**
-         * Project 名称。
-         */
-        public Builder project(String project) {
-            this.putHostParameter("project", project);
-            this.project = project;
             return this;
         }
 

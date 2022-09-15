@@ -12,20 +12,20 @@ import com.aliyun.sdk.gateway.sls.models.*;
  * <p>GetExternalStoreRequest</p>
  */
 public class GetExternalStoreRequest extends Request {
-    @Path
-    @NameInMap("externalStoreName")
-    @Validation(required = true)
-    private String externalStoreName;
-
     @Host
     @NameInMap("project")
     @Validation(required = true)
     private String project;
 
+    @Path
+    @NameInMap("externalStoreName")
+    @Validation(required = true)
+    private String externalStoreName;
+
     private GetExternalStoreRequest(Builder builder) {
         super(builder);
-        this.externalStoreName = builder.externalStoreName;
         this.project = builder.project;
+        this.externalStoreName = builder.externalStoreName;
     }
 
     public static Builder builder() {
@@ -42,22 +42,22 @@ public class GetExternalStoreRequest extends Request {
     }
 
     /**
-     * @return externalStoreName
-     */
-    public String getExternalStoreName() {
-        return this.externalStoreName;
-    }
-
-    /**
      * @return project
      */
     public String getProject() {
         return this.project;
     }
 
+    /**
+     * @return externalStoreName
+     */
+    public String getExternalStoreName() {
+        return this.externalStoreName;
+    }
+
     public static final class Builder extends Request.Builder<GetExternalStoreRequest, Builder> {
-        private String externalStoreName; 
         private String project; 
+        private String externalStoreName; 
 
         private Builder() {
             super();
@@ -65,18 +65,9 @@ public class GetExternalStoreRequest extends Request {
 
         private Builder(GetExternalStoreRequest request) {
             super(request);
-            this.externalStoreName = request.externalStoreName;
             this.project = request.project;
+            this.externalStoreName = request.externalStoreName;
         } 
-
-        /**
-         * A short description of struct
-         */
-        public Builder externalStoreName(String externalStoreName) {
-            this.putPathParameter("externalStoreName", externalStoreName);
-            this.externalStoreName = externalStoreName;
-            return this;
-        }
 
         /**
          * project.
@@ -84,6 +75,15 @@ public class GetExternalStoreRequest extends Request {
         public Builder project(String project) {
             this.putHostParameter("project", project);
             this.project = project;
+            return this;
+        }
+
+        /**
+         * A short description of struct
+         */
+        public Builder externalStoreName(String externalStoreName) {
+            this.putPathParameter("externalStoreName", externalStoreName);
+            this.externalStoreName = externalStoreName;
             return this;
         }
 

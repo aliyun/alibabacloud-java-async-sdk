@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.sls.models.*;
  * <p>UpdateMachineGroupRequest</p>
  */
 public class UpdateMachineGroupRequest extends Request {
+    @Host
+    @NameInMap("project")
+    @Validation(required = true)
+    private String project;
+
     @Path
     @Body
     @NameInMap("groupName")
@@ -36,19 +41,14 @@ public class UpdateMachineGroupRequest extends Request {
     @Validation(required = true)
     private java.util.List < String > machineList;
 
-    @Host
-    @NameInMap("project")
-    @Validation(required = true)
-    private String project;
-
     private UpdateMachineGroupRequest(Builder builder) {
         super(builder);
+        this.project = builder.project;
         this.groupName = builder.groupName;
         this.groupAttribute = builder.groupAttribute;
         this.groupType = builder.groupType;
         this.machineIdentifyType = builder.machineIdentifyType;
         this.machineList = builder.machineList;
-        this.project = builder.project;
     }
 
     public static Builder builder() {
@@ -62,6 +62,13 @@ public class UpdateMachineGroupRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return project
+     */
+    public String getProject() {
+        return this.project;
     }
 
     /**
@@ -99,20 +106,13 @@ public class UpdateMachineGroupRequest extends Request {
         return this.machineList;
     }
 
-    /**
-     * @return project
-     */
-    public String getProject() {
-        return this.project;
-    }
-
     public static final class Builder extends Request.Builder<UpdateMachineGroupRequest, Builder> {
+        private String project; 
         private String groupName; 
         private GroupAttribute groupAttribute; 
         private String groupType; 
         private String machineIdentifyType; 
         private java.util.List < String > machineList; 
-        private String project; 
 
         private Builder() {
             super();
@@ -120,13 +120,22 @@ public class UpdateMachineGroupRequest extends Request {
 
         private Builder(UpdateMachineGroupRequest request) {
             super(request);
+            this.project = request.project;
             this.groupName = request.groupName;
             this.groupAttribute = request.groupAttribute;
             this.groupType = request.groupType;
             this.machineIdentifyType = request.machineIdentifyType;
             this.machineList = request.machineList;
-            this.project = request.project;
         } 
+
+        /**
+         * project 名称。
+         */
+        public Builder project(String project) {
+            this.putHostParameter("project", project);
+            this.project = project;
+            return this;
+        }
 
         /**
          * 机器组名称。
@@ -171,15 +180,6 @@ public class UpdateMachineGroupRequest extends Request {
         public Builder machineList(java.util.List < String > machineList) {
             this.putBodyParameter("machineList", machineList);
             this.machineList = machineList;
-            return this;
-        }
-
-        /**
-         * project 名称。
-         */
-        public Builder project(String project) {
-            this.putHostParameter("project", project);
-            this.project = project;
             return this;
         }
 

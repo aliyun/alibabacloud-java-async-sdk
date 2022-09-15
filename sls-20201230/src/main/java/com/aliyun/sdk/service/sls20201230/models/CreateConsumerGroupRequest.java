@@ -17,6 +17,11 @@ public class CreateConsumerGroupRequest extends Request {
     @Validation(required = true)
     private String logstore;
 
+    @Host
+    @NameInMap("project")
+    @Validation(required = true)
+    private String project;
+
     @Body
     @NameInMap("consumerGroup")
     @Validation(required = true)
@@ -32,18 +37,13 @@ public class CreateConsumerGroupRequest extends Request {
     @Validation(required = true)
     private Integer timeout;
 
-    @Host
-    @NameInMap("project")
-    @Validation(required = true)
-    private String project;
-
     private CreateConsumerGroupRequest(Builder builder) {
         super(builder);
         this.logstore = builder.logstore;
+        this.project = builder.project;
         this.consumerGroup = builder.consumerGroup;
         this.order = builder.order;
         this.timeout = builder.timeout;
-        this.project = builder.project;
     }
 
     public static Builder builder() {
@@ -67,6 +67,13 @@ public class CreateConsumerGroupRequest extends Request {
     }
 
     /**
+     * @return project
+     */
+    public String getProject() {
+        return this.project;
+    }
+
+    /**
      * @return consumerGroup
      */
     public String getConsumerGroup() {
@@ -87,19 +94,12 @@ public class CreateConsumerGroupRequest extends Request {
         return this.timeout;
     }
 
-    /**
-     * @return project
-     */
-    public String getProject() {
-        return this.project;
-    }
-
     public static final class Builder extends Request.Builder<CreateConsumerGroupRequest, Builder> {
         private String logstore; 
+        private String project; 
         private String consumerGroup; 
         private Boolean order; 
         private Integer timeout; 
-        private String project; 
 
         private Builder() {
             super();
@@ -108,10 +108,10 @@ public class CreateConsumerGroupRequest extends Request {
         private Builder(CreateConsumerGroupRequest request) {
             super(request);
             this.logstore = request.logstore;
+            this.project = request.project;
             this.consumerGroup = request.consumerGroup;
             this.order = request.order;
             this.timeout = request.timeout;
-            this.project = request.project;
         } 
 
         /**
@@ -120,6 +120,15 @@ public class CreateConsumerGroupRequest extends Request {
         public Builder logstore(String logstore) {
             this.putPathParameter("logstore", logstore);
             this.logstore = logstore;
+            return this;
+        }
+
+        /**
+         * project.
+         */
+        public Builder project(String project) {
+            this.putHostParameter("project", project);
+            this.project = project;
             return this;
         }
 
@@ -147,15 +156,6 @@ public class CreateConsumerGroupRequest extends Request {
         public Builder timeout(Integer timeout) {
             this.putBodyParameter("timeout", timeout);
             this.timeout = timeout;
-            return this;
-        }
-
-        /**
-         * project.
-         */
-        public Builder project(String project) {
-            this.putHostParameter("project", project);
-            this.project = project;
             return this;
         }
 

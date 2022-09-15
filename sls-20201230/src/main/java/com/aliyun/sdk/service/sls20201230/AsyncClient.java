@@ -30,6 +30,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateDomainResponse> createDomain(CreateDomainRequest request);
 
+    CompletableFuture<CreateEtlJobResponse> createEtlJob(CreateEtlJobRequest request);
+
     CompletableFuture<CreateEtlMetaResponse> createEtlMeta(CreateEtlMetaRequest request);
 
     CompletableFuture<CreateIndexResponse> createIndex(CreateIndexRequest request);
@@ -55,6 +57,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteConsumerGroupResponse> deleteConsumerGroup(DeleteConsumerGroupRequest request);
 
     CompletableFuture<DeleteDomainResponse> deleteDomain(DeleteDomainRequest request);
+
+    CompletableFuture<DeleteEtlJobResponse> deleteEtlJob(DeleteEtlJobRequest request);
 
     CompletableFuture<DeleteEtlMetaResponse> deleteEtlMeta(DeleteEtlMetaRequest request);
 
@@ -86,6 +90,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetCursorTimeResponse> getCursorTime(GetCursorTimeRequest request);
 
+    CompletableFuture<GetEtlJobResponse> getEtlJob(GetEtlJobRequest request);
+
     CompletableFuture<GetEtlMetaResponse> getEtlMeta(GetEtlMetaRequest request);
 
     CompletableFuture<GetExternalStoreResponse> getExternalStore(GetExternalStoreRequest request);
@@ -115,6 +121,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListConsumerGroupResponse> listConsumerGroup(ListConsumerGroupRequest request);
 
     CompletableFuture<ListDomainsResponse> listDomains(ListDomainsRequest request);
+
+    CompletableFuture<ListEtlJobResponse> listEtlJob(ListEtlJobRequest request);
 
     CompletableFuture<ListEtlMetaResponse> listEtlMeta(ListEtlMetaRequest request);
 
@@ -151,6 +159,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateCheckPointResponse> updateCheckPoint(UpdateCheckPointRequest request);
 
     CompletableFuture<UpdateConsumerGroupResponse> updateConsumerGroup(UpdateConsumerGroupRequest request);
+
+    CompletableFuture<UpdateEtlJobResponse> updateEtlJob(UpdateEtlJobRequest request);
 
     CompletableFuture<UpdateEtlMetaResponse> updateEtlMeta(UpdateEtlMetaRequest request);
 

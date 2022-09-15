@@ -17,6 +17,11 @@ public class CreateIndexRequest extends Request {
     @Validation(required = true)
     private String logstore;
 
+    @Host
+    @NameInMap("project")
+    @Validation(required = true)
+    private String project;
+
     @Body
     @NameInMap("keys")
     private java.util.Map < String, KeysValue > keys;
@@ -45,14 +50,10 @@ public class CreateIndexRequest extends Request {
     @NameInMap("ttl")
     private Integer ttl;
 
-    @Host
-    @NameInMap("project")
-    @Validation(required = true)
-    private String project;
-
     private CreateIndexRequest(Builder builder) {
         super(builder);
         this.logstore = builder.logstore;
+        this.project = builder.project;
         this.keys = builder.keys;
         this.line = builder.line;
         this.logReduce = builder.logReduce;
@@ -60,7 +61,6 @@ public class CreateIndexRequest extends Request {
         this.logReduceWhiteList = builder.logReduceWhiteList;
         this.maxTextLen = builder.maxTextLen;
         this.ttl = builder.ttl;
-        this.project = builder.project;
     }
 
     public static Builder builder() {
@@ -81,6 +81,13 @@ public class CreateIndexRequest extends Request {
      */
     public String getLogstore() {
         return this.logstore;
+    }
+
+    /**
+     * @return project
+     */
+    public String getProject() {
+        return this.project;
     }
 
     /**
@@ -132,15 +139,9 @@ public class CreateIndexRequest extends Request {
         return this.ttl;
     }
 
-    /**
-     * @return project
-     */
-    public String getProject() {
-        return this.project;
-    }
-
     public static final class Builder extends Request.Builder<CreateIndexRequest, Builder> {
         private String logstore; 
+        private String project; 
         private java.util.Map < String, KeysValue > keys; 
         private Line line; 
         private Boolean logReduce; 
@@ -148,7 +149,6 @@ public class CreateIndexRequest extends Request {
         private java.util.List < String > logReduceWhiteList; 
         private Integer maxTextLen; 
         private Integer ttl; 
-        private String project; 
 
         private Builder() {
             super();
@@ -157,6 +157,7 @@ public class CreateIndexRequest extends Request {
         private Builder(CreateIndexRequest request) {
             super(request);
             this.logstore = request.logstore;
+            this.project = request.project;
             this.keys = request.keys;
             this.line = request.line;
             this.logReduce = request.logReduce;
@@ -164,7 +165,6 @@ public class CreateIndexRequest extends Request {
             this.logReduceWhiteList = request.logReduceWhiteList;
             this.maxTextLen = request.maxTextLen;
             this.ttl = request.ttl;
-            this.project = request.project;
         } 
 
         /**
@@ -173,6 +173,15 @@ public class CreateIndexRequest extends Request {
         public Builder logstore(String logstore) {
             this.putPathParameter("logstore", logstore);
             this.logstore = logstore;
+            return this;
+        }
+
+        /**
+         * project.
+         */
+        public Builder project(String project) {
+            this.putHostParameter("project", project);
+            this.project = project;
             return this;
         }
 
@@ -236,15 +245,6 @@ public class CreateIndexRequest extends Request {
         public Builder ttl(Integer ttl) {
             this.putBodyParameter("ttl", ttl);
             this.ttl = ttl;
-            return this;
-        }
-
-        /**
-         * project.
-         */
-        public Builder project(String project) {
-            this.putHostParameter("project", project);
-            this.project = project;
             return this;
         }
 

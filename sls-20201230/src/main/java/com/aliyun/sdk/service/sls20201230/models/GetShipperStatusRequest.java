@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.sls.models.*;
  * <p>GetShipperStatusRequest</p>
  */
 public class GetShipperStatusRequest extends Request {
+    @Host
+    @NameInMap("project")
+    @Validation(required = true)
+    private String project;
+
     @Path
     @NameInMap("logstore")
     @Validation(required = true)
@@ -31,11 +36,6 @@ public class GetShipperStatusRequest extends Request {
     @NameInMap("offset")
     private Integer offset;
 
-    @Host
-    @NameInMap("project")
-    @Validation(required = true)
-    private String project;
-
     @Query
     @NameInMap("size")
     private Integer size;
@@ -51,11 +51,11 @@ public class GetShipperStatusRequest extends Request {
 
     private GetShipperStatusRequest(Builder builder) {
         super(builder);
+        this.project = builder.project;
         this.logstore = builder.logstore;
         this.shipperName = builder.shipperName;
         this.from = builder.from;
         this.offset = builder.offset;
-        this.project = builder.project;
         this.size = builder.size;
         this.status = builder.status;
         this.to = builder.to;
@@ -72,6 +72,13 @@ public class GetShipperStatusRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return project
+     */
+    public String getProject() {
+        return this.project;
     }
 
     /**
@@ -103,13 +110,6 @@ public class GetShipperStatusRequest extends Request {
     }
 
     /**
-     * @return project
-     */
-    public String getProject() {
-        return this.project;
-    }
-
-    /**
      * @return size
      */
     public Integer getSize() {
@@ -131,11 +131,11 @@ public class GetShipperStatusRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetShipperStatusRequest, Builder> {
+        private String project; 
         private String logstore; 
         private String shipperName; 
         private Long from; 
         private Integer offset; 
-        private String project; 
         private Integer size; 
         private String status; 
         private Long to; 
@@ -146,15 +146,24 @@ public class GetShipperStatusRequest extends Request {
 
         private Builder(GetShipperStatusRequest request) {
             super(request);
+            this.project = request.project;
             this.logstore = request.logstore;
             this.shipperName = request.shipperName;
             this.from = request.from;
             this.offset = request.offset;
-            this.project = request.project;
             this.size = request.size;
             this.status = request.status;
             this.to = request.to;
         } 
+
+        /**
+         * Project 名称。
+         */
+        public Builder project(String project) {
+            this.putHostParameter("project", project);
+            this.project = project;
+            return this;
+        }
 
         /**
          * Logstore 名称。
@@ -189,15 +198,6 @@ public class GetShipperStatusRequest extends Request {
         public Builder offset(Integer offset) {
             this.putQueryParameter("offset", offset);
             this.offset = offset;
-            return this;
-        }
-
-        /**
-         * Project 名称。
-         */
-        public Builder project(String project) {
-            this.putHostParameter("project", project);
-            this.project = project;
             return this;
         }
 

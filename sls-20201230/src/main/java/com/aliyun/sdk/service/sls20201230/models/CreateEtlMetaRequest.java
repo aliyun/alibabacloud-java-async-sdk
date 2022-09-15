@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.sls.models.*;
  * <p>CreateEtlMetaRequest</p>
  */
 public class CreateEtlMetaRequest extends Request {
+    @Host
+    @NameInMap("project")
+    @Validation(required = true)
+    private String project;
+
     @Body
     @NameInMap("enable")
     private Boolean enable;
@@ -35,19 +40,14 @@ public class CreateEtlMetaRequest extends Request {
     @NameInMap("etlMetaValue")
     private java.util.Map < String, ? > etlMetaValue;
 
-    @Host
-    @NameInMap("project")
-    @Validation(required = true)
-    private String project;
-
     private CreateEtlMetaRequest(Builder builder) {
         super(builder);
+        this.project = builder.project;
         this.enable = builder.enable;
         this.etlMetaKey = builder.etlMetaKey;
         this.etlMetaName = builder.etlMetaName;
         this.etlMetaTag = builder.etlMetaTag;
         this.etlMetaValue = builder.etlMetaValue;
-        this.project = builder.project;
     }
 
     public static Builder builder() {
@@ -61,6 +61,13 @@ public class CreateEtlMetaRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return project
+     */
+    public String getProject() {
+        return this.project;
     }
 
     /**
@@ -98,20 +105,13 @@ public class CreateEtlMetaRequest extends Request {
         return this.etlMetaValue;
     }
 
-    /**
-     * @return project
-     */
-    public String getProject() {
-        return this.project;
-    }
-
     public static final class Builder extends Request.Builder<CreateEtlMetaRequest, Builder> {
+        private String project; 
         private Boolean enable; 
         private String etlMetaKey; 
         private String etlMetaName; 
         private String etlMetaTag; 
         private java.util.Map < String, ? > etlMetaValue; 
-        private String project; 
 
         private Builder() {
             super();
@@ -119,13 +119,22 @@ public class CreateEtlMetaRequest extends Request {
 
         private Builder(CreateEtlMetaRequest request) {
             super(request);
+            this.project = request.project;
             this.enable = request.enable;
             this.etlMetaKey = request.etlMetaKey;
             this.etlMetaName = request.etlMetaName;
             this.etlMetaTag = request.etlMetaTag;
             this.etlMetaValue = request.etlMetaValue;
-            this.project = request.project;
         } 
+
+        /**
+         * A short description of struct
+         */
+        public Builder project(String project) {
+            this.putHostParameter("project", project);
+            this.project = project;
+            return this;
+        }
 
         /**
          * 是否启用
@@ -169,15 +178,6 @@ public class CreateEtlMetaRequest extends Request {
         public Builder etlMetaValue(java.util.Map < String, ? > etlMetaValue) {
             this.putBodyParameter("etlMetaValue", etlMetaValue);
             this.etlMetaValue = etlMetaValue;
-            return this;
-        }
-
-        /**
-         * A short description of struct
-         */
-        public Builder project(String project) {
-            this.putHostParameter("project", project);
-            this.project = project;
             return this;
         }
 

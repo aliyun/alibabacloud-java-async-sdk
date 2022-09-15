@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.sls.models.*;
  * <p>UpdateIndexRequest</p>
  */
 public class UpdateIndexRequest extends Request {
+    @Host
+    @NameInMap("project")
+    @Validation(required = true)
+    private String project;
+
     @Path
     @NameInMap("logstore")
     @Validation(required = true)
@@ -46,13 +51,9 @@ public class UpdateIndexRequest extends Request {
     @Validation(required = true)
     private Integer ttl;
 
-    @Host
-    @NameInMap("project")
-    @Validation(required = true)
-    private String project;
-
     private UpdateIndexRequest(Builder builder) {
         super(builder);
+        this.project = builder.project;
         this.logstore = builder.logstore;
         this.keys = builder.keys;
         this.line = builder.line;
@@ -61,7 +62,6 @@ public class UpdateIndexRequest extends Request {
         this.logReduceWhiteList = builder.logReduceWhiteList;
         this.maxTextLen = builder.maxTextLen;
         this.ttl = builder.ttl;
-        this.project = builder.project;
     }
 
     public static Builder builder() {
@@ -75,6 +75,13 @@ public class UpdateIndexRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return project
+     */
+    public String getProject() {
+        return this.project;
     }
 
     /**
@@ -133,14 +140,8 @@ public class UpdateIndexRequest extends Request {
         return this.ttl;
     }
 
-    /**
-     * @return project
-     */
-    public String getProject() {
-        return this.project;
-    }
-
     public static final class Builder extends Request.Builder<UpdateIndexRequest, Builder> {
+        private String project; 
         private String logstore; 
         private java.util.Map < String, KeysValue > keys; 
         private Line line; 
@@ -149,7 +150,6 @@ public class UpdateIndexRequest extends Request {
         private java.util.List < String > logReduceWhiteList; 
         private Integer maxTextLen; 
         private Integer ttl; 
-        private String project; 
 
         private Builder() {
             super();
@@ -157,6 +157,7 @@ public class UpdateIndexRequest extends Request {
 
         private Builder(UpdateIndexRequest request) {
             super(request);
+            this.project = request.project;
             this.logstore = request.logstore;
             this.keys = request.keys;
             this.line = request.line;
@@ -165,8 +166,16 @@ public class UpdateIndexRequest extends Request {
             this.logReduceWhiteList = request.logReduceWhiteList;
             this.maxTextLen = request.maxTextLen;
             this.ttl = request.ttl;
-            this.project = request.project;
         } 
+
+        /**
+         * project 名称。
+         */
+        public Builder project(String project) {
+            this.putHostParameter("project", project);
+            this.project = project;
+            return this;
+        }
 
         /**
          * logstore 名称。
@@ -237,15 +246,6 @@ public class UpdateIndexRequest extends Request {
         public Builder ttl(Integer ttl) {
             this.putBodyParameter("ttl", ttl);
             this.ttl = ttl;
-            return this;
-        }
-
-        /**
-         * project 名称。
-         */
-        public Builder project(String project) {
-            this.putHostParameter("project", project);
-            this.project = project;
             return this;
         }
 

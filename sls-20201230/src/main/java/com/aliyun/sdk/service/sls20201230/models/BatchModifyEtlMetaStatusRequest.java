@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.sls.models.*;
  * <p>BatchModifyEtlMetaStatusRequest</p>
  */
 public class BatchModifyEtlMetaStatusRequest extends Request {
+    @Host
+    @NameInMap("project")
+    @Validation(required = true)
+    private String project;
+
     @Body
     @NameInMap("etlMetaKeyList")
     private java.util.List < String > etlMetaKeyList;
@@ -30,11 +35,6 @@ public class BatchModifyEtlMetaStatusRequest extends Request {
     @Validation(required = true)
     private String range;
 
-    @Host
-    @NameInMap("project")
-    @Validation(required = true)
-    private String project;
-
     @Query
     @NameInMap("type")
     @Validation(required = true)
@@ -42,11 +42,11 @@ public class BatchModifyEtlMetaStatusRequest extends Request {
 
     private BatchModifyEtlMetaStatusRequest(Builder builder) {
         super(builder);
+        this.project = builder.project;
         this.etlMetaKeyList = builder.etlMetaKeyList;
         this.etlMetaName = builder.etlMetaName;
         this.etlMetaTag = builder.etlMetaTag;
         this.range = builder.range;
-        this.project = builder.project;
         this.type = builder.type;
     }
 
@@ -61,6 +61,13 @@ public class BatchModifyEtlMetaStatusRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return project
+     */
+    public String getProject() {
+        return this.project;
     }
 
     /**
@@ -92,13 +99,6 @@ public class BatchModifyEtlMetaStatusRequest extends Request {
     }
 
     /**
-     * @return project
-     */
-    public String getProject() {
-        return this.project;
-    }
-
-    /**
      * @return type
      */
     public String getType() {
@@ -106,11 +106,11 @@ public class BatchModifyEtlMetaStatusRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<BatchModifyEtlMetaStatusRequest, Builder> {
+        private String project; 
         private java.util.List < String > etlMetaKeyList; 
         private String etlMetaName; 
         private String etlMetaTag; 
         private String range; 
-        private String project; 
         private String type; 
 
         private Builder() {
@@ -119,13 +119,22 @@ public class BatchModifyEtlMetaStatusRequest extends Request {
 
         private Builder(BatchModifyEtlMetaStatusRequest request) {
             super(request);
+            this.project = request.project;
             this.etlMetaKeyList = request.etlMetaKeyList;
             this.etlMetaName = request.etlMetaName;
             this.etlMetaTag = request.etlMetaTag;
             this.range = request.range;
-            this.project = request.project;
             this.type = request.type;
         } 
+
+        /**
+         * project 名称
+         */
+        public Builder project(String project) {
+            this.putHostParameter("project", project);
+            this.project = project;
+            return this;
+        }
 
         /**
          * 当 range 的值为 "list" 时有效，匹配list中的 metaKey
@@ -160,15 +169,6 @@ public class BatchModifyEtlMetaStatusRequest extends Request {
         public Builder range(String range) {
             this.putBodyParameter("range", range);
             this.range = range;
-            return this;
-        }
-
-        /**
-         * project 名称
-         */
-        public Builder project(String project) {
-            this.putHostParameter("project", project);
-            this.project = project;
             return this;
         }
 

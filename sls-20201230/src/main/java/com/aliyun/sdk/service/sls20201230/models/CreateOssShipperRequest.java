@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.sls.models.*;
  * <p>CreateOssShipperRequest</p>
  */
 public class CreateOssShipperRequest extends Request {
+    @Host
+    @NameInMap("project")
+    @Validation(required = true)
+    private String project;
+
     @Path
     @NameInMap("logstore")
     @Validation(required = true)
@@ -32,18 +37,13 @@ public class CreateOssShipperRequest extends Request {
     @Validation(required = true)
     private String targetType;
 
-    @Host
-    @NameInMap("project")
-    @Validation(required = true)
-    private String project;
-
     private CreateOssShipperRequest(Builder builder) {
         super(builder);
+        this.project = builder.project;
         this.logstore = builder.logstore;
         this.shipperName = builder.shipperName;
         this.targetConfiguration = builder.targetConfiguration;
         this.targetType = builder.targetType;
-        this.project = builder.project;
     }
 
     public static Builder builder() {
@@ -57,6 +57,13 @@ public class CreateOssShipperRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return project
+     */
+    public String getProject() {
+        return this.project;
     }
 
     /**
@@ -87,19 +94,12 @@ public class CreateOssShipperRequest extends Request {
         return this.targetType;
     }
 
-    /**
-     * @return project
-     */
-    public String getProject() {
-        return this.project;
-    }
-
     public static final class Builder extends Request.Builder<CreateOssShipperRequest, Builder> {
+        private String project; 
         private String logstore; 
         private String shipperName; 
         private TargetConfiguration targetConfiguration; 
         private String targetType; 
-        private String project; 
 
         private Builder() {
             super();
@@ -107,12 +107,21 @@ public class CreateOssShipperRequest extends Request {
 
         private Builder(CreateOssShipperRequest request) {
             super(request);
+            this.project = request.project;
             this.logstore = request.logstore;
             this.shipperName = request.shipperName;
             this.targetConfiguration = request.targetConfiguration;
             this.targetType = request.targetType;
-            this.project = request.project;
         } 
+
+        /**
+         * Project 名称。
+         */
+        public Builder project(String project) {
+            this.putHostParameter("project", project);
+            this.project = project;
+            return this;
+        }
 
         /**
          * Logstore 名称。
@@ -147,15 +156,6 @@ public class CreateOssShipperRequest extends Request {
         public Builder targetType(String targetType) {
             this.putBodyParameter("targetType", targetType);
             this.targetType = targetType;
-            return this;
-        }
-
-        /**
-         * Project 名称。
-         */
-        public Builder project(String project) {
-            this.putHostParameter("project", project);
-            this.project = project;
             return this;
         }
 

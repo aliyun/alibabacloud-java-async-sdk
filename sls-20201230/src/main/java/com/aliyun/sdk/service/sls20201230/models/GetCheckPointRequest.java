@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.sls.models.*;
  * <p>GetCheckPointRequest</p>
  */
 public class GetCheckPointRequest extends Request {
+    @Host
+    @NameInMap("project")
+    @Validation(required = true)
+    private String project;
+
     @Path
     @NameInMap("logstore")
     @Validation(required = true)
@@ -22,20 +27,15 @@ public class GetCheckPointRequest extends Request {
     @Validation(required = true)
     private String consumerGroup;
 
-    @Host
-    @NameInMap("project")
-    @Validation(required = true)
-    private String project;
-
     @Query
     @NameInMap("shard")
     private Integer shard;
 
     private GetCheckPointRequest(Builder builder) {
         super(builder);
+        this.project = builder.project;
         this.logstore = builder.logstore;
         this.consumerGroup = builder.consumerGroup;
-        this.project = builder.project;
         this.shard = builder.shard;
     }
 
@@ -53,6 +53,13 @@ public class GetCheckPointRequest extends Request {
     }
 
     /**
+     * @return project
+     */
+    public String getProject() {
+        return this.project;
+    }
+
+    /**
      * @return logstore
      */
     public String getLogstore() {
@@ -67,13 +74,6 @@ public class GetCheckPointRequest extends Request {
     }
 
     /**
-     * @return project
-     */
-    public String getProject() {
-        return this.project;
-    }
-
-    /**
      * @return shard
      */
     public Integer getShard() {
@@ -81,9 +81,9 @@ public class GetCheckPointRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetCheckPointRequest, Builder> {
+        private String project; 
         private String logstore; 
         private String consumerGroup; 
-        private String project; 
         private Integer shard; 
 
         private Builder() {
@@ -92,11 +92,20 @@ public class GetCheckPointRequest extends Request {
 
         private Builder(GetCheckPointRequest request) {
             super(request);
+            this.project = request.project;
             this.logstore = request.logstore;
             this.consumerGroup = request.consumerGroup;
-            this.project = request.project;
             this.shard = request.shard;
         } 
+
+        /**
+         * project 名称。
+         */
+        public Builder project(String project) {
+            this.putHostParameter("project", project);
+            this.project = project;
+            return this;
+        }
 
         /**
          * logstore 名称。
@@ -113,15 +122,6 @@ public class GetCheckPointRequest extends Request {
         public Builder consumerGroup(String consumerGroup) {
             this.putPathParameter("consumerGroup", consumerGroup);
             this.consumerGroup = consumerGroup;
-            return this;
-        }
-
-        /**
-         * project 名称。
-         */
-        public Builder project(String project) {
-            this.putHostParameter("project", project);
-            this.project = project;
             return this;
         }
 

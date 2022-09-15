@@ -12,20 +12,20 @@ import com.aliyun.sdk.gateway.sls.models.*;
  * <p>GetAppliedMachineGroupsRequest</p>
  */
 public class GetAppliedMachineGroupsRequest extends Request {
-    @Path
-    @NameInMap("configName")
-    @Validation(required = true)
-    private String configName;
-
     @Host
     @NameInMap("project")
     @Validation(required = true)
     private String project;
 
+    @Path
+    @NameInMap("configName")
+    @Validation(required = true)
+    private String configName;
+
     private GetAppliedMachineGroupsRequest(Builder builder) {
         super(builder);
-        this.configName = builder.configName;
         this.project = builder.project;
+        this.configName = builder.configName;
     }
 
     public static Builder builder() {
@@ -42,22 +42,22 @@ public class GetAppliedMachineGroupsRequest extends Request {
     }
 
     /**
-     * @return configName
-     */
-    public String getConfigName() {
-        return this.configName;
-    }
-
-    /**
      * @return project
      */
     public String getProject() {
         return this.project;
     }
 
+    /**
+     * @return configName
+     */
+    public String getConfigName() {
+        return this.configName;
+    }
+
     public static final class Builder extends Request.Builder<GetAppliedMachineGroupsRequest, Builder> {
-        private String configName; 
         private String project; 
+        private String configName; 
 
         private Builder() {
             super();
@@ -65,18 +65,9 @@ public class GetAppliedMachineGroupsRequest extends Request {
 
         private Builder(GetAppliedMachineGroupsRequest request) {
             super(request);
-            this.configName = request.configName;
             this.project = request.project;
+            this.configName = request.configName;
         } 
-
-        /**
-         * logtail 配置名称。
-         */
-        public Builder configName(String configName) {
-            this.putPathParameter("configName", configName);
-            this.configName = configName;
-            return this;
-        }
 
         /**
          * project 名称。
@@ -84,6 +75,15 @@ public class GetAppliedMachineGroupsRequest extends Request {
         public Builder project(String project) {
             this.putHostParameter("project", project);
             this.project = project;
+            return this;
+        }
+
+        /**
+         * logtail 配置名称。
+         */
+        public Builder configName(String configName) {
+            this.putPathParameter("configName", configName);
+            this.configName = configName;
             return this;
         }
 

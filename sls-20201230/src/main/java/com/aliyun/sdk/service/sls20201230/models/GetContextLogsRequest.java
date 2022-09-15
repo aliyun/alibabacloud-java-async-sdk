@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.sls.models.*;
  * <p>GetContextLogsRequest</p>
  */
 public class GetContextLogsRequest extends Request {
+    @Host
+    @NameInMap("project")
+    @Validation(required = true)
+    private String project;
+
     @Path
     @NameInMap("logstore")
     @Validation(required = true)
@@ -37,11 +42,6 @@ public class GetContextLogsRequest extends Request {
     @Validation(required = true)
     private String packMeta;
 
-    @Host
-    @NameInMap("project")
-    @Validation(required = true)
-    private String project;
-
     @Query
     @NameInMap("type")
     @Validation(required = true)
@@ -49,12 +49,12 @@ public class GetContextLogsRequest extends Request {
 
     private GetContextLogsRequest(Builder builder) {
         super(builder);
+        this.project = builder.project;
         this.logstore = builder.logstore;
         this.backLines = builder.backLines;
         this.forwardLines = builder.forwardLines;
         this.packId = builder.packId;
         this.packMeta = builder.packMeta;
-        this.project = builder.project;
         this.type = builder.type;
     }
 
@@ -69,6 +69,13 @@ public class GetContextLogsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return project
+     */
+    public String getProject() {
+        return this.project;
     }
 
     /**
@@ -107,13 +114,6 @@ public class GetContextLogsRequest extends Request {
     }
 
     /**
-     * @return project
-     */
-    public String getProject() {
-        return this.project;
-    }
-
-    /**
      * @return type
      */
     public String getType() {
@@ -121,12 +121,12 @@ public class GetContextLogsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetContextLogsRequest, Builder> {
+        private String project; 
         private String logstore; 
         private Long backLines; 
         private Long forwardLines; 
         private String packId; 
         private String packMeta; 
-        private String project; 
         private String type; 
 
         private Builder() {
@@ -135,14 +135,23 @@ public class GetContextLogsRequest extends Request {
 
         private Builder(GetContextLogsRequest request) {
             super(request);
+            this.project = request.project;
             this.logstore = request.logstore;
             this.backLines = request.backLines;
             this.forwardLines = request.forwardLines;
             this.packId = request.packId;
             this.packMeta = request.packMeta;
-            this.project = request.project;
             this.type = request.type;
         } 
+
+        /**
+         * project 名称。
+         */
+        public Builder project(String project) {
+            this.putHostParameter("project", project);
+            this.project = project;
+            return this;
+        }
 
         /**
          * logstore 名称。
@@ -186,15 +195,6 @@ public class GetContextLogsRequest extends Request {
         public Builder packMeta(String packMeta) {
             this.putQueryParameter("pack_meta", packMeta);
             this.packMeta = packMeta;
-            return this;
-        }
-
-        /**
-         * project 名称。
-         */
-        public Builder project(String project) {
-            this.putHostParameter("project", project);
-            this.project = project;
             return this;
         }
 

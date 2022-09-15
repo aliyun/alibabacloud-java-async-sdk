@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.sls.models.*;
  * <p>UpdateConsumerGroupRequest</p>
  */
 public class UpdateConsumerGroupRequest extends Request {
+    @Host
+    @NameInMap("project")
+    @Validation(required = true)
+    private String project;
+
     @Path
     @NameInMap("logstore")
     @Validation(required = true)
@@ -30,18 +35,13 @@ public class UpdateConsumerGroupRequest extends Request {
     @NameInMap("timeout")
     private Integer timeout;
 
-    @Host
-    @NameInMap("project")
-    @Validation(required = true)
-    private String project;
-
     private UpdateConsumerGroupRequest(Builder builder) {
         super(builder);
+        this.project = builder.project;
         this.logstore = builder.logstore;
         this.consumerGroup = builder.consumerGroup;
         this.order = builder.order;
         this.timeout = builder.timeout;
-        this.project = builder.project;
     }
 
     public static Builder builder() {
@@ -55,6 +55,13 @@ public class UpdateConsumerGroupRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return project
+     */
+    public String getProject() {
+        return this.project;
     }
 
     /**
@@ -85,19 +92,12 @@ public class UpdateConsumerGroupRequest extends Request {
         return this.timeout;
     }
 
-    /**
-     * @return project
-     */
-    public String getProject() {
-        return this.project;
-    }
-
     public static final class Builder extends Request.Builder<UpdateConsumerGroupRequest, Builder> {
+        private String project; 
         private String logstore; 
         private String consumerGroup; 
         private Boolean order; 
         private Integer timeout; 
-        private String project; 
 
         private Builder() {
             super();
@@ -105,12 +105,21 @@ public class UpdateConsumerGroupRequest extends Request {
 
         private Builder(UpdateConsumerGroupRequest request) {
             super(request);
+            this.project = request.project;
             this.logstore = request.logstore;
             this.consumerGroup = request.consumerGroup;
             this.order = request.order;
             this.timeout = request.timeout;
-            this.project = request.project;
         } 
+
+        /**
+         * project.
+         */
+        public Builder project(String project) {
+            this.putHostParameter("project", project);
+            this.project = project;
+            return this;
+        }
 
         /**
          * logstore.
@@ -145,15 +154,6 @@ public class UpdateConsumerGroupRequest extends Request {
         public Builder timeout(Integer timeout) {
             this.putBodyParameter("timeout", timeout);
             this.timeout = timeout;
-            return this;
-        }
-
-        /**
-         * project.
-         */
-        public Builder project(String project) {
-            this.putHostParameter("project", project);
-            this.project = project;
             return this;
         }
 

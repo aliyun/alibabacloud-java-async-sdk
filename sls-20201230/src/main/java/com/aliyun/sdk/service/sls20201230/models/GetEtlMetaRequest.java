@@ -12,10 +12,10 @@ import com.aliyun.sdk.gateway.sls.models.*;
  * <p>GetEtlMetaRequest</p>
  */
 public class GetEtlMetaRequest extends Request {
-    @Query
-    @NameInMap("elMetaName")
+    @Host
+    @NameInMap("project")
     @Validation(required = true)
-    private String elMetaName;
+    private String project;
 
     @Query
     @NameInMap("etlMetaKey")
@@ -23,21 +23,21 @@ public class GetEtlMetaRequest extends Request {
     private String etlMetaKey;
 
     @Query
+    @NameInMap("etlMetaName")
+    @Validation(required = true)
+    private String etlMetaName;
+
+    @Query
     @NameInMap("etlMetaTag")
     @Validation(required = true)
     private String etlMetaTag;
 
-    @Host
-    @NameInMap("project")
-    @Validation(required = true)
-    private String project;
-
     private GetEtlMetaRequest(Builder builder) {
         super(builder);
-        this.elMetaName = builder.elMetaName;
-        this.etlMetaKey = builder.etlMetaKey;
-        this.etlMetaTag = builder.etlMetaTag;
         this.project = builder.project;
+        this.etlMetaKey = builder.etlMetaKey;
+        this.etlMetaName = builder.etlMetaName;
+        this.etlMetaTag = builder.etlMetaTag;
     }
 
     public static Builder builder() {
@@ -54,10 +54,10 @@ public class GetEtlMetaRequest extends Request {
     }
 
     /**
-     * @return elMetaName
+     * @return project
      */
-    public String getElMetaName() {
-        return this.elMetaName;
+    public String getProject() {
+        return this.project;
     }
 
     /**
@@ -68,24 +68,24 @@ public class GetEtlMetaRequest extends Request {
     }
 
     /**
+     * @return etlMetaName
+     */
+    public String getEtlMetaName() {
+        return this.etlMetaName;
+    }
+
+    /**
      * @return etlMetaTag
      */
     public String getEtlMetaTag() {
         return this.etlMetaTag;
     }
 
-    /**
-     * @return project
-     */
-    public String getProject() {
-        return this.project;
-    }
-
     public static final class Builder extends Request.Builder<GetEtlMetaRequest, Builder> {
-        private String elMetaName; 
-        private String etlMetaKey; 
-        private String etlMetaTag; 
         private String project; 
+        private String etlMetaKey; 
+        private String etlMetaName; 
+        private String etlMetaTag; 
 
         private Builder() {
             super();
@@ -93,18 +93,18 @@ public class GetEtlMetaRequest extends Request {
 
         private Builder(GetEtlMetaRequest request) {
             super(request);
-            this.elMetaName = request.elMetaName;
-            this.etlMetaKey = request.etlMetaKey;
-            this.etlMetaTag = request.etlMetaTag;
             this.project = request.project;
+            this.etlMetaKey = request.etlMetaKey;
+            this.etlMetaName = request.etlMetaName;
+            this.etlMetaTag = request.etlMetaTag;
         } 
 
         /**
-         * elMetaName.
+         * A short description of struct
          */
-        public Builder elMetaName(String elMetaName) {
-            this.putQueryParameter("elMetaName", elMetaName);
-            this.elMetaName = elMetaName;
+        public Builder project(String project) {
+            this.putHostParameter("project", project);
+            this.project = project;
             return this;
         }
 
@@ -118,20 +118,20 @@ public class GetEtlMetaRequest extends Request {
         }
 
         /**
+         * etlMetaName.
+         */
+        public Builder etlMetaName(String etlMetaName) {
+            this.putQueryParameter("etlMetaName", etlMetaName);
+            this.etlMetaName = etlMetaName;
+            return this;
+        }
+
+        /**
          * 此处固定为 "__all_etl_meta_tag_match__"。
          */
         public Builder etlMetaTag(String etlMetaTag) {
             this.putQueryParameter("etlMetaTag", etlMetaTag);
             this.etlMetaTag = etlMetaTag;
-            return this;
-        }
-
-        /**
-         * A short description of struct
-         */
-        public Builder project(String project) {
-            this.putHostParameter("project", project);
-            this.project = project;
             return this;
         }
 

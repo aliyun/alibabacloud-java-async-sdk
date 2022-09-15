@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.sls.models.*;
  * <p>UpdateSavedSearchRequest</p>
  */
 public class UpdateSavedSearchRequest extends Request {
+    @Host
+    @NameInMap("project")
+    @Validation(required = true)
+    private String project;
+
     @Path
     @Body
     @NameInMap("savedsearchName")
@@ -37,19 +42,14 @@ public class UpdateSavedSearchRequest extends Request {
     @NameInMap("topic")
     private String topic;
 
-    @Host
-    @NameInMap("project")
-    @Validation(required = true)
-    private String project;
-
     private UpdateSavedSearchRequest(Builder builder) {
         super(builder);
+        this.project = builder.project;
         this.savedsearchName = builder.savedsearchName;
         this.displayName = builder.displayName;
         this.logstore = builder.logstore;
         this.searchQuery = builder.searchQuery;
         this.topic = builder.topic;
-        this.project = builder.project;
     }
 
     public static Builder builder() {
@@ -63,6 +63,13 @@ public class UpdateSavedSearchRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return project
+     */
+    public String getProject() {
+        return this.project;
     }
 
     /**
@@ -100,20 +107,13 @@ public class UpdateSavedSearchRequest extends Request {
         return this.topic;
     }
 
-    /**
-     * @return project
-     */
-    public String getProject() {
-        return this.project;
-    }
-
     public static final class Builder extends Request.Builder<UpdateSavedSearchRequest, Builder> {
+        private String project; 
         private String savedsearchName; 
         private String displayName; 
         private String logstore; 
         private String searchQuery; 
         private String topic; 
-        private String project; 
 
         private Builder() {
             super();
@@ -121,13 +121,22 @@ public class UpdateSavedSearchRequest extends Request {
 
         private Builder(UpdateSavedSearchRequest request) {
             super(request);
+            this.project = request.project;
             this.savedsearchName = request.savedsearchName;
             this.displayName = request.displayName;
             this.logstore = request.logstore;
             this.searchQuery = request.searchQuery;
             this.topic = request.topic;
-            this.project = request.project;
         } 
+
+        /**
+         * Project 名称。
+         */
+        public Builder project(String project) {
+            this.putHostParameter("project", project);
+            this.project = project;
+            return this;
+        }
 
         /**
          * savedsearchName.
@@ -172,15 +181,6 @@ public class UpdateSavedSearchRequest extends Request {
         public Builder topic(String topic) {
             this.putBodyParameter("topic", topic);
             this.topic = topic;
-            return this;
-        }
-
-        /**
-         * Project 名称。
-         */
-        public Builder project(String project) {
-            this.putHostParameter("project", project);
-            this.project = project;
             return this;
         }
 

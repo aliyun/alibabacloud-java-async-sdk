@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.sls.models.*;
  * <p>DeleteConsumerGroupRequest</p>
  */
 public class DeleteConsumerGroupRequest extends Request {
+    @Host
+    @NameInMap("project")
+    @Validation(required = true)
+    private String project;
+
     @Path
     @NameInMap("logstore")
     @Validation(required = true)
@@ -22,16 +27,11 @@ public class DeleteConsumerGroupRequest extends Request {
     @Validation(required = true)
     private String consumerGroup;
 
-    @Host
-    @NameInMap("project")
-    @Validation(required = true)
-    private String project;
-
     private DeleteConsumerGroupRequest(Builder builder) {
         super(builder);
+        this.project = builder.project;
         this.logstore = builder.logstore;
         this.consumerGroup = builder.consumerGroup;
-        this.project = builder.project;
     }
 
     public static Builder builder() {
@@ -48,6 +48,13 @@ public class DeleteConsumerGroupRequest extends Request {
     }
 
     /**
+     * @return project
+     */
+    public String getProject() {
+        return this.project;
+    }
+
+    /**
      * @return logstore
      */
     public String getLogstore() {
@@ -61,17 +68,10 @@ public class DeleteConsumerGroupRequest extends Request {
         return this.consumerGroup;
     }
 
-    /**
-     * @return project
-     */
-    public String getProject() {
-        return this.project;
-    }
-
     public static final class Builder extends Request.Builder<DeleteConsumerGroupRequest, Builder> {
+        private String project; 
         private String logstore; 
         private String consumerGroup; 
-        private String project; 
 
         private Builder() {
             super();
@@ -79,10 +79,19 @@ public class DeleteConsumerGroupRequest extends Request {
 
         private Builder(DeleteConsumerGroupRequest request) {
             super(request);
+            this.project = request.project;
             this.logstore = request.logstore;
             this.consumerGroup = request.consumerGroup;
-            this.project = request.project;
         } 
+
+        /**
+         * Project name
+         */
+        public Builder project(String project) {
+            this.putHostParameter("project", project);
+            this.project = project;
+            return this;
+        }
 
         /**
          * Logstore name
@@ -99,15 +108,6 @@ public class DeleteConsumerGroupRequest extends Request {
         public Builder consumerGroup(String consumerGroup) {
             this.putPathParameter("consumerGroup", consumerGroup);
             this.consumerGroup = consumerGroup;
-            return this;
-        }
-
-        /**
-         * Project name
-         */
-        public Builder project(String project) {
-            this.putHostParameter("project", project);
-            this.project = project;
             return this;
         }
 

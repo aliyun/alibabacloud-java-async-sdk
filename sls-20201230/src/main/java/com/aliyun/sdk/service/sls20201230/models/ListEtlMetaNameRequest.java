@@ -12,14 +12,14 @@ import com.aliyun.sdk.gateway.sls.models.*;
  * <p>ListEtlMetaNameRequest</p>
  */
 public class ListEtlMetaNameRequest extends Request {
-    @Query
-    @NameInMap("offset")
-    private Integer offset;
-
     @Host
     @NameInMap("project")
     @Validation(required = true)
     private String project;
+
+    @Query
+    @NameInMap("offset")
+    private Integer offset;
 
     @Query
     @NameInMap("size")
@@ -27,8 +27,8 @@ public class ListEtlMetaNameRequest extends Request {
 
     private ListEtlMetaNameRequest(Builder builder) {
         super(builder);
-        this.offset = builder.offset;
         this.project = builder.project;
+        this.offset = builder.offset;
         this.size = builder.size;
     }
 
@@ -46,17 +46,17 @@ public class ListEtlMetaNameRequest extends Request {
     }
 
     /**
-     * @return offset
-     */
-    public Integer getOffset() {
-        return this.offset;
-    }
-
-    /**
      * @return project
      */
     public String getProject() {
         return this.project;
+    }
+
+    /**
+     * @return offset
+     */
+    public Integer getOffset() {
+        return this.offset;
     }
 
     /**
@@ -67,8 +67,8 @@ public class ListEtlMetaNameRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListEtlMetaNameRequest, Builder> {
-        private Integer offset; 
         private String project; 
+        private Integer offset; 
         private Integer size; 
 
         private Builder() {
@@ -77,19 +77,10 @@ public class ListEtlMetaNameRequest extends Request {
 
         private Builder(ListEtlMetaNameRequest request) {
             super(request);
-            this.offset = request.offset;
             this.project = request.project;
+            this.offset = request.offset;
             this.size = request.size;
         } 
-
-        /**
-         * 默认值为 0。
-         */
-        public Builder offset(Integer offset) {
-            this.putQueryParameter("offset", offset);
-            this.offset = offset;
-            return this;
-        }
 
         /**
          * A short description of struct
@@ -97,6 +88,15 @@ public class ListEtlMetaNameRequest extends Request {
         public Builder project(String project) {
             this.putHostParameter("project", project);
             this.project = project;
+            return this;
+        }
+
+        /**
+         * 默认值为 0。
+         */
+        public Builder offset(Integer offset) {
+            this.putQueryParameter("offset", offset);
+            this.offset = offset;
             return this;
         }
 

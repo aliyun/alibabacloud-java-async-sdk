@@ -12,20 +12,20 @@ import com.aliyun.sdk.gateway.sls.models.*;
  * <p>GetIndexRequest</p>
  */
 public class GetIndexRequest extends Request {
-    @Path
-    @NameInMap("logstore")
-    @Validation(required = true)
-    private String logstore;
-
     @Host
     @NameInMap("project")
     @Validation(required = true)
     private String project;
 
+    @Path
+    @NameInMap("logstore")
+    @Validation(required = true)
+    private String logstore;
+
     private GetIndexRequest(Builder builder) {
         super(builder);
-        this.logstore = builder.logstore;
         this.project = builder.project;
+        this.logstore = builder.logstore;
     }
 
     public static Builder builder() {
@@ -42,22 +42,22 @@ public class GetIndexRequest extends Request {
     }
 
     /**
-     * @return logstore
-     */
-    public String getLogstore() {
-        return this.logstore;
-    }
-
-    /**
      * @return project
      */
     public String getProject() {
         return this.project;
     }
 
+    /**
+     * @return logstore
+     */
+    public String getLogstore() {
+        return this.logstore;
+    }
+
     public static final class Builder extends Request.Builder<GetIndexRequest, Builder> {
-        private String logstore; 
         private String project; 
+        private String logstore; 
 
         private Builder() {
             super();
@@ -65,18 +65,9 @@ public class GetIndexRequest extends Request {
 
         private Builder(GetIndexRequest request) {
             super(request);
-            this.logstore = request.logstore;
             this.project = request.project;
+            this.logstore = request.logstore;
         } 
-
-        /**
-         * logstore 名称。
-         */
-        public Builder logstore(String logstore) {
-            this.putPathParameter("logstore", logstore);
-            this.logstore = logstore;
-            return this;
-        }
 
         /**
          * project 名称。
@@ -84,6 +75,15 @@ public class GetIndexRequest extends Request {
         public Builder project(String project) {
             this.putHostParameter("project", project);
             this.project = project;
+            return this;
+        }
+
+        /**
+         * logstore 名称。
+         */
+        public Builder logstore(String logstore) {
+            this.putPathParameter("logstore", logstore);
+            this.logstore = logstore;
             return this;
         }
 

@@ -12,18 +12,22 @@ import com.aliyun.sdk.gateway.sls.models.*;
  * <p>ListLogStoresRequest</p>
  */
 public class ListLogStoresRequest extends Request {
+    @Host
+    @NameInMap("project")
+    @Validation(required = true)
+    private String project;
+
     @Query
     @NameInMap("logstoreName")
     private String logstoreName;
 
     @Query
+    @NameInMap("mode")
+    private String mode;
+
+    @Query
     @NameInMap("offset")
     private Integer offset;
-
-    @Host
-    @NameInMap("project")
-    @Validation(required = true)
-    private String project;
 
     @Query
     @NameInMap("size")
@@ -35,9 +39,10 @@ public class ListLogStoresRequest extends Request {
 
     private ListLogStoresRequest(Builder builder) {
         super(builder);
-        this.logstoreName = builder.logstoreName;
-        this.offset = builder.offset;
         this.project = builder.project;
+        this.logstoreName = builder.logstoreName;
+        this.mode = builder.mode;
+        this.offset = builder.offset;
         this.size = builder.size;
         this.telemetryType = builder.telemetryType;
     }
@@ -56,6 +61,13 @@ public class ListLogStoresRequest extends Request {
     }
 
     /**
+     * @return project
+     */
+    public String getProject() {
+        return this.project;
+    }
+
+    /**
      * @return logstoreName
      */
     public String getLogstoreName() {
@@ -63,17 +75,17 @@ public class ListLogStoresRequest extends Request {
     }
 
     /**
+     * @return mode
+     */
+    public String getMode() {
+        return this.mode;
+    }
+
+    /**
      * @return offset
      */
     public Integer getOffset() {
         return this.offset;
-    }
-
-    /**
-     * @return project
-     */
-    public String getProject() {
-        return this.project;
     }
 
     /**
@@ -91,9 +103,10 @@ public class ListLogStoresRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListLogStoresRequest, Builder> {
-        private String logstoreName; 
-        private Integer offset; 
         private String project; 
+        private String logstoreName; 
+        private String mode; 
+        private Integer offset; 
         private Integer size; 
         private String telemetryType; 
 
@@ -103,12 +116,22 @@ public class ListLogStoresRequest extends Request {
 
         private Builder(ListLogStoresRequest request) {
             super(request);
-            this.logstoreName = request.logstoreName;
-            this.offset = request.offset;
             this.project = request.project;
+            this.logstoreName = request.logstoreName;
+            this.mode = request.mode;
+            this.offset = request.offset;
             this.size = request.size;
             this.telemetryType = request.telemetryType;
         } 
+
+        /**
+         * project.
+         */
+        public Builder project(String project) {
+            this.putHostParameter("project", project);
+            this.project = project;
+            return this;
+        }
 
         /**
          * logstoreName.
@@ -120,20 +143,20 @@ public class ListLogStoresRequest extends Request {
         }
 
         /**
+         * mode.
+         */
+        public Builder mode(String mode) {
+            this.putQueryParameter("mode", mode);
+            this.mode = mode;
+            return this;
+        }
+
+        /**
          * offset.
          */
         public Builder offset(Integer offset) {
             this.putQueryParameter("offset", offset);
             this.offset = offset;
-            return this;
-        }
-
-        /**
-         * project.
-         */
-        public Builder project(String project) {
-            this.putHostParameter("project", project);
-            this.project = project;
             return this;
         }
 

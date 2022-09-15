@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.sls.models.*;
  * <p>ListMachineGroupRequest</p>
  */
 public class ListMachineGroupRequest extends Request {
+    @Host
+    @NameInMap("project")
+    @Validation(required = true)
+    private String project;
+
     @Query
     @NameInMap("groupName")
     private String groupName;
@@ -20,20 +25,15 @@ public class ListMachineGroupRequest extends Request {
     @NameInMap("offset")
     private Integer offset;
 
-    @Host
-    @NameInMap("project")
-    @Validation(required = true)
-    private String project;
-
     @Query
     @NameInMap("size")
     private Integer size;
 
     private ListMachineGroupRequest(Builder builder) {
         super(builder);
+        this.project = builder.project;
         this.groupName = builder.groupName;
         this.offset = builder.offset;
-        this.project = builder.project;
         this.size = builder.size;
     }
 
@@ -51,6 +51,13 @@ public class ListMachineGroupRequest extends Request {
     }
 
     /**
+     * @return project
+     */
+    public String getProject() {
+        return this.project;
+    }
+
+    /**
      * @return groupName
      */
     public String getGroupName() {
@@ -65,13 +72,6 @@ public class ListMachineGroupRequest extends Request {
     }
 
     /**
-     * @return project
-     */
-    public String getProject() {
-        return this.project;
-    }
-
-    /**
      * @return size
      */
     public Integer getSize() {
@@ -79,9 +79,9 @@ public class ListMachineGroupRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListMachineGroupRequest, Builder> {
+        private String project; 
         private String groupName; 
         private Integer offset; 
-        private String project; 
         private Integer size; 
 
         private Builder() {
@@ -90,11 +90,20 @@ public class ListMachineGroupRequest extends Request {
 
         private Builder(ListMachineGroupRequest request) {
             super(request);
+            this.project = request.project;
             this.groupName = request.groupName;
             this.offset = request.offset;
-            this.project = request.project;
             this.size = request.size;
         } 
+
+        /**
+         * project 名称。
+         */
+        public Builder project(String project) {
+            this.putHostParameter("project", project);
+            this.project = project;
+            return this;
+        }
 
         /**
          * 可将 groupName 作为 pattern 匹配名称，只会返回匹配的机器组。例如 test 可以匹配机器组 test-group。
@@ -111,15 +120,6 @@ public class ListMachineGroupRequest extends Request {
         public Builder offset(Integer offset) {
             this.putQueryParameter("offset", offset);
             this.offset = offset;
-            return this;
-        }
-
-        /**
-         * project 名称。
-         */
-        public Builder project(String project) {
-            this.putHostParameter("project", project);
-            this.project = project;
             return this;
         }
 

@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.sls.models.*;
  * <p>CreateSavedSearchRequest</p>
  */
 public class CreateSavedSearchRequest extends Request {
+    @Host
+    @NameInMap("project")
+    @Validation(required = true)
+    private String project;
+
     @Body
     @NameInMap("displayName")
     @Validation(required = true)
@@ -36,19 +41,14 @@ public class CreateSavedSearchRequest extends Request {
     @NameInMap("topic")
     private String topic;
 
-    @Host
-    @NameInMap("project")
-    @Validation(required = true)
-    private String project;
-
     private CreateSavedSearchRequest(Builder builder) {
         super(builder);
+        this.project = builder.project;
         this.displayName = builder.displayName;
         this.logstore = builder.logstore;
         this.savedsearchName = builder.savedsearchName;
         this.searchQuery = builder.searchQuery;
         this.topic = builder.topic;
-        this.project = builder.project;
     }
 
     public static Builder builder() {
@@ -62,6 +62,13 @@ public class CreateSavedSearchRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return project
+     */
+    public String getProject() {
+        return this.project;
     }
 
     /**
@@ -99,20 +106,13 @@ public class CreateSavedSearchRequest extends Request {
         return this.topic;
     }
 
-    /**
-     * @return project
-     */
-    public String getProject() {
-        return this.project;
-    }
-
     public static final class Builder extends Request.Builder<CreateSavedSearchRequest, Builder> {
+        private String project; 
         private String displayName; 
         private String logstore; 
         private String savedsearchName; 
         private String searchQuery; 
         private String topic; 
-        private String project; 
 
         private Builder() {
             super();
@@ -120,13 +120,22 @@ public class CreateSavedSearchRequest extends Request {
 
         private Builder(CreateSavedSearchRequest request) {
             super(request);
+            this.project = request.project;
             this.displayName = request.displayName;
             this.logstore = request.logstore;
             this.savedsearchName = request.savedsearchName;
             this.searchQuery = request.searchQuery;
             this.topic = request.topic;
-            this.project = request.project;
         } 
+
+        /**
+         * project.
+         */
+        public Builder project(String project) {
+            this.putHostParameter("project", project);
+            this.project = project;
+            return this;
+        }
 
         /**
          * displayName.
@@ -170,15 +179,6 @@ public class CreateSavedSearchRequest extends Request {
         public Builder topic(String topic) {
             this.putBodyParameter("topic", topic);
             this.topic = topic;
-            return this;
-        }
-
-        /**
-         * project.
-         */
-        public Builder project(String project) {
-            this.putHostParameter("project", project);
-            this.project = project;
             return this;
         }
 

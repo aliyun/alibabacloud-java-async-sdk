@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.sls.models.*;
  * <p>ListExternalStoreRequest</p>
  */
 public class ListExternalStoreRequest extends Request {
+    @Host
+    @NameInMap("project")
+    @Validation(required = true)
+    private String project;
+
     @Query
     @NameInMap("externalStoreName")
     private String externalStoreName;
@@ -20,20 +25,15 @@ public class ListExternalStoreRequest extends Request {
     @NameInMap("offset")
     private Integer offset;
 
-    @Host
-    @NameInMap("project")
-    @Validation(required = true)
-    private String project;
-
     @Query
     @NameInMap("sizs")
     private Integer sizs;
 
     private ListExternalStoreRequest(Builder builder) {
         super(builder);
+        this.project = builder.project;
         this.externalStoreName = builder.externalStoreName;
         this.offset = builder.offset;
-        this.project = builder.project;
         this.sizs = builder.sizs;
     }
 
@@ -51,6 +51,13 @@ public class ListExternalStoreRequest extends Request {
     }
 
     /**
+     * @return project
+     */
+    public String getProject() {
+        return this.project;
+    }
+
+    /**
      * @return externalStoreName
      */
     public String getExternalStoreName() {
@@ -65,13 +72,6 @@ public class ListExternalStoreRequest extends Request {
     }
 
     /**
-     * @return project
-     */
-    public String getProject() {
-        return this.project;
-    }
-
-    /**
      * @return sizs
      */
     public Integer getSizs() {
@@ -79,9 +79,9 @@ public class ListExternalStoreRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListExternalStoreRequest, Builder> {
+        private String project; 
         private String externalStoreName; 
         private Integer offset; 
-        private String project; 
         private Integer sizs; 
 
         private Builder() {
@@ -90,11 +90,20 @@ public class ListExternalStoreRequest extends Request {
 
         private Builder(ListExternalStoreRequest request) {
             super(request);
+            this.project = request.project;
             this.externalStoreName = request.externalStoreName;
             this.offset = request.offset;
-            this.project = request.project;
             this.sizs = request.sizs;
         } 
+
+        /**
+         * A short description of struct
+         */
+        public Builder project(String project) {
+            this.putHostParameter("project", project);
+            this.project = project;
+            return this;
+        }
 
         /**
          * 可选使用名字 pattern 匹配
@@ -111,15 +120,6 @@ public class ListExternalStoreRequest extends Request {
         public Builder offset(Integer offset) {
             this.putQueryParameter("offset", offset);
             this.offset = offset;
-            return this;
-        }
-
-        /**
-         * A short description of struct
-         */
-        public Builder project(String project) {
-            this.putHostParameter("project", project);
-            this.project = project;
             return this;
         }
 

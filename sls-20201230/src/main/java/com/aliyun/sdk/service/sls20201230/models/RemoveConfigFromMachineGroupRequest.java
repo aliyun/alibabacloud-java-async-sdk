@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.sls.models.*;
  * <p>RemoveConfigFromMachineGroupRequest</p>
  */
 public class RemoveConfigFromMachineGroupRequest extends Request {
+    @Host
+    @NameInMap("project")
+    @Validation(required = true)
+    private String project;
+
     @Path
     @NameInMap("machineGroup")
     @Validation(required = true)
@@ -22,16 +27,11 @@ public class RemoveConfigFromMachineGroupRequest extends Request {
     @Validation(required = true)
     private String configName;
 
-    @Host
-    @NameInMap("project")
-    @Validation(required = true)
-    private String project;
-
     private RemoveConfigFromMachineGroupRequest(Builder builder) {
         super(builder);
+        this.project = builder.project;
         this.machineGroup = builder.machineGroup;
         this.configName = builder.configName;
-        this.project = builder.project;
     }
 
     public static Builder builder() {
@@ -48,6 +48,13 @@ public class RemoveConfigFromMachineGroupRequest extends Request {
     }
 
     /**
+     * @return project
+     */
+    public String getProject() {
+        return this.project;
+    }
+
+    /**
      * @return machineGroup
      */
     public String getMachineGroup() {
@@ -61,17 +68,10 @@ public class RemoveConfigFromMachineGroupRequest extends Request {
         return this.configName;
     }
 
-    /**
-     * @return project
-     */
-    public String getProject() {
-        return this.project;
-    }
-
     public static final class Builder extends Request.Builder<RemoveConfigFromMachineGroupRequest, Builder> {
+        private String project; 
         private String machineGroup; 
         private String configName; 
-        private String project; 
 
         private Builder() {
             super();
@@ -79,10 +79,19 @@ public class RemoveConfigFromMachineGroupRequest extends Request {
 
         private Builder(RemoveConfigFromMachineGroupRequest request) {
             super(request);
+            this.project = request.project;
             this.machineGroup = request.machineGroup;
             this.configName = request.configName;
-            this.project = request.project;
         } 
+
+        /**
+         * project 名称。
+         */
+        public Builder project(String project) {
+            this.putHostParameter("project", project);
+            this.project = project;
+            return this;
+        }
 
         /**
          * 机器组名称。
@@ -99,15 +108,6 @@ public class RemoveConfigFromMachineGroupRequest extends Request {
         public Builder configName(String configName) {
             this.putPathParameter("configName", configName);
             this.configName = configName;
-            return this;
-        }
-
-        /**
-         * project 名称。
-         */
-        public Builder project(String project) {
-            this.putHostParameter("project", project);
-            this.project = project;
             return this;
         }
 

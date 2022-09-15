@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.sls.models.*;
  * <p>GetHistogramsRequest</p>
  */
 public class GetHistogramsRequest extends Request {
+    @Host
+    @NameInMap("project")
+    @Validation(required = true)
+    private String project;
+
     @Path
     @NameInMap("logstore")
     @Validation(required = true)
@@ -21,11 +26,6 @@ public class GetHistogramsRequest extends Request {
     @NameInMap("from")
     @Validation(required = true)
     private Long from;
-
-    @Host
-    @NameInMap("project")
-    @Validation(required = true)
-    private String project;
 
     @Query
     @NameInMap("query")
@@ -40,20 +40,14 @@ public class GetHistogramsRequest extends Request {
     @NameInMap("topic")
     private String topic;
 
-    @Query
-    @NameInMap("type")
-    @Validation(required = true)
-    private String type;
-
     private GetHistogramsRequest(Builder builder) {
         super(builder);
+        this.project = builder.project;
         this.logstore = builder.logstore;
         this.from = builder.from;
-        this.project = builder.project;
         this.query = builder.query;
         this.to = builder.to;
         this.topic = builder.topic;
-        this.type = builder.type;
     }
 
     public static Builder builder() {
@@ -70,6 +64,13 @@ public class GetHistogramsRequest extends Request {
     }
 
     /**
+     * @return project
+     */
+    public String getProject() {
+        return this.project;
+    }
+
+    /**
      * @return logstore
      */
     public String getLogstore() {
@@ -81,13 +82,6 @@ public class GetHistogramsRequest extends Request {
      */
     public Long getFrom() {
         return this.from;
-    }
-
-    /**
-     * @return project
-     */
-    public String getProject() {
-        return this.project;
     }
 
     /**
@@ -111,21 +105,13 @@ public class GetHistogramsRequest extends Request {
         return this.topic;
     }
 
-    /**
-     * @return type
-     */
-    public String getType() {
-        return this.type;
-    }
-
     public static final class Builder extends Request.Builder<GetHistogramsRequest, Builder> {
+        private String project; 
         private String logstore; 
         private Long from; 
-        private String project; 
         private String query; 
         private Long to; 
         private String topic; 
-        private String type; 
 
         private Builder() {
             super();
@@ -133,14 +119,22 @@ public class GetHistogramsRequest extends Request {
 
         private Builder(GetHistogramsRequest request) {
             super(request);
+            this.project = request.project;
             this.logstore = request.logstore;
             this.from = request.from;
-            this.project = request.project;
             this.query = request.query;
             this.to = request.to;
             this.topic = request.topic;
-            this.type = request.type;
         } 
+
+        /**
+         * project 名称。
+         */
+        public Builder project(String project) {
+            this.putHostParameter("project", project);
+            this.project = project;
+            return this;
+        }
 
         /**
          * logstore 名称。
@@ -160,15 +154,6 @@ public class GetHistogramsRequest extends Request {
         public Builder from(Long from) {
             this.putQueryParameter("from", from);
             this.from = from;
-            return this;
-        }
-
-        /**
-         * project 名称。
-         */
-        public Builder project(String project) {
-            this.putHostParameter("project", project);
-            this.project = project;
             return this;
         }
 
@@ -199,15 +184,6 @@ public class GetHistogramsRequest extends Request {
         public Builder topic(String topic) {
             this.putQueryParameter("topic", topic);
             this.topic = topic;
-            return this;
-        }
-
-        /**
-         * Logstore中数据的类型。该接口中固定取值为histogram。
-         */
-        public Builder type(String type) {
-            this.putQueryParameter("type", type);
-            this.type = type;
             return this;
         }
 
