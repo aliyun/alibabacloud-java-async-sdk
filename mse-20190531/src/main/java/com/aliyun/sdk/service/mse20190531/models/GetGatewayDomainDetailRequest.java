@@ -24,11 +24,16 @@ public class GetGatewayDomainDetailRequest extends Request {
     @NameInMap("Id")
     private String id;
 
+    @Query
+    @NameInMap("MseSessionId")
+    private String mseSessionId;
+
     private GetGatewayDomainDetailRequest(Builder builder) {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
         this.gatewayUniqueId = builder.gatewayUniqueId;
         this.id = builder.id;
+        this.mseSessionId = builder.mseSessionId;
     }
 
     public static Builder builder() {
@@ -65,10 +70,18 @@ public class GetGatewayDomainDetailRequest extends Request {
         return this.id;
     }
 
+    /**
+     * @return mseSessionId
+     */
+    public String getMseSessionId() {
+        return this.mseSessionId;
+    }
+
     public static final class Builder extends Request.Builder<GetGatewayDomainDetailRequest, Builder> {
         private String acceptLanguage; 
         private String gatewayUniqueId; 
         private String id; 
+        private String mseSessionId; 
 
         private Builder() {
             super();
@@ -79,6 +92,7 @@ public class GetGatewayDomainDetailRequest extends Request {
             this.acceptLanguage = request.acceptLanguage;
             this.gatewayUniqueId = request.gatewayUniqueId;
             this.id = request.id;
+            this.mseSessionId = request.mseSessionId;
         } 
 
         /**
@@ -105,6 +119,15 @@ public class GetGatewayDomainDetailRequest extends Request {
         public Builder id(String id) {
             this.putQueryParameter("Id", id);
             this.id = id;
+            return this;
+        }
+
+        /**
+         * MseSessionId.
+         */
+        public Builder mseSessionId(String mseSessionId) {
+            this.putQueryParameter("MseSessionId", mseSessionId);
+            this.mseSessionId = mseSessionId;
             return this;
         }
 

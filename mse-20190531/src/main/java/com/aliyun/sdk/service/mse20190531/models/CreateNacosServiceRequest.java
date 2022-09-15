@@ -33,6 +33,10 @@ public class CreateNacosServiceRequest extends Request {
     private String instanceId;
 
     @Query
+    @NameInMap("MseSessionId")
+    private String mseSessionId;
+
+    @Query
     @NameInMap("NamespaceId")
     private String namespaceId;
 
@@ -52,6 +56,7 @@ public class CreateNacosServiceRequest extends Request {
         this.ephemeral = builder.ephemeral;
         this.groupName = builder.groupName;
         this.instanceId = builder.instanceId;
+        this.mseSessionId = builder.mseSessionId;
         this.namespaceId = builder.namespaceId;
         this.protectThreshold = builder.protectThreshold;
         this.serviceName = builder.serviceName;
@@ -106,6 +111,13 @@ public class CreateNacosServiceRequest extends Request {
     }
 
     /**
+     * @return mseSessionId
+     */
+    public String getMseSessionId() {
+        return this.mseSessionId;
+    }
+
+    /**
      * @return namespaceId
      */
     public String getNamespaceId() {
@@ -132,6 +144,7 @@ public class CreateNacosServiceRequest extends Request {
         private Boolean ephemeral; 
         private String groupName; 
         private String instanceId; 
+        private String mseSessionId; 
         private String namespaceId; 
         private String protectThreshold; 
         private String serviceName; 
@@ -147,6 +160,7 @@ public class CreateNacosServiceRequest extends Request {
             this.ephemeral = request.ephemeral;
             this.groupName = request.groupName;
             this.instanceId = request.instanceId;
+            this.mseSessionId = request.mseSessionId;
             this.namespaceId = request.namespaceId;
             this.protectThreshold = request.protectThreshold;
             this.serviceName = request.serviceName;
@@ -194,6 +208,15 @@ public class CreateNacosServiceRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * MseSessionId.
+         */
+        public Builder mseSessionId(String mseSessionId) {
+            this.putQueryParameter("MseSessionId", mseSessionId);
+            this.mseSessionId = mseSessionId;
             return this;
         }
 

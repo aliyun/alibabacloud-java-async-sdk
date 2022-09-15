@@ -33,6 +33,10 @@ public class CreateEngineNamespaceRequest extends Request {
     private String instanceId;
 
     @Query
+    @NameInMap("MseSessionId")
+    private String mseSessionId;
+
+    @Query
     @NameInMap("Name")
     @Validation(required = true)
     private String name;
@@ -48,6 +52,7 @@ public class CreateEngineNamespaceRequest extends Request {
         this.desc = builder.desc;
         this.id = builder.id;
         this.instanceId = builder.instanceId;
+        this.mseSessionId = builder.mseSessionId;
         this.name = builder.name;
         this.serviceCount = builder.serviceCount;
     }
@@ -101,6 +106,13 @@ public class CreateEngineNamespaceRequest extends Request {
     }
 
     /**
+     * @return mseSessionId
+     */
+    public String getMseSessionId() {
+        return this.mseSessionId;
+    }
+
+    /**
      * @return name
      */
     public String getName() {
@@ -120,6 +132,7 @@ public class CreateEngineNamespaceRequest extends Request {
         private String desc; 
         private String id; 
         private String instanceId; 
+        private String mseSessionId; 
         private String name; 
         private Integer serviceCount; 
 
@@ -134,6 +147,7 @@ public class CreateEngineNamespaceRequest extends Request {
             this.desc = request.desc;
             this.id = request.id;
             this.instanceId = request.instanceId;
+            this.mseSessionId = request.mseSessionId;
             this.name = request.name;
             this.serviceCount = request.serviceCount;
         } 
@@ -180,6 +194,15 @@ public class CreateEngineNamespaceRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * MseSessionId.
+         */
+        public Builder mseSessionId(String mseSessionId) {
+            this.putQueryParameter("MseSessionId", mseSessionId);
+            this.mseSessionId = mseSessionId;
             return this;
         }
 

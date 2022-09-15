@@ -393,6 +393,207 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         } 
 
     }
+    public static class FallbackServices extends TeaModel {
+        @NameInMap("AgreementType")
+        private String agreementType;
+
+        @NameInMap("GroupName")
+        private String groupName;
+
+        @NameInMap("Name")
+        private String name;
+
+        @NameInMap("Namespace")
+        private String namespace;
+
+        @NameInMap("Percent")
+        private Integer percent;
+
+        @NameInMap("ServiceId")
+        private Long serviceId;
+
+        @NameInMap("ServiceName")
+        private String serviceName;
+
+        @NameInMap("SourceType")
+        private String sourceType;
+
+        @NameInMap("Version")
+        private String version;
+
+        private FallbackServices(Builder builder) {
+            this.agreementType = builder.agreementType;
+            this.groupName = builder.groupName;
+            this.name = builder.name;
+            this.namespace = builder.namespace;
+            this.percent = builder.percent;
+            this.serviceId = builder.serviceId;
+            this.serviceName = builder.serviceName;
+            this.sourceType = builder.sourceType;
+            this.version = builder.version;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static FallbackServices create() {
+            return builder().build();
+        }
+
+        /**
+         * @return agreementType
+         */
+        public String getAgreementType() {
+            return this.agreementType;
+        }
+
+        /**
+         * @return groupName
+         */
+        public String getGroupName() {
+            return this.groupName;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return namespace
+         */
+        public String getNamespace() {
+            return this.namespace;
+        }
+
+        /**
+         * @return percent
+         */
+        public Integer getPercent() {
+            return this.percent;
+        }
+
+        /**
+         * @return serviceId
+         */
+        public Long getServiceId() {
+            return this.serviceId;
+        }
+
+        /**
+         * @return serviceName
+         */
+        public String getServiceName() {
+            return this.serviceName;
+        }
+
+        /**
+         * @return sourceType
+         */
+        public String getSourceType() {
+            return this.sourceType;
+        }
+
+        /**
+         * @return version
+         */
+        public String getVersion() {
+            return this.version;
+        }
+
+        public static final class Builder {
+            private String agreementType; 
+            private String groupName; 
+            private String name; 
+            private String namespace; 
+            private Integer percent; 
+            private Long serviceId; 
+            private String serviceName; 
+            private String sourceType; 
+            private String version; 
+
+            /**
+             * AgreementType.
+             */
+            public Builder agreementType(String agreementType) {
+                this.agreementType = agreementType;
+                return this;
+            }
+
+            /**
+             * GroupName.
+             */
+            public Builder groupName(String groupName) {
+                this.groupName = groupName;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * Namespace.
+             */
+            public Builder namespace(String namespace) {
+                this.namespace = namespace;
+                return this;
+            }
+
+            /**
+             * Percent.
+             */
+            public Builder percent(Integer percent) {
+                this.percent = percent;
+                return this;
+            }
+
+            /**
+             * ServiceId.
+             */
+            public Builder serviceId(Long serviceId) {
+                this.serviceId = serviceId;
+                return this;
+            }
+
+            /**
+             * ServiceName.
+             */
+            public Builder serviceName(String serviceName) {
+                this.serviceName = serviceName;
+                return this;
+            }
+
+            /**
+             * SourceType.
+             */
+            public Builder sourceType(String sourceType) {
+                this.sourceType = sourceType;
+                return this;
+            }
+
+            /**
+             * Version.
+             */
+            public Builder version(String version) {
+                this.version = version;
+                return this;
+            }
+
+            public FallbackServices build() {
+                return new FallbackServices(this);
+            } 
+
+        } 
+
+    }
     public static class HTTPRewrite extends TeaModel {
         @NameInMap("Host")
         private String host;
@@ -1223,6 +1424,9 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
 
     }
     public static class RouteServices extends TeaModel {
+        @NameInMap("AgreementType")
+        private String agreementType;
+
         @NameInMap("GroupName")
         private String groupName;
 
@@ -1248,6 +1452,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         private String version;
 
         private RouteServices(Builder builder) {
+            this.agreementType = builder.agreementType;
             this.groupName = builder.groupName;
             this.name = builder.name;
             this.namespace = builder.namespace;
@@ -1264,6 +1469,13 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
 
         public static RouteServices create() {
             return builder().build();
+        }
+
+        /**
+         * @return agreementType
+         */
+        public String getAgreementType() {
+            return this.agreementType;
         }
 
         /**
@@ -1323,6 +1535,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String agreementType; 
             private String groupName; 
             private String name; 
             private String namespace; 
@@ -1331,6 +1544,14 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             private String serviceName; 
             private String sourceType; 
             private String version; 
+
+            /**
+             * AgreementType.
+             */
+            public Builder agreementType(String agreementType) {
+                this.agreementType = agreementType;
+                return this;
+            }
 
             /**
              * GroupName.
@@ -1518,6 +1739,12 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         @NameInMap("EnableWaf")
         private Boolean enableWaf;
 
+        @NameInMap("Fallback")
+        private Boolean fallback;
+
+        @NameInMap("FallbackServices")
+        private java.util.List < FallbackServices> fallbackServices;
+
         @NameInMap("GatewayId")
         private Long gatewayId;
 
@@ -1581,6 +1808,8 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             this.domainName = builder.domainName;
             this.domainNameList = builder.domainNameList;
             this.enableWaf = builder.enableWaf;
+            this.fallback = builder.fallback;
+            this.fallbackServices = builder.fallbackServices;
             this.gatewayId = builder.gatewayId;
             this.gatewayUniqueId = builder.gatewayUniqueId;
             this.gmtCreate = builder.gmtCreate;
@@ -1683,6 +1912,20 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
          */
         public Boolean getEnableWaf() {
             return this.enableWaf;
+        }
+
+        /**
+         * @return fallback
+         */
+        public Boolean getFallback() {
+            return this.fallback;
+        }
+
+        /**
+         * @return fallbackServices
+         */
+        public java.util.List < FallbackServices> getFallbackServices() {
+            return this.fallbackServices;
         }
 
         /**
@@ -1816,6 +2059,8 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             private String domainName; 
             private java.util.List < String > domainNameList; 
             private Boolean enableWaf; 
+            private Boolean fallback; 
+            private java.util.List < FallbackServices> fallbackServices; 
             private Long gatewayId; 
             private String gatewayUniqueId; 
             private String gmtCreate; 
@@ -1919,6 +2164,22 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
              */
             public Builder enableWaf(Boolean enableWaf) {
                 this.enableWaf = enableWaf;
+                return this;
+            }
+
+            /**
+             * Fallback.
+             */
+            public Builder fallback(Boolean fallback) {
+                this.fallback = fallback;
+                return this;
+            }
+
+            /**
+             * FallbackServices.
+             */
+            public Builder fallbackServices(java.util.List < FallbackServices> fallbackServices) {
+                this.fallbackServices = fallbackServices;
                 return this;
             }
 

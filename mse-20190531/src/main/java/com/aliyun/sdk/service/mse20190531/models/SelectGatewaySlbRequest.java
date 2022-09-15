@@ -21,6 +21,10 @@ public class SelectGatewaySlbRequest extends Request {
     private String gatewayUniqueId;
 
     @Query
+    @NameInMap("MseSessionId")
+    private String mseSessionId;
+
+    @Query
     @NameInMap("Name")
     private String name;
 
@@ -32,6 +36,7 @@ public class SelectGatewaySlbRequest extends Request {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
         this.gatewayUniqueId = builder.gatewayUniqueId;
+        this.mseSessionId = builder.mseSessionId;
         this.name = builder.name;
         this.type = builder.type;
     }
@@ -64,6 +69,13 @@ public class SelectGatewaySlbRequest extends Request {
     }
 
     /**
+     * @return mseSessionId
+     */
+    public String getMseSessionId() {
+        return this.mseSessionId;
+    }
+
+    /**
      * @return name
      */
     public String getName() {
@@ -80,6 +92,7 @@ public class SelectGatewaySlbRequest extends Request {
     public static final class Builder extends Request.Builder<SelectGatewaySlbRequest, Builder> {
         private String acceptLanguage; 
         private String gatewayUniqueId; 
+        private String mseSessionId; 
         private String name; 
         private String type; 
 
@@ -91,6 +104,7 @@ public class SelectGatewaySlbRequest extends Request {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
             this.gatewayUniqueId = request.gatewayUniqueId;
+            this.mseSessionId = request.mseSessionId;
             this.name = request.name;
             this.type = request.type;
         } 
@@ -110,6 +124,15 @@ public class SelectGatewaySlbRequest extends Request {
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
             this.gatewayUniqueId = gatewayUniqueId;
+            return this;
+        }
+
+        /**
+         * MseSessionId.
+         */
+        public Builder mseSessionId(String mseSessionId) {
+            this.putQueryParameter("MseSessionId", mseSessionId);
+            this.mseSessionId = mseSessionId;
             return this;
         }
 

@@ -27,6 +27,10 @@ public class DeleteNacosServiceRequest extends Request {
     private String instanceId;
 
     @Query
+    @NameInMap("MseSessionId")
+    private String mseSessionId;
+
+    @Query
     @NameInMap("NamespaceId")
     private String namespaceId;
 
@@ -40,6 +44,7 @@ public class DeleteNacosServiceRequest extends Request {
         this.acceptLanguage = builder.acceptLanguage;
         this.groupName = builder.groupName;
         this.instanceId = builder.instanceId;
+        this.mseSessionId = builder.mseSessionId;
         this.namespaceId = builder.namespaceId;
         this.serviceName = builder.serviceName;
     }
@@ -79,6 +84,13 @@ public class DeleteNacosServiceRequest extends Request {
     }
 
     /**
+     * @return mseSessionId
+     */
+    public String getMseSessionId() {
+        return this.mseSessionId;
+    }
+
+    /**
      * @return namespaceId
      */
     public String getNamespaceId() {
@@ -96,6 +108,7 @@ public class DeleteNacosServiceRequest extends Request {
         private String acceptLanguage; 
         private String groupName; 
         private String instanceId; 
+        private String mseSessionId; 
         private String namespaceId; 
         private String serviceName; 
 
@@ -108,6 +121,7 @@ public class DeleteNacosServiceRequest extends Request {
             this.acceptLanguage = request.acceptLanguage;
             this.groupName = request.groupName;
             this.instanceId = request.instanceId;
+            this.mseSessionId = request.mseSessionId;
             this.namespaceId = request.namespaceId;
             this.serviceName = request.serviceName;
         } 
@@ -136,6 +150,15 @@ public class DeleteNacosServiceRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * MseSessionId.
+         */
+        public Builder mseSessionId(String mseSessionId) {
+            this.putQueryParameter("MseSessionId", mseSessionId);
+            this.mseSessionId = mseSessionId;
             return this;
         }
 

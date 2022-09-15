@@ -25,6 +25,14 @@ public class AddGatewayDomainRequest extends Request {
     private String gatewayUniqueId;
 
     @Query
+    @NameInMap("Http2")
+    private String http2;
+
+    @Query
+    @NameInMap("MseSessionId")
+    private String mseSessionId;
+
+    @Query
     @NameInMap("MustHttps")
     private Boolean mustHttps;
 
@@ -36,14 +44,26 @@ public class AddGatewayDomainRequest extends Request {
     @NameInMap("Protocol")
     private String protocol;
 
+    @Query
+    @NameInMap("TlsMax")
+    private String tlsMax;
+
+    @Query
+    @NameInMap("TlsMin")
+    private String tlsMin;
+
     private AddGatewayDomainRequest(Builder builder) {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
         this.certIdentifier = builder.certIdentifier;
         this.gatewayUniqueId = builder.gatewayUniqueId;
+        this.http2 = builder.http2;
+        this.mseSessionId = builder.mseSessionId;
         this.mustHttps = builder.mustHttps;
         this.name = builder.name;
         this.protocol = builder.protocol;
+        this.tlsMax = builder.tlsMax;
+        this.tlsMin = builder.tlsMin;
     }
 
     public static Builder builder() {
@@ -81,6 +101,20 @@ public class AddGatewayDomainRequest extends Request {
     }
 
     /**
+     * @return http2
+     */
+    public String getHttp2() {
+        return this.http2;
+    }
+
+    /**
+     * @return mseSessionId
+     */
+    public String getMseSessionId() {
+        return this.mseSessionId;
+    }
+
+    /**
      * @return mustHttps
      */
     public Boolean getMustHttps() {
@@ -101,13 +135,31 @@ public class AddGatewayDomainRequest extends Request {
         return this.protocol;
     }
 
+    /**
+     * @return tlsMax
+     */
+    public String getTlsMax() {
+        return this.tlsMax;
+    }
+
+    /**
+     * @return tlsMin
+     */
+    public String getTlsMin() {
+        return this.tlsMin;
+    }
+
     public static final class Builder extends Request.Builder<AddGatewayDomainRequest, Builder> {
         private String acceptLanguage; 
         private String certIdentifier; 
         private String gatewayUniqueId; 
+        private String http2; 
+        private String mseSessionId; 
         private Boolean mustHttps; 
         private String name; 
         private String protocol; 
+        private String tlsMax; 
+        private String tlsMin; 
 
         private Builder() {
             super();
@@ -118,9 +170,13 @@ public class AddGatewayDomainRequest extends Request {
             this.acceptLanguage = request.acceptLanguage;
             this.certIdentifier = request.certIdentifier;
             this.gatewayUniqueId = request.gatewayUniqueId;
+            this.http2 = request.http2;
+            this.mseSessionId = request.mseSessionId;
             this.mustHttps = request.mustHttps;
             this.name = request.name;
             this.protocol = request.protocol;
+            this.tlsMax = request.tlsMax;
+            this.tlsMin = request.tlsMin;
         } 
 
         /**
@@ -151,6 +207,24 @@ public class AddGatewayDomainRequest extends Request {
         }
 
         /**
+         * Http2.
+         */
+        public Builder http2(String http2) {
+            this.putQueryParameter("Http2", http2);
+            this.http2 = http2;
+            return this;
+        }
+
+        /**
+         * MseSessionId.
+         */
+        public Builder mseSessionId(String mseSessionId) {
+            this.putQueryParameter("MseSessionId", mseSessionId);
+            this.mseSessionId = mseSessionId;
+            return this;
+        }
+
+        /**
          * MustHttps.
          */
         public Builder mustHttps(Boolean mustHttps) {
@@ -174,6 +248,24 @@ public class AddGatewayDomainRequest extends Request {
         public Builder protocol(String protocol) {
             this.putQueryParameter("Protocol", protocol);
             this.protocol = protocol;
+            return this;
+        }
+
+        /**
+         * TlsMax.
+         */
+        public Builder tlsMax(String tlsMax) {
+            this.putQueryParameter("TlsMax", tlsMax);
+            this.tlsMax = tlsMax;
+            return this;
+        }
+
+        /**
+         * TlsMin.
+         */
+        public Builder tlsMin(String tlsMin) {
+            this.putQueryParameter("TlsMin", tlsMin);
+            this.tlsMin = tlsMin;
             return this;
         }
 

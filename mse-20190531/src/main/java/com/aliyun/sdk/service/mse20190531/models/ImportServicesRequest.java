@@ -21,24 +21,29 @@ public class ImportServicesRequest extends Request {
     private String gatewayUniqueId;
 
     @Query
-    @NameInMap("ServiceList")
-    private java.util.List < ServiceList> serviceList;
+    @NameInMap("MseSessionId")
+    private String mseSessionId;
 
     @Query
-    @NameInMap("SourceId")
-    private String sourceId;
+    @NameInMap("ServiceList")
+    private java.util.List < ServiceList> serviceList;
 
     @Query
     @NameInMap("SourceType")
     private String sourceType;
 
+    @Query
+    @NameInMap("TlsSetting")
+    private String tlsSetting;
+
     private ImportServicesRequest(Builder builder) {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
         this.gatewayUniqueId = builder.gatewayUniqueId;
+        this.mseSessionId = builder.mseSessionId;
         this.serviceList = builder.serviceList;
-        this.sourceId = builder.sourceId;
         this.sourceType = builder.sourceType;
+        this.tlsSetting = builder.tlsSetting;
     }
 
     public static Builder builder() {
@@ -69,17 +74,17 @@ public class ImportServicesRequest extends Request {
     }
 
     /**
+     * @return mseSessionId
+     */
+    public String getMseSessionId() {
+        return this.mseSessionId;
+    }
+
+    /**
      * @return serviceList
      */
     public java.util.List < ServiceList> getServiceList() {
         return this.serviceList;
-    }
-
-    /**
-     * @return sourceId
-     */
-    public String getSourceId() {
-        return this.sourceId;
     }
 
     /**
@@ -89,12 +94,20 @@ public class ImportServicesRequest extends Request {
         return this.sourceType;
     }
 
+    /**
+     * @return tlsSetting
+     */
+    public String getTlsSetting() {
+        return this.tlsSetting;
+    }
+
     public static final class Builder extends Request.Builder<ImportServicesRequest, Builder> {
         private String acceptLanguage; 
         private String gatewayUniqueId; 
+        private String mseSessionId; 
         private java.util.List < ServiceList> serviceList; 
-        private String sourceId; 
         private String sourceType; 
+        private String tlsSetting; 
 
         private Builder() {
             super();
@@ -104,9 +117,10 @@ public class ImportServicesRequest extends Request {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
             this.gatewayUniqueId = request.gatewayUniqueId;
+            this.mseSessionId = request.mseSessionId;
             this.serviceList = request.serviceList;
-            this.sourceId = request.sourceId;
             this.sourceType = request.sourceType;
+            this.tlsSetting = request.tlsSetting;
         } 
 
         /**
@@ -128,6 +142,15 @@ public class ImportServicesRequest extends Request {
         }
 
         /**
+         * MseSessionId.
+         */
+        public Builder mseSessionId(String mseSessionId) {
+            this.putQueryParameter("MseSessionId", mseSessionId);
+            this.mseSessionId = mseSessionId;
+            return this;
+        }
+
+        /**
          * ServiceList.
          */
         public Builder serviceList(java.util.List < ServiceList> serviceList) {
@@ -138,20 +161,20 @@ public class ImportServicesRequest extends Request {
         }
 
         /**
-         * SourceId.
-         */
-        public Builder sourceId(String sourceId) {
-            this.putQueryParameter("SourceId", sourceId);
-            this.sourceId = sourceId;
-            return this;
-        }
-
-        /**
          * 服务来源
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);
             this.sourceType = sourceType;
+            return this;
+        }
+
+        /**
+         * TlsSetting.
+         */
+        public Builder tlsSetting(String tlsSetting) {
+            this.putQueryParameter("TlsSetting", tlsSetting);
+            this.tlsSetting = tlsSetting;
             return this;
         }
 

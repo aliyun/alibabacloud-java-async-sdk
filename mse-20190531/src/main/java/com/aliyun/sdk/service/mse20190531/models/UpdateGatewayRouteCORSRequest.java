@@ -32,6 +32,10 @@ public class UpdateGatewayRouteCORSRequest extends Request {
     @NameInMap("Id")
     private Long id;
 
+    @Query
+    @NameInMap("MseSessionId")
+    private String mseSessionId;
+
     private UpdateGatewayRouteCORSRequest(Builder builder) {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
@@ -39,6 +43,7 @@ public class UpdateGatewayRouteCORSRequest extends Request {
         this.gatewayId = builder.gatewayId;
         this.gatewayUniqueId = builder.gatewayUniqueId;
         this.id = builder.id;
+        this.mseSessionId = builder.mseSessionId;
     }
 
     public static Builder builder() {
@@ -89,12 +94,20 @@ public class UpdateGatewayRouteCORSRequest extends Request {
         return this.id;
     }
 
+    /**
+     * @return mseSessionId
+     */
+    public String getMseSessionId() {
+        return this.mseSessionId;
+    }
+
     public static final class Builder extends Request.Builder<UpdateGatewayRouteCORSRequest, Builder> {
         private String acceptLanguage; 
         private CorsJSON corsJSON; 
         private Long gatewayId; 
         private String gatewayUniqueId; 
         private Long id; 
+        private String mseSessionId; 
 
         private Builder() {
             super();
@@ -107,6 +120,7 @@ public class UpdateGatewayRouteCORSRequest extends Request {
             this.gatewayId = request.gatewayId;
             this.gatewayUniqueId = request.gatewayUniqueId;
             this.id = request.id;
+            this.mseSessionId = request.mseSessionId;
         } 
 
         /**
@@ -152,6 +166,15 @@ public class UpdateGatewayRouteCORSRequest extends Request {
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
             this.id = id;
+            return this;
+        }
+
+        /**
+         * MseSessionId.
+         */
+        public Builder mseSessionId(String mseSessionId) {
+            this.putQueryParameter("MseSessionId", mseSessionId);
+            this.mseSessionId = mseSessionId;
             return this;
         }
 

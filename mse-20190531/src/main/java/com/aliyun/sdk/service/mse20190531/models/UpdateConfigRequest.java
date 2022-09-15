@@ -68,6 +68,14 @@ public class UpdateConfigRequest extends Request {
     @NameInMap("MinSessionTimeout")
     private String minSessionTimeout;
 
+    @Query
+    @NameInMap("MseSessionId")
+    private String mseSessionId;
+
+    @Query
+    @NameInMap("NamingAuthEnabled")
+    private Boolean namingAuthEnabled;
+
     @Body
     @NameInMap("OpenSuperAcl")
     private String openSuperAcl;
@@ -79,6 +87,10 @@ public class UpdateConfigRequest extends Request {
     @Query
     @NameInMap("RequestPars")
     private String requestPars;
+
+    @Query
+    @NameInMap("SnapshotCount")
+    private String snapshotCount;
 
     @Query
     @NameInMap("SyncLimit")
@@ -108,9 +120,12 @@ public class UpdateConfigRequest extends Request {
         this.maxClientCnxns = builder.maxClientCnxns;
         this.maxSessionTimeout = builder.maxSessionTimeout;
         this.minSessionTimeout = builder.minSessionTimeout;
+        this.mseSessionId = builder.mseSessionId;
+        this.namingAuthEnabled = builder.namingAuthEnabled;
         this.openSuperAcl = builder.openSuperAcl;
         this.passWord = builder.passWord;
         this.requestPars = builder.requestPars;
+        this.snapshotCount = builder.snapshotCount;
         this.syncLimit = builder.syncLimit;
         this.tickTime = builder.tickTime;
         this.userName = builder.userName;
@@ -228,6 +243,20 @@ public class UpdateConfigRequest extends Request {
     }
 
     /**
+     * @return mseSessionId
+     */
+    public String getMseSessionId() {
+        return this.mseSessionId;
+    }
+
+    /**
+     * @return namingAuthEnabled
+     */
+    public Boolean getNamingAuthEnabled() {
+        return this.namingAuthEnabled;
+    }
+
+    /**
      * @return openSuperAcl
      */
     public String getOpenSuperAcl() {
@@ -246,6 +275,13 @@ public class UpdateConfigRequest extends Request {
      */
     public String getRequestPars() {
         return this.requestPars;
+    }
+
+    /**
+     * @return snapshotCount
+     */
+    public String getSnapshotCount() {
+        return this.snapshotCount;
     }
 
     /**
@@ -284,9 +320,12 @@ public class UpdateConfigRequest extends Request {
         private String maxClientCnxns; 
         private String maxSessionTimeout; 
         private String minSessionTimeout; 
+        private String mseSessionId; 
+        private Boolean namingAuthEnabled; 
         private String openSuperAcl; 
         private String passWord; 
         private String requestPars; 
+        private String snapshotCount; 
         private String syncLimit; 
         private String tickTime; 
         private String userName; 
@@ -311,9 +350,12 @@ public class UpdateConfigRequest extends Request {
             this.maxClientCnxns = request.maxClientCnxns;
             this.maxSessionTimeout = request.maxSessionTimeout;
             this.minSessionTimeout = request.minSessionTimeout;
+            this.mseSessionId = request.mseSessionId;
+            this.namingAuthEnabled = request.namingAuthEnabled;
             this.openSuperAcl = request.openSuperAcl;
             this.passWord = request.passWord;
             this.requestPars = request.requestPars;
+            this.snapshotCount = request.snapshotCount;
             this.syncLimit = request.syncLimit;
             this.tickTime = request.tickTime;
             this.userName = request.userName;
@@ -446,6 +488,24 @@ public class UpdateConfigRequest extends Request {
         }
 
         /**
+         * MseSessionId.
+         */
+        public Builder mseSessionId(String mseSessionId) {
+            this.putQueryParameter("MseSessionId", mseSessionId);
+            this.mseSessionId = mseSessionId;
+            return this;
+        }
+
+        /**
+         * NamingAuthEnabled.
+         */
+        public Builder namingAuthEnabled(Boolean namingAuthEnabled) {
+            this.putQueryParameter("NamingAuthEnabled", namingAuthEnabled);
+            this.namingAuthEnabled = namingAuthEnabled;
+            return this;
+        }
+
+        /**
          * OpenSuperAcl.
          */
         public Builder openSuperAcl(String openSuperAcl) {
@@ -469,6 +529,15 @@ public class UpdateConfigRequest extends Request {
         public Builder requestPars(String requestPars) {
             this.putQueryParameter("RequestPars", requestPars);
             this.requestPars = requestPars;
+            return this;
+        }
+
+        /**
+         * SnapshotCount.
+         */
+        public Builder snapshotCount(String snapshotCount) {
+            this.putQueryParameter("SnapshotCount", snapshotCount);
+            this.snapshotCount = snapshotCount;
             return this;
         }
 

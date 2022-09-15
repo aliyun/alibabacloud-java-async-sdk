@@ -22,6 +22,10 @@ public class ListAppBySwimmingLaneGroupTagRequest extends Request {
     private Long groupId;
 
     @Query
+    @NameInMap("MseSessionId")
+    private String mseSessionId;
+
+    @Query
     @NameInMap("Tag")
     @Validation(required = true)
     private String tag;
@@ -30,6 +34,7 @@ public class ListAppBySwimmingLaneGroupTagRequest extends Request {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
         this.groupId = builder.groupId;
+        this.mseSessionId = builder.mseSessionId;
         this.tag = builder.tag;
     }
 
@@ -61,6 +66,13 @@ public class ListAppBySwimmingLaneGroupTagRequest extends Request {
     }
 
     /**
+     * @return mseSessionId
+     */
+    public String getMseSessionId() {
+        return this.mseSessionId;
+    }
+
+    /**
      * @return tag
      */
     public String getTag() {
@@ -70,6 +82,7 @@ public class ListAppBySwimmingLaneGroupTagRequest extends Request {
     public static final class Builder extends Request.Builder<ListAppBySwimmingLaneGroupTagRequest, Builder> {
         private String acceptLanguage; 
         private Long groupId; 
+        private String mseSessionId; 
         private String tag; 
 
         private Builder() {
@@ -80,6 +93,7 @@ public class ListAppBySwimmingLaneGroupTagRequest extends Request {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
             this.groupId = request.groupId;
+            this.mseSessionId = request.mseSessionId;
             this.tag = request.tag;
         } 
 
@@ -98,6 +112,15 @@ public class ListAppBySwimmingLaneGroupTagRequest extends Request {
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);
             this.groupId = groupId;
+            return this;
+        }
+
+        /**
+         * MseSessionId.
+         */
+        public Builder mseSessionId(String mseSessionId) {
+            this.putQueryParameter("MseSessionId", mseSessionId);
+            this.mseSessionId = mseSessionId;
             return this;
         }
 

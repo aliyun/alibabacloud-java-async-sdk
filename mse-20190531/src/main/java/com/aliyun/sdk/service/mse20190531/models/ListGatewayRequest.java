@@ -25,6 +25,10 @@ public class ListGatewayRequest extends Request {
     private FilterParams filterParams;
 
     @Query
+    @NameInMap("MseSessionId")
+    private String mseSessionId;
+
+    @Query
     @NameInMap("OrderItem")
     private String orderItem;
 
@@ -41,6 +45,7 @@ public class ListGatewayRequest extends Request {
         this.acceptLanguage = builder.acceptLanguage;
         this.descSort = builder.descSort;
         this.filterParams = builder.filterParams;
+        this.mseSessionId = builder.mseSessionId;
         this.orderItem = builder.orderItem;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -81,6 +86,13 @@ public class ListGatewayRequest extends Request {
     }
 
     /**
+     * @return mseSessionId
+     */
+    public String getMseSessionId() {
+        return this.mseSessionId;
+    }
+
+    /**
      * @return orderItem
      */
     public String getOrderItem() {
@@ -105,6 +117,7 @@ public class ListGatewayRequest extends Request {
         private String acceptLanguage; 
         private Boolean descSort; 
         private FilterParams filterParams; 
+        private String mseSessionId; 
         private String orderItem; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -118,6 +131,7 @@ public class ListGatewayRequest extends Request {
             this.acceptLanguage = request.acceptLanguage;
             this.descSort = request.descSort;
             this.filterParams = request.filterParams;
+            this.mseSessionId = request.mseSessionId;
             this.orderItem = request.orderItem;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
@@ -148,6 +162,15 @@ public class ListGatewayRequest extends Request {
             String filterParamsShrink = shrink(filterParams, "FilterParams", "json");
             this.putQueryParameter("FilterParams", filterParamsShrink);
             this.filterParams = filterParams;
+            return this;
+        }
+
+        /**
+         * MseSessionId.
+         */
+        public Builder mseSessionId(String mseSessionId) {
+            this.putQueryParameter("MseSessionId", mseSessionId);
+            this.mseSessionId = mseSessionId;
             return this;
         }
 

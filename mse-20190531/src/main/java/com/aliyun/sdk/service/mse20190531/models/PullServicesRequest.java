@@ -21,6 +21,14 @@ public class PullServicesRequest extends Request {
     private String gatewayUniqueId;
 
     @Query
+    @NameInMap("MseSessionId")
+    private String mseSessionId;
+
+    @Query
+    @NameInMap("Namespace")
+    private String namespace;
+
+    @Query
     @NameInMap("SourceType")
     private String sourceType;
 
@@ -28,6 +36,8 @@ public class PullServicesRequest extends Request {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
         this.gatewayUniqueId = builder.gatewayUniqueId;
+        this.mseSessionId = builder.mseSessionId;
+        this.namespace = builder.namespace;
         this.sourceType = builder.sourceType;
     }
 
@@ -59,6 +69,20 @@ public class PullServicesRequest extends Request {
     }
 
     /**
+     * @return mseSessionId
+     */
+    public String getMseSessionId() {
+        return this.mseSessionId;
+    }
+
+    /**
+     * @return namespace
+     */
+    public String getNamespace() {
+        return this.namespace;
+    }
+
+    /**
      * @return sourceType
      */
     public String getSourceType() {
@@ -68,6 +92,8 @@ public class PullServicesRequest extends Request {
     public static final class Builder extends Request.Builder<PullServicesRequest, Builder> {
         private String acceptLanguage; 
         private String gatewayUniqueId; 
+        private String mseSessionId; 
+        private String namespace; 
         private String sourceType; 
 
         private Builder() {
@@ -78,6 +104,8 @@ public class PullServicesRequest extends Request {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
             this.gatewayUniqueId = request.gatewayUniqueId;
+            this.mseSessionId = request.mseSessionId;
+            this.namespace = request.namespace;
             this.sourceType = request.sourceType;
         } 
 
@@ -96,6 +124,24 @@ public class PullServicesRequest extends Request {
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
             this.gatewayUniqueId = gatewayUniqueId;
+            return this;
+        }
+
+        /**
+         * MseSessionId.
+         */
+        public Builder mseSessionId(String mseSessionId) {
+            this.putQueryParameter("MseSessionId", mseSessionId);
+            this.mseSessionId = mseSessionId;
+            return this;
+        }
+
+        /**
+         * Namespace.
+         */
+        public Builder namespace(String namespace) {
+            this.putQueryParameter("Namespace", namespace);
+            this.namespace = namespace;
             return this;
         }
 

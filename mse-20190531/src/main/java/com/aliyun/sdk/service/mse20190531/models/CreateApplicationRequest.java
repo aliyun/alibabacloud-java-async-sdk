@@ -30,6 +30,10 @@ public class CreateApplicationRequest extends Request {
     private String language;
 
     @Query
+    @NameInMap("MseSessionId")
+    private String mseSessionId;
+
+    @Query
     @NameInMap("Region")
     @Validation(required = true)
     private String region;
@@ -52,6 +56,7 @@ public class CreateApplicationRequest extends Request {
         this.appName = builder.appName;
         this.extraInfo = builder.extraInfo;
         this.language = builder.language;
+        this.mseSessionId = builder.mseSessionId;
         this.region = builder.region;
         this.sentinelEnable = builder.sentinelEnable;
         this.source = builder.source;
@@ -100,6 +105,13 @@ public class CreateApplicationRequest extends Request {
     }
 
     /**
+     * @return mseSessionId
+     */
+    public String getMseSessionId() {
+        return this.mseSessionId;
+    }
+
+    /**
      * @return region
      */
     public String getRegion() {
@@ -132,6 +144,7 @@ public class CreateApplicationRequest extends Request {
         private String appName; 
         private String extraInfo; 
         private String language; 
+        private String mseSessionId; 
         private String region; 
         private String sentinelEnable; 
         private String source; 
@@ -147,6 +160,7 @@ public class CreateApplicationRequest extends Request {
             this.appName = request.appName;
             this.extraInfo = request.extraInfo;
             this.language = request.language;
+            this.mseSessionId = request.mseSessionId;
             this.region = request.region;
             this.sentinelEnable = request.sentinelEnable;
             this.source = request.source;
@@ -186,6 +200,15 @@ public class CreateApplicationRequest extends Request {
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
             this.language = language;
+            return this;
+        }
+
+        /**
+         * MseSessionId.
+         */
+        public Builder mseSessionId(String mseSessionId) {
+            this.putQueryParameter("MseSessionId", mseSessionId);
+            this.mseSessionId = mseSessionId;
             return this;
         }
 

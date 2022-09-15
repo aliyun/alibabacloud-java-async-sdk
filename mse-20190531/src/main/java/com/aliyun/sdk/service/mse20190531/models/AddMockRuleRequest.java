@@ -40,6 +40,10 @@ public class AddMockRuleRequest extends Request {
     private Long mockType;
 
     @Query
+    @NameInMap("MseSessionId")
+    private String mseSessionId;
+
+    @Query
     @NameInMap("Name")
     @Validation(required = true)
     private String name;
@@ -75,6 +79,7 @@ public class AddMockRuleRequest extends Request {
         this.enable = builder.enable;
         this.extraJson = builder.extraJson;
         this.mockType = builder.mockType;
+        this.mseSessionId = builder.mseSessionId;
         this.name = builder.name;
         this.providerAppId = builder.providerAppId;
         this.providerAppName = builder.providerAppName;
@@ -139,6 +144,13 @@ public class AddMockRuleRequest extends Request {
     }
 
     /**
+     * @return mseSessionId
+     */
+    public String getMseSessionId() {
+        return this.mseSessionId;
+    }
+
+    /**
      * @return name
      */
     public String getName() {
@@ -187,6 +199,7 @@ public class AddMockRuleRequest extends Request {
         private Boolean enable; 
         private String extraJson; 
         private Long mockType; 
+        private String mseSessionId; 
         private String name; 
         private String providerAppId; 
         private String providerAppName; 
@@ -206,6 +219,7 @@ public class AddMockRuleRequest extends Request {
             this.enable = request.enable;
             this.extraJson = request.extraJson;
             this.mockType = request.mockType;
+            this.mseSessionId = request.mseSessionId;
             this.name = request.name;
             this.providerAppId = request.providerAppId;
             this.providerAppName = request.providerAppName;
@@ -265,6 +279,15 @@ public class AddMockRuleRequest extends Request {
         public Builder mockType(Long mockType) {
             this.putQueryParameter("MockType", mockType);
             this.mockType = mockType;
+            return this;
+        }
+
+        /**
+         * MseSessionId.
+         */
+        public Builder mseSessionId(String mseSessionId) {
+            this.putQueryParameter("MseSessionId", mseSessionId);
+            this.mseSessionId = mseSessionId;
             return this;
         }
 

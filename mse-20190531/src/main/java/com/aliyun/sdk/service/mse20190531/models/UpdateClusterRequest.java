@@ -25,6 +25,10 @@ public class UpdateClusterRequest extends Request {
     private String instanceId;
 
     @Query
+    @NameInMap("MseSessionId")
+    private String mseSessionId;
+
+    @Query
     @NameInMap("RequestPars")
     private String requestPars;
 
@@ -33,6 +37,7 @@ public class UpdateClusterRequest extends Request {
         this.acceptLanguage = builder.acceptLanguage;
         this.clusterAliasName = builder.clusterAliasName;
         this.instanceId = builder.instanceId;
+        this.mseSessionId = builder.mseSessionId;
         this.requestPars = builder.requestPars;
     }
 
@@ -71,6 +76,13 @@ public class UpdateClusterRequest extends Request {
     }
 
     /**
+     * @return mseSessionId
+     */
+    public String getMseSessionId() {
+        return this.mseSessionId;
+    }
+
+    /**
      * @return requestPars
      */
     public String getRequestPars() {
@@ -81,6 +93,7 @@ public class UpdateClusterRequest extends Request {
         private String acceptLanguage; 
         private String clusterAliasName; 
         private String instanceId; 
+        private String mseSessionId; 
         private String requestPars; 
 
         private Builder() {
@@ -92,6 +105,7 @@ public class UpdateClusterRequest extends Request {
             this.acceptLanguage = request.acceptLanguage;
             this.clusterAliasName = request.clusterAliasName;
             this.instanceId = request.instanceId;
+            this.mseSessionId = request.mseSessionId;
             this.requestPars = request.requestPars;
         } 
 
@@ -119,6 +133,15 @@ public class UpdateClusterRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * MseSessionId.
+         */
+        public Builder mseSessionId(String mseSessionId) {
+            this.putQueryParameter("MseSessionId", mseSessionId);
+            this.mseSessionId = mseSessionId;
             return this;
         }
 

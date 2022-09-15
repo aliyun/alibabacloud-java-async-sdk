@@ -45,6 +45,18 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
     private String licenseKey;
 
     @Query
+    @NameInMap("MessageQueueFilterSide")
+    private String messageQueueFilterSide;
+
+    @Query
+    @NameInMap("MessageQueueGrayEnable")
+    private Boolean messageQueueGrayEnable;
+
+    @Query
+    @NameInMap("MseSessionId")
+    private String mseSessionId;
+
+    @Query
     @NameInMap("Name")
     private String name;
 
@@ -74,6 +86,9 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         this.gmtModified = builder.gmtModified;
         this.id = builder.id;
         this.licenseKey = builder.licenseKey;
+        this.messageQueueFilterSide = builder.messageQueueFilterSide;
+        this.messageQueueGrayEnable = builder.messageQueueGrayEnable;
+        this.mseSessionId = builder.mseSessionId;
         this.name = builder.name;
         this.region = builder.region;
         this.source = builder.source;
@@ -151,6 +166,27 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
     }
 
     /**
+     * @return messageQueueFilterSide
+     */
+    public String getMessageQueueFilterSide() {
+        return this.messageQueueFilterSide;
+    }
+
+    /**
+     * @return messageQueueGrayEnable
+     */
+    public Boolean getMessageQueueGrayEnable() {
+        return this.messageQueueGrayEnable;
+    }
+
+    /**
+     * @return mseSessionId
+     */
+    public String getMseSessionId() {
+        return this.mseSessionId;
+    }
+
+    /**
      * @return name
      */
     public String getName() {
@@ -194,6 +230,9 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         private String gmtModified; 
         private Long id; 
         private String licenseKey; 
+        private String messageQueueFilterSide; 
+        private Boolean messageQueueGrayEnable; 
+        private String mseSessionId; 
         private String name; 
         private String region; 
         private String source; 
@@ -214,6 +253,9 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
             this.gmtModified = request.gmtModified;
             this.id = request.id;
             this.licenseKey = request.licenseKey;
+            this.messageQueueFilterSide = request.messageQueueFilterSide;
+            this.messageQueueGrayEnable = request.messageQueueGrayEnable;
+            this.mseSessionId = request.mseSessionId;
             this.name = request.name;
             this.region = request.region;
             this.source = request.source;
@@ -290,6 +332,33 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         public Builder licenseKey(String licenseKey) {
             this.putQueryParameter("LicenseKey", licenseKey);
             this.licenseKey = licenseKey;
+            return this;
+        }
+
+        /**
+         * MessageQueueFilterSide.
+         */
+        public Builder messageQueueFilterSide(String messageQueueFilterSide) {
+            this.putQueryParameter("MessageQueueFilterSide", messageQueueFilterSide);
+            this.messageQueueFilterSide = messageQueueFilterSide;
+            return this;
+        }
+
+        /**
+         * MessageQueueGrayEnable.
+         */
+        public Builder messageQueueGrayEnable(Boolean messageQueueGrayEnable) {
+            this.putQueryParameter("MessageQueueGrayEnable", messageQueueGrayEnable);
+            this.messageQueueGrayEnable = messageQueueGrayEnable;
+            return this;
+        }
+
+        /**
+         * MseSessionId.
+         */
+        public Builder mseSessionId(String mseSessionId) {
+            this.putQueryParameter("MseSessionId", mseSessionId);
+            this.mseSessionId = mseSessionId;
             return this;
         }
 

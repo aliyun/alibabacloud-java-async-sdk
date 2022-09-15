@@ -260,6 +260,12 @@ public class ListClustersResponseBody extends TeaModel {
         @NameInMap("MseVersion")
         private String mseVersion;
 
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
+        @NameInMap("Tags")
+        private java.util.Map < String, ? > tags;
+
         @NameInMap("VersionCode")
         private String versionCode;
 
@@ -280,6 +286,8 @@ public class ListClustersResponseBody extends TeaModel {
             this.intranetAddress = builder.intranetAddress;
             this.intranetDomain = builder.intranetDomain;
             this.mseVersion = builder.mseVersion;
+            this.resourceGroupId = builder.resourceGroupId;
+            this.tags = builder.tags;
             this.versionCode = builder.versionCode;
         }
 
@@ -404,6 +412,20 @@ public class ListClustersResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
+         * @return tags
+         */
+        public java.util.Map < String, ? > getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return versionCode
          */
         public String getVersionCode() {
@@ -427,6 +449,8 @@ public class ListClustersResponseBody extends TeaModel {
             private String intranetAddress; 
             private String intranetDomain; 
             private String mseVersion; 
+            private String resourceGroupId; 
+            private java.util.Map < String, ? > tags; 
             private String versionCode; 
 
             /**
@@ -554,6 +578,22 @@ public class ListClustersResponseBody extends TeaModel {
              */
             public Builder mseVersion(String mseVersion) {
                 this.mseVersion = mseVersion;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.Map < String, ? > tags) {
+                this.tags = tags;
                 return this;
             }
 

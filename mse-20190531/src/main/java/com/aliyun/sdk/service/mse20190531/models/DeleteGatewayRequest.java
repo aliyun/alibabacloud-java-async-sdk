@@ -24,11 +24,16 @@ public class DeleteGatewayRequest extends Request {
     @NameInMap("GatewayUniqueId")
     private String gatewayUniqueId;
 
+    @Query
+    @NameInMap("MseSessionId")
+    private String mseSessionId;
+
     private DeleteGatewayRequest(Builder builder) {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
         this.deleteSlb = builder.deleteSlb;
         this.gatewayUniqueId = builder.gatewayUniqueId;
+        this.mseSessionId = builder.mseSessionId;
     }
 
     public static Builder builder() {
@@ -65,10 +70,18 @@ public class DeleteGatewayRequest extends Request {
         return this.gatewayUniqueId;
     }
 
+    /**
+     * @return mseSessionId
+     */
+    public String getMseSessionId() {
+        return this.mseSessionId;
+    }
+
     public static final class Builder extends Request.Builder<DeleteGatewayRequest, Builder> {
         private String acceptLanguage; 
         private Boolean deleteSlb; 
         private String gatewayUniqueId; 
+        private String mseSessionId; 
 
         private Builder() {
             super();
@@ -79,6 +92,7 @@ public class DeleteGatewayRequest extends Request {
             this.acceptLanguage = request.acceptLanguage;
             this.deleteSlb = request.deleteSlb;
             this.gatewayUniqueId = request.gatewayUniqueId;
+            this.mseSessionId = request.mseSessionId;
         } 
 
         /**
@@ -105,6 +119,15 @@ public class DeleteGatewayRequest extends Request {
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
             this.gatewayUniqueId = gatewayUniqueId;
+            return this;
+        }
+
+        /**
+         * MseSessionId.
+         */
+        public Builder mseSessionId(String mseSessionId) {
+            this.putQueryParameter("MseSessionId", mseSessionId);
+            this.mseSessionId = mseSessionId;
             return this;
         }
 

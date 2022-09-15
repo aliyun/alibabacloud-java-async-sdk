@@ -37,6 +37,10 @@ public class UpdateServiceSourceRequest extends Request {
     private IngressOptionsRequest ingressOptionsRequest;
 
     @Query
+    @NameInMap("MseSessionId")
+    private String mseSessionId;
+
+    @Query
     @NameInMap("Name")
     private String name;
 
@@ -56,6 +60,7 @@ public class UpdateServiceSourceRequest extends Request {
         this.gatewayUniqueId = builder.gatewayUniqueId;
         this.id = builder.id;
         this.ingressOptionsRequest = builder.ingressOptionsRequest;
+        this.mseSessionId = builder.mseSessionId;
         this.name = builder.name;
         this.source = builder.source;
         this.type = builder.type;
@@ -117,6 +122,13 @@ public class UpdateServiceSourceRequest extends Request {
     }
 
     /**
+     * @return mseSessionId
+     */
+    public String getMseSessionId() {
+        return this.mseSessionId;
+    }
+
+    /**
      * @return name
      */
     public String getName() {
@@ -144,6 +156,7 @@ public class UpdateServiceSourceRequest extends Request {
         private String gatewayUniqueId; 
         private Long id; 
         private IngressOptionsRequest ingressOptionsRequest; 
+        private String mseSessionId; 
         private String name; 
         private String source; 
         private String type; 
@@ -160,6 +173,7 @@ public class UpdateServiceSourceRequest extends Request {
             this.gatewayUniqueId = request.gatewayUniqueId;
             this.id = request.id;
             this.ingressOptionsRequest = request.ingressOptionsRequest;
+            this.mseSessionId = request.mseSessionId;
             this.name = request.name;
             this.source = request.source;
             this.type = request.type;
@@ -217,6 +231,15 @@ public class UpdateServiceSourceRequest extends Request {
             String ingressOptionsRequestShrink = shrink(ingressOptionsRequest, "IngressOptionsRequest", "json");
             this.putQueryParameter("IngressOptionsRequest", ingressOptionsRequestShrink);
             this.ingressOptionsRequest = ingressOptionsRequest;
+            return this;
+        }
+
+        /**
+         * MseSessionId.
+         */
+        public Builder mseSessionId(String mseSessionId) {
+            this.putQueryParameter("MseSessionId", mseSessionId);
+            this.mseSessionId = mseSessionId;
             return this;
         }
 

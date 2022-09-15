@@ -22,6 +22,10 @@ public class ModifyGovernanceKubernetesClusterRequest extends Request {
     private String clusterId;
 
     @Query
+    @NameInMap("MseSessionId")
+    private String mseSessionId;
+
+    @Query
     @NameInMap("NamespaceInfos")
     @Validation(required = true)
     private String namespaceInfos;
@@ -35,6 +39,7 @@ public class ModifyGovernanceKubernetesClusterRequest extends Request {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
         this.clusterId = builder.clusterId;
+        this.mseSessionId = builder.mseSessionId;
         this.namespaceInfos = builder.namespaceInfos;
         this.regionId = builder.regionId;
     }
@@ -67,6 +72,13 @@ public class ModifyGovernanceKubernetesClusterRequest extends Request {
     }
 
     /**
+     * @return mseSessionId
+     */
+    public String getMseSessionId() {
+        return this.mseSessionId;
+    }
+
+    /**
      * @return namespaceInfos
      */
     public String getNamespaceInfos() {
@@ -83,6 +95,7 @@ public class ModifyGovernanceKubernetesClusterRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyGovernanceKubernetesClusterRequest, Builder> {
         private String acceptLanguage; 
         private String clusterId; 
+        private String mseSessionId; 
         private String namespaceInfos; 
         private String regionId; 
 
@@ -94,6 +107,7 @@ public class ModifyGovernanceKubernetesClusterRequest extends Request {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
             this.clusterId = request.clusterId;
+            this.mseSessionId = request.mseSessionId;
             this.namespaceInfos = request.namespaceInfos;
             this.regionId = request.regionId;
         } 
@@ -113,6 +127,15 @@ public class ModifyGovernanceKubernetesClusterRequest extends Request {
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
             this.clusterId = clusterId;
+            return this;
+        }
+
+        /**
+         * MseSessionId.
+         */
+        public Builder mseSessionId(String mseSessionId) {
+            this.putQueryParameter("MseSessionId", mseSessionId);
+            this.mseSessionId = mseSessionId;
             return this;
         }
 

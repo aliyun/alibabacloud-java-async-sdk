@@ -29,6 +29,10 @@ public class UpdateGatewayServiceTrafficPolicyRequest extends Request {
     private String gatewayUniqueId;
 
     @Query
+    @NameInMap("MseSessionId")
+    private String mseSessionId;
+
+    @Query
     @NameInMap("ServiceId")
     private Long serviceId;
 
@@ -38,6 +42,7 @@ public class UpdateGatewayServiceTrafficPolicyRequest extends Request {
         this.gatewayId = builder.gatewayId;
         this.gatewayTrafficPolicy = builder.gatewayTrafficPolicy;
         this.gatewayUniqueId = builder.gatewayUniqueId;
+        this.mseSessionId = builder.mseSessionId;
         this.serviceId = builder.serviceId;
     }
 
@@ -83,6 +88,13 @@ public class UpdateGatewayServiceTrafficPolicyRequest extends Request {
     }
 
     /**
+     * @return mseSessionId
+     */
+    public String getMseSessionId() {
+        return this.mseSessionId;
+    }
+
+    /**
      * @return serviceId
      */
     public Long getServiceId() {
@@ -94,6 +106,7 @@ public class UpdateGatewayServiceTrafficPolicyRequest extends Request {
         private Long gatewayId; 
         private TrafficPolicy gatewayTrafficPolicy; 
         private String gatewayUniqueId; 
+        private String mseSessionId; 
         private Long serviceId; 
 
         private Builder() {
@@ -106,6 +119,7 @@ public class UpdateGatewayServiceTrafficPolicyRequest extends Request {
             this.gatewayId = request.gatewayId;
             this.gatewayTrafficPolicy = request.gatewayTrafficPolicy;
             this.gatewayUniqueId = request.gatewayUniqueId;
+            this.mseSessionId = request.mseSessionId;
             this.serviceId = request.serviceId;
         } 
 
@@ -143,6 +157,15 @@ public class UpdateGatewayServiceTrafficPolicyRequest extends Request {
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
             this.gatewayUniqueId = gatewayUniqueId;
+            return this;
+        }
+
+        /**
+         * MseSessionId.
+         */
+        public Builder mseSessionId(String mseSessionId) {
+            this.putQueryParameter("MseSessionId", mseSessionId);
+            this.mseSessionId = mseSessionId;
             return this;
         }
 

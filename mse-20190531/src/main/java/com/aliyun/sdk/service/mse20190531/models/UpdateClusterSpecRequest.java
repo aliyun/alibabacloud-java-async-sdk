@@ -36,6 +36,10 @@ public class UpdateClusterSpecRequest extends Request {
     @Validation(required = true)
     private String instanceId;
 
+    @Query
+    @NameInMap("MseSessionId")
+    private String mseSessionId;
+
     private UpdateClusterSpecRequest(Builder builder) {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
@@ -43,6 +47,7 @@ public class UpdateClusterSpecRequest extends Request {
         this.clusterSpecification = builder.clusterSpecification;
         this.instanceCount = builder.instanceCount;
         this.instanceId = builder.instanceId;
+        this.mseSessionId = builder.mseSessionId;
     }
 
     public static Builder builder() {
@@ -93,12 +98,20 @@ public class UpdateClusterSpecRequest extends Request {
         return this.instanceId;
     }
 
+    /**
+     * @return mseSessionId
+     */
+    public String getMseSessionId() {
+        return this.mseSessionId;
+    }
+
     public static final class Builder extends Request.Builder<UpdateClusterSpecRequest, Builder> {
         private String acceptLanguage; 
         private String clusterId; 
         private String clusterSpecification; 
         private Integer instanceCount; 
         private String instanceId; 
+        private String mseSessionId; 
 
         private Builder() {
             super();
@@ -111,6 +124,7 @@ public class UpdateClusterSpecRequest extends Request {
             this.clusterSpecification = request.clusterSpecification;
             this.instanceCount = request.instanceCount;
             this.instanceId = request.instanceId;
+            this.mseSessionId = request.mseSessionId;
         } 
 
         /**
@@ -155,6 +169,15 @@ public class UpdateClusterSpecRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * MseSessionId.
+         */
+        public Builder mseSessionId(String mseSessionId) {
+            this.putQueryParameter("MseSessionId", mseSessionId);
+            this.mseSessionId = mseSessionId;
             return this;
         }
 

@@ -38,6 +38,10 @@ public class ExportNacosConfigRequest extends Request {
     private String instanceId;
 
     @Query
+    @NameInMap("MseSessionId")
+    private String mseSessionId;
+
+    @Query
     @NameInMap("NamespaceId")
     private String namespaceId;
 
@@ -49,6 +53,7 @@ public class ExportNacosConfigRequest extends Request {
         this.group = builder.group;
         this.ids = builder.ids;
         this.instanceId = builder.instanceId;
+        this.mseSessionId = builder.mseSessionId;
         this.namespaceId = builder.namespaceId;
     }
 
@@ -108,6 +113,13 @@ public class ExportNacosConfigRequest extends Request {
     }
 
     /**
+     * @return mseSessionId
+     */
+    public String getMseSessionId() {
+        return this.mseSessionId;
+    }
+
+    /**
      * @return namespaceId
      */
     public String getNamespaceId() {
@@ -121,6 +133,7 @@ public class ExportNacosConfigRequest extends Request {
         private String group; 
         private String ids; 
         private String instanceId; 
+        private String mseSessionId; 
         private String namespaceId; 
 
         private Builder() {
@@ -135,6 +148,7 @@ public class ExportNacosConfigRequest extends Request {
             this.group = request.group;
             this.ids = request.ids;
             this.instanceId = request.instanceId;
+            this.mseSessionId = request.mseSessionId;
             this.namespaceId = request.namespaceId;
         } 
 
@@ -189,6 +203,15 @@ public class ExportNacosConfigRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * MseSessionId.
+         */
+        public Builder mseSessionId(String mseSessionId) {
+            this.putQueryParameter("MseSessionId", mseSessionId);
+            this.mseSessionId = mseSessionId;
             return this;
         }
 

@@ -28,12 +28,17 @@ public class AddSSLCertRequest extends Request {
     @NameInMap("GatewayUniqueId")
     private String gatewayUniqueId;
 
+    @Query
+    @NameInMap("MseSessionId")
+    private String mseSessionId;
+
     private AddSSLCertRequest(Builder builder) {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
         this.certIdentifier = builder.certIdentifier;
         this.domainId = builder.domainId;
         this.gatewayUniqueId = builder.gatewayUniqueId;
+        this.mseSessionId = builder.mseSessionId;
     }
 
     public static Builder builder() {
@@ -77,11 +82,19 @@ public class AddSSLCertRequest extends Request {
         return this.gatewayUniqueId;
     }
 
+    /**
+     * @return mseSessionId
+     */
+    public String getMseSessionId() {
+        return this.mseSessionId;
+    }
+
     public static final class Builder extends Request.Builder<AddSSLCertRequest, Builder> {
         private String acceptLanguage; 
         private String certIdentifier; 
         private Long domainId; 
         private String gatewayUniqueId; 
+        private String mseSessionId; 
 
         private Builder() {
             super();
@@ -93,6 +106,7 @@ public class AddSSLCertRequest extends Request {
             this.certIdentifier = request.certIdentifier;
             this.domainId = request.domainId;
             this.gatewayUniqueId = request.gatewayUniqueId;
+            this.mseSessionId = request.mseSessionId;
         } 
 
         /**
@@ -128,6 +142,15 @@ public class AddSSLCertRequest extends Request {
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
             this.gatewayUniqueId = gatewayUniqueId;
+            return this;
+        }
+
+        /**
+         * MseSessionId.
+         */
+        public Builder mseSessionId(String mseSessionId) {
+            this.putQueryParameter("MseSessionId", mseSessionId);
+            this.mseSessionId = mseSessionId;
             return this;
         }
 

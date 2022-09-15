@@ -25,6 +25,14 @@ public class UpdateMessageQueueRouteRequest extends Request {
     private Boolean enable;
 
     @Query
+    @NameInMap("FilterSide")
+    private String filterSide;
+
+    @Query
+    @NameInMap("MseSessionId")
+    private String mseSessionId;
+
+    @Query
     @NameInMap("Region")
     @Validation(required = true)
     private String region;
@@ -39,6 +47,8 @@ public class UpdateMessageQueueRouteRequest extends Request {
         this.acceptLanguage = builder.acceptLanguage;
         this.appId = builder.appId;
         this.enable = builder.enable;
+        this.filterSide = builder.filterSide;
+        this.mseSessionId = builder.mseSessionId;
         this.region = builder.region;
         this.tags = builder.tags;
     }
@@ -78,6 +88,20 @@ public class UpdateMessageQueueRouteRequest extends Request {
     }
 
     /**
+     * @return filterSide
+     */
+    public String getFilterSide() {
+        return this.filterSide;
+    }
+
+    /**
+     * @return mseSessionId
+     */
+    public String getMseSessionId() {
+        return this.mseSessionId;
+    }
+
+    /**
      * @return region
      */
     public String getRegion() {
@@ -95,6 +119,8 @@ public class UpdateMessageQueueRouteRequest extends Request {
         private String acceptLanguage; 
         private String appId; 
         private Boolean enable; 
+        private String filterSide; 
+        private String mseSessionId; 
         private String region; 
         private java.util.List < String > tags; 
 
@@ -107,6 +133,8 @@ public class UpdateMessageQueueRouteRequest extends Request {
             this.acceptLanguage = request.acceptLanguage;
             this.appId = request.appId;
             this.enable = request.enable;
+            this.filterSide = request.filterSide;
+            this.mseSessionId = request.mseSessionId;
             this.region = request.region;
             this.tags = request.tags;
         } 
@@ -135,6 +163,24 @@ public class UpdateMessageQueueRouteRequest extends Request {
         public Builder enable(Boolean enable) {
             this.putQueryParameter("Enable", enable);
             this.enable = enable;
+            return this;
+        }
+
+        /**
+         * FilterSide.
+         */
+        public Builder filterSide(String filterSide) {
+            this.putQueryParameter("FilterSide", filterSide);
+            this.filterSide = filterSide;
+            return this;
+        }
+
+        /**
+         * MseSessionId.
+         */
+        public Builder mseSessionId(String mseSessionId) {
+            this.putQueryParameter("MseSessionId", mseSessionId);
+            this.mseSessionId = mseSessionId;
             return this;
         }
 

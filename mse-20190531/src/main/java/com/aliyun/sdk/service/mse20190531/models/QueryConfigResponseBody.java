@@ -197,6 +197,12 @@ public class QueryConfigResponseBody extends TeaModel {
         @NameInMap("MinSessionTimeout")
         private String minSessionTimeout;
 
+        @NameInMap("NamingAuthEnabled")
+        private Boolean namingAuthEnabled;
+
+        @NameInMap("NamingAuthSupported")
+        private Boolean namingAuthSupported;
+
         @NameInMap("NamingCreateServiceSupported")
         private Boolean namingCreateServiceSupported;
 
@@ -208,6 +214,9 @@ public class QueryConfigResponseBody extends TeaModel {
 
         @NameInMap("RestartFlag")
         private Boolean restartFlag;
+
+        @NameInMap("SnapshotCount")
+        private String snapshotCount;
 
         @NameInMap("SyncLimit")
         private String syncLimit;
@@ -234,10 +243,13 @@ public class QueryConfigResponseBody extends TeaModel {
             this.maxClientCnxns = builder.maxClientCnxns;
             this.maxSessionTimeout = builder.maxSessionTimeout;
             this.minSessionTimeout = builder.minSessionTimeout;
+            this.namingAuthEnabled = builder.namingAuthEnabled;
+            this.namingAuthSupported = builder.namingAuthSupported;
             this.namingCreateServiceSupported = builder.namingCreateServiceSupported;
             this.openSuperAcl = builder.openSuperAcl;
             this.passWord = builder.passWord;
             this.restartFlag = builder.restartFlag;
+            this.snapshotCount = builder.snapshotCount;
             this.syncLimit = builder.syncLimit;
             this.tickTime = builder.tickTime;
             this.userName = builder.userName;
@@ -357,6 +369,20 @@ public class QueryConfigResponseBody extends TeaModel {
         }
 
         /**
+         * @return namingAuthEnabled
+         */
+        public Boolean getNamingAuthEnabled() {
+            return this.namingAuthEnabled;
+        }
+
+        /**
+         * @return namingAuthSupported
+         */
+        public Boolean getNamingAuthSupported() {
+            return this.namingAuthSupported;
+        }
+
+        /**
          * @return namingCreateServiceSupported
          */
         public Boolean getNamingCreateServiceSupported() {
@@ -382,6 +408,13 @@ public class QueryConfigResponseBody extends TeaModel {
          */
         public Boolean getRestartFlag() {
             return this.restartFlag;
+        }
+
+        /**
+         * @return snapshotCount
+         */
+        public String getSnapshotCount() {
+            return this.snapshotCount;
         }
 
         /**
@@ -421,10 +454,13 @@ public class QueryConfigResponseBody extends TeaModel {
             private String maxClientCnxns; 
             private String maxSessionTimeout; 
             private String minSessionTimeout; 
+            private Boolean namingAuthEnabled; 
+            private Boolean namingAuthSupported; 
             private Boolean namingCreateServiceSupported; 
             private Boolean openSuperAcl; 
             private String passWord; 
             private Boolean restartFlag; 
+            private String snapshotCount; 
             private String syncLimit; 
             private String tickTime; 
             private String userName; 
@@ -550,6 +586,22 @@ public class QueryConfigResponseBody extends TeaModel {
             }
 
             /**
+             * NamingAuthEnabled.
+             */
+            public Builder namingAuthEnabled(Boolean namingAuthEnabled) {
+                this.namingAuthEnabled = namingAuthEnabled;
+                return this;
+            }
+
+            /**
+             * NamingAuthSupported.
+             */
+            public Builder namingAuthSupported(Boolean namingAuthSupported) {
+                this.namingAuthSupported = namingAuthSupported;
+                return this;
+            }
+
+            /**
              * NamingCreateServiceSupported.
              */
             public Builder namingCreateServiceSupported(Boolean namingCreateServiceSupported) {
@@ -578,6 +630,14 @@ public class QueryConfigResponseBody extends TeaModel {
              */
             public Builder restartFlag(Boolean restartFlag) {
                 this.restartFlag = restartFlag;
+                return this;
+            }
+
+            /**
+             * SnapshotCount.
+             */
+            public Builder snapshotCount(String snapshotCount) {
+                this.snapshotCount = snapshotCount;
                 return this;
             }
 

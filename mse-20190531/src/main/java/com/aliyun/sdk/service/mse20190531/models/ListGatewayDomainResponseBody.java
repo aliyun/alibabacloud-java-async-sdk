@@ -211,6 +211,9 @@ public class ListGatewayDomainResponseBody extends TeaModel {
         @NameInMap("GmtModified")
         private String gmtModified;
 
+        @NameInMap("Http2")
+        private String http2;
+
         @NameInMap("Id")
         private Long id;
 
@@ -226,6 +229,12 @@ public class ListGatewayDomainResponseBody extends TeaModel {
         @NameInMap("Status")
         private Integer status;
 
+        @NameInMap("TlsMax")
+        private String tlsMax;
+
+        @NameInMap("TlsMin")
+        private String tlsMin;
+
         @NameInMap("Type")
         private String type;
 
@@ -236,11 +245,14 @@ public class ListGatewayDomainResponseBody extends TeaModel {
             this.gatewayId = builder.gatewayId;
             this.gmtCreate = builder.gmtCreate;
             this.gmtModified = builder.gmtModified;
+            this.http2 = builder.http2;
             this.id = builder.id;
             this.mustHttps = builder.mustHttps;
             this.name = builder.name;
             this.protocol = builder.protocol;
             this.status = builder.status;
+            this.tlsMax = builder.tlsMax;
+            this.tlsMin = builder.tlsMin;
             this.type = builder.type;
         }
 
@@ -295,6 +307,13 @@ public class ListGatewayDomainResponseBody extends TeaModel {
         }
 
         /**
+         * @return http2
+         */
+        public String getHttp2() {
+            return this.http2;
+        }
+
+        /**
          * @return id
          */
         public Long getId() {
@@ -330,6 +349,20 @@ public class ListGatewayDomainResponseBody extends TeaModel {
         }
 
         /**
+         * @return tlsMax
+         */
+        public String getTlsMax() {
+            return this.tlsMax;
+        }
+
+        /**
+         * @return tlsMin
+         */
+        public String getTlsMin() {
+            return this.tlsMin;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
@@ -343,11 +376,14 @@ public class ListGatewayDomainResponseBody extends TeaModel {
             private Long gatewayId; 
             private String gmtCreate; 
             private String gmtModified; 
+            private String http2; 
             private Long id; 
             private Boolean mustHttps; 
             private String name; 
             private String protocol; 
             private Integer status; 
+            private String tlsMax; 
+            private String tlsMin; 
             private String type; 
 
             /**
@@ -399,6 +435,14 @@ public class ListGatewayDomainResponseBody extends TeaModel {
             }
 
             /**
+             * Http2.
+             */
+            public Builder http2(String http2) {
+                this.http2 = http2;
+                return this;
+            }
+
+            /**
              * Id.
              */
             public Builder id(Long id) {
@@ -435,6 +479,22 @@ public class ListGatewayDomainResponseBody extends TeaModel {
              */
             public Builder status(Integer status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * TlsMax.
+             */
+            public Builder tlsMax(String tlsMax) {
+                this.tlsMax = tlsMax;
+                return this;
+            }
+
+            /**
+             * TlsMin.
+             */
+            public Builder tlsMin(String tlsMin) {
+                this.tlsMin = tlsMin;
                 return this;
             }
 

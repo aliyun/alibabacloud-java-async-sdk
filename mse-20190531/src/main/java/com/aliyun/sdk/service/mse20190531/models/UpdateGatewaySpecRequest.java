@@ -22,6 +22,10 @@ public class UpdateGatewaySpecRequest extends Request {
     private String gatewayUniqueId;
 
     @Query
+    @NameInMap("MseSessionId")
+    private String mseSessionId;
+
+    @Query
     @NameInMap("Replica")
     @Validation(required = true)
     private Integer replica;
@@ -35,6 +39,7 @@ public class UpdateGatewaySpecRequest extends Request {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
         this.gatewayUniqueId = builder.gatewayUniqueId;
+        this.mseSessionId = builder.mseSessionId;
         this.replica = builder.replica;
         this.spec = builder.spec;
     }
@@ -67,6 +72,13 @@ public class UpdateGatewaySpecRequest extends Request {
     }
 
     /**
+     * @return mseSessionId
+     */
+    public String getMseSessionId() {
+        return this.mseSessionId;
+    }
+
+    /**
      * @return replica
      */
     public Integer getReplica() {
@@ -83,6 +95,7 @@ public class UpdateGatewaySpecRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateGatewaySpecRequest, Builder> {
         private String acceptLanguage; 
         private String gatewayUniqueId; 
+        private String mseSessionId; 
         private Integer replica; 
         private String spec; 
 
@@ -94,6 +107,7 @@ public class UpdateGatewaySpecRequest extends Request {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
             this.gatewayUniqueId = request.gatewayUniqueId;
+            this.mseSessionId = request.mseSessionId;
             this.replica = request.replica;
             this.spec = request.spec;
         } 
@@ -113,6 +127,15 @@ public class UpdateGatewaySpecRequest extends Request {
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
             this.gatewayUniqueId = gatewayUniqueId;
+            return this;
+        }
+
+        /**
+         * MseSessionId.
+         */
+        public Builder mseSessionId(String mseSessionId) {
+            this.putQueryParameter("MseSessionId", mseSessionId);
+            this.mseSessionId = mseSessionId;
             return this;
         }
 

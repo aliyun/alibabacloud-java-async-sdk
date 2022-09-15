@@ -25,8 +25,16 @@ public class AddServiceSourceRequest extends Request {
     private String gatewayUniqueId;
 
     @Query
+    @NameInMap("GroupList")
+    private java.util.List < String > groupList;
+
+    @Query
     @NameInMap("IngressOptionsRequest")
     private IngressOptionsRequest ingressOptionsRequest;
+
+    @Query
+    @NameInMap("MseSessionId")
+    private String mseSessionId;
 
     @Query
     @NameInMap("Name")
@@ -45,7 +53,9 @@ public class AddServiceSourceRequest extends Request {
         this.acceptLanguage = builder.acceptLanguage;
         this.address = builder.address;
         this.gatewayUniqueId = builder.gatewayUniqueId;
+        this.groupList = builder.groupList;
         this.ingressOptionsRequest = builder.ingressOptionsRequest;
+        this.mseSessionId = builder.mseSessionId;
         this.name = builder.name;
         this.source = builder.source;
         this.type = builder.type;
@@ -86,10 +96,24 @@ public class AddServiceSourceRequest extends Request {
     }
 
     /**
+     * @return groupList
+     */
+    public java.util.List < String > getGroupList() {
+        return this.groupList;
+    }
+
+    /**
      * @return ingressOptionsRequest
      */
     public IngressOptionsRequest getIngressOptionsRequest() {
         return this.ingressOptionsRequest;
+    }
+
+    /**
+     * @return mseSessionId
+     */
+    public String getMseSessionId() {
+        return this.mseSessionId;
     }
 
     /**
@@ -117,7 +141,9 @@ public class AddServiceSourceRequest extends Request {
         private String acceptLanguage; 
         private String address; 
         private String gatewayUniqueId; 
+        private java.util.List < String > groupList; 
         private IngressOptionsRequest ingressOptionsRequest; 
+        private String mseSessionId; 
         private String name; 
         private String source; 
         private String type; 
@@ -131,7 +157,9 @@ public class AddServiceSourceRequest extends Request {
             this.acceptLanguage = request.acceptLanguage;
             this.address = request.address;
             this.gatewayUniqueId = request.gatewayUniqueId;
+            this.groupList = request.groupList;
             this.ingressOptionsRequest = request.ingressOptionsRequest;
+            this.mseSessionId = request.mseSessionId;
             this.name = request.name;
             this.source = request.source;
             this.type = request.type;
@@ -165,12 +193,31 @@ public class AddServiceSourceRequest extends Request {
         }
 
         /**
+         * GroupList.
+         */
+        public Builder groupList(java.util.List < String > groupList) {
+            String groupListShrink = shrink(groupList, "GroupList", "json");
+            this.putQueryParameter("GroupList", groupListShrink);
+            this.groupList = groupList;
+            return this;
+        }
+
+        /**
          * IngressOptionsRequest.
          */
         public Builder ingressOptionsRequest(IngressOptionsRequest ingressOptionsRequest) {
             String ingressOptionsRequestShrink = shrink(ingressOptionsRequest, "IngressOptionsRequest", "json");
             this.putQueryParameter("IngressOptionsRequest", ingressOptionsRequestShrink);
             this.ingressOptionsRequest = ingressOptionsRequest;
+            return this;
+        }
+
+        /**
+         * MseSessionId.
+         */
+        public Builder mseSessionId(String mseSessionId) {
+            this.putQueryParameter("MseSessionId", mseSessionId);
+            this.mseSessionId = mseSessionId;
             return this;
         }
 

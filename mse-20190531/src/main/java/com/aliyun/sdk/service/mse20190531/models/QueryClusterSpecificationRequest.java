@@ -20,10 +20,15 @@ public class QueryClusterSpecificationRequest extends Request {
     @NameInMap("ConnectType")
     private String connectType;
 
+    @Query
+    @NameInMap("MseSessionId")
+    private String mseSessionId;
+
     private QueryClusterSpecificationRequest(Builder builder) {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
         this.connectType = builder.connectType;
+        this.mseSessionId = builder.mseSessionId;
     }
 
     public static Builder builder() {
@@ -53,9 +58,17 @@ public class QueryClusterSpecificationRequest extends Request {
         return this.connectType;
     }
 
+    /**
+     * @return mseSessionId
+     */
+    public String getMseSessionId() {
+        return this.mseSessionId;
+    }
+
     public static final class Builder extends Request.Builder<QueryClusterSpecificationRequest, Builder> {
         private String acceptLanguage; 
         private String connectType; 
+        private String mseSessionId; 
 
         private Builder() {
             super();
@@ -65,6 +78,7 @@ public class QueryClusterSpecificationRequest extends Request {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
             this.connectType = request.connectType;
+            this.mseSessionId = request.mseSessionId;
         } 
 
         /**
@@ -82,6 +96,15 @@ public class QueryClusterSpecificationRequest extends Request {
         public Builder connectType(String connectType) {
             this.putQueryParameter("ConnectType", connectType);
             this.connectType = connectType;
+            return this;
+        }
+
+        /**
+         * MseSessionId.
+         */
+        public Builder mseSessionId(String mseSessionId) {
+            this.putQueryParameter("MseSessionId", mseSessionId);
+            this.mseSessionId = mseSessionId;
             return this;
         }
 

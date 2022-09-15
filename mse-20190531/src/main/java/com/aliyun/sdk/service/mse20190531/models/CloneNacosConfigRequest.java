@@ -27,6 +27,10 @@ public class CloneNacosConfigRequest extends Request {
     private String instanceId;
 
     @Query
+    @NameInMap("MseSessionId")
+    private String mseSessionId;
+
+    @Query
     @NameInMap("OriginNamespaceId")
     private String originNamespaceId;
 
@@ -44,6 +48,7 @@ public class CloneNacosConfigRequest extends Request {
         this.acceptLanguage = builder.acceptLanguage;
         this.ids = builder.ids;
         this.instanceId = builder.instanceId;
+        this.mseSessionId = builder.mseSessionId;
         this.originNamespaceId = builder.originNamespaceId;
         this.policy = builder.policy;
         this.targetNamespaceId = builder.targetNamespaceId;
@@ -84,6 +89,13 @@ public class CloneNacosConfigRequest extends Request {
     }
 
     /**
+     * @return mseSessionId
+     */
+    public String getMseSessionId() {
+        return this.mseSessionId;
+    }
+
+    /**
      * @return originNamespaceId
      */
     public String getOriginNamespaceId() {
@@ -108,6 +120,7 @@ public class CloneNacosConfigRequest extends Request {
         private String acceptLanguage; 
         private String ids; 
         private String instanceId; 
+        private String mseSessionId; 
         private String originNamespaceId; 
         private String policy; 
         private String targetNamespaceId; 
@@ -121,6 +134,7 @@ public class CloneNacosConfigRequest extends Request {
             this.acceptLanguage = request.acceptLanguage;
             this.ids = request.ids;
             this.instanceId = request.instanceId;
+            this.mseSessionId = request.mseSessionId;
             this.originNamespaceId = request.originNamespaceId;
             this.policy = request.policy;
             this.targetNamespaceId = request.targetNamespaceId;
@@ -150,6 +164,15 @@ public class CloneNacosConfigRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * MseSessionId.
+         */
+        public Builder mseSessionId(String mseSessionId) {
+            this.putQueryParameter("MseSessionId", mseSessionId);
+            this.mseSessionId = mseSessionId;
             return this;
         }
 

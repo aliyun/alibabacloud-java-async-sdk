@@ -25,6 +25,10 @@ public class UpdateGatewayRouteWafStatusRequest extends Request {
     private String gatewayUniqueId;
 
     @Query
+    @NameInMap("MseSessionId")
+    private String mseSessionId;
+
+    @Query
     @NameInMap("RouteId")
     private Long routeId;
 
@@ -33,6 +37,7 @@ public class UpdateGatewayRouteWafStatusRequest extends Request {
         this.acceptLanguage = builder.acceptLanguage;
         this.enableWaf = builder.enableWaf;
         this.gatewayUniqueId = builder.gatewayUniqueId;
+        this.mseSessionId = builder.mseSessionId;
         this.routeId = builder.routeId;
     }
 
@@ -71,6 +76,13 @@ public class UpdateGatewayRouteWafStatusRequest extends Request {
     }
 
     /**
+     * @return mseSessionId
+     */
+    public String getMseSessionId() {
+        return this.mseSessionId;
+    }
+
+    /**
      * @return routeId
      */
     public Long getRouteId() {
@@ -81,6 +93,7 @@ public class UpdateGatewayRouteWafStatusRequest extends Request {
         private String acceptLanguage; 
         private Boolean enableWaf; 
         private String gatewayUniqueId; 
+        private String mseSessionId; 
         private Long routeId; 
 
         private Builder() {
@@ -92,6 +105,7 @@ public class UpdateGatewayRouteWafStatusRequest extends Request {
             this.acceptLanguage = request.acceptLanguage;
             this.enableWaf = request.enableWaf;
             this.gatewayUniqueId = request.gatewayUniqueId;
+            this.mseSessionId = request.mseSessionId;
             this.routeId = request.routeId;
         } 
 
@@ -119,6 +133,15 @@ public class UpdateGatewayRouteWafStatusRequest extends Request {
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
             this.gatewayUniqueId = gatewayUniqueId;
+            return this;
+        }
+
+        /**
+         * MseSessionId.
+         */
+        public Builder mseSessionId(String mseSessionId) {
+            this.putQueryParameter("MseSessionId", mseSessionId);
+            this.mseSessionId = mseSessionId;
             return this;
         }
 

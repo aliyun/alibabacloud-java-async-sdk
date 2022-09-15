@@ -152,6 +152,9 @@ public class ListGatewaySlbResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
+        @NameInMap("EditEnable")
+        private Boolean editEnable;
+
         @NameInMap("GatewayId")
         private String gatewayId;
 
@@ -164,8 +167,20 @@ public class ListGatewaySlbResponseBody extends TeaModel {
         @NameInMap("GmtCreate")
         private String gmtCreate;
 
+        @NameInMap("HttpPort")
+        private Integer httpPort;
+
+        @NameInMap("HttpsPort")
+        private Integer httpsPort;
+
+        @NameInMap("HttpsVServerGroupId")
+        private String httpsVServerGroupId;
+
         @NameInMap("Id")
         private String id;
+
+        @NameInMap("ServiceWeight")
+        private Integer serviceWeight;
 
         @NameInMap("SlbId")
         private String slbId;
@@ -182,17 +197,26 @@ public class ListGatewaySlbResponseBody extends TeaModel {
         @NameInMap("Type")
         private String type;
 
+        @NameInMap("VServerGroupId")
+        private String vServerGroupId;
+
         private Data(Builder builder) {
+            this.editEnable = builder.editEnable;
             this.gatewayId = builder.gatewayId;
             this.gatewaySlbMode = builder.gatewaySlbMode;
             this.gatewaySlbStatus = builder.gatewaySlbStatus;
             this.gmtCreate = builder.gmtCreate;
+            this.httpPort = builder.httpPort;
+            this.httpsPort = builder.httpsPort;
+            this.httpsVServerGroupId = builder.httpsVServerGroupId;
             this.id = builder.id;
+            this.serviceWeight = builder.serviceWeight;
             this.slbId = builder.slbId;
             this.slbIp = builder.slbIp;
             this.slbPort = builder.slbPort;
             this.statusDesc = builder.statusDesc;
             this.type = builder.type;
+            this.vServerGroupId = builder.vServerGroupId;
         }
 
         public static Builder builder() {
@@ -201,6 +225,13 @@ public class ListGatewaySlbResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return editEnable
+         */
+        public Boolean getEditEnable() {
+            return this.editEnable;
         }
 
         /**
@@ -232,10 +263,38 @@ public class ListGatewaySlbResponseBody extends TeaModel {
         }
 
         /**
+         * @return httpPort
+         */
+        public Integer getHttpPort() {
+            return this.httpPort;
+        }
+
+        /**
+         * @return httpsPort
+         */
+        public Integer getHttpsPort() {
+            return this.httpsPort;
+        }
+
+        /**
+         * @return httpsVServerGroupId
+         */
+        public String getHttpsVServerGroupId() {
+            return this.httpsVServerGroupId;
+        }
+
+        /**
          * @return id
          */
         public String getId() {
             return this.id;
+        }
+
+        /**
+         * @return serviceWeight
+         */
+        public Integer getServiceWeight() {
+            return this.serviceWeight;
         }
 
         /**
@@ -273,17 +332,38 @@ public class ListGatewaySlbResponseBody extends TeaModel {
             return this.type;
         }
 
+        /**
+         * @return vServerGroupId
+         */
+        public String getVServerGroupId() {
+            return this.vServerGroupId;
+        }
+
         public static final class Builder {
+            private Boolean editEnable; 
             private String gatewayId; 
             private String gatewaySlbMode; 
             private String gatewaySlbStatus; 
             private String gmtCreate; 
+            private Integer httpPort; 
+            private Integer httpsPort; 
+            private String httpsVServerGroupId; 
             private String id; 
+            private Integer serviceWeight; 
             private String slbId; 
             private String slbIp; 
             private String slbPort; 
             private String statusDesc; 
             private String type; 
+            private String vServerGroupId; 
+
+            /**
+             * EditEnable.
+             */
+            public Builder editEnable(Boolean editEnable) {
+                this.editEnable = editEnable;
+                return this;
+            }
 
             /**
              * GatewayId.
@@ -318,10 +398,42 @@ public class ListGatewaySlbResponseBody extends TeaModel {
             }
 
             /**
+             * HttpPort.
+             */
+            public Builder httpPort(Integer httpPort) {
+                this.httpPort = httpPort;
+                return this;
+            }
+
+            /**
+             * HttpsPort.
+             */
+            public Builder httpsPort(Integer httpsPort) {
+                this.httpsPort = httpsPort;
+                return this;
+            }
+
+            /**
+             * HttpsVServerGroupId.
+             */
+            public Builder httpsVServerGroupId(String httpsVServerGroupId) {
+                this.httpsVServerGroupId = httpsVServerGroupId;
+                return this;
+            }
+
+            /**
              * Id.
              */
             public Builder id(String id) {
                 this.id = id;
+                return this;
+            }
+
+            /**
+             * ServiceWeight.
+             */
+            public Builder serviceWeight(Integer serviceWeight) {
+                this.serviceWeight = serviceWeight;
                 return this;
             }
 
@@ -362,6 +474,14 @@ public class ListGatewaySlbResponseBody extends TeaModel {
              */
             public Builder type(String type) {
                 this.type = type;
+                return this;
+            }
+
+            /**
+             * VServerGroupId.
+             */
+            public Builder vServerGroupId(String vServerGroupId) {
+                this.vServerGroupId = vServerGroupId;
                 return this;
             }
 

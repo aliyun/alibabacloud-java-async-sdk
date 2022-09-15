@@ -45,6 +45,14 @@ public class CreateClusterRequest extends Request {
     private Integer instanceCount;
 
     @Query
+    @NameInMap("InstanceName")
+    private String instanceName;
+
+    @Query
+    @NameInMap("MseSessionId")
+    private String mseSessionId;
+
+    @Query
     @NameInMap("MseVersion")
     private String mseVersion;
 
@@ -74,6 +82,10 @@ public class CreateClusterRequest extends Request {
     private String requestPars;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("VSwitchId")
     private String vSwitchId;
 
@@ -90,6 +102,8 @@ public class CreateClusterRequest extends Request {
         this.connectionType = builder.connectionType;
         this.diskType = builder.diskType;
         this.instanceCount = builder.instanceCount;
+        this.instanceName = builder.instanceName;
+        this.mseSessionId = builder.mseSessionId;
         this.mseVersion = builder.mseVersion;
         this.netType = builder.netType;
         this.privateSlbSpecification = builder.privateSlbSpecification;
@@ -97,6 +111,7 @@ public class CreateClusterRequest extends Request {
         this.pubSlbSpecification = builder.pubSlbSpecification;
         this.region = builder.region;
         this.requestPars = builder.requestPars;
+        this.resourceGroupId = builder.resourceGroupId;
         this.vSwitchId = builder.vSwitchId;
         this.vpcId = builder.vpcId;
     }
@@ -164,6 +179,20 @@ public class CreateClusterRequest extends Request {
     }
 
     /**
+     * @return instanceName
+     */
+    public String getInstanceName() {
+        return this.instanceName;
+    }
+
+    /**
+     * @return mseSessionId
+     */
+    public String getMseSessionId() {
+        return this.mseSessionId;
+    }
+
+    /**
      * @return mseVersion
      */
     public String getMseVersion() {
@@ -213,6 +242,13 @@ public class CreateClusterRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return vSwitchId
      */
     public String getVSwitchId() {
@@ -234,6 +270,8 @@ public class CreateClusterRequest extends Request {
         private String connectionType; 
         private String diskType; 
         private Integer instanceCount; 
+        private String instanceName; 
+        private String mseSessionId; 
         private String mseVersion; 
         private String netType; 
         private String privateSlbSpecification; 
@@ -241,6 +279,7 @@ public class CreateClusterRequest extends Request {
         private String pubSlbSpecification; 
         private String region; 
         private String requestPars; 
+        private String resourceGroupId; 
         private String vSwitchId; 
         private String vpcId; 
 
@@ -257,6 +296,8 @@ public class CreateClusterRequest extends Request {
             this.connectionType = request.connectionType;
             this.diskType = request.diskType;
             this.instanceCount = request.instanceCount;
+            this.instanceName = request.instanceName;
+            this.mseSessionId = request.mseSessionId;
             this.mseVersion = request.mseVersion;
             this.netType = request.netType;
             this.privateSlbSpecification = request.privateSlbSpecification;
@@ -264,6 +305,7 @@ public class CreateClusterRequest extends Request {
             this.pubSlbSpecification = request.pubSlbSpecification;
             this.region = request.region;
             this.requestPars = request.requestPars;
+            this.resourceGroupId = request.resourceGroupId;
             this.vSwitchId = request.vSwitchId;
             this.vpcId = request.vpcId;
         } 
@@ -332,6 +374,24 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
+         * 实例名称
+         */
+        public Builder instanceName(String instanceName) {
+            this.putQueryParameter("InstanceName", instanceName);
+            this.instanceName = instanceName;
+            return this;
+        }
+
+        /**
+         * MseSessionId.
+         */
+        public Builder mseSessionId(String mseSessionId) {
+            this.putQueryParameter("MseSessionId", mseSessionId);
+            this.mseSessionId = mseSessionId;
+            return this;
+        }
+
+        /**
          * 用于区分基础/专业版本
          */
         public Builder mseVersion(String mseVersion) {
@@ -391,6 +451,15 @@ public class CreateClusterRequest extends Request {
         public Builder requestPars(String requestPars) {
             this.putQueryParameter("RequestPars", requestPars);
             this.requestPars = requestPars;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

@@ -188,6 +188,9 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
         @NameInMap("GmtModified")
         private String gmtModified;
 
+        @NameInMap("Http2")
+        private String http2;
+
         @NameInMap("Id")
         private Long id;
 
@@ -206,6 +209,12 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
         @NameInMap("Sans")
         private String sans;
 
+        @NameInMap("TlsMax")
+        private String tlsMax;
+
+        @NameInMap("TlsMin")
+        private String tlsMin;
+
         private Data(Builder builder) {
             this.afterDate = builder.afterDate;
             this.algorithm = builder.algorithm;
@@ -219,12 +228,15 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             this.gmtBefore = builder.gmtBefore;
             this.gmtCreate = builder.gmtCreate;
             this.gmtModified = builder.gmtModified;
+            this.http2 = builder.http2;
             this.id = builder.id;
             this.issuer = builder.issuer;
             this.mustHttps = builder.mustHttps;
             this.name = builder.name;
             this.protocol = builder.protocol;
             this.sans = builder.sans;
+            this.tlsMax = builder.tlsMax;
+            this.tlsMin = builder.tlsMin;
         }
 
         public static Builder builder() {
@@ -320,6 +332,13 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return http2
+         */
+        public String getHttp2() {
+            return this.http2;
+        }
+
+        /**
          * @return id
          */
         public Long getId() {
@@ -361,6 +380,20 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             return this.sans;
         }
 
+        /**
+         * @return tlsMax
+         */
+        public String getTlsMax() {
+            return this.tlsMax;
+        }
+
+        /**
+         * @return tlsMin
+         */
+        public String getTlsMin() {
+            return this.tlsMin;
+        }
+
         public static final class Builder {
             private Long afterDate; 
             private String algorithm; 
@@ -374,12 +407,15 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             private String gmtBefore; 
             private String gmtCreate; 
             private String gmtModified; 
+            private String http2; 
             private Long id; 
             private String issuer; 
             private Boolean mustHttps; 
             private String name; 
             private String protocol; 
             private String sans; 
+            private String tlsMax; 
+            private String tlsMin; 
 
             /**
              * AfterDate.
@@ -478,6 +514,14 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             }
 
             /**
+             * Http2.
+             */
+            public Builder http2(String http2) {
+                this.http2 = http2;
+                return this;
+            }
+
+            /**
              * Id.
              */
             public Builder id(Long id) {
@@ -522,6 +566,22 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
              */
             public Builder sans(String sans) {
                 this.sans = sans;
+                return this;
+            }
+
+            /**
+             * TlsMax.
+             */
+            public Builder tlsMax(String tlsMax) {
+                this.tlsMax = tlsMax;
+                return this;
+            }
+
+            /**
+             * TlsMin.
+             */
+            public Builder tlsMin(String tlsMin) {
+                this.tlsMin = tlsMin;
                 return this;
             }
 

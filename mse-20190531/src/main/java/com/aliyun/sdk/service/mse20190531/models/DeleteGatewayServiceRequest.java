@@ -25,6 +25,10 @@ public class DeleteGatewayServiceRequest extends Request {
     private String gatewayUniqueId;
 
     @Query
+    @NameInMap("MseSessionId")
+    private String mseSessionId;
+
+    @Query
     @NameInMap("ServiceId")
     private String serviceId;
 
@@ -33,6 +37,7 @@ public class DeleteGatewayServiceRequest extends Request {
         this.acceptLanguage = builder.acceptLanguage;
         this.gatewayId = builder.gatewayId;
         this.gatewayUniqueId = builder.gatewayUniqueId;
+        this.mseSessionId = builder.mseSessionId;
         this.serviceId = builder.serviceId;
     }
 
@@ -71,6 +76,13 @@ public class DeleteGatewayServiceRequest extends Request {
     }
 
     /**
+     * @return mseSessionId
+     */
+    public String getMseSessionId() {
+        return this.mseSessionId;
+    }
+
+    /**
      * @return serviceId
      */
     public String getServiceId() {
@@ -81,6 +93,7 @@ public class DeleteGatewayServiceRequest extends Request {
         private String acceptLanguage; 
         private Long gatewayId; 
         private String gatewayUniqueId; 
+        private String mseSessionId; 
         private String serviceId; 
 
         private Builder() {
@@ -92,6 +105,7 @@ public class DeleteGatewayServiceRequest extends Request {
             this.acceptLanguage = request.acceptLanguage;
             this.gatewayId = request.gatewayId;
             this.gatewayUniqueId = request.gatewayUniqueId;
+            this.mseSessionId = request.mseSessionId;
             this.serviceId = request.serviceId;
         } 
 
@@ -119,6 +133,15 @@ public class DeleteGatewayServiceRequest extends Request {
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
             this.gatewayUniqueId = gatewayUniqueId;
+            return this;
+        }
+
+        /**
+         * MseSessionId.
+         */
+        public Builder mseSessionId(String mseSessionId) {
+            this.putQueryParameter("MseSessionId", mseSessionId);
+            this.mseSessionId = mseSessionId;
             return this;
         }
 

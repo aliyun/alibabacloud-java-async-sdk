@@ -30,6 +30,14 @@ public class CreateMseServiceApplicationRequest extends Request {
     private String language;
 
     @Query
+    @NameInMap("MseSessionId")
+    private String mseSessionId;
+
+    @Query
+    @NameInMap("MseVersion")
+    private String mseVersion;
+
+    @Query
     @NameInMap("Region")
     @Validation(required = true)
     private String region;
@@ -52,6 +60,8 @@ public class CreateMseServiceApplicationRequest extends Request {
         this.appName = builder.appName;
         this.extraInfo = builder.extraInfo;
         this.language = builder.language;
+        this.mseSessionId = builder.mseSessionId;
+        this.mseVersion = builder.mseVersion;
         this.region = builder.region;
         this.sentinelEnable = builder.sentinelEnable;
         this.source = builder.source;
@@ -100,6 +110,20 @@ public class CreateMseServiceApplicationRequest extends Request {
     }
 
     /**
+     * @return mseSessionId
+     */
+    public String getMseSessionId() {
+        return this.mseSessionId;
+    }
+
+    /**
+     * @return mseVersion
+     */
+    public String getMseVersion() {
+        return this.mseVersion;
+    }
+
+    /**
      * @return region
      */
     public String getRegion() {
@@ -132,6 +156,8 @@ public class CreateMseServiceApplicationRequest extends Request {
         private String appName; 
         private String extraInfo; 
         private String language; 
+        private String mseSessionId; 
+        private String mseVersion; 
         private String region; 
         private String sentinelEnable; 
         private String source; 
@@ -147,6 +173,8 @@ public class CreateMseServiceApplicationRequest extends Request {
             this.appName = request.appName;
             this.extraInfo = request.extraInfo;
             this.language = request.language;
+            this.mseSessionId = request.mseSessionId;
+            this.mseVersion = request.mseVersion;
             this.region = request.region;
             this.sentinelEnable = request.sentinelEnable;
             this.source = request.source;
@@ -186,6 +214,24 @@ public class CreateMseServiceApplicationRequest extends Request {
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
             this.language = language;
+            return this;
+        }
+
+        /**
+         * MseSessionId.
+         */
+        public Builder mseSessionId(String mseSessionId) {
+            this.putQueryParameter("MseSessionId", mseSessionId);
+            this.mseSessionId = mseSessionId;
+            return this;
+        }
+
+        /**
+         * MseVersion.
+         */
+        public Builder mseVersion(String mseVersion) {
+            this.putQueryParameter("MseVersion", mseVersion);
+            this.mseVersion = mseVersion;
             return this;
         }
 

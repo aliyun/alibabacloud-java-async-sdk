@@ -25,6 +25,10 @@ public class QueryGovernanceKubernetesClusterRequest extends Request {
     private String clusterName;
 
     @Query
+    @NameInMap("MseSessionId")
+    private String mseSessionId;
+
+    @Query
     @NameInMap("PageNumber")
     @Validation(required = true)
     private Integer pageNumber;
@@ -39,6 +43,7 @@ public class QueryGovernanceKubernetesClusterRequest extends Request {
         this.acceptLanguage = builder.acceptLanguage;
         this.clusterId = builder.clusterId;
         this.clusterName = builder.clusterName;
+        this.mseSessionId = builder.mseSessionId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
     }
@@ -78,6 +83,13 @@ public class QueryGovernanceKubernetesClusterRequest extends Request {
     }
 
     /**
+     * @return mseSessionId
+     */
+    public String getMseSessionId() {
+        return this.mseSessionId;
+    }
+
+    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -95,6 +107,7 @@ public class QueryGovernanceKubernetesClusterRequest extends Request {
         private String acceptLanguage; 
         private String clusterId; 
         private String clusterName; 
+        private String mseSessionId; 
         private Integer pageNumber; 
         private Integer pageSize; 
 
@@ -107,6 +120,7 @@ public class QueryGovernanceKubernetesClusterRequest extends Request {
             this.acceptLanguage = request.acceptLanguage;
             this.clusterId = request.clusterId;
             this.clusterName = request.clusterName;
+            this.mseSessionId = request.mseSessionId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
         } 
@@ -135,6 +149,15 @@ public class QueryGovernanceKubernetesClusterRequest extends Request {
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("ClusterName", clusterName);
             this.clusterName = clusterName;
+            return this;
+        }
+
+        /**
+         * MseSessionId.
+         */
+        public Builder mseSessionId(String mseSessionId) {
+            this.putQueryParameter("MseSessionId", mseSessionId);
+            this.mseSessionId = mseSessionId;
             return this;
         }
 

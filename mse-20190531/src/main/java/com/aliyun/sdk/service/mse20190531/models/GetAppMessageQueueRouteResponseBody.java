@@ -158,6 +158,9 @@ public class GetAppMessageQueueRouteResponseBody extends TeaModel {
         @NameInMap("Enable")
         private Boolean enable;
 
+        @NameInMap("FilterSide")
+        private String filterSide;
+
         @NameInMap("Region")
         private String region;
 
@@ -167,6 +170,7 @@ public class GetAppMessageQueueRouteResponseBody extends TeaModel {
         private Data(Builder builder) {
             this.appId = builder.appId;
             this.enable = builder.enable;
+            this.filterSide = builder.filterSide;
             this.region = builder.region;
             this.tags = builder.tags;
         }
@@ -194,6 +198,13 @@ public class GetAppMessageQueueRouteResponseBody extends TeaModel {
         }
 
         /**
+         * @return filterSide
+         */
+        public String getFilterSide() {
+            return this.filterSide;
+        }
+
+        /**
          * @return region
          */
         public String getRegion() {
@@ -210,6 +221,7 @@ public class GetAppMessageQueueRouteResponseBody extends TeaModel {
         public static final class Builder {
             private String appId; 
             private Boolean enable; 
+            private String filterSide; 
             private String region; 
             private java.util.List < String > tags; 
 
@@ -226,6 +238,14 @@ public class GetAppMessageQueueRouteResponseBody extends TeaModel {
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
+                return this;
+            }
+
+            /**
+             * FilterSide.
+             */
+            public Builder filterSide(String filterSide) {
+                this.filterSide = filterSide;
                 return this;
             }
 

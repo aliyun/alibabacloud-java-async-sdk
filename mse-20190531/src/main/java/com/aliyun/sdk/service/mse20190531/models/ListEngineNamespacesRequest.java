@@ -20,10 +20,15 @@ public class ListEngineNamespacesRequest extends Request {
     @NameInMap("InstanceId")
     private String instanceId;
 
+    @Query
+    @NameInMap("MseSessionId")
+    private String mseSessionId;
+
     private ListEngineNamespacesRequest(Builder builder) {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
         this.instanceId = builder.instanceId;
+        this.mseSessionId = builder.mseSessionId;
     }
 
     public static Builder builder() {
@@ -53,9 +58,17 @@ public class ListEngineNamespacesRequest extends Request {
         return this.instanceId;
     }
 
+    /**
+     * @return mseSessionId
+     */
+    public String getMseSessionId() {
+        return this.mseSessionId;
+    }
+
     public static final class Builder extends Request.Builder<ListEngineNamespacesRequest, Builder> {
         private String acceptLanguage; 
         private String instanceId; 
+        private String mseSessionId; 
 
         private Builder() {
             super();
@@ -65,6 +78,7 @@ public class ListEngineNamespacesRequest extends Request {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
             this.instanceId = request.instanceId;
+            this.mseSessionId = request.mseSessionId;
         } 
 
         /**
@@ -82,6 +96,15 @@ public class ListEngineNamespacesRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * MseSessionId.
+         */
+        public Builder mseSessionId(String mseSessionId) {
+            this.putQueryParameter("MseSessionId", mseSessionId);
+            this.mseSessionId = mseSessionId;
             return this;
         }
 

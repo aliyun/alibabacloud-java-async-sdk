@@ -253,6 +253,207 @@ public class ListGatewayRouteResponseBody extends TeaModel {
         } 
 
     }
+    public static class FallbackServices extends TeaModel {
+        @NameInMap("AgreementType")
+        private String agreementType;
+
+        @NameInMap("GroupName")
+        private String groupName;
+
+        @NameInMap("Name")
+        private String name;
+
+        @NameInMap("Namespace")
+        private String namespace;
+
+        @NameInMap("Percent")
+        private Integer percent;
+
+        @NameInMap("ServiceId")
+        private Long serviceId;
+
+        @NameInMap("ServiceName")
+        private String serviceName;
+
+        @NameInMap("SourceType")
+        private String sourceType;
+
+        @NameInMap("Version")
+        private String version;
+
+        private FallbackServices(Builder builder) {
+            this.agreementType = builder.agreementType;
+            this.groupName = builder.groupName;
+            this.name = builder.name;
+            this.namespace = builder.namespace;
+            this.percent = builder.percent;
+            this.serviceId = builder.serviceId;
+            this.serviceName = builder.serviceName;
+            this.sourceType = builder.sourceType;
+            this.version = builder.version;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static FallbackServices create() {
+            return builder().build();
+        }
+
+        /**
+         * @return agreementType
+         */
+        public String getAgreementType() {
+            return this.agreementType;
+        }
+
+        /**
+         * @return groupName
+         */
+        public String getGroupName() {
+            return this.groupName;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return namespace
+         */
+        public String getNamespace() {
+            return this.namespace;
+        }
+
+        /**
+         * @return percent
+         */
+        public Integer getPercent() {
+            return this.percent;
+        }
+
+        /**
+         * @return serviceId
+         */
+        public Long getServiceId() {
+            return this.serviceId;
+        }
+
+        /**
+         * @return serviceName
+         */
+        public String getServiceName() {
+            return this.serviceName;
+        }
+
+        /**
+         * @return sourceType
+         */
+        public String getSourceType() {
+            return this.sourceType;
+        }
+
+        /**
+         * @return version
+         */
+        public String getVersion() {
+            return this.version;
+        }
+
+        public static final class Builder {
+            private String agreementType; 
+            private String groupName; 
+            private String name; 
+            private String namespace; 
+            private Integer percent; 
+            private Long serviceId; 
+            private String serviceName; 
+            private String sourceType; 
+            private String version; 
+
+            /**
+             * AgreementType.
+             */
+            public Builder agreementType(String agreementType) {
+                this.agreementType = agreementType;
+                return this;
+            }
+
+            /**
+             * GroupName.
+             */
+            public Builder groupName(String groupName) {
+                this.groupName = groupName;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * Namespace.
+             */
+            public Builder namespace(String namespace) {
+                this.namespace = namespace;
+                return this;
+            }
+
+            /**
+             * Percent.
+             */
+            public Builder percent(Integer percent) {
+                this.percent = percent;
+                return this;
+            }
+
+            /**
+             * ServiceId.
+             */
+            public Builder serviceId(Long serviceId) {
+                this.serviceId = serviceId;
+                return this;
+            }
+
+            /**
+             * ServiceName.
+             */
+            public Builder serviceName(String serviceName) {
+                this.serviceName = serviceName;
+                return this;
+            }
+
+            /**
+             * SourceType.
+             */
+            public Builder sourceType(String sourceType) {
+                this.sourceType = sourceType;
+                return this;
+            }
+
+            /**
+             * Version.
+             */
+            public Builder version(String version) {
+                this.version = version;
+                return this;
+            }
+
+            public FallbackServices build() {
+                return new FallbackServices(this);
+            } 
+
+        } 
+
+    }
     public static class Redirect extends TeaModel {
         @NameInMap("Code")
         private Integer code;
@@ -678,9 +879,318 @@ public class ListGatewayRouteResponseBody extends TeaModel {
         } 
 
     }
+    public static class ParamMapsList extends TeaModel {
+        @NameInMap("ExtractKey")
+        private String extractKey;
+
+        @NameInMap("ExtractKeySpec")
+        private String extractKeySpec;
+
+        @NameInMap("MappingType")
+        private String mappingType;
+
+        private ParamMapsList(Builder builder) {
+            this.extractKey = builder.extractKey;
+            this.extractKeySpec = builder.extractKeySpec;
+            this.mappingType = builder.mappingType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ParamMapsList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return extractKey
+         */
+        public String getExtractKey() {
+            return this.extractKey;
+        }
+
+        /**
+         * @return extractKeySpec
+         */
+        public String getExtractKeySpec() {
+            return this.extractKeySpec;
+        }
+
+        /**
+         * @return mappingType
+         */
+        public String getMappingType() {
+            return this.mappingType;
+        }
+
+        public static final class Builder {
+            private String extractKey; 
+            private String extractKeySpec; 
+            private String mappingType; 
+
+            /**
+             * ExtractKey.
+             */
+            public Builder extractKey(String extractKey) {
+                this.extractKey = extractKey;
+                return this;
+            }
+
+            /**
+             * ExtractKeySpec.
+             */
+            public Builder extractKeySpec(String extractKeySpec) {
+                this.extractKeySpec = extractKeySpec;
+                return this;
+            }
+
+            /**
+             * MappingType.
+             */
+            public Builder mappingType(String mappingType) {
+                this.mappingType = mappingType;
+                return this;
+            }
+
+            public ParamMapsList build() {
+                return new ParamMapsList(this);
+            } 
+
+        } 
+
+    }
+    public static class MothedMapList extends TeaModel {
+        @NameInMap("DubboMothedName")
+        private String dubboMothedName;
+
+        @NameInMap("HttpMothed")
+        private String httpMothed;
+
+        @NameInMap("Mothedpath")
+        private String mothedpath;
+
+        @NameInMap("ParamMapsList")
+        private java.util.List < ParamMapsList> paramMapsList;
+
+        @NameInMap("PassThroughAllHeaders")
+        private String passThroughAllHeaders;
+
+        @NameInMap("PassThroughList")
+        private java.util.List < String > passThroughList;
+
+        private MothedMapList(Builder builder) {
+            this.dubboMothedName = builder.dubboMothedName;
+            this.httpMothed = builder.httpMothed;
+            this.mothedpath = builder.mothedpath;
+            this.paramMapsList = builder.paramMapsList;
+            this.passThroughAllHeaders = builder.passThroughAllHeaders;
+            this.passThroughList = builder.passThroughList;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static MothedMapList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return dubboMothedName
+         */
+        public String getDubboMothedName() {
+            return this.dubboMothedName;
+        }
+
+        /**
+         * @return httpMothed
+         */
+        public String getHttpMothed() {
+            return this.httpMothed;
+        }
+
+        /**
+         * @return mothedpath
+         */
+        public String getMothedpath() {
+            return this.mothedpath;
+        }
+
+        /**
+         * @return paramMapsList
+         */
+        public java.util.List < ParamMapsList> getParamMapsList() {
+            return this.paramMapsList;
+        }
+
+        /**
+         * @return passThroughAllHeaders
+         */
+        public String getPassThroughAllHeaders() {
+            return this.passThroughAllHeaders;
+        }
+
+        /**
+         * @return passThroughList
+         */
+        public java.util.List < String > getPassThroughList() {
+            return this.passThroughList;
+        }
+
+        public static final class Builder {
+            private String dubboMothedName; 
+            private String httpMothed; 
+            private String mothedpath; 
+            private java.util.List < ParamMapsList> paramMapsList; 
+            private String passThroughAllHeaders; 
+            private java.util.List < String > passThroughList; 
+
+            /**
+             * DubboMothedName.
+             */
+            public Builder dubboMothedName(String dubboMothedName) {
+                this.dubboMothedName = dubboMothedName;
+                return this;
+            }
+
+            /**
+             * HttpMothed.
+             */
+            public Builder httpMothed(String httpMothed) {
+                this.httpMothed = httpMothed;
+                return this;
+            }
+
+            /**
+             * Mothedpath.
+             */
+            public Builder mothedpath(String mothedpath) {
+                this.mothedpath = mothedpath;
+                return this;
+            }
+
+            /**
+             * ParamMapsList.
+             */
+            public Builder paramMapsList(java.util.List < ParamMapsList> paramMapsList) {
+                this.paramMapsList = paramMapsList;
+                return this;
+            }
+
+            /**
+             * PassThroughAllHeaders.
+             */
+            public Builder passThroughAllHeaders(String passThroughAllHeaders) {
+                this.passThroughAllHeaders = passThroughAllHeaders;
+                return this;
+            }
+
+            /**
+             * PassThroughList.
+             */
+            public Builder passThroughList(java.util.List < String > passThroughList) {
+                this.passThroughList = passThroughList;
+                return this;
+            }
+
+            public MothedMapList build() {
+                return new MothedMapList(this);
+            } 
+
+        } 
+
+    }
+    public static class HttpDubboTranscoder extends TeaModel {
+        @NameInMap("DubboServiceName")
+        private String dubboServiceName;
+
+        @NameInMap("DubboServiceVersion")
+        private String dubboServiceVersion;
+
+        @NameInMap("MothedMapList")
+        private java.util.List < MothedMapList> mothedMapList;
+
+        private HttpDubboTranscoder(Builder builder) {
+            this.dubboServiceName = builder.dubboServiceName;
+            this.dubboServiceVersion = builder.dubboServiceVersion;
+            this.mothedMapList = builder.mothedMapList;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static HttpDubboTranscoder create() {
+            return builder().build();
+        }
+
+        /**
+         * @return dubboServiceName
+         */
+        public String getDubboServiceName() {
+            return this.dubboServiceName;
+        }
+
+        /**
+         * @return dubboServiceVersion
+         */
+        public String getDubboServiceVersion() {
+            return this.dubboServiceVersion;
+        }
+
+        /**
+         * @return mothedMapList
+         */
+        public java.util.List < MothedMapList> getMothedMapList() {
+            return this.mothedMapList;
+        }
+
+        public static final class Builder {
+            private String dubboServiceName; 
+            private String dubboServiceVersion; 
+            private java.util.List < MothedMapList> mothedMapList; 
+
+            /**
+             * DubboServiceName.
+             */
+            public Builder dubboServiceName(String dubboServiceName) {
+                this.dubboServiceName = dubboServiceName;
+                return this;
+            }
+
+            /**
+             * DubboServiceVersion.
+             */
+            public Builder dubboServiceVersion(String dubboServiceVersion) {
+                this.dubboServiceVersion = dubboServiceVersion;
+                return this;
+            }
+
+            /**
+             * MothedMapList.
+             */
+            public Builder mothedMapList(java.util.List < MothedMapList> mothedMapList) {
+                this.mothedMapList = mothedMapList;
+                return this;
+            }
+
+            public HttpDubboTranscoder build() {
+                return new HttpDubboTranscoder(this);
+            } 
+
+        } 
+
+    }
     public static class RouteServices extends TeaModel {
+        @NameInMap("AgreementType")
+        private String agreementType;
+
         @NameInMap("GroupName")
         private String groupName;
+
+        @NameInMap("HttpDubboTranscoder")
+        private HttpDubboTranscoder httpDubboTranscoder;
 
         @NameInMap("Name")
         private String name;
@@ -704,7 +1214,9 @@ public class ListGatewayRouteResponseBody extends TeaModel {
         private String version;
 
         private RouteServices(Builder builder) {
+            this.agreementType = builder.agreementType;
             this.groupName = builder.groupName;
+            this.httpDubboTranscoder = builder.httpDubboTranscoder;
             this.name = builder.name;
             this.namespace = builder.namespace;
             this.percent = builder.percent;
@@ -723,10 +1235,24 @@ public class ListGatewayRouteResponseBody extends TeaModel {
         }
 
         /**
+         * @return agreementType
+         */
+        public String getAgreementType() {
+            return this.agreementType;
+        }
+
+        /**
          * @return groupName
          */
         public String getGroupName() {
             return this.groupName;
+        }
+
+        /**
+         * @return httpDubboTranscoder
+         */
+        public HttpDubboTranscoder getHttpDubboTranscoder() {
+            return this.httpDubboTranscoder;
         }
 
         /**
@@ -779,7 +1305,9 @@ public class ListGatewayRouteResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String agreementType; 
             private String groupName; 
+            private HttpDubboTranscoder httpDubboTranscoder; 
             private String name; 
             private String namespace; 
             private Integer percent; 
@@ -789,10 +1317,26 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             private String version; 
 
             /**
+             * AgreementType.
+             */
+            public Builder agreementType(String agreementType) {
+                this.agreementType = agreementType;
+                return this;
+            }
+
+            /**
              * GroupName.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
+                return this;
+            }
+
+            /**
+             * HttpDubboTranscoder.
+             */
+            public Builder httpDubboTranscoder(HttpDubboTranscoder httpDubboTranscoder) {
+                this.httpDubboTranscoder = httpDubboTranscoder;
                 return this;
             }
 
@@ -890,6 +1434,12 @@ public class ListGatewayRouteResponseBody extends TeaModel {
         @NameInMap("EnableWaf")
         private String enableWaf;
 
+        @NameInMap("Fallback")
+        private Boolean fallback;
+
+        @NameInMap("FallbackServices")
+        private java.util.List < FallbackServices> fallbackServices;
+
         @NameInMap("GatewayId")
         private Long gatewayId;
 
@@ -943,6 +1493,8 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             this.domainName = builder.domainName;
             this.domainNameList = builder.domainNameList;
             this.enableWaf = builder.enableWaf;
+            this.fallback = builder.fallback;
+            this.fallbackServices = builder.fallbackServices;
             this.gatewayId = builder.gatewayId;
             this.gatewayUniqueId = builder.gatewayUniqueId;
             this.gmtCreate = builder.gmtCreate;
@@ -1035,6 +1587,20 @@ public class ListGatewayRouteResponseBody extends TeaModel {
          */
         public String getEnableWaf() {
             return this.enableWaf;
+        }
+
+        /**
+         * @return fallback
+         */
+        public Boolean getFallback() {
+            return this.fallback;
+        }
+
+        /**
+         * @return fallbackServices
+         */
+        public java.util.List < FallbackServices> getFallbackServices() {
+            return this.fallbackServices;
         }
 
         /**
@@ -1146,6 +1712,8 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             private String domainName; 
             private java.util.List < String > domainNameList; 
             private String enableWaf; 
+            private Boolean fallback; 
+            private java.util.List < FallbackServices> fallbackServices; 
             private Long gatewayId; 
             private String gatewayUniqueId; 
             private String gmtCreate; 
@@ -1238,6 +1806,22 @@ public class ListGatewayRouteResponseBody extends TeaModel {
              */
             public Builder enableWaf(String enableWaf) {
                 this.enableWaf = enableWaf;
+                return this;
+            }
+
+            /**
+             * Fallback.
+             */
+            public Builder fallback(Boolean fallback) {
+                this.fallback = fallback;
+                return this;
+            }
+
+            /**
+             * FallbackServices.
+             */
+            public Builder fallbackServices(java.util.List < FallbackServices> fallbackServices) {
+                this.fallbackServices = fallbackServices;
                 return this;
             }
 

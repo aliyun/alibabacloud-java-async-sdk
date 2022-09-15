@@ -29,6 +29,10 @@ public class GetApplicationListRequest extends Request {
     private String language;
 
     @Query
+    @NameInMap("MseSessionId")
+    private String mseSessionId;
+
+    @Query
     @NameInMap("PageNumber")
     @Validation(required = true)
     private Integer pageNumber;
@@ -61,6 +65,7 @@ public class GetApplicationListRequest extends Request {
         this.appId = builder.appId;
         this.appName = builder.appName;
         this.language = builder.language;
+        this.mseSessionId = builder.mseSessionId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.region = builder.region;
@@ -111,6 +116,13 @@ public class GetApplicationListRequest extends Request {
     }
 
     /**
+     * @return mseSessionId
+     */
+    public String getMseSessionId() {
+        return this.mseSessionId;
+    }
+
+    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -157,6 +169,7 @@ public class GetApplicationListRequest extends Request {
         private String appId; 
         private String appName; 
         private String language; 
+        private String mseSessionId; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String region; 
@@ -174,6 +187,7 @@ public class GetApplicationListRequest extends Request {
             this.appId = request.appId;
             this.appName = request.appName;
             this.language = request.language;
+            this.mseSessionId = request.mseSessionId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.region = request.region;
@@ -215,6 +229,15 @@ public class GetApplicationListRequest extends Request {
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
             this.language = language;
+            return this;
+        }
+
+        /**
+         * MseSessionId.
+         */
+        public Builder mseSessionId(String mseSessionId) {
+            this.putQueryParameter("MseSessionId", mseSessionId);
+            this.mseSessionId = mseSessionId;
             return this;
         }
 

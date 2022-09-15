@@ -53,6 +53,10 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
     private String licenseKey;
 
     @Query
+    @NameInMap("MseSessionId")
+    private String mseSessionId;
+
+    @Query
     @NameInMap("Name")
     private String name;
 
@@ -88,6 +92,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         this.groupId = builder.groupId;
         this.id = builder.id;
         this.licenseKey = builder.licenseKey;
+        this.mseSessionId = builder.mseSessionId;
         this.name = builder.name;
         this.regionId = builder.regionId;
         this.source = builder.source;
@@ -180,6 +185,13 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
     }
 
     /**
+     * @return mseSessionId
+     */
+    public String getMseSessionId() {
+        return this.mseSessionId;
+    }
+
+    /**
      * @return name
      */
     public String getName() {
@@ -232,6 +244,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         private Long groupId; 
         private Long id; 
         private String licenseKey; 
+        private String mseSessionId; 
         private String name; 
         private String regionId; 
         private String source; 
@@ -255,6 +268,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             this.groupId = request.groupId;
             this.id = request.id;
             this.licenseKey = request.licenseKey;
+            this.mseSessionId = request.mseSessionId;
             this.name = request.name;
             this.regionId = request.regionId;
             this.source = request.source;
@@ -350,6 +364,15 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         public Builder licenseKey(String licenseKey) {
             this.putQueryParameter("LicenseKey", licenseKey);
             this.licenseKey = licenseKey;
+            return this;
+        }
+
+        /**
+         * MseSessionId.
+         */
+        public Builder mseSessionId(String mseSessionId) {
+            this.putQueryParameter("MseSessionId", mseSessionId);
+            this.mseSessionId = mseSessionId;
             return this;
         }
 
@@ -645,6 +668,9 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         @NameInMap("Path")
         private String path;
 
+        @NameInMap("Paths")
+        private java.util.List < String > paths;
+
         @NameInMap("Priority")
         private Integer priority;
 
@@ -655,6 +681,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             this.condition = builder.condition;
             this.enable = builder.enable;
             this.path = builder.path;
+            this.paths = builder.paths;
             this.priority = builder.priority;
             this.restItems = builder.restItems;
         }
@@ -689,6 +716,13 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         }
 
         /**
+         * @return paths
+         */
+        public java.util.List < String > getPaths() {
+            return this.paths;
+        }
+
+        /**
          * @return priority
          */
         public Integer getPriority() {
@@ -706,6 +740,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             private String condition; 
             private Boolean enable; 
             private String path; 
+            private java.util.List < String > paths; 
             private Integer priority; 
             private java.util.List < RestItems> restItems; 
 
@@ -730,6 +765,14 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
              */
             public Builder path(String path) {
                 this.path = path;
+                return this;
+            }
+
+            /**
+             * Paths.
+             */
+            public Builder paths(java.util.List < String > paths) {
+                this.paths = paths;
                 return this;
             }
 

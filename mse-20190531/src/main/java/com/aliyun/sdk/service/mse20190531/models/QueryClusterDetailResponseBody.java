@@ -412,6 +412,12 @@ public class QueryClusterDetailResponseBody extends TeaModel {
         @NameInMap("RegionId")
         private String regionId;
 
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
+        @NameInMap("Tags")
+        private java.util.Map < String, ? > tags;
+
         @NameInMap("VSwitchId")
         private String vSwitchId;
 
@@ -452,6 +458,8 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             this.payInfo = builder.payInfo;
             this.pubNetworkFlow = builder.pubNetworkFlow;
             this.regionId = builder.regionId;
+            this.resourceGroupId = builder.resourceGroupId;
+            this.tags = builder.tags;
             this.vSwitchId = builder.vSwitchId;
             this.vpcId = builder.vpcId;
         }
@@ -696,6 +704,20 @@ public class QueryClusterDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
+         * @return tags
+         */
+        public java.util.Map < String, ? > getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return vSwitchId
          */
         public String getVSwitchId() {
@@ -743,6 +765,8 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             private String payInfo; 
             private String pubNetworkFlow; 
             private String regionId; 
+            private String resourceGroupId; 
+            private java.util.Map < String, ? > tags; 
             private String vSwitchId; 
             private String vpcId; 
 
@@ -1007,6 +1031,22 @@ public class QueryClusterDetailResponseBody extends TeaModel {
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.Map < String, ? > tags) {
+                this.tags = tags;
                 return this;
             }
 

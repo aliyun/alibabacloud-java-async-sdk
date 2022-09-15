@@ -140,7 +140,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetOverviewResponse> getOverview(GetOverviewRequest request);
 
+    CompletableFuture<GetPluginConfigResponse> getPluginConfig(GetPluginConfigRequest request);
+
+    CompletableFuture<GetPluginsResponse> getPlugins(GetPluginsRequest request);
+
     CompletableFuture<GetServiceListResponse> getServiceList(GetServiceListRequest request);
+
+    CompletableFuture<GetServiceListenersResponse> getServiceListeners(GetServiceListenersRequest request);
 
     CompletableFuture<GetTagsBySwimmingLaneGroupIdResponse> getTagsBySwimmingLaneGroupId(GetTagsBySwimmingLaneGroupIdRequest request);
 
@@ -200,6 +206,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListServiceSourceResponse> listServiceSource(ListServiceSourceRequest request);
 
+    CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
+
     CompletableFuture<ListUserInstancesResponse> listUserInstances(ListUserInstancesRequest request);
 
     CompletableFuture<ListVgroupsResponse> listVgroups(ListVgroupsRequest request);
@@ -207,6 +215,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListZnodeChildrenResponse> listZnodeChildren(ListZnodeChildrenRequest request);
 
     CompletableFuture<ModifyGovernanceKubernetesClusterResponse> modifyGovernanceKubernetesCluster(ModifyGovernanceKubernetesClusterRequest request);
+
+    CompletableFuture<ModifyLosslessRuleResponse> modifyLosslessRule(ModifyLosslessRuleRequest request);
 
     CompletableFuture<OfflineGatewayRouteResponse> offlineGatewayRoute(OfflineGatewayRouteRequest request);
 
@@ -245,6 +255,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RetryClusterResponse> retryCluster(RetryClusterRequest request);
 
     CompletableFuture<SelectGatewaySlbResponse> selectGatewaySlb(SelectGatewaySlbRequest request);
+
+    CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
+
+    CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);
 
     CompletableFuture<UpdateAclResponse> updateAcl(UpdateAclRequest request);
 
@@ -295,6 +309,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateNacosInstanceResponse> updateNacosInstance(UpdateNacosInstanceRequest request);
 
     CompletableFuture<UpdateNacosServiceResponse> updateNacosService(UpdateNacosServiceRequest request);
+
+    CompletableFuture<UpdatePluginConfigResponse> updatePluginConfig(UpdatePluginConfigRequest request);
 
     CompletableFuture<UpdateSSLCertResponse> updateSSLCert(UpdateSSLCertRequest request);
 

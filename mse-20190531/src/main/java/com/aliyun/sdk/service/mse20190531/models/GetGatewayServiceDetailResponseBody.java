@@ -515,6 +515,12 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         @NameInMap("GroupName")
         private String groupName;
 
+        @NameInMap("HealthCheck")
+        private String healthCheck;
+
+        @NameInMap("HealthStatus")
+        private String healthStatus;
+
         @NameInMap("Id")
         private Long id;
 
@@ -536,6 +542,9 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         @NameInMap("ServiceNameInRegistry")
         private String serviceNameInRegistry;
 
+        @NameInMap("ServiceProtocol")
+        private String serviceProtocol;
+
         @NameInMap("SourceId")
         private Long sourceId;
 
@@ -555,6 +564,8 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
             this.gmtCreate = builder.gmtCreate;
             this.gmtModified = builder.gmtModified;
             this.groupName = builder.groupName;
+            this.healthCheck = builder.healthCheck;
+            this.healthStatus = builder.healthStatus;
             this.id = builder.id;
             this.ips = builder.ips;
             this.labelDetails = builder.labelDetails;
@@ -562,6 +573,7 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
             this.name = builder.name;
             this.namespace = builder.namespace;
             this.serviceNameInRegistry = builder.serviceNameInRegistry;
+            this.serviceProtocol = builder.serviceProtocol;
             this.sourceId = builder.sourceId;
             this.sourceType = builder.sourceType;
             this.versionDetails = builder.versionDetails;
@@ -619,6 +631,20 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return healthCheck
+         */
+        public String getHealthCheck() {
+            return this.healthCheck;
+        }
+
+        /**
+         * @return healthStatus
+         */
+        public String getHealthStatus() {
+            return this.healthStatus;
+        }
+
+        /**
          * @return id
          */
         public Long getId() {
@@ -668,6 +694,13 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return serviceProtocol
+         */
+        public String getServiceProtocol() {
+            return this.serviceProtocol;
+        }
+
+        /**
          * @return sourceId
          */
         public Long getSourceId() {
@@ -702,6 +735,8 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
             private String gmtCreate; 
             private String gmtModified; 
             private String groupName; 
+            private String healthCheck; 
+            private String healthStatus; 
             private Long id; 
             private java.util.List < String > ips; 
             private java.util.List < LabelDetails> labelDetails; 
@@ -709,6 +744,7 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
             private String name; 
             private String namespace; 
             private String serviceNameInRegistry; 
+            private String serviceProtocol; 
             private Long sourceId; 
             private String sourceType; 
             private java.util.List < VersionDetails> versionDetails; 
@@ -759,6 +795,22 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
+                return this;
+            }
+
+            /**
+             * HealthCheck.
+             */
+            public Builder healthCheck(String healthCheck) {
+                this.healthCheck = healthCheck;
+                return this;
+            }
+
+            /**
+             * HealthStatus.
+             */
+            public Builder healthStatus(String healthStatus) {
+                this.healthStatus = healthStatus;
                 return this;
             }
 
@@ -815,6 +867,14 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
              */
             public Builder serviceNameInRegistry(String serviceNameInRegistry) {
                 this.serviceNameInRegistry = serviceNameInRegistry;
+                return this;
+            }
+
+            /**
+             * ServiceProtocol.
+             */
+            public Builder serviceProtocol(String serviceProtocol) {
+                this.serviceProtocol = serviceProtocol;
                 return this;
             }
 

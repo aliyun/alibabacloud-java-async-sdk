@@ -25,6 +25,10 @@ public class RestartClusterRequest extends Request {
     private String instanceId;
 
     @Query
+    @NameInMap("MseSessionId")
+    private String mseSessionId;
+
+    @Query
     @NameInMap("PodNameList")
     private String podNameList;
 
@@ -37,6 +41,7 @@ public class RestartClusterRequest extends Request {
         this.acceptLanguage = builder.acceptLanguage;
         this.clusterId = builder.clusterId;
         this.instanceId = builder.instanceId;
+        this.mseSessionId = builder.mseSessionId;
         this.podNameList = builder.podNameList;
         this.requestPars = builder.requestPars;
     }
@@ -76,6 +81,13 @@ public class RestartClusterRequest extends Request {
     }
 
     /**
+     * @return mseSessionId
+     */
+    public String getMseSessionId() {
+        return this.mseSessionId;
+    }
+
+    /**
      * @return podNameList
      */
     public String getPodNameList() {
@@ -93,6 +105,7 @@ public class RestartClusterRequest extends Request {
         private String acceptLanguage; 
         private String clusterId; 
         private String instanceId; 
+        private String mseSessionId; 
         private String podNameList; 
         private String requestPars; 
 
@@ -105,6 +118,7 @@ public class RestartClusterRequest extends Request {
             this.acceptLanguage = request.acceptLanguage;
             this.clusterId = request.clusterId;
             this.instanceId = request.instanceId;
+            this.mseSessionId = request.mseSessionId;
             this.podNameList = request.podNameList;
             this.requestPars = request.requestPars;
         } 
@@ -133,6 +147,15 @@ public class RestartClusterRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * MseSessionId.
+         */
+        public Builder mseSessionId(String mseSessionId) {
+            this.putQueryParameter("MseSessionId", mseSessionId);
+            this.mseSessionId = mseSessionId;
             return this;
         }
 
