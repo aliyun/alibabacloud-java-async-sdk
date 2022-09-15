@@ -27,6 +27,10 @@ public class ModifyDBProxyEndpointAddressRequest extends Request {
     private String DBProxyEndpointId;
 
     @Query
+    @NameInMap("DBProxyEngineType")
+    private String DBProxyEngineType;
+
+    @Query
     @NameInMap("DBProxyNewConnectString")
     private String DBProxyNewConnectString;
 
@@ -51,6 +55,7 @@ public class ModifyDBProxyEndpointAddressRequest extends Request {
         this.DBInstanceId = builder.DBInstanceId;
         this.DBProxyConnectStringNetType = builder.DBProxyConnectStringNetType;
         this.DBProxyEndpointId = builder.DBProxyEndpointId;
+        this.DBProxyEngineType = builder.DBProxyEngineType;
         this.DBProxyNewConnectString = builder.DBProxyNewConnectString;
         this.DBProxyNewConnectStringPort = builder.DBProxyNewConnectStringPort;
         this.ownerId = builder.ownerId;
@@ -93,6 +98,13 @@ public class ModifyDBProxyEndpointAddressRequest extends Request {
     }
 
     /**
+     * @return DBProxyEngineType
+     */
+    public String getDBProxyEngineType() {
+        return this.DBProxyEngineType;
+    }
+
+    /**
      * @return DBProxyNewConnectString
      */
     public String getDBProxyNewConnectString() {
@@ -131,6 +143,7 @@ public class ModifyDBProxyEndpointAddressRequest extends Request {
         private String DBInstanceId; 
         private String DBProxyConnectStringNetType; 
         private String DBProxyEndpointId; 
+        private String DBProxyEngineType; 
         private String DBProxyNewConnectString; 
         private String DBProxyNewConnectStringPort; 
         private Long ownerId; 
@@ -146,6 +159,7 @@ public class ModifyDBProxyEndpointAddressRequest extends Request {
             this.DBInstanceId = request.DBInstanceId;
             this.DBProxyConnectStringNetType = request.DBProxyConnectStringNetType;
             this.DBProxyEndpointId = request.DBProxyEndpointId;
+            this.DBProxyEngineType = request.DBProxyEngineType;
             this.DBProxyNewConnectString = request.DBProxyNewConnectString;
             this.DBProxyNewConnectStringPort = request.DBProxyNewConnectStringPort;
             this.ownerId = request.ownerId;
@@ -177,6 +191,15 @@ public class ModifyDBProxyEndpointAddressRequest extends Request {
         public Builder DBProxyEndpointId(String DBProxyEndpointId) {
             this.putQueryParameter("DBProxyEndpointId", DBProxyEndpointId);
             this.DBProxyEndpointId = DBProxyEndpointId;
+            return this;
+        }
+
+        /**
+         * DBProxyEngineType.
+         */
+        public Builder DBProxyEngineType(String DBProxyEngineType) {
+            this.putQueryParameter("DBProxyEngineType", DBProxyEngineType);
+            this.DBProxyEngineType = DBProxyEngineType;
             return this;
         }
 

@@ -215,6 +215,18 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         @NameInMap("Engine")
         private String engine;
 
+        @NameInMap("PageNumber")
+        private Integer pageNumber;
+
+        @NameInMap("PageSize")
+        private Integer pageSize;
+
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
+        @NameInMap("TotalCount")
+        private Integer totalCount;
+
         private Database(Builder builder) {
             this.accounts = builder.accounts;
             this.characterSetName = builder.characterSetName;
@@ -223,6 +235,10 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             this.DBName = builder.DBName;
             this.DBStatus = builder.DBStatus;
             this.engine = builder.engine;
+            this.pageNumber = builder.pageNumber;
+            this.pageSize = builder.pageSize;
+            this.resourceGroupId = builder.resourceGroupId;
+            this.totalCount = builder.totalCount;
         }
 
         public static Builder builder() {
@@ -282,6 +298,34 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             return this.engine;
         }
 
+        /**
+         * @return pageNumber
+         */
+        public Integer getPageNumber() {
+            return this.pageNumber;
+        }
+
+        /**
+         * @return pageSize
+         */
+        public Integer getPageSize() {
+            return this.pageSize;
+        }
+
+        /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
+         * @return totalCount
+         */
+        public Integer getTotalCount() {
+            return this.totalCount;
+        }
+
         public static final class Builder {
             private Accounts accounts; 
             private String characterSetName; 
@@ -290,6 +334,10 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             private String DBName; 
             private String DBStatus; 
             private String engine; 
+            private Integer pageNumber; 
+            private Integer pageSize; 
+            private String resourceGroupId; 
+            private Integer totalCount; 
 
             /**
              * Accounts.
@@ -344,6 +392,38 @@ public class DescribeDatabasesResponseBody extends TeaModel {
              */
             public Builder engine(String engine) {
                 this.engine = engine;
+                return this;
+            }
+
+            /**
+             * PageNumber.
+             */
+            public Builder pageNumber(Integer pageNumber) {
+                this.pageNumber = pageNumber;
+                return this;
+            }
+
+            /**
+             * PageSize.
+             */
+            public Builder pageSize(Integer pageSize) {
+                this.pageSize = pageSize;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * TotalCount.
+             */
+            public Builder totalCount(Integer totalCount) {
+                this.totalCount = totalCount;
                 return this;
             }
 

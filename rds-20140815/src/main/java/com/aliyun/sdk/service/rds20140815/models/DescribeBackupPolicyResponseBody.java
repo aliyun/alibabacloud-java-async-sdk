@@ -42,6 +42,9 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     @NameInMap("EnableBackupLog")
     private String enableBackupLog;
 
+    @NameInMap("EnableIncrementDataBackup")
+    private Boolean enableIncrementDataBackup;
+
     @NameInMap("HighSpaceUsageProtection")
     private String highSpaceUsageProtection;
 
@@ -92,6 +95,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         this.category = builder.category;
         this.compressType = builder.compressType;
         this.enableBackupLog = builder.enableBackupLog;
+        this.enableIncrementDataBackup = builder.enableIncrementDataBackup;
         this.highSpaceUsageProtection = builder.highSpaceUsageProtection;
         this.localLogRetentionHours = builder.localLogRetentionHours;
         this.localLogRetentionSpace = builder.localLogRetentionSpace;
@@ -183,6 +187,13 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
      */
     public String getEnableBackupLog() {
         return this.enableBackupLog;
+    }
+
+    /**
+     * @return enableIncrementDataBackup
+     */
+    public Boolean getEnableIncrementDataBackup() {
+        return this.enableIncrementDataBackup;
     }
 
     /**
@@ -287,6 +298,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         private String category; 
         private String compressType; 
         private String enableBackupLog; 
+        private Boolean enableIncrementDataBackup; 
         private String highSpaceUsageProtection; 
         private Integer localLogRetentionHours; 
         private String localLogRetentionSpace; 
@@ -378,6 +390,14 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
          */
         public Builder enableBackupLog(String enableBackupLog) {
             this.enableBackupLog = enableBackupLog;
+            return this;
+        }
+
+        /**
+         * EnableIncrementDataBackup.
+         */
+        public Builder enableIncrementDataBackup(Boolean enableIncrementDataBackup) {
+            this.enableIncrementDataBackup = enableIncrementDataBackup;
             return this;
         }
 

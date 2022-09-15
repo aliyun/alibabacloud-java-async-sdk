@@ -17,6 +17,10 @@ public class RenewInstanceRequest extends Request {
     private String autoPay;
 
     @Query
+    @NameInMap("AutoRenew")
+    private String autoRenew;
+
+    @Query
     @NameInMap("ClientToken")
     private String clientToken;
 
@@ -45,6 +49,7 @@ public class RenewInstanceRequest extends Request {
     private RenewInstanceRequest(Builder builder) {
         super(builder);
         this.autoPay = builder.autoPay;
+        this.autoRenew = builder.autoRenew;
         this.clientToken = builder.clientToken;
         this.DBInstanceId = builder.DBInstanceId;
         this.ownerId = builder.ownerId;
@@ -71,6 +76,13 @@ public class RenewInstanceRequest extends Request {
      */
     public String getAutoPay() {
         return this.autoPay;
+    }
+
+    /**
+     * @return autoRenew
+     */
+    public String getAutoRenew() {
+        return this.autoRenew;
     }
 
     /**
@@ -117,6 +129,7 @@ public class RenewInstanceRequest extends Request {
 
     public static final class Builder extends Request.Builder<RenewInstanceRequest, Builder> {
         private String autoPay; 
+        private String autoRenew; 
         private String clientToken; 
         private String DBInstanceId; 
         private Long ownerId; 
@@ -131,6 +144,7 @@ public class RenewInstanceRequest extends Request {
         private Builder(RenewInstanceRequest request) {
             super(request);
             this.autoPay = request.autoPay;
+            this.autoRenew = request.autoRenew;
             this.clientToken = request.clientToken;
             this.DBInstanceId = request.DBInstanceId;
             this.ownerId = request.ownerId;
@@ -145,6 +159,15 @@ public class RenewInstanceRequest extends Request {
         public Builder autoPay(String autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
             this.autoPay = autoPay;
+            return this;
+        }
+
+        /**
+         * AutoRenew.
+         */
+        public Builder autoRenew(String autoRenew) {
+            this.putQueryParameter("AutoRenew", autoRenew);
+            this.autoRenew = autoRenew;
             return this;
         }
 

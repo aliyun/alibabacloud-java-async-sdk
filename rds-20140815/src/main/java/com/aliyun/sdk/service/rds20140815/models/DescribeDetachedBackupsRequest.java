@@ -48,6 +48,10 @@ public class DescribeDetachedBackupsRequest extends Request {
     private String region;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
@@ -65,6 +69,7 @@ public class DescribeDetachedBackupsRequest extends Request {
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.region = builder.region;
+        this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.startTime = builder.startTime;
     }
@@ -139,6 +144,13 @@ public class DescribeDetachedBackupsRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return resourceOwnerId
      */
     public Long getResourceOwnerId() {
@@ -161,6 +173,7 @@ public class DescribeDetachedBackupsRequest extends Request {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String region; 
+        private String resourceGroupId; 
         private Long resourceOwnerId; 
         private String startTime; 
 
@@ -178,6 +191,7 @@ public class DescribeDetachedBackupsRequest extends Request {
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.region = request.region;
+            this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerId = request.resourceOwnerId;
             this.startTime = request.startTime;
         } 
@@ -251,6 +265,15 @@ public class DescribeDetachedBackupsRequest extends Request {
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
             this.region = region;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

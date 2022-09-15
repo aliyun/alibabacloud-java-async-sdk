@@ -87,6 +87,9 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
         @NameInMap("RegionId")
         private String regionId;
 
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
         @NameInMap("Role")
         private String role;
 
@@ -99,6 +102,7 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
             this.engine = builder.engine;
             this.engineVersion = builder.engineVersion;
             this.regionId = builder.regionId;
+            this.resourceGroupId = builder.resourceGroupId;
             this.role = builder.role;
             this.status = builder.status;
         }
@@ -147,6 +151,13 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return role
          */
         public String getRole() {
@@ -166,6 +177,7 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
             private String engine; 
             private String engineVersion; 
             private String regionId; 
+            private String resourceGroupId; 
             private String role; 
             private String status; 
 
@@ -206,6 +218,14 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 

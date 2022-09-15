@@ -26,6 +26,10 @@ public class ModifyDBProxyEndpointRequest extends Request {
     private String DBProxyEndpointId;
 
     @Query
+    @NameInMap("DBProxyEngineType")
+    private String DBProxyEngineType;
+
+    @Query
     @NameInMap("DbEndpointAliases")
     private String dbEndpointAliases;
 
@@ -74,6 +78,7 @@ public class ModifyDBProxyEndpointRequest extends Request {
         this.configDBProxyFeatures = builder.configDBProxyFeatures;
         this.DBInstanceId = builder.DBInstanceId;
         this.DBProxyEndpointId = builder.DBProxyEndpointId;
+        this.DBProxyEngineType = builder.DBProxyEngineType;
         this.dbEndpointAliases = builder.dbEndpointAliases;
         this.dbEndpointOperator = builder.dbEndpointOperator;
         this.dbEndpointReadWriteMode = builder.dbEndpointReadWriteMode;
@@ -119,6 +124,13 @@ public class ModifyDBProxyEndpointRequest extends Request {
      */
     public String getDBProxyEndpointId() {
         return this.DBProxyEndpointId;
+    }
+
+    /**
+     * @return DBProxyEngineType
+     */
+    public String getDBProxyEngineType() {
+        return this.DBProxyEngineType;
     }
 
     /**
@@ -202,6 +214,7 @@ public class ModifyDBProxyEndpointRequest extends Request {
         private String configDBProxyFeatures; 
         private String DBInstanceId; 
         private String DBProxyEndpointId; 
+        private String DBProxyEngineType; 
         private String dbEndpointAliases; 
         private String dbEndpointOperator; 
         private String dbEndpointReadWriteMode; 
@@ -223,6 +236,7 @@ public class ModifyDBProxyEndpointRequest extends Request {
             this.configDBProxyFeatures = request.configDBProxyFeatures;
             this.DBInstanceId = request.DBInstanceId;
             this.DBProxyEndpointId = request.DBProxyEndpointId;
+            this.DBProxyEngineType = request.DBProxyEngineType;
             this.dbEndpointAliases = request.dbEndpointAliases;
             this.dbEndpointOperator = request.dbEndpointOperator;
             this.dbEndpointReadWriteMode = request.dbEndpointReadWriteMode;
@@ -260,6 +274,15 @@ public class ModifyDBProxyEndpointRequest extends Request {
         public Builder DBProxyEndpointId(String DBProxyEndpointId) {
             this.putQueryParameter("DBProxyEndpointId", DBProxyEndpointId);
             this.DBProxyEndpointId = DBProxyEndpointId;
+            return this;
+        }
+
+        /**
+         * DBProxyEngineType.
+         */
+        public Builder DBProxyEngineType(String DBProxyEngineType) {
+            this.putQueryParameter("DBProxyEngineType", DBProxyEngineType);
+            this.DBProxyEngineType = DBProxyEngineType;
             return this;
         }
 

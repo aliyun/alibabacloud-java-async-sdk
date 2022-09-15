@@ -42,6 +42,10 @@ public class DescribeCrossBackupMetaListRequest extends Request {
     private String region;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -58,6 +62,7 @@ public class DescribeCrossBackupMetaListRequest extends Request {
         this.pageSize = builder.pageSize;
         this.pattern = builder.pattern;
         this.region = builder.region;
+        this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
     }
@@ -125,6 +130,13 @@ public class DescribeCrossBackupMetaListRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -146,6 +158,7 @@ public class DescribeCrossBackupMetaListRequest extends Request {
         private String pageSize; 
         private String pattern; 
         private String region; 
+        private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
 
@@ -162,6 +175,7 @@ public class DescribeCrossBackupMetaListRequest extends Request {
             this.pageSize = request.pageSize;
             this.pattern = request.pattern;
             this.region = request.region;
+            this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
         } 
@@ -226,6 +240,15 @@ public class DescribeCrossBackupMetaListRequest extends Request {
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
             this.region = region;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

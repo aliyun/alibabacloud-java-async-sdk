@@ -18,6 +18,10 @@ public class DescribeDBProxyPerformanceRequest extends Request {
     private String DBInstanceId;
 
     @Query
+    @NameInMap("DBProxyEngineType")
+    private String DBProxyEngineType;
+
+    @Query
     @NameInMap("DBProxyInstanceType")
     private String DBProxyInstanceType;
 
@@ -56,6 +60,7 @@ public class DescribeDBProxyPerformanceRequest extends Request {
     private DescribeDBProxyPerformanceRequest(Builder builder) {
         super(builder);
         this.DBInstanceId = builder.DBInstanceId;
+        this.DBProxyEngineType = builder.DBProxyEngineType;
         this.DBProxyInstanceType = builder.DBProxyInstanceType;
         this.endTime = builder.endTime;
         this.metricsName = builder.metricsName;
@@ -84,6 +89,13 @@ public class DescribeDBProxyPerformanceRequest extends Request {
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    /**
+     * @return DBProxyEngineType
+     */
+    public String getDBProxyEngineType() {
+        return this.DBProxyEngineType;
     }
 
     /**
@@ -144,6 +156,7 @@ public class DescribeDBProxyPerformanceRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeDBProxyPerformanceRequest, Builder> {
         private String DBInstanceId; 
+        private String DBProxyEngineType; 
         private String DBProxyInstanceType; 
         private String endTime; 
         private String metricsName; 
@@ -160,6 +173,7 @@ public class DescribeDBProxyPerformanceRequest extends Request {
         private Builder(DescribeDBProxyPerformanceRequest request) {
             super(request);
             this.DBInstanceId = request.DBInstanceId;
+            this.DBProxyEngineType = request.DBProxyEngineType;
             this.DBProxyInstanceType = request.DBProxyInstanceType;
             this.endTime = request.endTime;
             this.metricsName = request.metricsName;
@@ -176,6 +190,15 @@ public class DescribeDBProxyPerformanceRequest extends Request {
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
             this.DBInstanceId = DBInstanceId;
+            return this;
+        }
+
+        /**
+         * DBProxyEngineType.
+         */
+        public Builder DBProxyEngineType(String DBProxyEngineType) {
+            this.putQueryParameter("DBProxyEngineType", DBProxyEngineType);
+            this.DBProxyEngineType = DBProxyEngineType;
             return this;
         }
 

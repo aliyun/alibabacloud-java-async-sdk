@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetDbProxyInstanceSslRequest extends Request {
     @Query
+    @NameInMap("DBProxyEngineType")
+    private String DBProxyEngineType;
+
+    @Query
     @NameInMap("DbInstanceId")
     @Validation(required = true)
     private String dbInstanceId;
@@ -23,6 +27,7 @@ public class GetDbProxyInstanceSslRequest extends Request {
 
     private GetDbProxyInstanceSslRequest(Builder builder) {
         super(builder);
+        this.DBProxyEngineType = builder.DBProxyEngineType;
         this.dbInstanceId = builder.dbInstanceId;
         this.regionId = builder.regionId;
     }
@@ -41,6 +46,13 @@ public class GetDbProxyInstanceSslRequest extends Request {
     }
 
     /**
+     * @return DBProxyEngineType
+     */
+    public String getDBProxyEngineType() {
+        return this.DBProxyEngineType;
+    }
+
+    /**
      * @return dbInstanceId
      */
     public String getDbInstanceId() {
@@ -55,6 +67,7 @@ public class GetDbProxyInstanceSslRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetDbProxyInstanceSslRequest, Builder> {
+        private String DBProxyEngineType; 
         private String dbInstanceId; 
         private String regionId; 
 
@@ -64,9 +77,19 @@ public class GetDbProxyInstanceSslRequest extends Request {
 
         private Builder(GetDbProxyInstanceSslRequest request) {
             super(request);
+            this.DBProxyEngineType = request.DBProxyEngineType;
             this.dbInstanceId = request.dbInstanceId;
             this.regionId = request.regionId;
         } 
+
+        /**
+         * DBProxyEngineType.
+         */
+        public Builder DBProxyEngineType(String DBProxyEngineType) {
+            this.putQueryParameter("DBProxyEngineType", DBProxyEngineType);
+            this.DBProxyEngineType = DBProxyEngineType;
+            return this;
+        }
 
         /**
          * DbInstanceId.

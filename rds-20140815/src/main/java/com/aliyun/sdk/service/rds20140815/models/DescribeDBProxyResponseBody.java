@@ -15,6 +15,9 @@ public class DescribeDBProxyResponseBody extends TeaModel {
     @NameInMap("DBProxyConnectStringItems")
     private DBProxyConnectStringItems DBProxyConnectStringItems;
 
+    @NameInMap("DBProxyEngineType")
+    private String DBProxyEngineType;
+
     @NameInMap("DBProxyInstanceCurrentMinorVersion")
     private String DBProxyInstanceCurrentMinorVersion;
 
@@ -45,8 +48,12 @@ public class DescribeDBProxyResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
     private DescribeDBProxyResponseBody(Builder builder) {
         this.DBProxyConnectStringItems = builder.DBProxyConnectStringItems;
+        this.DBProxyEngineType = builder.DBProxyEngineType;
         this.DBProxyInstanceCurrentMinorVersion = builder.DBProxyInstanceCurrentMinorVersion;
         this.DBProxyInstanceLatestMinorVersion = builder.DBProxyInstanceLatestMinorVersion;
         this.DBProxyInstanceName = builder.DBProxyInstanceName;
@@ -57,6 +64,7 @@ public class DescribeDBProxyResponseBody extends TeaModel {
         this.DBProxyServiceStatus = builder.DBProxyServiceStatus;
         this.dbProxyEndpointItems = builder.dbProxyEndpointItems;
         this.requestId = builder.requestId;
+        this.resourceGroupId = builder.resourceGroupId;
     }
 
     public static Builder builder() {
@@ -72,6 +80,13 @@ public class DescribeDBProxyResponseBody extends TeaModel {
      */
     public DBProxyConnectStringItems getDBProxyConnectStringItems() {
         return this.DBProxyConnectStringItems;
+    }
+
+    /**
+     * @return DBProxyEngineType
+     */
+    public String getDBProxyEngineType() {
+        return this.DBProxyEngineType;
     }
 
     /**
@@ -144,8 +159,16 @@ public class DescribeDBProxyResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public static final class Builder {
         private DBProxyConnectStringItems DBProxyConnectStringItems; 
+        private String DBProxyEngineType; 
         private String DBProxyInstanceCurrentMinorVersion; 
         private String DBProxyInstanceLatestMinorVersion; 
         private String DBProxyInstanceName; 
@@ -156,12 +179,21 @@ public class DescribeDBProxyResponseBody extends TeaModel {
         private String DBProxyServiceStatus; 
         private DbProxyEndpointItems dbProxyEndpointItems; 
         private String requestId; 
+        private String resourceGroupId; 
 
         /**
          * DBProxyConnectStringItems.
          */
         public Builder DBProxyConnectStringItems(DBProxyConnectStringItems DBProxyConnectStringItems) {
             this.DBProxyConnectStringItems = DBProxyConnectStringItems;
+            return this;
+        }
+
+        /**
+         * DBProxyEngineType.
+         */
+        public Builder DBProxyEngineType(String DBProxyEngineType) {
+            this.DBProxyEngineType = DBProxyEngineType;
             return this;
         }
 
@@ -242,6 +274,14 @@ public class DescribeDBProxyResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

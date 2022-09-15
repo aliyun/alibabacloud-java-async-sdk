@@ -26,6 +26,10 @@ public class DescribeDBProxyEndpointRequest extends Request {
     private String DBProxyEndpointId;
 
     @Query
+    @NameInMap("DBProxyEngineType")
+    private String DBProxyEngineType;
+
+    @Query
     @NameInMap("OwnerId")
     private Long ownerId;
 
@@ -46,6 +50,7 @@ public class DescribeDBProxyEndpointRequest extends Request {
         this.DBInstanceId = builder.DBInstanceId;
         this.DBProxyConnectString = builder.DBProxyConnectString;
         this.DBProxyEndpointId = builder.DBProxyEndpointId;
+        this.DBProxyEngineType = builder.DBProxyEngineType;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -87,6 +92,13 @@ public class DescribeDBProxyEndpointRequest extends Request {
     }
 
     /**
+     * @return DBProxyEngineType
+     */
+    public String getDBProxyEngineType() {
+        return this.DBProxyEngineType;
+    }
+
+    /**
      * @return ownerId
      */
     public Long getOwnerId() {
@@ -118,6 +130,7 @@ public class DescribeDBProxyEndpointRequest extends Request {
         private String DBInstanceId; 
         private String DBProxyConnectString; 
         private String DBProxyEndpointId; 
+        private String DBProxyEngineType; 
         private Long ownerId; 
         private String regionId; 
         private String resourceOwnerAccount; 
@@ -132,6 +145,7 @@ public class DescribeDBProxyEndpointRequest extends Request {
             this.DBInstanceId = request.DBInstanceId;
             this.DBProxyConnectString = request.DBProxyConnectString;
             this.DBProxyEndpointId = request.DBProxyEndpointId;
+            this.DBProxyEngineType = request.DBProxyEngineType;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
@@ -162,6 +176,15 @@ public class DescribeDBProxyEndpointRequest extends Request {
         public Builder DBProxyEndpointId(String DBProxyEndpointId) {
             this.putQueryParameter("DBProxyEndpointId", DBProxyEndpointId);
             this.DBProxyEndpointId = DBProxyEndpointId;
+            return this;
+        }
+
+        /**
+         * DBProxyEngineType.
+         */
+        public Builder DBProxyEngineType(String DBProxyEngineType) {
+            this.putQueryParameter("DBProxyEngineType", DBProxyEngineType);
+            this.DBProxyEngineType = DBProxyEngineType;
             return this;
         }
 

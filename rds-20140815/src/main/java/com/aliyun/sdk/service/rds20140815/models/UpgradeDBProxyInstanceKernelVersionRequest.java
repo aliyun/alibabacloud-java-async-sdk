@@ -18,6 +18,10 @@ public class UpgradeDBProxyInstanceKernelVersionRequest extends Request {
     private String DBInstanceId;
 
     @Query
+    @NameInMap("DBProxyEngineType")
+    private String DBProxyEngineType;
+
+    @Query
     @NameInMap("OwnerId")
     private Long ownerId;
 
@@ -40,6 +44,7 @@ public class UpgradeDBProxyInstanceKernelVersionRequest extends Request {
     private UpgradeDBProxyInstanceKernelVersionRequest(Builder builder) {
         super(builder);
         this.DBInstanceId = builder.DBInstanceId;
+        this.DBProxyEngineType = builder.DBProxyEngineType;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
@@ -65,6 +70,13 @@ public class UpgradeDBProxyInstanceKernelVersionRequest extends Request {
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    /**
+     * @return DBProxyEngineType
+     */
+    public String getDBProxyEngineType() {
+        return this.DBProxyEngineType;
     }
 
     /**
@@ -104,6 +116,7 @@ public class UpgradeDBProxyInstanceKernelVersionRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpgradeDBProxyInstanceKernelVersionRequest, Builder> {
         private String DBInstanceId; 
+        private String DBProxyEngineType; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
@@ -117,6 +130,7 @@ public class UpgradeDBProxyInstanceKernelVersionRequest extends Request {
         private Builder(UpgradeDBProxyInstanceKernelVersionRequest request) {
             super(request);
             this.DBInstanceId = request.DBInstanceId;
+            this.DBProxyEngineType = request.DBProxyEngineType;
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
@@ -130,6 +144,15 @@ public class UpgradeDBProxyInstanceKernelVersionRequest extends Request {
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
             this.DBInstanceId = DBInstanceId;
+            return this;
+        }
+
+        /**
+         * DBProxyEngineType.
+         */
+        public Builder DBProxyEngineType(String DBProxyEngineType) {
+            this.putQueryParameter("DBProxyEngineType", DBProxyEngineType);
+            this.DBProxyEngineType = DBProxyEngineType;
             return this;
         }
 

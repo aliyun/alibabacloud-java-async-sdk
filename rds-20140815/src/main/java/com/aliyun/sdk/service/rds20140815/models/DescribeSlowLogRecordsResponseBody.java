@@ -12,9 +12,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSlowLogRecordsResponseBody</p>
  */
 public class DescribeSlowLogRecordsResponseBody extends TeaModel {
-    @NameInMap("CPUTime")
-    private Long CPUTime;
-
     @NameInMap("DBInstanceId")
     private String DBInstanceId;
 
@@ -24,55 +21,26 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
     @NameInMap("Items")
     private Items items;
 
-    @NameInMap("LastRowsAffectedCount")
-    private Long lastRowsAffectedCount;
-
-    @NameInMap("LogicalIORead")
-    private Long logicalIORead;
-
     @NameInMap("PageNumber")
     private Integer pageNumber;
 
     @NameInMap("PageRecordCount")
     private Integer pageRecordCount;
 
-    @NameInMap("PhysicalIORead")
-    private Long physicalIORead;
-
     @NameInMap("RequestId")
     private String requestId;
-
-    @NameInMap("RowsAffectedCount")
-    private Long rowsAffectedCount;
-
-    @NameInMap("SQLHash")
-    private String SQLHash;
 
     @NameInMap("TotalRecordCount")
     private Integer totalRecordCount;
 
-    @NameInMap("UserName")
-    private String userName;
-
-    @NameInMap("WritesIOCount")
-    private Long writesIOCount;
-
     private DescribeSlowLogRecordsResponseBody(Builder builder) {
-        this.CPUTime = builder.CPUTime;
         this.DBInstanceId = builder.DBInstanceId;
         this.engine = builder.engine;
         this.items = builder.items;
-        this.lastRowsAffectedCount = builder.lastRowsAffectedCount;
-        this.logicalIORead = builder.logicalIORead;
         this.pageNumber = builder.pageNumber;
         this.pageRecordCount = builder.pageRecordCount;
-        this.physicalIORead = builder.physicalIORead;
         this.requestId = builder.requestId;
-        this.rowsAffectedCount = builder.rowsAffectedCount;
-        this.SQLHash = builder.SQLHash;
         this.totalRecordCount = builder.totalRecordCount;
-        this.userName = builder.userName;
-        this.writesIOCount = builder.writesIOCount;
     }
 
     public static Builder builder() {
@@ -81,13 +49,6 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
 
     public static DescribeSlowLogRecordsResponseBody create() {
         return builder().build();
-    }
-
-    /**
-     * @return CPUTime
-     */
-    public Long getCPUTime() {
-        return this.CPUTime;
     }
 
     /**
@@ -112,20 +73,6 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
     }
 
     /**
-     * @return lastRowsAffectedCount
-     */
-    public Long getLastRowsAffectedCount() {
-        return this.lastRowsAffectedCount;
-    }
-
-    /**
-     * @return logicalIORead
-     */
-    public Long getLogicalIORead() {
-        return this.logicalIORead;
-    }
-
-    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -140,31 +87,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
     }
 
     /**
-     * @return physicalIORead
-     */
-    public Long getPhysicalIORead() {
-        return this.physicalIORead;
-    }
-
-    /**
      * @return requestId
      */
     public String getRequestId() {
         return this.requestId;
-    }
-
-    /**
-     * @return rowsAffectedCount
-     */
-    public Long getRowsAffectedCount() {
-        return this.rowsAffectedCount;
-    }
-
-    /**
-     * @return SQLHash
-     */
-    public String getSQLHash() {
-        return this.SQLHash;
     }
 
     /**
@@ -174,44 +100,14 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         return this.totalRecordCount;
     }
 
-    /**
-     * @return userName
-     */
-    public String getUserName() {
-        return this.userName;
-    }
-
-    /**
-     * @return writesIOCount
-     */
-    public Long getWritesIOCount() {
-        return this.writesIOCount;
-    }
-
     public static final class Builder {
-        private Long CPUTime; 
         private String DBInstanceId; 
         private String engine; 
         private Items items; 
-        private Long lastRowsAffectedCount; 
-        private Long logicalIORead; 
         private Integer pageNumber; 
         private Integer pageRecordCount; 
-        private Long physicalIORead; 
         private String requestId; 
-        private Long rowsAffectedCount; 
-        private String SQLHash; 
         private Integer totalRecordCount; 
-        private String userName; 
-        private Long writesIOCount; 
-
-        /**
-         * CPUTime.
-         */
-        public Builder CPUTime(Long CPUTime) {
-            this.CPUTime = CPUTime;
-            return this;
-        }
 
         /**
          * DBInstanceId.
@@ -238,22 +134,6 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * LastRowsAffectedCount.
-         */
-        public Builder lastRowsAffectedCount(Long lastRowsAffectedCount) {
-            this.lastRowsAffectedCount = lastRowsAffectedCount;
-            return this;
-        }
-
-        /**
-         * LogicalIORead.
-         */
-        public Builder logicalIORead(Long logicalIORead) {
-            this.logicalIORead = logicalIORead;
-            return this;
-        }
-
-        /**
          * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
@@ -270,14 +150,6 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * PhysicalIORead.
-         */
-        public Builder physicalIORead(Long physicalIORead) {
-            this.physicalIORead = physicalIORead;
-            return this;
-        }
-
-        /**
          * RequestId.
          */
         public Builder requestId(String requestId) {
@@ -286,42 +158,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * RowsAffectedCount.
-         */
-        public Builder rowsAffectedCount(Long rowsAffectedCount) {
-            this.rowsAffectedCount = rowsAffectedCount;
-            return this;
-        }
-
-        /**
-         * SQLHash.
-         */
-        public Builder SQLHash(String SQLHash) {
-            this.SQLHash = SQLHash;
-            return this;
-        }
-
-        /**
          * TotalRecordCount.
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
-            return this;
-        }
-
-        /**
-         * UserName.
-         */
-        public Builder userName(String userName) {
-            this.userName = userName;
-            return this;
-        }
-
-        /**
-         * WritesIOCount.
-         */
-        public Builder writesIOCount(Long writesIOCount) {
-            this.writesIOCount = writesIOCount;
             return this;
         }
 
@@ -377,6 +217,9 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         @NameInMap("RowsAffectedCount")
         private Long rowsAffectedCount;
 
+        @NameInMap("SQLHash")
+        private String SQLHash;
+
         @NameInMap("SQLText")
         private String SQLText;
 
@@ -402,6 +245,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             this.queryTimes = builder.queryTimes;
             this.returnRowCounts = builder.returnRowCounts;
             this.rowsAffectedCount = builder.rowsAffectedCount;
+            this.SQLHash = builder.SQLHash;
             this.SQLText = builder.SQLText;
             this.userName = builder.userName;
             this.writeIOCount = builder.writeIOCount;
@@ -521,6 +365,13 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         }
 
         /**
+         * @return SQLHash
+         */
+        public String getSQLHash() {
+            return this.SQLHash;
+        }
+
+        /**
          * @return SQLText
          */
         public String getSQLText() {
@@ -557,6 +408,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             private Long queryTimes; 
             private Long returnRowCounts; 
             private Long rowsAffectedCount; 
+            private String SQLHash; 
             private String SQLText; 
             private String userName; 
             private Long writeIOCount; 
@@ -678,6 +530,14 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
              */
             public Builder rowsAffectedCount(Long rowsAffectedCount) {
                 this.rowsAffectedCount = rowsAffectedCount;
+                return this;
+            }
+
+            /**
+             * SQLHash.
+             */
+            public Builder SQLHash(String SQLHash) {
+                this.SQLHash = SQLHash;
                 return this;
             }
 

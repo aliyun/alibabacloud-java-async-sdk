@@ -15,6 +15,9 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
     @NameInMap("DBInstanceId")
     private String DBInstanceId;
 
+    @NameInMap("DBProxyEngineType")
+    private String DBProxyEngineType;
+
     @NameInMap("EndTime")
     private String endTime;
 
@@ -29,6 +32,7 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
 
     private DescribeDBProxyPerformanceResponseBody(Builder builder) {
         this.DBInstanceId = builder.DBInstanceId;
+        this.DBProxyEngineType = builder.DBProxyEngineType;
         this.endTime = builder.endTime;
         this.performanceKeys = builder.performanceKeys;
         this.requestId = builder.requestId;
@@ -48,6 +52,13 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    /**
+     * @return DBProxyEngineType
+     */
+    public String getDBProxyEngineType() {
+        return this.DBProxyEngineType;
     }
 
     /**
@@ -80,6 +91,7 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
 
     public static final class Builder {
         private String DBInstanceId; 
+        private String DBProxyEngineType; 
         private String endTime; 
         private PerformanceKeys performanceKeys; 
         private String requestId; 
@@ -90,6 +102,14 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
+            return this;
+        }
+
+        /**
+         * DBProxyEngineType.
+         */
+        public Builder DBProxyEngineType(String DBProxyEngineType) {
+            this.DBProxyEngineType = DBProxyEngineType;
             return this;
         }
 

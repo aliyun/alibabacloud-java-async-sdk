@@ -101,6 +101,12 @@ public class ListClassesResponseBody extends TeaModel {
         @NameInMap("Cpu")
         private String cpu;
 
+        @NameInMap("EncryptedMemory")
+        private String encryptedMemory;
+
+        @NameInMap("InstructionSetArch")
+        private String instructionSetArch;
+
         @NameInMap("MaxConnections")
         private String maxConnections;
 
@@ -120,6 +126,8 @@ public class ListClassesResponseBody extends TeaModel {
             this.classCode = builder.classCode;
             this.classGroup = builder.classGroup;
             this.cpu = builder.cpu;
+            this.encryptedMemory = builder.encryptedMemory;
+            this.instructionSetArch = builder.instructionSetArch;
             this.maxConnections = builder.maxConnections;
             this.maxIOMBPS = builder.maxIOMBPS;
             this.maxIOPS = builder.maxIOPS;
@@ -154,6 +162,20 @@ public class ListClassesResponseBody extends TeaModel {
          */
         public String getCpu() {
             return this.cpu;
+        }
+
+        /**
+         * @return encryptedMemory
+         */
+        public String getEncryptedMemory() {
+            return this.encryptedMemory;
+        }
+
+        /**
+         * @return instructionSetArch
+         */
+        public String getInstructionSetArch() {
+            return this.instructionSetArch;
         }
 
         /**
@@ -195,6 +217,8 @@ public class ListClassesResponseBody extends TeaModel {
             private String classCode; 
             private String classGroup; 
             private String cpu; 
+            private String encryptedMemory; 
+            private String instructionSetArch; 
             private String maxConnections; 
             private String maxIOMBPS; 
             private String maxIOPS; 
@@ -222,6 +246,22 @@ public class ListClassesResponseBody extends TeaModel {
              */
             public Builder cpu(String cpu) {
                 this.cpu = cpu;
+                return this;
+            }
+
+            /**
+             * EncryptedMemory.
+             */
+            public Builder encryptedMemory(String encryptedMemory) {
+                this.encryptedMemory = encryptedMemory;
+                return this;
+            }
+
+            /**
+             * InstructionSetArch.
+             */
+            public Builder instructionSetArch(String instructionSetArch) {
+                this.instructionSetArch = instructionSetArch;
                 return this;
             }
 

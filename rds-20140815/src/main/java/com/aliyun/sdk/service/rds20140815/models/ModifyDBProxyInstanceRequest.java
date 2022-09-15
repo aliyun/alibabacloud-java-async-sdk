@@ -18,6 +18,10 @@ public class ModifyDBProxyInstanceRequest extends Request {
     private String DBInstanceId;
 
     @Query
+    @NameInMap("DBProxyEngineType")
+    private String DBProxyEngineType;
+
+    @Query
     @NameInMap("DBProxyInstanceNum")
     @Validation(required = true)
     private String DBProxyInstanceNum;
@@ -54,6 +58,7 @@ public class ModifyDBProxyInstanceRequest extends Request {
     private ModifyDBProxyInstanceRequest(Builder builder) {
         super(builder);
         this.DBInstanceId = builder.DBInstanceId;
+        this.DBProxyEngineType = builder.DBProxyEngineType;
         this.DBProxyInstanceNum = builder.DBProxyInstanceNum;
         this.DBProxyInstanceType = builder.DBProxyInstanceType;
         this.effectiveSpecificTime = builder.effectiveSpecificTime;
@@ -82,6 +87,13 @@ public class ModifyDBProxyInstanceRequest extends Request {
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    /**
+     * @return DBProxyEngineType
+     */
+    public String getDBProxyEngineType() {
+        return this.DBProxyEngineType;
     }
 
     /**
@@ -142,6 +154,7 @@ public class ModifyDBProxyInstanceRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyDBProxyInstanceRequest, Builder> {
         private String DBInstanceId; 
+        private String DBProxyEngineType; 
         private String DBProxyInstanceNum; 
         private String DBProxyInstanceType; 
         private String effectiveSpecificTime; 
@@ -158,6 +171,7 @@ public class ModifyDBProxyInstanceRequest extends Request {
         private Builder(ModifyDBProxyInstanceRequest request) {
             super(request);
             this.DBInstanceId = request.DBInstanceId;
+            this.DBProxyEngineType = request.DBProxyEngineType;
             this.DBProxyInstanceNum = request.DBProxyInstanceNum;
             this.DBProxyInstanceType = request.DBProxyInstanceType;
             this.effectiveSpecificTime = request.effectiveSpecificTime;
@@ -174,6 +188,15 @@ public class ModifyDBProxyInstanceRequest extends Request {
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
             this.DBInstanceId = DBInstanceId;
+            return this;
+        }
+
+        /**
+         * DBProxyEngineType.
+         */
+        public Builder DBProxyEngineType(String DBProxyEngineType) {
+            this.putQueryParameter("DBProxyEngineType", DBProxyEngineType);
+            this.DBProxyEngineType = DBProxyEngineType;
             return this;
         }
 

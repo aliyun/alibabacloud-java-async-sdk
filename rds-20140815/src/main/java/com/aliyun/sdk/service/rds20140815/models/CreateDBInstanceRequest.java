@@ -41,6 +41,10 @@ public class CreateDBInstanceRequest extends Request {
     private String connectionMode;
 
     @Query
+    @NameInMap("ConnectionString")
+    private String connectionString;
+
+    @Query
     @NameInMap("CreateStrategy")
     private String createStrategy;
 
@@ -221,6 +225,7 @@ public class CreateDBInstanceRequest extends Request {
         this.category = builder.category;
         this.clientToken = builder.clientToken;
         this.connectionMode = builder.connectionMode;
+        this.connectionString = builder.connectionString;
         this.createStrategy = builder.createStrategy;
         this.DBInstanceClass = builder.DBInstanceClass;
         this.DBInstanceDescription = builder.DBInstanceDescription;
@@ -324,6 +329,13 @@ public class CreateDBInstanceRequest extends Request {
      */
     public String getConnectionMode() {
         return this.connectionMode;
+    }
+
+    /**
+     * @return connectionString
+     */
+    public String getConnectionString() {
+        return this.connectionString;
     }
 
     /**
@@ -621,6 +633,7 @@ public class CreateDBInstanceRequest extends Request {
         private String category; 
         private String clientToken; 
         private String connectionMode; 
+        private String connectionString; 
         private String createStrategy; 
         private String DBInstanceClass; 
         private String DBInstanceDescription; 
@@ -676,6 +689,7 @@ public class CreateDBInstanceRequest extends Request {
             this.category = request.category;
             this.clientToken = request.clientToken;
             this.connectionMode = request.connectionMode;
+            this.connectionString = request.connectionString;
             this.createStrategy = request.createStrategy;
             this.DBInstanceClass = request.DBInstanceClass;
             this.DBInstanceDescription = request.DBInstanceDescription;
@@ -779,6 +793,15 @@ public class CreateDBInstanceRequest extends Request {
         public Builder connectionMode(String connectionMode) {
             this.putQueryParameter("ConnectionMode", connectionMode);
             this.connectionMode = connectionMode;
+            return this;
+        }
+
+        /**
+         * ConnectionString.
+         */
+        public Builder connectionString(String connectionString) {
+            this.putQueryParameter("ConnectionString", connectionString);
+            this.connectionString = connectionString;
             return this;
         }
 
@@ -1160,15 +1183,23 @@ public class CreateDBInstanceRequest extends Request {
     } 
 
     public static class ServerlessConfig extends TeaModel {
+        @NameInMap("AutoPause")
+        private Boolean autoPause;
+
         @NameInMap("MaxCapacity")
         private Double maxCapacity;
 
         @NameInMap("MinCapacity")
         private Double minCapacity;
 
+        @NameInMap("SwitchForce")
+        private Boolean switchForce;
+
         private ServerlessConfig(Builder builder) {
+            this.autoPause = builder.autoPause;
             this.maxCapacity = builder.maxCapacity;
             this.minCapacity = builder.minCapacity;
+            this.switchForce = builder.switchForce;
         }
 
         public static Builder builder() {
@@ -1177,6 +1208,13 @@ public class CreateDBInstanceRequest extends Request {
 
         public static ServerlessConfig create() {
             return builder().build();
+        }
+
+        /**
+         * @return autoPause
+         */
+        public Boolean getAutoPause() {
+            return this.autoPause;
         }
 
         /**
@@ -1193,9 +1231,26 @@ public class CreateDBInstanceRequest extends Request {
             return this.minCapacity;
         }
 
+        /**
+         * @return switchForce
+         */
+        public Boolean getSwitchForce() {
+            return this.switchForce;
+        }
+
         public static final class Builder {
+            private Boolean autoPause; 
             private Double maxCapacity; 
             private Double minCapacity; 
+            private Boolean switchForce; 
+
+            /**
+             * AutoPause.
+             */
+            public Builder autoPause(Boolean autoPause) {
+                this.autoPause = autoPause;
+                return this;
+            }
 
             /**
              * MaxCapacity.
@@ -1210,6 +1265,14 @@ public class CreateDBInstanceRequest extends Request {
              */
             public Builder minCapacity(Double minCapacity) {
                 this.minCapacity = minCapacity;
+                return this;
+            }
+
+            /**
+             * SwitchForce.
+             */
+            public Builder switchForce(Boolean switchForce) {
+                this.switchForce = switchForce;
                 return this;
             }
 

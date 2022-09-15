@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDiagnosticReportListResponseBody</p>
  */
 public class DescribeDiagnosticReportListResponseBody extends TeaModel {
+    @NameInMap("DBInstanceId")
+    private String DBInstanceId;
+
     @NameInMap("ReportList")
     private java.util.List < ReportList> reportList;
 
@@ -19,6 +22,7 @@ public class DescribeDiagnosticReportListResponseBody extends TeaModel {
     private String requestId;
 
     private DescribeDiagnosticReportListResponseBody(Builder builder) {
+        this.DBInstanceId = builder.DBInstanceId;
         this.reportList = builder.reportList;
         this.requestId = builder.requestId;
     }
@@ -29,6 +33,13 @@ public class DescribeDiagnosticReportListResponseBody extends TeaModel {
 
     public static DescribeDiagnosticReportListResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return DBInstanceId
+     */
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
     }
 
     /**
@@ -46,8 +57,17 @@ public class DescribeDiagnosticReportListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String DBInstanceId; 
         private java.util.List < ReportList> reportList; 
         private String requestId; 
+
+        /**
+         * DBInstanceId.
+         */
+        public Builder DBInstanceId(String DBInstanceId) {
+            this.DBInstanceId = DBInstanceId;
+            return this;
+        }
 
         /**
          * ReportList.

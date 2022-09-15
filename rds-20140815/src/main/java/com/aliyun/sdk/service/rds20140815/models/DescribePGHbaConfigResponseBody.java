@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePGHbaConfigResponseBody</p>
  */
 public class DescribePGHbaConfigResponseBody extends TeaModel {
+    @NameInMap("DBInstanceId")
+    private String DBInstanceId;
+
     @NameInMap("DefaultHbaItems")
     private DefaultHbaItems defaultHbaItems;
 
@@ -31,6 +34,7 @@ public class DescribePGHbaConfigResponseBody extends TeaModel {
     private RunningHbaItems runningHbaItems;
 
     private DescribePGHbaConfigResponseBody(Builder builder) {
+        this.DBInstanceId = builder.DBInstanceId;
         this.defaultHbaItems = builder.defaultHbaItems;
         this.hbaModifyTime = builder.hbaModifyTime;
         this.lastModifyStatus = builder.lastModifyStatus;
@@ -45,6 +49,13 @@ public class DescribePGHbaConfigResponseBody extends TeaModel {
 
     public static DescribePGHbaConfigResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return DBInstanceId
+     */
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
     }
 
     /**
@@ -90,12 +101,21 @@ public class DescribePGHbaConfigResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String DBInstanceId; 
         private DefaultHbaItems defaultHbaItems; 
         private String hbaModifyTime; 
         private String lastModifyStatus; 
         private String modifyStatusReason; 
         private String requestId; 
         private RunningHbaItems runningHbaItems; 
+
+        /**
+         * DBInstanceId.
+         */
+        public Builder DBInstanceId(String DBInstanceId) {
+            this.DBInstanceId = DBInstanceId;
+            return this;
+        }
 
         /**
          * DefaultHbaItems.

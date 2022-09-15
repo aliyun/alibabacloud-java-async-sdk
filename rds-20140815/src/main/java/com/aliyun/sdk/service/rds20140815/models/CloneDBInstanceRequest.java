@@ -87,6 +87,10 @@ public class CloneDBInstanceRequest extends Request {
     private String restoreTime;
 
     @Query
+    @NameInMap("ServerlessConfig")
+    private ServerlessConfig serverlessConfig;
+
+    @Query
     @NameInMap("TableMeta")
     private String tableMeta;
 
@@ -126,6 +130,7 @@ public class CloneDBInstanceRequest extends Request {
         this.resourceOwnerId = builder.resourceOwnerId;
         this.restoreTable = builder.restoreTable;
         this.restoreTime = builder.restoreTime;
+        this.serverlessConfig = builder.serverlessConfig;
         this.tableMeta = builder.tableMeta;
         this.usedTime = builder.usedTime;
         this.VPCId = builder.VPCId;
@@ -273,6 +278,13 @@ public class CloneDBInstanceRequest extends Request {
     }
 
     /**
+     * @return serverlessConfig
+     */
+    public ServerlessConfig getServerlessConfig() {
+        return this.serverlessConfig;
+    }
+
+    /**
      * @return tableMeta
      */
     public String getTableMeta() {
@@ -326,6 +338,7 @@ public class CloneDBInstanceRequest extends Request {
         private Long resourceOwnerId; 
         private String restoreTable; 
         private String restoreTime; 
+        private ServerlessConfig serverlessConfig; 
         private String tableMeta; 
         private Integer usedTime; 
         private String VPCId; 
@@ -356,6 +369,7 @@ public class CloneDBInstanceRequest extends Request {
             this.resourceOwnerId = request.resourceOwnerId;
             this.restoreTable = request.restoreTable;
             this.restoreTime = request.restoreTime;
+            this.serverlessConfig = request.serverlessConfig;
             this.tableMeta = request.tableMeta;
             this.usedTime = request.usedTime;
             this.VPCId = request.VPCId;
@@ -526,6 +540,16 @@ public class CloneDBInstanceRequest extends Request {
         }
 
         /**
+         * ServerlessConfig.
+         */
+        public Builder serverlessConfig(ServerlessConfig serverlessConfig) {
+            String serverlessConfigShrink = shrink(serverlessConfig, "ServerlessConfig", "json");
+            this.putQueryParameter("ServerlessConfig", serverlessConfigShrink);
+            this.serverlessConfig = serverlessConfig;
+            return this;
+        }
+
+        /**
          * TableMeta.
          */
         public Builder tableMeta(String tableMeta) {
@@ -577,4 +601,105 @@ public class CloneDBInstanceRequest extends Request {
 
     } 
 
+    public static class ServerlessConfig extends TeaModel {
+        @NameInMap("AutoPause")
+        private Boolean autoPause;
+
+        @NameInMap("MaxCapacity")
+        private Double maxCapacity;
+
+        @NameInMap("MinCapacity")
+        private Double minCapacity;
+
+        @NameInMap("SwitchForce")
+        private Boolean switchForce;
+
+        private ServerlessConfig(Builder builder) {
+            this.autoPause = builder.autoPause;
+            this.maxCapacity = builder.maxCapacity;
+            this.minCapacity = builder.minCapacity;
+            this.switchForce = builder.switchForce;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ServerlessConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return autoPause
+         */
+        public Boolean getAutoPause() {
+            return this.autoPause;
+        }
+
+        /**
+         * @return maxCapacity
+         */
+        public Double getMaxCapacity() {
+            return this.maxCapacity;
+        }
+
+        /**
+         * @return minCapacity
+         */
+        public Double getMinCapacity() {
+            return this.minCapacity;
+        }
+
+        /**
+         * @return switchForce
+         */
+        public Boolean getSwitchForce() {
+            return this.switchForce;
+        }
+
+        public static final class Builder {
+            private Boolean autoPause; 
+            private Double maxCapacity; 
+            private Double minCapacity; 
+            private Boolean switchForce; 
+
+            /**
+             * AutoPause.
+             */
+            public Builder autoPause(Boolean autoPause) {
+                this.autoPause = autoPause;
+                return this;
+            }
+
+            /**
+             * MaxCapacity.
+             */
+            public Builder maxCapacity(Double maxCapacity) {
+                this.maxCapacity = maxCapacity;
+                return this;
+            }
+
+            /**
+             * MinCapacity.
+             */
+            public Builder minCapacity(Double minCapacity) {
+                this.minCapacity = minCapacity;
+                return this;
+            }
+
+            /**
+             * SwitchForce.
+             */
+            public Builder switchForce(Boolean switchForce) {
+                this.switchForce = switchForce;
+                return this;
+            }
+
+            public ServerlessConfig build() {
+                return new ServerlessConfig(this);
+            } 
+
+        } 
+
+    }
 }

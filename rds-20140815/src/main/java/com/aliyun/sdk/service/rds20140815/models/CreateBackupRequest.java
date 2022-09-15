@@ -34,6 +34,10 @@ public class CreateBackupRequest extends Request {
     private String DBName;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
@@ -44,6 +48,7 @@ public class CreateBackupRequest extends Request {
         this.backupType = builder.backupType;
         this.DBInstanceId = builder.DBInstanceId;
         this.DBName = builder.DBName;
+        this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerId = builder.resourceOwnerId;
     }
 
@@ -96,6 +101,13 @@ public class CreateBackupRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return resourceOwnerId
      */
     public Long getResourceOwnerId() {
@@ -108,6 +120,7 @@ public class CreateBackupRequest extends Request {
         private String backupType; 
         private String DBInstanceId; 
         private String DBName; 
+        private String resourceGroupId; 
         private Long resourceOwnerId; 
 
         private Builder() {
@@ -121,6 +134,7 @@ public class CreateBackupRequest extends Request {
             this.backupType = request.backupType;
             this.DBInstanceId = request.DBInstanceId;
             this.DBName = request.DBName;
+            this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerId = request.resourceOwnerId;
         } 
 
@@ -166,6 +180,15 @@ public class CreateBackupRequest extends Request {
         public Builder DBName(String DBName) {
             this.putQueryParameter("DBName", DBName);
             this.DBName = DBName;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

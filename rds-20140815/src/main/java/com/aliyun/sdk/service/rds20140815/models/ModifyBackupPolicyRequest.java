@@ -62,6 +62,10 @@ public class ModifyBackupPolicyRequest extends Request {
     private String enableBackupLog;
 
     @Query
+    @NameInMap("EnableIncrementDataBackup")
+    private Boolean enableIncrementDataBackup;
+
+    @Query
     @NameInMap("HighSpaceUsageProtection")
     private String highSpaceUsageProtection;
 
@@ -127,6 +131,7 @@ public class ModifyBackupPolicyRequest extends Request {
         this.compressType = builder.compressType;
         this.DBInstanceId = builder.DBInstanceId;
         this.enableBackupLog = builder.enableBackupLog;
+        this.enableIncrementDataBackup = builder.enableIncrementDataBackup;
         this.highSpaceUsageProtection = builder.highSpaceUsageProtection;
         this.localLogRetentionHours = builder.localLogRetentionHours;
         this.localLogRetentionSpace = builder.localLogRetentionSpace;
@@ -240,6 +245,13 @@ public class ModifyBackupPolicyRequest extends Request {
     }
 
     /**
+     * @return enableIncrementDataBackup
+     */
+    public Boolean getEnableIncrementDataBackup() {
+        return this.enableIncrementDataBackup;
+    }
+
+    /**
      * @return highSpaceUsageProtection
      */
     public String getHighSpaceUsageProtection() {
@@ -343,6 +355,7 @@ public class ModifyBackupPolicyRequest extends Request {
         private String compressType; 
         private String DBInstanceId; 
         private String enableBackupLog; 
+        private Boolean enableIncrementDataBackup; 
         private String highSpaceUsageProtection; 
         private String localLogRetentionHours; 
         private String localLogRetentionSpace; 
@@ -375,6 +388,7 @@ public class ModifyBackupPolicyRequest extends Request {
             this.compressType = request.compressType;
             this.DBInstanceId = request.DBInstanceId;
             this.enableBackupLog = request.enableBackupLog;
+            this.enableIncrementDataBackup = request.enableIncrementDataBackup;
             this.highSpaceUsageProtection = request.highSpaceUsageProtection;
             this.localLogRetentionHours = request.localLogRetentionHours;
             this.localLogRetentionSpace = request.localLogRetentionSpace;
@@ -495,6 +509,15 @@ public class ModifyBackupPolicyRequest extends Request {
         public Builder enableBackupLog(String enableBackupLog) {
             this.putQueryParameter("EnableBackupLog", enableBackupLog);
             this.enableBackupLog = enableBackupLog;
+            return this;
+        }
+
+        /**
+         * EnableIncrementDataBackup.
+         */
+        public Builder enableIncrementDataBackup(Boolean enableIncrementDataBackup) {
+            this.putQueryParameter("EnableIncrementDataBackup", enableIncrementDataBackup);
+            this.enableIncrementDataBackup = enableIncrementDataBackup;
             return this;
         }
 

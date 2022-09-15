@@ -28,6 +28,10 @@ public class DeleteDBProxyEndpointAddressRequest extends Request {
     private String DBProxyEndpointId;
 
     @Query
+    @NameInMap("DBProxyEngineType")
+    private String DBProxyEngineType;
+
+    @Query
     @NameInMap("RegionId")
     private String regionId;
 
@@ -36,6 +40,7 @@ public class DeleteDBProxyEndpointAddressRequest extends Request {
         this.DBInstanceId = builder.DBInstanceId;
         this.DBProxyConnectStringNetType = builder.DBProxyConnectStringNetType;
         this.DBProxyEndpointId = builder.DBProxyEndpointId;
+        this.DBProxyEngineType = builder.DBProxyEngineType;
         this.regionId = builder.regionId;
     }
 
@@ -74,6 +79,13 @@ public class DeleteDBProxyEndpointAddressRequest extends Request {
     }
 
     /**
+     * @return DBProxyEngineType
+     */
+    public String getDBProxyEngineType() {
+        return this.DBProxyEngineType;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -84,6 +96,7 @@ public class DeleteDBProxyEndpointAddressRequest extends Request {
         private String DBInstanceId; 
         private String DBProxyConnectStringNetType; 
         private String DBProxyEndpointId; 
+        private String DBProxyEngineType; 
         private String regionId; 
 
         private Builder() {
@@ -95,6 +108,7 @@ public class DeleteDBProxyEndpointAddressRequest extends Request {
             this.DBInstanceId = request.DBInstanceId;
             this.DBProxyConnectStringNetType = request.DBProxyConnectStringNetType;
             this.DBProxyEndpointId = request.DBProxyEndpointId;
+            this.DBProxyEngineType = request.DBProxyEngineType;
             this.regionId = request.regionId;
         } 
 
@@ -122,6 +136,15 @@ public class DeleteDBProxyEndpointAddressRequest extends Request {
         public Builder DBProxyEndpointId(String DBProxyEndpointId) {
             this.putQueryParameter("DBProxyEndpointId", DBProxyEndpointId);
             this.DBProxyEndpointId = DBProxyEndpointId;
+            return this;
+        }
+
+        /**
+         * DBProxyEngineType.
+         */
+        public Builder DBProxyEngineType(String DBProxyEngineType) {
+            this.putQueryParameter("DBProxyEngineType", DBProxyEngineType);
+            this.DBProxyEngineType = DBProxyEngineType;
             return this;
         }
 

@@ -24,6 +24,9 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
     @NameInMap("DBProxyEndpointId")
     private String DBProxyEndpointId;
 
+    @NameInMap("DBProxyEngineType")
+    private String DBProxyEngineType;
+
     @NameInMap("DBProxyFeatures")
     private String DBProxyFeatures;
 
@@ -53,6 +56,7 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
         this.DBProxyConnectStringNetType = builder.DBProxyConnectStringNetType;
         this.DBProxyConnectStringPort = builder.DBProxyConnectStringPort;
         this.DBProxyEndpointId = builder.DBProxyEndpointId;
+        this.DBProxyEngineType = builder.DBProxyEngineType;
         this.DBProxyFeatures = builder.DBProxyFeatures;
         this.dbProxyEndpointAliases = builder.dbProxyEndpointAliases;
         this.dbProxyEndpointReadWriteMode = builder.dbProxyEndpointReadWriteMode;
@@ -97,6 +101,13 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
      */
     public String getDBProxyEndpointId() {
         return this.DBProxyEndpointId;
+    }
+
+    /**
+     * @return DBProxyEngineType
+     */
+    public String getDBProxyEngineType() {
+        return this.DBProxyEngineType;
     }
 
     /**
@@ -160,6 +171,7 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
         private String DBProxyConnectStringNetType; 
         private String DBProxyConnectStringPort; 
         private String DBProxyEndpointId; 
+        private String DBProxyEngineType; 
         private String DBProxyFeatures; 
         private String dbProxyEndpointAliases; 
         private String dbProxyEndpointReadWriteMode; 
@@ -198,6 +210,14 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
          */
         public Builder DBProxyEndpointId(String DBProxyEndpointId) {
             this.DBProxyEndpointId = DBProxyEndpointId;
+            return this;
+        }
+
+        /**
+         * DBProxyEngineType.
+         */
+        public Builder DBProxyEngineType(String DBProxyEngineType) {
+            this.DBProxyEngineType = DBProxyEngineType;
             return this;
         }
 

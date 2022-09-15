@@ -18,12 +18,20 @@ public class DescribeAvailableRecoveryTimeRequest extends Request {
     private Integer crossBackupId;
 
     @Query
+    @NameInMap("DBInstanceId")
+    private String DBInstanceId;
+
+    @Query
     @NameInMap("OwnerId")
     private Long ownerId;
 
     @Query
     @NameInMap("RegionId")
     private String regionId;
+
+    @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
 
     @Query
     @NameInMap("ResourceOwnerAccount")
@@ -36,8 +44,10 @@ public class DescribeAvailableRecoveryTimeRequest extends Request {
     private DescribeAvailableRecoveryTimeRequest(Builder builder) {
         super(builder);
         this.crossBackupId = builder.crossBackupId;
+        this.DBInstanceId = builder.DBInstanceId;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
     }
@@ -63,6 +73,13 @@ public class DescribeAvailableRecoveryTimeRequest extends Request {
     }
 
     /**
+     * @return DBInstanceId
+     */
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
+    /**
      * @return ownerId
      */
     public Long getOwnerId() {
@@ -74,6 +91,13 @@ public class DescribeAvailableRecoveryTimeRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     /**
@@ -92,8 +116,10 @@ public class DescribeAvailableRecoveryTimeRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeAvailableRecoveryTimeRequest, Builder> {
         private Integer crossBackupId; 
+        private String DBInstanceId; 
         private Long ownerId; 
         private String regionId; 
+        private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
 
@@ -104,8 +130,10 @@ public class DescribeAvailableRecoveryTimeRequest extends Request {
         private Builder(DescribeAvailableRecoveryTimeRequest request) {
             super(request);
             this.crossBackupId = request.crossBackupId;
+            this.DBInstanceId = request.DBInstanceId;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
         } 
@@ -116,6 +144,15 @@ public class DescribeAvailableRecoveryTimeRequest extends Request {
         public Builder crossBackupId(Integer crossBackupId) {
             this.putQueryParameter("CrossBackupId", crossBackupId);
             this.crossBackupId = crossBackupId;
+            return this;
+        }
+
+        /**
+         * DBInstanceId.
+         */
+        public Builder DBInstanceId(String DBInstanceId) {
+            this.putQueryParameter("DBInstanceId", DBInstanceId);
+            this.DBInstanceId = DBInstanceId;
             return this;
         }
 
@@ -134,6 +171,15 @@ public class DescribeAvailableRecoveryTimeRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

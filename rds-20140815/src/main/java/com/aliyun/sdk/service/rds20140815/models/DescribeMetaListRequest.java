@@ -46,6 +46,10 @@ public class DescribeMetaListRequest extends Request {
     private String pattern;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -71,6 +75,7 @@ public class DescribeMetaListRequest extends Request {
         this.pageIndex = builder.pageIndex;
         this.pageSize = builder.pageSize;
         this.pattern = builder.pattern;
+        this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.restoreTime = builder.restoreTime;
@@ -147,6 +152,13 @@ public class DescribeMetaListRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -183,6 +195,7 @@ public class DescribeMetaListRequest extends Request {
         private Integer pageIndex; 
         private Integer pageSize; 
         private String pattern; 
+        private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String restoreTime; 
@@ -202,6 +215,7 @@ public class DescribeMetaListRequest extends Request {
             this.pageIndex = request.pageIndex;
             this.pageSize = request.pageSize;
             this.pattern = request.pattern;
+            this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.restoreTime = request.restoreTime;
@@ -277,6 +291,15 @@ public class DescribeMetaListRequest extends Request {
         public Builder pattern(String pattern) {
             this.putQueryParameter("Pattern", pattern);
             this.pattern = pattern;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

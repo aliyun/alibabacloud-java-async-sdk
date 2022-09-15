@@ -17,18 +17,6 @@ public class CreateDdrInstanceRequest extends Request {
     private String backupSetId;
 
     @Query
-    @NameInMap("BinlogName")
-    private String binlogName;
-
-    @Query
-    @NameInMap("BinlogPosition")
-    private String binlogPosition;
-
-    @Query
-    @NameInMap("BinlogRole")
-    private String binlogRole;
-
-    @Query
     @NameInMap("ClientToken")
     private String clientToken;
 
@@ -156,9 +144,6 @@ public class CreateDdrInstanceRequest extends Request {
     private CreateDdrInstanceRequest(Builder builder) {
         super(builder);
         this.backupSetId = builder.backupSetId;
-        this.binlogName = builder.binlogName;
-        this.binlogPosition = builder.binlogPosition;
-        this.binlogRole = builder.binlogRole;
         this.clientToken = builder.clientToken;
         this.connectionMode = builder.connectionMode;
         this.DBInstanceClass = builder.DBInstanceClass;
@@ -208,27 +193,6 @@ public class CreateDdrInstanceRequest extends Request {
      */
     public String getBackupSetId() {
         return this.backupSetId;
-    }
-
-    /**
-     * @return binlogName
-     */
-    public String getBinlogName() {
-        return this.binlogName;
-    }
-
-    /**
-     * @return binlogPosition
-     */
-    public String getBinlogPosition() {
-        return this.binlogPosition;
-    }
-
-    /**
-     * @return binlogRole
-     */
-    public String getBinlogRole() {
-        return this.binlogRole;
     }
 
     /**
@@ -436,9 +400,6 @@ public class CreateDdrInstanceRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateDdrInstanceRequest, Builder> {
         private String backupSetId; 
-        private String binlogName; 
-        private String binlogPosition; 
-        private String binlogRole; 
         private String clientToken; 
         private String connectionMode; 
         private String DBInstanceClass; 
@@ -476,9 +437,6 @@ public class CreateDdrInstanceRequest extends Request {
         private Builder(CreateDdrInstanceRequest request) {
             super(request);
             this.backupSetId = request.backupSetId;
-            this.binlogName = request.binlogName;
-            this.binlogPosition = request.binlogPosition;
-            this.binlogRole = request.binlogRole;
             this.clientToken = request.clientToken;
             this.connectionMode = request.connectionMode;
             this.DBInstanceClass = request.DBInstanceClass;
@@ -516,33 +474,6 @@ public class CreateDdrInstanceRequest extends Request {
         public Builder backupSetId(String backupSetId) {
             this.putQueryParameter("BackupSetId", backupSetId);
             this.backupSetId = backupSetId;
-            return this;
-        }
-
-        /**
-         * BinlogName.
-         */
-        public Builder binlogName(String binlogName) {
-            this.putQueryParameter("BinlogName", binlogName);
-            this.binlogName = binlogName;
-            return this;
-        }
-
-        /**
-         * BinlogPosition.
-         */
-        public Builder binlogPosition(String binlogPosition) {
-            this.putQueryParameter("BinlogPosition", binlogPosition);
-            this.binlogPosition = binlogPosition;
-            return this;
-        }
-
-        /**
-         * BinlogRole.
-         */
-        public Builder binlogRole(String binlogRole) {
-            this.putQueryParameter("BinlogRole", binlogRole);
-            this.binlogRole = binlogRole;
             return this;
         }
 

@@ -17,9 +17,14 @@ public class DescribeDiagnosticReportListRequest extends Request {
     @Validation(required = true)
     private String DBInstanceId;
 
+    @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
     private DescribeDiagnosticReportListRequest(Builder builder) {
         super(builder);
         this.DBInstanceId = builder.DBInstanceId;
+        this.resourceGroupId = builder.resourceGroupId;
     }
 
     public static Builder builder() {
@@ -42,8 +47,16 @@ public class DescribeDiagnosticReportListRequest extends Request {
         return this.DBInstanceId;
     }
 
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public static final class Builder extends Request.Builder<DescribeDiagnosticReportListRequest, Builder> {
         private String DBInstanceId; 
+        private String resourceGroupId; 
 
         private Builder() {
             super();
@@ -52,6 +65,7 @@ public class DescribeDiagnosticReportListRequest extends Request {
         private Builder(DescribeDiagnosticReportListRequest request) {
             super(request);
             this.DBInstanceId = request.DBInstanceId;
+            this.resourceGroupId = request.resourceGroupId;
         } 
 
         /**
@@ -60,6 +74,15 @@ public class DescribeDiagnosticReportListRequest extends Request {
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
             this.DBInstanceId = DBInstanceId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

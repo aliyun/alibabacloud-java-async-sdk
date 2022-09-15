@@ -18,12 +18,16 @@ public class CopyDatabaseResponseBody extends TeaModel {
     @NameInMap("DBStatus")
     private String DBStatus;
 
+    @NameInMap("RequestId")
+    private String requestId;
+
     @NameInMap("TaskId")
     private String taskId;
 
     private CopyDatabaseResponseBody(Builder builder) {
         this.DBName = builder.DBName;
         this.DBStatus = builder.DBStatus;
+        this.requestId = builder.requestId;
         this.taskId = builder.taskId;
     }
 
@@ -50,6 +54,13 @@ public class CopyDatabaseResponseBody extends TeaModel {
     }
 
     /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    /**
      * @return taskId
      */
     public String getTaskId() {
@@ -59,6 +70,7 @@ public class CopyDatabaseResponseBody extends TeaModel {
     public static final class Builder {
         private String DBName; 
         private String DBStatus; 
+        private String requestId; 
         private String taskId; 
 
         /**
@@ -74,6 +86,14 @@ public class CopyDatabaseResponseBody extends TeaModel {
          */
         public Builder DBStatus(String DBStatus) {
             this.DBStatus = DBStatus;
+            return this;
+        }
+
+        /**
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 

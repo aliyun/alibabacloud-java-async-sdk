@@ -23,6 +23,10 @@ public class ModifyDBProxyRequest extends Request {
     private String DBInstanceId;
 
     @Query
+    @NameInMap("DBProxyEngineType")
+    private String DBProxyEngineType;
+
+    @Query
     @NameInMap("DBProxyInstanceNum")
     private String DBProxyInstanceNum;
 
@@ -37,6 +41,10 @@ public class ModifyDBProxyRequest extends Request {
     @Query
     @NameInMap("RegionId")
     private String regionId;
+
+    @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
 
     @Query
     @NameInMap("ResourceOwnerAccount")
@@ -58,10 +66,12 @@ public class ModifyDBProxyRequest extends Request {
         super(builder);
         this.configDBProxyService = builder.configDBProxyService;
         this.DBInstanceId = builder.DBInstanceId;
+        this.DBProxyEngineType = builder.DBProxyEngineType;
         this.DBProxyInstanceNum = builder.DBProxyInstanceNum;
         this.instanceNetworkType = builder.instanceNetworkType;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.VPCId = builder.VPCId;
@@ -96,6 +106,13 @@ public class ModifyDBProxyRequest extends Request {
     }
 
     /**
+     * @return DBProxyEngineType
+     */
+    public String getDBProxyEngineType() {
+        return this.DBProxyEngineType;
+    }
+
+    /**
      * @return DBProxyInstanceNum
      */
     public String getDBProxyInstanceNum() {
@@ -121,6 +138,13 @@ public class ModifyDBProxyRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     /**
@@ -154,10 +178,12 @@ public class ModifyDBProxyRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyDBProxyRequest, Builder> {
         private String configDBProxyService; 
         private String DBInstanceId; 
+        private String DBProxyEngineType; 
         private String DBProxyInstanceNum; 
         private String instanceNetworkType; 
         private Long ownerId; 
         private String regionId; 
+        private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String VPCId; 
@@ -171,10 +197,12 @@ public class ModifyDBProxyRequest extends Request {
             super(request);
             this.configDBProxyService = request.configDBProxyService;
             this.DBInstanceId = request.DBInstanceId;
+            this.DBProxyEngineType = request.DBProxyEngineType;
             this.DBProxyInstanceNum = request.DBProxyInstanceNum;
             this.instanceNetworkType = request.instanceNetworkType;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.VPCId = request.VPCId;
@@ -196,6 +224,15 @@ public class ModifyDBProxyRequest extends Request {
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
             this.DBInstanceId = DBInstanceId;
+            return this;
+        }
+
+        /**
+         * DBProxyEngineType.
+         */
+        public Builder DBProxyEngineType(String DBProxyEngineType) {
+            this.putQueryParameter("DBProxyEngineType", DBProxyEngineType);
+            this.DBProxyEngineType = DBProxyEngineType;
             return this;
         }
 
@@ -232,6 +269,15 @@ public class ModifyDBProxyRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAvailableMetricsResponseBody</p>
  */
 public class DescribeAvailableMetricsResponseBody extends TeaModel {
+    @NameInMap("DBInstanceName")
+    private String DBInstanceName;
+
     @NameInMap("Items")
     private java.util.List < Items> items;
 
@@ -22,6 +25,7 @@ public class DescribeAvailableMetricsResponseBody extends TeaModel {
     private Integer totalRecordCount;
 
     private DescribeAvailableMetricsResponseBody(Builder builder) {
+        this.DBInstanceName = builder.DBInstanceName;
         this.items = builder.items;
         this.requestId = builder.requestId;
         this.totalRecordCount = builder.totalRecordCount;
@@ -33,6 +37,13 @@ public class DescribeAvailableMetricsResponseBody extends TeaModel {
 
     public static DescribeAvailableMetricsResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return DBInstanceName
+     */
+    public String getDBInstanceName() {
+        return this.DBInstanceName;
     }
 
     /**
@@ -57,9 +68,18 @@ public class DescribeAvailableMetricsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String DBInstanceName; 
         private java.util.List < Items> items; 
         private String requestId; 
         private Integer totalRecordCount; 
+
+        /**
+         * DBInstanceName.
+         */
+        public Builder DBInstanceName(String DBInstanceName) {
+            this.DBInstanceName = DBInstanceName;
+            return this;
+        }
 
         /**
          * Items.

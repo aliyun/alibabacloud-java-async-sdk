@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyDbProxyInstanceSslRequest extends Request {
     @Query
+    @NameInMap("DBProxyEngineType")
+    private String DBProxyEngineType;
+
+    @Query
     @NameInMap("DbInstanceId")
     @Validation(required = true)
     private String dbInstanceId;
@@ -38,6 +42,7 @@ public class ModifyDbProxyInstanceSslRequest extends Request {
 
     private ModifyDbProxyInstanceSslRequest(Builder builder) {
         super(builder);
+        this.DBProxyEngineType = builder.DBProxyEngineType;
         this.dbInstanceId = builder.dbInstanceId;
         this.dbProxyConnectString = builder.dbProxyConnectString;
         this.dbProxyEndpointId = builder.dbProxyEndpointId;
@@ -56,6 +61,13 @@ public class ModifyDbProxyInstanceSslRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return DBProxyEngineType
+     */
+    public String getDBProxyEngineType() {
+        return this.DBProxyEngineType;
     }
 
     /**
@@ -94,6 +106,7 @@ public class ModifyDbProxyInstanceSslRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyDbProxyInstanceSslRequest, Builder> {
+        private String DBProxyEngineType; 
         private String dbInstanceId; 
         private String dbProxyConnectString; 
         private String dbProxyEndpointId; 
@@ -106,12 +119,22 @@ public class ModifyDbProxyInstanceSslRequest extends Request {
 
         private Builder(ModifyDbProxyInstanceSslRequest request) {
             super(request);
+            this.DBProxyEngineType = request.DBProxyEngineType;
             this.dbInstanceId = request.dbInstanceId;
             this.dbProxyConnectString = request.dbProxyConnectString;
             this.dbProxyEndpointId = request.dbProxyEndpointId;
             this.dbProxySslEnabled = request.dbProxySslEnabled;
             this.regionId = request.regionId;
         } 
+
+        /**
+         * DBProxyEngineType.
+         */
+        public Builder DBProxyEngineType(String DBProxyEngineType) {
+            this.putQueryParameter("DBProxyEngineType", DBProxyEngineType);
+            this.DBProxyEngineType = DBProxyEngineType;
+            return this;
+        }
 
         /**
          * DbInstanceId.

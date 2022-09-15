@@ -33,12 +33,20 @@ public class CreateDBProxyEndpointAddressRequest extends Request {
     private String DBProxyEndpointId;
 
     @Query
+    @NameInMap("DBProxyEngineType")
+    private String DBProxyEngineType;
+
+    @Query
     @NameInMap("DBProxyNewConnectStringPort")
     private String DBProxyNewConnectStringPort;
 
     @Query
     @NameInMap("RegionId")
     private String regionId;
+
+    @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
 
     @Query
     @NameInMap("VPCId")
@@ -54,8 +62,10 @@ public class CreateDBProxyEndpointAddressRequest extends Request {
         this.DBInstanceId = builder.DBInstanceId;
         this.DBProxyConnectStringNetType = builder.DBProxyConnectStringNetType;
         this.DBProxyEndpointId = builder.DBProxyEndpointId;
+        this.DBProxyEngineType = builder.DBProxyEngineType;
         this.DBProxyNewConnectStringPort = builder.DBProxyNewConnectStringPort;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.VPCId = builder.VPCId;
         this.vSwitchId = builder.vSwitchId;
     }
@@ -102,6 +112,13 @@ public class CreateDBProxyEndpointAddressRequest extends Request {
     }
 
     /**
+     * @return DBProxyEngineType
+     */
+    public String getDBProxyEngineType() {
+        return this.DBProxyEngineType;
+    }
+
+    /**
      * @return DBProxyNewConnectStringPort
      */
     public String getDBProxyNewConnectStringPort() {
@@ -113,6 +130,13 @@ public class CreateDBProxyEndpointAddressRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     /**
@@ -134,8 +158,10 @@ public class CreateDBProxyEndpointAddressRequest extends Request {
         private String DBInstanceId; 
         private String DBProxyConnectStringNetType; 
         private String DBProxyEndpointId; 
+        private String DBProxyEngineType; 
         private String DBProxyNewConnectStringPort; 
         private String regionId; 
+        private String resourceGroupId; 
         private String VPCId; 
         private String vSwitchId; 
 
@@ -149,8 +175,10 @@ public class CreateDBProxyEndpointAddressRequest extends Request {
             this.DBInstanceId = request.DBInstanceId;
             this.DBProxyConnectStringNetType = request.DBProxyConnectStringNetType;
             this.DBProxyEndpointId = request.DBProxyEndpointId;
+            this.DBProxyEngineType = request.DBProxyEngineType;
             this.DBProxyNewConnectStringPort = request.DBProxyNewConnectStringPort;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.VPCId = request.VPCId;
             this.vSwitchId = request.vSwitchId;
         } 
@@ -192,6 +220,15 @@ public class CreateDBProxyEndpointAddressRequest extends Request {
         }
 
         /**
+         * DBProxyEngineType.
+         */
+        public Builder DBProxyEngineType(String DBProxyEngineType) {
+            this.putQueryParameter("DBProxyEngineType", DBProxyEngineType);
+            this.DBProxyEngineType = DBProxyEngineType;
+            return this;
+        }
+
+        /**
          * DBProxyNewConnectStringPort.
          */
         public Builder DBProxyNewConnectStringPort(String DBProxyNewConnectStringPort) {
@@ -206,6 +243,15 @@ public class CreateDBProxyEndpointAddressRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

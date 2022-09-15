@@ -12,10 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RestoreDdrTableResponseBody</p>
  */
 public class RestoreDdrTableResponseBody extends TeaModel {
+    @NameInMap("DBInstanceId")
+    private String DBInstanceId;
+
     @NameInMap("RequestId")
     private String requestId;
 
     private RestoreDdrTableResponseBody(Builder builder) {
+        this.DBInstanceId = builder.DBInstanceId;
         this.requestId = builder.requestId;
     }
 
@@ -28,6 +32,13 @@ public class RestoreDdrTableResponseBody extends TeaModel {
     }
 
     /**
+     * @return DBInstanceId
+     */
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -35,7 +46,16 @@ public class RestoreDdrTableResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String DBInstanceId; 
         private String requestId; 
+
+        /**
+         * DBInstanceId.
+         */
+        public Builder DBInstanceId(String DBInstanceId) {
+            this.DBInstanceId = DBInstanceId;
+            return this;
+        }
 
         /**
          * RequestId.

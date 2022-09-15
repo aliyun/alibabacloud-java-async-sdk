@@ -297,15 +297,23 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
     }
     public static class ServerlessConfig extends TeaModel {
+        @NameInMap("AutoPause")
+        private Boolean autoPause;
+
         @NameInMap("ScaleMax")
         private Double scaleMax;
 
         @NameInMap("ScaleMin")
         private Double scaleMin;
 
+        @NameInMap("SwitchForce")
+        private Boolean switchForce;
+
         private ServerlessConfig(Builder builder) {
+            this.autoPause = builder.autoPause;
             this.scaleMax = builder.scaleMax;
             this.scaleMin = builder.scaleMin;
+            this.switchForce = builder.switchForce;
         }
 
         public static Builder builder() {
@@ -314,6 +322,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
         public static ServerlessConfig create() {
             return builder().build();
+        }
+
+        /**
+         * @return autoPause
+         */
+        public Boolean getAutoPause() {
+            return this.autoPause;
         }
 
         /**
@@ -330,9 +345,26 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             return this.scaleMin;
         }
 
+        /**
+         * @return switchForce
+         */
+        public Boolean getSwitchForce() {
+            return this.switchForce;
+        }
+
         public static final class Builder {
+            private Boolean autoPause; 
             private Double scaleMax; 
             private Double scaleMin; 
+            private Boolean switchForce; 
+
+            /**
+             * AutoPause.
+             */
+            public Builder autoPause(Boolean autoPause) {
+                this.autoPause = autoPause;
+                return this;
+            }
 
             /**
              * ScaleMax.
@@ -347,6 +379,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              */
             public Builder scaleMin(Double scaleMin) {
                 this.scaleMin = scaleMin;
+                return this;
+            }
+
+            /**
+             * SwitchForce.
+             */
+            public Builder switchForce(Boolean switchForce) {
+                this.switchForce = switchForce;
                 return this;
             }
 
@@ -545,6 +585,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("InstanceNetworkType")
         private String instanceNetworkType;
 
+        @NameInMap("InstructionSetArch")
+        private String instructionSetArch;
+
         @NameInMap("LatestKernelVersion")
         private String latestKernelVersion;
 
@@ -632,6 +675,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("ZoneId")
         private String zoneId;
 
+        @NameInMap("kindCode")
+        private String kindCode;
+
         private DBInstanceAttribute(Builder builder) {
             this.accountMaxQuantity = builder.accountMaxQuantity;
             this.advancedFeatures = builder.advancedFeatures;
@@ -668,6 +714,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.IPType = builder.IPType;
             this.incrementSourceDBInstanceId = builder.incrementSourceDBInstanceId;
             this.instanceNetworkType = builder.instanceNetworkType;
+            this.instructionSetArch = builder.instructionSetArch;
             this.latestKernelVersion = builder.latestKernelVersion;
             this.lockMode = builder.lockMode;
             this.lockReason = builder.lockReason;
@@ -697,6 +744,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.vpcCloudInstanceId = builder.vpcCloudInstanceId;
             this.vpcId = builder.vpcId;
             this.zoneId = builder.zoneId;
+            this.kindCode = builder.kindCode;
         }
 
         public static Builder builder() {
@@ -953,6 +1001,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return instructionSetArch
+         */
+        public String getInstructionSetArch() {
+            return this.instructionSetArch;
+        }
+
+        /**
          * @return latestKernelVersion
          */
         public String getLatestKernelVersion() {
@@ -1155,6 +1210,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             return this.zoneId;
         }
 
+        /**
+         * @return kindCode
+         */
+        public String getKindCode() {
+            return this.kindCode;
+        }
+
         public static final class Builder {
             private Integer accountMaxQuantity; 
             private String advancedFeatures; 
@@ -1191,6 +1253,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String IPType; 
             private String incrementSourceDBInstanceId; 
             private String instanceNetworkType; 
+            private String instructionSetArch; 
             private String latestKernelVersion; 
             private String lockMode; 
             private String lockReason; 
@@ -1220,6 +1283,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String vpcCloudInstanceId; 
             private String vpcId; 
             private String zoneId; 
+            private String kindCode; 
 
             /**
              * AccountMaxQuantity.
@@ -1502,6 +1566,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
+             * InstructionSetArch.
+             */
+            public Builder instructionSetArch(String instructionSetArch) {
+                this.instructionSetArch = instructionSetArch;
+                return this;
+            }
+
+            /**
              * LatestKernelVersion.
              */
             public Builder latestKernelVersion(String latestKernelVersion) {
@@ -1730,6 +1802,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
+                return this;
+            }
+
+            /**
+             * kindCode.
+             */
+            public Builder kindCode(String kindCode) {
+                this.kindCode = kindCode;
                 return this;
             }
 

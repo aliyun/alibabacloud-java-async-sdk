@@ -511,15 +511,23 @@ public class ModifyDBInstanceSpecRequest extends Request {
     } 
 
     public static class ServerlessConfiguration extends TeaModel {
+        @NameInMap("AutoPause")
+        private Boolean autoPause;
+
         @NameInMap("MaxCapacity")
         private Double maxCapacity;
 
         @NameInMap("MinCapacity")
         private Double minCapacity;
 
+        @NameInMap("SwitchForce")
+        private Boolean switchForce;
+
         private ServerlessConfiguration(Builder builder) {
+            this.autoPause = builder.autoPause;
             this.maxCapacity = builder.maxCapacity;
             this.minCapacity = builder.minCapacity;
+            this.switchForce = builder.switchForce;
         }
 
         public static Builder builder() {
@@ -528,6 +536,13 @@ public class ModifyDBInstanceSpecRequest extends Request {
 
         public static ServerlessConfiguration create() {
             return builder().build();
+        }
+
+        /**
+         * @return autoPause
+         */
+        public Boolean getAutoPause() {
+            return this.autoPause;
         }
 
         /**
@@ -544,9 +559,26 @@ public class ModifyDBInstanceSpecRequest extends Request {
             return this.minCapacity;
         }
 
+        /**
+         * @return switchForce
+         */
+        public Boolean getSwitchForce() {
+            return this.switchForce;
+        }
+
         public static final class Builder {
+            private Boolean autoPause; 
             private Double maxCapacity; 
             private Double minCapacity; 
+            private Boolean switchForce; 
+
+            /**
+             * AutoPause.
+             */
+            public Builder autoPause(Boolean autoPause) {
+                this.autoPause = autoPause;
+                return this;
+            }
 
             /**
              * MaxCapacity.
@@ -561,6 +593,14 @@ public class ModifyDBInstanceSpecRequest extends Request {
              */
             public Builder minCapacity(Double minCapacity) {
                 this.minCapacity = minCapacity;
+                return this;
+            }
+
+            /**
+             * SwitchForce.
+             */
+            public Builder switchForce(Boolean switchForce) {
+                this.switchForce = switchForce;
                 return this;
             }
 
