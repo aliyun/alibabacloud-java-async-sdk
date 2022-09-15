@@ -12,17 +12,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DepartmentSaveResponseBody</p>
  */
 public class DepartmentSaveResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    private String requestId;
+    @NameInMap("code")
+    private Integer code;
+
+    @NameInMap("message")
+    private String message;
 
     @NameInMap("module")
     private String module;
 
-    @NameInMap("result_code")
-    private Integer resultCode;
-
-    @NameInMap("result_msg")
-    private String resultMsg;
+    @NameInMap("requestId")
+    private String requestId;
 
     @NameInMap("success")
     private Boolean success;
@@ -31,10 +31,10 @@ public class DepartmentSaveResponseBody extends TeaModel {
     private String traceId;
 
     private DepartmentSaveResponseBody(Builder builder) {
-        this.requestId = builder.requestId;
+        this.code = builder.code;
+        this.message = builder.message;
         this.module = builder.module;
-        this.resultCode = builder.resultCode;
-        this.resultMsg = builder.resultMsg;
+        this.requestId = builder.requestId;
         this.success = builder.success;
         this.traceId = builder.traceId;
     }
@@ -48,10 +48,17 @@ public class DepartmentSaveResponseBody extends TeaModel {
     }
 
     /**
-     * @return requestId
+     * @return code
      */
-    public String getRequestId() {
-        return this.requestId;
+    public Integer getCode() {
+        return this.code;
+    }
+
+    /**
+     * @return message
+     */
+    public String getMessage() {
+        return this.message;
     }
 
     /**
@@ -62,17 +69,10 @@ public class DepartmentSaveResponseBody extends TeaModel {
     }
 
     /**
-     * @return resultCode
+     * @return requestId
      */
-    public Integer getResultCode() {
-        return this.resultCode;
-    }
-
-    /**
-     * @return resultMsg
-     */
-    public String getResultMsg() {
-        return this.resultMsg;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     /**
@@ -90,18 +90,26 @@ public class DepartmentSaveResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String requestId; 
+        private Integer code; 
+        private String message; 
         private String module; 
-        private Integer resultCode; 
-        private String resultMsg; 
+        private String requestId; 
         private Boolean success; 
         private String traceId; 
 
         /**
-         * RequestId.
+         * code.
          */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
+        public Builder code(Integer code) {
+            this.code = code;
+            return this;
+        }
+
+        /**
+         * message.
+         */
+        public Builder message(String message) {
+            this.message = message;
             return this;
         }
 
@@ -114,18 +122,10 @@ public class DepartmentSaveResponseBody extends TeaModel {
         }
 
         /**
-         * result_code.
+         * requestId.
          */
-        public Builder resultCode(Integer resultCode) {
-            this.resultCode = resultCode;
-            return this;
-        }
-
-        /**
-         * result_msg.
-         */
-        public Builder resultMsg(String resultMsg) {
-            this.resultMsg = resultMsg;
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 
