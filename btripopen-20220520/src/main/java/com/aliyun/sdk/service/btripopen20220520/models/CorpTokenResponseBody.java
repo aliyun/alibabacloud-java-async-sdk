@@ -12,9 +12,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CorpTokenResponseBody</p>
  */
 public class CorpTokenResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    private String requestId;
-
     @NameInMap("code")
     private String code;
 
@@ -24,14 +21,17 @@ public class CorpTokenResponseBody extends TeaModel {
     @NameInMap("message")
     private String message;
 
+    @NameInMap("requestId")
+    private String requestId;
+
     @NameInMap("traceId")
     private String traceId;
 
     private CorpTokenResponseBody(Builder builder) {
-        this.requestId = builder.requestId;
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
+        this.requestId = builder.requestId;
         this.traceId = builder.traceId;
     }
 
@@ -41,13 +41,6 @@ public class CorpTokenResponseBody extends TeaModel {
 
     public static CorpTokenResponseBody create() {
         return builder().build();
-    }
-
-    /**
-     * @return requestId
-     */
-    public String getRequestId() {
-        return this.requestId;
     }
 
     /**
@@ -72,6 +65,13 @@ public class CorpTokenResponseBody extends TeaModel {
     }
 
     /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    /**
      * @return traceId
      */
     public String getTraceId() {
@@ -79,19 +79,11 @@ public class CorpTokenResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String requestId; 
         private String code; 
         private Data data; 
         private String message; 
+        private String requestId; 
         private String traceId; 
-
-        /**
-         * pop请求id
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
 
         /**
          * 错误码
@@ -114,6 +106,14 @@ public class CorpTokenResponseBody extends TeaModel {
          */
         public Builder message(String message) {
             this.message = message;
+            return this;
+        }
+
+        /**
+         * pop请求id
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 
