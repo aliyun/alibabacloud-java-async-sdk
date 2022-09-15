@@ -29,6 +29,10 @@ public class AddAuthResourceRequest extends Request {
     private String gatewayUniqueId;
 
     @Query
+    @NameInMap("MatchType")
+    private String matchType;
+
+    @Query
     @NameInMap("MseSessionId")
     private String mseSessionId;
 
@@ -42,6 +46,7 @@ public class AddAuthResourceRequest extends Request {
         this.authId = builder.authId;
         this.domainId = builder.domainId;
         this.gatewayUniqueId = builder.gatewayUniqueId;
+        this.matchType = builder.matchType;
         this.mseSessionId = builder.mseSessionId;
         this.path = builder.path;
     }
@@ -88,6 +93,13 @@ public class AddAuthResourceRequest extends Request {
     }
 
     /**
+     * @return matchType
+     */
+    public String getMatchType() {
+        return this.matchType;
+    }
+
+    /**
      * @return mseSessionId
      */
     public String getMseSessionId() {
@@ -106,6 +118,7 @@ public class AddAuthResourceRequest extends Request {
         private Long authId; 
         private Long domainId; 
         private String gatewayUniqueId; 
+        private String matchType; 
         private String mseSessionId; 
         private String path; 
 
@@ -119,6 +132,7 @@ public class AddAuthResourceRequest extends Request {
             this.authId = request.authId;
             this.domainId = request.domainId;
             this.gatewayUniqueId = request.gatewayUniqueId;
+            this.matchType = request.matchType;
             this.mseSessionId = request.mseSessionId;
             this.path = request.path;
         } 
@@ -156,6 +170,15 @@ public class AddAuthResourceRequest extends Request {
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
             this.gatewayUniqueId = gatewayUniqueId;
+            return this;
+        }
+
+        /**
+         * MatchType.
+         */
+        public Builder matchType(String matchType) {
+            this.putQueryParameter("MatchType", matchType);
+            this.matchType = matchType;
             return this;
         }
 
