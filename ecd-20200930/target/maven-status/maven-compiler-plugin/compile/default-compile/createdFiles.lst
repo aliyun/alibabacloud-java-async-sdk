@@ -10,6 +10,7 @@ com/aliyun/sdk/service/ecd20200930/models/DescribeImagesResponse$1.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeVirtualMFADevicesResponse$1.class
 com/aliyun/sdk/service/ecd20200930/models/ModifyDesktopGroupResponse$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/ModifyNetworkPackageBandwidthResponse$1.class
+com/aliyun/sdk/service/ecd20200930/models/CreateAndBindNasFileSystemRequest$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/LockVirtualMFADeviceRequest$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeFotaTasksResponseBody$FotaTasks$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/DeleteImagesResponse$Builder.class
@@ -20,6 +21,7 @@ com/aliyun/sdk/service/ecd20200930/models/DescribeUsersPasswordResponse$Builder.
 com/aliyun/sdk/service/ecd20200930/models/OperateVulsResponseBody$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/ClonePolicyGroupResponse.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeDirectoriesResponseBody$Directories.class
+com/aliyun/sdk/service/ecd20200930/models/ModifyCustomizedListHeadersResponse$1.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeBundlesResponse$BuilderImpl.class
 com/aliyun/sdk/service/ecd20200930/models/DisableDesktopsInGroupResponse.class
 com/aliyun/sdk/service/ecd20200930/models/ModifyDesktopHostNameRequest$Builder.class
@@ -31,6 +33,7 @@ com/aliyun/sdk/service/ecd20200930/models/ModifyDesktopHostNameResponseBody.clas
 com/aliyun/sdk/service/ecd20200930/models/CreateSimpleOfficeSiteRequest.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeUsersInGroupResponseBody$1.class
 com/aliyun/sdk/service/ecd20200930/models/SetDesktopGroupTimerStatusRequest.class
+com/aliyun/sdk/service/ecd20200930/models/DescribeCustomizedListHeadersRequest.class
 com/aliyun/sdk/service/ecd20200930/models/ModifyOfficeSiteMfaEnabledResponse.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeCloudDrivePermissionsResponseBody$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/ListOfficeSiteOverviewResponse$1.class
@@ -42,6 +45,7 @@ com/aliyun/sdk/service/ecd20200930/models/DescribeDesktopTypesResponse.class
 com/aliyun/sdk/service/ecd20200930/models/ClonePolicyGroupResponse$1.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeDesktopIdsByVulNamesResponseBody$DesktopItems$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/CreateDriveResponse$BuilderImpl.class
+com/aliyun/sdk/service/ecd20200930/models/ModifyCustomizedListHeadersResponse$BuilderImpl.class
 com/aliyun/sdk/service/ecd20200930/models/DetachCenRequest.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeImagesRequest$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeDesktopsInGroupResponseBody.class
@@ -101,6 +105,7 @@ com/aliyun/sdk/service/ecd20200930/models/DeleteOfficeSitesResponseBody.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeDrivesResponseBody$Drives$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/ModifyImagePermissionResponse$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/CopyImageRequest$1.class
+com/aliyun/sdk/service/ecd20200930/models/DescribeCustomizedListHeadersResponseBody.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeNetworkPackagesRequest$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeNetworkPackagesResponseBody$1.class
 com/aliyun/sdk/service/ecd20200930/models/CopyImageResponseBody$1.class
@@ -108,8 +113,10 @@ com/aliyun/sdk/service/ecd20200930/models/RebootDesktopsRequest$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeFotaPendingDesktopsResponse$BuilderImpl.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeSecurityEventOperationStatusResponse.class
 com/aliyun/sdk/service/ecd20200930/models/HandleSecurityEventsRequest$1.class
+com/aliyun/sdk/service/ecd20200930/models/RevokeCoordinatePrivilegeResponse$BuilderImpl.class
 com/aliyun/sdk/service/ecd20200930/models/ModifyNetworkPackageBandwidthRequest$1.class
 com/aliyun/sdk/service/ecd20200930/models/DescribePolicyGroupsResponseBody$DescribePolicyGroups$Builder.class
+com/aliyun/sdk/service/ecd20200930/models/DescribeCustomizedListHeadersRequest$1.class
 com/aliyun/sdk/service/ecd20200930/models/GetConnectionTicketRequest.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeZonesResponseBody$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeAlarmEventStackInfoResponseBody$1.class
@@ -133,6 +140,7 @@ com/aliyun/sdk/service/ecd20200930/models/DescribeVulOverviewResponse$BuilderImp
 com/aliyun/sdk/service/ecd20200930/models/ModifyDiskSpecRequest$1.class
 com/aliyun/sdk/service/ecd20200930/models/ApplyCoordinationForMonitoringResponseBody$CoordinateFlowModels.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeFrontVulPatchListResponseBody$1.class
+com/aliyun/sdk/service/ecd20200930/models/DescribeCustomizedListHeadersResponse.class
 com/aliyun/sdk/service/ecd20200930/models/CreateSimpleOfficeSiteResponse$BuilderImpl.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeVulDetailsRequest$1.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeCensResponseBody$PackageIds$Builder.class
@@ -232,6 +240,7 @@ com/aliyun/sdk/service/ecd20200930/models/DescribeFrontVulPatchListRequest$VulIn
 com/aliyun/sdk/service/ecd20200930/models/DeleteDesktopsRequest$1.class
 com/aliyun/sdk/service/ecd20200930/models/DissociateNetworkPackageResponseBody$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/ModifyDesktopsPolicyGroupResponseBody$Builder.class
+com/aliyun/sdk/service/ecd20200930/models/RevokeCoordinatePrivilegeResponse$1.class
 com/aliyun/sdk/service/ecd20200930/models/ListOfficeSiteUsersResponseBody$Users.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeBundlesResponseBody$Disks$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/RebuildDesktopsResponseBody$Builder.class
@@ -272,7 +281,9 @@ com/aliyun/sdk/service/ecd20200930/models/ModifyNetworkPackageBandwidthResponse$
 com/aliyun/sdk/service/ecd20200930/models/ModifyOperateVulResponseBody$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeUserConnectionRecordsRequest$1.class
 com/aliyun/sdk/service/ecd20200930/models/AssociateNetworkPackageResponse.class
+com/aliyun/sdk/service/ecd20200930/models/ModifyCustomizedListHeadersResponse$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/UpdateFotaTaskRequest$Builder.class
+com/aliyun/sdk/service/ecd20200930/models/RevokeCoordinatePrivilegeResponseBody.class
 com/aliyun/sdk/service/ecd20200930/models/DeleteCloudDriveUsersResponseBody$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/DisableDesktopsInGroupResponseBody.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeNetworkPackagesResponse$BuilderImpl.class
@@ -319,6 +330,7 @@ com/aliyun/sdk/service/ecd20200930/models/ExportClientEventsResponseBody.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeDirectoriesResponse$1.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeDesktopsResponse$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeBundlesResponseBody$Bundles.class
+com/aliyun/sdk/service/ecd20200930/models/CreateAndBindNasFileSystemResponseBody$1.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeVirtualMFADevicesResponseBody$1.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeVulListResponse.class
 com/aliyun/sdk/service/ecd20200930/models/ModifyDesktopGroupResponse$1.class
@@ -344,6 +356,7 @@ com/aliyun/sdk/service/ecd20200930/models/RebuildDesktopsResponseBody$RebuildRes
 com/aliyun/sdk/service/ecd20200930/models/ModifyOfficeSiteCrossDesktopAccessResponse$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeSuspEventsResponseBody$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeFlowStatisticResponse$1.class
+com/aliyun/sdk/service/ecd20200930/models/ApplyCoordinatePrivilegeResponse$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/RemoveUserFromDesktopGroupRequest.class
 com/aliyun/sdk/service/ecd20200930/models/ModifyDiskSpecResponseBody$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeImagesResponseBody$Builder.class
@@ -380,6 +393,7 @@ com/aliyun/sdk/service/ecd20200930/models/DescribeSnapshotsResponseBody$Snapshot
 com/aliyun/sdk/service/ecd20200930/models/ModifyOfficeSiteAttributeResponseBody.class
 com/aliyun/sdk/service/ecd20200930/models/DeleteVirtualMFADeviceResponse$1.class
 com/aliyun/sdk/service/ecd20200930/models/SetIdpMetadataResponse$BuilderImpl.class
+com/aliyun/sdk/service/ecd20200930/models/CreateAndBindNasFileSystemResponse$BuilderImpl.class
 com/aliyun/sdk/service/ecd20200930/models/AddUserToDesktopGroupRequest$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/CreateRAMDirectoryResponse.class
 com/aliyun/sdk/service/ecd20200930/models/CreateADConnectorDirectoryResponseBody$AdConnectors.class
@@ -387,10 +401,12 @@ com/aliyun/sdk/service/ecd20200930/models/DescribeSecurityEventOperationStatusRe
 com/aliyun/sdk/service/ecd20200930/models/SendVerifyCodeResponse$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/GetSpMetadataResponseBody.class
 com/aliyun/sdk/service/ecd20200930/models/StartVirusScanTaskResponse$Builder.class
+com/aliyun/sdk/service/ecd20200930/models/ApplyCoordinatePrivilegeResponse$1.class
 com/aliyun/sdk/service/ecd20200930/models/ModifyEntitlementResponse$BuilderImpl.class
 com/aliyun/sdk/service/ecd20200930/models/ConfigADConnectorTrustRequest$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/RenewDesktopsResponseBody$1.class
 com/aliyun/sdk/service/ecd20200930/models/ModifyOfficeSiteMfaEnabledRequest.class
+com/aliyun/sdk/service/ecd20200930/models/ApplyCoordinatePrivilegeResponse$BuilderImpl.class
 com/aliyun/sdk/service/ecd20200930/models/ModifyImageAttributeResponse$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/ExportClientEventsRequest.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeUsersInGroupResponseBody$UserSetPropertiesModels$Builder.class
@@ -399,10 +415,12 @@ com/aliyun/sdk/service/ecd20200930/models/DescribeSnapshotsResponseBody$Snapshot
 com/aliyun/sdk/service/ecd20200930/models/ModifyDiskSpecResponse.class
 com/aliyun/sdk/service/ecd20200930/models/RenewDesktopsResponseBody.class
 com/aliyun/sdk/service/ecd20200930/models/RenewNetworkPackagesRequest$Builder.class
+com/aliyun/sdk/service/ecd20200930/models/ModifyCustomizedListHeadersResponseBody$1.class
 com/aliyun/sdk/service/ecd20200930/models/CopyImageResponse$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeCensResponseBody$PackageIds.class
 com/aliyun/sdk/service/ecd20200930/models/ModifyOperateVulRequest$1.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeSecurityEventOperationsRequest$1.class
+com/aliyun/sdk/service/ecd20200930/models/DescribeCustomizedListHeadersResponseBody$Headers$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/ResetSnapshotResponseBody$1.class
 com/aliyun/sdk/service/ecd20200930/models/AttachCenResponse$1.class
 com/aliyun/sdk/service/ecd20200930/models/ResetDesktopsResponseBody$1.class
@@ -418,6 +436,7 @@ com/aliyun/sdk/service/ecd20200930/models/DescribeFotaTasksResponse$1.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeFotaTasksResponse$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/ListOfficeSiteOverviewRequest$1.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeFlowStatisticRequest$1.class
+com/aliyun/sdk/service/ecd20200930/models/ModifyCustomizedListHeadersResponse.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeAlarmEventStackInfoResponse.class
 com/aliyun/sdk/service/ecd20200930/models/ModifyNASDefaultMountTargetResponse$1.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeSuspEventQuaraFilesResponse$Builder.class
@@ -433,6 +452,7 @@ com/aliyun/sdk/service/ecd20200930/models/AttachCenResponse.class
 com/aliyun/sdk/service/ecd20200930/models/RollbackSuspEventQuaraFileResponse$1.class
 com/aliyun/sdk/service/ecd20200930/models/DeleteBundlesResponse$1.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeUsersInGroupResponseBody$ExternalInfo$Builder.class
+com/aliyun/sdk/service/ecd20200930/models/DescribeCustomizedListHeadersResponse$BuilderImpl.class
 com/aliyun/sdk/service/ecd20200930/models/CreatePolicyGroupRequest$AuthorizeAccessPolicyRule$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/ModifyDesktopHostNameResponse.class
 com/aliyun/sdk/service/ecd20200930/models/CreatePolicyGroupRequest$UsbSupplyRedirectRule.class
@@ -469,6 +489,7 @@ com/aliyun/sdk/service/ecd20200930/models/DescribeGroupedVulResponseBody.class
 com/aliyun/sdk/service/ecd20200930/models/DeleteDriveResponseBody.class
 com/aliyun/sdk/service/ecd20200930/models/HandleSecurityEventsResponseBody$1.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeFotaPendingDesktopsResponseBody$Builder.class
+com/aliyun/sdk/service/ecd20200930/models/DescribeCustomizedListHeadersResponseBody$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/StartVirusScanTaskResponse$1.class
 com/aliyun/sdk/service/ecd20200930/models/GetSpMetadataRequest.class
 com/aliyun/sdk/service/ecd20200930/models/UntagResourcesResponse$BuilderImpl.class
@@ -478,6 +499,7 @@ com/aliyun/sdk/service/ecd20200930/models/HandleSecurityEventsResponseBody$Build
 com/aliyun/sdk/service/ecd20200930/models/SetDesktopGroupTimerResponseBody$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/ResetNASDefaultMountTargetResponse$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/CopyImageResponse$1.class
+com/aliyun/sdk/service/ecd20200930/models/CreateAndBindNasFileSystemResponse$1.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeImagesRequest.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeDirectoriesResponseBody$Directories$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/CreateDesktopsRequest.class
@@ -606,6 +628,7 @@ com/aliyun/sdk/service/ecd20200930/models/ModifyADConnectorOfficeSiteRequest.cla
 com/aliyun/sdk/service/ecd20200930/models/DescribeImageModifiedRecordsRequest$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeKmsKeysRequest$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/StopInvocationRequest$1.class
+com/aliyun/sdk/service/ecd20200930/models/ApplyCoordinatePrivilegeRequest$1.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeCensResponseBody$Cens$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeVulListRequest.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeNASFileSystemsResponse$Builder.class
@@ -664,6 +687,7 @@ com/aliyun/sdk/service/ecd20200930/models/ConfigADConnectorUserResponse$1.class
 com/aliyun/sdk/service/ecd20200930/models/ExportDesktopGroupInfoResponse.class
 com/aliyun/sdk/service/ecd20200930/models/AssociateNetworkPackageResponse$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/ModifyCloudDrivePermissionResponse.class
+com/aliyun/sdk/service/ecd20200930/models/ModifyCustomizedListHeadersRequest$Headers.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeDesktopsResponseBody$Disks.class
 com/aliyun/sdk/service/ecd20200930/models/CreateADConnectorOfficeSiteResponse$BuilderImpl.class
 com/aliyun/sdk/service/ecd20200930/models/ModifyCloudDrivePermissionRequest$Builder.class
@@ -685,6 +709,7 @@ com/aliyun/sdk/service/ecd20200930/models/ModifyDiskSpecRequest.class
 com/aliyun/sdk/service/ecd20200930/models/ModifyBundleResponseBody.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeDesktopsInGroupResponseBody$PostPaidDesktops.class
 com/aliyun/sdk/service/ecd20200930/models/DeleteSnapshotResponseBody$1.class
+com/aliyun/sdk/service/ecd20200930/models/ApplyCoordinatePrivilegeResponseBody.class
 com/aliyun/sdk/service/ecd20200930/models/CancelCoordinationForMonitoringResponseBody$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/DeleteImagesRequest.class
 com/aliyun/sdk/service/ecd20200930/models/ModifyUserEntitlementRequest$1.class
@@ -780,6 +805,7 @@ com/aliyun/sdk/service/ecd20200930/models/UploadImageResponse.class
 com/aliyun/sdk/service/ecd20200930/models/ModifyOperateVulResponse$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/CreateNASFileSystemResponseBody$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeVulListResponseBody$VulRecords$Builder.class
+com/aliyun/sdk/service/ecd20200930/models/RevokeCoordinatePrivilegeResponse.class
 com/aliyun/sdk/service/ecd20200930/models/StartDesktopsRequest.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeFlowStatisticResponse$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeSecurityEventOperationsResponse.class
@@ -859,6 +885,7 @@ com/aliyun/sdk/service/ecd20200930/models/DeleteImagesResponse$BuilderImpl.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeBundlesResponseBody$DesktopTypeAttribute$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/RebuildDesktopsResponse$1.class
 com/aliyun/sdk/service/ecd20200930/models/StopInvocationRequest.class
+com/aliyun/sdk/service/ecd20200930/models/ApplyCoordinatePrivilegeResponseBody$1.class
 com/aliyun/sdk/service/ecd20200930/models/SendVerifyCodeRequest.class
 com/aliyun/sdk/service/ecd20200930/models/CreateDesktopsRequest$Tag.class
 com/aliyun/sdk/service/ecd20200930/models/StopDesktopsResponseBody.class
@@ -868,6 +895,7 @@ com/aliyun/sdk/service/ecd20200930/models/UpdateFotaTaskResponseBody$1.class
 com/aliyun/sdk/service/ecd20200930/models/UploadImageRequest$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/GetConnectionTicketResponse$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/GetOfficeSiteSsoStatusResponse$1.class
+com/aliyun/sdk/service/ecd20200930/models/RevokeCoordinatePrivilegeResponseBody$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/DeleteBundlesRequest$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/DeleteOfficeSitesRequest.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeVirtualMFADevicesResponseBody$VirtualMFADevices.class
@@ -880,6 +908,7 @@ com/aliyun/sdk/service/ecd20200930/models/LockVirtualMFADeviceRequest$1.class
 com/aliyun/sdk/service/ecd20200930/models/ModifyDesktopChargeTypeResponse$BuilderImpl.class
 com/aliyun/sdk/service/ecd20200930/models/StopInvocationResponse$1.class
 com/aliyun/sdk/service/ecd20200930/models/ModifyDesktopNameResponseBody$Builder.class
+com/aliyun/sdk/service/ecd20200930/models/ApplyCoordinatePrivilegeResponse.class
 com/aliyun/sdk/service/ecd20200930/models/ListOfficeSiteOverviewResponseBody$OfficeSiteOverviewResults.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeUsersInGroupResponse$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeDesktopsResponseBody$1.class
@@ -925,6 +954,7 @@ com/aliyun/sdk/service/ecd20200930/models/DescribeSecurityEventOperationStatusRe
 com/aliyun/sdk/service/ecd20200930/models/AddUserToDesktopGroupResponseBody.class
 com/aliyun/sdk/service/ecd20200930/models/CreateImageRequest$1.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeScanTaskProgressRequest.class
+com/aliyun/sdk/service/ecd20200930/models/RevokeCoordinatePrivilegeResponseBody$1.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeVulDetailsResponseBody.class
 com/aliyun/sdk/service/ecd20200930/models/RunCommandRequest$1.class
 com/aliyun/sdk/service/ecd20200930/models/UploadImageRequest.class
@@ -942,11 +972,13 @@ com/aliyun/sdk/service/ecd20200930/models/RollbackSuspEventQuaraFileResponseBody
 com/aliyun/sdk/service/ecd20200930/models/ApproveFotaUpdateRequest$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeRegionsResponseBody$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeDesktopsInGroupResponseBody$PaidDesktops.class
+com/aliyun/sdk/service/ecd20200930/models/ModifyCustomizedListHeadersRequest$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/ListOfficeSiteUsersResponseBody$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/DeleteBundlesResponseBody$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeFotaPendingDesktopsResponseBody$FotaPendingDesktops.class
 com/aliyun/sdk/service/ecd20200930/models/ModifyDesktopChargeTypeResponse$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeSuspEventQuaraFilesResponse$BuilderImpl.class
+com/aliyun/sdk/service/ecd20200930/models/CreateAndBindNasFileSystemResponse$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeVulOverviewResponse$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/DeleteImagesResponseBody$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/ModifyImageAttributeResponse.class
@@ -986,9 +1018,11 @@ com/aliyun/sdk/service/ecd20200930/models/DescribeDirectoriesResponseBody$Builde
 com/aliyun/sdk/service/ecd20200930/models/AddUserToDesktopGroupResponse.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeImageModifiedRecordsResponse$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/ModifyNASDefaultMountTargetResponse$Builder.class
+com/aliyun/sdk/service/ecd20200930/models/ApplyCoordinatePrivilegeRequest$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/RunCommandResponseBody.class
 com/aliyun/sdk/service/ecd20200930/models/CreateNASFileSystemRequest$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeSuspEventQuaraFilesResponse$1.class
+com/aliyun/sdk/service/ecd20200930/models/CreateAndBindNasFileSystemResponseBody$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/ModifyUserToDesktopGroupRequest.class
 com/aliyun/sdk/service/ecd20200930/models/ListDirectoryUsersResponseBody$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/ListUserAdOrganizationUnitsResponseBody$Builder.class
@@ -1006,6 +1040,7 @@ com/aliyun/sdk/service/ecd20200930/models/UnlockVirtualMFADeviceResponse$1.class
 com/aliyun/sdk/service/ecd20200930/models/TagResourcesRequest$Tag$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/ListTagResourcesResponseBody$TagResources.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeClientEventsResponse$Builder.class
+com/aliyun/sdk/service/ecd20200930/models/CreateAndBindNasFileSystemResponse.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeDesktopGroupsResponseBody$DesktopGroups.class
 com/aliyun/sdk/service/ecd20200930/models/ModifyNetworkPackageBandwidthResponseBody.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeVulDetailsResponseBody$Cves.class
@@ -1076,6 +1111,7 @@ com/aliyun/sdk/service/ecd20200930/models/GetDesktopGroupDetailResponse$1.class
 com/aliyun/sdk/service/ecd20200930/models/ModifyDesktopHostNameResponse$1.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeUsersPasswordResponseBody$DesktopUsers.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeGroupedVulRequest$Builder.class
+com/aliyun/sdk/service/ecd20200930/models/RevokeCoordinatePrivilegeResponse$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/CreateNetworkPackageResponseBody$1.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeZonesRequest$1.class
 com/aliyun/sdk/service/ecd20200930/models/CancelCopyImageResponse$1.class
@@ -1100,6 +1136,7 @@ com/aliyun/sdk/service/ecd20200930/models/ListOfficeSiteOverviewResponseBody$1.c
 com/aliyun/sdk/service/ecd20200930/models/DescribeDesktopsInGroupResponse$1.class
 com/aliyun/sdk/service/ecd20200930/models/CreateADConnectorOfficeSiteResponseBody.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeGroupedVulRequest$1.class
+com/aliyun/sdk/service/ecd20200930/models/DescribeCustomizedListHeadersResponse$1.class
 com/aliyun/sdk/service/ecd20200930/models/CreateADConnectorDirectoryResponseBody$1.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeFrontVulPatchListResponseBody$FrontPatchList$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/ModifyDesktopsPolicyGroupResponse$BuilderImpl.class
@@ -1165,10 +1202,12 @@ com/aliyun/sdk/service/ecd20200930/models/ModifyOperateVulRequest$VulInfo$Builde
 com/aliyun/sdk/service/ecd20200930/models/DescribeImagePermissionResponse$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/DescribePolicyGroupsResponse$BuilderImpl.class
 com/aliyun/sdk/service/ecd20200930/models/ModifyOfficeSiteCrossDesktopAccessResponseBody$1.class
+com/aliyun/sdk/service/ecd20200930/models/DescribeCustomizedListHeadersResponseBody$Headers.class
 com/aliyun/sdk/service/ecd20200930/models/SetDesktopGroupTimerResponseBody$1.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeUserConnectionRecordsResponse$BuilderImpl.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeSecurityEventOperationsResponseBody.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeDirectoriesResponseBody$1.class
+com/aliyun/sdk/service/ecd20200930/models/DescribeCustomizedListHeadersResponse$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/GetOfficeSiteSsoStatusRequest$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeDrivesRequest.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeCloudDrivePermissionsRequest.class
@@ -1189,6 +1228,7 @@ com/aliyun/sdk/service/ecd20200930/models/DescribeNASFileSystemsResponse$1.class
 com/aliyun/sdk/service/ecd20200930/models/ModifyPolicyGroupRequest$RevokeSecurityPolicyRule$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/ListTagResourcesRequest.class
 com/aliyun/sdk/service/ecd20200930/models/CopyImageResponseBody$Builder.class
+com/aliyun/sdk/service/ecd20200930/models/ApplyCoordinatePrivilegeRequest.class
 com/aliyun/sdk/service/ecd20200930/models/CreateADConnectorDirectoryResponseBody$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeFlowStatisticResponseBody$DesktopFlowStatistic$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/ModifyImagePermissionResponse$BuilderImpl.class
@@ -1239,6 +1279,7 @@ com/aliyun/sdk/service/ecd20200930/models/DescribeNetworkPackagesResponse$1.clas
 com/aliyun/sdk/service/ecd20200930/models/SendVerifyCodeResponseBody$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/UpdateFotaTaskRequest$1.class
 com/aliyun/sdk/service/ecd20200930/models/RunCommandResponse$BuilderImpl.class
+com/aliyun/sdk/service/ecd20200930/models/ModifyCustomizedListHeadersResponseBody.class
 com/aliyun/sdk/service/ecd20200930/models/StopDesktopsResponseBody$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/ConfigADConnectorUserResponse$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/ModifyADConnectorOfficeSiteResponse$1.class
@@ -1266,6 +1307,7 @@ com/aliyun/sdk/service/ecd20200930/models/DescribePolicyGroupsRequest$Builder.cl
 com/aliyun/sdk/service/ecd20200930/models/DescribeOfficeSitesResponseBody$Logs.class
 com/aliyun/sdk/service/ecd20200930/models/ModifyDesktopGroupResponse$BuilderImpl.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeImageModifiedRecordsResponse$1.class
+com/aliyun/sdk/service/ecd20200930/models/ModifyCustomizedListHeadersRequest$Headers$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/DeleteDriveResponseBody$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/ConfigADConnectorUserResponseBody.class
 com/aliyun/sdk/service/ecd20200930/models/RollbackSuspEventQuaraFileResponseBody$Builder.class
@@ -1298,6 +1340,7 @@ com/aliyun/sdk/service/ecd20200930/models/DescribeZonesResponseBody$Zones$Builde
 com/aliyun/sdk/service/ecd20200930/models/DeleteDriveRequest.class
 com/aliyun/sdk/service/ecd20200930/models/AddUserToDesktopGroupRequest$1.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeInvocationsResponse$BuilderImpl.class
+com/aliyun/sdk/service/ecd20200930/models/ModifyCustomizedListHeadersRequest$1.class
 com/aliyun/sdk/service/ecd20200930/models/ModifyUserEntitlementResponseBody$1.class
 com/aliyun/sdk/service/ecd20200930/models/ExportDesktopGroupInfoRequest.class
 com/aliyun/sdk/service/ecd20200930/models/CreateADConnectorDirectoryResponseBody.class
@@ -1306,11 +1349,13 @@ com/aliyun/sdk/service/ecd20200930/models/ModifyDesktopGroupRequest$Builder.clas
 com/aliyun/sdk/service/ecd20200930/models/ModifyDiskSpecResponse$1.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeFlowMetricResponseBody$1.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeSuspEventOverviewResponse$BuilderImpl.class
+com/aliyun/sdk/service/ecd20200930/models/ModifyCustomizedListHeadersResponseBody$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeVirtualMFADevicesRequest.class
 com/aliyun/sdk/service/ecd20200930/models/ActivateOfficeSiteResponseBody.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeFotaTasksRequest$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/DeletePolicyGroupsRequest$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/SetDesktopGroupTimerStatusResponse$BuilderImpl.class
+com/aliyun/sdk/service/ecd20200930/models/CreateAndBindNasFileSystemResponseBody.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeDesktopsRequest$Tag$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeDesktopTypesResponseBody$1.class
 com/aliyun/sdk/service/ecd20200930/models/ModifyDesktopHostNameResponse$Builder.class
@@ -1332,6 +1377,7 @@ com/aliyun/sdk/service/ecd20200930/models/ModifyADConnectorDirectoryRequest$1.cl
 com/aliyun/sdk/service/ecd20200930/models/GetConnectionTicketResponseBody$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/HandleSecurityEventsResponseBody.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeFotaTasksRequest$1.class
+com/aliyun/sdk/service/ecd20200930/models/RevokeCoordinatePrivilegeRequest$1.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeDrivesResponseBody.class
 com/aliyun/sdk/service/ecd20200930/models/ModifyADConnectorOfficeSiteResponseBody$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeSnapshotsResponseBody.class
@@ -1349,6 +1395,8 @@ com/aliyun/sdk/service/ecd20200930/models/DeleteBundlesResponse$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/StartVirusScanTaskRequest.class
 com/aliyun/sdk/service/ecd20200930/models/RebuildDesktopsResponseBody$RebuildResults.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeFotaPendingDesktopsResponse$1.class
+com/aliyun/sdk/service/ecd20200930/models/RevokeCoordinatePrivilegeRequest$Builder.class
+com/aliyun/sdk/service/ecd20200930/models/RevokeCoordinatePrivilegeRequest.class
 com/aliyun/sdk/service/ecd20200930/models/ModifyDesktopsPolicyGroupResponse$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/VerifyCenResponse$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeSecurityEventOperationStatusResponse$1.class
@@ -1423,6 +1471,7 @@ com/aliyun/sdk/service/ecd20200930/models/DeleteDirectoriesResponse$BuilderImpl.
 com/aliyun/sdk/service/ecd20200930/models/HandleSecurityEventsRequest$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/StartVirusScanTaskResponseBody$1.class
 com/aliyun/sdk/service/ecd20200930/models/ListDirectoryUsersResponse$BuilderImpl.class
+com/aliyun/sdk/service/ecd20200930/models/DescribeCustomizedListHeadersResponseBody$1.class
 com/aliyun/sdk/service/ecd20200930/models/CreateRAMDirectoryResponseBody$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/ModifyDesktopSpecRequest$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeFlowStatisticResponse.class
@@ -1533,6 +1582,7 @@ com/aliyun/sdk/service/ecd20200930/models/SendVerifyCodeResponse.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeFlowMetricRequest.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeCensResponseBody.class
 com/aliyun/sdk/service/ecd20200930/models/CreateImageResponseBody$Builder.class
+com/aliyun/sdk/service/ecd20200930/models/CreateAndBindNasFileSystemRequest$1.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeVulOverviewResponse.class
 com/aliyun/sdk/service/ecd20200930/models/CreateDesktopGroupResponse$BuilderImpl.class
 com/aliyun/sdk/service/ecd20200930/models/CreateSnapshotResponse$BuilderImpl.class
@@ -1560,6 +1610,7 @@ com/aliyun/sdk/service/ecd20200930/models/TagResourcesResponseBody$1.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeUsersPasswordResponse$1.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeSuspEventsResponseBody$SuspEvents$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeSuspEventOverviewRequest.class
+com/aliyun/sdk/service/ecd20200930/models/ModifyCustomizedListHeadersRequest.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeDesktopsInGroupResponseBody$PostPaidDesktops$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeFrontVulPatchListResponseBody$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeImagePermissionResponseBody.class
@@ -1581,6 +1632,7 @@ com/aliyun/sdk/service/ecd20200930/models/SetDesktopGroupTimerStatusRequest$1.cl
 com/aliyun/sdk/service/ecd20200930/models/DescribePolicyGroupsResponseBody.class
 com/aliyun/sdk/service/ecd20200930/models/ModifyEntitlementResponseBody$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/ExportClientEventsResponse.class
+com/aliyun/sdk/service/ecd20200930/models/ApplyCoordinatePrivilegeResponseBody$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/SetDesktopGroupTimerStatusRequest$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeImageModifiedRecordsResponseBody$ImageModifiedRecords$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/ModifyUserToDesktopGroupResponse$1.class
@@ -1628,9 +1680,11 @@ com/aliyun/sdk/service/ecd20200930/models/DeleteCloudDriveUsersResponse$1.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeDirectoriesRequest.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeOfficeSitesResponse$BuilderImpl.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeDesktopsRequest$Tag.class
+com/aliyun/sdk/service/ecd20200930/models/CreateAndBindNasFileSystemRequest.class
 com/aliyun/sdk/service/ecd20200930/models/RemoveUserFromDesktopGroupRequest$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/ModifyPolicyGroupRequest$RevokeSecurityPolicyRule.class
 com/aliyun/sdk/service/ecd20200930/models/ModifyUserToDesktopGroupRequest$1.class
+com/aliyun/sdk/service/ecd20200930/models/DescribeCustomizedListHeadersRequest$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeScanTaskProgressRequest$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/DescribeClientEventsRequest$Builder.class
 com/aliyun/sdk/service/ecd20200930/models/DetachCenRequest$Builder.class

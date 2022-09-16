@@ -617,6 +617,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @NameInMap("RecordingStartTime")
         private String recordingStartTime;
 
+        @NameInMap("RemoteCoordinate")
+        private String remoteCoordinate;
+
         @NameInMap("UsbRedirect")
         private String usbRedirect;
 
@@ -666,6 +669,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             this.recordingExpires = builder.recordingExpires;
             this.recordingFps = builder.recordingFps;
             this.recordingStartTime = builder.recordingStartTime;
+            this.remoteCoordinate = builder.remoteCoordinate;
             this.usbRedirect = builder.usbRedirect;
             this.usbSupplyRedirectRule = builder.usbSupplyRedirectRule;
             this.visualQuality = builder.visualQuality;
@@ -873,6 +877,13 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return remoteCoordinate
+         */
+        public String getRemoteCoordinate() {
+            return this.remoteCoordinate;
+        }
+
+        /**
          * @return usbRedirect
          */
         public String getUsbRedirect() {
@@ -949,6 +960,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             private Long recordingExpires; 
             private Long recordingFps; 
             private String recordingStartTime; 
+            private String remoteCoordinate; 
             private String usbRedirect; 
             private java.util.List < UsbSupplyRedirectRule> usbSupplyRedirectRule; 
             private String visualQuality; 
@@ -1170,6 +1182,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
              */
             public Builder recordingStartTime(String recordingStartTime) {
                 this.recordingStartTime = recordingStartTime;
+                return this;
+            }
+
+            /**
+             * RemoteCoordinate.
+             */
+            public Builder remoteCoordinate(String remoteCoordinate) {
+                this.remoteCoordinate = remoteCoordinate;
                 return this;
             }
 

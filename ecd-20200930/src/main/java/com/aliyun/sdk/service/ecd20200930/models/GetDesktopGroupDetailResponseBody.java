@@ -242,6 +242,12 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         @NameInMap("MinDesktopsCount")
         private Integer minDesktopsCount;
 
+        @NameInMap("NasFileSystemID")
+        private String nasFileSystemID;
+
+        @NameInMap("NasFileSystemName")
+        private String nasFileSystemName;
+
         @NameInMap("OfficeSiteId")
         private String officeSiteId;
 
@@ -268,6 +274,9 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
 
         @NameInMap("PolicyGroupName")
         private String policyGroupName;
+
+        @NameInMap("ProfileFollowSwitch")
+        private Boolean profileFollowSwitch;
 
         @NameInMap("RatioThreshold")
         private Float ratioThreshold;
@@ -320,6 +329,8 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             this.maxDesktopsCount = builder.maxDesktopsCount;
             this.memory = builder.memory;
             this.minDesktopsCount = builder.minDesktopsCount;
+            this.nasFileSystemID = builder.nasFileSystemID;
+            this.nasFileSystemName = builder.nasFileSystemName;
             this.officeSiteId = builder.officeSiteId;
             this.officeSiteName = builder.officeSiteName;
             this.officeSiteType = builder.officeSiteType;
@@ -329,6 +340,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             this.payType = builder.payType;
             this.policyGroupId = builder.policyGroupId;
             this.policyGroupName = builder.policyGroupName;
+            this.profileFollowSwitch = builder.profileFollowSwitch;
             this.ratioThreshold = builder.ratioThreshold;
             this.resType = builder.resType;
             this.resetType = builder.resetType;
@@ -510,6 +522,20 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return nasFileSystemID
+         */
+        public String getNasFileSystemID() {
+            return this.nasFileSystemID;
+        }
+
+        /**
+         * @return nasFileSystemName
+         */
+        public String getNasFileSystemName() {
+            return this.nasFileSystemName;
+        }
+
+        /**
          * @return officeSiteId
          */
         public String getOfficeSiteId() {
@@ -570,6 +596,13 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
          */
         public String getPolicyGroupName() {
             return this.policyGroupName;
+        }
+
+        /**
+         * @return profileFollowSwitch
+         */
+        public Boolean getProfileFollowSwitch() {
+            return this.profileFollowSwitch;
         }
 
         /**
@@ -659,6 +692,8 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             private Integer maxDesktopsCount; 
             private Long memory; 
             private Integer minDesktopsCount; 
+            private String nasFileSystemID; 
+            private String nasFileSystemName; 
             private String officeSiteId; 
             private String officeSiteName; 
             private String officeSiteType; 
@@ -668,6 +703,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             private String payType; 
             private String policyGroupId; 
             private String policyGroupName; 
+            private Boolean profileFollowSwitch; 
             private Float ratioThreshold; 
             private Integer resType; 
             private Integer resetType; 
@@ -863,6 +899,22 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             }
 
             /**
+             * NasFileSystemID.
+             */
+            public Builder nasFileSystemID(String nasFileSystemID) {
+                this.nasFileSystemID = nasFileSystemID;
+                return this;
+            }
+
+            /**
+             * NasFileSystemName.
+             */
+            public Builder nasFileSystemName(String nasFileSystemName) {
+                this.nasFileSystemName = nasFileSystemName;
+                return this;
+            }
+
+            /**
              * OfficeSiteId.
              */
             public Builder officeSiteId(String officeSiteId) {
@@ -931,6 +983,14 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
              */
             public Builder policyGroupName(String policyGroupName) {
                 this.policyGroupName = policyGroupName;
+                return this;
+            }
+
+            /**
+             * ProfileFollowSwitch.
+             */
+            public Builder profileFollowSwitch(Boolean profileFollowSwitch) {
+                this.profileFollowSwitch = profileFollowSwitch;
                 return this;
             }
 

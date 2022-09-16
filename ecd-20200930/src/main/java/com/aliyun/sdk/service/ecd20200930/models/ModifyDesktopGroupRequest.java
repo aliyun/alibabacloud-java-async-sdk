@@ -52,6 +52,10 @@ public class ModifyDesktopGroupRequest extends Request {
     private Boolean disableSessionConfig;
 
     @Query
+    @NameInMap("FileSystemId")
+    private String fileSystemId;
+
+    @Query
     @NameInMap("IdleDisconnectDuration")
     private Long idleDisconnectDuration;
 
@@ -86,6 +90,10 @@ public class ModifyDesktopGroupRequest extends Request {
     private String policyGroupId;
 
     @Query
+    @NameInMap("ProfileFollowSwitch")
+    private Boolean profileFollowSwitch;
+
+    @Query
     @NameInMap("RatioThreshold")
     private Float ratioThreshold;
 
@@ -117,6 +125,7 @@ public class ModifyDesktopGroupRequest extends Request {
         this.desktopGroupId = builder.desktopGroupId;
         this.desktopGroupName = builder.desktopGroupName;
         this.disableSessionConfig = builder.disableSessionConfig;
+        this.fileSystemId = builder.fileSystemId;
         this.idleDisconnectDuration = builder.idleDisconnectDuration;
         this.imageId = builder.imageId;
         this.keepDuration = builder.keepDuration;
@@ -125,6 +134,7 @@ public class ModifyDesktopGroupRequest extends Request {
         this.minDesktopsCount = builder.minDesktopsCount;
         this.ownBundleId = builder.ownBundleId;
         this.policyGroupId = builder.policyGroupId;
+        this.profileFollowSwitch = builder.profileFollowSwitch;
         this.ratioThreshold = builder.ratioThreshold;
         this.regionId = builder.regionId;
         this.resetType = builder.resetType;
@@ -209,6 +219,13 @@ public class ModifyDesktopGroupRequest extends Request {
     }
 
     /**
+     * @return fileSystemId
+     */
+    public String getFileSystemId() {
+        return this.fileSystemId;
+    }
+
+    /**
      * @return idleDisconnectDuration
      */
     public Long getIdleDisconnectDuration() {
@@ -265,6 +282,13 @@ public class ModifyDesktopGroupRequest extends Request {
     }
 
     /**
+     * @return profileFollowSwitch
+     */
+    public Boolean getProfileFollowSwitch() {
+        return this.profileFollowSwitch;
+    }
+
+    /**
      * @return ratioThreshold
      */
     public Float getRatioThreshold() {
@@ -309,6 +333,7 @@ public class ModifyDesktopGroupRequest extends Request {
         private String desktopGroupId; 
         private String desktopGroupName; 
         private Boolean disableSessionConfig; 
+        private String fileSystemId; 
         private Long idleDisconnectDuration; 
         private String imageId; 
         private Long keepDuration; 
@@ -317,6 +342,7 @@ public class ModifyDesktopGroupRequest extends Request {
         private Integer minDesktopsCount; 
         private String ownBundleId; 
         private String policyGroupId; 
+        private Boolean profileFollowSwitch; 
         private Float ratioThreshold; 
         private String regionId; 
         private Long resetType; 
@@ -338,6 +364,7 @@ public class ModifyDesktopGroupRequest extends Request {
             this.desktopGroupId = request.desktopGroupId;
             this.desktopGroupName = request.desktopGroupName;
             this.disableSessionConfig = request.disableSessionConfig;
+            this.fileSystemId = request.fileSystemId;
             this.idleDisconnectDuration = request.idleDisconnectDuration;
             this.imageId = request.imageId;
             this.keepDuration = request.keepDuration;
@@ -346,6 +373,7 @@ public class ModifyDesktopGroupRequest extends Request {
             this.minDesktopsCount = request.minDesktopsCount;
             this.ownBundleId = request.ownBundleId;
             this.policyGroupId = request.policyGroupId;
+            this.profileFollowSwitch = request.profileFollowSwitch;
             this.ratioThreshold = request.ratioThreshold;
             this.regionId = request.regionId;
             this.resetType = request.resetType;
@@ -435,6 +463,15 @@ public class ModifyDesktopGroupRequest extends Request {
         }
 
         /**
+         * FileSystemId.
+         */
+        public Builder fileSystemId(String fileSystemId) {
+            this.putQueryParameter("FileSystemId", fileSystemId);
+            this.fileSystemId = fileSystemId;
+            return this;
+        }
+
+        /**
          * IdleDisconnectDuration.
          */
         public Builder idleDisconnectDuration(Long idleDisconnectDuration) {
@@ -503,6 +540,15 @@ public class ModifyDesktopGroupRequest extends Request {
         public Builder policyGroupId(String policyGroupId) {
             this.putQueryParameter("PolicyGroupId", policyGroupId);
             this.policyGroupId = policyGroupId;
+            return this;
+        }
+
+        /**
+         * ProfileFollowSwitch.
+         */
+        public Builder profileFollowSwitch(Boolean profileFollowSwitch) {
+            this.putQueryParameter("ProfileFollowSwitch", profileFollowSwitch);
+            this.profileFollowSwitch = profileFollowSwitch;
             return this;
         }
 

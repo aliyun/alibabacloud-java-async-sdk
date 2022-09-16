@@ -115,6 +115,10 @@ public class ModifyPolicyGroupRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("RemoteCoordinate")
+    private String remoteCoordinate;
+
+    @Query
     @NameInMap("RevokeAccessPolicyRule")
     private java.util.List < RevokeAccessPolicyRule> revokeAccessPolicyRule;
 
@@ -173,6 +177,7 @@ public class ModifyPolicyGroupRequest extends Request {
         this.recordingFps = builder.recordingFps;
         this.recordingStartTime = builder.recordingStartTime;
         this.regionId = builder.regionId;
+        this.remoteCoordinate = builder.remoteCoordinate;
         this.revokeAccessPolicyRule = builder.revokeAccessPolicyRule;
         this.revokeSecurityPolicyRule = builder.revokeSecurityPolicyRule;
         this.usbRedirect = builder.usbRedirect;
@@ -372,6 +377,13 @@ public class ModifyPolicyGroupRequest extends Request {
     }
 
     /**
+     * @return remoteCoordinate
+     */
+    public String getRemoteCoordinate() {
+        return this.remoteCoordinate;
+    }
+
+    /**
      * @return revokeAccessPolicyRule
      */
     public java.util.List < RevokeAccessPolicyRule> getRevokeAccessPolicyRule() {
@@ -453,6 +465,7 @@ public class ModifyPolicyGroupRequest extends Request {
         private Long recordingFps; 
         private String recordingStartTime; 
         private String regionId; 
+        private String remoteCoordinate; 
         private java.util.List < RevokeAccessPolicyRule> revokeAccessPolicyRule; 
         private java.util.List < RevokeSecurityPolicyRule> revokeSecurityPolicyRule; 
         private String usbRedirect; 
@@ -493,6 +506,7 @@ public class ModifyPolicyGroupRequest extends Request {
             this.recordingFps = request.recordingFps;
             this.recordingStartTime = request.recordingStartTime;
             this.regionId = request.regionId;
+            this.remoteCoordinate = request.remoteCoordinate;
             this.revokeAccessPolicyRule = request.revokeAccessPolicyRule;
             this.revokeSecurityPolicyRule = request.revokeSecurityPolicyRule;
             this.usbRedirect = request.usbRedirect;
@@ -725,6 +739,15 @@ public class ModifyPolicyGroupRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * RemoteCoordinate.
+         */
+        public Builder remoteCoordinate(String remoteCoordinate) {
+            this.putQueryParameter("RemoteCoordinate", remoteCoordinate);
+            this.remoteCoordinate = remoteCoordinate;
             return this;
         }
 

@@ -313,6 +313,9 @@ public class DescribeBundlesResponseBody extends TeaModel {
         @NameInMap("OsType")
         private String osType;
 
+        @NameInMap("Platform")
+        private String platform;
+
         @NameInMap("ProtocolType")
         private String protocolType;
 
@@ -342,6 +345,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
             this.imageName = builder.imageName;
             this.language = builder.language;
             this.osType = builder.osType;
+            this.platform = builder.platform;
             this.protocolType = builder.protocolType;
             this.sessionType = builder.sessionType;
             this.stockState = builder.stockState;
@@ -449,6 +453,13 @@ public class DescribeBundlesResponseBody extends TeaModel {
         }
 
         /**
+         * @return platform
+         */
+        public String getPlatform() {
+            return this.platform;
+        }
+
+        /**
          * @return protocolType
          */
         public String getProtocolType() {
@@ -497,6 +508,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
             private String imageName; 
             private String language; 
             private String osType; 
+            private String platform; 
             private String protocolType; 
             private String sessionType; 
             private String stockState; 
@@ -604,6 +616,14 @@ public class DescribeBundlesResponseBody extends TeaModel {
              */
             public Builder osType(String osType) {
                 this.osType = osType;
+                return this;
+            }
+
+            /**
+             * Platform.
+             */
+            public Builder platform(String platform) {
+                this.platform = platform;
                 return this;
             }
 

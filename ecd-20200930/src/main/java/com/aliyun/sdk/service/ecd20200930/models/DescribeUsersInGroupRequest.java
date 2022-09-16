@@ -38,6 +38,10 @@ public class DescribeUsersInGroupRequest extends Request {
     private String nextToken;
 
     @Query
+    @NameInMap("OrgId")
+    private String orgId;
+
+    @Query
     @NameInMap("QueryUserDetail")
     private Boolean queryUserDetail;
 
@@ -54,6 +58,7 @@ public class DescribeUsersInGroupRequest extends Request {
         this.filter = builder.filter;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
+        this.orgId = builder.orgId;
         this.queryUserDetail = builder.queryUserDetail;
         this.regionId = builder.regionId;
     }
@@ -114,6 +119,13 @@ public class DescribeUsersInGroupRequest extends Request {
     }
 
     /**
+     * @return orgId
+     */
+    public String getOrgId() {
+        return this.orgId;
+    }
+
+    /**
      * @return queryUserDetail
      */
     public Boolean getQueryUserDetail() {
@@ -134,6 +146,7 @@ public class DescribeUsersInGroupRequest extends Request {
         private String filter; 
         private Integer maxResults; 
         private String nextToken; 
+        private String orgId; 
         private Boolean queryUserDetail; 
         private String regionId; 
 
@@ -149,6 +162,7 @@ public class DescribeUsersInGroupRequest extends Request {
             this.filter = request.filter;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
+            this.orgId = request.orgId;
             this.queryUserDetail = request.queryUserDetail;
             this.regionId = request.regionId;
         } 
@@ -204,6 +218,15 @@ public class DescribeUsersInGroupRequest extends Request {
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
             this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * OrgId.
+         */
+        public Builder orgId(String orgId) {
+            this.putQueryParameter("OrgId", orgId);
+            this.orgId = orgId;
             return this;
         }
 

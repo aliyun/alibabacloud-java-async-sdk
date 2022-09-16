@@ -110,6 +110,10 @@ public class CreatePolicyGroupRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("RemoteCoordinate")
+    private String remoteCoordinate;
+
+    @Query
     @NameInMap("UsbRedirect")
     private String usbRedirect;
 
@@ -159,6 +163,7 @@ public class CreatePolicyGroupRequest extends Request {
         this.recordingFps = builder.recordingFps;
         this.recordingStartTime = builder.recordingStartTime;
         this.regionId = builder.regionId;
+        this.remoteCoordinate = builder.remoteCoordinate;
         this.usbRedirect = builder.usbRedirect;
         this.usbSupplyRedirectRule = builder.usbSupplyRedirectRule;
         this.visualQuality = builder.visualQuality;
@@ -349,6 +354,13 @@ public class CreatePolicyGroupRequest extends Request {
     }
 
     /**
+     * @return remoteCoordinate
+     */
+    public String getRemoteCoordinate() {
+        return this.remoteCoordinate;
+    }
+
+    /**
      * @return usbRedirect
      */
     public String getUsbRedirect() {
@@ -415,6 +427,7 @@ public class CreatePolicyGroupRequest extends Request {
         private Long recordingFps; 
         private String recordingStartTime; 
         private String regionId; 
+        private String remoteCoordinate; 
         private String usbRedirect; 
         private java.util.List < UsbSupplyRedirectRule> usbSupplyRedirectRule; 
         private String visualQuality; 
@@ -452,6 +465,7 @@ public class CreatePolicyGroupRequest extends Request {
             this.recordingFps = request.recordingFps;
             this.recordingStartTime = request.recordingStartTime;
             this.regionId = request.regionId;
+            this.remoteCoordinate = request.remoteCoordinate;
             this.usbRedirect = request.usbRedirect;
             this.usbSupplyRedirectRule = request.usbSupplyRedirectRule;
             this.visualQuality = request.visualQuality;
@@ -673,6 +687,15 @@ public class CreatePolicyGroupRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * RemoteCoordinate.
+         */
+        public Builder remoteCoordinate(String remoteCoordinate) {
+            this.putQueryParameter("RemoteCoordinate", remoteCoordinate);
+            this.remoteCoordinate = remoteCoordinate;
             return this;
         }
 

@@ -404,6 +404,9 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
         @NameInMap("DesktopName")
         private String desktopName;
 
+        @NameInMap("DisplayName")
+        private String displayName;
+
         @NameInMap("EndUserEmail")
         private String endUserEmail;
 
@@ -415,6 +418,9 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
 
         @NameInMap("EndUserPhone")
         private String endUserPhone;
+
+        @NameInMap("EndUserRemark")
+        private String endUserRemark;
 
         @NameInMap("EndUserType")
         private String endUserType;
@@ -432,10 +438,12 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             this.connectionStatus = builder.connectionStatus;
             this.desktopId = builder.desktopId;
             this.desktopName = builder.desktopName;
+            this.displayName = builder.displayName;
             this.endUserEmail = builder.endUserEmail;
             this.endUserId = builder.endUserId;
             this.endUserName = builder.endUserName;
             this.endUserPhone = builder.endUserPhone;
+            this.endUserRemark = builder.endUserRemark;
             this.endUserType = builder.endUserType;
             this.externalInfo = builder.externalInfo;
             this.userDesktopId = builder.userDesktopId;
@@ -472,6 +480,13 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
         }
 
         /**
+         * @return displayName
+         */
+        public String getDisplayName() {
+            return this.displayName;
+        }
+
+        /**
          * @return endUserEmail
          */
         public String getEndUserEmail() {
@@ -497,6 +512,13 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
          */
         public String getEndUserPhone() {
             return this.endUserPhone;
+        }
+
+        /**
+         * @return endUserRemark
+         */
+        public String getEndUserRemark() {
+            return this.endUserRemark;
         }
 
         /**
@@ -531,10 +553,12 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             private String connectionStatus; 
             private String desktopId; 
             private String desktopName; 
+            private String displayName; 
             private String endUserEmail; 
             private String endUserId; 
             private String endUserName; 
             private String endUserPhone; 
+            private String endUserRemark; 
             private String endUserType; 
             private ExternalInfo externalInfo; 
             private String userDesktopId; 
@@ -561,6 +585,14 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
              */
             public Builder desktopName(String desktopName) {
                 this.desktopName = desktopName;
+                return this;
+            }
+
+            /**
+             * DisplayName.
+             */
+            public Builder displayName(String displayName) {
+                this.displayName = displayName;
                 return this;
             }
 
@@ -593,6 +625,14 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
              */
             public Builder endUserPhone(String endUserPhone) {
                 this.endUserPhone = endUserPhone;
+                return this;
+            }
+
+            /**
+             * EndUserRemark.
+             */
+            public Builder endUserRemark(String endUserRemark) {
+                this.endUserRemark = endUserRemark;
                 return this;
             }
 

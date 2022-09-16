@@ -78,6 +78,10 @@ public class CreateDesktopGroupRequest extends Request {
     private java.util.List < String > endUserIds;
 
     @Query
+    @NameInMap("FileSystemId")
+    private String fileSystemId;
+
+    @Query
     @NameInMap("IdleDisconnectDuration")
     private Long idleDisconnectDuration;
 
@@ -119,6 +123,10 @@ public class CreateDesktopGroupRequest extends Request {
     @Query
     @NameInMap("PolicyGroupId")
     private String policyGroupId;
+
+    @Query
+    @NameInMap("ProfileFollowSwitch")
+    private Boolean profileFollowSwitch;
 
     @Query
     @NameInMap("RatioThreshold")
@@ -170,6 +178,7 @@ public class CreateDesktopGroupRequest extends Request {
         this.desktopGroupName = builder.desktopGroupName;
         this.directoryId = builder.directoryId;
         this.endUserIds = builder.endUserIds;
+        this.fileSystemId = builder.fileSystemId;
         this.idleDisconnectDuration = builder.idleDisconnectDuration;
         this.keepDuration = builder.keepDuration;
         this.loadPolicy = builder.loadPolicy;
@@ -180,6 +189,7 @@ public class CreateDesktopGroupRequest extends Request {
         this.period = builder.period;
         this.periodUnit = builder.periodUnit;
         this.policyGroupId = builder.policyGroupId;
+        this.profileFollowSwitch = builder.profileFollowSwitch;
         this.ratioThreshold = builder.ratioThreshold;
         this.regionId = builder.regionId;
         this.resetType = builder.resetType;
@@ -309,6 +319,13 @@ public class CreateDesktopGroupRequest extends Request {
     }
 
     /**
+     * @return fileSystemId
+     */
+    public String getFileSystemId() {
+        return this.fileSystemId;
+    }
+
+    /**
      * @return idleDisconnectDuration
      */
     public Long getIdleDisconnectDuration() {
@@ -376,6 +393,13 @@ public class CreateDesktopGroupRequest extends Request {
      */
     public String getPolicyGroupId() {
         return this.policyGroupId;
+    }
+
+    /**
+     * @return profileFollowSwitch
+     */
+    public Boolean getProfileFollowSwitch() {
+        return this.profileFollowSwitch;
     }
 
     /**
@@ -450,6 +474,7 @@ public class CreateDesktopGroupRequest extends Request {
         private String desktopGroupName; 
         private String directoryId; 
         private java.util.List < String > endUserIds; 
+        private String fileSystemId; 
         private Long idleDisconnectDuration; 
         private Long keepDuration; 
         private Long loadPolicy; 
@@ -460,6 +485,7 @@ public class CreateDesktopGroupRequest extends Request {
         private Integer period; 
         private String periodUnit; 
         private String policyGroupId; 
+        private Boolean profileFollowSwitch; 
         private Float ratioThreshold; 
         private String regionId; 
         private Long resetType; 
@@ -490,6 +516,7 @@ public class CreateDesktopGroupRequest extends Request {
             this.desktopGroupName = request.desktopGroupName;
             this.directoryId = request.directoryId;
             this.endUserIds = request.endUserIds;
+            this.fileSystemId = request.fileSystemId;
             this.idleDisconnectDuration = request.idleDisconnectDuration;
             this.keepDuration = request.keepDuration;
             this.loadPolicy = request.loadPolicy;
@@ -500,6 +527,7 @@ public class CreateDesktopGroupRequest extends Request {
             this.period = request.period;
             this.periodUnit = request.periodUnit;
             this.policyGroupId = request.policyGroupId;
+            this.profileFollowSwitch = request.profileFollowSwitch;
             this.ratioThreshold = request.ratioThreshold;
             this.regionId = request.regionId;
             this.resetType = request.resetType;
@@ -646,6 +674,15 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
+         * FileSystemId.
+         */
+        public Builder fileSystemId(String fileSystemId) {
+            this.putQueryParameter("FileSystemId", fileSystemId);
+            this.fileSystemId = fileSystemId;
+            return this;
+        }
+
+        /**
          * IdleDisconnectDuration.
          */
         public Builder idleDisconnectDuration(Long idleDisconnectDuration) {
@@ -732,6 +769,15 @@ public class CreateDesktopGroupRequest extends Request {
         public Builder policyGroupId(String policyGroupId) {
             this.putQueryParameter("PolicyGroupId", policyGroupId);
             this.policyGroupId = policyGroupId;
+            return this;
+        }
+
+        /**
+         * ProfileFollowSwitch.
+         */
+        public Builder profileFollowSwitch(Boolean profileFollowSwitch) {
+            this.putQueryParameter("ProfileFollowSwitch", profileFollowSwitch);
+            this.profileFollowSwitch = profileFollowSwitch;
             return this;
         }
 

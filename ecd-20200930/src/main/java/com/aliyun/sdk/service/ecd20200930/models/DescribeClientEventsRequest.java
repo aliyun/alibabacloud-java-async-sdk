@@ -41,6 +41,10 @@ public class DescribeClientEventsRequest extends Request {
     private String eventType;
 
     @Query
+    @NameInMap("EventTypes")
+    private java.util.List < String > eventTypes;
+
+    @Query
     @NameInMap("MaxResults")
     private Integer maxResults;
 
@@ -74,6 +78,7 @@ public class DescribeClientEventsRequest extends Request {
         this.endTime = builder.endTime;
         this.endUserId = builder.endUserId;
         this.eventType = builder.eventType;
+        this.eventTypes = builder.eventTypes;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.officeSiteId = builder.officeSiteId;
@@ -145,6 +150,13 @@ public class DescribeClientEventsRequest extends Request {
     }
 
     /**
+     * @return eventTypes
+     */
+    public java.util.List < String > getEventTypes() {
+        return this.eventTypes;
+    }
+
+    /**
      * @return maxResults
      */
     public Integer getMaxResults() {
@@ -194,6 +206,7 @@ public class DescribeClientEventsRequest extends Request {
         private String endTime; 
         private String endUserId; 
         private String eventType; 
+        private java.util.List < String > eventTypes; 
         private Integer maxResults; 
         private String nextToken; 
         private String officeSiteId; 
@@ -214,6 +227,7 @@ public class DescribeClientEventsRequest extends Request {
             this.endTime = request.endTime;
             this.endUserId = request.endUserId;
             this.eventType = request.eventType;
+            this.eventTypes = request.eventTypes;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.officeSiteId = request.officeSiteId;
@@ -282,6 +296,15 @@ public class DescribeClientEventsRequest extends Request {
         public Builder eventType(String eventType) {
             this.putQueryParameter("EventType", eventType);
             this.eventType = eventType;
+            return this;
+        }
+
+        /**
+         * EventTypes.
+         */
+        public Builder eventTypes(java.util.List < String > eventTypes) {
+            this.putQueryParameter("EventTypes", eventTypes);
+            this.eventTypes = eventTypes;
             return this;
         }
 
