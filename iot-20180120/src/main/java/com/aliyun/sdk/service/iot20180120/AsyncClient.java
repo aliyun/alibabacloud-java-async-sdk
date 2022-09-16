@@ -126,6 +126,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CopyThingModelResponse> copyThingModel(CopyThingModelRequest request);
 
+    CompletableFuture<CountSpeechBroadcastHourResponse> countSpeechBroadcastHour(CountSpeechBroadcastHourRequest request);
+
     CompletableFuture<CreateConsumerGroupResponse> createConsumerGroup(CreateConsumerGroupRequest request);
 
     CompletableFuture<CreateConsumerGroupSubscribeRelationResponse> createConsumerGroupSubscribeRelation(CreateConsumerGroupSubscribeRelationRequest request);
@@ -443,6 +445,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<PackageSoundCodeLabelBatchAudioResponse> packageSoundCodeLabelBatchAudio(PackageSoundCodeLabelBatchAudioRequest request);
 
     CompletableFuture<PageQuerySharedSpeechOpenResponse> pageQuerySharedSpeechOpen(PageQuerySharedSpeechOpenRequest request);
+
+    CompletableFuture<PageQuerySpeechBroadcastHourResponse> pageQuerySpeechBroadcastHour(PageQuerySpeechBroadcastHourRequest request);
 
     CompletableFuture<PrintByTemplateResponse> printByTemplate(PrintByTemplateRequest request);
 

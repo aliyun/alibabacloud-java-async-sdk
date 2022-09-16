@@ -207,6 +207,9 @@ public class ListDestinationResponseBody extends TeaModel {
         @NameInMap("Name")
         private String name;
 
+        @NameInMap("Status")
+        private String status;
+
         @NameInMap("Type")
         private String type;
 
@@ -219,6 +222,7 @@ public class ListDestinationResponseBody extends TeaModel {
             this.destinationId = builder.destinationId;
             this.isFailover = builder.isFailover;
             this.name = builder.name;
+            this.status = builder.status;
             this.type = builder.type;
             this.utcCreated = builder.utcCreated;
         }
@@ -267,6 +271,13 @@ public class ListDestinationResponseBody extends TeaModel {
         }
 
         /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
@@ -286,6 +297,7 @@ public class ListDestinationResponseBody extends TeaModel {
             private Long destinationId; 
             private Boolean isFailover; 
             private String name; 
+            private String status; 
             private String type; 
             private String utcCreated; 
 
@@ -326,6 +338,14 @@ public class ListDestinationResponseBody extends TeaModel {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
                 return this;
             }
 

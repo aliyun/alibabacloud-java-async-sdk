@@ -23,6 +23,7 @@ com/aliyun/sdk/service/iot20180120/models/QueryStudioAppPageListOpenResponseBody
 com/aliyun/sdk/service/iot20180120/models/QueryEdgeInstanceHistoricDeploymentResponseBody.class
 com/aliyun/sdk/service/iot20180120/models/QueryClientIdsResponseBody$DynamicRegClientIds$Builder.class
 com/aliyun/sdk/service/iot20180120/models/CreateEdgeInstanceChannelResponseBody$1.class
+com/aliyun/sdk/service/iot20180120/models/PageQuerySpeechBroadcastHourResponseBody$1.class
 com/aliyun/sdk/service/iot20180120/models/CreateDataAPIServiceResponseBody.class
 com/aliyun/sdk/service/iot20180120/models/QueryEdgeDriverVersionResponse.class
 com/aliyun/sdk/service/iot20180120/models/QueryStudioAppPageListOpenResponseBody$List.class
@@ -348,6 +349,7 @@ com/aliyun/sdk/service/iot20180120/models/GetSoundCodeAudioResponseBody.class
 com/aliyun/sdk/service/iot20180120/models/QuerySubscribeRelationResponseBody$Builder.class
 com/aliyun/sdk/service/iot20180120/models/GetDestinationResponseBody$1.class
 com/aliyun/sdk/service/iot20180120/models/QueryDeviceEventDataResponseBody$EventInfo$Builder.class
+com/aliyun/sdk/service/iot20180120/models/PageQuerySpeechBroadcastHourResponse$1.class
 com/aliyun/sdk/service/iot20180120/models/EnableSceneRuleResponse.class
 com/aliyun/sdk/service/iot20180120/models/QueryDeviceCertRequest$1.class
 com/aliyun/sdk/service/iot20180120/models/QueryDevicePropertiesDataResponseBody$PropertyDataInfos.class
@@ -1047,6 +1049,7 @@ com/aliyun/sdk/service/iot20180120/models/ConfirmOTATaskResponse$BuilderImpl.cla
 com/aliyun/sdk/service/iot20180120/models/DeleteDeviceSpeechRequest$DeviceSpeechList.class
 com/aliyun/sdk/service/iot20180120/models/BatchSetEdgeInstanceDeviceChannelResponse$1.class
 com/aliyun/sdk/service/iot20180120/models/GetShareTaskByDeviceOpenRequest$Builder.class
+com/aliyun/sdk/service/iot20180120/models/PageQuerySpeechBroadcastHourResponseBody$ResultData$Builder.class
 com/aliyun/sdk/service/iot20180120/models/CreateConsumerGroupSubscribeRelationRequest.class
 com/aliyun/sdk/service/iot20180120/models/CreateParserRequest.class
 com/aliyun/sdk/service/iot20180120/models/QueryProjectShareDeviceListResponse$Builder.class
@@ -1064,6 +1067,7 @@ com/aliyun/sdk/service/iot20180120/models/BatchSetEdgeInstanceDeviceConfigRespon
 com/aliyun/sdk/service/iot20180120/models/BatchCheckImportDeviceRequest$Builder.class
 com/aliyun/sdk/service/iot20180120/models/GetGatewayBySubDeviceRequest$Builder.class
 com/aliyun/sdk/service/iot20180120/models/SaveDevicePropResponse$1.class
+com/aliyun/sdk/service/iot20180120/models/PageQuerySpeechBroadcastHourRequest$Builder.class
 com/aliyun/sdk/service/iot20180120/models/ReupgradeOTATaskResponseBody.class
 com/aliyun/sdk/service/iot20180120/models/DisableDeviceTunnelShareResponseBody$Builder.class
 com/aliyun/sdk/service/iot20180120/models/CreateOTAModuleResponse.class
@@ -1118,6 +1122,7 @@ com/aliyun/sdk/service/iot20180120/models/RefreshDeviceTunnelSharePasswordRespon
 com/aliyun/sdk/service/iot20180120/models/BatchGetEdgeInstanceDriverConfigsResponse$Builder.class
 com/aliyun/sdk/service/iot20180120/models/BatchGetEdgeInstanceChannelResponseBody$Data.class
 com/aliyun/sdk/service/iot20180120/models/DeleteSchedulePeriodResponseBody$Builder.class
+com/aliyun/sdk/service/iot20180120/models/PageQuerySpeechBroadcastHourRequest.class
 com/aliyun/sdk/service/iot20180120/models/QuerySoundCodeListResponseBody$Items.class
 com/aliyun/sdk/service/iot20180120/models/QuerySuperDeviceGroupResponse$BuilderImpl.class
 com/aliyun/sdk/service/iot20180120/models/GetEdgeInstanceDeploymentResponse$BuilderImpl.class
@@ -1153,6 +1158,7 @@ com/aliyun/sdk/service/iot20180120/models/EnableDeviceTunnelShareResponse$Builde
 com/aliyun/sdk/service/iot20180120/models/CreateProductDistributeJobRequest$1.class
 com/aliyun/sdk/service/iot20180120/models/GetDataAPIServiceDetailResponseBody$ResponseParams$Builder.class
 com/aliyun/sdk/service/iot20180120/models/ListOTATaskByJobResponse$1.class
+com/aliyun/sdk/service/iot20180120/models/CountSpeechBroadcastHourResponse.class
 com/aliyun/sdk/service/iot20180120/models/BatchCheckDeviceNamesResponse$BuilderImpl.class
 com/aliyun/sdk/service/iot20180120/models/DeleteDeviceTunnelRequest.class
 com/aliyun/sdk/service/iot20180120/models/ReupgradeOTATaskResponse$1.class
@@ -1553,6 +1559,7 @@ com/aliyun/sdk/service/iot20180120/models/PushSpeechResponse$1.class
 com/aliyun/sdk/service/iot20180120/models/ListDistributedDeviceResponse$BuilderImpl.class
 com/aliyun/sdk/service/iot20180120/models/DeleteDeviceTunnelResponseBody$Builder.class
 com/aliyun/sdk/service/iot20180120/models/BatchSetEdgeInstanceDeviceChannelResponse$Builder.class
+com/aliyun/sdk/service/iot20180120/models/CountSpeechBroadcastHourRequest$1.class
 com/aliyun/sdk/service/iot20180120/models/UpdateProductTagsResponseBody$Builder.class
 com/aliyun/sdk/service/iot20180120/models/DeleteDeviceRequest$1.class
 com/aliyun/sdk/service/iot20180120/models/CreateProductTopicResponse$Builder.class
@@ -1609,6 +1616,7 @@ com/aliyun/sdk/service/iot20180120/models/QuerySpeechPushJobSpeechRequest.class
 com/aliyun/sdk/service/iot20180120/models/GisQueryDeviceLocationRequest.class
 com/aliyun/sdk/service/iot20180120/models/PublishScriptResponse.class
 com/aliyun/sdk/service/iot20180120/models/UpdateSoundCodeLabelResponse.class
+com/aliyun/sdk/service/iot20180120/models/PageQuerySpeechBroadcastHourResponseBody$ResultData.class
 com/aliyun/sdk/service/iot20180120/models/GetDataAPIServiceDetailResponseBody$SqlTemplateDTO$Builder.class
 com/aliyun/sdk/service/iot20180120/models/UpdateSoundCodeRequest.class
 com/aliyun/sdk/service/iot20180120/models/ListDataSourceItemResponseBody$DataSourceItems.class
@@ -1797,6 +1805,7 @@ com/aliyun/sdk/service/iot20180120/models/QueryDeviceServiceDataResponse.class
 com/aliyun/sdk/service/iot20180120/models/CreateDownloadDataJobResponseBody.class
 com/aliyun/sdk/service/iot20180120/models/CopyThingModelResponseBody.class
 com/aliyun/sdk/service/iot20180120/models/GetDownloadFileResponseBody$AstExpr.class
+com/aliyun/sdk/service/iot20180120/models/CountSpeechBroadcastHourResponseBody$Builder.class
 com/aliyun/sdk/service/iot20180120/models/CreateProductDistributeJobResponse$Builder.class
 com/aliyun/sdk/service/iot20180120/models/RerunJobRequest$1.class
 com/aliyun/sdk/service/iot20180120/models/CancelOTAStrategyByJobRequest$Builder.class
@@ -1812,6 +1821,7 @@ com/aliyun/sdk/service/iot20180120/models/CreateDeviceDistributeJobResponse$Buil
 com/aliyun/sdk/service/iot20180120/models/QueryThingModelExtendConfigPublishedRequest.class
 com/aliyun/sdk/service/iot20180120/models/GetThingTemplateResponse$BuilderImpl.class
 com/aliyun/sdk/service/iot20180120/models/QueryDeviceOriginalPropertyDataResponseBody.class
+com/aliyun/sdk/service/iot20180120/models/PageQuerySpeechBroadcastHourRequest$1.class
 com/aliyun/sdk/service/iot20180120/models/ListRuleResponse$BuilderImpl.class
 com/aliyun/sdk/service/iot20180120/models/CreateOTAVerifyJobRequest$1.class
 com/aliyun/sdk/service/iot20180120/models/GetSpeechVoiceResponseBody$VoiceList.class
@@ -2004,6 +2014,7 @@ com/aliyun/sdk/service/iot20180120/models/DeleteSpeechResponse$Builder.class
 com/aliyun/sdk/service/iot20180120/models/UpdateEdgeInstanceMessageRoutingResponse$1.class
 com/aliyun/sdk/service/iot20180120/models/QueryShareTaskDeviceListResponse$1.class
 com/aliyun/sdk/service/iot20180120/models/QueryDeviceGroupTagListResponseBody$Data.class
+com/aliyun/sdk/service/iot20180120/models/CountSpeechBroadcastHourResponse$1.class
 com/aliyun/sdk/service/iot20180120/models/QueryProductResponse$1.class
 com/aliyun/sdk/service/iot20180120/models/SetDeviceDesiredPropertyResponseBody$Data$Builder.class
 com/aliyun/sdk/service/iot20180120/models/QueryDevicePropertiesDataResponseBody$1.class
@@ -2077,6 +2088,7 @@ com/aliyun/sdk/service/iot20180120/models/GetStudioAppTokenOpenRequest$1.class
 com/aliyun/sdk/service/iot20180120/models/UpdateProductFilterConfigResponse$1.class
 com/aliyun/sdk/service/iot20180120/models/SaveDevicePropResponse$BuilderImpl.class
 com/aliyun/sdk/service/iot20180120/models/ListOTAJobByDeviceResponseBody$SimpleOTAJobInfo$Builder.class
+com/aliyun/sdk/service/iot20180120/models/PageQuerySpeechBroadcastHourResponse$BuilderImpl.class
 com/aliyun/sdk/service/iot20180120/models/QueryDevicePropRequest$1.class
 com/aliyun/sdk/service/iot20180120/models/QueryPageByApplyIdResponseBody$1.class
 com/aliyun/sdk/service/iot20180120/models/QueryEdgeInstanceGatewayResponse$BuilderImpl.class
@@ -2600,6 +2612,7 @@ com/aliyun/sdk/service/iot20180120/models/BatchBindDeviceToEdgeInstanceWithDrive
 com/aliyun/sdk/service/iot20180120/models/CreateThingScriptRequest.class
 com/aliyun/sdk/service/iot20180120/models/QueryEdgeInstanceHistoricDeploymentResponse.class
 com/aliyun/sdk/service/iot20180120/models/QueryDeviceByTagsResponseBody$1.class
+com/aliyun/sdk/service/iot20180120/models/PageQuerySpeechBroadcastHourResponseBody.class
 com/aliyun/sdk/service/iot20180120/models/BatchBindDevicesIntoProjectResponseBody$Builder.class
 com/aliyun/sdk/service/iot20180120/models/UpdateRuleActionResponse.class
 com/aliyun/sdk/service/iot20180120/models/QueryDeviceFileResponse$BuilderImpl.class
@@ -2887,6 +2900,7 @@ com/aliyun/sdk/service/iot20180120/models/DisableSceneRuleRequest$Builder.class
 com/aliyun/sdk/service/iot20180120/models/BindLicenseDeviceRequest$Builder.class
 com/aliyun/sdk/service/iot20180120/models/UpdateSpeechResponseBody$1.class
 com/aliyun/sdk/service/iot20180120/models/CreateLoRaNodesTaskResponseBody.class
+com/aliyun/sdk/service/iot20180120/models/PageQuerySpeechBroadcastHourResponseBody$Data.class
 com/aliyun/sdk/service/iot20180120/models/CreateJobResponse$Builder.class
 com/aliyun/sdk/service/iot20180120/models/QueryDeviceOriginalServiceDataResponseBody$ServiceInfo.class
 com/aliyun/sdk/service/iot20180120/models/DeleteSpeechResponseBody.class
@@ -2965,6 +2979,7 @@ com/aliyun/sdk/service/iot20180120/models/CreateEdgeOssPreSignedAddressResponse$
 com/aliyun/sdk/service/iot20180120/models/QueryJobStatisticsRequest$Builder.class
 com/aliyun/sdk/service/iot20180120/models/ListProductTagsResponseBody$ProductTag.class
 com/aliyun/sdk/service/iot20180120/models/QuerySoundCodeLabelListResponseBody$List.class
+com/aliyun/sdk/service/iot20180120/models/PageQuerySpeechBroadcastHourResponse.class
 com/aliyun/sdk/service/iot20180120/models/CreateThingModelResponse$Builder.class
 com/aliyun/sdk/service/iot20180120/models/QueryEdgeInstanceChannelRequest.class
 com/aliyun/sdk/service/iot20180120/models/RemoveThingTopoRequest$Builder.class
@@ -3519,6 +3534,7 @@ com/aliyun/sdk/service/iot20180120/models/BatchGetEdgeInstanceDeviceConfigRespon
 com/aliyun/sdk/service/iot20180120/models/QuerySubscribeRelationResponseBody$1.class
 com/aliyun/sdk/service/iot20180120/models/BatchDeleteDeviceGroupRelationsRequest.class
 com/aliyun/sdk/service/iot20180120/models/BatchSetEdgeInstanceDeviceConfigResponse.class
+com/aliyun/sdk/service/iot20180120/models/CountSpeechBroadcastHourResponseBody.class
 com/aliyun/sdk/service/iot20180120/models/ListOTAUnfinishedTaskByDeviceRequest$1.class
 com/aliyun/sdk/service/iot20180120/models/BatchAddDeviceGroupRelationsRequest$Device.class
 com/aliyun/sdk/service/iot20180120/models/SaveDevicePropRequest.class
@@ -3652,6 +3668,7 @@ com/aliyun/sdk/service/iot20180120/models/QuerySubscribeRelationRequest$Builder.
 com/aliyun/sdk/service/iot20180120/models/BatchUnbindProjectDevicesResponseBody$Builder.class
 com/aliyun/sdk/service/iot20180120/models/DeleteProductTagsRequest.class
 com/aliyun/sdk/service/iot20180120/models/BatchRegisterDeviceWithApplyIdResponse$1.class
+com/aliyun/sdk/service/iot20180120/models/PageQuerySpeechBroadcastHourResponseBody$Data$Builder.class
 com/aliyun/sdk/service/iot20180120/models/QueryDeviceSubTopicResponse$1.class
 com/aliyun/sdk/service/iot20180120/models/ListOTAModuleByProductResponse.class
 com/aliyun/sdk/service/iot20180120/models/ListParserDestinationResponse$BuilderImpl.class
@@ -3677,6 +3694,7 @@ com/aliyun/sdk/service/iot20180120/models/ListOTAJobByFirmwareResponseBody$OtaTa
 com/aliyun/sdk/service/iot20180120/models/BatchCheckDeviceNamesRequest$1.class
 com/aliyun/sdk/service/iot20180120/models/UnbindLicenseProductResponse$BuilderImpl.class
 com/aliyun/sdk/service/iot20180120/models/DeleteProductResponseBody$Builder.class
+com/aliyun/sdk/service/iot20180120/models/CountSpeechBroadcastHourResponse$BuilderImpl.class
 com/aliyun/sdk/service/iot20180120/models/CreateJobResponse$BuilderImpl.class
 com/aliyun/sdk/service/iot20180120/models/UpdateSchedulePeriodResponse$BuilderImpl.class
 com/aliyun/sdk/service/iot20180120/models/BindSceneRuleToEdgeInstanceResponseBody$Builder.class
@@ -3771,12 +3789,15 @@ com/aliyun/sdk/service/iot20180120/models/CreateRuleActionResponse$1.class
 com/aliyun/sdk/service/iot20180120/models/EnableDeviceTunnelShareRequest.class
 com/aliyun/sdk/service/iot20180120/models/DeleteRuleActionResponseBody$Builder.class
 com/aliyun/sdk/service/iot20180120/models/BatchCreateSoundCodeLabelResponseBody$Builder.class
+com/aliyun/sdk/service/iot20180120/models/PageQuerySpeechBroadcastHourResponseBody$ResultDataData$Builder.class
 com/aliyun/sdk/service/iot20180120/models/CreateDataSourceItemResponseBody$Builder.class
 com/aliyun/sdk/service/iot20180120/models/ListRuleActionsResponse$1.class
 com/aliyun/sdk/service/iot20180120/models/DeleteSoundCodeScheduleResponse.class
 com/aliyun/sdk/service/iot20180120/models/DeleteProductTagsResponseBody$1.class
+com/aliyun/sdk/service/iot20180120/models/PageQuerySpeechBroadcastHourResponseBody$Builder.class
 com/aliyun/sdk/service/iot20180120/models/PackageSoundCodeLabelBatchAudioResponse$1.class
 com/aliyun/sdk/service/iot20180120/models/DeleteJobRequest$1.class
+com/aliyun/sdk/service/iot20180120/models/PageQuerySpeechBroadcastHourResponseBody$ResultDataData.class
 com/aliyun/sdk/service/iot20180120/models/QueryStudioAppDomainListOpenResponseBody.class
 com/aliyun/sdk/service/iot20180120/models/QueryDeviceByStatusResponseBody$SimpleDeviceInfo$Builder.class
 com/aliyun/sdk/service/iot20180120/models/DeleteRuleActionResponseBody$1.class
@@ -3976,6 +3997,7 @@ com/aliyun/sdk/service/iot20180120/models/UpdateParserDataSourceResponseBody$Bui
 com/aliyun/sdk/service/iot20180120/models/QueryEdgeDriverVersionRequest$Builder.class
 com/aliyun/sdk/service/iot20180120/models/BatchGetEdgeInstanceDeviceDriverResponseBody$Builder.class
 com/aliyun/sdk/service/iot20180120/models/CheckBindLicenseDeviceProgressResponseBody$Builder.class
+com/aliyun/sdk/service/iot20180120/models/CountSpeechBroadcastHourResponseBody$1.class
 com/aliyun/sdk/service/iot20180120/models/ListOTAFirmwareResponseBody$FirmwareInfo$Builder.class
 com/aliyun/sdk/service/iot20180120/models/GetRuleResponseBody$RuleInfo.class
 com/aliyun/sdk/service/iot20180120/models/GenerateDeviceNameListURLResponseBody$Builder.class
@@ -4337,6 +4359,7 @@ com/aliyun/sdk/service/iot20180120/models/BatchAddDeviceGroupRelationsResponse$1
 com/aliyun/sdk/service/iot20180120/models/RegisterDeviceResponseBody$Builder.class
 com/aliyun/sdk/service/iot20180120/models/QueryDeviceGroupListResponseBody$Data$Builder.class
 com/aliyun/sdk/service/iot20180120/models/InvokeDataAPIServiceResponse$Builder.class
+com/aliyun/sdk/service/iot20180120/models/CountSpeechBroadcastHourRequest$Builder.class
 com/aliyun/sdk/service/iot20180120/models/GetEdgeInstanceMessageRoutingResponseBody$Data.class
 com/aliyun/sdk/service/iot20180120/models/ListDistributedProductResponseBody$Info.class
 com/aliyun/sdk/service/iot20180120/models/QueryStudioProjectListResponseBody$Builder.class
@@ -4397,6 +4420,7 @@ com/aliyun/sdk/service/iot20180120/models/BatchGetEdgeInstanceDriverConfigsRespo
 com/aliyun/sdk/service/iot20180120/models/EnableThingRequest$1.class
 com/aliyun/sdk/service/iot20180120/models/GetDeviceShadowResponseBody$Builder.class
 com/aliyun/sdk/service/iot20180120/models/DeleteOTAFirmwareResponse$BuilderImpl.class
+com/aliyun/sdk/service/iot20180120/models/CountSpeechBroadcastHourRequest.class
 com/aliyun/sdk/service/iot20180120/models/ListOTAModuleByProductResponseBody.class
 com/aliyun/sdk/service/iot20180120/models/BatchClearEdgeInstanceDeviceConfigRequest$Builder.class
 com/aliyun/sdk/service/iot20180120/models/UnbindLicenseProductRequest$Builder.class
@@ -4448,6 +4472,7 @@ com/aliyun/sdk/service/iot20180120/models/UpdateEdgeInstanceChannelResponseBody$
 com/aliyun/sdk/service/iot20180120/models/DeleteDeviceTunnelRequest$1.class
 com/aliyun/sdk/service/iot20180120/models/QueryDynamicGroupDevicesRequest.class
 com/aliyun/sdk/service/iot20180120/models/DeleteDeviceSpeechRequest.class
+com/aliyun/sdk/service/iot20180120/models/PageQuerySpeechBroadcastHourResponse$Builder.class
 com/aliyun/sdk/service/iot20180120/models/GetDestinationRequest$Builder.class
 com/aliyun/sdk/service/iot20180120/models/BatchGetDeviceStateResponseBody$Builder.class
 com/aliyun/sdk/service/iot20180120/models/QueryDeviceOriginalPropertyStatusResponseBody$PropertyStatusDataInfo.class
@@ -4630,6 +4655,7 @@ com/aliyun/sdk/service/iot20180120/models/DeleteDestinationResponse.class
 com/aliyun/sdk/service/iot20180120/models/QuerySpeechLicenseDeviceListRequest$Builder.class
 com/aliyun/sdk/service/iot20180120/models/QueryStudioAppListResponseBody$Builder.class
 com/aliyun/sdk/service/iot20180120/models/BatchUnbindDeviceFromEdgeInstanceResponse.class
+com/aliyun/sdk/service/iot20180120/models/CountSpeechBroadcastHourResponse$Builder.class
 com/aliyun/sdk/service/iot20180120/models/TestSpeechResponseBody.class
 com/aliyun/sdk/service/iot20180120/models/CancelReleaseProductResponseBody$1.class
 com/aliyun/sdk/service/iot20180120/models/GetSceneRuleResponseBody$1.class

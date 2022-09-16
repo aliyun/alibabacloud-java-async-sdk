@@ -144,6 +144,9 @@ public class ListRuleActionsResponseBody extends TeaModel {
         @NameInMap("RuleId")
         private Long ruleId;
 
+        @NameInMap("Status")
+        private String status;
+
         @NameInMap("Type")
         private String type;
 
@@ -152,6 +155,7 @@ public class ListRuleActionsResponseBody extends TeaModel {
             this.errorActionFlag = builder.errorActionFlag;
             this.id = builder.id;
             this.ruleId = builder.ruleId;
+            this.status = builder.status;
             this.type = builder.type;
         }
 
@@ -192,6 +196,13 @@ public class ListRuleActionsResponseBody extends TeaModel {
         }
 
         /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
@@ -203,6 +214,7 @@ public class ListRuleActionsResponseBody extends TeaModel {
             private Boolean errorActionFlag; 
             private Long id; 
             private Long ruleId; 
+            private String status; 
             private String type; 
 
             /**
@@ -234,6 +246,14 @@ public class ListRuleActionsResponseBody extends TeaModel {
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
                 return this;
             }
 
