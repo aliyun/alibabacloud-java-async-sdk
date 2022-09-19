@@ -142,16 +142,16 @@ public class ModifyDedicatedHostClassRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyDedicatedHostClassRequest response) {
-            super(response);
-            this.dedicatedHostId = response.dedicatedHostId;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.switchTime = response.switchTime;
-            this.switchTimeMode = response.switchTimeMode;
-            this.targetClassCode = response.targetClassCode;
+        private Builder(ModifyDedicatedHostClassRequest request) {
+            super(request);
+            this.dedicatedHostId = request.dedicatedHostId;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.switchTime = request.switchTime;
+            this.switchTimeMode = request.switchTimeMode;
+            this.targetClassCode = request.targetClassCode;
         } 
 
         /**

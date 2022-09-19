@@ -24,7 +24,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateDedicatedHostGroupResponse> createDedicatedHostGroup(CreateDedicatedHostGroupRequest request);
 
-    CompletableFuture<DeleteDHGInstanceVpcNetResponse> deleteDHGInstanceVpcNet(DeleteDHGInstanceVpcNetRequest request);
+    CompletableFuture<CreateMyBaseResponse> createMyBase(CreateMyBaseRequest request);
 
     CompletableFuture<DeleteDedicatedHostAccountResponse> deleteDedicatedHostAccount(DeleteDedicatedHostAccountRequest request);
 
@@ -43,6 +43,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeHostSecurityGroupAttributeResponse> describeHostSecurityGroupAttribute(DescribeHostSecurityGroupAttributeRequest request);
 
     CompletableFuture<DescribeHostWebShellResponse> describeHostWebShell(DescribeHostWebShellRequest request);
+
+    CompletableFuture<DescribeMyBaseHostOverViewResponse> describeMyBaseHostOverView(DescribeMyBaseHostOverViewRequest request);
+
+    CompletableFuture<DescribeMyBaseInstanceOverViewResponse> describeMyBaseInstanceOverView(DescribeMyBaseInstanceOverViewRequest request);
 
     CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request);
 
@@ -69,5 +73,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
 
     CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);
+
+    CompletableFuture<ListResponse> list(ListRequest request);
+
+    CompletableFuture<TagResponse> tag(TagRequest request);
+
+    CompletableFuture<UntagResponse> untag(UntagRequest request);
 
 }

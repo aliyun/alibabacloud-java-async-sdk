@@ -101,13 +101,13 @@ public class DeleteDedicatedHostGroupRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteDedicatedHostGroupRequest response) {
-            super(response);
-            this.dedicatedHostGroupId = response.dedicatedHostGroupId;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DeleteDedicatedHostGroupRequest request) {
+            super(request);
+            this.dedicatedHostGroupId = request.dedicatedHostGroupId;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

@@ -127,15 +127,15 @@ public class ModifyDedicatedHostAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyDedicatedHostAttributeRequest response) {
-            super(response);
-            this.allocationStatus = response.allocationStatus;
-            this.dedicatedHostId = response.dedicatedHostId;
-            this.hostName = response.hostName;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ModifyDedicatedHostAttributeRequest request) {
+            super(request);
+            this.allocationStatus = request.allocationStatus;
+            this.dedicatedHostId = request.dedicatedHostId;
+            this.hostName = request.hostName;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

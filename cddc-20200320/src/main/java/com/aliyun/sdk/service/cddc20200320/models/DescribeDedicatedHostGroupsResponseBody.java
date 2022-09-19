@@ -119,6 +119,9 @@ public class DescribeDedicatedHostGroupsResponseBody extends TeaModel {
         @NameInMap("BastionInstanceId")
         private String bastionInstanceId;
 
+        @NameInMap("Category")
+        private String category;
+
         @NameInMap("CpuAllocateRation")
         private Float cpuAllocateRation;
 
@@ -200,6 +203,7 @@ public class DescribeDedicatedHostGroupsResponseBody extends TeaModel {
         private DedicatedHostGroupsDedicatedHostGroups(Builder builder) {
             this.allocationPolicy = builder.allocationPolicy;
             this.bastionInstanceId = builder.bastionInstanceId;
+            this.category = builder.category;
             this.cpuAllocateRation = builder.cpuAllocateRation;
             this.cpuAllocatedAmount = builder.cpuAllocatedAmount;
             this.cpuAllocationRatio = builder.cpuAllocationRatio;
@@ -248,6 +252,13 @@ public class DescribeDedicatedHostGroupsResponseBody extends TeaModel {
          */
         public String getBastionInstanceId() {
             return this.bastionInstanceId;
+        }
+
+        /**
+         * @return category
+         */
+        public String getCategory() {
+            return this.category;
         }
 
         /**
@@ -435,6 +446,7 @@ public class DescribeDedicatedHostGroupsResponseBody extends TeaModel {
         public static final class Builder {
             private String allocationPolicy; 
             private String bastionInstanceId; 
+            private String category; 
             private Float cpuAllocateRation; 
             private Float cpuAllocatedAmount; 
             private Integer cpuAllocationRatio; 
@@ -475,6 +487,14 @@ public class DescribeDedicatedHostGroupsResponseBody extends TeaModel {
              */
             public Builder bastionInstanceId(String bastionInstanceId) {
                 this.bastionInstanceId = bastionInstanceId;
+                return this;
+            }
+
+            /**
+             * Category.
+             */
+            public Builder category(String category) {
+                this.category = category;
                 return this;
             }
 

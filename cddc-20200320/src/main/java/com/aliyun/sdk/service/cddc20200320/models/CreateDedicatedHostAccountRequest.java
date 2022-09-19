@@ -168,18 +168,18 @@ public class CreateDedicatedHostAccountRequest extends Request {
             super();
         } 
 
-        private Builder(CreateDedicatedHostAccountRequest response) {
-            super(response);
-            this.accountName = response.accountName;
-            this.accountPassword = response.accountPassword;
-            this.accountType = response.accountType;
-            this.bastionInstanceId = response.bastionInstanceId;
-            this.clientToken = response.clientToken;
-            this.dedicatedHostId = response.dedicatedHostId;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(CreateDedicatedHostAccountRequest request) {
+            super(request);
+            this.accountName = request.accountName;
+            this.accountPassword = request.accountPassword;
+            this.accountType = request.accountType;
+            this.bastionInstanceId = request.bastionInstanceId;
+            this.clientToken = request.clientToken;
+            this.dedicatedHostId = request.dedicatedHostId;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

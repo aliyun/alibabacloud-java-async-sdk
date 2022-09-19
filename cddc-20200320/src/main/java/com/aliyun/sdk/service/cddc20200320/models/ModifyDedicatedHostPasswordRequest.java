@@ -115,14 +115,14 @@ public class ModifyDedicatedHostPasswordRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyDedicatedHostPasswordRequest response) {
-            super(response);
-            this.dedicatedHostId = response.dedicatedHostId;
-            this.newPassword = response.newPassword;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ModifyDedicatedHostPasswordRequest request) {
+            super(request);
+            this.dedicatedHostId = request.dedicatedHostId;
+            this.newPassword = request.newPassword;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

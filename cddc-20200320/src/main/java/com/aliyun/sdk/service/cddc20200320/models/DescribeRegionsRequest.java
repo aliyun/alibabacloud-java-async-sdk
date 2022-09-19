@@ -48,9 +48,9 @@ public class DescribeRegionsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeRegionsRequest response) {
-            super(response);
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DescribeRegionsRequest request) {
+            super(request);
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

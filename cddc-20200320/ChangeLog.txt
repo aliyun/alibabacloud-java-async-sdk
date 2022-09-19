@@ -1,3 +1,6 @@
+2022-09-19 Version: 1.1.1
+- Build SDK for multiple languages.
+
 2022-02-21 Version: 1.0.0
 - Generated java-async 2020-03-20 for cddc.
 

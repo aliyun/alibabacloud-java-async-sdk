@@ -218,22 +218,22 @@ public class DescribeDedicatedHostsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDedicatedHostsRequest response) {
-            super(response);
-            this.allocationStatus = response.allocationStatus;
-            this.dedicatedHostGroupId = response.dedicatedHostGroupId;
-            this.dedicatedHostId = response.dedicatedHostId;
-            this.hostStatus = response.hostStatus;
-            this.hostType = response.hostType;
-            this.orderId = response.orderId;
-            this.ownerId = response.ownerId;
-            this.pageNumbers = response.pageNumbers;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.tags = response.tags;
-            this.zoneId = response.zoneId;
+        private Builder(DescribeDedicatedHostsRequest request) {
+            super(request);
+            this.allocationStatus = request.allocationStatus;
+            this.dedicatedHostGroupId = request.dedicatedHostGroupId;
+            this.dedicatedHostId = request.dedicatedHostId;
+            this.hostStatus = request.hostStatus;
+            this.hostType = request.hostType;
+            this.orderId = request.orderId;
+            this.ownerId = request.ownerId;
+            this.pageNumbers = request.pageNumbers;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.tags = request.tags;
+            this.zoneId = request.zoneId;
         } 
 
         /**

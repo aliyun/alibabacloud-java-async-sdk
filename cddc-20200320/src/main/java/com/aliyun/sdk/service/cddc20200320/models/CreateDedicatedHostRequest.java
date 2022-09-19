@@ -32,10 +32,6 @@ public class CreateDedicatedHostRequest extends Request {
     private String hostClass;
 
     @Query
-    @NameInMap("HostName")
-    private String hostName;
-
-    @Query
     @NameInMap("HostStorage")
     private String hostStorage;
 
@@ -66,6 +62,7 @@ public class CreateDedicatedHostRequest extends Request {
 
     @Query
     @NameInMap("RegionId")
+    @Validation(required = true)
     private String regionId;
 
     @Query
@@ -96,7 +93,6 @@ public class CreateDedicatedHostRequest extends Request {
         this.clientToken = builder.clientToken;
         this.dedicatedHostGroupId = builder.dedicatedHostGroupId;
         this.hostClass = builder.hostClass;
-        this.hostName = builder.hostName;
         this.hostStorage = builder.hostStorage;
         this.hostStorageType = builder.hostStorageType;
         this.imageCategory = builder.imageCategory;
@@ -151,13 +147,6 @@ public class CreateDedicatedHostRequest extends Request {
      */
     public String getHostClass() {
         return this.hostClass;
-    }
-
-    /**
-     * @return hostName
-     */
-    public String getHostName() {
-        return this.hostName;
     }
 
     /**
@@ -256,7 +245,6 @@ public class CreateDedicatedHostRequest extends Request {
         private String clientToken; 
         private String dedicatedHostGroupId; 
         private String hostClass; 
-        private String hostName; 
         private String hostStorage; 
         private String hostStorageType; 
         private String imageCategory; 
@@ -275,26 +263,25 @@ public class CreateDedicatedHostRequest extends Request {
             super();
         } 
 
-        private Builder(CreateDedicatedHostRequest response) {
-            super(response);
-            this.autoRenew = response.autoRenew;
-            this.clientToken = response.clientToken;
-            this.dedicatedHostGroupId = response.dedicatedHostGroupId;
-            this.hostClass = response.hostClass;
-            this.hostName = response.hostName;
-            this.hostStorage = response.hostStorage;
-            this.hostStorageType = response.hostStorageType;
-            this.imageCategory = response.imageCategory;
-            this.osPassword = response.osPassword;
-            this.ownerId = response.ownerId;
-            this.payType = response.payType;
-            this.period = response.period;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.usedTime = response.usedTime;
-            this.vSwitchId = response.vSwitchId;
-            this.zoneId = response.zoneId;
+        private Builder(CreateDedicatedHostRequest request) {
+            super(request);
+            this.autoRenew = request.autoRenew;
+            this.clientToken = request.clientToken;
+            this.dedicatedHostGroupId = request.dedicatedHostGroupId;
+            this.hostClass = request.hostClass;
+            this.hostStorage = request.hostStorage;
+            this.hostStorageType = request.hostStorageType;
+            this.imageCategory = request.imageCategory;
+            this.osPassword = request.osPassword;
+            this.ownerId = request.ownerId;
+            this.payType = request.payType;
+            this.period = request.period;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.usedTime = request.usedTime;
+            this.vSwitchId = request.vSwitchId;
+            this.zoneId = request.zoneId;
         } 
 
         /**
@@ -330,15 +317,6 @@ public class CreateDedicatedHostRequest extends Request {
         public Builder hostClass(String hostClass) {
             this.putQueryParameter("HostClass", hostClass);
             this.hostClass = hostClass;
-            return this;
-        }
-
-        /**
-         * HostName.
-         */
-        public Builder hostName(String hostName) {
-            this.putQueryParameter("HostName", hostName);
-            this.hostName = hostName;
             return this;
         }
 

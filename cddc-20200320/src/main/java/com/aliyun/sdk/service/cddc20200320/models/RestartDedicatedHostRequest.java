@@ -128,15 +128,15 @@ public class RestartDedicatedHostRequest extends Request {
             super();
         } 
 
-        private Builder(RestartDedicatedHostRequest response) {
-            super(response);
-            this.dedicatedHostId = response.dedicatedHostId;
-            this.failoverMode = response.failoverMode;
-            this.forceStop = response.forceStop;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(RestartDedicatedHostRequest request) {
+            super(request);
+            this.dedicatedHostId = request.dedicatedHostId;
+            this.failoverMode = request.failoverMode;
+            this.forceStop = request.forceStop;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

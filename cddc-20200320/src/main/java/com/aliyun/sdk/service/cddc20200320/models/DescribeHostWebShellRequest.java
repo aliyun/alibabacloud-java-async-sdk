@@ -116,14 +116,14 @@ public class DescribeHostWebShellRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeHostWebShellRequest response) {
-            super(response);
-            this.dedicatedHostId = response.dedicatedHostId;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.zoneId = response.zoneId;
+        private Builder(DescribeHostWebShellRequest request) {
+            super(request);
+            this.dedicatedHostId = request.dedicatedHostId;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.zoneId = request.zoneId;
         } 
 
         /**

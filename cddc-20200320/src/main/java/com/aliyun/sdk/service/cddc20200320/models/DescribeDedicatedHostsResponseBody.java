@@ -187,6 +187,12 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         @NameInMap("CPUAllocationRatio")
         private String CPUAllocationRatio;
 
+        @NameInMap("Category")
+        private String category;
+
+        @NameInMap("ChargeType")
+        private String chargeType;
+
         @NameInMap("CpuUsed")
         private String cpuUsed;
 
@@ -199,11 +205,11 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         @NameInMap("DedicatedHostId")
         private String dedicatedHostId;
 
-        @NameInMap("DeployType")
-        private String deployType;
-
         @NameInMap("DiskAllocationRatio")
         private String diskAllocationRatio;
+
+        @NameInMap("DiskInfo")
+        private String diskInfo;
 
         @NameInMap("DistributionSymbol")
         private String distributionSymbol;
@@ -213,6 +219,9 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
 
         @NameInMap("EcsClassCode")
         private String ecsClassCode;
+
+        @NameInMap("EcsId")
+        private String ecsId;
 
         @NameInMap("EndTime")
         private String endTime;
@@ -256,6 +265,9 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         @NameInMap("MemoryUsed")
         private String memoryUsed;
 
+        @NameInMap("MssqlSupportVersion")
+        private String mssqlSupportVersion;
+
         @NameInMap("OpenPermission")
         private String openPermission;
 
@@ -277,15 +289,18 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             this.allocationStatus = builder.allocationStatus;
             this.bastionInstanceId = builder.bastionInstanceId;
             this.CPUAllocationRatio = builder.CPUAllocationRatio;
+            this.category = builder.category;
+            this.chargeType = builder.chargeType;
             this.cpuUsed = builder.cpuUsed;
             this.createdTime = builder.createdTime;
             this.dedicatedHostGroupId = builder.dedicatedHostGroupId;
             this.dedicatedHostId = builder.dedicatedHostId;
-            this.deployType = builder.deployType;
             this.diskAllocationRatio = builder.diskAllocationRatio;
+            this.diskInfo = builder.diskInfo;
             this.distributionSymbol = builder.distributionSymbol;
             this.distributionTag = builder.distributionTag;
             this.ecsClassCode = builder.ecsClassCode;
+            this.ecsId = builder.ecsId;
             this.endTime = builder.endTime;
             this.engine = builder.engine;
             this.hostCPU = builder.hostCPU;
@@ -300,6 +315,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             this.instanceNumber = builder.instanceNumber;
             this.memAllocationRatio = builder.memAllocationRatio;
             this.memoryUsed = builder.memoryUsed;
+            this.mssqlSupportVersion = builder.mssqlSupportVersion;
             this.openPermission = builder.openPermission;
             this.storageUsed = builder.storageUsed;
             this.VPCId = builder.VPCId;
@@ -351,6 +367,20 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         }
 
         /**
+         * @return category
+         */
+        public String getCategory() {
+            return this.category;
+        }
+
+        /**
+         * @return chargeType
+         */
+        public String getChargeType() {
+            return this.chargeType;
+        }
+
+        /**
          * @return cpuUsed
          */
         public String getCpuUsed() {
@@ -379,17 +409,17 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         }
 
         /**
-         * @return deployType
-         */
-        public String getDeployType() {
-            return this.deployType;
-        }
-
-        /**
          * @return diskAllocationRatio
          */
         public String getDiskAllocationRatio() {
             return this.diskAllocationRatio;
+        }
+
+        /**
+         * @return diskInfo
+         */
+        public String getDiskInfo() {
+            return this.diskInfo;
         }
 
         /**
@@ -411,6 +441,13 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
          */
         public String getEcsClassCode() {
             return this.ecsClassCode;
+        }
+
+        /**
+         * @return ecsId
+         */
+        public String getEcsId() {
+            return this.ecsId;
         }
 
         /**
@@ -512,6 +549,13 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         }
 
         /**
+         * @return mssqlSupportVersion
+         */
+        public String getMssqlSupportVersion() {
+            return this.mssqlSupportVersion;
+        }
+
+        /**
          * @return openPermission
          */
         public String getOpenPermission() {
@@ -552,15 +596,18 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             private String allocationStatus; 
             private String bastionInstanceId; 
             private String CPUAllocationRatio; 
+            private String category; 
+            private String chargeType; 
             private String cpuUsed; 
             private String createdTime; 
             private String dedicatedHostGroupId; 
             private String dedicatedHostId; 
-            private String deployType; 
             private String diskAllocationRatio; 
+            private String diskInfo; 
             private String distributionSymbol; 
             private String distributionTag; 
             private String ecsClassCode; 
+            private String ecsId; 
             private String endTime; 
             private String engine; 
             private String hostCPU; 
@@ -575,6 +622,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             private String instanceNumber; 
             private String memAllocationRatio; 
             private String memoryUsed; 
+            private String mssqlSupportVersion; 
             private String openPermission; 
             private String storageUsed; 
             private String VPCId; 
@@ -622,6 +670,22 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
+             * Category.
+             */
+            public Builder category(String category) {
+                this.category = category;
+                return this;
+            }
+
+            /**
+             * ChargeType.
+             */
+            public Builder chargeType(String chargeType) {
+                this.chargeType = chargeType;
+                return this;
+            }
+
+            /**
              * CpuUsed.
              */
             public Builder cpuUsed(String cpuUsed) {
@@ -654,18 +718,18 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * DeployType.
-             */
-            public Builder deployType(String deployType) {
-                this.deployType = deployType;
-                return this;
-            }
-
-            /**
              * DiskAllocationRatio.
              */
             public Builder diskAllocationRatio(String diskAllocationRatio) {
                 this.diskAllocationRatio = diskAllocationRatio;
+                return this;
+            }
+
+            /**
+             * DiskInfo.
+             */
+            public Builder diskInfo(String diskInfo) {
+                this.diskInfo = diskInfo;
                 return this;
             }
 
@@ -690,6 +754,14 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
              */
             public Builder ecsClassCode(String ecsClassCode) {
                 this.ecsClassCode = ecsClassCode;
+                return this;
+            }
+
+            /**
+             * EcsId.
+             */
+            public Builder ecsId(String ecsId) {
+                this.ecsId = ecsId;
                 return this;
             }
 
@@ -802,6 +874,14 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
              */
             public Builder memoryUsed(String memoryUsed) {
                 this.memoryUsed = memoryUsed;
+                return this;
+            }
+
+            /**
+             * MssqlSupportVersion.
+             */
+            public Builder mssqlSupportVersion(String mssqlSupportVersion) {
+                this.mssqlSupportVersion = mssqlSupportVersion;
                 return this;
             }
 

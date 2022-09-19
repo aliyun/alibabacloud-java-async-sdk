@@ -221,22 +221,22 @@ public class CreateDedicatedHostGroupRequest extends Request {
             super();
         } 
 
-        private Builder(CreateDedicatedHostGroupRequest response) {
-            super(response);
-            this.allocationPolicy = response.allocationPolicy;
-            this.clientToken = response.clientToken;
-            this.cpuAllocationRatio = response.cpuAllocationRatio;
-            this.dedicatedHostGroupDesc = response.dedicatedHostGroupDesc;
-            this.diskAllocationRatio = response.diskAllocationRatio;
-            this.engine = response.engine;
-            this.hostReplacePolicy = response.hostReplacePolicy;
-            this.memAllocationRatio = response.memAllocationRatio;
-            this.openPermission = response.openPermission;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.VPCId = response.VPCId;
+        private Builder(CreateDedicatedHostGroupRequest request) {
+            super(request);
+            this.allocationPolicy = request.allocationPolicy;
+            this.clientToken = request.clientToken;
+            this.cpuAllocationRatio = request.cpuAllocationRatio;
+            this.dedicatedHostGroupDesc = request.dedicatedHostGroupDesc;
+            this.diskAllocationRatio = request.diskAllocationRatio;
+            this.engine = request.engine;
+            this.hostReplacePolicy = request.hostReplacePolicy;
+            this.memAllocationRatio = request.memAllocationRatio;
+            this.openPermission = request.openPermission;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.VPCId = request.VPCId;
         } 
 
         /**

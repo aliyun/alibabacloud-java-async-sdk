@@ -192,20 +192,20 @@ public class ModifyDedicatedHostGroupAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyDedicatedHostGroupAttributeRequest response) {
-            super(response);
-            this.allocationPolicy = response.allocationPolicy;
-            this.cpuAllocationRatio = response.cpuAllocationRatio;
-            this.dedicatedHostGroupDesc = response.dedicatedHostGroupDesc;
-            this.dedicatedHostGroupId = response.dedicatedHostGroupId;
-            this.diskAllocationRatio = response.diskAllocationRatio;
-            this.hostReplacePolicy = response.hostReplacePolicy;
-            this.memAllocationRatio = response.memAllocationRatio;
-            this.openPermission = response.openPermission;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ModifyDedicatedHostGroupAttributeRequest request) {
+            super(request);
+            this.allocationPolicy = request.allocationPolicy;
+            this.cpuAllocationRatio = request.cpuAllocationRatio;
+            this.dedicatedHostGroupDesc = request.dedicatedHostGroupDesc;
+            this.dedicatedHostGroupId = request.dedicatedHostGroupId;
+            this.diskAllocationRatio = request.diskAllocationRatio;
+            this.hostReplacePolicy = request.hostReplacePolicy;
+            this.memAllocationRatio = request.memAllocationRatio;
+            this.openPermission = request.openPermission;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

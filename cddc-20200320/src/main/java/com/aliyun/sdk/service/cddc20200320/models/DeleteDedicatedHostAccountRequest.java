@@ -115,14 +115,14 @@ public class DeleteDedicatedHostAccountRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteDedicatedHostAccountRequest response) {
-            super(response);
-            this.accountName = response.accountName;
-            this.dedicatedHostId = response.dedicatedHostId;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DeleteDedicatedHostAccountRequest request) {
+            super(request);
+            this.accountName = request.accountName;
+            this.dedicatedHostId = request.dedicatedHostId;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
