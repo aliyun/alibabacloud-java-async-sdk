@@ -22,6 +22,7 @@ public class DescribeSuspEventQuaraFilesRequest extends Request {
 
     @Query
     @NameInMap("GroupId")
+    @Deprecated
     private String groupId;
 
     @Query

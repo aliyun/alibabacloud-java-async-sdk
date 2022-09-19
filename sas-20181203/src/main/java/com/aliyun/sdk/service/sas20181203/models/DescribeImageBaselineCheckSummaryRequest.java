@@ -40,6 +40,10 @@ public class DescribeImageBaselineCheckSummaryRequest extends Request {
     @NameInMap("RiskLevel")
     private String riskLevel;
 
+    @Query
+    @NameInMap("ScanRange")
+    private java.util.List < String > scanRange;
+
     private DescribeImageBaselineCheckSummaryRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
@@ -49,6 +53,7 @@ public class DescribeImageBaselineCheckSummaryRequest extends Request {
         this.lang = builder.lang;
         this.pageSize = builder.pageSize;
         this.riskLevel = builder.riskLevel;
+        this.scanRange = builder.scanRange;
     }
 
     public static Builder builder() {
@@ -113,6 +118,13 @@ public class DescribeImageBaselineCheckSummaryRequest extends Request {
         return this.riskLevel;
     }
 
+    /**
+     * @return scanRange
+     */
+    public java.util.List < String > getScanRange() {
+        return this.scanRange;
+    }
+
     public static final class Builder extends Request.Builder<DescribeImageBaselineCheckSummaryRequest, Builder> {
         private String clusterId; 
         private String criteria; 
@@ -121,6 +133,7 @@ public class DescribeImageBaselineCheckSummaryRequest extends Request {
         private String lang; 
         private Integer pageSize; 
         private String riskLevel; 
+        private java.util.List < String > scanRange; 
 
         private Builder() {
             super();
@@ -135,6 +148,7 @@ public class DescribeImageBaselineCheckSummaryRequest extends Request {
             this.lang = request.lang;
             this.pageSize = request.pageSize;
             this.riskLevel = request.riskLevel;
+            this.scanRange = request.scanRange;
         } 
 
         /**
@@ -197,6 +211,15 @@ public class DescribeImageBaselineCheckSummaryRequest extends Request {
         public Builder riskLevel(String riskLevel) {
             this.putQueryParameter("RiskLevel", riskLevel);
             this.riskLevel = riskLevel;
+            return this;
+        }
+
+        /**
+         * ScanRange.
+         */
+        public Builder scanRange(java.util.List < String > scanRange) {
+            this.putQueryParameter("ScanRange", scanRange);
+            this.scanRange = scanRange;
             return this;
         }
 

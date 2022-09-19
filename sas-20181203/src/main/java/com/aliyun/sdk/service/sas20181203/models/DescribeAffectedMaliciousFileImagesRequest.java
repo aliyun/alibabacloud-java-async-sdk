@@ -17,9 +17,21 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
     private String clusterId;
 
     @Query
+    @NameInMap("ClusterName")
+    private String clusterName;
+
+    @Query
+    @NameInMap("ContainerId")
+    private String containerId;
+
+    @Query
     @NameInMap("CurrentPage")
     @Validation(required = true)
     private Integer currentPage;
+
+    @Query
+    @NameInMap("Image")
+    private String image;
 
     @Query
     @NameInMap("ImageDigest")
@@ -38,13 +50,25 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
     private String lang;
 
     @Query
+    @NameInMap("Levels")
+    private String levels;
+
+    @Query
     @NameInMap("MaliciousMd5")
     private String maliciousMd5;
+
+    @Query
+    @NameInMap("Namespace")
+    private String namespace;
 
     @Query
     @NameInMap("PageSize")
     @Validation(required = true)
     private String pageSize;
+
+    @Query
+    @NameInMap("Pod")
+    private String pod;
 
     @Query
     @NameInMap("RepoId")
@@ -66,21 +90,32 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
     @NameInMap("RepoRegionId")
     private String repoRegionId;
 
+    @Query
+    @NameInMap("ScanRange")
+    private java.util.List < String > scanRange;
+
     private DescribeAffectedMaliciousFileImagesRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
+        this.clusterName = builder.clusterName;
+        this.containerId = builder.containerId;
         this.currentPage = builder.currentPage;
+        this.image = builder.image;
         this.imageDigest = builder.imageDigest;
         this.imageLayer = builder.imageLayer;
         this.imageTag = builder.imageTag;
         this.lang = builder.lang;
+        this.levels = builder.levels;
         this.maliciousMd5 = builder.maliciousMd5;
+        this.namespace = builder.namespace;
         this.pageSize = builder.pageSize;
+        this.pod = builder.pod;
         this.repoId = builder.repoId;
         this.repoInstanceId = builder.repoInstanceId;
         this.repoName = builder.repoName;
         this.repoNamespace = builder.repoNamespace;
         this.repoRegionId = builder.repoRegionId;
+        this.scanRange = builder.scanRange;
     }
 
     public static Builder builder() {
@@ -104,10 +139,31 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
     }
 
     /**
+     * @return clusterName
+     */
+    public String getClusterName() {
+        return this.clusterName;
+    }
+
+    /**
+     * @return containerId
+     */
+    public String getContainerId() {
+        return this.containerId;
+    }
+
+    /**
      * @return currentPage
      */
     public Integer getCurrentPage() {
         return this.currentPage;
+    }
+
+    /**
+     * @return image
+     */
+    public String getImage() {
+        return this.image;
     }
 
     /**
@@ -139,6 +195,13 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
     }
 
     /**
+     * @return levels
+     */
+    public String getLevels() {
+        return this.levels;
+    }
+
+    /**
      * @return maliciousMd5
      */
     public String getMaliciousMd5() {
@@ -146,10 +209,24 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
     }
 
     /**
+     * @return namespace
+     */
+    public String getNamespace() {
+        return this.namespace;
+    }
+
+    /**
      * @return pageSize
      */
     public String getPageSize() {
         return this.pageSize;
+    }
+
+    /**
+     * @return pod
+     */
+    public String getPod() {
+        return this.pod;
     }
 
     /**
@@ -187,20 +264,34 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
         return this.repoRegionId;
     }
 
+    /**
+     * @return scanRange
+     */
+    public java.util.List < String > getScanRange() {
+        return this.scanRange;
+    }
+
     public static final class Builder extends Request.Builder<DescribeAffectedMaliciousFileImagesRequest, Builder> {
         private String clusterId; 
+        private String clusterName; 
+        private String containerId; 
         private Integer currentPage; 
+        private String image; 
         private String imageDigest; 
         private String imageLayer; 
         private String imageTag; 
         private String lang; 
+        private String levels; 
         private String maliciousMd5; 
+        private String namespace; 
         private String pageSize; 
+        private String pod; 
         private String repoId; 
         private String repoInstanceId; 
         private String repoName; 
         private String repoNamespace; 
         private String repoRegionId; 
+        private java.util.List < String > scanRange; 
 
         private Builder() {
             super();
@@ -209,18 +300,25 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
         private Builder(DescribeAffectedMaliciousFileImagesRequest request) {
             super(request);
             this.clusterId = request.clusterId;
+            this.clusterName = request.clusterName;
+            this.containerId = request.containerId;
             this.currentPage = request.currentPage;
+            this.image = request.image;
             this.imageDigest = request.imageDigest;
             this.imageLayer = request.imageLayer;
             this.imageTag = request.imageTag;
             this.lang = request.lang;
+            this.levels = request.levels;
             this.maliciousMd5 = request.maliciousMd5;
+            this.namespace = request.namespace;
             this.pageSize = request.pageSize;
+            this.pod = request.pod;
             this.repoId = request.repoId;
             this.repoInstanceId = request.repoInstanceId;
             this.repoName = request.repoName;
             this.repoNamespace = request.repoNamespace;
             this.repoRegionId = request.repoRegionId;
+            this.scanRange = request.scanRange;
         } 
 
         /**
@@ -233,11 +331,38 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
         }
 
         /**
+         * ClusterName.
+         */
+        public Builder clusterName(String clusterName) {
+            this.putQueryParameter("ClusterName", clusterName);
+            this.clusterName = clusterName;
+            return this;
+        }
+
+        /**
+         * ContainerId.
+         */
+        public Builder containerId(String containerId) {
+            this.putQueryParameter("ContainerId", containerId);
+            this.containerId = containerId;
+            return this;
+        }
+
+        /**
          * CurrentPage.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
             this.currentPage = currentPage;
+            return this;
+        }
+
+        /**
+         * Image.
+         */
+        public Builder image(String image) {
+            this.putQueryParameter("Image", image);
+            this.image = image;
             return this;
         }
 
@@ -278,6 +403,15 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
         }
 
         /**
+         * Levels.
+         */
+        public Builder levels(String levels) {
+            this.putQueryParameter("Levels", levels);
+            this.levels = levels;
+            return this;
+        }
+
+        /**
          * MaliciousMd5.
          */
         public Builder maliciousMd5(String maliciousMd5) {
@@ -287,11 +421,29 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
         }
 
         /**
+         * Namespace.
+         */
+        public Builder namespace(String namespace) {
+            this.putQueryParameter("Namespace", namespace);
+            this.namespace = namespace;
+            return this;
+        }
+
+        /**
          * PageSize.
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * Pod.
+         */
+        public Builder pod(String pod) {
+            this.putQueryParameter("Pod", pod);
+            this.pod = pod;
             return this;
         }
 
@@ -337,6 +489,15 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
         public Builder repoRegionId(String repoRegionId) {
             this.putQueryParameter("RepoRegionId", repoRegionId);
             this.repoRegionId = repoRegionId;
+            return this;
+        }
+
+        /**
+         * ScanRange.
+         */
+        public Builder scanRange(java.util.List < String > scanRange) {
+            this.putQueryParameter("ScanRange", scanRange);
+            this.scanRange = scanRange;
             return this;
         }
 

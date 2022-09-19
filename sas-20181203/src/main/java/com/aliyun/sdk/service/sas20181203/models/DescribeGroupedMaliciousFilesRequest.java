@@ -70,6 +70,10 @@ public class DescribeGroupedMaliciousFilesRequest extends Request {
     @NameInMap("RepoRegionId")
     private String repoRegionId;
 
+    @Query
+    @NameInMap("ScanRange")
+    private java.util.List < String > scanRange;
+
     private DescribeGroupedMaliciousFilesRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
@@ -86,6 +90,7 @@ public class DescribeGroupedMaliciousFilesRequest extends Request {
         this.repoName = builder.repoName;
         this.repoNamespace = builder.repoNamespace;
         this.repoRegionId = builder.repoRegionId;
+        this.scanRange = builder.scanRange;
     }
 
     public static Builder builder() {
@@ -199,6 +204,13 @@ public class DescribeGroupedMaliciousFilesRequest extends Request {
         return this.repoRegionId;
     }
 
+    /**
+     * @return scanRange
+     */
+    public java.util.List < String > getScanRange() {
+        return this.scanRange;
+    }
+
     public static final class Builder extends Request.Builder<DescribeGroupedMaliciousFilesRequest, Builder> {
         private String clusterId; 
         private Integer currentPage; 
@@ -214,6 +226,7 @@ public class DescribeGroupedMaliciousFilesRequest extends Request {
         private String repoName; 
         private String repoNamespace; 
         private String repoRegionId; 
+        private java.util.List < String > scanRange; 
 
         private Builder() {
             super();
@@ -235,6 +248,7 @@ public class DescribeGroupedMaliciousFilesRequest extends Request {
             this.repoName = request.repoName;
             this.repoNamespace = request.repoNamespace;
             this.repoRegionId = request.repoRegionId;
+            this.scanRange = request.scanRange;
         } 
 
         /**
@@ -360,6 +374,15 @@ public class DescribeGroupedMaliciousFilesRequest extends Request {
         public Builder repoRegionId(String repoRegionId) {
             this.putQueryParameter("RepoRegionId", repoRegionId);
             this.repoRegionId = repoRegionId;
+            return this;
+        }
+
+        /**
+         * ScanRange.
+         */
+        public Builder scanRange(java.util.List < String > scanRange) {
+            this.putQueryParameter("ScanRange", scanRange);
+            this.scanRange = scanRange;
             return this;
         }
 

@@ -18,6 +18,10 @@ public class DescribeFrontVulPatchListRequest extends Request {
     private String info;
 
     @Query
+    @NameInMap("Lang")
+    private String lang;
+
+    @Query
     @NameInMap("OperateType")
     @Validation(required = true)
     private String operateType;
@@ -30,6 +34,7 @@ public class DescribeFrontVulPatchListRequest extends Request {
     private DescribeFrontVulPatchListRequest(Builder builder) {
         super(builder);
         this.info = builder.info;
+        this.lang = builder.lang;
         this.operateType = builder.operateType;
         this.type = builder.type;
     }
@@ -55,6 +60,13 @@ public class DescribeFrontVulPatchListRequest extends Request {
     }
 
     /**
+     * @return lang
+     */
+    public String getLang() {
+        return this.lang;
+    }
+
+    /**
      * @return operateType
      */
     public String getOperateType() {
@@ -70,6 +82,7 @@ public class DescribeFrontVulPatchListRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeFrontVulPatchListRequest, Builder> {
         private String info; 
+        private String lang; 
         private String operateType; 
         private String type; 
 
@@ -80,6 +93,7 @@ public class DescribeFrontVulPatchListRequest extends Request {
         private Builder(DescribeFrontVulPatchListRequest request) {
             super(request);
             this.info = request.info;
+            this.lang = request.lang;
             this.operateType = request.operateType;
             this.type = request.type;
         } 
@@ -90,6 +104,15 @@ public class DescribeFrontVulPatchListRequest extends Request {
         public Builder info(String info) {
             this.putQueryParameter("Info", info);
             this.info = info;
+            return this;
+        }
+
+        /**
+         * Lang.
+         */
+        public Builder lang(String lang) {
+            this.putQueryParameter("Lang", lang);
+            this.lang = lang;
             return this;
         }
 

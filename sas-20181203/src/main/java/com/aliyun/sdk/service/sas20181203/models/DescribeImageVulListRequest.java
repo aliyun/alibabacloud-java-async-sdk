@@ -21,6 +21,14 @@ public class DescribeImageVulListRequest extends Request {
     private String clusterId;
 
     @Query
+    @NameInMap("ClusterName")
+    private String clusterName;
+
+    @Query
+    @NameInMap("ContainerId")
+    private String containerId;
+
+    @Query
     @NameInMap("CurrentPage")
     private Integer currentPage;
 
@@ -31,6 +39,10 @@ public class DescribeImageVulListRequest extends Request {
     @Query
     @NameInMap("Digest")
     private String digest;
+
+    @Query
+    @NameInMap("Image")
+    private String image;
 
     @Query
     @NameInMap("InstanceId")
@@ -45,12 +57,20 @@ public class DescribeImageVulListRequest extends Request {
     private String name;
 
     @Query
+    @NameInMap("Namespace")
+    private String namespace;
+
+    @Query
     @NameInMap("Necessity")
     private String necessity;
 
     @Query
     @NameInMap("PageSize")
     private Integer pageSize;
+
+    @Query
+    @NameInMap("Pod")
+    private String pod;
 
     @Query
     @NameInMap("RegionId")
@@ -77,6 +97,10 @@ public class DescribeImageVulListRequest extends Request {
     private String repoRegionId;
 
     @Query
+    @NameInMap("ScanRange")
+    private java.util.List < String > scanRange;
+
+    @Query
     @NameInMap("StatusList")
     private String statusList;
 
@@ -97,20 +121,26 @@ public class DescribeImageVulListRequest extends Request {
         super(builder);
         this.aliasName = builder.aliasName;
         this.clusterId = builder.clusterId;
+        this.clusterName = builder.clusterName;
+        this.containerId = builder.containerId;
         this.currentPage = builder.currentPage;
         this.dealed = builder.dealed;
         this.digest = builder.digest;
+        this.image = builder.image;
         this.instanceId = builder.instanceId;
         this.lang = builder.lang;
         this.name = builder.name;
+        this.namespace = builder.namespace;
         this.necessity = builder.necessity;
         this.pageSize = builder.pageSize;
+        this.pod = builder.pod;
         this.regionId = builder.regionId;
         this.repoId = builder.repoId;
         this.repoInstanceId = builder.repoInstanceId;
         this.repoName = builder.repoName;
         this.repoNamespace = builder.repoNamespace;
         this.repoRegionId = builder.repoRegionId;
+        this.scanRange = builder.scanRange;
         this.statusList = builder.statusList;
         this.tag = builder.tag;
         this.type = builder.type;
@@ -145,6 +175,20 @@ public class DescribeImageVulListRequest extends Request {
     }
 
     /**
+     * @return clusterName
+     */
+    public String getClusterName() {
+        return this.clusterName;
+    }
+
+    /**
+     * @return containerId
+     */
+    public String getContainerId() {
+        return this.containerId;
+    }
+
+    /**
      * @return currentPage
      */
     public Integer getCurrentPage() {
@@ -163,6 +207,13 @@ public class DescribeImageVulListRequest extends Request {
      */
     public String getDigest() {
         return this.digest;
+    }
+
+    /**
+     * @return image
+     */
+    public String getImage() {
+        return this.image;
     }
 
     /**
@@ -187,6 +238,13 @@ public class DescribeImageVulListRequest extends Request {
     }
 
     /**
+     * @return namespace
+     */
+    public String getNamespace() {
+        return this.namespace;
+    }
+
+    /**
      * @return necessity
      */
     public String getNecessity() {
@@ -198,6 +256,13 @@ public class DescribeImageVulListRequest extends Request {
      */
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    /**
+     * @return pod
+     */
+    public String getPod() {
+        return this.pod;
     }
 
     /**
@@ -243,6 +308,13 @@ public class DescribeImageVulListRequest extends Request {
     }
 
     /**
+     * @return scanRange
+     */
+    public java.util.List < String > getScanRange() {
+        return this.scanRange;
+    }
+
+    /**
      * @return statusList
      */
     public String getStatusList() {
@@ -273,20 +345,26 @@ public class DescribeImageVulListRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeImageVulListRequest, Builder> {
         private String aliasName; 
         private String clusterId; 
+        private String clusterName; 
+        private String containerId; 
         private Integer currentPage; 
         private String dealed; 
         private String digest; 
+        private String image; 
         private String instanceId; 
         private String lang; 
         private String name; 
+        private String namespace; 
         private String necessity; 
         private Integer pageSize; 
+        private String pod; 
         private String regionId; 
         private String repoId; 
         private String repoInstanceId; 
         private String repoName; 
         private String repoNamespace; 
         private String repoRegionId; 
+        private java.util.List < String > scanRange; 
         private String statusList; 
         private String tag; 
         private String type; 
@@ -300,20 +378,26 @@ public class DescribeImageVulListRequest extends Request {
             super(request);
             this.aliasName = request.aliasName;
             this.clusterId = request.clusterId;
+            this.clusterName = request.clusterName;
+            this.containerId = request.containerId;
             this.currentPage = request.currentPage;
             this.dealed = request.dealed;
             this.digest = request.digest;
+            this.image = request.image;
             this.instanceId = request.instanceId;
             this.lang = request.lang;
             this.name = request.name;
+            this.namespace = request.namespace;
             this.necessity = request.necessity;
             this.pageSize = request.pageSize;
+            this.pod = request.pod;
             this.regionId = request.regionId;
             this.repoId = request.repoId;
             this.repoInstanceId = request.repoInstanceId;
             this.repoName = request.repoName;
             this.repoNamespace = request.repoNamespace;
             this.repoRegionId = request.repoRegionId;
+            this.scanRange = request.scanRange;
             this.statusList = request.statusList;
             this.tag = request.tag;
             this.type = request.type;
@@ -335,6 +419,24 @@ public class DescribeImageVulListRequest extends Request {
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
             this.clusterId = clusterId;
+            return this;
+        }
+
+        /**
+         * ClusterName.
+         */
+        public Builder clusterName(String clusterName) {
+            this.putQueryParameter("ClusterName", clusterName);
+            this.clusterName = clusterName;
+            return this;
+        }
+
+        /**
+         * ContainerId.
+         */
+        public Builder containerId(String containerId) {
+            this.putQueryParameter("ContainerId", containerId);
+            this.containerId = containerId;
             return this;
         }
 
@@ -366,6 +468,15 @@ public class DescribeImageVulListRequest extends Request {
         }
 
         /**
+         * Image.
+         */
+        public Builder image(String image) {
+            this.putQueryParameter("Image", image);
+            this.image = image;
+            return this;
+        }
+
+        /**
          * InstanceId.
          */
         public Builder instanceId(String instanceId) {
@@ -393,6 +504,15 @@ public class DescribeImageVulListRequest extends Request {
         }
 
         /**
+         * Namespace.
+         */
+        public Builder namespace(String namespace) {
+            this.putQueryParameter("Namespace", namespace);
+            this.namespace = namespace;
+            return this;
+        }
+
+        /**
          * Necessity.
          */
         public Builder necessity(String necessity) {
@@ -407,6 +527,15 @@ public class DescribeImageVulListRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * Pod.
+         */
+        public Builder pod(String pod) {
+            this.putQueryParameter("Pod", pod);
+            this.pod = pod;
             return this;
         }
 
@@ -461,6 +590,15 @@ public class DescribeImageVulListRequest extends Request {
         public Builder repoRegionId(String repoRegionId) {
             this.putQueryParameter("RepoRegionId", repoRegionId);
             this.repoRegionId = repoRegionId;
+            return this;
+        }
+
+        /**
+         * ScanRange.
+         */
+        public Builder scanRange(java.util.List < String > scanRange) {
+            this.putQueryParameter("ScanRange", scanRange);
+            this.scanRange = scanRange;
             return this;
         }
 

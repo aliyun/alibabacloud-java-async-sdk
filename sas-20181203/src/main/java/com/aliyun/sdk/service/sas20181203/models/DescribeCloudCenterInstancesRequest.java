@@ -25,6 +25,10 @@ public class DescribeCloudCenterInstancesRequest extends Request {
     private Integer importance;
 
     @Query
+    @NameInMap("Lang")
+    private String lang;
+
+    @Query
     @NameInMap("LogicalExp")
     private String logicalExp;
 
@@ -49,6 +53,7 @@ public class DescribeCloudCenterInstancesRequest extends Request {
         this.criteria = builder.criteria;
         this.currentPage = builder.currentPage;
         this.importance = builder.importance;
+        this.lang = builder.lang;
         this.logicalExp = builder.logicalExp;
         this.machineTypes = builder.machineTypes;
         this.noGroupTrace = builder.noGroupTrace;
@@ -91,6 +96,13 @@ public class DescribeCloudCenterInstancesRequest extends Request {
     }
 
     /**
+     * @return lang
+     */
+    public String getLang() {
+        return this.lang;
+    }
+
+    /**
      * @return logicalExp
      */
     public String getLogicalExp() {
@@ -129,6 +141,7 @@ public class DescribeCloudCenterInstancesRequest extends Request {
         private String criteria; 
         private Integer currentPage; 
         private Integer importance; 
+        private String lang; 
         private String logicalExp; 
         private String machineTypes; 
         private Boolean noGroupTrace; 
@@ -144,6 +157,7 @@ public class DescribeCloudCenterInstancesRequest extends Request {
             this.criteria = request.criteria;
             this.currentPage = request.currentPage;
             this.importance = request.importance;
+            this.lang = request.lang;
             this.logicalExp = request.logicalExp;
             this.machineTypes = request.machineTypes;
             this.noGroupTrace = request.noGroupTrace;
@@ -175,6 +189,15 @@ public class DescribeCloudCenterInstancesRequest extends Request {
         public Builder importance(Integer importance) {
             this.putQueryParameter("Importance", importance);
             this.importance = importance;
+            return this;
+        }
+
+        /**
+         * Lang.
+         */
+        public Builder lang(String lang) {
+            this.putQueryParameter("Lang", lang);
+            this.lang = lang;
             return this;
         }
 

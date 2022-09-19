@@ -403,11 +403,23 @@ public class DescribeImageVulListResponseBody extends TeaModel {
         @NameInMap("CanUpdate")
         private Boolean canUpdate;
 
+        @NameInMap("ClusterId")
+        private String clusterId;
+
+        @NameInMap("ClusterName")
+        private String clusterName;
+
+        @NameInMap("ContainerId")
+        private String containerId;
+
         @NameInMap("ExtendContentJson")
         private ExtendContentJson extendContentJson;
 
         @NameInMap("FirstTs")
         private Long firstTs;
+
+        @NameInMap("Image")
+        private String image;
 
         @NameInMap("ImageDigest")
         private String imageDigest;
@@ -424,8 +436,14 @@ public class DescribeImageVulListResponseBody extends TeaModel {
         @NameInMap("Name")
         private String name;
 
+        @NameInMap("Namespace")
+        private String namespace;
+
         @NameInMap("Necessity")
         private String necessity;
+
+        @NameInMap("Pod")
+        private String pod;
 
         @NameInMap("PrimaryId")
         private Long primaryId;
@@ -455,14 +473,20 @@ public class DescribeImageVulListResponseBody extends TeaModel {
             this.aliasName = builder.aliasName;
             this.canFix = builder.canFix;
             this.canUpdate = builder.canUpdate;
+            this.clusterId = builder.clusterId;
+            this.clusterName = builder.clusterName;
+            this.containerId = builder.containerId;
             this.extendContentJson = builder.extendContentJson;
             this.firstTs = builder.firstTs;
+            this.image = builder.image;
             this.imageDigest = builder.imageDigest;
             this.lastTs = builder.lastTs;
             this.layers = builder.layers;
             this.modifyTs = builder.modifyTs;
             this.name = builder.name;
+            this.namespace = builder.namespace;
             this.necessity = builder.necessity;
+            this.pod = builder.pod;
             this.primaryId = builder.primaryId;
             this.related = builder.related;
             this.repoName = builder.repoName;
@@ -503,6 +527,27 @@ public class DescribeImageVulListResponseBody extends TeaModel {
         }
 
         /**
+         * @return clusterId
+         */
+        public String getClusterId() {
+            return this.clusterId;
+        }
+
+        /**
+         * @return clusterName
+         */
+        public String getClusterName() {
+            return this.clusterName;
+        }
+
+        /**
+         * @return containerId
+         */
+        public String getContainerId() {
+            return this.containerId;
+        }
+
+        /**
          * @return extendContentJson
          */
         public ExtendContentJson getExtendContentJson() {
@@ -514,6 +559,13 @@ public class DescribeImageVulListResponseBody extends TeaModel {
          */
         public Long getFirstTs() {
             return this.firstTs;
+        }
+
+        /**
+         * @return image
+         */
+        public String getImage() {
+            return this.image;
         }
 
         /**
@@ -552,10 +604,24 @@ public class DescribeImageVulListResponseBody extends TeaModel {
         }
 
         /**
+         * @return namespace
+         */
+        public String getNamespace() {
+            return this.namespace;
+        }
+
+        /**
          * @return necessity
          */
         public String getNecessity() {
             return this.necessity;
+        }
+
+        /**
+         * @return pod
+         */
+        public String getPod() {
+            return this.pod;
         }
 
         /**
@@ -618,14 +684,20 @@ public class DescribeImageVulListResponseBody extends TeaModel {
             private String aliasName; 
             private String canFix; 
             private Boolean canUpdate; 
+            private String clusterId; 
+            private String clusterName; 
+            private String containerId; 
             private ExtendContentJson extendContentJson; 
             private Long firstTs; 
+            private String image; 
             private String imageDigest; 
             private Long lastTs; 
             private java.util.List < String > layers; 
             private Long modifyTs; 
             private String name; 
+            private String namespace; 
             private String necessity; 
+            private String pod; 
             private Long primaryId; 
             private String related; 
             private String repoName; 
@@ -660,6 +732,30 @@ public class DescribeImageVulListResponseBody extends TeaModel {
             }
 
             /**
+             * ClusterId.
+             */
+            public Builder clusterId(String clusterId) {
+                this.clusterId = clusterId;
+                return this;
+            }
+
+            /**
+             * ClusterName.
+             */
+            public Builder clusterName(String clusterName) {
+                this.clusterName = clusterName;
+                return this;
+            }
+
+            /**
+             * ContainerId.
+             */
+            public Builder containerId(String containerId) {
+                this.containerId = containerId;
+                return this;
+            }
+
+            /**
              * ExtendContentJson.
              */
             public Builder extendContentJson(ExtendContentJson extendContentJson) {
@@ -672,6 +768,14 @@ public class DescribeImageVulListResponseBody extends TeaModel {
              */
             public Builder firstTs(Long firstTs) {
                 this.firstTs = firstTs;
+                return this;
+            }
+
+            /**
+             * Image.
+             */
+            public Builder image(String image) {
+                this.image = image;
                 return this;
             }
 
@@ -716,10 +820,26 @@ public class DescribeImageVulListResponseBody extends TeaModel {
             }
 
             /**
+             * Namespace.
+             */
+            public Builder namespace(String namespace) {
+                this.namespace = namespace;
+                return this;
+            }
+
+            /**
              * Necessity.
              */
             public Builder necessity(String necessity) {
                 this.necessity = necessity;
+                return this;
+            }
+
+            /**
+             * Pod.
+             */
+            public Builder pod(String pod) {
+                this.pod = pod;
                 return this;
             }
 

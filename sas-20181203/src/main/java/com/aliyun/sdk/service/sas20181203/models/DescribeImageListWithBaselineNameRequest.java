@@ -22,6 +22,14 @@ public class DescribeImageListWithBaselineNameRequest extends Request {
     private String clusterId;
 
     @Query
+    @NameInMap("ClusterName")
+    private String clusterName;
+
+    @Query
+    @NameInMap("ContainerId")
+    private String containerId;
+
+    @Query
     @NameInMap("Criteria")
     private String criteria;
 
@@ -34,6 +42,10 @@ public class DescribeImageListWithBaselineNameRequest extends Request {
     private Integer currentPage;
 
     @Query
+    @NameInMap("Image")
+    private String image;
+
+    @Query
     @NameInMap("ImageDigest")
     private String imageDigest;
 
@@ -42,8 +54,16 @@ public class DescribeImageListWithBaselineNameRequest extends Request {
     private String lang;
 
     @Query
+    @NameInMap("Namespace")
+    private String namespace;
+
+    @Query
     @NameInMap("PageSize")
     private Integer pageSize;
+
+    @Query
+    @NameInMap("Pod")
+    private String pod;
 
     @Query
     @NameInMap("RepoInstanceId")
@@ -57,19 +77,29 @@ public class DescribeImageListWithBaselineNameRequest extends Request {
     @NameInMap("RepoNamespace")
     private String repoNamespace;
 
+    @Query
+    @NameInMap("ScanRange")
+    private java.util.List < String > scanRange;
+
     private DescribeImageListWithBaselineNameRequest(Builder builder) {
         super(builder);
         this.baselineNameKey = builder.baselineNameKey;
         this.clusterId = builder.clusterId;
+        this.clusterName = builder.clusterName;
+        this.containerId = builder.containerId;
         this.criteria = builder.criteria;
         this.criteriaType = builder.criteriaType;
         this.currentPage = builder.currentPage;
+        this.image = builder.image;
         this.imageDigest = builder.imageDigest;
         this.lang = builder.lang;
+        this.namespace = builder.namespace;
         this.pageSize = builder.pageSize;
+        this.pod = builder.pod;
         this.repoInstanceId = builder.repoInstanceId;
         this.repoName = builder.repoName;
         this.repoNamespace = builder.repoNamespace;
+        this.scanRange = builder.scanRange;
     }
 
     public static Builder builder() {
@@ -100,6 +130,20 @@ public class DescribeImageListWithBaselineNameRequest extends Request {
     }
 
     /**
+     * @return clusterName
+     */
+    public String getClusterName() {
+        return this.clusterName;
+    }
+
+    /**
+     * @return containerId
+     */
+    public String getContainerId() {
+        return this.containerId;
+    }
+
+    /**
      * @return criteria
      */
     public String getCriteria() {
@@ -121,6 +165,13 @@ public class DescribeImageListWithBaselineNameRequest extends Request {
     }
 
     /**
+     * @return image
+     */
+    public String getImage() {
+        return this.image;
+    }
+
+    /**
      * @return imageDigest
      */
     public String getImageDigest() {
@@ -135,10 +186,24 @@ public class DescribeImageListWithBaselineNameRequest extends Request {
     }
 
     /**
+     * @return namespace
+     */
+    public String getNamespace() {
+        return this.namespace;
+    }
+
+    /**
      * @return pageSize
      */
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    /**
+     * @return pod
+     */
+    public String getPod() {
+        return this.pod;
     }
 
     /**
@@ -162,18 +227,31 @@ public class DescribeImageListWithBaselineNameRequest extends Request {
         return this.repoNamespace;
     }
 
+    /**
+     * @return scanRange
+     */
+    public java.util.List < String > getScanRange() {
+        return this.scanRange;
+    }
+
     public static final class Builder extends Request.Builder<DescribeImageListWithBaselineNameRequest, Builder> {
         private String baselineNameKey; 
         private String clusterId; 
+        private String clusterName; 
+        private String containerId; 
         private String criteria; 
         private String criteriaType; 
         private Integer currentPage; 
+        private String image; 
         private String imageDigest; 
         private String lang; 
+        private String namespace; 
         private Integer pageSize; 
+        private String pod; 
         private String repoInstanceId; 
         private String repoName; 
         private String repoNamespace; 
+        private java.util.List < String > scanRange; 
 
         private Builder() {
             super();
@@ -183,15 +261,21 @@ public class DescribeImageListWithBaselineNameRequest extends Request {
             super(request);
             this.baselineNameKey = request.baselineNameKey;
             this.clusterId = request.clusterId;
+            this.clusterName = request.clusterName;
+            this.containerId = request.containerId;
             this.criteria = request.criteria;
             this.criteriaType = request.criteriaType;
             this.currentPage = request.currentPage;
+            this.image = request.image;
             this.imageDigest = request.imageDigest;
             this.lang = request.lang;
+            this.namespace = request.namespace;
             this.pageSize = request.pageSize;
+            this.pod = request.pod;
             this.repoInstanceId = request.repoInstanceId;
             this.repoName = request.repoName;
             this.repoNamespace = request.repoNamespace;
+            this.scanRange = request.scanRange;
         } 
 
         /**
@@ -209,6 +293,24 @@ public class DescribeImageListWithBaselineNameRequest extends Request {
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
             this.clusterId = clusterId;
+            return this;
+        }
+
+        /**
+         * ClusterName.
+         */
+        public Builder clusterName(String clusterName) {
+            this.putQueryParameter("ClusterName", clusterName);
+            this.clusterName = clusterName;
+            return this;
+        }
+
+        /**
+         * ContainerId.
+         */
+        public Builder containerId(String containerId) {
+            this.putQueryParameter("ContainerId", containerId);
+            this.containerId = containerId;
             return this;
         }
 
@@ -240,6 +342,15 @@ public class DescribeImageListWithBaselineNameRequest extends Request {
         }
 
         /**
+         * Image.
+         */
+        public Builder image(String image) {
+            this.putQueryParameter("Image", image);
+            this.image = image;
+            return this;
+        }
+
+        /**
          * ImageDigest.
          */
         public Builder imageDigest(String imageDigest) {
@@ -258,11 +369,29 @@ public class DescribeImageListWithBaselineNameRequest extends Request {
         }
 
         /**
+         * Namespace.
+         */
+        public Builder namespace(String namespace) {
+            this.putQueryParameter("Namespace", namespace);
+            this.namespace = namespace;
+            return this;
+        }
+
+        /**
          * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * Pod.
+         */
+        public Builder pod(String pod) {
+            this.putQueryParameter("Pod", pod);
+            this.pod = pod;
             return this;
         }
 
@@ -290,6 +419,15 @@ public class DescribeImageListWithBaselineNameRequest extends Request {
         public Builder repoNamespace(String repoNamespace) {
             this.putQueryParameter("RepoNamespace", repoNamespace);
             this.repoNamespace = repoNamespace;
+            return this;
+        }
+
+        /**
+         * ScanRange.
+         */
+        public Builder scanRange(java.util.List < String > scanRange) {
+            this.putQueryParameter("ScanRange", scanRange);
+            this.scanRange = scanRange;
             return this;
         }
 

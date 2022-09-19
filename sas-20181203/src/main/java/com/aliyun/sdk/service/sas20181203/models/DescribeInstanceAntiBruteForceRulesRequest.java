@@ -13,6 +13,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeInstanceAntiBruteForceRulesRequest extends Request {
     @Query
+    @NameInMap("CurrentPage")
+    private Integer currentPage;
+
+    @Query
+    @NameInMap("PageSize")
+    private Integer pageSize;
+
+    @Query
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
@@ -26,6 +34,8 @@ public class DescribeInstanceAntiBruteForceRulesRequest extends Request {
 
     private DescribeInstanceAntiBruteForceRulesRequest(Builder builder) {
         super(builder);
+        this.currentPage = builder.currentPage;
+        this.pageSize = builder.pageSize;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.sourceIp = builder.sourceIp;
         this.uuidList = builder.uuidList;
@@ -42,6 +52,20 @@ public class DescribeInstanceAntiBruteForceRulesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return currentPage
+     */
+    public Integer getCurrentPage() {
+        return this.currentPage;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     /**
@@ -66,6 +90,8 @@ public class DescribeInstanceAntiBruteForceRulesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeInstanceAntiBruteForceRulesRequest, Builder> {
+        private Integer currentPage; 
+        private Integer pageSize; 
         private Long resourceOwnerId; 
         private String sourceIp; 
         private java.util.List < String > uuidList; 
@@ -76,10 +102,30 @@ public class DescribeInstanceAntiBruteForceRulesRequest extends Request {
 
         private Builder(DescribeInstanceAntiBruteForceRulesRequest request) {
             super(request);
+            this.currentPage = request.currentPage;
+            this.pageSize = request.pageSize;
             this.resourceOwnerId = request.resourceOwnerId;
             this.sourceIp = request.sourceIp;
             this.uuidList = request.uuidList;
         } 
+
+        /**
+         * CurrentPage.
+         */
+        public Builder currentPage(Integer currentPage) {
+            this.putQueryParameter("CurrentPage", currentPage);
+            this.currentPage = currentPage;
+            return this;
+        }
+
+        /**
+         * PageSize.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
 
         /**
          * ResourceOwnerId.

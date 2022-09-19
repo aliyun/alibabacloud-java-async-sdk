@@ -13,12 +13,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeAssetDetailByUuidsRequest extends Request {
     @Query
+    @NameInMap("Lang")
+    private String lang;
+
+    @Query
     @NameInMap("Uuids")
     @Validation(required = true)
     private String uuids;
 
     private DescribeAssetDetailByUuidsRequest(Builder builder) {
         super(builder);
+        this.lang = builder.lang;
         this.uuids = builder.uuids;
     }
 
@@ -36,6 +41,13 @@ public class DescribeAssetDetailByUuidsRequest extends Request {
     }
 
     /**
+     * @return lang
+     */
+    public String getLang() {
+        return this.lang;
+    }
+
+    /**
      * @return uuids
      */
     public String getUuids() {
@@ -43,6 +55,7 @@ public class DescribeAssetDetailByUuidsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeAssetDetailByUuidsRequest, Builder> {
+        private String lang; 
         private String uuids; 
 
         private Builder() {
@@ -51,8 +64,18 @@ public class DescribeAssetDetailByUuidsRequest extends Request {
 
         private Builder(DescribeAssetDetailByUuidsRequest request) {
             super(request);
+            this.lang = request.lang;
             this.uuids = request.uuids;
         } 
+
+        /**
+         * Lang.
+         */
+        public Builder lang(String lang) {
+            this.putQueryParameter("Lang", lang);
+            this.lang = lang;
+            return this;
+        }
 
         /**
          * Uuids.

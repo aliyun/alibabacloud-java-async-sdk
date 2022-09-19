@@ -16,9 +16,19 @@ public class RefreshAssetsRequest extends Request {
     @NameInMap("AssetType")
     private String assetType;
 
+    @Query
+    @NameInMap("CloudAssetSubType")
+    private Integer cloudAssetSubType;
+
+    @Query
+    @NameInMap("CloudAssetType")
+    private Integer cloudAssetType;
+
     private RefreshAssetsRequest(Builder builder) {
         super(builder);
         this.assetType = builder.assetType;
+        this.cloudAssetSubType = builder.cloudAssetSubType;
+        this.cloudAssetType = builder.cloudAssetType;
     }
 
     public static Builder builder() {
@@ -41,8 +51,24 @@ public class RefreshAssetsRequest extends Request {
         return this.assetType;
     }
 
+    /**
+     * @return cloudAssetSubType
+     */
+    public Integer getCloudAssetSubType() {
+        return this.cloudAssetSubType;
+    }
+
+    /**
+     * @return cloudAssetType
+     */
+    public Integer getCloudAssetType() {
+        return this.cloudAssetType;
+    }
+
     public static final class Builder extends Request.Builder<RefreshAssetsRequest, Builder> {
         private String assetType; 
+        private Integer cloudAssetSubType; 
+        private Integer cloudAssetType; 
 
         private Builder() {
             super();
@@ -51,6 +77,8 @@ public class RefreshAssetsRequest extends Request {
         private Builder(RefreshAssetsRequest request) {
             super(request);
             this.assetType = request.assetType;
+            this.cloudAssetSubType = request.cloudAssetSubType;
+            this.cloudAssetType = request.cloudAssetType;
         } 
 
         /**
@@ -59,6 +87,24 @@ public class RefreshAssetsRequest extends Request {
         public Builder assetType(String assetType) {
             this.putQueryParameter("AssetType", assetType);
             this.assetType = assetType;
+            return this;
+        }
+
+        /**
+         * CloudAssetSubType.
+         */
+        public Builder cloudAssetSubType(Integer cloudAssetSubType) {
+            this.putQueryParameter("CloudAssetSubType", cloudAssetSubType);
+            this.cloudAssetSubType = cloudAssetSubType;
+            return this;
+        }
+
+        /**
+         * CloudAssetType.
+         */
+        public Builder cloudAssetType(Integer cloudAssetType) {
+            this.putQueryParameter("CloudAssetType", cloudAssetType);
+            this.cloudAssetType = cloudAssetType;
             return this;
         }
 

@@ -199,9 +199,6 @@ public class ListHoneypotNodeResponseBody extends TeaModel {
         @NameInMap("NodeName")
         private String nodeName;
 
-        @NameInMap("NodeVersion")
-        private String nodeVersion;
-
         @NameInMap("ProbeTotalCount")
         private Integer probeTotalCount;
 
@@ -224,7 +221,6 @@ public class ListHoneypotNodeResponseBody extends TeaModel {
             this.nodeId = builder.nodeId;
             this.nodeIp = builder.nodeIp;
             this.nodeName = builder.nodeName;
-            this.nodeVersion = builder.nodeVersion;
             this.probeTotalCount = builder.probeTotalCount;
             this.probeUsedCount = builder.probeUsedCount;
             this.securityGroupProbeIpList = builder.securityGroupProbeIpList;
@@ -303,13 +299,6 @@ public class ListHoneypotNodeResponseBody extends TeaModel {
         }
 
         /**
-         * @return nodeVersion
-         */
-        public String getNodeVersion() {
-            return this.nodeVersion;
-        }
-
-        /**
          * @return probeTotalCount
          */
         public Integer getProbeTotalCount() {
@@ -347,7 +336,6 @@ public class ListHoneypotNodeResponseBody extends TeaModel {
             private String nodeId; 
             private String nodeIp; 
             private String nodeName; 
-            private String nodeVersion; 
             private Integer probeTotalCount; 
             private Integer probeUsedCount; 
             private java.util.List < String > securityGroupProbeIpList; 
@@ -422,14 +410,6 @@ public class ListHoneypotNodeResponseBody extends TeaModel {
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
-                return this;
-            }
-
-            /**
-             * 管理节点售卖版本
-             */
-            public Builder nodeVersion(String nodeVersion) {
-                this.nodeVersion = nodeVersion;
                 return this;
             }
 

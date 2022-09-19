@@ -92,11 +92,26 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
     } 
 
     public static class ImageInfos extends TeaModel {
+        @NameInMap("BaselineType")
+        private String baselineType;
+
+        @NameInMap("ClusterId")
+        private String clusterId;
+
+        @NameInMap("ClusterName")
+        private String clusterName;
+
+        @NameInMap("ContainerId")
+        private String containerId;
+
         @NameInMap("Digest")
         private String digest;
 
         @NameInMap("HighRiskImage")
         private Integer highRiskImage;
+
+        @NameInMap("Image")
+        private String image;
 
         @NameInMap("ImageCreate")
         private Long imageCreate;
@@ -119,8 +134,14 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
         @NameInMap("MiddleRiskImage")
         private Integer middleRiskImage;
 
+        @NameInMap("Namespace")
+        private String namespace;
+
         @NameInMap("NoRiskImage")
         private Integer noRiskImage;
+
+        @NameInMap("Pod")
+        private String pod;
 
         @NameInMap("RegionId")
         private String regionId;
@@ -150,8 +171,13 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
         private String uuid;
 
         private ImageInfos(Builder builder) {
+            this.baselineType = builder.baselineType;
+            this.clusterId = builder.clusterId;
+            this.clusterName = builder.clusterName;
+            this.containerId = builder.containerId;
             this.digest = builder.digest;
             this.highRiskImage = builder.highRiskImage;
+            this.image = builder.image;
             this.imageCreate = builder.imageCreate;
             this.imageId = builder.imageId;
             this.imageSize = builder.imageSize;
@@ -159,7 +185,9 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             this.instanceId = builder.instanceId;
             this.lowRiskImage = builder.lowRiskImage;
             this.middleRiskImage = builder.middleRiskImage;
+            this.namespace = builder.namespace;
             this.noRiskImage = builder.noRiskImage;
+            this.pod = builder.pod;
             this.regionId = builder.regionId;
             this.repoId = builder.repoId;
             this.repoName = builder.repoName;
@@ -180,6 +208,34 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
         }
 
         /**
+         * @return baselineType
+         */
+        public String getBaselineType() {
+            return this.baselineType;
+        }
+
+        /**
+         * @return clusterId
+         */
+        public String getClusterId() {
+            return this.clusterId;
+        }
+
+        /**
+         * @return clusterName
+         */
+        public String getClusterName() {
+            return this.clusterName;
+        }
+
+        /**
+         * @return containerId
+         */
+        public String getContainerId() {
+            return this.containerId;
+        }
+
+        /**
          * @return digest
          */
         public String getDigest() {
@@ -191,6 +247,13 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
          */
         public Integer getHighRiskImage() {
             return this.highRiskImage;
+        }
+
+        /**
+         * @return image
+         */
+        public String getImage() {
+            return this.image;
         }
 
         /**
@@ -243,10 +306,24 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
         }
 
         /**
+         * @return namespace
+         */
+        public String getNamespace() {
+            return this.namespace;
+        }
+
+        /**
          * @return noRiskImage
          */
         public Integer getNoRiskImage() {
             return this.noRiskImage;
+        }
+
+        /**
+         * @return pod
+         */
+        public String getPod() {
+            return this.pod;
         }
 
         /**
@@ -313,8 +390,13 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String baselineType; 
+            private String clusterId; 
+            private String clusterName; 
+            private String containerId; 
             private String digest; 
             private Integer highRiskImage; 
+            private String image; 
             private Long imageCreate; 
             private String imageId; 
             private Integer imageSize; 
@@ -322,7 +404,9 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             private String instanceId; 
             private Integer lowRiskImage; 
             private Integer middleRiskImage; 
+            private String namespace; 
             private Integer noRiskImage; 
+            private String pod; 
             private String regionId; 
             private String repoId; 
             private String repoName; 
@@ -332,6 +416,38 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             private String tag; 
             private Integer totalItemCount; 
             private String uuid; 
+
+            /**
+             * BaselineType.
+             */
+            public Builder baselineType(String baselineType) {
+                this.baselineType = baselineType;
+                return this;
+            }
+
+            /**
+             * ClusterId.
+             */
+            public Builder clusterId(String clusterId) {
+                this.clusterId = clusterId;
+                return this;
+            }
+
+            /**
+             * ClusterName.
+             */
+            public Builder clusterName(String clusterName) {
+                this.clusterName = clusterName;
+                return this;
+            }
+
+            /**
+             * ContainerId.
+             */
+            public Builder containerId(String containerId) {
+                this.containerId = containerId;
+                return this;
+            }
 
             /**
              * Digest.
@@ -346,6 +462,14 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
              */
             public Builder highRiskImage(Integer highRiskImage) {
                 this.highRiskImage = highRiskImage;
+                return this;
+            }
+
+            /**
+             * Image.
+             */
+            public Builder image(String image) {
+                this.image = image;
                 return this;
             }
 
@@ -406,10 +530,26 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             }
 
             /**
+             * Namespace.
+             */
+            public Builder namespace(String namespace) {
+                this.namespace = namespace;
+                return this;
+            }
+
+            /**
              * NoRiskImage.
              */
             public Builder noRiskImage(Integer noRiskImage) {
                 this.noRiskImage = noRiskImage;
+                return this;
+            }
+
+            /**
+             * Pod.
+             */
+            public Builder pod(String pod) {
+                this.pod = pod;
                 return this;
             }
 

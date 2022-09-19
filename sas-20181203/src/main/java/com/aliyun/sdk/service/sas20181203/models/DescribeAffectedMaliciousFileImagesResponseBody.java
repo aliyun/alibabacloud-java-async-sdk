@@ -92,6 +92,15 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
     } 
 
     public static class AffectedMaliciousFileImagesResponse extends TeaModel {
+        @NameInMap("ClusterId")
+        private String clusterId;
+
+        @NameInMap("ClusterName")
+        private String clusterName;
+
+        @NameInMap("ContainerId")
+        private String containerId;
+
         @NameInMap("Digest")
         private String digest;
 
@@ -106,6 +115,9 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
 
         @NameInMap("HighLight")
         private String highLight;
+
+        @NameInMap("Image")
+        private String image;
 
         @NameInMap("ImageUuid")
         private String imageUuid;
@@ -125,8 +137,14 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
         @NameInMap("MaliciousMd5")
         private String maliciousMd5;
 
+        @NameInMap("MaliciousSource")
+        private String maliciousSource;
+
         @NameInMap("Namespace")
         private String namespace;
+
+        @NameInMap("Pod")
+        private String pod;
 
         @NameInMap("RepoId")
         private String repoId;
@@ -147,18 +165,24 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
         private String tag;
 
         private AffectedMaliciousFileImagesResponse(Builder builder) {
+            this.clusterId = builder.clusterId;
+            this.clusterName = builder.clusterName;
+            this.containerId = builder.containerId;
             this.digest = builder.digest;
             this.downloadUrl = builder.downloadUrl;
             this.filePath = builder.filePath;
             this.firstScanTimestamp = builder.firstScanTimestamp;
             this.highLight = builder.highLight;
+            this.image = builder.image;
             this.imageUuid = builder.imageUuid;
             this.latestScanTimestamp = builder.latestScanTimestamp;
             this.latestVerifyTimestamp = builder.latestVerifyTimestamp;
             this.layer = builder.layer;
             this.level = builder.level;
             this.maliciousMd5 = builder.maliciousMd5;
+            this.maliciousSource = builder.maliciousSource;
             this.namespace = builder.namespace;
+            this.pod = builder.pod;
             this.repoId = builder.repoId;
             this.repoInstanceId = builder.repoInstanceId;
             this.repoName = builder.repoName;
@@ -173,6 +197,27 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
 
         public static AffectedMaliciousFileImagesResponse create() {
             return builder().build();
+        }
+
+        /**
+         * @return clusterId
+         */
+        public String getClusterId() {
+            return this.clusterId;
+        }
+
+        /**
+         * @return clusterName
+         */
+        public String getClusterName() {
+            return this.clusterName;
+        }
+
+        /**
+         * @return containerId
+         */
+        public String getContainerId() {
+            return this.containerId;
         }
 
         /**
@@ -208,6 +253,13 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
          */
         public String getHighLight() {
             return this.highLight;
+        }
+
+        /**
+         * @return image
+         */
+        public String getImage() {
+            return this.image;
         }
 
         /**
@@ -253,10 +305,24 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
         }
 
         /**
+         * @return maliciousSource
+         */
+        public String getMaliciousSource() {
+            return this.maliciousSource;
+        }
+
+        /**
          * @return namespace
          */
         public String getNamespace() {
             return this.namespace;
+        }
+
+        /**
+         * @return pod
+         */
+        public String getPod() {
+            return this.pod;
         }
 
         /**
@@ -302,24 +368,54 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String clusterId; 
+            private String clusterName; 
+            private String containerId; 
             private String digest; 
             private String downloadUrl; 
             private String filePath; 
             private Long firstScanTimestamp; 
             private String highLight; 
+            private String image; 
             private String imageUuid; 
             private Long latestScanTimestamp; 
             private Long latestVerifyTimestamp; 
             private String layer; 
             private String level; 
             private String maliciousMd5; 
+            private String maliciousSource; 
             private String namespace; 
+            private String pod; 
             private String repoId; 
             private String repoInstanceId; 
             private String repoName; 
             private String repoRegionId; 
             private Integer status; 
             private String tag; 
+
+            /**
+             * ClusterId.
+             */
+            public Builder clusterId(String clusterId) {
+                this.clusterId = clusterId;
+                return this;
+            }
+
+            /**
+             * ClusterName.
+             */
+            public Builder clusterName(String clusterName) {
+                this.clusterName = clusterName;
+                return this;
+            }
+
+            /**
+             * ContainerId.
+             */
+            public Builder containerId(String containerId) {
+                this.containerId = containerId;
+                return this;
+            }
 
             /**
              * Digest.
@@ -358,6 +454,14 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
              */
             public Builder highLight(String highLight) {
                 this.highLight = highLight;
+                return this;
+            }
+
+            /**
+             * Image.
+             */
+            public Builder image(String image) {
+                this.image = image;
                 return this;
             }
 
@@ -410,10 +514,26 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             }
 
             /**
+             * MaliciousSource.
+             */
+            public Builder maliciousSource(String maliciousSource) {
+                this.maliciousSource = maliciousSource;
+                return this;
+            }
+
+            /**
              * Namespace.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
+                return this;
+            }
+
+            /**
+             * Pod.
+             */
+            public Builder pod(String pod) {
+                this.pod = pod;
                 return this;
             }
 
