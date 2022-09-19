@@ -170,6 +170,9 @@ public class TrainOrderQueryResponseBody extends TeaModel {
         @NameInMap("change_service_fee")
         private Double changeServiceFee;
 
+        @NameInMap("change_train_no")
+        private String changeTrainNo;
+
         @NameInMap("change_train_type_name")
         private String changeTrainTypeName;
 
@@ -181,6 +184,9 @@ public class TrainOrderQueryResponseBody extends TeaModel {
 
         @NameInMap("end_time")
         private String endTime;
+
+        @NameInMap("from_station_name")
+        private String fromStationName;
 
         @NameInMap("gmt_create")
         private String gmtCreate;
@@ -200,6 +206,9 @@ public class TrainOrderQueryResponseBody extends TeaModel {
         @NameInMap("ticket_no")
         private String ticketNo;
 
+        @NameInMap("to_station_name")
+        private String toStationName;
+
         private ChangeTicketInfoList(Builder builder) {
             this.changeCoachNo = builder.changeCoachNo;
             this.changeGapFee = builder.changeGapFee;
@@ -207,16 +216,19 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             this.changeSeatNo = builder.changeSeatNo;
             this.changeSeatTypeName = builder.changeSeatTypeName;
             this.changeServiceFee = builder.changeServiceFee;
+            this.changeTrainNo = builder.changeTrainNo;
             this.changeTrainTypeName = builder.changeTrainTypeName;
             this.checkInTime = builder.checkInTime;
             this.checkOutTime = builder.checkOutTime;
             this.endTime = builder.endTime;
+            this.fromStationName = builder.fromStationName;
             this.gmtCreate = builder.gmtCreate;
             this.gmtModify = builder.gmtModify;
             this.originTicketNo = builder.originTicketNo;
             this.outTicketStatus = builder.outTicketStatus;
             this.startTime = builder.startTime;
             this.ticketNo = builder.ticketNo;
+            this.toStationName = builder.toStationName;
         }
 
         public static Builder builder() {
@@ -270,6 +282,13 @@ public class TrainOrderQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return changeTrainNo
+         */
+        public String getChangeTrainNo() {
+            return this.changeTrainNo;
+        }
+
+        /**
          * @return changeTrainTypeName
          */
         public String getChangeTrainTypeName() {
@@ -295,6 +314,13 @@ public class TrainOrderQueryResponseBody extends TeaModel {
          */
         public String getEndTime() {
             return this.endTime;
+        }
+
+        /**
+         * @return fromStationName
+         */
+        public String getFromStationName() {
+            return this.fromStationName;
         }
 
         /**
@@ -339,6 +365,13 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             return this.ticketNo;
         }
 
+        /**
+         * @return toStationName
+         */
+        public String getToStationName() {
+            return this.toStationName;
+        }
+
         public static final class Builder {
             private String changeCoachNo; 
             private Double changeGapFee; 
@@ -346,16 +379,19 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             private String changeSeatNo; 
             private String changeSeatTypeName; 
             private Double changeServiceFee; 
+            private String changeTrainNo; 
             private String changeTrainTypeName; 
             private String checkInTime; 
             private String checkOutTime; 
             private String endTime; 
+            private String fromStationName; 
             private String gmtCreate; 
             private String gmtModify; 
             private String originTicketNo; 
             private String outTicketStatus; 
             private String startTime; 
             private String ticketNo; 
+            private String toStationName; 
 
             /**
              * 改签车厢号
@@ -406,6 +442,14 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
+             * change_train_no.
+             */
+            public Builder changeTrainNo(String changeTrainNo) {
+                this.changeTrainNo = changeTrainNo;
+                return this;
+            }
+
+            /**
              * 改签座位类型
              */
             public Builder changeTrainTypeName(String changeTrainTypeName) {
@@ -434,6 +478,14 @@ public class TrainOrderQueryResponseBody extends TeaModel {
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
+                return this;
+            }
+
+            /**
+             * from_station_name.
+             */
+            public Builder fromStationName(String fromStationName) {
+                this.fromStationName = fromStationName;
                 return this;
             }
 
@@ -482,6 +534,14 @@ public class TrainOrderQueryResponseBody extends TeaModel {
              */
             public Builder ticketNo(String ticketNo) {
                 this.ticketNo = ticketNo;
+                return this;
+            }
+
+            /**
+             * to_station_name.
+             */
+            public Builder toStationName(String toStationName) {
+                this.toStationName = toStationName;
                 return this;
             }
 
