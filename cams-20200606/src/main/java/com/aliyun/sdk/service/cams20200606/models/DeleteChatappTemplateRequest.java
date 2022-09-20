@@ -17,6 +17,10 @@ public class DeleteChatappTemplateRequest extends Request {
     private String custWabaId;
 
     @Query
+    @NameInMap("IsvCode")
+    private String isvCode;
+
+    @Query
     @NameInMap("TemplateCode")
     @Validation(required = true)
     private String templateCode;
@@ -24,6 +28,7 @@ public class DeleteChatappTemplateRequest extends Request {
     private DeleteChatappTemplateRequest(Builder builder) {
         super(builder);
         this.custWabaId = builder.custWabaId;
+        this.isvCode = builder.isvCode;
         this.templateCode = builder.templateCode;
     }
 
@@ -48,6 +53,13 @@ public class DeleteChatappTemplateRequest extends Request {
     }
 
     /**
+     * @return isvCode
+     */
+    public String getIsvCode() {
+        return this.isvCode;
+    }
+
+    /**
      * @return templateCode
      */
     public String getTemplateCode() {
@@ -56,6 +68,7 @@ public class DeleteChatappTemplateRequest extends Request {
 
     public static final class Builder extends Request.Builder<DeleteChatappTemplateRequest, Builder> {
         private String custWabaId; 
+        private String isvCode; 
         private String templateCode; 
 
         private Builder() {
@@ -65,6 +78,7 @@ public class DeleteChatappTemplateRequest extends Request {
         private Builder(DeleteChatappTemplateRequest request) {
             super(request);
             this.custWabaId = request.custWabaId;
+            this.isvCode = request.isvCode;
             this.templateCode = request.templateCode;
         } 
 
@@ -74,6 +88,15 @@ public class DeleteChatappTemplateRequest extends Request {
         public Builder custWabaId(String custWabaId) {
             this.putQueryParameter("CustWabaId", custWabaId);
             this.custWabaId = custWabaId;
+            return this;
+        }
+
+        /**
+         * Isv校验码，用于校验子帐号是否由ISV授权
+         */
+        public Builder isvCode(String isvCode) {
+            this.putQueryParameter("IsvCode", isvCode);
+            this.isvCode = isvCode;
             return this;
         }
 

@@ -35,6 +35,10 @@ public class SendChatappMassMessageRequest extends Request {
     private String from;
 
     @Body
+    @NameInMap("IsvCode")
+    private String isvCode;
+
+    @Body
     @NameInMap("Language")
     private String language;
 
@@ -58,6 +62,7 @@ public class SendChatappMassMessageRequest extends Request {
         this.fallBackContent = builder.fallBackContent;
         this.fallBackId = builder.fallBackId;
         this.from = builder.from;
+        this.isvCode = builder.isvCode;
         this.language = builder.language;
         this.senderList = builder.senderList;
         this.taskId = builder.taskId;
@@ -113,6 +118,13 @@ public class SendChatappMassMessageRequest extends Request {
     }
 
     /**
+     * @return isvCode
+     */
+    public String getIsvCode() {
+        return this.isvCode;
+    }
+
+    /**
      * @return language
      */
     public String getLanguage() {
@@ -146,6 +158,7 @@ public class SendChatappMassMessageRequest extends Request {
         private String fallBackContent; 
         private String fallBackId; 
         private String from; 
+        private String isvCode; 
         private String language; 
         private java.util.List < SenderList> senderList; 
         private String taskId; 
@@ -162,6 +175,7 @@ public class SendChatappMassMessageRequest extends Request {
             this.fallBackContent = request.fallBackContent;
             this.fallBackId = request.fallBackId;
             this.from = request.from;
+            this.isvCode = request.isvCode;
             this.language = request.language;
             this.senderList = request.senderList;
             this.taskId = request.taskId;
@@ -210,6 +224,15 @@ public class SendChatappMassMessageRequest extends Request {
         public Builder from(String from) {
             this.putBodyParameter("From", from);
             this.from = from;
+            return this;
+        }
+
+        /**
+         * Isv校验码，用于校验子帐号是否由ISV授权
+         */
+        public Builder isvCode(String isvCode) {
+            this.putBodyParameter("IsvCode", isvCode);
+            this.isvCode = isvCode;
             return this;
         }
 

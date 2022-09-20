@@ -18,8 +18,6 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
-    CompletableFuture<CheckChatappContactsResponse> checkChatappContacts(CheckChatappContactsRequest request);
-
     CompletableFuture<CreateChatappTemplateResponse> createChatappTemplate(CreateChatappTemplateRequest request);
 
     CompletableFuture<DeleteChatappTemplateResponse> deleteChatappTemplate(DeleteChatappTemplateRequest request);

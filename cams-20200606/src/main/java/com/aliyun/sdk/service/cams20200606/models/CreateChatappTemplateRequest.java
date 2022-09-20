@@ -31,6 +31,10 @@ public class CreateChatappTemplateRequest extends Request {
     private java.util.Map < String, String > example;
 
     @Body
+    @NameInMap("IsvCode")
+    private String isvCode;
+
+    @Body
     @NameInMap("Language")
     @Validation(required = true)
     private String language;
@@ -51,6 +55,7 @@ public class CreateChatappTemplateRequest extends Request {
         this.components = builder.components;
         this.custWabaId = builder.custWabaId;
         this.example = builder.example;
+        this.isvCode = builder.isvCode;
         this.language = builder.language;
         this.name = builder.name;
         this.templateType = builder.templateType;
@@ -98,6 +103,13 @@ public class CreateChatappTemplateRequest extends Request {
     }
 
     /**
+     * @return isvCode
+     */
+    public String getIsvCode() {
+        return this.isvCode;
+    }
+
+    /**
      * @return language
      */
     public String getLanguage() {
@@ -123,6 +135,7 @@ public class CreateChatappTemplateRequest extends Request {
         private java.util.List < Components> components; 
         private String custWabaId; 
         private java.util.Map < String, String > example; 
+        private String isvCode; 
         private String language; 
         private String name; 
         private String templateType; 
@@ -137,6 +150,7 @@ public class CreateChatappTemplateRequest extends Request {
             this.components = request.components;
             this.custWabaId = request.custWabaId;
             this.example = request.example;
+            this.isvCode = request.isvCode;
             this.language = request.language;
             this.name = request.name;
             this.templateType = request.templateType;
@@ -177,6 +191,15 @@ public class CreateChatappTemplateRequest extends Request {
             String exampleShrink = shrink(example, "Example", "json");
             this.putBodyParameter("Example", exampleShrink);
             this.example = example;
+            return this;
+        }
+
+        /**
+         * Isv校验码，用于校验子帐号是否由ISV授权
+         */
+        public Builder isvCode(String isvCode) {
+            this.putBodyParameter("IsvCode", isvCode);
+            this.isvCode = isvCode;
             return this;
         }
 

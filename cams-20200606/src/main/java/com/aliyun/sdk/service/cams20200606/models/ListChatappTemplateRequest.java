@@ -21,6 +21,10 @@ public class ListChatappTemplateRequest extends Request {
     private String custWabaId;
 
     @Query
+    @NameInMap("IsvCode")
+    private String isvCode;
+
+    @Query
     @NameInMap("Language")
     private String language;
 
@@ -36,6 +40,7 @@ public class ListChatappTemplateRequest extends Request {
         super(builder);
         this.auditStatus = builder.auditStatus;
         this.custWabaId = builder.custWabaId;
+        this.isvCode = builder.isvCode;
         this.language = builder.language;
         this.name = builder.name;
         this.page = builder.page;
@@ -69,6 +74,13 @@ public class ListChatappTemplateRequest extends Request {
     }
 
     /**
+     * @return isvCode
+     */
+    public String getIsvCode() {
+        return this.isvCode;
+    }
+
+    /**
      * @return language
      */
     public String getLanguage() {
@@ -92,6 +104,7 @@ public class ListChatappTemplateRequest extends Request {
     public static final class Builder extends Request.Builder<ListChatappTemplateRequest, Builder> {
         private String auditStatus; 
         private String custWabaId; 
+        private String isvCode; 
         private String language; 
         private String name; 
         private Page page; 
@@ -104,6 +117,7 @@ public class ListChatappTemplateRequest extends Request {
             super(request);
             this.auditStatus = request.auditStatus;
             this.custWabaId = request.custWabaId;
+            this.isvCode = request.isvCode;
             this.language = request.language;
             this.name = request.name;
             this.page = request.page;
@@ -124,6 +138,15 @@ public class ListChatappTemplateRequest extends Request {
         public Builder custWabaId(String custWabaId) {
             this.putQueryParameter("CustWabaId", custWabaId);
             this.custWabaId = custWabaId;
+            return this;
+        }
+
+        /**
+         * Isv校验码，用于校验子帐号是否由ISV授权
+         */
+        public Builder isvCode(String isvCode) {
+            this.putQueryParameter("IsvCode", isvCode);
+            this.isvCode = isvCode;
             return this;
         }
 
