@@ -26,7 +26,6 @@ public class ListFullNatEntriesRequest extends Request {
 
     @Query
     @NameInMap("FullNatTableId")
-    @Validation(required = true)
     private String fullNatTableId;
 
     @Query
@@ -36,6 +35,10 @@ public class ListFullNatEntriesRequest extends Request {
     @Query
     @NameInMap("MaxResults")
     private Long maxResults;
+
+    @Query
+    @NameInMap("NatGatewayId")
+    private String natGatewayId;
 
     @Query
     @NameInMap("NetworkInterfaceIds")
@@ -74,6 +77,7 @@ public class ListFullNatEntriesRequest extends Request {
         this.fullNatTableId = builder.fullNatTableId;
         this.ipProtocol = builder.ipProtocol;
         this.maxResults = builder.maxResults;
+        this.natGatewayId = builder.natGatewayId;
         this.networkInterfaceIds = builder.networkInterfaceIds;
         this.nextToken = builder.nextToken;
         this.ownerAccount = builder.ownerAccount;
@@ -139,6 +143,13 @@ public class ListFullNatEntriesRequest extends Request {
     }
 
     /**
+     * @return natGatewayId
+     */
+    public String getNatGatewayId() {
+        return this.natGatewayId;
+    }
+
+    /**
      * @return networkInterfaceIds
      */
     public java.util.List < String > getNetworkInterfaceIds() {
@@ -194,6 +205,7 @@ public class ListFullNatEntriesRequest extends Request {
         private String fullNatTableId; 
         private String ipProtocol; 
         private Long maxResults; 
+        private String natGatewayId; 
         private java.util.List < String > networkInterfaceIds; 
         private String nextToken; 
         private String ownerAccount; 
@@ -214,6 +226,7 @@ public class ListFullNatEntriesRequest extends Request {
             this.fullNatTableId = request.fullNatTableId;
             this.ipProtocol = request.ipProtocol;
             this.maxResults = request.maxResults;
+            this.natGatewayId = request.natGatewayId;
             this.networkInterfaceIds = request.networkInterfaceIds;
             this.nextToken = request.nextToken;
             this.ownerAccount = request.ownerAccount;
@@ -274,6 +287,15 @@ public class ListFullNatEntriesRequest extends Request {
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
             this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * NatGatewayId.
+         */
+        public Builder natGatewayId(String natGatewayId) {
+            this.putQueryParameter("NatGatewayId", natGatewayId);
+            this.natGatewayId = natGatewayId;
             return this;
         }
 

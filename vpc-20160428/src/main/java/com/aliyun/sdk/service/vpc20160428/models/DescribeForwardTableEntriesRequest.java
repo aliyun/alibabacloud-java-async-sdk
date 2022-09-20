@@ -30,7 +30,6 @@ public class DescribeForwardTableEntriesRequest extends Request {
 
     @Query
     @NameInMap("ForwardTableId")
-    @Validation(required = true)
     private String forwardTableId;
 
     @Query
@@ -44,6 +43,10 @@ public class DescribeForwardTableEntriesRequest extends Request {
     @Query
     @NameInMap("IpProtocol")
     private String ipProtocol;
+
+    @Query
+    @NameInMap("NatGatewayId")
+    private String natGatewayId;
 
     @Query
     @NameInMap("OwnerAccount")
@@ -85,6 +88,7 @@ public class DescribeForwardTableEntriesRequest extends Request {
         this.internalIp = builder.internalIp;
         this.internalPort = builder.internalPort;
         this.ipProtocol = builder.ipProtocol;
+        this.natGatewayId = builder.natGatewayId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
@@ -164,6 +168,13 @@ public class DescribeForwardTableEntriesRequest extends Request {
     }
 
     /**
+     * @return natGatewayId
+     */
+    public String getNatGatewayId() {
+        return this.natGatewayId;
+    }
+
+    /**
      * @return ownerAccount
      */
     public String getOwnerAccount() {
@@ -221,6 +232,7 @@ public class DescribeForwardTableEntriesRequest extends Request {
         private String internalIp; 
         private String internalPort; 
         private String ipProtocol; 
+        private String natGatewayId; 
         private String ownerAccount; 
         private Long ownerId; 
         private Integer pageNumber; 
@@ -243,6 +255,7 @@ public class DescribeForwardTableEntriesRequest extends Request {
             this.internalIp = request.internalIp;
             this.internalPort = request.internalPort;
             this.ipProtocol = request.ipProtocol;
+            this.natGatewayId = request.natGatewayId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
@@ -321,6 +334,15 @@ public class DescribeForwardTableEntriesRequest extends Request {
         public Builder ipProtocol(String ipProtocol) {
             this.putQueryParameter("IpProtocol", ipProtocol);
             this.ipProtocol = ipProtocol;
+            return this;
+        }
+
+        /**
+         * NatGatewayId.
+         */
+        public Builder natGatewayId(String natGatewayId) {
+            this.putQueryParameter("NatGatewayId", natGatewayId);
+            this.natGatewayId = natGatewayId;
             return this;
         }
 

@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeSnatTableEntriesRequest extends Request {
     @Query
+    @NameInMap("NatGatewayId")
+    private String natGatewayId;
+
+    @Query
     @NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -56,7 +60,6 @@ public class DescribeSnatTableEntriesRequest extends Request {
 
     @Query
     @NameInMap("SnatTableId")
-    @Validation(required = true)
     private String snatTableId;
 
     @Query
@@ -69,6 +72,7 @@ public class DescribeSnatTableEntriesRequest extends Request {
 
     private DescribeSnatTableEntriesRequest(Builder builder) {
         super(builder);
+        this.natGatewayId = builder.natGatewayId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
@@ -95,6 +99,13 @@ public class DescribeSnatTableEntriesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return natGatewayId
+     */
+    public String getNatGatewayId() {
+        return this.natGatewayId;
     }
 
     /**
@@ -189,6 +200,7 @@ public class DescribeSnatTableEntriesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeSnatTableEntriesRequest, Builder> {
+        private String natGatewayId; 
         private String ownerAccount; 
         private Long ownerId; 
         private Integer pageNumber; 
@@ -209,6 +221,7 @@ public class DescribeSnatTableEntriesRequest extends Request {
 
         private Builder(DescribeSnatTableEntriesRequest request) {
             super(request);
+            this.natGatewayId = request.natGatewayId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
@@ -223,6 +236,15 @@ public class DescribeSnatTableEntriesRequest extends Request {
             this.sourceCIDR = request.sourceCIDR;
             this.sourceVSwitchId = request.sourceVSwitchId;
         } 
+
+        /**
+         * NatGatewayId.
+         */
+        public Builder natGatewayId(String natGatewayId) {
+            this.putQueryParameter("NatGatewayId", natGatewayId);
+            this.natGatewayId = natGatewayId;
+            return this;
+        }
 
         /**
          * OwnerAccount.

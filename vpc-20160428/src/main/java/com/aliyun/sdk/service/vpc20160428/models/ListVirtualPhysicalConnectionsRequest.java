@@ -34,6 +34,10 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("Tags")
+    private java.util.List < Tags> tags;
+
+    @Query
     @NameInMap("VirtualPhysicalConnectionAliUids")
     private java.util.List < String > virtualPhysicalConnectionAliUids;
 
@@ -60,6 +64,7 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
         this.nextToken = builder.nextToken;
         this.physicalConnectionId = builder.physicalConnectionId;
         this.regionId = builder.regionId;
+        this.tags = builder.tags;
         this.virtualPhysicalConnectionAliUids = builder.virtualPhysicalConnectionAliUids;
         this.virtualPhysicalConnectionBusinessStatus = builder.virtualPhysicalConnectionBusinessStatus;
         this.virtualPhysicalConnectionIds = builder.virtualPhysicalConnectionIds;
@@ -116,6 +121,13 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
     }
 
     /**
+     * @return tags
+     */
+    public java.util.List < Tags> getTags() {
+        return this.tags;
+    }
+
+    /**
      * @return virtualPhysicalConnectionAliUids
      */
     public java.util.List < String > getVirtualPhysicalConnectionAliUids() {
@@ -156,6 +168,7 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
         private String nextToken; 
         private String physicalConnectionId; 
         private String regionId; 
+        private java.util.List < Tags> tags; 
         private java.util.List < String > virtualPhysicalConnectionAliUids; 
         private String virtualPhysicalConnectionBusinessStatus; 
         private java.util.List < String > virtualPhysicalConnectionIds; 
@@ -173,6 +186,7 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
             this.nextToken = request.nextToken;
             this.physicalConnectionId = request.physicalConnectionId;
             this.regionId = request.regionId;
+            this.tags = request.tags;
             this.virtualPhysicalConnectionAliUids = request.virtualPhysicalConnectionAliUids;
             this.virtualPhysicalConnectionBusinessStatus = request.virtualPhysicalConnectionBusinessStatus;
             this.virtualPhysicalConnectionIds = request.virtualPhysicalConnectionIds;
@@ -222,6 +236,15 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * Tags.
+         */
+        public Builder tags(java.util.List < Tags> tags) {
+            this.putQueryParameter("Tags", tags);
+            this.tags = tags;
             return this;
         }
 
@@ -277,4 +300,65 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
 
     } 
 
+    public static class Tags extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
 }

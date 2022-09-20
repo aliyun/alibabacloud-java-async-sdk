@@ -159,6 +159,9 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
         @NameInMap("EndTime")
         private String endTime;
 
+        @NameInMap("FastLinkMode")
+        private Boolean fastLinkMode;
+
         @NameInMap("HasReservationData")
         private String hasReservationData;
 
@@ -256,6 +259,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             this.crossBorder = builder.crossBorder;
             this.description = builder.description;
             this.endTime = builder.endTime;
+            this.fastLinkMode = builder.fastLinkMode;
             this.hasReservationData = builder.hasReservationData;
             this.hcRate = builder.hcRate;
             this.hcThreshold = builder.hcThreshold;
@@ -356,6 +360,13 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
          */
         public String getEndTime() {
             return this.endTime;
+        }
+
+        /**
+         * @return fastLinkMode
+         */
+        public Boolean getFastLinkMode() {
+            return this.fastLinkMode;
         }
 
         /**
@@ -571,6 +582,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             private Boolean crossBorder; 
             private String description; 
             private String endTime; 
+            private Boolean fastLinkMode; 
             private String hasReservationData; 
             private Integer hcRate; 
             private Integer hcThreshold; 
@@ -670,6 +682,14 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
+                return this;
+            }
+
+            /**
+             * FastLinkMode.
+             */
+            public Builder fastLinkMode(Boolean fastLinkMode) {
+                this.fastLinkMode = fastLinkMode;
                 return this;
             }
 

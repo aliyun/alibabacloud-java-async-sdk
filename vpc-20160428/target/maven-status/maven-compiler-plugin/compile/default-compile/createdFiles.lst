@@ -167,6 +167,7 @@ com/aliyun/sdk/service/vpc20160428/models/DeleteVirtualBorderRouterRequest$1.cla
 com/aliyun/sdk/service/vpc20160428/models/EnableVpcClassicLinkResponseBody.class
 com/aliyun/sdk/service/vpc20160428/models/DeleteVpnAttachmentResponseBody$1.class
 com/aliyun/sdk/service/vpc20160428/models/DescribeCommonBandwidthPackagesResponseBody$SecurityProtectionTypes.class
+com/aliyun/sdk/service/vpc20160428/models/UntagResourcesForExpressConnectResponse$BuilderImpl.class
 com/aliyun/sdk/service/vpc20160428/models/UnassociateNetworkAclResponseBody$Builder.class
 com/aliyun/sdk/service/vpc20160428/models/DeleteNatIpCidrResponseBody$Builder.class
 com/aliyun/sdk/service/vpc20160428/models/ListVpcGatewayEndpointsResponseBody$Builder.class
@@ -224,6 +225,7 @@ com/aliyun/sdk/service/vpc20160428/models/CheckCanAllocateVpcPrivateIpAddressReq
 com/aliyun/sdk/service/vpc20160428/models/GetFlowLogServiceStatusResponse$Builder.class
 com/aliyun/sdk/service/vpc20160428/models/UpdateVirtualPhysicalConnectionResponseBody$1.class
 com/aliyun/sdk/service/vpc20160428/models/CreateSslVpnServerResponse$BuilderImpl.class
+com/aliyun/sdk/service/vpc20160428/models/ListTagResourcesForExpressConnectResponseBody.class
 com/aliyun/sdk/service/vpc20160428/models/CreateTrafficMirrorFilterResponse.class
 com/aliyun/sdk/service/vpc20160428/models/ModifyVpnConnectionAttributeResponseBody$VpnBgpConfig$Builder.class
 com/aliyun/sdk/service/vpc20160428/models/UnassociateRouteTableResponseBody$Builder.class
@@ -334,6 +336,7 @@ com/aliyun/sdk/service/vpc20160428/models/DeleteFlowLogRequest$Builder.class
 com/aliyun/sdk/service/vpc20160428/models/CreateRouterInterfaceResponse$BuilderImpl.class
 com/aliyun/sdk/service/vpc20160428/models/ModifyRouterInterfaceAttributeResponse.class
 com/aliyun/sdk/service/vpc20160428/models/DescribeBgpGroupsResponse$Builder.class
+com/aliyun/sdk/service/vpc20160428/models/TagResourcesForExpressConnectResponse$BuilderImpl.class
 com/aliyun/sdk/service/vpc20160428/models/CreateIpv6GatewayResponseBody$Builder.class
 com/aliyun/sdk/service/vpc20160428/models/DescribeNatGatewaysResponseBody$IpLists.class
 com/aliyun/sdk/service/vpc20160428/models/DeleteVpnRouteEntryRequest$1.class
@@ -362,6 +365,7 @@ com/aliyun/sdk/service/vpc20160428/models/UpdateNatGatewayNatTypeResponse$1.clas
 com/aliyun/sdk/service/vpc20160428/models/DescribeSnatTableEntriesRequest.class
 com/aliyun/sdk/service/vpc20160428/models/DeleteSnatEntryResponse$BuilderImpl.class
 com/aliyun/sdk/service/vpc20160428/models/CreateVirtualPhysicalConnectionRequest$Builder.class
+com/aliyun/sdk/service/vpc20160428/models/ListTagResourcesForExpressConnectRequest.class
 com/aliyun/sdk/service/vpc20160428/models/ListPrefixListsResponseBody$PrefixLists$Builder.class
 com/aliyun/sdk/service/vpc20160428/models/AssociatePhysicalConnectionToVirtualBorderRouterRequest$Builder.class
 com/aliyun/sdk/service/vpc20160428/models/DeleteNetworkAclRequest.class
@@ -434,6 +438,7 @@ com/aliyun/sdk/service/vpc20160428/models/ListPublicIpAddressPoolsRequest$Builde
 com/aliyun/sdk/service/vpc20160428/models/ListEnhanhcedNatGatewayAvailableZonesRequest$1.class
 com/aliyun/sdk/service/vpc20160428/models/DeletePublicIpAddressPoolResponse$BuilderImpl.class
 com/aliyun/sdk/service/vpc20160428/models/DescribeVpnAttachmentsResponseBody$1.class
+com/aliyun/sdk/service/vpc20160428/models/ListVirtualPhysicalConnectionsRequest$Tags.class
 com/aliyun/sdk/service/vpc20160428/models/ModifyVpnAttachmentAttributeResponseBody$IpsecConfig.class
 com/aliyun/sdk/service/vpc20160428/models/DescribeNatGatewaysResponseBody$Tags.class
 com/aliyun/sdk/service/vpc20160428/models/DescribeBgpGroupsResponseBody$Builder.class
@@ -595,6 +600,7 @@ com/aliyun/sdk/service/vpc20160428/models/DescribeIPv6TranslatorAclListsResponse
 com/aliyun/sdk/service/vpc20160428/models/CreateFullNatEntryResponseBody.class
 com/aliyun/sdk/service/vpc20160428/models/AddCommonBandwidthPackageIpResponseBody.class
 com/aliyun/sdk/service/vpc20160428/models/DeleteVpnGatewayResponseBody.class
+com/aliyun/sdk/service/vpc20160428/models/ListTagResourcesForExpressConnectResponse$BuilderImpl.class
 com/aliyun/sdk/service/vpc20160428/models/AllocateEipSegmentAddressRequest$Builder.class
 com/aliyun/sdk/service/vpc20160428/models/CreateIpsecServerResponseBody.class
 com/aliyun/sdk/service/vpc20160428/models/PublishVpnRouteEntryRequest$1.class
@@ -637,6 +643,7 @@ com/aliyun/sdk/service/vpc20160428/models/DescribeIPv6TranslatorAclListsResponse
 com/aliyun/sdk/service/vpc20160428/models/ModifyForwardEntryResponseBody.class
 com/aliyun/sdk/service/vpc20160428/models/UpdateTrafficMirrorFilterAttributeResponse$1.class
 com/aliyun/sdk/service/vpc20160428/models/DeletionProtectionResponse$1.class
+com/aliyun/sdk/service/vpc20160428/models/ListTagResourcesForExpressConnectResponseBody$TagResources.class
 com/aliyun/sdk/service/vpc20160428/models/GetIpv4GatewayAttributeRequest$Builder.class
 com/aliyun/sdk/service/vpc20160428/models/ModifyRouterInterfaceAttributeResponse$BuilderImpl.class
 com/aliyun/sdk/service/vpc20160428/models/ModifyForwardEntryResponseBody$Builder.class
@@ -687,6 +694,7 @@ com/aliyun/sdk/service/vpc20160428/models/ListTrafficMirrorSessionsResponseBody.
 com/aliyun/sdk/service/vpc20160428/models/DeleteVSwitchResponseBody$Builder.class
 com/aliyun/sdk/service/vpc20160428/models/DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody$VirtualBorderRouterForPhysicalConnectionType.class
 com/aliyun/sdk/service/vpc20160428/models/ModifyFullNatEntryAttributeRequest$1.class
+com/aliyun/sdk/service/vpc20160428/models/ListTagResourcesForExpressConnectResponseBody$TagResource.class
 com/aliyun/sdk/service/vpc20160428/models/CreateIPv6TranslatorRequest$Builder.class
 com/aliyun/sdk/service/vpc20160428/models/DeleteIPv6TranslatorAclListResponse$BuilderImpl.class
 com/aliyun/sdk/service/vpc20160428/models/DeleteVpcPrefixListResponse$1.class
@@ -758,6 +766,7 @@ com/aliyun/sdk/service/vpc20160428/models/DescribeVbrHaResponseBody$1.class
 com/aliyun/sdk/service/vpc20160428/models/CreateIPv6TranslatorAclListResponseBody.class
 com/aliyun/sdk/service/vpc20160428/models/ListTagResourcesResponse.class
 com/aliyun/sdk/service/vpc20160428/models/CreateVpnAttachmentRequest$Builder.class
+com/aliyun/sdk/service/vpc20160428/models/ListTagResourcesForExpressConnectResponse.class
 com/aliyun/sdk/service/vpc20160428/models/DownloadVpnConnectionConfigResponseBody$VpnConnectionConfig$Builder.class
 com/aliyun/sdk/service/vpc20160428/models/GrantInstanceToCenResponseBody.class
 com/aliyun/sdk/service/vpc20160428/models/DescribePublicIpAddressResponseBody.class
@@ -795,9 +804,11 @@ com/aliyun/sdk/service/vpc20160428/models/DeleteIPv6TranslatorAclListRequest.cla
 com/aliyun/sdk/service/vpc20160428/models/GetVpcGatewayEndpointAttributeResponse.class
 com/aliyun/sdk/service/vpc20160428/models/ModifyRouteTableAttributesResponseBody.class
 com/aliyun/sdk/service/vpc20160428/models/DescribeVcoRouteEntriesResponseBody$VcoRouteEntries$Builder.class
+com/aliyun/sdk/service/vpc20160428/models/ListTagResourcesForExpressConnectRequest$Tag.class
 com/aliyun/sdk/service/vpc20160428/models/DeleteRouteTableResponseBody.class
 com/aliyun/sdk/service/vpc20160428/models/ConnectRouterInterfaceRequest$Builder.class
 com/aliyun/sdk/service/vpc20160428/models/ModifyFullNatEntryAttributeRequest$Builder.class
+com/aliyun/sdk/service/vpc20160428/models/ListTagResourcesForExpressConnectResponse$Builder.class
 com/aliyun/sdk/service/vpc20160428/models/DescribeNatGatewaysResponse$Builder.class
 com/aliyun/sdk/service/vpc20160428/models/CreateDhcpOptionsSetResponseBody$1.class
 com/aliyun/sdk/service/vpc20160428/models/AssociateNetworkAclRequest$Resource.class
@@ -967,6 +978,7 @@ com/aliyun/sdk/service/vpc20160428/models/DescribeSslVpnServersResponse$Builder.
 com/aliyun/sdk/service/vpc20160428/models/GetTrafficMirrorServiceStatusResponse.class
 com/aliyun/sdk/service/vpc20160428/models/ModifyIPv6TranslatorAttributeResponse.class
 com/aliyun/sdk/service/vpc20160428/models/DescribeVirtualBorderRoutersRequest$Filter$Builder.class
+com/aliyun/sdk/service/vpc20160428/models/TagResourcesForExpressConnectResponseBody$1.class
 com/aliyun/sdk/service/vpc20160428/models/CreateVpcGatewayEndpointRequest$1.class
 com/aliyun/sdk/service/vpc20160428/models/DescribeVpnCrossAccountAuthorizationsResponse$Builder.class
 com/aliyun/sdk/service/vpc20160428/models/CreateVpnPbrRouteEntryResponseBody.class
@@ -989,6 +1001,7 @@ com/aliyun/sdk/service/vpc20160428/models/DescribeHaVipsRequest$Builder.class
 com/aliyun/sdk/service/vpc20160428/models/CreateExpressCloudConnectionRequest$1.class
 com/aliyun/sdk/service/vpc20160428/models/ModifyExpressCloudConnectionAttributeResponseBody$1.class
 com/aliyun/sdk/service/vpc20160428/models/ListTagResourcesResponseBody$TagResources$Builder.class
+com/aliyun/sdk/service/vpc20160428/models/ListTagResourcesForExpressConnectRequest$Builder.class
 com/aliyun/sdk/service/vpc20160428/models/DisableNatGatewayEcsMetricRequest$Builder.class
 com/aliyun/sdk/service/vpc20160428/models/DescribeIPv6TranslatorEntriesResponseBody$Ipv6TranslatorEntry.class
 com/aliyun/sdk/service/vpc20160428/models/UpdateTrafficMirrorSessionAttributeResponse$Builder.class
@@ -1113,6 +1126,7 @@ com/aliyun/sdk/service/vpc20160428/models/DeleteIpv4GatewayResponseBody$Builder.
 com/aliyun/sdk/service/vpc20160428/models/ModifyNatGatewayAttributeRequest$1.class
 com/aliyun/sdk/service/vpc20160428/models/CreatePhysicalConnectionSetupOrderResponse$Builder.class
 com/aliyun/sdk/service/vpc20160428/models/ListVpnCertificateAssociationsResponseBody$1.class
+com/aliyun/sdk/service/vpc20160428/models/ListTagResourcesForExpressConnectResponseBody$TagResources$Builder.class
 com/aliyun/sdk/service/vpc20160428/models/UpdatePublicIpAddressPoolAttributeResponse$Builder.class
 com/aliyun/sdk/service/vpc20160428/models/AddPublicIpAddressPoolCidrBlockResponseBody$Builder.class
 com/aliyun/sdk/service/vpc20160428/models/DescribeVpcsResponseBody$Ipv6CidrBlocks$Builder.class
@@ -1198,6 +1212,7 @@ com/aliyun/sdk/service/vpc20160428/models/DescribeRouteTablesResponseBody$NextHo
 com/aliyun/sdk/service/vpc20160428/models/ModifyRouterInterfaceSpecRequest.class
 com/aliyun/sdk/service/vpc20160428/models/UpdateNetworkAclEntriesRequest$1.class
 com/aliyun/sdk/service/vpc20160428/models/DeleteTrafficMirrorFilterResponse$1.class
+com/aliyun/sdk/service/vpc20160428/models/TagResourcesForExpressConnectRequest$Tag$Builder.class
 com/aliyun/sdk/service/vpc20160428/models/DeleteTrafficMirrorFilterResponse$BuilderImpl.class
 com/aliyun/sdk/service/vpc20160428/models/UnassociateHaVipResponseBody.class
 com/aliyun/sdk/service/vpc20160428/models/ModifyNetworkAclAttributesResponseBody.class
@@ -1423,6 +1438,7 @@ com/aliyun/sdk/service/vpc20160428/models/RemoveCommonBandwidthPackageIpResponse
 com/aliyun/sdk/service/vpc20160428/models/DescribeRouteTablesResponseBody$NextHops.class
 com/aliyun/sdk/service/vpc20160428/models/CreateNetworkAclResponse$Builder.class
 com/aliyun/sdk/service/vpc20160428/models/ListEnhanhcedNatGatewayAvailableZonesResponseBody$Zones.class
+com/aliyun/sdk/service/vpc20160428/models/UntagResourcesForExpressConnectRequest$1.class
 com/aliyun/sdk/service/vpc20160428/models/DescribeVpnConnectionsResponseBody.class
 com/aliyun/sdk/service/vpc20160428/models/AssociateRouteTablesWithVpcGatewayEndpointRequest$Builder.class
 com/aliyun/sdk/service/vpc20160428/models/DescribeNetworkAclsResponseBody$IngressAclEntries$Builder.class
@@ -1496,6 +1512,7 @@ com/aliyun/sdk/service/vpc20160428/models/GetVpcPrefixListAssociationsRequest$1.
 com/aliyun/sdk/service/vpc20160428/models/DescribeNetworkAclAttributesResponseBody$IngressAclEntry.class
 com/aliyun/sdk/service/vpc20160428/models/ModifySnatEntryResponse$BuilderImpl.class
 com/aliyun/sdk/service/vpc20160428/models/DescribeGlobalAccelerationInstancesRequest$1.class
+com/aliyun/sdk/service/vpc20160428/models/TagResourcesForExpressConnectResponse$Builder.class
 com/aliyun/sdk/service/vpc20160428/models/DeactivateRouterInterfaceRequest.class
 com/aliyun/sdk/service/vpc20160428/models/CreateVpnPbrRouteEntryResponse.class
 com/aliyun/sdk/service/vpc20160428/models/DeleteBgpGroupResponse.class
@@ -1678,6 +1695,7 @@ com/aliyun/sdk/service/vpc20160428/models/DescribeVpcAttributeResponseBody$Ipv6C
 com/aliyun/sdk/service/vpc20160428/models/DeletePhysicalConnectionResponseBody$1.class
 com/aliyun/sdk/service/vpc20160428/models/DescribeEipAddressesResponseBody$SecurityProtectionTypes.class
 com/aliyun/sdk/service/vpc20160428/models/DescribeSslVpnClientCertsResponseBody$SslVpnClientCertKeys$Builder.class
+com/aliyun/sdk/service/vpc20160428/models/UntagResourcesForExpressConnectResponse$Builder.class
 com/aliyun/sdk/service/vpc20160428/models/UpdateIpsecServerRequest$Builder.class
 com/aliyun/sdk/service/vpc20160428/models/ReplaceVpcDhcpOptionsSetResponseBody$Builder.class
 com/aliyun/sdk/service/vpc20160428/models/DescribeRouteTablesRequest$1.class
@@ -1715,6 +1733,7 @@ com/aliyun/sdk/service/vpc20160428/models/CreateVpconnFromVbrRequest$1.class
 com/aliyun/sdk/service/vpc20160428/models/CompletePhysicalConnectionLOAResponse.class
 com/aliyun/sdk/service/vpc20160428/models/CreateIPv6TranslatorEntryRequest$Builder.class
 com/aliyun/sdk/service/vpc20160428/models/ListEnhanhcedNatGatewayAvailableZonesResponse.class
+com/aliyun/sdk/service/vpc20160428/models/ListTagResourcesForExpressConnectRequest$Tag$Builder.class
 com/aliyun/sdk/service/vpc20160428/models/DeleteNatIpCidrRequest.class
 com/aliyun/sdk/service/vpc20160428/models/DescribeRegionsResponse$Builder.class
 com/aliyun/sdk/service/vpc20160428/models/DescribeAccessPointsResponseBody$AccessPointType.class
@@ -1772,6 +1791,7 @@ com/aliyun/sdk/service/vpc20160428/models/RetryVpcPrefixListAssociationResponse.
 com/aliyun/sdk/service/vpc20160428/models/ModifyHaVipAttributeResponse$Builder.class
 com/aliyun/sdk/service/vpc20160428/models/DescribePublicIpAddressResponse$Builder.class
 com/aliyun/sdk/service/vpc20160428/models/DescribeIPv6TranslatorEntriesResponse$Builder.class
+com/aliyun/sdk/service/vpc20160428/models/ListTagResourcesForExpressConnectResponseBody$TagResource$Builder.class
 com/aliyun/sdk/service/vpc20160428/models/RecoverPhysicalConnectionRequest$1.class
 com/aliyun/sdk/service/vpc20160428/models/CreateIpv6EgressOnlyRuleRequest$1.class
 com/aliyun/sdk/service/vpc20160428/models/ConvertBandwidthPackageRequest$Builder.class
@@ -1839,6 +1859,7 @@ com/aliyun/sdk/service/vpc20160428/models/DescribeIpv6GatewaysResponseBody$Ipv6G
 com/aliyun/sdk/service/vpc20160428/models/ListGatewayRouteTableEntriesRequest.class
 com/aliyun/sdk/service/vpc20160428/models/GetPhysicalConnectionServiceStatusResponse$BuilderImpl.class
 com/aliyun/sdk/service/vpc20160428/models/ListNatIpCidrsResponse.class
+com/aliyun/sdk/service/vpc20160428/models/UntagResourcesForExpressConnectResponse.class
 com/aliyun/sdk/service/vpc20160428/models/ModifyNatGatewaySpecResponse.class
 com/aliyun/sdk/service/vpc20160428/models/RemoveCommonBandwidthPackageIpResponseBody.class
 com/aliyun/sdk/service/vpc20160428/models/DescribeNetworkAclsResponseBody$EgressAclEntries.class
@@ -1918,6 +1939,7 @@ com/aliyun/sdk/service/vpc20160428/models/DescribeNatGatewaysResponse$BuilderImp
 com/aliyun/sdk/service/vpc20160428/models/DeleteFlowLogRequest$1.class
 com/aliyun/sdk/service/vpc20160428/models/DeleteTrafficMirrorFilterRulesResponseBody$Builder.class
 com/aliyun/sdk/service/vpc20160428/models/ModifyIpv6GatewaySpecResponse.class
+com/aliyun/sdk/service/vpc20160428/models/TagResourcesForExpressConnectResponseBody.class
 com/aliyun/sdk/service/vpc20160428/models/CheckCanAllocateVpcPrivateIpAddressRequest.class
 com/aliyun/sdk/service/vpc20160428/models/DescribeZonesResponseBody$Zones$Builder.class
 com/aliyun/sdk/service/vpc20160428/models/CreateVpnConnectionRequest$Builder.class
@@ -1987,6 +2009,7 @@ com/aliyun/sdk/service/vpc20160428/models/ApplyPhysicalConnectionLOARequest$Buil
 com/aliyun/sdk/service/vpc20160428/models/AddGlobalAccelerationInstanceIpResponseBody$Builder.class
 com/aliyun/sdk/service/vpc20160428/models/TagResourcesResponseBody$1.class
 com/aliyun/sdk/service/vpc20160428/models/DescribeVpnGatewaysResponseBody$Tags.class
+com/aliyun/sdk/service/vpc20160428/models/TagResourcesForExpressConnectResponse$1.class
 com/aliyun/sdk/service/vpc20160428/models/DescribeVpnAttachmentsRequest$1.class
 com/aliyun/sdk/service/vpc20160428/models/ReplaceVpcDhcpOptionsSetResponse$BuilderImpl.class
 com/aliyun/sdk/service/vpc20160428/models/DissociateVpnGatewayWithCertificateRequest$Builder.class
@@ -2070,6 +2093,7 @@ com/aliyun/sdk/service/vpc20160428/models/AddPublicIpAddressPoolCidrBlockRespons
 com/aliyun/sdk/service/vpc20160428/models/AssociateVpnGatewayWithCertificateRequest$1.class
 com/aliyun/sdk/service/vpc20160428/models/ActivateRouterInterfaceRequest$1.class
 com/aliyun/sdk/service/vpc20160428/models/CheckCanAllocateVpcPrivateIpAddressRequest$Builder.class
+com/aliyun/sdk/service/vpc20160428/models/ListTagResourcesForExpressConnectResponseBody$Builder.class
 com/aliyun/sdk/service/vpc20160428/models/CreateIpv6GatewayResponse$BuilderImpl.class
 com/aliyun/sdk/service/vpc20160428/models/CreateCustomerGatewayResponseBody.class
 com/aliyun/sdk/service/vpc20160428/models/DescribeVpnConnectionResponseBody$VcoHealthCheck$Builder.class
@@ -2126,6 +2150,7 @@ com/aliyun/sdk/service/vpc20160428/models/ModifyExpressCloudConnectionBandwidthR
 com/aliyun/sdk/service/vpc20160428/models/DescribeNetworkAclAttributesResponseBody$NetworkAclAttribute.class
 com/aliyun/sdk/service/vpc20160428/models/RevokeInstanceFromCenResponseBody$Builder.class
 com/aliyun/sdk/service/vpc20160428/models/ModifyCommonBandwidthPackageSpecRequest$1.class
+com/aliyun/sdk/service/vpc20160428/models/TagResourcesForExpressConnectRequest.class
 com/aliyun/sdk/service/vpc20160428/models/MoveResourceGroupResponseBody.class
 com/aliyun/sdk/service/vpc20160428/models/CreateVpnConnectionResponse$1.class
 com/aliyun/sdk/service/vpc20160428/models/DescribeRouterInterfacesResponseBody$RouterInterfaceType.class
@@ -2172,6 +2197,7 @@ com/aliyun/sdk/service/vpc20160428/models/ModifyVpcAttributeRequest.class
 com/aliyun/sdk/service/vpc20160428/models/CreateNetworkAclResponseBody$NetworkAclAttribute.class
 com/aliyun/sdk/service/vpc20160428/models/DescribeVpnPbrRouteEntriesResponseBody$VpnPbrRouteEntries$Builder.class
 com/aliyun/sdk/service/vpc20160428/models/ModifyVpcAttributeResponse$BuilderImpl.class
+com/aliyun/sdk/service/vpc20160428/models/UntagResourcesForExpressConnectResponse$1.class
 com/aliyun/sdk/service/vpc20160428/models/RemoveGlobalAccelerationInstanceIpRequest.class
 com/aliyun/sdk/service/vpc20160428/models/DeleteFlowLogRequest.class
 com/aliyun/sdk/service/vpc20160428/models/AssociateVpnGatewayWithCertificateResponseBody$Builder.class
@@ -2222,6 +2248,7 @@ com/aliyun/sdk/service/vpc20160428/models/DescribeNetworkAclAttributesRequest$1.
 com/aliyun/sdk/service/vpc20160428/models/DescribeNatGatewaysRequest$Tag$Builder.class
 com/aliyun/sdk/service/vpc20160428/models/RemoveSourcesFromTrafficMirrorSessionRequest$1.class
 com/aliyun/sdk/service/vpc20160428/models/AssociateRouteTableWithGatewayResponseBody.class
+com/aliyun/sdk/service/vpc20160428/models/TagResourcesForExpressConnectRequest$1.class
 com/aliyun/sdk/service/vpc20160428/models/CreateNatIpCidrResponse.class
 com/aliyun/sdk/service/vpc20160428/models/CreateIpv4GatewayRequest$1.class
 com/aliyun/sdk/service/vpc20160428/models/CheckVpnBgpEnabledResponse$Builder.class
@@ -2334,6 +2361,7 @@ com/aliyun/sdk/service/vpc20160428/models/DescribeVSwitchAttributesResponse$1.cl
 com/aliyun/sdk/service/vpc20160428/models/ListTrafficMirrorFiltersResponse$Builder.class
 com/aliyun/sdk/service/vpc20160428/models/UnassociateNetworkAclRequest$Resource$Builder.class
 com/aliyun/sdk/service/vpc20160428/models/ModifyNatGatewayAttributeResponse$Builder.class
+com/aliyun/sdk/service/vpc20160428/models/DescribePhysicalConnectionsRequest$Tags$Builder.class
 com/aliyun/sdk/service/vpc20160428/models/RemoveCommonBandwidthPackageIpResponse$Builder.class
 com/aliyun/sdk/service/vpc20160428/models/UpdateNatGatewayNatTypeResponse$BuilderImpl.class
 com/aliyun/sdk/service/vpc20160428/models/DescribeSnatTableEntriesResponse.class
@@ -2400,6 +2428,7 @@ com/aliyun/sdk/service/vpc20160428/models/UpdateVirtualPhysicalConnectionRequest
 com/aliyun/sdk/service/vpc20160428/models/CreatePublicIpAddressPoolResponse$1.class
 com/aliyun/sdk/service/vpc20160428/models/DeleteRouterInterfaceRequest$1.class
 com/aliyun/sdk/service/vpc20160428/models/DescribeSslVpnClientCertRequest$Builder.class
+com/aliyun/sdk/service/vpc20160428/models/UntagResourcesForExpressConnectResponseBody.class
 com/aliyun/sdk/service/vpc20160428/models/ModifyIpv6InternetBandwidthRequest.class
 com/aliyun/sdk/service/vpc20160428/models/DescribeForwardTableEntriesRequest$1.class
 com/aliyun/sdk/service/vpc20160428/models/RecoverPhysicalConnectionResponse$BuilderImpl.class
@@ -2574,6 +2603,7 @@ com/aliyun/sdk/service/vpc20160428/models/DeleteFlowLogResponse$BuilderImpl.clas
 com/aliyun/sdk/service/vpc20160428/models/DeleteVpnRouteEntryRequest$Builder.class
 com/aliyun/sdk/service/vpc20160428/models/DeleteRouterInterfaceRequest.class
 com/aliyun/sdk/service/vpc20160428/models/DescribeCustomerGatewaysResponseBody$CustomerGateways$Builder.class
+com/aliyun/sdk/service/vpc20160428/models/TagResourcesForExpressConnectResponse.class
 com/aliyun/sdk/service/vpc20160428/models/TagResourcesResponse$1.class
 com/aliyun/sdk/service/vpc20160428/models/ModifyCommonBandwidthPackageSpecRequest.class
 com/aliyun/sdk/service/vpc20160428/models/DeactivateRouterInterfaceResponse$BuilderImpl.class
@@ -2594,6 +2624,7 @@ com/aliyun/sdk/service/vpc20160428/models/DeleteIPv6TranslatorAclListResponse$1.
 com/aliyun/sdk/service/vpc20160428/models/DeleteGlobalAccelerationInstanceResponseBody$Builder.class
 com/aliyun/sdk/service/vpc20160428/models/EnableVpcClassicLinkResponse$1.class
 com/aliyun/sdk/service/vpc20160428/models/CreateNatIpCidrRequest$Builder.class
+com/aliyun/sdk/service/vpc20160428/models/TagResourcesForExpressConnectRequest$Tag.class
 com/aliyun/sdk/service/vpc20160428/models/ModifyGlobalAccelerationInstanceAttributesResponse$1.class
 com/aliyun/sdk/service/vpc20160428/models/ModifyBgpGroupAttributeResponseBody$Builder.class
 com/aliyun/sdk/service/vpc20160428/models/DeleteForwardEntryResponse$BuilderImpl.class
@@ -2651,6 +2682,7 @@ com/aliyun/sdk/service/vpc20160428/models/DescribeGrantRulesToCenRequest.class
 com/aliyun/sdk/service/vpc20160428/models/ModifyVpcPrefixListResponseBody.class
 com/aliyun/sdk/service/vpc20160428/models/UpdateNetworkAclEntriesResponse$1.class
 com/aliyun/sdk/service/vpc20160428/models/DescribeNetworkAclsResponse$1.class
+com/aliyun/sdk/service/vpc20160428/models/ListTagResourcesForExpressConnectResponseBody$1.class
 com/aliyun/sdk/service/vpc20160428/models/DissociateVpnGatewayWithCertificateResponseBody$1.class
 com/aliyun/sdk/service/vpc20160428/models/ModifyIPv6TranslatorBandwidthResponseBody.class
 com/aliyun/sdk/service/vpc20160428/models/DescribeEipAddressesResponse$1.class
@@ -2784,6 +2816,7 @@ com/aliyun/sdk/service/vpc20160428/models/OpenPhysicalConnectionServiceResponse.
 com/aliyun/sdk/service/vpc20160428/models/DescribeVpnGatewaysResponseBody$Builder.class
 com/aliyun/sdk/service/vpc20160428/models/DescribeVirtualBorderRoutersResponse$BuilderImpl.class
 com/aliyun/sdk/service/vpc20160428/models/ModifyIPv6TranslatorEntryResponseBody$Builder.class
+com/aliyun/sdk/service/vpc20160428/models/DescribePhysicalConnectionsRequest$Tags.class
 com/aliyun/sdk/service/vpc20160428/models/ListTrafficMirrorFiltersResponseBody.class
 com/aliyun/sdk/service/vpc20160428/models/ListFullNatEntriesResponse$BuilderImpl.class
 com/aliyun/sdk/service/vpc20160428/models/TerminatePhysicalConnectionResponseBody$1.class
@@ -2804,6 +2837,7 @@ com/aliyun/sdk/service/vpc20160428/models/DeleteVSwitchResponse$Builder.class
 com/aliyun/sdk/service/vpc20160428/models/MoveResourceGroupRequest.class
 com/aliyun/sdk/service/vpc20160428/models/CreateIPv6TranslatorResponseBody$1.class
 com/aliyun/sdk/service/vpc20160428/models/DescribeVbrHaResponse.class
+com/aliyun/sdk/service/vpc20160428/models/TagResourcesForExpressConnectResponseBody$Builder.class
 com/aliyun/sdk/service/vpc20160428/models/DeleteVbrHaResponse$Builder.class
 com/aliyun/sdk/service/vpc20160428/models/GetVpcGatewayEndpointAttributeResponseBody.class
 com/aliyun/sdk/service/vpc20160428/models/CreateVirtualBorderRouterResponseBody.class
@@ -2828,6 +2862,7 @@ com/aliyun/sdk/service/vpc20160428/models/CreateIPv6TranslatorRequest$1.class
 com/aliyun/sdk/service/vpc20160428/models/AllocateIpv6InternetBandwidthRequest$Builder.class
 com/aliyun/sdk/service/vpc20160428/models/CreateVpcResponseBody$1.class
 com/aliyun/sdk/service/vpc20160428/models/AddCommonBandwidthPackageIpsResponseBody.class
+com/aliyun/sdk/service/vpc20160428/models/UntagResourcesForExpressConnectRequest$Builder.class
 com/aliyun/sdk/service/vpc20160428/models/DeleteVpcGatewayEndpointRequest$1.class
 com/aliyun/sdk/service/vpc20160428/models/ListNatIpsRequest.class
 com/aliyun/sdk/service/vpc20160428/models/DescribeVpnGatewayResponse$1.class
@@ -3031,6 +3066,7 @@ com/aliyun/sdk/service/vpc20160428/models/GrantInstanceToCenResponseBody$1.class
 com/aliyun/sdk/service/vpc20160428/models/DissociateRouteTablesFromVpcGatewayEndpointResponse$Builder.class
 com/aliyun/sdk/service/vpc20160428/models/DissociateRouteTablesFromVpcGatewayEndpointRequest$Builder.class
 com/aliyun/sdk/service/vpc20160428/models/DescribeIpv6GatewaysResponseBody$Ipv6Gateway$Builder.class
+com/aliyun/sdk/service/vpc20160428/models/ListTagResourcesForExpressConnectRequest$1.class
 com/aliyun/sdk/service/vpc20160428/models/CreateSslVpnClientCertResponse$Builder.class
 com/aliyun/sdk/service/vpc20160428/models/GetVpcPrefixListEntriesResponseBody$PrefixListEntry$Builder.class
 com/aliyun/sdk/service/vpc20160428/models/ModifyVirtualBorderRouterAttributeRequest.class
@@ -3179,6 +3215,7 @@ com/aliyun/sdk/service/vpc20160428/models/DeleteVSwitchResponseBody.class
 com/aliyun/sdk/service/vpc20160428/models/DissociateVpnGatewayWithCertificateResponse$BuilderImpl.class
 com/aliyun/sdk/service/vpc20160428/models/ModifyGlobalAccelerationInstanceSpecResponseBody$1.class
 com/aliyun/sdk/service/vpc20160428/models/DeleteSslVpnServerResponse$1.class
+com/aliyun/sdk/service/vpc20160428/models/ListVirtualPhysicalConnectionsRequest$Tags$Builder.class
 com/aliyun/sdk/service/vpc20160428/models/DisableNatGatewayEcsMetricResponse$Builder.class
 com/aliyun/sdk/service/vpc20160428/models/AssociateVpcCidrBlockRequest$1.class
 com/aliyun/sdk/service/vpc20160428/models/UpdateIpsecServerResponseBody$Builder.class
@@ -3414,6 +3451,7 @@ com/aliyun/sdk/service/vpc20160428/models/CreateVpcRequest.class
 com/aliyun/sdk/service/vpc20160428/models/ModifyVpnPbrRouteEntryWeightResponse$1.class
 com/aliyun/sdk/service/vpc20160428/models/ListPublicIpAddressPoolCidrBlocksRequest.class
 com/aliyun/sdk/service/vpc20160428/models/DescribeVpcsResponseBody$Ipv6CidrBlock$Builder.class
+com/aliyun/sdk/service/vpc20160428/models/UntagResourcesForExpressConnectResponseBody$Builder.class
 com/aliyun/sdk/service/vpc20160428/models/AddPublicIpAddressPoolCidrBlockResponse$BuilderImpl.class
 com/aliyun/sdk/service/vpc20160428/models/DeletePublicIpAddressPoolResponse.class
 com/aliyun/sdk/service/vpc20160428/models/DeleteNetworkAclRequest$1.class
@@ -3578,6 +3616,7 @@ com/aliyun/sdk/service/vpc20160428/models/ModifyBgpPeerAttributeResponse$1.class
 com/aliyun/sdk/service/vpc20160428/models/CreateVpcPrefixListResponseBody$Builder.class
 com/aliyun/sdk/service/vpc20160428/models/DeleteVpcResponseBody.class
 com/aliyun/sdk/service/vpc20160428/models/DeleteHaVipResponseBody.class
+com/aliyun/sdk/service/vpc20160428/models/UntagResourcesForExpressConnectResponseBody$1.class
 com/aliyun/sdk/service/vpc20160428/models/DescribeVpnGatewaysResponse.class
 com/aliyun/sdk/service/vpc20160428/models/DescribeRouteTablesResponse$1.class
 com/aliyun/sdk/service/vpc20160428/models/DeleteVpnConnectionResponse$1.class
@@ -3627,6 +3666,7 @@ com/aliyun/sdk/service/vpc20160428/models/DescribeNetworkAclAttributesResponseBo
 com/aliyun/sdk/service/vpc20160428/models/CreateNetworkAclResponseBody$IngressAclEntries$Builder.class
 com/aliyun/sdk/service/vpc20160428/models/RemoveCommonBandwidthPackageIpResponse$BuilderImpl.class
 com/aliyun/sdk/service/vpc20160428/models/ModifyVRouterAttributeResponseBody$1.class
+com/aliyun/sdk/service/vpc20160428/models/UntagResourcesForExpressConnectRequest.class
 com/aliyun/sdk/service/vpc20160428/models/CreateTrafficMirrorFilterResponse$Builder.class
 com/aliyun/sdk/service/vpc20160428/models/ModifyVpnGatewayAttributeResponse$Builder.class
 com/aliyun/sdk/service/vpc20160428/models/UpdateIpv4GatewayAttributeResponse$Builder.class
@@ -3703,6 +3743,7 @@ com/aliyun/sdk/service/vpc20160428/models/DeleteCommonBandwidthPackageRequest$1.
 com/aliyun/sdk/service/vpc20160428/models/CreateCommonBandwidthPackageResponse.class
 com/aliyun/sdk/service/vpc20160428/models/RecoverPhysicalConnectionResponseBody.class
 com/aliyun/sdk/service/vpc20160428/models/UpdateNetworkAclEntriesRequest$IngressAclEntries$Builder.class
+com/aliyun/sdk/service/vpc20160428/models/ListTagResourcesForExpressConnectResponse$1.class
 com/aliyun/sdk/service/vpc20160428/models/DeletePublicIpAddressPoolRequest$1.class
 com/aliyun/sdk/service/vpc20160428/models/DeleteGlobalAccelerationInstanceResponseBody$1.class
 com/aliyun/sdk/service/vpc20160428/models/UpdateVirtualPhysicalConnectionResponse$Builder.class
@@ -3754,6 +3795,7 @@ com/aliyun/sdk/service/vpc20160428/models/DescribeNetworkAclAttributesResponseBo
 com/aliyun/sdk/service/vpc20160428/models/DeleteTrafficMirrorSessionRequest.class
 com/aliyun/sdk/service/vpc20160428/models/CancelPhysicalConnectionRequest$Builder.class
 com/aliyun/sdk/service/vpc20160428/models/DeleteVirtualBorderRouterRequest$Builder.class
+com/aliyun/sdk/service/vpc20160428/models/TagResourcesForExpressConnectRequest$Builder.class
 com/aliyun/sdk/service/vpc20160428/models/ModifyVpnGatewayAttributeResponse$1.class
 com/aliyun/sdk/service/vpc20160428/models/CreateNatIpCidrResponseBody$Builder.class
 com/aliyun/sdk/service/vpc20160428/models/DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody$VirtualBorderRouterForPhysicalConnectionType$Builder.class
