@@ -1,0 +1,13 @@
+com/aliyun/sdk/service/openplatform20191219/models/AuthorizeFileUploadResponseBody.class
+com/aliyun/sdk/service/openplatform20191219/models/AuthorizeFileUploadResponse$Builder.class
+com/aliyun/sdk/service/openplatform20191219/models/AuthorizeFileUploadResponse.class
+com/aliyun/sdk/service/openplatform20191219/models/AuthorizeFileUploadRequest$Builder.class
+com/aliyun/sdk/service/openplatform20191219/AsyncClient.class
+com/aliyun/sdk/service/openplatform20191219/models/AuthorizeFileUploadResponseBody$1.class
+com/aliyun/sdk/service/openplatform20191219/models/AuthorizeFileUploadResponse$1.class
+com/aliyun/sdk/service/openplatform20191219/models/AuthorizeFileUploadRequest.class
+com/aliyun/sdk/service/openplatform20191219/DefaultAsyncClientBuilder.class
+com/aliyun/sdk/service/openplatform20191219/models/AuthorizeFileUploadResponseBody$Builder.class
+com/aliyun/sdk/service/openplatform20191219/DefaultAsyncClient.class
+com/aliyun/sdk/service/openplatform20191219/models/AuthorizeFileUploadRequest$1.class
+com/aliyun/sdk/service/openplatform20191219/models/AuthorizeFileUploadResponse$BuilderImpl.class
