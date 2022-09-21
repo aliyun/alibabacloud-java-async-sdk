@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListOrganizationalUnitsRequest</p>
  */
 public class ListOrganizationalUnitsRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("InstanceId")
     @Validation(required = true, maxLength = 64)
@@ -35,18 +39,14 @@ public class ListOrganizationalUnitsRequest extends Request {
     @Validation(maxLength = 64)
     private String parentId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private ListOrganizationalUnitsRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
         this.organizationalUnitName = builder.organizationalUnitName;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.parentId = builder.parentId;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -60,6 +60,13 @@ public class ListOrganizationalUnitsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -97,20 +104,13 @@ public class ListOrganizationalUnitsRequest extends Request {
         return this.parentId;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<ListOrganizationalUnitsRequest, Builder> {
+        private String regionId; 
         private String instanceId; 
         private String organizationalUnitName; 
         private Long pageNumber; 
         private Long pageSize; 
         private String parentId; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -118,13 +118,22 @@ public class ListOrganizationalUnitsRequest extends Request {
 
         private Builder(ListOrganizationalUnitsRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.instanceId = request.instanceId;
             this.organizationalUnitName = request.organizationalUnitName;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.parentId = request.parentId;
-            this.regionId = request.regionId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * IDaaS EIAM实例的ID。
@@ -168,15 +177,6 @@ public class ListOrganizationalUnitsRequest extends Request {
         public Builder parentId(String parentId) {
             this.putQueryParameter("ParentId", parentId);
             this.parentId = parentId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

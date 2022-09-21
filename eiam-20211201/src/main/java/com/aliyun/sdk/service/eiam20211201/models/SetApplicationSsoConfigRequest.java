@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SetApplicationSsoConfigRequest</p>
  */
 public class SetApplicationSsoConfigRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("ApplicationId")
     @Validation(required = true, maxLength = 64)
@@ -34,22 +38,18 @@ public class SetApplicationSsoConfigRequest extends Request {
     @NameInMap("OidcSsoConfig")
     private OidcSsoConfig oidcSsoConfig;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("SamlSsoConfig")
     private SamlSsoConfig samlSsoConfig;
 
     private SetApplicationSsoConfigRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.applicationId = builder.applicationId;
         this.initLoginType = builder.initLoginType;
         this.initLoginUrl = builder.initLoginUrl;
         this.instanceId = builder.instanceId;
         this.oidcSsoConfig = builder.oidcSsoConfig;
-        this.regionId = builder.regionId;
         this.samlSsoConfig = builder.samlSsoConfig;
     }
 
@@ -64,6 +64,13 @@ public class SetApplicationSsoConfigRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -102,13 +109,6 @@ public class SetApplicationSsoConfigRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return samlSsoConfig
      */
     public SamlSsoConfig getSamlSsoConfig() {
@@ -116,12 +116,12 @@ public class SetApplicationSsoConfigRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SetApplicationSsoConfigRequest, Builder> {
+        private String regionId; 
         private String applicationId; 
         private String initLoginType; 
         private String initLoginUrl; 
         private String instanceId; 
         private OidcSsoConfig oidcSsoConfig; 
-        private String regionId; 
         private SamlSsoConfig samlSsoConfig; 
 
         private Builder() {
@@ -130,17 +130,26 @@ public class SetApplicationSsoConfigRequest extends Request {
 
         private Builder(SetApplicationSsoConfigRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.applicationId = request.applicationId;
             this.initLoginType = request.initLoginType;
             this.initLoginUrl = request.initLoginUrl;
             this.instanceId = request.instanceId;
             this.oidcSsoConfig = request.oidcSsoConfig;
-            this.regionId = request.regionId;
             this.samlSsoConfig = request.samlSsoConfig;
         } 
 
         /**
-         * IDaaS的应用主键id
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * IDaaS的应用资源ID。
          */
         public Builder applicationId(String applicationId) {
             this.putQueryParameter("ApplicationId", applicationId);
@@ -181,15 +190,6 @@ public class SetApplicationSsoConfigRequest extends Request {
         public Builder oidcSsoConfig(OidcSsoConfig oidcSsoConfig) {
             this.putQueryParameter("OidcSsoConfig", oidcSsoConfig);
             this.oidcSsoConfig = oidcSsoConfig;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 
@@ -295,6 +295,9 @@ public class SetApplicationSsoConfigRequest extends Request {
         @NameInMap("PkceRequired")
         private Boolean pkceRequired;
 
+        @NameInMap("PostLogoutRedirectUris")
+        private java.util.List < String > postLogoutRedirectUris;
+
         @NameInMap("RedirectUris")
         private java.util.List < String > redirectUris;
 
@@ -317,6 +320,7 @@ public class SetApplicationSsoConfigRequest extends Request {
             this.idTokenEffectiveTime = builder.idTokenEffectiveTime;
             this.pkceChallengeMethods = builder.pkceChallengeMethods;
             this.pkceRequired = builder.pkceRequired;
+            this.postLogoutRedirectUris = builder.postLogoutRedirectUris;
             this.redirectUris = builder.redirectUris;
             this.refreshTokenEffective = builder.refreshTokenEffective;
             this.responseTypes = builder.responseTypes;
@@ -388,6 +392,13 @@ public class SetApplicationSsoConfigRequest extends Request {
         }
 
         /**
+         * @return postLogoutRedirectUris
+         */
+        public java.util.List < String > getPostLogoutRedirectUris() {
+            return this.postLogoutRedirectUris;
+        }
+
+        /**
          * @return redirectUris
          */
         public java.util.List < String > getRedirectUris() {
@@ -424,6 +435,7 @@ public class SetApplicationSsoConfigRequest extends Request {
             private Long idTokenEffectiveTime; 
             private java.util.List < String > pkceChallengeMethods; 
             private Boolean pkceRequired; 
+            private java.util.List < String > postLogoutRedirectUris; 
             private java.util.List < String > redirectUris; 
             private Long refreshTokenEffective; 
             private java.util.List < String > responseTypes; 
@@ -494,7 +506,15 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * 应用支持的回调的uri列表，OIDC标准参数
+             * Logout回调支持的Uri列表，OIDC协议标准参数。
+             */
+            public Builder postLogoutRedirectUris(java.util.List < String > postLogoutRedirectUris) {
+                this.postLogoutRedirectUris = postLogoutRedirectUris;
+                return this;
+            }
+
+            /**
+             * 应用SSO支持的回调的uri列表，OIDC标准参数。
              */
             public Builder redirectUris(java.util.List < String > redirectUris) {
                 this.redirectUris = redirectUris;

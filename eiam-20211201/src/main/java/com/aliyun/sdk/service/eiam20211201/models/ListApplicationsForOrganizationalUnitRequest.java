@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListApplicationsForOrganizationalUnitRequest</p>
  */
 public class ListApplicationsForOrganizationalUnitRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("ApplicationIds")
     private java.util.List < String > applicationIds;
@@ -34,18 +38,14 @@ public class ListApplicationsForOrganizationalUnitRequest extends Request {
     @NameInMap("PageSize")
     private Long pageSize;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private ListApplicationsForOrganizationalUnitRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.applicationIds = builder.applicationIds;
         this.instanceId = builder.instanceId;
         this.organizationalUnitId = builder.organizationalUnitId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -59,6 +59,13 @@ public class ListApplicationsForOrganizationalUnitRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -96,20 +103,13 @@ public class ListApplicationsForOrganizationalUnitRequest extends Request {
         return this.pageSize;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<ListApplicationsForOrganizationalUnitRequest, Builder> {
+        private String regionId; 
         private java.util.List < String > applicationIds; 
         private String instanceId; 
         private String organizationalUnitId; 
         private Long pageNumber; 
         private Long pageSize; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -117,13 +117,22 @@ public class ListApplicationsForOrganizationalUnitRequest extends Request {
 
         private Builder(ListApplicationsForOrganizationalUnitRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.applicationIds = request.applicationIds;
             this.instanceId = request.instanceId;
             this.organizationalUnitId = request.organizationalUnitId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
-            this.regionId = request.regionId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * 非必填，如果填写则可以基于应用ID进行过滤，列表中最多包含100个元素。
@@ -167,15 +176,6 @@ public class ListApplicationsForOrganizationalUnitRequest extends Request {
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

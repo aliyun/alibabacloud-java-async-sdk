@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListUsersForApplicationRequest</p>
  */
 public class ListUsersForApplicationRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("ApplicationId")
     @Validation(required = true, maxLength = 64)
@@ -30,21 +34,17 @@ public class ListUsersForApplicationRequest extends Request {
     @NameInMap("PageSize")
     private Long pageSize;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("UserIds")
     private java.util.List < String > userIds;
 
     private ListUsersForApplicationRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.applicationId = builder.applicationId;
         this.instanceId = builder.instanceId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
         this.userIds = builder.userIds;
     }
 
@@ -59,6 +59,13 @@ public class ListUsersForApplicationRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -90,13 +97,6 @@ public class ListUsersForApplicationRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return userIds
      */
     public java.util.List < String > getUserIds() {
@@ -104,11 +104,11 @@ public class ListUsersForApplicationRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListUsersForApplicationRequest, Builder> {
+        private String regionId; 
         private String applicationId; 
         private String instanceId; 
         private Long pageNumber; 
         private Long pageSize; 
-        private String regionId; 
         private java.util.List < String > userIds; 
 
         private Builder() {
@@ -117,13 +117,22 @@ public class ListUsersForApplicationRequest extends Request {
 
         private Builder(ListUsersForApplicationRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.applicationId = request.applicationId;
             this.instanceId = request.instanceId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
-            this.regionId = request.regionId;
             this.userIds = request.userIds;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * 应用的唯一标识。
@@ -158,15 +167,6 @@ public class ListUsersForApplicationRequest extends Request {
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

@@ -12,14 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetUserRequest</p>
  */
 public class GetUserRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("InstanceId")
     @Validation(required = true, maxLength = 64)
     private String instanceId;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Query
     @NameInMap("UserId")
@@ -28,8 +28,8 @@ public class GetUserRequest extends Request {
 
     private GetUserRequest(Builder builder) {
         super(builder);
-        this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
+        this.instanceId = builder.instanceId;
         this.userId = builder.userId;
     }
 
@@ -47,17 +47,17 @@ public class GetUserRequest extends Request {
     }
 
     /**
-     * @return instanceId
-     */
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     /**
@@ -68,8 +68,8 @@ public class GetUserRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetUserRequest, Builder> {
-        private String instanceId; 
         private String regionId; 
+        private String instanceId; 
         private String userId; 
 
         private Builder() {
@@ -78,19 +78,10 @@ public class GetUserRequest extends Request {
 
         private Builder(GetUserRequest request) {
             super(request);
-            this.instanceId = request.instanceId;
             this.regionId = request.regionId;
+            this.instanceId = request.instanceId;
             this.userId = request.userId;
         } 
-
-        /**
-         * IDaaS EIAM实例的ID。
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -98,6 +89,15 @@ public class GetUserRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * IDaaS EIAM实例的ID。
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
             return this;
         }
 

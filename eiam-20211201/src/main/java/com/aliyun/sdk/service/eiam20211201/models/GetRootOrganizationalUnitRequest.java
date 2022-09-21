@@ -12,19 +12,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetRootOrganizationalUnitRequest</p>
  */
 public class GetRootOrganizationalUnitRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("InstanceId")
     @Validation(required = true, maxLength = 64)
     private String instanceId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private GetRootOrganizationalUnitRequest(Builder builder) {
         super(builder);
-        this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
+        this.instanceId = builder.instanceId;
     }
 
     public static Builder builder() {
@@ -41,22 +41,22 @@ public class GetRootOrganizationalUnitRequest extends Request {
     }
 
     /**
-     * @return instanceId
-     */
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
     }
 
+    /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
     public static final class Builder extends Request.Builder<GetRootOrganizationalUnitRequest, Builder> {
-        private String instanceId; 
         private String regionId; 
+        private String instanceId; 
 
         private Builder() {
             super();
@@ -64,18 +64,9 @@ public class GetRootOrganizationalUnitRequest extends Request {
 
         private Builder(GetRootOrganizationalUnitRequest request) {
             super(request);
-            this.instanceId = request.instanceId;
             this.regionId = request.regionId;
+            this.instanceId = request.instanceId;
         } 
-
-        /**
-         * IDaaS EIAM实例的ID。
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -83,6 +74,15 @@ public class GetRootOrganizationalUnitRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * IDaaS EIAM实例的ID。
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
             return this;
         }
 

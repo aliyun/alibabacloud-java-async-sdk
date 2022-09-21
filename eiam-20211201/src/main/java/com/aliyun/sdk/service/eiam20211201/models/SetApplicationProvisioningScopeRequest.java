@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SetApplicationProvisioningScopeRequest</p>
  */
 public class SetApplicationProvisioningScopeRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("ApplicationId")
     @Validation(required = true, maxLength = 64)
@@ -26,16 +30,12 @@ public class SetApplicationProvisioningScopeRequest extends Request {
     @NameInMap("OrganizationalUnitIds")
     private java.util.List < String > organizationalUnitIds;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private SetApplicationProvisioningScopeRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.applicationId = builder.applicationId;
         this.instanceId = builder.instanceId;
         this.organizationalUnitIds = builder.organizationalUnitIds;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -49,6 +49,13 @@ public class SetApplicationProvisioningScopeRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -72,18 +79,11 @@ public class SetApplicationProvisioningScopeRequest extends Request {
         return this.organizationalUnitIds;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<SetApplicationProvisioningScopeRequest, Builder> {
+        private String regionId; 
         private String applicationId; 
         private String instanceId; 
         private java.util.List < String > organizationalUnitIds; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -91,11 +91,20 @@ public class SetApplicationProvisioningScopeRequest extends Request {
 
         private Builder(SetApplicationProvisioningScopeRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.applicationId = request.applicationId;
             this.instanceId = request.instanceId;
             this.organizationalUnitIds = request.organizationalUnitIds;
-            this.regionId = request.regionId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * IDaaS的应用主键id
@@ -121,15 +130,6 @@ public class SetApplicationProvisioningScopeRequest extends Request {
         public Builder organizationalUnitIds(java.util.List < String > organizationalUnitIds) {
             this.putQueryParameter("OrganizationalUnitIds", organizationalUnitIds);
             this.organizationalUnitIds = organizationalUnitIds;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

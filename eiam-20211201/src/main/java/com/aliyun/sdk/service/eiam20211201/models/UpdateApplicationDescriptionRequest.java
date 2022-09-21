@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateApplicationDescriptionRequest</p>
  */
 public class UpdateApplicationDescriptionRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("ApplicationId")
     @Validation(required = true, maxLength = 64)
@@ -27,16 +31,12 @@ public class UpdateApplicationDescriptionRequest extends Request {
     @Validation(required = true, maxLength = 64)
     private String instanceId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private UpdateApplicationDescriptionRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.applicationId = builder.applicationId;
         this.description = builder.description;
         this.instanceId = builder.instanceId;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -50,6 +50,13 @@ public class UpdateApplicationDescriptionRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -73,18 +80,11 @@ public class UpdateApplicationDescriptionRequest extends Request {
         return this.instanceId;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<UpdateApplicationDescriptionRequest, Builder> {
+        private String regionId; 
         private String applicationId; 
         private String description; 
         private String instanceId; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -92,11 +92,20 @@ public class UpdateApplicationDescriptionRequest extends Request {
 
         private Builder(UpdateApplicationDescriptionRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.applicationId = request.applicationId;
             this.description = request.description;
             this.instanceId = request.instanceId;
-            this.regionId = request.regionId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * IDaaS的应用主键id
@@ -122,15 +131,6 @@ public class UpdateApplicationDescriptionRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

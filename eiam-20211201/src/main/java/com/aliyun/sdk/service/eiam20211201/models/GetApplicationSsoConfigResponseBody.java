@@ -157,6 +157,9 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
         @NameInMap("PkceRequired")
         private Boolean pkceRequired;
 
+        @NameInMap("PostLogoutRedirectUris")
+        private java.util.List < String > postLogoutRedirectUris;
+
         @NameInMap("RedirectUris")
         private java.util.List < String > redirectUris;
 
@@ -178,6 +181,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
             this.idTokenEffectiveTime = builder.idTokenEffectiveTime;
             this.pkceChallengeMethods = builder.pkceChallengeMethods;
             this.pkceRequired = builder.pkceRequired;
+            this.postLogoutRedirectUris = builder.postLogoutRedirectUris;
             this.redirectUris = builder.redirectUris;
             this.refreshTokenEffective = builder.refreshTokenEffective;
             this.responseTypes = builder.responseTypes;
@@ -249,6 +253,13 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
         }
 
         /**
+         * @return postLogoutRedirectUris
+         */
+        public java.util.List < String > getPostLogoutRedirectUris() {
+            return this.postLogoutRedirectUris;
+        }
+
+        /**
          * @return redirectUris
          */
         public java.util.List < String > getRedirectUris() {
@@ -285,6 +296,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
             private Long idTokenEffectiveTime; 
             private java.util.List < String > pkceChallengeMethods; 
             private Boolean pkceRequired; 
+            private java.util.List < String > postLogoutRedirectUris; 
             private java.util.List < String > redirectUris; 
             private Long refreshTokenEffective; 
             private java.util.List < String > responseTypes; 
@@ -355,7 +367,15 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
             }
 
             /**
-             * 应用支持的回调的uri列表，OIDC标准参数
+             * Logout回调支持的Uri列表，OIDC协议标准参数。
+             */
+            public Builder postLogoutRedirectUris(java.util.List < String > postLogoutRedirectUris) {
+                this.postLogoutRedirectUris = postLogoutRedirectUris;
+                return this;
+            }
+
+            /**
+             * 应用SSO支持的回调的uri列表，OIDC标准参数。
              */
             public Builder redirectUris(java.util.List < String > redirectUris) {
                 this.redirectUris = redirectUris;
@@ -415,6 +435,9 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
         @NameInMap("OidcJwksEndpoint")
         private String oidcJwksEndpoint;
 
+        @NameInMap("OidcLogoutEndpoint")
+        private String oidcLogoutEndpoint;
+
         @NameInMap("SamlMetaEndpoint")
         private String samlMetaEndpoint;
 
@@ -429,6 +452,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
             this.oauth2UserinfoEndpoint = builder.oauth2UserinfoEndpoint;
             this.oidcIssuer = builder.oidcIssuer;
             this.oidcJwksEndpoint = builder.oidcJwksEndpoint;
+            this.oidcLogoutEndpoint = builder.oidcLogoutEndpoint;
             this.samlMetaEndpoint = builder.samlMetaEndpoint;
             this.samlSsoEndpoint = builder.samlSsoEndpoint;
         }
@@ -491,6 +515,13 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
         }
 
         /**
+         * @return oidcLogoutEndpoint
+         */
+        public String getOidcLogoutEndpoint() {
+            return this.oidcLogoutEndpoint;
+        }
+
+        /**
          * @return samlMetaEndpoint
          */
         public String getSamlMetaEndpoint() {
@@ -512,6 +543,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
             private String oauth2UserinfoEndpoint; 
             private String oidcIssuer; 
             private String oidcJwksEndpoint; 
+            private String oidcLogoutEndpoint; 
             private String samlMetaEndpoint; 
             private String samlSsoEndpoint; 
 
@@ -568,6 +600,14 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
              */
             public Builder oidcJwksEndpoint(String oidcJwksEndpoint) {
                 this.oidcJwksEndpoint = oidcJwksEndpoint;
+                return this;
+            }
+
+            /**
+             * OIDC RP-initial Logout端点
+             */
+            public Builder oidcLogoutEndpoint(String oidcLogoutEndpoint) {
+                this.oidcLogoutEndpoint = oidcLogoutEndpoint;
                 return this;
             }
 

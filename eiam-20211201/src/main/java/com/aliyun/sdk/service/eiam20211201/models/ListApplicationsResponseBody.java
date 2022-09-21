@@ -119,6 +119,12 @@ public class ListApplicationsResponseBody extends TeaModel {
         @NameInMap("LogoUrl")
         private String logoUrl;
 
+        @NameInMap("ManagedServiceCode")
+        private String managedServiceCode;
+
+        @NameInMap("ServiceManaged")
+        private Boolean serviceManaged;
+
         @NameInMap("SsoType")
         private String ssoType;
 
@@ -138,6 +144,8 @@ public class ListApplicationsResponseBody extends TeaModel {
             this.features = builder.features;
             this.instanceId = builder.instanceId;
             this.logoUrl = builder.logoUrl;
+            this.managedServiceCode = builder.managedServiceCode;
+            this.serviceManaged = builder.serviceManaged;
             this.ssoType = builder.ssoType;
             this.status = builder.status;
             this.updateTime = builder.updateTime;
@@ -215,6 +223,20 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         /**
+         * @return managedServiceCode
+         */
+        public String getManagedServiceCode() {
+            return this.managedServiceCode;
+        }
+
+        /**
+         * @return serviceManaged
+         */
+        public Boolean getServiceManaged() {
+            return this.serviceManaged;
+        }
+
+        /**
          * @return ssoType
          */
         public String getSsoType() {
@@ -245,6 +267,8 @@ public class ListApplicationsResponseBody extends TeaModel {
             private String features; 
             private String instanceId; 
             private String logoUrl; 
+            private String managedServiceCode; 
+            private Boolean serviceManaged; 
             private String ssoType; 
             private String status; 
             private Long updateTime; 
@@ -318,6 +342,22 @@ public class ListApplicationsResponseBody extends TeaModel {
              */
             public Builder logoUrl(String logoUrl) {
                 this.logoUrl = logoUrl;
+                return this;
+            }
+
+            /**
+             * 托管应用模板的云产品ServiceCode。当且仅当ServiceManaged为true是返回。
+             */
+            public Builder managedServiceCode(String managedServiceCode) {
+                this.managedServiceCode = managedServiceCode;
+                return this;
+            }
+
+            /**
+             * 应用模板是否被云产品托管。
+             */
+            public Builder serviceManaged(Boolean serviceManaged) {
+                this.serviceManaged = serviceManaged;
                 return this;
             }
 

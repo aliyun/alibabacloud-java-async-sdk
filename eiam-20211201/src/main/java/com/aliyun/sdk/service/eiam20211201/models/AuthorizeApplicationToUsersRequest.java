@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AuthorizeApplicationToUsersRequest</p>
  */
 public class AuthorizeApplicationToUsersRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("ApplicationId")
     @Validation(required = true, maxLength = 64)
@@ -22,10 +26,6 @@ public class AuthorizeApplicationToUsersRequest extends Request {
     @Validation(required = true, maxLength = 64)
     private String instanceId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("UserIds")
     @Validation(required = true)
@@ -33,9 +33,9 @@ public class AuthorizeApplicationToUsersRequest extends Request {
 
     private AuthorizeApplicationToUsersRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.applicationId = builder.applicationId;
         this.instanceId = builder.instanceId;
-        this.regionId = builder.regionId;
         this.userIds = builder.userIds;
     }
 
@@ -53,6 +53,13 @@ public class AuthorizeApplicationToUsersRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return applicationId
      */
     public String getApplicationId() {
@@ -67,13 +74,6 @@ public class AuthorizeApplicationToUsersRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return userIds
      */
     public java.util.List < String > getUserIds() {
@@ -81,9 +81,9 @@ public class AuthorizeApplicationToUsersRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AuthorizeApplicationToUsersRequest, Builder> {
+        private String regionId; 
         private String applicationId; 
         private String instanceId; 
-        private String regionId; 
         private java.util.List < String > userIds; 
 
         private Builder() {
@@ -92,11 +92,20 @@ public class AuthorizeApplicationToUsersRequest extends Request {
 
         private Builder(AuthorizeApplicationToUsersRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.applicationId = request.applicationId;
             this.instanceId = request.instanceId;
-            this.regionId = request.regionId;
             this.userIds = request.userIds;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * 应用的唯一标识。
@@ -113,15 +122,6 @@ public class AuthorizeApplicationToUsersRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListApplicationsRequest</p>
  */
 public class ListApplicationsRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("ApplicationIds")
     private java.util.List < String > applicationIds;
@@ -20,6 +24,11 @@ public class ListApplicationsRequest extends Request {
     @NameInMap("ApplicationName")
     @Validation(maxLength = 64)
     private String applicationName;
+
+    @Query
+    @NameInMap("AuthorizationType")
+    @Validation(maxLength = 64)
+    private String authorizationType;
 
     @Query
     @NameInMap("InstanceId")
@@ -34,10 +43,6 @@ public class ListApplicationsRequest extends Request {
     @NameInMap("PageSize")
     private Long pageSize;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("Status")
     @Validation(maxLength = 32)
@@ -45,12 +50,13 @@ public class ListApplicationsRequest extends Request {
 
     private ListApplicationsRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.applicationIds = builder.applicationIds;
         this.applicationName = builder.applicationName;
+        this.authorizationType = builder.authorizationType;
         this.instanceId = builder.instanceId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
         this.status = builder.status;
     }
 
@@ -68,6 +74,13 @@ public class ListApplicationsRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return applicationIds
      */
     public java.util.List < String > getApplicationIds() {
@@ -79,6 +92,13 @@ public class ListApplicationsRequest extends Request {
      */
     public String getApplicationName() {
         return this.applicationName;
+    }
+
+    /**
+     * @return authorizationType
+     */
+    public String getAuthorizationType() {
+        return this.authorizationType;
     }
 
     /**
@@ -103,13 +123,6 @@ public class ListApplicationsRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return status
      */
     public String getStatus() {
@@ -117,12 +130,13 @@ public class ListApplicationsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListApplicationsRequest, Builder> {
+        private String regionId; 
         private java.util.List < String > applicationIds; 
         private String applicationName; 
+        private String authorizationType; 
         private String instanceId; 
         private Long pageNumber; 
         private Long pageSize; 
-        private String regionId; 
         private String status; 
 
         private Builder() {
@@ -131,14 +145,24 @@ public class ListApplicationsRequest extends Request {
 
         private Builder(ListApplicationsRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.applicationIds = request.applicationIds;
             this.applicationName = request.applicationName;
+            this.authorizationType = request.authorizationType;
             this.instanceId = request.instanceId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
-            this.regionId = request.regionId;
             this.status = request.status;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * 应用Id列表
@@ -155,6 +179,15 @@ public class ListApplicationsRequest extends Request {
         public Builder applicationName(String applicationName) {
             this.putQueryParameter("ApplicationName", applicationName);
             this.applicationName = applicationName;
+            return this;
+        }
+
+        /**
+         * 应用的授权类型。
+         */
+        public Builder authorizationType(String authorizationType) {
+            this.putQueryParameter("AuthorizationType", authorizationType);
+            this.authorizationType = authorizationType;
             return this;
         }
 
@@ -182,15 +215,6 @@ public class ListApplicationsRequest extends Request {
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

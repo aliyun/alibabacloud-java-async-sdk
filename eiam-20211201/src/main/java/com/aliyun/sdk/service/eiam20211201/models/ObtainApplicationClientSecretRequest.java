@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ObtainApplicationClientSecretRequest</p>
  */
 public class ObtainApplicationClientSecretRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("ApplicationId")
     @Validation(required = true, maxLength = 64)
@@ -22,10 +26,6 @@ public class ObtainApplicationClientSecretRequest extends Request {
     @Validation(required = true, maxLength = 64)
     private String instanceId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("SecretId")
     @Validation(required = true, maxLength = 64)
@@ -33,9 +33,9 @@ public class ObtainApplicationClientSecretRequest extends Request {
 
     private ObtainApplicationClientSecretRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.applicationId = builder.applicationId;
         this.instanceId = builder.instanceId;
-        this.regionId = builder.regionId;
         this.secretId = builder.secretId;
     }
 
@@ -53,6 +53,13 @@ public class ObtainApplicationClientSecretRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return applicationId
      */
     public String getApplicationId() {
@@ -67,13 +74,6 @@ public class ObtainApplicationClientSecretRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return secretId
      */
     public String getSecretId() {
@@ -81,9 +81,9 @@ public class ObtainApplicationClientSecretRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ObtainApplicationClientSecretRequest, Builder> {
+        private String regionId; 
         private String applicationId; 
         private String instanceId; 
-        private String regionId; 
         private String secretId; 
 
         private Builder() {
@@ -92,11 +92,20 @@ public class ObtainApplicationClientSecretRequest extends Request {
 
         private Builder(ObtainApplicationClientSecretRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.applicationId = request.applicationId;
             this.instanceId = request.instanceId;
-            this.regionId = request.regionId;
             this.secretId = request.secretId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * IDaaS的应用主键id
@@ -113,15 +122,6 @@ public class ObtainApplicationClientSecretRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

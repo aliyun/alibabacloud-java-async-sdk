@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListUsersRequest</p>
  */
 public class ListUsersRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("Email")
     @Validation(maxLength = 64)
@@ -45,10 +49,6 @@ public class ListUsersRequest extends Request {
     @Validation(maxLength = 32)
     private String phoneRegion;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("Status")
     @Validation(maxLength = 32)
@@ -71,6 +71,7 @@ public class ListUsersRequest extends Request {
 
     private ListUsersRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.email = builder.email;
         this.instanceId = builder.instanceId;
         this.organizationalUnitId = builder.organizationalUnitId;
@@ -78,7 +79,6 @@ public class ListUsersRequest extends Request {
         this.pageSize = builder.pageSize;
         this.phoneNumber = builder.phoneNumber;
         this.phoneRegion = builder.phoneRegion;
-        this.regionId = builder.regionId;
         this.status = builder.status;
         this.userExternalId = builder.userExternalId;
         this.userSourceId = builder.userSourceId;
@@ -96,6 +96,13 @@ public class ListUsersRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -148,13 +155,6 @@ public class ListUsersRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return status
      */
     public String getStatus() {
@@ -183,6 +183,7 @@ public class ListUsersRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListUsersRequest, Builder> {
+        private String regionId; 
         private String email; 
         private String instanceId; 
         private String organizationalUnitId; 
@@ -190,7 +191,6 @@ public class ListUsersRequest extends Request {
         private Long pageSize; 
         private String phoneNumber; 
         private String phoneRegion; 
-        private String regionId; 
         private String status; 
         private String userExternalId; 
         private String userSourceId; 
@@ -202,6 +202,7 @@ public class ListUsersRequest extends Request {
 
         private Builder(ListUsersRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.email = request.email;
             this.instanceId = request.instanceId;
             this.organizationalUnitId = request.organizationalUnitId;
@@ -209,12 +210,20 @@ public class ListUsersRequest extends Request {
             this.pageSize = request.pageSize;
             this.phoneNumber = request.phoneNumber;
             this.phoneRegion = request.phoneRegion;
-            this.regionId = request.regionId;
             this.status = request.status;
             this.userExternalId = request.userExternalId;
             this.userSourceId = request.userSourceId;
             this.userSourceType = request.userSourceType;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * 邮箱
@@ -276,15 +285,6 @@ public class ListUsersRequest extends Request {
         public Builder phoneRegion(String phoneRegion) {
             this.putQueryParameter("PhoneRegion", phoneRegion);
             this.phoneRegion = phoneRegion;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

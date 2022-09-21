@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateApplicationRequest</p>
  */
 public class CreateApplicationRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("ApplicationName")
     @Validation(required = true, maxLength = 64)
@@ -41,10 +45,6 @@ public class CreateApplicationRequest extends Request {
     @Validation(maxLength = 128)
     private String logoUrl;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("SsoType")
     @Validation(required = true, maxLength = 64)
@@ -52,13 +52,13 @@ public class CreateApplicationRequest extends Request {
 
     private CreateApplicationRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.applicationName = builder.applicationName;
         this.applicationSourceType = builder.applicationSourceType;
         this.applicationTemplateId = builder.applicationTemplateId;
         this.description = builder.description;
         this.instanceId = builder.instanceId;
         this.logoUrl = builder.logoUrl;
-        this.regionId = builder.regionId;
         this.ssoType = builder.ssoType;
     }
 
@@ -73,6 +73,13 @@ public class CreateApplicationRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -118,13 +125,6 @@ public class CreateApplicationRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return ssoType
      */
     public String getSsoType() {
@@ -132,13 +132,13 @@ public class CreateApplicationRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateApplicationRequest, Builder> {
+        private String regionId; 
         private String applicationName; 
         private String applicationSourceType; 
         private String applicationTemplateId; 
         private String description; 
         private String instanceId; 
         private String logoUrl; 
-        private String regionId; 
         private String ssoType; 
 
         private Builder() {
@@ -147,15 +147,24 @@ public class CreateApplicationRequest extends Request {
 
         private Builder(CreateApplicationRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.applicationName = request.applicationName;
             this.applicationSourceType = request.applicationSourceType;
             this.applicationTemplateId = request.applicationTemplateId;
             this.description = request.description;
             this.instanceId = request.instanceId;
             this.logoUrl = request.logoUrl;
-            this.regionId = request.regionId;
             this.ssoType = request.ssoType;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * 应用的表示名称
@@ -208,15 +217,6 @@ public class CreateApplicationRequest extends Request {
         public Builder logoUrl(String logoUrl) {
             this.putQueryParameter("LogoUrl", logoUrl);
             this.logoUrl = logoUrl;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SetApplicationProvisioningConfigRequest</p>
  */
 public class SetApplicationProvisioningConfigRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("ApplicationId")
     @Validation(required = true, maxLength = 64)
@@ -35,18 +39,14 @@ public class SetApplicationProvisioningConfigRequest extends Request {
     @Validation(required = true, maxLength = 64)
     private String provisionProtocolType;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private SetApplicationProvisioningConfigRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.applicationId = builder.applicationId;
         this.callbackProvisioningConfig = builder.callbackProvisioningConfig;
         this.instanceId = builder.instanceId;
         this.provisionPassword = builder.provisionPassword;
         this.provisionProtocolType = builder.provisionProtocolType;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -60,6 +60,13 @@ public class SetApplicationProvisioningConfigRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -97,20 +104,13 @@ public class SetApplicationProvisioningConfigRequest extends Request {
         return this.provisionProtocolType;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<SetApplicationProvisioningConfigRequest, Builder> {
+        private String regionId; 
         private String applicationId; 
         private CallbackProvisioningConfig callbackProvisioningConfig; 
         private String instanceId; 
         private Boolean provisionPassword; 
         private String provisionProtocolType; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -118,13 +118,22 @@ public class SetApplicationProvisioningConfigRequest extends Request {
 
         private Builder(SetApplicationProvisioningConfigRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.applicationId = request.applicationId;
             this.callbackProvisioningConfig = request.callbackProvisioningConfig;
             this.instanceId = request.instanceId;
             this.provisionPassword = request.provisionPassword;
             this.provisionProtocolType = request.provisionProtocolType;
-            this.regionId = request.regionId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * IDaaS的应用资源ID。
@@ -168,15 +177,6 @@ public class SetApplicationProvisioningConfigRequest extends Request {
         public Builder provisionProtocolType(String provisionProtocolType) {
             this.putQueryParameter("ProvisionProtocolType", provisionProtocolType);
             this.provisionProtocolType = provisionProtocolType;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

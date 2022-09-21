@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetOrganizationalUnitRequest</p>
  */
 public class GetOrganizationalUnitRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("InstanceId")
     @Validation(required = true, maxLength = 64)
@@ -22,15 +26,11 @@ public class GetOrganizationalUnitRequest extends Request {
     @Validation(required = true, maxLength = 64)
     private String organizationalUnitId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private GetOrganizationalUnitRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
         this.organizationalUnitId = builder.organizationalUnitId;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -47,6 +47,13 @@ public class GetOrganizationalUnitRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -60,17 +67,10 @@ public class GetOrganizationalUnitRequest extends Request {
         return this.organizationalUnitId;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<GetOrganizationalUnitRequest, Builder> {
+        private String regionId; 
         private String instanceId; 
         private String organizationalUnitId; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -78,10 +78,19 @@ public class GetOrganizationalUnitRequest extends Request {
 
         private Builder(GetOrganizationalUnitRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.instanceId = request.instanceId;
             this.organizationalUnitId = request.organizationalUnitId;
-            this.regionId = request.regionId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * IDaaS EIAM实例的ID。
@@ -98,15 +107,6 @@ public class GetOrganizationalUnitRequest extends Request {
         public Builder organizationalUnitId(String organizationalUnitId) {
             this.putQueryParameter("OrganizationalUnitId", organizationalUnitId);
             this.organizationalUnitId = organizationalUnitId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 
