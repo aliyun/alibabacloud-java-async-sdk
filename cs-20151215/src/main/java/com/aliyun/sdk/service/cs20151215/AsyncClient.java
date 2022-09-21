@@ -182,6 +182,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<RemoveClusterNodesResponse> removeClusterNodes(RemoveClusterNodesRequest request);
 
+    CompletableFuture<RemoveNodePoolNodesResponse> removeNodePoolNodes(RemoveNodePoolNodesRequest request);
+
     CompletableFuture<RemoveWorkflowResponse> removeWorkflow(RemoveWorkflowRequest request);
 
     CompletableFuture<RepairClusterNodePoolResponse> repairClusterNodePool(RepairClusterNodePoolRequest request);
