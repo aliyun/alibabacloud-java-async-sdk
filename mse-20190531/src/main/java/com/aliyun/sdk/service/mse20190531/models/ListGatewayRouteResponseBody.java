@@ -1102,6 +1102,9 @@ public class ListGatewayRouteResponseBody extends TeaModel {
 
     }
     public static class HttpDubboTranscoder extends TeaModel {
+        @NameInMap("DubboServiceGroup")
+        private String dubboServiceGroup;
+
         @NameInMap("DubboServiceName")
         private String dubboServiceName;
 
@@ -1112,6 +1115,7 @@ public class ListGatewayRouteResponseBody extends TeaModel {
         private java.util.List < MothedMapList> mothedMapList;
 
         private HttpDubboTranscoder(Builder builder) {
+            this.dubboServiceGroup = builder.dubboServiceGroup;
             this.dubboServiceName = builder.dubboServiceName;
             this.dubboServiceVersion = builder.dubboServiceVersion;
             this.mothedMapList = builder.mothedMapList;
@@ -1123,6 +1127,13 @@ public class ListGatewayRouteResponseBody extends TeaModel {
 
         public static HttpDubboTranscoder create() {
             return builder().build();
+        }
+
+        /**
+         * @return dubboServiceGroup
+         */
+        public String getDubboServiceGroup() {
+            return this.dubboServiceGroup;
         }
 
         /**
@@ -1147,9 +1158,18 @@ public class ListGatewayRouteResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String dubboServiceGroup; 
             private String dubboServiceName; 
             private String dubboServiceVersion; 
             private java.util.List < MothedMapList> mothedMapList; 
+
+            /**
+             * DubboServiceGroup.
+             */
+            public Builder dubboServiceGroup(String dubboServiceGroup) {
+                this.dubboServiceGroup = dubboServiceGroup;
+                return this;
+            }
 
             /**
              * DubboServiceName.

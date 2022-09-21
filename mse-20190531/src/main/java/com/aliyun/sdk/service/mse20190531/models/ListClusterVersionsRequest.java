@@ -24,11 +24,16 @@ public class ListClusterVersionsRequest extends Request {
     @NameInMap("MseSessionId")
     private String mseSessionId;
 
+    @Query
+    @NameInMap("MseVersion")
+    private String mseVersion;
+
     private ListClusterVersionsRequest(Builder builder) {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
         this.clusterType = builder.clusterType;
         this.mseSessionId = builder.mseSessionId;
+        this.mseVersion = builder.mseVersion;
     }
 
     public static Builder builder() {
@@ -65,10 +70,18 @@ public class ListClusterVersionsRequest extends Request {
         return this.mseSessionId;
     }
 
+    /**
+     * @return mseVersion
+     */
+    public String getMseVersion() {
+        return this.mseVersion;
+    }
+
     public static final class Builder extends Request.Builder<ListClusterVersionsRequest, Builder> {
         private String acceptLanguage; 
         private String clusterType; 
         private String mseSessionId; 
+        private String mseVersion; 
 
         private Builder() {
             super();
@@ -79,6 +92,7 @@ public class ListClusterVersionsRequest extends Request {
             this.acceptLanguage = request.acceptLanguage;
             this.clusterType = request.clusterType;
             this.mseSessionId = request.mseSessionId;
+            this.mseVersion = request.mseVersion;
         } 
 
         /**
@@ -105,6 +119,15 @@ public class ListClusterVersionsRequest extends Request {
         public Builder mseSessionId(String mseSessionId) {
             this.putQueryParameter("MseSessionId", mseSessionId);
             this.mseSessionId = mseSessionId;
+            return this;
+        }
+
+        /**
+         * MseVersion.
+         */
+        public Builder mseVersion(String mseVersion) {
+            this.putQueryParameter("MseVersion", mseVersion);
+            this.mseVersion = mseVersion;
             return this;
         }
 

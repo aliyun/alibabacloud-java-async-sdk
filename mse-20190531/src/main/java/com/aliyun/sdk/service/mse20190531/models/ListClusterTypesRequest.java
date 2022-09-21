@@ -25,6 +25,10 @@ public class ListClusterTypesRequest extends Request {
     private String mseSessionId;
 
     @Query
+    @NameInMap("MseVersion")
+    private String mseVersion;
+
+    @Query
     @NameInMap("RegionId")
     private String regionId;
 
@@ -33,6 +37,7 @@ public class ListClusterTypesRequest extends Request {
         this.acceptLanguage = builder.acceptLanguage;
         this.connectType = builder.connectType;
         this.mseSessionId = builder.mseSessionId;
+        this.mseVersion = builder.mseVersion;
         this.regionId = builder.regionId;
     }
 
@@ -71,6 +76,13 @@ public class ListClusterTypesRequest extends Request {
     }
 
     /**
+     * @return mseVersion
+     */
+    public String getMseVersion() {
+        return this.mseVersion;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -81,6 +93,7 @@ public class ListClusterTypesRequest extends Request {
         private String acceptLanguage; 
         private String connectType; 
         private String mseSessionId; 
+        private String mseVersion; 
         private String regionId; 
 
         private Builder() {
@@ -92,6 +105,7 @@ public class ListClusterTypesRequest extends Request {
             this.acceptLanguage = request.acceptLanguage;
             this.connectType = request.connectType;
             this.mseSessionId = request.mseSessionId;
+            this.mseVersion = request.mseVersion;
             this.regionId = request.regionId;
         } 
 
@@ -119,6 +133,15 @@ public class ListClusterTypesRequest extends Request {
         public Builder mseSessionId(String mseSessionId) {
             this.putQueryParameter("MseSessionId", mseSessionId);
             this.mseSessionId = mseSessionId;
+            return this;
+        }
+
+        /**
+         * MseVersion.
+         */
+        public Builder mseVersion(String mseVersion) {
+            this.putQueryParameter("MseVersion", mseVersion);
+            this.mseVersion = mseVersion;
             return this;
         }
 
