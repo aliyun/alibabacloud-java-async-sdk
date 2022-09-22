@@ -7,18 +7,18 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link QueryClusterSpecificationRequest} extends {@link RequestModel}
+ * {@link ListInstanceCountRequest} extends {@link RequestModel}
  *
- * <p>QueryClusterSpecificationRequest</p>
+ * <p>ListInstanceCountRequest</p>
  */
-public class QueryClusterSpecificationRequest extends Request {
+public class ListInstanceCountRequest extends Request {
     @Query
     @NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
     @Query
-    @NameInMap("ConnectType")
-    private String connectType;
+    @NameInMap("ClusterType")
+    private String clusterType;
 
     @Query
     @NameInMap("MseSessionId")
@@ -28,19 +28,29 @@ public class QueryClusterSpecificationRequest extends Request {
     @NameInMap("MseVersion")
     private String mseVersion;
 
-    private QueryClusterSpecificationRequest(Builder builder) {
+    @Query
+    @NameInMap("RegionId")
+    private String regionId;
+
+    @Query
+    @NameInMap("RequestPars")
+    private String requestPars;
+
+    private ListInstanceCountRequest(Builder builder) {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
-        this.connectType = builder.connectType;
+        this.clusterType = builder.clusterType;
         this.mseSessionId = builder.mseSessionId;
         this.mseVersion = builder.mseVersion;
+        this.regionId = builder.regionId;
+        this.requestPars = builder.requestPars;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static QueryClusterSpecificationRequest create() {
+    public static ListInstanceCountRequest create() {
         return builder().build();
     }
 
@@ -57,10 +67,10 @@ public class QueryClusterSpecificationRequest extends Request {
     }
 
     /**
-     * @return connectType
+     * @return clusterType
      */
-    public String getConnectType() {
-        return this.connectType;
+    public String getClusterType() {
+        return this.clusterType;
     }
 
     /**
@@ -77,22 +87,40 @@ public class QueryClusterSpecificationRequest extends Request {
         return this.mseVersion;
     }
 
-    public static final class Builder extends Request.Builder<QueryClusterSpecificationRequest, Builder> {
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return requestPars
+     */
+    public String getRequestPars() {
+        return this.requestPars;
+    }
+
+    public static final class Builder extends Request.Builder<ListInstanceCountRequest, Builder> {
         private String acceptLanguage; 
-        private String connectType; 
+        private String clusterType; 
         private String mseSessionId; 
         private String mseVersion; 
+        private String regionId; 
+        private String requestPars; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(QueryClusterSpecificationRequest request) {
+        private Builder(ListInstanceCountRequest request) {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
-            this.connectType = request.connectType;
+            this.clusterType = request.clusterType;
             this.mseSessionId = request.mseSessionId;
             this.mseVersion = request.mseVersion;
+            this.regionId = request.regionId;
+            this.requestPars = request.requestPars;
         } 
 
         /**
@@ -105,11 +133,11 @@ public class QueryClusterSpecificationRequest extends Request {
         }
 
         /**
-         * 网络连接类型
+         * ClusterType.
          */
-        public Builder connectType(String connectType) {
-            this.putQueryParameter("ConnectType", connectType);
-            this.connectType = connectType;
+        public Builder clusterType(String clusterType) {
+            this.putQueryParameter("ClusterType", clusterType);
+            this.clusterType = clusterType;
             return this;
         }
 
@@ -131,9 +159,27 @@ public class QueryClusterSpecificationRequest extends Request {
             return this;
         }
 
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * RequestPars.
+         */
+        public Builder requestPars(String requestPars) {
+            this.putQueryParameter("RequestPars", requestPars);
+            this.requestPars = requestPars;
+            return this;
+        }
+
         @Override
-        public QueryClusterSpecificationRequest build() {
-            return new QueryClusterSpecificationRequest(this);
+        public ListInstanceCountRequest build() {
+            return new ListInstanceCountRequest(this);
         } 
 
     } 

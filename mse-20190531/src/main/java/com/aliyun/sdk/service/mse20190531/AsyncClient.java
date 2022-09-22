@@ -188,6 +188,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListGatewaySlbResponse> listGatewaySlb(ListGatewaySlbRequest request);
 
+    CompletableFuture<ListInstanceCountResponse> listInstanceCount(ListInstanceCountRequest request);
+
     CompletableFuture<ListInstancesResponse> listInstances(ListInstancesRequest request);
 
     CompletableFuture<ListListenersByConfigResponse> listListenersByConfig(ListListenersByConfigRequest request);
