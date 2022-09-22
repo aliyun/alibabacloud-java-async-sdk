@@ -253,23 +253,15 @@ public class ListFileResponseBody extends TeaModel {
 
     }
     public static class Paginator extends TeaModel {
-        @NameInMap("PageCount")
-        private Integer pageCount;
-
-        @NameInMap("PageNum")
-        private Integer pageNum;
+        @NameInMap("NextToken")
+        private String nextToken;
 
         @NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("Total")
-        private Integer total;
-
         private Paginator(Builder builder) {
-            this.pageCount = builder.pageCount;
-            this.pageNum = builder.pageNum;
+            this.nextToken = builder.nextToken;
             this.pageSize = builder.pageSize;
-            this.total = builder.total;
         }
 
         public static Builder builder() {
@@ -281,17 +273,10 @@ public class ListFileResponseBody extends TeaModel {
         }
 
         /**
-         * @return pageCount
+         * @return nextToken
          */
-        public Integer getPageCount() {
-            return this.pageCount;
-        }
-
-        /**
-         * @return pageNum
-         */
-        public Integer getPageNum() {
-            return this.pageNum;
+        public String getNextToken() {
+            return this.nextToken;
         }
 
         /**
@@ -301,32 +286,15 @@ public class ListFileResponseBody extends TeaModel {
             return this.pageSize;
         }
 
-        /**
-         * @return total
-         */
-        public Integer getTotal() {
-            return this.total;
-        }
-
         public static final class Builder {
-            private Integer pageCount; 
-            private Integer pageNum; 
+            private String nextToken; 
             private Integer pageSize; 
-            private Integer total; 
 
             /**
-             * PageCount.
+             * NextToken.
              */
-            public Builder pageCount(Integer pageCount) {
-                this.pageCount = pageCount;
-                return this;
-            }
-
-            /**
-             * PageNum.
-             */
-            public Builder pageNum(Integer pageNum) {
-                this.pageNum = pageNum;
+            public Builder nextToken(String nextToken) {
+                this.nextToken = nextToken;
                 return this;
             }
 
@@ -335,14 +303,6 @@ public class ListFileResponseBody extends TeaModel {
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
-                return this;
-            }
-
-            /**
-             * Total.
-             */
-            public Builder total(Integer total) {
-                this.total = total;
                 return this;
             }
 

@@ -36,6 +36,9 @@ public class UpdateFunctionResponseBody extends TeaModel {
     @NameInMap("TimingTriggerConfig")
     private String timingTriggerConfig;
 
+    @NameInMap("TimingTriggerUserPayload")
+    private String timingTriggerUserPayload;
+
     private UpdateFunctionResponseBody(Builder builder) {
         this.createdAt = builder.createdAt;
         this.desc = builder.desc;
@@ -45,6 +48,7 @@ public class UpdateFunctionResponseBody extends TeaModel {
         this.requestId = builder.requestId;
         this.spec = builder.spec;
         this.timingTriggerConfig = builder.timingTriggerConfig;
+        this.timingTriggerUserPayload = builder.timingTriggerUserPayload;
     }
 
     public static Builder builder() {
@@ -111,6 +115,13 @@ public class UpdateFunctionResponseBody extends TeaModel {
         return this.timingTriggerConfig;
     }
 
+    /**
+     * @return timingTriggerUserPayload
+     */
+    public String getTimingTriggerUserPayload() {
+        return this.timingTriggerUserPayload;
+    }
+
     public static final class Builder {
         private String createdAt; 
         private String desc; 
@@ -120,6 +131,7 @@ public class UpdateFunctionResponseBody extends TeaModel {
         private String requestId; 
         private Spec spec; 
         private String timingTriggerConfig; 
+        private String timingTriggerUserPayload; 
 
         /**
          * CreatedAt.
@@ -182,6 +194,14 @@ public class UpdateFunctionResponseBody extends TeaModel {
          */
         public Builder timingTriggerConfig(String timingTriggerConfig) {
             this.timingTriggerConfig = timingTriggerConfig;
+            return this;
+        }
+
+        /**
+         * TimingTriggerUserPayload.
+         */
+        public Builder timingTriggerUserPayload(String timingTriggerUserPayload) {
+            this.timingTriggerUserPayload = timingTriggerUserPayload;
             return this;
         }
 

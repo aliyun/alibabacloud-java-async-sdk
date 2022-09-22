@@ -55,6 +55,10 @@ public class UpdateFunctionRequest extends Request {
     @NameInMap("TimingTriggerConfig")
     private String timingTriggerConfig;
 
+    @Body
+    @NameInMap("TimingTriggerUserPayload")
+    private String timingTriggerUserPayload;
+
     private UpdateFunctionRequest(Builder builder) {
         super(builder);
         this.desc = builder.desc;
@@ -66,6 +70,7 @@ public class UpdateFunctionRequest extends Request {
         this.spaceId = builder.spaceId;
         this.timeout = builder.timeout;
         this.timingTriggerConfig = builder.timingTriggerConfig;
+        this.timingTriggerUserPayload = builder.timingTriggerUserPayload;
     }
 
     public static Builder builder() {
@@ -144,6 +149,13 @@ public class UpdateFunctionRequest extends Request {
         return this.timingTriggerConfig;
     }
 
+    /**
+     * @return timingTriggerUserPayload
+     */
+    public String getTimingTriggerUserPayload() {
+        return this.timingTriggerUserPayload;
+    }
+
     public static final class Builder extends Request.Builder<UpdateFunctionRequest, Builder> {
         private String desc; 
         private String httpTriggerPath; 
@@ -154,6 +166,7 @@ public class UpdateFunctionRequest extends Request {
         private String spaceId; 
         private Integer timeout; 
         private String timingTriggerConfig; 
+        private String timingTriggerUserPayload; 
 
         private Builder() {
             super();
@@ -170,6 +183,7 @@ public class UpdateFunctionRequest extends Request {
             this.spaceId = request.spaceId;
             this.timeout = request.timeout;
             this.timingTriggerConfig = request.timingTriggerConfig;
+            this.timingTriggerUserPayload = request.timingTriggerUserPayload;
         } 
 
         /**
@@ -250,6 +264,15 @@ public class UpdateFunctionRequest extends Request {
         public Builder timingTriggerConfig(String timingTriggerConfig) {
             this.putBodyParameter("TimingTriggerConfig", timingTriggerConfig);
             this.timingTriggerConfig = timingTriggerConfig;
+            return this;
+        }
+
+        /**
+         * TimingTriggerUserPayload.
+         */
+        public Builder timingTriggerUserPayload(String timingTriggerUserPayload) {
+            this.putBodyParameter("TimingTriggerUserPayload", timingTriggerUserPayload);
+            this.timingTriggerUserPayload = timingTriggerUserPayload;
             return this;
         }
 

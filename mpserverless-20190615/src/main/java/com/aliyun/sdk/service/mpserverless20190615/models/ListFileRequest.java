@@ -20,9 +20,9 @@ public class ListFileRequest extends Request {
     @NameInMap("Keyword")
     private String keyword;
 
-    @Body
-    @NameInMap("PageNum")
-    private Integer pageNum;
+    @Query
+    @NameInMap("NextToken")
+    private String nextToken;
 
     @Body
     @NameInMap("PageSize")
@@ -38,7 +38,7 @@ public class ListFileRequest extends Request {
         super(builder);
         this.fileId = builder.fileId;
         this.keyword = builder.keyword;
-        this.pageNum = builder.pageNum;
+        this.nextToken = builder.nextToken;
         this.pageSize = builder.pageSize;
         this.spaceId = builder.spaceId;
     }
@@ -71,10 +71,10 @@ public class ListFileRequest extends Request {
     }
 
     /**
-     * @return pageNum
+     * @return nextToken
      */
-    public Integer getPageNum() {
-        return this.pageNum;
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     /**
@@ -94,7 +94,7 @@ public class ListFileRequest extends Request {
     public static final class Builder extends Request.Builder<ListFileRequest, Builder> {
         private String fileId; 
         private String keyword; 
-        private Integer pageNum; 
+        private String nextToken; 
         private Integer pageSize; 
         private String spaceId; 
 
@@ -106,7 +106,7 @@ public class ListFileRequest extends Request {
             super(request);
             this.fileId = request.fileId;
             this.keyword = request.keyword;
-            this.pageNum = request.pageNum;
+            this.nextToken = request.nextToken;
             this.pageSize = request.pageSize;
             this.spaceId = request.spaceId;
         } 
@@ -130,11 +130,11 @@ public class ListFileRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * NextToken.
          */
-        public Builder pageNum(Integer pageNum) {
-            this.putBodyParameter("PageNum", pageNum);
-            this.pageNum = pageNum;
+        public Builder nextToken(String nextToken) {
+            this.putQueryParameter("NextToken", nextToken);
+            this.nextToken = nextToken;
             return this;
         }
 

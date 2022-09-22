@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListSpaceRequest extends Request {
     @Body
+    @NameInMap("EmasWorkspaceId")
+    private String emasWorkspaceId;
+
+    @Body
     @NameInMap("PageNum")
     private Integer pageNum;
 
@@ -27,6 +31,7 @@ public class ListSpaceRequest extends Request {
 
     private ListSpaceRequest(Builder builder) {
         super(builder);
+        this.emasWorkspaceId = builder.emasWorkspaceId;
         this.pageNum = builder.pageNum;
         this.pageSize = builder.pageSize;
         this.spaceIds = builder.spaceIds;
@@ -43,6 +48,13 @@ public class ListSpaceRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return emasWorkspaceId
+     */
+    public String getEmasWorkspaceId() {
+        return this.emasWorkspaceId;
     }
 
     /**
@@ -67,6 +79,7 @@ public class ListSpaceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListSpaceRequest, Builder> {
+        private String emasWorkspaceId; 
         private Integer pageNum; 
         private Integer pageSize; 
         private java.util.List < String > spaceIds; 
@@ -77,10 +90,20 @@ public class ListSpaceRequest extends Request {
 
         private Builder(ListSpaceRequest request) {
             super(request);
+            this.emasWorkspaceId = request.emasWorkspaceId;
             this.pageNum = request.pageNum;
             this.pageSize = request.pageSize;
             this.spaceIds = request.spaceIds;
         } 
+
+        /**
+         * EmasWorkspaceId.
+         */
+        public Builder emasWorkspaceId(String emasWorkspaceId) {
+            this.putBodyParameter("EmasWorkspaceId", emasWorkspaceId);
+            this.emasWorkspaceId = emasWorkspaceId;
+            return this;
+        }
 
         /**
          * PageNum.

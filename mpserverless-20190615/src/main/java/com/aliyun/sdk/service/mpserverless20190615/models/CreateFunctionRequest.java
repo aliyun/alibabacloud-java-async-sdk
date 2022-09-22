@@ -18,6 +18,10 @@ public class CreateFunctionRequest extends Request {
     private String desc;
 
     @Body
+    @NameInMap("Memory")
+    private Integer memory;
+
+    @Body
     @NameInMap("Name")
     @Validation(required = true)
     private String name;
@@ -31,12 +35,18 @@ public class CreateFunctionRequest extends Request {
     @Validation(required = true)
     private String spaceId;
 
+    @Body
+    @NameInMap("Timeout")
+    private Integer timeout;
+
     private CreateFunctionRequest(Builder builder) {
         super(builder);
         this.desc = builder.desc;
+        this.memory = builder.memory;
         this.name = builder.name;
         this.runtime = builder.runtime;
         this.spaceId = builder.spaceId;
+        this.timeout = builder.timeout;
     }
 
     public static Builder builder() {
@@ -60,6 +70,13 @@ public class CreateFunctionRequest extends Request {
     }
 
     /**
+     * @return memory
+     */
+    public Integer getMemory() {
+        return this.memory;
+    }
+
+    /**
      * @return name
      */
     public String getName() {
@@ -80,11 +97,20 @@ public class CreateFunctionRequest extends Request {
         return this.spaceId;
     }
 
+    /**
+     * @return timeout
+     */
+    public Integer getTimeout() {
+        return this.timeout;
+    }
+
     public static final class Builder extends Request.Builder<CreateFunctionRequest, Builder> {
         private String desc; 
+        private Integer memory; 
         private String name; 
         private String runtime; 
         private String spaceId; 
+        private Integer timeout; 
 
         private Builder() {
             super();
@@ -93,9 +119,11 @@ public class CreateFunctionRequest extends Request {
         private Builder(CreateFunctionRequest request) {
             super(request);
             this.desc = request.desc;
+            this.memory = request.memory;
             this.name = request.name;
             this.runtime = request.runtime;
             this.spaceId = request.spaceId;
+            this.timeout = request.timeout;
         } 
 
         /**
@@ -104,6 +132,15 @@ public class CreateFunctionRequest extends Request {
         public Builder desc(String desc) {
             this.putBodyParameter("Desc", desc);
             this.desc = desc;
+            return this;
+        }
+
+        /**
+         * Memory.
+         */
+        public Builder memory(Integer memory) {
+            this.putBodyParameter("Memory", memory);
+            this.memory = memory;
             return this;
         }
 
@@ -131,6 +168,15 @@ public class CreateFunctionRequest extends Request {
         public Builder spaceId(String spaceId) {
             this.putBodyParameter("SpaceId", spaceId);
             this.spaceId = spaceId;
+            return this;
+        }
+
+        /**
+         * Timeout.
+         */
+        public Builder timeout(Integer timeout) {
+            this.putBodyParameter("Timeout", timeout);
+            this.timeout = timeout;
             return this;
         }
 

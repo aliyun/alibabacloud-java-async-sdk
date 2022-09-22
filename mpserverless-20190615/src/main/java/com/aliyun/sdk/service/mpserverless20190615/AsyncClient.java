@@ -80,6 +80,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeSpaceClientConfigResponse> describeSpaceClientConfig(DescribeSpaceClientConfigRequest request);
 
+    CompletableFuture<DescribeSpacesResponse> describeSpaces(DescribeSpacesRequest request);
+
     CompletableFuture<DescribeWebHostingFileResponse> describeWebHostingFile(DescribeWebHostingFileRequest request);
 
     CompletableFuture<EnableExtensionResponse> enableExtension(EnableExtensionRequest request);
@@ -135,6 +137,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryDBRestoreTaskStatusResponse> queryDBRestoreTaskStatus(QueryDBRestoreTaskStatusRequest request);
 
     CompletableFuture<QueryServiceStatusResponse> queryServiceStatus(QueryServiceStatusRequest request);
+
+    CompletableFuture<QuerySpaceConsumptionResponse> querySpaceConsumption(QuerySpaceConsumptionRequest request);
+
+    CompletableFuture<QuerySpaceSpecDetailResponse> querySpaceSpecDetail(QuerySpaceSpecDetailRequest request);
+
+    CompletableFuture<QuerySpaceUsageResponse> querySpaceUsage(QuerySpaceUsageRequest request);
+
+    CompletableFuture<RefreshWebHostingCustomDomainCacheResponse> refreshWebHostingCustomDomainCache(RefreshWebHostingCustomDomainCacheRequest request);
 
     CompletableFuture<RegisterFileResponse> registerFile(RegisterFileRequest request);
 
