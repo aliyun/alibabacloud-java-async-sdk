@@ -12,14 +12,8 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAvailableResourceInfoRequest</p>
  */
 public class DescribeAvailableResourceInfoRequest extends Request {
-    @Query
-    @NameInMap("Version")
-    @Validation(required = true)
-    private String version;
-
     private DescribeAvailableResourceInfoRequest(Builder builder) {
         super(builder);
-        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -35,15 +29,7 @@ public class DescribeAvailableResourceInfoRequest extends Request {
         return new Builder(this);
     }
 
-    /**
-     * @return version
-     */
-    public String getVersion() {
-        return this.version;
-    }
-
     public static final class Builder extends Request.Builder<DescribeAvailableResourceInfoRequest, Builder> {
-        private String version; 
 
         private Builder() {
             super();
@@ -51,17 +37,7 @@ public class DescribeAvailableResourceInfoRequest extends Request {
 
         private Builder(DescribeAvailableResourceInfoRequest request) {
             super(request);
-            this.version = request.version;
         } 
-
-        /**
-         * Version.
-         */
-        public Builder version(String version) {
-            this.putQueryParameter("Version", version);
-            this.version = version;
-            return this;
-        }
 
         @Override
         public DescribeAvailableResourceInfoRequest build() {

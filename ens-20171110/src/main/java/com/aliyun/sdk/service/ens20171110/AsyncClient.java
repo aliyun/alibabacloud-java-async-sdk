@@ -18,6 +18,8 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
+    CompletableFuture<AccosicateNetworkAclResponse> accosicateNetworkAcl(AccosicateNetworkAclRequest request);
+
     CompletableFuture<AddBackendServersResponse> addBackendServers(AddBackendServersRequest request);
 
     CompletableFuture<AddDeviceInternetPortResponse> addDeviceInternetPort(AddDeviceInternetPortRequest request);
@@ -52,6 +54,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateEpnInstanceResponse> createEpnInstance(CreateEpnInstanceRequest request);
 
+    CompletableFuture<CreateFileSystemResponse> createFileSystem(CreateFileSystemRequest request);
+
     CompletableFuture<CreateForwardEntryResponse> createForwardEntry(CreateForwardEntryRequest request);
 
     CompletableFuture<CreateImageResponse> createImage(CreateImageRequest request);
@@ -70,9 +74,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateLoadBalancerUDPListenerResponse> createLoadBalancerUDPListener(CreateLoadBalancerUDPListenerRequest request);
 
+    CompletableFuture<CreateMountTargetResponse> createMountTarget(CreateMountTargetRequest request);
+
     CompletableFuture<CreateNatGatewayResponse> createNatGateway(CreateNatGatewayRequest request);
 
     CompletableFuture<CreateNetworkResponse> createNetwork(CreateNetworkRequest request);
+
+    CompletableFuture<CreateNetworkAclResponse> createNetworkAcl(CreateNetworkAclRequest request);
+
+    CompletableFuture<CreateNetworkAclEntryResponse> createNetworkAclEntry(CreateNetworkAclEntryRequest request);
 
     CompletableFuture<CreateSecurityGroupResponse> createSecurityGroup(CreateSecurityGroupRequest request);
 
@@ -88,6 +98,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteEpnInstanceResponse> deleteEpnInstance(DeleteEpnInstanceRequest request);
 
+    CompletableFuture<DeleteFileSystemResponse> deleteFileSystem(DeleteFileSystemRequest request);
+
     CompletableFuture<DeleteForwardEntryResponse> deleteForwardEntry(DeleteForwardEntryRequest request);
 
     CompletableFuture<DeleteImageResponse> deleteImage(DeleteImageRequest request);
@@ -96,9 +108,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteLoadBalancerListenerResponse> deleteLoadBalancerListener(DeleteLoadBalancerListenerRequest request);
 
+    CompletableFuture<DeleteMountTargetResponse> deleteMountTarget(DeleteMountTargetRequest request);
+
     CompletableFuture<DeleteNatGatewayResponse> deleteNatGateway(DeleteNatGatewayRequest request);
 
     CompletableFuture<DeleteNetworkResponse> deleteNetwork(DeleteNetworkRequest request);
+
+    CompletableFuture<DeleteNetworkAclResponse> deleteNetworkAcl(DeleteNetworkAclRequest request);
+
+    CompletableFuture<DeleteNetworkAclEntryResponse> deleteNetworkAclEntry(DeleteNetworkAclEntryRequest request);
 
     CompletableFuture<DeleteSecurityGroupResponse> deleteSecurityGroup(DeleteSecurityGroupRequest request);
 
@@ -210,7 +228,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeMeasurementDataResponse> describeMeasurementData(DescribeMeasurementDataRequest request);
 
+    CompletableFuture<DescribeMountTargetsResponse> describeMountTargets(DescribeMountTargetsRequest request);
+
     CompletableFuture<DescribeNatGatewaysResponse> describeNatGateways(DescribeNatGatewaysRequest request);
+
+    CompletableFuture<DescribeNetworkAclsResponse> describeNetworkAcls(DescribeNetworkAclsRequest request);
 
     CompletableFuture<DescribeNetworkAttributeResponse> describeNetworkAttribute(DescribeNetworkAttributeRequest request);
 
@@ -229,6 +251,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeSecurityGroupAttributeResponse> describeSecurityGroupAttribute(DescribeSecurityGroupAttributeRequest request);
 
     CompletableFuture<DescribeSecurityGroupsResponse> describeSecurityGroups(DescribeSecurityGroupsRequest request);
+
+    CompletableFuture<DescribeSelfImagesResponse> describeSelfImages(DescribeSelfImagesRequest request);
 
     CompletableFuture<DescribeServcieScheduleResponse> describeServcieSchedule(DescribeServcieScheduleRequest request);
 
@@ -267,6 +291,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyEnsEipAddressAttributeResponse> modifyEnsEipAddressAttribute(ModifyEnsEipAddressAttributeRequest request);
 
     CompletableFuture<ModifyEpnInstanceResponse> modifyEpnInstance(ModifyEpnInstanceRequest request);
+
+    CompletableFuture<ModifyFileSystemResponse> modifyFileSystem(ModifyFileSystemRequest request);
 
     CompletableFuture<ModifyForwardEntryResponse> modifyForwardEntry(ModifyForwardEntryRequest request);
 
@@ -328,6 +354,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ResetDeviceInstanceResponse> resetDeviceInstance(ResetDeviceInstanceRequest request);
 
+    CompletableFuture<ResizeDiskResponse> resizeDisk(ResizeDiskRequest request);
+
     CompletableFuture<RestartDeviceInstanceResponse> restartDeviceInstance(RestartDeviceInstanceRequest request);
 
     CompletableFuture<RevokeSecurityGroupResponse> revokeSecurityGroup(RevokeSecurityGroupRequest request);
@@ -367,6 +395,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UnAssociateEnsEipAddressResponse> unAssociateEnsEipAddress(UnAssociateEnsEipAddressRequest request);
 
     CompletableFuture<UnassignPrivateIpAddressesResponse> unassignPrivateIpAddresses(UnassignPrivateIpAddressesRequest request);
+
+    CompletableFuture<UnassociateNetworkAclResponse> unassociateNetworkAcl(UnassociateNetworkAclRequest request);
 
     CompletableFuture<UpgradeAICInstanceImageResponse> upgradeAICInstanceImage(UpgradeAICInstanceImageRequest request);
 

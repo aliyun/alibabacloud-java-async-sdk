@@ -27,6 +27,9 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
     @NameInMap("EnsRegionId")
     private String ensRegionId;
 
+    @NameInMap("NetworkAclId")
+    private String networkAclId;
+
     @NameInMap("NetworkId")
     private String networkId;
 
@@ -51,6 +54,7 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
         this.createdTime = builder.createdTime;
         this.description = builder.description;
         this.ensRegionId = builder.ensRegionId;
+        this.networkAclId = builder.networkAclId;
         this.networkId = builder.networkId;
         this.networkName = builder.networkName;
         this.requestId = builder.requestId;
@@ -103,6 +107,13 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return networkAclId
+     */
+    public String getNetworkAclId() {
+        return this.networkAclId;
+    }
+
+    /**
      * @return networkId
      */
     public String getNetworkId() {
@@ -150,6 +161,7 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
         private String createdTime; 
         private String description; 
         private String ensRegionId; 
+        private String networkAclId; 
         private String networkId; 
         private String networkName; 
         private String requestId; 
@@ -194,6 +206,14 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
          */
         public Builder ensRegionId(String ensRegionId) {
             this.ensRegionId = ensRegionId;
+            return this;
+        }
+
+        /**
+         * NetworkAclId.
+         */
+        public Builder networkAclId(String networkAclId) {
+            this.networkAclId = networkAclId;
             return this;
         }
 

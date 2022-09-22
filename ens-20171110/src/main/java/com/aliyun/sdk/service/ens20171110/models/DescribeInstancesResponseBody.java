@@ -1120,6 +1120,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("InstanceResourceType")
         private String instanceResourceType;
 
+        @NameInMap("InstanceTypeFamily")
+        private String instanceTypeFamily;
+
         @NameInMap("InternetMaxBandwidthIn")
         private Integer internetMaxBandwidthIn;
 
@@ -1169,6 +1172,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             this.instanceId = builder.instanceId;
             this.instanceName = builder.instanceName;
             this.instanceResourceType = builder.instanceResourceType;
+            this.instanceTypeFamily = builder.instanceTypeFamily;
             this.internetMaxBandwidthIn = builder.internetMaxBandwidthIn;
             this.internetMaxBandwidthOut = builder.internetMaxBandwidthOut;
             this.memory = builder.memory;
@@ -1276,6 +1280,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return instanceTypeFamily
+         */
+        public String getInstanceTypeFamily() {
+            return this.instanceTypeFamily;
+        }
+
+        /**
          * @return internetMaxBandwidthIn
          */
         public Integer getInternetMaxBandwidthIn() {
@@ -1372,6 +1383,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String instanceId; 
             private String instanceName; 
             private String instanceResourceType; 
+            private String instanceTypeFamily; 
             private Integer internetMaxBandwidthIn; 
             private Integer internetMaxBandwidthOut; 
             private Integer memory; 
@@ -1478,6 +1490,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
              */
             public Builder instanceResourceType(String instanceResourceType) {
                 this.instanceResourceType = instanceResourceType;
+                return this;
+            }
+
+            /**
+             * InstanceTypeFamily.
+             */
+            public Builder instanceTypeFamily(String instanceTypeFamily) {
+                this.instanceTypeFamily = instanceTypeFamily;
                 return this;
             }
 
