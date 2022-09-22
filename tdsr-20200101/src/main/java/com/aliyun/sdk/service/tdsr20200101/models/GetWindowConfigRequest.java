@@ -12,18 +12,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetWindowConfigRequest</p>
  */
 public class GetWindowConfigRequest extends Request {
-    @Query
-    @NameInMap("PreviewToken")
-    private String previewToken;
-
     @Host
     @NameInMap("RegionId")
     private String regionId;
 
+    @Query
+    @NameInMap("PreviewToken")
+    private String previewToken;
+
     private GetWindowConfigRequest(Builder builder) {
         super(builder);
-        this.previewToken = builder.previewToken;
         this.regionId = builder.regionId;
+        this.previewToken = builder.previewToken;
     }
 
     public static Builder builder() {
@@ -40,22 +40,22 @@ public class GetWindowConfigRequest extends Request {
     }
 
     /**
-     * @return previewToken
-     */
-    public String getPreviewToken() {
-        return this.previewToken;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
     }
 
+    /**
+     * @return previewToken
+     */
+    public String getPreviewToken() {
+        return this.previewToken;
+    }
+
     public static final class Builder extends Request.Builder<GetWindowConfigRequest, Builder> {
-        private String previewToken; 
         private String regionId; 
+        private String previewToken; 
 
         private Builder() {
             super();
@@ -63,18 +63,9 @@ public class GetWindowConfigRequest extends Request {
 
         private Builder(GetWindowConfigRequest request) {
             super(request);
-            this.previewToken = request.previewToken;
             this.regionId = request.regionId;
+            this.previewToken = request.previewToken;
         } 
-
-        /**
-         * PreviewToken.
-         */
-        public Builder previewToken(String previewToken) {
-            this.putQueryParameter("PreviewToken", previewToken);
-            this.previewToken = previewToken;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -82,6 +73,15 @@ public class GetWindowConfigRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * PreviewToken.
+         */
+        public Builder previewToken(String previewToken) {
+            this.putQueryParameter("PreviewToken", previewToken);
+            this.previewToken = previewToken;
             return this;
         }
 

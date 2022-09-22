@@ -21,6 +21,9 @@ public class DetailSceneResponseBody extends TeaModel {
     @NameInMap("CoverUrl")
     private String coverUrl;
 
+    @NameInMap("FloorPlans")
+    private java.util.List < FloorPlans> floorPlans;
+
     @NameInMap("GmtCreate")
     private Long gmtCreate;
 
@@ -67,6 +70,7 @@ public class DetailSceneResponseBody extends TeaModel {
         this.captures = builder.captures;
         this.code = builder.code;
         this.coverUrl = builder.coverUrl;
+        this.floorPlans = builder.floorPlans;
         this.gmtCreate = builder.gmtCreate;
         this.gmtModified = builder.gmtModified;
         this.id = builder.id;
@@ -110,6 +114,13 @@ public class DetailSceneResponseBody extends TeaModel {
      */
     public String getCoverUrl() {
         return this.coverUrl;
+    }
+
+    /**
+     * @return floorPlans
+     */
+    public java.util.List < FloorPlans> getFloorPlans() {
+        return this.floorPlans;
     }
 
     /**
@@ -214,6 +225,7 @@ public class DetailSceneResponseBody extends TeaModel {
         private java.util.List < Captures> captures; 
         private Long code; 
         private String coverUrl; 
+        private java.util.List < FloorPlans> floorPlans; 
         private Long gmtCreate; 
         private Long gmtModified; 
         private String id; 
@@ -250,6 +262,14 @@ public class DetailSceneResponseBody extends TeaModel {
          */
         public Builder coverUrl(String coverUrl) {
             this.coverUrl = coverUrl;
+            return this;
+        }
+
+        /**
+         * FloorPlans.
+         */
+        public Builder floorPlans(java.util.List < FloorPlans> floorPlans) {
+            this.floorPlans = floorPlans;
             return this;
         }
 
@@ -427,6 +447,107 @@ public class DetailSceneResponseBody extends TeaModel {
 
             public Captures build() {
                 return new Captures(this);
+            } 
+
+        } 
+
+    }
+    public static class FloorPlans extends TeaModel {
+        @NameInMap("ColorMapUrl")
+        private String colorMapUrl;
+
+        @NameInMap("FloorLabel")
+        private String floorLabel;
+
+        @NameInMap("FloorName")
+        private String floorName;
+
+        @NameInMap("MiniMapUrl")
+        private String miniMapUrl;
+
+        private FloorPlans(Builder builder) {
+            this.colorMapUrl = builder.colorMapUrl;
+            this.floorLabel = builder.floorLabel;
+            this.floorName = builder.floorName;
+            this.miniMapUrl = builder.miniMapUrl;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static FloorPlans create() {
+            return builder().build();
+        }
+
+        /**
+         * @return colorMapUrl
+         */
+        public String getColorMapUrl() {
+            return this.colorMapUrl;
+        }
+
+        /**
+         * @return floorLabel
+         */
+        public String getFloorLabel() {
+            return this.floorLabel;
+        }
+
+        /**
+         * @return floorName
+         */
+        public String getFloorName() {
+            return this.floorName;
+        }
+
+        /**
+         * @return miniMapUrl
+         */
+        public String getMiniMapUrl() {
+            return this.miniMapUrl;
+        }
+
+        public static final class Builder {
+            private String colorMapUrl; 
+            private String floorLabel; 
+            private String floorName; 
+            private String miniMapUrl; 
+
+            /**
+             * 彩色图地址
+             */
+            public Builder colorMapUrl(String colorMapUrl) {
+                this.colorMapUrl = colorMapUrl;
+                return this;
+            }
+
+            /**
+             * 楼层索引
+             */
+            public Builder floorLabel(String floorLabel) {
+                this.floorLabel = floorLabel;
+                return this;
+            }
+
+            /**
+             * 楼层名称
+             */
+            public Builder floorName(String floorName) {
+                this.floorName = floorName;
+                return this;
+            }
+
+            /**
+             * 黑白图地址
+             */
+            public Builder miniMapUrl(String miniMapUrl) {
+                this.miniMapUrl = miniMapUrl;
+                return this;
+            }
+
+            public FloorPlans build() {
+                return new FloorPlans(this);
             } 
 
         } 

@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetHotspotTagRequest</p>
  */
 public class GetHotspotTagRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("Domain")
     private String domain;
@@ -24,10 +28,6 @@ public class GetHotspotTagRequest extends Request {
     @NameInMap("PreviewToken")
     private String previewToken;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("SubSceneUuid")
     private String subSceneUuid;
@@ -38,10 +38,10 @@ public class GetHotspotTagRequest extends Request {
 
     private GetHotspotTagRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.domain = builder.domain;
         this.enabled = builder.enabled;
         this.previewToken = builder.previewToken;
-        this.regionId = builder.regionId;
         this.subSceneUuid = builder.subSceneUuid;
         this.type = builder.type;
     }
@@ -57,6 +57,13 @@ public class GetHotspotTagRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -81,13 +88,6 @@ public class GetHotspotTagRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return subSceneUuid
      */
     public String getSubSceneUuid() {
@@ -102,10 +102,10 @@ public class GetHotspotTagRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetHotspotTagRequest, Builder> {
+        private String regionId; 
         private String domain; 
         private Boolean enabled; 
         private String previewToken; 
-        private String regionId; 
         private String subSceneUuid; 
         private String type; 
 
@@ -115,13 +115,22 @@ public class GetHotspotTagRequest extends Request {
 
         private Builder(GetHotspotTagRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.domain = request.domain;
             this.enabled = request.enabled;
             this.previewToken = request.previewToken;
-            this.regionId = request.regionId;
             this.subSceneUuid = request.subSceneUuid;
             this.type = request.type;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * Domain.
@@ -147,15 +156,6 @@ public class GetHotspotTagRequest extends Request {
         public Builder previewToken(String previewToken) {
             this.putQueryParameter("PreviewToken", previewToken);
             this.previewToken = previewToken;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

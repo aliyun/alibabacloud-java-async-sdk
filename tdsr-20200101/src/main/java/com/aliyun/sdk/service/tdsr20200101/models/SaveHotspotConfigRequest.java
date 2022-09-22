@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SaveHotspotConfigRequest</p>
  */
 public class SaveHotspotConfigRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("ParamTag")
     private String paramTag;
@@ -20,15 +24,11 @@ public class SaveHotspotConfigRequest extends Request {
     @NameInMap("PreviewToken")
     private String previewToken;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private SaveHotspotConfigRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.paramTag = builder.paramTag;
         this.previewToken = builder.previewToken;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -45,6 +45,13 @@ public class SaveHotspotConfigRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return paramTag
      */
     public String getParamTag() {
@@ -58,17 +65,10 @@ public class SaveHotspotConfigRequest extends Request {
         return this.previewToken;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<SaveHotspotConfigRequest, Builder> {
+        private String regionId; 
         private String paramTag; 
         private String previewToken; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -76,10 +76,19 @@ public class SaveHotspotConfigRequest extends Request {
 
         private Builder(SaveHotspotConfigRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.paramTag = request.paramTag;
             this.previewToken = request.previewToken;
-            this.regionId = request.regionId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * ParamTag.
@@ -96,15 +105,6 @@ public class SaveHotspotConfigRequest extends Request {
         public Builder previewToken(String previewToken) {
             this.putQueryParameter("PreviewToken", previewToken);
             this.previewToken = previewToken;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

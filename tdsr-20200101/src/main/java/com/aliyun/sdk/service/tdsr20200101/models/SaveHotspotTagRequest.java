@@ -12,13 +12,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SaveHotspotTagRequest</p>
  */
 public class SaveHotspotTagRequest extends Request {
-    @Query
-    @NameInMap("ParamTag")
-    private String paramTag;
-
     @Host
     @NameInMap("RegionId")
     private String regionId;
+
+    @Query
+    @NameInMap("ParamTag")
+    private String paramTag;
 
     @Query
     @NameInMap("SubSceneUuid")
@@ -26,8 +26,8 @@ public class SaveHotspotTagRequest extends Request {
 
     private SaveHotspotTagRequest(Builder builder) {
         super(builder);
-        this.paramTag = builder.paramTag;
         this.regionId = builder.regionId;
+        this.paramTag = builder.paramTag;
         this.subSceneUuid = builder.subSceneUuid;
     }
 
@@ -45,17 +45,17 @@ public class SaveHotspotTagRequest extends Request {
     }
 
     /**
-     * @return paramTag
-     */
-    public String getParamTag() {
-        return this.paramTag;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return paramTag
+     */
+    public String getParamTag() {
+        return this.paramTag;
     }
 
     /**
@@ -66,8 +66,8 @@ public class SaveHotspotTagRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SaveHotspotTagRequest, Builder> {
-        private String paramTag; 
         private String regionId; 
+        private String paramTag; 
         private String subSceneUuid; 
 
         private Builder() {
@@ -76,19 +76,10 @@ public class SaveHotspotTagRequest extends Request {
 
         private Builder(SaveHotspotTagRequest request) {
             super(request);
-            this.paramTag = request.paramTag;
             this.regionId = request.regionId;
+            this.paramTag = request.paramTag;
             this.subSceneUuid = request.subSceneUuid;
         } 
-
-        /**
-         * ParamTag.
-         */
-        public Builder paramTag(String paramTag) {
-            this.putQueryParameter("ParamTag", paramTag);
-            this.paramTag = paramTag;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -96,6 +87,15 @@ public class SaveHotspotTagRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ParamTag.
+         */
+        public Builder paramTag(String paramTag) {
+            this.putQueryParameter("ParamTag", paramTag);
+            this.paramTag = paramTag;
             return this;
         }
 
