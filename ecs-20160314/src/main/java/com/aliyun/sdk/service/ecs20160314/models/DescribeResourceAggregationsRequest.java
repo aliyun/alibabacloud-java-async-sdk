@@ -246,24 +246,24 @@ public class DescribeResourceAggregationsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeResourceAggregationsRequest response) {
-            super(response);
-            this.aggregators = response.aggregators;
-            this.filter = response.filter;
-            this.global = response.global;
-            this.keyword = response.keyword;
-            this.marker = response.marker;
-            this.maxItems = response.maxItems;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.product = response.product;
-            this.regionId = response.regionId;
-            this.regionNo = response.regionNo;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.resourceType = response.resourceType;
-            this.tagFilter = response.tagFilter;
+        private Builder(DescribeResourceAggregationsRequest request) {
+            super(request);
+            this.aggregators = request.aggregators;
+            this.filter = request.filter;
+            this.global = request.global;
+            this.keyword = request.keyword;
+            this.marker = request.marker;
+            this.maxItems = request.maxItems;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.product = request.product;
+            this.regionId = request.regionId;
+            this.regionNo = request.regionNo;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.resourceType = request.resourceType;
+            this.tagFilter = request.tagFilter;
         } 
 
         /**

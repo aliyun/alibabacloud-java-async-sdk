@@ -142,16 +142,16 @@ public class CreateFunctionFeedbackRequest extends Request {
             super();
         } 
 
-        private Builder(CreateFunctionFeedbackRequest response) {
-            super(response);
-            this.category = response.category;
-            this.feedback = response.feedback;
-            this.functionName = response.functionName;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.suggestion = response.suggestion;
+        private Builder(CreateFunctionFeedbackRequest request) {
+            super(request);
+            this.category = request.category;
+            this.feedback = request.feedback;
+            this.functionName = request.functionName;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.suggestion = request.suggestion;
         } 
 
         /**

@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDedicatedHostsRequest extends Request {
     @Query
+    @NameInMap("SchedulerOptions")
+    private SchedulerOptions schedulerOptions;
+
+    @Query
     @NameInMap("DedicatedHostClusterId")
     private String dedicatedHostClusterId;
 
@@ -80,6 +84,7 @@ public class DescribeDedicatedHostsRequest extends Request {
 
     private DescribeDedicatedHostsRequest(Builder builder) {
         super(builder);
+        this.schedulerOptions = builder.schedulerOptions;
         this.dedicatedHostClusterId = builder.dedicatedHostClusterId;
         this.dedicatedHostIds = builder.dedicatedHostIds;
         this.dedicatedHostName = builder.dedicatedHostName;
@@ -109,6 +114,13 @@ public class DescribeDedicatedHostsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return schedulerOptions
+     */
+    public SchedulerOptions getSchedulerOptions() {
+        return this.schedulerOptions;
     }
 
     /**
@@ -224,6 +236,7 @@ public class DescribeDedicatedHostsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeDedicatedHostsRequest, Builder> {
+        private SchedulerOptions schedulerOptions; 
         private String dedicatedHostClusterId; 
         private String dedicatedHostIds; 
         private String dedicatedHostName; 
@@ -245,25 +258,35 @@ public class DescribeDedicatedHostsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDedicatedHostsRequest response) {
-            super(response);
-            this.dedicatedHostClusterId = response.dedicatedHostClusterId;
-            this.dedicatedHostIds = response.dedicatedHostIds;
-            this.dedicatedHostName = response.dedicatedHostName;
-            this.dedicatedHostType = response.dedicatedHostType;
-            this.lockReason = response.lockReason;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.status = response.status;
-            this.tag = response.tag;
-            this.zoneId = response.zoneId;
+        private Builder(DescribeDedicatedHostsRequest request) {
+            super(request);
+            this.schedulerOptions = request.schedulerOptions;
+            this.dedicatedHostClusterId = request.dedicatedHostClusterId;
+            this.dedicatedHostIds = request.dedicatedHostIds;
+            this.dedicatedHostName = request.dedicatedHostName;
+            this.dedicatedHostType = request.dedicatedHostType;
+            this.lockReason = request.lockReason;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.status = request.status;
+            this.tag = request.tag;
+            this.zoneId = request.zoneId;
         } 
+
+        /**
+         * SchedulerOptions.
+         */
+        public Builder schedulerOptions(SchedulerOptions schedulerOptions) {
+            this.putQueryParameter("SchedulerOptions", schedulerOptions);
+            this.schedulerOptions = schedulerOptions;
+            return this;
+        }
 
         /**
          * DedicatedHostClusterId.
@@ -416,6 +439,47 @@ public class DescribeDedicatedHostsRequest extends Request {
 
     } 
 
+    public static class SchedulerOptions extends TeaModel {
+        @NameInMap("ManagedPrivateSpaceId")
+        private String managedPrivateSpaceId;
+
+        private SchedulerOptions(Builder builder) {
+            this.managedPrivateSpaceId = builder.managedPrivateSpaceId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SchedulerOptions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return managedPrivateSpaceId
+         */
+        public String getManagedPrivateSpaceId() {
+            return this.managedPrivateSpaceId;
+        }
+
+        public static final class Builder {
+            private String managedPrivateSpaceId; 
+
+            /**
+             * ManagedPrivateSpaceId.
+             */
+            public Builder managedPrivateSpaceId(String managedPrivateSpaceId) {
+                this.managedPrivateSpaceId = managedPrivateSpaceId;
+                return this;
+            }
+
+            public SchedulerOptions build() {
+                return new SchedulerOptions(this);
+            } 
+
+        } 
+
+    }
     public static class Tag extends TeaModel {
         @NameInMap("Key")
         private String key;

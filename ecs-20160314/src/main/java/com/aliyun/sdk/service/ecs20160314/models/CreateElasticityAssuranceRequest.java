@@ -12,6 +12,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateElasticityAssuranceRequest</p>
  */
 public class CreateElasticityAssuranceRequest extends Request {
+    @Query
     @NameInMap("PrivatePoolOptions")
     private PrivatePoolOptions privatePoolOptions;
 
@@ -271,32 +272,33 @@ public class CreateElasticityAssuranceRequest extends Request {
             super();
         } 
 
-        private Builder(CreateElasticityAssuranceRequest response) {
-            super(response);
-            this.privatePoolOptions = response.privatePoolOptions;
-            this.assuranceTimes = response.assuranceTimes;
-            this.clientToken = response.clientToken;
-            this.description = response.description;
-            this.instanceAmount = response.instanceAmount;
-            this.instanceCpuCoreCount = response.instanceCpuCoreCount;
-            this.instanceType = response.instanceType;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.period = response.period;
-            this.periodUnit = response.periodUnit;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.startTime = response.startTime;
-            this.tag = response.tag;
-            this.zoneId = response.zoneId;
+        private Builder(CreateElasticityAssuranceRequest request) {
+            super(request);
+            this.privatePoolOptions = request.privatePoolOptions;
+            this.assuranceTimes = request.assuranceTimes;
+            this.clientToken = request.clientToken;
+            this.description = request.description;
+            this.instanceAmount = request.instanceAmount;
+            this.instanceCpuCoreCount = request.instanceCpuCoreCount;
+            this.instanceType = request.instanceType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.period = request.period;
+            this.periodUnit = request.periodUnit;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.startTime = request.startTime;
+            this.tag = request.tag;
+            this.zoneId = request.zoneId;
         } 
 
         /**
          * PrivatePoolOptions.
          */
         public Builder privatePoolOptions(PrivatePoolOptions privatePoolOptions) {
+            this.putQueryParameter("PrivatePoolOptions", privatePoolOptions);
             this.privatePoolOptions = privatePoolOptions;
             return this;
         }

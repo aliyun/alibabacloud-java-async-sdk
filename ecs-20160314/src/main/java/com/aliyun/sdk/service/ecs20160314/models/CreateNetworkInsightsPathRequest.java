@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateNetworkInsightsPathRequest</p>
  */
 public class CreateNetworkInsightsPathRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("ClientToken")
     private String clientToken;
@@ -60,10 +64,6 @@ public class CreateNetworkInsightsPathRequest extends Request {
     @Validation(required = true)
     private String source;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
     @NameInMap("SourceType")
     @Validation(required = true)
@@ -71,6 +71,7 @@ public class CreateNetworkInsightsPathRequest extends Request {
 
     private CreateNetworkInsightsPathRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.clientToken = builder.clientToken;
         this.destination = builder.destination;
         this.destinationPort = builder.destinationPort;
@@ -82,7 +83,6 @@ public class CreateNetworkInsightsPathRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.source = builder.source;
-        this.sourceRegionId = builder.sourceRegionId;
         this.sourceType = builder.sourceType;
     }
 
@@ -97,6 +97,13 @@ public class CreateNetworkInsightsPathRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -177,13 +184,6 @@ public class CreateNetworkInsightsPathRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
      * @return sourceType
      */
     public String getSourceType() {
@@ -191,6 +191,7 @@ public class CreateNetworkInsightsPathRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateNetworkInsightsPathRequest, Builder> {
+        private String sourceRegionId; 
         private String clientToken; 
         private String destination; 
         private String destinationPort; 
@@ -202,29 +203,37 @@ public class CreateNetworkInsightsPathRequest extends Request {
         private String regionId; 
         private Long resourceOwnerId; 
         private String source; 
-        private String sourceRegionId; 
         private String sourceType; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateNetworkInsightsPathRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.destination = response.destination;
-            this.destinationPort = response.destinationPort;
-            this.destinationType = response.destinationType;
-            this.dryRun = response.dryRun;
-            this.needDiagnoseGuest = response.needDiagnoseGuest;
-            this.networkInsightsPathName = response.networkInsightsPathName;
-            this.protocol = response.protocol;
-            this.regionId = response.regionId;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.source = response.source;
-            this.sourceRegionId = response.sourceRegionId;
-            this.sourceType = response.sourceType;
+        private Builder(CreateNetworkInsightsPathRequest request) {
+            super(request);
+            this.sourceRegionId = request.sourceRegionId;
+            this.clientToken = request.clientToken;
+            this.destination = request.destination;
+            this.destinationPort = request.destinationPort;
+            this.destinationType = request.destinationType;
+            this.dryRun = request.dryRun;
+            this.needDiagnoseGuest = request.needDiagnoseGuest;
+            this.networkInsightsPathName = request.networkInsightsPathName;
+            this.protocol = request.protocol;
+            this.regionId = request.regionId;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.source = request.source;
+            this.sourceType = request.sourceType;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * ClientToken.
@@ -322,15 +331,6 @@ public class CreateNetworkInsightsPathRequest extends Request {
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
             this.source = source;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

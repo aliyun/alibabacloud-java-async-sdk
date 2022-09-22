@@ -71,7 +71,6 @@ public class CreateDisksRequest extends Request {
 
     @Query
     @NameInMap("ProvisionedIops")
-    @Validation(maximum = 50000)
     private Long provisionedIops;
 
     @Query
@@ -376,34 +375,34 @@ public class CreateDisksRequest extends Request {
             super();
         } 
 
-        private Builder(CreateDisksRequest response) {
-            super(response);
-            this.amount = response.amount;
-            this.autoSnapshotPolicyId = response.autoSnapshotPolicyId;
-            this.burstingEnabled = response.burstingEnabled;
-            this.category = response.category;
-            this.clientToken = response.clientToken;
-            this.description = response.description;
-            this.diskName = response.diskName;
-            this.encryptAlgorithm = response.encryptAlgorithm;
-            this.encrypted = response.encrypted;
-            this.KMSKeyId = response.KMSKeyId;
-            this.multiAttach = response.multiAttach;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.performanceLevel = response.performanceLevel;
-            this.provisionedIops = response.provisionedIops;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.size = response.size;
-            this.snapshotId = response.snapshotId;
-            this.storageClusterId = response.storageClusterId;
-            this.storageSetId = response.storageSetId;
-            this.storageSetPartitionNumber = response.storageSetPartitionNumber;
-            this.tag = response.tag;
-            this.zoneId = response.zoneId;
+        private Builder(CreateDisksRequest request) {
+            super(request);
+            this.amount = request.amount;
+            this.autoSnapshotPolicyId = request.autoSnapshotPolicyId;
+            this.burstingEnabled = request.burstingEnabled;
+            this.category = request.category;
+            this.clientToken = request.clientToken;
+            this.description = request.description;
+            this.diskName = request.diskName;
+            this.encryptAlgorithm = request.encryptAlgorithm;
+            this.encrypted = request.encrypted;
+            this.KMSKeyId = request.KMSKeyId;
+            this.multiAttach = request.multiAttach;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.performanceLevel = request.performanceLevel;
+            this.provisionedIops = request.provisionedIops;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.size = request.size;
+            this.snapshotId = request.snapshotId;
+            this.storageClusterId = request.storageClusterId;
+            this.storageSetId = request.storageSetId;
+            this.storageSetPartitionNumber = request.storageSetPartitionNumber;
+            this.tag = request.tag;
+            this.zoneId = request.zoneId;
         } 
 
         /**

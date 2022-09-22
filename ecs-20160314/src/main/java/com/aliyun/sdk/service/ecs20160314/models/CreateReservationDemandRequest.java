@@ -523,45 +523,45 @@ public class CreateReservationDemandRequest extends Request {
             super();
         } 
 
-        private Builder(CreateReservationDemandRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.confirmType = response.confirmType;
-            this.couponAuto = response.couponAuto;
-            this.couponType = response.couponType;
-            this.description = response.description;
-            this.endTime = response.endTime;
-            this.instanceAmount = response.instanceAmount;
-            this.instanceChargeType = response.instanceChargeType;
-            this.instanceCpuCoreCount = response.instanceCpuCoreCount;
-            this.instanceTypeFamily = response.instanceTypeFamily;
-            this.instanceTypes = response.instanceTypes;
-            this.matchCriteria = response.matchCriteria;
-            this.name = response.name;
-            this.period = response.period;
-            this.periodUnit = response.periodUnit;
-            this.phoneNumber = response.phoneNumber;
-            this.platform = response.platform;
-            this.privatePoolOptions = response.privatePoolOptions;
-            this.productType = response.productType;
-            this.regionId = response.regionId;
-            this.reservedInstanceDescription = response.reservedInstanceDescription;
-            this.reservedInstanceName = response.reservedInstanceName;
-            this.reservedInstanceOfferingType = response.reservedInstanceOfferingType;
-            this.reservedInstanceScope = response.reservedInstanceScope;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.resourceSupplyType = response.resourceSupplyType;
-            this.savingPlanDescription = response.savingPlanDescription;
-            this.savingPlanHourFee = response.savingPlanHourFee;
-            this.savingPlanId = response.savingPlanId;
-            this.savingPlanInstanceTypeFamilyGroup = response.savingPlanInstanceTypeFamilyGroup;
-            this.savingPlanName = response.savingPlanName;
-            this.savingPlanPayMode = response.savingPlanPayMode;
-            this.savingPlanSavingType = response.savingPlanSavingType;
-            this.startTime = response.startTime;
-            this.tag = response.tag;
-            this.zoneIds = response.zoneIds;
+        private Builder(CreateReservationDemandRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.confirmType = request.confirmType;
+            this.couponAuto = request.couponAuto;
+            this.couponType = request.couponType;
+            this.description = request.description;
+            this.endTime = request.endTime;
+            this.instanceAmount = request.instanceAmount;
+            this.instanceChargeType = request.instanceChargeType;
+            this.instanceCpuCoreCount = request.instanceCpuCoreCount;
+            this.instanceTypeFamily = request.instanceTypeFamily;
+            this.instanceTypes = request.instanceTypes;
+            this.matchCriteria = request.matchCriteria;
+            this.name = request.name;
+            this.period = request.period;
+            this.periodUnit = request.periodUnit;
+            this.phoneNumber = request.phoneNumber;
+            this.platform = request.platform;
+            this.privatePoolOptions = request.privatePoolOptions;
+            this.productType = request.productType;
+            this.regionId = request.regionId;
+            this.reservedInstanceDescription = request.reservedInstanceDescription;
+            this.reservedInstanceName = request.reservedInstanceName;
+            this.reservedInstanceOfferingType = request.reservedInstanceOfferingType;
+            this.reservedInstanceScope = request.reservedInstanceScope;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.resourceSupplyType = request.resourceSupplyType;
+            this.savingPlanDescription = request.savingPlanDescription;
+            this.savingPlanHourFee = request.savingPlanHourFee;
+            this.savingPlanId = request.savingPlanId;
+            this.savingPlanInstanceTypeFamilyGroup = request.savingPlanInstanceTypeFamilyGroup;
+            this.savingPlanName = request.savingPlanName;
+            this.savingPlanPayMode = request.savingPlanPayMode;
+            this.savingPlanSavingType = request.savingPlanSavingType;
+            this.startTime = request.startTime;
+            this.tag = request.tag;
+            this.zoneIds = request.zoneIds;
         } 
 
         /**

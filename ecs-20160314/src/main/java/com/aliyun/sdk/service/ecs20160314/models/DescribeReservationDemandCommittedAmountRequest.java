@@ -206,21 +206,21 @@ public class DescribeReservationDemandCommittedAmountRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeReservationDemandCommittedAmountRequest response) {
-            super(response);
-            this.demandPlan = response.demandPlan;
-            this.instanceFamily = response.instanceFamily;
-            this.instanceFamilySet = response.instanceFamilySet;
-            this.offeringType = response.offeringType;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.period = response.period;
-            this.periodUnit = response.periodUnit;
-            this.planType = response.planType;
-            this.platform = response.platform;
-            this.purchaseMethod = response.purchaseMethod;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
+        private Builder(DescribeReservationDemandCommittedAmountRequest request) {
+            super(request);
+            this.demandPlan = request.demandPlan;
+            this.instanceFamily = request.instanceFamily;
+            this.instanceFamilySet = request.instanceFamilySet;
+            this.offeringType = request.offeringType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.period = request.period;
+            this.periodUnit = request.periodUnit;
+            this.planType = request.planType;
+            this.platform = request.platform;
+            this.purchaseMethod = request.purchaseMethod;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
         } 
 
         /**

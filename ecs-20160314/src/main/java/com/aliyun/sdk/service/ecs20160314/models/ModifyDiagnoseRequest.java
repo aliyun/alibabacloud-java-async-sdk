@@ -127,15 +127,15 @@ public class ModifyDiagnoseRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyDiagnoseRequest response) {
-            super(response);
-            this.diagnoseId = response.diagnoseId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.status = response.status;
+        private Builder(ModifyDiagnoseRequest request) {
+            super(request);
+            this.diagnoseId = request.diagnoseId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.status = request.status;
         } 
 
         /**

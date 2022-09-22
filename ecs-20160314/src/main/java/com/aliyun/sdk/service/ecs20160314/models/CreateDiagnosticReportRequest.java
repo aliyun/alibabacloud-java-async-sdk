@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateDiagnosticReportRequest</p>
  */
 public class CreateDiagnosticReportRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("ClientToken")
     private String clientToken;
@@ -67,10 +71,6 @@ public class CreateDiagnosticReportRequest extends Request {
     @Validation(required = true)
     private String resourceType;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
     @NameInMap("SourceSystem")
     private String sourceSystem;
@@ -81,6 +81,7 @@ public class CreateDiagnosticReportRequest extends Request {
 
     private CreateDiagnosticReportRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.clientToken = builder.clientToken;
         this.commandName = builder.commandName;
         this.commandType = builder.commandType;
@@ -94,7 +95,6 @@ public class CreateDiagnosticReportRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.resourceType = builder.resourceType;
-        this.sourceRegionId = builder.sourceRegionId;
         this.sourceSystem = builder.sourceSystem;
         this.startTime = builder.startTime;
     }
@@ -110,6 +110,13 @@ public class CreateDiagnosticReportRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -204,13 +211,6 @@ public class CreateDiagnosticReportRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
      * @return sourceSystem
      */
     public String getSourceSystem() {
@@ -225,6 +225,7 @@ public class CreateDiagnosticReportRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateDiagnosticReportRequest, Builder> {
+        private String sourceRegionId; 
         private String clientToken; 
         private java.util.List < String > commandName; 
         private String commandType; 
@@ -238,7 +239,6 @@ public class CreateDiagnosticReportRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String resourceType; 
-        private String sourceRegionId; 
         private String sourceSystem; 
         private String startTime; 
 
@@ -246,25 +246,34 @@ public class CreateDiagnosticReportRequest extends Request {
             super();
         } 
 
-        private Builder(CreateDiagnosticReportRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.commandName = response.commandName;
-            this.commandType = response.commandType;
-            this.diagnosticCategory = response.diagnosticCategory;
-            this.endTime = response.endTime;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pluginVersion = response.pluginVersion;
-            this.regionId = response.regionId;
-            this.resourceId = response.resourceId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.resourceType = response.resourceType;
-            this.sourceRegionId = response.sourceRegionId;
-            this.sourceSystem = response.sourceSystem;
-            this.startTime = response.startTime;
+        private Builder(CreateDiagnosticReportRequest request) {
+            super(request);
+            this.sourceRegionId = request.sourceRegionId;
+            this.clientToken = request.clientToken;
+            this.commandName = request.commandName;
+            this.commandType = request.commandType;
+            this.diagnosticCategory = request.diagnosticCategory;
+            this.endTime = request.endTime;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pluginVersion = request.pluginVersion;
+            this.regionId = request.regionId;
+            this.resourceId = request.resourceId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.resourceType = request.resourceType;
+            this.sourceSystem = request.sourceSystem;
+            this.startTime = request.startTime;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * ClientToken.
@@ -380,15 +389,6 @@ public class CreateDiagnosticReportRequest extends Request {
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
             this.resourceType = resourceType;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

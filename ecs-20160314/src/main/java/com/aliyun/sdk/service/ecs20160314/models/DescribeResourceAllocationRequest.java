@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeResourceAllocationRequest</p>
  */
 public class DescribeResourceAllocationRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("Cores")
     private Integer cores;
@@ -31,6 +35,10 @@ public class DescribeResourceAllocationRequest extends Request {
     @Query
     @NameInMap("InstanceTypeModel")
     private java.util.List < InstanceTypeModel> instanceTypeModel;
+
+    @Query
+    @NameInMap("InstanceTypeSupportIPv6")
+    private Boolean instanceTypeSupportIPv6;
 
     @Query
     @NameInMap("IoOptimized")
@@ -82,10 +90,6 @@ public class DescribeResourceAllocationRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
     @NameInMap("SpotBaseCapacity")
     private Integer spotBaseCapacity;
@@ -117,11 +121,13 @@ public class DescribeResourceAllocationRequest extends Request {
 
     private DescribeResourceAllocationRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.cores = builder.cores;
         this.dataDiskCategory = builder.dataDiskCategory;
         this.defaultTargetCapacityType = builder.defaultTargetCapacityType;
         this.instanceFamilyLevel = builder.instanceFamilyLevel;
         this.instanceTypeModel = builder.instanceTypeModel;
+        this.instanceTypeSupportIPv6 = builder.instanceTypeSupportIPv6;
         this.ioOptimized = builder.ioOptimized;
         this.maxPrice = builder.maxPrice;
         this.memory = builder.memory;
@@ -134,7 +140,6 @@ public class DescribeResourceAllocationRequest extends Request {
         this.resourceAmountType = builder.resourceAmountType;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
         this.spotBaseCapacity = builder.spotBaseCapacity;
         this.spotInstancePools = builder.spotInstancePools;
         this.spotStrategy = builder.spotStrategy;
@@ -155,6 +160,13 @@ public class DescribeResourceAllocationRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -190,6 +202,13 @@ public class DescribeResourceAllocationRequest extends Request {
      */
     public java.util.List < InstanceTypeModel> getInstanceTypeModel() {
         return this.instanceTypeModel;
+    }
+
+    /**
+     * @return instanceTypeSupportIPv6
+     */
+    public Boolean getInstanceTypeSupportIPv6() {
+        return this.instanceTypeSupportIPv6;
     }
 
     /**
@@ -277,13 +296,6 @@ public class DescribeResourceAllocationRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
      * @return spotBaseCapacity
      */
     public Integer getSpotBaseCapacity() {
@@ -333,11 +345,13 @@ public class DescribeResourceAllocationRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeResourceAllocationRequest, Builder> {
+        private String sourceRegionId; 
         private Integer cores; 
         private java.util.List < String > dataDiskCategory; 
         private String defaultTargetCapacityType; 
         private String instanceFamilyLevel; 
         private java.util.List < InstanceTypeModel> instanceTypeModel; 
+        private Boolean instanceTypeSupportIPv6; 
         private String ioOptimized; 
         private Float maxPrice; 
         private Float memory; 
@@ -350,7 +364,6 @@ public class DescribeResourceAllocationRequest extends Request {
         private String resourceAmountType; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
         private Integer spotBaseCapacity; 
         private Integer spotInstancePools; 
         private String spotStrategy; 
@@ -363,34 +376,44 @@ public class DescribeResourceAllocationRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeResourceAllocationRequest response) {
-            super(response);
-            this.cores = response.cores;
-            this.dataDiskCategory = response.dataDiskCategory;
-            this.defaultTargetCapacityType = response.defaultTargetCapacityType;
-            this.instanceFamilyLevel = response.instanceFamilyLevel;
-            this.instanceTypeModel = response.instanceTypeModel;
-            this.ioOptimized = response.ioOptimized;
-            this.maxPrice = response.maxPrice;
-            this.memory = response.memory;
-            this.networkType = response.networkType;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.postPaidBaseCapacity = response.postPaidBaseCapacity;
-            this.priorityStrategy = response.priorityStrategy;
-            this.regionId = response.regionId;
-            this.resourceAmountType = response.resourceAmountType;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.sourceRegionId = response.sourceRegionId;
-            this.spotBaseCapacity = response.spotBaseCapacity;
-            this.spotInstancePools = response.spotInstancePools;
-            this.spotStrategy = response.spotStrategy;
-            this.strictSatisfiedTargetCapacity = response.strictSatisfiedTargetCapacity;
-            this.systemDiskCategory = response.systemDiskCategory;
-            this.targetCapacity = response.targetCapacity;
-            this.zoneId = response.zoneId;
+        private Builder(DescribeResourceAllocationRequest request) {
+            super(request);
+            this.sourceRegionId = request.sourceRegionId;
+            this.cores = request.cores;
+            this.dataDiskCategory = request.dataDiskCategory;
+            this.defaultTargetCapacityType = request.defaultTargetCapacityType;
+            this.instanceFamilyLevel = request.instanceFamilyLevel;
+            this.instanceTypeModel = request.instanceTypeModel;
+            this.instanceTypeSupportIPv6 = request.instanceTypeSupportIPv6;
+            this.ioOptimized = request.ioOptimized;
+            this.maxPrice = request.maxPrice;
+            this.memory = request.memory;
+            this.networkType = request.networkType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.postPaidBaseCapacity = request.postPaidBaseCapacity;
+            this.priorityStrategy = request.priorityStrategy;
+            this.regionId = request.regionId;
+            this.resourceAmountType = request.resourceAmountType;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.spotBaseCapacity = request.spotBaseCapacity;
+            this.spotInstancePools = request.spotInstancePools;
+            this.spotStrategy = request.spotStrategy;
+            this.strictSatisfiedTargetCapacity = request.strictSatisfiedTargetCapacity;
+            this.systemDiskCategory = request.systemDiskCategory;
+            this.targetCapacity = request.targetCapacity;
+            this.zoneId = request.zoneId;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * Cores.
@@ -434,6 +457,15 @@ public class DescribeResourceAllocationRequest extends Request {
         public Builder instanceTypeModel(java.util.List < InstanceTypeModel> instanceTypeModel) {
             this.putQueryParameter("InstanceTypeModel", instanceTypeModel);
             this.instanceTypeModel = instanceTypeModel;
+            return this;
+        }
+
+        /**
+         * InstanceTypeSupportIPv6.
+         */
+        public Builder instanceTypeSupportIPv6(Boolean instanceTypeSupportIPv6) {
+            this.putQueryParameter("InstanceTypeSupportIPv6", instanceTypeSupportIPv6);
+            this.instanceTypeSupportIPv6 = instanceTypeSupportIPv6;
             return this;
         }
 
@@ -542,15 +574,6 @@ public class DescribeResourceAllocationRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

@@ -102,13 +102,13 @@ public class DescribeMigrationPreferencesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeMigrationPreferencesRequest response) {
-            super(response);
-            this.migrationNetworkType = response.migrationNetworkType;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DescribeMigrationPreferencesRequest request) {
+            super(request);
+            this.migrationNetworkType = request.migrationNetworkType;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

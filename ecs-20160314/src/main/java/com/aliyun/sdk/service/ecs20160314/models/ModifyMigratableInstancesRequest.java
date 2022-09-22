@@ -141,16 +141,16 @@ public class ModifyMigratableInstancesRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyMigratableInstancesRequest response) {
-            super(response);
-            this.businessMigrationType = response.businessMigrationType;
-            this.instanceId = response.instanceId;
-            this.networkMigrationType = response.networkMigrationType;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.vpcId = response.vpcId;
+        private Builder(ModifyMigratableInstancesRequest request) {
+            super(request);
+            this.businessMigrationType = request.businessMigrationType;
+            this.instanceId = request.instanceId;
+            this.networkMigrationType = request.networkMigrationType;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.vpcId = request.vpcId;
         } 
 
         /**

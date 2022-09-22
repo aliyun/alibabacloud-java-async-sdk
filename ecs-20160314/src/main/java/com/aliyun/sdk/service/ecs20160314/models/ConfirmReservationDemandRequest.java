@@ -89,12 +89,12 @@ public class ConfirmReservationDemandRequest extends Request {
             super();
         } 
 
-        private Builder(ConfirmReservationDemandRequest response) {
-            super(response);
-            this.demandId = response.demandId;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.tag = response.tag;
+        private Builder(ConfirmReservationDemandRequest request) {
+            super(request);
+            this.demandId = request.demandId;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.tag = request.tag;
         } 
 
         /**

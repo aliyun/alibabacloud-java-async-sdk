@@ -12,6 +12,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyPrivatePoolRequest</p>
  */
 public class ModifyPrivatePoolRequest extends Request {
+    @Query
     @NameInMap("PrivatePoolOptions")
     private PrivatePoolOptions privatePoolOptions;
 
@@ -191,26 +192,27 @@ public class ModifyPrivatePoolRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyPrivatePoolRequest response) {
-            super(response);
-            this.privatePoolOptions = response.privatePoolOptions;
-            this.description = response.description;
-            this.endTime = response.endTime;
-            this.endTimeType = response.endTimeType;
-            this.instanceAmount = response.instanceAmount;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.platform = response.platform;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.startTime = response.startTime;
+        private Builder(ModifyPrivatePoolRequest request) {
+            super(request);
+            this.privatePoolOptions = request.privatePoolOptions;
+            this.description = request.description;
+            this.endTime = request.endTime;
+            this.endTimeType = request.endTimeType;
+            this.instanceAmount = request.instanceAmount;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.platform = request.platform;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.startTime = request.startTime;
         } 
 
         /**
          * PrivatePoolOptions.
          */
         public Builder privatePoolOptions(PrivatePoolOptions privatePoolOptions) {
+            this.putQueryParameter("PrivatePoolOptions", privatePoolOptions);
             this.privatePoolOptions = privatePoolOptions;
             return this;
         }

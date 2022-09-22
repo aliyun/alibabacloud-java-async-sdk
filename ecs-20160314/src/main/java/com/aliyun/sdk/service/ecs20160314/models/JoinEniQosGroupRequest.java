@@ -116,14 +116,14 @@ public class JoinEniQosGroupRequest extends Request {
             super();
         } 
 
-        private Builder(JoinEniQosGroupRequest response) {
-            super(response);
-            this.networkInterfaceId = response.networkInterfaceId;
-            this.ownerId = response.ownerId;
-            this.qosGroupName = response.qosGroupName;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(JoinEniQosGroupRequest request) {
+            super(request);
+            this.networkInterfaceId = request.networkInterfaceId;
+            this.ownerId = request.ownerId;
+            this.qosGroupName = request.qosGroupName;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

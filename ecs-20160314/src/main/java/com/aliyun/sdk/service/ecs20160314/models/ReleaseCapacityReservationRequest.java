@@ -128,15 +128,15 @@ public class ReleaseCapacityReservationRequest extends Request {
             super();
         } 
 
-        private Builder(ReleaseCapacityReservationRequest response) {
-            super(response);
-            this.capacityReservationId = response.capacityReservationId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.token = response.token;
+        private Builder(ReleaseCapacityReservationRequest request) {
+            super(request);
+            this.capacityReservationId = request.capacityReservationId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.token = request.token;
         } 
 
         /**

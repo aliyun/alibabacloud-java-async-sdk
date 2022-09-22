@@ -274,26 +274,26 @@ public class CreateMigrationPlanRequest extends Request {
             super();
         } 
 
-        private Builder(CreateMigrationPlanRequest response) {
-            super(response);
-            this.customMigrationTimes = response.customMigrationTimes;
-            this.dryRun = response.dryRun;
-            this.enableAutoCreateVSwitch = response.enableAutoCreateVSwitch;
-            this.ensureNetworkConnectivity = response.ensureNetworkConnectivity;
-            this.globalMigrationTime = response.globalMigrationTime;
-            this.instanceIds = response.instanceIds;
-            this.name = response.name;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.remainPrivateIp = response.remainPrivateIp;
-            this.remainPublicMacAsPriority = response.remainPublicMacAsPriority;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.targetSecurityGroupIds = response.targetSecurityGroupIds;
-            this.targetVSwitchId = response.targetVSwitchId;
-            this.targetVpcId = response.targetVpcId;
-            this.targetZoneId = response.targetZoneId;
-            this.type = response.type;
+        private Builder(CreateMigrationPlanRequest request) {
+            super(request);
+            this.customMigrationTimes = request.customMigrationTimes;
+            this.dryRun = request.dryRun;
+            this.enableAutoCreateVSwitch = request.enableAutoCreateVSwitch;
+            this.ensureNetworkConnectivity = request.ensureNetworkConnectivity;
+            this.globalMigrationTime = request.globalMigrationTime;
+            this.instanceIds = request.instanceIds;
+            this.name = request.name;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.remainPrivateIp = request.remainPrivateIp;
+            this.remainPublicMacAsPriority = request.remainPublicMacAsPriority;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.targetSecurityGroupIds = request.targetSecurityGroupIds;
+            this.targetVSwitchId = request.targetVSwitchId;
+            this.targetVpcId = request.targetVpcId;
+            this.targetZoneId = request.targetZoneId;
+            this.type = request.type;
         } 
 
         /**

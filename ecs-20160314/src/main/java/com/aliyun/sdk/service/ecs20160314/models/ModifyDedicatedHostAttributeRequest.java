@@ -12,6 +12,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyDedicatedHostAttributeRequest</p>
  */
 public class ModifyDedicatedHostAttributeRequest extends Request {
+    @Query
     @NameInMap("NetworkAttributes")
     private NetworkAttributes networkAttributes;
 
@@ -205,27 +206,28 @@ public class ModifyDedicatedHostAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyDedicatedHostAttributeRequest response) {
-            super(response);
-            this.networkAttributes = response.networkAttributes;
-            this.actionOnMaintenance = response.actionOnMaintenance;
-            this.autoPlacement = response.autoPlacement;
-            this.cpuOverCommitRatio = response.cpuOverCommitRatio;
-            this.dedicatedHostClusterId = response.dedicatedHostClusterId;
-            this.dedicatedHostId = response.dedicatedHostId;
-            this.dedicatedHostName = response.dedicatedHostName;
-            this.description = response.description;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ModifyDedicatedHostAttributeRequest request) {
+            super(request);
+            this.networkAttributes = request.networkAttributes;
+            this.actionOnMaintenance = request.actionOnMaintenance;
+            this.autoPlacement = request.autoPlacement;
+            this.cpuOverCommitRatio = request.cpuOverCommitRatio;
+            this.dedicatedHostClusterId = request.dedicatedHostClusterId;
+            this.dedicatedHostId = request.dedicatedHostId;
+            this.dedicatedHostName = request.dedicatedHostName;
+            this.description = request.description;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
          * NetworkAttributes.
          */
         public Builder networkAttributes(NetworkAttributes networkAttributes) {
+            this.putQueryParameter("NetworkAttributes", networkAttributes);
             this.networkAttributes = networkAttributes;
             return this;
         }

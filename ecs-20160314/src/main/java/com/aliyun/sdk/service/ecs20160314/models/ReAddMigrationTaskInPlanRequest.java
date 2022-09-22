@@ -144,16 +144,16 @@ public class ReAddMigrationTaskInPlanRequest extends Request {
             super();
         } 
 
-        private Builder(ReAddMigrationTaskInPlanRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.migrationPlanId = response.migrationPlanId;
-            this.migrationTime = response.migrationTime;
-            this.networkMigrationType = response.networkMigrationType;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ReAddMigrationTaskInPlanRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.migrationPlanId = request.migrationPlanId;
+            this.migrationTime = request.migrationTime;
+            this.networkMigrationType = request.networkMigrationType;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

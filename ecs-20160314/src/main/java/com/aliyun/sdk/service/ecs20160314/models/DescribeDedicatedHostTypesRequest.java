@@ -140,16 +140,16 @@ public class DescribeDedicatedHostTypesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDedicatedHostTypesRequest response) {
-            super(response);
-            this.dedicatedHostType = response.dedicatedHostType;
-            this.generation = response.generation;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.supportInstanceTypeFamily = response.supportInstanceTypeFamily;
+        private Builder(DescribeDedicatedHostTypesRequest request) {
+            super(request);
+            this.dedicatedHostType = request.dedicatedHostType;
+            this.generation = request.generation;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.supportInstanceTypeFamily = request.supportInstanceTypeFamily;
         } 
 
         /**

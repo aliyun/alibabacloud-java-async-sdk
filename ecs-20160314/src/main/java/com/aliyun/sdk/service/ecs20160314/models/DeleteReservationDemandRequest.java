@@ -102,13 +102,13 @@ public class DeleteReservationDemandRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteReservationDemandRequest response) {
-            super(response);
-            this.demandId = response.demandId;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.tag = response.tag;
+        private Builder(DeleteReservationDemandRequest request) {
+            super(request);
+            this.demandId = request.demandId;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.tag = request.tag;
         } 
 
         /**

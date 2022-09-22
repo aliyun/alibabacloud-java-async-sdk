@@ -193,20 +193,20 @@ public class DescribeResourceDisplayRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeResourceDisplayRequest response) {
-            super(response);
-            this.chargeType = response.chargeType;
-            this.firstBizLevel = response.firstBizLevel;
-            this.instanceCategoryType = response.instanceCategoryType;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.secondBizLevel = response.secondBizLevel;
-            this.spotStrategy = response.spotStrategy;
-            this.templateTag = response.templateTag;
-            this.zoneId = response.zoneId;
+        private Builder(DescribeResourceDisplayRequest request) {
+            super(request);
+            this.chargeType = request.chargeType;
+            this.firstBizLevel = request.firstBizLevel;
+            this.instanceCategoryType = request.instanceCategoryType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.secondBizLevel = request.secondBizLevel;
+            this.spotStrategy = request.spotStrategy;
+            this.templateTag = request.templateTag;
+            this.zoneId = request.zoneId;
         } 
 
         /**

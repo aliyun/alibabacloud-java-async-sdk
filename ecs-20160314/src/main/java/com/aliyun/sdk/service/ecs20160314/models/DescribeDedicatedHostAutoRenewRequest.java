@@ -128,15 +128,15 @@ public class DescribeDedicatedHostAutoRenewRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDedicatedHostAutoRenewRequest response) {
-            super(response);
-            this.instanceIds = response.instanceIds;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.resourceType = response.resourceType;
+        private Builder(DescribeDedicatedHostAutoRenewRequest request) {
+            super(request);
+            this.instanceIds = request.instanceIds;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.resourceType = request.resourceType;
         } 
 
         /**

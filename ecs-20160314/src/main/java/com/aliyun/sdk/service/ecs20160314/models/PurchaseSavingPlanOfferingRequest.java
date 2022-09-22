@@ -259,25 +259,25 @@ public class PurchaseSavingPlanOfferingRequest extends Request {
             super();
         } 
 
-        private Builder(PurchaseSavingPlanOfferingRequest response) {
-            super(response);
-            this.chargeType = response.chargeType;
-            this.clientToken = response.clientToken;
-            this.committedAmount = response.committedAmount;
-            this.description = response.description;
-            this.instanceFamily = response.instanceFamily;
-            this.instanceFamilySet = response.instanceFamilySet;
-            this.name = response.name;
-            this.offeringType = response.offeringType;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.period = response.period;
-            this.periodUnit = response.periodUnit;
-            this.planType = response.planType;
-            this.purchaseMethod = response.purchaseMethod;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.startTime = response.startTime;
+        private Builder(PurchaseSavingPlanOfferingRequest request) {
+            super(request);
+            this.chargeType = request.chargeType;
+            this.clientToken = request.clientToken;
+            this.committedAmount = request.committedAmount;
+            this.description = request.description;
+            this.instanceFamily = request.instanceFamily;
+            this.instanceFamilySet = request.instanceFamilySet;
+            this.name = request.name;
+            this.offeringType = request.offeringType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.period = request.period;
+            this.periodUnit = request.periodUnit;
+            this.planType = request.planType;
+            this.purchaseMethod = request.purchaseMethod;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.startTime = request.startTime;
         } 
 
         /**

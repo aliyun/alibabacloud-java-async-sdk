@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDiagnosisOperateRecordsRequest</p>
  */
 public class DescribeDiagnosisOperateRecordsRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("ErrorCode")
     private String errorCode;
@@ -53,16 +57,13 @@ public class DescribeDiagnosisOperateRecordsRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
     @NameInMap("ZoneId")
     private String zoneId;
 
     private DescribeDiagnosisOperateRecordsRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.errorCode = builder.errorCode;
         this.instanceType = builder.instanceType;
         this.operateRecordType = builder.operateRecordType;
@@ -73,7 +74,6 @@ public class DescribeDiagnosisOperateRecordsRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
         this.zoneId = builder.zoneId;
     }
 
@@ -88,6 +88,13 @@ public class DescribeDiagnosisOperateRecordsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -161,13 +168,6 @@ public class DescribeDiagnosisOperateRecordsRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
      * @return zoneId
      */
     public String getZoneId() {
@@ -175,6 +175,7 @@ public class DescribeDiagnosisOperateRecordsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeDiagnosisOperateRecordsRequest, Builder> {
+        private String sourceRegionId; 
         private String errorCode; 
         private String instanceType; 
         private String operateRecordType; 
@@ -185,28 +186,36 @@ public class DescribeDiagnosisOperateRecordsRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
         private String zoneId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeDiagnosisOperateRecordsRequest response) {
-            super(response);
-            this.errorCode = response.errorCode;
-            this.instanceType = response.instanceType;
-            this.operateRecordType = response.operateRecordType;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.payType = response.payType;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.sourceRegionId = response.sourceRegionId;
-            this.zoneId = response.zoneId;
+        private Builder(DescribeDiagnosisOperateRecordsRequest request) {
+            super(request);
+            this.sourceRegionId = request.sourceRegionId;
+            this.errorCode = request.errorCode;
+            this.instanceType = request.instanceType;
+            this.operateRecordType = request.operateRecordType;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.payType = request.payType;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.zoneId = request.zoneId;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * ErrorCode.
@@ -295,15 +304,6 @@ public class DescribeDiagnosisOperateRecordsRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

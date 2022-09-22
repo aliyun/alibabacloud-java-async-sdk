@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteNetworkInsightsPathRequest</p>
  */
 public class DeleteNetworkInsightsPathRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("DryRun")
     private Boolean dryRun;
@@ -30,17 +34,13 @@ public class DeleteNetworkInsightsPathRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     private DeleteNetworkInsightsPathRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.dryRun = builder.dryRun;
         this.networkInsightsPathId = builder.networkInsightsPathId;
         this.regionId = builder.regionId;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -54,6 +54,13 @@ public class DeleteNetworkInsightsPathRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -84,32 +91,34 @@ public class DeleteNetworkInsightsPathRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
     public static final class Builder extends Request.Builder<DeleteNetworkInsightsPathRequest, Builder> {
+        private String sourceRegionId; 
         private Boolean dryRun; 
         private java.util.List < String > networkInsightsPathId; 
         private String regionId; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DeleteNetworkInsightsPathRequest response) {
-            super(response);
-            this.dryRun = response.dryRun;
-            this.networkInsightsPathId = response.networkInsightsPathId;
-            this.regionId = response.regionId;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.sourceRegionId = response.sourceRegionId;
+        private Builder(DeleteNetworkInsightsPathRequest request) {
+            super(request);
+            this.sourceRegionId = request.sourceRegionId;
+            this.dryRun = request.dryRun;
+            this.networkInsightsPathId = request.networkInsightsPathId;
+            this.regionId = request.regionId;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * DryRun.
@@ -144,15 +153,6 @@ public class DeleteNetworkInsightsPathRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeResourceSolutionsRequest</p>
  */
 public class DescribeResourceSolutionsRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("Cores")
     private Integer cores;
@@ -27,6 +31,10 @@ public class DescribeResourceSolutionsRequest extends Request {
     @Query
     @NameInMap("InstanceTypeModel")
     private java.util.List < InstanceTypeModel> instanceTypeModel;
+
+    @Query
+    @NameInMap("InstanceTypeSupportIPv6")
+    private Boolean instanceTypeSupportIPv6;
 
     @Query
     @NameInMap("MatchOpenInstances")
@@ -65,10 +73,6 @@ public class DescribeResourceSolutionsRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
     @NameInMap("SpotStrategy")
     private String spotStrategy;
@@ -88,10 +92,12 @@ public class DescribeResourceSolutionsRequest extends Request {
 
     private DescribeResourceSolutionsRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.cores = builder.cores;
         this.instanceChargeType = builder.instanceChargeType;
         this.instanceFamilyLevel = builder.instanceFamilyLevel;
         this.instanceTypeModel = builder.instanceTypeModel;
+        this.instanceTypeSupportIPv6 = builder.instanceTypeSupportIPv6;
         this.matchOpenInstances = builder.matchOpenInstances;
         this.maxPrice = builder.maxPrice;
         this.memory = builder.memory;
@@ -101,7 +107,6 @@ public class DescribeResourceSolutionsRequest extends Request {
         this.resourceAmountType = builder.resourceAmountType;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
         this.spotStrategy = builder.spotStrategy;
         this.systemDiskCategory = builder.systemDiskCategory;
         this.targetCapacity = builder.targetCapacity;
@@ -119,6 +124,13 @@ public class DescribeResourceSolutionsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -147,6 +159,13 @@ public class DescribeResourceSolutionsRequest extends Request {
      */
     public java.util.List < InstanceTypeModel> getInstanceTypeModel() {
         return this.instanceTypeModel;
+    }
+
+    /**
+     * @return instanceTypeSupportIPv6
+     */
+    public Boolean getInstanceTypeSupportIPv6() {
+        return this.instanceTypeSupportIPv6;
     }
 
     /**
@@ -213,13 +232,6 @@ public class DescribeResourceSolutionsRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
      * @return spotStrategy
      */
     public String getSpotStrategy() {
@@ -248,10 +260,12 @@ public class DescribeResourceSolutionsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeResourceSolutionsRequest, Builder> {
+        private String sourceRegionId; 
         private Integer cores; 
         private String instanceChargeType; 
         private String instanceFamilyLevel; 
         private java.util.List < InstanceTypeModel> instanceTypeModel; 
+        private Boolean instanceTypeSupportIPv6; 
         private Boolean matchOpenInstances; 
         private Float maxPrice; 
         private Float memory; 
@@ -261,7 +275,6 @@ public class DescribeResourceSolutionsRequest extends Request {
         private String resourceAmountType; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
         private String spotStrategy; 
         private String systemDiskCategory; 
         private Integer targetCapacity; 
@@ -271,27 +284,37 @@ public class DescribeResourceSolutionsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeResourceSolutionsRequest response) {
-            super(response);
-            this.cores = response.cores;
-            this.instanceChargeType = response.instanceChargeType;
-            this.instanceFamilyLevel = response.instanceFamilyLevel;
-            this.instanceTypeModel = response.instanceTypeModel;
-            this.matchOpenInstances = response.matchOpenInstances;
-            this.maxPrice = response.maxPrice;
-            this.memory = response.memory;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceAmountType = response.resourceAmountType;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.sourceRegionId = response.sourceRegionId;
-            this.spotStrategy = response.spotStrategy;
-            this.systemDiskCategory = response.systemDiskCategory;
-            this.targetCapacity = response.targetCapacity;
-            this.zoneId = response.zoneId;
+        private Builder(DescribeResourceSolutionsRequest request) {
+            super(request);
+            this.sourceRegionId = request.sourceRegionId;
+            this.cores = request.cores;
+            this.instanceChargeType = request.instanceChargeType;
+            this.instanceFamilyLevel = request.instanceFamilyLevel;
+            this.instanceTypeModel = request.instanceTypeModel;
+            this.instanceTypeSupportIPv6 = request.instanceTypeSupportIPv6;
+            this.matchOpenInstances = request.matchOpenInstances;
+            this.maxPrice = request.maxPrice;
+            this.memory = request.memory;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceAmountType = request.resourceAmountType;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.spotStrategy = request.spotStrategy;
+            this.systemDiskCategory = request.systemDiskCategory;
+            this.targetCapacity = request.targetCapacity;
+            this.zoneId = request.zoneId;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * Cores.
@@ -326,6 +349,15 @@ public class DescribeResourceSolutionsRequest extends Request {
         public Builder instanceTypeModel(java.util.List < InstanceTypeModel> instanceTypeModel) {
             this.putQueryParameter("InstanceTypeModel", instanceTypeModel);
             this.instanceTypeModel = instanceTypeModel;
+            return this;
+        }
+
+        /**
+         * InstanceTypeSupportIPv6.
+         */
+        public Builder instanceTypeSupportIPv6(Boolean instanceTypeSupportIPv6) {
+            this.putQueryParameter("InstanceTypeSupportIPv6", instanceTypeSupportIPv6);
+            this.instanceTypeSupportIPv6 = instanceTypeSupportIPv6;
             return this;
         }
 
@@ -407,15 +439,6 @@ public class DescribeResourceSolutionsRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

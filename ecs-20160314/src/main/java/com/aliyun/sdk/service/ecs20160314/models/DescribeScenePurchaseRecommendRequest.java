@@ -12,11 +12,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeScenePurchaseRecommendRequest</p>
  */
 public class DescribeScenePurchaseRecommendRequest extends Request {
+    @Query
     @NameInMap("PrivatePoolOptions")
     private PrivatePoolOptions privatePoolOptions;
 
+    @Query
     @NameInMap("SchedulerOptions")
     private SchedulerOptions schedulerOptions;
+
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     @Query
     @NameInMap("Amount")
@@ -102,10 +108,6 @@ public class DescribeScenePurchaseRecommendRequest extends Request {
     @Validation(required = true)
     private Integer sceneId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
     @NameInMap("SpotStrategy")
     private String spotStrategy;
@@ -130,6 +132,7 @@ public class DescribeScenePurchaseRecommendRequest extends Request {
         super(builder);
         this.privatePoolOptions = builder.privatePoolOptions;
         this.schedulerOptions = builder.schedulerOptions;
+        this.sourceRegionId = builder.sourceRegionId;
         this.amount = builder.amount;
         this.dataDisk = builder.dataDisk;
         this.dedicatedHostId = builder.dedicatedHostId;
@@ -149,7 +152,6 @@ public class DescribeScenePurchaseRecommendRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.sceneId = builder.sceneId;
-        this.sourceRegionId = builder.sourceRegionId;
         this.spotStrategy = builder.spotStrategy;
         this.systemDisk = builder.systemDisk;
         this.tenancy = builder.tenancy;
@@ -182,6 +184,13 @@ public class DescribeScenePurchaseRecommendRequest extends Request {
      */
     public SchedulerOptions getSchedulerOptions() {
         return this.schedulerOptions;
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -318,13 +327,6 @@ public class DescribeScenePurchaseRecommendRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
      * @return spotStrategy
      */
     public String getSpotStrategy() {
@@ -362,6 +364,7 @@ public class DescribeScenePurchaseRecommendRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeScenePurchaseRecommendRequest, Builder> {
         private PrivatePoolOptions privatePoolOptions; 
         private SchedulerOptions schedulerOptions; 
+        private String sourceRegionId; 
         private Integer amount; 
         private java.util.List < DataDisk> dataDisk; 
         private String dedicatedHostId; 
@@ -381,7 +384,6 @@ public class DescribeScenePurchaseRecommendRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private Integer sceneId; 
-        private String sourceRegionId; 
         private String spotStrategy; 
         private SystemDisk systemDisk; 
         private String tenancy; 
@@ -392,41 +394,42 @@ public class DescribeScenePurchaseRecommendRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeScenePurchaseRecommendRequest response) {
-            super(response);
-            this.privatePoolOptions = response.privatePoolOptions;
-            this.schedulerOptions = response.schedulerOptions;
-            this.amount = response.amount;
-            this.dataDisk = response.dataDisk;
-            this.dedicatedHostId = response.dedicatedHostId;
-            this.imageId = response.imageId;
-            this.instanceChargeType = response.instanceChargeType;
-            this.instanceType = response.instanceType;
-            this.internetChargeType = response.internetChargeType;
-            this.internetMaxBandwidthOut = response.internetMaxBandwidthOut;
-            this.ioOptimized = response.ioOptimized;
-            this.networkType = response.networkType;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.period = response.period;
-            this.periodUnit = response.periodUnit;
-            this.productId = response.productId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.sceneId = response.sceneId;
-            this.sourceRegionId = response.sourceRegionId;
-            this.spotStrategy = response.spotStrategy;
-            this.systemDisk = response.systemDisk;
-            this.tenancy = response.tenancy;
-            this.vSwitchId = response.vSwitchId;
-            this.zoneId = response.zoneId;
+        private Builder(DescribeScenePurchaseRecommendRequest request) {
+            super(request);
+            this.privatePoolOptions = request.privatePoolOptions;
+            this.schedulerOptions = request.schedulerOptions;
+            this.sourceRegionId = request.sourceRegionId;
+            this.amount = request.amount;
+            this.dataDisk = request.dataDisk;
+            this.dedicatedHostId = request.dedicatedHostId;
+            this.imageId = request.imageId;
+            this.instanceChargeType = request.instanceChargeType;
+            this.instanceType = request.instanceType;
+            this.internetChargeType = request.internetChargeType;
+            this.internetMaxBandwidthOut = request.internetMaxBandwidthOut;
+            this.ioOptimized = request.ioOptimized;
+            this.networkType = request.networkType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.period = request.period;
+            this.periodUnit = request.periodUnit;
+            this.productId = request.productId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sceneId = request.sceneId;
+            this.spotStrategy = request.spotStrategy;
+            this.systemDisk = request.systemDisk;
+            this.tenancy = request.tenancy;
+            this.vSwitchId = request.vSwitchId;
+            this.zoneId = request.zoneId;
         } 
 
         /**
          * PrivatePoolOptions.
          */
         public Builder privatePoolOptions(PrivatePoolOptions privatePoolOptions) {
+            this.putQueryParameter("PrivatePoolOptions", privatePoolOptions);
             this.privatePoolOptions = privatePoolOptions;
             return this;
         }
@@ -435,7 +438,17 @@ public class DescribeScenePurchaseRecommendRequest extends Request {
          * SchedulerOptions.
          */
         public Builder schedulerOptions(SchedulerOptions schedulerOptions) {
+            this.putQueryParameter("SchedulerOptions", schedulerOptions);
             this.schedulerOptions = schedulerOptions;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 
@@ -607,15 +620,6 @@ public class DescribeScenePurchaseRecommendRequest extends Request {
         public Builder sceneId(Integer sceneId) {
             this.putQueryParameter("SceneId", sceneId);
             this.sceneId = sceneId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

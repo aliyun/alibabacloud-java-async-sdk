@@ -12,8 +12,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AllocateDedicatedHostsRequest</p>
  */
 public class AllocateDedicatedHostsRequest extends Request {
+    @Query
     @NameInMap("NetworkAttributes")
     private NetworkAttributes networkAttributes;
+
+    @Query
+    @NameInMap("SchedulerOptions")
+    private SchedulerOptions schedulerOptions;
 
     @Query
     @NameInMap("ActionOnMaintenance")
@@ -124,6 +129,7 @@ public class AllocateDedicatedHostsRequest extends Request {
     private AllocateDedicatedHostsRequest(Builder builder) {
         super(builder);
         this.networkAttributes = builder.networkAttributes;
+        this.schedulerOptions = builder.schedulerOptions;
         this.actionOnMaintenance = builder.actionOnMaintenance;
         this.autoPlacement = builder.autoPlacement;
         this.autoReleaseTime = builder.autoReleaseTime;
@@ -170,6 +176,13 @@ public class AllocateDedicatedHostsRequest extends Request {
      */
     public NetworkAttributes getNetworkAttributes() {
         return this.networkAttributes;
+    }
+
+    /**
+     * @return schedulerOptions
+     */
+    public SchedulerOptions getSchedulerOptions() {
+        return this.schedulerOptions;
     }
 
     /**
@@ -356,6 +369,7 @@ public class AllocateDedicatedHostsRequest extends Request {
 
     public static final class Builder extends Request.Builder<AllocateDedicatedHostsRequest, Builder> {
         private NetworkAttributes networkAttributes; 
+        private SchedulerOptions schedulerOptions; 
         private String actionOnMaintenance; 
         private String autoPlacement; 
         private String autoReleaseTime; 
@@ -387,42 +401,53 @@ public class AllocateDedicatedHostsRequest extends Request {
             super();
         } 
 
-        private Builder(AllocateDedicatedHostsRequest response) {
-            super(response);
-            this.networkAttributes = response.networkAttributes;
-            this.actionOnMaintenance = response.actionOnMaintenance;
-            this.autoPlacement = response.autoPlacement;
-            this.autoReleaseTime = response.autoReleaseTime;
-            this.autoRenew = response.autoRenew;
-            this.autoRenewPeriod = response.autoRenewPeriod;
-            this.businessInfo = response.businessInfo;
-            this.chargeType = response.chargeType;
-            this.clientToken = response.clientToken;
-            this.cpuOverCommitRatio = response.cpuOverCommitRatio;
-            this.dedicatedHostClusterId = response.dedicatedHostClusterId;
-            this.dedicatedHostName = response.dedicatedHostName;
-            this.dedicatedHostType = response.dedicatedHostType;
-            this.description = response.description;
-            this.fromApp = response.fromApp;
-            this.minQuantity = response.minQuantity;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.period = response.period;
-            this.periodUnit = response.periodUnit;
-            this.quantity = response.quantity;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.tag = response.tag;
-            this.zoneId = response.zoneId;
+        private Builder(AllocateDedicatedHostsRequest request) {
+            super(request);
+            this.networkAttributes = request.networkAttributes;
+            this.schedulerOptions = request.schedulerOptions;
+            this.actionOnMaintenance = request.actionOnMaintenance;
+            this.autoPlacement = request.autoPlacement;
+            this.autoReleaseTime = request.autoReleaseTime;
+            this.autoRenew = request.autoRenew;
+            this.autoRenewPeriod = request.autoRenewPeriod;
+            this.businessInfo = request.businessInfo;
+            this.chargeType = request.chargeType;
+            this.clientToken = request.clientToken;
+            this.cpuOverCommitRatio = request.cpuOverCommitRatio;
+            this.dedicatedHostClusterId = request.dedicatedHostClusterId;
+            this.dedicatedHostName = request.dedicatedHostName;
+            this.dedicatedHostType = request.dedicatedHostType;
+            this.description = request.description;
+            this.fromApp = request.fromApp;
+            this.minQuantity = request.minQuantity;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.period = request.period;
+            this.periodUnit = request.periodUnit;
+            this.quantity = request.quantity;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.tag = request.tag;
+            this.zoneId = request.zoneId;
         } 
 
         /**
          * NetworkAttributes.
          */
         public Builder networkAttributes(NetworkAttributes networkAttributes) {
+            this.putQueryParameter("NetworkAttributes", networkAttributes);
             this.networkAttributes = networkAttributes;
+            return this;
+        }
+
+        /**
+         * SchedulerOptions.
+         */
+        public Builder schedulerOptions(SchedulerOptions schedulerOptions) {
+            this.putQueryParameter("SchedulerOptions", schedulerOptions);
+            this.schedulerOptions = schedulerOptions;
             return this;
         }
 
@@ -723,6 +748,47 @@ public class AllocateDedicatedHostsRequest extends Request {
 
             public NetworkAttributes build() {
                 return new NetworkAttributes(this);
+            } 
+
+        } 
+
+    }
+    public static class SchedulerOptions extends TeaModel {
+        @NameInMap("ManagedPrivateSpaceId")
+        private String managedPrivateSpaceId;
+
+        private SchedulerOptions(Builder builder) {
+            this.managedPrivateSpaceId = builder.managedPrivateSpaceId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SchedulerOptions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return managedPrivateSpaceId
+         */
+        public String getManagedPrivateSpaceId() {
+            return this.managedPrivateSpaceId;
+        }
+
+        public static final class Builder {
+            private String managedPrivateSpaceId; 
+
+            /**
+             * ManagedPrivateSpaceId.
+             */
+            public Builder managedPrivateSpaceId(String managedPrivateSpaceId) {
+                this.managedPrivateSpaceId = managedPrivateSpaceId;
+                return this;
+            }
+
+            public SchedulerOptions build() {
+                return new SchedulerOptions(this);
             } 
 
         } 

@@ -167,18 +167,18 @@ public class DescribeReservedInstanceCategoriesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeReservedInstanceCategoriesRequest response) {
-            super(response);
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.scope = response.scope;
-            this.tag = response.tag;
-            this.zoneId = response.zoneId;
+        private Builder(DescribeReservedInstanceCategoriesRequest request) {
+            super(request);
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.scope = request.scope;
+            this.tag = request.tag;
+            this.zoneId = request.zoneId;
         } 
 
         /**

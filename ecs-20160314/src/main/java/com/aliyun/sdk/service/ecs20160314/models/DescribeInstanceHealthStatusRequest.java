@@ -61,10 +61,10 @@ public class DescribeInstanceHealthStatusRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeInstanceHealthStatusRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
+        private Builder(DescribeInstanceHealthStatusRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.regionId = request.regionId;
         } 
 
         /**

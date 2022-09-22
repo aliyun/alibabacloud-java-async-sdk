@@ -172,18 +172,18 @@ public class CreateEniQosGroupRequest extends Request {
             super();
         } 
 
-        private Builder(CreateEniQosGroupRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.ownerId = response.ownerId;
-            this.qosGroupName = response.qosGroupName;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.rx = response.rx;
-            this.rxPps = response.rxPps;
-            this.tx = response.tx;
-            this.txPps = response.txPps;
+        private Builder(CreateEniQosGroupRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.ownerId = request.ownerId;
+            this.qosGroupName = request.qosGroupName;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.rx = request.rx;
+            this.rxPps = request.rxPps;
+            this.tx = request.tx;
+            this.txPps = request.txPps;
         } 
 
         /**

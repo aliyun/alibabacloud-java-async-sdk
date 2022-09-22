@@ -61,10 +61,10 @@ public class CreateIssueCategoryReportRelationRequest extends Request {
             super();
         } 
 
-        private Builder(CreateIssueCategoryReportRelationRequest response) {
-            super(response);
-            this.regionId = response.regionId;
-            this.relationModelList = response.relationModelList;
+        private Builder(CreateIssueCategoryReportRelationRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.relationModelList = request.relationModelList;
         } 
 
         /**

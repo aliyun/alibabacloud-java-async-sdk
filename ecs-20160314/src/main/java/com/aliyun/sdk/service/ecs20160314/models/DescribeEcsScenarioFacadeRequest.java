@@ -12,9 +12,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeEcsScenarioFacadeRequest</p>
  */
 public class DescribeEcsScenarioFacadeRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("ExtMap")
     private java.util.Map < String, String > extMap;
+
+    @Query
+    @NameInMap("ExtParam")
+    private String extParam;
 
     @Query
     @NameInMap("OwnerId")
@@ -32,18 +40,15 @@ public class DescribeEcsScenarioFacadeRequest extends Request {
     @NameInMap("ScenarioList")
     private java.util.List < ScenarioList> scenarioList;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     private DescribeEcsScenarioFacadeRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.extMap = builder.extMap;
+        this.extParam = builder.extParam;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.scenarioList = builder.scenarioList;
-        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -60,10 +65,24 @@ public class DescribeEcsScenarioFacadeRequest extends Request {
     }
 
     /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
+    }
+
+    /**
      * @return extMap
      */
     public java.util.Map < String, String > getExtMap() {
         return this.extMap;
+    }
+
+    /**
+     * @return extParam
+     */
+    public String getExtParam() {
+        return this.extParam;
     }
 
     /**
@@ -94,34 +113,38 @@ public class DescribeEcsScenarioFacadeRequest extends Request {
         return this.scenarioList;
     }
 
-    /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
     public static final class Builder extends Request.Builder<DescribeEcsScenarioFacadeRequest, Builder> {
+        private String sourceRegionId; 
         private java.util.Map < String, String > extMap; 
+        private String extParam; 
         private Long ownerId; 
         private String regionId; 
         private Long resourceOwnerId; 
         private java.util.List < ScenarioList> scenarioList; 
-        private String sourceRegionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeEcsScenarioFacadeRequest response) {
-            super(response);
-            this.extMap = response.extMap;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.scenarioList = response.scenarioList;
-            this.sourceRegionId = response.sourceRegionId;
+        private Builder(DescribeEcsScenarioFacadeRequest request) {
+            super(request);
+            this.sourceRegionId = request.sourceRegionId;
+            this.extMap = request.extMap;
+            this.extParam = request.extParam;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.scenarioList = request.scenarioList;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * ExtMap.
@@ -129,6 +152,15 @@ public class DescribeEcsScenarioFacadeRequest extends Request {
         public Builder extMap(java.util.Map < String, String > extMap) {
             this.putQueryParameter("ExtMap", extMap);
             this.extMap = extMap;
+            return this;
+        }
+
+        /**
+         * ExtParam.
+         */
+        public Builder extParam(String extParam) {
+            this.putQueryParameter("ExtParam", extParam);
+            this.extParam = extParam;
             return this;
         }
 
@@ -165,15 +197,6 @@ public class DescribeEcsScenarioFacadeRequest extends Request {
         public Builder scenarioList(java.util.List < ScenarioList> scenarioList) {
             this.putQueryParameter("ScenarioList", scenarioList);
             this.scenarioList = scenarioList;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

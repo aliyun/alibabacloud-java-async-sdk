@@ -153,17 +153,17 @@ public class DescribeStorageCapacityUnitDeductFactorRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeStorageCapacityUnitDeductFactorRequest response) {
-            super(response);
-            this.deductField = response.deductField;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.performanceLevel = response.performanceLevel;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.storageType = response.storageType;
-            this.tag = response.tag;
+        private Builder(DescribeStorageCapacityUnitDeductFactorRequest request) {
+            super(request);
+            this.deductField = request.deductField;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.performanceLevel = request.performanceLevel;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.storageType = request.storageType;
+            this.tag = request.tag;
         } 
 
         /**

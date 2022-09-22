@@ -102,13 +102,13 @@ public class LeaveEniQosGroupRequest extends Request {
             super();
         } 
 
-        private Builder(LeaveEniQosGroupRequest response) {
-            super(response);
-            this.networkInterfaceId = response.networkInterfaceId;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(LeaveEniQosGroupRequest request) {
+            super(request);
+            this.networkInterfaceId = request.networkInterfaceId;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

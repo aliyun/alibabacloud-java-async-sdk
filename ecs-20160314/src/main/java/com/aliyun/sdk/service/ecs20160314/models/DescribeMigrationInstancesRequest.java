@@ -233,23 +233,23 @@ public class DescribeMigrationInstancesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeMigrationInstancesRequest response) {
-            super(response);
-            this.businessMigrationType = response.businessMigrationType;
-            this.hostname = response.hostname;
-            this.instanceId = response.instanceId;
-            this.migrationPlanId = response.migrationPlanId;
-            this.migrationStatus = response.migrationStatus;
-            this.networkMigrationType = response.networkMigrationType;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.tag = response.tag;
-            this.zoneId = response.zoneId;
+        private Builder(DescribeMigrationInstancesRequest request) {
+            super(request);
+            this.businessMigrationType = request.businessMigrationType;
+            this.hostname = request.hostname;
+            this.instanceId = request.instanceId;
+            this.migrationPlanId = request.migrationPlanId;
+            this.migrationStatus = request.migrationStatus;
+            this.networkMigrationType = request.networkMigrationType;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.tag = request.tag;
+            this.zoneId = request.zoneId;
         } 
 
         /**

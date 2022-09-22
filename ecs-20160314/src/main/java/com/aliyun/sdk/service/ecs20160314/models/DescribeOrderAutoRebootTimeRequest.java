@@ -102,13 +102,13 @@ public class DescribeOrderAutoRebootTimeRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeOrderAutoRebootTimeRequest response) {
-            super(response);
-            this.orderId = response.orderId;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DescribeOrderAutoRebootTimeRequest request) {
+            super(request);
+            this.orderId = request.orderId;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

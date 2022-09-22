@@ -128,15 +128,15 @@ public class DescribeInstanceAutoRebootTimeRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeInstanceAutoRebootTimeRequest response) {
-            super(response);
-            this.autoRebootTimeFrom = response.autoRebootTimeFrom;
-            this.autoRebootTimeTo = response.autoRebootTimeTo;
-            this.instanceIds = response.instanceIds;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DescribeInstanceAutoRebootTimeRequest request) {
+            super(request);
+            this.autoRebootTimeFrom = request.autoRebootTimeFrom;
+            this.autoRebootTimeTo = request.autoRebootTimeTo;
+            this.instanceIds = request.instanceIds;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyInstanceChargeTypeRequest</p>
  */
 public class ModifyInstanceChargeTypeRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("AutoPay")
     private Boolean autoPay;
@@ -74,12 +78,9 @@ public class ModifyInstanceChargeTypeRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     private ModifyInstanceChargeTypeRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.autoPay = builder.autoPay;
         this.clientToken = builder.clientToken;
         this.couponNo = builder.couponNo;
@@ -95,7 +96,6 @@ public class ModifyInstanceChargeTypeRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -109,6 +109,13 @@ public class ModifyInstanceChargeTypeRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -216,14 +223,8 @@ public class ModifyInstanceChargeTypeRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
     public static final class Builder extends Request.Builder<ModifyInstanceChargeTypeRequest, Builder> {
+        private String sourceRegionId; 
         private Boolean autoPay; 
         private String clientToken; 
         private String couponNo; 
@@ -239,31 +240,39 @@ public class ModifyInstanceChargeTypeRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ModifyInstanceChargeTypeRequest response) {
-            super(response);
-            this.autoPay = response.autoPay;
-            this.clientToken = response.clientToken;
-            this.couponNo = response.couponNo;
-            this.dryRun = response.dryRun;
-            this.includeDataDisks = response.includeDataDisks;
-            this.instanceChargeType = response.instanceChargeType;
-            this.instanceIds = response.instanceIds;
-            this.isDetailFee = response.isDetailFee;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.period = response.period;
-            this.periodUnit = response.periodUnit;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.sourceRegionId = response.sourceRegionId;
+        private Builder(ModifyInstanceChargeTypeRequest request) {
+            super(request);
+            this.sourceRegionId = request.sourceRegionId;
+            this.autoPay = request.autoPay;
+            this.clientToken = request.clientToken;
+            this.couponNo = request.couponNo;
+            this.dryRun = request.dryRun;
+            this.includeDataDisks = request.includeDataDisks;
+            this.instanceChargeType = request.instanceChargeType;
+            this.instanceIds = request.instanceIds;
+            this.isDetailFee = request.isDetailFee;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.period = request.period;
+            this.periodUnit = request.periodUnit;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * AutoPay.
@@ -397,15 +406,6 @@ public class ModifyInstanceChargeTypeRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

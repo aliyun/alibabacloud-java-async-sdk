@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UnmountPEDiskRequest</p>
  */
 public class UnmountPEDiskRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("Category")
     private String category;
@@ -46,10 +50,6 @@ public class UnmountPEDiskRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
     @NameInMap("SourceSystem")
     private String sourceSystem;
@@ -60,6 +60,7 @@ public class UnmountPEDiskRequest extends Request {
 
     private UnmountPEDiskRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.category = builder.category;
         this.clientToken = builder.clientToken;
         this.ownerAccount = builder.ownerAccount;
@@ -68,7 +69,6 @@ public class UnmountPEDiskRequest extends Request {
         this.resourceId = builder.resourceId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
         this.sourceSystem = builder.sourceSystem;
         this.status = builder.status;
     }
@@ -84,6 +84,13 @@ public class UnmountPEDiskRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -143,13 +150,6 @@ public class UnmountPEDiskRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
      * @return sourceSystem
      */
     public String getSourceSystem() {
@@ -164,6 +164,7 @@ public class UnmountPEDiskRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UnmountPEDiskRequest, Builder> {
+        private String sourceRegionId; 
         private String category; 
         private String clientToken; 
         private String ownerAccount; 
@@ -172,7 +173,6 @@ public class UnmountPEDiskRequest extends Request {
         private String resourceId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
         private String sourceSystem; 
         private String status; 
 
@@ -180,20 +180,29 @@ public class UnmountPEDiskRequest extends Request {
             super();
         } 
 
-        private Builder(UnmountPEDiskRequest response) {
-            super(response);
-            this.category = response.category;
-            this.clientToken = response.clientToken;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceId = response.resourceId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.sourceRegionId = response.sourceRegionId;
-            this.sourceSystem = response.sourceSystem;
-            this.status = response.status;
+        private Builder(UnmountPEDiskRequest request) {
+            super(request);
+            this.sourceRegionId = request.sourceRegionId;
+            this.category = request.category;
+            this.clientToken = request.clientToken;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceId = request.resourceId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceSystem = request.sourceSystem;
+            this.status = request.status;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * Category.
@@ -264,15 +273,6 @@ public class UnmountPEDiskRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

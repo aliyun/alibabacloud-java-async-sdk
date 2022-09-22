@@ -140,16 +140,16 @@ public class FeedbackDiagnoseRequest extends Request {
             super();
         } 
 
-        private Builder(FeedbackDiagnoseRequest response) {
-            super(response);
-            this.diagnoseId = response.diagnoseId;
-            this.mark = response.mark;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.star = response.star;
+        private Builder(FeedbackDiagnoseRequest request) {
+            super(request);
+            this.diagnoseId = request.diagnoseId;
+            this.mark = request.mark;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.star = request.star;
         } 
 
         /**

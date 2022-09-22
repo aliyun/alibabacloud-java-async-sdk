@@ -153,17 +153,17 @@ public class ModifyWaitingOrderRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyWaitingOrderRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.instanceAmount = response.instanceAmount;
-            this.ownerAccount = response.ownerAccount;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.tag = response.tag;
-            this.waitingOrderId = response.waitingOrderId;
+        private Builder(ModifyWaitingOrderRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.instanceAmount = request.instanceAmount;
+            this.ownerAccount = request.ownerAccount;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.tag = request.tag;
+            this.waitingOrderId = request.waitingOrderId;
         } 
 
         /**

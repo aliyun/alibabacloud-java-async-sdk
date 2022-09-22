@@ -13,6 +13,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateDedicatedHostClusterRequest extends Request {
     @Query
+    @NameInMap("SchedulerOptions")
+    private SchedulerOptions schedulerOptions;
+
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
+    @Query
     @NameInMap("DedicatedHostClusterName")
     private String dedicatedHostClusterName;
 
@@ -49,10 +57,6 @@ public class CreateDedicatedHostClusterRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
     @NameInMap("Tag")
     private java.util.List < Tag> tag;
@@ -63,6 +67,8 @@ public class CreateDedicatedHostClusterRequest extends Request {
 
     private CreateDedicatedHostClusterRequest(Builder builder) {
         super(builder);
+        this.schedulerOptions = builder.schedulerOptions;
+        this.sourceRegionId = builder.sourceRegionId;
         this.dedicatedHostClusterName = builder.dedicatedHostClusterName;
         this.description = builder.description;
         this.dryRun = builder.dryRun;
@@ -72,7 +78,6 @@ public class CreateDedicatedHostClusterRequest extends Request {
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
         this.tag = builder.tag;
         this.zoneId = builder.zoneId;
     }
@@ -88,6 +93,20 @@ public class CreateDedicatedHostClusterRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return schedulerOptions
+     */
+    public SchedulerOptions getSchedulerOptions() {
+        return this.schedulerOptions;
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -154,13 +173,6 @@ public class CreateDedicatedHostClusterRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
      * @return tag
      */
     public java.util.List < Tag> getTag() {
@@ -175,6 +187,8 @@ public class CreateDedicatedHostClusterRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateDedicatedHostClusterRequest, Builder> {
+        private SchedulerOptions schedulerOptions; 
+        private String sourceRegionId; 
         private String dedicatedHostClusterName; 
         private String description; 
         private Boolean dryRun; 
@@ -184,7 +198,6 @@ public class CreateDedicatedHostClusterRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
         private java.util.List < Tag> tag; 
         private String zoneId; 
 
@@ -192,21 +205,40 @@ public class CreateDedicatedHostClusterRequest extends Request {
             super();
         } 
 
-        private Builder(CreateDedicatedHostClusterRequest response) {
-            super(response);
-            this.dedicatedHostClusterName = response.dedicatedHostClusterName;
-            this.description = response.description;
-            this.dryRun = response.dryRun;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.sourceRegionId = response.sourceRegionId;
-            this.tag = response.tag;
-            this.zoneId = response.zoneId;
+        private Builder(CreateDedicatedHostClusterRequest request) {
+            super(request);
+            this.schedulerOptions = request.schedulerOptions;
+            this.sourceRegionId = request.sourceRegionId;
+            this.dedicatedHostClusterName = request.dedicatedHostClusterName;
+            this.description = request.description;
+            this.dryRun = request.dryRun;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.tag = request.tag;
+            this.zoneId = request.zoneId;
         } 
+
+        /**
+         * SchedulerOptions.
+         */
+        public Builder schedulerOptions(SchedulerOptions schedulerOptions) {
+            this.putQueryParameter("SchedulerOptions", schedulerOptions);
+            this.schedulerOptions = schedulerOptions;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * DedicatedHostClusterName.
@@ -290,15 +322,6 @@ public class CreateDedicatedHostClusterRequest extends Request {
         }
 
         /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
-            return this;
-        }
-
-        /**
          * Tag.
          */
         public Builder tag(java.util.List < Tag> tag) {
@@ -323,6 +346,47 @@ public class CreateDedicatedHostClusterRequest extends Request {
 
     } 
 
+    public static class SchedulerOptions extends TeaModel {
+        @NameInMap("ManagedPrivateSpaceId")
+        private String managedPrivateSpaceId;
+
+        private SchedulerOptions(Builder builder) {
+            this.managedPrivateSpaceId = builder.managedPrivateSpaceId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SchedulerOptions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return managedPrivateSpaceId
+         */
+        public String getManagedPrivateSpaceId() {
+            return this.managedPrivateSpaceId;
+        }
+
+        public static final class Builder {
+            private String managedPrivateSpaceId; 
+
+            /**
+             * ManagedPrivateSpaceId.
+             */
+            public Builder managedPrivateSpaceId(String managedPrivateSpaceId) {
+                this.managedPrivateSpaceId = managedPrivateSpaceId;
+                return this;
+            }
+
+            public SchedulerOptions build() {
+                return new SchedulerOptions(this);
+            } 
+
+        } 
+
+    }
     public static class Tag extends TeaModel {
         @NameInMap("Key")
         private String key;

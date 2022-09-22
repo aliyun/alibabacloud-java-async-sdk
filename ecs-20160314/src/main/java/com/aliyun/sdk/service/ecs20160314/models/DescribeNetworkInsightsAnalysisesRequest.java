@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeNetworkInsightsAnalysisesRequest</p>
  */
 public class DescribeNetworkInsightsAnalysisesRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("DryRun")
     private Boolean dryRun;
@@ -45,16 +49,13 @@ public class DescribeNetworkInsightsAnalysisesRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
     @NameInMap("Status")
     private String status;
 
     private DescribeNetworkInsightsAnalysisesRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.dryRun = builder.dryRun;
         this.maxResults = builder.maxResults;
         this.networkInsightsAnalysisId = builder.networkInsightsAnalysisId;
@@ -63,7 +64,6 @@ public class DescribeNetworkInsightsAnalysisesRequest extends Request {
         this.nextToken = builder.nextToken;
         this.regionId = builder.regionId;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
         this.status = builder.status;
     }
 
@@ -78,6 +78,13 @@ public class DescribeNetworkInsightsAnalysisesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -137,13 +144,6 @@ public class DescribeNetworkInsightsAnalysisesRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
      * @return status
      */
     public String getStatus() {
@@ -151,6 +151,7 @@ public class DescribeNetworkInsightsAnalysisesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeNetworkInsightsAnalysisesRequest, Builder> {
+        private String sourceRegionId; 
         private Boolean dryRun; 
         private Integer maxResults; 
         private java.util.List < String > networkInsightsAnalysisId; 
@@ -159,26 +160,34 @@ public class DescribeNetworkInsightsAnalysisesRequest extends Request {
         private String nextToken; 
         private String regionId; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
         private String status; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeNetworkInsightsAnalysisesRequest response) {
-            super(response);
-            this.dryRun = response.dryRun;
-            this.maxResults = response.maxResults;
-            this.networkInsightsAnalysisId = response.networkInsightsAnalysisId;
-            this.networkInsightsPathId = response.networkInsightsPathId;
-            this.networkPathFound = response.networkPathFound;
-            this.nextToken = response.nextToken;
-            this.regionId = response.regionId;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.sourceRegionId = response.sourceRegionId;
-            this.status = response.status;
+        private Builder(DescribeNetworkInsightsAnalysisesRequest request) {
+            super(request);
+            this.sourceRegionId = request.sourceRegionId;
+            this.dryRun = request.dryRun;
+            this.maxResults = request.maxResults;
+            this.networkInsightsAnalysisId = request.networkInsightsAnalysisId;
+            this.networkInsightsPathId = request.networkInsightsPathId;
+            this.networkPathFound = request.networkPathFound;
+            this.nextToken = request.nextToken;
+            this.regionId = request.regionId;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.status = request.status;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * DryRun.
@@ -249,15 +258,6 @@ public class DescribeNetworkInsightsAnalysisesRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

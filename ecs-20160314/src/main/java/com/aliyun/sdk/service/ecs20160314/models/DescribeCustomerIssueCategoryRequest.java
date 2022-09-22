@@ -61,10 +61,10 @@ public class DescribeCustomerIssueCategoryRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeCustomerIssueCategoryRequest response) {
-            super(response);
-            this.layer = response.layer;
-            this.regionId = response.regionId;
+        private Builder(DescribeCustomerIssueCategoryRequest request) {
+            super(request);
+            this.layer = request.layer;
+            this.regionId = request.regionId;
         } 
 
         /**

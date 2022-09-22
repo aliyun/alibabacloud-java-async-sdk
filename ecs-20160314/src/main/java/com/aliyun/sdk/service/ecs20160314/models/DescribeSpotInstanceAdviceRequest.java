@@ -192,20 +192,20 @@ public class DescribeSpotInstanceAdviceRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeSpotInstanceAdviceRequest response) {
-            super(response);
-            this.cores = response.cores;
-            this.ioOptimized = response.ioOptimized;
-            this.memory = response.memory;
-            this.minCores = response.minCores;
-            this.minMemory = response.minMemory;
-            this.networkType = response.networkType;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.zoneId = response.zoneId;
+        private Builder(DescribeSpotInstanceAdviceRequest request) {
+            super(request);
+            this.cores = request.cores;
+            this.ioOptimized = request.ioOptimized;
+            this.memory = request.memory;
+            this.minCores = request.minCores;
+            this.minMemory = request.minMemory;
+            this.networkType = request.networkType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.zoneId = request.zoneId;
         } 
 
         /**

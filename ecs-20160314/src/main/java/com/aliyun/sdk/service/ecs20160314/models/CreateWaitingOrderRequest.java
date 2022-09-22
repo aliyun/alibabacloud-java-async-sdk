@@ -12,23 +12,33 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateWaitingOrderRequest</p>
  */
 public class CreateWaitingOrderRequest extends Request {
+    @Query
     @NameInMap("CpuOptions")
     private CpuOptions cpuOptions;
 
+    @Query
     @NameInMap("HibernationOptions")
     private HibernationOptions hibernationOptions;
 
+    @Query
     @NameInMap("PrivatePoolOptions")
     private PrivatePoolOptions privatePoolOptions;
 
+    @Query
     @NameInMap("SchedulerOptions")
     private SchedulerOptions schedulerOptions;
 
+    @Query
     @NameInMap("SecurityOptions")
     private SecurityOptions securityOptions;
 
+    @Query
     @NameInMap("SystemDisk")
     private SystemDisk systemDisk;
+
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     @Query
     @NameInMap("Affinity")
@@ -257,10 +267,6 @@ public class CreateWaitingOrderRequest extends Request {
     @NameInMap("SecurityGroupIds")
     private java.util.List < String > securityGroupIds;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
     @NameInMap("SpotDuration")
     @Validation(maximum = 6)
@@ -319,6 +325,7 @@ public class CreateWaitingOrderRequest extends Request {
         this.schedulerOptions = builder.schedulerOptions;
         this.securityOptions = builder.securityOptions;
         this.systemDisk = builder.systemDisk;
+        this.sourceRegionId = builder.sourceRegionId;
         this.affinity = builder.affinity;
         this.arn = builder.arn;
         this.autoReleaseTime = builder.autoReleaseTime;
@@ -375,7 +382,6 @@ public class CreateWaitingOrderRequest extends Request {
         this.securityEnhancementStrategy = builder.securityEnhancementStrategy;
         this.securityGroupId = builder.securityGroupId;
         this.securityGroupIds = builder.securityGroupIds;
-        this.sourceRegionId = builder.sourceRegionId;
         this.spotDuration = builder.spotDuration;
         this.spotInterruptionBehavior = builder.spotInterruptionBehavior;
         this.spotPriceLimit = builder.spotPriceLimit;
@@ -443,6 +449,13 @@ public class CreateWaitingOrderRequest extends Request {
      */
     public SystemDisk getSystemDisk() {
         return this.systemDisk;
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -838,13 +851,6 @@ public class CreateWaitingOrderRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
      * @return spotDuration
      */
     public Integer getSpotDuration() {
@@ -935,6 +941,7 @@ public class CreateWaitingOrderRequest extends Request {
         private SchedulerOptions schedulerOptions; 
         private SecurityOptions securityOptions; 
         private SystemDisk systemDisk; 
+        private String sourceRegionId; 
         private String affinity; 
         private java.util.List < Arn> arn; 
         private String autoReleaseTime; 
@@ -991,7 +998,6 @@ public class CreateWaitingOrderRequest extends Request {
         private String securityEnhancementStrategy; 
         private String securityGroupId; 
         private java.util.List < String > securityGroupIds; 
-        private String sourceRegionId; 
         private Integer spotDuration; 
         private String spotInterruptionBehavior; 
         private Float spotPriceLimit; 
@@ -1009,89 +1015,90 @@ public class CreateWaitingOrderRequest extends Request {
             super();
         } 
 
-        private Builder(CreateWaitingOrderRequest response) {
-            super(response);
-            this.cpuOptions = response.cpuOptions;
-            this.hibernationOptions = response.hibernationOptions;
-            this.privatePoolOptions = response.privatePoolOptions;
-            this.schedulerOptions = response.schedulerOptions;
-            this.securityOptions = response.securityOptions;
-            this.systemDisk = response.systemDisk;
-            this.affinity = response.affinity;
-            this.arn = response.arn;
-            this.autoReleaseTime = response.autoReleaseTime;
-            this.autoRenew = response.autoRenew;
-            this.autoRenewPeriod = response.autoRenewPeriod;
-            this.clientToken = response.clientToken;
-            this.creditSpecification = response.creditSpecification;
-            this.dataDisk = response.dataDisk;
-            this.dedicatedHostId = response.dedicatedHostId;
-            this.deletionProtection = response.deletionProtection;
-            this.deploymentSetGroupNo = response.deploymentSetGroupNo;
-            this.deploymentSetId = response.deploymentSetId;
-            this.description = response.description;
-            this.dryRun = response.dryRun;
-            this.expiredTime = response.expiredTime;
-            this.hostName = response.hostName;
-            this.hostNames = response.hostNames;
-            this.hpcClusterId = response.hpcClusterId;
-            this.httpEndpoint = response.httpEndpoint;
-            this.httpPutResponseHopLimit = response.httpPutResponseHopLimit;
-            this.httpTokens = response.httpTokens;
-            this.imageFamily = response.imageFamily;
-            this.imageId = response.imageId;
-            this.instanceChargeType = response.instanceChargeType;
-            this.instanceName = response.instanceName;
-            this.instanceType = response.instanceType;
-            this.internetChargeType = response.internetChargeType;
-            this.internetMaxBandwidthIn = response.internetMaxBandwidthIn;
-            this.internetMaxBandwidthOut = response.internetMaxBandwidthOut;
-            this.ioOptimized = response.ioOptimized;
-            this.ipv6Address = response.ipv6Address;
-            this.ipv6AddressCount = response.ipv6AddressCount;
-            this.isp = response.isp;
-            this.keyPairName = response.keyPairName;
-            this.launchTemplateId = response.launchTemplateId;
-            this.launchTemplateName = response.launchTemplateName;
-            this.launchTemplateVersion = response.launchTemplateVersion;
-            this.maxAmount = response.maxAmount;
-            this.minAmount = response.minAmount;
-            this.networkInterface = response.networkInterface;
-            this.networkInterfaceQueueNumber = response.networkInterfaceQueueNumber;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.password = response.password;
-            this.passwordInherit = response.passwordInherit;
-            this.period = response.period;
-            this.periodUnit = response.periodUnit;
-            this.privateIpAddress = response.privateIpAddress;
-            this.ramRoleName = response.ramRoleName;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.securityEnhancementStrategy = response.securityEnhancementStrategy;
-            this.securityGroupId = response.securityGroupId;
-            this.securityGroupIds = response.securityGroupIds;
-            this.sourceRegionId = response.sourceRegionId;
-            this.spotDuration = response.spotDuration;
-            this.spotInterruptionBehavior = response.spotInterruptionBehavior;
-            this.spotPriceLimit = response.spotPriceLimit;
-            this.spotStrategy = response.spotStrategy;
-            this.storageSetId = response.storageSetId;
-            this.storageSetPartitionNumber = response.storageSetPartitionNumber;
-            this.tag = response.tag;
-            this.tenancy = response.tenancy;
-            this.uniqueSuffix = response.uniqueSuffix;
-            this.userData = response.userData;
-            this.vSwitchId = response.vSwitchId;
-            this.zoneId = response.zoneId;
+        private Builder(CreateWaitingOrderRequest request) {
+            super(request);
+            this.cpuOptions = request.cpuOptions;
+            this.hibernationOptions = request.hibernationOptions;
+            this.privatePoolOptions = request.privatePoolOptions;
+            this.schedulerOptions = request.schedulerOptions;
+            this.securityOptions = request.securityOptions;
+            this.systemDisk = request.systemDisk;
+            this.sourceRegionId = request.sourceRegionId;
+            this.affinity = request.affinity;
+            this.arn = request.arn;
+            this.autoReleaseTime = request.autoReleaseTime;
+            this.autoRenew = request.autoRenew;
+            this.autoRenewPeriod = request.autoRenewPeriod;
+            this.clientToken = request.clientToken;
+            this.creditSpecification = request.creditSpecification;
+            this.dataDisk = request.dataDisk;
+            this.dedicatedHostId = request.dedicatedHostId;
+            this.deletionProtection = request.deletionProtection;
+            this.deploymentSetGroupNo = request.deploymentSetGroupNo;
+            this.deploymentSetId = request.deploymentSetId;
+            this.description = request.description;
+            this.dryRun = request.dryRun;
+            this.expiredTime = request.expiredTime;
+            this.hostName = request.hostName;
+            this.hostNames = request.hostNames;
+            this.hpcClusterId = request.hpcClusterId;
+            this.httpEndpoint = request.httpEndpoint;
+            this.httpPutResponseHopLimit = request.httpPutResponseHopLimit;
+            this.httpTokens = request.httpTokens;
+            this.imageFamily = request.imageFamily;
+            this.imageId = request.imageId;
+            this.instanceChargeType = request.instanceChargeType;
+            this.instanceName = request.instanceName;
+            this.instanceType = request.instanceType;
+            this.internetChargeType = request.internetChargeType;
+            this.internetMaxBandwidthIn = request.internetMaxBandwidthIn;
+            this.internetMaxBandwidthOut = request.internetMaxBandwidthOut;
+            this.ioOptimized = request.ioOptimized;
+            this.ipv6Address = request.ipv6Address;
+            this.ipv6AddressCount = request.ipv6AddressCount;
+            this.isp = request.isp;
+            this.keyPairName = request.keyPairName;
+            this.launchTemplateId = request.launchTemplateId;
+            this.launchTemplateName = request.launchTemplateName;
+            this.launchTemplateVersion = request.launchTemplateVersion;
+            this.maxAmount = request.maxAmount;
+            this.minAmount = request.minAmount;
+            this.networkInterface = request.networkInterface;
+            this.networkInterfaceQueueNumber = request.networkInterfaceQueueNumber;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.password = request.password;
+            this.passwordInherit = request.passwordInherit;
+            this.period = request.period;
+            this.periodUnit = request.periodUnit;
+            this.privateIpAddress = request.privateIpAddress;
+            this.ramRoleName = request.ramRoleName;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.securityEnhancementStrategy = request.securityEnhancementStrategy;
+            this.securityGroupId = request.securityGroupId;
+            this.securityGroupIds = request.securityGroupIds;
+            this.spotDuration = request.spotDuration;
+            this.spotInterruptionBehavior = request.spotInterruptionBehavior;
+            this.spotPriceLimit = request.spotPriceLimit;
+            this.spotStrategy = request.spotStrategy;
+            this.storageSetId = request.storageSetId;
+            this.storageSetPartitionNumber = request.storageSetPartitionNumber;
+            this.tag = request.tag;
+            this.tenancy = request.tenancy;
+            this.uniqueSuffix = request.uniqueSuffix;
+            this.userData = request.userData;
+            this.vSwitchId = request.vSwitchId;
+            this.zoneId = request.zoneId;
         } 
 
         /**
          * CpuOptions.
          */
         public Builder cpuOptions(CpuOptions cpuOptions) {
+            this.putQueryParameter("CpuOptions", cpuOptions);
             this.cpuOptions = cpuOptions;
             return this;
         }
@@ -1100,6 +1107,7 @@ public class CreateWaitingOrderRequest extends Request {
          * HibernationOptions.
          */
         public Builder hibernationOptions(HibernationOptions hibernationOptions) {
+            this.putQueryParameter("HibernationOptions", hibernationOptions);
             this.hibernationOptions = hibernationOptions;
             return this;
         }
@@ -1108,6 +1116,7 @@ public class CreateWaitingOrderRequest extends Request {
          * PrivatePoolOptions.
          */
         public Builder privatePoolOptions(PrivatePoolOptions privatePoolOptions) {
+            this.putQueryParameter("PrivatePoolOptions", privatePoolOptions);
             this.privatePoolOptions = privatePoolOptions;
             return this;
         }
@@ -1116,6 +1125,7 @@ public class CreateWaitingOrderRequest extends Request {
          * SchedulerOptions.
          */
         public Builder schedulerOptions(SchedulerOptions schedulerOptions) {
+            this.putQueryParameter("SchedulerOptions", schedulerOptions);
             this.schedulerOptions = schedulerOptions;
             return this;
         }
@@ -1124,6 +1134,7 @@ public class CreateWaitingOrderRequest extends Request {
          * SecurityOptions.
          */
         public Builder securityOptions(SecurityOptions securityOptions) {
+            this.putQueryParameter("SecurityOptions", securityOptions);
             this.securityOptions = securityOptions;
             return this;
         }
@@ -1132,7 +1143,17 @@ public class CreateWaitingOrderRequest extends Request {
          * SystemDisk.
          */
         public Builder systemDisk(SystemDisk systemDisk) {
+            this.putQueryParameter("SystemDisk", systemDisk);
             this.systemDisk = systemDisk;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 
@@ -1641,15 +1662,6 @@ public class CreateWaitingOrderRequest extends Request {
         }
 
         /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
-            return this;
-        }
-
-        /**
          * SpotDuration.
          */
         public Builder spotDuration(Integer spotDuration) {
@@ -2068,6 +2080,9 @@ public class CreateWaitingOrderRequest extends Request {
         @NameInMap("Size")
         private String size;
 
+        @NameInMap("StorageClusterId")
+        private String storageClusterId;
+
         private SystemDisk(Builder builder) {
             this.autoSnapshotPolicyId = builder.autoSnapshotPolicyId;
             this.category = builder.category;
@@ -2075,6 +2090,7 @@ public class CreateWaitingOrderRequest extends Request {
             this.diskName = builder.diskName;
             this.performanceLevel = builder.performanceLevel;
             this.size = builder.size;
+            this.storageClusterId = builder.storageClusterId;
         }
 
         public static Builder builder() {
@@ -2127,6 +2143,13 @@ public class CreateWaitingOrderRequest extends Request {
             return this.size;
         }
 
+        /**
+         * @return storageClusterId
+         */
+        public String getStorageClusterId() {
+            return this.storageClusterId;
+        }
+
         public static final class Builder {
             private String autoSnapshotPolicyId; 
             private String category; 
@@ -2134,6 +2157,7 @@ public class CreateWaitingOrderRequest extends Request {
             private String diskName; 
             private String performanceLevel; 
             private String size; 
+            private String storageClusterId; 
 
             /**
              * AutoSnapshotPolicyId.
@@ -2180,6 +2204,14 @@ public class CreateWaitingOrderRequest extends Request {
              */
             public Builder size(String size) {
                 this.size = size;
+                return this;
+            }
+
+            /**
+             * StorageClusterId.
+             */
+            public Builder storageClusterId(String storageClusterId) {
+                this.storageClusterId = storageClusterId;
                 return this;
             }
 

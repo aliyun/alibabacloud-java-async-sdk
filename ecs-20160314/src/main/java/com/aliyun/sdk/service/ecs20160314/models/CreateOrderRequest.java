@@ -246,24 +246,24 @@ public class CreateOrderRequest extends Request {
             super();
         } 
 
-        private Builder(CreateOrderRequest response) {
-            super(response);
-            this.affinity = response.affinity;
-            this.asyncPattern = response.asyncPattern;
-            this.businessInfo = response.businessInfo;
-            this.chargeType = response.chargeType;
-            this.clientToken = response.clientToken;
-            this.commodity = response.commodity;
-            this.dedicatedHostClusterId = response.dedicatedHostClusterId;
-            this.dedicatedHostId = response.dedicatedHostId;
-            this.fromApp = response.fromApp;
-            this.orderType = response.orderType;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.tenancy = response.tenancy;
+        private Builder(CreateOrderRequest request) {
+            super(request);
+            this.affinity = request.affinity;
+            this.asyncPattern = request.asyncPattern;
+            this.businessInfo = request.businessInfo;
+            this.chargeType = request.chargeType;
+            this.clientToken = request.clientToken;
+            this.commodity = request.commodity;
+            this.dedicatedHostClusterId = request.dedicatedHostClusterId;
+            this.dedicatedHostId = request.dedicatedHostId;
+            this.fromApp = request.fromApp;
+            this.orderType = request.orderType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.tenancy = request.tenancy;
         } 
 
         /**

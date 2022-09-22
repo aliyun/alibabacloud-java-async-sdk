@@ -71,127 +71,6 @@ public class GetLaunchTemplateDataResponseBody extends TeaModel {
 
     } 
 
-    public static class SystemDisk extends TeaModel {
-        @NameInMap("Category")
-        private String category;
-
-        @NameInMap("Description")
-        private String description;
-
-        @NameInMap("DiskName")
-        private String diskName;
-
-        @NameInMap("Iops")
-        private Integer iops;
-
-        @NameInMap("Size")
-        private Integer size;
-
-        private SystemDisk(Builder builder) {
-            this.category = builder.category;
-            this.description = builder.description;
-            this.diskName = builder.diskName;
-            this.iops = builder.iops;
-            this.size = builder.size;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static SystemDisk create() {
-            return builder().build();
-        }
-
-        /**
-         * @return category
-         */
-        public String getCategory() {
-            return this.category;
-        }
-
-        /**
-         * @return description
-         */
-        public String getDescription() {
-            return this.description;
-        }
-
-        /**
-         * @return diskName
-         */
-        public String getDiskName() {
-            return this.diskName;
-        }
-
-        /**
-         * @return iops
-         */
-        public Integer getIops() {
-            return this.iops;
-        }
-
-        /**
-         * @return size
-         */
-        public Integer getSize() {
-            return this.size;
-        }
-
-        public static final class Builder {
-            private String category; 
-            private String description; 
-            private String diskName; 
-            private Integer iops; 
-            private Integer size; 
-
-            /**
-             * Category.
-             */
-            public Builder category(String category) {
-                this.category = category;
-                return this;
-            }
-
-            /**
-             * Description.
-             */
-            public Builder description(String description) {
-                this.description = description;
-                return this;
-            }
-
-            /**
-             * DiskName.
-             */
-            public Builder diskName(String diskName) {
-                this.diskName = diskName;
-                return this;
-            }
-
-            /**
-             * Iops.
-             */
-            public Builder iops(Integer iops) {
-                this.iops = iops;
-                return this;
-            }
-
-            /**
-             * Size.
-             */
-            public Builder size(Integer size) {
-                this.size = size;
-                return this;
-            }
-
-            public SystemDisk build() {
-                return new SystemDisk(this);
-            } 
-
-        } 
-
-    }
     public static class DataDisk extends TeaModel {
         @NameInMap("Category")
         private String category;
@@ -679,10 +558,6 @@ public class GetLaunchTemplateDataResponseBody extends TeaModel {
 
     }
     public static class LaunchTemplateData extends TeaModel {
-        @NameInMap("SystemDisk")
-        @Validation(required = true)
-        private SystemDisk systemDisk;
-
         @NameInMap("AutoReleaseTime")
         private String autoReleaseTime;
 
@@ -761,6 +636,21 @@ public class GetLaunchTemplateDataResponseBody extends TeaModel {
         @NameInMap("SpotStrategy")
         private String spotStrategy;
 
+        @NameInMap("SystemDisk.Category")
+        private String systemDisk_category;
+
+        @NameInMap("SystemDisk.Description")
+        private String systemDisk_description;
+
+        @NameInMap("SystemDisk.DiskName")
+        private String systemDisk_diskName;
+
+        @NameInMap("SystemDisk.Iops")
+        private Integer systemDisk_iops;
+
+        @NameInMap("SystemDisk.Size")
+        private Integer systemDisk_size;
+
         @NameInMap("Tags")
         private Tags tags;
 
@@ -777,7 +667,6 @@ public class GetLaunchTemplateDataResponseBody extends TeaModel {
         private String zoneId;
 
         private LaunchTemplateData(Builder builder) {
-            this.systemDisk = builder.systemDisk;
             this.autoReleaseTime = builder.autoReleaseTime;
             this.dataDisks = builder.dataDisks;
             this.description = builder.description;
@@ -804,6 +693,11 @@ public class GetLaunchTemplateDataResponseBody extends TeaModel {
             this.spotDuration = builder.spotDuration;
             this.spotPriceLimit = builder.spotPriceLimit;
             this.spotStrategy = builder.spotStrategy;
+            this.systemDisk_category = builder.systemDisk_category;
+            this.systemDisk_description = builder.systemDisk_description;
+            this.systemDisk_diskName = builder.systemDisk_diskName;
+            this.systemDisk_iops = builder.systemDisk_iops;
+            this.systemDisk_size = builder.systemDisk_size;
             this.tags = builder.tags;
             this.userData = builder.userData;
             this.vSwitchId = builder.vSwitchId;
@@ -817,13 +711,6 @@ public class GetLaunchTemplateDataResponseBody extends TeaModel {
 
         public static LaunchTemplateData create() {
             return builder().build();
-        }
-
-        /**
-         * @return systemDisk
-         */
-        public SystemDisk getSystemDisk() {
-            return this.systemDisk;
         }
 
         /**
@@ -1009,6 +896,41 @@ public class GetLaunchTemplateDataResponseBody extends TeaModel {
         }
 
         /**
+         * @return systemDisk_category
+         */
+        public String getSystemDisk_category() {
+            return this.systemDisk_category;
+        }
+
+        /**
+         * @return systemDisk_description
+         */
+        public String getSystemDisk_description() {
+            return this.systemDisk_description;
+        }
+
+        /**
+         * @return systemDisk_diskName
+         */
+        public String getSystemDisk_diskName() {
+            return this.systemDisk_diskName;
+        }
+
+        /**
+         * @return systemDisk_iops
+         */
+        public Integer getSystemDisk_iops() {
+            return this.systemDisk_iops;
+        }
+
+        /**
+         * @return systemDisk_size
+         */
+        public Integer getSystemDisk_size() {
+            return this.systemDisk_size;
+        }
+
+        /**
          * @return tags
          */
         public Tags getTags() {
@@ -1044,7 +966,6 @@ public class GetLaunchTemplateDataResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private SystemDisk systemDisk; 
             private String autoReleaseTime; 
             private DataDisks dataDisks; 
             private String description; 
@@ -1071,19 +992,16 @@ public class GetLaunchTemplateDataResponseBody extends TeaModel {
             private Integer spotDuration; 
             private Float spotPriceLimit; 
             private String spotStrategy; 
+            private String systemDisk_category; 
+            private String systemDisk_description; 
+            private String systemDisk_diskName; 
+            private Integer systemDisk_iops; 
+            private Integer systemDisk_size; 
             private Tags tags; 
             private String userData; 
             private String vSwitchId; 
             private String vpcId; 
             private String zoneId; 
-
-            /**
-             * SystemDisk.
-             */
-            public Builder systemDisk(SystemDisk systemDisk) {
-                this.systemDisk = systemDisk;
-                return this;
-            }
 
             /**
              * AutoReleaseTime.
@@ -1290,6 +1208,46 @@ public class GetLaunchTemplateDataResponseBody extends TeaModel {
              */
             public Builder spotStrategy(String spotStrategy) {
                 this.spotStrategy = spotStrategy;
+                return this;
+            }
+
+            /**
+             * SystemDisk.Category.
+             */
+            public Builder systemDisk_category(String systemDisk_category) {
+                this.systemDisk_category = systemDisk_category;
+                return this;
+            }
+
+            /**
+             * SystemDisk.Description.
+             */
+            public Builder systemDisk_description(String systemDisk_description) {
+                this.systemDisk_description = systemDisk_description;
+                return this;
+            }
+
+            /**
+             * SystemDisk.DiskName.
+             */
+            public Builder systemDisk_diskName(String systemDisk_diskName) {
+                this.systemDisk_diskName = systemDisk_diskName;
+                return this;
+            }
+
+            /**
+             * SystemDisk.Iops.
+             */
+            public Builder systemDisk_iops(Integer systemDisk_iops) {
+                this.systemDisk_iops = systemDisk_iops;
+                return this;
+            }
+
+            /**
+             * SystemDisk.Size.
+             */
+            public Builder systemDisk_size(Integer systemDisk_size) {
+                this.systemDisk_size = systemDisk_size;
                 return this;
             }
 

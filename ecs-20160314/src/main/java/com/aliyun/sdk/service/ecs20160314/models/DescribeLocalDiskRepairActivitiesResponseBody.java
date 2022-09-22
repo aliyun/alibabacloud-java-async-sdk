@@ -422,9 +422,13 @@ public class DescribeLocalDiskRepairActivitiesResponseBody extends TeaModel {
         @NameInMap("DiskId")
         private String diskId;
 
+        @NameInMap("OnlineRepairPolicy")
+        private String onlineRepairPolicy;
+
         private ExtendedAttribute(Builder builder) {
             this.device = builder.device;
             this.diskId = builder.diskId;
+            this.onlineRepairPolicy = builder.onlineRepairPolicy;
         }
 
         public static Builder builder() {
@@ -449,9 +453,17 @@ public class DescribeLocalDiskRepairActivitiesResponseBody extends TeaModel {
             return this.diskId;
         }
 
+        /**
+         * @return onlineRepairPolicy
+         */
+        public String getOnlineRepairPolicy() {
+            return this.onlineRepairPolicy;
+        }
+
         public static final class Builder {
             private String device; 
             private String diskId; 
+            private String onlineRepairPolicy; 
 
             /**
              * Device.
@@ -466,6 +478,14 @@ public class DescribeLocalDiskRepairActivitiesResponseBody extends TeaModel {
              */
             public Builder diskId(String diskId) {
                 this.diskId = diskId;
+                return this;
+            }
+
+            /**
+             * OnlineRepairPolicy.
+             */
+            public Builder onlineRepairPolicy(String onlineRepairPolicy) {
+                this.onlineRepairPolicy = onlineRepairPolicy;
                 return this;
             }
 

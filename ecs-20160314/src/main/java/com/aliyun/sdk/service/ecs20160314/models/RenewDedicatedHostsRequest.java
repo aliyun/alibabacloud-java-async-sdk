@@ -181,19 +181,19 @@ public class RenewDedicatedHostsRequest extends Request {
             super();
         } 
 
-        private Builder(RenewDedicatedHostsRequest response) {
-            super(response);
-            this.businessInfo = response.businessInfo;
-            this.clientToken = response.clientToken;
-            this.dedicatedHostIds = response.dedicatedHostIds;
-            this.fromApp = response.fromApp;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.period = response.period;
-            this.periodUnit = response.periodUnit;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(RenewDedicatedHostsRequest request) {
+            super(request);
+            this.businessInfo = request.businessInfo;
+            this.clientToken = request.clientToken;
+            this.dedicatedHostIds = request.dedicatedHostIds;
+            this.fromApp = request.fromApp;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.period = request.period;
+            this.periodUnit = request.periodUnit;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

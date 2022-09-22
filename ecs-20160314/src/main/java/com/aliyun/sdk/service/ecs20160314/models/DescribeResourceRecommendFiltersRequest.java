@@ -207,21 +207,21 @@ public class DescribeResourceRecommendFiltersRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeResourceRecommendFiltersRequest response) {
-            super(response);
-            this.attributeName = response.attributeName;
-            this.attributeValue = response.attributeValue;
-            this.global = response.global;
-            this.maxItems = response.maxItems;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.product = response.product;
-            this.regionId = response.regionId;
-            this.regionNo = response.regionNo;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.resourceType = response.resourceType;
-            this.templateTag = response.templateTag;
+        private Builder(DescribeResourceRecommendFiltersRequest request) {
+            super(request);
+            this.attributeName = request.attributeName;
+            this.attributeValue = request.attributeValue;
+            this.global = request.global;
+            this.maxItems = request.maxItems;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.product = request.product;
+            this.regionId = request.regionId;
+            this.regionNo = request.regionNo;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.resourceType = request.resourceType;
+            this.templateTag = request.templateTag;
         } 
 
         /**

@@ -140,16 +140,16 @@ public class DescribeResourceFilterAttributesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeResourceFilterAttributesRequest response) {
-            super(response);
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.product = response.product;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.resourceType = response.resourceType;
-            this.templateTag = response.templateTag;
+        private Builder(DescribeResourceFilterAttributesRequest request) {
+            super(request);
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.product = request.product;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.resourceType = request.resourceType;
+            this.templateTag = request.templateTag;
         } 
 
         /**

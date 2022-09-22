@@ -661,6 +661,9 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
         @NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
+        @NameInMap("SchedulerOptions.ManagedPrivateSpaceId")
+        private String schedulerOptions_managedPrivateSpaceId;
+
         @NameInMap("Tags")
         private Tags tags;
 
@@ -675,6 +678,7 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
             this.description = builder.description;
             this.regionId = builder.regionId;
             this.resourceGroupId = builder.resourceGroupId;
+            this.schedulerOptions_managedPrivateSpaceId = builder.schedulerOptions_managedPrivateSpaceId;
             this.tags = builder.tags;
             this.zoneId = builder.zoneId;
         }
@@ -737,6 +741,13 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
         }
 
         /**
+         * @return schedulerOptions_managedPrivateSpaceId
+         */
+        public String getSchedulerOptions_managedPrivateSpaceId() {
+            return this.schedulerOptions_managedPrivateSpaceId;
+        }
+
+        /**
          * @return tags
          */
         public Tags getTags() {
@@ -758,6 +769,7 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
             private String description; 
             private String regionId; 
             private String resourceGroupId; 
+            private String schedulerOptions_managedPrivateSpaceId; 
             private Tags tags; 
             private String zoneId; 
 
@@ -814,6 +826,14 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * SchedulerOptions.ManagedPrivateSpaceId.
+             */
+            public Builder schedulerOptions_managedPrivateSpaceId(String schedulerOptions_managedPrivateSpaceId) {
+                this.schedulerOptions_managedPrivateSpaceId = schedulerOptions_managedPrivateSpaceId;
                 return this;
             }
 

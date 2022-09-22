@@ -166,18 +166,18 @@ public class DescribeWaitingOrdersRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeWaitingOrdersRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.ownerAccount = response.ownerAccount;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.status = response.status;
-            this.tag = response.tag;
-            this.waitingOrderId = response.waitingOrderId;
+        private Builder(DescribeWaitingOrdersRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.ownerAccount = request.ownerAccount;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.status = request.status;
+            this.tag = request.tag;
+            this.waitingOrderId = request.waitingOrderId;
         } 
 
         /**

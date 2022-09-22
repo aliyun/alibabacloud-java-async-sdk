@@ -939,6 +939,9 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
         @NameInMap("InvokeSystem")
         private String invokeSystem;
 
+        @NameInMap("IssueCategoryId")
+        private String issueCategoryId;
+
         @NameInMap("Issues")
         private Issues issues;
 
@@ -978,6 +981,7 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
             this.endTime = builder.endTime;
             this.finishedTime = builder.finishedTime;
             this.invokeSystem = builder.invokeSystem;
+            this.issueCategoryId = builder.issueCategoryId;
             this.issues = builder.issues;
             this.items = builder.items;
             this.offlineDiagReportStatus = builder.offlineDiagReportStatus;
@@ -1032,6 +1036,13 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
          */
         public String getInvokeSystem() {
             return this.invokeSystem;
+        }
+
+        /**
+         * @return issueCategoryId
+         */
+        public String getIssueCategoryId() {
+            return this.issueCategoryId;
         }
 
         /**
@@ -1117,6 +1128,7 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
             private String endTime; 
             private String finishedTime; 
             private String invokeSystem; 
+            private String issueCategoryId; 
             private Issues issues; 
             private Items items; 
             private String offlineDiagReportStatus; 
@@ -1166,6 +1178,14 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
              */
             public Builder invokeSystem(String invokeSystem) {
                 this.invokeSystem = invokeSystem;
+                return this;
+            }
+
+            /**
+             * IssueCategoryId.
+             */
+            public Builder issueCategoryId(String issueCategoryId) {
+                this.issueCategoryId = issueCategoryId;
                 return this;
             }
 

@@ -88,12 +88,12 @@ public class DescribeImageAgreementRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeImageAgreementRequest response) {
-            super(response);
-            this.agreementType = response.agreementType;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DescribeImageAgreementRequest request) {
+            super(request);
+            this.agreementType = request.agreementType;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

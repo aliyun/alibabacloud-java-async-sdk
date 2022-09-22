@@ -142,16 +142,16 @@ public class CancelMigrationPlanRequest extends Request {
             super();
         } 
 
-        private Builder(CancelMigrationPlanRequest response) {
-            super(response);
-            this.migrationPlanId = response.migrationPlanId;
-            this.onlyCancelPlan = response.onlyCancelPlan;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(CancelMigrationPlanRequest request) {
+            super(request);
+            this.migrationPlanId = request.migrationPlanId;
+            this.onlyCancelPlan = request.onlyCancelPlan;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

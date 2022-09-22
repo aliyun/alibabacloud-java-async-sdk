@@ -232,23 +232,23 @@ public class ListAccountEcsQuotasRequest extends Request {
             super();
         } 
 
-        private Builder(ListAccountEcsQuotasRequest response) {
-            super(response);
-            this.chargeType = response.chargeType;
-            this.networkType = response.networkType;
-            this.nextToken = response.nextToken;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageSize = response.pageSize;
-            this.quotaResourceName = response.quotaResourceName;
-            this.quotaResourceType = response.quotaResourceType;
-            this.quotaUnit = response.quotaUnit;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.sortField = response.sortField;
-            this.sortOrder = response.sortOrder;
-            this.zoneId = response.zoneId;
+        private Builder(ListAccountEcsQuotasRequest request) {
+            super(request);
+            this.chargeType = request.chargeType;
+            this.networkType = request.networkType;
+            this.nextToken = request.nextToken;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageSize = request.pageSize;
+            this.quotaResourceName = request.quotaResourceName;
+            this.quotaResourceType = request.quotaResourceType;
+            this.quotaUnit = request.quotaUnit;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sortField = request.sortField;
+            this.sortOrder = request.sortOrder;
+            this.zoneId = request.zoneId;
         } 
 
         /**

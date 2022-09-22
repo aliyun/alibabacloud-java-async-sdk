@@ -335,31 +335,31 @@ public class CreateDiagnoseRequest extends Request {
             super();
         } 
 
-        private Builder(CreateDiagnoseRequest response) {
-            super(response);
-            this.amount = response.amount;
-            this.diagnoseAction = response.diagnoseAction;
-            this.diagnoseErrorCode = response.diagnoseErrorCode;
-            this.diagnoseProduct = response.diagnoseProduct;
-            this.diagnoseRequestId = response.diagnoseRequestId;
-            this.diagnoseRequestParams = response.diagnoseRequestParams;
-            this.diagnoseResponse = response.diagnoseResponse;
-            this.diskCategory = response.diskCategory;
-            this.expireTime = response.expireTime;
-            this.instanceChargeType = response.instanceChargeType;
-            this.instanceTypeName = response.instanceTypeName;
-            this.izNo = response.izNo;
-            this.mark = response.mark;
-            this.networkType = response.networkType;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.period = response.period;
-            this.periodUnit = response.periodUnit;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.tag = response.tag;
-            this.type = response.type;
+        private Builder(CreateDiagnoseRequest request) {
+            super(request);
+            this.amount = request.amount;
+            this.diagnoseAction = request.diagnoseAction;
+            this.diagnoseErrorCode = request.diagnoseErrorCode;
+            this.diagnoseProduct = request.diagnoseProduct;
+            this.diagnoseRequestId = request.diagnoseRequestId;
+            this.diagnoseRequestParams = request.diagnoseRequestParams;
+            this.diagnoseResponse = request.diagnoseResponse;
+            this.diskCategory = request.diskCategory;
+            this.expireTime = request.expireTime;
+            this.instanceChargeType = request.instanceChargeType;
+            this.instanceTypeName = request.instanceTypeName;
+            this.izNo = request.izNo;
+            this.mark = request.mark;
+            this.networkType = request.networkType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.period = request.period;
+            this.periodUnit = request.periodUnit;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.tag = request.tag;
+            this.type = request.type;
         } 
 
         /**

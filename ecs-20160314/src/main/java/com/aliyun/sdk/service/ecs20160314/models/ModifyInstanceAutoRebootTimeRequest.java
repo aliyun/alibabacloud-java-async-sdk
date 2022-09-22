@@ -116,14 +116,14 @@ public class ModifyInstanceAutoRebootTimeRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyInstanceAutoRebootTimeRequest response) {
-            super(response);
-            this.autoRebootTime = response.autoRebootTime;
-            this.instanceIds = response.instanceIds;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ModifyInstanceAutoRebootTimeRequest request) {
+            super(request);
+            this.autoRebootTime = request.autoRebootTime;
+            this.instanceIds = request.instanceIds;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

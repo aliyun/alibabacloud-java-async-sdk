@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyDiskSpecRequest</p>
  */
 public class ModifyDiskSpecRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("AutoPay")
     private Boolean autoPay;
@@ -38,6 +42,10 @@ public class ModifyDiskSpecRequest extends Request {
     private String performanceLevel;
 
     @Query
+    @NameInMap("ProvisionedIops")
+    private Long provisionedIops;
+
+    @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -45,21 +53,18 @@ public class ModifyDiskSpecRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     private ModifyDiskSpecRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.autoPay = builder.autoPay;
         this.diskCategory = builder.diskCategory;
         this.diskId = builder.diskId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.performanceLevel = builder.performanceLevel;
+        this.provisionedIops = builder.provisionedIops;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -73,6 +78,13 @@ public class ModifyDiskSpecRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -118,6 +130,13 @@ public class ModifyDiskSpecRequest extends Request {
     }
 
     /**
+     * @return provisionedIops
+     */
+    public Long getProvisionedIops() {
+        return this.provisionedIops;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -131,40 +150,44 @@ public class ModifyDiskSpecRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
     public static final class Builder extends Request.Builder<ModifyDiskSpecRequest, Builder> {
+        private String sourceRegionId; 
         private Boolean autoPay; 
         private String diskCategory; 
         private String diskId; 
         private String ownerAccount; 
         private Long ownerId; 
         private String performanceLevel; 
+        private Long provisionedIops; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ModifyDiskSpecRequest response) {
-            super(response);
-            this.autoPay = response.autoPay;
-            this.diskCategory = response.diskCategory;
-            this.diskId = response.diskId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.performanceLevel = response.performanceLevel;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.sourceRegionId = response.sourceRegionId;
+        private Builder(ModifyDiskSpecRequest request) {
+            super(request);
+            this.sourceRegionId = request.sourceRegionId;
+            this.autoPay = request.autoPay;
+            this.diskCategory = request.diskCategory;
+            this.diskId = request.diskId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.performanceLevel = request.performanceLevel;
+            this.provisionedIops = request.provisionedIops;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * AutoPay.
@@ -221,6 +244,15 @@ public class ModifyDiskSpecRequest extends Request {
         }
 
         /**
+         * ProvisionedIops.
+         */
+        public Builder provisionedIops(Long provisionedIops) {
+            this.putQueryParameter("ProvisionedIops", provisionedIops);
+            this.provisionedIops = provisionedIops;
+            return this;
+        }
+
+        /**
          * ResourceOwnerAccount.
          */
         public Builder resourceOwnerAccount(String resourceOwnerAccount) {
@@ -235,15 +267,6 @@ public class ModifyDiskSpecRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

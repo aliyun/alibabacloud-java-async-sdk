@@ -128,15 +128,15 @@ public class DeleteUserQuotaApplicationRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteUserQuotaApplicationRequest response) {
-            super(response);
-            this.applicationId = response.applicationId;
-            this.clientToken = response.clientToken;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DeleteUserQuotaApplicationRequest request) {
+            super(request);
+            this.applicationId = request.applicationId;
+            this.clientToken = request.clientToken;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

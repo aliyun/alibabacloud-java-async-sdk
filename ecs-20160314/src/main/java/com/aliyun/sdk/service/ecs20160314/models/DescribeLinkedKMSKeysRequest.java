@@ -166,18 +166,18 @@ public class DescribeLinkedKMSKeysRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeLinkedKMSKeysRequest response) {
-            super(response);
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.appKey = response.appKey;
-            this.channel = response.channel;
-            this.operator = response.operator;
-            this.proxyId = response.proxyId;
-            this.token = response.token;
+        private Builder(DescribeLinkedKMSKeysRequest request) {
+            super(request);
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.appKey = request.appKey;
+            this.channel = request.channel;
+            this.operator = request.operator;
+            this.proxyId = request.proxyId;
+            this.token = request.token;
         } 
 
         /**

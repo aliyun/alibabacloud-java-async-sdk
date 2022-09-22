@@ -12,8 +12,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceModificationPriceRequest</p>
  */
 public class DescribeInstanceModificationPriceRequest extends Request {
+    @Query
     @NameInMap("SystemDisk")
     private SystemDisk systemDisk;
+
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     @Query
     @NameInMap("DataDisk")
@@ -49,13 +54,10 @@ public class DescribeInstanceModificationPriceRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     private DescribeInstanceModificationPriceRequest(Builder builder) {
         super(builder);
         this.systemDisk = builder.systemDisk;
+        this.sourceRegionId = builder.sourceRegionId;
         this.dataDisk = builder.dataDisk;
         this.instanceId = builder.instanceId;
         this.instanceType = builder.instanceType;
@@ -64,7 +66,6 @@ public class DescribeInstanceModificationPriceRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -85,6 +86,13 @@ public class DescribeInstanceModificationPriceRequest extends Request {
      */
     public SystemDisk getSystemDisk() {
         return this.systemDisk;
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -143,15 +151,9 @@ public class DescribeInstanceModificationPriceRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
     public static final class Builder extends Request.Builder<DescribeInstanceModificationPriceRequest, Builder> {
         private SystemDisk systemDisk; 
+        private String sourceRegionId; 
         private java.util.List < DataDisk> dataDisk; 
         private String instanceId; 
         private String instanceType; 
@@ -160,31 +162,40 @@ public class DescribeInstanceModificationPriceRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeInstanceModificationPriceRequest response) {
-            super(response);
-            this.systemDisk = response.systemDisk;
-            this.dataDisk = response.dataDisk;
-            this.instanceId = response.instanceId;
-            this.instanceType = response.instanceType;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.sourceRegionId = response.sourceRegionId;
+        private Builder(DescribeInstanceModificationPriceRequest request) {
+            super(request);
+            this.systemDisk = request.systemDisk;
+            this.sourceRegionId = request.sourceRegionId;
+            this.dataDisk = request.dataDisk;
+            this.instanceId = request.instanceId;
+            this.instanceType = request.instanceType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
          * SystemDisk.
          */
         public Builder systemDisk(SystemDisk systemDisk) {
+            this.putQueryParameter("SystemDisk", systemDisk);
             this.systemDisk = systemDisk;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 
@@ -257,15 +268,6 @@ public class DescribeInstanceModificationPriceRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

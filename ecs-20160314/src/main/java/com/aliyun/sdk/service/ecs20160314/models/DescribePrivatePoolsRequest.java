@@ -12,8 +12,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePrivatePoolsRequest</p>
  */
 public class DescribePrivatePoolsRequest extends Request {
+    @Query
     @NameInMap("PrivatePoolOptions")
     private PrivatePoolOptions privatePoolOptions;
+
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     @Query
     @NameInMap("InstanceChargeType")
@@ -61,10 +66,6 @@ public class DescribePrivatePoolsRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
     @NameInMap("StartTimeType")
     private String startTimeType;
@@ -84,6 +85,7 @@ public class DescribePrivatePoolsRequest extends Request {
     private DescribePrivatePoolsRequest(Builder builder) {
         super(builder);
         this.privatePoolOptions = builder.privatePoolOptions;
+        this.sourceRegionId = builder.sourceRegionId;
         this.instanceChargeType = builder.instanceChargeType;
         this.instanceType = builder.instanceType;
         this.maxResults = builder.maxResults;
@@ -95,7 +97,6 @@ public class DescribePrivatePoolsRequest extends Request {
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
         this.startTimeType = builder.startTimeType;
         this.status = builder.status;
         this.tag = builder.tag;
@@ -120,6 +121,13 @@ public class DescribePrivatePoolsRequest extends Request {
      */
     public PrivatePoolOptions getPrivatePoolOptions() {
         return this.privatePoolOptions;
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -200,13 +208,6 @@ public class DescribePrivatePoolsRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
      * @return startTimeType
      */
     public String getStartTimeType() {
@@ -236,6 +237,7 @@ public class DescribePrivatePoolsRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribePrivatePoolsRequest, Builder> {
         private PrivatePoolOptions privatePoolOptions; 
+        private String sourceRegionId; 
         private String instanceChargeType; 
         private String instanceType; 
         private Integer maxResults; 
@@ -247,7 +249,6 @@ public class DescribePrivatePoolsRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
         private String startTimeType; 
         private String status; 
         private java.util.List < Tag> tag; 
@@ -257,32 +258,42 @@ public class DescribePrivatePoolsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribePrivatePoolsRequest response) {
-            super(response);
-            this.privatePoolOptions = response.privatePoolOptions;
-            this.instanceChargeType = response.instanceChargeType;
-            this.instanceType = response.instanceType;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.platform = response.platform;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.sourceRegionId = response.sourceRegionId;
-            this.startTimeType = response.startTimeType;
-            this.status = response.status;
-            this.tag = response.tag;
-            this.zoneId = response.zoneId;
+        private Builder(DescribePrivatePoolsRequest request) {
+            super(request);
+            this.privatePoolOptions = request.privatePoolOptions;
+            this.sourceRegionId = request.sourceRegionId;
+            this.instanceChargeType = request.instanceChargeType;
+            this.instanceType = request.instanceType;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.platform = request.platform;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.startTimeType = request.startTimeType;
+            this.status = request.status;
+            this.tag = request.tag;
+            this.zoneId = request.zoneId;
         } 
 
         /**
          * PrivatePoolOptions.
          */
         public Builder privatePoolOptions(PrivatePoolOptions privatePoolOptions) {
+            this.putQueryParameter("PrivatePoolOptions", privatePoolOptions);
             this.privatePoolOptions = privatePoolOptions;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 
@@ -382,15 +393,6 @@ public class DescribePrivatePoolsRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

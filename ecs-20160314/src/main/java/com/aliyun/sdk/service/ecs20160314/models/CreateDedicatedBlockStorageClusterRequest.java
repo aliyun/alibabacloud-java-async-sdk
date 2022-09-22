@@ -234,23 +234,23 @@ public class CreateDedicatedBlockStorageClusterRequest extends Request {
             super();
         } 
 
-        private Builder(CreateDedicatedBlockStorageClusterRequest response) {
-            super(response);
-            this.capacity = response.capacity;
-            this.category = response.category;
-            this.clientToken = response.clientToken;
-            this.dedicatedBlockStorageClusterName = response.dedicatedBlockStorageClusterName;
-            this.description = response.description;
-            this.fromApp = response.fromApp;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.period = response.period;
-            this.periodUnit = response.periodUnit;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.type = response.type;
-            this.zoneId = response.zoneId;
+        private Builder(CreateDedicatedBlockStorageClusterRequest request) {
+            super(request);
+            this.capacity = request.capacity;
+            this.category = request.category;
+            this.clientToken = request.clientToken;
+            this.dedicatedBlockStorageClusterName = request.dedicatedBlockStorageClusterName;
+            this.description = request.description;
+            this.fromApp = request.fromApp;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.period = request.period;
+            this.periodUnit = request.periodUnit;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.type = request.type;
+            this.zoneId = request.zoneId;
         } 
 
         /**

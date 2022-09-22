@@ -24,11 +24,15 @@ public class CreateMigrationPlanResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("SgFailModels")
+    private SgFailModels sgFailModels;
+
     private CreateMigrationPlanResponseBody(Builder builder) {
         this.instancesFailModels = builder.instancesFailModels;
         this.migrationPlanId = builder.migrationPlanId;
         this.planFailModels = builder.planFailModels;
         this.requestId = builder.requestId;
+        this.sgFailModels = builder.sgFailModels;
     }
 
     public static Builder builder() {
@@ -67,11 +71,19 @@ public class CreateMigrationPlanResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return sgFailModels
+     */
+    public SgFailModels getSgFailModels() {
+        return this.sgFailModels;
+    }
+
     public static final class Builder {
         private InstancesFailModels instancesFailModels; 
         private String migrationPlanId; 
         private PlanFailModels planFailModels; 
         private String requestId; 
+        private SgFailModels sgFailModels; 
 
         /**
          * InstancesFailModels.
@@ -102,6 +114,14 @@ public class CreateMigrationPlanResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * SgFailModels.
+         */
+        public Builder sgFailModels(SgFailModels sgFailModels) {
+            this.sgFailModels = sgFailModels;
             return this;
         }
 
@@ -412,6 +432,210 @@ public class CreateMigrationPlanResponseBody extends TeaModel {
 
             public PlanFailModels build() {
                 return new PlanFailModels(this);
+            } 
+
+        } 
+
+    }
+    public static class FailModelsFailModel extends TeaModel {
+        @NameInMap("ErrorCode")
+        private String errorCode;
+
+        @NameInMap("ErrorMessage")
+        private String errorMessage;
+
+        private FailModelsFailModel(Builder builder) {
+            this.errorCode = builder.errorCode;
+            this.errorMessage = builder.errorMessage;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static FailModelsFailModel create() {
+            return builder().build();
+        }
+
+        /**
+         * @return errorCode
+         */
+        public String getErrorCode() {
+            return this.errorCode;
+        }
+
+        /**
+         * @return errorMessage
+         */
+        public String getErrorMessage() {
+            return this.errorMessage;
+        }
+
+        public static final class Builder {
+            private String errorCode; 
+            private String errorMessage; 
+
+            /**
+             * ErrorCode.
+             */
+            public Builder errorCode(String errorCode) {
+                this.errorCode = errorCode;
+                return this;
+            }
+
+            /**
+             * ErrorMessage.
+             */
+            public Builder errorMessage(String errorMessage) {
+                this.errorMessage = errorMessage;
+                return this;
+            }
+
+            public FailModelsFailModel build() {
+                return new FailModelsFailModel(this);
+            } 
+
+        } 
+
+    }
+    public static class SgFailModelFailModels extends TeaModel {
+        @NameInMap("FailModel")
+        private java.util.List < FailModelsFailModel> failModel;
+
+        private SgFailModelFailModels(Builder builder) {
+            this.failModel = builder.failModel;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SgFailModelFailModels create() {
+            return builder().build();
+        }
+
+        /**
+         * @return failModel
+         */
+        public java.util.List < FailModelsFailModel> getFailModel() {
+            return this.failModel;
+        }
+
+        public static final class Builder {
+            private java.util.List < FailModelsFailModel> failModel; 
+
+            /**
+             * FailModel.
+             */
+            public Builder failModel(java.util.List < FailModelsFailModel> failModel) {
+                this.failModel = failModel;
+                return this;
+            }
+
+            public SgFailModelFailModels build() {
+                return new SgFailModelFailModels(this);
+            } 
+
+        } 
+
+    }
+    public static class SgFailModel extends TeaModel {
+        @NameInMap("FailModels")
+        private SgFailModelFailModels failModels;
+
+        @NameInMap("GroupNo")
+        private String groupNo;
+
+        private SgFailModel(Builder builder) {
+            this.failModels = builder.failModels;
+            this.groupNo = builder.groupNo;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SgFailModel create() {
+            return builder().build();
+        }
+
+        /**
+         * @return failModels
+         */
+        public SgFailModelFailModels getFailModels() {
+            return this.failModels;
+        }
+
+        /**
+         * @return groupNo
+         */
+        public String getGroupNo() {
+            return this.groupNo;
+        }
+
+        public static final class Builder {
+            private SgFailModelFailModels failModels; 
+            private String groupNo; 
+
+            /**
+             * FailModels.
+             */
+            public Builder failModels(SgFailModelFailModels failModels) {
+                this.failModels = failModels;
+                return this;
+            }
+
+            /**
+             * GroupNo.
+             */
+            public Builder groupNo(String groupNo) {
+                this.groupNo = groupNo;
+                return this;
+            }
+
+            public SgFailModel build() {
+                return new SgFailModel(this);
+            } 
+
+        } 
+
+    }
+    public static class SgFailModels extends TeaModel {
+        @NameInMap("SgFailModel")
+        private java.util.List < SgFailModel> sgFailModel;
+
+        private SgFailModels(Builder builder) {
+            this.sgFailModel = builder.sgFailModel;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SgFailModels create() {
+            return builder().build();
+        }
+
+        /**
+         * @return sgFailModel
+         */
+        public java.util.List < SgFailModel> getSgFailModel() {
+            return this.sgFailModel;
+        }
+
+        public static final class Builder {
+            private java.util.List < SgFailModel> sgFailModel; 
+
+            /**
+             * SgFailModel.
+             */
+            public Builder sgFailModel(java.util.List < SgFailModel> sgFailModel) {
+                this.sgFailModel = sgFailModel;
+                return this;
+            }
+
+            public SgFailModels build() {
+                return new SgFailModels(this);
             } 
 
         } 

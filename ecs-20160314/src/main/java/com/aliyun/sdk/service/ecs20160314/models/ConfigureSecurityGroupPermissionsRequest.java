@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ConfigureSecurityGroupPermissionsRequest</p>
  */
 public class ConfigureSecurityGroupPermissionsRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("AuthorizePermission")
     private java.util.List < AuthorizePermission> authorizePermission;
@@ -50,12 +54,9 @@ public class ConfigureSecurityGroupPermissionsRequest extends Request {
     @Validation(required = true)
     private String securityGroupId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     private ConfigureSecurityGroupPermissionsRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.authorizePermission = builder.authorizePermission;
         this.clientToken = builder.clientToken;
         this.ownerAccount = builder.ownerAccount;
@@ -65,7 +66,6 @@ public class ConfigureSecurityGroupPermissionsRequest extends Request {
         this.resourceOwnerId = builder.resourceOwnerId;
         this.revokePermission = builder.revokePermission;
         this.securityGroupId = builder.securityGroupId;
-        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -79,6 +79,13 @@ public class ConfigureSecurityGroupPermissionsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -144,14 +151,8 @@ public class ConfigureSecurityGroupPermissionsRequest extends Request {
         return this.securityGroupId;
     }
 
-    /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
     public static final class Builder extends Request.Builder<ConfigureSecurityGroupPermissionsRequest, Builder> {
+        private String sourceRegionId; 
         private java.util.List < AuthorizePermission> authorizePermission; 
         private String clientToken; 
         private String ownerAccount; 
@@ -161,25 +162,33 @@ public class ConfigureSecurityGroupPermissionsRequest extends Request {
         private Long resourceOwnerId; 
         private java.util.List < RevokePermission> revokePermission; 
         private String securityGroupId; 
-        private String sourceRegionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ConfigureSecurityGroupPermissionsRequest response) {
-            super(response);
-            this.authorizePermission = response.authorizePermission;
-            this.clientToken = response.clientToken;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.revokePermission = response.revokePermission;
-            this.securityGroupId = response.securityGroupId;
-            this.sourceRegionId = response.sourceRegionId;
+        private Builder(ConfigureSecurityGroupPermissionsRequest request) {
+            super(request);
+            this.sourceRegionId = request.sourceRegionId;
+            this.authorizePermission = request.authorizePermission;
+            this.clientToken = request.clientToken;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.revokePermission = request.revokePermission;
+            this.securityGroupId = request.securityGroupId;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * AuthorizePermission.
@@ -262,15 +271,6 @@ public class ConfigureSecurityGroupPermissionsRequest extends Request {
             return this;
         }
 
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
-            return this;
-        }
-
         @Override
         public ConfigureSecurityGroupPermissionsRequest build() {
             return new ConfigureSecurityGroupPermissionsRequest(this);
@@ -291,8 +291,10 @@ public class ConfigureSecurityGroupPermissionsRequest extends Request {
         @NameInMap("DestPrefixListId")
         private String destPrefixListId;
 
+        @NameInMap("Direction")
+        private String direction;
+
         @NameInMap("GressFlow")
-        @Validation(required = true)
         private String gressFlow;
 
         @NameInMap("GroupOwnerAccount")
@@ -341,6 +343,7 @@ public class ConfigureSecurityGroupPermissionsRequest extends Request {
             this.destCidrIp = builder.destCidrIp;
             this.destGroupId = builder.destGroupId;
             this.destPrefixListId = builder.destPrefixListId;
+            this.direction = builder.direction;
             this.gressFlow = builder.gressFlow;
             this.groupOwnerAccount = builder.groupOwnerAccount;
             this.groupOwnerId = builder.groupOwnerId;
@@ -391,6 +394,13 @@ public class ConfigureSecurityGroupPermissionsRequest extends Request {
          */
         public String getDestPrefixListId() {
             return this.destPrefixListId;
+        }
+
+        /**
+         * @return direction
+         */
+        public String getDirection() {
+            return this.direction;
         }
 
         /**
@@ -496,6 +506,7 @@ public class ConfigureSecurityGroupPermissionsRequest extends Request {
             private String destCidrIp; 
             private String destGroupId; 
             private String destPrefixListId; 
+            private String direction; 
             private String gressFlow; 
             private String groupOwnerAccount; 
             private Long groupOwnerId; 
@@ -540,6 +551,14 @@ public class ConfigureSecurityGroupPermissionsRequest extends Request {
              */
             public Builder destPrefixListId(String destPrefixListId) {
                 this.destPrefixListId = destPrefixListId;
+                return this;
+            }
+
+            /**
+             * Direction.
+             */
+            public Builder direction(String direction) {
+                this.direction = direction;
                 return this;
             }
 
@@ -675,8 +694,10 @@ public class ConfigureSecurityGroupPermissionsRequest extends Request {
         @NameInMap("DestPrefixListId")
         private String destPrefixListId;
 
+        @NameInMap("Direction")
+        private String direction;
+
         @NameInMap("GressFlow")
-        @Validation(required = true)
         private String gressFlow;
 
         @NameInMap("GroupOwnerAccount")
@@ -725,6 +746,7 @@ public class ConfigureSecurityGroupPermissionsRequest extends Request {
             this.destCidrIp = builder.destCidrIp;
             this.destGroupId = builder.destGroupId;
             this.destPrefixListId = builder.destPrefixListId;
+            this.direction = builder.direction;
             this.gressFlow = builder.gressFlow;
             this.groupOwnerAccount = builder.groupOwnerAccount;
             this.groupOwnerId = builder.groupOwnerId;
@@ -775,6 +797,13 @@ public class ConfigureSecurityGroupPermissionsRequest extends Request {
          */
         public String getDestPrefixListId() {
             return this.destPrefixListId;
+        }
+
+        /**
+         * @return direction
+         */
+        public String getDirection() {
+            return this.direction;
         }
 
         /**
@@ -880,6 +909,7 @@ public class ConfigureSecurityGroupPermissionsRequest extends Request {
             private String destCidrIp; 
             private String destGroupId; 
             private String destPrefixListId; 
+            private String direction; 
             private String gressFlow; 
             private String groupOwnerAccount; 
             private Long groupOwnerId; 
@@ -924,6 +954,14 @@ public class ConfigureSecurityGroupPermissionsRequest extends Request {
              */
             public Builder destPrefixListId(String destPrefixListId) {
                 this.destPrefixListId = destPrefixListId;
+                return this;
+            }
+
+            /**
+             * Direction.
+             */
+            public Builder direction(String direction) {
+                this.direction = direction;
                 return this;
             }
 

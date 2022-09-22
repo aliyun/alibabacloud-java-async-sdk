@@ -52,6 +52,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateFunctionFeedbackResponse> createFunctionFeedback(CreateFunctionFeedbackRequest request);
 
+    CompletableFuture<CreateImageCacheResponse> createImageCache(CreateImageCacheRequest request);
+
     CompletableFuture<CreateIssueCategoryReportRelationResponse> createIssueCategoryReportRelation(CreateIssueCategoryReportRelationRequest request);
 
     CompletableFuture<CreateMigrationPlanResponse> createMigrationPlan(CreateMigrationPlanRequest request);
@@ -73,6 +75,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteDedicatedHostClusterResponse> deleteDedicatedHostCluster(DeleteDedicatedHostClusterRequest request);
 
     CompletableFuture<DeleteEniQosGroupResponse> deleteEniQosGroup(DeleteEniQosGroupRequest request);
+
+    CompletableFuture<DeleteImageCacheResponse> deleteImageCache(DeleteImageCacheRequest request);
 
     CompletableFuture<DeleteMigratableInstancesResponse> deleteMigratableInstances(DeleteMigratableInstancesRequest request);
 
@@ -127,6 +131,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeHavsInstanceTypesResponse> describeHavsInstanceTypes(DescribeHavsInstanceTypesRequest request);
 
     CompletableFuture<DescribeImageAgreementResponse> describeImageAgreement(DescribeImageAgreementRequest request);
+
+    CompletableFuture<DescribeImageCachesResponse> describeImageCaches(DescribeImageCachesRequest request);
 
     CompletableFuture<DescribeImageFamiliesResponse> describeImageFamilies(DescribeImageFamiliesRequest request);
 
@@ -233,6 +239,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<FeedbackDiagnoseResponse> feedbackDiagnose(FeedbackDiagnoseRequest request);
 
     CompletableFuture<GetLaunchTemplateDataResponse> getLaunchTemplateData(GetLaunchTemplateDataRequest request);
+
+    CompletableFuture<InnerDescribeNetworkInterfaceInGroupResponse> innerDescribeNetworkInterfaceInGroup(InnerDescribeNetworkInterfaceInGroupRequest request);
 
     CompletableFuture<JoinEniQosGroupResponse> joinEniQosGroup(JoinEniQosGroupRequest request);
 

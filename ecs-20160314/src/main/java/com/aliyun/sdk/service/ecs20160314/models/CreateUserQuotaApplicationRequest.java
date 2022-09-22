@@ -196,20 +196,20 @@ public class CreateUserQuotaApplicationRequest extends Request {
             super();
         } 
 
-        private Builder(CreateUserQuotaApplicationRequest response) {
-            super(response);
-            this.chargeType = response.chargeType;
-            this.clientToken = response.clientToken;
-            this.description = response.description;
-            this.instanceType = response.instanceType;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.quotaType = response.quotaType;
-            this.quotaValue = response.quotaValue;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.zoneId = response.zoneId;
+        private Builder(CreateUserQuotaApplicationRequest request) {
+            super(request);
+            this.chargeType = request.chargeType;
+            this.clientToken = request.clientToken;
+            this.description = request.description;
+            this.instanceType = request.instanceType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.quotaType = request.quotaType;
+            this.quotaValue = request.quotaValue;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.zoneId = request.zoneId;
         } 
 
         /**

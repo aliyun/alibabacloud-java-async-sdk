@@ -113,14 +113,14 @@ public class DescribeAccountLimitsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeAccountLimitsRequest response) {
-            super(response);
-            this.filter = response.filter;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DescribeAccountLimitsRequest request) {
+            super(request);
+            this.filter = request.filter;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

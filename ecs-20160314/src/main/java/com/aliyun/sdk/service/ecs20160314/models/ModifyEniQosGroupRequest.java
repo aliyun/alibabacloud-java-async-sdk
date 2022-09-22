@@ -158,17 +158,17 @@ public class ModifyEniQosGroupRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyEniQosGroupRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.qosGroupName = response.qosGroupName;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.rx = response.rx;
-            this.rxPps = response.rxPps;
-            this.tx = response.tx;
-            this.txPps = response.txPps;
+        private Builder(ModifyEniQosGroupRequest request) {
+            super(request);
+            this.ownerId = request.ownerId;
+            this.qosGroupName = request.qosGroupName;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.rx = request.rx;
+            this.rxPps = request.rxPps;
+            this.tx = request.tx;
+            this.txPps = request.txPps;
         } 
 
         /**

@@ -87,12 +87,20 @@ public class DescribeCustomerIssueCategoryResponseBody extends TeaModel {
         @NameInMap("MappingTools")
         private String mappingTools;
 
+        @NameInMap("MetricSetId")
+        private String metricSetId;
+
+        @NameInMap("ResourceType")
+        private String resourceType;
+
         private IssueCategoryModelList(Builder builder) {
             this.issueCategoryId = builder.issueCategoryId;
             this.issueCategoryName = builder.issueCategoryName;
             this.issueCategoryParentId = builder.issueCategoryParentId;
             this.layer = builder.layer;
             this.mappingTools = builder.mappingTools;
+            this.metricSetId = builder.metricSetId;
+            this.resourceType = builder.resourceType;
         }
 
         public static Builder builder() {
@@ -138,12 +146,28 @@ public class DescribeCustomerIssueCategoryResponseBody extends TeaModel {
             return this.mappingTools;
         }
 
+        /**
+         * @return metricSetId
+         */
+        public String getMetricSetId() {
+            return this.metricSetId;
+        }
+
+        /**
+         * @return resourceType
+         */
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
         public static final class Builder {
             private Long issueCategoryId; 
             private String issueCategoryName; 
             private Long issueCategoryParentId; 
             private Long layer; 
             private String mappingTools; 
+            private String metricSetId; 
+            private String resourceType; 
 
             /**
              * IssueCategoryId.
@@ -182,6 +206,22 @@ public class DescribeCustomerIssueCategoryResponseBody extends TeaModel {
              */
             public Builder mappingTools(String mappingTools) {
                 this.mappingTools = mappingTools;
+                return this;
+            }
+
+            /**
+             * MetricSetId.
+             */
+            public Builder metricSetId(String metricSetId) {
+                this.metricSetId = metricSetId;
+                return this;
+            }
+
+            /**
+             * ResourceType.
+             */
+            public Builder resourceType(String resourceType) {
+                this.resourceType = resourceType;
                 return this;
             }
 

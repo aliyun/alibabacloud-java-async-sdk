@@ -337,31 +337,31 @@ public class PurchaseReservedInstancesOfferingRequest extends Request {
             super();
         } 
 
-        private Builder(PurchaseReservedInstancesOfferingRequest response) {
-            super(response);
-            this.autoPay = response.autoPay;
-            this.businessInfo = response.businessInfo;
-            this.chargeType = response.chargeType;
-            this.clientToken = response.clientToken;
-            this.description = response.description;
-            this.fromApp = response.fromApp;
-            this.instanceAmount = response.instanceAmount;
-            this.instanceType = response.instanceType;
-            this.offeringType = response.offeringType;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.period = response.period;
-            this.periodUnit = response.periodUnit;
-            this.platform = response.platform;
-            this.regionId = response.regionId;
-            this.reservedInstanceName = response.reservedInstanceName;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.scope = response.scope;
-            this.startTime = response.startTime;
-            this.tag = response.tag;
-            this.zoneId = response.zoneId;
+        private Builder(PurchaseReservedInstancesOfferingRequest request) {
+            super(request);
+            this.autoPay = request.autoPay;
+            this.businessInfo = request.businessInfo;
+            this.chargeType = request.chargeType;
+            this.clientToken = request.clientToken;
+            this.description = request.description;
+            this.fromApp = request.fromApp;
+            this.instanceAmount = request.instanceAmount;
+            this.instanceType = request.instanceType;
+            this.offeringType = request.offeringType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.period = request.period;
+            this.periodUnit = request.periodUnit;
+            this.platform = request.platform;
+            this.regionId = request.regionId;
+            this.reservedInstanceName = request.reservedInstanceName;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.scope = request.scope;
+            this.startTime = request.startTime;
+            this.tag = request.tag;
+            this.zoneId = request.zoneId;
         } 
 
         /**

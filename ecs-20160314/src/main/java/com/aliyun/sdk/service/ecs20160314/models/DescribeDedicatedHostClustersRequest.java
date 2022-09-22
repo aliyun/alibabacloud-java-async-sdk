@@ -13,6 +13,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDedicatedHostClustersRequest extends Request {
     @Query
+    @NameInMap("SchedulerOptions")
+    private SchedulerOptions schedulerOptions;
+
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
+    @Query
     @NameInMap("DedicatedHostClusterIds")
     private String dedicatedHostClusterIds;
 
@@ -58,10 +66,6 @@ public class DescribeDedicatedHostClustersRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
     @NameInMap("Status")
     private String status;
@@ -76,6 +80,8 @@ public class DescribeDedicatedHostClustersRequest extends Request {
 
     private DescribeDedicatedHostClustersRequest(Builder builder) {
         super(builder);
+        this.schedulerOptions = builder.schedulerOptions;
+        this.sourceRegionId = builder.sourceRegionId;
         this.dedicatedHostClusterIds = builder.dedicatedHostClusterIds;
         this.dedicatedHostClusterName = builder.dedicatedHostClusterName;
         this.lockReason = builder.lockReason;
@@ -87,7 +93,6 @@ public class DescribeDedicatedHostClustersRequest extends Request {
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
         this.status = builder.status;
         this.tag = builder.tag;
         this.zoneId = builder.zoneId;
@@ -104,6 +109,20 @@ public class DescribeDedicatedHostClustersRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return schedulerOptions
+     */
+    public SchedulerOptions getSchedulerOptions() {
+        return this.schedulerOptions;
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -184,13 +203,6 @@ public class DescribeDedicatedHostClustersRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
      * @return status
      */
     public String getStatus() {
@@ -212,6 +224,8 @@ public class DescribeDedicatedHostClustersRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeDedicatedHostClustersRequest, Builder> {
+        private SchedulerOptions schedulerOptions; 
+        private String sourceRegionId; 
         private String dedicatedHostClusterIds; 
         private String dedicatedHostClusterName; 
         private String lockReason; 
@@ -223,7 +237,6 @@ public class DescribeDedicatedHostClustersRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
         private String status; 
         private java.util.List < Tag> tag; 
         private String zoneId; 
@@ -232,24 +245,43 @@ public class DescribeDedicatedHostClustersRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDedicatedHostClustersRequest response) {
-            super(response);
-            this.dedicatedHostClusterIds = response.dedicatedHostClusterIds;
-            this.dedicatedHostClusterName = response.dedicatedHostClusterName;
-            this.lockReason = response.lockReason;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.sourceRegionId = response.sourceRegionId;
-            this.status = response.status;
-            this.tag = response.tag;
-            this.zoneId = response.zoneId;
+        private Builder(DescribeDedicatedHostClustersRequest request) {
+            super(request);
+            this.schedulerOptions = request.schedulerOptions;
+            this.sourceRegionId = request.sourceRegionId;
+            this.dedicatedHostClusterIds = request.dedicatedHostClusterIds;
+            this.dedicatedHostClusterName = request.dedicatedHostClusterName;
+            this.lockReason = request.lockReason;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.status = request.status;
+            this.tag = request.tag;
+            this.zoneId = request.zoneId;
         } 
+
+        /**
+         * SchedulerOptions.
+         */
+        public Builder schedulerOptions(SchedulerOptions schedulerOptions) {
+            this.putQueryParameter("SchedulerOptions", schedulerOptions);
+            this.schedulerOptions = schedulerOptions;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * DedicatedHostClusterIds.
@@ -351,15 +383,6 @@ public class DescribeDedicatedHostClustersRequest extends Request {
         }
 
         /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
-            return this;
-        }
-
-        /**
          * Status.
          */
         public Builder status(String status) {
@@ -393,6 +416,47 @@ public class DescribeDedicatedHostClustersRequest extends Request {
 
     } 
 
+    public static class SchedulerOptions extends TeaModel {
+        @NameInMap("ManagedPrivateSpaceId")
+        private String managedPrivateSpaceId;
+
+        private SchedulerOptions(Builder builder) {
+            this.managedPrivateSpaceId = builder.managedPrivateSpaceId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SchedulerOptions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return managedPrivateSpaceId
+         */
+        public String getManagedPrivateSpaceId() {
+            return this.managedPrivateSpaceId;
+        }
+
+        public static final class Builder {
+            private String managedPrivateSpaceId; 
+
+            /**
+             * ManagedPrivateSpaceId.
+             */
+            public Builder managedPrivateSpaceId(String managedPrivateSpaceId) {
+                this.managedPrivateSpaceId = managedPrivateSpaceId;
+                return this;
+            }
+
+            public SchedulerOptions build() {
+                return new SchedulerOptions(this);
+            } 
+
+        } 
+
+    }
     public static class Tag extends TeaModel {
         @NameInMap("Key")
         private String key;

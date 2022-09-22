@@ -154,17 +154,17 @@ public class ModifyStorageSetAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyStorageSetAttributeRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.description = response.description;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.storageSetId = response.storageSetId;
-            this.storageSetName = response.storageSetName;
+        private Builder(ModifyStorageSetAttributeRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.description = request.description;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.storageSetId = request.storageSetId;
+            this.storageSetName = request.storageSetName;
         } 
 
         /**

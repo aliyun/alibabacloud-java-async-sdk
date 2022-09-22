@@ -114,14 +114,14 @@ public class DescribeAccountAttributesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeAccountAttributesRequest response) {
-            super(response);
-            this.attributeName = response.attributeName;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.zoneId = response.zoneId;
+        private Builder(DescribeAccountAttributesRequest request) {
+            super(request);
+            this.attributeName = request.attributeName;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.zoneId = request.zoneId;
         } 
 
         /**

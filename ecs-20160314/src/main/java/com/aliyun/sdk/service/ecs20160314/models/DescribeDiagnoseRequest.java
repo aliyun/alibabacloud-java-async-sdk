@@ -192,20 +192,20 @@ public class DescribeDiagnoseRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDiagnoseRequest response) {
-            super(response);
-            this.diagnoseAction = response.diagnoseAction;
-            this.diagnoseId = response.diagnoseId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.status = response.status;
-            this.tag = response.tag;
-            this.type = response.type;
+        private Builder(DescribeDiagnoseRequest request) {
+            super(request);
+            this.diagnoseAction = request.diagnoseAction;
+            this.diagnoseId = request.diagnoseId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.status = request.status;
+            this.tag = request.tag;
+            this.type = request.type;
         } 
 
         /**

@@ -180,19 +180,19 @@ public class ModifyInstanceDeploymentRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyInstanceDeploymentRequest response) {
-            super(response);
-            this.affinity = response.affinity;
-            this.dedicatedHostClusterId = response.dedicatedHostClusterId;
-            this.dedicatedHostId = response.dedicatedHostId;
-            this.instanceId = response.instanceId;
-            this.migrationType = response.migrationType;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.tenancy = response.tenancy;
+        private Builder(ModifyInstanceDeploymentRequest request) {
+            super(request);
+            this.affinity = request.affinity;
+            this.dedicatedHostClusterId = request.dedicatedHostClusterId;
+            this.dedicatedHostId = request.dedicatedHostId;
+            this.instanceId = request.instanceId;
+            this.migrationType = request.migrationType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.tenancy = request.tenancy;
         } 
 
         /**

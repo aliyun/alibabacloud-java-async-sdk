@@ -101,13 +101,13 @@ public class DeleteWaitingOrdersRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteWaitingOrdersRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.ownerAccount = response.ownerAccount;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.waitingOrderId = response.waitingOrderId;
+        private Builder(DeleteWaitingOrdersRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.ownerAccount = request.ownerAccount;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.waitingOrderId = request.waitingOrderId;
         } 
 
         /**

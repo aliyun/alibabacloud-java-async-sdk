@@ -181,19 +181,19 @@ public class DescribeStorageSetsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeStorageSetsRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.storageSetIds = response.storageSetIds;
-            this.storageSetName = response.storageSetName;
-            this.zoneId = response.zoneId;
+        private Builder(DescribeStorageSetsRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.storageSetIds = request.storageSetIds;
+            this.storageSetName = request.storageSetName;
+            this.zoneId = request.zoneId;
         } 
 
         /**

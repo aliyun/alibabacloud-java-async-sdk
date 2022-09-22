@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyInstanceMaintenanceAttributesRequest</p>
  */
 public class ModifyInstanceMaintenanceAttributesRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("ActionOnMaintenance")
     private String actionOnMaintenance;
@@ -49,12 +53,9 @@ public class ModifyInstanceMaintenanceAttributesRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     private ModifyInstanceMaintenanceAttributesRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.actionOnMaintenance = builder.actionOnMaintenance;
         this.instanceId = builder.instanceId;
         this.liveMigration = builder.liveMigration;
@@ -64,7 +65,6 @@ public class ModifyInstanceMaintenanceAttributesRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -78,6 +78,13 @@ public class ModifyInstanceMaintenanceAttributesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -143,14 +150,8 @@ public class ModifyInstanceMaintenanceAttributesRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
     public static final class Builder extends Request.Builder<ModifyInstanceMaintenanceAttributesRequest, Builder> {
+        private String sourceRegionId; 
         private String actionOnMaintenance; 
         private java.util.List < String > instanceId; 
         private Boolean liveMigration; 
@@ -160,25 +161,33 @@ public class ModifyInstanceMaintenanceAttributesRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ModifyInstanceMaintenanceAttributesRequest response) {
-            super(response);
-            this.actionOnMaintenance = response.actionOnMaintenance;
-            this.instanceId = response.instanceId;
-            this.liveMigration = response.liveMigration;
-            this.maintenanceWindow = response.maintenanceWindow;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.sourceRegionId = response.sourceRegionId;
+        private Builder(ModifyInstanceMaintenanceAttributesRequest request) {
+            super(request);
+            this.sourceRegionId = request.sourceRegionId;
+            this.actionOnMaintenance = request.actionOnMaintenance;
+            this.instanceId = request.instanceId;
+            this.liveMigration = request.liveMigration;
+            this.maintenanceWindow = request.maintenanceWindow;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * ActionOnMaintenance.
@@ -258,15 +267,6 @@ public class ModifyInstanceMaintenanceAttributesRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

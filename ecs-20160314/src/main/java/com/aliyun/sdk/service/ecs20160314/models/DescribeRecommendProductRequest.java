@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeRecommendProductRequest</p>
  */
 public class DescribeRecommendProductRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("Amount")
     private Integer amount;
@@ -35,6 +39,10 @@ public class DescribeRecommendProductRequest extends Request {
     @Query
     @NameInMap("InstanceTypeFamily")
     private java.util.List < String > instanceTypeFamily;
+
+    @Query
+    @NameInMap("InstanceTypeSupportIPv6")
+    private Boolean instanceTypeSupportIPv6;
 
     @Query
     @NameInMap("IoOptimized")
@@ -78,10 +86,6 @@ public class DescribeRecommendProductRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
     @NameInMap("SpotStrategy")
     private String spotStrategy;
@@ -100,12 +104,14 @@ public class DescribeRecommendProductRequest extends Request {
 
     private DescribeRecommendProductRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.amount = builder.amount;
         this.cores = builder.cores;
         this.instanceChargeType = builder.instanceChargeType;
         this.instanceFamilyLevel = builder.instanceFamilyLevel;
         this.instanceType = builder.instanceType;
         this.instanceTypeFamily = builder.instanceTypeFamily;
+        this.instanceTypeSupportIPv6 = builder.instanceTypeSupportIPv6;
         this.ioOptimized = builder.ioOptimized;
         this.maxPrice = builder.maxPrice;
         this.memory = builder.memory;
@@ -116,7 +122,6 @@ public class DescribeRecommendProductRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
         this.spotStrategy = builder.spotStrategy;
         this.systemDiskCategory = builder.systemDiskCategory;
         this.zoneId = builder.zoneId;
@@ -134,6 +139,13 @@ public class DescribeRecommendProductRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -176,6 +188,13 @@ public class DescribeRecommendProductRequest extends Request {
      */
     public java.util.List < String > getInstanceTypeFamily() {
         return this.instanceTypeFamily;
+    }
+
+    /**
+     * @return instanceTypeSupportIPv6
+     */
+    public Boolean getInstanceTypeSupportIPv6() {
+        return this.instanceTypeSupportIPv6;
     }
 
     /**
@@ -249,13 +268,6 @@ public class DescribeRecommendProductRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
      * @return spotStrategy
      */
     public String getSpotStrategy() {
@@ -284,12 +296,14 @@ public class DescribeRecommendProductRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeRecommendProductRequest, Builder> {
+        private String sourceRegionId; 
         private Integer amount; 
         private Integer cores; 
         private String instanceChargeType; 
         private String instanceFamilyLevel; 
         private String instanceType; 
         private java.util.List < String > instanceTypeFamily; 
+        private Boolean instanceTypeSupportIPv6; 
         private String ioOptimized; 
         private Float maxPrice; 
         private Float memory; 
@@ -300,7 +314,6 @@ public class DescribeRecommendProductRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
         private String spotStrategy; 
         private String systemDiskCategory; 
         private String zoneId; 
@@ -310,30 +323,40 @@ public class DescribeRecommendProductRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeRecommendProductRequest response) {
-            super(response);
-            this.amount = response.amount;
-            this.cores = response.cores;
-            this.instanceChargeType = response.instanceChargeType;
-            this.instanceFamilyLevel = response.instanceFamilyLevel;
-            this.instanceType = response.instanceType;
-            this.instanceTypeFamily = response.instanceTypeFamily;
-            this.ioOptimized = response.ioOptimized;
-            this.maxPrice = response.maxPrice;
-            this.memory = response.memory;
-            this.networkType = response.networkType;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.priorityStrategy = response.priorityStrategy;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.sourceRegionId = response.sourceRegionId;
-            this.spotStrategy = response.spotStrategy;
-            this.systemDiskCategory = response.systemDiskCategory;
-            this.zoneId = response.zoneId;
-            this.zoneMatchMode = response.zoneMatchMode;
+        private Builder(DescribeRecommendProductRequest request) {
+            super(request);
+            this.sourceRegionId = request.sourceRegionId;
+            this.amount = request.amount;
+            this.cores = request.cores;
+            this.instanceChargeType = request.instanceChargeType;
+            this.instanceFamilyLevel = request.instanceFamilyLevel;
+            this.instanceType = request.instanceType;
+            this.instanceTypeFamily = request.instanceTypeFamily;
+            this.instanceTypeSupportIPv6 = request.instanceTypeSupportIPv6;
+            this.ioOptimized = request.ioOptimized;
+            this.maxPrice = request.maxPrice;
+            this.memory = request.memory;
+            this.networkType = request.networkType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.priorityStrategy = request.priorityStrategy;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.spotStrategy = request.spotStrategy;
+            this.systemDiskCategory = request.systemDiskCategory;
+            this.zoneId = request.zoneId;
+            this.zoneMatchMode = request.zoneMatchMode;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * Amount.
@@ -386,6 +409,15 @@ public class DescribeRecommendProductRequest extends Request {
         public Builder instanceTypeFamily(java.util.List < String > instanceTypeFamily) {
             this.putQueryParameter("InstanceTypeFamily", instanceTypeFamily);
             this.instanceTypeFamily = instanceTypeFamily;
+            return this;
+        }
+
+        /**
+         * InstanceTypeSupportIPv6.
+         */
+        public Builder instanceTypeSupportIPv6(Boolean instanceTypeSupportIPv6) {
+            this.putQueryParameter("InstanceTypeSupportIPv6", instanceTypeSupportIPv6);
+            this.instanceTypeSupportIPv6 = instanceTypeSupportIPv6;
             return this;
         }
 
@@ -476,15 +508,6 @@ public class DescribeRecommendProductRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

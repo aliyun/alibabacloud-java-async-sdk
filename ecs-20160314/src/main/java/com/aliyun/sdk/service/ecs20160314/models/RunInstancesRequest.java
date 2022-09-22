@@ -12,18 +12,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RunInstancesRequest</p>
  */
 public class RunInstancesRequest extends Request {
+    @Query
     @NameInMap("HibernationOptions")
     private HibernationOptions hibernationOptions;
 
+    @Query
     @NameInMap("PrivatePoolOptions")
     private PrivatePoolOptions privatePoolOptions;
 
+    @Query
     @NameInMap("SchedulerOptions")
     private SchedulerOptions schedulerOptions;
 
+    @Query
     @NameInMap("SecurityOptions")
     private SecurityOptions securityOptions;
 
+    @Query
     @NameInMap("SystemDisk")
     private SystemDisk systemDisk;
 
@@ -996,88 +1001,89 @@ public class RunInstancesRequest extends Request {
             super();
         } 
 
-        private Builder(RunInstancesRequest response) {
-            super(response);
-            this.hibernationOptions = response.hibernationOptions;
-            this.privatePoolOptions = response.privatePoolOptions;
-            this.schedulerOptions = response.schedulerOptions;
-            this.securityOptions = response.securityOptions;
-            this.systemDisk = response.systemDisk;
-            this.affinity = response.affinity;
-            this.autoReleaseTime = response.autoReleaseTime;
-            this.businessInfo = response.businessInfo;
-            this.clientToken = response.clientToken;
-            this.clusterId = response.clusterId;
-            this.creditSpecification = response.creditSpecification;
-            this.dataDisk = response.dataDisk;
-            this.dedicatedHostClusterId = response.dedicatedHostClusterId;
-            this.dedicatedHostId = response.dedicatedHostId;
-            this.defaultVpc = response.defaultVpc;
-            this.deletionProtection = response.deletionProtection;
-            this.deploymentSetGroupNo = response.deploymentSetGroupNo;
-            this.deploymentSetId = response.deploymentSetId;
-            this.description = response.description;
-            this.dryRun = response.dryRun;
-            this.fromApp = response.fromApp;
-            this.hostName = response.hostName;
-            this.hostNames = response.hostNames;
-            this.hpcClusterId = response.hpcClusterId;
-            this.httpEndpoint = response.httpEndpoint;
-            this.httpPutResponseHopLimit = response.httpPutResponseHopLimit;
-            this.httpTokens = response.httpTokens;
-            this.imageFamily = response.imageFamily;
-            this.imageId = response.imageId;
-            this.imageOptions = response.imageOptions;
-            this.instance = response.instance;
-            this.instanceName = response.instanceName;
-            this.instanceType = response.instanceType;
-            this.internetChargeType = response.internetChargeType;
-            this.internetMaxBandwidthIn = response.internetMaxBandwidthIn;
-            this.internetMaxBandwidthOut = response.internetMaxBandwidthOut;
-            this.ioOptimized = response.ioOptimized;
-            this.ipv6Address = response.ipv6Address;
-            this.ipv6AddressCount = response.ipv6AddressCount;
-            this.isp = response.isp;
-            this.keyPairName = response.keyPairName;
-            this.maxAmount = response.maxAmount;
-            this.minAmount = response.minAmount;
-            this.networkInterface = response.networkInterface;
-            this.networkType = response.networkType;
-            this.nodeControllerId = response.nodeControllerId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.password = response.password;
-            this.passwordInherit = response.passwordInherit;
-            this.privateIpAddress = response.privateIpAddress;
-            this.ramRoleName = response.ramRoleName;
-            this.recycleBinResourceId = response.recycleBinResourceId;
-            this.regionId = response.regionId;
-            this.relationOrderId = response.relationOrderId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.securityEnhancementStrategy = response.securityEnhancementStrategy;
-            this.securityGroupId = response.securityGroupId;
-            this.securityGroupIds = response.securityGroupIds;
-            this.securityGroupRule = response.securityGroupRule;
-            this.spotDuration = response.spotDuration;
-            this.spotInterruptionBehavior = response.spotInterruptionBehavior;
-            this.spotPriceLimit = response.spotPriceLimit;
-            this.spotStrategy = response.spotStrategy;
-            this.storageSetId = response.storageSetId;
-            this.storageSetPartitionNumber = response.storageSetPartitionNumber;
-            this.tag = response.tag;
-            this.tenancy = response.tenancy;
-            this.uniqueSuffix = response.uniqueSuffix;
-            this.userData = response.userData;
-            this.vSwitchId = response.vSwitchId;
-            this.zoneId = response.zoneId;
+        private Builder(RunInstancesRequest request) {
+            super(request);
+            this.hibernationOptions = request.hibernationOptions;
+            this.privatePoolOptions = request.privatePoolOptions;
+            this.schedulerOptions = request.schedulerOptions;
+            this.securityOptions = request.securityOptions;
+            this.systemDisk = request.systemDisk;
+            this.affinity = request.affinity;
+            this.autoReleaseTime = request.autoReleaseTime;
+            this.businessInfo = request.businessInfo;
+            this.clientToken = request.clientToken;
+            this.clusterId = request.clusterId;
+            this.creditSpecification = request.creditSpecification;
+            this.dataDisk = request.dataDisk;
+            this.dedicatedHostClusterId = request.dedicatedHostClusterId;
+            this.dedicatedHostId = request.dedicatedHostId;
+            this.defaultVpc = request.defaultVpc;
+            this.deletionProtection = request.deletionProtection;
+            this.deploymentSetGroupNo = request.deploymentSetGroupNo;
+            this.deploymentSetId = request.deploymentSetId;
+            this.description = request.description;
+            this.dryRun = request.dryRun;
+            this.fromApp = request.fromApp;
+            this.hostName = request.hostName;
+            this.hostNames = request.hostNames;
+            this.hpcClusterId = request.hpcClusterId;
+            this.httpEndpoint = request.httpEndpoint;
+            this.httpPutResponseHopLimit = request.httpPutResponseHopLimit;
+            this.httpTokens = request.httpTokens;
+            this.imageFamily = request.imageFamily;
+            this.imageId = request.imageId;
+            this.imageOptions = request.imageOptions;
+            this.instance = request.instance;
+            this.instanceName = request.instanceName;
+            this.instanceType = request.instanceType;
+            this.internetChargeType = request.internetChargeType;
+            this.internetMaxBandwidthIn = request.internetMaxBandwidthIn;
+            this.internetMaxBandwidthOut = request.internetMaxBandwidthOut;
+            this.ioOptimized = request.ioOptimized;
+            this.ipv6Address = request.ipv6Address;
+            this.ipv6AddressCount = request.ipv6AddressCount;
+            this.isp = request.isp;
+            this.keyPairName = request.keyPairName;
+            this.maxAmount = request.maxAmount;
+            this.minAmount = request.minAmount;
+            this.networkInterface = request.networkInterface;
+            this.networkType = request.networkType;
+            this.nodeControllerId = request.nodeControllerId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.password = request.password;
+            this.passwordInherit = request.passwordInherit;
+            this.privateIpAddress = request.privateIpAddress;
+            this.ramRoleName = request.ramRoleName;
+            this.recycleBinResourceId = request.recycleBinResourceId;
+            this.regionId = request.regionId;
+            this.relationOrderId = request.relationOrderId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.securityEnhancementStrategy = request.securityEnhancementStrategy;
+            this.securityGroupId = request.securityGroupId;
+            this.securityGroupIds = request.securityGroupIds;
+            this.securityGroupRule = request.securityGroupRule;
+            this.spotDuration = request.spotDuration;
+            this.spotInterruptionBehavior = request.spotInterruptionBehavior;
+            this.spotPriceLimit = request.spotPriceLimit;
+            this.spotStrategy = request.spotStrategy;
+            this.storageSetId = request.storageSetId;
+            this.storageSetPartitionNumber = request.storageSetPartitionNumber;
+            this.tag = request.tag;
+            this.tenancy = request.tenancy;
+            this.uniqueSuffix = request.uniqueSuffix;
+            this.userData = request.userData;
+            this.vSwitchId = request.vSwitchId;
+            this.zoneId = request.zoneId;
         } 
 
         /**
          * HibernationOptions.
          */
         public Builder hibernationOptions(HibernationOptions hibernationOptions) {
+            this.putQueryParameter("HibernationOptions", hibernationOptions);
             this.hibernationOptions = hibernationOptions;
             return this;
         }
@@ -1086,6 +1092,7 @@ public class RunInstancesRequest extends Request {
          * PrivatePoolOptions.
          */
         public Builder privatePoolOptions(PrivatePoolOptions privatePoolOptions) {
+            this.putQueryParameter("PrivatePoolOptions", privatePoolOptions);
             this.privatePoolOptions = privatePoolOptions;
             return this;
         }
@@ -1094,6 +1101,7 @@ public class RunInstancesRequest extends Request {
          * SchedulerOptions.
          */
         public Builder schedulerOptions(SchedulerOptions schedulerOptions) {
+            this.putQueryParameter("SchedulerOptions", schedulerOptions);
             this.schedulerOptions = schedulerOptions;
             return this;
         }
@@ -1102,6 +1110,7 @@ public class RunInstancesRequest extends Request {
          * SecurityOptions.
          */
         public Builder securityOptions(SecurityOptions securityOptions) {
+            this.putQueryParameter("SecurityOptions", securityOptions);
             this.securityOptions = securityOptions;
             return this;
         }
@@ -1110,6 +1119,7 @@ public class RunInstancesRequest extends Request {
          * SystemDisk.
          */
         public Builder systemDisk(SystemDisk systemDisk) {
+            this.putQueryParameter("SystemDisk", systemDisk);
             this.systemDisk = systemDisk;
             return this;
         }
@@ -1968,6 +1978,24 @@ public class RunInstancesRequest extends Request {
         @NameInMap("Size")
         private String size;
 
+        @NameInMap("BurstingEnabled")
+        private Boolean burstingEnabled;
+
+        @NameInMap("EncryptAlgorithm")
+        private String encryptAlgorithm;
+
+        @NameInMap("Encrypted")
+        private Boolean encrypted;
+
+        @NameInMap("KMSKeyId")
+        private String KMSKeyId;
+
+        @NameInMap("ProvisionedIops")
+        private Long provisionedIops;
+
+        @NameInMap("StorageClusterId")
+        private String storageClusterId;
+
         private SystemDisk(Builder builder) {
             this.autoSnapshotPolicyId = builder.autoSnapshotPolicyId;
             this.category = builder.category;
@@ -1976,6 +2004,12 @@ public class RunInstancesRequest extends Request {
             this.diskName = builder.diskName;
             this.performanceLevel = builder.performanceLevel;
             this.size = builder.size;
+            this.burstingEnabled = builder.burstingEnabled;
+            this.encryptAlgorithm = builder.encryptAlgorithm;
+            this.encrypted = builder.encrypted;
+            this.KMSKeyId = builder.KMSKeyId;
+            this.provisionedIops = builder.provisionedIops;
+            this.storageClusterId = builder.storageClusterId;
         }
 
         public static Builder builder() {
@@ -2035,6 +2069,48 @@ public class RunInstancesRequest extends Request {
             return this.size;
         }
 
+        /**
+         * @return burstingEnabled
+         */
+        public Boolean getBurstingEnabled() {
+            return this.burstingEnabled;
+        }
+
+        /**
+         * @return encryptAlgorithm
+         */
+        public String getEncryptAlgorithm() {
+            return this.encryptAlgorithm;
+        }
+
+        /**
+         * @return encrypted
+         */
+        public Boolean getEncrypted() {
+            return this.encrypted;
+        }
+
+        /**
+         * @return KMSKeyId
+         */
+        public String getKMSKeyId() {
+            return this.KMSKeyId;
+        }
+
+        /**
+         * @return provisionedIops
+         */
+        public Long getProvisionedIops() {
+            return this.provisionedIops;
+        }
+
+        /**
+         * @return storageClusterId
+         */
+        public String getStorageClusterId() {
+            return this.storageClusterId;
+        }
+
         public static final class Builder {
             private String autoSnapshotPolicyId; 
             private String category; 
@@ -2043,6 +2119,12 @@ public class RunInstancesRequest extends Request {
             private String diskName; 
             private String performanceLevel; 
             private String size; 
+            private Boolean burstingEnabled; 
+            private String encryptAlgorithm; 
+            private Boolean encrypted; 
+            private String KMSKeyId; 
+            private Long provisionedIops; 
+            private String storageClusterId; 
 
             /**
              * AutoSnapshotPolicyId.
@@ -2100,6 +2182,54 @@ public class RunInstancesRequest extends Request {
                 return this;
             }
 
+            /**
+             * BurstingEnabled.
+             */
+            public Builder burstingEnabled(Boolean burstingEnabled) {
+                this.burstingEnabled = burstingEnabled;
+                return this;
+            }
+
+            /**
+             * EncryptAlgorithm.
+             */
+            public Builder encryptAlgorithm(String encryptAlgorithm) {
+                this.encryptAlgorithm = encryptAlgorithm;
+                return this;
+            }
+
+            /**
+             * Encrypted.
+             */
+            public Builder encrypted(Boolean encrypted) {
+                this.encrypted = encrypted;
+                return this;
+            }
+
+            /**
+             * KMSKeyId.
+             */
+            public Builder KMSKeyId(String KMSKeyId) {
+                this.KMSKeyId = KMSKeyId;
+                return this;
+            }
+
+            /**
+             * ProvisionedIops.
+             */
+            public Builder provisionedIops(Long provisionedIops) {
+                this.provisionedIops = provisionedIops;
+                return this;
+            }
+
+            /**
+             * StorageClusterId.
+             */
+            public Builder storageClusterId(String storageClusterId) {
+                this.storageClusterId = storageClusterId;
+                return this;
+            }
+
             public SystemDisk build() {
                 return new SystemDisk(this);
             } 
@@ -2142,7 +2272,6 @@ public class RunInstancesRequest extends Request {
         private String performanceLevel;
 
         @NameInMap("ProvisionedIops")
-        @Validation(maximum = 50000)
         private Long provisionedIops;
 
         @NameInMap("Size")

@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceTypeResourceRequest</p>
  */
 public class DescribeInstanceTypeResourceRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("Cores")
     private Integer cores;
@@ -65,16 +69,13 @@ public class DescribeInstanceTypeResourceRequest extends Request {
     @NameInMap("SearchTypes")
     private java.util.List < String > searchTypes;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
     @NameInMap("ZoneIds")
     private java.util.List < String > zoneIds;
 
     private DescribeInstanceTypeResourceRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.cores = builder.cores;
         this.instanceTypeFamilies = builder.instanceTypeFamilies;
         this.instanceTypeMatchMode = builder.instanceTypeMatchMode;
@@ -88,7 +89,6 @@ public class DescribeInstanceTypeResourceRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.searchTypes = builder.searchTypes;
-        this.sourceRegionId = builder.sourceRegionId;
         this.zoneIds = builder.zoneIds;
     }
 
@@ -103,6 +103,13 @@ public class DescribeInstanceTypeResourceRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -197,13 +204,6 @@ public class DescribeInstanceTypeResourceRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
      * @return zoneIds
      */
     public java.util.List < String > getZoneIds() {
@@ -211,6 +211,7 @@ public class DescribeInstanceTypeResourceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeInstanceTypeResourceRequest, Builder> {
+        private String sourceRegionId; 
         private Integer cores; 
         private java.util.List < String > instanceTypeFamilies; 
         private String instanceTypeMatchMode; 
@@ -224,31 +225,39 @@ public class DescribeInstanceTypeResourceRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private java.util.List < String > searchTypes; 
-        private String sourceRegionId; 
         private java.util.List < String > zoneIds; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeInstanceTypeResourceRequest response) {
-            super(response);
-            this.cores = response.cores;
-            this.instanceTypeFamilies = response.instanceTypeFamilies;
-            this.instanceTypeMatchMode = response.instanceTypeMatchMode;
-            this.instanceTypes = response.instanceTypes;
-            this.memories = response.memories;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.searchTypes = response.searchTypes;
-            this.sourceRegionId = response.sourceRegionId;
-            this.zoneIds = response.zoneIds;
+        private Builder(DescribeInstanceTypeResourceRequest request) {
+            super(request);
+            this.sourceRegionId = request.sourceRegionId;
+            this.cores = request.cores;
+            this.instanceTypeFamilies = request.instanceTypeFamilies;
+            this.instanceTypeMatchMode = request.instanceTypeMatchMode;
+            this.instanceTypes = request.instanceTypes;
+            this.memories = request.memories;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.searchTypes = request.searchTypes;
+            this.zoneIds = request.zoneIds;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * Cores.
@@ -364,15 +373,6 @@ public class DescribeInstanceTypeResourceRequest extends Request {
         public Builder searchTypes(java.util.List < String > searchTypes) {
             this.putQueryParameter("SearchTypes", searchTypes);
             this.searchTypes = searchTypes;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

@@ -284,27 +284,27 @@ public class DescribeReservedInstancesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeReservedInstancesRequest response) {
-            super(response);
-            this.allocationType = response.allocationType;
-            this.expiredTime = response.expiredTime;
-            this.instanceType = response.instanceType;
-            this.instanceTypeFamily = response.instanceTypeFamily;
-            this.lockReason = response.lockReason;
-            this.offeringType = response.offeringType;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.reservedInstanceId = response.reservedInstanceId;
-            this.reservedInstanceName = response.reservedInstanceName;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.scope = response.scope;
-            this.status = response.status;
-            this.tag = response.tag;
-            this.zoneId = response.zoneId;
+        private Builder(DescribeReservedInstancesRequest request) {
+            super(request);
+            this.allocationType = request.allocationType;
+            this.expiredTime = request.expiredTime;
+            this.instanceType = request.instanceType;
+            this.instanceTypeFamily = request.instanceTypeFamily;
+            this.lockReason = request.lockReason;
+            this.offeringType = request.offeringType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.reservedInstanceId = request.reservedInstanceId;
+            this.reservedInstanceName = request.reservedInstanceName;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.scope = request.scope;
+            this.status = request.status;
+            this.tag = request.tag;
+            this.zoneId = request.zoneId;
         } 
 
         /**

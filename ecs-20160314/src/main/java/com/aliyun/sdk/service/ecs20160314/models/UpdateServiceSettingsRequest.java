@@ -12,8 +12,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateServiceSettingsRequest</p>
  */
 public class UpdateServiceSettingsRequest extends Request {
+    @Query
     @NameInMap("CloudAssistantDeliverySettings")
     private CloudAssistantDeliverySettings cloudAssistantDeliverySettings;
+
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     @Query
     @NameInMap("OwnerAccount")
@@ -36,19 +41,15 @@ public class UpdateServiceSettingsRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     private UpdateServiceSettingsRequest(Builder builder) {
         super(builder);
         this.cloudAssistantDeliverySettings = builder.cloudAssistantDeliverySettings;
+        this.sourceRegionId = builder.sourceRegionId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -69,6 +70,13 @@ public class UpdateServiceSettingsRequest extends Request {
      */
     public CloudAssistantDeliverySettings getCloudAssistantDeliverySettings() {
         return this.cloudAssistantDeliverySettings;
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -106,42 +114,45 @@ public class UpdateServiceSettingsRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
     public static final class Builder extends Request.Builder<UpdateServiceSettingsRequest, Builder> {
         private CloudAssistantDeliverySettings cloudAssistantDeliverySettings; 
+        private String sourceRegionId; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(UpdateServiceSettingsRequest response) {
-            super(response);
-            this.cloudAssistantDeliverySettings = response.cloudAssistantDeliverySettings;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.sourceRegionId = response.sourceRegionId;
+        private Builder(UpdateServiceSettingsRequest request) {
+            super(request);
+            this.cloudAssistantDeliverySettings = request.cloudAssistantDeliverySettings;
+            this.sourceRegionId = request.sourceRegionId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
          * CloudAssistantDeliverySettings.
          */
         public Builder cloudAssistantDeliverySettings(CloudAssistantDeliverySettings cloudAssistantDeliverySettings) {
+            this.putQueryParameter("CloudAssistantDeliverySettings", cloudAssistantDeliverySettings);
             this.cloudAssistantDeliverySettings = cloudAssistantDeliverySettings;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 
@@ -187,15 +198,6 @@ public class UpdateServiceSettingsRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

@@ -140,16 +140,16 @@ public class DescribeBandwidthPriceRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeBandwidthPriceRequest response) {
-            super(response);
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.priceUnit = response.priceUnit;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.verbose = response.verbose;
+        private Builder(DescribeBandwidthPriceRequest request) {
+            super(request);
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.priceUnit = request.priceUnit;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.verbose = request.verbose;
         } 
 
         /**

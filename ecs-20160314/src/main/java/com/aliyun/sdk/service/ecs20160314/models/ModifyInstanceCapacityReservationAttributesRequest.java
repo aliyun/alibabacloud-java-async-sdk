@@ -141,16 +141,16 @@ public class ModifyInstanceCapacityReservationAttributesRequest extends Request 
             super();
         } 
 
-        private Builder(ModifyInstanceCapacityReservationAttributesRequest response) {
-            super(response);
-            this.capacityReservationId = response.capacityReservationId;
-            this.capacityReservationPreference = response.capacityReservationPreference;
-            this.instanceId = response.instanceId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ModifyInstanceCapacityReservationAttributesRequest request) {
+            super(request);
+            this.capacityReservationId = request.capacityReservationId;
+            this.capacityReservationPreference = request.capacityReservationPreference;
+            this.instanceId = request.instanceId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

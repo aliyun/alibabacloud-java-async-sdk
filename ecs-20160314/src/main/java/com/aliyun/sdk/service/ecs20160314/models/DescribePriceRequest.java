@@ -206,21 +206,21 @@ public class DescribePriceRequest extends Request {
             super();
         } 
 
-        private Builder(DescribePriceRequest response) {
-            super(response);
-            this.businessInfo = response.businessInfo;
-            this.commodity = response.commodity;
-            this.defaultVpc = response.defaultVpc;
-            this.fromApp = response.fromApp;
-            this.needSpotPrice = response.needSpotPrice;
-            this.networkType = response.networkType;
-            this.orderType = response.orderType;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.verbose = response.verbose;
+        private Builder(DescribePriceRequest request) {
+            super(request);
+            this.businessInfo = request.businessInfo;
+            this.commodity = request.commodity;
+            this.defaultVpc = request.defaultVpc;
+            this.fromApp = request.fromApp;
+            this.needSpotPrice = request.needSpotPrice;
+            this.networkType = request.networkType;
+            this.orderType = request.orderType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.verbose = request.verbose;
         } 
 
         /**

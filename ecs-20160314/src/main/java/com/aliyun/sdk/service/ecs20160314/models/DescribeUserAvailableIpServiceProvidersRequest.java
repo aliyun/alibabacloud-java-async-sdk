@@ -114,14 +114,14 @@ public class DescribeUserAvailableIpServiceProvidersRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeUserAvailableIpServiceProvidersRequest response) {
-            super(response);
-            this.aliUid = response.aliUid;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DescribeUserAvailableIpServiceProvidersRequest request) {
+            super(request);
+            this.aliUid = request.aliUid;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

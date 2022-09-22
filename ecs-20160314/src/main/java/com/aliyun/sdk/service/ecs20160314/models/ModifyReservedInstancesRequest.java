@@ -141,16 +141,16 @@ public class ModifyReservedInstancesRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyReservedInstancesRequest response) {
-            super(response);
-            this.configuration = response.configuration;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.reservedInstanceId = response.reservedInstanceId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.tag = response.tag;
+        private Builder(ModifyReservedInstancesRequest request) {
+            super(request);
+            this.configuration = request.configuration;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.reservedInstanceId = request.reservedInstanceId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.tag = request.tag;
         } 
 
         /**

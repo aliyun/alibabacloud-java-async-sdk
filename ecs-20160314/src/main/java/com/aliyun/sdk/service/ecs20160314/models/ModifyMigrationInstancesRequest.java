@@ -157,17 +157,17 @@ public class ModifyMigrationInstancesRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyMigrationInstancesRequest response) {
-            super(response);
-            this.globalMigrationTime = response.globalMigrationTime;
-            this.instanceId = response.instanceId;
-            this.networkMigrationType = response.networkMigrationType;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ModifyMigrationInstancesRequest request) {
+            super(request);
+            this.globalMigrationTime = request.globalMigrationTime;
+            this.instanceId = request.instanceId;
+            this.networkMigrationType = request.networkMigrationType;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

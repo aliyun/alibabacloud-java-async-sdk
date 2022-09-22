@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyImageAdvancedAttributeRequest</p>
  */
 public class ModifyImageAdvancedAttributeRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("Flag")
     private java.util.List < Flag> flag;
@@ -38,23 +42,20 @@ public class ModifyImageAdvancedAttributeRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
     @NameInMap("SupportIoOptimized")
+    @Deprecated
     private String supportIoOptimized;
 
     private ModifyImageAdvancedAttributeRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.flag = builder.flag;
         this.imageId = builder.imageId;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
         this.supportIoOptimized = builder.supportIoOptimized;
     }
 
@@ -69,6 +70,13 @@ public class ModifyImageAdvancedAttributeRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -114,13 +122,6 @@ public class ModifyImageAdvancedAttributeRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
      * @return supportIoOptimized
      */
     public String getSupportIoOptimized() {
@@ -128,30 +129,39 @@ public class ModifyImageAdvancedAttributeRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyImageAdvancedAttributeRequest, Builder> {
+        private String sourceRegionId; 
         private java.util.List < Flag> flag; 
         private String imageId; 
         private Long ownerId; 
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
         private String supportIoOptimized; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ModifyImageAdvancedAttributeRequest response) {
-            super(response);
-            this.flag = response.flag;
-            this.imageId = response.imageId;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.sourceRegionId = response.sourceRegionId;
-            this.supportIoOptimized = response.supportIoOptimized;
+        private Builder(ModifyImageAdvancedAttributeRequest request) {
+            super(request);
+            this.sourceRegionId = request.sourceRegionId;
+            this.flag = request.flag;
+            this.imageId = request.imageId;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.supportIoOptimized = request.supportIoOptimized;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * Flag.
@@ -204,15 +214,6 @@ public class ModifyImageAdvancedAttributeRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

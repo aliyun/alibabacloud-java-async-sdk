@@ -128,15 +128,15 @@ public class DescribeVpcHavsInstancesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeVpcHavsInstancesRequest response) {
-            super(response);
-            this.maxResultSize = response.maxResultSize;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.vpcIdList = response.vpcIdList;
+        private Builder(DescribeVpcHavsInstancesRequest request) {
+            super(request);
+            this.maxResultSize = request.maxResultSize;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.vpcIdList = request.vpcIdList;
         } 
 
         /**

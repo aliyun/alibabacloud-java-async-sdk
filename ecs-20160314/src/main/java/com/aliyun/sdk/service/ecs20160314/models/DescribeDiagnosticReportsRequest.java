@@ -192,20 +192,20 @@ public class DescribeDiagnosticReportsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDiagnosticReportsRequest response) {
-            super(response);
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.reportId = response.reportId;
-            this.resourceId = response.resourceId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.resourceType = response.resourceType;
-            this.severity = response.severity;
-            this.sourceSystem = response.sourceSystem;
-            this.status = response.status;
+        private Builder(DescribeDiagnosticReportsRequest request) {
+            super(request);
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.reportId = request.reportId;
+            this.resourceId = request.resourceId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.resourceType = request.resourceType;
+            this.severity = request.severity;
+            this.sourceSystem = request.sourceSystem;
+            this.status = request.status;
         } 
 
         /**

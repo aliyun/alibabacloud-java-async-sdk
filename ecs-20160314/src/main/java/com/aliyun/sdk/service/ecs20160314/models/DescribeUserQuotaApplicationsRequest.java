@@ -231,23 +231,23 @@ public class DescribeUserQuotaApplicationsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeUserQuotaApplicationsRequest response) {
-            super(response);
-            this.applicationId = response.applicationId;
-            this.chargeType = response.chargeType;
-            this.clientToken = response.clientToken;
-            this.instanceType = response.instanceType;
-            this.nextToken = response.nextToken;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.quotaType = response.quotaType;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.status = response.status;
-            this.zoneId = response.zoneId;
-            this.pageSize = response.pageSize;
+        private Builder(DescribeUserQuotaApplicationsRequest request) {
+            super(request);
+            this.applicationId = request.applicationId;
+            this.chargeType = request.chargeType;
+            this.clientToken = request.clientToken;
+            this.instanceType = request.instanceType;
+            this.nextToken = request.nextToken;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.quotaType = request.quotaType;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.status = request.status;
+            this.zoneId = request.zoneId;
+            this.pageSize = request.pageSize;
         } 
 
         /**

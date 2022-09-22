@@ -102,13 +102,13 @@ public class DeleteMigratableInstancesRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteMigratableInstancesRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DeleteMigratableInstancesRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

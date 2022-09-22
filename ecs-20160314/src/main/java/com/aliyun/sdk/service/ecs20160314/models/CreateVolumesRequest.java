@@ -272,26 +272,26 @@ public class CreateVolumesRequest extends Request {
             super();
         } 
 
-        private Builder(CreateVolumesRequest response) {
-            super(response);
-            this.amount = response.amount;
-            this.clientToken = response.clientToken;
-            this.description = response.description;
-            this.KMSKeyId = response.KMSKeyId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.size = response.size;
-            this.snapshotId = response.snapshotId;
-            this.storageSetId = response.storageSetId;
-            this.storageSetPartitionNumber = response.storageSetPartitionNumber;
-            this.tag = response.tag;
-            this.volumeCategory = response.volumeCategory;
-            this.volumeEncrypted = response.volumeEncrypted;
-            this.volumeName = response.volumeName;
-            this.zoneId = response.zoneId;
+        private Builder(CreateVolumesRequest request) {
+            super(request);
+            this.amount = request.amount;
+            this.clientToken = request.clientToken;
+            this.description = request.description;
+            this.KMSKeyId = request.KMSKeyId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.size = request.size;
+            this.snapshotId = request.snapshotId;
+            this.storageSetId = request.storageSetId;
+            this.storageSetPartitionNumber = request.storageSetPartitionNumber;
+            this.tag = request.tag;
+            this.volumeCategory = request.volumeCategory;
+            this.volumeEncrypted = request.volumeEncrypted;
+            this.volumeName = request.volumeName;
+            this.zoneId = request.zoneId;
         } 
 
         /**

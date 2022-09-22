@@ -264,25 +264,25 @@ public class CreateCapacityReservationRequest extends Request {
             super();
         } 
 
-        private Builder(CreateCapacityReservationRequest response) {
-            super(response);
-            this.capacityReservationName = response.capacityReservationName;
-            this.description = response.description;
-            this.endDateType = response.endDateType;
-            this.instanceCount = response.instanceCount;
-            this.instanceMatchCriteria = response.instanceMatchCriteria;
-            this.instancePlatform = response.instancePlatform;
-            this.instanceType = response.instanceType;
-            this.networkType = response.networkType;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.tag = response.tag;
-            this.timeSlot = response.timeSlot;
-            this.zoneId = response.zoneId;
+        private Builder(CreateCapacityReservationRequest request) {
+            super(request);
+            this.capacityReservationName = request.capacityReservationName;
+            this.description = request.description;
+            this.endDateType = request.endDateType;
+            this.instanceCount = request.instanceCount;
+            this.instanceMatchCriteria = request.instanceMatchCriteria;
+            this.instancePlatform = request.instancePlatform;
+            this.instanceType = request.instanceType;
+            this.networkType = request.networkType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.tag = request.tag;
+            this.timeSlot = request.timeSlot;
+            this.zoneId = request.zoneId;
         } 
 
         /**

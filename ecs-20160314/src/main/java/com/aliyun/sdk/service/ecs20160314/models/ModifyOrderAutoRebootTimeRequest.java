@@ -116,14 +116,14 @@ public class ModifyOrderAutoRebootTimeRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyOrderAutoRebootTimeRequest response) {
-            super(response);
-            this.autoRebootTime = response.autoRebootTime;
-            this.orderId = response.orderId;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ModifyOrderAutoRebootTimeRequest request) {
+            super(request);
+            this.autoRebootTime = request.autoRebootTime;
+            this.orderId = request.orderId;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
