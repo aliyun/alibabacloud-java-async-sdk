@@ -21,32 +21,16 @@ public class CreateHubClusterRequest extends Request {
     private Boolean auditLogEnabled;
 
     @Body
-    @NameInMap("AuditLogProject")
-    private String auditLogProject;
-
-    @Body
-    @NameInMap("AuditLogStoreTTL")
-    private String auditLogStoreTTL;
-
-    @Body
-    @NameInMap("ControlPlaneLogEnabled")
-    private Boolean controlPlaneLogEnabled;
-
-    @Body
-    @NameInMap("ControlPlaneLogProject")
-    private String controlPlaneLogProject;
-
-    @Body
-    @NameInMap("ControlPlaneLogTTL")
-    private String controlPlaneLogTTL;
-
-    @Body
     @NameInMap("IsEnterpriseSecurityGroup")
     private Boolean isEnterpriseSecurityGroup;
 
     @Body
     @NameInMap("Name")
     private String name;
+
+    @Body
+    @NameInMap("Profile")
+    private String profile;
 
     @Body
     @NameInMap("RegionId")
@@ -67,13 +51,9 @@ public class CreateHubClusterRequest extends Request {
         super(builder);
         this.apiServerPublicEip = builder.apiServerPublicEip;
         this.auditLogEnabled = builder.auditLogEnabled;
-        this.auditLogProject = builder.auditLogProject;
-        this.auditLogStoreTTL = builder.auditLogStoreTTL;
-        this.controlPlaneLogEnabled = builder.controlPlaneLogEnabled;
-        this.controlPlaneLogProject = builder.controlPlaneLogProject;
-        this.controlPlaneLogTTL = builder.controlPlaneLogTTL;
         this.isEnterpriseSecurityGroup = builder.isEnterpriseSecurityGroup;
         this.name = builder.name;
+        this.profile = builder.profile;
         this.regionId = builder.regionId;
         this.vSwitches = builder.vSwitches;
         this.vpcId = builder.vpcId;
@@ -107,41 +87,6 @@ public class CreateHubClusterRequest extends Request {
     }
 
     /**
-     * @return auditLogProject
-     */
-    public String getAuditLogProject() {
-        return this.auditLogProject;
-    }
-
-    /**
-     * @return auditLogStoreTTL
-     */
-    public String getAuditLogStoreTTL() {
-        return this.auditLogStoreTTL;
-    }
-
-    /**
-     * @return controlPlaneLogEnabled
-     */
-    public Boolean getControlPlaneLogEnabled() {
-        return this.controlPlaneLogEnabled;
-    }
-
-    /**
-     * @return controlPlaneLogProject
-     */
-    public String getControlPlaneLogProject() {
-        return this.controlPlaneLogProject;
-    }
-
-    /**
-     * @return controlPlaneLogTTL
-     */
-    public String getControlPlaneLogTTL() {
-        return this.controlPlaneLogTTL;
-    }
-
-    /**
      * @return isEnterpriseSecurityGroup
      */
     public Boolean getIsEnterpriseSecurityGroup() {
@@ -153,6 +98,13 @@ public class CreateHubClusterRequest extends Request {
      */
     public String getName() {
         return this.name;
+    }
+
+    /**
+     * @return profile
+     */
+    public String getProfile() {
+        return this.profile;
     }
 
     /**
@@ -179,13 +131,9 @@ public class CreateHubClusterRequest extends Request {
     public static final class Builder extends Request.Builder<CreateHubClusterRequest, Builder> {
         private Boolean apiServerPublicEip; 
         private Boolean auditLogEnabled; 
-        private String auditLogProject; 
-        private String auditLogStoreTTL; 
-        private Boolean controlPlaneLogEnabled; 
-        private String controlPlaneLogProject; 
-        private String controlPlaneLogTTL; 
         private Boolean isEnterpriseSecurityGroup; 
         private String name; 
+        private String profile; 
         private String regionId; 
         private String vSwitches; 
         private String vpcId; 
@@ -198,13 +146,9 @@ public class CreateHubClusterRequest extends Request {
             super(request);
             this.apiServerPublicEip = request.apiServerPublicEip;
             this.auditLogEnabled = request.auditLogEnabled;
-            this.auditLogProject = request.auditLogProject;
-            this.auditLogStoreTTL = request.auditLogStoreTTL;
-            this.controlPlaneLogEnabled = request.controlPlaneLogEnabled;
-            this.controlPlaneLogProject = request.controlPlaneLogProject;
-            this.controlPlaneLogTTL = request.controlPlaneLogTTL;
             this.isEnterpriseSecurityGroup = request.isEnterpriseSecurityGroup;
             this.name = request.name;
+            this.profile = request.profile;
             this.regionId = request.regionId;
             this.vSwitches = request.vSwitches;
             this.vpcId = request.vpcId;
@@ -229,51 +173,6 @@ public class CreateHubClusterRequest extends Request {
         }
 
         /**
-         * AuditLogProject.
-         */
-        public Builder auditLogProject(String auditLogProject) {
-            this.putBodyParameter("AuditLogProject", auditLogProject);
-            this.auditLogProject = auditLogProject;
-            return this;
-        }
-
-        /**
-         * AuditLogStoreTTL.
-         */
-        public Builder auditLogStoreTTL(String auditLogStoreTTL) {
-            this.putBodyParameter("AuditLogStoreTTL", auditLogStoreTTL);
-            this.auditLogStoreTTL = auditLogStoreTTL;
-            return this;
-        }
-
-        /**
-         * ControlPlaneLogEnabled.
-         */
-        public Builder controlPlaneLogEnabled(Boolean controlPlaneLogEnabled) {
-            this.putBodyParameter("ControlPlaneLogEnabled", controlPlaneLogEnabled);
-            this.controlPlaneLogEnabled = controlPlaneLogEnabled;
-            return this;
-        }
-
-        /**
-         * ControlPlaneLogProject.
-         */
-        public Builder controlPlaneLogProject(String controlPlaneLogProject) {
-            this.putBodyParameter("ControlPlaneLogProject", controlPlaneLogProject);
-            this.controlPlaneLogProject = controlPlaneLogProject;
-            return this;
-        }
-
-        /**
-         * ControlPlaneLogTTL.
-         */
-        public Builder controlPlaneLogTTL(String controlPlaneLogTTL) {
-            this.putBodyParameter("ControlPlaneLogTTL", controlPlaneLogTTL);
-            this.controlPlaneLogTTL = controlPlaneLogTTL;
-            return this;
-        }
-
-        /**
          * 是否企业安全组
          */
         public Builder isEnterpriseSecurityGroup(Boolean isEnterpriseSecurityGroup) {
@@ -288,6 +187,15 @@ public class CreateHubClusterRequest extends Request {
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
             this.name = name;
+            return this;
+        }
+
+        /**
+         * 集群配置
+         */
+        public Builder profile(String profile) {
+            this.putBodyParameter("Profile", profile);
+            this.profile = profile;
             return this;
         }
 

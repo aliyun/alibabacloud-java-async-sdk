@@ -72,6 +72,9 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
     } 
 
     public static class ApiServer extends TeaModel {
+        @NameInMap("ApiServerEipId")
+        private String apiServerEipId;
+
         @NameInMap("EnabledPublic")
         private Boolean enabledPublic;
 
@@ -79,6 +82,7 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
         private String loadBalancerId;
 
         private ApiServer(Builder builder) {
+            this.apiServerEipId = builder.apiServerEipId;
             this.enabledPublic = builder.enabledPublic;
             this.loadBalancerId = builder.loadBalancerId;
         }
@@ -89,6 +93,13 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
 
         public static ApiServer create() {
             return builder().build();
+        }
+
+        /**
+         * @return apiServerEipId
+         */
+        public String getApiServerEipId() {
+            return this.apiServerEipId;
         }
 
         /**
@@ -106,8 +117,17 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String apiServerEipId; 
             private Boolean enabledPublic; 
             private String loadBalancerId; 
+
+            /**
+             * ApiServerEipId.
+             */
+            public Builder apiServerEipId(String apiServerEipId) {
+                this.apiServerEipId = apiServerEipId;
+                return this;
+            }
 
             /**
              * EnabledPublic.
@@ -353,6 +373,107 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
         } 
 
     }
+    public static class Conditions extends TeaModel {
+        @NameInMap("Message")
+        private String message;
+
+        @NameInMap("Reason")
+        private String reason;
+
+        @NameInMap("Status")
+        private String status;
+
+        @NameInMap("Type")
+        private String type;
+
+        private Conditions(Builder builder) {
+            this.message = builder.message;
+            this.reason = builder.reason;
+            this.status = builder.status;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Conditions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return message
+         */
+        public String getMessage() {
+            return this.message;
+        }
+
+        /**
+         * @return reason
+         */
+        public String getReason() {
+            return this.reason;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private String message; 
+            private String reason; 
+            private String status; 
+            private String type; 
+
+            /**
+             * Message.
+             */
+            public Builder message(String message) {
+                this.message = message;
+                return this;
+            }
+
+            /**
+             * Reason.
+             */
+            public Builder reason(String reason) {
+                this.reason = reason;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public Conditions build() {
+                return new Conditions(this);
+            } 
+
+        } 
+
+    }
     public static class Endpoints extends TeaModel {
         @NameInMap("IntranetApiServerEndpoint")
         private String intranetApiServerEndpoint;
@@ -409,6 +530,148 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
 
             public Endpoints build() {
                 return new Endpoints(this);
+            } 
+
+        } 
+
+    }
+    public static class LogConfig extends TeaModel {
+        @NameInMap("EnableLog")
+        private Boolean enableLog;
+
+        @NameInMap("LogProject")
+        private String logProject;
+
+        @NameInMap("LogStoreTTL")
+        private String logStoreTTL;
+
+        private LogConfig(Builder builder) {
+            this.enableLog = builder.enableLog;
+            this.logProject = builder.logProject;
+            this.logStoreTTL = builder.logStoreTTL;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static LogConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enableLog
+         */
+        public Boolean getEnableLog() {
+            return this.enableLog;
+        }
+
+        /**
+         * @return logProject
+         */
+        public String getLogProject() {
+            return this.logProject;
+        }
+
+        /**
+         * @return logStoreTTL
+         */
+        public String getLogStoreTTL() {
+            return this.logStoreTTL;
+        }
+
+        public static final class Builder {
+            private Boolean enableLog; 
+            private String logProject; 
+            private String logStoreTTL; 
+
+            /**
+             * EnableLog.
+             */
+            public Builder enableLog(Boolean enableLog) {
+                this.enableLog = enableLog;
+                return this;
+            }
+
+            /**
+             * LogProject.
+             */
+            public Builder logProject(String logProject) {
+                this.logProject = logProject;
+                return this;
+            }
+
+            /**
+             * LogStoreTTL.
+             */
+            public Builder logStoreTTL(String logStoreTTL) {
+                this.logStoreTTL = logStoreTTL;
+                return this;
+            }
+
+            public LogConfig build() {
+                return new LogConfig(this);
+            } 
+
+        } 
+
+    }
+    public static class MeshConfig extends TeaModel {
+        @NameInMap("EnableMesh")
+        private Boolean enableMesh;
+
+        @NameInMap("MeshId")
+        private String meshId;
+
+        private MeshConfig(Builder builder) {
+            this.enableMesh = builder.enableMesh;
+            this.meshId = builder.meshId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static MeshConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enableMesh
+         */
+        public Boolean getEnableMesh() {
+            return this.enableMesh;
+        }
+
+        /**
+         * @return meshId
+         */
+        public String getMeshId() {
+            return this.meshId;
+        }
+
+        public static final class Builder {
+            private Boolean enableMesh; 
+            private String meshId; 
+
+            /**
+             * EnableMesh.
+             */
+            public Builder enableMesh(Boolean enableMesh) {
+                this.enableMesh = enableMesh;
+                return this;
+            }
+
+            /**
+             * MeshId.
+             */
+            public Builder meshId(String meshId) {
+                this.meshId = meshId;
+                return this;
+            }
+
+            public MeshConfig build() {
+                return new MeshConfig(this);
             } 
 
         } 
@@ -542,8 +805,17 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
         @NameInMap("ClusterInfo")
         private ClusterInfo clusterInfo;
 
+        @NameInMap("Conditions")
+        private java.util.List < Conditions> conditions;
+
         @NameInMap("Endpoints")
         private Endpoints endpoints;
+
+        @NameInMap("LogConfig")
+        private LogConfig logConfig;
+
+        @NameInMap("MeshConfig")
+        private MeshConfig meshConfig;
 
         @NameInMap("Network")
         private Network network;
@@ -551,7 +823,10 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
         private Cluster(Builder builder) {
             this.apiServer = builder.apiServer;
             this.clusterInfo = builder.clusterInfo;
+            this.conditions = builder.conditions;
             this.endpoints = builder.endpoints;
+            this.logConfig = builder.logConfig;
+            this.meshConfig = builder.meshConfig;
             this.network = builder.network;
         }
 
@@ -578,10 +853,31 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
         }
 
         /**
+         * @return conditions
+         */
+        public java.util.List < Conditions> getConditions() {
+            return this.conditions;
+        }
+
+        /**
          * @return endpoints
          */
         public Endpoints getEndpoints() {
             return this.endpoints;
+        }
+
+        /**
+         * @return logConfig
+         */
+        public LogConfig getLogConfig() {
+            return this.logConfig;
+        }
+
+        /**
+         * @return meshConfig
+         */
+        public MeshConfig getMeshConfig() {
+            return this.meshConfig;
         }
 
         /**
@@ -594,7 +890,10 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
         public static final class Builder {
             private ApiServer apiServer; 
             private ClusterInfo clusterInfo; 
+            private java.util.List < Conditions> conditions; 
             private Endpoints endpoints; 
+            private LogConfig logConfig; 
+            private MeshConfig meshConfig; 
             private Network network; 
 
             /**
@@ -614,10 +913,34 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             }
 
             /**
+             * Conditions.
+             */
+            public Builder conditions(java.util.List < Conditions> conditions) {
+                this.conditions = conditions;
+                return this;
+            }
+
+            /**
              * Endpoints.
              */
             public Builder endpoints(Endpoints endpoints) {
                 this.endpoints = endpoints;
+                return this;
+            }
+
+            /**
+             * LogConfig.
+             */
+            public Builder logConfig(LogConfig logConfig) {
+                this.logConfig = logConfig;
+                return this;
+            }
+
+            /**
+             * MeshConfig.
+             */
+            public Builder meshConfig(MeshConfig meshConfig) {
+                this.meshConfig = meshConfig;
                 return this;
             }
 

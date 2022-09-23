@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class AttachClusterToHubRequest extends Request {
     @Query
+    @NameInMap("AttachToMesh")
+    private Boolean attachToMesh;
+
+    @Query
     @NameInMap("ClusterId")
     @Validation(required = true)
     private String clusterId;
@@ -24,6 +28,7 @@ public class AttachClusterToHubRequest extends Request {
 
     private AttachClusterToHubRequest(Builder builder) {
         super(builder);
+        this.attachToMesh = builder.attachToMesh;
         this.clusterId = builder.clusterId;
         this.clusterIds = builder.clusterIds;
     }
@@ -42,6 +47,13 @@ public class AttachClusterToHubRequest extends Request {
     }
 
     /**
+     * @return attachToMesh
+     */
+    public Boolean getAttachToMesh() {
+        return this.attachToMesh;
+    }
+
+    /**
      * @return clusterId
      */
     public String getClusterId() {
@@ -56,6 +68,7 @@ public class AttachClusterToHubRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AttachClusterToHubRequest, Builder> {
+        private Boolean attachToMesh; 
         private String clusterId; 
         private String clusterIds; 
 
@@ -65,9 +78,19 @@ public class AttachClusterToHubRequest extends Request {
 
         private Builder(AttachClusterToHubRequest request) {
             super(request);
+            this.attachToMesh = request.attachToMesh;
             this.clusterId = request.clusterId;
             this.clusterIds = request.clusterIds;
         } 
+
+        /**
+         * AttachToMesh.
+         */
+        public Builder attachToMesh(Boolean attachToMesh) {
+            this.putQueryParameter("AttachToMesh", attachToMesh);
+            this.attachToMesh = attachToMesh;
+            return this;
+        }
 
         /**
          * ClusterId.

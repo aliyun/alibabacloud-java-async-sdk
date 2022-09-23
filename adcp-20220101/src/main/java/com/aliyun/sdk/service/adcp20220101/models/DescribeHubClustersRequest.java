@@ -12,8 +12,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeHubClustersRequest</p>
  */
 public class DescribeHubClustersRequest extends Request {
+    @Query
+    @NameInMap("Profile")
+    private String profile;
+
     private DescribeHubClustersRequest(Builder builder) {
         super(builder);
+        this.profile = builder.profile;
     }
 
     public static Builder builder() {
@@ -29,7 +34,15 @@ public class DescribeHubClustersRequest extends Request {
         return new Builder(this);
     }
 
+    /**
+     * @return profile
+     */
+    public String getProfile() {
+        return this.profile;
+    }
+
     public static final class Builder extends Request.Builder<DescribeHubClustersRequest, Builder> {
+        private String profile; 
 
         private Builder() {
             super();
@@ -37,7 +50,17 @@ public class DescribeHubClustersRequest extends Request {
 
         private Builder(DescribeHubClustersRequest request) {
             super(request);
+            this.profile = request.profile;
         } 
+
+        /**
+         * Profile.
+         */
+        public Builder profile(String profile) {
+            this.putQueryParameter("Profile", profile);
+            this.profile = profile;
+            return this;
+        }
 
         @Override
         public DescribeHubClustersRequest build() {

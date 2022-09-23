@@ -38,4 +38,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DetachClusterFromHubResponse> detachClusterFromHub(DetachClusterFromHubRequest request);
 
+    CompletableFuture<UpdateHubClusterFeatureResponse> updateHubClusterFeature(UpdateHubClusterFeatureRequest request);
+
 }

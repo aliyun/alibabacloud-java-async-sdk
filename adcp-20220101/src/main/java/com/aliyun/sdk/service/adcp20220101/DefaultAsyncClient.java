@@ -31,7 +31,29 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.version = "2022-01-01";
         this.endpointRule = "central";
         this.endpointMap = CommonUtil.buildMap(
-            new TeaPair("cn-beijing-gov-1", "adcp-dualstack.cn-beijing-gov-1.aliyuncs.com")
+            new TeaPair("cn-beijing", "adcp.cn-beijing.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "adcp.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "adcp.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "adcp.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "adcp.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-heyuan", "adcp.cn-heyuan.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "adcp.cn-hongkong.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "adcp.ap-northeast-1.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "adcp.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "adcp.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("ap-south-1", "adcp.ap-south-1.aliyuncs.com"),
+            new TeaPair("ap-southeast-2", "adcp.ap-southeast-2.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "adcp.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "adcp-vpc.cn-chengdu.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "adcp.cn-huhehaote.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "adcp.cn-qingdao.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "adcp-vpc.cn-shanghai-finance-1.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "adcp.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("eu-central-1", "adcp.eu-central-1.aliyuncs.com"),
+            new TeaPair("eu-west-1", "adcp-vpc.eu-west-1.aliyuncs.com"),
+            new TeaPair("me-east-1", "adcp.me-east-1.aliyuncs.com"),
+            new TeaPair("us-east-1", "adcp.us-east-1.aliyuncs.com"),
+            new TeaPair("us-west-1", "adcp.us-west-1.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
@@ -176,6 +198,20 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DetachClusterFromHubResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<UpdateHubClusterFeatureResponse> updateHubClusterFeature(UpdateHubClusterFeatureRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateHubClusterFeature").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateHubClusterFeatureResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateHubClusterFeatureResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

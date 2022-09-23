@@ -12,8 +12,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeRegionsRequest</p>
  */
 public class DescribeRegionsRequest extends Request {
+    @Query
+    @NameInMap("Language")
+    private String language;
+
     private DescribeRegionsRequest(Builder builder) {
         super(builder);
+        this.language = builder.language;
     }
 
     public static Builder builder() {
@@ -29,7 +34,15 @@ public class DescribeRegionsRequest extends Request {
         return new Builder(this);
     }
 
+    /**
+     * @return language
+     */
+    public String getLanguage() {
+        return this.language;
+    }
+
     public static final class Builder extends Request.Builder<DescribeRegionsRequest, Builder> {
+        private String language; 
 
         private Builder() {
             super();
@@ -37,7 +50,17 @@ public class DescribeRegionsRequest extends Request {
 
         private Builder(DescribeRegionsRequest request) {
             super(request);
+            this.language = request.language;
         } 
+
+        /**
+         * Language.
+         */
+        public Builder language(String language) {
+            this.putQueryParameter("Language", language);
+            this.language = language;
+            return this;
+        }
 
         @Override
         public DescribeRegionsRequest build() {

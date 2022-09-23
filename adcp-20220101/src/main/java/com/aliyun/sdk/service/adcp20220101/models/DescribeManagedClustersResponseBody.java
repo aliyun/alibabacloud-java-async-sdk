@@ -372,6 +372,47 @@ public class DescribeManagedClustersResponseBody extends TeaModel {
         } 
 
     }
+    public static class MeshStatus extends TeaModel {
+        @NameInMap("InMesh")
+        private Boolean inMesh;
+
+        private MeshStatus(Builder builder) {
+            this.inMesh = builder.inMesh;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static MeshStatus create() {
+            return builder().build();
+        }
+
+        /**
+         * @return inMesh
+         */
+        public Boolean getInMesh() {
+            return this.inMesh;
+        }
+
+        public static final class Builder {
+            private Boolean inMesh; 
+
+            /**
+             * InMesh.
+             */
+            public Builder inMesh(Boolean inMesh) {
+                this.inMesh = inMesh;
+                return this;
+            }
+
+            public MeshStatus build() {
+                return new MeshStatus(this);
+            } 
+
+        } 
+
+    }
     public static class Status extends TeaModel {
         @NameInMap("Message")
         private String message;
@@ -437,11 +478,15 @@ public class DescribeManagedClustersResponseBody extends TeaModel {
         @NameInMap("Cluster")
         private Cluster cluster;
 
+        @NameInMap("MeshStatus")
+        private MeshStatus meshStatus;
+
         @NameInMap("Status")
         private Status status;
 
         private Clusters(Builder builder) {
             this.cluster = builder.cluster;
+            this.meshStatus = builder.meshStatus;
             this.status = builder.status;
         }
 
@@ -461,6 +506,13 @@ public class DescribeManagedClustersResponseBody extends TeaModel {
         }
 
         /**
+         * @return meshStatus
+         */
+        public MeshStatus getMeshStatus() {
+            return this.meshStatus;
+        }
+
+        /**
          * @return status
          */
         public Status getStatus() {
@@ -469,6 +521,7 @@ public class DescribeManagedClustersResponseBody extends TeaModel {
 
         public static final class Builder {
             private Cluster cluster; 
+            private MeshStatus meshStatus; 
             private Status status; 
 
             /**
@@ -476,6 +529,14 @@ public class DescribeManagedClustersResponseBody extends TeaModel {
              */
             public Builder cluster(Cluster cluster) {
                 this.cluster = cluster;
+                return this;
+            }
+
+            /**
+             * MeshStatus.
+             */
+            public Builder meshStatus(MeshStatus meshStatus) {
+                this.meshStatus = meshStatus;
                 return this;
             }
 

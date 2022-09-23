@@ -22,10 +22,15 @@ public class DetachClusterFromHubRequest extends Request {
     @Validation(required = true)
     private String clusterIds;
 
+    @Query
+    @NameInMap("DetachFromMesh")
+    private Boolean detachFromMesh;
+
     private DetachClusterFromHubRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
         this.clusterIds = builder.clusterIds;
+        this.detachFromMesh = builder.detachFromMesh;
     }
 
     public static Builder builder() {
@@ -55,9 +60,17 @@ public class DetachClusterFromHubRequest extends Request {
         return this.clusterIds;
     }
 
+    /**
+     * @return detachFromMesh
+     */
+    public Boolean getDetachFromMesh() {
+        return this.detachFromMesh;
+    }
+
     public static final class Builder extends Request.Builder<DetachClusterFromHubRequest, Builder> {
         private String clusterId; 
         private String clusterIds; 
+        private Boolean detachFromMesh; 
 
         private Builder() {
             super();
@@ -67,6 +80,7 @@ public class DetachClusterFromHubRequest extends Request {
             super(request);
             this.clusterId = request.clusterId;
             this.clusterIds = request.clusterIds;
+            this.detachFromMesh = request.detachFromMesh;
         } 
 
         /**
@@ -84,6 +98,15 @@ public class DetachClusterFromHubRequest extends Request {
         public Builder clusterIds(String clusterIds) {
             this.putBodyParameter("ClusterIds", clusterIds);
             this.clusterIds = clusterIds;
+            return this;
+        }
+
+        /**
+         * DetachFromMesh.
+         */
+        public Builder detachFromMesh(Boolean detachFromMesh) {
+            this.putQueryParameter("DetachFromMesh", detachFromMesh);
+            this.detachFromMesh = detachFromMesh;
             return this;
         }
 

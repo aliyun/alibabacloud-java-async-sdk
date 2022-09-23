@@ -75,20 +75,12 @@ public class DescribeRegionsResponseBody extends TeaModel {
         @NameInMap("LocalName")
         private String localName;
 
-        @NameInMap("RegionEndpoint")
-        private String regionEndpoint;
-
         @NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RegionVpcEndpoint")
-        private String regionVpcEndpoint;
-
         private Regions(Builder builder) {
             this.localName = builder.localName;
-            this.regionEndpoint = builder.regionEndpoint;
             this.regionId = builder.regionId;
-            this.regionVpcEndpoint = builder.regionVpcEndpoint;
         }
 
         public static Builder builder() {
@@ -107,31 +99,15 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * @return regionEndpoint
-         */
-        public String getRegionEndpoint() {
-            return this.regionEndpoint;
-        }
-
-        /**
          * @return regionId
          */
         public String getRegionId() {
             return this.regionId;
         }
 
-        /**
-         * @return regionVpcEndpoint
-         */
-        public String getRegionVpcEndpoint() {
-            return this.regionVpcEndpoint;
-        }
-
         public static final class Builder {
             private String localName; 
-            private String regionEndpoint; 
             private String regionId; 
-            private String regionVpcEndpoint; 
 
             /**
              * LocalName.
@@ -142,26 +118,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionEndpoint.
-             */
-            public Builder regionEndpoint(String regionEndpoint) {
-                this.regionEndpoint = regionEndpoint;
-                return this;
-            }
-
-            /**
              * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
-                return this;
-            }
-
-            /**
-             * RegionVpcEndpoint.
-             */
-            public Builder regionVpcEndpoint(String regionVpcEndpoint) {
-                this.regionVpcEndpoint = regionVpcEndpoint;
                 return this;
             }
 

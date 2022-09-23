@@ -21,10 +21,14 @@ public class DetachClusterFromHubResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("TaskId")
+    private String taskId;
+
     private DetachClusterFromHubResponseBody(Builder builder) {
         this.clusterId = builder.clusterId;
         this.managedClusterIds = builder.managedClusterIds;
         this.requestId = builder.requestId;
+        this.taskId = builder.taskId;
     }
 
     public static Builder builder() {
@@ -56,10 +60,18 @@ public class DetachClusterFromHubResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return taskId
+     */
+    public String getTaskId() {
+        return this.taskId;
+    }
+
     public static final class Builder {
         private String clusterId; 
         private java.util.List < String > managedClusterIds; 
         private String requestId; 
+        private String taskId; 
 
         /**
          * ClusterId.
@@ -82,6 +94,14 @@ public class DetachClusterFromHubResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * TaskId.
+         */
+        public Builder taskId(String taskId) {
+            this.taskId = taskId;
             return this;
         }
 
