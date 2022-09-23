@@ -107,6 +107,10 @@ public class CreateClusterRequest extends Request {
     private java.util.List < String > instances;
 
     @Body
+    @NameInMap("ip_stack")
+    private String ipStack;
+
+    @Body
     @NameInMap("is_enterprise_security_group")
     private Boolean isEnterpriseSecurityGroup;
 
@@ -403,6 +407,7 @@ public class CreateClusterRequest extends Request {
         this.imageId = builder.imageId;
         this.imageType = builder.imageType;
         this.instances = builder.instances;
+        this.ipStack = builder.ipStack;
         this.isEnterpriseSecurityGroup = builder.isEnterpriseSecurityGroup;
         this.keepInstanceName = builder.keepInstanceName;
         this.keyPair = builder.keyPair;
@@ -641,6 +646,13 @@ public class CreateClusterRequest extends Request {
      */
     public java.util.List < String > getInstances() {
         return this.instances;
+    }
+
+    /**
+     * @return ipStack
+     */
+    public String getIpStack() {
+        return this.ipStack;
     }
 
     /**
@@ -1115,6 +1127,7 @@ public class CreateClusterRequest extends Request {
         private String imageId; 
         private String imageType; 
         private java.util.List < String > instances; 
+        private String ipStack; 
         private Boolean isEnterpriseSecurityGroup; 
         private Boolean keepInstanceName; 
         private String keyPair; 
@@ -1209,6 +1222,7 @@ public class CreateClusterRequest extends Request {
             this.imageId = request.imageId;
             this.imageType = request.imageType;
             this.instances = request.instances;
+            this.ipStack = request.ipStack;
             this.isEnterpriseSecurityGroup = request.isEnterpriseSecurityGroup;
             this.keepInstanceName = request.keepInstanceName;
             this.keyPair = request.keyPair;
@@ -1479,6 +1493,15 @@ public class CreateClusterRequest extends Request {
         public Builder instances(java.util.List < String > instances) {
             this.putBodyParameter("instances", instances);
             this.instances = instances;
+            return this;
+        }
+
+        /**
+         * 集群IP Stack
+         */
+        public Builder ipStack(String ipStack) {
+            this.putBodyParameter("ip_stack", ipStack);
+            this.ipStack = ipStack;
             return this;
         }
 
