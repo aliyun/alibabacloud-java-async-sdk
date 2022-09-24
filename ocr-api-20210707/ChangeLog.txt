@@ -1,3 +1,6 @@
+2022-09-24 Version: 1.1.9
+- Generated java-async 2021-07-07 for ocr-api.
+
 2022-08-23 Version: 1.1.8
 - Phase IV.
 
