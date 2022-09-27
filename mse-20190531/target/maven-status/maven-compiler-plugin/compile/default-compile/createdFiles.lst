@@ -61,6 +61,7 @@ com/aliyun/sdk/service/mse20190531/models/ListClustersResponse.class
 com/aliyun/sdk/service/mse20190531/models/GatewayOption$LogConfigDetails$Builder.class
 com/aliyun/sdk/service/mse20190531/models/GetGatewayRouteDetailResponseBody$Data.class
 com/aliyun/sdk/service/mse20190531/models/AddGatewayRouteRequest$HttpDubboTranscoder$Builder.class
+com/aliyun/sdk/service/mse20190531/models/CreateClusterRequest$Tag$Builder.class
 com/aliyun/sdk/service/mse20190531/models/ListApplicationsWithTagRulesResponseBody.class
 com/aliyun/sdk/service/mse20190531/models/GetPluginsResponseBody$Data$Builder.class
 com/aliyun/sdk/service/mse20190531/models/QueryClusterDiskSpecificationResponseBody$Builder.class
@@ -866,6 +867,7 @@ com/aliyun/sdk/service/mse20190531/models/ListGatewayDomainResponseBody$Comment.
 com/aliyun/sdk/service/mse20190531/models/GetGatewayResponseBody$XtraceDetails$Builder.class
 com/aliyun/sdk/service/mse20190531/models/CreateNacosServiceResponse$Builder.class
 com/aliyun/sdk/service/mse20190531/models/CreateOrUpdateSwimmingLaneGroupRequest$1.class
+com/aliyun/sdk/service/mse20190531/models/CreateClusterRequest$Tag.class
 com/aliyun/sdk/service/mse20190531/models/UpdateServiceSourceResponseBody$1.class
 com/aliyun/sdk/service/mse20190531/models/AddBlackWhiteListRequest$1.class
 com/aliyun/sdk/service/mse20190531/models/ListGatewaySlbResponse.class

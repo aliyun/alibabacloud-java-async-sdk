@@ -86,6 +86,10 @@ public class CreateClusterRequest extends Request {
     private String resourceGroupId;
 
     @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
+    @Query
     @NameInMap("VSwitchId")
     private String vSwitchId;
 
@@ -112,6 +116,7 @@ public class CreateClusterRequest extends Request {
         this.region = builder.region;
         this.requestPars = builder.requestPars;
         this.resourceGroupId = builder.resourceGroupId;
+        this.tag = builder.tag;
         this.vSwitchId = builder.vSwitchId;
         this.vpcId = builder.vpcId;
     }
@@ -249,6 +254,13 @@ public class CreateClusterRequest extends Request {
     }
 
     /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
      * @return vSwitchId
      */
     public String getVSwitchId() {
@@ -280,6 +292,7 @@ public class CreateClusterRequest extends Request {
         private String region; 
         private String requestPars; 
         private String resourceGroupId; 
+        private java.util.List < Tag> tag; 
         private String vSwitchId; 
         private String vpcId; 
 
@@ -306,6 +319,7 @@ public class CreateClusterRequest extends Request {
             this.region = request.region;
             this.requestPars = request.requestPars;
             this.resourceGroupId = request.resourceGroupId;
+            this.tag = request.tag;
             this.vSwitchId = request.vSwitchId;
             this.vpcId = request.vpcId;
         } 
@@ -464,6 +478,15 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
+         * 标签列表，最多包含20个子项
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
          * VSwitchId.
          */
         public Builder vSwitchId(String vSwitchId) {
@@ -488,4 +511,65 @@ public class CreateClusterRequest extends Request {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * 标签键
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * 标签值
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }
