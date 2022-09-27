@@ -31,6 +31,10 @@ public class SubmitImageCopyrightRequest extends Request {
     private String output;
 
     @Body
+    @NameInMap("Params")
+    private String params;
+
+    @Body
     @NameInMap("Url")
     private String url;
 
@@ -40,6 +44,7 @@ public class SubmitImageCopyrightRequest extends Request {
         this.level = builder.level;
         this.message = builder.message;
         this.output = builder.output;
+        this.params = builder.params;
         this.url = builder.url;
     }
 
@@ -85,6 +90,13 @@ public class SubmitImageCopyrightRequest extends Request {
     }
 
     /**
+     * @return params
+     */
+    public String getParams() {
+        return this.params;
+    }
+
+    /**
      * @return url
      */
     public String getUrl() {
@@ -96,6 +108,7 @@ public class SubmitImageCopyrightRequest extends Request {
         private Long level; 
         private String message; 
         private String output; 
+        private String params; 
         private String url; 
 
         private Builder() {
@@ -108,6 +121,7 @@ public class SubmitImageCopyrightRequest extends Request {
             this.level = request.level;
             this.message = request.message;
             this.output = request.output;
+            this.params = request.params;
             this.url = request.url;
         } 
 
@@ -144,6 +158,15 @@ public class SubmitImageCopyrightRequest extends Request {
         public Builder output(String output) {
             this.putBodyParameter("Output", output);
             this.output = output;
+            return this;
+        }
+
+        /**
+         * 参数
+         */
+        public Builder params(String params) {
+            this.putBodyParameter("Params", params);
+            this.params = params;
             return this;
         }
 
