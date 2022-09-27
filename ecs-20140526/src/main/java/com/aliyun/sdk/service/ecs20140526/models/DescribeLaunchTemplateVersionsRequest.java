@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeLaunchTemplateVersionsRequest</p>
  */
 public class DescribeLaunchTemplateVersionsRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("DefaultVersion")
     private Boolean defaultVersion;
@@ -69,12 +73,9 @@ public class DescribeLaunchTemplateVersionsRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     private DescribeLaunchTemplateVersionsRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.defaultVersion = builder.defaultVersion;
         this.detailFlag = builder.detailFlag;
         this.launchTemplateId = builder.launchTemplateId;
@@ -89,7 +90,6 @@ public class DescribeLaunchTemplateVersionsRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -103,6 +103,13 @@ public class DescribeLaunchTemplateVersionsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -203,14 +210,8 @@ public class DescribeLaunchTemplateVersionsRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
     public static final class Builder extends Request.Builder<DescribeLaunchTemplateVersionsRequest, Builder> {
+        private String sourceRegionId; 
         private Boolean defaultVersion; 
         private Boolean detailFlag; 
         private String launchTemplateId; 
@@ -225,7 +226,6 @@ public class DescribeLaunchTemplateVersionsRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -233,6 +233,7 @@ public class DescribeLaunchTemplateVersionsRequest extends Request {
 
         private Builder(DescribeLaunchTemplateVersionsRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.defaultVersion = request.defaultVersion;
             this.detailFlag = request.detailFlag;
             this.launchTemplateId = request.launchTemplateId;
@@ -247,8 +248,16 @@ public class DescribeLaunchTemplateVersionsRequest extends Request {
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.sourceRegionId = request.sourceRegionId;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * DefaultVersion.
@@ -373,15 +382,6 @@ public class DescribeLaunchTemplateVersionsRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

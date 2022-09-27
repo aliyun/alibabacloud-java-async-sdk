@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeImagePipelineExecutionsRequest</p>
  */
 public class DescribeImagePipelineExecutionsRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("ExecutionId")
     private String executionId;
@@ -50,10 +54,6 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
     @NameInMap("Status")
     private String status;
@@ -64,6 +64,7 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
 
     private DescribeImagePipelineExecutionsRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.executionId = builder.executionId;
         this.imagePipelineId = builder.imagePipelineId;
         this.maxResults = builder.maxResults;
@@ -73,7 +74,6 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
         this.status = builder.status;
         this.tag = builder.tag;
     }
@@ -89,6 +89,13 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -155,13 +162,6 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
      * @return status
      */
     public String getStatus() {
@@ -176,6 +176,7 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeImagePipelineExecutionsRequest, Builder> {
+        private String sourceRegionId; 
         private String executionId; 
         private String imagePipelineId; 
         private Integer maxResults; 
@@ -185,7 +186,6 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
         private String status; 
         private java.util.List < Tag> tag; 
 
@@ -195,6 +195,7 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
 
         private Builder(DescribeImagePipelineExecutionsRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.executionId = request.executionId;
             this.imagePipelineId = request.imagePipelineId;
             this.maxResults = request.maxResults;
@@ -204,10 +205,18 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.sourceRegionId = request.sourceRegionId;
             this.status = request.status;
             this.tag = request.tag;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * ExecutionId.
@@ -287,15 +296,6 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

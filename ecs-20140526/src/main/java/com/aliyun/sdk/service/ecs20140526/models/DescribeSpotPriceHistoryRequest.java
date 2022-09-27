@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSpotPriceHistoryRequest</p>
  */
 public class DescribeSpotPriceHistoryRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("EndTime")
     private String endTime;
@@ -59,10 +63,6 @@ public class DescribeSpotPriceHistoryRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
     @NameInMap("SpotDuration")
     private Integer spotDuration;
@@ -77,6 +77,7 @@ public class DescribeSpotPriceHistoryRequest extends Request {
 
     private DescribeSpotPriceHistoryRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.endTime = builder.endTime;
         this.instanceType = builder.instanceType;
         this.ioOptimized = builder.ioOptimized;
@@ -88,7 +89,6 @@ public class DescribeSpotPriceHistoryRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
         this.spotDuration = builder.spotDuration;
         this.startTime = builder.startTime;
         this.zoneId = builder.zoneId;
@@ -105,6 +105,13 @@ public class DescribeSpotPriceHistoryRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -185,13 +192,6 @@ public class DescribeSpotPriceHistoryRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
      * @return spotDuration
      */
     public Integer getSpotDuration() {
@@ -213,6 +213,7 @@ public class DescribeSpotPriceHistoryRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeSpotPriceHistoryRequest, Builder> {
+        private String sourceRegionId; 
         private String endTime; 
         private String instanceType; 
         private String ioOptimized; 
@@ -224,7 +225,6 @@ public class DescribeSpotPriceHistoryRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
         private Integer spotDuration; 
         private String startTime; 
         private String zoneId; 
@@ -235,6 +235,7 @@ public class DescribeSpotPriceHistoryRequest extends Request {
 
         private Builder(DescribeSpotPriceHistoryRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.endTime = request.endTime;
             this.instanceType = request.instanceType;
             this.ioOptimized = request.ioOptimized;
@@ -246,11 +247,19 @@ public class DescribeSpotPriceHistoryRequest extends Request {
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.sourceRegionId = request.sourceRegionId;
             this.spotDuration = request.spotDuration;
             this.startTime = request.startTime;
             this.zoneId = request.zoneId;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * EndTime.
@@ -348,15 +357,6 @@ public class DescribeSpotPriceHistoryRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

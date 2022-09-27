@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifySecurityGroupEgressRuleRequest</p>
  */
 public class ModifySecurityGroupEgressRuleRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("ClientToken")
     private String clientToken;
@@ -104,12 +108,9 @@ public class ModifySecurityGroupEgressRuleRequest extends Request {
     @NameInMap("SourcePortRange")
     private String sourcePortRange;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     private ModifySecurityGroupEgressRuleRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.clientToken = builder.clientToken;
         this.description = builder.description;
         this.destCidrIp = builder.destCidrIp;
@@ -132,7 +133,6 @@ public class ModifySecurityGroupEgressRuleRequest extends Request {
         this.securityGroupId = builder.securityGroupId;
         this.sourceCidrIp = builder.sourceCidrIp;
         this.sourcePortRange = builder.sourcePortRange;
-        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -146,6 +146,13 @@ public class ModifySecurityGroupEgressRuleRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -302,14 +309,8 @@ public class ModifySecurityGroupEgressRuleRequest extends Request {
         return this.sourcePortRange;
     }
 
-    /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
     public static final class Builder extends Request.Builder<ModifySecurityGroupEgressRuleRequest, Builder> {
+        private String sourceRegionId; 
         private String clientToken; 
         private String description; 
         private String destCidrIp; 
@@ -332,7 +333,6 @@ public class ModifySecurityGroupEgressRuleRequest extends Request {
         private String securityGroupId; 
         private String sourceCidrIp; 
         private String sourcePortRange; 
-        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -340,6 +340,7 @@ public class ModifySecurityGroupEgressRuleRequest extends Request {
 
         private Builder(ModifySecurityGroupEgressRuleRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.clientToken = request.clientToken;
             this.description = request.description;
             this.destCidrIp = request.destCidrIp;
@@ -362,8 +363,16 @@ public class ModifySecurityGroupEgressRuleRequest extends Request {
             this.securityGroupId = request.securityGroupId;
             this.sourceCidrIp = request.sourceCidrIp;
             this.sourcePortRange = request.sourcePortRange;
-            this.sourceRegionId = request.sourceRegionId;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * ClientToken.
@@ -560,15 +569,6 @@ public class ModifySecurityGroupEgressRuleRequest extends Request {
         public Builder sourcePortRange(String sourcePortRange) {
             this.putQueryParameter("SourcePortRange", sourcePortRange);
             this.sourcePortRange = sourcePortRange;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

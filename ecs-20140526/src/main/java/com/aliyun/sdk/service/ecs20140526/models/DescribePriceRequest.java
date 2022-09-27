@@ -20,6 +20,10 @@ public class DescribePriceRequest extends Request {
     @NameInMap("SystemDisk")
     private SystemDisk systemDisk;
 
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("Amount")
     private Integer amount;
@@ -121,10 +125,6 @@ public class DescribePriceRequest extends Request {
     @NameInMap("Scope")
     private String scope;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
     @NameInMap("SpotDuration")
     private Integer spotDuration;
@@ -141,6 +141,7 @@ public class DescribePriceRequest extends Request {
         super(builder);
         this.dataDisk = builder.dataDisk;
         this.systemDisk = builder.systemDisk;
+        this.sourceRegionId = builder.sourceRegionId;
         this.amount = builder.amount;
         this.assuranceTimes = builder.assuranceTimes;
         this.capacity = builder.capacity;
@@ -166,7 +167,6 @@ public class DescribePriceRequest extends Request {
         this.resourceOwnerId = builder.resourceOwnerId;
         this.resourceType = builder.resourceType;
         this.scope = builder.scope;
-        this.sourceRegionId = builder.sourceRegionId;
         this.spotDuration = builder.spotDuration;
         this.spotStrategy = builder.spotStrategy;
         this.zoneId = builder.zoneId;
@@ -197,6 +197,13 @@ public class DescribePriceRequest extends Request {
      */
     public SystemDisk getSystemDisk() {
         return this.systemDisk;
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -375,13 +382,6 @@ public class DescribePriceRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
      * @return spotDuration
      */
     public Integer getSpotDuration() {
@@ -405,6 +405,7 @@ public class DescribePriceRequest extends Request {
     public static final class Builder extends Request.Builder<DescribePriceRequest, Builder> {
         private java.util.List < DataDisk> dataDisk; 
         private SystemDisk systemDisk; 
+        private String sourceRegionId; 
         private Integer amount; 
         private String assuranceTimes; 
         private Integer capacity; 
@@ -430,7 +431,6 @@ public class DescribePriceRequest extends Request {
         private Long resourceOwnerId; 
         private String resourceType; 
         private String scope; 
-        private String sourceRegionId; 
         private Integer spotDuration; 
         private String spotStrategy; 
         private String zoneId; 
@@ -443,6 +443,7 @@ public class DescribePriceRequest extends Request {
             super(request);
             this.dataDisk = request.dataDisk;
             this.systemDisk = request.systemDisk;
+            this.sourceRegionId = request.sourceRegionId;
             this.amount = request.amount;
             this.assuranceTimes = request.assuranceTimes;
             this.capacity = request.capacity;
@@ -468,7 +469,6 @@ public class DescribePriceRequest extends Request {
             this.resourceOwnerId = request.resourceOwnerId;
             this.resourceType = request.resourceType;
             this.scope = request.scope;
-            this.sourceRegionId = request.sourceRegionId;
             this.spotDuration = request.spotDuration;
             this.spotStrategy = request.spotStrategy;
             this.zoneId = request.zoneId;
@@ -489,6 +489,15 @@ public class DescribePriceRequest extends Request {
         public Builder systemDisk(SystemDisk systemDisk) {
             this.putQueryParameter("SystemDisk", systemDisk);
             this.systemDisk = systemDisk;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 
@@ -718,15 +727,6 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
-            return this;
-        }
-
-        /**
          * SpotDuration.
          */
         public Builder spotDuration(Integer spotDuration) {
@@ -768,7 +768,7 @@ public class DescribePriceRequest extends Request {
         private String performanceLevel;
 
         @NameInMap("Size")
-        private Integer size;
+        private Long size;
 
         private DataDisk(Builder builder) {
             this.category = builder.category;
@@ -801,14 +801,14 @@ public class DescribePriceRequest extends Request {
         /**
          * @return size
          */
-        public Integer getSize() {
+        public Long getSize() {
             return this.size;
         }
 
         public static final class Builder {
             private String category; 
             private String performanceLevel; 
-            private Integer size; 
+            private Long size; 
 
             /**
              * Category.
@@ -829,7 +829,7 @@ public class DescribePriceRequest extends Request {
             /**
              * Size.
              */
-            public Builder size(Integer size) {
+            public Builder size(Long size) {
                 this.size = size;
                 return this;
             }

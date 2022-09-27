@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeRegionsRequest</p>
  */
 public class DescribeRegionsRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("AcceptLanguage")
     private String acceptLanguage;
@@ -40,12 +44,9 @@ public class DescribeRegionsRequest extends Request {
     @NameInMap("ResourceType")
     private String resourceType;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     private DescribeRegionsRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.acceptLanguage = builder.acceptLanguage;
         this.instanceChargeType = builder.instanceChargeType;
         this.ownerAccount = builder.ownerAccount;
@@ -53,7 +54,6 @@ public class DescribeRegionsRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.resourceType = builder.resourceType;
-        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -67,6 +67,13 @@ public class DescribeRegionsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -118,14 +125,8 @@ public class DescribeRegionsRequest extends Request {
         return this.resourceType;
     }
 
-    /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
     public static final class Builder extends Request.Builder<DescribeRegionsRequest, Builder> {
+        private String sourceRegionId; 
         private String acceptLanguage; 
         private String instanceChargeType; 
         private String ownerAccount; 
@@ -133,7 +134,6 @@ public class DescribeRegionsRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String resourceType; 
-        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -141,6 +141,7 @@ public class DescribeRegionsRequest extends Request {
 
         private Builder(DescribeRegionsRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.acceptLanguage = request.acceptLanguage;
             this.instanceChargeType = request.instanceChargeType;
             this.ownerAccount = request.ownerAccount;
@@ -148,8 +149,16 @@ public class DescribeRegionsRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.resourceType = request.resourceType;
-            this.sourceRegionId = request.sourceRegionId;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * AcceptLanguage.
@@ -211,15 +220,6 @@ public class DescribeRegionsRequest extends Request {
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
             this.resourceType = resourceType;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CancelAutoSnapshotPolicyRequest</p>
  */
 public class CancelAutoSnapshotPolicyRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("OwnerId")
     private Long ownerId;
@@ -23,10 +27,6 @@ public class CancelAutoSnapshotPolicyRequest extends Request {
     @Query
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
-
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
 
     @Query
     @NameInMap("diskIds")
@@ -40,10 +40,10 @@ public class CancelAutoSnapshotPolicyRequest extends Request {
 
     private CancelAutoSnapshotPolicyRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
         this.diskIds = builder.diskIds;
         this.regionId = builder.regionId;
     }
@@ -59,6 +59,13 @@ public class CancelAutoSnapshotPolicyRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -83,13 +90,6 @@ public class CancelAutoSnapshotPolicyRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
      * @return diskIds
      */
     public String getDiskIds() {
@@ -104,10 +104,10 @@ public class CancelAutoSnapshotPolicyRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CancelAutoSnapshotPolicyRequest, Builder> {
+        private String sourceRegionId; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
         private String diskIds; 
         private String regionId; 
 
@@ -117,13 +117,22 @@ public class CancelAutoSnapshotPolicyRequest extends Request {
 
         private Builder(CancelAutoSnapshotPolicyRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.sourceRegionId = request.sourceRegionId;
             this.diskIds = request.diskIds;
             this.regionId = request.regionId;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * OwnerId.
@@ -149,15 +158,6 @@ public class CancelAutoSnapshotPolicyRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

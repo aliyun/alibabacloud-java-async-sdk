@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyInstanceAttributeRequest</p>
  */
 public class ModifyInstanceAttributeRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("CreditSpecification")
     private String creditSpecification;
@@ -73,16 +77,13 @@ public class ModifyInstanceAttributeRequest extends Request {
     @NameInMap("SecurityGroupIds")
     private java.util.List < String > securityGroupIds;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
     @NameInMap("UserData")
     private String userData;
 
     private ModifyInstanceAttributeRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.creditSpecification = builder.creditSpecification;
         this.deletionProtection = builder.deletionProtection;
         this.description = builder.description;
@@ -98,7 +99,6 @@ public class ModifyInstanceAttributeRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityGroupIds = builder.securityGroupIds;
-        this.sourceRegionId = builder.sourceRegionId;
         this.userData = builder.userData;
     }
 
@@ -113,6 +113,13 @@ public class ModifyInstanceAttributeRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -221,13 +228,6 @@ public class ModifyInstanceAttributeRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
      * @return userData
      */
     public String getUserData() {
@@ -235,6 +235,7 @@ public class ModifyInstanceAttributeRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyInstanceAttributeRequest, Builder> {
+        private String sourceRegionId; 
         private String creditSpecification; 
         private Boolean deletionProtection; 
         private String description; 
@@ -250,7 +251,6 @@ public class ModifyInstanceAttributeRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private java.util.List < String > securityGroupIds; 
-        private String sourceRegionId; 
         private String userData; 
 
         private Builder() {
@@ -259,6 +259,7 @@ public class ModifyInstanceAttributeRequest extends Request {
 
         private Builder(ModifyInstanceAttributeRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.creditSpecification = request.creditSpecification;
             this.deletionProtection = request.deletionProtection;
             this.description = request.description;
@@ -274,9 +275,17 @@ public class ModifyInstanceAttributeRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.securityGroupIds = request.securityGroupIds;
-            this.sourceRegionId = request.sourceRegionId;
             this.userData = request.userData;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * CreditSpecification.
@@ -410,15 +419,6 @@ public class ModifyInstanceAttributeRequest extends Request {
         public Builder securityGroupIds(java.util.List < String > securityGroupIds) {
             this.putQueryParameter("SecurityGroupIds", securityGroupIds);
             this.securityGroupIds = securityGroupIds;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

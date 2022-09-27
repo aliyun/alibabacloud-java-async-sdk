@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDeploymentSetSupportedInstanceTypeFamilyRequest</p>
  */
 public class DescribeDeploymentSetSupportedInstanceTypeFamilyRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("OwnerAccount")
     private String ownerAccount;
@@ -33,18 +37,14 @@ public class DescribeDeploymentSetSupportedInstanceTypeFamilyRequest extends Req
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     private DescribeDeploymentSetSupportedInstanceTypeFamilyRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -58,6 +58,13 @@ public class DescribeDeploymentSetSupportedInstanceTypeFamilyRequest extends Req
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -95,20 +102,13 @@ public class DescribeDeploymentSetSupportedInstanceTypeFamilyRequest extends Req
         return this.resourceOwnerId;
     }
 
-    /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
     public static final class Builder extends Request.Builder<DescribeDeploymentSetSupportedInstanceTypeFamilyRequest, Builder> {
+        private String sourceRegionId; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -116,13 +116,22 @@ public class DescribeDeploymentSetSupportedInstanceTypeFamilyRequest extends Req
 
         private Builder(DescribeDeploymentSetSupportedInstanceTypeFamilyRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.sourceRegionId = request.sourceRegionId;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * OwnerAccount.
@@ -166,15 +175,6 @@ public class DescribeDeploymentSetSupportedInstanceTypeFamilyRequest extends Req
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

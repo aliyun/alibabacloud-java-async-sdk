@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyInstanceNetworkSpecRequest</p>
  */
 public class ModifyInstanceNetworkSpecRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("AllocatePublicIp")
     private Boolean allocatePublicIp;
@@ -66,16 +70,13 @@ public class ModifyInstanceNetworkSpecRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
     @NameInMap("StartTime")
     private String startTime;
 
     private ModifyInstanceNetworkSpecRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.allocatePublicIp = builder.allocatePublicIp;
         this.autoPay = builder.autoPay;
         this.clientToken = builder.clientToken;
@@ -89,7 +90,6 @@ public class ModifyInstanceNetworkSpecRequest extends Request {
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
         this.startTime = builder.startTime;
     }
 
@@ -104,6 +104,13 @@ public class ModifyInstanceNetworkSpecRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -198,13 +205,6 @@ public class ModifyInstanceNetworkSpecRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -212,6 +212,7 @@ public class ModifyInstanceNetworkSpecRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyInstanceNetworkSpecRequest, Builder> {
+        private String sourceRegionId; 
         private Boolean allocatePublicIp; 
         private Boolean autoPay; 
         private String clientToken; 
@@ -225,7 +226,6 @@ public class ModifyInstanceNetworkSpecRequest extends Request {
         private Long ownerId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
         private String startTime; 
 
         private Builder() {
@@ -234,6 +234,7 @@ public class ModifyInstanceNetworkSpecRequest extends Request {
 
         private Builder(ModifyInstanceNetworkSpecRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.allocatePublicIp = request.allocatePublicIp;
             this.autoPay = request.autoPay;
             this.clientToken = request.clientToken;
@@ -247,9 +248,17 @@ public class ModifyInstanceNetworkSpecRequest extends Request {
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.sourceRegionId = request.sourceRegionId;
             this.startTime = request.startTime;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * AllocatePublicIp.
@@ -365,15 +374,6 @@ public class ModifyInstanceNetworkSpecRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

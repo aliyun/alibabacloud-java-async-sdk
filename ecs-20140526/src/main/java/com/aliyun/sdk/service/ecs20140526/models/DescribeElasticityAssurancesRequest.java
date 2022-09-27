@@ -16,6 +16,10 @@ public class DescribeElasticityAssurancesRequest extends Request {
     @NameInMap("PrivatePoolOptions")
     private PrivatePoolOptions privatePoolOptions;
 
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("InstanceChargeType")
     private String instanceChargeType;
@@ -62,10 +66,6 @@ public class DescribeElasticityAssurancesRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
     @NameInMap("Status")
     private String status;
@@ -81,6 +81,7 @@ public class DescribeElasticityAssurancesRequest extends Request {
     private DescribeElasticityAssurancesRequest(Builder builder) {
         super(builder);
         this.privatePoolOptions = builder.privatePoolOptions;
+        this.sourceRegionId = builder.sourceRegionId;
         this.instanceChargeType = builder.instanceChargeType;
         this.instanceType = builder.instanceType;
         this.maxResults = builder.maxResults;
@@ -92,7 +93,6 @@ public class DescribeElasticityAssurancesRequest extends Request {
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
         this.status = builder.status;
         this.tag = builder.tag;
         this.zoneId = builder.zoneId;
@@ -116,6 +116,13 @@ public class DescribeElasticityAssurancesRequest extends Request {
      */
     public PrivatePoolOptions getPrivatePoolOptions() {
         return this.privatePoolOptions;
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -196,13 +203,6 @@ public class DescribeElasticityAssurancesRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
      * @return status
      */
     public String getStatus() {
@@ -225,6 +225,7 @@ public class DescribeElasticityAssurancesRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeElasticityAssurancesRequest, Builder> {
         private PrivatePoolOptions privatePoolOptions; 
+        private String sourceRegionId; 
         private String instanceChargeType; 
         private String instanceType; 
         private Integer maxResults; 
@@ -236,7 +237,6 @@ public class DescribeElasticityAssurancesRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
         private String status; 
         private java.util.List < Tag> tag; 
         private String zoneId; 
@@ -248,6 +248,7 @@ public class DescribeElasticityAssurancesRequest extends Request {
         private Builder(DescribeElasticityAssurancesRequest request) {
             super(request);
             this.privatePoolOptions = request.privatePoolOptions;
+            this.sourceRegionId = request.sourceRegionId;
             this.instanceChargeType = request.instanceChargeType;
             this.instanceType = request.instanceType;
             this.maxResults = request.maxResults;
@@ -259,7 +260,6 @@ public class DescribeElasticityAssurancesRequest extends Request {
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.sourceRegionId = request.sourceRegionId;
             this.status = request.status;
             this.tag = request.tag;
             this.zoneId = request.zoneId;
@@ -271,6 +271,15 @@ public class DescribeElasticityAssurancesRequest extends Request {
         public Builder privatePoolOptions(PrivatePoolOptions privatePoolOptions) {
             this.putQueryParameter("PrivatePoolOptions", privatePoolOptions);
             this.privatePoolOptions = privatePoolOptions;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 
@@ -370,15 +379,6 @@ public class DescribeElasticityAssurancesRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

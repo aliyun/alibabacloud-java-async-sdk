@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyDiskChargeTypeRequest</p>
  */
 public class ModifyDiskChargeTypeRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("AutoPay")
     private Boolean autoPay;
@@ -55,12 +59,9 @@ public class ModifyDiskChargeTypeRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     private ModifyDiskChargeTypeRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.autoPay = builder.autoPay;
         this.clientToken = builder.clientToken;
         this.diskChargeType = builder.diskChargeType;
@@ -71,7 +72,6 @@ public class ModifyDiskChargeTypeRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -85,6 +85,13 @@ public class ModifyDiskChargeTypeRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -157,14 +164,8 @@ public class ModifyDiskChargeTypeRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
     public static final class Builder extends Request.Builder<ModifyDiskChargeTypeRequest, Builder> {
+        private String sourceRegionId; 
         private Boolean autoPay; 
         private String clientToken; 
         private String diskChargeType; 
@@ -175,7 +176,6 @@ public class ModifyDiskChargeTypeRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -183,6 +183,7 @@ public class ModifyDiskChargeTypeRequest extends Request {
 
         private Builder(ModifyDiskChargeTypeRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.autoPay = request.autoPay;
             this.clientToken = request.clientToken;
             this.diskChargeType = request.diskChargeType;
@@ -193,8 +194,16 @@ public class ModifyDiskChargeTypeRequest extends Request {
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.sourceRegionId = request.sourceRegionId;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * AutoPay.
@@ -283,15 +292,6 @@ public class ModifyDiskChargeTypeRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

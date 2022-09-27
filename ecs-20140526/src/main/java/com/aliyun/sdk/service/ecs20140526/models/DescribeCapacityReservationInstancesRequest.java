@@ -16,6 +16,10 @@ public class DescribeCapacityReservationInstancesRequest extends Request {
     @NameInMap("PrivatePoolOptions")
     private PrivatePoolOptions privatePoolOptions;
 
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("MaxResults")
     @Validation(maximum = 100, minimum = 1)
@@ -46,13 +50,10 @@ public class DescribeCapacityReservationInstancesRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     private DescribeCapacityReservationInstancesRequest(Builder builder) {
         super(builder);
         this.privatePoolOptions = builder.privatePoolOptions;
+        this.sourceRegionId = builder.sourceRegionId;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.ownerAccount = builder.ownerAccount;
@@ -60,7 +61,6 @@ public class DescribeCapacityReservationInstancesRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -81,6 +81,13 @@ public class DescribeCapacityReservationInstancesRequest extends Request {
      */
     public PrivatePoolOptions getPrivatePoolOptions() {
         return this.privatePoolOptions;
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -132,15 +139,9 @@ public class DescribeCapacityReservationInstancesRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
     public static final class Builder extends Request.Builder<DescribeCapacityReservationInstancesRequest, Builder> {
         private PrivatePoolOptions privatePoolOptions; 
+        private String sourceRegionId; 
         private Integer maxResults; 
         private String nextToken; 
         private String ownerAccount; 
@@ -148,7 +149,6 @@ public class DescribeCapacityReservationInstancesRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -157,6 +157,7 @@ public class DescribeCapacityReservationInstancesRequest extends Request {
         private Builder(DescribeCapacityReservationInstancesRequest request) {
             super(request);
             this.privatePoolOptions = request.privatePoolOptions;
+            this.sourceRegionId = request.sourceRegionId;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.ownerAccount = request.ownerAccount;
@@ -164,7 +165,6 @@ public class DescribeCapacityReservationInstancesRequest extends Request {
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.sourceRegionId = request.sourceRegionId;
         } 
 
         /**
@@ -173,6 +173,15 @@ public class DescribeCapacityReservationInstancesRequest extends Request {
         public Builder privatePoolOptions(PrivatePoolOptions privatePoolOptions) {
             this.putQueryParameter("PrivatePoolOptions", privatePoolOptions);
             this.privatePoolOptions = privatePoolOptions;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 
@@ -236,15 +245,6 @@ public class DescribeCapacityReservationInstancesRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

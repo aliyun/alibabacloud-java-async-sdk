@@ -95,8 +95,17 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         @NameInMap("BaselineCredit")
         private Integer baselineCredit;
 
+        @NameInMap("CpuArchitecture")
+        private String cpuArchitecture;
+
         @NameInMap("CpuCoreCount")
         private Integer cpuCoreCount;
+
+        @NameInMap("CpuSpeedFrequency")
+        private Float cpuSpeedFrequency;
+
+        @NameInMap("CpuTurboFrequency")
+        private Float cpuTurboFrequency;
 
         @NameInMap("DiskQuantity")
         private Integer diskQuantity;
@@ -134,6 +143,9 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         @NameInMap("InstanceBandwidthTx")
         private Integer instanceBandwidthTx;
 
+        @NameInMap("InstanceCategory")
+        private String instanceCategory;
+
         @NameInMap("InstanceFamilyLevel")
         private String instanceFamilyLevel;
 
@@ -164,8 +176,14 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         @NameInMap("MemorySize")
         private Float memorySize;
 
+        @NameInMap("NetworkEncryptionSupport")
+        private Boolean networkEncryptionSupport;
+
         @NameInMap("NvmeSupport")
         private String nvmeSupport;
+
+        @NameInMap("PhysicalProcessorModel")
+        private String physicalProcessorModel;
 
         @NameInMap("PrimaryEniQueueNumber")
         private Integer primaryEniQueueNumber;
@@ -181,7 +199,10 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
 
         private InstanceType(Builder builder) {
             this.baselineCredit = builder.baselineCredit;
+            this.cpuArchitecture = builder.cpuArchitecture;
             this.cpuCoreCount = builder.cpuCoreCount;
+            this.cpuSpeedFrequency = builder.cpuSpeedFrequency;
+            this.cpuTurboFrequency = builder.cpuTurboFrequency;
             this.diskQuantity = builder.diskQuantity;
             this.eniIpv6AddressQuantity = builder.eniIpv6AddressQuantity;
             this.eniPrivateIpAddressQuantity = builder.eniPrivateIpAddressQuantity;
@@ -194,6 +215,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             this.initialCredit = builder.initialCredit;
             this.instanceBandwidthRx = builder.instanceBandwidthRx;
             this.instanceBandwidthTx = builder.instanceBandwidthTx;
+            this.instanceCategory = builder.instanceCategory;
             this.instanceFamilyLevel = builder.instanceFamilyLevel;
             this.instancePpsRx = builder.instancePpsRx;
             this.instancePpsTx = builder.instancePpsTx;
@@ -204,7 +226,9 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             this.localStorageCategory = builder.localStorageCategory;
             this.maximumQueueNumberPerEni = builder.maximumQueueNumberPerEni;
             this.memorySize = builder.memorySize;
+            this.networkEncryptionSupport = builder.networkEncryptionSupport;
             this.nvmeSupport = builder.nvmeSupport;
+            this.physicalProcessorModel = builder.physicalProcessorModel;
             this.primaryEniQueueNumber = builder.primaryEniQueueNumber;
             this.queuePairNumber = builder.queuePairNumber;
             this.secondaryEniQueueNumber = builder.secondaryEniQueueNumber;
@@ -227,10 +251,31 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         }
 
         /**
+         * @return cpuArchitecture
+         */
+        public String getCpuArchitecture() {
+            return this.cpuArchitecture;
+        }
+
+        /**
          * @return cpuCoreCount
          */
         public Integer getCpuCoreCount() {
             return this.cpuCoreCount;
+        }
+
+        /**
+         * @return cpuSpeedFrequency
+         */
+        public Float getCpuSpeedFrequency() {
+            return this.cpuSpeedFrequency;
+        }
+
+        /**
+         * @return cpuTurboFrequency
+         */
+        public Float getCpuTurboFrequency() {
+            return this.cpuTurboFrequency;
         }
 
         /**
@@ -318,6 +363,13 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         }
 
         /**
+         * @return instanceCategory
+         */
+        public String getInstanceCategory() {
+            return this.instanceCategory;
+        }
+
+        /**
          * @return instanceFamilyLevel
          */
         public String getInstanceFamilyLevel() {
@@ -388,10 +440,24 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         }
 
         /**
+         * @return networkEncryptionSupport
+         */
+        public Boolean getNetworkEncryptionSupport() {
+            return this.networkEncryptionSupport;
+        }
+
+        /**
          * @return nvmeSupport
          */
         public String getNvmeSupport() {
             return this.nvmeSupport;
+        }
+
+        /**
+         * @return physicalProcessorModel
+         */
+        public String getPhysicalProcessorModel() {
+            return this.physicalProcessorModel;
         }
 
         /**
@@ -424,7 +490,10 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer baselineCredit; 
+            private String cpuArchitecture; 
             private Integer cpuCoreCount; 
+            private Float cpuSpeedFrequency; 
+            private Float cpuTurboFrequency; 
             private Integer diskQuantity; 
             private Integer eniIpv6AddressQuantity; 
             private Integer eniPrivateIpAddressQuantity; 
@@ -437,6 +506,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             private Integer initialCredit; 
             private Integer instanceBandwidthRx; 
             private Integer instanceBandwidthTx; 
+            private String instanceCategory; 
             private String instanceFamilyLevel; 
             private Long instancePpsRx; 
             private Long instancePpsTx; 
@@ -447,7 +517,9 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             private String localStorageCategory; 
             private Integer maximumQueueNumberPerEni; 
             private Float memorySize; 
+            private Boolean networkEncryptionSupport; 
             private String nvmeSupport; 
+            private String physicalProcessorModel; 
             private Integer primaryEniQueueNumber; 
             private Integer queuePairNumber; 
             private Integer secondaryEniQueueNumber; 
@@ -462,10 +534,34 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
+             * CpuArchitecture.
+             */
+            public Builder cpuArchitecture(String cpuArchitecture) {
+                this.cpuArchitecture = cpuArchitecture;
+                return this;
+            }
+
+            /**
              * CpuCoreCount.
              */
             public Builder cpuCoreCount(Integer cpuCoreCount) {
                 this.cpuCoreCount = cpuCoreCount;
+                return this;
+            }
+
+            /**
+             * CpuSpeedFrequency.
+             */
+            public Builder cpuSpeedFrequency(Float cpuSpeedFrequency) {
+                this.cpuSpeedFrequency = cpuSpeedFrequency;
+                return this;
+            }
+
+            /**
+             * CpuTurboFrequency.
+             */
+            public Builder cpuTurboFrequency(Float cpuTurboFrequency) {
+                this.cpuTurboFrequency = cpuTurboFrequency;
                 return this;
             }
 
@@ -566,6 +662,14 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
+             * InstanceCategory.
+             */
+            public Builder instanceCategory(String instanceCategory) {
+                this.instanceCategory = instanceCategory;
+                return this;
+            }
+
+            /**
              * InstanceFamilyLevel.
              */
             public Builder instanceFamilyLevel(String instanceFamilyLevel) {
@@ -646,10 +750,26 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
+             * NetworkEncryptionSupport.
+             */
+            public Builder networkEncryptionSupport(Boolean networkEncryptionSupport) {
+                this.networkEncryptionSupport = networkEncryptionSupport;
+                return this;
+            }
+
+            /**
              * NvmeSupport.
              */
             public Builder nvmeSupport(String nvmeSupport) {
                 this.nvmeSupport = nvmeSupport;
+                return this;
+            }
+
+            /**
+             * PhysicalProcessorModel.
+             */
+            public Builder physicalProcessorModel(String physicalProcessorModel) {
+                this.physicalProcessorModel = physicalProcessorModel;
                 return this;
             }
 

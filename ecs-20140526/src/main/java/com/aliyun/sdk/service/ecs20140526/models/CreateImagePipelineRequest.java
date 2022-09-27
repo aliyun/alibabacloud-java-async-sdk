@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateImagePipelineRequest</p>
  */
 public class CreateImagePipelineRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("AddAccount")
     private java.util.List < Long > addAccount;
@@ -83,10 +87,6 @@ public class CreateImagePipelineRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
     @NameInMap("SystemDiskSize")
     private Integer systemDiskSize;
@@ -105,6 +105,7 @@ public class CreateImagePipelineRequest extends Request {
 
     private CreateImagePipelineRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.addAccount = builder.addAccount;
         this.baseImage = builder.baseImage;
         this.baseImageType = builder.baseImageType;
@@ -122,7 +123,6 @@ public class CreateImagePipelineRequest extends Request {
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
         this.systemDiskSize = builder.systemDiskSize;
         this.tag = builder.tag;
         this.toRegionId = builder.toRegionId;
@@ -140,6 +140,13 @@ public class CreateImagePipelineRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -262,13 +269,6 @@ public class CreateImagePipelineRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
      * @return systemDiskSize
      */
     public Integer getSystemDiskSize() {
@@ -297,6 +297,7 @@ public class CreateImagePipelineRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateImagePipelineRequest, Builder> {
+        private String sourceRegionId; 
         private java.util.List < Long > addAccount; 
         private String baseImage; 
         private String baseImageType; 
@@ -314,7 +315,6 @@ public class CreateImagePipelineRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
         private Integer systemDiskSize; 
         private java.util.List < Tag> tag; 
         private java.util.List < String > toRegionId; 
@@ -326,6 +326,7 @@ public class CreateImagePipelineRequest extends Request {
 
         private Builder(CreateImagePipelineRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.addAccount = request.addAccount;
             this.baseImage = request.baseImage;
             this.baseImageType = request.baseImageType;
@@ -343,12 +344,20 @@ public class CreateImagePipelineRequest extends Request {
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.sourceRegionId = request.sourceRegionId;
             this.systemDiskSize = request.systemDiskSize;
             this.tag = request.tag;
             this.toRegionId = request.toRegionId;
             this.vSwitchId = request.vSwitchId;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * AddAccount.
@@ -500,15 +509,6 @@ public class CreateImagePipelineRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

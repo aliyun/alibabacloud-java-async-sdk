@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeRecommendInstanceTypeRequest</p>
  */
 public class DescribeRecommendInstanceTypeRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("Cores")
     private Integer cores;
@@ -78,10 +82,6 @@ public class DescribeRecommendInstanceTypeRequest extends Request {
     @NameInMap("Scene")
     private String scene;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
     @NameInMap("SpotStrategy")
     private String spotStrategy;
@@ -100,6 +100,7 @@ public class DescribeRecommendInstanceTypeRequest extends Request {
 
     private DescribeRecommendInstanceTypeRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.cores = builder.cores;
         this.instanceChargeType = builder.instanceChargeType;
         this.instanceFamilyLevel = builder.instanceFamilyLevel;
@@ -116,7 +117,6 @@ public class DescribeRecommendInstanceTypeRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.scene = builder.scene;
-        this.sourceRegionId = builder.sourceRegionId;
         this.spotStrategy = builder.spotStrategy;
         this.systemDiskCategory = builder.systemDiskCategory;
         this.zoneId = builder.zoneId;
@@ -134,6 +134,13 @@ public class DescribeRecommendInstanceTypeRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -249,13 +256,6 @@ public class DescribeRecommendInstanceTypeRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
      * @return spotStrategy
      */
     public String getSpotStrategy() {
@@ -284,6 +284,7 @@ public class DescribeRecommendInstanceTypeRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeRecommendInstanceTypeRequest, Builder> {
+        private String sourceRegionId; 
         private Integer cores; 
         private String instanceChargeType; 
         private String instanceFamilyLevel; 
@@ -300,7 +301,6 @@ public class DescribeRecommendInstanceTypeRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String scene; 
-        private String sourceRegionId; 
         private String spotStrategy; 
         private String systemDiskCategory; 
         private String zoneId; 
@@ -312,6 +312,7 @@ public class DescribeRecommendInstanceTypeRequest extends Request {
 
         private Builder(DescribeRecommendInstanceTypeRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.cores = request.cores;
             this.instanceChargeType = request.instanceChargeType;
             this.instanceFamilyLevel = request.instanceFamilyLevel;
@@ -328,12 +329,20 @@ public class DescribeRecommendInstanceTypeRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.scene = request.scene;
-            this.sourceRegionId = request.sourceRegionId;
             this.spotStrategy = request.spotStrategy;
             this.systemDiskCategory = request.systemDiskCategory;
             this.zoneId = request.zoneId;
             this.zoneMatchMode = request.zoneMatchMode;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * Cores.
@@ -476,15 +485,6 @@ public class DescribeRecommendInstanceTypeRequest extends Request {
         public Builder scene(String scene) {
             this.putQueryParameter("Scene", scene);
             this.scene = scene;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

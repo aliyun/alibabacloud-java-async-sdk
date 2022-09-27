@@ -12,10 +12,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RunCommandRequest</p>
  */
 public class RunCommandRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("CommandContent")
     @Validation(required = true)
     private String commandContent;
+
+    @Query
+    @NameInMap("ContainerId")
+    private String containerId;
+
+    @Query
+    @NameInMap("ContainerName")
+    private String containerName;
 
     @Query
     @NameInMap("ContentEncoding")
@@ -75,9 +87,9 @@ public class RunCommandRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
 
     @Query
     @NameInMap("Timed")
@@ -106,7 +118,10 @@ public class RunCommandRequest extends Request {
 
     private RunCommandRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.commandContent = builder.commandContent;
+        this.containerId = builder.containerId;
+        this.containerName = builder.containerName;
         this.contentEncoding = builder.contentEncoding;
         this.description = builder.description;
         this.enableParameter = builder.enableParameter;
@@ -121,7 +136,7 @@ public class RunCommandRequest extends Request {
         this.repeatMode = builder.repeatMode;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
+        this.tag = builder.tag;
         this.timed = builder.timed;
         this.timeout = builder.timeout;
         this.type = builder.type;
@@ -144,10 +159,31 @@ public class RunCommandRequest extends Request {
     }
 
     /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
+    }
+
+    /**
      * @return commandContent
      */
     public String getCommandContent() {
         return this.commandContent;
+    }
+
+    /**
+     * @return containerId
+     */
+    public String getContainerId() {
+        return this.containerId;
+    }
+
+    /**
+     * @return containerName
+     */
+    public String getContainerName() {
+        return this.containerName;
     }
 
     /**
@@ -249,10 +285,10 @@ public class RunCommandRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return tag
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public java.util.List < Tag> getTag() {
+        return this.tag;
     }
 
     /**
@@ -298,7 +334,10 @@ public class RunCommandRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<RunCommandRequest, Builder> {
+        private String sourceRegionId; 
         private String commandContent; 
+        private String containerId; 
+        private String containerName; 
         private String contentEncoding; 
         private String description; 
         private Boolean enableParameter; 
@@ -313,7 +352,7 @@ public class RunCommandRequest extends Request {
         private String repeatMode; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
+        private java.util.List < Tag> tag; 
         private Boolean timed; 
         private Long timeout; 
         private String type; 
@@ -327,7 +366,10 @@ public class RunCommandRequest extends Request {
 
         private Builder(RunCommandRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.commandContent = request.commandContent;
+            this.containerId = request.containerId;
+            this.containerName = request.containerName;
             this.contentEncoding = request.contentEncoding;
             this.description = request.description;
             this.enableParameter = request.enableParameter;
@@ -342,7 +384,7 @@ public class RunCommandRequest extends Request {
             this.repeatMode = request.repeatMode;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.sourceRegionId = request.sourceRegionId;
+            this.tag = request.tag;
             this.timed = request.timed;
             this.timeout = request.timeout;
             this.type = request.type;
@@ -352,11 +394,38 @@ public class RunCommandRequest extends Request {
         } 
 
         /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
+
+        /**
          * CommandContent.
          */
         public Builder commandContent(String commandContent) {
             this.putQueryParameter("CommandContent", commandContent);
             this.commandContent = commandContent;
+            return this;
+        }
+
+        /**
+         * ContainerId.
+         */
+        public Builder containerId(String containerId) {
+            this.putQueryParameter("ContainerId", containerId);
+            this.containerId = containerId;
+            return this;
+        }
+
+        /**
+         * ContainerName.
+         */
+        public Builder containerName(String containerName) {
+            this.putQueryParameter("ContainerName", containerName);
+            this.containerName = containerName;
             return this;
         }
 
@@ -488,11 +557,11 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * SourceRegionId.
+         * Tag.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
             return this;
         }
 
@@ -557,4 +626,65 @@ public class RunCommandRequest extends Request {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

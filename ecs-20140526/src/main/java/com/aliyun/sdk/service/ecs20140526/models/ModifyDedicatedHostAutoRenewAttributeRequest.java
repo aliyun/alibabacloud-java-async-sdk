@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyDedicatedHostAutoRenewAttributeRequest</p>
  */
 public class ModifyDedicatedHostAutoRenewAttributeRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("AutoRenew")
     private Boolean autoRenew;
@@ -58,12 +62,9 @@ public class ModifyDedicatedHostAutoRenewAttributeRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     private ModifyDedicatedHostAutoRenewAttributeRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.autoRenew = builder.autoRenew;
         this.autoRenewWithEcs = builder.autoRenewWithEcs;
         this.dedicatedHostIds = builder.dedicatedHostIds;
@@ -75,7 +76,6 @@ public class ModifyDedicatedHostAutoRenewAttributeRequest extends Request {
         this.renewalStatus = builder.renewalStatus;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -89,6 +89,13 @@ public class ModifyDedicatedHostAutoRenewAttributeRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -168,14 +175,8 @@ public class ModifyDedicatedHostAutoRenewAttributeRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
     public static final class Builder extends Request.Builder<ModifyDedicatedHostAutoRenewAttributeRequest, Builder> {
+        private String sourceRegionId; 
         private Boolean autoRenew; 
         private String autoRenewWithEcs; 
         private String dedicatedHostIds; 
@@ -187,7 +188,6 @@ public class ModifyDedicatedHostAutoRenewAttributeRequest extends Request {
         private String renewalStatus; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -195,6 +195,7 @@ public class ModifyDedicatedHostAutoRenewAttributeRequest extends Request {
 
         private Builder(ModifyDedicatedHostAutoRenewAttributeRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.autoRenew = request.autoRenew;
             this.autoRenewWithEcs = request.autoRenewWithEcs;
             this.dedicatedHostIds = request.dedicatedHostIds;
@@ -206,8 +207,16 @@ public class ModifyDedicatedHostAutoRenewAttributeRequest extends Request {
             this.renewalStatus = request.renewalStatus;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.sourceRegionId = request.sourceRegionId;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * AutoRenew.
@@ -305,15 +314,6 @@ public class ModifyDedicatedHostAutoRenewAttributeRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

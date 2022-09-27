@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeHpcClustersRequest</p>
  */
 public class DescribeHpcClustersRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("ClientToken")
     private String clientToken;
@@ -50,12 +54,9 @@ public class DescribeHpcClustersRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     private DescribeHpcClustersRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.clientToken = builder.clientToken;
         this.hpcClusterIds = builder.hpcClusterIds;
         this.ownerAccount = builder.ownerAccount;
@@ -65,7 +66,6 @@ public class DescribeHpcClustersRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -79,6 +79,13 @@ public class DescribeHpcClustersRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -144,14 +151,8 @@ public class DescribeHpcClustersRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
     public static final class Builder extends Request.Builder<DescribeHpcClustersRequest, Builder> {
+        private String sourceRegionId; 
         private String clientToken; 
         private String hpcClusterIds; 
         private String ownerAccount; 
@@ -161,7 +162,6 @@ public class DescribeHpcClustersRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -169,6 +169,7 @@ public class DescribeHpcClustersRequest extends Request {
 
         private Builder(DescribeHpcClustersRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.clientToken = request.clientToken;
             this.hpcClusterIds = request.hpcClusterIds;
             this.ownerAccount = request.ownerAccount;
@@ -178,8 +179,16 @@ public class DescribeHpcClustersRequest extends Request {
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.sourceRegionId = request.sourceRegionId;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * ClientToken.
@@ -259,15 +268,6 @@ public class DescribeHpcClustersRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

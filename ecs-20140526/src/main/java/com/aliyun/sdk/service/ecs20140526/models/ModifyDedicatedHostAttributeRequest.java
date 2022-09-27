@@ -16,6 +16,10 @@ public class ModifyDedicatedHostAttributeRequest extends Request {
     @NameInMap("NetworkAttributes")
     private NetworkAttributes networkAttributes;
 
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("ActionOnMaintenance")
     private String actionOnMaintenance;
@@ -66,13 +70,10 @@ public class ModifyDedicatedHostAttributeRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     private ModifyDedicatedHostAttributeRequest(Builder builder) {
         super(builder);
         this.networkAttributes = builder.networkAttributes;
+        this.sourceRegionId = builder.sourceRegionId;
         this.actionOnMaintenance = builder.actionOnMaintenance;
         this.autoPlacement = builder.autoPlacement;
         this.cpuOverCommitRatio = builder.cpuOverCommitRatio;
@@ -85,7 +86,6 @@ public class ModifyDedicatedHostAttributeRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -106,6 +106,13 @@ public class ModifyDedicatedHostAttributeRequest extends Request {
      */
     public NetworkAttributes getNetworkAttributes() {
         return this.networkAttributes;
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -192,15 +199,9 @@ public class ModifyDedicatedHostAttributeRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
     public static final class Builder extends Request.Builder<ModifyDedicatedHostAttributeRequest, Builder> {
         private NetworkAttributes networkAttributes; 
+        private String sourceRegionId; 
         private String actionOnMaintenance; 
         private String autoPlacement; 
         private Float cpuOverCommitRatio; 
@@ -213,7 +214,6 @@ public class ModifyDedicatedHostAttributeRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -222,6 +222,7 @@ public class ModifyDedicatedHostAttributeRequest extends Request {
         private Builder(ModifyDedicatedHostAttributeRequest request) {
             super(request);
             this.networkAttributes = request.networkAttributes;
+            this.sourceRegionId = request.sourceRegionId;
             this.actionOnMaintenance = request.actionOnMaintenance;
             this.autoPlacement = request.autoPlacement;
             this.cpuOverCommitRatio = request.cpuOverCommitRatio;
@@ -234,7 +235,6 @@ public class ModifyDedicatedHostAttributeRequest extends Request {
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.sourceRegionId = request.sourceRegionId;
         } 
 
         /**
@@ -243,6 +243,15 @@ public class ModifyDedicatedHostAttributeRequest extends Request {
         public Builder networkAttributes(NetworkAttributes networkAttributes) {
             this.putQueryParameter("NetworkAttributes", networkAttributes);
             this.networkAttributes = networkAttributes;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 
@@ -351,15 +360,6 @@ public class ModifyDedicatedHostAttributeRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

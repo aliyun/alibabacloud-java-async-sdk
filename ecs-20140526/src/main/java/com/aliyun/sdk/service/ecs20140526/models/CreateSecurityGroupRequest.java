@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateSecurityGroupRequest</p>
  */
 public class CreateSecurityGroupRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("ClientToken")
     private String clientToken;
@@ -57,10 +61,6 @@ public class CreateSecurityGroupRequest extends Request {
     @NameInMap("ServiceManaged")
     private Boolean serviceManaged;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
     @NameInMap("Tag")
     private java.util.List < Tag> tag;
@@ -71,6 +71,7 @@ public class CreateSecurityGroupRequest extends Request {
 
     private CreateSecurityGroupRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.clientToken = builder.clientToken;
         this.description = builder.description;
         this.ownerAccount = builder.ownerAccount;
@@ -82,7 +83,6 @@ public class CreateSecurityGroupRequest extends Request {
         this.securityGroupName = builder.securityGroupName;
         this.securityGroupType = builder.securityGroupType;
         this.serviceManaged = builder.serviceManaged;
-        this.sourceRegionId = builder.sourceRegionId;
         this.tag = builder.tag;
         this.vpcId = builder.vpcId;
     }
@@ -98,6 +98,13 @@ public class CreateSecurityGroupRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -178,13 +185,6 @@ public class CreateSecurityGroupRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
      * @return tag
      */
     public java.util.List < Tag> getTag() {
@@ -199,6 +199,7 @@ public class CreateSecurityGroupRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateSecurityGroupRequest, Builder> {
+        private String sourceRegionId; 
         private String clientToken; 
         private String description; 
         private String ownerAccount; 
@@ -210,7 +211,6 @@ public class CreateSecurityGroupRequest extends Request {
         private String securityGroupName; 
         private String securityGroupType; 
         private Boolean serviceManaged; 
-        private String sourceRegionId; 
         private java.util.List < Tag> tag; 
         private String vpcId; 
 
@@ -220,6 +220,7 @@ public class CreateSecurityGroupRequest extends Request {
 
         private Builder(CreateSecurityGroupRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.clientToken = request.clientToken;
             this.description = request.description;
             this.ownerAccount = request.ownerAccount;
@@ -231,10 +232,18 @@ public class CreateSecurityGroupRequest extends Request {
             this.securityGroupName = request.securityGroupName;
             this.securityGroupType = request.securityGroupType;
             this.serviceManaged = request.serviceManaged;
-            this.sourceRegionId = request.sourceRegionId;
             this.tag = request.tag;
             this.vpcId = request.vpcId;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * ClientToken.
@@ -332,15 +341,6 @@ public class CreateSecurityGroupRequest extends Request {
         public Builder serviceManaged(Boolean serviceManaged) {
             this.putQueryParameter("ServiceManaged", serviceManaged);
             this.serviceManaged = serviceManaged;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

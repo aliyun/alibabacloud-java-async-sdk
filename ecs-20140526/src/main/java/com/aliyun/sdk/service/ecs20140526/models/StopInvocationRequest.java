@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>StopInvocationRequest</p>
  */
 public class StopInvocationRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("InstanceId")
     private java.util.List < String > instanceId;
@@ -42,12 +46,9 @@ public class StopInvocationRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     private StopInvocationRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.instanceId = builder.instanceId;
         this.invokeId = builder.invokeId;
         this.ownerAccount = builder.ownerAccount;
@@ -55,7 +56,6 @@ public class StopInvocationRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -69,6 +69,13 @@ public class StopInvocationRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -120,14 +127,8 @@ public class StopInvocationRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
     public static final class Builder extends Request.Builder<StopInvocationRequest, Builder> {
+        private String sourceRegionId; 
         private java.util.List < String > instanceId; 
         private String invokeId; 
         private String ownerAccount; 
@@ -135,7 +136,6 @@ public class StopInvocationRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -143,6 +143,7 @@ public class StopInvocationRequest extends Request {
 
         private Builder(StopInvocationRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.instanceId = request.instanceId;
             this.invokeId = request.invokeId;
             this.ownerAccount = request.ownerAccount;
@@ -150,8 +151,16 @@ public class StopInvocationRequest extends Request {
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.sourceRegionId = request.sourceRegionId;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * InstanceId.
@@ -213,15 +222,6 @@ public class StopInvocationRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

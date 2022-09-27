@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyManagedInstanceRequest</p>
  */
 public class ModifyManagedInstanceRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
@@ -43,12 +47,9 @@ public class ModifyManagedInstanceRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     private ModifyManagedInstanceRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.instanceId = builder.instanceId;
         this.instanceName = builder.instanceName;
         this.ownerAccount = builder.ownerAccount;
@@ -56,7 +57,6 @@ public class ModifyManagedInstanceRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -70,6 +70,13 @@ public class ModifyManagedInstanceRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -121,14 +128,8 @@ public class ModifyManagedInstanceRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
     public static final class Builder extends Request.Builder<ModifyManagedInstanceRequest, Builder> {
+        private String sourceRegionId; 
         private String instanceId; 
         private String instanceName; 
         private String ownerAccount; 
@@ -136,7 +137,6 @@ public class ModifyManagedInstanceRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -144,6 +144,7 @@ public class ModifyManagedInstanceRequest extends Request {
 
         private Builder(ModifyManagedInstanceRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.instanceId = request.instanceId;
             this.instanceName = request.instanceName;
             this.ownerAccount = request.ownerAccount;
@@ -151,8 +152,16 @@ public class ModifyManagedInstanceRequest extends Request {
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.sourceRegionId = request.sourceRegionId;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * InstanceId.
@@ -214,15 +223,6 @@ public class ModifyManagedInstanceRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

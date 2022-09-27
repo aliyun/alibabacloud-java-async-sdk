@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RebootInstancesRequest</p>
  */
 public class RebootInstancesRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("BatchOptimization")
     private String batchOptimization;
@@ -50,12 +54,9 @@ public class RebootInstancesRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     private RebootInstancesRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.batchOptimization = builder.batchOptimization;
         this.dryRun = builder.dryRun;
         this.forceReboot = builder.forceReboot;
@@ -65,7 +66,6 @@ public class RebootInstancesRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -79,6 +79,13 @@ public class RebootInstancesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -144,14 +151,8 @@ public class RebootInstancesRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
     public static final class Builder extends Request.Builder<RebootInstancesRequest, Builder> {
+        private String sourceRegionId; 
         private String batchOptimization; 
         private Boolean dryRun; 
         private Boolean forceReboot; 
@@ -161,7 +162,6 @@ public class RebootInstancesRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -169,6 +169,7 @@ public class RebootInstancesRequest extends Request {
 
         private Builder(RebootInstancesRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.batchOptimization = request.batchOptimization;
             this.dryRun = request.dryRun;
             this.forceReboot = request.forceReboot;
@@ -178,8 +179,16 @@ public class RebootInstancesRequest extends Request {
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.sourceRegionId = request.sourceRegionId;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * BatchOptimization.
@@ -259,15 +268,6 @@ public class RebootInstancesRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

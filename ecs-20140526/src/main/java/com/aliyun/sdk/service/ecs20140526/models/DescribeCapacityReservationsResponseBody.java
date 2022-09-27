@@ -406,8 +406,14 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
         @NameInMap("RegionId")
         private String regionId;
 
+        @NameInMap("ReservedInstanceId")
+        private String reservedInstanceId;
+
         @NameInMap("ResourceGroupId")
         private String resourceGroupId;
+
+        @NameInMap("SavingPlanId")
+        private String savingPlanId;
 
         @NameInMap("StartTime")
         private String startTime;
@@ -435,7 +441,9 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
             this.privatePoolOptionsMatchCriteria = builder.privatePoolOptionsMatchCriteria;
             this.privatePoolOptionsName = builder.privatePoolOptionsName;
             this.regionId = builder.regionId;
+            this.reservedInstanceId = builder.reservedInstanceId;
             this.resourceGroupId = builder.resourceGroupId;
+            this.savingPlanId = builder.savingPlanId;
             this.startTime = builder.startTime;
             this.startTimeType = builder.startTimeType;
             this.status = builder.status;
@@ -522,10 +530,24 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
         }
 
         /**
+         * @return reservedInstanceId
+         */
+        public String getReservedInstanceId() {
+            return this.reservedInstanceId;
+        }
+
+        /**
          * @return resourceGroupId
          */
         public String getResourceGroupId() {
             return this.resourceGroupId;
+        }
+
+        /**
+         * @return savingPlanId
+         */
+        public String getSavingPlanId() {
+            return this.savingPlanId;
         }
 
         /**
@@ -574,7 +596,9 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
             private String privatePoolOptionsMatchCriteria; 
             private String privatePoolOptionsName; 
             private String regionId; 
+            private String reservedInstanceId; 
             private String resourceGroupId; 
+            private String savingPlanId; 
             private String startTime; 
             private String startTimeType; 
             private String status; 
@@ -662,10 +686,26 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
             }
 
             /**
+             * ReservedInstanceId.
+             */
+            public Builder reservedInstanceId(String reservedInstanceId) {
+                this.reservedInstanceId = reservedInstanceId;
+                return this;
+            }
+
+            /**
              * ResourceGroupId.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * SavingPlanId.
+             */
+            public Builder savingPlanId(String savingPlanId) {
+                this.savingPlanId = savingPlanId;
                 return this;
             }
 

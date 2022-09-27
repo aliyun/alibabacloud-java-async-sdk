@@ -16,6 +16,10 @@ public class DescribeInstancesRequest extends Request {
     @NameInMap("Filter")
     private java.util.List < Filter> filter;
 
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("AdditionalAttributes")
     private java.util.List < String > additionalAttributes;
@@ -163,10 +167,6 @@ public class DescribeInstancesRequest extends Request {
     @NameInMap("SecurityGroupId")
     private String securityGroupId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
     @NameInMap("Status")
     private String status;
@@ -190,6 +190,7 @@ public class DescribeInstancesRequest extends Request {
     private DescribeInstancesRequest(Builder builder) {
         super(builder);
         this.filter = builder.filter;
+        this.sourceRegionId = builder.sourceRegionId;
         this.additionalAttributes = builder.additionalAttributes;
         this.deviceAvailable = builder.deviceAvailable;
         this.dryRun = builder.dryRun;
@@ -226,7 +227,6 @@ public class DescribeInstancesRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityGroupId = builder.securityGroupId;
-        this.sourceRegionId = builder.sourceRegionId;
         this.status = builder.status;
         this.tag = builder.tag;
         this.vSwitchId = builder.vSwitchId;
@@ -252,6 +252,13 @@ public class DescribeInstancesRequest extends Request {
      */
     public java.util.List < Filter> getFilter() {
         return this.filter;
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -507,13 +514,6 @@ public class DescribeInstancesRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
      * @return status
      */
     public String getStatus() {
@@ -550,6 +550,7 @@ public class DescribeInstancesRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeInstancesRequest, Builder> {
         private java.util.List < Filter> filter; 
+        private String sourceRegionId; 
         private java.util.List < String > additionalAttributes; 
         private Boolean deviceAvailable; 
         private Boolean dryRun; 
@@ -586,7 +587,6 @@ public class DescribeInstancesRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String securityGroupId; 
-        private String sourceRegionId; 
         private String status; 
         private java.util.List < Tag> tag; 
         private String vSwitchId; 
@@ -600,6 +600,7 @@ public class DescribeInstancesRequest extends Request {
         private Builder(DescribeInstancesRequest request) {
             super(request);
             this.filter = request.filter;
+            this.sourceRegionId = request.sourceRegionId;
             this.additionalAttributes = request.additionalAttributes;
             this.deviceAvailable = request.deviceAvailable;
             this.dryRun = request.dryRun;
@@ -636,7 +637,6 @@ public class DescribeInstancesRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.securityGroupId = request.securityGroupId;
-            this.sourceRegionId = request.sourceRegionId;
             this.status = request.status;
             this.tag = request.tag;
             this.vSwitchId = request.vSwitchId;
@@ -650,6 +650,15 @@ public class DescribeInstancesRequest extends Request {
         public Builder filter(java.util.List < Filter> filter) {
             this.putQueryParameter("Filter", filter);
             this.filter = filter;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 
@@ -974,15 +983,6 @@ public class DescribeInstancesRequest extends Request {
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
             this.securityGroupId = securityGroupId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

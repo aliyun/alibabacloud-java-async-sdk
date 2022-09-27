@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeClassicLinkInstancesRequest</p>
  */
 public class DescribeClassicLinkInstancesRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("InstanceId")
     private String instanceId;
@@ -41,16 +45,13 @@ public class DescribeClassicLinkInstancesRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
     @NameInMap("VpcId")
     private String vpcId;
 
     private DescribeClassicLinkInstancesRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.instanceId = builder.instanceId;
         this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
@@ -58,7 +59,6 @@ public class DescribeClassicLinkInstancesRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
         this.vpcId = builder.vpcId;
     }
 
@@ -73,6 +73,13 @@ public class DescribeClassicLinkInstancesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -125,13 +132,6 @@ public class DescribeClassicLinkInstancesRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
      * @return vpcId
      */
     public String getVpcId() {
@@ -139,6 +139,7 @@ public class DescribeClassicLinkInstancesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeClassicLinkInstancesRequest, Builder> {
+        private String sourceRegionId; 
         private String instanceId; 
         private Long ownerId; 
         private String pageNumber; 
@@ -146,7 +147,6 @@ public class DescribeClassicLinkInstancesRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
         private String vpcId; 
 
         private Builder() {
@@ -155,6 +155,7 @@ public class DescribeClassicLinkInstancesRequest extends Request {
 
         private Builder(DescribeClassicLinkInstancesRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.instanceId = request.instanceId;
             this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
@@ -162,9 +163,17 @@ public class DescribeClassicLinkInstancesRequest extends Request {
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.sourceRegionId = request.sourceRegionId;
             this.vpcId = request.vpcId;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * InstanceId.
@@ -226,15 +235,6 @@ public class DescribeClassicLinkInstancesRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

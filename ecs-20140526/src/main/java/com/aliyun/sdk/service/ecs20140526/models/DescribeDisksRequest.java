@@ -16,6 +16,10 @@ public class DescribeDisksRequest extends Request {
     @NameInMap("Filter")
     private java.util.List < Filter> filter;
 
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("AdditionalAttributes")
     private java.util.List < String > additionalAttributes;
@@ -139,10 +143,6 @@ public class DescribeDisksRequest extends Request {
     @NameInMap("SnapshotId")
     private String snapshotId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
     @NameInMap("Status")
     private String status;
@@ -158,6 +158,7 @@ public class DescribeDisksRequest extends Request {
     private DescribeDisksRequest(Builder builder) {
         super(builder);
         this.filter = builder.filter;
+        this.sourceRegionId = builder.sourceRegionId;
         this.additionalAttributes = builder.additionalAttributes;
         this.autoSnapshotPolicyId = builder.autoSnapshotPolicyId;
         this.category = builder.category;
@@ -188,7 +189,6 @@ public class DescribeDisksRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.snapshotId = builder.snapshotId;
-        this.sourceRegionId = builder.sourceRegionId;
         this.status = builder.status;
         this.tag = builder.tag;
         this.zoneId = builder.zoneId;
@@ -212,6 +212,13 @@ public class DescribeDisksRequest extends Request {
      */
     public java.util.List < Filter> getFilter() {
         return this.filter;
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -425,13 +432,6 @@ public class DescribeDisksRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
      * @return status
      */
     public String getStatus() {
@@ -454,6 +454,7 @@ public class DescribeDisksRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeDisksRequest, Builder> {
         private java.util.List < Filter> filter; 
+        private String sourceRegionId; 
         private java.util.List < String > additionalAttributes; 
         private String autoSnapshotPolicyId; 
         private String category; 
@@ -484,7 +485,6 @@ public class DescribeDisksRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String snapshotId; 
-        private String sourceRegionId; 
         private String status; 
         private java.util.List < Tag> tag; 
         private String zoneId; 
@@ -496,6 +496,7 @@ public class DescribeDisksRequest extends Request {
         private Builder(DescribeDisksRequest request) {
             super(request);
             this.filter = request.filter;
+            this.sourceRegionId = request.sourceRegionId;
             this.additionalAttributes = request.additionalAttributes;
             this.autoSnapshotPolicyId = request.autoSnapshotPolicyId;
             this.category = request.category;
@@ -526,7 +527,6 @@ public class DescribeDisksRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.snapshotId = request.snapshotId;
-            this.sourceRegionId = request.sourceRegionId;
             this.status = request.status;
             this.tag = request.tag;
             this.zoneId = request.zoneId;
@@ -538,6 +538,15 @@ public class DescribeDisksRequest extends Request {
         public Builder filter(java.util.List < Filter> filter) {
             this.putQueryParameter("Filter", filter);
             this.filter = filter;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 
@@ -808,15 +817,6 @@ public class DescribeDisksRequest extends Request {
         public Builder snapshotId(String snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);
             this.snapshotId = snapshotId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateDiskRequest</p>
  */
 public class CreateDiskRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("AdvancedFeatures")
     private String advancedFeatures;
@@ -102,10 +106,6 @@ public class CreateDiskRequest extends Request {
     @NameInMap("SnapshotId")
     private String snapshotId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
     @NameInMap("StorageClusterId")
     private String storageClusterId;
@@ -128,6 +128,7 @@ public class CreateDiskRequest extends Request {
 
     private CreateDiskRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.advancedFeatures = builder.advancedFeatures;
         this.arn = builder.arn;
         this.burstingEnabled = builder.burstingEnabled;
@@ -150,7 +151,6 @@ public class CreateDiskRequest extends Request {
         this.resourceOwnerId = builder.resourceOwnerId;
         this.size = builder.size;
         this.snapshotId = builder.snapshotId;
-        this.sourceRegionId = builder.sourceRegionId;
         this.storageClusterId = builder.storageClusterId;
         this.storageSetId = builder.storageSetId;
         this.storageSetPartitionNumber = builder.storageSetPartitionNumber;
@@ -169,6 +169,13 @@ public class CreateDiskRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -326,13 +333,6 @@ public class CreateDiskRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
      * @return storageClusterId
      */
     public String getStorageClusterId() {
@@ -368,6 +368,7 @@ public class CreateDiskRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateDiskRequest, Builder> {
+        private String sourceRegionId; 
         private String advancedFeatures; 
         private java.util.List < Arn> arn; 
         private Boolean burstingEnabled; 
@@ -390,7 +391,6 @@ public class CreateDiskRequest extends Request {
         private Long resourceOwnerId; 
         private Integer size; 
         private String snapshotId; 
-        private String sourceRegionId; 
         private String storageClusterId; 
         private String storageSetId; 
         private Integer storageSetPartitionNumber; 
@@ -403,6 +403,7 @@ public class CreateDiskRequest extends Request {
 
         private Builder(CreateDiskRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.advancedFeatures = request.advancedFeatures;
             this.arn = request.arn;
             this.burstingEnabled = request.burstingEnabled;
@@ -425,13 +426,21 @@ public class CreateDiskRequest extends Request {
             this.resourceOwnerId = request.resourceOwnerId;
             this.size = request.size;
             this.snapshotId = request.snapshotId;
-            this.sourceRegionId = request.sourceRegionId;
             this.storageClusterId = request.storageClusterId;
             this.storageSetId = request.storageSetId;
             this.storageSetPartitionNumber = request.storageSetPartitionNumber;
             this.tag = request.tag;
             this.zoneId = request.zoneId;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * AdvancedFeatures.
@@ -628,15 +637,6 @@ public class CreateDiskRequest extends Request {
         public Builder snapshotId(String snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);
             this.snapshotId = snapshotId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

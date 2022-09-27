@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AttachNetworkInterfaceRequest</p>
  */
 public class AttachNetworkInterfaceRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
@@ -43,10 +47,6 @@ public class AttachNetworkInterfaceRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
     @NameInMap("TrunkNetworkInstanceId")
     private String trunkNetworkInstanceId;
@@ -57,6 +57,7 @@ public class AttachNetworkInterfaceRequest extends Request {
 
     private AttachNetworkInterfaceRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.instanceId = builder.instanceId;
         this.networkInterfaceId = builder.networkInterfaceId;
         this.ownerAccount = builder.ownerAccount;
@@ -64,7 +65,6 @@ public class AttachNetworkInterfaceRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
         this.trunkNetworkInstanceId = builder.trunkNetworkInstanceId;
         this.waitForNetworkConfigurationReady = builder.waitForNetworkConfigurationReady;
     }
@@ -80,6 +80,13 @@ public class AttachNetworkInterfaceRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -132,13 +139,6 @@ public class AttachNetworkInterfaceRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
      * @return trunkNetworkInstanceId
      */
     public String getTrunkNetworkInstanceId() {
@@ -153,6 +153,7 @@ public class AttachNetworkInterfaceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AttachNetworkInterfaceRequest, Builder> {
+        private String sourceRegionId; 
         private String instanceId; 
         private String networkInterfaceId; 
         private String ownerAccount; 
@@ -160,7 +161,6 @@ public class AttachNetworkInterfaceRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
         private String trunkNetworkInstanceId; 
         private Boolean waitForNetworkConfigurationReady; 
 
@@ -170,6 +170,7 @@ public class AttachNetworkInterfaceRequest extends Request {
 
         private Builder(AttachNetworkInterfaceRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.instanceId = request.instanceId;
             this.networkInterfaceId = request.networkInterfaceId;
             this.ownerAccount = request.ownerAccount;
@@ -177,10 +178,18 @@ public class AttachNetworkInterfaceRequest extends Request {
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.sourceRegionId = request.sourceRegionId;
             this.trunkNetworkInstanceId = request.trunkNetworkInstanceId;
             this.waitForNetworkConfigurationReady = request.waitForNetworkConfigurationReady;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * InstanceId.
@@ -242,15 +251,6 @@ public class AttachNetworkInterfaceRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

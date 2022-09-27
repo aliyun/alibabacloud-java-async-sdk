@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateActivationRequest</p>
  */
 public class CreateActivationRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("Description")
     private String description;
@@ -49,16 +53,13 @@ public class CreateActivationRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
     @NameInMap("TimeToLiveInHours")
     private Long timeToLiveInHours;
 
     private CreateActivationRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.description = builder.description;
         this.instanceCount = builder.instanceCount;
         this.instanceName = builder.instanceName;
@@ -68,7 +69,6 @@ public class CreateActivationRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
         this.timeToLiveInHours = builder.timeToLiveInHours;
     }
 
@@ -83,6 +83,13 @@ public class CreateActivationRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -149,13 +156,6 @@ public class CreateActivationRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
      * @return timeToLiveInHours
      */
     public Long getTimeToLiveInHours() {
@@ -163,6 +163,7 @@ public class CreateActivationRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateActivationRequest, Builder> {
+        private String sourceRegionId; 
         private String description; 
         private Integer instanceCount; 
         private String instanceName; 
@@ -172,7 +173,6 @@ public class CreateActivationRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
         private Long timeToLiveInHours; 
 
         private Builder() {
@@ -181,6 +181,7 @@ public class CreateActivationRequest extends Request {
 
         private Builder(CreateActivationRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.description = request.description;
             this.instanceCount = request.instanceCount;
             this.instanceName = request.instanceName;
@@ -190,9 +191,17 @@ public class CreateActivationRequest extends Request {
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.sourceRegionId = request.sourceRegionId;
             this.timeToLiveInHours = request.timeToLiveInHours;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * Description.
@@ -272,15 +281,6 @@ public class CreateActivationRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

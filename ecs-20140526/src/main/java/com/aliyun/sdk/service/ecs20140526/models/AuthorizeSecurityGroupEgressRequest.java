@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AuthorizeSecurityGroupEgressRequest</p>
  */
 public class AuthorizeSecurityGroupEgressRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("ClientToken")
     private String clientToken;
@@ -42,7 +46,6 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
 
     @Query
     @NameInMap("IpProtocol")
-    @Validation(required = true)
     private String ipProtocol;
 
     @Query
@@ -66,12 +69,15 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
     private Long ownerId;
 
     @Query
+    @NameInMap("Permissions")
+    private java.util.List < Permissions> permissions;
+
+    @Query
     @NameInMap("Policy")
     private String policy;
 
     @Query
     @NameInMap("PortRange")
-    @Validation(required = true)
     private String portRange;
 
     @Query
@@ -104,12 +110,9 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
     @NameInMap("SourcePortRange")
     private String sourcePortRange;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     private AuthorizeSecurityGroupEgressRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.clientToken = builder.clientToken;
         this.description = builder.description;
         this.destCidrIp = builder.destCidrIp;
@@ -123,6 +126,7 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
         this.nicType = builder.nicType;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.permissions = builder.permissions;
         this.policy = builder.policy;
         this.portRange = builder.portRange;
         this.priority = builder.priority;
@@ -132,7 +136,6 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
         this.securityGroupId = builder.securityGroupId;
         this.sourceCidrIp = builder.sourceCidrIp;
         this.sourcePortRange = builder.sourcePortRange;
-        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -146,6 +149,13 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -240,6 +250,13 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
     }
 
     /**
+     * @return permissions
+     */
+    public java.util.List < Permissions> getPermissions() {
+        return this.permissions;
+    }
+
+    /**
      * @return policy
      */
     public String getPolicy() {
@@ -302,14 +319,8 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
         return this.sourcePortRange;
     }
 
-    /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
     public static final class Builder extends Request.Builder<AuthorizeSecurityGroupEgressRequest, Builder> {
+        private String sourceRegionId; 
         private String clientToken; 
         private String description; 
         private String destCidrIp; 
@@ -323,6 +334,7 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
         private String nicType; 
         private String ownerAccount; 
         private Long ownerId; 
+        private java.util.List < Permissions> permissions; 
         private String policy; 
         private String portRange; 
         private String priority; 
@@ -332,7 +344,6 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
         private String securityGroupId; 
         private String sourceCidrIp; 
         private String sourcePortRange; 
-        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -340,6 +351,7 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
 
         private Builder(AuthorizeSecurityGroupEgressRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.clientToken = request.clientToken;
             this.description = request.description;
             this.destCidrIp = request.destCidrIp;
@@ -353,6 +365,7 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
             this.nicType = request.nicType;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.permissions = request.permissions;
             this.policy = request.policy;
             this.portRange = request.portRange;
             this.priority = request.priority;
@@ -362,8 +375,16 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
             this.securityGroupId = request.securityGroupId;
             this.sourceCidrIp = request.sourceCidrIp;
             this.sourcePortRange = request.sourcePortRange;
-            this.sourceRegionId = request.sourceRegionId;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * ClientToken.
@@ -483,6 +504,15 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
         }
 
         /**
+         * Permissions.
+         */
+        public Builder permissions(java.util.List < Permissions> permissions) {
+            this.putQueryParameter("Permissions", permissions);
+            this.permissions = permissions;
+            return this;
+        }
+
+        /**
          * Policy.
          */
         public Builder policy(String policy) {
@@ -563,15 +593,6 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
             return this;
         }
 
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
-            return this;
-        }
-
         @Override
         public AuthorizeSecurityGroupEgressRequest build() {
             return new AuthorizeSecurityGroupEgressRequest(this);
@@ -579,4 +600,325 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
 
     } 
 
+    public static class Permissions extends TeaModel {
+        @NameInMap("Description")
+        private String description;
+
+        @NameInMap("DestCidrIp")
+        private String destCidrIp;
+
+        @NameInMap("DestGroupId")
+        private String destGroupId;
+
+        @NameInMap("DestGroupOwnerAccount")
+        private String destGroupOwnerAccount;
+
+        @NameInMap("DestGroupOwnerId")
+        private Long destGroupOwnerId;
+
+        @NameInMap("DestPrefixListId")
+        private String destPrefixListId;
+
+        @NameInMap("IpProtocol")
+        private String ipProtocol;
+
+        @NameInMap("Ipv6DestCidrIp")
+        private String ipv6DestCidrIp;
+
+        @NameInMap("Ipv6SourceCidrIp")
+        private String ipv6SourceCidrIp;
+
+        @NameInMap("NicType")
+        private String nicType;
+
+        @NameInMap("Policy")
+        private String policy;
+
+        @NameInMap("PortRange")
+        private String portRange;
+
+        @NameInMap("Priority")
+        private String priority;
+
+        @NameInMap("SourceCidrIp")
+        private String sourceCidrIp;
+
+        @NameInMap("SourcePortRange")
+        private String sourcePortRange;
+
+        private Permissions(Builder builder) {
+            this.description = builder.description;
+            this.destCidrIp = builder.destCidrIp;
+            this.destGroupId = builder.destGroupId;
+            this.destGroupOwnerAccount = builder.destGroupOwnerAccount;
+            this.destGroupOwnerId = builder.destGroupOwnerId;
+            this.destPrefixListId = builder.destPrefixListId;
+            this.ipProtocol = builder.ipProtocol;
+            this.ipv6DestCidrIp = builder.ipv6DestCidrIp;
+            this.ipv6SourceCidrIp = builder.ipv6SourceCidrIp;
+            this.nicType = builder.nicType;
+            this.policy = builder.policy;
+            this.portRange = builder.portRange;
+            this.priority = builder.priority;
+            this.sourceCidrIp = builder.sourceCidrIp;
+            this.sourcePortRange = builder.sourcePortRange;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Permissions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
+         * @return destCidrIp
+         */
+        public String getDestCidrIp() {
+            return this.destCidrIp;
+        }
+
+        /**
+         * @return destGroupId
+         */
+        public String getDestGroupId() {
+            return this.destGroupId;
+        }
+
+        /**
+         * @return destGroupOwnerAccount
+         */
+        public String getDestGroupOwnerAccount() {
+            return this.destGroupOwnerAccount;
+        }
+
+        /**
+         * @return destGroupOwnerId
+         */
+        public Long getDestGroupOwnerId() {
+            return this.destGroupOwnerId;
+        }
+
+        /**
+         * @return destPrefixListId
+         */
+        public String getDestPrefixListId() {
+            return this.destPrefixListId;
+        }
+
+        /**
+         * @return ipProtocol
+         */
+        public String getIpProtocol() {
+            return this.ipProtocol;
+        }
+
+        /**
+         * @return ipv6DestCidrIp
+         */
+        public String getIpv6DestCidrIp() {
+            return this.ipv6DestCidrIp;
+        }
+
+        /**
+         * @return ipv6SourceCidrIp
+         */
+        public String getIpv6SourceCidrIp() {
+            return this.ipv6SourceCidrIp;
+        }
+
+        /**
+         * @return nicType
+         */
+        public String getNicType() {
+            return this.nicType;
+        }
+
+        /**
+         * @return policy
+         */
+        public String getPolicy() {
+            return this.policy;
+        }
+
+        /**
+         * @return portRange
+         */
+        public String getPortRange() {
+            return this.portRange;
+        }
+
+        /**
+         * @return priority
+         */
+        public String getPriority() {
+            return this.priority;
+        }
+
+        /**
+         * @return sourceCidrIp
+         */
+        public String getSourceCidrIp() {
+            return this.sourceCidrIp;
+        }
+
+        /**
+         * @return sourcePortRange
+         */
+        public String getSourcePortRange() {
+            return this.sourcePortRange;
+        }
+
+        public static final class Builder {
+            private String description; 
+            private String destCidrIp; 
+            private String destGroupId; 
+            private String destGroupOwnerAccount; 
+            private Long destGroupOwnerId; 
+            private String destPrefixListId; 
+            private String ipProtocol; 
+            private String ipv6DestCidrIp; 
+            private String ipv6SourceCidrIp; 
+            private String nicType; 
+            private String policy; 
+            private String portRange; 
+            private String priority; 
+            private String sourceCidrIp; 
+            private String sourcePortRange; 
+
+            /**
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * DestCidrIp.
+             */
+            public Builder destCidrIp(String destCidrIp) {
+                this.destCidrIp = destCidrIp;
+                return this;
+            }
+
+            /**
+             * DestGroupId.
+             */
+            public Builder destGroupId(String destGroupId) {
+                this.destGroupId = destGroupId;
+                return this;
+            }
+
+            /**
+             * DestGroupOwnerAccount.
+             */
+            public Builder destGroupOwnerAccount(String destGroupOwnerAccount) {
+                this.destGroupOwnerAccount = destGroupOwnerAccount;
+                return this;
+            }
+
+            /**
+             * DestGroupOwnerId.
+             */
+            public Builder destGroupOwnerId(Long destGroupOwnerId) {
+                this.destGroupOwnerId = destGroupOwnerId;
+                return this;
+            }
+
+            /**
+             * DestPrefixListId.
+             */
+            public Builder destPrefixListId(String destPrefixListId) {
+                this.destPrefixListId = destPrefixListId;
+                return this;
+            }
+
+            /**
+             * IpProtocol.
+             */
+            public Builder ipProtocol(String ipProtocol) {
+                this.ipProtocol = ipProtocol;
+                return this;
+            }
+
+            /**
+             * Ipv6DestCidrIp.
+             */
+            public Builder ipv6DestCidrIp(String ipv6DestCidrIp) {
+                this.ipv6DestCidrIp = ipv6DestCidrIp;
+                return this;
+            }
+
+            /**
+             * Ipv6SourceCidrIp.
+             */
+            public Builder ipv6SourceCidrIp(String ipv6SourceCidrIp) {
+                this.ipv6SourceCidrIp = ipv6SourceCidrIp;
+                return this;
+            }
+
+            /**
+             * NicType.
+             */
+            public Builder nicType(String nicType) {
+                this.nicType = nicType;
+                return this;
+            }
+
+            /**
+             * Policy.
+             */
+            public Builder policy(String policy) {
+                this.policy = policy;
+                return this;
+            }
+
+            /**
+             * PortRange.
+             */
+            public Builder portRange(String portRange) {
+                this.portRange = portRange;
+                return this;
+            }
+
+            /**
+             * Priority.
+             */
+            public Builder priority(String priority) {
+                this.priority = priority;
+                return this;
+            }
+
+            /**
+             * SourceCidrIp.
+             */
+            public Builder sourceCidrIp(String sourceCidrIp) {
+                this.sourceCidrIp = sourceCidrIp;
+                return this;
+            }
+
+            /**
+             * SourcePortRange.
+             */
+            public Builder sourcePortRange(String sourcePortRange) {
+                this.sourcePortRange = sourcePortRange;
+                return this;
+            }
+
+            public Permissions build() {
+                return new Permissions(this);
+            } 
+
+        } 
+
+    }
 }

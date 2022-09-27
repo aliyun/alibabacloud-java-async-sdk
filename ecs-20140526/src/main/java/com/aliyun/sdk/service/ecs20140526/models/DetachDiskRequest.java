@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DetachDiskRequest</p>
  */
 public class DetachDiskRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("DeleteWithInstance")
     private Boolean deleteWithInstance;
@@ -42,12 +46,9 @@ public class DetachDiskRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     private DetachDiskRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.deleteWithInstance = builder.deleteWithInstance;
         this.diskId = builder.diskId;
         this.instanceId = builder.instanceId;
@@ -55,7 +56,6 @@ public class DetachDiskRequest extends Request {
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -69,6 +69,13 @@ public class DetachDiskRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -120,14 +127,8 @@ public class DetachDiskRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
     public static final class Builder extends Request.Builder<DetachDiskRequest, Builder> {
+        private String sourceRegionId; 
         private Boolean deleteWithInstance; 
         private String diskId; 
         private String instanceId; 
@@ -135,7 +136,6 @@ public class DetachDiskRequest extends Request {
         private Long ownerId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -143,6 +143,7 @@ public class DetachDiskRequest extends Request {
 
         private Builder(DetachDiskRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.deleteWithInstance = request.deleteWithInstance;
             this.diskId = request.diskId;
             this.instanceId = request.instanceId;
@@ -150,8 +151,16 @@ public class DetachDiskRequest extends Request {
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.sourceRegionId = request.sourceRegionId;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * DeleteWithInstance.
@@ -213,15 +222,6 @@ public class DetachDiskRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

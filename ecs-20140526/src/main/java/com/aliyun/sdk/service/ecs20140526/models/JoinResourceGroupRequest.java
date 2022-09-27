@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>JoinResourceGroupRequest</p>
  */
 public class JoinResourceGroupRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("OwnerAccount")
     private String ownerAccount;
@@ -44,12 +48,9 @@ public class JoinResourceGroupRequest extends Request {
     @NameInMap("ResourceType")
     private String resourceType;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     private JoinResourceGroupRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
@@ -58,7 +59,6 @@ public class JoinResourceGroupRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.resourceType = builder.resourceType;
-        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -72,6 +72,13 @@ public class JoinResourceGroupRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -130,14 +137,8 @@ public class JoinResourceGroupRequest extends Request {
         return this.resourceType;
     }
 
-    /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
     public static final class Builder extends Request.Builder<JoinResourceGroupRequest, Builder> {
+        private String sourceRegionId; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
@@ -146,7 +147,6 @@ public class JoinResourceGroupRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String resourceType; 
-        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -154,6 +154,7 @@ public class JoinResourceGroupRequest extends Request {
 
         private Builder(JoinResourceGroupRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
@@ -162,8 +163,16 @@ public class JoinResourceGroupRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.resourceType = request.resourceType;
-            this.sourceRegionId = request.sourceRegionId;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * OwnerAccount.
@@ -234,15 +243,6 @@ public class JoinResourceGroupRequest extends Request {
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
             this.resourceType = resourceType;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

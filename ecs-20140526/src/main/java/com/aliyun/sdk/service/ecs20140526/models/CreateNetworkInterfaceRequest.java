@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateNetworkInterfaceRequest</p>
  */
 public class CreateNetworkInterfaceRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("BusinessType")
     private String businessType;
@@ -97,10 +101,6 @@ public class CreateNetworkInterfaceRequest extends Request {
     @NameInMap("SecurityGroupIds")
     private java.util.List < String > securityGroupIds;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
     @NameInMap("Tag")
     private java.util.List < Tag> tag;
@@ -116,6 +116,7 @@ public class CreateNetworkInterfaceRequest extends Request {
 
     private CreateNetworkInterfaceRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.businessType = builder.businessType;
         this.clientToken = builder.clientToken;
         this.description = builder.description;
@@ -137,7 +138,6 @@ public class CreateNetworkInterfaceRequest extends Request {
         this.secondaryPrivateIpAddressCount = builder.secondaryPrivateIpAddressCount;
         this.securityGroupId = builder.securityGroupId;
         this.securityGroupIds = builder.securityGroupIds;
-        this.sourceRegionId = builder.sourceRegionId;
         this.tag = builder.tag;
         this.vSwitchId = builder.vSwitchId;
         this.visible = builder.visible;
@@ -154,6 +154,13 @@ public class CreateNetworkInterfaceRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -304,13 +311,6 @@ public class CreateNetworkInterfaceRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
      * @return tag
      */
     public java.util.List < Tag> getTag() {
@@ -332,6 +332,7 @@ public class CreateNetworkInterfaceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateNetworkInterfaceRequest, Builder> {
+        private String sourceRegionId; 
         private String businessType; 
         private String clientToken; 
         private String description; 
@@ -353,7 +354,6 @@ public class CreateNetworkInterfaceRequest extends Request {
         private Integer secondaryPrivateIpAddressCount; 
         private String securityGroupId; 
         private java.util.List < String > securityGroupIds; 
-        private String sourceRegionId; 
         private java.util.List < Tag> tag; 
         private String vSwitchId; 
         private Boolean visible; 
@@ -364,6 +364,7 @@ public class CreateNetworkInterfaceRequest extends Request {
 
         private Builder(CreateNetworkInterfaceRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.businessType = request.businessType;
             this.clientToken = request.clientToken;
             this.description = request.description;
@@ -385,11 +386,19 @@ public class CreateNetworkInterfaceRequest extends Request {
             this.secondaryPrivateIpAddressCount = request.secondaryPrivateIpAddressCount;
             this.securityGroupId = request.securityGroupId;
             this.securityGroupIds = request.securityGroupIds;
-            this.sourceRegionId = request.sourceRegionId;
             this.tag = request.tag;
             this.vSwitchId = request.vSwitchId;
             this.visible = request.visible;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * BusinessType.
@@ -577,15 +586,6 @@ public class CreateNetworkInterfaceRequest extends Request {
         public Builder securityGroupIds(java.util.List < String > securityGroupIds) {
             this.putQueryParameter("SecurityGroupIds", securityGroupIds);
             this.securityGroupIds = securityGroupIds;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

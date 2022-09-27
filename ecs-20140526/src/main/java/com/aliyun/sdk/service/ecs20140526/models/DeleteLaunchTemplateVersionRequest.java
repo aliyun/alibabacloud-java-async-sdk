@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteLaunchTemplateVersionRequest</p>
  */
 public class DeleteLaunchTemplateVersionRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("DeleteVersion")
     @Validation(required = true)
@@ -46,12 +50,9 @@ public class DeleteLaunchTemplateVersionRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     private DeleteLaunchTemplateVersionRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.deleteVersion = builder.deleteVersion;
         this.launchTemplateId = builder.launchTemplateId;
         this.launchTemplateName = builder.launchTemplateName;
@@ -60,7 +61,6 @@ public class DeleteLaunchTemplateVersionRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -74,6 +74,13 @@ public class DeleteLaunchTemplateVersionRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -132,14 +139,8 @@ public class DeleteLaunchTemplateVersionRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
     public static final class Builder extends Request.Builder<DeleteLaunchTemplateVersionRequest, Builder> {
+        private String sourceRegionId; 
         private java.util.List < Long > deleteVersion; 
         private String launchTemplateId; 
         private String launchTemplateName; 
@@ -148,7 +149,6 @@ public class DeleteLaunchTemplateVersionRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -156,6 +156,7 @@ public class DeleteLaunchTemplateVersionRequest extends Request {
 
         private Builder(DeleteLaunchTemplateVersionRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.deleteVersion = request.deleteVersion;
             this.launchTemplateId = request.launchTemplateId;
             this.launchTemplateName = request.launchTemplateName;
@@ -164,8 +165,16 @@ public class DeleteLaunchTemplateVersionRequest extends Request {
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.sourceRegionId = request.sourceRegionId;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * DeleteVersion.
@@ -236,15 +245,6 @@ public class DeleteLaunchTemplateVersionRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

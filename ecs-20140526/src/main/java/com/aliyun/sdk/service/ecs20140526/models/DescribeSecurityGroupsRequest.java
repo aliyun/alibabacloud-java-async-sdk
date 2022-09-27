@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSecurityGroupsRequest</p>
  */
 public class DescribeSecurityGroupsRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("DryRun")
     private Boolean dryRun;
@@ -87,10 +91,6 @@ public class DescribeSecurityGroupsRequest extends Request {
     @NameInMap("SecurityGroupType")
     private String securityGroupType;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
     @NameInMap("Tag")
     private java.util.List < Tag> tag;
@@ -101,6 +101,7 @@ public class DescribeSecurityGroupsRequest extends Request {
 
     private DescribeSecurityGroupsRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.dryRun = builder.dryRun;
         this.fuzzyQuery = builder.fuzzyQuery;
         this.isQueryEcsCount = builder.isQueryEcsCount;
@@ -119,7 +120,6 @@ public class DescribeSecurityGroupsRequest extends Request {
         this.securityGroupIds = builder.securityGroupIds;
         this.securityGroupName = builder.securityGroupName;
         this.securityGroupType = builder.securityGroupType;
-        this.sourceRegionId = builder.sourceRegionId;
         this.tag = builder.tag;
         this.vpcId = builder.vpcId;
     }
@@ -135,6 +135,13 @@ public class DescribeSecurityGroupsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -264,13 +271,6 @@ public class DescribeSecurityGroupsRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
      * @return tag
      */
     public java.util.List < Tag> getTag() {
@@ -285,6 +285,7 @@ public class DescribeSecurityGroupsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeSecurityGroupsRequest, Builder> {
+        private String sourceRegionId; 
         private Boolean dryRun; 
         private Boolean fuzzyQuery; 
         private Boolean isQueryEcsCount; 
@@ -303,7 +304,6 @@ public class DescribeSecurityGroupsRequest extends Request {
         private String securityGroupIds; 
         private String securityGroupName; 
         private String securityGroupType; 
-        private String sourceRegionId; 
         private java.util.List < Tag> tag; 
         private String vpcId; 
 
@@ -313,6 +313,7 @@ public class DescribeSecurityGroupsRequest extends Request {
 
         private Builder(DescribeSecurityGroupsRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.dryRun = request.dryRun;
             this.fuzzyQuery = request.fuzzyQuery;
             this.isQueryEcsCount = request.isQueryEcsCount;
@@ -331,10 +332,18 @@ public class DescribeSecurityGroupsRequest extends Request {
             this.securityGroupIds = request.securityGroupIds;
             this.securityGroupName = request.securityGroupName;
             this.securityGroupType = request.securityGroupType;
-            this.sourceRegionId = request.sourceRegionId;
             this.tag = request.tag;
             this.vpcId = request.vpcId;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * DryRun.
@@ -495,15 +504,6 @@ public class DescribeSecurityGroupsRequest extends Request {
         public Builder securityGroupType(String securityGroupType) {
             this.putQueryParameter("SecurityGroupType", securityGroupType);
             this.securityGroupType = securityGroupType;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

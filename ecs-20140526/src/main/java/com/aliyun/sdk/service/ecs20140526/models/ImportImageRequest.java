@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ImportImageRequest</p>
  */
 public class ImportImageRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("Architecture")
     private String architecture;
@@ -23,6 +27,10 @@ public class ImportImageRequest extends Request {
     @Query
     @NameInMap("Description")
     private String description;
+
+    @Query
+    @NameInMap("DetectionStrategy")
+    private String detectionStrategy;
 
     @Query
     @NameInMap("DiskDeviceMapping")
@@ -69,19 +77,17 @@ public class ImportImageRequest extends Request {
     @NameInMap("RoleName")
     private String roleName;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
     @NameInMap("Tag")
     private java.util.List < Tag> tag;
 
     private ImportImageRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.architecture = builder.architecture;
         this.bootMode = builder.bootMode;
         this.description = builder.description;
+        this.detectionStrategy = builder.detectionStrategy;
         this.diskDeviceMapping = builder.diskDeviceMapping;
         this.imageName = builder.imageName;
         this.licenseType = builder.licenseType;
@@ -93,7 +99,6 @@ public class ImportImageRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.roleName = builder.roleName;
-        this.sourceRegionId = builder.sourceRegionId;
         this.tag = builder.tag;
     }
 
@@ -108,6 +113,13 @@ public class ImportImageRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -129,6 +141,13 @@ public class ImportImageRequest extends Request {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return detectionStrategy
+     */
+    public String getDetectionStrategy() {
+        return this.detectionStrategy;
     }
 
     /**
@@ -209,13 +228,6 @@ public class ImportImageRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
      * @return tag
      */
     public java.util.List < Tag> getTag() {
@@ -223,9 +235,11 @@ public class ImportImageRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ImportImageRequest, Builder> {
+        private String sourceRegionId; 
         private String architecture; 
         private String bootMode; 
         private String description; 
+        private String detectionStrategy; 
         private java.util.List < DiskDeviceMapping> diskDeviceMapping; 
         private String imageName; 
         private String licenseType; 
@@ -237,7 +251,6 @@ public class ImportImageRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String roleName; 
-        private String sourceRegionId; 
         private java.util.List < Tag> tag; 
 
         private Builder() {
@@ -246,9 +259,11 @@ public class ImportImageRequest extends Request {
 
         private Builder(ImportImageRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.architecture = request.architecture;
             this.bootMode = request.bootMode;
             this.description = request.description;
+            this.detectionStrategy = request.detectionStrategy;
             this.diskDeviceMapping = request.diskDeviceMapping;
             this.imageName = request.imageName;
             this.licenseType = request.licenseType;
@@ -260,9 +275,17 @@ public class ImportImageRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.roleName = request.roleName;
-            this.sourceRegionId = request.sourceRegionId;
             this.tag = request.tag;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * Architecture.
@@ -288,6 +311,15 @@ public class ImportImageRequest extends Request {
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * DetectionStrategy.
+         */
+        public Builder detectionStrategy(String detectionStrategy) {
+            this.putQueryParameter("DetectionStrategy", detectionStrategy);
+            this.detectionStrategy = detectionStrategy;
             return this;
         }
 
@@ -387,15 +419,6 @@ public class ImportImageRequest extends Request {
         public Builder roleName(String roleName) {
             this.putQueryParameter("RoleName", roleName);
             this.roleName = roleName;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

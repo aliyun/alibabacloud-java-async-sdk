@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifySecurityGroupAttributeRequest</p>
  */
 public class ModifySecurityGroupAttributeRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("Description")
     private String description;
@@ -46,12 +50,9 @@ public class ModifySecurityGroupAttributeRequest extends Request {
     @NameInMap("SecurityGroupName")
     private String securityGroupName;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     private ModifySecurityGroupAttributeRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.description = builder.description;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -60,7 +61,6 @@ public class ModifySecurityGroupAttributeRequest extends Request {
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityGroupId = builder.securityGroupId;
         this.securityGroupName = builder.securityGroupName;
-        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -74,6 +74,13 @@ public class ModifySecurityGroupAttributeRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -132,14 +139,8 @@ public class ModifySecurityGroupAttributeRequest extends Request {
         return this.securityGroupName;
     }
 
-    /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
     public static final class Builder extends Request.Builder<ModifySecurityGroupAttributeRequest, Builder> {
+        private String sourceRegionId; 
         private String description; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -148,7 +149,6 @@ public class ModifySecurityGroupAttributeRequest extends Request {
         private Long resourceOwnerId; 
         private String securityGroupId; 
         private String securityGroupName; 
-        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -156,6 +156,7 @@ public class ModifySecurityGroupAttributeRequest extends Request {
 
         private Builder(ModifySecurityGroupAttributeRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.description = request.description;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -164,8 +165,16 @@ public class ModifySecurityGroupAttributeRequest extends Request {
             this.resourceOwnerId = request.resourceOwnerId;
             this.securityGroupId = request.securityGroupId;
             this.securityGroupName = request.securityGroupName;
-            this.sourceRegionId = request.sourceRegionId;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * Description.
@@ -236,15 +245,6 @@ public class ModifySecurityGroupAttributeRequest extends Request {
         public Builder securityGroupName(String securityGroupName) {
             this.putQueryParameter("SecurityGroupName", securityGroupName);
             this.securityGroupName = securityGroupName;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

@@ -24,6 +24,10 @@ public class CreateInstanceRequest extends Request {
     @NameInMap("SystemDisk")
     private SystemDisk systemDisk;
 
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("Affinity")
     private String affinity;
@@ -207,10 +211,6 @@ public class CreateInstanceRequest extends Request {
     @NameInMap("SecurityGroupId")
     private String securityGroupId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
     @NameInMap("SpotDuration")
     @Validation(maximum = 6)
@@ -269,6 +269,7 @@ public class CreateInstanceRequest extends Request {
         this.hibernationOptions = builder.hibernationOptions;
         this.privatePoolOptions = builder.privatePoolOptions;
         this.systemDisk = builder.systemDisk;
+        this.sourceRegionId = builder.sourceRegionId;
         this.affinity = builder.affinity;
         this.arn = builder.arn;
         this.autoRenew = builder.autoRenew;
@@ -314,7 +315,6 @@ public class CreateInstanceRequest extends Request {
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityEnhancementStrategy = builder.securityEnhancementStrategy;
         this.securityGroupId = builder.securityGroupId;
-        this.sourceRegionId = builder.sourceRegionId;
         this.spotDuration = builder.spotDuration;
         this.spotInterruptionBehavior = builder.spotInterruptionBehavior;
         this.spotPriceLimit = builder.spotPriceLimit;
@@ -362,6 +362,13 @@ public class CreateInstanceRequest extends Request {
      */
     public SystemDisk getSystemDisk() {
         return this.systemDisk;
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -680,13 +687,6 @@ public class CreateInstanceRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
      * @return spotDuration
      */
     public Integer getSpotDuration() {
@@ -781,6 +781,7 @@ public class CreateInstanceRequest extends Request {
         private HibernationOptions hibernationOptions; 
         private PrivatePoolOptions privatePoolOptions; 
         private SystemDisk systemDisk; 
+        private String sourceRegionId; 
         private String affinity; 
         private java.util.List < Arn> arn; 
         private Boolean autoRenew; 
@@ -826,7 +827,6 @@ public class CreateInstanceRequest extends Request {
         private Long resourceOwnerId; 
         private String securityEnhancementStrategy; 
         private String securityGroupId; 
-        private String sourceRegionId; 
         private Integer spotDuration; 
         private String spotInterruptionBehavior; 
         private Float spotPriceLimit; 
@@ -850,6 +850,7 @@ public class CreateInstanceRequest extends Request {
             this.hibernationOptions = request.hibernationOptions;
             this.privatePoolOptions = request.privatePoolOptions;
             this.systemDisk = request.systemDisk;
+            this.sourceRegionId = request.sourceRegionId;
             this.affinity = request.affinity;
             this.arn = request.arn;
             this.autoRenew = request.autoRenew;
@@ -895,7 +896,6 @@ public class CreateInstanceRequest extends Request {
             this.resourceOwnerId = request.resourceOwnerId;
             this.securityEnhancementStrategy = request.securityEnhancementStrategy;
             this.securityGroupId = request.securityGroupId;
-            this.sourceRegionId = request.sourceRegionId;
             this.spotDuration = request.spotDuration;
             this.spotInterruptionBehavior = request.spotInterruptionBehavior;
             this.spotPriceLimit = request.spotPriceLimit;
@@ -935,6 +935,15 @@ public class CreateInstanceRequest extends Request {
         public Builder systemDisk(SystemDisk systemDisk) {
             this.putQueryParameter("SystemDisk", systemDisk);
             this.systemDisk = systemDisk;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 
@@ -1340,15 +1349,6 @@ public class CreateInstanceRequest extends Request {
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
             this.securityGroupId = securityGroupId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

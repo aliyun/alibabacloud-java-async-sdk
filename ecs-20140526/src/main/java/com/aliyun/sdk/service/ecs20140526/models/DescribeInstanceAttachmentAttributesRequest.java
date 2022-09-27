@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceAttachmentAttributesRequest</p>
  */
 public class DescribeInstanceAttachmentAttributesRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("InstanceIds")
     @Validation(required = true)
@@ -47,12 +51,9 @@ public class DescribeInstanceAttachmentAttributesRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     private DescribeInstanceAttachmentAttributesRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.instanceIds = builder.instanceIds;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -61,7 +62,6 @@ public class DescribeInstanceAttachmentAttributesRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -75,6 +75,13 @@ public class DescribeInstanceAttachmentAttributesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -133,14 +140,8 @@ public class DescribeInstanceAttachmentAttributesRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
     public static final class Builder extends Request.Builder<DescribeInstanceAttachmentAttributesRequest, Builder> {
+        private String sourceRegionId; 
         private String instanceIds; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -149,7 +150,6 @@ public class DescribeInstanceAttachmentAttributesRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -157,6 +157,7 @@ public class DescribeInstanceAttachmentAttributesRequest extends Request {
 
         private Builder(DescribeInstanceAttachmentAttributesRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.instanceIds = request.instanceIds;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -165,8 +166,16 @@ public class DescribeInstanceAttachmentAttributesRequest extends Request {
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.sourceRegionId = request.sourceRegionId;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * InstanceIds.
@@ -237,15 +246,6 @@ public class DescribeInstanceAttachmentAttributesRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceStatusRequest</p>
  */
 public class DescribeInstanceStatusRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("ClusterId")
     private String clusterId;
@@ -50,16 +54,13 @@ public class DescribeInstanceStatusRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
     @NameInMap("ZoneId")
     private String zoneId;
 
     private DescribeInstanceStatusRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.clusterId = builder.clusterId;
         this.instanceId = builder.instanceId;
         this.ownerAccount = builder.ownerAccount;
@@ -69,7 +70,6 @@ public class DescribeInstanceStatusRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
         this.zoneId = builder.zoneId;
     }
 
@@ -84,6 +84,13 @@ public class DescribeInstanceStatusRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -150,13 +157,6 @@ public class DescribeInstanceStatusRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
      * @return zoneId
      */
     public String getZoneId() {
@@ -164,6 +164,7 @@ public class DescribeInstanceStatusRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeInstanceStatusRequest, Builder> {
+        private String sourceRegionId; 
         private String clusterId; 
         private java.util.List < String > instanceId; 
         private String ownerAccount; 
@@ -173,7 +174,6 @@ public class DescribeInstanceStatusRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
         private String zoneId; 
 
         private Builder() {
@@ -182,6 +182,7 @@ public class DescribeInstanceStatusRequest extends Request {
 
         private Builder(DescribeInstanceStatusRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.clusterId = request.clusterId;
             this.instanceId = request.instanceId;
             this.ownerAccount = request.ownerAccount;
@@ -191,9 +192,17 @@ public class DescribeInstanceStatusRequest extends Request {
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.sourceRegionId = request.sourceRegionId;
             this.zoneId = request.zoneId;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * ClusterId.
@@ -273,15 +282,6 @@ public class DescribeInstanceStatusRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

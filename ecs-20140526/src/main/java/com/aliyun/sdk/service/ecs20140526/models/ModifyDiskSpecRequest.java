@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyDiskSpecRequest</p>
  */
 public class ModifyDiskSpecRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("DiskCategory")
     private String diskCategory;
@@ -49,12 +53,9 @@ public class ModifyDiskSpecRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     private ModifyDiskSpecRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.diskCategory = builder.diskCategory;
         this.diskId = builder.diskId;
         this.dryRun = builder.dryRun;
@@ -64,7 +65,6 @@ public class ModifyDiskSpecRequest extends Request {
         this.provisionedIops = builder.provisionedIops;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -78,6 +78,13 @@ public class ModifyDiskSpecRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -143,14 +150,8 @@ public class ModifyDiskSpecRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
     public static final class Builder extends Request.Builder<ModifyDiskSpecRequest, Builder> {
+        private String sourceRegionId; 
         private String diskCategory; 
         private String diskId; 
         private Boolean dryRun; 
@@ -160,7 +161,6 @@ public class ModifyDiskSpecRequest extends Request {
         private Long provisionedIops; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -168,6 +168,7 @@ public class ModifyDiskSpecRequest extends Request {
 
         private Builder(ModifyDiskSpecRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.diskCategory = request.diskCategory;
             this.diskId = request.diskId;
             this.dryRun = request.dryRun;
@@ -177,8 +178,16 @@ public class ModifyDiskSpecRequest extends Request {
             this.provisionedIops = request.provisionedIops;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.sourceRegionId = request.sourceRegionId;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * DiskCategory.
@@ -258,15 +267,6 @@ public class ModifyDiskSpecRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

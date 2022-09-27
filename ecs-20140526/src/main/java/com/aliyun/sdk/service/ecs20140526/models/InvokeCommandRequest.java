@@ -12,10 +12,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>InvokeCommandRequest</p>
  */
 public class InvokeCommandRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("CommandId")
     @Validation(required = true)
     private String commandId;
+
+    @Query
+    @NameInMap("ContainerId")
+    private String containerId;
+
+    @Query
+    @NameInMap("ContainerName")
+    private String containerName;
 
     @Query
     @NameInMap("Frequency")
@@ -55,10 +67,6 @@ public class InvokeCommandRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
     @NameInMap("Timed")
     private Boolean timed;
@@ -73,7 +81,10 @@ public class InvokeCommandRequest extends Request {
 
     private InvokeCommandRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.commandId = builder.commandId;
+        this.containerId = builder.containerId;
+        this.containerName = builder.containerName;
         this.frequency = builder.frequency;
         this.instanceId = builder.instanceId;
         this.ownerAccount = builder.ownerAccount;
@@ -83,7 +94,6 @@ public class InvokeCommandRequest extends Request {
         this.repeatMode = builder.repeatMode;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
         this.timed = builder.timed;
         this.username = builder.username;
         this.windowsPasswordName = builder.windowsPasswordName;
@@ -103,10 +113,31 @@ public class InvokeCommandRequest extends Request {
     }
 
     /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
+    }
+
+    /**
      * @return commandId
      */
     public String getCommandId() {
         return this.commandId;
+    }
+
+    /**
+     * @return containerId
+     */
+    public String getContainerId() {
+        return this.containerId;
+    }
+
+    /**
+     * @return containerName
+     */
+    public String getContainerName() {
+        return this.containerName;
     }
 
     /**
@@ -173,13 +204,6 @@ public class InvokeCommandRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
      * @return timed
      */
     public Boolean getTimed() {
@@ -201,7 +225,10 @@ public class InvokeCommandRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<InvokeCommandRequest, Builder> {
+        private String sourceRegionId; 
         private String commandId; 
+        private String containerId; 
+        private String containerName; 
         private String frequency; 
         private java.util.List < String > instanceId; 
         private String ownerAccount; 
@@ -211,7 +238,6 @@ public class InvokeCommandRequest extends Request {
         private String repeatMode; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
         private Boolean timed; 
         private String username; 
         private String windowsPasswordName; 
@@ -222,7 +248,10 @@ public class InvokeCommandRequest extends Request {
 
         private Builder(InvokeCommandRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.commandId = request.commandId;
+            this.containerId = request.containerId;
+            this.containerName = request.containerName;
             this.frequency = request.frequency;
             this.instanceId = request.instanceId;
             this.ownerAccount = request.ownerAccount;
@@ -232,11 +261,19 @@ public class InvokeCommandRequest extends Request {
             this.repeatMode = request.repeatMode;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.sourceRegionId = request.sourceRegionId;
             this.timed = request.timed;
             this.username = request.username;
             this.windowsPasswordName = request.windowsPasswordName;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * CommandId.
@@ -244,6 +281,24 @@ public class InvokeCommandRequest extends Request {
         public Builder commandId(String commandId) {
             this.putQueryParameter("CommandId", commandId);
             this.commandId = commandId;
+            return this;
+        }
+
+        /**
+         * ContainerId.
+         */
+        public Builder containerId(String containerId) {
+            this.putQueryParameter("ContainerId", containerId);
+            this.containerId = containerId;
+            return this;
+        }
+
+        /**
+         * ContainerName.
+         */
+        public Builder containerName(String containerName) {
+            this.putQueryParameter("ContainerName", containerName);
+            this.containerName = containerName;
             return this;
         }
 
@@ -326,15 +381,6 @@ public class InvokeCommandRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

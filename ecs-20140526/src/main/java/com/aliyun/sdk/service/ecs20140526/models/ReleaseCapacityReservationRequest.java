@@ -16,6 +16,10 @@ public class ReleaseCapacityReservationRequest extends Request {
     @NameInMap("PrivatePoolOptions")
     private PrivatePoolOptions privatePoolOptions;
 
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("DryRun")
     private Boolean dryRun;
@@ -41,20 +45,16 @@ public class ReleaseCapacityReservationRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     private ReleaseCapacityReservationRequest(Builder builder) {
         super(builder);
         this.privatePoolOptions = builder.privatePoolOptions;
+        this.sourceRegionId = builder.sourceRegionId;
         this.dryRun = builder.dryRun;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -75,6 +75,13 @@ public class ReleaseCapacityReservationRequest extends Request {
      */
     public PrivatePoolOptions getPrivatePoolOptions() {
         return this.privatePoolOptions;
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -119,22 +126,15 @@ public class ReleaseCapacityReservationRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
     public static final class Builder extends Request.Builder<ReleaseCapacityReservationRequest, Builder> {
         private PrivatePoolOptions privatePoolOptions; 
+        private String sourceRegionId; 
         private Boolean dryRun; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -143,13 +143,13 @@ public class ReleaseCapacityReservationRequest extends Request {
         private Builder(ReleaseCapacityReservationRequest request) {
             super(request);
             this.privatePoolOptions = request.privatePoolOptions;
+            this.sourceRegionId = request.sourceRegionId;
             this.dryRun = request.dryRun;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.sourceRegionId = request.sourceRegionId;
         } 
 
         /**
@@ -158,6 +158,15 @@ public class ReleaseCapacityReservationRequest extends Request {
         public Builder privatePoolOptions(PrivatePoolOptions privatePoolOptions) {
             this.putQueryParameter("PrivatePoolOptions", privatePoolOptions);
             this.privatePoolOptions = privatePoolOptions;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 
@@ -212,15 +221,6 @@ public class ReleaseCapacityReservationRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

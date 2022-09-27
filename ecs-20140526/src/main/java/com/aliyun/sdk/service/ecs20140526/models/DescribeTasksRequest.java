@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeTasksRequest</p>
  */
 public class DescribeTasksRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("EndTime")
     private String endTime;
@@ -46,10 +50,6 @@ public class DescribeTasksRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
     @NameInMap("StartTime")
     private String startTime;
@@ -68,6 +68,7 @@ public class DescribeTasksRequest extends Request {
 
     private DescribeTasksRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.endTime = builder.endTime;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -76,7 +77,6 @@ public class DescribeTasksRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
         this.startTime = builder.startTime;
         this.taskAction = builder.taskAction;
         this.taskIds = builder.taskIds;
@@ -94,6 +94,13 @@ public class DescribeTasksRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -153,13 +160,6 @@ public class DescribeTasksRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -188,6 +188,7 @@ public class DescribeTasksRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeTasksRequest, Builder> {
+        private String sourceRegionId; 
         private String endTime; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -196,7 +197,6 @@ public class DescribeTasksRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
         private String startTime; 
         private String taskAction; 
         private String taskIds; 
@@ -208,6 +208,7 @@ public class DescribeTasksRequest extends Request {
 
         private Builder(DescribeTasksRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.endTime = request.endTime;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -216,12 +217,20 @@ public class DescribeTasksRequest extends Request {
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.sourceRegionId = request.sourceRegionId;
             this.startTime = request.startTime;
             this.taskAction = request.taskAction;
             this.taskIds = request.taskIds;
             this.taskStatus = request.taskStatus;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * EndTime.
@@ -292,15 +301,6 @@ public class DescribeTasksRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

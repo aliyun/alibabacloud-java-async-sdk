@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ReportInstancesStatusRequest</p>
  */
 public class ReportInstancesStatusRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("Description")
     @Validation(required = true)
@@ -63,16 +67,13 @@ public class ReportInstancesStatusRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
     @NameInMap("StartTime")
     private String startTime;
 
     private ReportInstancesStatusRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.description = builder.description;
         this.device = builder.device;
         this.diskId = builder.diskId;
@@ -85,7 +86,6 @@ public class ReportInstancesStatusRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
         this.startTime = builder.startTime;
     }
 
@@ -100,6 +100,13 @@ public class ReportInstancesStatusRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -187,13 +194,6 @@ public class ReportInstancesStatusRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -201,6 +201,7 @@ public class ReportInstancesStatusRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ReportInstancesStatusRequest, Builder> {
+        private String sourceRegionId; 
         private String description; 
         private java.util.List < String > device; 
         private java.util.List < String > diskId; 
@@ -213,7 +214,6 @@ public class ReportInstancesStatusRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
         private String startTime; 
 
         private Builder() {
@@ -222,6 +222,7 @@ public class ReportInstancesStatusRequest extends Request {
 
         private Builder(ReportInstancesStatusRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.description = request.description;
             this.device = request.device;
             this.diskId = request.diskId;
@@ -234,9 +235,17 @@ public class ReportInstancesStatusRequest extends Request {
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.sourceRegionId = request.sourceRegionId;
             this.startTime = request.startTime;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * Description.
@@ -343,15 +352,6 @@ public class ReportInstancesStatusRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

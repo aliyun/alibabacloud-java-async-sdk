@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ImportKeyPairRequest</p>
  */
 public class ImportKeyPairRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("KeyPairName")
     @Validation(required = true)
@@ -43,16 +47,13 @@ public class ImportKeyPairRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
     @NameInMap("Tag")
     private java.util.List < Tag> tag;
 
     private ImportKeyPairRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.keyPairName = builder.keyPairName;
         this.ownerId = builder.ownerId;
         this.publicKeyBody = builder.publicKeyBody;
@@ -60,7 +61,6 @@ public class ImportKeyPairRequest extends Request {
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
         this.tag = builder.tag;
     }
 
@@ -75,6 +75,13 @@ public class ImportKeyPairRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -127,13 +134,6 @@ public class ImportKeyPairRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
      * @return tag
      */
     public java.util.List < Tag> getTag() {
@@ -141,6 +141,7 @@ public class ImportKeyPairRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ImportKeyPairRequest, Builder> {
+        private String sourceRegionId; 
         private String keyPairName; 
         private Long ownerId; 
         private String publicKeyBody; 
@@ -148,7 +149,6 @@ public class ImportKeyPairRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
         private java.util.List < Tag> tag; 
 
         private Builder() {
@@ -157,6 +157,7 @@ public class ImportKeyPairRequest extends Request {
 
         private Builder(ImportKeyPairRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.keyPairName = request.keyPairName;
             this.ownerId = request.ownerId;
             this.publicKeyBody = request.publicKeyBody;
@@ -164,9 +165,17 @@ public class ImportKeyPairRequest extends Request {
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.sourceRegionId = request.sourceRegionId;
             this.tag = request.tag;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * KeyPairName.
@@ -228,15 +237,6 @@ public class ImportKeyPairRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

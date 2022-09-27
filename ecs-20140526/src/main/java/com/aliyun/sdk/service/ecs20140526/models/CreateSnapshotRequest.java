@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateSnapshotRequest</p>
  */
 public class CreateSnapshotRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("Category")
     private String category;
@@ -65,16 +69,13 @@ public class CreateSnapshotRequest extends Request {
     @NameInMap("SnapshotName")
     private String snapshotName;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
     @NameInMap("Tag")
     private java.util.List < Tag> tag;
 
     private CreateSnapshotRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.category = builder.category;
         this.clientToken = builder.clientToken;
         this.description = builder.description;
@@ -88,7 +89,6 @@ public class CreateSnapshotRequest extends Request {
         this.resourceOwnerId = builder.resourceOwnerId;
         this.retentionDays = builder.retentionDays;
         this.snapshotName = builder.snapshotName;
-        this.sourceRegionId = builder.sourceRegionId;
         this.tag = builder.tag;
     }
 
@@ -103,6 +103,13 @@ public class CreateSnapshotRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -197,13 +204,6 @@ public class CreateSnapshotRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
      * @return tag
      */
     public java.util.List < Tag> getTag() {
@@ -211,6 +211,7 @@ public class CreateSnapshotRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateSnapshotRequest, Builder> {
+        private String sourceRegionId; 
         private String category; 
         private String clientToken; 
         private String description; 
@@ -224,7 +225,6 @@ public class CreateSnapshotRequest extends Request {
         private Long resourceOwnerId; 
         private Integer retentionDays; 
         private String snapshotName; 
-        private String sourceRegionId; 
         private java.util.List < Tag> tag; 
 
         private Builder() {
@@ -233,6 +233,7 @@ public class CreateSnapshotRequest extends Request {
 
         private Builder(CreateSnapshotRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.category = request.category;
             this.clientToken = request.clientToken;
             this.description = request.description;
@@ -246,9 +247,17 @@ public class CreateSnapshotRequest extends Request {
             this.resourceOwnerId = request.resourceOwnerId;
             this.retentionDays = request.retentionDays;
             this.snapshotName = request.snapshotName;
-            this.sourceRegionId = request.sourceRegionId;
             this.tag = request.tag;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * Category.
@@ -364,15 +373,6 @@ public class CreateSnapshotRequest extends Request {
         public Builder snapshotName(String snapshotName) {
             this.putQueryParameter("SnapshotName", snapshotName);
             this.snapshotName = snapshotName;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

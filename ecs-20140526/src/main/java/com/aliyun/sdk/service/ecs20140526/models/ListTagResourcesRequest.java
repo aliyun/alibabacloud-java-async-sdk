@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListTagResourcesRequest</p>
  */
 public class ListTagResourcesRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("NextToken")
     private String nextToken;
@@ -46,10 +50,6 @@ public class ListTagResourcesRequest extends Request {
     @Validation(required = true)
     private String resourceType;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
     @NameInMap("Tag")
     private java.util.List < Tag> tag;
@@ -60,6 +60,7 @@ public class ListTagResourcesRequest extends Request {
 
     private ListTagResourcesRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.nextToken = builder.nextToken;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -68,7 +69,6 @@ public class ListTagResourcesRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.resourceType = builder.resourceType;
-        this.sourceRegionId = builder.sourceRegionId;
         this.tag = builder.tag;
         this.tagFilter = builder.tagFilter;
     }
@@ -84,6 +84,13 @@ public class ListTagResourcesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -143,13 +150,6 @@ public class ListTagResourcesRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
      * @return tag
      */
     public java.util.List < Tag> getTag() {
@@ -164,6 +164,7 @@ public class ListTagResourcesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListTagResourcesRequest, Builder> {
+        private String sourceRegionId; 
         private String nextToken; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -172,7 +173,6 @@ public class ListTagResourcesRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String resourceType; 
-        private String sourceRegionId; 
         private java.util.List < Tag> tag; 
         private java.util.List < TagFilter> tagFilter; 
 
@@ -182,6 +182,7 @@ public class ListTagResourcesRequest extends Request {
 
         private Builder(ListTagResourcesRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.nextToken = request.nextToken;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -190,10 +191,18 @@ public class ListTagResourcesRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.resourceType = request.resourceType;
-            this.sourceRegionId = request.sourceRegionId;
             this.tag = request.tag;
             this.tagFilter = request.tagFilter;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * NextToken.
@@ -264,15 +273,6 @@ public class ListTagResourcesRequest extends Request {
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
             this.resourceType = resourceType;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

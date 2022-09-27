@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateSimulatedSystemEventsRequest</p>
  */
 public class CreateSimulatedSystemEventsRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("EventType")
     @Validation(required = true)
@@ -48,12 +52,9 @@ public class CreateSimulatedSystemEventsRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     private CreateSimulatedSystemEventsRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.eventType = builder.eventType;
         this.instanceId = builder.instanceId;
         this.notBefore = builder.notBefore;
@@ -62,7 +63,6 @@ public class CreateSimulatedSystemEventsRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -76,6 +76,13 @@ public class CreateSimulatedSystemEventsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -134,14 +141,8 @@ public class CreateSimulatedSystemEventsRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
     public static final class Builder extends Request.Builder<CreateSimulatedSystemEventsRequest, Builder> {
+        private String sourceRegionId; 
         private String eventType; 
         private java.util.List < String > instanceId; 
         private String notBefore; 
@@ -150,7 +151,6 @@ public class CreateSimulatedSystemEventsRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -158,6 +158,7 @@ public class CreateSimulatedSystemEventsRequest extends Request {
 
         private Builder(CreateSimulatedSystemEventsRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.eventType = request.eventType;
             this.instanceId = request.instanceId;
             this.notBefore = request.notBefore;
@@ -166,8 +167,16 @@ public class CreateSimulatedSystemEventsRequest extends Request {
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.sourceRegionId = request.sourceRegionId;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * EventType.
@@ -238,15 +247,6 @@ public class CreateSimulatedSystemEventsRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

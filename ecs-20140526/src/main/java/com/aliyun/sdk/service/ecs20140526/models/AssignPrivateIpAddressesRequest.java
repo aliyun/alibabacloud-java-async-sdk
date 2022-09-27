@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AssignPrivateIpAddressesRequest</p>
  */
 public class AssignPrivateIpAddressesRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("ClientToken")
     private String clientToken;
@@ -50,12 +54,9 @@ public class AssignPrivateIpAddressesRequest extends Request {
     @NameInMap("SecondaryPrivateIpAddressCount")
     private Integer secondaryPrivateIpAddressCount;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     private AssignPrivateIpAddressesRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.clientToken = builder.clientToken;
         this.networkInterfaceId = builder.networkInterfaceId;
         this.ownerAccount = builder.ownerAccount;
@@ -65,7 +66,6 @@ public class AssignPrivateIpAddressesRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.secondaryPrivateIpAddressCount = builder.secondaryPrivateIpAddressCount;
-        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -79,6 +79,13 @@ public class AssignPrivateIpAddressesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -144,14 +151,8 @@ public class AssignPrivateIpAddressesRequest extends Request {
         return this.secondaryPrivateIpAddressCount;
     }
 
-    /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
     public static final class Builder extends Request.Builder<AssignPrivateIpAddressesRequest, Builder> {
+        private String sourceRegionId; 
         private String clientToken; 
         private String networkInterfaceId; 
         private String ownerAccount; 
@@ -161,7 +162,6 @@ public class AssignPrivateIpAddressesRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private Integer secondaryPrivateIpAddressCount; 
-        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -169,6 +169,7 @@ public class AssignPrivateIpAddressesRequest extends Request {
 
         private Builder(AssignPrivateIpAddressesRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.clientToken = request.clientToken;
             this.networkInterfaceId = request.networkInterfaceId;
             this.ownerAccount = request.ownerAccount;
@@ -178,8 +179,16 @@ public class AssignPrivateIpAddressesRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.secondaryPrivateIpAddressCount = request.secondaryPrivateIpAddressCount;
-            this.sourceRegionId = request.sourceRegionId;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * ClientToken.
@@ -259,15 +268,6 @@ public class AssignPrivateIpAddressesRequest extends Request {
         public Builder secondaryPrivateIpAddressCount(Integer secondaryPrivateIpAddressCount) {
             this.putQueryParameter("SecondaryPrivateIpAddressCount", secondaryPrivateIpAddressCount);
             this.secondaryPrivateIpAddressCount = secondaryPrivateIpAddressCount;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

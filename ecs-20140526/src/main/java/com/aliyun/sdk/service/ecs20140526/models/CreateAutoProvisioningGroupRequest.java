@@ -45,6 +45,10 @@ public class CreateAutoProvisioningGroupRequest extends Request {
     private String excessCapacityTerminationPolicy;
 
     @Query
+    @NameInMap("HibernationOptionsConfigured")
+    private Boolean hibernationOptionsConfigured;
+
+    @Query
     @NameInMap("LaunchTemplateConfig")
     private java.util.List < LaunchTemplateConfig> launchTemplateConfig;
 
@@ -148,6 +152,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         this.defaultTargetCapacityType = builder.defaultTargetCapacityType;
         this.description = builder.description;
         this.excessCapacityTerminationPolicy = builder.excessCapacityTerminationPolicy;
+        this.hibernationOptionsConfigured = builder.hibernationOptionsConfigured;
         this.launchTemplateConfig = builder.launchTemplateConfig;
         this.launchTemplateId = builder.launchTemplateId;
         this.launchTemplateVersion = builder.launchTemplateVersion;
@@ -240,6 +245,13 @@ public class CreateAutoProvisioningGroupRequest extends Request {
      */
     public String getExcessCapacityTerminationPolicy() {
         return this.excessCapacityTerminationPolicy;
+    }
+
+    /**
+     * @return hibernationOptionsConfigured
+     */
+    public Boolean getHibernationOptionsConfigured() {
+        return this.hibernationOptionsConfigured;
     }
 
     /**
@@ -412,6 +424,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         private String defaultTargetCapacityType; 
         private String description; 
         private String excessCapacityTerminationPolicy; 
+        private Boolean hibernationOptionsConfigured; 
         private java.util.List < LaunchTemplateConfig> launchTemplateConfig; 
         private String launchTemplateId; 
         private String launchTemplateVersion; 
@@ -450,6 +463,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             this.defaultTargetCapacityType = request.defaultTargetCapacityType;
             this.description = request.description;
             this.excessCapacityTerminationPolicy = request.excessCapacityTerminationPolicy;
+            this.hibernationOptionsConfigured = request.hibernationOptionsConfigured;
             this.launchTemplateConfig = request.launchTemplateConfig;
             this.launchTemplateId = request.launchTemplateId;
             this.launchTemplateVersion = request.launchTemplateVersion;
@@ -544,6 +558,15 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         public Builder excessCapacityTerminationPolicy(String excessCapacityTerminationPolicy) {
             this.putQueryParameter("ExcessCapacityTerminationPolicy", excessCapacityTerminationPolicy);
             this.excessCapacityTerminationPolicy = excessCapacityTerminationPolicy;
+            return this;
+        }
+
+        /**
+         * HibernationOptionsConfigured.
+         */
+        public Builder hibernationOptionsConfigured(Boolean hibernationOptionsConfigured) {
+            this.putQueryParameter("HibernationOptionsConfigured", hibernationOptionsConfigured);
+            this.hibernationOptionsConfigured = hibernationOptionsConfigured;
             return this;
         }
 

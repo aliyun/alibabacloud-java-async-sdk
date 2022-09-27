@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSecurityGroupAttributeRequest</p>
  */
 public class DescribeSecurityGroupAttributeRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("Direction")
     private String direction;
@@ -46,12 +50,9 @@ public class DescribeSecurityGroupAttributeRequest extends Request {
     @Validation(required = true)
     private String securityGroupId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     private DescribeSecurityGroupAttributeRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.direction = builder.direction;
         this.nicType = builder.nicType;
         this.ownerAccount = builder.ownerAccount;
@@ -60,7 +61,6 @@ public class DescribeSecurityGroupAttributeRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityGroupId = builder.securityGroupId;
-        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -74,6 +74,13 @@ public class DescribeSecurityGroupAttributeRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -132,14 +139,8 @@ public class DescribeSecurityGroupAttributeRequest extends Request {
         return this.securityGroupId;
     }
 
-    /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
     public static final class Builder extends Request.Builder<DescribeSecurityGroupAttributeRequest, Builder> {
+        private String sourceRegionId; 
         private String direction; 
         private String nicType; 
         private String ownerAccount; 
@@ -148,7 +149,6 @@ public class DescribeSecurityGroupAttributeRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String securityGroupId; 
-        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -156,6 +156,7 @@ public class DescribeSecurityGroupAttributeRequest extends Request {
 
         private Builder(DescribeSecurityGroupAttributeRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.direction = request.direction;
             this.nicType = request.nicType;
             this.ownerAccount = request.ownerAccount;
@@ -164,8 +165,16 @@ public class DescribeSecurityGroupAttributeRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.securityGroupId = request.securityGroupId;
-            this.sourceRegionId = request.sourceRegionId;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * Direction.
@@ -236,15 +245,6 @@ public class DescribeSecurityGroupAttributeRequest extends Request {
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
             this.securityGroupId = securityGroupId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

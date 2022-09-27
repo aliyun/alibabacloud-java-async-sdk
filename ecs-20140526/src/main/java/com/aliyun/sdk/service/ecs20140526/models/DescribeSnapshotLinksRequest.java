@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSnapshotLinksRequest</p>
  */
 public class DescribeSnapshotLinksRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("DiskIds")
     private String diskIds;
@@ -54,12 +58,9 @@ public class DescribeSnapshotLinksRequest extends Request {
     @NameInMap("SnapshotLinkIds")
     private String snapshotLinkIds;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     private DescribeSnapshotLinksRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.diskIds = builder.diskIds;
         this.instanceId = builder.instanceId;
         this.ownerAccount = builder.ownerAccount;
@@ -70,7 +71,6 @@ public class DescribeSnapshotLinksRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.snapshotLinkIds = builder.snapshotLinkIds;
-        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -84,6 +84,13 @@ public class DescribeSnapshotLinksRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -156,14 +163,8 @@ public class DescribeSnapshotLinksRequest extends Request {
         return this.snapshotLinkIds;
     }
 
-    /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
     public static final class Builder extends Request.Builder<DescribeSnapshotLinksRequest, Builder> {
+        private String sourceRegionId; 
         private String diskIds; 
         private String instanceId; 
         private String ownerAccount; 
@@ -174,7 +175,6 @@ public class DescribeSnapshotLinksRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String snapshotLinkIds; 
-        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -182,6 +182,7 @@ public class DescribeSnapshotLinksRequest extends Request {
 
         private Builder(DescribeSnapshotLinksRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.diskIds = request.diskIds;
             this.instanceId = request.instanceId;
             this.ownerAccount = request.ownerAccount;
@@ -192,8 +193,16 @@ public class DescribeSnapshotLinksRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.snapshotLinkIds = request.snapshotLinkIds;
-            this.sourceRegionId = request.sourceRegionId;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * DiskIds.
@@ -282,15 +291,6 @@ public class DescribeSnapshotLinksRequest extends Request {
         public Builder snapshotLinkIds(String snapshotLinkIds) {
             this.putQueryParameter("SnapshotLinkIds", snapshotLinkIds);
             this.snapshotLinkIds = snapshotLinkIds;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

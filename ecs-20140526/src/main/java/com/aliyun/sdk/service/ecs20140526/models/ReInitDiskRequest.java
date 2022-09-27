@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ReInitDiskRequest</p>
  */
 public class ReInitDiskRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("AutoStartInstance")
     private Boolean autoStartInstance;
@@ -49,12 +53,9 @@ public class ReInitDiskRequest extends Request {
     @NameInMap("SecurityEnhancementStrategy")
     private String securityEnhancementStrategy;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     private ReInitDiskRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.autoStartInstance = builder.autoStartInstance;
         this.diskId = builder.diskId;
         this.keyPairName = builder.keyPairName;
@@ -64,7 +65,6 @@ public class ReInitDiskRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityEnhancementStrategy = builder.securityEnhancementStrategy;
-        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -78,6 +78,13 @@ public class ReInitDiskRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -143,14 +150,8 @@ public class ReInitDiskRequest extends Request {
         return this.securityEnhancementStrategy;
     }
 
-    /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
     public static final class Builder extends Request.Builder<ReInitDiskRequest, Builder> {
+        private String sourceRegionId; 
         private Boolean autoStartInstance; 
         private String diskId; 
         private String keyPairName; 
@@ -160,7 +161,6 @@ public class ReInitDiskRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String securityEnhancementStrategy; 
-        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -168,6 +168,7 @@ public class ReInitDiskRequest extends Request {
 
         private Builder(ReInitDiskRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.autoStartInstance = request.autoStartInstance;
             this.diskId = request.diskId;
             this.keyPairName = request.keyPairName;
@@ -177,8 +178,16 @@ public class ReInitDiskRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.securityEnhancementStrategy = request.securityEnhancementStrategy;
-            this.sourceRegionId = request.sourceRegionId;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * AutoStartInstance.
@@ -258,15 +267,6 @@ public class ReInitDiskRequest extends Request {
         public Builder securityEnhancementStrategy(String securityEnhancementStrategy) {
             this.putQueryParameter("SecurityEnhancementStrategy", securityEnhancementStrategy);
             this.securityEnhancementStrategy = securityEnhancementStrategy;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

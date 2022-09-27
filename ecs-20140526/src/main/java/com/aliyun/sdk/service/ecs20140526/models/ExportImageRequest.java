@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ExportImageRequest</p>
  */
 public class ExportImageRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("ImageFormat")
     private String imageFormat;
@@ -51,12 +55,9 @@ public class ExportImageRequest extends Request {
     @NameInMap("RoleName")
     private String roleName;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     private ExportImageRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.imageFormat = builder.imageFormat;
         this.imageId = builder.imageId;
         this.OSSBucket = builder.OSSBucket;
@@ -66,7 +67,6 @@ public class ExportImageRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.roleName = builder.roleName;
-        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -80,6 +80,13 @@ public class ExportImageRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -145,14 +152,8 @@ public class ExportImageRequest extends Request {
         return this.roleName;
     }
 
-    /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
     public static final class Builder extends Request.Builder<ExportImageRequest, Builder> {
+        private String sourceRegionId; 
         private String imageFormat; 
         private String imageId; 
         private String OSSBucket; 
@@ -162,7 +163,6 @@ public class ExportImageRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String roleName; 
-        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -170,6 +170,7 @@ public class ExportImageRequest extends Request {
 
         private Builder(ExportImageRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.imageFormat = request.imageFormat;
             this.imageId = request.imageId;
             this.OSSBucket = request.OSSBucket;
@@ -179,8 +180,16 @@ public class ExportImageRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.roleName = request.roleName;
-            this.sourceRegionId = request.sourceRegionId;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * ImageFormat.
@@ -260,15 +269,6 @@ public class ExportImageRequest extends Request {
         public Builder roleName(String roleName) {
             this.putQueryParameter("RoleName", roleName);
             this.roleName = roleName;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

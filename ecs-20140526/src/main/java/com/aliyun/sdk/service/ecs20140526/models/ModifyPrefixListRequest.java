@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyPrefixListRequest</p>
  */
 public class ModifyPrefixListRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("AddEntry")
     private java.util.List < AddEntry> addEntry;
@@ -54,12 +58,9 @@ public class ModifyPrefixListRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     private ModifyPrefixListRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.addEntry = builder.addEntry;
         this.description = builder.description;
         this.ownerAccount = builder.ownerAccount;
@@ -70,7 +71,6 @@ public class ModifyPrefixListRequest extends Request {
         this.removeEntry = builder.removeEntry;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -84,6 +84,13 @@ public class ModifyPrefixListRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -156,14 +163,8 @@ public class ModifyPrefixListRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
     public static final class Builder extends Request.Builder<ModifyPrefixListRequest, Builder> {
+        private String sourceRegionId; 
         private java.util.List < AddEntry> addEntry; 
         private String description; 
         private String ownerAccount; 
@@ -174,7 +175,6 @@ public class ModifyPrefixListRequest extends Request {
         private java.util.List < RemoveEntry> removeEntry; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -182,6 +182,7 @@ public class ModifyPrefixListRequest extends Request {
 
         private Builder(ModifyPrefixListRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.addEntry = request.addEntry;
             this.description = request.description;
             this.ownerAccount = request.ownerAccount;
@@ -192,8 +193,16 @@ public class ModifyPrefixListRequest extends Request {
             this.removeEntry = request.removeEntry;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.sourceRegionId = request.sourceRegionId;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * AddEntry.
@@ -282,15 +291,6 @@ public class ModifyPrefixListRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

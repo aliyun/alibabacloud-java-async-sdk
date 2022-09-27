@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeLaunchTemplatesRequest</p>
  */
 public class DescribeLaunchTemplatesRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("LaunchTemplateId")
     private java.util.List < String > launchTemplateId;
@@ -49,10 +53,6 @@ public class DescribeLaunchTemplatesRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
     @NameInMap("TemplateResourceGroupId")
     private String templateResourceGroupId;
@@ -63,6 +63,7 @@ public class DescribeLaunchTemplatesRequest extends Request {
 
     private DescribeLaunchTemplatesRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.launchTemplateId = builder.launchTemplateId;
         this.launchTemplateName = builder.launchTemplateName;
         this.ownerAccount = builder.ownerAccount;
@@ -72,7 +73,6 @@ public class DescribeLaunchTemplatesRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
         this.templateResourceGroupId = builder.templateResourceGroupId;
         this.templateTag = builder.templateTag;
     }
@@ -88,6 +88,13 @@ public class DescribeLaunchTemplatesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -154,13 +161,6 @@ public class DescribeLaunchTemplatesRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
      * @return templateResourceGroupId
      */
     public String getTemplateResourceGroupId() {
@@ -175,6 +175,7 @@ public class DescribeLaunchTemplatesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeLaunchTemplatesRequest, Builder> {
+        private String sourceRegionId; 
         private java.util.List < String > launchTemplateId; 
         private java.util.List < String > launchTemplateName; 
         private String ownerAccount; 
@@ -184,7 +185,6 @@ public class DescribeLaunchTemplatesRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
         private String templateResourceGroupId; 
         private java.util.List < TemplateTag> templateTag; 
 
@@ -194,6 +194,7 @@ public class DescribeLaunchTemplatesRequest extends Request {
 
         private Builder(DescribeLaunchTemplatesRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.launchTemplateId = request.launchTemplateId;
             this.launchTemplateName = request.launchTemplateName;
             this.ownerAccount = request.ownerAccount;
@@ -203,10 +204,18 @@ public class DescribeLaunchTemplatesRequest extends Request {
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.sourceRegionId = request.sourceRegionId;
             this.templateResourceGroupId = request.templateResourceGroupId;
             this.templateTag = request.templateTag;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * LaunchTemplateId.
@@ -286,15 +295,6 @@ public class DescribeLaunchTemplatesRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

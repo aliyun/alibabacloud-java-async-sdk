@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAccountAttributesRequest</p>
  */
 public class DescribeAccountAttributesRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("AttributeName")
     private java.util.List < String > attributeName;
@@ -33,22 +37,18 @@ public class DescribeAccountAttributesRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
     @NameInMap("ZoneId")
     private String zoneId;
 
     private DescribeAccountAttributesRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.attributeName = builder.attributeName;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
         this.zoneId = builder.zoneId;
     }
 
@@ -63,6 +63,13 @@ public class DescribeAccountAttributesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -101,13 +108,6 @@ public class DescribeAccountAttributesRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
      * @return zoneId
      */
     public String getZoneId() {
@@ -115,12 +115,12 @@ public class DescribeAccountAttributesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeAccountAttributesRequest, Builder> {
+        private String sourceRegionId; 
         private java.util.List < String > attributeName; 
         private Long ownerId; 
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
         private String zoneId; 
 
         private Builder() {
@@ -129,14 +129,23 @@ public class DescribeAccountAttributesRequest extends Request {
 
         private Builder(DescribeAccountAttributesRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.attributeName = request.attributeName;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.sourceRegionId = request.sourceRegionId;
             this.zoneId = request.zoneId;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * AttributeName.
@@ -180,15 +189,6 @@ public class DescribeAccountAttributesRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

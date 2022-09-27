@@ -151,6 +151,209 @@ public class DescribeImagesResponseBody extends TeaModel {
 
     } 
 
+    public static class Item extends TeaModel {
+        @NameInMap("Name")
+        private String name;
+
+        @NameInMap("RiskCode")
+        private String riskCode;
+
+        @NameInMap("RiskLevel")
+        private String riskLevel;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Item(Builder builder) {
+            this.name = builder.name;
+            this.riskCode = builder.riskCode;
+            this.riskLevel = builder.riskLevel;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Item create() {
+            return builder().build();
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return riskCode
+         */
+        public String getRiskCode() {
+            return this.riskCode;
+        }
+
+        /**
+         * @return riskLevel
+         */
+        public String getRiskLevel() {
+            return this.riskLevel;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String name; 
+            private String riskCode; 
+            private String riskLevel; 
+            private String value; 
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * RiskCode.
+             */
+            public Builder riskCode(String riskCode) {
+                this.riskCode = riskCode;
+                return this;
+            }
+
+            /**
+             * RiskLevel.
+             */
+            public Builder riskLevel(String riskLevel) {
+                this.riskLevel = riskLevel;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Item build() {
+                return new Item(this);
+            } 
+
+        } 
+
+    }
+    public static class Items extends TeaModel {
+        @NameInMap("Item")
+        private java.util.List < Item> item;
+
+        private Items(Builder builder) {
+            this.item = builder.item;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Items create() {
+            return builder().build();
+        }
+
+        /**
+         * @return item
+         */
+        public java.util.List < Item> getItem() {
+            return this.item;
+        }
+
+        public static final class Builder {
+            private java.util.List < Item> item; 
+
+            /**
+             * Item.
+             */
+            public Builder item(java.util.List < Item> item) {
+                this.item = item;
+                return this;
+            }
+
+            public Items build() {
+                return new Items(this);
+            } 
+
+        } 
+
+    }
+    public static class DetectionOptions extends TeaModel {
+        @NameInMap("Items")
+        private Items items;
+
+        @NameInMap("Status")
+        private String status;
+
+        private DetectionOptions(Builder builder) {
+            this.items = builder.items;
+            this.status = builder.status;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DetectionOptions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return items
+         */
+        public Items getItems() {
+            return this.items;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        public static final class Builder {
+            private Items items; 
+            private String status; 
+
+            /**
+             * Items.
+             */
+            public Builder items(Items items) {
+                this.items = items;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            public DetectionOptions build() {
+                return new DetectionOptions(this);
+            } 
+
+        } 
+
+    }
     public static class DiskDeviceMapping extends TeaModel {
         @NameInMap("Device")
         private String device;
@@ -393,6 +596,47 @@ public class DescribeImagesResponseBody extends TeaModel {
         } 
 
     }
+    public static class Features extends TeaModel {
+        @NameInMap("NvmeSupport")
+        private String nvmeSupport;
+
+        private Features(Builder builder) {
+            this.nvmeSupport = builder.nvmeSupport;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Features create() {
+            return builder().build();
+        }
+
+        /**
+         * @return nvmeSupport
+         */
+        public String getNvmeSupport() {
+            return this.nvmeSupport;
+        }
+
+        public static final class Builder {
+            private String nvmeSupport; 
+
+            /**
+             * NvmeSupport.
+             */
+            public Builder nvmeSupport(String nvmeSupport) {
+                this.nvmeSupport = nvmeSupport;
+                return this;
+            }
+
+            public Features build() {
+                return new Features(this);
+            } 
+
+        } 
+
+    }
     public static class Tag extends TeaModel {
         @NameInMap("TagKey")
         private String tagKey;
@@ -499,14 +743,23 @@ public class DescribeImagesResponseBody extends TeaModel {
         @NameInMap("Architecture")
         private String architecture;
 
+        @NameInMap("BootMode")
+        private String bootMode;
+
         @NameInMap("CreationTime")
         private String creationTime;
 
         @NameInMap("Description")
         private String description;
 
+        @NameInMap("DetectionOptions")
+        private DetectionOptions detectionOptions;
+
         @NameInMap("DiskDeviceMappings")
         private DiskDeviceMappings diskDeviceMappings;
+
+        @NameInMap("Features")
+        private Features features;
 
         @NameInMap("ImageFamily")
         private String imageFamily;
@@ -585,9 +838,12 @@ public class DescribeImagesResponseBody extends TeaModel {
 
         private Image(Builder builder) {
             this.architecture = builder.architecture;
+            this.bootMode = builder.bootMode;
             this.creationTime = builder.creationTime;
             this.description = builder.description;
+            this.detectionOptions = builder.detectionOptions;
             this.diskDeviceMappings = builder.diskDeviceMappings;
+            this.features = builder.features;
             this.imageFamily = builder.imageFamily;
             this.imageId = builder.imageId;
             this.imageName = builder.imageName;
@@ -631,6 +887,13 @@ public class DescribeImagesResponseBody extends TeaModel {
         }
 
         /**
+         * @return bootMode
+         */
+        public String getBootMode() {
+            return this.bootMode;
+        }
+
+        /**
          * @return creationTime
          */
         public String getCreationTime() {
@@ -645,10 +908,24 @@ public class DescribeImagesResponseBody extends TeaModel {
         }
 
         /**
+         * @return detectionOptions
+         */
+        public DetectionOptions getDetectionOptions() {
+            return this.detectionOptions;
+        }
+
+        /**
          * @return diskDeviceMappings
          */
         public DiskDeviceMappings getDiskDeviceMappings() {
             return this.diskDeviceMappings;
+        }
+
+        /**
+         * @return features
+         */
+        public Features getFeatures() {
+            return this.features;
         }
 
         /**
@@ -828,9 +1105,12 @@ public class DescribeImagesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String architecture; 
+            private String bootMode; 
             private String creationTime; 
             private String description; 
+            private DetectionOptions detectionOptions; 
             private DiskDeviceMappings diskDeviceMappings; 
+            private Features features; 
             private String imageFamily; 
             private String imageId; 
             private String imageName; 
@@ -866,6 +1146,14 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
+             * BootMode.
+             */
+            public Builder bootMode(String bootMode) {
+                this.bootMode = bootMode;
+                return this;
+            }
+
+            /**
              * CreationTime.
              */
             public Builder creationTime(String creationTime) {
@@ -882,10 +1170,26 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
+             * DetectionOptions.
+             */
+            public Builder detectionOptions(DetectionOptions detectionOptions) {
+                this.detectionOptions = detectionOptions;
+                return this;
+            }
+
+            /**
              * DiskDeviceMappings.
              */
             public Builder diskDeviceMappings(DiskDeviceMappings diskDeviceMappings) {
                 this.diskDeviceMappings = diskDeviceMappings;
+                return this;
+            }
+
+            /**
+             * Features.
+             */
+            public Builder features(Features features) {
+                this.features = features;
                 return this;
             }
 

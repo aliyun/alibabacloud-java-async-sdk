@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCommandsRequest</p>
  */
 public class DescribeCommandsRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("CommandId")
     private String commandId;
@@ -23,6 +27,10 @@ public class DescribeCommandsRequest extends Request {
     @Query
     @NameInMap("Description")
     private String description;
+
+    @Query
+    @NameInMap("Latest")
+    private Boolean latest;
 
     @Query
     @NameInMap("Name")
@@ -61,9 +69,9 @@ public class DescribeCommandsRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
 
     @Query
     @NameInMap("Type")
@@ -71,9 +79,11 @@ public class DescribeCommandsRequest extends Request {
 
     private DescribeCommandsRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.commandId = builder.commandId;
         this.contentEncoding = builder.contentEncoding;
         this.description = builder.description;
+        this.latest = builder.latest;
         this.name = builder.name;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -83,7 +93,7 @@ public class DescribeCommandsRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
+        this.tag = builder.tag;
         this.type = builder.type;
     }
 
@@ -98,6 +108,13 @@ public class DescribeCommandsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -119,6 +136,13 @@ public class DescribeCommandsRequest extends Request {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return latest
+     */
+    public Boolean getLatest() {
+        return this.latest;
     }
 
     /**
@@ -185,10 +209,10 @@ public class DescribeCommandsRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return tag
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public java.util.List < Tag> getTag() {
+        return this.tag;
     }
 
     /**
@@ -199,9 +223,11 @@ public class DescribeCommandsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeCommandsRequest, Builder> {
+        private String sourceRegionId; 
         private String commandId; 
         private String contentEncoding; 
         private String description; 
+        private Boolean latest; 
         private String name; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -211,7 +237,7 @@ public class DescribeCommandsRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
+        private java.util.List < Tag> tag; 
         private String type; 
 
         private Builder() {
@@ -220,9 +246,11 @@ public class DescribeCommandsRequest extends Request {
 
         private Builder(DescribeCommandsRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.commandId = request.commandId;
             this.contentEncoding = request.contentEncoding;
             this.description = request.description;
+            this.latest = request.latest;
             this.name = request.name;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -232,9 +260,18 @@ public class DescribeCommandsRequest extends Request {
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.sourceRegionId = request.sourceRegionId;
+            this.tag = request.tag;
             this.type = request.type;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * CommandId.
@@ -260,6 +297,15 @@ public class DescribeCommandsRequest extends Request {
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * Latest.
+         */
+        public Builder latest(Boolean latest) {
+            this.putQueryParameter("Latest", latest);
+            this.latest = latest;
             return this;
         }
 
@@ -345,11 +391,11 @@ public class DescribeCommandsRequest extends Request {
         }
 
         /**
-         * SourceRegionId.
+         * Tag.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
             return this;
         }
 
@@ -369,4 +415,65 @@ public class DescribeCommandsRequest extends Request {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

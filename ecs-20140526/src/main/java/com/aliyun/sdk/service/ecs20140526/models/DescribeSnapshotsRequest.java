@@ -16,6 +16,10 @@ public class DescribeSnapshotsRequest extends Request {
     @NameInMap("Filter")
     private java.util.List < Filter> filter;
 
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("Category")
     private String category;
@@ -103,10 +107,6 @@ public class DescribeSnapshotsRequest extends Request {
     @NameInMap("SourceDiskType")
     private String sourceDiskType;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
     @NameInMap("Status")
     private String status;
@@ -122,6 +122,7 @@ public class DescribeSnapshotsRequest extends Request {
     private DescribeSnapshotsRequest(Builder builder) {
         super(builder);
         this.filter = builder.filter;
+        this.sourceRegionId = builder.sourceRegionId;
         this.category = builder.category;
         this.diskId = builder.diskId;
         this.dryRun = builder.dryRun;
@@ -143,7 +144,6 @@ public class DescribeSnapshotsRequest extends Request {
         this.snapshotName = builder.snapshotName;
         this.snapshotType = builder.snapshotType;
         this.sourceDiskType = builder.sourceDiskType;
-        this.sourceRegionId = builder.sourceRegionId;
         this.status = builder.status;
         this.tag = builder.tag;
         this.usage = builder.usage;
@@ -167,6 +167,13 @@ public class DescribeSnapshotsRequest extends Request {
      */
     public java.util.List < Filter> getFilter() {
         return this.filter;
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -317,13 +324,6 @@ public class DescribeSnapshotsRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
      * @return status
      */
     public String getStatus() {
@@ -346,6 +346,7 @@ public class DescribeSnapshotsRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeSnapshotsRequest, Builder> {
         private java.util.List < Filter> filter; 
+        private String sourceRegionId; 
         private String category; 
         private String diskId; 
         private Boolean dryRun; 
@@ -367,7 +368,6 @@ public class DescribeSnapshotsRequest extends Request {
         private String snapshotName; 
         private String snapshotType; 
         private String sourceDiskType; 
-        private String sourceRegionId; 
         private String status; 
         private java.util.List < Tag> tag; 
         private String usage; 
@@ -379,6 +379,7 @@ public class DescribeSnapshotsRequest extends Request {
         private Builder(DescribeSnapshotsRequest request) {
             super(request);
             this.filter = request.filter;
+            this.sourceRegionId = request.sourceRegionId;
             this.category = request.category;
             this.diskId = request.diskId;
             this.dryRun = request.dryRun;
@@ -400,7 +401,6 @@ public class DescribeSnapshotsRequest extends Request {
             this.snapshotName = request.snapshotName;
             this.snapshotType = request.snapshotType;
             this.sourceDiskType = request.sourceDiskType;
-            this.sourceRegionId = request.sourceRegionId;
             this.status = request.status;
             this.tag = request.tag;
             this.usage = request.usage;
@@ -412,6 +412,15 @@ public class DescribeSnapshotsRequest extends Request {
         public Builder filter(java.util.List < Filter> filter) {
             this.putQueryParameter("Filter", filter);
             this.filter = filter;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 
@@ -601,15 +610,6 @@ public class DescribeSnapshotsRequest extends Request {
         public Builder sourceDiskType(String sourceDiskType) {
             this.putQueryParameter("SourceDiskType", sourceDiskType);
             this.sourceDiskType = sourceDiskType;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

@@ -20,6 +20,10 @@ public class ModifyInstanceSpecRequest extends Request {
     @NameInMap("Temporary")
     private Temporary temporary;
 
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("AllowMigrateAcrossZone")
     private Boolean allowMigrateAcrossZone;
@@ -66,14 +70,11 @@ public class ModifyInstanceSpecRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     private ModifyInstanceSpecRequest(Builder builder) {
         super(builder);
         this.systemDisk = builder.systemDisk;
         this.temporary = builder.temporary;
+        this.sourceRegionId = builder.sourceRegionId;
         this.allowMigrateAcrossZone = builder.allowMigrateAcrossZone;
         this.async = builder.async;
         this.clientToken = builder.clientToken;
@@ -85,7 +86,6 @@ public class ModifyInstanceSpecRequest extends Request {
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -113,6 +113,13 @@ public class ModifyInstanceSpecRequest extends Request {
      */
     public Temporary getTemporary() {
         return this.temporary;
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -192,16 +199,10 @@ public class ModifyInstanceSpecRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
     public static final class Builder extends Request.Builder<ModifyInstanceSpecRequest, Builder> {
         private SystemDisk systemDisk; 
         private Temporary temporary; 
+        private String sourceRegionId; 
         private Boolean allowMigrateAcrossZone; 
         private Boolean async; 
         private String clientToken; 
@@ -213,7 +214,6 @@ public class ModifyInstanceSpecRequest extends Request {
         private Long ownerId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -223,6 +223,7 @@ public class ModifyInstanceSpecRequest extends Request {
             super(request);
             this.systemDisk = request.systemDisk;
             this.temporary = request.temporary;
+            this.sourceRegionId = request.sourceRegionId;
             this.allowMigrateAcrossZone = request.allowMigrateAcrossZone;
             this.async = request.async;
             this.clientToken = request.clientToken;
@@ -234,7 +235,6 @@ public class ModifyInstanceSpecRequest extends Request {
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.sourceRegionId = request.sourceRegionId;
         } 
 
         /**
@@ -252,6 +252,15 @@ public class ModifyInstanceSpecRequest extends Request {
         public Builder temporary(Temporary temporary) {
             this.putQueryParameter("Temporary", temporary);
             this.temporary = temporary;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 
@@ -351,15 +360,6 @@ public class ModifyInstanceSpecRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

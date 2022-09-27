@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyNetworkInterfaceAttributeRequest</p>
  */
 public class ModifyNetworkInterfaceAttributeRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("Description")
     private String description;
@@ -54,12 +58,9 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
     @NameInMap("SecurityGroupId")
     private java.util.List < String > securityGroupId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     private ModifyNetworkInterfaceAttributeRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.description = builder.description;
         this.networkInterfaceId = builder.networkInterfaceId;
         this.networkInterfaceName = builder.networkInterfaceName;
@@ -70,7 +71,6 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityGroupId = builder.securityGroupId;
-        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -84,6 +84,13 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -156,14 +163,8 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
         return this.securityGroupId;
     }
 
-    /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
     public static final class Builder extends Request.Builder<ModifyNetworkInterfaceAttributeRequest, Builder> {
+        private String sourceRegionId; 
         private String description; 
         private String networkInterfaceId; 
         private String networkInterfaceName; 
@@ -174,7 +175,6 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private java.util.List < String > securityGroupId; 
-        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -182,6 +182,7 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
 
         private Builder(ModifyNetworkInterfaceAttributeRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.description = request.description;
             this.networkInterfaceId = request.networkInterfaceId;
             this.networkInterfaceName = request.networkInterfaceName;
@@ -192,8 +193,16 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.securityGroupId = request.securityGroupId;
-            this.sourceRegionId = request.sourceRegionId;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * Description.
@@ -282,15 +291,6 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
         public Builder securityGroupId(java.util.List < String > securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
             this.securityGroupId = securityGroupId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

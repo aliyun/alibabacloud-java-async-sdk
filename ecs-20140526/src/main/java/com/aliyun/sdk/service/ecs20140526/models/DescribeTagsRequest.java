@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeTagsRequest</p>
  */
 public class DescribeTagsRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("Category")
     private String category;
@@ -50,16 +54,13 @@ public class DescribeTagsRequest extends Request {
     @NameInMap("ResourceType")
     private String resourceType;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
     @NameInMap("Tag")
     private java.util.List < Tag> tag;
 
     private DescribeTagsRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.category = builder.category;
         this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
@@ -69,7 +70,6 @@ public class DescribeTagsRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.resourceType = builder.resourceType;
-        this.sourceRegionId = builder.sourceRegionId;
         this.tag = builder.tag;
     }
 
@@ -84,6 +84,13 @@ public class DescribeTagsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -150,13 +157,6 @@ public class DescribeTagsRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
      * @return tag
      */
     public java.util.List < Tag> getTag() {
@@ -164,6 +164,7 @@ public class DescribeTagsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeTagsRequest, Builder> {
+        private String sourceRegionId; 
         private String category; 
         private Long ownerId; 
         private Integer pageNumber; 
@@ -173,7 +174,6 @@ public class DescribeTagsRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String resourceType; 
-        private String sourceRegionId; 
         private java.util.List < Tag> tag; 
 
         private Builder() {
@@ -182,6 +182,7 @@ public class DescribeTagsRequest extends Request {
 
         private Builder(DescribeTagsRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.category = request.category;
             this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
@@ -191,9 +192,17 @@ public class DescribeTagsRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.resourceType = request.resourceType;
-            this.sourceRegionId = request.sourceRegionId;
             this.tag = request.tag;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * Category.
@@ -273,15 +282,6 @@ public class DescribeTagsRequest extends Request {
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
             this.resourceType = resourceType;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

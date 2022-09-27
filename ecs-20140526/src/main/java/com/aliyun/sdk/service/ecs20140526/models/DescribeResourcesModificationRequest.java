@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeResourcesModificationRequest</p>
  */
 public class DescribeResourcesModificationRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("Cores")
     private Integer cores;
@@ -63,12 +67,13 @@ public class DescribeResourcesModificationRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @Query
+    @NameInMap("ZoneId")
+    private String zoneId;
 
     private DescribeResourcesModificationRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.cores = builder.cores;
         this.destinationResource = builder.destinationResource;
         this.instanceType = builder.instanceType;
@@ -81,7 +86,7 @@ public class DescribeResourcesModificationRequest extends Request {
         this.resourceId = builder.resourceId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
+        this.zoneId = builder.zoneId;
     }
 
     public static Builder builder() {
@@ -95,6 +100,13 @@ public class DescribeResourcesModificationRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -182,13 +194,14 @@ public class DescribeResourcesModificationRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return zoneId
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public String getZoneId() {
+        return this.zoneId;
     }
 
     public static final class Builder extends Request.Builder<DescribeResourcesModificationRequest, Builder> {
+        private String sourceRegionId; 
         private Integer cores; 
         private String destinationResource; 
         private String instanceType; 
@@ -201,7 +214,7 @@ public class DescribeResourcesModificationRequest extends Request {
         private String resourceId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
+        private String zoneId; 
 
         private Builder() {
             super();
@@ -209,6 +222,7 @@ public class DescribeResourcesModificationRequest extends Request {
 
         private Builder(DescribeResourcesModificationRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.cores = request.cores;
             this.destinationResource = request.destinationResource;
             this.instanceType = request.instanceType;
@@ -221,8 +235,17 @@ public class DescribeResourcesModificationRequest extends Request {
             this.resourceId = request.resourceId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.sourceRegionId = request.sourceRegionId;
+            this.zoneId = request.zoneId;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * Cores.
@@ -333,11 +356,11 @@ public class DescribeResourcesModificationRequest extends Request {
         }
 
         /**
-         * SourceRegionId.
+         * ZoneId.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder zoneId(String zoneId) {
+            this.putQueryParameter("ZoneId", zoneId);
+            this.zoneId = zoneId;
             return this;
         }
 

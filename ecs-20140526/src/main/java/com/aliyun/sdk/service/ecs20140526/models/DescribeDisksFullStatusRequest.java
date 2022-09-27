@@ -16,6 +16,10 @@ public class DescribeDisksFullStatusRequest extends Request {
     @NameInMap("EventTime")
     private EventTime eventTime;
 
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("DiskId")
     private java.util.List < String > diskId;
@@ -65,10 +69,6 @@ public class DescribeDisksFullStatusRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
     @NameInMap("Status")
     private String status;
@@ -80,6 +80,7 @@ public class DescribeDisksFullStatusRequest extends Request {
     private DescribeDisksFullStatusRequest(Builder builder) {
         super(builder);
         this.eventTime = builder.eventTime;
+        this.sourceRegionId = builder.sourceRegionId;
         this.diskId = builder.diskId;
         this.eventId = builder.eventId;
         this.eventType = builder.eventType;
@@ -92,7 +93,6 @@ public class DescribeDisksFullStatusRequest extends Request {
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
         this.status = builder.status;
         this.tag = builder.tag;
     }
@@ -115,6 +115,13 @@ public class DescribeDisksFullStatusRequest extends Request {
      */
     public EventTime getEventTime() {
         return this.eventTime;
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -202,13 +209,6 @@ public class DescribeDisksFullStatusRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
      * @return status
      */
     public String getStatus() {
@@ -224,6 +224,7 @@ public class DescribeDisksFullStatusRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeDisksFullStatusRequest, Builder> {
         private EventTime eventTime; 
+        private String sourceRegionId; 
         private java.util.List < String > diskId; 
         private java.util.List < String > eventId; 
         private String eventType; 
@@ -236,7 +237,6 @@ public class DescribeDisksFullStatusRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
         private String status; 
         private java.util.List < Tag> tag; 
 
@@ -247,6 +247,7 @@ public class DescribeDisksFullStatusRequest extends Request {
         private Builder(DescribeDisksFullStatusRequest request) {
             super(request);
             this.eventTime = request.eventTime;
+            this.sourceRegionId = request.sourceRegionId;
             this.diskId = request.diskId;
             this.eventId = request.eventId;
             this.eventType = request.eventType;
@@ -259,7 +260,6 @@ public class DescribeDisksFullStatusRequest extends Request {
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.sourceRegionId = request.sourceRegionId;
             this.status = request.status;
             this.tag = request.tag;
         } 
@@ -270,6 +270,15 @@ public class DescribeDisksFullStatusRequest extends Request {
         public Builder eventTime(EventTime eventTime) {
             this.putQueryParameter("EventTime", eventTime);
             this.eventTime = eventTime;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 
@@ -378,15 +387,6 @@ public class DescribeDisksFullStatusRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeImagesRequest</p>
  */
 public class DescribeImagesRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("ActionType")
     private String actionType;
@@ -110,10 +114,6 @@ public class DescribeImagesRequest extends Request {
     @NameInMap("SnapshotId")
     private String snapshotId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
     @NameInMap("Status")
     private String status;
@@ -128,6 +128,7 @@ public class DescribeImagesRequest extends Request {
 
     private DescribeImagesRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.actionType = builder.actionType;
         this.architecture = builder.architecture;
         this.dryRun = builder.dryRun;
@@ -152,7 +153,6 @@ public class DescribeImagesRequest extends Request {
         this.resourceOwnerId = builder.resourceOwnerId;
         this.showExpired = builder.showExpired;
         this.snapshotId = builder.snapshotId;
-        this.sourceRegionId = builder.sourceRegionId;
         this.status = builder.status;
         this.tag = builder.tag;
         this.usage = builder.usage;
@@ -169,6 +169,13 @@ public class DescribeImagesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -340,13 +347,6 @@ public class DescribeImagesRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
      * @return status
      */
     public String getStatus() {
@@ -368,6 +368,7 @@ public class DescribeImagesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeImagesRequest, Builder> {
+        private String sourceRegionId; 
         private String actionType; 
         private String architecture; 
         private Boolean dryRun; 
@@ -392,7 +393,6 @@ public class DescribeImagesRequest extends Request {
         private Long resourceOwnerId; 
         private Boolean showExpired; 
         private String snapshotId; 
-        private String sourceRegionId; 
         private String status; 
         private java.util.List < Tag> tag; 
         private String usage; 
@@ -403,6 +403,7 @@ public class DescribeImagesRequest extends Request {
 
         private Builder(DescribeImagesRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.actionType = request.actionType;
             this.architecture = request.architecture;
             this.dryRun = request.dryRun;
@@ -427,11 +428,19 @@ public class DescribeImagesRequest extends Request {
             this.resourceOwnerId = request.resourceOwnerId;
             this.showExpired = request.showExpired;
             this.snapshotId = request.snapshotId;
-            this.sourceRegionId = request.sourceRegionId;
             this.status = request.status;
             this.tag = request.tag;
             this.usage = request.usage;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * ActionType.
@@ -646,15 +655,6 @@ public class DescribeImagesRequest extends Request {
         public Builder snapshotId(String snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);
             this.snapshotId = snapshotId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

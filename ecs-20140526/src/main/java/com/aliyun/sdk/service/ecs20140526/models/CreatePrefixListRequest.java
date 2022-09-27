@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreatePrefixListRequest</p>
  */
 public class CreatePrefixListRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("AddressFamily")
     @Validation(required = true)
@@ -60,12 +64,9 @@ public class CreatePrefixListRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     private CreatePrefixListRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.addressFamily = builder.addressFamily;
         this.clientToken = builder.clientToken;
         this.description = builder.description;
@@ -77,7 +78,6 @@ public class CreatePrefixListRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -91,6 +91,13 @@ public class CreatePrefixListRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -170,14 +177,8 @@ public class CreatePrefixListRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
     public static final class Builder extends Request.Builder<CreatePrefixListRequest, Builder> {
+        private String sourceRegionId; 
         private String addressFamily; 
         private String clientToken; 
         private String description; 
@@ -189,7 +190,6 @@ public class CreatePrefixListRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -197,6 +197,7 @@ public class CreatePrefixListRequest extends Request {
 
         private Builder(CreatePrefixListRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.addressFamily = request.addressFamily;
             this.clientToken = request.clientToken;
             this.description = request.description;
@@ -208,8 +209,16 @@ public class CreatePrefixListRequest extends Request {
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.sourceRegionId = request.sourceRegionId;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * AddressFamily.
@@ -307,15 +316,6 @@ public class CreatePrefixListRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

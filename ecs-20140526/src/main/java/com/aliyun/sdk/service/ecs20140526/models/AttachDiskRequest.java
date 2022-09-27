@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AttachDiskRequest</p>
  */
 public class AttachDiskRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("Bootable")
     private Boolean bootable;
@@ -58,12 +62,9 @@ public class AttachDiskRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     private AttachDiskRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.bootable = builder.bootable;
         this.deleteWithInstance = builder.deleteWithInstance;
         this.device = builder.device;
@@ -75,7 +76,6 @@ public class AttachDiskRequest extends Request {
         this.password = builder.password;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -89,6 +89,13 @@ public class AttachDiskRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -168,14 +175,8 @@ public class AttachDiskRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
     public static final class Builder extends Request.Builder<AttachDiskRequest, Builder> {
+        private String sourceRegionId; 
         private Boolean bootable; 
         private Boolean deleteWithInstance; 
         private String device; 
@@ -187,7 +188,6 @@ public class AttachDiskRequest extends Request {
         private String password; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -195,6 +195,7 @@ public class AttachDiskRequest extends Request {
 
         private Builder(AttachDiskRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.bootable = request.bootable;
             this.deleteWithInstance = request.deleteWithInstance;
             this.device = request.device;
@@ -206,8 +207,16 @@ public class AttachDiskRequest extends Request {
             this.password = request.password;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.sourceRegionId = request.sourceRegionId;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * Bootable.
@@ -305,15 +314,6 @@ public class AttachDiskRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

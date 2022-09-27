@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeNetworkInterfaceAttributeRequest</p>
  */
 public class DescribeNetworkInterfaceAttributeRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("Attribute")
     private String attribute;
@@ -42,16 +46,13 @@ public class DescribeNetworkInterfaceAttributeRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
     @NameInMap("Tag")
     private java.util.List < Tag> tag;
 
     private DescribeNetworkInterfaceAttributeRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.attribute = builder.attribute;
         this.networkInterfaceId = builder.networkInterfaceId;
         this.ownerAccount = builder.ownerAccount;
@@ -59,7 +60,6 @@ public class DescribeNetworkInterfaceAttributeRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
         this.tag = builder.tag;
     }
 
@@ -74,6 +74,13 @@ public class DescribeNetworkInterfaceAttributeRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -126,13 +133,6 @@ public class DescribeNetworkInterfaceAttributeRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
      * @return tag
      */
     public java.util.List < Tag> getTag() {
@@ -140,6 +140,7 @@ public class DescribeNetworkInterfaceAttributeRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeNetworkInterfaceAttributeRequest, Builder> {
+        private String sourceRegionId; 
         private String attribute; 
         private String networkInterfaceId; 
         private String ownerAccount; 
@@ -147,7 +148,6 @@ public class DescribeNetworkInterfaceAttributeRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
         private java.util.List < Tag> tag; 
 
         private Builder() {
@@ -156,6 +156,7 @@ public class DescribeNetworkInterfaceAttributeRequest extends Request {
 
         private Builder(DescribeNetworkInterfaceAttributeRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.attribute = request.attribute;
             this.networkInterfaceId = request.networkInterfaceId;
             this.ownerAccount = request.ownerAccount;
@@ -163,9 +164,17 @@ public class DescribeNetworkInterfaceAttributeRequest extends Request {
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.sourceRegionId = request.sourceRegionId;
             this.tag = request.tag;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * Attribute.
@@ -227,15 +236,6 @@ public class DescribeNetworkInterfaceAttributeRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

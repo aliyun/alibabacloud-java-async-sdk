@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyDiskAttributeRequest</p>
  */
 public class ModifyDiskAttributeRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("BurstingEnabled")
     private Boolean burstingEnabled;
@@ -64,12 +68,9 @@ public class ModifyDiskAttributeRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     private ModifyDiskAttributeRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.burstingEnabled = builder.burstingEnabled;
         this.deleteAutoSnapshot = builder.deleteAutoSnapshot;
         this.deleteWithInstance = builder.deleteWithInstance;
@@ -83,7 +84,6 @@ public class ModifyDiskAttributeRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -97,6 +97,13 @@ public class ModifyDiskAttributeRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -190,14 +197,8 @@ public class ModifyDiskAttributeRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
     public static final class Builder extends Request.Builder<ModifyDiskAttributeRequest, Builder> {
+        private String sourceRegionId; 
         private Boolean burstingEnabled; 
         private Boolean deleteAutoSnapshot; 
         private Boolean deleteWithInstance; 
@@ -211,7 +212,6 @@ public class ModifyDiskAttributeRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -219,6 +219,7 @@ public class ModifyDiskAttributeRequest extends Request {
 
         private Builder(ModifyDiskAttributeRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.burstingEnabled = request.burstingEnabled;
             this.deleteAutoSnapshot = request.deleteAutoSnapshot;
             this.deleteWithInstance = request.deleteWithInstance;
@@ -232,8 +233,16 @@ public class ModifyDiskAttributeRequest extends Request {
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.sourceRegionId = request.sourceRegionId;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * BurstingEnabled.
@@ -349,15 +358,6 @@ public class ModifyDiskAttributeRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

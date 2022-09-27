@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInvocationsRequest</p>
  */
 public class DescribeInvocationsRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("CommandId")
     private String commandId;
@@ -77,9 +81,9 @@ public class DescribeInvocationsRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
 
     @Query
     @NameInMap("Timed")
@@ -87,6 +91,7 @@ public class DescribeInvocationsRequest extends Request {
 
     private DescribeInvocationsRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.commandId = builder.commandId;
         this.commandName = builder.commandName;
         this.commandType = builder.commandType;
@@ -103,7 +108,7 @@ public class DescribeInvocationsRequest extends Request {
         this.repeatMode = builder.repeatMode;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
+        this.tag = builder.tag;
         this.timed = builder.timed;
     }
 
@@ -118,6 +123,13 @@ public class DescribeInvocationsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -233,10 +245,10 @@ public class DescribeInvocationsRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return tag
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public java.util.List < Tag> getTag() {
+        return this.tag;
     }
 
     /**
@@ -247,6 +259,7 @@ public class DescribeInvocationsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeInvocationsRequest, Builder> {
+        private String sourceRegionId; 
         private String commandId; 
         private String commandName; 
         private String commandType; 
@@ -263,7 +276,7 @@ public class DescribeInvocationsRequest extends Request {
         private String repeatMode; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
+        private java.util.List < Tag> tag; 
         private Boolean timed; 
 
         private Builder() {
@@ -272,6 +285,7 @@ public class DescribeInvocationsRequest extends Request {
 
         private Builder(DescribeInvocationsRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.commandId = request.commandId;
             this.commandName = request.commandName;
             this.commandType = request.commandType;
@@ -288,9 +302,18 @@ public class DescribeInvocationsRequest extends Request {
             this.repeatMode = request.repeatMode;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.sourceRegionId = request.sourceRegionId;
+            this.tag = request.tag;
             this.timed = request.timed;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * CommandId.
@@ -437,11 +460,11 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * SourceRegionId.
+         * Tag.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
             return this;
         }
 
@@ -461,4 +484,65 @@ public class DescribeInvocationsRequest extends Request {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

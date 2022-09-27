@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteNetworkInterfacePermissionRequest</p>
  */
 public class DeleteNetworkInterfacePermissionRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("Force")
     private Boolean force;
@@ -42,12 +46,9 @@ public class DeleteNetworkInterfacePermissionRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     private DeleteNetworkInterfacePermissionRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.force = builder.force;
         this.networkInterfacePermissionId = builder.networkInterfacePermissionId;
         this.ownerAccount = builder.ownerAccount;
@@ -55,7 +56,6 @@ public class DeleteNetworkInterfacePermissionRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -69,6 +69,13 @@ public class DeleteNetworkInterfacePermissionRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -120,14 +127,8 @@ public class DeleteNetworkInterfacePermissionRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
     public static final class Builder extends Request.Builder<DeleteNetworkInterfacePermissionRequest, Builder> {
+        private String sourceRegionId; 
         private Boolean force; 
         private String networkInterfacePermissionId; 
         private String ownerAccount; 
@@ -135,7 +136,6 @@ public class DeleteNetworkInterfacePermissionRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -143,6 +143,7 @@ public class DeleteNetworkInterfacePermissionRequest extends Request {
 
         private Builder(DeleteNetworkInterfacePermissionRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.force = request.force;
             this.networkInterfacePermissionId = request.networkInterfacePermissionId;
             this.ownerAccount = request.ownerAccount;
@@ -150,8 +151,16 @@ public class DeleteNetworkInterfacePermissionRequest extends Request {
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.sourceRegionId = request.sourceRegionId;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * Force.
@@ -213,15 +222,6 @@ public class DeleteNetworkInterfacePermissionRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

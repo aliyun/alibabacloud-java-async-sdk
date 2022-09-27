@@ -16,6 +16,10 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
     @NameInMap("SystemDisk")
     private SystemDisk systemDisk;
 
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("AutoPay")
     private Boolean autoPay;
@@ -75,13 +79,10 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     private ModifyPrepayInstanceSpecRequest(Builder builder) {
         super(builder);
         this.systemDisk = builder.systemDisk;
+        this.sourceRegionId = builder.sourceRegionId;
         this.autoPay = builder.autoPay;
         this.clientToken = builder.clientToken;
         this.endTime = builder.endTime;
@@ -96,7 +97,6 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -117,6 +117,13 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
      */
     public SystemDisk getSystemDisk() {
         return this.systemDisk;
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -217,15 +224,9 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
     public static final class Builder extends Request.Builder<ModifyPrepayInstanceSpecRequest, Builder> {
         private SystemDisk systemDisk; 
+        private String sourceRegionId; 
         private Boolean autoPay; 
         private String clientToken; 
         private String endTime; 
@@ -240,7 +241,6 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -249,6 +249,7 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
         private Builder(ModifyPrepayInstanceSpecRequest request) {
             super(request);
             this.systemDisk = request.systemDisk;
+            this.sourceRegionId = request.sourceRegionId;
             this.autoPay = request.autoPay;
             this.clientToken = request.clientToken;
             this.endTime = request.endTime;
@@ -263,7 +264,6 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.sourceRegionId = request.sourceRegionId;
         } 
 
         /**
@@ -272,6 +272,15 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
         public Builder systemDisk(SystemDisk systemDisk) {
             this.putQueryParameter("SystemDisk", systemDisk);
             this.systemDisk = systemDisk;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 
@@ -398,15 +407,6 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

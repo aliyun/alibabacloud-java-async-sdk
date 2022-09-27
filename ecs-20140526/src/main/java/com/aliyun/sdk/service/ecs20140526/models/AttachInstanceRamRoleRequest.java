@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AttachInstanceRamRoleRequest</p>
  */
 public class AttachInstanceRamRoleRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("InstanceIds")
     @Validation(required = true)
@@ -43,12 +47,9 @@ public class AttachInstanceRamRoleRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     private AttachInstanceRamRoleRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.instanceIds = builder.instanceIds;
         this.ownerId = builder.ownerId;
         this.policy = builder.policy;
@@ -56,7 +57,6 @@ public class AttachInstanceRamRoleRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -70,6 +70,13 @@ public class AttachInstanceRamRoleRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -121,14 +128,8 @@ public class AttachInstanceRamRoleRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
     public static final class Builder extends Request.Builder<AttachInstanceRamRoleRequest, Builder> {
+        private String sourceRegionId; 
         private String instanceIds; 
         private Long ownerId; 
         private String policy; 
@@ -136,7 +137,6 @@ public class AttachInstanceRamRoleRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -144,6 +144,7 @@ public class AttachInstanceRamRoleRequest extends Request {
 
         private Builder(AttachInstanceRamRoleRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.instanceIds = request.instanceIds;
             this.ownerId = request.ownerId;
             this.policy = request.policy;
@@ -151,8 +152,16 @@ public class AttachInstanceRamRoleRequest extends Request {
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.sourceRegionId = request.sourceRegionId;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * InstanceIds.
@@ -214,15 +223,6 @@ public class AttachInstanceRamRoleRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

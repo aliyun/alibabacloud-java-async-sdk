@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SendFileRequest</p>
  */
 public class SendFileRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("Content")
     @Validation(required = true)
@@ -72,10 +76,6 @@ public class SendFileRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
     @NameInMap("TargetDir")
     @Validation(required = true)
@@ -87,6 +87,7 @@ public class SendFileRequest extends Request {
 
     private SendFileRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.content = builder.content;
         this.contentType = builder.contentType;
         this.description = builder.description;
@@ -101,7 +102,6 @@ public class SendFileRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
         this.targetDir = builder.targetDir;
         this.timeout = builder.timeout;
     }
@@ -117,6 +117,13 @@ public class SendFileRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -218,13 +225,6 @@ public class SendFileRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
      * @return targetDir
      */
     public String getTargetDir() {
@@ -239,6 +239,7 @@ public class SendFileRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SendFileRequest, Builder> {
+        private String sourceRegionId; 
         private String content; 
         private String contentType; 
         private String description; 
@@ -253,7 +254,6 @@ public class SendFileRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
         private String targetDir; 
         private Long timeout; 
 
@@ -263,6 +263,7 @@ public class SendFileRequest extends Request {
 
         private Builder(SendFileRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.content = request.content;
             this.contentType = request.contentType;
             this.description = request.description;
@@ -277,10 +278,18 @@ public class SendFileRequest extends Request {
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.sourceRegionId = request.sourceRegionId;
             this.targetDir = request.targetDir;
             this.timeout = request.timeout;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * Content.
@@ -405,15 +414,6 @@ public class SendFileRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

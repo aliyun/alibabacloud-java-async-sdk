@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDiskMonitorDataRequest</p>
  */
 public class DescribeDiskMonitorDataRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("DiskId")
     @Validation(required = true)
@@ -42,10 +46,6 @@ public class DescribeDiskMonitorDataRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
     @NameInMap("StartTime")
     @Validation(required = true)
@@ -53,6 +53,7 @@ public class DescribeDiskMonitorDataRequest extends Request {
 
     private DescribeDiskMonitorDataRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.diskId = builder.diskId;
         this.endTime = builder.endTime;
         this.ownerAccount = builder.ownerAccount;
@@ -60,7 +61,6 @@ public class DescribeDiskMonitorDataRequest extends Request {
         this.period = builder.period;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
         this.startTime = builder.startTime;
     }
 
@@ -75,6 +75,13 @@ public class DescribeDiskMonitorDataRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -127,13 +134,6 @@ public class DescribeDiskMonitorDataRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -141,6 +141,7 @@ public class DescribeDiskMonitorDataRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeDiskMonitorDataRequest, Builder> {
+        private String sourceRegionId; 
         private String diskId; 
         private String endTime; 
         private String ownerAccount; 
@@ -148,7 +149,6 @@ public class DescribeDiskMonitorDataRequest extends Request {
         private Integer period; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
         private String startTime; 
 
         private Builder() {
@@ -157,6 +157,7 @@ public class DescribeDiskMonitorDataRequest extends Request {
 
         private Builder(DescribeDiskMonitorDataRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.diskId = request.diskId;
             this.endTime = request.endTime;
             this.ownerAccount = request.ownerAccount;
@@ -164,9 +165,17 @@ public class DescribeDiskMonitorDataRequest extends Request {
             this.period = request.period;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.sourceRegionId = request.sourceRegionId;
             this.startTime = request.startTime;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * DiskId.
@@ -228,15 +237,6 @@ public class DescribeDiskMonitorDataRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

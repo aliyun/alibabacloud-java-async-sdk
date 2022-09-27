@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyImageAttributeRequest</p>
  */
 public class ModifyImageAttributeRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("BootMode")
     private String bootMode;
@@ -19,6 +23,10 @@ public class ModifyImageAttributeRequest extends Request {
     @Query
     @NameInMap("Description")
     private String description;
+
+    @Query
+    @NameInMap("Features")
+    private Features features;
 
     @Query
     @NameInMap("ImageFamily")
@@ -58,18 +66,16 @@ public class ModifyImageAttributeRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
     @NameInMap("Status")
     private String status;
 
     private ModifyImageAttributeRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.bootMode = builder.bootMode;
         this.description = builder.description;
+        this.features = builder.features;
         this.imageFamily = builder.imageFamily;
         this.imageId = builder.imageId;
         this.imageName = builder.imageName;
@@ -79,7 +85,6 @@ public class ModifyImageAttributeRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
         this.status = builder.status;
     }
 
@@ -97,6 +102,13 @@ public class ModifyImageAttributeRequest extends Request {
     }
 
     /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
+    }
+
+    /**
      * @return bootMode
      */
     public String getBootMode() {
@@ -108,6 +120,13 @@ public class ModifyImageAttributeRequest extends Request {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return features
+     */
+    public Features getFeatures() {
+        return this.features;
     }
 
     /**
@@ -174,13 +193,6 @@ public class ModifyImageAttributeRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
      * @return status
      */
     public String getStatus() {
@@ -188,8 +200,10 @@ public class ModifyImageAttributeRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyImageAttributeRequest, Builder> {
+        private String sourceRegionId; 
         private String bootMode; 
         private String description; 
+        private Features features; 
         private String imageFamily; 
         private String imageId; 
         private String imageName; 
@@ -199,7 +213,6 @@ public class ModifyImageAttributeRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
         private String status; 
 
         private Builder() {
@@ -208,8 +221,10 @@ public class ModifyImageAttributeRequest extends Request {
 
         private Builder(ModifyImageAttributeRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.bootMode = request.bootMode;
             this.description = request.description;
+            this.features = request.features;
             this.imageFamily = request.imageFamily;
             this.imageId = request.imageId;
             this.imageName = request.imageName;
@@ -219,9 +234,17 @@ public class ModifyImageAttributeRequest extends Request {
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.sourceRegionId = request.sourceRegionId;
             this.status = request.status;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * BootMode.
@@ -238,6 +261,15 @@ public class ModifyImageAttributeRequest extends Request {
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * Features.
+         */
+        public Builder features(Features features) {
+            this.putQueryParameter("Features", features);
+            this.features = features;
             return this;
         }
 
@@ -323,15 +355,6 @@ public class ModifyImageAttributeRequest extends Request {
         }
 
         /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
-            return this;
-        }
-
-        /**
          * Status.
          */
         public Builder status(String status) {
@@ -347,4 +370,45 @@ public class ModifyImageAttributeRequest extends Request {
 
     } 
 
+    public static class Features extends TeaModel {
+        @NameInMap("NvmeSupport")
+        private String nvmeSupport;
+
+        private Features(Builder builder) {
+            this.nvmeSupport = builder.nvmeSupport;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Features create() {
+            return builder().build();
+        }
+
+        /**
+         * @return nvmeSupport
+         */
+        public String getNvmeSupport() {
+            return this.nvmeSupport;
+        }
+
+        public static final class Builder {
+            private String nvmeSupport; 
+
+            /**
+             * NvmeSupport.
+             */
+            public Builder nvmeSupport(String nvmeSupport) {
+                this.nvmeSupport = nvmeSupport;
+                return this;
+            }
+
+            public Features build() {
+                return new Features(this);
+            } 
+
+        } 
+
+    }
 }

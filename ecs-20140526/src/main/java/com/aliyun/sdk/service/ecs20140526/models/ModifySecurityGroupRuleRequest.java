@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifySecurityGroupRuleRequest</p>
  */
 public class ModifySecurityGroupRuleRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("ClientToken")
     private String clientToken;
@@ -104,12 +108,9 @@ public class ModifySecurityGroupRuleRequest extends Request {
     @NameInMap("SourcePrefixListId")
     private String sourcePrefixListId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     private ModifySecurityGroupRuleRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.clientToken = builder.clientToken;
         this.description = builder.description;
         this.destCidrIp = builder.destCidrIp;
@@ -132,7 +133,6 @@ public class ModifySecurityGroupRuleRequest extends Request {
         this.sourceGroupOwnerId = builder.sourceGroupOwnerId;
         this.sourcePortRange = builder.sourcePortRange;
         this.sourcePrefixListId = builder.sourcePrefixListId;
-        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -146,6 +146,13 @@ public class ModifySecurityGroupRuleRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -302,14 +309,8 @@ public class ModifySecurityGroupRuleRequest extends Request {
         return this.sourcePrefixListId;
     }
 
-    /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
     public static final class Builder extends Request.Builder<ModifySecurityGroupRuleRequest, Builder> {
+        private String sourceRegionId; 
         private String clientToken; 
         private String description; 
         private String destCidrIp; 
@@ -332,7 +333,6 @@ public class ModifySecurityGroupRuleRequest extends Request {
         private Long sourceGroupOwnerId; 
         private String sourcePortRange; 
         private String sourcePrefixListId; 
-        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -340,6 +340,7 @@ public class ModifySecurityGroupRuleRequest extends Request {
 
         private Builder(ModifySecurityGroupRuleRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.clientToken = request.clientToken;
             this.description = request.description;
             this.destCidrIp = request.destCidrIp;
@@ -362,8 +363,16 @@ public class ModifySecurityGroupRuleRequest extends Request {
             this.sourceGroupOwnerId = request.sourceGroupOwnerId;
             this.sourcePortRange = request.sourcePortRange;
             this.sourcePrefixListId = request.sourcePrefixListId;
-            this.sourceRegionId = request.sourceRegionId;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * ClientToken.
@@ -560,15 +569,6 @@ public class ModifySecurityGroupRuleRequest extends Request {
         public Builder sourcePrefixListId(String sourcePrefixListId) {
             this.putQueryParameter("SourcePrefixListId", sourcePrefixListId);
             this.sourcePrefixListId = sourcePrefixListId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

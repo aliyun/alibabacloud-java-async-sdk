@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AssignIpv6AddressesRequest</p>
  */
 public class AssignIpv6AddressesRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("Ipv6Address")
     private java.util.List < String > ipv6Address;
@@ -46,12 +50,9 @@ public class AssignIpv6AddressesRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     private AssignIpv6AddressesRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.ipv6Address = builder.ipv6Address;
         this.ipv6AddressCount = builder.ipv6AddressCount;
         this.networkInterfaceId = builder.networkInterfaceId;
@@ -60,7 +61,6 @@ public class AssignIpv6AddressesRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -74,6 +74,13 @@ public class AssignIpv6AddressesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -132,14 +139,8 @@ public class AssignIpv6AddressesRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
     public static final class Builder extends Request.Builder<AssignIpv6AddressesRequest, Builder> {
+        private String sourceRegionId; 
         private java.util.List < String > ipv6Address; 
         private Integer ipv6AddressCount; 
         private String networkInterfaceId; 
@@ -148,7 +149,6 @@ public class AssignIpv6AddressesRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -156,6 +156,7 @@ public class AssignIpv6AddressesRequest extends Request {
 
         private Builder(AssignIpv6AddressesRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.ipv6Address = request.ipv6Address;
             this.ipv6AddressCount = request.ipv6AddressCount;
             this.networkInterfaceId = request.networkInterfaceId;
@@ -164,8 +165,16 @@ public class AssignIpv6AddressesRequest extends Request {
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.sourceRegionId = request.sourceRegionId;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * Ipv6Address.
@@ -236,15 +245,6 @@ public class AssignIpv6AddressesRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

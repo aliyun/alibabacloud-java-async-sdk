@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateImageComponentRequest</p>
  */
 public class CreateImageComponentRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("ClientToken")
     private String clientToken;
@@ -57,10 +61,6 @@ public class CreateImageComponentRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
     @NameInMap("SystemType")
     private String systemType;
@@ -71,6 +71,7 @@ public class CreateImageComponentRequest extends Request {
 
     private CreateImageComponentRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.clientToken = builder.clientToken;
         this.componentType = builder.componentType;
         this.content = builder.content;
@@ -82,7 +83,6 @@ public class CreateImageComponentRequest extends Request {
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
         this.systemType = builder.systemType;
         this.tag = builder.tag;
     }
@@ -98,6 +98,13 @@ public class CreateImageComponentRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -178,13 +185,6 @@ public class CreateImageComponentRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
      * @return systemType
      */
     public String getSystemType() {
@@ -199,6 +199,7 @@ public class CreateImageComponentRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateImageComponentRequest, Builder> {
+        private String sourceRegionId; 
         private String clientToken; 
         private String componentType; 
         private String content; 
@@ -210,7 +211,6 @@ public class CreateImageComponentRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
         private String systemType; 
         private java.util.List < Tag> tag; 
 
@@ -220,6 +220,7 @@ public class CreateImageComponentRequest extends Request {
 
         private Builder(CreateImageComponentRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.clientToken = request.clientToken;
             this.componentType = request.componentType;
             this.content = request.content;
@@ -231,10 +232,18 @@ public class CreateImageComponentRequest extends Request {
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.sourceRegionId = request.sourceRegionId;
             this.systemType = request.systemType;
             this.tag = request.tag;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * ClientToken.
@@ -332,15 +341,6 @@ public class CreateImageComponentRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

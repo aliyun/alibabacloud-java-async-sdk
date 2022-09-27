@@ -20,6 +20,10 @@ public class DescribeInstancesFullStatusRequest extends Request {
     @NameInMap("NotBefore")
     private NotBefore notBefore;
 
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("EventId")
     private java.util.List < String > eventId;
@@ -69,10 +73,6 @@ public class DescribeInstancesFullStatusRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
     @NameInMap("Status")
     private String status;
@@ -81,6 +81,7 @@ public class DescribeInstancesFullStatusRequest extends Request {
         super(builder);
         this.eventPublishTime = builder.eventPublishTime;
         this.notBefore = builder.notBefore;
+        this.sourceRegionId = builder.sourceRegionId;
         this.eventId = builder.eventId;
         this.eventType = builder.eventType;
         this.healthStatus = builder.healthStatus;
@@ -93,7 +94,6 @@ public class DescribeInstancesFullStatusRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
         this.status = builder.status;
     }
 
@@ -122,6 +122,13 @@ public class DescribeInstancesFullStatusRequest extends Request {
      */
     public NotBefore getNotBefore() {
         return this.notBefore;
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -209,13 +216,6 @@ public class DescribeInstancesFullStatusRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
      * @return status
      */
     public String getStatus() {
@@ -225,6 +225,7 @@ public class DescribeInstancesFullStatusRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeInstancesFullStatusRequest, Builder> {
         private EventPublishTime eventPublishTime; 
         private NotBefore notBefore; 
+        private String sourceRegionId; 
         private java.util.List < String > eventId; 
         private String eventType; 
         private String healthStatus; 
@@ -237,7 +238,6 @@ public class DescribeInstancesFullStatusRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
         private String status; 
 
         private Builder() {
@@ -248,6 +248,7 @@ public class DescribeInstancesFullStatusRequest extends Request {
             super(request);
             this.eventPublishTime = request.eventPublishTime;
             this.notBefore = request.notBefore;
+            this.sourceRegionId = request.sourceRegionId;
             this.eventId = request.eventId;
             this.eventType = request.eventType;
             this.healthStatus = request.healthStatus;
@@ -260,7 +261,6 @@ public class DescribeInstancesFullStatusRequest extends Request {
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.sourceRegionId = request.sourceRegionId;
             this.status = request.status;
         } 
 
@@ -279,6 +279,15 @@ public class DescribeInstancesFullStatusRequest extends Request {
         public Builder notBefore(NotBefore notBefore) {
             this.putQueryParameter("NotBefore", notBefore);
             this.notBefore = notBefore;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 
@@ -387,15 +396,6 @@ public class DescribeInstancesFullStatusRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

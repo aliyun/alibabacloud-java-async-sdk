@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteImagePipelineRequest</p>
  */
 public class DeleteImagePipelineRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("ImagePipelineId")
     @Validation(required = true)
@@ -38,24 +42,15 @@ public class DeleteImagePipelineRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
-    @Query
-    @NameInMap("TemplateTag")
-    private java.util.List < TemplateTag> templateTag;
-
     private DeleteImagePipelineRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.imagePipelineId = builder.imagePipelineId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
-        this.templateTag = builder.templateTag;
     }
 
     public static Builder builder() {
@@ -69,6 +64,13 @@ public class DeleteImagePipelineRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -113,29 +115,14 @@ public class DeleteImagePipelineRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
-     * @return templateTag
-     */
-    public java.util.List < TemplateTag> getTemplateTag() {
-        return this.templateTag;
-    }
-
     public static final class Builder extends Request.Builder<DeleteImagePipelineRequest, Builder> {
+        private String sourceRegionId; 
         private String imagePipelineId; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
-        private java.util.List < TemplateTag> templateTag; 
 
         private Builder() {
             super();
@@ -143,15 +130,23 @@ public class DeleteImagePipelineRequest extends Request {
 
         private Builder(DeleteImagePipelineRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.imagePipelineId = request.imagePipelineId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.sourceRegionId = request.sourceRegionId;
-            this.templateTag = request.templateTag;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * ImagePipelineId.
@@ -207,24 +202,6 @@ public class DeleteImagePipelineRequest extends Request {
             return this;
         }
 
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
-            return this;
-        }
-
-        /**
-         * TemplateTag.
-         */
-        public Builder templateTag(java.util.List < TemplateTag> templateTag) {
-            this.putQueryParameter("TemplateTag", templateTag);
-            this.templateTag = templateTag;
-            return this;
-        }
-
         @Override
         public DeleteImagePipelineRequest build() {
             return new DeleteImagePipelineRequest(this);
@@ -232,65 +209,4 @@ public class DeleteImagePipelineRequest extends Request {
 
     } 
 
-    public static class TemplateTag extends TeaModel {
-        @NameInMap("Key")
-        private String key;
-
-        @NameInMap("Value")
-        private String value;
-
-        private TemplateTag(Builder builder) {
-            this.key = builder.key;
-            this.value = builder.value;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static TemplateTag create() {
-            return builder().build();
-        }
-
-        /**
-         * @return key
-         */
-        public String getKey() {
-            return this.key;
-        }
-
-        /**
-         * @return value
-         */
-        public String getValue() {
-            return this.value;
-        }
-
-        public static final class Builder {
-            private String key; 
-            private String value; 
-
-            /**
-             * Key.
-             */
-            public Builder key(String key) {
-                this.key = key;
-                return this;
-            }
-
-            /**
-             * Value.
-             */
-            public Builder value(String value) {
-                this.value = value;
-                return this;
-            }
-
-            public TemplateTag build() {
-                return new TemplateTag(this);
-            } 
-
-        } 
-
-    }
 }

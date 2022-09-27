@@ -131,6 +131,209 @@ public class DescribeCommandsResponseBody extends TeaModel {
 
     } 
 
+    public static class PossibleValues extends TeaModel {
+        @NameInMap("PossibleValue")
+        private java.util.List < String > possibleValue;
+
+        private PossibleValues(Builder builder) {
+            this.possibleValue = builder.possibleValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PossibleValues create() {
+            return builder().build();
+        }
+
+        /**
+         * @return possibleValue
+         */
+        public java.util.List < String > getPossibleValue() {
+            return this.possibleValue;
+        }
+
+        public static final class Builder {
+            private java.util.List < String > possibleValue; 
+
+            /**
+             * PossibleValue.
+             */
+            public Builder possibleValue(java.util.List < String > possibleValue) {
+                this.possibleValue = possibleValue;
+                return this;
+            }
+
+            public PossibleValues build() {
+                return new PossibleValues(this);
+            } 
+
+        } 
+
+    }
+    public static class ParameterDefinition extends TeaModel {
+        @NameInMap("DefaultValue")
+        private String defaultValue;
+
+        @NameInMap("Description")
+        private String description;
+
+        @NameInMap("ParameterName")
+        private String parameterName;
+
+        @NameInMap("PossibleValues")
+        private PossibleValues possibleValues;
+
+        @NameInMap("Required")
+        private Boolean required;
+
+        private ParameterDefinition(Builder builder) {
+            this.defaultValue = builder.defaultValue;
+            this.description = builder.description;
+            this.parameterName = builder.parameterName;
+            this.possibleValues = builder.possibleValues;
+            this.required = builder.required;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ParameterDefinition create() {
+            return builder().build();
+        }
+
+        /**
+         * @return defaultValue
+         */
+        public String getDefaultValue() {
+            return this.defaultValue;
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
+         * @return parameterName
+         */
+        public String getParameterName() {
+            return this.parameterName;
+        }
+
+        /**
+         * @return possibleValues
+         */
+        public PossibleValues getPossibleValues() {
+            return this.possibleValues;
+        }
+
+        /**
+         * @return required
+         */
+        public Boolean getRequired() {
+            return this.required;
+        }
+
+        public static final class Builder {
+            private String defaultValue; 
+            private String description; 
+            private String parameterName; 
+            private PossibleValues possibleValues; 
+            private Boolean required; 
+
+            /**
+             * DefaultValue.
+             */
+            public Builder defaultValue(String defaultValue) {
+                this.defaultValue = defaultValue;
+                return this;
+            }
+
+            /**
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * ParameterName.
+             */
+            public Builder parameterName(String parameterName) {
+                this.parameterName = parameterName;
+                return this;
+            }
+
+            /**
+             * PossibleValues.
+             */
+            public Builder possibleValues(PossibleValues possibleValues) {
+                this.possibleValues = possibleValues;
+                return this;
+            }
+
+            /**
+             * Required.
+             */
+            public Builder required(Boolean required) {
+                this.required = required;
+                return this;
+            }
+
+            public ParameterDefinition build() {
+                return new ParameterDefinition(this);
+            } 
+
+        } 
+
+    }
+    public static class ParameterDefinitions extends TeaModel {
+        @NameInMap("ParameterDefinition")
+        private java.util.List < ParameterDefinition> parameterDefinition;
+
+        private ParameterDefinitions(Builder builder) {
+            this.parameterDefinition = builder.parameterDefinition;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ParameterDefinitions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return parameterDefinition
+         */
+        public java.util.List < ParameterDefinition> getParameterDefinition() {
+            return this.parameterDefinition;
+        }
+
+        public static final class Builder {
+            private java.util.List < ParameterDefinition> parameterDefinition; 
+
+            /**
+             * ParameterDefinition.
+             */
+            public Builder parameterDefinition(java.util.List < ParameterDefinition> parameterDefinition) {
+                this.parameterDefinition = parameterDefinition;
+                return this;
+            }
+
+            public ParameterDefinitions build() {
+                return new ParameterDefinitions(this);
+            } 
+
+        } 
+
+    }
     public static class ParameterNames extends TeaModel {
         @NameInMap("ParameterName")
         private java.util.List < String > parameterName;
@@ -172,6 +375,108 @@ public class DescribeCommandsResponseBody extends TeaModel {
         } 
 
     }
+    public static class Tag extends TeaModel {
+        @NameInMap("TagKey")
+        private String tagKey;
+
+        @NameInMap("TagValue")
+        private String tagValue;
+
+        private Tag(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            /**
+             * TagKey.
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * TagValue.
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
+    public static class Tags extends TeaModel {
+        @NameInMap("Tag")
+        private java.util.List < Tag> tag;
+
+        private Tags(Builder builder) {
+            this.tag = builder.tag;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tag
+         */
+        public java.util.List < Tag> getTag() {
+            return this.tag;
+        }
+
+        public static final class Builder {
+            private java.util.List < Tag> tag; 
+
+            /**
+             * Tag.
+             */
+            public Builder tag(java.util.List < Tag> tag) {
+                this.tag = tag;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
     public static class Command extends TeaModel {
         @NameInMap("Category")
         private String category;
@@ -200,11 +505,17 @@ public class DescribeCommandsResponseBody extends TeaModel {
         @NameInMap("Name")
         private String name;
 
+        @NameInMap("ParameterDefinitions")
+        private ParameterDefinitions parameterDefinitions;
+
         @NameInMap("ParameterNames")
         private ParameterNames parameterNames;
 
         @NameInMap("Provider")
         private String provider;
+
+        @NameInMap("Tags")
+        private Tags tags;
 
         @NameInMap("Timeout")
         private Long timeout;
@@ -228,8 +539,10 @@ public class DescribeCommandsResponseBody extends TeaModel {
             this.invokeTimes = builder.invokeTimes;
             this.latest = builder.latest;
             this.name = builder.name;
+            this.parameterDefinitions = builder.parameterDefinitions;
             this.parameterNames = builder.parameterNames;
             this.provider = builder.provider;
+            this.tags = builder.tags;
             this.timeout = builder.timeout;
             this.type = builder.type;
             this.version = builder.version;
@@ -308,6 +621,13 @@ public class DescribeCommandsResponseBody extends TeaModel {
         }
 
         /**
+         * @return parameterDefinitions
+         */
+        public ParameterDefinitions getParameterDefinitions() {
+            return this.parameterDefinitions;
+        }
+
+        /**
          * @return parameterNames
          */
         public ParameterNames getParameterNames() {
@@ -319,6 +639,13 @@ public class DescribeCommandsResponseBody extends TeaModel {
          */
         public String getProvider() {
             return this.provider;
+        }
+
+        /**
+         * @return tags
+         */
+        public Tags getTags() {
+            return this.tags;
         }
 
         /**
@@ -359,8 +686,10 @@ public class DescribeCommandsResponseBody extends TeaModel {
             private Integer invokeTimes; 
             private Boolean latest; 
             private String name; 
+            private ParameterDefinitions parameterDefinitions; 
             private ParameterNames parameterNames; 
             private String provider; 
+            private Tags tags; 
             private Long timeout; 
             private String type; 
             private Integer version; 
@@ -439,6 +768,14 @@ public class DescribeCommandsResponseBody extends TeaModel {
             }
 
             /**
+             * ParameterDefinitions.
+             */
+            public Builder parameterDefinitions(ParameterDefinitions parameterDefinitions) {
+                this.parameterDefinitions = parameterDefinitions;
+                return this;
+            }
+
+            /**
              * ParameterNames.
              */
             public Builder parameterNames(ParameterNames parameterNames) {
@@ -451,6 +788,14 @@ public class DescribeCommandsResponseBody extends TeaModel {
              */
             public Builder provider(String provider) {
                 this.provider = provider;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(Tags tags) {
+                this.tags = tags;
                 return this;
             }
 

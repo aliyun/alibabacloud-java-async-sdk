@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyInstanceMetadataOptionsRequest</p>
  */
 public class ModifyInstanceMetadataOptionsRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("HttpEndpoint")
     @Validation(required = true)
@@ -46,12 +50,9 @@ public class ModifyInstanceMetadataOptionsRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     private ModifyInstanceMetadataOptionsRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.httpEndpoint = builder.httpEndpoint;
         this.httpPutResponseHopLimit = builder.httpPutResponseHopLimit;
         this.httpTokens = builder.httpTokens;
@@ -60,7 +61,6 @@ public class ModifyInstanceMetadataOptionsRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -74,6 +74,13 @@ public class ModifyInstanceMetadataOptionsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -132,14 +139,8 @@ public class ModifyInstanceMetadataOptionsRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
     public static final class Builder extends Request.Builder<ModifyInstanceMetadataOptionsRequest, Builder> {
+        private String sourceRegionId; 
         private String httpEndpoint; 
         private Integer httpPutResponseHopLimit; 
         private String httpTokens; 
@@ -148,7 +149,6 @@ public class ModifyInstanceMetadataOptionsRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -156,6 +156,7 @@ public class ModifyInstanceMetadataOptionsRequest extends Request {
 
         private Builder(ModifyInstanceMetadataOptionsRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.httpEndpoint = request.httpEndpoint;
             this.httpPutResponseHopLimit = request.httpPutResponseHopLimit;
             this.httpTokens = request.httpTokens;
@@ -164,8 +165,16 @@ public class ModifyInstanceMetadataOptionsRequest extends Request {
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.sourceRegionId = request.sourceRegionId;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * HttpEndpoint.
@@ -236,15 +245,6 @@ public class ModifyInstanceMetadataOptionsRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

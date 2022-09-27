@@ -12,9 +12,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateImageRequest</p>
  */
 public class CreateImageRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("Architecture")
     private String architecture;
+
+    @Query
+    @NameInMap("BootMode")
+    private String bootMode;
 
     @Query
     @NameInMap("ClientToken")
@@ -77,17 +85,15 @@ public class CreateImageRequest extends Request {
     @NameInMap("SnapshotId")
     private String snapshotId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
     @NameInMap("Tag")
     private java.util.List < Tag> tag;
 
     private CreateImageRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.architecture = builder.architecture;
+        this.bootMode = builder.bootMode;
         this.clientToken = builder.clientToken;
         this.description = builder.description;
         this.diskDeviceMapping = builder.diskDeviceMapping;
@@ -103,7 +109,6 @@ public class CreateImageRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.snapshotId = builder.snapshotId;
-        this.sourceRegionId = builder.sourceRegionId;
         this.tag = builder.tag;
     }
 
@@ -121,10 +126,24 @@ public class CreateImageRequest extends Request {
     }
 
     /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
+    }
+
+    /**
      * @return architecture
      */
     public String getArchitecture() {
         return this.architecture;
+    }
+
+    /**
+     * @return bootMode
+     */
+    public String getBootMode() {
+        return this.bootMode;
     }
 
     /**
@@ -233,13 +252,6 @@ public class CreateImageRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
      * @return tag
      */
     public java.util.List < Tag> getTag() {
@@ -247,7 +259,9 @@ public class CreateImageRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateImageRequest, Builder> {
+        private String sourceRegionId; 
         private String architecture; 
+        private String bootMode; 
         private String clientToken; 
         private String description; 
         private java.util.List < DiskDeviceMapping> diskDeviceMapping; 
@@ -263,7 +277,6 @@ public class CreateImageRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String snapshotId; 
-        private String sourceRegionId; 
         private java.util.List < Tag> tag; 
 
         private Builder() {
@@ -272,7 +285,9 @@ public class CreateImageRequest extends Request {
 
         private Builder(CreateImageRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.architecture = request.architecture;
+            this.bootMode = request.bootMode;
             this.clientToken = request.clientToken;
             this.description = request.description;
             this.diskDeviceMapping = request.diskDeviceMapping;
@@ -288,9 +303,17 @@ public class CreateImageRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.snapshotId = request.snapshotId;
-            this.sourceRegionId = request.sourceRegionId;
             this.tag = request.tag;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * Architecture.
@@ -298,6 +321,15 @@ public class CreateImageRequest extends Request {
         public Builder architecture(String architecture) {
             this.putQueryParameter("Architecture", architecture);
             this.architecture = architecture;
+            return this;
+        }
+
+        /**
+         * BootMode.
+         */
+        public Builder bootMode(String bootMode) {
+            this.putQueryParameter("BootMode", bootMode);
+            this.bootMode = bootMode;
             return this;
         }
 
@@ -433,15 +465,6 @@ public class CreateImageRequest extends Request {
         public Builder snapshotId(String snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);
             this.snapshotId = snapshotId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifySnapshotAttributeRequest</p>
  */
 public class ModifySnapshotAttributeRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("Description")
     private String description;
@@ -45,12 +49,9 @@ public class ModifySnapshotAttributeRequest extends Request {
     @NameInMap("SnapshotName")
     private String snapshotName;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     private ModifySnapshotAttributeRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.description = builder.description;
         this.disableInstantAccess = builder.disableInstantAccess;
         this.ownerAccount = builder.ownerAccount;
@@ -59,7 +60,6 @@ public class ModifySnapshotAttributeRequest extends Request {
         this.resourceOwnerId = builder.resourceOwnerId;
         this.snapshotId = builder.snapshotId;
         this.snapshotName = builder.snapshotName;
-        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -73,6 +73,13 @@ public class ModifySnapshotAttributeRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -131,14 +138,8 @@ public class ModifySnapshotAttributeRequest extends Request {
         return this.snapshotName;
     }
 
-    /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
     public static final class Builder extends Request.Builder<ModifySnapshotAttributeRequest, Builder> {
+        private String sourceRegionId; 
         private String description; 
         private Boolean disableInstantAccess; 
         private String ownerAccount; 
@@ -147,7 +148,6 @@ public class ModifySnapshotAttributeRequest extends Request {
         private Long resourceOwnerId; 
         private String snapshotId; 
         private String snapshotName; 
-        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -155,6 +155,7 @@ public class ModifySnapshotAttributeRequest extends Request {
 
         private Builder(ModifySnapshotAttributeRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.description = request.description;
             this.disableInstantAccess = request.disableInstantAccess;
             this.ownerAccount = request.ownerAccount;
@@ -163,8 +164,16 @@ public class ModifySnapshotAttributeRequest extends Request {
             this.resourceOwnerId = request.resourceOwnerId;
             this.snapshotId = request.snapshotId;
             this.snapshotName = request.snapshotName;
-            this.sourceRegionId = request.sourceRegionId;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * Description.
@@ -235,15 +244,6 @@ public class ModifySnapshotAttributeRequest extends Request {
         public Builder snapshotName(String snapshotName) {
             this.putQueryParameter("SnapshotName", snapshotName);
             this.snapshotName = snapshotName;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

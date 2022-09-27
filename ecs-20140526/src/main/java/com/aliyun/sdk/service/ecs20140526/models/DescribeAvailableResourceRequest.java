@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAvailableResourceRequest</p>
  */
 public class DescribeAvailableResourceRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("Cores")
     private Integer cores;
@@ -78,10 +82,6 @@ public class DescribeAvailableResourceRequest extends Request {
     @NameInMap("Scope")
     private String scope;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
     @NameInMap("SpotDuration")
     @Validation(maximum = 6, minimum = 2)
@@ -101,6 +101,7 @@ public class DescribeAvailableResourceRequest extends Request {
 
     private DescribeAvailableResourceRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.cores = builder.cores;
         this.dataDiskCategory = builder.dataDiskCategory;
         this.dedicatedHostId = builder.dedicatedHostId;
@@ -117,7 +118,6 @@ public class DescribeAvailableResourceRequest extends Request {
         this.resourceOwnerId = builder.resourceOwnerId;
         this.resourceType = builder.resourceType;
         this.scope = builder.scope;
-        this.sourceRegionId = builder.sourceRegionId;
         this.spotDuration = builder.spotDuration;
         this.spotStrategy = builder.spotStrategy;
         this.systemDiskCategory = builder.systemDiskCategory;
@@ -135,6 +135,13 @@ public class DescribeAvailableResourceRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -250,13 +257,6 @@ public class DescribeAvailableResourceRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
      * @return spotDuration
      */
     public Integer getSpotDuration() {
@@ -285,6 +285,7 @@ public class DescribeAvailableResourceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeAvailableResourceRequest, Builder> {
+        private String sourceRegionId; 
         private Integer cores; 
         private String dataDiskCategory; 
         private String dedicatedHostId; 
@@ -301,7 +302,6 @@ public class DescribeAvailableResourceRequest extends Request {
         private Long resourceOwnerId; 
         private String resourceType; 
         private String scope; 
-        private String sourceRegionId; 
         private Integer spotDuration; 
         private String spotStrategy; 
         private String systemDiskCategory; 
@@ -313,6 +313,7 @@ public class DescribeAvailableResourceRequest extends Request {
 
         private Builder(DescribeAvailableResourceRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.cores = request.cores;
             this.dataDiskCategory = request.dataDiskCategory;
             this.dedicatedHostId = request.dedicatedHostId;
@@ -329,12 +330,20 @@ public class DescribeAvailableResourceRequest extends Request {
             this.resourceOwnerId = request.resourceOwnerId;
             this.resourceType = request.resourceType;
             this.scope = request.scope;
-            this.sourceRegionId = request.sourceRegionId;
             this.spotDuration = request.spotDuration;
             this.spotStrategy = request.spotStrategy;
             this.systemDiskCategory = request.systemDiskCategory;
             this.zoneId = request.zoneId;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * Cores.
@@ -477,15 +486,6 @@ public class DescribeAvailableResourceRequest extends Request {
         public Builder scope(String scope) {
             this.putQueryParameter("Scope", scope);
             this.scope = scope;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

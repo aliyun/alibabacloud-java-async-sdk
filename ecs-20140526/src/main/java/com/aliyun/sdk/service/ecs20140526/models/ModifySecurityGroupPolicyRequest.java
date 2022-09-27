@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifySecurityGroupPolicyRequest</p>
  */
 public class ModifySecurityGroupPolicyRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("ClientToken")
     private String clientToken;
@@ -47,12 +51,9 @@ public class ModifySecurityGroupPolicyRequest extends Request {
     @Validation(required = true)
     private String securityGroupId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     private ModifySecurityGroupPolicyRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.clientToken = builder.clientToken;
         this.innerAccessPolicy = builder.innerAccessPolicy;
         this.ownerAccount = builder.ownerAccount;
@@ -61,7 +62,6 @@ public class ModifySecurityGroupPolicyRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityGroupId = builder.securityGroupId;
-        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -75,6 +75,13 @@ public class ModifySecurityGroupPolicyRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -133,14 +140,8 @@ public class ModifySecurityGroupPolicyRequest extends Request {
         return this.securityGroupId;
     }
 
-    /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
     public static final class Builder extends Request.Builder<ModifySecurityGroupPolicyRequest, Builder> {
+        private String sourceRegionId; 
         private String clientToken; 
         private String innerAccessPolicy; 
         private String ownerAccount; 
@@ -149,7 +150,6 @@ public class ModifySecurityGroupPolicyRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String securityGroupId; 
-        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -157,6 +157,7 @@ public class ModifySecurityGroupPolicyRequest extends Request {
 
         private Builder(ModifySecurityGroupPolicyRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.clientToken = request.clientToken;
             this.innerAccessPolicy = request.innerAccessPolicy;
             this.ownerAccount = request.ownerAccount;
@@ -165,8 +166,16 @@ public class ModifySecurityGroupPolicyRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.securityGroupId = request.securityGroupId;
-            this.sourceRegionId = request.sourceRegionId;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * ClientToken.
@@ -237,15 +246,6 @@ public class ModifySecurityGroupPolicyRequest extends Request {
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
             this.securityGroupId = securityGroupId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

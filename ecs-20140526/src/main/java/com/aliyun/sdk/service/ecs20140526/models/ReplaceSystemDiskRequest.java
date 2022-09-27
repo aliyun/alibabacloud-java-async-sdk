@@ -16,6 +16,10 @@ public class ReplaceSystemDiskRequest extends Request {
     @NameInMap("SystemDisk")
     private SystemDisk systemDisk;
 
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("Architecture")
     private String architecture;
@@ -73,10 +77,6 @@ public class ReplaceSystemDiskRequest extends Request {
     @NameInMap("SecurityEnhancementStrategy")
     private String securityEnhancementStrategy;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
     @NameInMap("UseAdditionalService")
     private Boolean useAdditionalService;
@@ -84,6 +84,7 @@ public class ReplaceSystemDiskRequest extends Request {
     private ReplaceSystemDiskRequest(Builder builder) {
         super(builder);
         this.systemDisk = builder.systemDisk;
+        this.sourceRegionId = builder.sourceRegionId;
         this.architecture = builder.architecture;
         this.clientToken = builder.clientToken;
         this.diskId = builder.diskId;
@@ -98,7 +99,6 @@ public class ReplaceSystemDiskRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityEnhancementStrategy = builder.securityEnhancementStrategy;
-        this.sourceRegionId = builder.sourceRegionId;
         this.useAdditionalService = builder.useAdditionalService;
     }
 
@@ -120,6 +120,13 @@ public class ReplaceSystemDiskRequest extends Request {
      */
     public SystemDisk getSystemDisk() {
         return this.systemDisk;
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -221,13 +228,6 @@ public class ReplaceSystemDiskRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
      * @return useAdditionalService
      */
     public Boolean getUseAdditionalService() {
@@ -236,6 +236,7 @@ public class ReplaceSystemDiskRequest extends Request {
 
     public static final class Builder extends Request.Builder<ReplaceSystemDiskRequest, Builder> {
         private SystemDisk systemDisk; 
+        private String sourceRegionId; 
         private String architecture; 
         private String clientToken; 
         private String diskId; 
@@ -250,7 +251,6 @@ public class ReplaceSystemDiskRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String securityEnhancementStrategy; 
-        private String sourceRegionId; 
         private Boolean useAdditionalService; 
 
         private Builder() {
@@ -260,6 +260,7 @@ public class ReplaceSystemDiskRequest extends Request {
         private Builder(ReplaceSystemDiskRequest request) {
             super(request);
             this.systemDisk = request.systemDisk;
+            this.sourceRegionId = request.sourceRegionId;
             this.architecture = request.architecture;
             this.clientToken = request.clientToken;
             this.diskId = request.diskId;
@@ -274,7 +275,6 @@ public class ReplaceSystemDiskRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.securityEnhancementStrategy = request.securityEnhancementStrategy;
-            this.sourceRegionId = request.sourceRegionId;
             this.useAdditionalService = request.useAdditionalService;
         } 
 
@@ -284,6 +284,15 @@ public class ReplaceSystemDiskRequest extends Request {
         public Builder systemDisk(SystemDisk systemDisk) {
             this.putQueryParameter("SystemDisk", systemDisk);
             this.systemDisk = systemDisk;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 
@@ -410,15 +419,6 @@ public class ReplaceSystemDiskRequest extends Request {
         public Builder securityEnhancementStrategy(String securityEnhancementStrategy) {
             this.putQueryParameter("SecurityEnhancementStrategy", securityEnhancementStrategy);
             this.securityEnhancementStrategy = securityEnhancementStrategy;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeRenewalPriceRequest</p>
  */
 public class DescribeRenewalPriceRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("ExpectedRenewDay")
     private Integer expectedRenewDay;
@@ -54,12 +58,9 @@ public class DescribeRenewalPriceRequest extends Request {
     @NameInMap("ResourceType")
     private String resourceType;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     private DescribeRenewalPriceRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.expectedRenewDay = builder.expectedRenewDay;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -70,7 +71,6 @@ public class DescribeRenewalPriceRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.resourceType = builder.resourceType;
-        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -84,6 +84,13 @@ public class DescribeRenewalPriceRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -156,14 +163,8 @@ public class DescribeRenewalPriceRequest extends Request {
         return this.resourceType;
     }
 
-    /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
     public static final class Builder extends Request.Builder<DescribeRenewalPriceRequest, Builder> {
+        private String sourceRegionId; 
         private Integer expectedRenewDay; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -174,7 +175,6 @@ public class DescribeRenewalPriceRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String resourceType; 
-        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -182,6 +182,7 @@ public class DescribeRenewalPriceRequest extends Request {
 
         private Builder(DescribeRenewalPriceRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.expectedRenewDay = request.expectedRenewDay;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -192,8 +193,16 @@ public class DescribeRenewalPriceRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.resourceType = request.resourceType;
-            this.sourceRegionId = request.sourceRegionId;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * ExpectedRenewDay.
@@ -282,15 +291,6 @@ public class DescribeRenewalPriceRequest extends Request {
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
             this.resourceType = resourceType;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

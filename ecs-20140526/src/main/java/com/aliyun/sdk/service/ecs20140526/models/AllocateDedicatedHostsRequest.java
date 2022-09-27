@@ -16,6 +16,10 @@ public class AllocateDedicatedHostsRequest extends Request {
     @NameInMap("NetworkAttributes")
     private NetworkAttributes networkAttributes;
 
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("ActionOnMaintenance")
     private String actionOnMaintenance;
@@ -106,10 +110,6 @@ public class AllocateDedicatedHostsRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
     @NameInMap("Tag")
     private java.util.List < Tag> tag;
@@ -121,6 +121,7 @@ public class AllocateDedicatedHostsRequest extends Request {
     private AllocateDedicatedHostsRequest(Builder builder) {
         super(builder);
         this.networkAttributes = builder.networkAttributes;
+        this.sourceRegionId = builder.sourceRegionId;
         this.actionOnMaintenance = builder.actionOnMaintenance;
         this.autoPlacement = builder.autoPlacement;
         this.autoReleaseTime = builder.autoReleaseTime;
@@ -143,7 +144,6 @@ public class AllocateDedicatedHostsRequest extends Request {
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
         this.tag = builder.tag;
         this.zoneId = builder.zoneId;
     }
@@ -166,6 +166,13 @@ public class AllocateDedicatedHostsRequest extends Request {
      */
     public NetworkAttributes getNetworkAttributes() {
         return this.networkAttributes;
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -323,13 +330,6 @@ public class AllocateDedicatedHostsRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
      * @return tag
      */
     public java.util.List < Tag> getTag() {
@@ -345,6 +345,7 @@ public class AllocateDedicatedHostsRequest extends Request {
 
     public static final class Builder extends Request.Builder<AllocateDedicatedHostsRequest, Builder> {
         private NetworkAttributes networkAttributes; 
+        private String sourceRegionId; 
         private String actionOnMaintenance; 
         private String autoPlacement; 
         private String autoReleaseTime; 
@@ -367,7 +368,6 @@ public class AllocateDedicatedHostsRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
         private java.util.List < Tag> tag; 
         private String zoneId; 
 
@@ -378,6 +378,7 @@ public class AllocateDedicatedHostsRequest extends Request {
         private Builder(AllocateDedicatedHostsRequest request) {
             super(request);
             this.networkAttributes = request.networkAttributes;
+            this.sourceRegionId = request.sourceRegionId;
             this.actionOnMaintenance = request.actionOnMaintenance;
             this.autoPlacement = request.autoPlacement;
             this.autoReleaseTime = request.autoReleaseTime;
@@ -400,7 +401,6 @@ public class AllocateDedicatedHostsRequest extends Request {
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.sourceRegionId = request.sourceRegionId;
             this.tag = request.tag;
             this.zoneId = request.zoneId;
         } 
@@ -411,6 +411,15 @@ public class AllocateDedicatedHostsRequest extends Request {
         public Builder networkAttributes(NetworkAttributes networkAttributes) {
             this.putQueryParameter("NetworkAttributes", networkAttributes);
             this.networkAttributes = networkAttributes;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 
@@ -609,15 +618,6 @@ public class AllocateDedicatedHostsRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

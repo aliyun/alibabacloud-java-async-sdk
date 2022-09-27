@@ -132,6 +132,12 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
     } 
 
     public static class DataDisk extends TeaModel {
+        @NameInMap("AutoSnapshotPolicyId")
+        private String autoSnapshotPolicyId;
+
+        @NameInMap("BurstingEnabled")
+        private Boolean burstingEnabled;
+
         @NameInMap("Category")
         private String category;
 
@@ -153,6 +159,9 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         @NameInMap("PerformanceLevel")
         private String performanceLevel;
 
+        @NameInMap("ProvisionedIops")
+        private Long provisionedIops;
+
         @NameInMap("Size")
         private Integer size;
 
@@ -160,6 +169,8 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         private String snapshotId;
 
         private DataDisk(Builder builder) {
+            this.autoSnapshotPolicyId = builder.autoSnapshotPolicyId;
+            this.burstingEnabled = builder.burstingEnabled;
             this.category = builder.category;
             this.deleteWithInstance = builder.deleteWithInstance;
             this.description = builder.description;
@@ -167,6 +178,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             this.diskName = builder.diskName;
             this.encrypted = builder.encrypted;
             this.performanceLevel = builder.performanceLevel;
+            this.provisionedIops = builder.provisionedIops;
             this.size = builder.size;
             this.snapshotId = builder.snapshotId;
         }
@@ -177,6 +189,20 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
 
         public static DataDisk create() {
             return builder().build();
+        }
+
+        /**
+         * @return autoSnapshotPolicyId
+         */
+        public String getAutoSnapshotPolicyId() {
+            return this.autoSnapshotPolicyId;
+        }
+
+        /**
+         * @return burstingEnabled
+         */
+        public Boolean getBurstingEnabled() {
+            return this.burstingEnabled;
         }
 
         /**
@@ -229,6 +255,13 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         }
 
         /**
+         * @return provisionedIops
+         */
+        public Long getProvisionedIops() {
+            return this.provisionedIops;
+        }
+
+        /**
          * @return size
          */
         public Integer getSize() {
@@ -243,6 +276,8 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String autoSnapshotPolicyId; 
+            private Boolean burstingEnabled; 
             private String category; 
             private Boolean deleteWithInstance; 
             private String description; 
@@ -250,8 +285,25 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             private String diskName; 
             private String encrypted; 
             private String performanceLevel; 
+            private Long provisionedIops; 
             private Integer size; 
             private String snapshotId; 
+
+            /**
+             * AutoSnapshotPolicyId.
+             */
+            public Builder autoSnapshotPolicyId(String autoSnapshotPolicyId) {
+                this.autoSnapshotPolicyId = autoSnapshotPolicyId;
+                return this;
+            }
+
+            /**
+             * BurstingEnabled.
+             */
+            public Builder burstingEnabled(Boolean burstingEnabled) {
+                this.burstingEnabled = burstingEnabled;
+                return this;
+            }
 
             /**
              * Category.
@@ -306,6 +358,14 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
              */
             public Builder performanceLevel(String performanceLevel) {
                 this.performanceLevel = performanceLevel;
+                return this;
+            }
+
+            /**
+             * ProvisionedIops.
+             */
+            public Builder provisionedIops(Long provisionedIops) {
+                this.provisionedIops = provisionedIops;
                 return this;
             }
 
@@ -418,8 +478,14 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         @NameInMap("Description")
         private String description;
 
+        @NameInMap("InstanceType")
+        private String instanceType;
+
         @NameInMap("NetworkInterfaceName")
         private String networkInterfaceName;
+
+        @NameInMap("NetworkInterfaceTrafficMode")
+        private String networkInterfaceTrafficMode;
 
         @NameInMap("PrimaryIpAddress")
         private String primaryIpAddress;
@@ -435,7 +501,9 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
 
         private NetworkInterface(Builder builder) {
             this.description = builder.description;
+            this.instanceType = builder.instanceType;
             this.networkInterfaceName = builder.networkInterfaceName;
+            this.networkInterfaceTrafficMode = builder.networkInterfaceTrafficMode;
             this.primaryIpAddress = builder.primaryIpAddress;
             this.securityGroupId = builder.securityGroupId;
             this.securityGroupIds = builder.securityGroupIds;
@@ -458,10 +526,24 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         }
 
         /**
+         * @return instanceType
+         */
+        public String getInstanceType() {
+            return this.instanceType;
+        }
+
+        /**
          * @return networkInterfaceName
          */
         public String getNetworkInterfaceName() {
             return this.networkInterfaceName;
+        }
+
+        /**
+         * @return networkInterfaceTrafficMode
+         */
+        public String getNetworkInterfaceTrafficMode() {
+            return this.networkInterfaceTrafficMode;
         }
 
         /**
@@ -494,7 +576,9 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String description; 
+            private String instanceType; 
             private String networkInterfaceName; 
+            private String networkInterfaceTrafficMode; 
             private String primaryIpAddress; 
             private String securityGroupId; 
             private SecurityGroupIds securityGroupIds; 
@@ -509,10 +593,26 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
+             * InstanceType.
+             */
+            public Builder instanceType(String instanceType) {
+                this.instanceType = instanceType;
+                return this;
+            }
+
+            /**
              * NetworkInterfaceName.
              */
             public Builder networkInterfaceName(String networkInterfaceName) {
                 this.networkInterfaceName = networkInterfaceName;
+                return this;
+            }
+
+            /**
+             * NetworkInterfaceTrafficMode.
+             */
+            public Builder networkInterfaceTrafficMode(String networkInterfaceTrafficMode) {
+                this.networkInterfaceTrafficMode = networkInterfaceTrafficMode;
                 return this;
             }
 
@@ -830,6 +930,12 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         @NameInMap("SpotStrategy")
         private String spotStrategy;
 
+        @NameInMap("SystemDisk.AutoSnapshotPolicyId")
+        private String systemDisk_autoSnapshotPolicyId;
+
+        @NameInMap("SystemDisk.BurstingEnabled")
+        private Boolean systemDisk_burstingEnabled;
+
         @NameInMap("SystemDisk.Category")
         private String systemDisk_category;
 
@@ -847,6 +953,9 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
 
         @NameInMap("SystemDisk.PerformanceLevel")
         private String systemDisk_performanceLevel;
+
+        @NameInMap("SystemDisk.ProvisionedIops")
+        private Long systemDisk_provisionedIops;
 
         @NameInMap("SystemDisk.Size")
         private Integer systemDisk_size;
@@ -897,12 +1006,15 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             this.spotDuration = builder.spotDuration;
             this.spotPriceLimit = builder.spotPriceLimit;
             this.spotStrategy = builder.spotStrategy;
+            this.systemDisk_autoSnapshotPolicyId = builder.systemDisk_autoSnapshotPolicyId;
+            this.systemDisk_burstingEnabled = builder.systemDisk_burstingEnabled;
             this.systemDisk_category = builder.systemDisk_category;
             this.systemDisk_deleteWithInstance = builder.systemDisk_deleteWithInstance;
             this.systemDisk_description = builder.systemDisk_description;
             this.systemDisk_diskName = builder.systemDisk_diskName;
             this.systemDisk_iops = builder.systemDisk_iops;
             this.systemDisk_performanceLevel = builder.systemDisk_performanceLevel;
+            this.systemDisk_provisionedIops = builder.systemDisk_provisionedIops;
             this.systemDisk_size = builder.systemDisk_size;
             this.tags = builder.tags;
             this.userData = builder.userData;
@@ -1130,6 +1242,20 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         }
 
         /**
+         * @return systemDisk_autoSnapshotPolicyId
+         */
+        public String getSystemDisk_autoSnapshotPolicyId() {
+            return this.systemDisk_autoSnapshotPolicyId;
+        }
+
+        /**
+         * @return systemDisk_burstingEnabled
+         */
+        public Boolean getSystemDisk_burstingEnabled() {
+            return this.systemDisk_burstingEnabled;
+        }
+
+        /**
          * @return systemDisk_category
          */
         public String getSystemDisk_category() {
@@ -1169,6 +1295,13 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
          */
         public String getSystemDisk_performanceLevel() {
             return this.systemDisk_performanceLevel;
+        }
+
+        /**
+         * @return systemDisk_provisionedIops
+         */
+        public Long getSystemDisk_provisionedIops() {
+            return this.systemDisk_provisionedIops;
         }
 
         /**
@@ -1244,12 +1377,15 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             private Integer spotDuration; 
             private Float spotPriceLimit; 
             private String spotStrategy; 
+            private String systemDisk_autoSnapshotPolicyId; 
+            private Boolean systemDisk_burstingEnabled; 
             private String systemDisk_category; 
             private Boolean systemDisk_deleteWithInstance; 
             private String systemDisk_description; 
             private String systemDisk_diskName; 
             private Integer systemDisk_iops; 
             private String systemDisk_performanceLevel; 
+            private Long systemDisk_provisionedIops; 
             private Integer systemDisk_size; 
             private Tags tags; 
             private String userData; 
@@ -1498,6 +1634,22 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
+             * SystemDisk.AutoSnapshotPolicyId.
+             */
+            public Builder systemDisk_autoSnapshotPolicyId(String systemDisk_autoSnapshotPolicyId) {
+                this.systemDisk_autoSnapshotPolicyId = systemDisk_autoSnapshotPolicyId;
+                return this;
+            }
+
+            /**
+             * SystemDisk.BurstingEnabled.
+             */
+            public Builder systemDisk_burstingEnabled(Boolean systemDisk_burstingEnabled) {
+                this.systemDisk_burstingEnabled = systemDisk_burstingEnabled;
+                return this;
+            }
+
+            /**
              * SystemDisk.Category.
              */
             public Builder systemDisk_category(String systemDisk_category) {
@@ -1542,6 +1694,14 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
              */
             public Builder systemDisk_performanceLevel(String systemDisk_performanceLevel) {
                 this.systemDisk_performanceLevel = systemDisk_performanceLevel;
+                return this;
+            }
+
+            /**
+             * SystemDisk.ProvisionedIops.
+             */
+            public Builder systemDisk_provisionedIops(Long systemDisk_provisionedIops) {
+                this.systemDisk_provisionedIops = systemDisk_provisionedIops;
                 return this;
             }
 

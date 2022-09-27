@@ -12,10 +12,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateCommandRequest</p>
  */
 public class CreateCommandRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("CommandContent")
     @Validation(required = true)
     private String commandContent;
+
+    @Query
+    @NameInMap("ContentEncoding")
+    private String contentEncoding;
 
     @Query
     @NameInMap("Description")
@@ -51,10 +59,6 @@ public class CreateCommandRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
     @NameInMap("Timeout")
     private Long timeout;
@@ -70,7 +74,9 @@ public class CreateCommandRequest extends Request {
 
     private CreateCommandRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.commandContent = builder.commandContent;
+        this.contentEncoding = builder.contentEncoding;
         this.description = builder.description;
         this.enableParameter = builder.enableParameter;
         this.name = builder.name;
@@ -79,7 +85,6 @@ public class CreateCommandRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
         this.timeout = builder.timeout;
         this.type = builder.type;
         this.workingDir = builder.workingDir;
@@ -99,10 +104,24 @@ public class CreateCommandRequest extends Request {
     }
 
     /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
+    }
+
+    /**
      * @return commandContent
      */
     public String getCommandContent() {
         return this.commandContent;
+    }
+
+    /**
+     * @return contentEncoding
+     */
+    public String getContentEncoding() {
+        return this.contentEncoding;
     }
 
     /**
@@ -162,13 +181,6 @@ public class CreateCommandRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
      * @return timeout
      */
     public Long getTimeout() {
@@ -190,7 +202,9 @@ public class CreateCommandRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateCommandRequest, Builder> {
+        private String sourceRegionId; 
         private String commandContent; 
+        private String contentEncoding; 
         private String description; 
         private Boolean enableParameter; 
         private String name; 
@@ -199,7 +213,6 @@ public class CreateCommandRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
         private Long timeout; 
         private String type; 
         private String workingDir; 
@@ -210,7 +223,9 @@ public class CreateCommandRequest extends Request {
 
         private Builder(CreateCommandRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.commandContent = request.commandContent;
+            this.contentEncoding = request.contentEncoding;
             this.description = request.description;
             this.enableParameter = request.enableParameter;
             this.name = request.name;
@@ -219,11 +234,19 @@ public class CreateCommandRequest extends Request {
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.sourceRegionId = request.sourceRegionId;
             this.timeout = request.timeout;
             this.type = request.type;
             this.workingDir = request.workingDir;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * CommandContent.
@@ -231,6 +254,15 @@ public class CreateCommandRequest extends Request {
         public Builder commandContent(String commandContent) {
             this.putQueryParameter("CommandContent", commandContent);
             this.commandContent = commandContent;
+            return this;
+        }
+
+        /**
+         * ContentEncoding.
+         */
+        public Builder contentEncoding(String contentEncoding) {
+            this.putQueryParameter("ContentEncoding", contentEncoding);
+            this.contentEncoding = contentEncoding;
             return this;
         }
 
@@ -303,15 +335,6 @@ public class CreateCommandRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

@@ -493,9 +493,114 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         } 
 
     }
+    public static class Tag extends TeaModel {
+        @NameInMap("TagKey")
+        private String tagKey;
+
+        @NameInMap("TagValue")
+        private String tagValue;
+
+        private Tag(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            /**
+             * TagKey.
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * TagValue.
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
+    public static class Tags extends TeaModel {
+        @NameInMap("Tag")
+        private java.util.List < Tag> tag;
+
+        private Tags(Builder builder) {
+            this.tag = builder.tag;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tag
+         */
+        public java.util.List < Tag> getTag() {
+            return this.tag;
+        }
+
+        public static final class Builder {
+            private java.util.List < Tag> tag; 
+
+            /**
+             * Tag.
+             */
+            public Builder tag(java.util.List < Tag> tag) {
+                this.tag = tag;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
     public static class Invocation extends TeaModel {
         @NameInMap("CommandContent")
         private String commandContent;
+
+        @NameInMap("CommandDescription")
+        private String commandDescription;
 
         @NameInMap("CommandId")
         private String commandId;
@@ -505,6 +610,12 @@ public class DescribeInvocationsResponseBody extends TeaModel {
 
         @NameInMap("CommandType")
         private String commandType;
+
+        @NameInMap("ContainerId")
+        private String containerId;
+
+        @NameInMap("ContainerName")
+        private String containerName;
 
         @NameInMap("CreationTime")
         private String creationTime;
@@ -530,17 +641,29 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         @NameInMap("RepeatMode")
         private String repeatMode;
 
+        @NameInMap("Tags")
+        private Tags tags;
+
         @NameInMap("Timed")
         private Boolean timed;
+
+        @NameInMap("Timeout")
+        private Long timeout;
 
         @NameInMap("Username")
         private String username;
 
+        @NameInMap("WorkingDir")
+        private String workingDir;
+
         private Invocation(Builder builder) {
             this.commandContent = builder.commandContent;
+            this.commandDescription = builder.commandDescription;
             this.commandId = builder.commandId;
             this.commandName = builder.commandName;
             this.commandType = builder.commandType;
+            this.containerId = builder.containerId;
+            this.containerName = builder.containerName;
             this.creationTime = builder.creationTime;
             this.frequency = builder.frequency;
             this.invocationStatus = builder.invocationStatus;
@@ -549,8 +672,11 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             this.invokeStatus = builder.invokeStatus;
             this.parameters = builder.parameters;
             this.repeatMode = builder.repeatMode;
+            this.tags = builder.tags;
             this.timed = builder.timed;
+            this.timeout = builder.timeout;
             this.username = builder.username;
+            this.workingDir = builder.workingDir;
         }
 
         public static Builder builder() {
@@ -566,6 +692,13 @@ public class DescribeInvocationsResponseBody extends TeaModel {
          */
         public String getCommandContent() {
             return this.commandContent;
+        }
+
+        /**
+         * @return commandDescription
+         */
+        public String getCommandDescription() {
+            return this.commandDescription;
         }
 
         /**
@@ -587,6 +720,20 @@ public class DescribeInvocationsResponseBody extends TeaModel {
          */
         public String getCommandType() {
             return this.commandType;
+        }
+
+        /**
+         * @return containerId
+         */
+        public String getContainerId() {
+            return this.containerId;
+        }
+
+        /**
+         * @return containerName
+         */
+        public String getContainerName() {
+            return this.containerName;
         }
 
         /**
@@ -646,10 +793,24 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         }
 
         /**
+         * @return tags
+         */
+        public Tags getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return timed
          */
         public Boolean getTimed() {
             return this.timed;
+        }
+
+        /**
+         * @return timeout
+         */
+        public Long getTimeout() {
+            return this.timeout;
         }
 
         /**
@@ -659,11 +820,21 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             return this.username;
         }
 
+        /**
+         * @return workingDir
+         */
+        public String getWorkingDir() {
+            return this.workingDir;
+        }
+
         public static final class Builder {
             private String commandContent; 
+            private String commandDescription; 
             private String commandId; 
             private String commandName; 
             private String commandType; 
+            private String containerId; 
+            private String containerName; 
             private String creationTime; 
             private String frequency; 
             private String invocationStatus; 
@@ -672,14 +843,25 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             private String invokeStatus; 
             private String parameters; 
             private String repeatMode; 
+            private Tags tags; 
             private Boolean timed; 
+            private Long timeout; 
             private String username; 
+            private String workingDir; 
 
             /**
              * CommandContent.
              */
             public Builder commandContent(String commandContent) {
                 this.commandContent = commandContent;
+                return this;
+            }
+
+            /**
+             * CommandDescription.
+             */
+            public Builder commandDescription(String commandDescription) {
+                this.commandDescription = commandDescription;
                 return this;
             }
 
@@ -704,6 +886,22 @@ public class DescribeInvocationsResponseBody extends TeaModel {
              */
             public Builder commandType(String commandType) {
                 this.commandType = commandType;
+                return this;
+            }
+
+            /**
+             * ContainerId.
+             */
+            public Builder containerId(String containerId) {
+                this.containerId = containerId;
+                return this;
+            }
+
+            /**
+             * ContainerName.
+             */
+            public Builder containerName(String containerName) {
+                this.containerName = containerName;
                 return this;
             }
 
@@ -772,6 +970,14 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
+             * Tags.
+             */
+            public Builder tags(Tags tags) {
+                this.tags = tags;
+                return this;
+            }
+
+            /**
              * Timed.
              */
             public Builder timed(Boolean timed) {
@@ -780,10 +986,26 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
+             * Timeout.
+             */
+            public Builder timeout(Long timeout) {
+                this.timeout = timeout;
+                return this;
+            }
+
+            /**
              * Username.
              */
             public Builder username(String username) {
                 this.username = username;
+                return this;
+            }
+
+            /**
+             * WorkingDir.
+             */
+            public Builder workingDir(String workingDir) {
+                this.workingDir = workingDir;
                 return this;
             }
 

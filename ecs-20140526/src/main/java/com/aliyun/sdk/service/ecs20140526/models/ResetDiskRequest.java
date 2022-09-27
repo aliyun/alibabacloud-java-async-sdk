@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ResetDiskRequest</p>
  */
 public class ResetDiskRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("DiskId")
     @Validation(required = true)
@@ -42,12 +46,9 @@ public class ResetDiskRequest extends Request {
     @Validation(required = true)
     private String snapshotId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     private ResetDiskRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.diskId = builder.diskId;
         this.dryRun = builder.dryRun;
         this.ownerAccount = builder.ownerAccount;
@@ -55,7 +56,6 @@ public class ResetDiskRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.snapshotId = builder.snapshotId;
-        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -69,6 +69,13 @@ public class ResetDiskRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -120,14 +127,8 @@ public class ResetDiskRequest extends Request {
         return this.snapshotId;
     }
 
-    /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
     public static final class Builder extends Request.Builder<ResetDiskRequest, Builder> {
+        private String sourceRegionId; 
         private String diskId; 
         private Boolean dryRun; 
         private String ownerAccount; 
@@ -135,7 +136,6 @@ public class ResetDiskRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String snapshotId; 
-        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -143,6 +143,7 @@ public class ResetDiskRequest extends Request {
 
         private Builder(ResetDiskRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.diskId = request.diskId;
             this.dryRun = request.dryRun;
             this.ownerAccount = request.ownerAccount;
@@ -150,8 +151,16 @@ public class ResetDiskRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.snapshotId = request.snapshotId;
-            this.sourceRegionId = request.sourceRegionId;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * DiskId.
@@ -213,15 +222,6 @@ public class ResetDiskRequest extends Request {
         public Builder snapshotId(String snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);
             this.snapshotId = snapshotId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

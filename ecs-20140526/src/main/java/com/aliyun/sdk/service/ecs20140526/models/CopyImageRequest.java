@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CopyImageRequest</p>
  */
 public class CopyImageRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("DestinationDescription")
     private String destinationDescription;
@@ -66,16 +70,13 @@ public class CopyImageRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
     @NameInMap("Tag")
     private java.util.List < Tag> tag;
 
     private CopyImageRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.destinationDescription = builder.destinationDescription;
         this.destinationImageName = builder.destinationImageName;
         this.destinationRegionId = builder.destinationRegionId;
@@ -89,7 +90,6 @@ public class CopyImageRequest extends Request {
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
         this.tag = builder.tag;
     }
 
@@ -104,6 +104,13 @@ public class CopyImageRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -198,13 +205,6 @@ public class CopyImageRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
      * @return tag
      */
     public java.util.List < Tag> getTag() {
@@ -212,6 +212,7 @@ public class CopyImageRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CopyImageRequest, Builder> {
+        private String sourceRegionId; 
         private String destinationDescription; 
         private String destinationImageName; 
         private String destinationRegionId; 
@@ -225,7 +226,6 @@ public class CopyImageRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
         private java.util.List < Tag> tag; 
 
         private Builder() {
@@ -234,6 +234,7 @@ public class CopyImageRequest extends Request {
 
         private Builder(CopyImageRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.destinationDescription = request.destinationDescription;
             this.destinationImageName = request.destinationImageName;
             this.destinationRegionId = request.destinationRegionId;
@@ -247,9 +248,17 @@ public class CopyImageRequest extends Request {
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.sourceRegionId = request.sourceRegionId;
             this.tag = request.tag;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * DestinationDescription.
@@ -365,15 +374,6 @@ public class CopyImageRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

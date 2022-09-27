@@ -94,6 +94,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateDeploymentSetResponse> createDeploymentSet(CreateDeploymentSetRequest request);
 
+    CompletableFuture<CreateDiagnosticMetricSetResponse> createDiagnosticMetricSet(CreateDiagnosticMetricSetRequest request);
+
+    CompletableFuture<CreateDiagnosticReportResponse> createDiagnosticReport(CreateDiagnosticReportRequest request);
+
     CompletableFuture<CreateDiskResponse> createDisk(CreateDiskRequest request);
 
     CompletableFuture<CreateElasticityAssuranceResponse> createElasticityAssurance(CreateElasticityAssuranceRequest request);
@@ -165,6 +169,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteDemandResponse> deleteDemand(DeleteDemandRequest request);
 
     CompletableFuture<DeleteDeploymentSetResponse> deleteDeploymentSet(DeleteDeploymentSetRequest request);
+
+    CompletableFuture<DeleteDiagnosticMetricSetsResponse> deleteDiagnosticMetricSets(DeleteDiagnosticMetricSetsRequest request);
+
+    CompletableFuture<DeleteDiagnosticReportsResponse> deleteDiagnosticReports(DeleteDiagnosticReportsRequest request);
 
     CompletableFuture<DeleteDiskResponse> deleteDisk(DeleteDiskRequest request);
 
@@ -267,6 +275,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDeploymentSetSupportedInstanceTypeFamilyResponse> describeDeploymentSetSupportedInstanceTypeFamily(DescribeDeploymentSetSupportedInstanceTypeFamilyRequest request);
 
     CompletableFuture<DescribeDeploymentSetsResponse> describeDeploymentSets(DescribeDeploymentSetsRequest request);
+
+    CompletableFuture<DescribeDiagnosticMetricSetsResponse> describeDiagnosticMetricSets(DescribeDiagnosticMetricSetsRequest request);
+
+    CompletableFuture<DescribeDiagnosticMetricsResponse> describeDiagnosticMetrics(DescribeDiagnosticMetricsRequest request);
+
+    CompletableFuture<DescribeDiagnosticReportsResponse> describeDiagnosticReports(DescribeDiagnosticReportsRequest request);
 
     CompletableFuture<DescribeDiskMonitorDataResponse> describeDiskMonitorData(DescribeDiskMonitorDataRequest request);
 
@@ -482,6 +496,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<LeaveSecurityGroupResponse> leaveSecurityGroup(LeaveSecurityGroupRequest request);
 
+    CompletableFuture<ListPluginStatusResponse> listPluginStatus(ListPluginStatusRequest request);
+
     CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
 
     CompletableFuture<ModifyAutoProvisioningGroupResponse> modifyAutoProvisioningGroup(ModifyAutoProvisioningGroupRequest request);
@@ -509,6 +525,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyDemandResponse> modifyDemand(ModifyDemandRequest request);
 
     CompletableFuture<ModifyDeploymentSetAttributeResponse> modifyDeploymentSetAttribute(ModifyDeploymentSetAttributeRequest request);
+
+    CompletableFuture<ModifyDiagnosticMetricSetResponse> modifyDiagnosticMetricSet(ModifyDiagnosticMetricSetRequest request);
 
     CompletableFuture<ModifyDiskAttributeResponse> modifyDiskAttribute(ModifyDiskAttributeRequest request);
 
@@ -635,6 +653,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RenewDedicatedHostsResponse> renewDedicatedHosts(RenewDedicatedHostsRequest request);
 
     CompletableFuture<RenewInstanceResponse> renewInstance(RenewInstanceRequest request);
+
+    CompletableFuture<RenewReservedInstancesResponse> renewReservedInstances(RenewReservedInstancesRequest request);
 
     CompletableFuture<ReplaceSystemDiskResponse> replaceSystemDisk(ReplaceSystemDiskRequest request);
 

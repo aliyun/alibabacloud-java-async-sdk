@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeNetworkInterfacesRequest</p>
  */
 public class DescribeNetworkInterfacesRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("InstanceId")
     private String instanceId;
@@ -85,10 +89,6 @@ public class DescribeNetworkInterfacesRequest extends Request {
     @NameInMap("ServiceManaged")
     private Boolean serviceManaged;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
     @NameInMap("Status")
     private String status;
@@ -111,6 +111,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
 
     private DescribeNetworkInterfacesRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.instanceId = builder.instanceId;
         this.ipv6Address = builder.ipv6Address;
         this.maxResults = builder.maxResults;
@@ -129,7 +130,6 @@ public class DescribeNetworkInterfacesRequest extends Request {
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityGroupId = builder.securityGroupId;
         this.serviceManaged = builder.serviceManaged;
-        this.sourceRegionId = builder.sourceRegionId;
         this.status = builder.status;
         this.tag = builder.tag;
         this.type = builder.type;
@@ -148,6 +148,13 @@ public class DescribeNetworkInterfacesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -277,13 +284,6 @@ public class DescribeNetworkInterfacesRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
      * @return status
      */
     public String getStatus() {
@@ -319,6 +319,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeNetworkInterfacesRequest, Builder> {
+        private String sourceRegionId; 
         private String instanceId; 
         private java.util.List < String > ipv6Address; 
         private Integer maxResults; 
@@ -337,7 +338,6 @@ public class DescribeNetworkInterfacesRequest extends Request {
         private Long resourceOwnerId; 
         private String securityGroupId; 
         private Boolean serviceManaged; 
-        private String sourceRegionId; 
         private String status; 
         private java.util.List < Tag> tag; 
         private String type; 
@@ -350,6 +350,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
 
         private Builder(DescribeNetworkInterfacesRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.instanceId = request.instanceId;
             this.ipv6Address = request.ipv6Address;
             this.maxResults = request.maxResults;
@@ -368,13 +369,21 @@ public class DescribeNetworkInterfacesRequest extends Request {
             this.resourceOwnerId = request.resourceOwnerId;
             this.securityGroupId = request.securityGroupId;
             this.serviceManaged = request.serviceManaged;
-            this.sourceRegionId = request.sourceRegionId;
             this.status = request.status;
             this.tag = request.tag;
             this.type = request.type;
             this.vSwitchId = request.vSwitchId;
             this.vpcId = request.vpcId;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * InstanceId.
@@ -535,15 +544,6 @@ public class DescribeNetworkInterfacesRequest extends Request {
         public Builder serviceManaged(Boolean serviceManaged) {
             this.putQueryParameter("ServiceManaged", serviceManaged);
             this.serviceManaged = serviceManaged;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

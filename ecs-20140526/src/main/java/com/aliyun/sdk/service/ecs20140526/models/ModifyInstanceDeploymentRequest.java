@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyInstanceDeploymentRequest</p>
  */
 public class ModifyInstanceDeploymentRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("Affinity")
     private String affinity;
@@ -63,6 +67,10 @@ public class ModifyInstanceDeploymentRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("RemoveFromDeploymentSet")
+    private Boolean removeFromDeploymentSet;
+
+    @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -70,16 +78,13 @@ public class ModifyInstanceDeploymentRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
     @NameInMap("Tenancy")
     private String tenancy;
 
     private ModifyInstanceDeploymentRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.affinity = builder.affinity;
         this.dedicatedHostClusterId = builder.dedicatedHostClusterId;
         this.dedicatedHostId = builder.dedicatedHostId;
@@ -92,9 +97,9 @@ public class ModifyInstanceDeploymentRequest extends Request {
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
+        this.removeFromDeploymentSet = builder.removeFromDeploymentSet;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
         this.tenancy = builder.tenancy;
     }
 
@@ -109,6 +114,13 @@ public class ModifyInstanceDeploymentRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -196,6 +208,13 @@ public class ModifyInstanceDeploymentRequest extends Request {
     }
 
     /**
+     * @return removeFromDeploymentSet
+     */
+    public Boolean getRemoveFromDeploymentSet() {
+        return this.removeFromDeploymentSet;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -210,13 +229,6 @@ public class ModifyInstanceDeploymentRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
      * @return tenancy
      */
     public String getTenancy() {
@@ -224,6 +236,7 @@ public class ModifyInstanceDeploymentRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyInstanceDeploymentRequest, Builder> {
+        private String sourceRegionId; 
         private String affinity; 
         private String dedicatedHostClusterId; 
         private String dedicatedHostId; 
@@ -236,9 +249,9 @@ public class ModifyInstanceDeploymentRequest extends Request {
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
+        private Boolean removeFromDeploymentSet; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
         private String tenancy; 
 
         private Builder() {
@@ -247,6 +260,7 @@ public class ModifyInstanceDeploymentRequest extends Request {
 
         private Builder(ModifyInstanceDeploymentRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.affinity = request.affinity;
             this.dedicatedHostClusterId = request.dedicatedHostClusterId;
             this.dedicatedHostId = request.dedicatedHostId;
@@ -259,11 +273,20 @@ public class ModifyInstanceDeploymentRequest extends Request {
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
+            this.removeFromDeploymentSet = request.removeFromDeploymentSet;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.sourceRegionId = request.sourceRegionId;
             this.tenancy = request.tenancy;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * Affinity.
@@ -374,6 +397,15 @@ public class ModifyInstanceDeploymentRequest extends Request {
         }
 
         /**
+         * RemoveFromDeploymentSet.
+         */
+        public Builder removeFromDeploymentSet(Boolean removeFromDeploymentSet) {
+            this.putQueryParameter("RemoveFromDeploymentSet", removeFromDeploymentSet);
+            this.removeFromDeploymentSet = removeFromDeploymentSet;
+            return this;
+        }
+
+        /**
          * ResourceOwnerAccount.
          */
         public Builder resourceOwnerAccount(String resourceOwnerAccount) {
@@ -388,15 +420,6 @@ public class ModifyInstanceDeploymentRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

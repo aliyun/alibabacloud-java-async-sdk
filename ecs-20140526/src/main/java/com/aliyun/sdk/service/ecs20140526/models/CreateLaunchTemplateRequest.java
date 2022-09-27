@@ -16,6 +16,10 @@ public class CreateLaunchTemplateRequest extends Request {
     @NameInMap("SystemDisk")
     private SystemDisk systemDisk;
 
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("AutoReleaseTime")
     private String autoReleaseTime;
@@ -150,10 +154,6 @@ public class CreateLaunchTemplateRequest extends Request {
     @NameInMap("SecurityGroupIds")
     private java.util.List < String > securityGroupIds;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
     @NameInMap("SpotDuration")
     private Integer spotDuration;
@@ -202,6 +202,7 @@ public class CreateLaunchTemplateRequest extends Request {
     private CreateLaunchTemplateRequest(Builder builder) {
         super(builder);
         this.systemDisk = builder.systemDisk;
+        this.sourceRegionId = builder.sourceRegionId;
         this.autoReleaseTime = builder.autoReleaseTime;
         this.dataDisk = builder.dataDisk;
         this.deploymentSetId = builder.deploymentSetId;
@@ -235,7 +236,6 @@ public class CreateLaunchTemplateRequest extends Request {
         this.securityEnhancementStrategy = builder.securityEnhancementStrategy;
         this.securityGroupId = builder.securityGroupId;
         this.securityGroupIds = builder.securityGroupIds;
-        this.sourceRegionId = builder.sourceRegionId;
         this.spotDuration = builder.spotDuration;
         this.spotPriceLimit = builder.spotPriceLimit;
         this.spotStrategy = builder.spotStrategy;
@@ -267,6 +267,13 @@ public class CreateLaunchTemplateRequest extends Request {
      */
     public SystemDisk getSystemDisk() {
         return this.systemDisk;
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -501,13 +508,6 @@ public class CreateLaunchTemplateRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
      * @return spotDuration
      */
     public Integer getSpotDuration() {
@@ -586,6 +586,7 @@ public class CreateLaunchTemplateRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateLaunchTemplateRequest, Builder> {
         private SystemDisk systemDisk; 
+        private String sourceRegionId; 
         private String autoReleaseTime; 
         private java.util.List < DataDisk> dataDisk; 
         private String deploymentSetId; 
@@ -619,7 +620,6 @@ public class CreateLaunchTemplateRequest extends Request {
         private String securityEnhancementStrategy; 
         private String securityGroupId; 
         private java.util.List < String > securityGroupIds; 
-        private String sourceRegionId; 
         private Integer spotDuration; 
         private Float spotPriceLimit; 
         private String spotStrategy; 
@@ -639,6 +639,7 @@ public class CreateLaunchTemplateRequest extends Request {
         private Builder(CreateLaunchTemplateRequest request) {
             super(request);
             this.systemDisk = request.systemDisk;
+            this.sourceRegionId = request.sourceRegionId;
             this.autoReleaseTime = request.autoReleaseTime;
             this.dataDisk = request.dataDisk;
             this.deploymentSetId = request.deploymentSetId;
@@ -672,7 +673,6 @@ public class CreateLaunchTemplateRequest extends Request {
             this.securityEnhancementStrategy = request.securityEnhancementStrategy;
             this.securityGroupId = request.securityGroupId;
             this.securityGroupIds = request.securityGroupIds;
-            this.sourceRegionId = request.sourceRegionId;
             this.spotDuration = request.spotDuration;
             this.spotPriceLimit = request.spotPriceLimit;
             this.spotStrategy = request.spotStrategy;
@@ -692,6 +692,15 @@ public class CreateLaunchTemplateRequest extends Request {
         public Builder systemDisk(SystemDisk systemDisk) {
             this.putQueryParameter("SystemDisk", systemDisk);
             this.systemDisk = systemDisk;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 
@@ -993,15 +1002,6 @@ public class CreateLaunchTemplateRequest extends Request {
         }
 
         /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
-            return this;
-        }
-
-        /**
          * SpotDuration.
          */
         public Builder spotDuration(Integer spotDuration) {
@@ -1108,6 +1108,12 @@ public class CreateLaunchTemplateRequest extends Request {
     } 
 
     public static class SystemDisk extends TeaModel {
+        @NameInMap("AutoSnapshotPolicyId")
+        private String autoSnapshotPolicyId;
+
+        @NameInMap("BurstingEnabled")
+        private Boolean burstingEnabled;
+
         @NameInMap("Category")
         private String category;
 
@@ -1126,16 +1132,22 @@ public class CreateLaunchTemplateRequest extends Request {
         @NameInMap("PerformanceLevel")
         private String performanceLevel;
 
+        @NameInMap("ProvisionedIops")
+        private Long provisionedIops;
+
         @NameInMap("Size")
         private Integer size;
 
         private SystemDisk(Builder builder) {
+            this.autoSnapshotPolicyId = builder.autoSnapshotPolicyId;
+            this.burstingEnabled = builder.burstingEnabled;
             this.category = builder.category;
             this.deleteWithInstance = builder.deleteWithInstance;
             this.description = builder.description;
             this.diskName = builder.diskName;
             this.iops = builder.iops;
             this.performanceLevel = builder.performanceLevel;
+            this.provisionedIops = builder.provisionedIops;
             this.size = builder.size;
         }
 
@@ -1145,6 +1157,20 @@ public class CreateLaunchTemplateRequest extends Request {
 
         public static SystemDisk create() {
             return builder().build();
+        }
+
+        /**
+         * @return autoSnapshotPolicyId
+         */
+        public String getAutoSnapshotPolicyId() {
+            return this.autoSnapshotPolicyId;
+        }
+
+        /**
+         * @return burstingEnabled
+         */
+        public Boolean getBurstingEnabled() {
+            return this.burstingEnabled;
         }
 
         /**
@@ -1190,6 +1216,13 @@ public class CreateLaunchTemplateRequest extends Request {
         }
 
         /**
+         * @return provisionedIops
+         */
+        public Long getProvisionedIops() {
+            return this.provisionedIops;
+        }
+
+        /**
          * @return size
          */
         public Integer getSize() {
@@ -1197,13 +1230,32 @@ public class CreateLaunchTemplateRequest extends Request {
         }
 
         public static final class Builder {
+            private String autoSnapshotPolicyId; 
+            private Boolean burstingEnabled; 
             private String category; 
             private Boolean deleteWithInstance; 
             private String description; 
             private String diskName; 
             private Integer iops; 
             private String performanceLevel; 
+            private Long provisionedIops; 
             private Integer size; 
+
+            /**
+             * AutoSnapshotPolicyId.
+             */
+            public Builder autoSnapshotPolicyId(String autoSnapshotPolicyId) {
+                this.autoSnapshotPolicyId = autoSnapshotPolicyId;
+                return this;
+            }
+
+            /**
+             * BurstingEnabled.
+             */
+            public Builder burstingEnabled(Boolean burstingEnabled) {
+                this.burstingEnabled = burstingEnabled;
+                return this;
+            }
 
             /**
              * Category.
@@ -1254,6 +1306,14 @@ public class CreateLaunchTemplateRequest extends Request {
             }
 
             /**
+             * ProvisionedIops.
+             */
+            public Builder provisionedIops(Long provisionedIops) {
+                this.provisionedIops = provisionedIops;
+                return this;
+            }
+
+            /**
              * Size.
              */
             public Builder size(Integer size) {
@@ -1269,6 +1329,12 @@ public class CreateLaunchTemplateRequest extends Request {
 
     }
     public static class DataDisk extends TeaModel {
+        @NameInMap("AutoSnapshotPolicyId")
+        private String autoSnapshotPolicyId;
+
+        @NameInMap("BurstingEnabled")
+        private Boolean burstingEnabled;
+
         @NameInMap("Category")
         private String category;
 
@@ -1290,6 +1356,9 @@ public class CreateLaunchTemplateRequest extends Request {
         @NameInMap("PerformanceLevel")
         private String performanceLevel;
 
+        @NameInMap("ProvisionedIops")
+        private Long provisionedIops;
+
         @NameInMap("Size")
         private Integer size;
 
@@ -1297,6 +1366,8 @@ public class CreateLaunchTemplateRequest extends Request {
         private String snapshotId;
 
         private DataDisk(Builder builder) {
+            this.autoSnapshotPolicyId = builder.autoSnapshotPolicyId;
+            this.burstingEnabled = builder.burstingEnabled;
             this.category = builder.category;
             this.deleteWithInstance = builder.deleteWithInstance;
             this.description = builder.description;
@@ -1304,6 +1375,7 @@ public class CreateLaunchTemplateRequest extends Request {
             this.diskName = builder.diskName;
             this.encrypted = builder.encrypted;
             this.performanceLevel = builder.performanceLevel;
+            this.provisionedIops = builder.provisionedIops;
             this.size = builder.size;
             this.snapshotId = builder.snapshotId;
         }
@@ -1314,6 +1386,20 @@ public class CreateLaunchTemplateRequest extends Request {
 
         public static DataDisk create() {
             return builder().build();
+        }
+
+        /**
+         * @return autoSnapshotPolicyId
+         */
+        public String getAutoSnapshotPolicyId() {
+            return this.autoSnapshotPolicyId;
+        }
+
+        /**
+         * @return burstingEnabled
+         */
+        public Boolean getBurstingEnabled() {
+            return this.burstingEnabled;
         }
 
         /**
@@ -1366,6 +1452,13 @@ public class CreateLaunchTemplateRequest extends Request {
         }
 
         /**
+         * @return provisionedIops
+         */
+        public Long getProvisionedIops() {
+            return this.provisionedIops;
+        }
+
+        /**
          * @return size
          */
         public Integer getSize() {
@@ -1380,6 +1473,8 @@ public class CreateLaunchTemplateRequest extends Request {
         }
 
         public static final class Builder {
+            private String autoSnapshotPolicyId; 
+            private Boolean burstingEnabled; 
             private String category; 
             private Boolean deleteWithInstance; 
             private String description; 
@@ -1387,8 +1482,25 @@ public class CreateLaunchTemplateRequest extends Request {
             private String diskName; 
             private String encrypted; 
             private String performanceLevel; 
+            private Long provisionedIops; 
             private Integer size; 
             private String snapshotId; 
+
+            /**
+             * AutoSnapshotPolicyId.
+             */
+            public Builder autoSnapshotPolicyId(String autoSnapshotPolicyId) {
+                this.autoSnapshotPolicyId = autoSnapshotPolicyId;
+                return this;
+            }
+
+            /**
+             * BurstingEnabled.
+             */
+            public Builder burstingEnabled(Boolean burstingEnabled) {
+                this.burstingEnabled = burstingEnabled;
+                return this;
+            }
 
             /**
              * Category.
@@ -1447,6 +1559,14 @@ public class CreateLaunchTemplateRequest extends Request {
             }
 
             /**
+             * ProvisionedIops.
+             */
+            public Builder provisionedIops(Long provisionedIops) {
+                this.provisionedIops = provisionedIops;
+                return this;
+            }
+
+            /**
              * Size.
              */
             public Builder size(Integer size) {
@@ -1473,8 +1593,14 @@ public class CreateLaunchTemplateRequest extends Request {
         @NameInMap("Description")
         private String description;
 
+        @NameInMap("InstanceType")
+        private String instanceType;
+
         @NameInMap("NetworkInterfaceName")
         private String networkInterfaceName;
+
+        @NameInMap("NetworkInterfaceTrafficMode")
+        private String networkInterfaceTrafficMode;
 
         @NameInMap("PrimaryIpAddress")
         private String primaryIpAddress;
@@ -1490,7 +1616,9 @@ public class CreateLaunchTemplateRequest extends Request {
 
         private NetworkInterface(Builder builder) {
             this.description = builder.description;
+            this.instanceType = builder.instanceType;
             this.networkInterfaceName = builder.networkInterfaceName;
+            this.networkInterfaceTrafficMode = builder.networkInterfaceTrafficMode;
             this.primaryIpAddress = builder.primaryIpAddress;
             this.securityGroupId = builder.securityGroupId;
             this.securityGroupIds = builder.securityGroupIds;
@@ -1513,10 +1641,24 @@ public class CreateLaunchTemplateRequest extends Request {
         }
 
         /**
+         * @return instanceType
+         */
+        public String getInstanceType() {
+            return this.instanceType;
+        }
+
+        /**
          * @return networkInterfaceName
          */
         public String getNetworkInterfaceName() {
             return this.networkInterfaceName;
+        }
+
+        /**
+         * @return networkInterfaceTrafficMode
+         */
+        public String getNetworkInterfaceTrafficMode() {
+            return this.networkInterfaceTrafficMode;
         }
 
         /**
@@ -1549,7 +1691,9 @@ public class CreateLaunchTemplateRequest extends Request {
 
         public static final class Builder {
             private String description; 
+            private String instanceType; 
             private String networkInterfaceName; 
+            private String networkInterfaceTrafficMode; 
             private String primaryIpAddress; 
             private String securityGroupId; 
             private java.util.List < String > securityGroupIds; 
@@ -1564,10 +1708,26 @@ public class CreateLaunchTemplateRequest extends Request {
             }
 
             /**
+             * InstanceType.
+             */
+            public Builder instanceType(String instanceType) {
+                this.instanceType = instanceType;
+                return this;
+            }
+
+            /**
              * NetworkInterfaceName.
              */
             public Builder networkInterfaceName(String networkInterfaceName) {
                 this.networkInterfaceName = networkInterfaceName;
+                return this;
+            }
+
+            /**
+             * NetworkInterfaceTrafficMode.
+             */
+            public Builder networkInterfaceTrafficMode(String networkInterfaceTrafficMode) {
+                this.networkInterfaceTrafficMode = networkInterfaceTrafficMode;
                 return this;
             }
 

@@ -12,9 +12,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAutoSnapshotPolicyExRequest</p>
  */
 public class DescribeAutoSnapshotPolicyExRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("AutoSnapshotPolicyId")
     private String autoSnapshotPolicyId;
+
+    @Query
+    @NameInMap("AutoSnapshotPolicyName")
+    private String autoSnapshotPolicyName;
 
     @Query
     @NameInMap("OwnerAccount")
@@ -50,17 +58,15 @@ public class DescribeAutoSnapshotPolicyExRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
     @NameInMap("Tag")
     private java.util.List < Tag> tag;
 
     private DescribeAutoSnapshotPolicyExRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.autoSnapshotPolicyId = builder.autoSnapshotPolicyId;
+        this.autoSnapshotPolicyName = builder.autoSnapshotPolicyName;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
@@ -69,7 +75,6 @@ public class DescribeAutoSnapshotPolicyExRequest extends Request {
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
         this.tag = builder.tag;
     }
 
@@ -87,10 +92,24 @@ public class DescribeAutoSnapshotPolicyExRequest extends Request {
     }
 
     /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
+    }
+
+    /**
      * @return autoSnapshotPolicyId
      */
     public String getAutoSnapshotPolicyId() {
         return this.autoSnapshotPolicyId;
+    }
+
+    /**
+     * @return autoSnapshotPolicyName
+     */
+    public String getAutoSnapshotPolicyName() {
+        return this.autoSnapshotPolicyName;
     }
 
     /**
@@ -150,13 +169,6 @@ public class DescribeAutoSnapshotPolicyExRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
      * @return tag
      */
     public java.util.List < Tag> getTag() {
@@ -164,7 +176,9 @@ public class DescribeAutoSnapshotPolicyExRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeAutoSnapshotPolicyExRequest, Builder> {
+        private String sourceRegionId; 
         private String autoSnapshotPolicyId; 
+        private String autoSnapshotPolicyName; 
         private String ownerAccount; 
         private Long ownerId; 
         private Integer pageNumber; 
@@ -173,7 +187,6 @@ public class DescribeAutoSnapshotPolicyExRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
         private java.util.List < Tag> tag; 
 
         private Builder() {
@@ -182,7 +195,9 @@ public class DescribeAutoSnapshotPolicyExRequest extends Request {
 
         private Builder(DescribeAutoSnapshotPolicyExRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.autoSnapshotPolicyId = request.autoSnapshotPolicyId;
+            this.autoSnapshotPolicyName = request.autoSnapshotPolicyName;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
@@ -191,9 +206,17 @@ public class DescribeAutoSnapshotPolicyExRequest extends Request {
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.sourceRegionId = request.sourceRegionId;
             this.tag = request.tag;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * AutoSnapshotPolicyId.
@@ -201,6 +224,15 @@ public class DescribeAutoSnapshotPolicyExRequest extends Request {
         public Builder autoSnapshotPolicyId(String autoSnapshotPolicyId) {
             this.putQueryParameter("AutoSnapshotPolicyId", autoSnapshotPolicyId);
             this.autoSnapshotPolicyId = autoSnapshotPolicyId;
+            return this;
+        }
+
+        /**
+         * AutoSnapshotPolicyName.
+         */
+        public Builder autoSnapshotPolicyName(String autoSnapshotPolicyName) {
+            this.putQueryParameter("AutoSnapshotPolicyName", autoSnapshotPolicyName);
+            this.autoSnapshotPolicyName = autoSnapshotPolicyName;
             return this;
         }
 
@@ -273,15 +305,6 @@ public class DescribeAutoSnapshotPolicyExRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

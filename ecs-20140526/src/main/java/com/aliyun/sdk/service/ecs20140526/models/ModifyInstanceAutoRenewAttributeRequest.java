@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyInstanceAutoRenewAttributeRequest</p>
  */
 public class ModifyInstanceAutoRenewAttributeRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("AutoRenew")
     private Boolean autoRenew;
@@ -54,12 +58,9 @@ public class ModifyInstanceAutoRenewAttributeRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     private ModifyInstanceAutoRenewAttributeRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.autoRenew = builder.autoRenew;
         this.duration = builder.duration;
         this.instanceId = builder.instanceId;
@@ -70,7 +71,6 @@ public class ModifyInstanceAutoRenewAttributeRequest extends Request {
         this.renewalStatus = builder.renewalStatus;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -84,6 +84,13 @@ public class ModifyInstanceAutoRenewAttributeRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -156,14 +163,8 @@ public class ModifyInstanceAutoRenewAttributeRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
     public static final class Builder extends Request.Builder<ModifyInstanceAutoRenewAttributeRequest, Builder> {
+        private String sourceRegionId; 
         private Boolean autoRenew; 
         private Integer duration; 
         private String instanceId; 
@@ -174,7 +175,6 @@ public class ModifyInstanceAutoRenewAttributeRequest extends Request {
         private String renewalStatus; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -182,6 +182,7 @@ public class ModifyInstanceAutoRenewAttributeRequest extends Request {
 
         private Builder(ModifyInstanceAutoRenewAttributeRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.autoRenew = request.autoRenew;
             this.duration = request.duration;
             this.instanceId = request.instanceId;
@@ -192,8 +193,16 @@ public class ModifyInstanceAutoRenewAttributeRequest extends Request {
             this.renewalStatus = request.renewalStatus;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.sourceRegionId = request.sourceRegionId;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * AutoRenew.
@@ -282,15 +291,6 @@ public class ModifyInstanceAutoRenewAttributeRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

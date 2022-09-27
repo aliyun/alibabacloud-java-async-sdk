@@ -71,9 +71,117 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @NameInMap("TagKey")
+        private String tagKey;
+
+        @NameInMap("TagValue")
+        private String tagValue;
+
+        private Tag(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            /**
+             * TagKey.
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * TagValue.
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
+    public static class Tags extends TeaModel {
+        @NameInMap("Tag")
+        private java.util.List < Tag> tag;
+
+        private Tags(Builder builder) {
+            this.tag = builder.tag;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tag
+         */
+        public java.util.List < Tag> getTag() {
+            return this.tag;
+        }
+
+        public static final class Builder {
+            private java.util.List < Tag> tag; 
+
+            /**
+             * Tag.
+             */
+            public Builder tag(java.util.List < Tag> tag) {
+                this.tag = tag;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
     public static class InvocationResult extends TeaModel {
         @NameInMap("CommandId")
         private String commandId;
+
+        @NameInMap("ContainerId")
+        private String containerId;
+
+        @NameInMap("ContainerName")
+        private String containerName;
 
         @NameInMap("Dropped")
         private Integer dropped;
@@ -114,11 +222,16 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
         @NameInMap("StopTime")
         private String stopTime;
 
+        @NameInMap("Tags")
+        private Tags tags;
+
         @NameInMap("Username")
         private String username;
 
         private InvocationResult(Builder builder) {
             this.commandId = builder.commandId;
+            this.containerId = builder.containerId;
+            this.containerName = builder.containerName;
             this.dropped = builder.dropped;
             this.errorCode = builder.errorCode;
             this.errorInfo = builder.errorInfo;
@@ -132,6 +245,7 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             this.repeats = builder.repeats;
             this.startTime = builder.startTime;
             this.stopTime = builder.stopTime;
+            this.tags = builder.tags;
             this.username = builder.username;
         }
 
@@ -148,6 +262,20 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
          */
         public String getCommandId() {
             return this.commandId;
+        }
+
+        /**
+         * @return containerId
+         */
+        public String getContainerId() {
+            return this.containerId;
+        }
+
+        /**
+         * @return containerName
+         */
+        public String getContainerName() {
+            return this.containerName;
         }
 
         /**
@@ -242,6 +370,13 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
         }
 
         /**
+         * @return tags
+         */
+        public Tags getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return username
          */
         public String getUsername() {
@@ -250,6 +385,8 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String commandId; 
+            private String containerId; 
+            private String containerName; 
             private Integer dropped; 
             private String errorCode; 
             private String errorInfo; 
@@ -263,6 +400,7 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             private Integer repeats; 
             private String startTime; 
             private String stopTime; 
+            private Tags tags; 
             private String username; 
 
             /**
@@ -270,6 +408,22 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
              */
             public Builder commandId(String commandId) {
                 this.commandId = commandId;
+                return this;
+            }
+
+            /**
+             * ContainerId.
+             */
+            public Builder containerId(String containerId) {
+                this.containerId = containerId;
+                return this;
+            }
+
+            /**
+             * ContainerName.
+             */
+            public Builder containerName(String containerName) {
+                this.containerName = containerName;
                 return this;
             }
 
@@ -374,6 +528,14 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
              */
             public Builder stopTime(String stopTime) {
                 this.stopTime = stopTime;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(Tags tags) {
+                this.tags = tags;
                 return this;
             }
 

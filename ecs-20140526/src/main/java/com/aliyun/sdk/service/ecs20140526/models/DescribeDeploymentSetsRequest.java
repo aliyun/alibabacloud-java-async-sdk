@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDeploymentSetsRequest</p>
  */
 public class DescribeDeploymentSetsRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("DeploymentSetIds")
     private String deploymentSetIds;
@@ -62,16 +66,13 @@ public class DescribeDeploymentSetsRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
     @NameInMap("Strategy")
     private String strategy;
 
     private DescribeDeploymentSetsRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.deploymentSetIds = builder.deploymentSetIds;
         this.deploymentSetName = builder.deploymentSetName;
         this.domain = builder.domain;
@@ -84,7 +85,6 @@ public class DescribeDeploymentSetsRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
         this.strategy = builder.strategy;
     }
 
@@ -99,6 +99,13 @@ public class DescribeDeploymentSetsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -186,13 +193,6 @@ public class DescribeDeploymentSetsRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
      * @return strategy
      */
     public String getStrategy() {
@@ -200,6 +200,7 @@ public class DescribeDeploymentSetsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeDeploymentSetsRequest, Builder> {
+        private String sourceRegionId; 
         private String deploymentSetIds; 
         private String deploymentSetName; 
         private String domain; 
@@ -212,7 +213,6 @@ public class DescribeDeploymentSetsRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
         private String strategy; 
 
         private Builder() {
@@ -221,6 +221,7 @@ public class DescribeDeploymentSetsRequest extends Request {
 
         private Builder(DescribeDeploymentSetsRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.deploymentSetIds = request.deploymentSetIds;
             this.deploymentSetName = request.deploymentSetName;
             this.domain = request.domain;
@@ -233,9 +234,17 @@ public class DescribeDeploymentSetsRequest extends Request {
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.sourceRegionId = request.sourceRegionId;
             this.strategy = request.strategy;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * DeploymentSetIds.
@@ -342,15 +351,6 @@ public class DescribeDeploymentSetsRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

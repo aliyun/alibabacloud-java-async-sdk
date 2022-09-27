@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyInstanceVpcAttributeRequest</p>
  */
 public class ModifyInstanceVpcAttributeRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
@@ -41,10 +45,6 @@ public class ModifyInstanceVpcAttributeRequest extends Request {
     @NameInMap("SecurityGroupId")
     private java.util.List < String > securityGroupId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
     @NameInMap("VSwitchId")
     @Validation(required = true)
@@ -56,6 +56,7 @@ public class ModifyInstanceVpcAttributeRequest extends Request {
 
     private ModifyInstanceVpcAttributeRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.instanceId = builder.instanceId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -63,7 +64,6 @@ public class ModifyInstanceVpcAttributeRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityGroupId = builder.securityGroupId;
-        this.sourceRegionId = builder.sourceRegionId;
         this.vSwitchId = builder.vSwitchId;
         this.vpcId = builder.vpcId;
     }
@@ -79,6 +79,13 @@ public class ModifyInstanceVpcAttributeRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -131,13 +138,6 @@ public class ModifyInstanceVpcAttributeRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
      * @return vSwitchId
      */
     public String getVSwitchId() {
@@ -152,6 +152,7 @@ public class ModifyInstanceVpcAttributeRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyInstanceVpcAttributeRequest, Builder> {
+        private String sourceRegionId; 
         private String instanceId; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -159,7 +160,6 @@ public class ModifyInstanceVpcAttributeRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private java.util.List < String > securityGroupId; 
-        private String sourceRegionId; 
         private String vSwitchId; 
         private String vpcId; 
 
@@ -169,6 +169,7 @@ public class ModifyInstanceVpcAttributeRequest extends Request {
 
         private Builder(ModifyInstanceVpcAttributeRequest request) {
             super(request);
+            this.sourceRegionId = request.sourceRegionId;
             this.instanceId = request.instanceId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -176,10 +177,18 @@ public class ModifyInstanceVpcAttributeRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.securityGroupId = request.securityGroupId;
-            this.sourceRegionId = request.sourceRegionId;
             this.vSwitchId = request.vSwitchId;
             this.vpcId = request.vpcId;
         } 
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
 
         /**
          * InstanceId.
@@ -241,15 +250,6 @@ public class ModifyInstanceVpcAttributeRequest extends Request {
         public Builder securityGroupId(java.util.List < String > securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
             this.securityGroupId = securityGroupId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

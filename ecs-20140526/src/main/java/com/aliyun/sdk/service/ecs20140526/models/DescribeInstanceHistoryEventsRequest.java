@@ -20,6 +20,10 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
     @NameInMap("NotBefore")
     private NotBefore notBefore;
 
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("EventCycleStatus")
     private String eventCycleStatus;
@@ -89,10 +93,6 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
     @NameInMap("ResourceType")
     private String resourceType;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
     @NameInMap("Tag")
     private java.util.List < Tag> tag;
@@ -101,6 +101,7 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
         super(builder);
         this.eventPublishTime = builder.eventPublishTime;
         this.notBefore = builder.notBefore;
+        this.sourceRegionId = builder.sourceRegionId;
         this.eventCycleStatus = builder.eventCycleStatus;
         this.eventId = builder.eventId;
         this.eventType = builder.eventType;
@@ -118,7 +119,6 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.resourceType = builder.resourceType;
-        this.sourceRegionId = builder.sourceRegionId;
         this.tag = builder.tag;
     }
 
@@ -147,6 +147,13 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
      */
     public NotBefore getNotBefore() {
         return this.notBefore;
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -269,13 +276,6 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
      * @return tag
      */
     public java.util.List < Tag> getTag() {
@@ -285,6 +285,7 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeInstanceHistoryEventsRequest, Builder> {
         private EventPublishTime eventPublishTime; 
         private NotBefore notBefore; 
+        private String sourceRegionId; 
         private String eventCycleStatus; 
         private java.util.List < String > eventId; 
         private String eventType; 
@@ -302,7 +303,6 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String resourceType; 
-        private String sourceRegionId; 
         private java.util.List < Tag> tag; 
 
         private Builder() {
@@ -313,6 +313,7 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
             super(request);
             this.eventPublishTime = request.eventPublishTime;
             this.notBefore = request.notBefore;
+            this.sourceRegionId = request.sourceRegionId;
             this.eventCycleStatus = request.eventCycleStatus;
             this.eventId = request.eventId;
             this.eventType = request.eventType;
@@ -330,7 +331,6 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.resourceType = request.resourceType;
-            this.sourceRegionId = request.sourceRegionId;
             this.tag = request.tag;
         } 
 
@@ -349,6 +349,15 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
         public Builder notBefore(NotBefore notBefore) {
             this.putQueryParameter("NotBefore", notBefore);
             this.notBefore = notBefore;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 
@@ -502,15 +511,6 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
             this.resourceType = resourceType;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 
