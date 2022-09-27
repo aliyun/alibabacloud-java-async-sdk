@@ -17,10 +17,6 @@ public class DeleteConnectedClusterRequest extends Request {
     @Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("body")
-    private String body;
-
     @Query
     @NameInMap("clientToken")
     private String clientToken;
@@ -33,7 +29,6 @@ public class DeleteConnectedClusterRequest extends Request {
     private DeleteConnectedClusterRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
-        this.body = builder.body;
         this.clientToken = builder.clientToken;
         this.connectedInstanceId = builder.connectedInstanceId;
     }
@@ -59,13 +54,6 @@ public class DeleteConnectedClusterRequest extends Request {
     }
 
     /**
-     * @return body
-     */
-    public String getBody() {
-        return this.body;
-    }
-
-    /**
      * @return clientToken
      */
     public String getClientToken() {
@@ -81,7 +69,6 @@ public class DeleteConnectedClusterRequest extends Request {
 
     public static final class Builder extends Request.Builder<DeleteConnectedClusterRequest, Builder> {
         private String instanceId; 
-        private String body; 
         private String clientToken; 
         private String connectedInstanceId; 
 
@@ -92,7 +79,6 @@ public class DeleteConnectedClusterRequest extends Request {
         private Builder(DeleteConnectedClusterRequest request) {
             super(request);
             this.instanceId = request.instanceId;
-            this.body = request.body;
             this.clientToken = request.clientToken;
             this.connectedInstanceId = request.connectedInstanceId;
         } 
@@ -103,15 +89,6 @@ public class DeleteConnectedClusterRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * body.
-         */
-        public Builder body(String body) {
-            this.putBodyParameter("body", body);
-            this.body = body;
             return this;
         }
 

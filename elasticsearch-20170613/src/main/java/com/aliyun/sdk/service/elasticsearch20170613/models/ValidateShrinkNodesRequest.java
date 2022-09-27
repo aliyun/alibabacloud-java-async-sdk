@@ -22,6 +22,10 @@ public class ValidateShrinkNodesRequest extends Request {
     private java.util.List < ValidateShrinkNodesRequestBody> body;
 
     @Query
+    @NameInMap("count")
+    private Integer count;
+
+    @Query
     @NameInMap("ignoreStatus")
     private Boolean ignoreStatus;
 
@@ -34,6 +38,7 @@ public class ValidateShrinkNodesRequest extends Request {
         super(builder);
         this.instanceId = builder.instanceId;
         this.body = builder.body;
+        this.count = builder.count;
         this.ignoreStatus = builder.ignoreStatus;
         this.nodeType = builder.nodeType;
     }
@@ -66,6 +71,13 @@ public class ValidateShrinkNodesRequest extends Request {
     }
 
     /**
+     * @return count
+     */
+    public Integer getCount() {
+        return this.count;
+    }
+
+    /**
      * @return ignoreStatus
      */
     public Boolean getIgnoreStatus() {
@@ -82,6 +94,7 @@ public class ValidateShrinkNodesRequest extends Request {
     public static final class Builder extends Request.Builder<ValidateShrinkNodesRequest, Builder> {
         private String instanceId; 
         private java.util.List < ValidateShrinkNodesRequestBody> body; 
+        private Integer count; 
         private Boolean ignoreStatus; 
         private String nodeType; 
 
@@ -93,6 +106,7 @@ public class ValidateShrinkNodesRequest extends Request {
             super(request);
             this.instanceId = request.instanceId;
             this.body = request.body;
+            this.count = request.count;
             this.ignoreStatus = request.ignoreStatus;
             this.nodeType = request.nodeType;
         } 
@@ -112,6 +126,15 @@ public class ValidateShrinkNodesRequest extends Request {
         public Builder body(java.util.List < ValidateShrinkNodesRequestBody> body) {
             this.putBodyParameter("body", body);
             this.body = body;
+            return this;
+        }
+
+        /**
+         * count.
+         */
+        public Builder count(Integer count) {
+            this.putQueryParameter("count", count);
+            this.count = count;
             return this;
         }
 
@@ -144,6 +167,12 @@ public class ValidateShrinkNodesRequest extends Request {
         @NameInMap("host")
         private String host;
 
+        @NameInMap("hostName")
+        private String hostName;
+
+        @NameInMap("nodeType")
+        private String nodeType;
+
         @NameInMap("port")
         private Integer port;
 
@@ -152,6 +181,8 @@ public class ValidateShrinkNodesRequest extends Request {
 
         private ValidateShrinkNodesRequestBody(Builder builder) {
             this.host = builder.host;
+            this.hostName = builder.hostName;
+            this.nodeType = builder.nodeType;
             this.port = builder.port;
             this.zoneId = builder.zoneId;
         }
@@ -172,6 +203,20 @@ public class ValidateShrinkNodesRequest extends Request {
         }
 
         /**
+         * @return hostName
+         */
+        public String getHostName() {
+            return this.hostName;
+        }
+
+        /**
+         * @return nodeType
+         */
+        public String getNodeType() {
+            return this.nodeType;
+        }
+
+        /**
          * @return port
          */
         public Integer getPort() {
@@ -187,6 +232,8 @@ public class ValidateShrinkNodesRequest extends Request {
 
         public static final class Builder {
             private String host; 
+            private String hostName; 
+            private String nodeType; 
             private Integer port; 
             private String zoneId; 
 
@@ -195,6 +242,22 @@ public class ValidateShrinkNodesRequest extends Request {
              */
             public Builder host(String host) {
                 this.host = host;
+                return this;
+            }
+
+            /**
+             * hostName.
+             */
+            public Builder hostName(String hostName) {
+                this.hostName = hostName;
+                return this;
+            }
+
+            /**
+             * nodeType.
+             */
+            public Builder nodeType(String nodeType) {
+                this.nodeType = nodeType;
                 return this;
             }
 

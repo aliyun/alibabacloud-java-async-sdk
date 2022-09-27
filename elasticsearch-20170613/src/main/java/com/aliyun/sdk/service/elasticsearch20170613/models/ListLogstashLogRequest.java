@@ -21,10 +21,6 @@ public class ListLogstashLogRequest extends Request {
     @NameInMap("beginTime")
     private Long beginTime;
 
-    @Body
-    @NameInMap("body")
-    private String body;
-
     @Query
     @NameInMap("endTime")
     private Long endTime;
@@ -51,7 +47,6 @@ public class ListLogstashLogRequest extends Request {
         super(builder);
         this.instanceId = builder.instanceId;
         this.beginTime = builder.beginTime;
-        this.body = builder.body;
         this.endTime = builder.endTime;
         this.page = builder.page;
         this.query = builder.query;
@@ -84,13 +79,6 @@ public class ListLogstashLogRequest extends Request {
      */
     public Long getBeginTime() {
         return this.beginTime;
-    }
-
-    /**
-     * @return body
-     */
-    public String getBody() {
-        return this.body;
     }
 
     /**
@@ -131,7 +119,6 @@ public class ListLogstashLogRequest extends Request {
     public static final class Builder extends Request.Builder<ListLogstashLogRequest, Builder> {
         private String instanceId; 
         private Long beginTime; 
-        private String body; 
         private Long endTime; 
         private Integer page; 
         private String query; 
@@ -146,7 +133,6 @@ public class ListLogstashLogRequest extends Request {
             super(request);
             this.instanceId = request.instanceId;
             this.beginTime = request.beginTime;
-            this.body = request.body;
             this.endTime = request.endTime;
             this.page = request.page;
             this.query = request.query;
@@ -169,15 +155,6 @@ public class ListLogstashLogRequest extends Request {
         public Builder beginTime(Long beginTime) {
             this.putQueryParameter("beginTime", beginTime);
             this.beginTime = beginTime;
-            return this;
-        }
-
-        /**
-         * body.
-         */
-        public Builder body(String body) {
-            this.putBodyParameter("body", body);
-            this.body = body;
             return this;
         }
 

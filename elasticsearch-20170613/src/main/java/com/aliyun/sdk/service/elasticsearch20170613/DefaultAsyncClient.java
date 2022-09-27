@@ -1426,6 +1426,20 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
+    public CompletableFuture<ListInstanceHistoryEventsResponse> listInstanceHistoryEvents(ListInstanceHistoryEventsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListInstanceHistoryEvents").setMethod(HttpMethod.POST).setPathRegex("/openapi/events").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListInstanceHistoryEventsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListInstanceHistoryEventsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
     public CompletableFuture<ListInstanceIndicesResponse> listInstanceIndices(ListInstanceIndicesRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -2171,7 +2185,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<UpdateBlackIpsResponse> updateBlackIps(UpdateBlackIpsRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateBlackIps").setMethod(HttpMethod.POST).setPathRegex("/openapi/instances/{InstanceId}/black-ips").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateBlackIps").setMethod(HttpMethod.POST).setPathRegex("/openapi/instances/{InstanceId}/black-ips").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateBlackIpsResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -2633,7 +2647,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<UpgradeEngineVersionResponse> upgradeEngineVersion(UpgradeEngineVersionRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpgradeEngineVersion").setMethod(HttpMethod.POST).setPathRegex("/openapi/instances/{InstanceId}/actions/upgrade-version").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpgradeEngineVersion").setMethod(HttpMethod.POST).setPathRegex("/openapi/instances/{InstanceId}/actions/upgrade-version").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpgradeEngineVersionResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {

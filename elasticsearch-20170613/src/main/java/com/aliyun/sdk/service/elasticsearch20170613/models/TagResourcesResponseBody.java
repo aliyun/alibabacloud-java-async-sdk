@@ -15,8 +15,12 @@ public class TagResourcesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("Result")
+    private Boolean result;
+
     private TagResourcesResponseBody(Builder builder) {
         this.requestId = builder.requestId;
+        this.result = builder.result;
     }
 
     public static Builder builder() {
@@ -34,14 +38,30 @@ public class TagResourcesResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return result
+     */
+    public Boolean getResult() {
+        return this.result;
+    }
+
     public static final class Builder {
         private String requestId; 
+        private Boolean result; 
 
         /**
-         * RequestId.
+         * 请求ID。
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * 返回结果，true 标签关联资源成功。
+         */
+        public Builder result(Boolean result) {
+            this.result = result;
             return this;
         }
 

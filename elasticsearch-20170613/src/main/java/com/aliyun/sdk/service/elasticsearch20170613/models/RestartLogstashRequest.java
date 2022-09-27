@@ -18,8 +18,25 @@ public class RestartLogstashRequest extends Request {
     private String instanceId;
 
     @Body
-    @NameInMap("body")
-    private String body;
+    @NameInMap("batchCount")
+    @Validation(maximum = 100)
+    private Double batchCount;
+
+    @Body
+    @NameInMap("blueGreenDep")
+    private Boolean blueGreenDep;
+
+    @Body
+    @NameInMap("nodeTypes")
+    private java.util.List < String > nodeTypes;
+
+    @Body
+    @NameInMap("nodes")
+    private java.util.List < String > nodes;
+
+    @Body
+    @NameInMap("restartType")
+    private String restartType;
 
     @Query
     @NameInMap("clientToken")
@@ -32,7 +49,11 @@ public class RestartLogstashRequest extends Request {
     private RestartLogstashRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
-        this.body = builder.body;
+        this.batchCount = builder.batchCount;
+        this.blueGreenDep = builder.blueGreenDep;
+        this.nodeTypes = builder.nodeTypes;
+        this.nodes = builder.nodes;
+        this.restartType = builder.restartType;
         this.clientToken = builder.clientToken;
         this.force = builder.force;
     }
@@ -58,10 +79,38 @@ public class RestartLogstashRequest extends Request {
     }
 
     /**
-     * @return body
+     * @return batchCount
      */
-    public String getBody() {
-        return this.body;
+    public Double getBatchCount() {
+        return this.batchCount;
+    }
+
+    /**
+     * @return blueGreenDep
+     */
+    public Boolean getBlueGreenDep() {
+        return this.blueGreenDep;
+    }
+
+    /**
+     * @return nodeTypes
+     */
+    public java.util.List < String > getNodeTypes() {
+        return this.nodeTypes;
+    }
+
+    /**
+     * @return nodes
+     */
+    public java.util.List < String > getNodes() {
+        return this.nodes;
+    }
+
+    /**
+     * @return restartType
+     */
+    public String getRestartType() {
+        return this.restartType;
     }
 
     /**
@@ -80,7 +129,11 @@ public class RestartLogstashRequest extends Request {
 
     public static final class Builder extends Request.Builder<RestartLogstashRequest, Builder> {
         private String instanceId; 
-        private String body; 
+        private Double batchCount; 
+        private Boolean blueGreenDep; 
+        private java.util.List < String > nodeTypes; 
+        private java.util.List < String > nodes; 
+        private String restartType; 
         private String clientToken; 
         private Boolean force; 
 
@@ -91,7 +144,11 @@ public class RestartLogstashRequest extends Request {
         private Builder(RestartLogstashRequest request) {
             super(request);
             this.instanceId = request.instanceId;
-            this.body = request.body;
+            this.batchCount = request.batchCount;
+            this.blueGreenDep = request.blueGreenDep;
+            this.nodeTypes = request.nodeTypes;
+            this.nodes = request.nodes;
+            this.restartType = request.restartType;
             this.clientToken = request.clientToken;
             this.force = request.force;
         } 
@@ -106,11 +163,49 @@ public class RestartLogstashRequest extends Request {
         }
 
         /**
-         * body.
+         * 强制重启百分比。蓝绿重启时，无法强制重启，无需设置。
          */
-        public Builder body(String body) {
-            this.putBodyParameter("body", body);
-            this.body = body;
+        public Builder batchCount(Double batchCount) {
+            this.putBodyParameter("batchCount", batchCount);
+            this.batchCount = batchCount;
+            return this;
+        }
+
+        /**
+         * 是否蓝绿重启
+         */
+        public Builder blueGreenDep(Boolean blueGreenDep) {
+            this.putBodyParameter("blueGreenDep", blueGreenDep);
+            this.blueGreenDep = blueGreenDep;
+            return this;
+        }
+
+        /**
+         * 角色重启时，选择的角色类型。
+         */
+        public Builder nodeTypes(java.util.List < String > nodeTypes) {
+            this.putBodyParameter("nodeTypes", nodeTypes);
+            this.nodeTypes = nodeTypes;
+            return this;
+        }
+
+        /**
+         * 节点重启时，选择的节点IP
+         */
+        public Builder nodes(java.util.List < String > nodes) {
+            this.putBodyParameter("nodes", nodes);
+            this.nodes = nodes;
+            return this;
+        }
+
+        /**
+         * 重启类型
+         * <p>
+         * 
+         */
+        public Builder restartType(String restartType) {
+            this.putBodyParameter("restartType", restartType);
+            this.restartType = restartType;
             return this;
         }
 

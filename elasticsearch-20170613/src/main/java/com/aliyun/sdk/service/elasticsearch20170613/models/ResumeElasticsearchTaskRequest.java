@@ -17,10 +17,6 @@ public class ResumeElasticsearchTaskRequest extends Request {
     @Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("body")
-    private String body;
-
     @Query
     @NameInMap("clientToken")
     private String clientToken;
@@ -28,7 +24,6 @@ public class ResumeElasticsearchTaskRequest extends Request {
     private ResumeElasticsearchTaskRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
-        this.body = builder.body;
         this.clientToken = builder.clientToken;
     }
 
@@ -53,13 +48,6 @@ public class ResumeElasticsearchTaskRequest extends Request {
     }
 
     /**
-     * @return body
-     */
-    public String getBody() {
-        return this.body;
-    }
-
-    /**
      * @return clientToken
      */
     public String getClientToken() {
@@ -68,7 +56,6 @@ public class ResumeElasticsearchTaskRequest extends Request {
 
     public static final class Builder extends Request.Builder<ResumeElasticsearchTaskRequest, Builder> {
         private String instanceId; 
-        private String body; 
         private String clientToken; 
 
         private Builder() {
@@ -78,7 +65,6 @@ public class ResumeElasticsearchTaskRequest extends Request {
         private Builder(ResumeElasticsearchTaskRequest request) {
             super(request);
             this.instanceId = request.instanceId;
-            this.body = request.body;
             this.clientToken = request.clientToken;
         } 
 
@@ -88,15 +74,6 @@ public class ResumeElasticsearchTaskRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * body.
-         */
-        public Builder body(String body) {
-            this.putBodyParameter("body", body);
-            this.body = body;
             return this;
         }
 

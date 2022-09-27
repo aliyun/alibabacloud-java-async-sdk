@@ -20,10 +20,6 @@ public class ListActionRecordsRequest extends Request {
     @NameInMap("actionNames")
     private String actionNames;
 
-    @Body
-    @NameInMap("body")
-    private String body;
-
     @Query
     @NameInMap("endTime")
     private Long endTime;
@@ -56,7 +52,6 @@ public class ListActionRecordsRequest extends Request {
         super(builder);
         this.instanceId = builder.instanceId;
         this.actionNames = builder.actionNames;
-        this.body = builder.body;
         this.endTime = builder.endTime;
         this.filter = builder.filter;
         this.page = builder.page;
@@ -91,13 +86,6 @@ public class ListActionRecordsRequest extends Request {
      */
     public String getActionNames() {
         return this.actionNames;
-    }
-
-    /**
-     * @return body
-     */
-    public String getBody() {
-        return this.body;
     }
 
     /**
@@ -152,7 +140,6 @@ public class ListActionRecordsRequest extends Request {
     public static final class Builder extends Request.Builder<ListActionRecordsRequest, Builder> {
         private String instanceId; 
         private String actionNames; 
-        private String body; 
         private Long endTime; 
         private String filter; 
         private Integer page; 
@@ -169,7 +156,6 @@ public class ListActionRecordsRequest extends Request {
             super(request);
             this.instanceId = request.instanceId;
             this.actionNames = request.actionNames;
-            this.body = request.body;
             this.endTime = request.endTime;
             this.filter = request.filter;
             this.page = request.page;
@@ -194,15 +180,6 @@ public class ListActionRecordsRequest extends Request {
         public Builder actionNames(String actionNames) {
             this.putQueryParameter("actionNames", actionNames);
             this.actionNames = actionNames;
-            return this;
-        }
-
-        /**
-         * body.
-         */
-        public Builder body(String body) {
-            this.putBodyParameter("body", body);
-            this.body = body;
             return this;
         }
 

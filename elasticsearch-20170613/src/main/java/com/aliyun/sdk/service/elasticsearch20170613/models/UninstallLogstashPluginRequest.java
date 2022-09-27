@@ -19,7 +19,7 @@ public class UninstallLogstashPluginRequest extends Request {
 
     @Body
     @NameInMap("body")
-    private String body;
+    private java.util.List < String > body;
 
     @Query
     @NameInMap("clientToken")
@@ -55,7 +55,7 @@ public class UninstallLogstashPluginRequest extends Request {
     /**
      * @return body
      */
-    public String getBody() {
+    public java.util.List < String > getBody() {
         return this.body;
     }
 
@@ -68,7 +68,7 @@ public class UninstallLogstashPluginRequest extends Request {
 
     public static final class Builder extends Request.Builder<UninstallLogstashPluginRequest, Builder> {
         private String instanceId; 
-        private String body; 
+        private java.util.List < String > body; 
         private String clientToken; 
 
         private Builder() {
@@ -94,7 +94,7 @@ public class UninstallLogstashPluginRequest extends Request {
         /**
          * body.
          */
-        public Builder body(String body) {
+        public Builder body(java.util.List < String > body) {
             this.putBodyParameter("body", body);
             this.body = body;
             return this;

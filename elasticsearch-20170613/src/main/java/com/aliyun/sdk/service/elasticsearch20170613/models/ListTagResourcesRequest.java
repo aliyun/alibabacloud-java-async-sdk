@@ -39,10 +39,6 @@ public class ListTagResourcesRequest extends Request {
     @NameInMap("Tags")
     private String tags;
 
-    @Body
-    @NameInMap("body")
-    private String body;
-
     private ListTagResourcesRequest(Builder builder) {
         super(builder);
         this.nextToken = builder.nextToken;
@@ -51,7 +47,6 @@ public class ListTagResourcesRequest extends Request {
         this.resourceType = builder.resourceType;
         this.size = builder.size;
         this.tags = builder.tags;
-        this.body = builder.body;
     }
 
     public static Builder builder() {
@@ -109,13 +104,6 @@ public class ListTagResourcesRequest extends Request {
         return this.tags;
     }
 
-    /**
-     * @return body
-     */
-    public String getBody() {
-        return this.body;
-    }
-
     public static final class Builder extends Request.Builder<ListTagResourcesRequest, Builder> {
         private String nextToken; 
         private Integer page; 
@@ -123,7 +111,6 @@ public class ListTagResourcesRequest extends Request {
         private String resourceType; 
         private Integer size; 
         private String tags; 
-        private String body; 
 
         private Builder() {
             super();
@@ -137,7 +124,6 @@ public class ListTagResourcesRequest extends Request {
             this.resourceType = request.resourceType;
             this.size = request.size;
             this.tags = request.tags;
-            this.body = request.body;
         } 
 
         /**
@@ -191,15 +177,6 @@ public class ListTagResourcesRequest extends Request {
         public Builder tags(String tags) {
             this.putQueryParameter("Tags", tags);
             this.tags = tags;
-            return this;
-        }
-
-        /**
-         * body.
-         */
-        public Builder body(String body) {
-            this.putBodyParameter("body", body);
-            this.body = body;
             return this;
         }
 

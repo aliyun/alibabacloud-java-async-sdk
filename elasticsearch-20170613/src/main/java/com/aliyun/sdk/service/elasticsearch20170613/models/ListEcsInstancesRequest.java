@@ -12,10 +12,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListEcsInstancesRequest</p>
  */
 public class ListEcsInstancesRequest extends Request {
-    @Body
-    @NameInMap("body")
-    private String body;
-
     @Query
     @NameInMap("ecsInstanceIds")
     private String ecsInstanceIds;
@@ -44,7 +40,6 @@ public class ListEcsInstancesRequest extends Request {
 
     private ListEcsInstancesRequest(Builder builder) {
         super(builder);
-        this.body = builder.body;
         this.ecsInstanceIds = builder.ecsInstanceIds;
         this.ecsInstanceName = builder.ecsInstanceName;
         this.page = builder.page;
@@ -64,13 +59,6 @@ public class ListEcsInstancesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return body
-     */
-    public String getBody() {
-        return this.body;
     }
 
     /**
@@ -116,7 +104,6 @@ public class ListEcsInstancesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListEcsInstancesRequest, Builder> {
-        private String body; 
         private String ecsInstanceIds; 
         private String ecsInstanceName; 
         private Integer page; 
@@ -130,7 +117,6 @@ public class ListEcsInstancesRequest extends Request {
 
         private Builder(ListEcsInstancesRequest request) {
             super(request);
-            this.body = request.body;
             this.ecsInstanceIds = request.ecsInstanceIds;
             this.ecsInstanceName = request.ecsInstanceName;
             this.page = request.page;
@@ -138,15 +124,6 @@ public class ListEcsInstancesRequest extends Request {
             this.tags = request.tags;
             this.vpcId = request.vpcId;
         } 
-
-        /**
-         * body.
-         */
-        public Builder body(String body) {
-            this.putBodyParameter("body", body);
-            this.body = body;
-            return this;
-        }
 
         /**
          * ecsInstanceIds.

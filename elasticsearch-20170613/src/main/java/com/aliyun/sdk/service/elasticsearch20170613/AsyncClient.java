@@ -216,6 +216,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListInstanceResponse> listInstance(ListInstanceRequest request);
 
+    CompletableFuture<ListInstanceHistoryEventsResponse> listInstanceHistoryEvents(ListInstanceHistoryEventsRequest request);
+
     CompletableFuture<ListInstanceIndicesResponse> listInstanceIndices(ListInstanceIndicesRequest request);
 
     CompletableFuture<ListKibanaPluginsResponse> listKibanaPlugins(ListKibanaPluginsRequest request);

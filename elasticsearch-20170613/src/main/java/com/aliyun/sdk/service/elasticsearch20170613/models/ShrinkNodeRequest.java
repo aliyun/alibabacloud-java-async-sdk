@@ -26,6 +26,10 @@ public class ShrinkNodeRequest extends Request {
     private String clientToken;
 
     @Query
+    @NameInMap("count")
+    private Integer count;
+
+    @Query
     @NameInMap("ignoreStatus")
     private Boolean ignoreStatus;
 
@@ -39,6 +43,7 @@ public class ShrinkNodeRequest extends Request {
         this.instanceId = builder.instanceId;
         this.body = builder.body;
         this.clientToken = builder.clientToken;
+        this.count = builder.count;
         this.ignoreStatus = builder.ignoreStatus;
         this.nodeType = builder.nodeType;
     }
@@ -78,6 +83,13 @@ public class ShrinkNodeRequest extends Request {
     }
 
     /**
+     * @return count
+     */
+    public Integer getCount() {
+        return this.count;
+    }
+
+    /**
      * @return ignoreStatus
      */
     public Boolean getIgnoreStatus() {
@@ -95,6 +107,7 @@ public class ShrinkNodeRequest extends Request {
         private String instanceId; 
         private java.util.List < ShrinkNodeRequestBody> body; 
         private String clientToken; 
+        private Integer count; 
         private Boolean ignoreStatus; 
         private String nodeType; 
 
@@ -107,6 +120,7 @@ public class ShrinkNodeRequest extends Request {
             this.instanceId = request.instanceId;
             this.body = request.body;
             this.clientToken = request.clientToken;
+            this.count = request.count;
             this.ignoreStatus = request.ignoreStatus;
             this.nodeType = request.nodeType;
         } 
@@ -139,6 +153,15 @@ public class ShrinkNodeRequest extends Request {
         }
 
         /**
+         * count.
+         */
+        public Builder count(Integer count) {
+            this.putQueryParameter("count", count);
+            this.count = count;
+            return this;
+        }
+
+        /**
          * ignoreStatus.
          */
         public Builder ignoreStatus(Boolean ignoreStatus) {
@@ -167,6 +190,12 @@ public class ShrinkNodeRequest extends Request {
         @NameInMap("host")
         private String host;
 
+        @NameInMap("hostName")
+        private String hostName;
+
+        @NameInMap("nodeType")
+        private String nodeType;
+
         @NameInMap("port")
         private Integer port;
 
@@ -175,6 +204,8 @@ public class ShrinkNodeRequest extends Request {
 
         private ShrinkNodeRequestBody(Builder builder) {
             this.host = builder.host;
+            this.hostName = builder.hostName;
+            this.nodeType = builder.nodeType;
             this.port = builder.port;
             this.zoneId = builder.zoneId;
         }
@@ -195,6 +226,20 @@ public class ShrinkNodeRequest extends Request {
         }
 
         /**
+         * @return hostName
+         */
+        public String getHostName() {
+            return this.hostName;
+        }
+
+        /**
+         * @return nodeType
+         */
+        public String getNodeType() {
+            return this.nodeType;
+        }
+
+        /**
          * @return port
          */
         public Integer getPort() {
@@ -210,6 +255,8 @@ public class ShrinkNodeRequest extends Request {
 
         public static final class Builder {
             private String host; 
+            private String hostName; 
+            private String nodeType; 
             private Integer port; 
             private String zoneId; 
 
@@ -218,6 +265,22 @@ public class ShrinkNodeRequest extends Request {
              */
             public Builder host(String host) {
                 this.host = host;
+                return this;
+            }
+
+            /**
+             * hostName.
+             */
+            public Builder hostName(String hostName) {
+                this.hostName = hostName;
+                return this;
+            }
+
+            /**
+             * nodeType.
+             */
+            public Builder nodeType(String nodeType) {
+                this.nodeType = nodeType;
                 return this;
             }
 

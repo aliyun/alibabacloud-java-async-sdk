@@ -15,8 +15,12 @@ public class RestartLogstashResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("Result")
+    private Logstash result;
+
     private RestartLogstashResponseBody(Builder builder) {
         this.requestId = builder.requestId;
+        this.result = builder.result;
     }
 
     public static Builder builder() {
@@ -34,14 +38,30 @@ public class RestartLogstashResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return result
+     */
+    public Logstash getResult() {
+        return this.result;
+    }
+
     public static final class Builder {
         private String requestId; 
+        private Logstash result; 
 
         /**
          * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * Result.
+         */
+        public Builder result(Logstash result) {
+            this.result = result;
             return this;
         }
 

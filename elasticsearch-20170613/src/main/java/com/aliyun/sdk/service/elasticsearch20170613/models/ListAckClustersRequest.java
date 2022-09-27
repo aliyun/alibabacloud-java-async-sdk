@@ -12,10 +12,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAckClustersRequest</p>
  */
 public class ListAckClustersRequest extends Request {
-    @Body
-    @NameInMap("body")
-    private String body;
-
     @Query
     @NameInMap("page")
     @Validation(maximum = 50, minimum = 1)
@@ -32,7 +28,6 @@ public class ListAckClustersRequest extends Request {
 
     private ListAckClustersRequest(Builder builder) {
         super(builder);
-        this.body = builder.body;
         this.page = builder.page;
         this.size = builder.size;
         this.vpcId = builder.vpcId;
@@ -49,13 +44,6 @@ public class ListAckClustersRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return body
-     */
-    public String getBody() {
-        return this.body;
     }
 
     /**
@@ -80,7 +68,6 @@ public class ListAckClustersRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListAckClustersRequest, Builder> {
-        private String body; 
         private Integer page; 
         private Integer size; 
         private String vpcId; 
@@ -91,20 +78,10 @@ public class ListAckClustersRequest extends Request {
 
         private Builder(ListAckClustersRequest request) {
             super(request);
-            this.body = request.body;
             this.page = request.page;
             this.size = request.size;
             this.vpcId = request.vpcId;
         } 
-
-        /**
-         * body.
-         */
-        public Builder body(String body) {
-            this.putBodyParameter("body", body);
-            this.body = body;
-            return this;
-        }
 
         /**
          * page.

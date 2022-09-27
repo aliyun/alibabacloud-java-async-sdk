@@ -17,14 +17,9 @@ public class DescribeKibanaSettingsRequest extends Request {
     @Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("body")
-    private String body;
-
     private DescribeKibanaSettingsRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
-        this.body = builder.body;
     }
 
     public static Builder builder() {
@@ -47,16 +42,8 @@ public class DescribeKibanaSettingsRequest extends Request {
         return this.instanceId;
     }
 
-    /**
-     * @return body
-     */
-    public String getBody() {
-        return this.body;
-    }
-
     public static final class Builder extends Request.Builder<DescribeKibanaSettingsRequest, Builder> {
         private String instanceId; 
-        private String body; 
 
         private Builder() {
             super();
@@ -65,7 +52,6 @@ public class DescribeKibanaSettingsRequest extends Request {
         private Builder(DescribeKibanaSettingsRequest request) {
             super(request);
             this.instanceId = request.instanceId;
-            this.body = request.body;
         } 
 
         /**
@@ -74,15 +60,6 @@ public class DescribeKibanaSettingsRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * body.
-         */
-        public Builder body(String body) {
-            this.putBodyParameter("body", body);
-            this.body = body;
             return this;
         }
 

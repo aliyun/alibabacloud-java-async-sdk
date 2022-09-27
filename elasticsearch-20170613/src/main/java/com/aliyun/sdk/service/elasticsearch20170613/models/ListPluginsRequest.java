@@ -17,10 +17,6 @@ public class ListPluginsRequest extends Request {
     @Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("body")
-    private String body;
-
     @Query
     @NameInMap("name")
     private String name;
@@ -40,7 +36,6 @@ public class ListPluginsRequest extends Request {
     private ListPluginsRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
-        this.body = builder.body;
         this.name = builder.name;
         this.page = builder.page;
         this.size = builder.size;
@@ -65,13 +60,6 @@ public class ListPluginsRequest extends Request {
      */
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    /**
-     * @return body
-     */
-    public String getBody() {
-        return this.body;
     }
 
     /**
@@ -104,7 +92,6 @@ public class ListPluginsRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListPluginsRequest, Builder> {
         private String instanceId; 
-        private String body; 
         private String name; 
         private String page; 
         private Integer size; 
@@ -117,7 +104,6 @@ public class ListPluginsRequest extends Request {
         private Builder(ListPluginsRequest request) {
             super(request);
             this.instanceId = request.instanceId;
-            this.body = request.body;
             this.name = request.name;
             this.page = request.page;
             this.size = request.size;
@@ -130,15 +116,6 @@ public class ListPluginsRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * body.
-         */
-        public Builder body(String body) {
-            this.putBodyParameter("body", body);
-            this.body = body;
             return this;
         }
 

@@ -17,24 +17,14 @@ public class UpdateBlackIpsRequest extends Request {
     @Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("body")
-    private String body;
-
     @Query
     @NameInMap("clientToken")
     private String clientToken;
 
-    @Body
-    @NameInMap("esIPBlacklist")
-    private java.util.List < String > esIPBlacklist;
-
     private UpdateBlackIpsRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
-        this.body = builder.body;
         this.clientToken = builder.clientToken;
-        this.esIPBlacklist = builder.esIPBlacklist;
     }
 
     public static Builder builder() {
@@ -58,31 +48,15 @@ public class UpdateBlackIpsRequest extends Request {
     }
 
     /**
-     * @return body
-     */
-    public String getBody() {
-        return this.body;
-    }
-
-    /**
      * @return clientToken
      */
     public String getClientToken() {
         return this.clientToken;
     }
 
-    /**
-     * @return esIPBlacklist
-     */
-    public java.util.List < String > getEsIPBlacklist() {
-        return this.esIPBlacklist;
-    }
-
     public static final class Builder extends Request.Builder<UpdateBlackIpsRequest, Builder> {
         private String instanceId; 
-        private String body; 
         private String clientToken; 
-        private java.util.List < String > esIPBlacklist; 
 
         private Builder() {
             super();
@@ -91,9 +65,7 @@ public class UpdateBlackIpsRequest extends Request {
         private Builder(UpdateBlackIpsRequest request) {
             super(request);
             this.instanceId = request.instanceId;
-            this.body = request.body;
             this.clientToken = request.clientToken;
-            this.esIPBlacklist = request.esIPBlacklist;
         } 
 
         /**
@@ -106,29 +78,11 @@ public class UpdateBlackIpsRequest extends Request {
         }
 
         /**
-         * body.
-         */
-        public Builder body(String body) {
-            this.putBodyParameter("body", body);
-            this.body = body;
-            return this;
-        }
-
-        /**
          * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);
             this.clientToken = clientToken;
-            return this;
-        }
-
-        /**
-         * esIPBlacklist.
-         */
-        public Builder esIPBlacklist(java.util.List < String > esIPBlacklist) {
-            this.putBodyParameter("esIPBlacklist", esIPBlacklist);
-            this.esIPBlacklist = esIPBlacklist;
             return this;
         }
 

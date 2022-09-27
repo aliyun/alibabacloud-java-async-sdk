@@ -17,10 +17,6 @@ public class DeleteLogstashRequest extends Request {
     @Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("body")
-    private String body;
-
     @Query
     @NameInMap("clientToken")
     private String clientToken;
@@ -32,7 +28,6 @@ public class DeleteLogstashRequest extends Request {
     private DeleteLogstashRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
-        this.body = builder.body;
         this.clientToken = builder.clientToken;
         this.deleteType = builder.deleteType;
     }
@@ -58,13 +53,6 @@ public class DeleteLogstashRequest extends Request {
     }
 
     /**
-     * @return body
-     */
-    public String getBody() {
-        return this.body;
-    }
-
-    /**
      * @return clientToken
      */
     public String getClientToken() {
@@ -80,7 +68,6 @@ public class DeleteLogstashRequest extends Request {
 
     public static final class Builder extends Request.Builder<DeleteLogstashRequest, Builder> {
         private String instanceId; 
-        private String body; 
         private String clientToken; 
         private String deleteType; 
 
@@ -91,7 +78,6 @@ public class DeleteLogstashRequest extends Request {
         private Builder(DeleteLogstashRequest request) {
             super(request);
             this.instanceId = request.instanceId;
-            this.body = request.body;
             this.clientToken = request.clientToken;
             this.deleteType = request.deleteType;
         } 
@@ -102,15 +88,6 @@ public class DeleteLogstashRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * body.
-         */
-        public Builder body(String body) {
-            this.putBodyParameter("body", body);
-            this.body = body;
             return this;
         }
 

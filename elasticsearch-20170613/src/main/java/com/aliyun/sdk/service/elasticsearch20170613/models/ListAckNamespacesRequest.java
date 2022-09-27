@@ -17,10 +17,6 @@ public class ListAckNamespacesRequest extends Request {
     @Validation(required = true)
     private String clusterId;
 
-    @Body
-    @NameInMap("body")
-    private String body;
-
     @Query
     @NameInMap("page")
     @Validation(maximum = 200, minimum = 1)
@@ -34,7 +30,6 @@ public class ListAckNamespacesRequest extends Request {
     private ListAckNamespacesRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
-        this.body = builder.body;
         this.page = builder.page;
         this.size = builder.size;
     }
@@ -60,13 +55,6 @@ public class ListAckNamespacesRequest extends Request {
     }
 
     /**
-     * @return body
-     */
-    public String getBody() {
-        return this.body;
-    }
-
-    /**
      * @return page
      */
     public Integer getPage() {
@@ -82,7 +70,6 @@ public class ListAckNamespacesRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListAckNamespacesRequest, Builder> {
         private String clusterId; 
-        private String body; 
         private Integer page; 
         private Integer size; 
 
@@ -93,7 +80,6 @@ public class ListAckNamespacesRequest extends Request {
         private Builder(ListAckNamespacesRequest request) {
             super(request);
             this.clusterId = request.clusterId;
-            this.body = request.body;
             this.page = request.page;
             this.size = request.size;
         } 
@@ -104,15 +90,6 @@ public class ListAckNamespacesRequest extends Request {
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
             this.clusterId = clusterId;
-            return this;
-        }
-
-        /**
-         * body.
-         */
-        public Builder body(String body) {
-            this.putBodyParameter("body", body);
-            this.body = body;
             return this;
         }
 

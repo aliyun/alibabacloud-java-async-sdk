@@ -26,16 +26,11 @@ public class DeleteDataStreamRequest extends Request {
     @NameInMap("ClientToken")
     private String clientToken;
 
-    @Body
-    @NameInMap("body")
-    private String body;
-
     private DeleteDataStreamRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
         this.dataStream = builder.dataStream;
         this.clientToken = builder.clientToken;
-        this.body = builder.body;
     }
 
     public static Builder builder() {
@@ -72,18 +67,10 @@ public class DeleteDataStreamRequest extends Request {
         return this.clientToken;
     }
 
-    /**
-     * @return body
-     */
-    public String getBody() {
-        return this.body;
-    }
-
     public static final class Builder extends Request.Builder<DeleteDataStreamRequest, Builder> {
         private String instanceId; 
         private String dataStream; 
         private String clientToken; 
-        private String body; 
 
         private Builder() {
             super();
@@ -94,7 +81,6 @@ public class DeleteDataStreamRequest extends Request {
             this.instanceId = request.instanceId;
             this.dataStream = request.dataStream;
             this.clientToken = request.clientToken;
-            this.body = request.body;
         } 
 
         /**
@@ -121,15 +107,6 @@ public class DeleteDataStreamRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
-            return this;
-        }
-
-        /**
-         * body.
-         */
-        public Builder body(String body) {
-            this.putBodyParameter("body", body);
-            this.body = body;
             return this;
         }
 

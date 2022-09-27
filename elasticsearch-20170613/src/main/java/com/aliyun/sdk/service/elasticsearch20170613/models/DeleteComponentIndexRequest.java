@@ -22,15 +22,10 @@ public class DeleteComponentIndexRequest extends Request {
     @Validation(required = true)
     private String name;
 
-    @Body
-    @NameInMap("body")
-    private String body;
-
     private DeleteComponentIndexRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
         this.name = builder.name;
-        this.body = builder.body;
     }
 
     public static Builder builder() {
@@ -60,17 +55,9 @@ public class DeleteComponentIndexRequest extends Request {
         return this.name;
     }
 
-    /**
-     * @return body
-     */
-    public String getBody() {
-        return this.body;
-    }
-
     public static final class Builder extends Request.Builder<DeleteComponentIndexRequest, Builder> {
         private String instanceId; 
         private String name; 
-        private String body; 
 
         private Builder() {
             super();
@@ -80,7 +67,6 @@ public class DeleteComponentIndexRequest extends Request {
             super(request);
             this.instanceId = request.instanceId;
             this.name = request.name;
-            this.body = request.body;
         } 
 
         /**
@@ -98,15 +84,6 @@ public class DeleteComponentIndexRequest extends Request {
         public Builder name(String name) {
             this.putPathParameter("name", name);
             this.name = name;
-            return this;
-        }
-
-        /**
-         * body.
-         */
-        public Builder body(String body) {
-            this.putBodyParameter("body", body);
-            this.body = body;
             return this;
         }
 

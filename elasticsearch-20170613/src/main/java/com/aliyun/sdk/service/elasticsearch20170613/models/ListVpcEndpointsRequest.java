@@ -17,10 +17,6 @@ public class ListVpcEndpointsRequest extends Request {
     @Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("body")
-    private String body;
-
     @Query
     @NameInMap("page")
     private Integer page;
@@ -32,7 +28,6 @@ public class ListVpcEndpointsRequest extends Request {
     private ListVpcEndpointsRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
-        this.body = builder.body;
         this.page = builder.page;
         this.size = builder.size;
     }
@@ -58,13 +53,6 @@ public class ListVpcEndpointsRequest extends Request {
     }
 
     /**
-     * @return body
-     */
-    public String getBody() {
-        return this.body;
-    }
-
-    /**
      * @return page
      */
     public Integer getPage() {
@@ -80,7 +68,6 @@ public class ListVpcEndpointsRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListVpcEndpointsRequest, Builder> {
         private String instanceId; 
-        private String body; 
         private Integer page; 
         private Integer size; 
 
@@ -91,7 +78,6 @@ public class ListVpcEndpointsRequest extends Request {
         private Builder(ListVpcEndpointsRequest request) {
             super(request);
             this.instanceId = request.instanceId;
-            this.body = request.body;
             this.page = request.page;
             this.size = request.size;
         } 
@@ -102,15 +88,6 @@ public class ListVpcEndpointsRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * body.
-         */
-        public Builder body(String body) {
-            this.putBodyParameter("body", body);
-            this.body = body;
             return this;
         }
 

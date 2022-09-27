@@ -13,12 +13,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class TagResourcesRequest extends Request {
     @Body
-    @NameInMap("body")
-    private String body;
+    @NameInMap("ResourceIds")
+    @Validation(required = true)
+    private java.util.List < String > resourceIds;
+
+    @Body
+    @NameInMap("ResourceType")
+    @Validation(required = true)
+    private String resourceType;
+
+    @Body
+    @NameInMap("Tags")
+    @Validation(required = true)
+    private java.util.List < Tags> tags;
 
     private TagResourcesRequest(Builder builder) {
         super(builder);
-        this.body = builder.body;
+        this.resourceIds = builder.resourceIds;
+        this.resourceType = builder.resourceType;
+        this.tags = builder.tags;
     }
 
     public static Builder builder() {
@@ -35,14 +48,30 @@ public class TagResourcesRequest extends Request {
     }
 
     /**
-     * @return body
+     * @return resourceIds
      */
-    public String getBody() {
-        return this.body;
+    public java.util.List < String > getResourceIds() {
+        return this.resourceIds;
+    }
+
+    /**
+     * @return resourceType
+     */
+    public String getResourceType() {
+        return this.resourceType;
+    }
+
+    /**
+     * @return tags
+     */
+    public java.util.List < Tags> getTags() {
+        return this.tags;
     }
 
     public static final class Builder extends Request.Builder<TagResourcesRequest, Builder> {
-        private String body; 
+        private java.util.List < String > resourceIds; 
+        private String resourceType; 
+        private java.util.List < Tags> tags; 
 
         private Builder() {
             super();
@@ -50,15 +79,35 @@ public class TagResourcesRequest extends Request {
 
         private Builder(TagResourcesRequest request) {
             super(request);
-            this.body = request.body;
+            this.resourceIds = request.resourceIds;
+            this.resourceType = request.resourceType;
+            this.tags = request.tags;
         } 
 
         /**
-         * body.
+         * 实例ID列表。
          */
-        public Builder body(String body) {
-            this.putBodyParameter("body", body);
-            this.body = body;
+        public Builder resourceIds(java.util.List < String > resourceIds) {
+            this.putBodyParameter("ResourceIds", resourceIds);
+            this.resourceIds = resourceIds;
+            return this;
+        }
+
+        /**
+         * 资源类型，固定为INSTANCE。
+         */
+        public Builder resourceType(String resourceType) {
+            this.putBodyParameter("ResourceType", resourceType);
+            this.resourceType = resourceType;
+            return this;
+        }
+
+        /**
+         * 所关联的标签列表。
+         */
+        public Builder tags(java.util.List < Tags> tags) {
+            this.putBodyParameter("Tags", tags);
+            this.tags = tags;
             return this;
         }
 
@@ -69,4 +118,67 @@ public class TagResourcesRequest extends Request {
 
     } 
 
+    public static class Tags extends TeaModel {
+        @NameInMap("key")
+        @Validation(required = true)
+        private String key;
+
+        @NameInMap("value")
+        @Validation(required = true)
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * 标签Key
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * 标签Value
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
 }

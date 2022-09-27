@@ -12,10 +12,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListLogstashRequest</p>
  */
 public class ListLogstashRequest extends Request {
-    @Body
-    @NameInMap("body")
-    private String body;
-
     @Query
     @NameInMap("description")
     private String description;
@@ -41,18 +37,22 @@ public class ListLogstashRequest extends Request {
     private Integer size;
 
     @Query
+    @NameInMap("tags")
+    private String tags;
+
+    @Query
     @NameInMap("version")
     private String version;
 
     private ListLogstashRequest(Builder builder) {
         super(builder);
-        this.body = builder.body;
         this.description = builder.description;
         this.instanceId = builder.instanceId;
         this.ownerId = builder.ownerId;
         this.page = builder.page;
         this.resourceGroupId = builder.resourceGroupId;
         this.size = builder.size;
+        this.tags = builder.tags;
         this.version = builder.version;
     }
 
@@ -67,13 +67,6 @@ public class ListLogstashRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return body
-     */
-    public String getBody() {
-        return this.body;
     }
 
     /**
@@ -119,6 +112,13 @@ public class ListLogstashRequest extends Request {
     }
 
     /**
+     * @return tags
+     */
+    public String getTags() {
+        return this.tags;
+    }
+
+    /**
      * @return version
      */
     public String getVersion() {
@@ -126,13 +126,13 @@ public class ListLogstashRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListLogstashRequest, Builder> {
-        private String body; 
         private String description; 
         private String instanceId; 
         private String ownerId; 
         private Integer page; 
         private String resourceGroupId; 
         private Integer size; 
+        private String tags; 
         private String version; 
 
         private Builder() {
@@ -141,24 +141,15 @@ public class ListLogstashRequest extends Request {
 
         private Builder(ListLogstashRequest request) {
             super(request);
-            this.body = request.body;
             this.description = request.description;
             this.instanceId = request.instanceId;
             this.ownerId = request.ownerId;
             this.page = request.page;
             this.resourceGroupId = request.resourceGroupId;
             this.size = request.size;
+            this.tags = request.tags;
             this.version = request.version;
         } 
-
-        /**
-         * body.
-         */
-        public Builder body(String body) {
-            this.putBodyParameter("body", body);
-            this.body = body;
-            return this;
-        }
 
         /**
          * description.
@@ -211,6 +202,15 @@ public class ListLogstashRequest extends Request {
         public Builder size(Integer size) {
             this.putQueryParameter("size", size);
             this.size = size;
+            return this;
+        }
+
+        /**
+         * tags.
+         */
+        public Builder tags(String tags) {
+            this.putQueryParameter("tags", tags);
+            this.tags = tags;
             return this;
         }
 

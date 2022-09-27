@@ -16,10 +16,6 @@ public class ValidateSlrPermissionRequest extends Request {
     @NameInMap("ClientToken")
     private String clientToken;
 
-    @Body
-    @NameInMap("body")
-    private String body;
-
     @Query
     @NameInMap("rolename")
     @Validation(required = true)
@@ -28,7 +24,6 @@ public class ValidateSlrPermissionRequest extends Request {
     private ValidateSlrPermissionRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
-        this.body = builder.body;
         this.rolename = builder.rolename;
     }
 
@@ -53,13 +48,6 @@ public class ValidateSlrPermissionRequest extends Request {
     }
 
     /**
-     * @return body
-     */
-    public String getBody() {
-        return this.body;
-    }
-
-    /**
      * @return rolename
      */
     public String getRolename() {
@@ -68,7 +56,6 @@ public class ValidateSlrPermissionRequest extends Request {
 
     public static final class Builder extends Request.Builder<ValidateSlrPermissionRequest, Builder> {
         private String clientToken; 
-        private String body; 
         private String rolename; 
 
         private Builder() {
@@ -78,7 +65,6 @@ public class ValidateSlrPermissionRequest extends Request {
         private Builder(ValidateSlrPermissionRequest request) {
             super(request);
             this.clientToken = request.clientToken;
-            this.body = request.body;
             this.rolename = request.rolename;
         } 
 
@@ -88,15 +74,6 @@ public class ValidateSlrPermissionRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
-            return this;
-        }
-
-        /**
-         * body.
-         */
-        public Builder body(String body) {
-            this.putBodyParameter("body", body);
-            this.body = body;
             return this;
         }
 

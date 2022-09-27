@@ -17,10 +17,6 @@ public class ListIndexTemplatesRequest extends Request {
     @Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("body")
-    private String body;
-
     @Query
     @NameInMap("indexTemplate")
     private String indexTemplate;
@@ -36,7 +32,6 @@ public class ListIndexTemplatesRequest extends Request {
     private ListIndexTemplatesRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
-        this.body = builder.body;
         this.indexTemplate = builder.indexTemplate;
         this.page = builder.page;
         this.size = builder.size;
@@ -63,13 +58,6 @@ public class ListIndexTemplatesRequest extends Request {
     }
 
     /**
-     * @return body
-     */
-    public String getBody() {
-        return this.body;
-    }
-
-    /**
      * @return indexTemplate
      */
     public String getIndexTemplate() {
@@ -92,7 +80,6 @@ public class ListIndexTemplatesRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListIndexTemplatesRequest, Builder> {
         private String instanceId; 
-        private String body; 
         private String indexTemplate; 
         private Integer page; 
         private Integer size; 
@@ -104,7 +91,6 @@ public class ListIndexTemplatesRequest extends Request {
         private Builder(ListIndexTemplatesRequest request) {
             super(request);
             this.instanceId = request.instanceId;
-            this.body = request.body;
             this.indexTemplate = request.indexTemplate;
             this.page = request.page;
             this.size = request.size;
@@ -116,15 +102,6 @@ public class ListIndexTemplatesRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * body.
-         */
-        public Builder body(String body) {
-            this.putBodyParameter("body", body);
-            this.body = body;
             return this;
         }
 

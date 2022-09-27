@@ -16,7 +16,7 @@ public class UpgradeEngineVersionResponseBody extends TeaModel {
     private String requestId;
 
     @NameInMap("Result")
-    private Result result;
+    private java.util.List < Result> result;
 
     private UpgradeEngineVersionResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +41,13 @@ public class UpgradeEngineVersionResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public Result getResult() {
+    public java.util.List < Result> getResult() {
         return this.result;
     }
 
     public static final class Builder {
         private String requestId; 
-        private Result result; 
+        private java.util.List < Result> result; 
 
         /**
          * RequestId.
@@ -60,7 +60,7 @@ public class UpgradeEngineVersionResponseBody extends TeaModel {
         /**
          * Result.
          */
-        public Builder result(Result result) {
+        public Builder result(java.util.List < Result> result) {
             this.result = result;
             return this;
         }
@@ -157,7 +157,7 @@ public class UpgradeEngineVersionResponseBody extends TeaModel {
         private String status;
 
         @NameInMap("validateResult")
-        private ValidateResult validateResult;
+        private java.util.List < ValidateResult> validateResult;
 
         @NameInMap("validateType")
         private String validateType;
@@ -186,7 +186,7 @@ public class UpgradeEngineVersionResponseBody extends TeaModel {
         /**
          * @return validateResult
          */
-        public ValidateResult getValidateResult() {
+        public java.util.List < ValidateResult> getValidateResult() {
             return this.validateResult;
         }
 
@@ -199,7 +199,7 @@ public class UpgradeEngineVersionResponseBody extends TeaModel {
 
         public static final class Builder {
             private String status; 
-            private ValidateResult validateResult; 
+            private java.util.List < ValidateResult> validateResult; 
             private String validateType; 
 
             /**
@@ -213,7 +213,7 @@ public class UpgradeEngineVersionResponseBody extends TeaModel {
             /**
              * validateResult.
              */
-            public Builder validateResult(ValidateResult validateResult) {
+            public Builder validateResult(java.util.List < ValidateResult> validateResult) {
                 this.validateResult = validateResult;
                 return this;
             }

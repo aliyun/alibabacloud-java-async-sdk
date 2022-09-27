@@ -12,13 +12,8 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeRegionsRequest</p>
  */
 public class DescribeRegionsRequest extends Request {
-    @Body
-    @NameInMap("body")
-    private String body;
-
     private DescribeRegionsRequest(Builder builder) {
         super(builder);
-        this.body = builder.body;
     }
 
     public static Builder builder() {
@@ -34,15 +29,7 @@ public class DescribeRegionsRequest extends Request {
         return new Builder(this);
     }
 
-    /**
-     * @return body
-     */
-    public String getBody() {
-        return this.body;
-    }
-
     public static final class Builder extends Request.Builder<DescribeRegionsRequest, Builder> {
-        private String body; 
 
         private Builder() {
             super();
@@ -50,17 +37,7 @@ public class DescribeRegionsRequest extends Request {
 
         private Builder(DescribeRegionsRequest request) {
             super(request);
-            this.body = request.body;
         } 
-
-        /**
-         * body.
-         */
-        public Builder body(String body) {
-            this.putBodyParameter("body", body);
-            this.body = body;
-            return this;
-        }
 
         @Override
         public DescribeRegionsRequest build() {

@@ -21,10 +21,6 @@ public class CloseDiagnosisRequest extends Request {
     @NameInMap("ClientToken")
     private String clientToken;
 
-    @Body
-    @NameInMap("body")
-    private String body;
-
     @Query
     @NameInMap("lang")
     private String lang;
@@ -33,7 +29,6 @@ public class CloseDiagnosisRequest extends Request {
         super(builder);
         this.instanceId = builder.instanceId;
         this.clientToken = builder.clientToken;
-        this.body = builder.body;
         this.lang = builder.lang;
     }
 
@@ -65,13 +60,6 @@ public class CloseDiagnosisRequest extends Request {
     }
 
     /**
-     * @return body
-     */
-    public String getBody() {
-        return this.body;
-    }
-
-    /**
      * @return lang
      */
     public String getLang() {
@@ -81,7 +69,6 @@ public class CloseDiagnosisRequest extends Request {
     public static final class Builder extends Request.Builder<CloseDiagnosisRequest, Builder> {
         private String instanceId; 
         private String clientToken; 
-        private String body; 
         private String lang; 
 
         private Builder() {
@@ -92,7 +79,6 @@ public class CloseDiagnosisRequest extends Request {
             super(request);
             this.instanceId = request.instanceId;
             this.clientToken = request.clientToken;
-            this.body = request.body;
             this.lang = request.lang;
         } 
 
@@ -111,15 +97,6 @@ public class CloseDiagnosisRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
-            return this;
-        }
-
-        /**
-         * body.
-         */
-        public Builder body(String body) {
-            this.putBodyParameter("body", body);
-            this.body = body;
             return this;
         }
 

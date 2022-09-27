@@ -71,53 +71,9 @@ public class DiagnoseInstanceResponseBody extends TeaModel {
 
     } 
 
-    public static class DiagnoseItems extends TeaModel {
-        @NameInMap("item")
-        private String item;
-
-        private DiagnoseItems(Builder builder) {
-            this.item = builder.item;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static DiagnoseItems create() {
-            return builder().build();
-        }
-
-        /**
-         * @return item
-         */
-        public String getItem() {
-            return this.item;
-        }
-
-        public static final class Builder {
-            private String item; 
-
-            /**
-             * item.
-             */
-            public Builder item(String item) {
-                this.item = item;
-                return this;
-            }
-
-            public DiagnoseItems build() {
-                return new DiagnoseItems(this);
-            } 
-
-        } 
-
-    }
     public static class Result extends TeaModel {
         @NameInMap("createTime")
         private Long createTime;
-
-        @NameInMap("diagnoseItems")
-        private java.util.List < DiagnoseItems> diagnoseItems;
 
         @NameInMap("instanceId")
         private String instanceId;
@@ -130,7 +86,6 @@ public class DiagnoseInstanceResponseBody extends TeaModel {
 
         private Result(Builder builder) {
             this.createTime = builder.createTime;
-            this.diagnoseItems = builder.diagnoseItems;
             this.instanceId = builder.instanceId;
             this.reportId = builder.reportId;
             this.state = builder.state;
@@ -149,13 +104,6 @@ public class DiagnoseInstanceResponseBody extends TeaModel {
          */
         public Long getCreateTime() {
             return this.createTime;
-        }
-
-        /**
-         * @return diagnoseItems
-         */
-        public java.util.List < DiagnoseItems> getDiagnoseItems() {
-            return this.diagnoseItems;
         }
 
         /**
@@ -181,7 +129,6 @@ public class DiagnoseInstanceResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long createTime; 
-            private java.util.List < DiagnoseItems> diagnoseItems; 
             private String instanceId; 
             private String reportId; 
             private String state; 
@@ -191,14 +138,6 @@ public class DiagnoseInstanceResponseBody extends TeaModel {
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
-                return this;
-            }
-
-            /**
-             * diagnoseItems.
-             */
-            public Builder diagnoseItems(java.util.List < DiagnoseItems> diagnoseItems) {
-                this.diagnoseItems = diagnoseItems;
                 return this;
             }
 

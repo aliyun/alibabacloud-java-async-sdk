@@ -14,16 +14,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class StopApmRequest extends Request {
     @Path
     @NameInMap("instanceId")
+    @Validation(required = true)
     private String instanceId;
-
-    @Body
-    @NameInMap("body")
-    private String body;
 
     private StopApmRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
-        this.body = builder.body;
     }
 
     public static Builder builder() {
@@ -46,16 +42,8 @@ public class StopApmRequest extends Request {
         return this.instanceId;
     }
 
-    /**
-     * @return body
-     */
-    public String getBody() {
-        return this.body;
-    }
-
     public static final class Builder extends Request.Builder<StopApmRequest, Builder> {
         private String instanceId; 
-        private String body; 
 
         private Builder() {
             super();
@@ -64,7 +52,6 @@ public class StopApmRequest extends Request {
         private Builder(StopApmRequest request) {
             super(request);
             this.instanceId = request.instanceId;
-            this.body = request.body;
         } 
 
         /**
@@ -73,15 +60,6 @@ public class StopApmRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
             this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * body.
-         */
-        public Builder body(String body) {
-            this.putBodyParameter("body", body);
-            this.body = body;
             return this;
         }
 

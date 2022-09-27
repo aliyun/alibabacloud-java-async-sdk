@@ -12,10 +12,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDefaultCollectorConfigurationsRequest</p>
  */
 public class ListDefaultCollectorConfigurationsRequest extends Request {
-    @Body
-    @NameInMap("body")
-    private String body;
-
     @Query
     @NameInMap("resType")
     @Validation(required = true)
@@ -32,7 +28,6 @@ public class ListDefaultCollectorConfigurationsRequest extends Request {
 
     private ListDefaultCollectorConfigurationsRequest(Builder builder) {
         super(builder);
-        this.body = builder.body;
         this.resType = builder.resType;
         this.resVersion = builder.resVersion;
         this.sourceType = builder.sourceType;
@@ -49,13 +44,6 @@ public class ListDefaultCollectorConfigurationsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return body
-     */
-    public String getBody() {
-        return this.body;
     }
 
     /**
@@ -80,7 +68,6 @@ public class ListDefaultCollectorConfigurationsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListDefaultCollectorConfigurationsRequest, Builder> {
-        private String body; 
         private String resType; 
         private String resVersion; 
         private String sourceType; 
@@ -91,20 +78,10 @@ public class ListDefaultCollectorConfigurationsRequest extends Request {
 
         private Builder(ListDefaultCollectorConfigurationsRequest request) {
             super(request);
-            this.body = request.body;
             this.resType = request.resType;
             this.resVersion = request.resVersion;
             this.sourceType = request.sourceType;
         } 
-
-        /**
-         * body.
-         */
-        public Builder body(String body) {
-            this.putBodyParameter("body", body);
-            this.body = body;
-            return this;
-        }
 
         /**
          * resType.

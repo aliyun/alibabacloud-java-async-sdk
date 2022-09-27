@@ -17,10 +17,6 @@ public class ListComponentIndicesRequest extends Request {
     @Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("body")
-    private String body;
-
     @Query
     @NameInMap("name")
     private String name;
@@ -38,7 +34,6 @@ public class ListComponentIndicesRequest extends Request {
     private ListComponentIndicesRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
-        this.body = builder.body;
         this.name = builder.name;
         this.page = builder.page;
         this.size = builder.size;
@@ -65,13 +60,6 @@ public class ListComponentIndicesRequest extends Request {
     }
 
     /**
-     * @return body
-     */
-    public String getBody() {
-        return this.body;
-    }
-
-    /**
      * @return name
      */
     public String getName() {
@@ -94,7 +82,6 @@ public class ListComponentIndicesRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListComponentIndicesRequest, Builder> {
         private String instanceId; 
-        private String body; 
         private String name; 
         private Integer page; 
         private Integer size; 
@@ -106,7 +93,6 @@ public class ListComponentIndicesRequest extends Request {
         private Builder(ListComponentIndicesRequest request) {
             super(request);
             this.instanceId = request.instanceId;
-            this.body = request.body;
             this.name = request.name;
             this.page = request.page;
             this.size = request.size;
@@ -118,15 +104,6 @@ public class ListComponentIndicesRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * body.
-         */
-        public Builder body(String body) {
-            this.putBodyParameter("body", body);
-            this.body = body;
             return this;
         }
 

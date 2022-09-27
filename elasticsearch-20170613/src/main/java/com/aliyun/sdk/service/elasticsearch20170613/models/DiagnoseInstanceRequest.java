@@ -22,8 +22,16 @@ public class DiagnoseInstanceRequest extends Request {
     private String clientToken;
 
     @Body
-    @NameInMap("body")
-    private String body;
+    @NameInMap("diagnoseItems")
+    private java.util.List < String > diagnoseItems;
+
+    @Body
+    @NameInMap("indices")
+    private java.util.List < String > indices;
+
+    @Body
+    @NameInMap("type")
+    private String type;
 
     @Query
     @NameInMap("lang")
@@ -33,7 +41,9 @@ public class DiagnoseInstanceRequest extends Request {
         super(builder);
         this.instanceId = builder.instanceId;
         this.clientToken = builder.clientToken;
-        this.body = builder.body;
+        this.diagnoseItems = builder.diagnoseItems;
+        this.indices = builder.indices;
+        this.type = builder.type;
         this.lang = builder.lang;
     }
 
@@ -65,10 +75,24 @@ public class DiagnoseInstanceRequest extends Request {
     }
 
     /**
-     * @return body
+     * @return diagnoseItems
      */
-    public String getBody() {
-        return this.body;
+    public java.util.List < String > getDiagnoseItems() {
+        return this.diagnoseItems;
+    }
+
+    /**
+     * @return indices
+     */
+    public java.util.List < String > getIndices() {
+        return this.indices;
+    }
+
+    /**
+     * @return type
+     */
+    public String getType() {
+        return this.type;
     }
 
     /**
@@ -81,7 +105,9 @@ public class DiagnoseInstanceRequest extends Request {
     public static final class Builder extends Request.Builder<DiagnoseInstanceRequest, Builder> {
         private String instanceId; 
         private String clientToken; 
-        private String body; 
+        private java.util.List < String > diagnoseItems; 
+        private java.util.List < String > indices; 
+        private String type; 
         private String lang; 
 
         private Builder() {
@@ -92,7 +118,9 @@ public class DiagnoseInstanceRequest extends Request {
             super(request);
             this.instanceId = request.instanceId;
             this.clientToken = request.clientToken;
-            this.body = request.body;
+            this.diagnoseItems = request.diagnoseItems;
+            this.indices = request.indices;
+            this.type = request.type;
             this.lang = request.lang;
         } 
 
@@ -115,11 +143,29 @@ public class DiagnoseInstanceRequest extends Request {
         }
 
         /**
-         * body.
+         * diagnoseItems.
          */
-        public Builder body(String body) {
-            this.putBodyParameter("body", body);
-            this.body = body;
+        public Builder diagnoseItems(java.util.List < String > diagnoseItems) {
+            this.putBodyParameter("diagnoseItems", diagnoseItems);
+            this.diagnoseItems = diagnoseItems;
+            return this;
+        }
+
+        /**
+         * indices.
+         */
+        public Builder indices(java.util.List < String > indices) {
+            this.putBodyParameter("indices", indices);
+            this.indices = indices;
+            return this;
+        }
+
+        /**
+         * type.
+         */
+        public Builder type(String type) {
+            this.putBodyParameter("type", type);
+            this.type = type;
             return this;
         }
 

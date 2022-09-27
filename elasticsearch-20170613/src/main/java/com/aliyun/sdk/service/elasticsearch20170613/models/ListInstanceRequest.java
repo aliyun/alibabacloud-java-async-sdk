@@ -12,10 +12,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListInstanceRequest</p>
  */
 public class ListInstanceRequest extends Request {
-    @Body
-    @NameInMap("body")
-    private String body;
-
     @Query
     @NameInMap("description")
     private String description;
@@ -62,7 +58,6 @@ public class ListInstanceRequest extends Request {
 
     private ListInstanceRequest(Builder builder) {
         super(builder);
-        this.body = builder.body;
         this.description = builder.description;
         this.esVersion = builder.esVersion;
         this.instanceCategory = builder.instanceCategory;
@@ -87,13 +82,6 @@ public class ListInstanceRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return body
-     */
-    public String getBody() {
-        return this.body;
     }
 
     /**
@@ -174,7 +162,6 @@ public class ListInstanceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListInstanceRequest, Builder> {
-        private String body; 
         private String description; 
         private String esVersion; 
         private String instanceCategory; 
@@ -193,7 +180,6 @@ public class ListInstanceRequest extends Request {
 
         private Builder(ListInstanceRequest request) {
             super(request);
-            this.body = request.body;
             this.description = request.description;
             this.esVersion = request.esVersion;
             this.instanceCategory = request.instanceCategory;
@@ -206,15 +192,6 @@ public class ListInstanceRequest extends Request {
             this.vpcId = request.vpcId;
             this.zoneId = request.zoneId;
         } 
-
-        /**
-         * body.
-         */
-        public Builder body(String body) {
-            this.putBodyParameter("body", body);
-            this.body = body;
-            return this;
-        }
 
         /**
          * description.

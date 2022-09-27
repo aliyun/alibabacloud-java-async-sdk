@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UninstallLogstashPluginResponseBody</p>
  */
 public class UninstallLogstashPluginResponseBody extends TeaModel {
+    @NameInMap("Headers")
+    private java.util.Map < String, ? > headers;
+
     @NameInMap("RequestId")
     private String requestId;
 
@@ -19,6 +22,7 @@ public class UninstallLogstashPluginResponseBody extends TeaModel {
     private java.util.List < String > result;
 
     private UninstallLogstashPluginResponseBody(Builder builder) {
+        this.headers = builder.headers;
         this.requestId = builder.requestId;
         this.result = builder.result;
     }
@@ -29,6 +33,13 @@ public class UninstallLogstashPluginResponseBody extends TeaModel {
 
     public static UninstallLogstashPluginResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return headers
+     */
+    public java.util.Map < String, ? > getHeaders() {
+        return this.headers;
     }
 
     /**
@@ -46,8 +57,17 @@ public class UninstallLogstashPluginResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private java.util.Map < String, ? > headers; 
         private String requestId; 
         private java.util.List < String > result; 
+
+        /**
+         * Headers.
+         */
+        public Builder headers(java.util.Map < String, ? > headers) {
+            this.headers = headers;
+            return this;
+        }
 
         /**
          * RequestId.

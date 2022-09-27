@@ -22,10 +22,6 @@ public class DescribeDiagnoseReportRequest extends Request {
     @Validation(required = true)
     private String reportId;
 
-    @Body
-    @NameInMap("body")
-    private String body;
-
     @Query
     @NameInMap("lang")
     private String lang;
@@ -34,7 +30,6 @@ public class DescribeDiagnoseReportRequest extends Request {
         super(builder);
         this.instanceId = builder.instanceId;
         this.reportId = builder.reportId;
-        this.body = builder.body;
         this.lang = builder.lang;
     }
 
@@ -66,13 +61,6 @@ public class DescribeDiagnoseReportRequest extends Request {
     }
 
     /**
-     * @return body
-     */
-    public String getBody() {
-        return this.body;
-    }
-
-    /**
      * @return lang
      */
     public String getLang() {
@@ -82,7 +70,6 @@ public class DescribeDiagnoseReportRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeDiagnoseReportRequest, Builder> {
         private String instanceId; 
         private String reportId; 
-        private String body; 
         private String lang; 
 
         private Builder() {
@@ -93,7 +80,6 @@ public class DescribeDiagnoseReportRequest extends Request {
             super(request);
             this.instanceId = request.instanceId;
             this.reportId = request.reportId;
-            this.body = request.body;
             this.lang = request.lang;
         } 
 
@@ -112,15 +98,6 @@ public class DescribeDiagnoseReportRequest extends Request {
         public Builder reportId(String reportId) {
             this.putPathParameter("ReportId", reportId);
             this.reportId = reportId;
-            return this;
-        }
-
-        /**
-         * body.
-         */
-        public Builder body(String body) {
-            this.putBodyParameter("body", body);
-            this.body = body;
             return this;
         }
 
