@@ -92,9 +92,6 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
     } 
 
     public static class ImageInfos extends TeaModel {
-        @NameInMap("BaselineType")
-        private String baselineType;
-
         @NameInMap("ClusterId")
         private String clusterId;
 
@@ -171,7 +168,6 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
         private String uuid;
 
         private ImageInfos(Builder builder) {
-            this.baselineType = builder.baselineType;
             this.clusterId = builder.clusterId;
             this.clusterName = builder.clusterName;
             this.containerId = builder.containerId;
@@ -205,13 +201,6 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
 
         public static ImageInfos create() {
             return builder().build();
-        }
-
-        /**
-         * @return baselineType
-         */
-        public String getBaselineType() {
-            return this.baselineType;
         }
 
         /**
@@ -390,7 +379,6 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private String baselineType; 
             private String clusterId; 
             private String clusterName; 
             private String containerId; 
@@ -416,14 +404,6 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             private String tag; 
             private Integer totalItemCount; 
             private String uuid; 
-
-            /**
-             * BaselineType.
-             */
-            public Builder baselineType(String baselineType) {
-                this.baselineType = baselineType;
-                return this;
-            }
 
             /**
              * ClusterId.

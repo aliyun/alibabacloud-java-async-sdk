@@ -15,11 +15,15 @@ public class DescribeVulFixStatisticsResponseBody extends TeaModel {
     @NameInMap("FixStat")
     private java.util.List < FixStat> fixStat;
 
+    @NameInMap("FixTotal")
+    private FixTotal fixTotal;
+
     @NameInMap("RequestId")
     private String requestId;
 
     private DescribeVulFixStatisticsResponseBody(Builder builder) {
         this.fixStat = builder.fixStat;
+        this.fixTotal = builder.fixTotal;
         this.requestId = builder.requestId;
     }
 
@@ -39,6 +43,13 @@ public class DescribeVulFixStatisticsResponseBody extends TeaModel {
     }
 
     /**
+     * @return fixTotal
+     */
+    public FixTotal getFixTotal() {
+        return this.fixTotal;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -47,6 +58,7 @@ public class DescribeVulFixStatisticsResponseBody extends TeaModel {
 
     public static final class Builder {
         private java.util.List < FixStat> fixStat; 
+        private FixTotal fixTotal; 
         private String requestId; 
 
         /**
@@ -54,6 +66,14 @@ public class DescribeVulFixStatisticsResponseBody extends TeaModel {
          */
         public Builder fixStat(java.util.List < FixStat> fixStat) {
             this.fixStat = fixStat;
+            return this;
+        }
+
+        /**
+         * FixTotal.
+         */
+        public Builder fixTotal(FixTotal fixTotal) {
+            this.fixTotal = fixTotal;
             return this;
         }
 
@@ -187,6 +207,107 @@ public class DescribeVulFixStatisticsResponseBody extends TeaModel {
 
             public FixStat build() {
                 return new FixStat(this);
+            } 
+
+        } 
+
+    }
+    public static class FixTotal extends TeaModel {
+        @NameInMap("FixedTodayNum")
+        private Integer fixedTodayNum;
+
+        @NameInMap("FixedTotalNum")
+        private Integer fixedTotalNum;
+
+        @NameInMap("FixingNum")
+        private Integer fixingNum;
+
+        @NameInMap("NeedFixNum")
+        private Integer needFixNum;
+
+        private FixTotal(Builder builder) {
+            this.fixedTodayNum = builder.fixedTodayNum;
+            this.fixedTotalNum = builder.fixedTotalNum;
+            this.fixingNum = builder.fixingNum;
+            this.needFixNum = builder.needFixNum;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static FixTotal create() {
+            return builder().build();
+        }
+
+        /**
+         * @return fixedTodayNum
+         */
+        public Integer getFixedTodayNum() {
+            return this.fixedTodayNum;
+        }
+
+        /**
+         * @return fixedTotalNum
+         */
+        public Integer getFixedTotalNum() {
+            return this.fixedTotalNum;
+        }
+
+        /**
+         * @return fixingNum
+         */
+        public Integer getFixingNum() {
+            return this.fixingNum;
+        }
+
+        /**
+         * @return needFixNum
+         */
+        public Integer getNeedFixNum() {
+            return this.needFixNum;
+        }
+
+        public static final class Builder {
+            private Integer fixedTodayNum; 
+            private Integer fixedTotalNum; 
+            private Integer fixingNum; 
+            private Integer needFixNum; 
+
+            /**
+             * FixedTodayNum.
+             */
+            public Builder fixedTodayNum(Integer fixedTodayNum) {
+                this.fixedTodayNum = fixedTodayNum;
+                return this;
+            }
+
+            /**
+             * FixedTotalNum.
+             */
+            public Builder fixedTotalNum(Integer fixedTotalNum) {
+                this.fixedTotalNum = fixedTotalNum;
+                return this;
+            }
+
+            /**
+             * FixingNum.
+             */
+            public Builder fixingNum(Integer fixingNum) {
+                this.fixingNum = fixingNum;
+                return this;
+            }
+
+            /**
+             * NeedFixNum.
+             */
+            public Builder needFixNum(Integer needFixNum) {
+                this.needFixNum = needFixNum;
+                return this;
+            }
+
+            public FixTotal build() {
+                return new FixTotal(this);
             } 
 
         } 

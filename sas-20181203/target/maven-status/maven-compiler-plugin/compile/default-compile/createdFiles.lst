@@ -1185,6 +1185,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeSuspiciousOverallConfigRespons
 com/aliyun/sdk/service/sas20181203/models/DescribeBackupPoliciesResponseBody$PageInfo.class
 com/aliyun/sdk/service/sas20181203/models/DescribeWarningExportInfoResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeImageGroupedVulListRequest.class
+com/aliyun/sdk/service/sas20181203/models/DescribeVulFixStatisticsResponseBody$FixTotal$Builder.class
 com/aliyun/sdk/service/sas20181203/models/ModifyStartVulScanResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/ModifyStrategyResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribePropertyUserItemResponseBody$PageInfo$Builder.class
@@ -1356,6 +1357,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeAffectedMaliciousFileImagesRes
 com/aliyun/sdk/service/sas20181203/models/DescribeUuidsByVulNamesResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/DescribeRiskCheckItemResultResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/HandleSecurityEventsRequest$1.class
+com/aliyun/sdk/service/sas20181203/models/DescribeVulFixStatisticsResponseBody$FixTotal.class
 com/aliyun/sdk/service/sas20181203/models/ListAvailableHoneypotResponse.class
 com/aliyun/sdk/service/sas20181203/models/DescribeConcernNecessityResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribePropertyUserItemResponseBody$PageInfo.class

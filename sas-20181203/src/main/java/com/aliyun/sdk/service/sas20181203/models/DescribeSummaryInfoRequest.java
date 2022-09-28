@@ -17,17 +17,12 @@ public class DescribeSummaryInfoRequest extends Request {
     private String lang;
 
     @Query
-    @NameInMap("ResourceDirectoryAccountId")
-    private String resourceDirectoryAccountId;
-
-    @Query
     @NameInMap("SourceIp")
     private String sourceIp;
 
     private DescribeSummaryInfoRequest(Builder builder) {
         super(builder);
         this.lang = builder.lang;
-        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.sourceIp = builder.sourceIp;
     }
 
@@ -52,13 +47,6 @@ public class DescribeSummaryInfoRequest extends Request {
     }
 
     /**
-     * @return resourceDirectoryAccountId
-     */
-    public String getResourceDirectoryAccountId() {
-        return this.resourceDirectoryAccountId;
-    }
-
-    /**
      * @return sourceIp
      */
     public String getSourceIp() {
@@ -67,7 +55,6 @@ public class DescribeSummaryInfoRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeSummaryInfoRequest, Builder> {
         private String lang; 
-        private String resourceDirectoryAccountId; 
         private String sourceIp; 
 
         private Builder() {
@@ -77,7 +64,6 @@ public class DescribeSummaryInfoRequest extends Request {
         private Builder(DescribeSummaryInfoRequest request) {
             super(request);
             this.lang = request.lang;
-            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.sourceIp = request.sourceIp;
         } 
 
@@ -87,15 +73,6 @@ public class DescribeSummaryInfoRequest extends Request {
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
             this.lang = lang;
-            return this;
-        }
-
-        /**
-         * ResourceDirectoryAccountId.
-         */
-        public Builder resourceDirectoryAccountId(String resourceDirectoryAccountId) {
-            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
-            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 

@@ -137,9 +137,6 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
         @NameInMap("MaliciousMd5")
         private String maliciousMd5;
 
-        @NameInMap("MaliciousSource")
-        private String maliciousSource;
-
         @NameInMap("Namespace")
         private String namespace;
 
@@ -180,7 +177,6 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             this.layer = builder.layer;
             this.level = builder.level;
             this.maliciousMd5 = builder.maliciousMd5;
-            this.maliciousSource = builder.maliciousSource;
             this.namespace = builder.namespace;
             this.pod = builder.pod;
             this.repoId = builder.repoId;
@@ -305,13 +301,6 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
         }
 
         /**
-         * @return maliciousSource
-         */
-        public String getMaliciousSource() {
-            return this.maliciousSource;
-        }
-
-        /**
          * @return namespace
          */
         public String getNamespace() {
@@ -383,7 +372,6 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             private String layer; 
             private String level; 
             private String maliciousMd5; 
-            private String maliciousSource; 
             private String namespace; 
             private String pod; 
             private String repoId; 
@@ -510,14 +498,6 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
              */
             public Builder maliciousMd5(String maliciousMd5) {
                 this.maliciousMd5 = maliciousMd5;
-                return this;
-            }
-
-            /**
-             * MaliciousSource.
-             */
-            public Builder maliciousSource(String maliciousSource) {
-                this.maliciousSource = maliciousSource;
                 return this;
             }
 
