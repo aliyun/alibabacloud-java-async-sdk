@@ -15,11 +15,11 @@ public class InvoiceModifyResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("result_code")
-    private Integer resultCode;
+    @NameInMap("code")
+    private Integer code;
 
-    @NameInMap("result_msg")
-    private String resultMsg;
+    @NameInMap("message")
+    private String message;
 
     @NameInMap("success")
     private Boolean success;
@@ -29,8 +29,8 @@ public class InvoiceModifyResponseBody extends TeaModel {
 
     private InvoiceModifyResponseBody(Builder builder) {
         this.requestId = builder.requestId;
-        this.resultCode = builder.resultCode;
-        this.resultMsg = builder.resultMsg;
+        this.code = builder.code;
+        this.message = builder.message;
         this.success = builder.success;
         this.traceId = builder.traceId;
     }
@@ -51,17 +51,17 @@ public class InvoiceModifyResponseBody extends TeaModel {
     }
 
     /**
-     * @return resultCode
+     * @return code
      */
-    public Integer getResultCode() {
-        return this.resultCode;
+    public Integer getCode() {
+        return this.code;
     }
 
     /**
-     * @return resultMsg
+     * @return message
      */
-    public String getResultMsg() {
-        return this.resultMsg;
+    public String getMessage() {
+        return this.message;
     }
 
     /**
@@ -80,8 +80,8 @@ public class InvoiceModifyResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private Integer resultCode; 
-        private String resultMsg; 
+        private Integer code; 
+        private String message; 
         private Boolean success; 
         private String traceId; 
 
@@ -96,16 +96,16 @@ public class InvoiceModifyResponseBody extends TeaModel {
         /**
          * 结果代码
          */
-        public Builder resultCode(Integer resultCode) {
-            this.resultCode = resultCode;
+        public Builder code(Integer code) {
+            this.code = code;
             return this;
         }
 
         /**
          * 备注，结果的备注，如对结果的说明
          */
-        public Builder resultMsg(String resultMsg) {
-            this.resultMsg = resultMsg;
+        public Builder message(String message) {
+            this.message = message;
             return this;
         }
 

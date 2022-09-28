@@ -18,11 +18,11 @@ public class CarApplyQueryResponseBody extends TeaModel {
     @NameInMap("apply_list")
     private java.util.List < ApplyList> applyList;
 
-    @NameInMap("err_code")
-    private Integer errCode;
+    @NameInMap("code")
+    private Integer code;
 
-    @NameInMap("err_msg")
-    private String errMsg;
+    @NameInMap("message")
+    private String message;
 
     @NameInMap("success")
     private Boolean success;
@@ -36,8 +36,8 @@ public class CarApplyQueryResponseBody extends TeaModel {
     private CarApplyQueryResponseBody(Builder builder) {
         this.requestId = builder.requestId;
         this.applyList = builder.applyList;
-        this.errCode = builder.errCode;
-        this.errMsg = builder.errMsg;
+        this.code = builder.code;
+        this.message = builder.message;
         this.success = builder.success;
         this.total = builder.total;
         this.traceId = builder.traceId;
@@ -66,17 +66,17 @@ public class CarApplyQueryResponseBody extends TeaModel {
     }
 
     /**
-     * @return errCode
+     * @return code
      */
-    public Integer getErrCode() {
-        return this.errCode;
+    public Integer getCode() {
+        return this.code;
     }
 
     /**
-     * @return errMsg
+     * @return message
      */
-    public String getErrMsg() {
-        return this.errMsg;
+    public String getMessage() {
+        return this.message;
     }
 
     /**
@@ -103,8 +103,8 @@ public class CarApplyQueryResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List < ApplyList> applyList; 
-        private Integer errCode; 
-        private String errMsg; 
+        private Integer code; 
+        private String message; 
         private Boolean success; 
         private Integer total; 
         private String traceId; 
@@ -126,18 +126,18 @@ public class CarApplyQueryResponseBody extends TeaModel {
         }
 
         /**
-         * err_code.
+         * code.
          */
-        public Builder errCode(Integer errCode) {
-            this.errCode = errCode;
+        public Builder code(Integer code) {
+            this.code = code;
             return this;
         }
 
         /**
-         * err_msg.
+         * message.
          */
-        public Builder errMsg(String errMsg) {
-            this.errMsg = errMsg;
+        public Builder message(String message) {
+            this.message = message;
             return this;
         }
 

@@ -15,14 +15,14 @@ public class ApplyListQueryResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("code")
+    private Integer code;
+
+    @NameInMap("message")
+    private String message;
+
     @NameInMap("module_list")
     private java.util.List < ModuleList> moduleList;
-
-    @NameInMap("result_code")
-    private Integer resultCode;
-
-    @NameInMap("result_msg")
-    private String resultMsg;
 
     @NameInMap("success")
     private Boolean success;
@@ -32,9 +32,9 @@ public class ApplyListQueryResponseBody extends TeaModel {
 
     private ApplyListQueryResponseBody(Builder builder) {
         this.requestId = builder.requestId;
+        this.code = builder.code;
+        this.message = builder.message;
         this.moduleList = builder.moduleList;
-        this.resultCode = builder.resultCode;
-        this.resultMsg = builder.resultMsg;
         this.success = builder.success;
         this.traceId = builder.traceId;
     }
@@ -55,24 +55,24 @@ public class ApplyListQueryResponseBody extends TeaModel {
     }
 
     /**
+     * @return code
+     */
+    public Integer getCode() {
+        return this.code;
+    }
+
+    /**
+     * @return message
+     */
+    public String getMessage() {
+        return this.message;
+    }
+
+    /**
      * @return moduleList
      */
     public java.util.List < ModuleList> getModuleList() {
         return this.moduleList;
-    }
-
-    /**
-     * @return resultCode
-     */
-    public Integer getResultCode() {
-        return this.resultCode;
-    }
-
-    /**
-     * @return resultMsg
-     */
-    public String getResultMsg() {
-        return this.resultMsg;
     }
 
     /**
@@ -91,9 +91,9 @@ public class ApplyListQueryResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
+        private Integer code; 
+        private String message; 
         private java.util.List < ModuleList> moduleList; 
-        private Integer resultCode; 
-        private String resultMsg; 
         private Boolean success; 
         private String traceId; 
 
@@ -106,26 +106,26 @@ public class ApplyListQueryResponseBody extends TeaModel {
         }
 
         /**
+         * code.
+         */
+        public Builder code(Integer code) {
+            this.code = code;
+            return this;
+        }
+
+        /**
+         * message.
+         */
+        public Builder message(String message) {
+            this.message = message;
+            return this;
+        }
+
+        /**
          * module_list.
          */
         public Builder moduleList(java.util.List < ModuleList> moduleList) {
             this.moduleList = moduleList;
-            return this;
-        }
-
-        /**
-         * result_code.
-         */
-        public Builder resultCode(Integer resultCode) {
-            this.resultCode = resultCode;
-            return this;
-        }
-
-        /**
-         * result_msg.
-         */
-        public Builder resultMsg(String resultMsg) {
-            this.resultMsg = resultMsg;
             return this;
         }
 

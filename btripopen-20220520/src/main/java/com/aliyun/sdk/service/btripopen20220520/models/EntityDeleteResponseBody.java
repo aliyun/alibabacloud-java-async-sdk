@@ -12,6 +12,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>EntityDeleteResponseBody</p>
  */
 public class EntityDeleteResponseBody extends TeaModel {
+    @NameInMap("code")
+    private Integer code;
+
+    @NameInMap("message")
+    private String message;
+
     @NameInMap("module")
     private Module module;
 
@@ -21,12 +27,6 @@ public class EntityDeleteResponseBody extends TeaModel {
     @NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result_code")
-    private Integer resultCode;
-
-    @NameInMap("result_msg")
-    private String resultMsg;
-
     @NameInMap("success")
     private Boolean success;
 
@@ -34,11 +34,11 @@ public class EntityDeleteResponseBody extends TeaModel {
     private String traceId;
 
     private EntityDeleteResponseBody(Builder builder) {
+        this.code = builder.code;
+        this.message = builder.message;
         this.module = builder.module;
         this.morePage = builder.morePage;
         this.requestId = builder.requestId;
-        this.resultCode = builder.resultCode;
-        this.resultMsg = builder.resultMsg;
         this.success = builder.success;
         this.traceId = builder.traceId;
     }
@@ -49,6 +49,20 @@ public class EntityDeleteResponseBody extends TeaModel {
 
     public static EntityDeleteResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return code
+     */
+    public Integer getCode() {
+        return this.code;
+    }
+
+    /**
+     * @return message
+     */
+    public String getMessage() {
+        return this.message;
     }
 
     /**
@@ -73,20 +87,6 @@ public class EntityDeleteResponseBody extends TeaModel {
     }
 
     /**
-     * @return resultCode
-     */
-    public Integer getResultCode() {
-        return this.resultCode;
-    }
-
-    /**
-     * @return resultMsg
-     */
-    public String getResultMsg() {
-        return this.resultMsg;
-    }
-
-    /**
      * @return success
      */
     public Boolean getSuccess() {
@@ -101,13 +101,29 @@ public class EntityDeleteResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private Integer code; 
+        private String message; 
         private Module module; 
         private Boolean morePage; 
         private String requestId; 
-        private Integer resultCode; 
-        private String resultMsg; 
         private Boolean success; 
         private String traceId; 
+
+        /**
+         * 结果代码
+         */
+        public Builder code(Integer code) {
+            this.code = code;
+            return this;
+        }
+
+        /**
+         * 备注，结果的备注，如对结果的说明
+         */
+        public Builder message(String message) {
+            this.message = message;
+            return this;
+        }
 
         /**
          * 返回值，服务端返回，没有结果或发生异常都返回空
@@ -130,22 +146,6 @@ public class EntityDeleteResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * 结果代码
-         */
-        public Builder resultCode(Integer resultCode) {
-            this.resultCode = resultCode;
-            return this;
-        }
-
-        /**
-         * 备注，结果的备注，如对结果的说明
-         */
-        public Builder resultMsg(String resultMsg) {
-            this.resultMsg = resultMsg;
             return this;
         }
 

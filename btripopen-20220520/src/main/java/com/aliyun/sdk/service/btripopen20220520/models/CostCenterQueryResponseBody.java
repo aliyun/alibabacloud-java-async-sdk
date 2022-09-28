@@ -15,17 +15,17 @@ public class CostCenterQueryResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("code")
+    private Integer code;
+
+    @NameInMap("message")
+    private String message;
+
     @NameInMap("module")
     private java.util.List < Module> module;
 
     @NameInMap("more_page")
     private Boolean morePage;
-
-    @NameInMap("result_code")
-    private Integer resultCode;
-
-    @NameInMap("result_msg")
-    private String resultMsg;
 
     @NameInMap("success")
     private Boolean success;
@@ -35,10 +35,10 @@ public class CostCenterQueryResponseBody extends TeaModel {
 
     private CostCenterQueryResponseBody(Builder builder) {
         this.requestId = builder.requestId;
+        this.code = builder.code;
+        this.message = builder.message;
         this.module = builder.module;
         this.morePage = builder.morePage;
-        this.resultCode = builder.resultCode;
-        this.resultMsg = builder.resultMsg;
         this.success = builder.success;
         this.traceId = builder.traceId;
     }
@@ -59,6 +59,20 @@ public class CostCenterQueryResponseBody extends TeaModel {
     }
 
     /**
+     * @return code
+     */
+    public Integer getCode() {
+        return this.code;
+    }
+
+    /**
+     * @return message
+     */
+    public String getMessage() {
+        return this.message;
+    }
+
+    /**
      * @return module
      */
     public java.util.List < Module> getModule() {
@@ -70,20 +84,6 @@ public class CostCenterQueryResponseBody extends TeaModel {
      */
     public Boolean getMorePage() {
         return this.morePage;
-    }
-
-    /**
-     * @return resultCode
-     */
-    public Integer getResultCode() {
-        return this.resultCode;
-    }
-
-    /**
-     * @return resultMsg
-     */
-    public String getResultMsg() {
-        return this.resultMsg;
     }
 
     /**
@@ -102,10 +102,10 @@ public class CostCenterQueryResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
+        private Integer code; 
+        private String message; 
         private java.util.List < Module> module; 
         private Boolean morePage; 
-        private Integer resultCode; 
-        private String resultMsg; 
         private Boolean success; 
         private String traceId; 
 
@@ -114,6 +114,22 @@ public class CostCenterQueryResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * 结果代码
+         */
+        public Builder code(Integer code) {
+            this.code = code;
+            return this;
+        }
+
+        /**
+         * 备注，结果的备注，如对结果的说明
+         */
+        public Builder message(String message) {
+            this.message = message;
             return this;
         }
 
@@ -130,22 +146,6 @@ public class CostCenterQueryResponseBody extends TeaModel {
          */
         public Builder morePage(Boolean morePage) {
             this.morePage = morePage;
-            return this;
-        }
-
-        /**
-         * 结果代码
-         */
-        public Builder resultCode(Integer resultCode) {
-            this.resultCode = resultCode;
-            return this;
-        }
-
-        /**
-         * 备注，结果的备注，如对结果的说明
-         */
-        public Builder resultMsg(String resultMsg) {
-            this.resultMsg = resultMsg;
             return this;
         }
 

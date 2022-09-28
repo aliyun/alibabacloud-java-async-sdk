@@ -15,14 +15,14 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("message")
+    private String message;
+
     @NameInMap("module")
     private Module module;
 
     @NameInMap("result_code")
     private Integer resultCode;
-
-    @NameInMap("result_msg")
-    private String resultMsg;
 
     @NameInMap("success")
     private Boolean success;
@@ -32,9 +32,9 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
 
     private CarBillSettlementQueryResponseBody(Builder builder) {
         this.requestId = builder.requestId;
+        this.message = builder.message;
         this.module = builder.module;
         this.resultCode = builder.resultCode;
-        this.resultMsg = builder.resultMsg;
         this.success = builder.success;
         this.traceId = builder.traceId;
     }
@@ -55,6 +55,13 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
     }
 
     /**
+     * @return message
+     */
+    public String getMessage() {
+        return this.message;
+    }
+
+    /**
      * @return module
      */
     public Module getModule() {
@@ -66,13 +73,6 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
      */
     public Integer getResultCode() {
         return this.resultCode;
-    }
-
-    /**
-     * @return resultMsg
-     */
-    public String getResultMsg() {
-        return this.resultMsg;
     }
 
     /**
@@ -91,9 +91,9 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
+        private String message; 
         private Module module; 
         private Integer resultCode; 
-        private String resultMsg; 
         private Boolean success; 
         private String traceId; 
 
@@ -102,6 +102,14 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * message.
+         */
+        public Builder message(String message) {
+            this.message = message;
             return this;
         }
 
@@ -118,14 +126,6 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
          */
         public Builder resultCode(Integer resultCode) {
             this.resultCode = resultCode;
-            return this;
-        }
-
-        /**
-         * result_msg.
-         */
-        public Builder resultMsg(String resultMsg) {
-            this.resultMsg = resultMsg;
             return this;
         }
 
