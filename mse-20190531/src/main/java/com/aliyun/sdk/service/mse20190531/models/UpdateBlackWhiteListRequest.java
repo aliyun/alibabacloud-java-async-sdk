@@ -37,6 +37,18 @@ public class UpdateBlackWhiteListRequest extends Request {
     private String mseSessionId;
 
     @Query
+    @NameInMap("Name")
+    private String name;
+
+    @Query
+    @NameInMap("Note")
+    private String note;
+
+    @Query
+    @NameInMap("ResourceIdJsonList")
+    private String resourceIdJsonList;
+
+    @Query
     @NameInMap("ResourceType")
     private String resourceType;
 
@@ -56,6 +68,9 @@ public class UpdateBlackWhiteListRequest extends Request {
         this.id = builder.id;
         this.isWhite = builder.isWhite;
         this.mseSessionId = builder.mseSessionId;
+        this.name = builder.name;
+        this.note = builder.note;
+        this.resourceIdJsonList = builder.resourceIdJsonList;
         this.resourceType = builder.resourceType;
         this.status = builder.status;
         this.type = builder.type;
@@ -117,6 +132,27 @@ public class UpdateBlackWhiteListRequest extends Request {
     }
 
     /**
+     * @return name
+     */
+    public String getName() {
+        return this.name;
+    }
+
+    /**
+     * @return note
+     */
+    public String getNote() {
+        return this.note;
+    }
+
+    /**
+     * @return resourceIdJsonList
+     */
+    public String getResourceIdJsonList() {
+        return this.resourceIdJsonList;
+    }
+
+    /**
      * @return resourceType
      */
     public String getResourceType() {
@@ -144,6 +180,9 @@ public class UpdateBlackWhiteListRequest extends Request {
         private Long id; 
         private Boolean isWhite; 
         private String mseSessionId; 
+        private String name; 
+        private String note; 
+        private String resourceIdJsonList; 
         private String resourceType; 
         private String status; 
         private String type; 
@@ -160,6 +199,9 @@ public class UpdateBlackWhiteListRequest extends Request {
             this.id = request.id;
             this.isWhite = request.isWhite;
             this.mseSessionId = request.mseSessionId;
+            this.name = request.name;
+            this.note = request.note;
+            this.resourceIdJsonList = request.resourceIdJsonList;
             this.resourceType = request.resourceType;
             this.status = request.status;
             this.type = request.type;
@@ -216,6 +258,33 @@ public class UpdateBlackWhiteListRequest extends Request {
         public Builder mseSessionId(String mseSessionId) {
             this.putQueryParameter("MseSessionId", mseSessionId);
             this.mseSessionId = mseSessionId;
+            return this;
+        }
+
+        /**
+         * Name.
+         */
+        public Builder name(String name) {
+            this.putQueryParameter("Name", name);
+            this.name = name;
+            return this;
+        }
+
+        /**
+         * Note.
+         */
+        public Builder note(String note) {
+            this.putQueryParameter("Note", note);
+            this.note = note;
+            return this;
+        }
+
+        /**
+         * ResourceIdJsonList.
+         */
+        public Builder resourceIdJsonList(String resourceIdJsonList) {
+            this.putQueryParameter("ResourceIdJsonList", resourceIdJsonList);
+            this.resourceIdJsonList = resourceIdJsonList;
             return this;
         }
 

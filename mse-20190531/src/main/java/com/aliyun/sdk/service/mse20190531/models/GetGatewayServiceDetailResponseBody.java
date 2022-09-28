@@ -212,6 +212,167 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         } 
 
     }
+    public static class PortTrafficPolicyList extends TeaModel {
+        @NameInMap("GatewayUniqueId")
+        private String gatewayUniqueId;
+
+        @NameInMap("GmtCreate")
+        private String gmtCreate;
+
+        @NameInMap("GmtModified")
+        private String gmtModified;
+
+        @NameInMap("Id")
+        private Long id;
+
+        @NameInMap("ServiceId")
+        private Long serviceId;
+
+        @NameInMap("ServicePort")
+        private Integer servicePort;
+
+        @NameInMap("TrafficPolicy")
+        private TrafficPolicy trafficPolicy;
+
+        private PortTrafficPolicyList(Builder builder) {
+            this.gatewayUniqueId = builder.gatewayUniqueId;
+            this.gmtCreate = builder.gmtCreate;
+            this.gmtModified = builder.gmtModified;
+            this.id = builder.id;
+            this.serviceId = builder.serviceId;
+            this.servicePort = builder.servicePort;
+            this.trafficPolicy = builder.trafficPolicy;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PortTrafficPolicyList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return gatewayUniqueId
+         */
+        public String getGatewayUniqueId() {
+            return this.gatewayUniqueId;
+        }
+
+        /**
+         * @return gmtCreate
+         */
+        public String getGmtCreate() {
+            return this.gmtCreate;
+        }
+
+        /**
+         * @return gmtModified
+         */
+        public String getGmtModified() {
+            return this.gmtModified;
+        }
+
+        /**
+         * @return id
+         */
+        public Long getId() {
+            return this.id;
+        }
+
+        /**
+         * @return serviceId
+         */
+        public Long getServiceId() {
+            return this.serviceId;
+        }
+
+        /**
+         * @return servicePort
+         */
+        public Integer getServicePort() {
+            return this.servicePort;
+        }
+
+        /**
+         * @return trafficPolicy
+         */
+        public TrafficPolicy getTrafficPolicy() {
+            return this.trafficPolicy;
+        }
+
+        public static final class Builder {
+            private String gatewayUniqueId; 
+            private String gmtCreate; 
+            private String gmtModified; 
+            private Long id; 
+            private Long serviceId; 
+            private Integer servicePort; 
+            private TrafficPolicy trafficPolicy; 
+
+            /**
+             * GatewayUniqueId.
+             */
+            public Builder gatewayUniqueId(String gatewayUniqueId) {
+                this.gatewayUniqueId = gatewayUniqueId;
+                return this;
+            }
+
+            /**
+             * GmtCreate.
+             */
+            public Builder gmtCreate(String gmtCreate) {
+                this.gmtCreate = gmtCreate;
+                return this;
+            }
+
+            /**
+             * GmtModified.
+             */
+            public Builder gmtModified(String gmtModified) {
+                this.gmtModified = gmtModified;
+                return this;
+            }
+
+            /**
+             * Id.
+             */
+            public Builder id(Long id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * ServiceId.
+             */
+            public Builder serviceId(Long serviceId) {
+                this.serviceId = serviceId;
+                return this;
+            }
+
+            /**
+             * ServicePort.
+             */
+            public Builder servicePort(Integer servicePort) {
+                this.servicePort = servicePort;
+                return this;
+            }
+
+            /**
+             * TrafficPolicy.
+             */
+            public Builder trafficPolicy(TrafficPolicy trafficPolicy) {
+                this.trafficPolicy = trafficPolicy;
+                return this;
+            }
+
+            public PortTrafficPolicyList build() {
+                return new PortTrafficPolicyList(this);
+            } 
+
+        } 
+
+    }
     public static class Labels extends TeaModel {
         @NameInMap("Key")
         private String key;
@@ -539,6 +700,12 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         @NameInMap("Namespace")
         private String namespace;
 
+        @NameInMap("PortTrafficPolicyList")
+        private java.util.List < PortTrafficPolicyList> portTrafficPolicyList;
+
+        @NameInMap("Ports")
+        private java.util.List < Integer > ports;
+
         @NameInMap("ServiceNameInRegistry")
         private String serviceNameInRegistry;
 
@@ -572,6 +739,8 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
             this.metaInfo = builder.metaInfo;
             this.name = builder.name;
             this.namespace = builder.namespace;
+            this.portTrafficPolicyList = builder.portTrafficPolicyList;
+            this.ports = builder.ports;
             this.serviceNameInRegistry = builder.serviceNameInRegistry;
             this.serviceProtocol = builder.serviceProtocol;
             this.sourceId = builder.sourceId;
@@ -687,6 +856,20 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return portTrafficPolicyList
+         */
+        public java.util.List < PortTrafficPolicyList> getPortTrafficPolicyList() {
+            return this.portTrafficPolicyList;
+        }
+
+        /**
+         * @return ports
+         */
+        public java.util.List < Integer > getPorts() {
+            return this.ports;
+        }
+
+        /**
          * @return serviceNameInRegistry
          */
         public String getServiceNameInRegistry() {
@@ -743,6 +926,8 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
             private String metaInfo; 
             private String name; 
             private String namespace; 
+            private java.util.List < PortTrafficPolicyList> portTrafficPolicyList; 
+            private java.util.List < Integer > ports; 
             private String serviceNameInRegistry; 
             private String serviceProtocol; 
             private Long sourceId; 
@@ -859,6 +1044,22 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
+                return this;
+            }
+
+            /**
+             * PortTrafficPolicyList.
+             */
+            public Builder portTrafficPolicyList(java.util.List < PortTrafficPolicyList> portTrafficPolicyList) {
+                this.portTrafficPolicyList = portTrafficPolicyList;
+                return this;
+            }
+
+            /**
+             * Ports.
+             */
+            public Builder ports(java.util.List < Integer > ports) {
+                this.ports = ports;
                 return this;
             }
 

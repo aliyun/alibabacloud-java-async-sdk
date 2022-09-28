@@ -904,6 +904,9 @@ public class ListGatewayServiceResponseBody extends TeaModel {
         @NameInMap("Namespace")
         private String namespace;
 
+        @NameInMap("Ports")
+        private java.util.List < Integer > ports;
+
         @NameInMap("ServiceNameInRegistry")
         private String serviceNameInRegistry;
 
@@ -941,6 +944,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             this.metaInfo = builder.metaInfo;
             this.name = builder.name;
             this.namespace = builder.namespace;
+            this.ports = builder.ports;
             this.serviceNameInRegistry = builder.serviceNameInRegistry;
             this.servicePort = builder.servicePort;
             this.serviceProtocol = builder.serviceProtocol;
@@ -1064,6 +1068,13 @@ public class ListGatewayServiceResponseBody extends TeaModel {
         }
 
         /**
+         * @return ports
+         */
+        public java.util.List < Integer > getPorts() {
+            return this.ports;
+        }
+
+        /**
          * @return serviceNameInRegistry
          */
         public String getServiceNameInRegistry() {
@@ -1128,6 +1139,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             private String metaInfo; 
             private String name; 
             private String namespace; 
+            private java.util.List < Integer > ports; 
             private String serviceNameInRegistry; 
             private Long servicePort; 
             private String serviceProtocol; 
@@ -1253,6 +1265,14 @@ public class ListGatewayServiceResponseBody extends TeaModel {
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
+                return this;
+            }
+
+            /**
+             * Ports.
+             */
+            public Builder ports(java.util.List < Integer > ports) {
+                this.ports = ports;
                 return this;
             }
 

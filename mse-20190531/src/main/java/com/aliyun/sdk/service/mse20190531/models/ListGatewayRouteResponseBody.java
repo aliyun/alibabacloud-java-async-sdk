@@ -275,6 +275,9 @@ public class ListGatewayRouteResponseBody extends TeaModel {
         @NameInMap("ServiceName")
         private String serviceName;
 
+        @NameInMap("ServicePort")
+        private Integer servicePort;
+
         @NameInMap("SourceType")
         private String sourceType;
 
@@ -289,6 +292,7 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             this.percent = builder.percent;
             this.serviceId = builder.serviceId;
             this.serviceName = builder.serviceName;
+            this.servicePort = builder.servicePort;
             this.sourceType = builder.sourceType;
             this.version = builder.version;
         }
@@ -351,6 +355,13 @@ public class ListGatewayRouteResponseBody extends TeaModel {
         }
 
         /**
+         * @return servicePort
+         */
+        public Integer getServicePort() {
+            return this.servicePort;
+        }
+
+        /**
          * @return sourceType
          */
         public String getSourceType() {
@@ -372,6 +383,7 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             private Integer percent; 
             private Long serviceId; 
             private String serviceName; 
+            private Integer servicePort; 
             private String sourceType; 
             private String version; 
 
@@ -428,6 +440,14 @@ public class ListGatewayRouteResponseBody extends TeaModel {
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
+                return this;
+            }
+
+            /**
+             * ServicePort.
+             */
+            public Builder servicePort(Integer servicePort) {
+                this.servicePort = servicePort;
                 return this;
             }
 
@@ -1227,6 +1247,9 @@ public class ListGatewayRouteResponseBody extends TeaModel {
         @NameInMap("ServiceName")
         private String serviceName;
 
+        @NameInMap("ServicePort")
+        private Integer servicePort;
+
         @NameInMap("SourceType")
         private String sourceType;
 
@@ -1242,6 +1265,7 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             this.percent = builder.percent;
             this.serviceId = builder.serviceId;
             this.serviceName = builder.serviceName;
+            this.servicePort = builder.servicePort;
             this.sourceType = builder.sourceType;
             this.version = builder.version;
         }
@@ -1311,6 +1335,13 @@ public class ListGatewayRouteResponseBody extends TeaModel {
         }
 
         /**
+         * @return servicePort
+         */
+        public Integer getServicePort() {
+            return this.servicePort;
+        }
+
+        /**
          * @return sourceType
          */
         public String getSourceType() {
@@ -1333,6 +1364,7 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             private Integer percent; 
             private Long serviceId; 
             private String serviceName; 
+            private Integer servicePort; 
             private String sourceType; 
             private String version; 
 
@@ -1397,6 +1429,14 @@ public class ListGatewayRouteResponseBody extends TeaModel {
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
+                return this;
+            }
+
+            /**
+             * ServicePort.
+             */
+            public Builder servicePort(Integer servicePort) {
+                this.servicePort = servicePort;
                 return this;
             }
 

@@ -218,6 +218,9 @@ public class ListGatewayRequest extends Request {
         @NameInMap("InstanceId")
         private String instanceId;
 
+        @NameInMap("MseTag")
+        private String mseTag;
+
         @NameInMap("Name")
         private String name;
 
@@ -228,6 +231,7 @@ public class ListGatewayRequest extends Request {
             this.gatewayType = builder.gatewayType;
             this.gatewayUniqueId = builder.gatewayUniqueId;
             this.instanceId = builder.instanceId;
+            this.mseTag = builder.mseTag;
             this.name = builder.name;
             this.vpc = builder.vpc;
         }
@@ -262,6 +266,13 @@ public class ListGatewayRequest extends Request {
         }
 
         /**
+         * @return mseTag
+         */
+        public String getMseTag() {
+            return this.mseTag;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
@@ -279,6 +290,7 @@ public class ListGatewayRequest extends Request {
             private String gatewayType; 
             private String gatewayUniqueId; 
             private String instanceId; 
+            private String mseTag; 
             private String name; 
             private String vpc; 
 
@@ -303,6 +315,14 @@ public class ListGatewayRequest extends Request {
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * MseTag.
+             */
+            public Builder mseTag(String mseTag) {
+                this.mseTag = mseTag;
                 return this;
             }
 

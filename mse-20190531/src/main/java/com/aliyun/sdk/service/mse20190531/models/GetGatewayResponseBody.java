@@ -318,6 +318,9 @@ public class GetGatewayResponseBody extends TeaModel {
         @NameInMap("LogConfigDetails")
         private LogConfigDetails logConfigDetails;
 
+        @NameInMap("MseTag")
+        private String mseTag;
+
         @NameInMap("Name")
         private String name;
 
@@ -363,6 +366,7 @@ public class GetGatewayResponseBody extends TeaModel {
             this.id = builder.id;
             this.instanceId = builder.instanceId;
             this.logConfigDetails = builder.logConfigDetails;
+            this.mseTag = builder.mseTag;
             this.name = builder.name;
             this.primaryUser = builder.primaryUser;
             this.region = builder.region;
@@ -439,6 +443,13 @@ public class GetGatewayResponseBody extends TeaModel {
          */
         public LogConfigDetails getLogConfigDetails() {
             return this.logConfigDetails;
+        }
+
+        /**
+         * @return mseTag
+         */
+        public String getMseTag() {
+            return this.mseTag;
         }
 
         /**
@@ -534,6 +545,7 @@ public class GetGatewayResponseBody extends TeaModel {
             private Long id; 
             private String instanceId; 
             private LogConfigDetails logConfigDetails; 
+            private String mseTag; 
             private String name; 
             private String primaryUser; 
             private String region; 
@@ -608,6 +620,14 @@ public class GetGatewayResponseBody extends TeaModel {
              */
             public Builder logConfigDetails(LogConfigDetails logConfigDetails) {
                 this.logConfigDetails = logConfigDetails;
+                return this;
+            }
+
+            /**
+             * MseTag.
+             */
+            public Builder mseTag(String mseTag) {
+                this.mseTag = mseTag;
                 return this;
             }
 

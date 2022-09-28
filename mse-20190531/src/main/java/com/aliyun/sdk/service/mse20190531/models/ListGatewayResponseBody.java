@@ -643,6 +643,9 @@ public class ListGatewayResponseBody extends TeaModel {
         @NameInMap("LatestVersion")
         private String latestVersion;
 
+        @NameInMap("MseTag")
+        private String mseTag;
+
         @NameInMap("MustUpgrade")
         private Boolean mustUpgrade;
 
@@ -702,6 +705,7 @@ public class ListGatewayResponseBody extends TeaModel {
             this.instanceId = builder.instanceId;
             this.internetSlb = builder.internetSlb;
             this.latestVersion = builder.latestVersion;
+            this.mseTag = builder.mseTag;
             this.mustUpgrade = builder.mustUpgrade;
             this.name = builder.name;
             this.primaryUser = builder.primaryUser;
@@ -839,6 +843,13 @@ public class ListGatewayResponseBody extends TeaModel {
         }
 
         /**
+         * @return mseTag
+         */
+        public String getMseTag() {
+            return this.mseTag;
+        }
+
+        /**
          * @return mustUpgrade
          */
         public Boolean getMustUpgrade() {
@@ -953,6 +964,7 @@ public class ListGatewayResponseBody extends TeaModel {
             private String instanceId; 
             private java.util.List < InternetSlb> internetSlb; 
             private String latestVersion; 
+            private String mseTag; 
             private Boolean mustUpgrade; 
             private String name; 
             private String primaryUser; 
@@ -1093,6 +1105,14 @@ public class ListGatewayResponseBody extends TeaModel {
              */
             public Builder latestVersion(String latestVersion) {
                 this.latestVersion = latestVersion;
+                return this;
+            }
+
+            /**
+             * MseTag.
+             */
+            public Builder mseTag(String mseTag) {
+                this.mseTag = mseTag;
                 return this;
             }
 
