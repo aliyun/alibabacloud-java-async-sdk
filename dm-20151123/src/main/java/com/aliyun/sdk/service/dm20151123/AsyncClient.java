@@ -92,6 +92,4 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<UpdateIpProtectionResponse> updateIpProtection(UpdateIpProtectionRequest request);
 
-    CompletableFuture<UpdateMailAddressMsgCallBackUrlResponse> updateMailAddressMsgCallBackUrl(UpdateMailAddressMsgCallBackUrlRequest request);
-
 }

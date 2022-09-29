@@ -12,10 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddIpfilterResponseBody</p>
  */
 public class AddIpfilterResponseBody extends TeaModel {
+    @NameInMap("IpFilterId")
+    private String ipFilterId;
+
     @NameInMap("RequestId")
     private String requestId;
 
     private AddIpfilterResponseBody(Builder builder) {
+        this.ipFilterId = builder.ipFilterId;
         this.requestId = builder.requestId;
     }
 
@@ -28,6 +32,13 @@ public class AddIpfilterResponseBody extends TeaModel {
     }
 
     /**
+     * @return ipFilterId
+     */
+    public String getIpFilterId() {
+        return this.ipFilterId;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -35,7 +46,16 @@ public class AddIpfilterResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String ipFilterId; 
         private String requestId; 
+
+        /**
+         * IpFilterId.
+         */
+        public Builder ipFilterId(String ipFilterId) {
+            this.ipFilterId = ipFilterId;
+            return this;
+        }
 
         /**
          * RequestId.
