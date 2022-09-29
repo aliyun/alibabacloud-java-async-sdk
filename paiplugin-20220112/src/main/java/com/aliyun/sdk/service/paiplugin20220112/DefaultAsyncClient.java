@@ -506,9 +506,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-     * 获取预测任务列表。
-     */
     @Override
     public CompletableFuture<ListInferenceJobsResponse> listInferenceJobs(ListInferenceJobsRequest request) {
         try {
@@ -610,9 +607,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-     * 获取训练任务列表。
-     */
     @Override
     public CompletableFuture<ListTrainingJobsResponse> listTrainingJobs(ListTrainingJobsRequest request) {
         try {
@@ -627,9 +621,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-     * 发送短信。
-     */
     @Override
     public CompletableFuture<SendMessageResponse> sendMessage(SendMessageRequest request) {
         try {

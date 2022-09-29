@@ -17,6 +17,10 @@ public class ListInferenceJobsRequest extends Request {
     private String campaignId;
 
     @Query
+    @NameInMap("CampaignName")
+    private String campaignName;
+
+    @Query
     @NameInMap("Name")
     private String name;
 
@@ -36,14 +40,20 @@ public class ListInferenceJobsRequest extends Request {
     @NameInMap("Status")
     private Integer status;
 
+    @Query
+    @NameInMap("TrainingJobName")
+    private String trainingJobName;
+
     private ListInferenceJobsRequest(Builder builder) {
         super(builder);
         this.campaignId = builder.campaignId;
+        this.campaignName = builder.campaignName;
         this.name = builder.name;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.remark = builder.remark;
         this.status = builder.status;
+        this.trainingJobName = builder.trainingJobName;
     }
 
     public static Builder builder() {
@@ -64,6 +74,13 @@ public class ListInferenceJobsRequest extends Request {
      */
     public String getCampaignId() {
         return this.campaignId;
+    }
+
+    /**
+     * @return campaignName
+     */
+    public String getCampaignName() {
+        return this.campaignName;
     }
 
     /**
@@ -101,13 +118,22 @@ public class ListInferenceJobsRequest extends Request {
         return this.status;
     }
 
+    /**
+     * @return trainingJobName
+     */
+    public String getTrainingJobName() {
+        return this.trainingJobName;
+    }
+
     public static final class Builder extends Request.Builder<ListInferenceJobsRequest, Builder> {
         private String campaignId; 
+        private String campaignName; 
         private String name; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String remark; 
         private Integer status; 
+        private String trainingJobName; 
 
         private Builder() {
             super();
@@ -116,11 +142,13 @@ public class ListInferenceJobsRequest extends Request {
         private Builder(ListInferenceJobsRequest request) {
             super(request);
             this.campaignId = request.campaignId;
+            this.campaignName = request.campaignName;
             this.name = request.name;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.remark = request.remark;
             this.status = request.status;
+            this.trainingJobName = request.trainingJobName;
         } 
 
         /**
@@ -129,6 +157,15 @@ public class ListInferenceJobsRequest extends Request {
         public Builder campaignId(String campaignId) {
             this.putQueryParameter("CampaignId", campaignId);
             this.campaignId = campaignId;
+            return this;
+        }
+
+        /**
+         * CampaignName.
+         */
+        public Builder campaignName(String campaignName) {
+            this.putQueryParameter("CampaignName", campaignName);
+            this.campaignName = campaignName;
             return this;
         }
 
@@ -180,6 +217,15 @@ public class ListInferenceJobsRequest extends Request {
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);
             this.status = status;
+            return this;
+        }
+
+        /**
+         * TrainingJobName.
+         */
+        public Builder trainingJobName(String trainingJobName) {
+            this.putQueryParameter("TrainingJobName", trainingJobName);
+            this.trainingJobName = trainingJobName;
             return this;
         }
 

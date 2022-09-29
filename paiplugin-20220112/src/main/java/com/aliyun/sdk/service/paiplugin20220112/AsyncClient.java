@@ -161,9 +161,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<ListGroupsResponse> listGroups(ListGroupsRequest request);
 
-    /**
-     * 获取预测任务列表。
-     */
     CompletableFuture<ListInferenceJobsResponse> listInferenceJobs(ListInferenceJobsRequest request);
 
     /**
@@ -193,14 +190,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<ListTemplatesResponse> listTemplates(ListTemplatesRequest request);
 
-    /**
-     * 获取训练任务列表。
-     */
     CompletableFuture<ListTrainingJobsResponse> listTrainingJobs(ListTrainingJobsRequest request);
 
-    /**
-     * 发送短信。
-     */
     CompletableFuture<SendMessageResponse> sendMessage(SendMessageRequest request);
 
     /**

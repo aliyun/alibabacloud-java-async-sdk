@@ -142,6 +142,9 @@ public class ListInferenceJobsResponseBody extends TeaModel {
         @NameInMap("Status")
         private Integer status;
 
+        @NameInMap("TargetGroupId")
+        private String targetGroupId;
+
         @NameInMap("TargetPath")
         private String targetPath;
 
@@ -165,6 +168,7 @@ public class ListInferenceJobsResponseBody extends TeaModel {
             this.name = builder.name;
             this.remark = builder.remark;
             this.status = builder.status;
+            this.targetGroupId = builder.targetGroupId;
             this.targetPath = builder.targetPath;
             this.trainingJobId = builder.trainingJobId;
             this.updatedTime = builder.updatedTime;
@@ -250,6 +254,13 @@ public class ListInferenceJobsResponseBody extends TeaModel {
         }
 
         /**
+         * @return targetGroupId
+         */
+        public String getTargetGroupId() {
+            return this.targetGroupId;
+        }
+
+        /**
          * @return targetPath
          */
         public String getTargetPath() {
@@ -288,6 +299,7 @@ public class ListInferenceJobsResponseBody extends TeaModel {
             private String name; 
             private String remark; 
             private Integer status; 
+            private String targetGroupId; 
             private String targetPath; 
             private String trainingJobId; 
             private String updatedTime; 
@@ -302,7 +314,7 @@ public class ListInferenceJobsResponseBody extends TeaModel {
             }
 
             /**
-             * 关联运营活动Id。
+             * 关联运营活动ID。
              */
             public Builder campaignId(String campaignId) {
                 this.campaignId = campaignId;
@@ -318,7 +330,7 @@ public class ListInferenceJobsResponseBody extends TeaModel {
             }
 
             /**
-             * 预测数据路径。
+             * 预测数据路径，当预测人群数据分布在多个csv文件时可指定目录，指定路径前需确保已在控制台完成一键授权。
              */
             public Builder dataPath(String dataPath) {
                 this.dataPath = dataPath;
@@ -326,7 +338,7 @@ public class ListInferenceJobsResponseBody extends TeaModel {
             }
 
             /**
-             * 关联人群Id，如果任务失败则人群无效。
+             * 预测人群，人群来源必须为多列csv，当同时指定DataPath与GroupId时，以GroupId为准。
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -342,7 +354,7 @@ public class ListInferenceJobsResponseBody extends TeaModel {
             }
 
             /**
-             * 预测任务Id。
+             * 预测任务ID。
              */
             public Builder id(String id) {
                 this.id = id;
@@ -367,6 +379,12 @@ public class ListInferenceJobsResponseBody extends TeaModel {
 
             /**
              * 预测任务状态。
+             * <p>
+             * - 0: 队列中。
+             * - 1: 已提交。
+             * - 2: 运行中。
+             * - 3: 成功。
+             * - 4: 失败。
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -374,7 +392,15 @@ public class ListInferenceJobsResponseBody extends TeaModel {
             }
 
             /**
-             * 输出数据路径，需要为空目录。
+             * 关联目标人群ID，如果任务失败则人群无效。
+             */
+            public Builder targetGroupId(String targetGroupId) {
+                this.targetGroupId = targetGroupId;
+                return this;
+            }
+
+            /**
+             * 输出数据路径，需要为空目录，指定路径前需确保已在控制台完成一键授权。
              */
             public Builder targetPath(String targetPath) {
                 this.targetPath = targetPath;

@@ -118,6 +118,9 @@ public class GetGroupResponseBody extends TeaModel {
         @NameInMap("Amount")
         private Integer amount;
 
+        @NameInMap("CampaignId")
+        private String campaignId;
+
         @NameInMap("Column")
         private String column;
 
@@ -126,6 +129,9 @@ public class GetGroupResponseBody extends TeaModel {
 
         @NameInMap("Filter")
         private String filter;
+
+        @NameInMap("History")
+        private String history;
 
         @NameInMap("Id")
         private String id;
@@ -166,9 +172,11 @@ public class GetGroupResponseBody extends TeaModel {
         private Data(Builder builder) {
             this.algorithm = builder.algorithm;
             this.amount = builder.amount;
+            this.campaignId = builder.campaignId;
             this.column = builder.column;
             this.createdTime = builder.createdTime;
             this.filter = builder.filter;
+            this.history = builder.history;
             this.id = builder.id;
             this.inferenceJobId = builder.inferenceJobId;
             this.name = builder.name;
@@ -206,6 +214,13 @@ public class GetGroupResponseBody extends TeaModel {
         }
 
         /**
+         * @return campaignId
+         */
+        public String getCampaignId() {
+            return this.campaignId;
+        }
+
+        /**
          * @return column
          */
         public String getColumn() {
@@ -224,6 +239,13 @@ public class GetGroupResponseBody extends TeaModel {
          */
         public String getFilter() {
             return this.filter;
+        }
+
+        /**
+         * @return history
+         */
+        public String getHistory() {
+            return this.history;
         }
 
         /**
@@ -313,9 +335,11 @@ public class GetGroupResponseBody extends TeaModel {
         public static final class Builder {
             private String algorithm; 
             private Integer amount; 
+            private String campaignId; 
             private String column; 
             private String createdTime; 
             private String filter; 
+            private String history; 
             private String id; 
             private String inferenceJobId; 
             private String name; 
@@ -346,6 +370,14 @@ public class GetGroupResponseBody extends TeaModel {
             }
 
             /**
+             * 关联运营活动Id。
+             */
+            public Builder campaignId(String campaignId) {
+                this.campaignId = campaignId;
+                return this;
+            }
+
+            /**
              * 手机号列名，人群来源为CSV文件，MaxCompute，并且包含手机号时需指定。
              */
             public Builder column(String column) {
@@ -366,6 +398,14 @@ public class GetGroupResponseBody extends TeaModel {
              */
             public Builder filter(String filter) {
                 this.filter = filter;
+                return this;
+            }
+
+            /**
+             * 历史记录。
+             */
+            public Builder history(String history) {
+                this.history = history;
                 return this;
             }
 
@@ -422,8 +462,8 @@ public class GetGroupResponseBody extends TeaModel {
              * <p>
              * - 0: 文本，每行一个手机号，最多100个。
              * - 1: 文本文件，每行一个手机号，可通过控制台上传或指定自定义OSS地址，指定自定义OSS地址前需确保已在控制台完成一键授权。
-             * - 2: CSV文件，需指定手机号列名，可通过控制台上传或指定自定义OSS地址，指定自定义OSS地址前需确保已在控制台完成一键授权。
-             * - 3: MaxCompute(ODPS)表，需指定手机号列名。
+             * - 2: 多列CSV文件，需指定手机号列名，可通过控制台上传或指定自定义OSS地址，指定自定义OSS地址前需确保已在控制台完成一键授权。
+             * - 3: MaxCompute表，需指定手机号列名。
              * - 4: 算法。
              */
             public Builder source(Integer source) {
@@ -468,7 +508,7 @@ public class GetGroupResponseBody extends TeaModel {
             }
 
             /**
-             * 文件地址，人群来源为文本文件，CSV文件，MaxCompute时需指定。
+             * 文件地址，人群来源为文本文件，CSV文件时需指定。
              */
             public Builder uri(String uri) {
                 this.uri = uri;

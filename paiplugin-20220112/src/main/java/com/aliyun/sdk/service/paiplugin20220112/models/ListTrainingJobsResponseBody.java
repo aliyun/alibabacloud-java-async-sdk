@@ -139,6 +139,9 @@ public class ListTrainingJobsResponseBody extends TeaModel {
         @NameInMap("Status")
         private Integer status;
 
+        @NameInMap("TrainingScheduleId")
+        private String trainingScheduleId;
+
         @NameInMap("UpdatedTime")
         private String updatedTime;
 
@@ -155,6 +158,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             this.name = builder.name;
             this.remark = builder.remark;
             this.status = builder.status;
+            this.trainingScheduleId = builder.trainingScheduleId;
             this.updatedTime = builder.updatedTime;
             this.userConfig = builder.userConfig;
         }
@@ -231,6 +235,13 @@ public class ListTrainingJobsResponseBody extends TeaModel {
         }
 
         /**
+         * @return trainingScheduleId
+         */
+        public String getTrainingScheduleId() {
+            return this.trainingScheduleId;
+        }
+
+        /**
          * @return updatedTime
          */
         public String getUpdatedTime() {
@@ -254,11 +265,12 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             private String name; 
             private String remark; 
             private Integer status; 
+            private String trainingScheduleId; 
             private String updatedTime; 
             private String userConfig; 
 
             /**
-             * 关联算法Id。
+             * 关联算法ID。
              */
             public Builder algorithm(String algorithm) {
                 this.algorithm = algorithm;
@@ -266,7 +278,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * 关联运营活动Id。
+             * 关联运营活动ID。
              */
             public Builder campaignId(String campaignId) {
                 this.campaignId = campaignId;
@@ -282,7 +294,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * 训练数据路径。
+             * 训练数据路径，指定路径前需确保已在控制台完成一键授权。
              */
             public Builder dataPath(String dataPath) {
                 this.dataPath = dataPath;
@@ -298,7 +310,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * 训练任务Id。
+             * 训练任务ID。
              */
             public Builder id(String id) {
                 this.id = id;
@@ -323,9 +335,23 @@ public class ListTrainingJobsResponseBody extends TeaModel {
 
             /**
              * 训练任务状态。
+             * <p>
+             * - 0: 队列中。
+             * - 1: 已提交。
+             * - 2: 运行中。
+             * - 3: 成功。
+             * - 4: 失败。
              */
             public Builder status(Integer status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * 关联训练计划ID。
+             */
+            public Builder trainingScheduleId(String trainingScheduleId) {
+                this.trainingScheduleId = trainingScheduleId;
                 return this;
             }
 
