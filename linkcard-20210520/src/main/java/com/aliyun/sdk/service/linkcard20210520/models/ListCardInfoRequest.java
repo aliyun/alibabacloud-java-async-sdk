@@ -77,6 +77,10 @@ public class ListCardInfoRequest extends Request {
     private String maxFlow;
 
     @Query
+    @NameInMap("MaxRestFlowPercentage")
+    private Double maxRestFlowPercentage;
+
+    @Query
     @NameInMap("MinFlow")
     private String minFlow;
 
@@ -144,6 +148,7 @@ public class ListCardInfoRequest extends Request {
         this.imsi = builder.imsi;
         this.isAutoRecharge = builder.isAutoRecharge;
         this.maxFlow = builder.maxFlow;
+        this.maxRestFlowPercentage = builder.maxRestFlowPercentage;
         this.minFlow = builder.minFlow;
         this.msisdn = builder.msisdn;
         this.notifyId = builder.notifyId;
@@ -284,6 +289,13 @@ public class ListCardInfoRequest extends Request {
     }
 
     /**
+     * @return maxRestFlowPercentage
+     */
+    public Double getMaxRestFlowPercentage() {
+        return this.maxRestFlowPercentage;
+    }
+
+    /**
      * @return minFlow
      */
     public String getMinFlow() {
@@ -384,6 +396,7 @@ public class ListCardInfoRequest extends Request {
         private String imsi; 
         private Boolean isAutoRecharge; 
         private String maxFlow; 
+        private Double maxRestFlowPercentage; 
         private String minFlow; 
         private String msisdn; 
         private String notifyId; 
@@ -419,6 +432,7 @@ public class ListCardInfoRequest extends Request {
             this.imsi = request.imsi;
             this.isAutoRecharge = request.isAutoRecharge;
             this.maxFlow = request.maxFlow;
+            this.maxRestFlowPercentage = request.maxRestFlowPercentage;
             this.minFlow = request.minFlow;
             this.msisdn = request.msisdn;
             this.notifyId = request.notifyId;
@@ -574,6 +588,15 @@ public class ListCardInfoRequest extends Request {
         public Builder maxFlow(String maxFlow) {
             this.putQueryParameter("MaxFlow", maxFlow);
             this.maxFlow = maxFlow;
+            return this;
+        }
+
+        /**
+         * MaxRestFlowPercentage.
+         */
+        public Builder maxRestFlowPercentage(Double maxRestFlowPercentage) {
+            this.putQueryParameter("MaxRestFlowPercentage", maxRestFlowPercentage);
+            this.maxRestFlowPercentage = maxRestFlowPercentage;
             return this;
         }
 

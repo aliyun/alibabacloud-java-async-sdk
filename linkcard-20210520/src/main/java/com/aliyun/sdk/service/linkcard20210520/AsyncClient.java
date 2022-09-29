@@ -24,8 +24,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<BatchAddDirectionalAddressResponse> batchAddDirectionalAddress(BatchAddDirectionalAddressRequest request);
 
-    CompletableFuture<CardStatisticsResponse> cardStatistics(CardStatisticsRequest request);
-
     CompletableFuture<ForceActivationResponse> forceActivation(ForceActivationRequest request);
 
     CompletableFuture<GetCardDetailResponse> getCardDetail(GetCardDetailRequest request);
