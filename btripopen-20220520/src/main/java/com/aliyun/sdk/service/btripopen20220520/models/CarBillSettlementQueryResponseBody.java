@@ -15,14 +15,14 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("code")
+    private Integer code;
+
     @NameInMap("message")
     private String message;
 
     @NameInMap("module")
     private Module module;
-
-    @NameInMap("result_code")
-    private Integer resultCode;
 
     @NameInMap("success")
     private Boolean success;
@@ -32,9 +32,9 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
 
     private CarBillSettlementQueryResponseBody(Builder builder) {
         this.requestId = builder.requestId;
+        this.code = builder.code;
         this.message = builder.message;
         this.module = builder.module;
-        this.resultCode = builder.resultCode;
         this.success = builder.success;
         this.traceId = builder.traceId;
     }
@@ -55,6 +55,13 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
     }
 
     /**
+     * @return code
+     */
+    public Integer getCode() {
+        return this.code;
+    }
+
+    /**
      * @return message
      */
     public String getMessage() {
@@ -66,13 +73,6 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
      */
     public Module getModule() {
         return this.module;
-    }
-
-    /**
-     * @return resultCode
-     */
-    public Integer getResultCode() {
-        return this.resultCode;
     }
 
     /**
@@ -91,9 +91,9 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
+        private Integer code; 
         private String message; 
         private Module module; 
-        private Integer resultCode; 
         private Boolean success; 
         private String traceId; 
 
@@ -102,6 +102,14 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * code.
+         */
+        public Builder code(Integer code) {
+            this.code = code;
             return this;
         }
 
@@ -118,14 +126,6 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
          */
         public Builder module(Module module) {
             this.module = module;
-            return this;
-        }
-
-        /**
-         * result_code.
-         */
-        public Builder resultCode(Integer resultCode) {
-            this.resultCode = resultCode;
             return this;
         }
 

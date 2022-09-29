@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>HotelBillSettlementQueryResponseBody</p>
  */
 public class HotelBillSettlementQueryResponseBody extends TeaModel {
+    @NameInMap("code")
+    private Integer code;
+
     @NameInMap("message")
     private String message;
 
@@ -21,9 +24,6 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
     @NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result_code")
-    private Integer resultCode;
-
     @NameInMap("success")
     private Boolean success;
 
@@ -31,10 +31,10 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
     private String traceId;
 
     private HotelBillSettlementQueryResponseBody(Builder builder) {
+        this.code = builder.code;
         this.message = builder.message;
         this.module = builder.module;
         this.requestId = builder.requestId;
-        this.resultCode = builder.resultCode;
         this.success = builder.success;
         this.traceId = builder.traceId;
     }
@@ -45,6 +45,13 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
 
     public static HotelBillSettlementQueryResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return code
+     */
+    public Integer getCode() {
+        return this.code;
     }
 
     /**
@@ -69,13 +76,6 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
     }
 
     /**
-     * @return resultCode
-     */
-    public Integer getResultCode() {
-        return this.resultCode;
-    }
-
-    /**
      * @return success
      */
     public Boolean getSuccess() {
@@ -90,12 +90,20 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private Integer code; 
         private String message; 
         private Module module; 
         private String requestId; 
-        private Integer resultCode; 
         private Boolean success; 
         private String traceId; 
+
+        /**
+         * code.
+         */
+        public Builder code(Integer code) {
+            this.code = code;
+            return this;
+        }
 
         /**
          * message.
@@ -118,14 +126,6 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * result_code.
-         */
-        public Builder resultCode(Integer resultCode) {
-            this.resultCode = resultCode;
             return this;
         }
 
