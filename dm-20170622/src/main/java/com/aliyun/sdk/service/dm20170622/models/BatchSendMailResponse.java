@@ -1,0 +1,104 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.dm20170622.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link BatchSendMailResponse} extends {@link TeaModel}
+ *
+ * <p>BatchSendMailResponse</p>
+ */
+public class BatchSendMailResponse extends Response {
+    @NameInMap("headers")
+    @Validation(required = true)
+    private java.util.Map < String, String > headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    private BatchSendMailResponseBody body;
+
+    private BatchSendMailResponse(BuilderImpl builder) {
+        super(builder);
+        this.headers = builder.headers;
+        this.body = builder.body;
+    }
+
+    public static BatchSendMailResponse create() {
+        return new BuilderImpl().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new BuilderImpl(this);
+    }
+
+    /**
+     * @return headers
+     */
+    public java.util.Map < String, String > getHeaders() {
+        return this.headers;
+    }
+
+    /**
+     * @return body
+     */
+    public BatchSendMailResponseBody getBody() {
+        return this.body;
+    }
+
+    public interface Builder extends Response.Builder<BatchSendMailResponse, Builder> {
+
+        Builder headers(java.util.Map < String, String > headers);
+
+        Builder body(BatchSendMailResponseBody body);
+
+        @Override
+        BatchSendMailResponse build();
+
+    } 
+
+    private static final class BuilderImpl
+            extends Response.BuilderImpl<BatchSendMailResponse, Builder>
+            implements Builder {
+        private java.util.Map < String, String > headers; 
+        private BatchSendMailResponseBody body; 
+
+        private BuilderImpl() {
+            super();
+        } 
+
+        private BuilderImpl(BatchSendMailResponse response) {
+            super(response);
+            this.headers = response.headers;
+            this.body = response.body;
+        } 
+
+        /**
+         * headers.
+         */
+        @Override
+        public Builder headers(java.util.Map < String, String > headers) {
+            this.headers = headers;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        @Override
+        public Builder body(BatchSendMailResponseBody body) {
+            this.body = body;
+            return this;
+        }
+
+        @Override
+        public BatchSendMailResponse build() {
+            return new BatchSendMailResponse(this);
+        } 
+
+    } 
+
+}
