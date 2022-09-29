@@ -309,6 +309,7 @@ com/aliyun/sdk/service/ros20190910/models/ValidateTemplateResponseBody$Outputs.c
 com/aliyun/sdk/service/ros20190910/models/UpdateStackResponseBody$1.class
 com/aliyun/sdk/service/ros20190910/models/GetStackGroupResponseBody$StackGroupDriftDetectionDetail.class
 com/aliyun/sdk/service/ros20190910/models/GetStackResponse$BuilderImpl.class
+com/aliyun/sdk/service/ros20190910/models/ValidateTemplateResponseBody$Resources$Builder.class
 com/aliyun/sdk/service/ros20190910/models/DeleteTemplateResponse$BuilderImpl.class
 com/aliyun/sdk/service/ros20190910/models/UpdateStackTemplateByResourcesRequest.class
 com/aliyun/sdk/service/ros20190910/models/ContinueCreateStackResponse$1.class
@@ -663,6 +664,7 @@ com/aliyun/sdk/service/ros20190910/models/DeleteChangeSetRequest.class
 com/aliyun/sdk/service/ros20190910/models/CreateTemplateScratchResponse$Builder.class
 com/aliyun/sdk/service/ros20190910/models/PreviewStackResponse$1.class
 com/aliyun/sdk/service/ros20190910/models/UpdateStackInstancesResponse$BuilderImpl.class
+com/aliyun/sdk/service/ros20190910/models/ValidateTemplateResponseBody$Resources.class
 com/aliyun/sdk/service/ros20190910/models/DescribeRegionsResponseBody$1.class
 com/aliyun/sdk/service/ros20190910/models/UpdateStackTemplateByResourcesResponse$1.class
 com/aliyun/sdk/service/ros20190910/models/DescribeRegionsResponse$Builder.class

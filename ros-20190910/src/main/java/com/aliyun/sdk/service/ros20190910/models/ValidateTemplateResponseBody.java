@@ -27,12 +27,16 @@ public class ValidateTemplateResponseBody extends TeaModel {
     @NameInMap("ResourceTypes")
     private ResourceTypes resourceTypes;
 
+    @NameInMap("Resources")
+    private java.util.List < Resources> resources;
+
     private ValidateTemplateResponseBody(Builder builder) {
         this.description = builder.description;
         this.outputs = builder.outputs;
         this.parameters = builder.parameters;
         this.requestId = builder.requestId;
         this.resourceTypes = builder.resourceTypes;
+        this.resources = builder.resources;
     }
 
     public static Builder builder() {
@@ -78,12 +82,20 @@ public class ValidateTemplateResponseBody extends TeaModel {
         return this.resourceTypes;
     }
 
+    /**
+     * @return resources
+     */
+    public java.util.List < Resources> getResources() {
+        return this.resources;
+    }
+
     public static final class Builder {
         private String description; 
         private java.util.List < Outputs> outputs; 
         private java.util.List < java.util.Map<String, ?>> parameters; 
         private String requestId; 
         private ResourceTypes resourceTypes; 
+        private java.util.List < Resources> resources; 
 
         /**
          * Description.
@@ -122,6 +134,14 @@ public class ValidateTemplateResponseBody extends TeaModel {
          */
         public Builder resourceTypes(ResourceTypes resourceTypes) {
             this.resourceTypes = resourceTypes;
+            return this;
+        }
+
+        /**
+         * Resources.
+         */
+        public Builder resources(java.util.List < Resources> resources) {
+            this.resources = resources;
             return this;
         }
 
@@ -248,6 +268,87 @@ public class ValidateTemplateResponseBody extends TeaModel {
 
             public ResourceTypes build() {
                 return new ResourceTypes(this);
+            } 
+
+        } 
+
+    }
+    public static class Resources extends TeaModel {
+        @NameInMap("LogicalResourceIdPattern")
+        private String logicalResourceIdPattern;
+
+        @NameInMap("ResourcePath")
+        private String resourcePath;
+
+        @NameInMap("ResourceType")
+        private String resourceType;
+
+        private Resources(Builder builder) {
+            this.logicalResourceIdPattern = builder.logicalResourceIdPattern;
+            this.resourcePath = builder.resourcePath;
+            this.resourceType = builder.resourceType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Resources create() {
+            return builder().build();
+        }
+
+        /**
+         * @return logicalResourceIdPattern
+         */
+        public String getLogicalResourceIdPattern() {
+            return this.logicalResourceIdPattern;
+        }
+
+        /**
+         * @return resourcePath
+         */
+        public String getResourcePath() {
+            return this.resourcePath;
+        }
+
+        /**
+         * @return resourceType
+         */
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+        public static final class Builder {
+            private String logicalResourceIdPattern; 
+            private String resourcePath; 
+            private String resourceType; 
+
+            /**
+             * LogicalResourceIdPattern.
+             */
+            public Builder logicalResourceIdPattern(String logicalResourceIdPattern) {
+                this.logicalResourceIdPattern = logicalResourceIdPattern;
+                return this;
+            }
+
+            /**
+             * ResourcePath.
+             */
+            public Builder resourcePath(String resourcePath) {
+                this.resourcePath = resourcePath;
+                return this;
+            }
+
+            /**
+             * ResourceType.
+             */
+            public Builder resourceType(String resourceType) {
+                this.resourceType = resourceType;
+                return this;
+            }
+
+            public Resources build() {
+                return new Resources(this);
             } 
 
         } 
