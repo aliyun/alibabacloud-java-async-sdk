@@ -12,6 +12,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateNodeBatchRequest</p>
  */
 public class CreateNodeBatchRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
+    @Query
+    @NameInMap("AccountName")
+    private String accountName;
+
+    @Query
+    @NameInMap("AccountPassword")
+    private String accountPassword;
+
     @Query
     @NameInMap("AutoPay")
     private Boolean autoPay;
@@ -50,10 +62,6 @@ public class CreateNodeBatchRequest extends Request {
     @NameInMap("OwnerId")
     private Long ownerId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
@@ -66,8 +74,15 @@ public class CreateNodeBatchRequest extends Request {
     @NameInMap("SecurityToken")
     private String securityToken;
 
+    @Query
+    @NameInMap("ShardDirect")
+    private Boolean shardDirect;
+
     private CreateNodeBatchRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
+        this.accountName = builder.accountName;
+        this.accountPassword = builder.accountPassword;
         this.autoPay = builder.autoPay;
         this.businessInfo = builder.businessInfo;
         this.clientToken = builder.clientToken;
@@ -77,10 +92,10 @@ public class CreateNodeBatchRequest extends Request {
         this.nodesInfo = builder.nodesInfo;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityToken = builder.securityToken;
+        this.shardDirect = builder.shardDirect;
     }
 
     public static Builder builder() {
@@ -94,6 +109,27 @@ public class CreateNodeBatchRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return accountName
+     */
+    public String getAccountName() {
+        return this.accountName;
+    }
+
+    /**
+     * @return accountPassword
+     */
+    public String getAccountPassword() {
+        return this.accountPassword;
     }
 
     /**
@@ -160,13 +196,6 @@ public class CreateNodeBatchRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -187,7 +216,17 @@ public class CreateNodeBatchRequest extends Request {
         return this.securityToken;
     }
 
+    /**
+     * @return shardDirect
+     */
+    public Boolean getShardDirect() {
+        return this.shardDirect;
+    }
+
     public static final class Builder extends Request.Builder<CreateNodeBatchRequest, Builder> {
+        private String regionId; 
+        private String accountName; 
+        private String accountPassword; 
         private Boolean autoPay; 
         private String businessInfo; 
         private String clientToken; 
@@ -197,31 +236,61 @@ public class CreateNodeBatchRequest extends Request {
         private String nodesInfo; 
         private String ownerAccount; 
         private Long ownerId; 
-        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String securityToken; 
+        private Boolean shardDirect; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateNodeBatchRequest response) {
-            super(response);
-            this.autoPay = response.autoPay;
-            this.businessInfo = response.businessInfo;
-            this.clientToken = response.clientToken;
-            this.couponNo = response.couponNo;
-            this.DBInstanceId = response.DBInstanceId;
-            this.fromApp = response.fromApp;
-            this.nodesInfo = response.nodesInfo;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.securityToken = response.securityToken;
+        private Builder(CreateNodeBatchRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.accountName = request.accountName;
+            this.accountPassword = request.accountPassword;
+            this.autoPay = request.autoPay;
+            this.businessInfo = request.businessInfo;
+            this.clientToken = request.clientToken;
+            this.couponNo = request.couponNo;
+            this.DBInstanceId = request.DBInstanceId;
+            this.fromApp = request.fromApp;
+            this.nodesInfo = request.nodesInfo;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.securityToken = request.securityToken;
+            this.shardDirect = request.shardDirect;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * AccountName.
+         */
+        public Builder accountName(String accountName) {
+            this.putQueryParameter("AccountName", accountName);
+            this.accountName = accountName;
+            return this;
+        }
+
+        /**
+         * AccountPassword.
+         */
+        public Builder accountPassword(String accountPassword) {
+            this.putQueryParameter("AccountPassword", accountPassword);
+            this.accountPassword = accountPassword;
+            return this;
+        }
 
         /**
          * AutoPay.
@@ -305,15 +374,6 @@ public class CreateNodeBatchRequest extends Request {
         }
 
         /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
          * ResourceOwnerAccount.
          */
         public Builder resourceOwnerAccount(String resourceOwnerAccount) {
@@ -337,6 +397,15 @@ public class CreateNodeBatchRequest extends Request {
         public Builder securityToken(String securityToken) {
             this.putQueryParameter("SecurityToken", securityToken);
             this.securityToken = securityToken;
+            return this;
+        }
+
+        /**
+         * ShardDirect.
+         */
+        public Builder shardDirect(Boolean shardDirect) {
+            this.putQueryParameter("ShardDirect", shardDirect);
+            this.shardDirect = shardDirect;
             return this;
         }
 

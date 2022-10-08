@@ -12,6 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBInstanceEncryptionKeyRequest</p>
  */
 public class DescribeDBInstanceEncryptionKeyRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
+    @Host
+    @NameInMap("TargetRegionId")
+    private String targetRegionId;
+
     @Query
     @NameInMap("DBInstanceId")
     @Validation(required = true)
@@ -29,10 +37,6 @@ public class DescribeDBInstanceEncryptionKeyRequest extends Request {
     @NameInMap("OwnerId")
     private Long ownerId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
@@ -45,21 +49,17 @@ public class DescribeDBInstanceEncryptionKeyRequest extends Request {
     @NameInMap("SecurityToken")
     private String securityToken;
 
-    @Host
-    @NameInMap("TargetRegionId")
-    private String targetRegionId;
-
     private DescribeDBInstanceEncryptionKeyRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
+        this.targetRegionId = builder.targetRegionId;
         this.DBInstanceId = builder.DBInstanceId;
         this.encryptionKey = builder.encryptionKey;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityToken = builder.securityToken;
-        this.targetRegionId = builder.targetRegionId;
     }
 
     public static Builder builder() {
@@ -73,6 +73,20 @@ public class DescribeDBInstanceEncryptionKeyRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return targetRegionId
+     */
+    public String getTargetRegionId() {
+        return this.targetRegionId;
     }
 
     /**
@@ -104,13 +118,6 @@ public class DescribeDBInstanceEncryptionKeyRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -131,40 +138,51 @@ public class DescribeDBInstanceEncryptionKeyRequest extends Request {
         return this.securityToken;
     }
 
-    /**
-     * @return targetRegionId
-     */
-    public String getTargetRegionId() {
-        return this.targetRegionId;
-    }
-
     public static final class Builder extends Request.Builder<DescribeDBInstanceEncryptionKeyRequest, Builder> {
+        private String regionId; 
+        private String targetRegionId; 
         private String DBInstanceId; 
         private String encryptionKey; 
         private String ownerAccount; 
         private Long ownerId; 
-        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String securityToken; 
-        private String targetRegionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeDBInstanceEncryptionKeyRequest response) {
-            super(response);
-            this.DBInstanceId = response.DBInstanceId;
-            this.encryptionKey = response.encryptionKey;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.securityToken = response.securityToken;
-            this.targetRegionId = response.targetRegionId;
+        private Builder(DescribeDBInstanceEncryptionKeyRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.targetRegionId = request.targetRegionId;
+            this.DBInstanceId = request.DBInstanceId;
+            this.encryptionKey = request.encryptionKey;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.securityToken = request.securityToken;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * TargetRegionId.
+         */
+        public Builder targetRegionId(String targetRegionId) {
+            this.putHostParameter("TargetRegionId", targetRegionId);
+            this.targetRegionId = targetRegionId;
+            return this;
+        }
 
         /**
          * DBInstanceId.
@@ -203,15 +221,6 @@ public class DescribeDBInstanceEncryptionKeyRequest extends Request {
         }
 
         /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
          * ResourceOwnerAccount.
          */
         public Builder resourceOwnerAccount(String resourceOwnerAccount) {
@@ -235,15 +244,6 @@ public class DescribeDBInstanceEncryptionKeyRequest extends Request {
         public Builder securityToken(String securityToken) {
             this.putQueryParameter("SecurityToken", securityToken);
             this.securityToken = securityToken;
-            return this;
-        }
-
-        /**
-         * TargetRegionId.
-         */
-        public Builder targetRegionId(String targetRegionId) {
-            this.putHostParameter("TargetRegionId", targetRegionId);
-            this.targetRegionId = targetRegionId;
             return this;
         }
 

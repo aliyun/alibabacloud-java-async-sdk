@@ -166,18 +166,18 @@ public class CheckRecoveryConditionRequest extends Request {
             super();
         } 
 
-        private Builder(CheckRecoveryConditionRequest response) {
-            super(response);
-            this.backupId = response.backupId;
-            this.databaseNames = response.databaseNames;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.restoreTime = response.restoreTime;
-            this.securityToken = response.securityToken;
-            this.sourceDBInstance = response.sourceDBInstance;
+        private Builder(CheckRecoveryConditionRequest request) {
+            super(request);
+            this.backupId = request.backupId;
+            this.databaseNames = request.databaseNames;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.restoreTime = request.restoreTime;
+            this.securityToken = request.securityToken;
+            this.sourceDBInstance = request.sourceDBInstance;
         } 
 
         /**

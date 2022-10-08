@@ -220,22 +220,22 @@ public class EvaluateResourceRequest extends Request {
             super();
         } 
 
-        private Builder(EvaluateResourceRequest response) {
-            super(response);
-            this.DBInstanceClass = response.DBInstanceClass;
-            this.DBInstanceId = response.DBInstanceId;
-            this.engine = response.engine;
-            this.engineVersion = response.engineVersion;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.readonlyReplicas = response.readonlyReplicas;
-            this.regionId = response.regionId;
-            this.replicationFactor = response.replicationFactor;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.securityToken = response.securityToken;
-            this.shardsInfo = response.shardsInfo;
-            this.zoneId = response.zoneId;
+        private Builder(EvaluateResourceRequest request) {
+            super(request);
+            this.DBInstanceClass = request.DBInstanceClass;
+            this.DBInstanceId = request.DBInstanceId;
+            this.engine = request.engine;
+            this.engineVersion = request.engineVersion;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.readonlyReplicas = request.readonlyReplicas;
+            this.regionId = request.regionId;
+            this.replicationFactor = request.replicationFactor;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.securityToken = request.securityToken;
+            this.shardsInfo = request.shardsInfo;
+            this.zoneId = request.zoneId;
         } 
 
         /**

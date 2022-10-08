@@ -75,11 +75,15 @@ public class DescribeRegionsResponseBody extends TeaModel {
         @NameInMap("VpcEnabled")
         private Boolean vpcEnabled;
 
+        @NameInMap("ZoneId")
+        private String zoneId;
+
         @NameInMap("ZoneName")
         private String zoneName;
 
         private Zone(Builder builder) {
             this.vpcEnabled = builder.vpcEnabled;
+            this.zoneId = builder.zoneId;
             this.zoneName = builder.zoneName;
         }
 
@@ -99,6 +103,13 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
+         * @return zoneId
+         */
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
+        /**
          * @return zoneName
          */
         public String getZoneName() {
@@ -107,6 +118,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean vpcEnabled; 
+            private String zoneId; 
             private String zoneName; 
 
             /**
@@ -114,6 +126,14 @@ public class DescribeRegionsResponseBody extends TeaModel {
              */
             public Builder vpcEnabled(Boolean vpcEnabled) {
                 this.vpcEnabled = vpcEnabled;
+                return this;
+            }
+
+            /**
+             * ZoneId.
+             */
+            public Builder zoneId(String zoneId) {
+                this.zoneId = zoneId;
                 return this;
             }
 
@@ -177,11 +197,15 @@ public class DescribeRegionsResponseBody extends TeaModel {
         @NameInMap("RegionId")
         private String regionId;
 
+        @NameInMap("RegionName")
+        private String regionName;
+
         @NameInMap("Zones")
         private Zones zones;
 
         private DdsRegion(Builder builder) {
             this.regionId = builder.regionId;
+            this.regionName = builder.regionName;
             this.zones = builder.zones;
         }
 
@@ -201,6 +225,13 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
+         * @return regionName
+         */
+        public String getRegionName() {
+            return this.regionName;
+        }
+
+        /**
          * @return zones
          */
         public Zones getZones() {
@@ -209,6 +240,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String regionId; 
+            private String regionName; 
             private Zones zones; 
 
             /**
@@ -216,6 +248,14 @@ public class DescribeRegionsResponseBody extends TeaModel {
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * RegionName.
+             */
+            public Builder regionName(String regionName) {
+                this.regionName = regionName;
                 return this;
             }
 

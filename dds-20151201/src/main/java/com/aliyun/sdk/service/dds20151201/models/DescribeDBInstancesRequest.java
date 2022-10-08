@@ -373,34 +373,34 @@ public class DescribeDBInstancesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDBInstancesRequest response) {
-            super(response);
-            this.chargeType = response.chargeType;
-            this.connectionDomain = response.connectionDomain;
-            this.DBInstanceClass = response.DBInstanceClass;
-            this.DBInstanceDescription = response.DBInstanceDescription;
-            this.DBInstanceId = response.DBInstanceId;
-            this.DBInstanceStatus = response.DBInstanceStatus;
-            this.DBInstanceType = response.DBInstanceType;
-            this.engine = response.engine;
-            this.engineVersion = response.engineVersion;
-            this.expireTime = response.expireTime;
-            this.expired = response.expired;
-            this.networkType = response.networkType;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.replicationFactor = response.replicationFactor;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.securityToken = response.securityToken;
-            this.tag = response.tag;
-            this.vSwitchId = response.vSwitchId;
-            this.vpcId = response.vpcId;
-            this.zoneId = response.zoneId;
+        private Builder(DescribeDBInstancesRequest request) {
+            super(request);
+            this.chargeType = request.chargeType;
+            this.connectionDomain = request.connectionDomain;
+            this.DBInstanceClass = request.DBInstanceClass;
+            this.DBInstanceDescription = request.DBInstanceDescription;
+            this.DBInstanceId = request.DBInstanceId;
+            this.DBInstanceStatus = request.DBInstanceStatus;
+            this.DBInstanceType = request.DBInstanceType;
+            this.engine = request.engine;
+            this.engineVersion = request.engineVersion;
+            this.expireTime = request.expireTime;
+            this.expired = request.expired;
+            this.networkType = request.networkType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.replicationFactor = request.replicationFactor;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.securityToken = request.securityToken;
+            this.tag = request.tag;
+            this.vSwitchId = request.vSwitchId;
+            this.vpcId = request.vpcId;
+            this.zoneId = request.zoneId;
         } 
 
         /**

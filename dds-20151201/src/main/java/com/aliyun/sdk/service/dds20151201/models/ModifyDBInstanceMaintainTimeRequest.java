@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyDBInstanceMaintainTimeRequest</p>
  */
 public class ModifyDBInstanceMaintainTimeRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("DBInstanceId")
     @Validation(required = true)
@@ -35,10 +39,6 @@ public class ModifyDBInstanceMaintainTimeRequest extends Request {
     @NameInMap("OwnerId")
     private Long ownerId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
@@ -53,12 +53,12 @@ public class ModifyDBInstanceMaintainTimeRequest extends Request {
 
     private ModifyDBInstanceMaintainTimeRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.DBInstanceId = builder.DBInstanceId;
         this.maintainEndTime = builder.maintainEndTime;
         this.maintainStartTime = builder.maintainStartTime;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityToken = builder.securityToken;
@@ -75,6 +75,13 @@ public class ModifyDBInstanceMaintainTimeRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -113,13 +120,6 @@ public class ModifyDBInstanceMaintainTimeRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -141,12 +141,12 @@ public class ModifyDBInstanceMaintainTimeRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyDBInstanceMaintainTimeRequest, Builder> {
+        private String regionId; 
         private String DBInstanceId; 
         private String maintainEndTime; 
         private String maintainStartTime; 
         private String ownerAccount; 
         private Long ownerId; 
-        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String securityToken; 
@@ -155,18 +155,27 @@ public class ModifyDBInstanceMaintainTimeRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyDBInstanceMaintainTimeRequest response) {
-            super(response);
-            this.DBInstanceId = response.DBInstanceId;
-            this.maintainEndTime = response.maintainEndTime;
-            this.maintainStartTime = response.maintainStartTime;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.securityToken = response.securityToken;
+        private Builder(ModifyDBInstanceMaintainTimeRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.DBInstanceId = request.DBInstanceId;
+            this.maintainEndTime = request.maintainEndTime;
+            this.maintainStartTime = request.maintainStartTime;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.securityToken = request.securityToken;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * DBInstanceId.
@@ -210,15 +219,6 @@ public class ModifyDBInstanceMaintainTimeRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

@@ -12,6 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyBackupPolicyRequest</p>
  */
 public class ModifyBackupPolicyRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
+    @Query
+    @NameInMap("BackupInterval")
+    private String backupInterval;
+
     @Query
     @NameInMap("BackupRetentionPeriod")
     private Long backupRetentionPeriod;
@@ -47,10 +55,6 @@ public class ModifyBackupPolicyRequest extends Request {
     @Validation(required = true)
     private String preferredBackupTime;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
@@ -63,8 +67,14 @@ public class ModifyBackupPolicyRequest extends Request {
     @NameInMap("SecurityToken")
     private String securityToken;
 
+    @Query
+    @NameInMap("SnapshotBackupType")
+    private String snapshotBackupType;
+
     private ModifyBackupPolicyRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
+        this.backupInterval = builder.backupInterval;
         this.backupRetentionPeriod = builder.backupRetentionPeriod;
         this.DBInstanceId = builder.DBInstanceId;
         this.enableBackupLog = builder.enableBackupLog;
@@ -73,10 +83,10 @@ public class ModifyBackupPolicyRequest extends Request {
         this.ownerId = builder.ownerId;
         this.preferredBackupPeriod = builder.preferredBackupPeriod;
         this.preferredBackupTime = builder.preferredBackupTime;
-        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityToken = builder.securityToken;
+        this.snapshotBackupType = builder.snapshotBackupType;
     }
 
     public static Builder builder() {
@@ -90,6 +100,20 @@ public class ModifyBackupPolicyRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return backupInterval
+     */
+    public String getBackupInterval() {
+        return this.backupInterval;
     }
 
     /**
@@ -149,13 +173,6 @@ public class ModifyBackupPolicyRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -176,7 +193,16 @@ public class ModifyBackupPolicyRequest extends Request {
         return this.securityToken;
     }
 
+    /**
+     * @return snapshotBackupType
+     */
+    public String getSnapshotBackupType() {
+        return this.snapshotBackupType;
+    }
+
     public static final class Builder extends Request.Builder<ModifyBackupPolicyRequest, Builder> {
+        private String regionId; 
+        private String backupInterval; 
         private Long backupRetentionPeriod; 
         private String DBInstanceId; 
         private Long enableBackupLog; 
@@ -185,30 +211,50 @@ public class ModifyBackupPolicyRequest extends Request {
         private Long ownerId; 
         private String preferredBackupPeriod; 
         private String preferredBackupTime; 
-        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String securityToken; 
+        private String snapshotBackupType; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ModifyBackupPolicyRequest response) {
-            super(response);
-            this.backupRetentionPeriod = response.backupRetentionPeriod;
-            this.DBInstanceId = response.DBInstanceId;
-            this.enableBackupLog = response.enableBackupLog;
-            this.logBackupRetentionPeriod = response.logBackupRetentionPeriod;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.preferredBackupPeriod = response.preferredBackupPeriod;
-            this.preferredBackupTime = response.preferredBackupTime;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.securityToken = response.securityToken;
+        private Builder(ModifyBackupPolicyRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.backupInterval = request.backupInterval;
+            this.backupRetentionPeriod = request.backupRetentionPeriod;
+            this.DBInstanceId = request.DBInstanceId;
+            this.enableBackupLog = request.enableBackupLog;
+            this.logBackupRetentionPeriod = request.logBackupRetentionPeriod;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.preferredBackupPeriod = request.preferredBackupPeriod;
+            this.preferredBackupTime = request.preferredBackupTime;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.securityToken = request.securityToken;
+            this.snapshotBackupType = request.snapshotBackupType;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * BackupInterval.
+         */
+        public Builder backupInterval(String backupInterval) {
+            this.putQueryParameter("BackupInterval", backupInterval);
+            this.backupInterval = backupInterval;
+            return this;
+        }
 
         /**
          * BackupRetentionPeriod.
@@ -283,15 +329,6 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
          * ResourceOwnerAccount.
          */
         public Builder resourceOwnerAccount(String resourceOwnerAccount) {
@@ -315,6 +352,15 @@ public class ModifyBackupPolicyRequest extends Request {
         public Builder securityToken(String securityToken) {
             this.putQueryParameter("SecurityToken", securityToken);
             this.securityToken = securityToken;
+            return this;
+        }
+
+        /**
+         * SnapshotBackupType.
+         */
+        public Builder snapshotBackupType(String snapshotBackupType) {
+            this.putQueryParameter("SnapshotBackupType", snapshotBackupType);
+            this.snapshotBackupType = snapshotBackupType;
             return this;
         }
 

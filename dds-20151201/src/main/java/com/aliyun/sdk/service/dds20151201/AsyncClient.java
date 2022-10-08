@@ -34,10 +34,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateNodeBatchResponse> createNodeBatch(CreateNodeBatchRequest request);
 
-    CompletableFuture<CreateRecommendationTaskResponse> createRecommendationTask(CreateRecommendationTaskRequest request);
-
-    CompletableFuture<CreateServerlessDBInstanceResponse> createServerlessDBInstance(CreateServerlessDBInstanceRequest request);
-
     CompletableFuture<CreateShardingDBInstanceResponse> createShardingDBInstance(CreateShardingDBInstanceRequest request);
 
     CompletableFuture<DeleteDBInstanceResponse> deleteDBInstance(DeleteDBInstanceRequest request);
@@ -50,8 +46,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeActiveOperationTaskTypeResponse> describeActiveOperationTaskType(DescribeActiveOperationTaskTypeRequest request);
 
-    CompletableFuture<DescribeAuditFilesResponse> describeAuditFiles(DescribeAuditFilesRequest request);
-
     CompletableFuture<DescribeAuditLogFilterResponse> describeAuditLogFilter(DescribeAuditLogFilterRequest request);
 
     CompletableFuture<DescribeAuditPolicyResponse> describeAuditPolicy(DescribeAuditPolicyRequest request);
@@ -61,8 +55,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeAvailableEngineVersionResponse> describeAvailableEngineVersion(DescribeAvailableEngineVersionRequest request);
 
     CompletableFuture<DescribeAvailableResourceResponse> describeAvailableResource(DescribeAvailableResourceRequest request);
-
-    CompletableFuture<DescribeAvailableTimeRangeResponse> describeAvailableTimeRange(DescribeAvailableTimeRangeRequest request);
 
     CompletableFuture<DescribeBackupDBsResponse> describeBackupDBs(DescribeBackupDBsRequest request);
 

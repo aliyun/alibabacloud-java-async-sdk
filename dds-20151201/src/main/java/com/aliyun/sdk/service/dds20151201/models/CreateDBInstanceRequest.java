@@ -73,6 +73,10 @@ public class CreateDBInstanceRequest extends Request {
     private String engineVersion;
 
     @Query
+    @NameInMap("HiddenZoneId")
+    private String hiddenZoneId;
+
+    @Query
     @NameInMap("NetworkType")
     private String networkType;
 
@@ -118,6 +122,10 @@ public class CreateDBInstanceRequest extends Request {
     private String restoreTime;
 
     @Query
+    @NameInMap("SecondaryZoneId")
+    private String secondaryZoneId;
+
+    @Query
     @NameInMap("SecurityIPList")
     private String securityIPList;
 
@@ -132,6 +140,10 @@ public class CreateDBInstanceRequest extends Request {
     @Query
     @NameInMap("StorageEngine")
     private String storageEngine;
+
+    @Query
+    @NameInMap("StorageType")
+    private String storageType;
 
     @Query
     @NameInMap("VSwitchId")
@@ -161,6 +173,7 @@ public class CreateDBInstanceRequest extends Request {
         this.databaseNames = builder.databaseNames;
         this.engine = builder.engine;
         this.engineVersion = builder.engineVersion;
+        this.hiddenZoneId = builder.hiddenZoneId;
         this.networkType = builder.networkType;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -172,10 +185,12 @@ public class CreateDBInstanceRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.restoreTime = builder.restoreTime;
+        this.secondaryZoneId = builder.secondaryZoneId;
         this.securityIPList = builder.securityIPList;
         this.securityToken = builder.securityToken;
         this.srcDBInstanceId = builder.srcDBInstanceId;
         this.storageEngine = builder.storageEngine;
+        this.storageType = builder.storageType;
         this.vSwitchId = builder.vSwitchId;
         this.vpcId = builder.vpcId;
         this.zoneId = builder.zoneId;
@@ -293,6 +308,13 @@ public class CreateDBInstanceRequest extends Request {
     }
 
     /**
+     * @return hiddenZoneId
+     */
+    public String getHiddenZoneId() {
+        return this.hiddenZoneId;
+    }
+
+    /**
      * @return networkType
      */
     public String getNetworkType() {
@@ -370,6 +392,13 @@ public class CreateDBInstanceRequest extends Request {
     }
 
     /**
+     * @return secondaryZoneId
+     */
+    public String getSecondaryZoneId() {
+        return this.secondaryZoneId;
+    }
+
+    /**
      * @return securityIPList
      */
     public String getSecurityIPList() {
@@ -395,6 +424,13 @@ public class CreateDBInstanceRequest extends Request {
      */
     public String getStorageEngine() {
         return this.storageEngine;
+    }
+
+    /**
+     * @return storageType
+     */
+    public String getStorageType() {
+        return this.storageType;
     }
 
     /**
@@ -433,6 +469,7 @@ public class CreateDBInstanceRequest extends Request {
         private String databaseNames; 
         private String engine; 
         private String engineVersion; 
+        private String hiddenZoneId; 
         private String networkType; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -444,10 +481,12 @@ public class CreateDBInstanceRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String restoreTime; 
+        private String secondaryZoneId; 
         private String securityIPList; 
         private String securityToken; 
         private String srcDBInstanceId; 
         private String storageEngine; 
+        private String storageType; 
         private String vSwitchId; 
         private String vpcId; 
         private String zoneId; 
@@ -456,40 +495,43 @@ public class CreateDBInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(CreateDBInstanceRequest response) {
-            super(response);
-            this.accountPassword = response.accountPassword;
-            this.autoRenew = response.autoRenew;
-            this.backupId = response.backupId;
-            this.businessInfo = response.businessInfo;
-            this.chargeType = response.chargeType;
-            this.clientToken = response.clientToken;
-            this.clusterId = response.clusterId;
-            this.couponNo = response.couponNo;
-            this.DBInstanceClass = response.DBInstanceClass;
-            this.DBInstanceDescription = response.DBInstanceDescription;
-            this.DBInstanceStorage = response.DBInstanceStorage;
-            this.databaseNames = response.databaseNames;
-            this.engine = response.engine;
-            this.engineVersion = response.engineVersion;
-            this.networkType = response.networkType;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.period = response.period;
-            this.readonlyReplicas = response.readonlyReplicas;
-            this.regionId = response.regionId;
-            this.replicationFactor = response.replicationFactor;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.restoreTime = response.restoreTime;
-            this.securityIPList = response.securityIPList;
-            this.securityToken = response.securityToken;
-            this.srcDBInstanceId = response.srcDBInstanceId;
-            this.storageEngine = response.storageEngine;
-            this.vSwitchId = response.vSwitchId;
-            this.vpcId = response.vpcId;
-            this.zoneId = response.zoneId;
+        private Builder(CreateDBInstanceRequest request) {
+            super(request);
+            this.accountPassword = request.accountPassword;
+            this.autoRenew = request.autoRenew;
+            this.backupId = request.backupId;
+            this.businessInfo = request.businessInfo;
+            this.chargeType = request.chargeType;
+            this.clientToken = request.clientToken;
+            this.clusterId = request.clusterId;
+            this.couponNo = request.couponNo;
+            this.DBInstanceClass = request.DBInstanceClass;
+            this.DBInstanceDescription = request.DBInstanceDescription;
+            this.DBInstanceStorage = request.DBInstanceStorage;
+            this.databaseNames = request.databaseNames;
+            this.engine = request.engine;
+            this.engineVersion = request.engineVersion;
+            this.hiddenZoneId = request.hiddenZoneId;
+            this.networkType = request.networkType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.period = request.period;
+            this.readonlyReplicas = request.readonlyReplicas;
+            this.regionId = request.regionId;
+            this.replicationFactor = request.replicationFactor;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.restoreTime = request.restoreTime;
+            this.secondaryZoneId = request.secondaryZoneId;
+            this.securityIPList = request.securityIPList;
+            this.securityToken = request.securityToken;
+            this.srcDBInstanceId = request.srcDBInstanceId;
+            this.storageEngine = request.storageEngine;
+            this.storageType = request.storageType;
+            this.vSwitchId = request.vSwitchId;
+            this.vpcId = request.vpcId;
+            this.zoneId = request.zoneId;
         } 
 
         /**
@@ -619,6 +661,15 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
+         * HiddenZoneId.
+         */
+        public Builder hiddenZoneId(String hiddenZoneId) {
+            this.putQueryParameter("HiddenZoneId", hiddenZoneId);
+            this.hiddenZoneId = hiddenZoneId;
+            return this;
+        }
+
+        /**
          * NetworkType.
          */
         public Builder networkType(String networkType) {
@@ -718,6 +769,15 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
+         * SecondaryZoneId.
+         */
+        public Builder secondaryZoneId(String secondaryZoneId) {
+            this.putQueryParameter("SecondaryZoneId", secondaryZoneId);
+            this.secondaryZoneId = secondaryZoneId;
+            return this;
+        }
+
+        /**
          * SecurityIPList.
          */
         public Builder securityIPList(String securityIPList) {
@@ -750,6 +810,15 @@ public class CreateDBInstanceRequest extends Request {
         public Builder storageEngine(String storageEngine) {
             this.putQueryParameter("StorageEngine", storageEngine);
             this.storageEngine = storageEngine;
+            return this;
+        }
+
+        /**
+         * StorageType.
+         */
+        public Builder storageType(String storageType) {
+            this.putQueryParameter("StorageType", storageType);
+            this.storageType = storageType;
             return this;
         }
 

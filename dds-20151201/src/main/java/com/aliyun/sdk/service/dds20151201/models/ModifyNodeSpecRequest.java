@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyNodeSpecRequest</p>
  */
 public class ModifyNodeSpecRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("AutoPay")
     private Boolean autoPay;
@@ -71,10 +75,6 @@ public class ModifyNodeSpecRequest extends Request {
     @Validation(maximum = 5)
     private Integer readonlyReplicas;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
@@ -93,6 +93,7 @@ public class ModifyNodeSpecRequest extends Request {
 
     private ModifyNodeSpecRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.autoPay = builder.autoPay;
         this.businessInfo = builder.businessInfo;
         this.clientToken = builder.clientToken;
@@ -107,7 +108,6 @@ public class ModifyNodeSpecRequest extends Request {
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.readonlyReplicas = builder.readonlyReplicas;
-        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityToken = builder.securityToken;
@@ -125,6 +125,13 @@ public class ModifyNodeSpecRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -226,13 +233,6 @@ public class ModifyNodeSpecRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -261,6 +261,7 @@ public class ModifyNodeSpecRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyNodeSpecRequest, Builder> {
+        private String regionId; 
         private Boolean autoPay; 
         private String businessInfo; 
         private String clientToken; 
@@ -275,7 +276,6 @@ public class ModifyNodeSpecRequest extends Request {
         private String ownerAccount; 
         private Long ownerId; 
         private Integer readonlyReplicas; 
-        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String securityToken; 
@@ -285,28 +285,37 @@ public class ModifyNodeSpecRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyNodeSpecRequest response) {
-            super(response);
-            this.autoPay = response.autoPay;
-            this.businessInfo = response.businessInfo;
-            this.clientToken = response.clientToken;
-            this.couponNo = response.couponNo;
-            this.DBInstanceId = response.DBInstanceId;
-            this.effectiveTime = response.effectiveTime;
-            this.fromApp = response.fromApp;
-            this.nodeClass = response.nodeClass;
-            this.nodeId = response.nodeId;
-            this.nodeStorage = response.nodeStorage;
-            this.orderType = response.orderType;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.readonlyReplicas = response.readonlyReplicas;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.securityToken = response.securityToken;
-            this.switchTime = response.switchTime;
+        private Builder(ModifyNodeSpecRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.autoPay = request.autoPay;
+            this.businessInfo = request.businessInfo;
+            this.clientToken = request.clientToken;
+            this.couponNo = request.couponNo;
+            this.DBInstanceId = request.DBInstanceId;
+            this.effectiveTime = request.effectiveTime;
+            this.fromApp = request.fromApp;
+            this.nodeClass = request.nodeClass;
+            this.nodeId = request.nodeId;
+            this.nodeStorage = request.nodeStorage;
+            this.orderType = request.orderType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.readonlyReplicas = request.readonlyReplicas;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.securityToken = request.securityToken;
+            this.switchTime = request.switchTime;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * AutoPay.
@@ -431,15 +440,6 @@ public class ModifyNodeSpecRequest extends Request {
         public Builder readonlyReplicas(Integer readonlyReplicas) {
             this.putQueryParameter("ReadonlyReplicas", readonlyReplicas);
             this.readonlyReplicas = readonlyReplicas;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

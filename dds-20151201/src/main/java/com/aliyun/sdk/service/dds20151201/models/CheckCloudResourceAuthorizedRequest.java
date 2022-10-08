@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CheckCloudResourceAuthorizedRequest</p>
  */
 public class CheckCloudResourceAuthorizedRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("DBInstanceId")
     @Validation(required = true)
@@ -24,10 +28,6 @@ public class CheckCloudResourceAuthorizedRequest extends Request {
     @Query
     @NameInMap("OwnerId")
     private Long ownerId;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Query
     @NameInMap("ResourceOwnerAccount")
@@ -48,10 +48,10 @@ public class CheckCloudResourceAuthorizedRequest extends Request {
 
     private CheckCloudResourceAuthorizedRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.DBInstanceId = builder.DBInstanceId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityToken = builder.securityToken;
@@ -69,6 +69,13 @@ public class CheckCloudResourceAuthorizedRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -90,13 +97,6 @@ public class CheckCloudResourceAuthorizedRequest extends Request {
      */
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -128,10 +128,10 @@ public class CheckCloudResourceAuthorizedRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CheckCloudResourceAuthorizedRequest, Builder> {
+        private String regionId; 
         private String DBInstanceId; 
         private String ownerAccount; 
         private Long ownerId; 
-        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String securityToken; 
@@ -141,17 +141,26 @@ public class CheckCloudResourceAuthorizedRequest extends Request {
             super();
         } 
 
-        private Builder(CheckCloudResourceAuthorizedRequest response) {
-            super(response);
-            this.DBInstanceId = response.DBInstanceId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.securityToken = response.securityToken;
-            this.targetRegionId = response.targetRegionId;
+        private Builder(CheckCloudResourceAuthorizedRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.DBInstanceId = request.DBInstanceId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.securityToken = request.securityToken;
+            this.targetRegionId = request.targetRegionId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * DBInstanceId.
@@ -177,15 +186,6 @@ public class CheckCloudResourceAuthorizedRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

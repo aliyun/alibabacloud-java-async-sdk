@@ -1,3 +1,6 @@
+2022-10-08 Version: 1.0.1
+- Update by SDK platform.
+
 2022-02-21 Version: 1.0.0
 - Generated java-async 2015-12-01 for Dds.
 

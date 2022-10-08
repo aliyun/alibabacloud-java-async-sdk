@@ -257,25 +257,25 @@ public class DescribeDBInstancesOverviewRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDBInstancesOverviewRequest response) {
-            super(response);
-            this.chargeType = response.chargeType;
-            this.engineVersion = response.engineVersion;
-            this.instanceClass = response.instanceClass;
-            this.instanceIds = response.instanceIds;
-            this.instanceStatus = response.instanceStatus;
-            this.instanceType = response.instanceType;
-            this.networkType = response.networkType;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.securityToken = response.securityToken;
-            this.vSwitchId = response.vSwitchId;
-            this.vpcId = response.vpcId;
-            this.zoneId = response.zoneId;
+        private Builder(DescribeDBInstancesOverviewRequest request) {
+            super(request);
+            this.chargeType = request.chargeType;
+            this.engineVersion = request.engineVersion;
+            this.instanceClass = request.instanceClass;
+            this.instanceIds = request.instanceIds;
+            this.instanceStatus = request.instanceStatus;
+            this.instanceType = request.instanceType;
+            this.networkType = request.networkType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.securityToken = request.securityToken;
+            this.vSwitchId = request.vSwitchId;
+            this.vpcId = request.vpcId;
+            this.zoneId = request.zoneId;
         } 
 
         /**

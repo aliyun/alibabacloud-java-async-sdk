@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyAuditPolicyRequest</p>
  */
 public class ModifyAuditPolicyRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("AuditLogSwitchSource")
     private String auditLogSwitchSource;
@@ -33,10 +37,6 @@ public class ModifyAuditPolicyRequest extends Request {
     @Query
     @NameInMap("OwnerId")
     private Long ownerId;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Query
     @NameInMap("ResourceOwnerAccount")
@@ -61,12 +61,12 @@ public class ModifyAuditPolicyRequest extends Request {
 
     private ModifyAuditPolicyRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.auditLogSwitchSource = builder.auditLogSwitchSource;
         this.auditStatus = builder.auditStatus;
         this.DBInstanceId = builder.DBInstanceId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityToken = builder.securityToken;
@@ -85,6 +85,13 @@ public class ModifyAuditPolicyRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -123,13 +130,6 @@ public class ModifyAuditPolicyRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -165,12 +165,12 @@ public class ModifyAuditPolicyRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyAuditPolicyRequest, Builder> {
+        private String regionId; 
         private String auditLogSwitchSource; 
         private String auditStatus; 
         private String DBInstanceId; 
         private String ownerAccount; 
         private Long ownerId; 
-        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String securityToken; 
@@ -181,20 +181,29 @@ public class ModifyAuditPolicyRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyAuditPolicyRequest response) {
-            super(response);
-            this.auditLogSwitchSource = response.auditLogSwitchSource;
-            this.auditStatus = response.auditStatus;
-            this.DBInstanceId = response.DBInstanceId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.securityToken = response.securityToken;
-            this.serviceType = response.serviceType;
-            this.storagePeriod = response.storagePeriod;
+        private Builder(ModifyAuditPolicyRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.auditLogSwitchSource = request.auditLogSwitchSource;
+            this.auditStatus = request.auditStatus;
+            this.DBInstanceId = request.DBInstanceId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.securityToken = request.securityToken;
+            this.serviceType = request.serviceType;
+            this.storagePeriod = request.storagePeriod;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * AuditLogSwitchSource.
@@ -238,15 +247,6 @@ public class ModifyAuditPolicyRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

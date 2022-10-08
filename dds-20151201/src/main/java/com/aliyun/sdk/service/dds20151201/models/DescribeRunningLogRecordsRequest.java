@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeRunningLogRecordsRequest</p>
  */
 public class DescribeRunningLogRecordsRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("DBInstanceId")
     @Validation(required = true)
@@ -52,10 +56,6 @@ public class DescribeRunningLogRecordsRequest extends Request {
     @Validation(maximum = 100, minimum = 30)
     private Integer pageSize;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("ResourceGroupId")
     private String resourceGroupId;
@@ -87,6 +87,7 @@ public class DescribeRunningLogRecordsRequest extends Request {
 
     private DescribeRunningLogRecordsRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.DBInstanceId = builder.DBInstanceId;
         this.DBName = builder.DBName;
         this.endTime = builder.endTime;
@@ -96,7 +97,6 @@ public class DescribeRunningLogRecordsRequest extends Request {
         this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
@@ -117,6 +117,13 @@ public class DescribeRunningLogRecordsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -183,13 +190,6 @@ public class DescribeRunningLogRecordsRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return resourceGroupId
      */
     public String getResourceGroupId() {
@@ -239,6 +239,7 @@ public class DescribeRunningLogRecordsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeRunningLogRecordsRequest, Builder> {
+        private String regionId; 
         private String DBInstanceId; 
         private String DBName; 
         private String endTime; 
@@ -248,7 +249,6 @@ public class DescribeRunningLogRecordsRequest extends Request {
         private Long ownerId; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private String regionId; 
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
@@ -261,26 +261,35 @@ public class DescribeRunningLogRecordsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeRunningLogRecordsRequest response) {
-            super(response);
-            this.DBInstanceId = response.DBInstanceId;
-            this.DBName = response.DBName;
-            this.endTime = response.endTime;
-            this.nodeId = response.nodeId;
-            this.orderType = response.orderType;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.roleId = response.roleId;
-            this.roleType = response.roleType;
-            this.securityToken = response.securityToken;
-            this.startTime = response.startTime;
+        private Builder(DescribeRunningLogRecordsRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.DBInstanceId = request.DBInstanceId;
+            this.DBName = request.DBName;
+            this.endTime = request.endTime;
+            this.nodeId = request.nodeId;
+            this.orderType = request.orderType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.roleId = request.roleId;
+            this.roleType = request.roleType;
+            this.securityToken = request.securityToken;
+            this.startTime = request.startTime;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * DBInstanceId.
@@ -360,15 +369,6 @@ public class DescribeRunningLogRecordsRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

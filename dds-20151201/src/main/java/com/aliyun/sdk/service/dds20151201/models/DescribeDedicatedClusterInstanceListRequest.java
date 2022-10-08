@@ -244,24 +244,24 @@ public class DescribeDedicatedClusterInstanceListRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDedicatedClusterInstanceListRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.dedicatedHostName = response.dedicatedHostName;
-            this.engine = response.engine;
-            this.engineVersion = response.engineVersion;
-            this.instanceId = response.instanceId;
-            this.instanceNetType = response.instanceNetType;
-            this.instanceStatus = response.instanceStatus;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.securityToken = response.securityToken;
-            this.zoneId = response.zoneId;
+        private Builder(DescribeDedicatedClusterInstanceListRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.dedicatedHostName = request.dedicatedHostName;
+            this.engine = request.engine;
+            this.engineVersion = request.engineVersion;
+            this.instanceId = request.instanceId;
+            this.instanceNetType = request.instanceNetType;
+            this.instanceStatus = request.instanceStatus;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.securityToken = request.securityToken;
+            this.zoneId = request.zoneId;
         } 
 
         /**

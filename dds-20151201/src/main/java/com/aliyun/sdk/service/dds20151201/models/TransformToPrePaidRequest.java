@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>TransformToPrePaidRequest</p>
  */
 public class TransformToPrePaidRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("AutoPay")
     private Boolean autoPay;
@@ -46,10 +50,6 @@ public class TransformToPrePaidRequest extends Request {
     @Validation(required = true)
     private Long period;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
@@ -64,6 +64,7 @@ public class TransformToPrePaidRequest extends Request {
 
     private TransformToPrePaidRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.autoPay = builder.autoPay;
         this.autoRenew = builder.autoRenew;
         this.businessInfo = builder.businessInfo;
@@ -72,7 +73,6 @@ public class TransformToPrePaidRequest extends Request {
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.period = builder.period;
-        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityToken = builder.securityToken;
@@ -89,6 +89,13 @@ public class TransformToPrePaidRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -148,13 +155,6 @@ public class TransformToPrePaidRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -176,6 +176,7 @@ public class TransformToPrePaidRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<TransformToPrePaidRequest, Builder> {
+        private String regionId; 
         private Boolean autoPay; 
         private String autoRenew; 
         private String businessInfo; 
@@ -184,7 +185,6 @@ public class TransformToPrePaidRequest extends Request {
         private String ownerAccount; 
         private Long ownerId; 
         private Long period; 
-        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String securityToken; 
@@ -193,21 +193,30 @@ public class TransformToPrePaidRequest extends Request {
             super();
         } 
 
-        private Builder(TransformToPrePaidRequest response) {
-            super(response);
-            this.autoPay = response.autoPay;
-            this.autoRenew = response.autoRenew;
-            this.businessInfo = response.businessInfo;
-            this.couponNo = response.couponNo;
-            this.instanceId = response.instanceId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.period = response.period;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.securityToken = response.securityToken;
+        private Builder(TransformToPrePaidRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.autoPay = request.autoPay;
+            this.autoRenew = request.autoRenew;
+            this.businessInfo = request.businessInfo;
+            this.couponNo = request.couponNo;
+            this.instanceId = request.instanceId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.period = request.period;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.securityToken = request.securityToken;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * AutoPay.
@@ -278,15 +287,6 @@ public class TransformToPrePaidRequest extends Request {
         public Builder period(Long period) {
             this.putQueryParameter("Period", period);
             this.period = period;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

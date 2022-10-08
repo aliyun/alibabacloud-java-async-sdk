@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifySecurityIpsRequest</p>
  */
 public class ModifySecurityIpsRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("DBInstanceId")
     @Validation(required = true)
@@ -28,10 +32,6 @@ public class ModifySecurityIpsRequest extends Request {
     @Query
     @NameInMap("OwnerId")
     private Long ownerId;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Query
     @NameInMap("ResourceOwnerAccount")
@@ -60,11 +60,11 @@ public class ModifySecurityIpsRequest extends Request {
 
     private ModifySecurityIpsRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.DBInstanceId = builder.DBInstanceId;
         this.modifyMode = builder.modifyMode;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityIpGroupAttribute = builder.securityIpGroupAttribute;
@@ -84,6 +84,13 @@ public class ModifySecurityIpsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -112,13 +119,6 @@ public class ModifySecurityIpsRequest extends Request {
      */
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -164,11 +164,11 @@ public class ModifySecurityIpsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifySecurityIpsRequest, Builder> {
+        private String regionId; 
         private String DBInstanceId; 
         private String modifyMode; 
         private String ownerAccount; 
         private Long ownerId; 
-        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String securityIpGroupAttribute; 
@@ -180,20 +180,29 @@ public class ModifySecurityIpsRequest extends Request {
             super();
         } 
 
-        private Builder(ModifySecurityIpsRequest response) {
-            super(response);
-            this.DBInstanceId = response.DBInstanceId;
-            this.modifyMode = response.modifyMode;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.securityIpGroupAttribute = response.securityIpGroupAttribute;
-            this.securityIpGroupName = response.securityIpGroupName;
-            this.securityIps = response.securityIps;
-            this.securityToken = response.securityToken;
+        private Builder(ModifySecurityIpsRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.DBInstanceId = request.DBInstanceId;
+            this.modifyMode = request.modifyMode;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.securityIpGroupAttribute = request.securityIpGroupAttribute;
+            this.securityIpGroupName = request.securityIpGroupName;
+            this.securityIps = request.securityIps;
+            this.securityToken = request.securityToken;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * DBInstanceId.
@@ -228,15 +237,6 @@ public class ModifySecurityIpsRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

@@ -167,18 +167,18 @@ public class DescribeInstanceAutoRenewalAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeInstanceAutoRenewalAttributeRequest response) {
-            super(response);
-            this.DBInstanceId = response.DBInstanceId;
-            this.DBInstanceType = response.DBInstanceType;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.securityToken = response.securityToken;
+        private Builder(DescribeInstanceAutoRenewalAttributeRequest request) {
+            super(request);
+            this.DBInstanceId = request.DBInstanceId;
+            this.DBInstanceType = request.DBInstanceType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.securityToken = request.securityToken;
         } 
 
         /**

@@ -219,22 +219,22 @@ public class DescribePriceRequest extends Request {
             super();
         } 
 
-        private Builder(DescribePriceRequest response) {
-            super(response);
-            this.businessInfo = response.businessInfo;
-            this.commodityCode = response.commodityCode;
-            this.couponNo = response.couponNo;
-            this.DBInstances = response.DBInstances;
-            this.orderParamOut = response.orderParamOut;
-            this.orderType = response.orderType;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.productCode = response.productCode;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.securityToken = response.securityToken;
+        private Builder(DescribePriceRequest request) {
+            super(request);
+            this.businessInfo = request.businessInfo;
+            this.commodityCode = request.commodityCode;
+            this.couponNo = request.couponNo;
+            this.DBInstances = request.DBInstances;
+            this.orderParamOut = request.orderParamOut;
+            this.orderType = request.orderType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.productCode = request.productCode;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.securityToken = request.securityToken;
         } 
 
         /**

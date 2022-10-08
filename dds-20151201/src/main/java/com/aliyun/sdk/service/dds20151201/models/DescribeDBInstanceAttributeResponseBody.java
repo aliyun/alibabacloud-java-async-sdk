@@ -1207,6 +1207,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("ExpireTime")
         private String expireTime;
 
+        @NameInMap("HiddenZoneId")
+        private String hiddenZoneId;
+
         @NameInMap("KindCode")
         private String kindCode;
 
@@ -1258,6 +1261,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
+        @NameInMap("SecondaryZoneId")
+        private String secondaryZoneId;
+
         @NameInMap("ShardList")
         private ShardList shardList;
 
@@ -1298,6 +1304,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.engine = builder.engine;
             this.engineVersion = builder.engineVersion;
             this.expireTime = builder.expireTime;
+            this.hiddenZoneId = builder.hiddenZoneId;
             this.kindCode = builder.kindCode;
             this.lastDowngradeTime = builder.lastDowngradeTime;
             this.lockMode = builder.lockMode;
@@ -1315,6 +1322,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.replicaSets = builder.replicaSets;
             this.replicationFactor = builder.replicationFactor;
             this.resourceGroupId = builder.resourceGroupId;
+            this.secondaryZoneId = builder.secondaryZoneId;
             this.shardList = builder.shardList;
             this.storageEngine = builder.storageEngine;
             this.tags = builder.tags;
@@ -1439,6 +1447,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return hiddenZoneId
+         */
+        public String getHiddenZoneId() {
+            return this.hiddenZoneId;
+        }
+
+        /**
          * @return kindCode
          */
         public String getKindCode() {
@@ -1558,6 +1573,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return secondaryZoneId
+         */
+        public String getSecondaryZoneId() {
+            return this.secondaryZoneId;
+        }
+
+        /**
          * @return shardList
          */
         public ShardList getShardList() {
@@ -1629,6 +1651,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String engine; 
             private String engineVersion; 
             private String expireTime; 
+            private String hiddenZoneId; 
             private String kindCode; 
             private String lastDowngradeTime; 
             private String lockMode; 
@@ -1646,6 +1669,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private ReplicaSets replicaSets; 
             private String replicationFactor; 
             private String resourceGroupId; 
+            private String secondaryZoneId; 
             private ShardList shardList; 
             private String storageEngine; 
             private Tags tags; 
@@ -1772,6 +1796,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
+                return this;
+            }
+
+            /**
+             * HiddenZoneId.
+             */
+            public Builder hiddenZoneId(String hiddenZoneId) {
+                this.hiddenZoneId = hiddenZoneId;
                 return this;
             }
 
@@ -1908,6 +1940,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * SecondaryZoneId.
+             */
+            public Builder secondaryZoneId(String secondaryZoneId) {
+                this.secondaryZoneId = secondaryZoneId;
                 return this;
             }
 

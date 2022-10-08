@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeParameterModificationHistoryRequest</p>
  */
 public class DescribeParameterModificationHistoryRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("CharacterType")
     private String characterType;
@@ -38,10 +42,6 @@ public class DescribeParameterModificationHistoryRequest extends Request {
     @NameInMap("OwnerId")
     private Long ownerId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
@@ -61,13 +61,13 @@ public class DescribeParameterModificationHistoryRequest extends Request {
 
     private DescribeParameterModificationHistoryRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.characterType = builder.characterType;
         this.DBInstanceId = builder.DBInstanceId;
         this.endTime = builder.endTime;
         this.nodeId = builder.nodeId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityToken = builder.securityToken;
@@ -85,6 +85,13 @@ public class DescribeParameterModificationHistoryRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -130,13 +137,6 @@ public class DescribeParameterModificationHistoryRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -165,13 +165,13 @@ public class DescribeParameterModificationHistoryRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeParameterModificationHistoryRequest, Builder> {
+        private String regionId; 
         private String characterType; 
         private String DBInstanceId; 
         private String endTime; 
         private String nodeId; 
         private String ownerAccount; 
         private Long ownerId; 
-        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String securityToken; 
@@ -181,20 +181,29 @@ public class DescribeParameterModificationHistoryRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeParameterModificationHistoryRequest response) {
-            super(response);
-            this.characterType = response.characterType;
-            this.DBInstanceId = response.DBInstanceId;
-            this.endTime = response.endTime;
-            this.nodeId = response.nodeId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.securityToken = response.securityToken;
-            this.startTime = response.startTime;
+        private Builder(DescribeParameterModificationHistoryRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.characterType = request.characterType;
+            this.DBInstanceId = request.DBInstanceId;
+            this.endTime = request.endTime;
+            this.nodeId = request.nodeId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.securityToken = request.securityToken;
+            this.startTime = request.startTime;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * CharacterType.
@@ -247,15 +256,6 @@ public class DescribeParameterModificationHistoryRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

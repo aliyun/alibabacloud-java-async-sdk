@@ -219,22 +219,22 @@ public class ModifyNodeSpecBatchRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyNodeSpecBatchRequest response) {
-            super(response);
-            this.autoPay = response.autoPay;
-            this.businessInfo = response.businessInfo;
-            this.clientToken = response.clientToken;
-            this.couponNo = response.couponNo;
-            this.DBInstanceId = response.DBInstanceId;
-            this.effectiveTime = response.effectiveTime;
-            this.nodesInfo = response.nodesInfo;
-            this.orderType = response.orderType;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.securityToken = response.securityToken;
+        private Builder(ModifyNodeSpecBatchRequest request) {
+            super(request);
+            this.autoPay = request.autoPay;
+            this.businessInfo = request.businessInfo;
+            this.clientToken = request.clientToken;
+            this.couponNo = request.couponNo;
+            this.DBInstanceId = request.DBInstanceId;
+            this.effectiveTime = request.effectiveTime;
+            this.nodesInfo = request.nodesInfo;
+            this.orderType = request.orderType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.securityToken = request.securityToken;
         } 
 
         /**

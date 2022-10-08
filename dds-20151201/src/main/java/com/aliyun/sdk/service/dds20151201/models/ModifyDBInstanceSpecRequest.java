@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyDBInstanceSpecRequest</p>
  */
 public class ModifyDBInstanceSpecRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("AutoPay")
     private Boolean autoPay;
@@ -57,10 +61,6 @@ public class ModifyDBInstanceSpecRequest extends Request {
     @NameInMap("ReadonlyReplicas")
     private String readonlyReplicas;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("ReplicationFactor")
     private String replicationFactor;
@@ -79,6 +79,7 @@ public class ModifyDBInstanceSpecRequest extends Request {
 
     private ModifyDBInstanceSpecRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.autoPay = builder.autoPay;
         this.businessInfo = builder.businessInfo;
         this.couponNo = builder.couponNo;
@@ -90,7 +91,6 @@ public class ModifyDBInstanceSpecRequest extends Request {
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.readonlyReplicas = builder.readonlyReplicas;
-        this.regionId = builder.regionId;
         this.replicationFactor = builder.replicationFactor;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
@@ -108,6 +108,13 @@ public class ModifyDBInstanceSpecRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -188,13 +195,6 @@ public class ModifyDBInstanceSpecRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return replicationFactor
      */
     public String getReplicationFactor() {
@@ -223,6 +223,7 @@ public class ModifyDBInstanceSpecRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyDBInstanceSpecRequest, Builder> {
+        private String regionId; 
         private Boolean autoPay; 
         private String businessInfo; 
         private String couponNo; 
@@ -234,7 +235,6 @@ public class ModifyDBInstanceSpecRequest extends Request {
         private String ownerAccount; 
         private Long ownerId; 
         private String readonlyReplicas; 
-        private String regionId; 
         private String replicationFactor; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
@@ -244,25 +244,34 @@ public class ModifyDBInstanceSpecRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyDBInstanceSpecRequest response) {
-            super(response);
-            this.autoPay = response.autoPay;
-            this.businessInfo = response.businessInfo;
-            this.couponNo = response.couponNo;
-            this.DBInstanceClass = response.DBInstanceClass;
-            this.DBInstanceId = response.DBInstanceId;
-            this.DBInstanceStorage = response.DBInstanceStorage;
-            this.effectiveTime = response.effectiveTime;
-            this.orderType = response.orderType;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.readonlyReplicas = response.readonlyReplicas;
-            this.regionId = response.regionId;
-            this.replicationFactor = response.replicationFactor;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.securityToken = response.securityToken;
+        private Builder(ModifyDBInstanceSpecRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.autoPay = request.autoPay;
+            this.businessInfo = request.businessInfo;
+            this.couponNo = request.couponNo;
+            this.DBInstanceClass = request.DBInstanceClass;
+            this.DBInstanceId = request.DBInstanceId;
+            this.DBInstanceStorage = request.DBInstanceStorage;
+            this.effectiveTime = request.effectiveTime;
+            this.orderType = request.orderType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.readonlyReplicas = request.readonlyReplicas;
+            this.replicationFactor = request.replicationFactor;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.securityToken = request.securityToken;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * AutoPay.
@@ -360,15 +369,6 @@ public class ModifyDBInstanceSpecRequest extends Request {
         public Builder readonlyReplicas(String readonlyReplicas) {
             this.putQueryParameter("ReadonlyReplicas", readonlyReplicas);
             this.readonlyReplicas = readonlyReplicas;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

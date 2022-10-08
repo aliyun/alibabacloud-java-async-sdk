@@ -141,16 +141,16 @@ public class MigrateToOtherZoneRequest extends Request {
             super();
         } 
 
-        private Builder(MigrateToOtherZoneRequest response) {
-            super(response);
-            this.effectiveTime = response.effectiveTime;
-            this.instanceId = response.instanceId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.vSwitchId = response.vSwitchId;
-            this.zoneId = response.zoneId;
+        private Builder(MigrateToOtherZoneRequest request) {
+            super(request);
+            this.effectiveTime = request.effectiveTime;
+            this.instanceId = request.instanceId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.vSwitchId = request.vSwitchId;
+            this.zoneId = request.zoneId;
         } 
 
         /**

@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyDBInstanceNetworkTypeRequest</p>
  */
 public class ModifyDBInstanceNetworkTypeRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("ClassicExpiredDays")
     private Integer classicExpiredDays;
@@ -33,10 +37,6 @@ public class ModifyDBInstanceNetworkTypeRequest extends Request {
     @Query
     @NameInMap("OwnerId")
     private Long ownerId;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Query
     @NameInMap("ResourceOwnerAccount")
@@ -64,12 +64,12 @@ public class ModifyDBInstanceNetworkTypeRequest extends Request {
 
     private ModifyDBInstanceNetworkTypeRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.classicExpiredDays = builder.classicExpiredDays;
         this.DBInstanceId = builder.DBInstanceId;
         this.networkType = builder.networkType;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.retainClassic = builder.retainClassic;
@@ -89,6 +89,13 @@ public class ModifyDBInstanceNetworkTypeRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -124,13 +131,6 @@ public class ModifyDBInstanceNetworkTypeRequest extends Request {
      */
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -176,12 +176,12 @@ public class ModifyDBInstanceNetworkTypeRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyDBInstanceNetworkTypeRequest, Builder> {
+        private String regionId; 
         private Integer classicExpiredDays; 
         private String DBInstanceId; 
         private String networkType; 
         private String ownerAccount; 
         private Long ownerId; 
-        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String retainClassic; 
@@ -193,21 +193,30 @@ public class ModifyDBInstanceNetworkTypeRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyDBInstanceNetworkTypeRequest response) {
-            super(response);
-            this.classicExpiredDays = response.classicExpiredDays;
-            this.DBInstanceId = response.DBInstanceId;
-            this.networkType = response.networkType;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.retainClassic = response.retainClassic;
-            this.securityToken = response.securityToken;
-            this.vSwitchId = response.vSwitchId;
-            this.vpcId = response.vpcId;
+        private Builder(ModifyDBInstanceNetworkTypeRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.classicExpiredDays = request.classicExpiredDays;
+            this.DBInstanceId = request.DBInstanceId;
+            this.networkType = request.networkType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.retainClassic = request.retainClassic;
+            this.securityToken = request.securityToken;
+            this.vSwitchId = request.vSwitchId;
+            this.vpcId = request.vpcId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * ClassicExpiredDays.
@@ -251,15 +260,6 @@ public class ModifyDBInstanceNetworkTypeRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

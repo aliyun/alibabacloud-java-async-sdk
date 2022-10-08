@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AllocateNodePrivateNetworkAddressRequest</p>
  */
 public class AllocateNodePrivateNetworkAddressRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("AccountName")
     private String accountName;
@@ -38,10 +42,6 @@ public class AllocateNodePrivateNetworkAddressRequest extends Request {
     @NameInMap("OwnerId")
     private Long ownerId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
@@ -60,13 +60,13 @@ public class AllocateNodePrivateNetworkAddressRequest extends Request {
 
     private AllocateNodePrivateNetworkAddressRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.accountName = builder.accountName;
         this.accountPassword = builder.accountPassword;
         this.DBInstanceId = builder.DBInstanceId;
         this.nodeId = builder.nodeId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityToken = builder.securityToken;
@@ -84,6 +84,13 @@ public class AllocateNodePrivateNetworkAddressRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -129,13 +136,6 @@ public class AllocateNodePrivateNetworkAddressRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -164,13 +164,13 @@ public class AllocateNodePrivateNetworkAddressRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AllocateNodePrivateNetworkAddressRequest, Builder> {
+        private String regionId; 
         private String accountName; 
         private String accountPassword; 
         private String DBInstanceId; 
         private String nodeId; 
         private String ownerAccount; 
         private Long ownerId; 
-        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String securityToken; 
@@ -180,20 +180,29 @@ public class AllocateNodePrivateNetworkAddressRequest extends Request {
             super();
         } 
 
-        private Builder(AllocateNodePrivateNetworkAddressRequest response) {
-            super(response);
-            this.accountName = response.accountName;
-            this.accountPassword = response.accountPassword;
-            this.DBInstanceId = response.DBInstanceId;
-            this.nodeId = response.nodeId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.securityToken = response.securityToken;
-            this.zoneId = response.zoneId;
+        private Builder(AllocateNodePrivateNetworkAddressRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.accountName = request.accountName;
+            this.accountPassword = request.accountPassword;
+            this.DBInstanceId = request.DBInstanceId;
+            this.nodeId = request.nodeId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.securityToken = request.securityToken;
+            this.zoneId = request.zoneId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * AccountName.
@@ -246,15 +255,6 @@ public class AllocateNodePrivateNetworkAddressRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

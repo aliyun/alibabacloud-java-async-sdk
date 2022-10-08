@@ -71,7 +71,91 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
 
     } 
 
+    public static class DBInstanceStorageRange extends TeaModel {
+        @NameInMap("Max")
+        private Integer max;
+
+        @NameInMap("Min")
+        private Integer min;
+
+        @NameInMap("Step")
+        private Integer step;
+
+        private DBInstanceStorageRange(Builder builder) {
+            this.max = builder.max;
+            this.min = builder.min;
+            this.step = builder.step;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DBInstanceStorageRange create() {
+            return builder().build();
+        }
+
+        /**
+         * @return max
+         */
+        public Integer getMax() {
+            return this.max;
+        }
+
+        /**
+         * @return min
+         */
+        public Integer getMin() {
+            return this.min;
+        }
+
+        /**
+         * @return step
+         */
+        public Integer getStep() {
+            return this.step;
+        }
+
+        public static final class Builder {
+            private Integer max; 
+            private Integer min; 
+            private Integer step; 
+
+            /**
+             * Max.
+             */
+            public Builder max(Integer max) {
+                this.max = max;
+                return this;
+            }
+
+            /**
+             * Min.
+             */
+            public Builder min(Integer min) {
+                this.min = min;
+                return this;
+            }
+
+            /**
+             * Step.
+             */
+            public Builder step(Integer step) {
+                this.step = step;
+                return this;
+            }
+
+            public DBInstanceStorageRange build() {
+                return new DBInstanceStorageRange(this);
+            } 
+
+        } 
+
+    }
     public static class AvailableResource extends TeaModel {
+        @NameInMap("DBInstanceStorageRange")
+        private DBInstanceStorageRange DBInstanceStorageRange;
+
         @NameInMap("InstanceClass")
         private String instanceClass;
 
@@ -79,6 +163,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         private String instanceClassRemark;
 
         private AvailableResource(Builder builder) {
+            this.DBInstanceStorageRange = builder.DBInstanceStorageRange;
             this.instanceClass = builder.instanceClass;
             this.instanceClassRemark = builder.instanceClassRemark;
         }
@@ -89,6 +174,13 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
 
         public static AvailableResource create() {
             return builder().build();
+        }
+
+        /**
+         * @return DBInstanceStorageRange
+         */
+        public DBInstanceStorageRange getDBInstanceStorageRange() {
+            return this.DBInstanceStorageRange;
         }
 
         /**
@@ -106,8 +198,17 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private DBInstanceStorageRange DBInstanceStorageRange; 
             private String instanceClass; 
             private String instanceClassRemark; 
+
+            /**
+             * DBInstanceStorageRange.
+             */
+            public Builder DBInstanceStorageRange(DBInstanceStorageRange DBInstanceStorageRange) {
+                this.DBInstanceStorageRange = DBInstanceStorageRange;
+                return this;
+            }
 
             /**
              * InstanceClass.

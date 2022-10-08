@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyDBInstanceConnectionStringRequest</p>
  */
 public class ModifyDBInstanceConnectionStringRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("CurrentConnectionString")
     @Validation(required = true)
@@ -39,10 +43,6 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
     @NameInMap("OwnerId")
     private Long ownerId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
@@ -57,13 +57,13 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
 
     private ModifyDBInstanceConnectionStringRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.currentConnectionString = builder.currentConnectionString;
         this.DBInstanceId = builder.DBInstanceId;
         this.newConnectionString = builder.newConnectionString;
         this.nodeId = builder.nodeId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityToken = builder.securityToken;
@@ -80,6 +80,13 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -125,13 +132,6 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -153,13 +153,13 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyDBInstanceConnectionStringRequest, Builder> {
+        private String regionId; 
         private String currentConnectionString; 
         private String DBInstanceId; 
         private String newConnectionString; 
         private String nodeId; 
         private String ownerAccount; 
         private Long ownerId; 
-        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String securityToken; 
@@ -168,19 +168,28 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyDBInstanceConnectionStringRequest response) {
-            super(response);
-            this.currentConnectionString = response.currentConnectionString;
-            this.DBInstanceId = response.DBInstanceId;
-            this.newConnectionString = response.newConnectionString;
-            this.nodeId = response.nodeId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.securityToken = response.securityToken;
+        private Builder(ModifyDBInstanceConnectionStringRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.currentConnectionString = request.currentConnectionString;
+            this.DBInstanceId = request.DBInstanceId;
+            this.newConnectionString = request.newConnectionString;
+            this.nodeId = request.nodeId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.securityToken = request.securityToken;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * CurrentConnectionString.
@@ -233,15 +242,6 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

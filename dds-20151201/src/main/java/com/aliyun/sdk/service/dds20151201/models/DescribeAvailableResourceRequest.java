@@ -166,18 +166,18 @@ public class DescribeAvailableResourceRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeAvailableResourceRequest response) {
-            super(response);
-            this.dbType = response.dbType;
-            this.instanceChargeType = response.instanceChargeType;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.securityToken = response.securityToken;
-            this.zoneId = response.zoneId;
+        private Builder(DescribeAvailableResourceRequest request) {
+            super(request);
+            this.dbType = request.dbType;
+            this.instanceChargeType = request.instanceChargeType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.securityToken = request.securityToken;
+            this.zoneId = request.zoneId;
         } 
 
         /**

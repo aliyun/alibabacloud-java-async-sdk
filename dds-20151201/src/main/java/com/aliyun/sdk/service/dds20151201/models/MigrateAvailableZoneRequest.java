@@ -141,16 +141,16 @@ public class MigrateAvailableZoneRequest extends Request {
             super();
         } 
 
-        private Builder(MigrateAvailableZoneRequest response) {
-            super(response);
-            this.DBInstanceId = response.DBInstanceId;
-            this.effectiveTime = response.effectiveTime;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.vswitch = response.vswitch;
-            this.zoneId = response.zoneId;
+        private Builder(MigrateAvailableZoneRequest request) {
+            super(request);
+            this.DBInstanceId = request.DBInstanceId;
+            this.effectiveTime = request.effectiveTime;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.vswitch = request.vswitch;
+            this.zoneId = request.zoneId;
         } 
 
         /**

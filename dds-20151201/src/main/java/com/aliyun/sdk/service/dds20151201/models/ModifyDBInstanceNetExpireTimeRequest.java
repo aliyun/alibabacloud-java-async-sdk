@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyDBInstanceNetExpireTimeRequest</p>
  */
 public class ModifyDBInstanceNetExpireTimeRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("ClassicExpendExpiredDays")
     @Validation(required = true)
@@ -34,10 +38,6 @@ public class ModifyDBInstanceNetExpireTimeRequest extends Request {
     @NameInMap("OwnerId")
     private Long ownerId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
@@ -52,12 +52,12 @@ public class ModifyDBInstanceNetExpireTimeRequest extends Request {
 
     private ModifyDBInstanceNetExpireTimeRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.classicExpendExpiredDays = builder.classicExpendExpiredDays;
         this.connectionString = builder.connectionString;
         this.DBInstanceId = builder.DBInstanceId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityToken = builder.securityToken;
@@ -74,6 +74,13 @@ public class ModifyDBInstanceNetExpireTimeRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -112,13 +119,6 @@ public class ModifyDBInstanceNetExpireTimeRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -140,12 +140,12 @@ public class ModifyDBInstanceNetExpireTimeRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyDBInstanceNetExpireTimeRequest, Builder> {
+        private String regionId; 
         private Integer classicExpendExpiredDays; 
         private String connectionString; 
         private String DBInstanceId; 
         private String ownerAccount; 
         private Long ownerId; 
-        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String securityToken; 
@@ -154,18 +154,27 @@ public class ModifyDBInstanceNetExpireTimeRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyDBInstanceNetExpireTimeRequest response) {
-            super(response);
-            this.classicExpendExpiredDays = response.classicExpendExpiredDays;
-            this.connectionString = response.connectionString;
-            this.DBInstanceId = response.DBInstanceId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.securityToken = response.securityToken;
+        private Builder(ModifyDBInstanceNetExpireTimeRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.classicExpendExpiredDays = request.classicExpendExpiredDays;
+            this.connectionString = request.connectionString;
+            this.DBInstanceId = request.DBInstanceId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.securityToken = request.securityToken;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * ClassicExpendExpiredDays.
@@ -209,15 +218,6 @@ public class ModifyDBInstanceNetExpireTimeRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeBackupsRequest</p>
  */
 public class DescribeBackupsRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("BackupId")
     private String backupId;
@@ -45,10 +49,6 @@ public class DescribeBackupsRequest extends Request {
     @NameInMap("PageSize")
     private Integer pageSize;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
@@ -67,6 +67,7 @@ public class DescribeBackupsRequest extends Request {
 
     private DescribeBackupsRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.backupId = builder.backupId;
         this.DBInstanceId = builder.DBInstanceId;
         this.endTime = builder.endTime;
@@ -75,7 +76,6 @@ public class DescribeBackupsRequest extends Request {
         this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityToken = builder.securityToken;
@@ -93,6 +93,13 @@ public class DescribeBackupsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -152,13 +159,6 @@ public class DescribeBackupsRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -187,6 +187,7 @@ public class DescribeBackupsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeBackupsRequest, Builder> {
+        private String regionId; 
         private String backupId; 
         private String DBInstanceId; 
         private String endTime; 
@@ -195,7 +196,6 @@ public class DescribeBackupsRequest extends Request {
         private Long ownerId; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String securityToken; 
@@ -205,22 +205,31 @@ public class DescribeBackupsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeBackupsRequest response) {
-            super(response);
-            this.backupId = response.backupId;
-            this.DBInstanceId = response.DBInstanceId;
-            this.endTime = response.endTime;
-            this.nodeId = response.nodeId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.securityToken = response.securityToken;
-            this.startTime = response.startTime;
+        private Builder(DescribeBackupsRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.backupId = request.backupId;
+            this.DBInstanceId = request.DBInstanceId;
+            this.endTime = request.endTime;
+            this.nodeId = request.nodeId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.securityToken = request.securityToken;
+            this.startTime = request.startTime;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * BackupId.
@@ -291,15 +300,6 @@ public class DescribeBackupsRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

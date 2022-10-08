@@ -557,6 +557,9 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         @NameInMap("ExpireTime")
         private String expireTime;
 
+        @NameInMap("HiddenZoneId")
+        private String hiddenZoneId;
+
         @NameInMap("KindCode")
         private String kindCode;
 
@@ -581,8 +584,14 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         @NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
+        @NameInMap("SecondaryZoneId")
+        private String secondaryZoneId;
+
         @NameInMap("ShardList")
         private ShardList shardList;
+
+        @NameInMap("StorageType")
+        private String storageType;
 
         @NameInMap("Tags")
         private Tags tags;
@@ -607,6 +616,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             this.engine = builder.engine;
             this.engineVersion = builder.engineVersion;
             this.expireTime = builder.expireTime;
+            this.hiddenZoneId = builder.hiddenZoneId;
             this.kindCode = builder.kindCode;
             this.lastDowngradeTime = builder.lastDowngradeTime;
             this.lockMode = builder.lockMode;
@@ -615,7 +625,9 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             this.regionId = builder.regionId;
             this.replicationFactor = builder.replicationFactor;
             this.resourceGroupId = builder.resourceGroupId;
+            this.secondaryZoneId = builder.secondaryZoneId;
             this.shardList = builder.shardList;
+            this.storageType = builder.storageType;
             this.tags = builder.tags;
             this.vpcAuthMode = builder.vpcAuthMode;
             this.zoneId = builder.zoneId;
@@ -721,6 +733,13 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return hiddenZoneId
+         */
+        public String getHiddenZoneId() {
+            return this.hiddenZoneId;
+        }
+
+        /**
          * @return kindCode
          */
         public String getKindCode() {
@@ -777,10 +796,24 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return secondaryZoneId
+         */
+        public String getSecondaryZoneId() {
+            return this.secondaryZoneId;
+        }
+
+        /**
          * @return shardList
          */
         public ShardList getShardList() {
             return this.shardList;
+        }
+
+        /**
+         * @return storageType
+         */
+        public String getStorageType() {
+            return this.storageType;
         }
 
         /**
@@ -818,6 +851,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             private String engine; 
             private String engineVersion; 
             private String expireTime; 
+            private String hiddenZoneId; 
             private String kindCode; 
             private String lastDowngradeTime; 
             private String lockMode; 
@@ -826,7 +860,9 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             private String regionId; 
             private String replicationFactor; 
             private String resourceGroupId; 
+            private String secondaryZoneId; 
             private ShardList shardList; 
+            private String storageType; 
             private Tags tags; 
             private String vpcAuthMode; 
             private String zoneId; 
@@ -936,6 +972,14 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
+             * HiddenZoneId.
+             */
+            public Builder hiddenZoneId(String hiddenZoneId) {
+                this.hiddenZoneId = hiddenZoneId;
+                return this;
+            }
+
+            /**
              * KindCode.
              */
             public Builder kindCode(String kindCode) {
@@ -1000,10 +1044,26 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
+             * SecondaryZoneId.
+             */
+            public Builder secondaryZoneId(String secondaryZoneId) {
+                this.secondaryZoneId = secondaryZoneId;
+                return this;
+            }
+
+            /**
              * ShardList.
              */
             public Builder shardList(ShardList shardList) {
                 this.shardList = shardList;
+                return this;
+            }
+
+            /**
+             * StorageType.
+             */
+            public Builder storageType(String storageType) {
+                this.storageType = storageType;
                 return this;
             }
 

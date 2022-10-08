@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAuditRecordsRequest</p>
  */
 public class DescribeAuditRecordsRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("DBInstanceId")
     @Validation(required = true)
@@ -58,10 +62,6 @@ public class DescribeAuditRecordsRequest extends Request {
     @NameInMap("QueryKeywords")
     private String queryKeywords;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
@@ -85,6 +85,7 @@ public class DescribeAuditRecordsRequest extends Request {
 
     private DescribeAuditRecordsRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.DBInstanceId = builder.DBInstanceId;
         this.database = builder.database;
         this.endTime = builder.endTime;
@@ -96,7 +97,6 @@ public class DescribeAuditRecordsRequest extends Request {
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.queryKeywords = builder.queryKeywords;
-        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityToken = builder.securityToken;
@@ -115,6 +115,13 @@ public class DescribeAuditRecordsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -195,13 +202,6 @@ public class DescribeAuditRecordsRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -237,6 +237,7 @@ public class DescribeAuditRecordsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeAuditRecordsRequest, Builder> {
+        private String regionId; 
         private String DBInstanceId; 
         private String database; 
         private String endTime; 
@@ -248,7 +249,6 @@ public class DescribeAuditRecordsRequest extends Request {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String queryKeywords; 
-        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String securityToken; 
@@ -259,26 +259,35 @@ public class DescribeAuditRecordsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeAuditRecordsRequest response) {
-            super(response);
-            this.DBInstanceId = response.DBInstanceId;
-            this.database = response.database;
-            this.endTime = response.endTime;
-            this.form = response.form;
-            this.nodeId = response.nodeId;
-            this.orderType = response.orderType;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.queryKeywords = response.queryKeywords;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.securityToken = response.securityToken;
-            this.startTime = response.startTime;
-            this.user = response.user;
+        private Builder(DescribeAuditRecordsRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.DBInstanceId = request.DBInstanceId;
+            this.database = request.database;
+            this.endTime = request.endTime;
+            this.form = request.form;
+            this.nodeId = request.nodeId;
+            this.orderType = request.orderType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.queryKeywords = request.queryKeywords;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.securityToken = request.securityToken;
+            this.startTime = request.startTime;
+            this.user = request.user;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * DBInstanceId.
@@ -376,15 +385,6 @@ public class DescribeAuditRecordsRequest extends Request {
         public Builder queryKeywords(String queryKeywords) {
             this.putQueryParameter("QueryKeywords", queryKeywords);
             this.queryKeywords = queryKeywords;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

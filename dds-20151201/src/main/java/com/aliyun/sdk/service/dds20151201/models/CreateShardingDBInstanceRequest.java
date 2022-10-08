@@ -30,6 +30,7 @@ public class CreateShardingDBInstanceRequest extends Request {
 
     @Query
     @NameInMap("ConfigServer")
+    @Validation(required = true)
     private java.util.List < ConfigServer> configServer;
 
     @Query
@@ -47,7 +48,12 @@ public class CreateShardingDBInstanceRequest extends Request {
     private String engineVersion;
 
     @Query
+    @NameInMap("HiddenZoneId")
+    private String hiddenZoneId;
+
+    @Query
     @NameInMap("Mongos")
+    @Validation(required = true)
     private java.util.List < Mongos> mongos;
 
     @Query
@@ -77,6 +83,7 @@ public class CreateShardingDBInstanceRequest extends Request {
 
     @Query
     @NameInMap("ReplicaSet")
+    @Validation(required = true)
     private java.util.List < ReplicaSet> replicaSet;
 
     @Query
@@ -94,6 +101,10 @@ public class CreateShardingDBInstanceRequest extends Request {
     @Query
     @NameInMap("RestoreTime")
     private String restoreTime;
+
+    @Query
+    @NameInMap("SecondaryZoneId")
+    private String secondaryZoneId;
 
     @Query
     @NameInMap("SecurityIPList")
@@ -133,6 +144,7 @@ public class CreateShardingDBInstanceRequest extends Request {
         this.DBInstanceDescription = builder.DBInstanceDescription;
         this.engine = builder.engine;
         this.engineVersion = builder.engineVersion;
+        this.hiddenZoneId = builder.hiddenZoneId;
         this.mongos = builder.mongos;
         this.networkType = builder.networkType;
         this.ownerAccount = builder.ownerAccount;
@@ -145,6 +157,7 @@ public class CreateShardingDBInstanceRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.restoreTime = builder.restoreTime;
+        this.secondaryZoneId = builder.secondaryZoneId;
         this.securityIPList = builder.securityIPList;
         this.securityToken = builder.securityToken;
         this.srcDBInstanceId = builder.srcDBInstanceId;
@@ -221,6 +234,13 @@ public class CreateShardingDBInstanceRequest extends Request {
      */
     public String getEngineVersion() {
         return this.engineVersion;
+    }
+
+    /**
+     * @return hiddenZoneId
+     */
+    public String getHiddenZoneId() {
+        return this.hiddenZoneId;
     }
 
     /**
@@ -308,6 +328,13 @@ public class CreateShardingDBInstanceRequest extends Request {
     }
 
     /**
+     * @return secondaryZoneId
+     */
+    public String getSecondaryZoneId() {
+        return this.secondaryZoneId;
+    }
+
+    /**
      * @return securityIPList
      */
     public String getSecurityIPList() {
@@ -365,6 +392,7 @@ public class CreateShardingDBInstanceRequest extends Request {
         private String DBInstanceDescription; 
         private String engine; 
         private String engineVersion; 
+        private String hiddenZoneId; 
         private java.util.List < Mongos> mongos; 
         private String networkType; 
         private String ownerAccount; 
@@ -377,6 +405,7 @@ public class CreateShardingDBInstanceRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String restoreTime; 
+        private String secondaryZoneId; 
         private String securityIPList; 
         private String securityToken; 
         private String srcDBInstanceId; 
@@ -389,35 +418,37 @@ public class CreateShardingDBInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(CreateShardingDBInstanceRequest response) {
-            super(response);
-            this.accountPassword = response.accountPassword;
-            this.autoRenew = response.autoRenew;
-            this.chargeType = response.chargeType;
-            this.clientToken = response.clientToken;
-            this.configServer = response.configServer;
-            this.DBInstanceDescription = response.DBInstanceDescription;
-            this.engine = response.engine;
-            this.engineVersion = response.engineVersion;
-            this.mongos = response.mongos;
-            this.networkType = response.networkType;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.period = response.period;
-            this.protocolType = response.protocolType;
-            this.regionId = response.regionId;
-            this.replicaSet = response.replicaSet;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.restoreTime = response.restoreTime;
-            this.securityIPList = response.securityIPList;
-            this.securityToken = response.securityToken;
-            this.srcDBInstanceId = response.srcDBInstanceId;
-            this.storageEngine = response.storageEngine;
-            this.vSwitchId = response.vSwitchId;
-            this.vpcId = response.vpcId;
-            this.zoneId = response.zoneId;
+        private Builder(CreateShardingDBInstanceRequest request) {
+            super(request);
+            this.accountPassword = request.accountPassword;
+            this.autoRenew = request.autoRenew;
+            this.chargeType = request.chargeType;
+            this.clientToken = request.clientToken;
+            this.configServer = request.configServer;
+            this.DBInstanceDescription = request.DBInstanceDescription;
+            this.engine = request.engine;
+            this.engineVersion = request.engineVersion;
+            this.hiddenZoneId = request.hiddenZoneId;
+            this.mongos = request.mongos;
+            this.networkType = request.networkType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.period = request.period;
+            this.protocolType = request.protocolType;
+            this.regionId = request.regionId;
+            this.replicaSet = request.replicaSet;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.restoreTime = request.restoreTime;
+            this.secondaryZoneId = request.secondaryZoneId;
+            this.securityIPList = request.securityIPList;
+            this.securityToken = request.securityToken;
+            this.srcDBInstanceId = request.srcDBInstanceId;
+            this.storageEngine = request.storageEngine;
+            this.vSwitchId = request.vSwitchId;
+            this.vpcId = request.vpcId;
+            this.zoneId = request.zoneId;
         } 
 
         /**
@@ -489,6 +520,15 @@ public class CreateShardingDBInstanceRequest extends Request {
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
             this.engineVersion = engineVersion;
+            return this;
+        }
+
+        /**
+         * HiddenZoneId.
+         */
+        public Builder hiddenZoneId(String hiddenZoneId) {
+            this.putQueryParameter("HiddenZoneId", hiddenZoneId);
+            this.hiddenZoneId = hiddenZoneId;
             return this;
         }
 
@@ -601,6 +641,15 @@ public class CreateShardingDBInstanceRequest extends Request {
         }
 
         /**
+         * SecondaryZoneId.
+         */
+        public Builder secondaryZoneId(String secondaryZoneId) {
+            this.putQueryParameter("SecondaryZoneId", secondaryZoneId);
+            this.secondaryZoneId = secondaryZoneId;
+            return this;
+        }
+
+        /**
          * SecurityIPList.
          */
         public Builder securityIPList(String securityIPList) {
@@ -672,9 +721,11 @@ public class CreateShardingDBInstanceRequest extends Request {
 
     public static class ConfigServer extends TeaModel {
         @NameInMap("Class")
+        @Validation(required = true)
         private String _class;
 
         @NameInMap("Storage")
+        @Validation(required = true)
         private Integer storage;
 
         private ConfigServer(Builder builder) {
@@ -733,6 +784,7 @@ public class CreateShardingDBInstanceRequest extends Request {
     }
     public static class Mongos extends TeaModel {
         @NameInMap("Class")
+        @Validation(required = true)
         private String _class;
 
         private Mongos(Builder builder) {
@@ -774,6 +826,7 @@ public class CreateShardingDBInstanceRequest extends Request {
     }
     public static class ReplicaSet extends TeaModel {
         @NameInMap("Class")
+        @Validation(required = true)
         private String _class;
 
         @NameInMap("ReadonlyReplicas")
@@ -781,6 +834,7 @@ public class CreateShardingDBInstanceRequest extends Request {
         private Integer readonlyReplicas;
 
         @NameInMap("Storage")
+        @Validation(required = true)
         private Integer storage;
 
         private ReplicaSet(Builder builder) {

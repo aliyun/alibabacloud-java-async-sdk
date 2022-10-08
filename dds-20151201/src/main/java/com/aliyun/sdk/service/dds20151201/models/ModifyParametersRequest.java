@@ -39,6 +39,10 @@ public class ModifyParametersRequest extends Request {
     private String parameters;
 
     @Query
+    @NameInMap("RegionId")
+    private String regionId;
+
+    @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -58,6 +62,7 @@ public class ModifyParametersRequest extends Request {
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.parameters = builder.parameters;
+        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityToken = builder.securityToken;
@@ -119,6 +124,13 @@ public class ModifyParametersRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -146,6 +158,7 @@ public class ModifyParametersRequest extends Request {
         private String ownerAccount; 
         private Long ownerId; 
         private String parameters; 
+        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String securityToken; 
@@ -154,17 +167,18 @@ public class ModifyParametersRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyParametersRequest response) {
-            super(response);
-            this.characterType = response.characterType;
-            this.DBInstanceId = response.DBInstanceId;
-            this.nodeId = response.nodeId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.parameters = response.parameters;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.securityToken = response.securityToken;
+        private Builder(ModifyParametersRequest request) {
+            super(request);
+            this.characterType = request.characterType;
+            this.DBInstanceId = request.DBInstanceId;
+            this.nodeId = request.nodeId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.parameters = request.parameters;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.securityToken = request.securityToken;
         } 
 
         /**
@@ -218,6 +232,15 @@ public class ModifyParametersRequest extends Request {
         public Builder parameters(String parameters) {
             this.putQueryParameter("Parameters", parameters);
             this.parameters = parameters;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 

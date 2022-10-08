@@ -140,16 +140,16 @@ public class DescribeParametersRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeParametersRequest response) {
-            super(response);
-            this.characterType = response.characterType;
-            this.DBInstanceId = response.DBInstanceId;
-            this.nodeId = response.nodeId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.securityToken = response.securityToken;
+        private Builder(DescribeParametersRequest request) {
+            super(request);
+            this.characterType = request.characterType;
+            this.DBInstanceId = request.DBInstanceId;
+            this.nodeId = request.nodeId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.securityToken = request.securityToken;
         } 
 
         /**

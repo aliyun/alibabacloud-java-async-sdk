@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyDBInstanceDescriptionRequest</p>
  */
 public class ModifyDBInstanceDescriptionRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("DBInstanceDescription")
     @Validation(required = true)
@@ -34,10 +38,6 @@ public class ModifyDBInstanceDescriptionRequest extends Request {
     @NameInMap("OwnerId")
     private Long ownerId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
@@ -52,12 +52,12 @@ public class ModifyDBInstanceDescriptionRequest extends Request {
 
     private ModifyDBInstanceDescriptionRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.DBInstanceDescription = builder.DBInstanceDescription;
         this.DBInstanceId = builder.DBInstanceId;
         this.nodeId = builder.nodeId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityToken = builder.securityToken;
@@ -74,6 +74,13 @@ public class ModifyDBInstanceDescriptionRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -112,13 +119,6 @@ public class ModifyDBInstanceDescriptionRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -140,12 +140,12 @@ public class ModifyDBInstanceDescriptionRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyDBInstanceDescriptionRequest, Builder> {
+        private String regionId; 
         private String DBInstanceDescription; 
         private String DBInstanceId; 
         private String nodeId; 
         private String ownerAccount; 
         private Long ownerId; 
-        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String securityToken; 
@@ -154,18 +154,27 @@ public class ModifyDBInstanceDescriptionRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyDBInstanceDescriptionRequest response) {
-            super(response);
-            this.DBInstanceDescription = response.DBInstanceDescription;
-            this.DBInstanceId = response.DBInstanceId;
-            this.nodeId = response.nodeId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.securityToken = response.securityToken;
+        private Builder(ModifyDBInstanceDescriptionRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.DBInstanceDescription = request.DBInstanceDescription;
+            this.DBInstanceId = request.DBInstanceId;
+            this.nodeId = request.nodeId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.securityToken = request.securityToken;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * DBInstanceDescription.
@@ -209,15 +218,6 @@ public class ModifyDBInstanceDescriptionRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

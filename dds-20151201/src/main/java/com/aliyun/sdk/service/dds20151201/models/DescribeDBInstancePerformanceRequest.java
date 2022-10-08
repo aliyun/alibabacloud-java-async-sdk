@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBInstancePerformanceRequest</p>
  */
 public class DescribeDBInstancePerformanceRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("DBInstanceId")
     @Validation(required = true)
@@ -38,10 +42,6 @@ public class DescribeDBInstancePerformanceRequest extends Request {
     @Query
     @NameInMap("OwnerId")
     private Long ownerId;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Query
     @NameInMap("ReplicaSetRole")
@@ -70,13 +70,13 @@ public class DescribeDBInstancePerformanceRequest extends Request {
 
     private DescribeDBInstancePerformanceRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.DBInstanceId = builder.DBInstanceId;
         this.endTime = builder.endTime;
         this.key = builder.key;
         this.nodeId = builder.nodeId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
         this.replicaSetRole = builder.replicaSetRole;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
@@ -96,6 +96,13 @@ public class DescribeDBInstancePerformanceRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -141,13 +148,6 @@ public class DescribeDBInstancePerformanceRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return replicaSetRole
      */
     public String getReplicaSetRole() {
@@ -190,13 +190,13 @@ public class DescribeDBInstancePerformanceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeDBInstancePerformanceRequest, Builder> {
+        private String regionId; 
         private String DBInstanceId; 
         private String endTime; 
         private String key; 
         private String nodeId; 
         private String ownerAccount; 
         private Long ownerId; 
-        private String regionId; 
         private String replicaSetRole; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
@@ -208,22 +208,31 @@ public class DescribeDBInstancePerformanceRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDBInstancePerformanceRequest response) {
-            super(response);
-            this.DBInstanceId = response.DBInstanceId;
-            this.endTime = response.endTime;
-            this.key = response.key;
-            this.nodeId = response.nodeId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.replicaSetRole = response.replicaSetRole;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.roleId = response.roleId;
-            this.securityToken = response.securityToken;
-            this.startTime = response.startTime;
+        private Builder(DescribeDBInstancePerformanceRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.DBInstanceId = request.DBInstanceId;
+            this.endTime = request.endTime;
+            this.key = request.key;
+            this.nodeId = request.nodeId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.replicaSetRole = request.replicaSetRole;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.roleId = request.roleId;
+            this.securityToken = request.securityToken;
+            this.startTime = request.startTime;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * DBInstanceId.
@@ -276,15 +285,6 @@ public class DescribeDBInstancePerformanceRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

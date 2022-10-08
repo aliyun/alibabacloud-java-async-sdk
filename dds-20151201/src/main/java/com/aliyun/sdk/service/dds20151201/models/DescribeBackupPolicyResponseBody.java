@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeBackupPolicyResponseBody</p>
  */
 public class DescribeBackupPolicyResponseBody extends TeaModel {
+    @NameInMap("BackupInterval")
+    private Integer backupInterval;
+
     @NameInMap("BackupRetentionPeriod")
     private String backupRetentionPeriod;
 
@@ -30,13 +33,18 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("SnapshotBackupType")
+    private String snapshotBackupType;
+
     private DescribeBackupPolicyResponseBody(Builder builder) {
+        this.backupInterval = builder.backupInterval;
         this.backupRetentionPeriod = builder.backupRetentionPeriod;
         this.enableBackupLog = builder.enableBackupLog;
         this.logBackupRetentionPeriod = builder.logBackupRetentionPeriod;
         this.preferredBackupPeriod = builder.preferredBackupPeriod;
         this.preferredBackupTime = builder.preferredBackupTime;
         this.requestId = builder.requestId;
+        this.snapshotBackupType = builder.snapshotBackupType;
     }
 
     public static Builder builder() {
@@ -45,6 +53,13 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
 
     public static DescribeBackupPolicyResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return backupInterval
+     */
+    public Integer getBackupInterval() {
+        return this.backupInterval;
     }
 
     /**
@@ -89,13 +104,30 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return snapshotBackupType
+     */
+    public String getSnapshotBackupType() {
+        return this.snapshotBackupType;
+    }
+
     public static final class Builder {
+        private Integer backupInterval; 
         private String backupRetentionPeriod; 
         private Integer enableBackupLog; 
         private Integer logBackupRetentionPeriod; 
         private String preferredBackupPeriod; 
         private String preferredBackupTime; 
         private String requestId; 
+        private String snapshotBackupType; 
+
+        /**
+         * BackupInterval.
+         */
+        public Builder backupInterval(Integer backupInterval) {
+            this.backupInterval = backupInterval;
+            return this;
+        }
 
         /**
          * BackupRetentionPeriod.
@@ -142,6 +174,14 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * SnapshotBackupType.
+         */
+        public Builder snapshotBackupType(String snapshotBackupType) {
+            this.snapshotBackupType = snapshotBackupType;
             return this;
         }
 

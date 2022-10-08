@@ -179,19 +179,19 @@ public class DescribeBackupDBsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeBackupDBsRequest response) {
-            super(response);
-            this.backupId = response.backupId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.restoreTime = response.restoreTime;
-            this.securityToken = response.securityToken;
-            this.sourceDBInstance = response.sourceDBInstance;
+        private Builder(DescribeBackupDBsRequest request) {
+            super(request);
+            this.backupId = request.backupId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.restoreTime = request.restoreTime;
+            this.securityToken = request.securityToken;
+            this.sourceDBInstance = request.sourceDBInstance;
         } 
 
         /**

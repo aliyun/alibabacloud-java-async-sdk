@@ -29,66 +29,8 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler = new TeaAsyncHandler(configuration);
         this.product = "Dds";
         this.version = "2015-12-01";
-        this.endpointRule = "regional";
-        this.endpointMap = CommonUtil.buildMap(
-            new TeaPair("cn-qingdao", "mongodb.aliyuncs.com"),
-            new TeaPair("cn-beijing", "mongodb.aliyuncs.com"),
-            new TeaPair("cn-chengdu", "mongodb.cn-chengdu.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "mongodb.cn-zhangjiakou.aliyuncs.com"),
-            new TeaPair("cn-huhehaote", "mongodb.cn-huhehaote.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "mongodb.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "mongodb.aliyuncs.com"),
-            new TeaPair("cn-shenzhen", "mongodb.aliyuncs.com"),
-            new TeaPair("cn-heyuan", "mongodb.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "mongodb.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "mongodb.aliyuncs.com"),
-            new TeaPair("ap-southeast-2", "mongodb.ap-southeast-2.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "mongodb.ap-southeast-3.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "mongodb.ap-southeast-5.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "mongodb.ap-northeast-1.aliyuncs.com"),
-            new TeaPair("eu-west-1", "mongodb.eu-west-1.aliyuncs.com"),
-            new TeaPair("us-west-1", "mongodb.aliyuncs.com"),
-            new TeaPair("us-east-1", "mongodb.aliyuncs.com"),
-            new TeaPair("eu-central-1", "mongodb.eu-central-1.aliyuncs.com"),
-            new TeaPair("me-east-1", "mongodb.me-east-1.aliyuncs.com"),
-            new TeaPair("ap-south-1", "mongodb.ap-south-1.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-finance", "mongodb.aliyuncs.com"),
-            new TeaPair("cn-shanghai-finance-1", "mongodb.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-finance-1", "mongodb.aliyuncs.com"),
-            new TeaPair("cn-north-2-gov-1", "mongodb.aliyuncs.com"),
-            new TeaPair("ap-northeast-2-pop", "mongodb.aliyuncs.com"),
-            new TeaPair("cn-beijing-finance-1", "mongodb.aliyuncs.com"),
-            new TeaPair("cn-beijing-finance-pop", "mongodb.aliyuncs.com"),
-            new TeaPair("cn-beijing-gov-1", "mongodb.aliyuncs.com"),
-            new TeaPair("cn-beijing-nu16-b01", "mongodb.aliyuncs.com"),
-            new TeaPair("cn-edge-1", "mongodb.aliyuncs.com"),
-            new TeaPair("cn-fujian", "mongodb.aliyuncs.com"),
-            new TeaPair("cn-haidian-cm12-c01", "mongodb.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-bj-b01", "mongodb.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-internal-prod-1", "mongodb.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-internal-test-1", "mongodb.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-internal-test-2", "mongodb.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-internal-test-3", "mongodb.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-test-306", "mongodb.aliyuncs.com"),
-            new TeaPair("cn-hongkong-finance-pop", "mongodb.aliyuncs.com"),
-            new TeaPair("cn-huhehaote-nebula-1", "mongodb.aliyuncs.com"),
-            new TeaPair("cn-qingdao-nebula", "mongodb.aliyuncs.com"),
-            new TeaPair("cn-shanghai-et15-b01", "mongodb.aliyuncs.com"),
-            new TeaPair("cn-shanghai-et2-b01", "mongodb.aliyuncs.com"),
-            new TeaPair("cn-shanghai-inner", "mongodb.aliyuncs.com"),
-            new TeaPair("cn-shanghai-internal-test-1", "mongodb.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-inner", "mongodb.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-st4-d01", "mongodb.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-su18-b01", "mongodb.aliyuncs.com"),
-            new TeaPair("cn-wuhan", "mongodb.aliyuncs.com"),
-            new TeaPair("cn-wulanchabu", "mongodb.aliyuncs.com"),
-            new TeaPair("cn-yushanfang", "mongodb.aliyuncs.com"),
-            new TeaPair("cn-zhangbei-na61-b01", "mongodb.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou-na62-a01", "mongodb.aliyuncs.com"),
-            new TeaPair("cn-zhengzhou-nebula-1", "mongodb.aliyuncs.com"),
-            new TeaPair("eu-west-1-oxs", "mongodb.aliyuncs.com"),
-            new TeaPair("rus-west-1-pop", "mongodb.aliyuncs.com")
-        );
+        this.endpointRule = "";
+        this.endpointMap = new java.util.HashMap<>();
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
 
@@ -210,34 +152,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
-    public CompletableFuture<CreateRecommendationTaskResponse> createRecommendationTask(CreateRecommendationTaskRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateRecommendationTask").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateRecommendationTaskResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<CreateRecommendationTaskResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<CreateServerlessDBInstanceResponse> createServerlessDBInstance(CreateServerlessDBInstanceRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateServerlessDBInstance").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateServerlessDBInstanceResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<CreateServerlessDBInstanceResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
     public CompletableFuture<CreateShardingDBInstanceResponse> createShardingDBInstance(CreateShardingDBInstanceRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -322,20 +236,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
-    public CompletableFuture<DescribeAuditFilesResponse> describeAuditFiles(DescribeAuditFilesRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeAuditFiles").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeAuditFilesResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DescribeAuditFilesResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
     public CompletableFuture<DescribeAuditLogFilterResponse> describeAuditLogFilter(DescribeAuditLogFilterRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -400,20 +300,6 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeAvailableResourceResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<DescribeAvailableTimeRangeResponse> describeAvailableTimeRange(DescribeAvailableTimeRangeRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeAvailableTimeRange").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeAvailableTimeRangeResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DescribeAvailableTimeRangeResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
