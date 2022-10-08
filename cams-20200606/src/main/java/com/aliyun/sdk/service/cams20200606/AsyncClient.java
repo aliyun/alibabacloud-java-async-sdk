@@ -18,6 +18,10 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
+    CompletableFuture<BeeBotAssociateResponse> beeBotAssociate(BeeBotAssociateRequest request);
+
+    CompletableFuture<BeeBotChatResponse> beeBotChat(BeeBotChatRequest request);
+
     CompletableFuture<CreateChatappTemplateResponse> createChatappTemplate(CreateChatappTemplateRequest request);
 
     CompletableFuture<DeleteChatappTemplateResponse> deleteChatappTemplate(DeleteChatappTemplateRequest request);
@@ -25,6 +29,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetChatappTemplateDetailResponse> getChatappTemplateDetail(GetChatappTemplateDetailRequest request);
 
     CompletableFuture<ListChatappTemplateResponse> listChatappTemplate(ListChatappTemplateRequest request);
+
+    CompletableFuture<ModifyChatappTemplateResponse> modifyChatappTemplate(ModifyChatappTemplateRequest request);
 
     CompletableFuture<SendChatappMassMessageResponse> sendChatappMassMessage(SendChatappMassMessageRequest request);
 

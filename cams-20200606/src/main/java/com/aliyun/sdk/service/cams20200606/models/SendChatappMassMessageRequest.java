@@ -40,6 +40,7 @@ public class SendChatappMassMessageRequest extends Request {
 
     @Body
     @NameInMap("Language")
+    @Validation(required = true)
     private String language;
 
     @Body
@@ -53,6 +54,7 @@ public class SendChatappMassMessageRequest extends Request {
 
     @Body
     @NameInMap("TemplateCode")
+    @Validation(required = true)
     private String templateCode;
 
     private SendChatappMassMessageRequest(Builder builder) {
