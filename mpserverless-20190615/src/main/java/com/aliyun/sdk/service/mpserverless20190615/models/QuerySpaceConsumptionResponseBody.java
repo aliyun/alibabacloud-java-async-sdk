@@ -15,6 +15,12 @@ public class QuerySpaceConsumptionResponseBody extends TeaModel {
     @NameInMap("CsUsage")
     private CsUsage csUsage;
 
+    @NameInMap("CycleEndTime")
+    private Long cycleEndTime;
+
+    @NameInMap("CycleStartTime")
+    private Long cycleStartTime;
+
     @NameInMap("DbUsage")
     private DbUsage dbUsage;
 
@@ -38,6 +44,8 @@ public class QuerySpaceConsumptionResponseBody extends TeaModel {
 
     private QuerySpaceConsumptionResponseBody(Builder builder) {
         this.csUsage = builder.csUsage;
+        this.cycleEndTime = builder.cycleEndTime;
+        this.cycleStartTime = builder.cycleStartTime;
         this.dbUsage = builder.dbUsage;
         this.fcUsage = builder.fcUsage;
         this.gmtCreate = builder.gmtCreate;
@@ -60,6 +68,20 @@ public class QuerySpaceConsumptionResponseBody extends TeaModel {
      */
     public CsUsage getCsUsage() {
         return this.csUsage;
+    }
+
+    /**
+     * @return cycleEndTime
+     */
+    public Long getCycleEndTime() {
+        return this.cycleEndTime;
+    }
+
+    /**
+     * @return cycleStartTime
+     */
+    public Long getCycleStartTime() {
+        return this.cycleStartTime;
     }
 
     /**
@@ -113,6 +135,8 @@ public class QuerySpaceConsumptionResponseBody extends TeaModel {
 
     public static final class Builder {
         private CsUsage csUsage; 
+        private Long cycleEndTime; 
+        private Long cycleStartTime; 
         private DbUsage dbUsage; 
         private FcUsage fcUsage; 
         private String gmtCreate; 
@@ -126,6 +150,22 @@ public class QuerySpaceConsumptionResponseBody extends TeaModel {
          */
         public Builder csUsage(CsUsage csUsage) {
             this.csUsage = csUsage;
+            return this;
+        }
+
+        /**
+         * CycleEndTime.
+         */
+        public Builder cycleEndTime(Long cycleEndTime) {
+            this.cycleEndTime = cycleEndTime;
+            return this;
+        }
+
+        /**
+         * CycleStartTime.
+         */
+        public Builder cycleStartTime(Long cycleStartTime) {
+            this.cycleStartTime = cycleStartTime;
             return this;
         }
 

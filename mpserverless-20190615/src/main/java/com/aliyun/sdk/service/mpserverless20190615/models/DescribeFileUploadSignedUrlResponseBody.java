@@ -15,6 +15,9 @@ public class DescribeFileUploadSignedUrlResponseBody extends TeaModel {
     @NameInMap("Id")
     private String id;
 
+    @NameInMap("OssCallbackUrl")
+    private String ossCallbackUrl;
+
     @NameInMap("RequestId")
     private String requestId;
 
@@ -23,6 +26,7 @@ public class DescribeFileUploadSignedUrlResponseBody extends TeaModel {
 
     private DescribeFileUploadSignedUrlResponseBody(Builder builder) {
         this.id = builder.id;
+        this.ossCallbackUrl = builder.ossCallbackUrl;
         this.requestId = builder.requestId;
         this.signUrl = builder.signUrl;
     }
@@ -43,6 +47,13 @@ public class DescribeFileUploadSignedUrlResponseBody extends TeaModel {
     }
 
     /**
+     * @return ossCallbackUrl
+     */
+    public String getOssCallbackUrl() {
+        return this.ossCallbackUrl;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -58,6 +69,7 @@ public class DescribeFileUploadSignedUrlResponseBody extends TeaModel {
 
     public static final class Builder {
         private String id; 
+        private String ossCallbackUrl; 
         private String requestId; 
         private String signUrl; 
 
@@ -66,6 +78,14 @@ public class DescribeFileUploadSignedUrlResponseBody extends TeaModel {
          */
         public Builder id(String id) {
             this.id = id;
+            return this;
+        }
+
+        /**
+         * OssCallbackUrl.
+         */
+        public Builder ossCallbackUrl(String ossCallbackUrl) {
+            this.ossCallbackUrl = ossCallbackUrl;
             return this;
         }
 
