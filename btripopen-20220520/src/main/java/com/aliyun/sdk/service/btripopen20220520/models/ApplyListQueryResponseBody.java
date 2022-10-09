@@ -12,9 +12,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ApplyListQueryResponseBody</p>
  */
 public class ApplyListQueryResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    private String requestId;
-
     @NameInMap("code")
     private Integer code;
 
@@ -24,6 +21,9 @@ public class ApplyListQueryResponseBody extends TeaModel {
     @NameInMap("module_list")
     private java.util.List < ModuleList> moduleList;
 
+    @NameInMap("requestId")
+    private String requestId;
+
     @NameInMap("success")
     private Boolean success;
 
@@ -31,10 +31,10 @@ public class ApplyListQueryResponseBody extends TeaModel {
     private String traceId;
 
     private ApplyListQueryResponseBody(Builder builder) {
-        this.requestId = builder.requestId;
         this.code = builder.code;
         this.message = builder.message;
         this.moduleList = builder.moduleList;
+        this.requestId = builder.requestId;
         this.success = builder.success;
         this.traceId = builder.traceId;
     }
@@ -45,13 +45,6 @@ public class ApplyListQueryResponseBody extends TeaModel {
 
     public static ApplyListQueryResponseBody create() {
         return builder().build();
-    }
-
-    /**
-     * @return requestId
-     */
-    public String getRequestId() {
-        return this.requestId;
     }
 
     /**
@@ -76,6 +69,13 @@ public class ApplyListQueryResponseBody extends TeaModel {
     }
 
     /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    /**
      * @return success
      */
     public Boolean getSuccess() {
@@ -90,20 +90,12 @@ public class ApplyListQueryResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String requestId; 
         private Integer code; 
         private String message; 
         private java.util.List < ModuleList> moduleList; 
+        private String requestId; 
         private Boolean success; 
         private String traceId; 
-
-        /**
-         * RequestId.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
 
         /**
          * code.
@@ -126,6 +118,14 @@ public class ApplyListQueryResponseBody extends TeaModel {
          */
         public Builder moduleList(java.util.List < ModuleList> moduleList) {
             this.moduleList = moduleList;
+            return this;
+        }
+
+        /**
+         * requestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 

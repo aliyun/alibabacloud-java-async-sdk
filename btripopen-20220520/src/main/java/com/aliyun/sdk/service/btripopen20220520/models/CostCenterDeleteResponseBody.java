@@ -12,14 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CostCenterDeleteResponseBody</p>
  */
 public class CostCenterDeleteResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    private String requestId;
-
     @NameInMap("code")
     private Integer code;
 
     @NameInMap("message")
     private String message;
+
+    @NameInMap("requestId")
+    private String requestId;
 
     @NameInMap("success")
     private Boolean success;
@@ -28,9 +28,9 @@ public class CostCenterDeleteResponseBody extends TeaModel {
     private String traceId;
 
     private CostCenterDeleteResponseBody(Builder builder) {
-        this.requestId = builder.requestId;
         this.code = builder.code;
         this.message = builder.message;
+        this.requestId = builder.requestId;
         this.success = builder.success;
         this.traceId = builder.traceId;
     }
@@ -41,13 +41,6 @@ public class CostCenterDeleteResponseBody extends TeaModel {
 
     public static CostCenterDeleteResponseBody create() {
         return builder().build();
-    }
-
-    /**
-     * @return requestId
-     */
-    public String getRequestId() {
-        return this.requestId;
     }
 
     /**
@@ -65,6 +58,13 @@ public class CostCenterDeleteResponseBody extends TeaModel {
     }
 
     /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    /**
      * @return success
      */
     public Boolean getSuccess() {
@@ -79,19 +79,11 @@ public class CostCenterDeleteResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String requestId; 
         private Integer code; 
         private String message; 
+        private String requestId; 
         private Boolean success; 
         private String traceId; 
-
-        /**
-         * RequestId.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
 
         /**
          * 结果代码
@@ -106,6 +98,14 @@ public class CostCenterDeleteResponseBody extends TeaModel {
          */
         public Builder message(String message) {
             this.message = message;
+            return this;
+        }
+
+        /**
+         * requestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 

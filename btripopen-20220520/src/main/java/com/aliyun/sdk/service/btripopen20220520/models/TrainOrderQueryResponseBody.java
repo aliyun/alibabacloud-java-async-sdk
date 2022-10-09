@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>TrainOrderQueryResponseBody</p>
  */
 public class TrainOrderQueryResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    private String requestId;
-
     @NameInMap("module")
     private Module module;
+
+    @NameInMap("requestId")
+    private String requestId;
 
     @NameInMap("result_code")
     private Integer resultCode;
@@ -31,8 +31,8 @@ public class TrainOrderQueryResponseBody extends TeaModel {
     private String traceId;
 
     private TrainOrderQueryResponseBody(Builder builder) {
-        this.requestId = builder.requestId;
         this.module = builder.module;
+        this.requestId = builder.requestId;
         this.resultCode = builder.resultCode;
         this.resultMsg = builder.resultMsg;
         this.success = builder.success;
@@ -48,17 +48,17 @@ public class TrainOrderQueryResponseBody extends TeaModel {
     }
 
     /**
-     * @return requestId
-     */
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    /**
      * @return module
      */
     public Module getModule() {
         return this.module;
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
     }
 
     /**
@@ -90,26 +90,26 @@ public class TrainOrderQueryResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String requestId; 
         private Module module; 
+        private String requestId; 
         private Integer resultCode; 
         private String resultMsg; 
         private Boolean success; 
         private String traceId; 
 
         /**
-         * RequestId.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
          * module.
          */
         public Builder module(Module module) {
             this.module = module;
+            return this;
+        }
+
+        /**
+         * requestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 

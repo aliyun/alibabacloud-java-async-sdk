@@ -12,9 +12,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>EntitySetResponseBody</p>
  */
 public class EntitySetResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    private String requestId;
-
     @NameInMap("code")
     private Integer code;
 
@@ -27,6 +24,9 @@ public class EntitySetResponseBody extends TeaModel {
     @NameInMap("more_page")
     private Boolean morePage;
 
+    @NameInMap("requestId")
+    private String requestId;
+
     @NameInMap("success")
     private Boolean success;
 
@@ -34,11 +34,11 @@ public class EntitySetResponseBody extends TeaModel {
     private String traceId;
 
     private EntitySetResponseBody(Builder builder) {
-        this.requestId = builder.requestId;
         this.code = builder.code;
         this.message = builder.message;
         this.module = builder.module;
         this.morePage = builder.morePage;
+        this.requestId = builder.requestId;
         this.success = builder.success;
         this.traceId = builder.traceId;
     }
@@ -49,13 +49,6 @@ public class EntitySetResponseBody extends TeaModel {
 
     public static EntitySetResponseBody create() {
         return builder().build();
-    }
-
-    /**
-     * @return requestId
-     */
-    public String getRequestId() {
-        return this.requestId;
     }
 
     /**
@@ -87,6 +80,13 @@ public class EntitySetResponseBody extends TeaModel {
     }
 
     /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    /**
      * @return success
      */
     public Boolean getSuccess() {
@@ -101,21 +101,13 @@ public class EntitySetResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String requestId; 
         private Integer code; 
         private String message; 
         private Module module; 
         private Boolean morePage; 
+        private String requestId; 
         private Boolean success; 
         private String traceId; 
-
-        /**
-         * RequestId.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
 
         /**
          * 结果代码
@@ -146,6 +138,14 @@ public class EntitySetResponseBody extends TeaModel {
          */
         public Builder morePage(Boolean morePage) {
             this.morePage = morePage;
+            return this;
+        }
+
+        /**
+         * requestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 

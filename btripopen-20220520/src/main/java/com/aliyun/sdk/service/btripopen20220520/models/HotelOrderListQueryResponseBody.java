@@ -12,9 +12,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>HotelOrderListQueryResponseBody</p>
  */
 public class HotelOrderListQueryResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    private String requestId;
-
     @NameInMap("code")
     private Integer code;
 
@@ -27,6 +24,9 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
     @NameInMap("page_info")
     private PageInfo pageInfo;
 
+    @NameInMap("requestId")
+    private String requestId;
+
     @NameInMap("success")
     private Boolean success;
 
@@ -34,11 +34,11 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
     private String traceId;
 
     private HotelOrderListQueryResponseBody(Builder builder) {
-        this.requestId = builder.requestId;
         this.code = builder.code;
         this.message = builder.message;
         this.module = builder.module;
         this.pageInfo = builder.pageInfo;
+        this.requestId = builder.requestId;
         this.success = builder.success;
         this.traceId = builder.traceId;
     }
@@ -49,13 +49,6 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
 
     public static HotelOrderListQueryResponseBody create() {
         return builder().build();
-    }
-
-    /**
-     * @return requestId
-     */
-    public String getRequestId() {
-        return this.requestId;
     }
 
     /**
@@ -87,6 +80,13 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
     }
 
     /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    /**
      * @return success
      */
     public Boolean getSuccess() {
@@ -101,21 +101,13 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String requestId; 
         private Integer code; 
         private String message; 
         private java.util.List < Module> module; 
         private PageInfo pageInfo; 
+        private String requestId; 
         private Boolean success; 
         private String traceId; 
-
-        /**
-         * RequestId.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
 
         /**
          * code.
@@ -146,6 +138,14 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
+            return this;
+        }
+
+        /**
+         * requestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 

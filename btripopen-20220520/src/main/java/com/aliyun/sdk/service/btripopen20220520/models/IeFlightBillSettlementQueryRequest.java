@@ -14,18 +14,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class IeFlightBillSettlementQueryRequest extends Request {
     @Query
     @NameInMap("page_no")
+    @Validation(required = true)
     private Integer pageNo;
 
     @Query
     @NameInMap("page_size")
+    @Validation(required = true)
     private Integer pageSize;
 
     @Query
     @NameInMap("period_end")
+    @Validation(required = true)
     private String periodEnd;
 
     @Query
     @NameInMap("period_start")
+    @Validation(required = true)
     private String periodStart;
 
     @Header

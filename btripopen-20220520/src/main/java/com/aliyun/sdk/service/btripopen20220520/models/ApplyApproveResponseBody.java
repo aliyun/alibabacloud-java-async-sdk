@@ -21,7 +21,7 @@ public class ApplyApproveResponseBody extends TeaModel {
     @NameInMap("module")
     private String module;
 
-    @NameInMap("request_id")
+    @NameInMap("requestId")
     private String requestId;
 
     @NameInMap("success")
@@ -122,7 +122,7 @@ public class ApplyApproveResponseBody extends TeaModel {
         }
 
         /**
-         * request_id.
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

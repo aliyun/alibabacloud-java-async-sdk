@@ -12,9 +12,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>InvoiceSearchResponseBody</p>
  */
 public class InvoiceSearchResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    private String requestId;
-
     @NameInMap("code")
     private Integer code;
 
@@ -24,6 +21,9 @@ public class InvoiceSearchResponseBody extends TeaModel {
     @NameInMap("module")
     private java.util.List < Module> module;
 
+    @NameInMap("requestId")
+    private String requestId;
+
     @NameInMap("success")
     private Boolean success;
 
@@ -31,10 +31,10 @@ public class InvoiceSearchResponseBody extends TeaModel {
     private String traceId;
 
     private InvoiceSearchResponseBody(Builder builder) {
-        this.requestId = builder.requestId;
         this.code = builder.code;
         this.message = builder.message;
         this.module = builder.module;
+        this.requestId = builder.requestId;
         this.success = builder.success;
         this.traceId = builder.traceId;
     }
@@ -45,13 +45,6 @@ public class InvoiceSearchResponseBody extends TeaModel {
 
     public static InvoiceSearchResponseBody create() {
         return builder().build();
-    }
-
-    /**
-     * @return requestId
-     */
-    public String getRequestId() {
-        return this.requestId;
     }
 
     /**
@@ -76,6 +69,13 @@ public class InvoiceSearchResponseBody extends TeaModel {
     }
 
     /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    /**
      * @return success
      */
     public Boolean getSuccess() {
@@ -90,20 +90,12 @@ public class InvoiceSearchResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String requestId; 
         private Integer code; 
         private String message; 
         private java.util.List < Module> module; 
+        private String requestId; 
         private Boolean success; 
         private String traceId; 
-
-        /**
-         * RequestId.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
 
         /**
          * 结果代码
@@ -126,6 +118,14 @@ public class InvoiceSearchResponseBody extends TeaModel {
          */
         public Builder module(java.util.List < Module> module) {
             this.module = module;
+            return this;
+        }
+
+        /**
+         * requestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 
