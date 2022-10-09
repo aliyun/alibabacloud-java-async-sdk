@@ -107,6 +107,9 @@ public class IsvUserSaveRequest extends Request {
         @NameInMap("leave_status")
         private Integer leaveStatus;
 
+        @NameInMap("manager_user_id")
+        private String managerUserId;
+
         @NameInMap("phone")
         private String phone;
 
@@ -138,6 +141,7 @@ public class IsvUserSaveRequest extends Request {
             this.email = builder.email;
             this.jobNo = builder.jobNo;
             this.leaveStatus = builder.leaveStatus;
+            this.managerUserId = builder.managerUserId;
             this.phone = builder.phone;
             this.position = builder.position;
             this.positionLevel = builder.positionLevel;
@@ -182,6 +186,13 @@ public class IsvUserSaveRequest extends Request {
          */
         public Integer getLeaveStatus() {
             return this.leaveStatus;
+        }
+
+        /**
+         * @return managerUserId
+         */
+        public String getManagerUserId() {
+            return this.managerUserId;
         }
 
         /**
@@ -245,6 +256,7 @@ public class IsvUserSaveRequest extends Request {
             private String email; 
             private String jobNo; 
             private Integer leaveStatus; 
+            private String managerUserId; 
             private String phone; 
             private String position; 
             private String positionLevel; 
@@ -283,6 +295,14 @@ public class IsvUserSaveRequest extends Request {
              */
             public Builder leaveStatus(Integer leaveStatus) {
                 this.leaveStatus = leaveStatus;
+                return this;
+            }
+
+            /**
+             * manager_user_id.
+             */
+            public Builder managerUserId(String managerUserId) {
+                this.managerUserId = managerUserId;
                 return this;
             }
 
