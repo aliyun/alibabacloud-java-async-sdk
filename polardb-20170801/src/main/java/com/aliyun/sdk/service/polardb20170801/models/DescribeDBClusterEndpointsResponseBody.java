@@ -259,6 +259,9 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
         @NameInMap("AutoAddNewNodes")
         private String autoAddNewNodes;
 
+        @NameInMap("DBClusterId")
+        private String DBClusterId;
+
         @NameInMap("DBEndpointDescription")
         private String DBEndpointDescription;
 
@@ -283,6 +286,7 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
         private Items(Builder builder) {
             this.addressItems = builder.addressItems;
             this.autoAddNewNodes = builder.autoAddNewNodes;
+            this.DBClusterId = builder.DBClusterId;
             this.DBEndpointDescription = builder.DBEndpointDescription;
             this.DBEndpointId = builder.DBEndpointId;
             this.endpointConfig = builder.endpointConfig;
@@ -312,6 +316,13 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
          */
         public String getAutoAddNewNodes() {
             return this.autoAddNewNodes;
+        }
+
+        /**
+         * @return DBClusterId
+         */
+        public String getDBClusterId() {
+            return this.DBClusterId;
         }
 
         /**
@@ -366,6 +377,7 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List < AddressItems> addressItems; 
             private String autoAddNewNodes; 
+            private String DBClusterId; 
             private String DBEndpointDescription; 
             private String DBEndpointId; 
             private String endpointConfig; 
@@ -387,6 +399,14 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
              */
             public Builder autoAddNewNodes(String autoAddNewNodes) {
                 this.autoAddNewNodes = autoAddNewNodes;
+                return this;
+            }
+
+            /**
+             * DBClusterId.
+             */
+            public Builder DBClusterId(String DBClusterId) {
+                this.DBClusterId = DBClusterId;
                 return this;
             }
 

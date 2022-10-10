@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeGlobalDatabaseNetworksRequest</p>
  */
 public class DescribeGlobalDatabaseNetworksRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("DBClusterId")
     private String DBClusterId;
@@ -40,9 +44,9 @@ public class DescribeGlobalDatabaseNetworksRequest extends Request {
     @NameInMap("PageSize")
     private Integer pageSize;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
+    @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
 
     @Query
     @NameInMap("ResourceOwnerAccount")
@@ -58,6 +62,7 @@ public class DescribeGlobalDatabaseNetworksRequest extends Request {
 
     private DescribeGlobalDatabaseNetworksRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.DBClusterId = builder.DBClusterId;
         this.GDNDescription = builder.GDNDescription;
         this.GDNId = builder.GDNId;
@@ -65,7 +70,7 @@ public class DescribeGlobalDatabaseNetworksRequest extends Request {
         this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityToken = builder.securityToken;
@@ -82,6 +87,13 @@ public class DescribeGlobalDatabaseNetworksRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -134,10 +146,10 @@ public class DescribeGlobalDatabaseNetworksRequest extends Request {
     }
 
     /**
-     * @return regionId
+     * @return resourceGroupId
      */
-    public String getRegionId() {
-        return this.regionId;
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     /**
@@ -162,6 +174,7 @@ public class DescribeGlobalDatabaseNetworksRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeGlobalDatabaseNetworksRequest, Builder> {
+        private String regionId; 
         private String DBClusterId; 
         private String GDNDescription; 
         private String GDNId; 
@@ -169,7 +182,7 @@ public class DescribeGlobalDatabaseNetworksRequest extends Request {
         private Long ownerId; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private String regionId; 
+        private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String securityToken; 
@@ -180,6 +193,7 @@ public class DescribeGlobalDatabaseNetworksRequest extends Request {
 
         private Builder(DescribeGlobalDatabaseNetworksRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.DBClusterId = request.DBClusterId;
             this.GDNDescription = request.GDNDescription;
             this.GDNId = request.GDNId;
@@ -187,11 +201,20 @@ public class DescribeGlobalDatabaseNetworksRequest extends Request {
             this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
-            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.securityToken = request.securityToken;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * DBClusterId.
@@ -257,11 +280,11 @@ public class DescribeGlobalDatabaseNetworksRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * ResourceGroupId.
          */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

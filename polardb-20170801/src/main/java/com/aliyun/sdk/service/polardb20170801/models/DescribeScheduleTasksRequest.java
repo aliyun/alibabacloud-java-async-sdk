@@ -53,6 +53,10 @@ public class DescribeScheduleTasksRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -80,6 +84,7 @@ public class DescribeScheduleTasksRequest extends Request {
         this.plannedEndTime = builder.plannedEndTime;
         this.plannedStartTime = builder.plannedStartTime;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.status = builder.status;
@@ -170,6 +175,13 @@ public class DescribeScheduleTasksRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -208,6 +220,7 @@ public class DescribeScheduleTasksRequest extends Request {
         private String plannedEndTime; 
         private String plannedStartTime; 
         private String regionId; 
+        private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String status; 
@@ -229,6 +242,7 @@ public class DescribeScheduleTasksRequest extends Request {
             this.plannedEndTime = request.plannedEndTime;
             this.plannedStartTime = request.plannedStartTime;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.status = request.status;
@@ -322,6 +336,15 @@ public class DescribeScheduleTasksRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyDBClusterMigrationRequest</p>
  */
 public class ModifyDBClusterMigrationRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("ConnectionStrings")
     private String connectionStrings;
@@ -33,10 +37,6 @@ public class ModifyDBClusterMigrationRequest extends Request {
     @Query
     @NameInMap("OwnerId")
     private Long ownerId;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Query
     @NameInMap("ResourceOwnerAccount")
@@ -61,12 +61,12 @@ public class ModifyDBClusterMigrationRequest extends Request {
 
     private ModifyDBClusterMigrationRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.connectionStrings = builder.connectionStrings;
         this.DBClusterId = builder.DBClusterId;
         this.newMasterInstanceId = builder.newMasterInstanceId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityToken = builder.securityToken;
@@ -85,6 +85,13 @@ public class ModifyDBClusterMigrationRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -123,13 +130,6 @@ public class ModifyDBClusterMigrationRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -165,12 +165,12 @@ public class ModifyDBClusterMigrationRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyDBClusterMigrationRequest, Builder> {
+        private String regionId; 
         private String connectionStrings; 
         private String DBClusterId; 
         private String newMasterInstanceId; 
         private String ownerAccount; 
         private Long ownerId; 
-        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String securityToken; 
@@ -183,18 +183,27 @@ public class ModifyDBClusterMigrationRequest extends Request {
 
         private Builder(ModifyDBClusterMigrationRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.connectionStrings = request.connectionStrings;
             this.DBClusterId = request.DBClusterId;
             this.newMasterInstanceId = request.newMasterInstanceId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
-            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.securityToken = request.securityToken;
             this.sourceRDSDBInstanceId = request.sourceRDSDBInstanceId;
             this.swapConnectionString = request.swapConnectionString;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * ConnectionStrings.
@@ -238,15 +247,6 @@ public class ModifyDBClusterMigrationRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

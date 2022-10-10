@@ -51,6 +51,10 @@ public class CreateDBNodesRequest extends Request {
     private String plannedStartTime;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -69,6 +73,7 @@ public class CreateDBNodesRequest extends Request {
         this.ownerId = builder.ownerId;
         this.plannedEndTime = builder.plannedEndTime;
         this.plannedStartTime = builder.plannedStartTime;
+        this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
     }
@@ -150,6 +155,13 @@ public class CreateDBNodesRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -173,6 +185,7 @@ public class CreateDBNodesRequest extends Request {
         private Long ownerId; 
         private String plannedEndTime; 
         private String plannedStartTime; 
+        private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
 
@@ -191,6 +204,7 @@ public class CreateDBNodesRequest extends Request {
             this.ownerId = request.ownerId;
             this.plannedEndTime = request.plannedEndTime;
             this.plannedStartTime = request.plannedStartTime;
+            this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
         } 
@@ -273,6 +287,15 @@ public class CreateDBNodesRequest extends Request {
         public Builder plannedStartTime(String plannedStartTime) {
             this.putQueryParameter("PlannedStartTime", plannedStartTime);
             this.plannedStartTime = plannedStartTime;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

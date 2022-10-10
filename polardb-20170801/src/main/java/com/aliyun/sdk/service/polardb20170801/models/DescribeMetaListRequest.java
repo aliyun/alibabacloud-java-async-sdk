@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeMetaListRequest</p>
  */
 public class DescribeMetaListRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("BackupId")
     private String backupId;
@@ -42,10 +46,6 @@ public class DescribeMetaListRequest extends Request {
     @Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
@@ -64,6 +64,7 @@ public class DescribeMetaListRequest extends Request {
 
     private DescribeMetaListRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.backupId = builder.backupId;
         this.DBClusterId = builder.DBClusterId;
         this.getDbName = builder.getDbName;
@@ -71,7 +72,6 @@ public class DescribeMetaListRequest extends Request {
         this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.restoreTime = builder.restoreTime;
@@ -89,6 +89,13 @@ public class DescribeMetaListRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -141,13 +148,6 @@ public class DescribeMetaListRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -176,6 +176,7 @@ public class DescribeMetaListRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeMetaListRequest, Builder> {
+        private String regionId; 
         private String backupId; 
         private String DBClusterId; 
         private String getDbName; 
@@ -183,7 +184,6 @@ public class DescribeMetaListRequest extends Request {
         private Long ownerId; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String restoreTime; 
@@ -195,6 +195,7 @@ public class DescribeMetaListRequest extends Request {
 
         private Builder(DescribeMetaListRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.backupId = request.backupId;
             this.DBClusterId = request.DBClusterId;
             this.getDbName = request.getDbName;
@@ -202,12 +203,20 @@ public class DescribeMetaListRequest extends Request {
             this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
-            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.restoreTime = request.restoreTime;
             this.securityToken = request.securityToken;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * BackupId.
@@ -269,15 +278,6 @@ public class DescribeMetaListRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

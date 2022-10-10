@@ -33,6 +33,10 @@ public class DescribeDBClustersRequest extends Request {
     private String DBType;
 
     @Query
+    @NameInMap("Expired")
+    private Boolean expired;
+
+    @Query
     @NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -51,6 +55,14 @@ public class DescribeDBClustersRequest extends Request {
     @Query
     @NameInMap("PayType")
     private String payType;
+
+    @Query
+    @NameInMap("RecentCreationInterval")
+    private Integer recentCreationInterval;
+
+    @Query
+    @NameInMap("RecentExpirationInterval")
+    private Integer recentExpirationInterval;
 
     @Query
     @NameInMap("RegionId")
@@ -80,11 +92,14 @@ public class DescribeDBClustersRequest extends Request {
         this.DBClusterStatus = builder.DBClusterStatus;
         this.DBNodeIds = builder.DBNodeIds;
         this.DBType = builder.DBType;
+        this.expired = builder.expired;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.payType = builder.payType;
+        this.recentCreationInterval = builder.recentCreationInterval;
+        this.recentExpirationInterval = builder.recentExpirationInterval;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -141,6 +156,13 @@ public class DescribeDBClustersRequest extends Request {
     }
 
     /**
+     * @return expired
+     */
+    public Boolean getExpired() {
+        return this.expired;
+    }
+
+    /**
      * @return ownerAccount
      */
     public String getOwnerAccount() {
@@ -173,6 +195,20 @@ public class DescribeDBClustersRequest extends Request {
      */
     public String getPayType() {
         return this.payType;
+    }
+
+    /**
+     * @return recentCreationInterval
+     */
+    public Integer getRecentCreationInterval() {
+        return this.recentCreationInterval;
+    }
+
+    /**
+     * @return recentExpirationInterval
+     */
+    public Integer getRecentExpirationInterval() {
+        return this.recentExpirationInterval;
     }
 
     /**
@@ -216,11 +252,14 @@ public class DescribeDBClustersRequest extends Request {
         private String DBClusterStatus; 
         private String DBNodeIds; 
         private String DBType; 
+        private Boolean expired; 
         private String ownerAccount; 
         private Long ownerId; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String payType; 
+        private Integer recentCreationInterval; 
+        private Integer recentExpirationInterval; 
         private String regionId; 
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
@@ -238,11 +277,14 @@ public class DescribeDBClustersRequest extends Request {
             this.DBClusterStatus = request.DBClusterStatus;
             this.DBNodeIds = request.DBNodeIds;
             this.DBType = request.DBType;
+            this.expired = request.expired;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.payType = request.payType;
+            this.recentCreationInterval = request.recentCreationInterval;
+            this.recentExpirationInterval = request.recentExpirationInterval;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
@@ -296,6 +338,15 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
+         * Expired.
+         */
+        public Builder expired(Boolean expired) {
+            this.putQueryParameter("Expired", expired);
+            this.expired = expired;
+            return this;
+        }
+
+        /**
          * OwnerAccount.
          */
         public Builder ownerAccount(String ownerAccount) {
@@ -337,6 +388,24 @@ public class DescribeDBClustersRequest extends Request {
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
             this.payType = payType;
+            return this;
+        }
+
+        /**
+         * RecentCreationInterval.
+         */
+        public Builder recentCreationInterval(Integer recentCreationInterval) {
+            this.putQueryParameter("RecentCreationInterval", recentCreationInterval);
+            this.recentCreationInterval = recentCreationInterval;
+            return this;
+        }
+
+        /**
+         * RecentExpirationInterval.
+         */
+        public Builder recentExpirationInterval(Integer recentExpirationInterval) {
+            this.putQueryParameter("RecentExpirationInterval", recentExpirationInterval);
+            this.recentExpirationInterval = recentExpirationInterval;
             return this;
         }
 

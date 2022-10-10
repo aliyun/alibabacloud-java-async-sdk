@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RemoveDBClusterFromGDNRequest</p>
  */
 public class RemoveDBClusterFromGDNRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("DBClusterId")
     @Validation(required = true)
@@ -30,10 +34,6 @@ public class RemoveDBClusterFromGDNRequest extends Request {
     @NameInMap("OwnerId")
     private Long ownerId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
@@ -48,11 +48,11 @@ public class RemoveDBClusterFromGDNRequest extends Request {
 
     private RemoveDBClusterFromGDNRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.DBClusterId = builder.DBClusterId;
         this.GDNId = builder.GDNId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityToken = builder.securityToken;
@@ -69,6 +69,13 @@ public class RemoveDBClusterFromGDNRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -100,13 +107,6 @@ public class RemoveDBClusterFromGDNRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -128,11 +128,11 @@ public class RemoveDBClusterFromGDNRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<RemoveDBClusterFromGDNRequest, Builder> {
+        private String regionId; 
         private String DBClusterId; 
         private String GDNId; 
         private String ownerAccount; 
         private Long ownerId; 
-        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String securityToken; 
@@ -143,15 +143,24 @@ public class RemoveDBClusterFromGDNRequest extends Request {
 
         private Builder(RemoveDBClusterFromGDNRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.DBClusterId = request.DBClusterId;
             this.GDNId = request.GDNId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
-            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.securityToken = request.securityToken;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * DBClusterId.
@@ -186,15 +195,6 @@ public class RemoveDBClusterFromGDNRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

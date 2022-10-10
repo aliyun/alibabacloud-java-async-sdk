@@ -304,6 +304,9 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
         @NameInMap("Port")
         private String port;
 
+        @NameInMap("SSLEnabled")
+        private String SSLEnabled;
+
         @NameInMap("VPCId")
         private String VPCId;
 
@@ -315,6 +318,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
             this.IPAddress = builder.IPAddress;
             this.netType = builder.netType;
             this.port = builder.port;
+            this.SSLEnabled = builder.SSLEnabled;
             this.VPCId = builder.VPCId;
             this.vSwitchId = builder.vSwitchId;
         }
@@ -356,6 +360,13 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
         }
 
         /**
+         * @return SSLEnabled
+         */
+        public String getSSLEnabled() {
+            return this.SSLEnabled;
+        }
+
+        /**
          * @return VPCId
          */
         public String getVPCId() {
@@ -374,6 +385,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
             private String IPAddress; 
             private String netType; 
             private String port; 
+            private String SSLEnabled; 
             private String VPCId; 
             private String vSwitchId; 
 
@@ -406,6 +418,14 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
              */
             public Builder port(String port) {
                 this.port = port;
+                return this;
+            }
+
+            /**
+             * SSLEnabled.
+             */
+            public Builder SSLEnabled(String SSLEnabled) {
+                this.SSLEnabled = SSLEnabled;
                 return this;
             }
 
@@ -526,6 +546,9 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
         @NameInMap("Port")
         private String port;
 
+        @NameInMap("SSLEnabled")
+        private String SSLEnabled;
+
         @NameInMap("VPCId")
         private String VPCId;
 
@@ -537,6 +560,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
             this.IPAddress = builder.IPAddress;
             this.netType = builder.netType;
             this.port = builder.port;
+            this.SSLEnabled = builder.SSLEnabled;
             this.VPCId = builder.VPCId;
             this.vSwitchId = builder.vSwitchId;
         }
@@ -578,6 +602,13 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
         }
 
         /**
+         * @return SSLEnabled
+         */
+        public String getSSLEnabled() {
+            return this.SSLEnabled;
+        }
+
+        /**
          * @return VPCId
          */
         public String getVPCId() {
@@ -596,6 +627,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
             private String IPAddress; 
             private String netType; 
             private String port; 
+            private String SSLEnabled; 
             private String VPCId; 
             private String vSwitchId; 
 
@@ -628,6 +660,14 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
              */
             public Builder port(String port) {
                 this.port = port;
+                return this;
+            }
+
+            /**
+             * SSLEnabled.
+             */
+            public Builder SSLEnabled(String SSLEnabled) {
+                this.SSLEnabled = SSLEnabled;
                 return this;
             }
 

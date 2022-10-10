@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBClusterMigrationRequest</p>
  */
 public class DescribeDBClusterMigrationRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("DBClusterId")
     @Validation(required = true)
@@ -25,10 +29,6 @@ public class DescribeDBClusterMigrationRequest extends Request {
     @NameInMap("OwnerId")
     private Long ownerId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
@@ -39,10 +39,10 @@ public class DescribeDBClusterMigrationRequest extends Request {
 
     private DescribeDBClusterMigrationRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.DBClusterId = builder.DBClusterId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
     }
@@ -58,6 +58,13 @@ public class DescribeDBClusterMigrationRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -82,13 +89,6 @@ public class DescribeDBClusterMigrationRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -103,10 +103,10 @@ public class DescribeDBClusterMigrationRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeDBClusterMigrationRequest, Builder> {
+        private String regionId; 
         private String DBClusterId; 
         private String ownerAccount; 
         private Long ownerId; 
-        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
 
@@ -116,13 +116,22 @@ public class DescribeDBClusterMigrationRequest extends Request {
 
         private Builder(DescribeDBClusterMigrationRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.DBClusterId = request.DBClusterId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
-            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * DBClusterId.
@@ -148,15 +157,6 @@ public class DescribeDBClusterMigrationRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

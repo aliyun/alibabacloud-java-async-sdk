@@ -88,6 +88,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeCharacterSetNameResponse> describeCharacterSetName(DescribeCharacterSetNameRequest request);
 
+    CompletableFuture<DescribeClassListResponse> describeClassList(DescribeClassListRequest request);
+
     CompletableFuture<DescribeDBClusterAccessWhitelistResponse> describeDBClusterAccessWhitelist(DescribeDBClusterAccessWhitelistRequest request);
 
     CompletableFuture<DescribeDBClusterAttributeResponse> describeDBClusterAttribute(DescribeDBClusterAttributeRequest request);
@@ -165,6 +167,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeTasksResponse> describeTasks(DescribeTasksRequest request);
 
     CompletableFuture<EnableFirewallRulesResponse> enableFirewallRules(EnableFirewallRulesRequest request);
+
+    CompletableFuture<EvaluateRegionResourceResponse> evaluateRegionResource(EvaluateRegionResourceRequest request);
 
     CompletableFuture<FailoverDBClusterResponse> failoverDBCluster(FailoverDBClusterRequest request);
 

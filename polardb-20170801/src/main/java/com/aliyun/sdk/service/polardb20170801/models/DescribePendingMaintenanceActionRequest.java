@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePendingMaintenanceActionRequest</p>
  */
 public class DescribePendingMaintenanceActionRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("IsHistory")
     private Integer isHistory;
@@ -39,9 +43,9 @@ public class DescribePendingMaintenanceActionRequest extends Request {
     @Validation(required = true)
     private String region;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
+    @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
 
     @Query
     @NameInMap("ResourceOwnerAccount")
@@ -62,13 +66,14 @@ public class DescribePendingMaintenanceActionRequest extends Request {
 
     private DescribePendingMaintenanceActionRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.isHistory = builder.isHistory;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.region = builder.region;
-        this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityToken = builder.securityToken;
@@ -86,6 +91,13 @@ public class DescribePendingMaintenanceActionRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -131,10 +143,10 @@ public class DescribePendingMaintenanceActionRequest extends Request {
     }
 
     /**
-     * @return regionId
+     * @return resourceGroupId
      */
-    public String getRegionId() {
-        return this.regionId;
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     /**
@@ -166,13 +178,14 @@ public class DescribePendingMaintenanceActionRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribePendingMaintenanceActionRequest, Builder> {
+        private String regionId; 
         private Integer isHistory; 
         private String ownerAccount; 
         private Long ownerId; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String region; 
-        private String regionId; 
+        private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String securityToken; 
@@ -184,18 +197,28 @@ public class DescribePendingMaintenanceActionRequest extends Request {
 
         private Builder(DescribePendingMaintenanceActionRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.isHistory = request.isHistory;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.region = request.region;
-            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.securityToken = request.securityToken;
             this.taskType = request.taskType;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * IsHistory.
@@ -252,11 +275,11 @@ public class DescribePendingMaintenanceActionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * ResourceGroupId.
          */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

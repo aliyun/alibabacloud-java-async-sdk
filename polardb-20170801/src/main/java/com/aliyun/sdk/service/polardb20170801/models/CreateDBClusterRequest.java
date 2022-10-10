@@ -126,6 +126,10 @@ public class CreateDBClusterRequest extends Request {
     private Boolean TDEStatus;
 
     @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
+    @Query
     @NameInMap("UsedTime")
     private String usedTime;
 
@@ -170,6 +174,7 @@ public class CreateDBClusterRequest extends Request {
         this.securityIPList = builder.securityIPList;
         this.sourceResourceId = builder.sourceResourceId;
         this.TDEStatus = builder.TDEStatus;
+        this.tag = builder.tag;
         this.usedTime = builder.usedTime;
         this.VPCId = builder.VPCId;
         this.vSwitchId = builder.vSwitchId;
@@ -379,6 +384,13 @@ public class CreateDBClusterRequest extends Request {
     }
 
     /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
      * @return usedTime
      */
     public String getUsedTime() {
@@ -434,6 +446,7 @@ public class CreateDBClusterRequest extends Request {
         private String securityIPList; 
         private String sourceResourceId; 
         private Boolean TDEStatus; 
+        private java.util.List < Tag> tag; 
         private String usedTime; 
         private String VPCId; 
         private String vSwitchId; 
@@ -472,6 +485,7 @@ public class CreateDBClusterRequest extends Request {
             this.securityIPList = request.securityIPList;
             this.sourceResourceId = request.sourceResourceId;
             this.TDEStatus = request.TDEStatus;
+            this.tag = request.tag;
             this.usedTime = request.usedTime;
             this.VPCId = request.VPCId;
             this.vSwitchId = request.vSwitchId;
@@ -722,6 +736,15 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
+         * Tag.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
          * UsedTime.
          */
         public Builder usedTime(String usedTime) {
@@ -764,4 +787,65 @@ public class CreateDBClusterRequest extends Request {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

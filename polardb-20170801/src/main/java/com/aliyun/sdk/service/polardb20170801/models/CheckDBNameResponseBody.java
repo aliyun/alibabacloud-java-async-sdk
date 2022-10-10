@@ -12,10 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CheckDBNameResponseBody</p>
  */
 public class CheckDBNameResponseBody extends TeaModel {
+    @NameInMap("DBName")
+    private String DBName;
+
     @NameInMap("RequestId")
     private String requestId;
 
     private CheckDBNameResponseBody(Builder builder) {
+        this.DBName = builder.DBName;
         this.requestId = builder.requestId;
     }
 
@@ -28,6 +32,13 @@ public class CheckDBNameResponseBody extends TeaModel {
     }
 
     /**
+     * @return DBName
+     */
+    public String getDBName() {
+        return this.DBName;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -35,7 +46,16 @@ public class CheckDBNameResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String DBName; 
         private String requestId; 
+
+        /**
+         * DBName.
+         */
+        public Builder DBName(String DBName) {
+            this.DBName = DBName;
+            return this;
+        }
 
         /**
          * RequestId.

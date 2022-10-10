@@ -24,6 +24,9 @@ public class DescribeDBClusterTDEResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("TDERegion")
+    private String TDERegion;
+
     @NameInMap("TDEStatus")
     private String TDEStatus;
 
@@ -32,6 +35,7 @@ public class DescribeDBClusterTDEResponseBody extends TeaModel {
         this.encryptNewTables = builder.encryptNewTables;
         this.encryptionKey = builder.encryptionKey;
         this.requestId = builder.requestId;
+        this.TDERegion = builder.TDERegion;
         this.TDEStatus = builder.TDEStatus;
     }
 
@@ -72,6 +76,13 @@ public class DescribeDBClusterTDEResponseBody extends TeaModel {
     }
 
     /**
+     * @return TDERegion
+     */
+    public String getTDERegion() {
+        return this.TDERegion;
+    }
+
+    /**
      * @return TDEStatus
      */
     public String getTDEStatus() {
@@ -83,6 +94,7 @@ public class DescribeDBClusterTDEResponseBody extends TeaModel {
         private String encryptNewTables; 
         private String encryptionKey; 
         private String requestId; 
+        private String TDERegion; 
         private String TDEStatus; 
 
         /**
@@ -114,6 +126,14 @@ public class DescribeDBClusterTDEResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * TDERegion.
+         */
+        public Builder TDERegion(String TDERegion) {
+            this.TDERegion = TDERegion;
             return this;
         }
 
