@@ -27,7 +27,7 @@ public class ApplyApproveResponseBody extends TeaModel {
     @NameInMap("success")
     private Boolean success;
 
-    @NameInMap("trace_id")
+    @NameInMap("traceId")
     private String traceId;
 
     private ApplyApproveResponseBody(Builder builder) {
@@ -138,7 +138,7 @@ public class ApplyApproveResponseBody extends TeaModel {
         }
 
         /**
-         * trace_id.
+         * traceId.
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;

@@ -12,9 +12,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CarApplyQueryResponseBody</p>
  */
 public class CarApplyQueryResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    private String requestId;
-
     @NameInMap("apply_list")
     private java.util.List < ApplyList> applyList;
 
@@ -23,6 +20,9 @@ public class CarApplyQueryResponseBody extends TeaModel {
 
     @NameInMap("message")
     private String message;
+
+    @NameInMap("requestId")
+    private String requestId;
 
     @NameInMap("success")
     private Boolean success;
@@ -34,10 +34,10 @@ public class CarApplyQueryResponseBody extends TeaModel {
     private String traceId;
 
     private CarApplyQueryResponseBody(Builder builder) {
-        this.requestId = builder.requestId;
         this.applyList = builder.applyList;
         this.code = builder.code;
         this.message = builder.message;
+        this.requestId = builder.requestId;
         this.success = builder.success;
         this.total = builder.total;
         this.traceId = builder.traceId;
@@ -49,13 +49,6 @@ public class CarApplyQueryResponseBody extends TeaModel {
 
     public static CarApplyQueryResponseBody create() {
         return builder().build();
-    }
-
-    /**
-     * @return requestId
-     */
-    public String getRequestId() {
-        return this.requestId;
     }
 
     /**
@@ -80,6 +73,13 @@ public class CarApplyQueryResponseBody extends TeaModel {
     }
 
     /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    /**
      * @return success
      */
     public Boolean getSuccess() {
@@ -101,21 +101,13 @@ public class CarApplyQueryResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String requestId; 
         private java.util.List < ApplyList> applyList; 
         private Integer code; 
         private String message; 
+        private String requestId; 
         private Boolean success; 
         private Integer total; 
         private String traceId; 
-
-        /**
-         * RequestId.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
 
         /**
          * apply_list.
@@ -138,6 +130,14 @@ public class CarApplyQueryResponseBody extends TeaModel {
          */
         public Builder message(String message) {
             this.message = message;
+            return this;
+        }
+
+        /**
+         * requestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 
