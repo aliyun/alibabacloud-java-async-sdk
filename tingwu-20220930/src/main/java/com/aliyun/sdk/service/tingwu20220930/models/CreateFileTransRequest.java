@@ -34,7 +34,7 @@ public class CreateFileTransRequest extends Request {
 
     @Body
     @NameInMap("AudioOutputEnabled")
-    private String audioOutputEnabled;
+    private Boolean audioOutputEnabled;
 
     @Body
     @NameInMap("AudioOutputOssBucket")
@@ -50,7 +50,7 @@ public class CreateFileTransRequest extends Request {
 
     @Body
     @NameInMap("AudioSegmentsEnabled")
-    private String audioSegmentsEnabled;
+    private Boolean audioSegmentsEnabled;
 
     @Body
     @NameInMap("TransKey")
@@ -126,7 +126,7 @@ public class CreateFileTransRequest extends Request {
     /**
      * @return audioOutputEnabled
      */
-    public String getAudioOutputEnabled() {
+    public Boolean getAudioOutputEnabled() {
         return this.audioOutputEnabled;
     }
 
@@ -154,7 +154,7 @@ public class CreateFileTransRequest extends Request {
     /**
      * @return audioSegmentsEnabled
      */
-    public String getAudioSegmentsEnabled() {
+    public Boolean getAudioSegmentsEnabled() {
         return this.audioSegmentsEnabled;
     }
 
@@ -184,11 +184,11 @@ public class CreateFileTransRequest extends Request {
         private String audioLanguage; 
         private String audioOssBucket; 
         private String audioOssPath; 
-        private String audioOutputEnabled; 
+        private Boolean audioOutputEnabled; 
         private String audioOutputOssBucket; 
         private String audioOutputOssPath; 
         private String audioRoleNum; 
-        private String audioSegmentsEnabled; 
+        private Boolean audioSegmentsEnabled; 
         private String transKey; 
         private String transResultOssBucket; 
         private String transResultOssPath; 
@@ -228,7 +228,6 @@ public class CreateFileTransRequest extends Request {
          * cn：中文。
          * en：英文。
          * yue：粤语。
-         * fspk：中英文自由说。
          */
         public Builder audioLanguage(String audioLanguage) {
             this.putBodyParameter("AudioLanguage", audioLanguage);
@@ -257,7 +256,7 @@ public class CreateFileTransRequest extends Request {
         /**
          * 是否开启mp3格式音频转码，默认是False。
          */
-        public Builder audioOutputEnabled(String audioOutputEnabled) {
+        public Builder audioOutputEnabled(Boolean audioOutputEnabled) {
             this.putBodyParameter("AudioOutputEnabled", audioOutputEnabled);
             this.audioOutputEnabled = audioOutputEnabled;
             return this;
@@ -297,7 +296,7 @@ public class CreateFileTransRequest extends Request {
         /**
          * 是否开启有效音频片断检测结果写入，默认是False。
          */
-        public Builder audioSegmentsEnabled(String audioSegmentsEnabled) {
+        public Builder audioSegmentsEnabled(Boolean audioSegmentsEnabled) {
             this.putBodyParameter("AudioSegmentsEnabled", audioSegmentsEnabled);
             this.audioSegmentsEnabled = audioSegmentsEnabled;
             return this;

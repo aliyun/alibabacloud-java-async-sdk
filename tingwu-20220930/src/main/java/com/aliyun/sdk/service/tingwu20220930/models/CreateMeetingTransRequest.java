@@ -329,7 +329,6 @@ public class CreateMeetingTransRequest extends Request {
          * cn：中文。
          * en：英文。
          * yue：粤语。
-         * fspk：中英文自由说。
          */
         public Builder audioLanguage(String audioLanguage) {
             this.putBodyParameter("AudioLanguage", audioLanguage);
