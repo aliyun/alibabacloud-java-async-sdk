@@ -13,9 +13,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class BeeBotAssociateRequest extends Request {
     @Body
-    @NameInMap("ChatBotInstnaceId")
+    @NameInMap("ChatBotInstanceId")
     @Validation(required = true)
-    private String chatBotInstnaceId;
+    private String chatBotInstanceId;
 
     @Body
     @NameInMap("IsvCode")
@@ -40,7 +40,7 @@ public class BeeBotAssociateRequest extends Request {
 
     private BeeBotAssociateRequest(Builder builder) {
         super(builder);
-        this.chatBotInstnaceId = builder.chatBotInstnaceId;
+        this.chatBotInstanceId = builder.chatBotInstanceId;
         this.isvCode = builder.isvCode;
         this.perspective = builder.perspective;
         this.recommendNum = builder.recommendNum;
@@ -62,10 +62,10 @@ public class BeeBotAssociateRequest extends Request {
     }
 
     /**
-     * @return chatBotInstnaceId
+     * @return chatBotInstanceId
      */
-    public String getChatBotInstnaceId() {
-        return this.chatBotInstnaceId;
+    public String getChatBotInstanceId() {
+        return this.chatBotInstanceId;
     }
 
     /**
@@ -104,7 +104,7 @@ public class BeeBotAssociateRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<BeeBotAssociateRequest, Builder> {
-        private String chatBotInstnaceId; 
+        private String chatBotInstanceId; 
         private String isvCode; 
         private java.util.List < String > perspective; 
         private Integer recommendNum; 
@@ -117,7 +117,7 @@ public class BeeBotAssociateRequest extends Request {
 
         private Builder(BeeBotAssociateRequest request) {
             super(request);
-            this.chatBotInstnaceId = request.chatBotInstnaceId;
+            this.chatBotInstanceId = request.chatBotInstanceId;
             this.isvCode = request.isvCode;
             this.perspective = request.perspective;
             this.recommendNum = request.recommendNum;
@@ -128,9 +128,9 @@ public class BeeBotAssociateRequest extends Request {
         /**
          * 发送号码
          */
-        public Builder chatBotInstnaceId(String chatBotInstnaceId) {
-            this.putBodyParameter("ChatBotInstnaceId", chatBotInstnaceId);
-            this.chatBotInstnaceId = chatBotInstnaceId;
+        public Builder chatBotInstanceId(String chatBotInstanceId) {
+            this.putBodyParameter("ChatBotInstanceId", chatBotInstanceId);
+            this.chatBotInstanceId = chatBotInstanceId;
             return this;
         }
 
