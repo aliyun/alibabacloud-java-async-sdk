@@ -82,6 +82,10 @@ public class ApplyModifyRequest extends Request {
     private String thirdpartBusinessId;
 
     @Body
+    @NameInMap("thirdpart_depart_id")
+    private String thirdpartDepartId;
+
+    @Body
     @NameInMap("together_book_rule")
     private Integer togetherBookRule;
 
@@ -152,6 +156,7 @@ public class ApplyModifyRequest extends Request {
         this.status = builder.status;
         this.thirdpartApplyId = builder.thirdpartApplyId;
         this.thirdpartBusinessId = builder.thirdpartBusinessId;
+        this.thirdpartDepartId = builder.thirdpartDepartId;
         this.togetherBookRule = builder.togetherBookRule;
         this.trainBudget = builder.trainBudget;
         this.travelerList = builder.travelerList;
@@ -299,6 +304,13 @@ public class ApplyModifyRequest extends Request {
     }
 
     /**
+     * @return thirdpartDepartId
+     */
+    public String getThirdpartDepartId() {
+        return this.thirdpartDepartId;
+    }
+
+    /**
      * @return togetherBookRule
      */
     public Integer getTogetherBookRule() {
@@ -400,6 +412,7 @@ public class ApplyModifyRequest extends Request {
         private Integer status; 
         private String thirdpartApplyId; 
         private String thirdpartBusinessId; 
+        private String thirdpartDepartId; 
         private Integer togetherBookRule; 
         private Long trainBudget; 
         private java.util.List < TravelerList> travelerList; 
@@ -436,6 +449,7 @@ public class ApplyModifyRequest extends Request {
             this.status = request.status;
             this.thirdpartApplyId = request.thirdpartApplyId;
             this.thirdpartBusinessId = request.thirdpartBusinessId;
+            this.thirdpartDepartId = request.thirdpartDepartId;
             this.togetherBookRule = request.togetherBookRule;
             this.trainBudget = request.trainBudget;
             this.travelerList = request.travelerList;
@@ -615,6 +629,18 @@ public class ApplyModifyRequest extends Request {
         public Builder thirdpartBusinessId(String thirdpartBusinessId) {
             this.putBodyParameter("thirdpart_business_id", thirdpartBusinessId);
             this.thirdpartBusinessId = thirdpartBusinessId;
+            return this;
+        }
+
+        /**
+         * 三方部门id
+         * <p>
+         * thirdpart_depart_id和depart_id中任意一个传值，以该字段为准
+         * thirdpart_depart_id和depart_id均传值，以thirdpart_depart_id为准
+         */
+        public Builder thirdpartDepartId(String thirdpartDepartId) {
+            this.putBodyParameter("thirdpart_depart_id", thirdpartDepartId);
+            this.thirdpartDepartId = thirdpartDepartId;
             return this;
         }
 
