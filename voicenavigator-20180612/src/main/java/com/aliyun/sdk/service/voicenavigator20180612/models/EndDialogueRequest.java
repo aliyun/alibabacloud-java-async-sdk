@@ -89,12 +89,12 @@ public class EndDialogueRequest extends Request {
             super();
         } 
 
-        private Builder(EndDialogueRequest response) {
-            super(response);
-            this.conversationId = response.conversationId;
-            this.hangUpParams = response.hangUpParams;
-            this.instanceId = response.instanceId;
-            this.instanceOwnerId = response.instanceOwnerId;
+        private Builder(EndDialogueRequest request) {
+            super(request);
+            this.conversationId = request.conversationId;
+            this.hangUpParams = request.hangUpParams;
+            this.instanceId = request.instanceId;
+            this.instanceOwnerId = request.instanceOwnerId;
         } 
 
         /**

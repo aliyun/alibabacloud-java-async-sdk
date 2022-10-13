@@ -103,13 +103,13 @@ public class DebugBeginDialogueRequest extends Request {
             super();
         } 
 
-        private Builder(DebugBeginDialogueRequest response) {
-            super(response);
-            this.calledNumber = response.calledNumber;
-            this.callingNumber = response.callingNumber;
-            this.conversationId = response.conversationId;
-            this.initialContext = response.initialContext;
-            this.instanceId = response.instanceId;
+        private Builder(DebugBeginDialogueRequest request) {
+            super(request);
+            this.calledNumber = request.calledNumber;
+            this.callingNumber = request.callingNumber;
+            this.conversationId = request.conversationId;
+            this.initialContext = request.initialContext;
+            this.instanceId = request.instanceId;
         } 
 
         /**

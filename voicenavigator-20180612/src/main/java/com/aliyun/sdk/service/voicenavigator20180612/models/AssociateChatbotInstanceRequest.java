@@ -76,11 +76,11 @@ public class AssociateChatbotInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(AssociateChatbotInstanceRequest response) {
-            super(response);
-            this.chatbotInstanceId = response.chatbotInstanceId;
-            this.chatbotName = response.chatbotName;
-            this.instanceId = response.instanceId;
+        private Builder(AssociateChatbotInstanceRequest request) {
+            super(request);
+            this.chatbotInstanceId = request.chatbotInstanceId;
+            this.chatbotName = request.chatbotName;
+            this.instanceId = request.instanceId;
         } 
 
         /**

@@ -118,14 +118,14 @@ public class ModifyUnrecognizingConfigRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyUnrecognizingConfigRequest response) {
-            super(response);
-            this.finalAction = response.finalAction;
-            this.finalActionParams = response.finalActionParams;
-            this.finalPrompt = response.finalPrompt;
-            this.instanceId = response.instanceId;
-            this.prompt = response.prompt;
-            this.threshold = response.threshold;
+        private Builder(ModifyUnrecognizingConfigRequest request) {
+            super(request);
+            this.finalAction = request.finalAction;
+            this.finalActionParams = request.finalActionParams;
+            this.finalPrompt = request.finalPrompt;
+            this.instanceId = request.instanceId;
+            this.prompt = request.prompt;
+            this.threshold = request.threshold;
         } 
 
         /**

@@ -89,12 +89,12 @@ public class SilenceTimeoutRequest extends Request {
             super();
         } 
 
-        private Builder(SilenceTimeoutRequest response) {
-            super(response);
-            this.conversationId = response.conversationId;
-            this.initialContext = response.initialContext;
-            this.instanceId = response.instanceId;
-            this.instanceOwnerId = response.instanceOwnerId;
+        private Builder(SilenceTimeoutRequest request) {
+            super(request);
+            this.conversationId = request.conversationId;
+            this.initialContext = request.initialContext;
+            this.instanceId = request.instanceId;
+            this.instanceOwnerId = request.instanceOwnerId;
         } 
 
         /**

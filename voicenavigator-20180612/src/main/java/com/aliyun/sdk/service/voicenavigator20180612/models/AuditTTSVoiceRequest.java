@@ -105,13 +105,13 @@ public class AuditTTSVoiceRequest extends Request {
             super();
         } 
 
-        private Builder(AuditTTSVoiceRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.speechRate = response.speechRate;
-            this.text = response.text;
-            this.voice = response.voice;
-            this.volume = response.volume;
+        private Builder(AuditTTSVoiceRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.speechRate = request.speechRate;
+            this.text = request.text;
+            this.voice = request.voice;
+            this.volume = request.volume;
         } 
 
         /**

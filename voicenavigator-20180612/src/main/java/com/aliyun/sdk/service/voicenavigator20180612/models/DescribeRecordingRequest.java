@@ -22,10 +22,15 @@ public class DescribeRecordingRequest extends Request {
     @Validation(required = true)
     private String instanceId;
 
+    @Query
+    @NameInMap("NeedVoiceSliceRecording")
+    private Boolean needVoiceSliceRecording;
+
     private DescribeRecordingRequest(Builder builder) {
         super(builder);
         this.conversationId = builder.conversationId;
         this.instanceId = builder.instanceId;
+        this.needVoiceSliceRecording = builder.needVoiceSliceRecording;
     }
 
     public static Builder builder() {
@@ -55,18 +60,27 @@ public class DescribeRecordingRequest extends Request {
         return this.instanceId;
     }
 
+    /**
+     * @return needVoiceSliceRecording
+     */
+    public Boolean getNeedVoiceSliceRecording() {
+        return this.needVoiceSliceRecording;
+    }
+
     public static final class Builder extends Request.Builder<DescribeRecordingRequest, Builder> {
         private String conversationId; 
         private String instanceId; 
+        private Boolean needVoiceSliceRecording; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeRecordingRequest response) {
-            super(response);
-            this.conversationId = response.conversationId;
-            this.instanceId = response.instanceId;
+        private Builder(DescribeRecordingRequest request) {
+            super(request);
+            this.conversationId = request.conversationId;
+            this.instanceId = request.instanceId;
+            this.needVoiceSliceRecording = request.needVoiceSliceRecording;
         } 
 
         /**
@@ -84,6 +98,15 @@ public class DescribeRecordingRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * NeedVoiceSliceRecording.
+         */
+        public Builder needVoiceSliceRecording(Boolean needVoiceSliceRecording) {
+            this.putQueryParameter("NeedVoiceSliceRecording", needVoiceSliceRecording);
+            this.needVoiceSliceRecording = needVoiceSliceRecording;
             return this;
         }
 

@@ -21,10 +21,14 @@ public class DescribeRecordingResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("VoiceSliceRecordingListJson")
+    private String voiceSliceRecordingListJson;
+
     private DescribeRecordingResponseBody(Builder builder) {
         this.fileName = builder.fileName;
         this.filePath = builder.filePath;
         this.requestId = builder.requestId;
+        this.voiceSliceRecordingListJson = builder.voiceSliceRecordingListJson;
     }
 
     public static Builder builder() {
@@ -56,10 +60,18 @@ public class DescribeRecordingResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return voiceSliceRecordingListJson
+     */
+    public String getVoiceSliceRecordingListJson() {
+        return this.voiceSliceRecordingListJson;
+    }
+
     public static final class Builder {
         private String fileName; 
         private String filePath; 
         private String requestId; 
+        private String voiceSliceRecordingListJson; 
 
         /**
          * FileName.
@@ -82,6 +94,14 @@ public class DescribeRecordingResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * VoiceSliceRecordingListJson.
+         */
+        public Builder voiceSliceRecordingListJson(String voiceSliceRecordingListJson) {
+            this.voiceSliceRecordingListJson = voiceSliceRecordingListJson;
             return this;
         }
 

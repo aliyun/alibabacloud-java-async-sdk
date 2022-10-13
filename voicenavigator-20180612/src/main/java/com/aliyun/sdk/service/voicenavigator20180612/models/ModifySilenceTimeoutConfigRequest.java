@@ -159,17 +159,17 @@ public class ModifySilenceTimeoutConfigRequest extends Request {
             super();
         } 
 
-        private Builder(ModifySilenceTimeoutConfigRequest response) {
-            super(response);
-            this.finalAction = response.finalAction;
-            this.finalActionParams = response.finalActionParams;
-            this.finalPrompt = response.finalPrompt;
-            this.instanceId = response.instanceId;
-            this.intentTrigger = response.intentTrigger;
-            this.prompt = response.prompt;
-            this.sourceType = response.sourceType;
-            this.threshold = response.threshold;
-            this.timeout = response.timeout;
+        private Builder(ModifySilenceTimeoutConfigRequest request) {
+            super(request);
+            this.finalAction = request.finalAction;
+            this.finalActionParams = request.finalActionParams;
+            this.finalPrompt = request.finalPrompt;
+            this.instanceId = request.instanceId;
+            this.intentTrigger = request.intentTrigger;
+            this.prompt = request.prompt;
+            this.sourceType = request.sourceType;
+            this.threshold = request.threshold;
+            this.timeout = request.timeout;
         } 
 
         /**

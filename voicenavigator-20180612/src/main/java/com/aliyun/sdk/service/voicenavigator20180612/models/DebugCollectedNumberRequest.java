@@ -76,11 +76,11 @@ public class DebugCollectedNumberRequest extends Request {
             super();
         } 
 
-        private Builder(DebugCollectedNumberRequest response) {
-            super(response);
-            this.conversationId = response.conversationId;
-            this.instanceId = response.instanceId;
-            this.number = response.number;
+        private Builder(DebugCollectedNumberRequest request) {
+            super(request);
+            this.conversationId = request.conversationId;
+            this.instanceId = request.instanceId;
+            this.number = request.number;
         } 
 
         /**

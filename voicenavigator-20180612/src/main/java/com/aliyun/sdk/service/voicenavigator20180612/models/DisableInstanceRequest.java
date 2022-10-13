@@ -49,9 +49,9 @@ public class DisableInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(DisableInstanceRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
+        private Builder(DisableInstanceRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
         } 
 
         /**

@@ -63,10 +63,10 @@ public class CreateDownloadUrlRequest extends Request {
             super();
         } 
 
-        private Builder(CreateDownloadUrlRequest response) {
-            super(response);
-            this.downloadTaskId = response.downloadTaskId;
-            this.fileId = response.fileId;
+        private Builder(CreateDownloadUrlRequest request) {
+            super(request);
+            this.downloadTaskId = request.downloadTaskId;
+            this.fileId = request.fileId;
         } 
 
         /**

@@ -63,10 +63,10 @@ public class ListConversationDetailsRequest extends Request {
             super();
         } 
 
-        private Builder(ListConversationDetailsRequest response) {
-            super(response);
-            this.conversationId = response.conversationId;
-            this.instanceId = response.instanceId;
+        private Builder(ListConversationDetailsRequest request) {
+            super(request);
+            this.conversationId = request.conversationId;
+            this.instanceId = request.instanceId;
         } 
 
         /**

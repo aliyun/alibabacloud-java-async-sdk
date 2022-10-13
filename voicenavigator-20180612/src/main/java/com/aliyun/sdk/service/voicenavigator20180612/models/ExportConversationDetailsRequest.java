@@ -33,6 +33,14 @@ public class ExportConversationDetailsRequest extends Request {
     @NameInMap("Options")
     private java.util.List < String > options;
 
+    @Query
+    @NameInMap("RoundsLeftRange")
+    private Integer roundsLeftRange;
+
+    @Query
+    @NameInMap("RoundsRightRange")
+    private Integer roundsRightRange;
+
     private ExportConversationDetailsRequest(Builder builder) {
         super(builder);
         this.beginTimeLeftRange = builder.beginTimeLeftRange;
@@ -40,6 +48,8 @@ public class ExportConversationDetailsRequest extends Request {
         this.callingNumber = builder.callingNumber;
         this.instanceId = builder.instanceId;
         this.options = builder.options;
+        this.roundsLeftRange = builder.roundsLeftRange;
+        this.roundsRightRange = builder.roundsRightRange;
     }
 
     public static Builder builder() {
@@ -90,24 +100,42 @@ public class ExportConversationDetailsRequest extends Request {
         return this.options;
     }
 
+    /**
+     * @return roundsLeftRange
+     */
+    public Integer getRoundsLeftRange() {
+        return this.roundsLeftRange;
+    }
+
+    /**
+     * @return roundsRightRange
+     */
+    public Integer getRoundsRightRange() {
+        return this.roundsRightRange;
+    }
+
     public static final class Builder extends Request.Builder<ExportConversationDetailsRequest, Builder> {
         private Long beginTimeLeftRange; 
         private Long beginTimeRightRange; 
         private String callingNumber; 
         private String instanceId; 
         private java.util.List < String > options; 
+        private Integer roundsLeftRange; 
+        private Integer roundsRightRange; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ExportConversationDetailsRequest response) {
-            super(response);
-            this.beginTimeLeftRange = response.beginTimeLeftRange;
-            this.beginTimeRightRange = response.beginTimeRightRange;
-            this.callingNumber = response.callingNumber;
-            this.instanceId = response.instanceId;
-            this.options = response.options;
+        private Builder(ExportConversationDetailsRequest request) {
+            super(request);
+            this.beginTimeLeftRange = request.beginTimeLeftRange;
+            this.beginTimeRightRange = request.beginTimeRightRange;
+            this.callingNumber = request.callingNumber;
+            this.instanceId = request.instanceId;
+            this.options = request.options;
+            this.roundsLeftRange = request.roundsLeftRange;
+            this.roundsRightRange = request.roundsRightRange;
         } 
 
         /**
@@ -152,6 +180,24 @@ public class ExportConversationDetailsRequest extends Request {
         public Builder options(java.util.List < String > options) {
             this.putQueryParameter("Options", options);
             this.options = options;
+            return this;
+        }
+
+        /**
+         * RoundsLeftRange.
+         */
+        public Builder roundsLeftRange(Integer roundsLeftRange) {
+            this.putQueryParameter("RoundsLeftRange", roundsLeftRange);
+            this.roundsLeftRange = roundsLeftRange;
+            return this;
+        }
+
+        /**
+         * RoundsRightRange.
+         */
+        public Builder roundsRightRange(Integer roundsRightRange) {
+            this.putQueryParameter("RoundsRightRange", roundsRightRange);
+            this.roundsRightRange = roundsRightRange;
             return this;
         }
 

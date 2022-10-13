@@ -38,8 +38,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteInstanceResponse> deleteInstance(DeleteInstanceRequest request);
 
-    CompletableFuture<DescribeAsrVadConfigResponse> describeAsrVadConfig(DescribeAsrVadConfigRequest request);
-
     CompletableFuture<DescribeConversationResponse> describeConversation(DescribeConversationRequest request);
 
     CompletableFuture<DescribeConversationContextResponse> describeConversationContext(DescribeConversationContextRequest request);
@@ -56,8 +54,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeTTSConfigResponse> describeTTSConfig(DescribeTTSConfigRequest request);
 
-    CompletableFuture<DescribeVoiceConfigResponse> describeVoiceConfig(DescribeVoiceConfigRequest request);
-
     CompletableFuture<DialogueResponse> dialogue(DialogueRequest request);
 
     CompletableFuture<DisableInstanceResponse> disableInstance(DisableInstanceRequest request);
@@ -70,9 +66,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ExportStatisticalDataResponse> exportStatisticalData(ExportStatisticalDataRequest request);
 
-    CompletableFuture<GetInstanceConfigResponse> getInstanceConfig(GetInstanceConfigRequest request);
+    CompletableFuture<GenerateUploadUrlResponse> generateUploadUrl(GenerateUploadUrlRequest request);
 
-    CompletableFuture<GetNewBargeInSwitchResponse> getNewBargeInSwitch(GetNewBargeInSwitchRequest request);
+    CompletableFuture<GetAsrConfigResponse> getAsrConfig(GetAsrConfigRequest request);
+
+    CompletableFuture<GetRealTimeConcurrencyResponse> getRealTimeConcurrency(GetRealTimeConcurrencyRequest request);
 
     CompletableFuture<ListChatbotInstancesResponse> listChatbotInstances(ListChatbotInstancesRequest request);
 
@@ -84,7 +82,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListInstancesResponse> listInstances(ListInstancesRequest request);
 
-    CompletableFuture<ModifyAsrVadConfigResponse> modifyAsrVadConfig(ModifyAsrVadConfigRequest request);
+    CompletableFuture<ModifyAsrConfigResponse> modifyAsrConfig(ModifyAsrConfigRequest request);
 
     CompletableFuture<ModifyGreetingConfigResponse> modifyGreetingConfig(ModifyGreetingConfigRequest request);
 
@@ -101,7 +99,5 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SaveRecordingResponse> saveRecording(SaveRecordingRequest request);
 
     CompletableFuture<SilenceTimeoutResponse> silenceTimeout(SilenceTimeoutRequest request);
-
-    CompletableFuture<UpdateNewBargeInSwitchResponse> updateNewBargeInSwitch(UpdateNewBargeInSwitchRequest request);
 
 }

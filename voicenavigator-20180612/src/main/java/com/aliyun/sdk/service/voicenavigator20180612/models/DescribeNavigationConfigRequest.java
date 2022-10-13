@@ -49,9 +49,9 @@ public class DescribeNavigationConfigRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeNavigationConfigRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
+        private Builder(DescribeNavigationConfigRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
         } 
 
         /**

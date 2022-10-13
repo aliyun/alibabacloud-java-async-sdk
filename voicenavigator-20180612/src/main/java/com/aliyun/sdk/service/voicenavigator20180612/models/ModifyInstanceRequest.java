@@ -26,11 +26,16 @@ public class ModifyInstanceRequest extends Request {
     @Validation(required = true)
     private String instanceId;
 
+    @Query
+    @NameInMap("Name")
+    private String name;
+
     private ModifyInstanceRequest(Builder builder) {
         super(builder);
         this.concurrency = builder.concurrency;
         this.description = builder.description;
         this.instanceId = builder.instanceId;
+        this.name = builder.name;
     }
 
     public static Builder builder() {
@@ -67,20 +72,29 @@ public class ModifyInstanceRequest extends Request {
         return this.instanceId;
     }
 
+    /**
+     * @return name
+     */
+    public String getName() {
+        return this.name;
+    }
+
     public static final class Builder extends Request.Builder<ModifyInstanceRequest, Builder> {
         private Long concurrency; 
         private String description; 
         private String instanceId; 
+        private String name; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ModifyInstanceRequest response) {
-            super(response);
-            this.concurrency = response.concurrency;
-            this.description = response.description;
-            this.instanceId = response.instanceId;
+        private Builder(ModifyInstanceRequest request) {
+            super(request);
+            this.concurrency = request.concurrency;
+            this.description = request.description;
+            this.instanceId = request.instanceId;
+            this.name = request.name;
         } 
 
         /**
@@ -107,6 +121,15 @@ public class ModifyInstanceRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * Name.
+         */
+        public Builder name(String name) {
+            this.putQueryParameter("Name", name);
+            this.name = name;
             return this;
         }
 

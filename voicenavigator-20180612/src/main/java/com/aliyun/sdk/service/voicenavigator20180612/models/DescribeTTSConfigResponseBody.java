@@ -12,6 +12,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeTTSConfigResponseBody</p>
  */
 public class DescribeTTSConfigResponseBody extends TeaModel {
+    @NameInMap("AppKey")
+    private String appKey;
+
+    @NameInMap("NlsServiceType")
+    private String nlsServiceType;
+
     @NameInMap("RequestId")
     private String requestId;
 
@@ -25,6 +31,8 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
     private Integer volume;
 
     private DescribeTTSConfigResponseBody(Builder builder) {
+        this.appKey = builder.appKey;
+        this.nlsServiceType = builder.nlsServiceType;
         this.requestId = builder.requestId;
         this.speechRate = builder.speechRate;
         this.voice = builder.voice;
@@ -37,6 +45,20 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
 
     public static DescribeTTSConfigResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return appKey
+     */
+    public String getAppKey() {
+        return this.appKey;
+    }
+
+    /**
+     * @return nlsServiceType
+     */
+    public String getNlsServiceType() {
+        return this.nlsServiceType;
     }
 
     /**
@@ -68,10 +90,28 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String appKey; 
+        private String nlsServiceType; 
         private String requestId; 
         private Integer speechRate; 
         private String voice; 
         private Integer volume; 
+
+        /**
+         * AppKey.
+         */
+        public Builder appKey(String appKey) {
+            this.appKey = appKey;
+            return this;
+        }
+
+        /**
+         * NlsServiceType.
+         */
+        public Builder nlsServiceType(String nlsServiceType) {
+            this.nlsServiceType = nlsServiceType;
+            return this;
+        }
 
         /**
          * RequestId.

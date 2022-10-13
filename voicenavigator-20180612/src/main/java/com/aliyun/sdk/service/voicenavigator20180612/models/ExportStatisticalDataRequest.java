@@ -103,13 +103,13 @@ public class ExportStatisticalDataRequest extends Request {
             super();
         } 
 
-        private Builder(ExportStatisticalDataRequest response) {
-            super(response);
-            this.beginTimeLeftRange = response.beginTimeLeftRange;
-            this.beginTimeRightRange = response.beginTimeRightRange;
-            this.exportType = response.exportType;
-            this.instanceId = response.instanceId;
-            this.timeUnit = response.timeUnit;
+        private Builder(ExportStatisticalDataRequest request) {
+            super(request);
+            this.beginTimeLeftRange = request.beginTimeLeftRange;
+            this.beginTimeRightRange = request.beginTimeRightRange;
+            this.exportType = request.exportType;
+            this.instanceId = request.instanceId;
+            this.timeUnit = request.timeUnit;
         } 
 
         /**

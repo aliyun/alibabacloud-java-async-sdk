@@ -62,10 +62,10 @@ public class DescribeTTSConfigRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeTTSConfigRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.instanceOwnerId = response.instanceOwnerId;
+        private Builder(DescribeTTSConfigRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.instanceOwnerId = request.instanceOwnerId;
         } 
 
         /**

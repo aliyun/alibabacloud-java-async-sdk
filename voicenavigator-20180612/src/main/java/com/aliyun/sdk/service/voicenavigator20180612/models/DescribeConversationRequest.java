@@ -63,10 +63,10 @@ public class DescribeConversationRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeConversationRequest response) {
-            super(response);
-            this.conversationId = response.conversationId;
-            this.instanceId = response.instanceId;
+        private Builder(DescribeConversationRequest request) {
+            super(request);
+            this.conversationId = request.conversationId;
+            this.instanceId = request.instanceId;
         } 
 
         /**

@@ -49,9 +49,9 @@ public class DeleteInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteInstanceRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
+        private Builder(DeleteInstanceRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
         } 
 
         /**

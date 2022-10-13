@@ -51,6 +51,10 @@ public class SaveRecordingRequest extends Request {
     @Validation(required = true)
     private String type;
 
+    @Query
+    @NameInMap("VoiceSliceRecordingList")
+    private String voiceSliceRecordingList;
+
     private SaveRecordingRequest(Builder builder) {
         super(builder);
         this.conversationId = builder.conversationId;
@@ -61,6 +65,7 @@ public class SaveRecordingRequest extends Request {
         this.instanceOwnerId = builder.instanceOwnerId;
         this.startTime = builder.startTime;
         this.type = builder.type;
+        this.voiceSliceRecordingList = builder.voiceSliceRecordingList;
     }
 
     public static Builder builder() {
@@ -132,6 +137,13 @@ public class SaveRecordingRequest extends Request {
         return this.type;
     }
 
+    /**
+     * @return voiceSliceRecordingList
+     */
+    public String getVoiceSliceRecordingList() {
+        return this.voiceSliceRecordingList;
+    }
+
     public static final class Builder extends Request.Builder<SaveRecordingRequest, Builder> {
         private String conversationId; 
         private String duration; 
@@ -141,21 +153,23 @@ public class SaveRecordingRequest extends Request {
         private Long instanceOwnerId; 
         private Long startTime; 
         private String type; 
+        private String voiceSliceRecordingList; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(SaveRecordingRequest response) {
-            super(response);
-            this.conversationId = response.conversationId;
-            this.duration = response.duration;
-            this.fileName = response.fileName;
-            this.filePath = response.filePath;
-            this.instanceId = response.instanceId;
-            this.instanceOwnerId = response.instanceOwnerId;
-            this.startTime = response.startTime;
-            this.type = response.type;
+        private Builder(SaveRecordingRequest request) {
+            super(request);
+            this.conversationId = request.conversationId;
+            this.duration = request.duration;
+            this.fileName = request.fileName;
+            this.filePath = request.filePath;
+            this.instanceId = request.instanceId;
+            this.instanceOwnerId = request.instanceOwnerId;
+            this.startTime = request.startTime;
+            this.type = request.type;
+            this.voiceSliceRecordingList = request.voiceSliceRecordingList;
         } 
 
         /**
@@ -227,6 +241,15 @@ public class SaveRecordingRequest extends Request {
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
             this.type = type;
+            return this;
+        }
+
+        /**
+         * VoiceSliceRecordingList.
+         */
+        public Builder voiceSliceRecordingList(String voiceSliceRecordingList) {
+            this.putQueryParameter("VoiceSliceRecordingList", voiceSliceRecordingList);
+            this.voiceSliceRecordingList = voiceSliceRecordingList;
             return this;
         }
 

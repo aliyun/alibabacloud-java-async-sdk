@@ -76,11 +76,11 @@ public class CreateInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(CreateInstanceRequest response) {
-            super(response);
-            this.concurrency = response.concurrency;
-            this.description = response.description;
-            this.name = response.name;
+        private Builder(CreateInstanceRequest request) {
+            super(request);
+            this.concurrency = request.concurrency;
+            this.description = request.description;
+            this.name = request.name;
         } 
 
         /**

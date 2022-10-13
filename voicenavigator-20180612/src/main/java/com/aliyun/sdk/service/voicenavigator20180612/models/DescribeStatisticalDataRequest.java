@@ -89,12 +89,12 @@ public class DescribeStatisticalDataRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeStatisticalDataRequest response) {
-            super(response);
-            this.beginTimeLeftRange = response.beginTimeLeftRange;
-            this.beginTimeRightRange = response.beginTimeRightRange;
-            this.instanceId = response.instanceId;
-            this.timeUnit = response.timeUnit;
+        private Builder(DescribeStatisticalDataRequest request) {
+            super(request);
+            this.beginTimeLeftRange = request.beginTimeLeftRange;
+            this.beginTimeRightRange = request.beginTimeRightRange;
+            this.instanceId = request.instanceId;
+            this.timeUnit = request.timeUnit;
         } 
 
         /**

@@ -89,12 +89,12 @@ public class CollectedNumberRequest extends Request {
             super();
         } 
 
-        private Builder(CollectedNumberRequest response) {
-            super(response);
-            this.conversationId = response.conversationId;
-            this.instanceId = response.instanceId;
-            this.instanceOwnerId = response.instanceOwnerId;
-            this.number = response.number;
+        private Builder(CollectedNumberRequest request) {
+            super(request);
+            this.conversationId = request.conversationId;
+            this.instanceId = request.instanceId;
+            this.instanceOwnerId = request.instanceOwnerId;
+            this.number = request.number;
         } 
 
         /**

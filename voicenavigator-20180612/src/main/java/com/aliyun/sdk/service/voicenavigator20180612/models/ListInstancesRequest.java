@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListInstancesRequest extends Request {
     @Query
+    @NameInMap("NluServiceTypeListJsonString")
+    private String nluServiceTypeListJsonString;
+
+    @Query
     @NameInMap("PageNumber")
     @Validation(required = true)
     private Integer pageNumber;
@@ -24,6 +28,7 @@ public class ListInstancesRequest extends Request {
 
     private ListInstancesRequest(Builder builder) {
         super(builder);
+        this.nluServiceTypeListJsonString = builder.nluServiceTypeListJsonString;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
     }
@@ -42,6 +47,13 @@ public class ListInstancesRequest extends Request {
     }
 
     /**
+     * @return nluServiceTypeListJsonString
+     */
+    public String getNluServiceTypeListJsonString() {
+        return this.nluServiceTypeListJsonString;
+    }
+
+    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -56,6 +68,7 @@ public class ListInstancesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListInstancesRequest, Builder> {
+        private String nluServiceTypeListJsonString; 
         private Integer pageNumber; 
         private Integer pageSize; 
 
@@ -63,11 +76,21 @@ public class ListInstancesRequest extends Request {
             super();
         } 
 
-        private Builder(ListInstancesRequest response) {
-            super(response);
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
+        private Builder(ListInstancesRequest request) {
+            super(request);
+            this.nluServiceTypeListJsonString = request.nluServiceTypeListJsonString;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
+
+        /**
+         * NluServiceTypeListJsonString.
+         */
+        public Builder nluServiceTypeListJsonString(String nluServiceTypeListJsonString) {
+            this.putQueryParameter("NluServiceTypeListJsonString", nluServiceTypeListJsonString);
+            this.nluServiceTypeListJsonString = nluServiceTypeListJsonString;
+            return this;
+        }
 
         /**
          * PageNumber.

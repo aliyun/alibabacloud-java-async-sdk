@@ -30,6 +30,10 @@ public class DialogueRequest extends Request {
     private String conversationId;
 
     @Query
+    @NameInMap("Emotion")
+    private String emotion;
+
+    @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
     private String instanceId;
@@ -49,6 +53,7 @@ public class DialogueRequest extends Request {
         this.calledNumber = builder.calledNumber;
         this.callingNumber = builder.callingNumber;
         this.conversationId = builder.conversationId;
+        this.emotion = builder.emotion;
         this.instanceId = builder.instanceId;
         this.instanceOwnerId = builder.instanceOwnerId;
         this.utterance = builder.utterance;
@@ -96,6 +101,13 @@ public class DialogueRequest extends Request {
     }
 
     /**
+     * @return emotion
+     */
+    public String getEmotion() {
+        return this.emotion;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -121,6 +133,7 @@ public class DialogueRequest extends Request {
         private String calledNumber; 
         private String callingNumber; 
         private String conversationId; 
+        private String emotion; 
         private String instanceId; 
         private Long instanceOwnerId; 
         private String utterance; 
@@ -129,15 +142,16 @@ public class DialogueRequest extends Request {
             super();
         } 
 
-        private Builder(DialogueRequest response) {
-            super(response);
-            this.additionalContext = response.additionalContext;
-            this.calledNumber = response.calledNumber;
-            this.callingNumber = response.callingNumber;
-            this.conversationId = response.conversationId;
-            this.instanceId = response.instanceId;
-            this.instanceOwnerId = response.instanceOwnerId;
-            this.utterance = response.utterance;
+        private Builder(DialogueRequest request) {
+            super(request);
+            this.additionalContext = request.additionalContext;
+            this.calledNumber = request.calledNumber;
+            this.callingNumber = request.callingNumber;
+            this.conversationId = request.conversationId;
+            this.emotion = request.emotion;
+            this.instanceId = request.instanceId;
+            this.instanceOwnerId = request.instanceOwnerId;
+            this.utterance = request.utterance;
         } 
 
         /**
@@ -173,6 +187,15 @@ public class DialogueRequest extends Request {
         public Builder conversationId(String conversationId) {
             this.putQueryParameter("ConversationId", conversationId);
             this.conversationId = conversationId;
+            return this;
+        }
+
+        /**
+         * Emotion.
+         */
+        public Builder emotion(String emotion) {
+            this.putQueryParameter("Emotion", emotion);
+            this.emotion = emotion;
             return this;
         }
 

@@ -132,6 +132,9 @@ public class ListConversationsResponseBody extends TeaModel {
     } 
 
     public static class Conversations extends TeaModel {
+        @NameInMap("CalledNumber")
+        private String calledNumber;
+
         @NameInMap("CallingNumber")
         private String callingNumber;
 
@@ -153,6 +156,9 @@ public class ListConversationsResponseBody extends TeaModel {
         @NameInMap("Rounds")
         private Integer rounds;
 
+        @NameInMap("SandBox")
+        private Boolean sandBox;
+
         @NameInMap("SkillGroup")
         private String skillGroup;
 
@@ -160,6 +166,7 @@ public class ListConversationsResponseBody extends TeaModel {
         private Long startTime;
 
         private Conversations(Builder builder) {
+            this.calledNumber = builder.calledNumber;
             this.callingNumber = builder.callingNumber;
             this.conversationId = builder.conversationId;
             this.endReason = builder.endReason;
@@ -167,6 +174,7 @@ public class ListConversationsResponseBody extends TeaModel {
             this.hasLastPlaybackCompleted = builder.hasLastPlaybackCompleted;
             this.hasToAgent = builder.hasToAgent;
             this.rounds = builder.rounds;
+            this.sandBox = builder.sandBox;
             this.skillGroup = builder.skillGroup;
             this.startTime = builder.startTime;
         }
@@ -177,6 +185,13 @@ public class ListConversationsResponseBody extends TeaModel {
 
         public static Conversations create() {
             return builder().build();
+        }
+
+        /**
+         * @return calledNumber
+         */
+        public String getCalledNumber() {
+            return this.calledNumber;
         }
 
         /**
@@ -229,6 +244,13 @@ public class ListConversationsResponseBody extends TeaModel {
         }
 
         /**
+         * @return sandBox
+         */
+        public Boolean getSandBox() {
+            return this.sandBox;
+        }
+
+        /**
          * @return skillGroup
          */
         public String getSkillGroup() {
@@ -243,6 +265,7 @@ public class ListConversationsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String calledNumber; 
             private String callingNumber; 
             private String conversationId; 
             private Integer endReason; 
@@ -250,8 +273,17 @@ public class ListConversationsResponseBody extends TeaModel {
             private Boolean hasLastPlaybackCompleted; 
             private Boolean hasToAgent; 
             private Integer rounds; 
+            private Boolean sandBox; 
             private String skillGroup; 
             private Long startTime; 
+
+            /**
+             * CalledNumber.
+             */
+            public Builder calledNumber(String calledNumber) {
+                this.calledNumber = calledNumber;
+                return this;
+            }
 
             /**
              * CallingNumber.
@@ -306,6 +338,14 @@ public class ListConversationsResponseBody extends TeaModel {
              */
             public Builder rounds(Integer rounds) {
                 this.rounds = rounds;
+                return this;
+            }
+
+            /**
+             * SandBox.
+             */
+            public Builder sandBox(Boolean sandBox) {
+                this.sandBox = sandBox;
                 return this;
             }
 

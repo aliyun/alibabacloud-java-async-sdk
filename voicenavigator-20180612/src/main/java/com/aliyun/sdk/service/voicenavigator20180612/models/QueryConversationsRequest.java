@@ -116,14 +116,14 @@ public class QueryConversationsRequest extends Request {
             super();
         } 
 
-        private Builder(QueryConversationsRequest response) {
-            super(response);
-            this.beginTimeLeftRange = response.beginTimeLeftRange;
-            this.beginTimeRightRange = response.beginTimeRightRange;
-            this.callingNumber = response.callingNumber;
-            this.instanceId = response.instanceId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
+        private Builder(QueryConversationsRequest request) {
+            super(request);
+            this.beginTimeLeftRange = request.beginTimeLeftRange;
+            this.beginTimeRightRange = request.beginTimeRightRange;
+            this.callingNumber = request.callingNumber;
+            this.instanceId = request.instanceId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
 
         /**

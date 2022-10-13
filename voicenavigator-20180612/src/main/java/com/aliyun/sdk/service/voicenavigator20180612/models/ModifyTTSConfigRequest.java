@@ -13,9 +13,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyTTSConfigRequest extends Request {
     @Query
+    @NameInMap("AppKey")
+    private String appKey;
+
+    @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
     private String instanceId;
+
+    @Query
+    @NameInMap("NlsServiceType")
+    private String nlsServiceType;
 
     @Query
     @NameInMap("SpeechRate")
@@ -31,7 +39,9 @@ public class ModifyTTSConfigRequest extends Request {
 
     private ModifyTTSConfigRequest(Builder builder) {
         super(builder);
+        this.appKey = builder.appKey;
         this.instanceId = builder.instanceId;
+        this.nlsServiceType = builder.nlsServiceType;
         this.speechRate = builder.speechRate;
         this.voice = builder.voice;
         this.volume = builder.volume;
@@ -51,10 +61,24 @@ public class ModifyTTSConfigRequest extends Request {
     }
 
     /**
+     * @return appKey
+     */
+    public String getAppKey() {
+        return this.appKey;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    /**
+     * @return nlsServiceType
+     */
+    public String getNlsServiceType() {
+        return this.nlsServiceType;
     }
 
     /**
@@ -79,7 +103,9 @@ public class ModifyTTSConfigRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyTTSConfigRequest, Builder> {
+        private String appKey; 
         private String instanceId; 
+        private String nlsServiceType; 
         private String speechRate; 
         private String voice; 
         private String volume; 
@@ -88,13 +114,24 @@ public class ModifyTTSConfigRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyTTSConfigRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.speechRate = response.speechRate;
-            this.voice = response.voice;
-            this.volume = response.volume;
+        private Builder(ModifyTTSConfigRequest request) {
+            super(request);
+            this.appKey = request.appKey;
+            this.instanceId = request.instanceId;
+            this.nlsServiceType = request.nlsServiceType;
+            this.speechRate = request.speechRate;
+            this.voice = request.voice;
+            this.volume = request.volume;
         } 
+
+        /**
+         * AppKey.
+         */
+        public Builder appKey(String appKey) {
+            this.putQueryParameter("AppKey", appKey);
+            this.appKey = appKey;
+            return this;
+        }
 
         /**
          * InstanceId.
@@ -102,6 +139,15 @@ public class ModifyTTSConfigRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * NlsServiceType.
+         */
+        public Builder nlsServiceType(String nlsServiceType) {
+            this.putQueryParameter("NlsServiceType", nlsServiceType);
+            this.nlsServiceType = nlsServiceType;
             return this;
         }
 

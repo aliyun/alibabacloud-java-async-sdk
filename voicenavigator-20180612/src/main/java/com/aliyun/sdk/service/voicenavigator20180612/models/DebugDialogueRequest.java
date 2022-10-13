@@ -90,12 +90,12 @@ public class DebugDialogueRequest extends Request {
             super();
         } 
 
-        private Builder(DebugDialogueRequest response) {
-            super(response);
-            this.additionalContext = response.additionalContext;
-            this.conversationId = response.conversationId;
-            this.instanceId = response.instanceId;
-            this.utterance = response.utterance;
+        private Builder(DebugDialogueRequest request) {
+            super(request);
+            this.additionalContext = request.additionalContext;
+            this.conversationId = request.conversationId;
+            this.instanceId = request.instanceId;
+            this.utterance = request.utterance;
         } 
 
         /**

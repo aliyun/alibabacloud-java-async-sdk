@@ -116,14 +116,14 @@ public class BeginDialogueRequest extends Request {
             super();
         } 
 
-        private Builder(BeginDialogueRequest response) {
-            super(response);
-            this.calledNumber = response.calledNumber;
-            this.callingNumber = response.callingNumber;
-            this.conversationId = response.conversationId;
-            this.initialContext = response.initialContext;
-            this.instanceId = response.instanceId;
-            this.instanceOwnerId = response.instanceOwnerId;
+        private Builder(BeginDialogueRequest request) {
+            super(request);
+            this.calledNumber = request.calledNumber;
+            this.callingNumber = request.callingNumber;
+            this.conversationId = request.conversationId;
+            this.initialContext = request.initialContext;
+            this.instanceId = request.instanceId;
+            this.instanceOwnerId = request.instanceOwnerId;
         } 
 
         /**

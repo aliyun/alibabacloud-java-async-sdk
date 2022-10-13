@@ -49,9 +49,9 @@ public class EnableInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(EnableInstanceRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
+        private Builder(EnableInstanceRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
         } 
 
         /**

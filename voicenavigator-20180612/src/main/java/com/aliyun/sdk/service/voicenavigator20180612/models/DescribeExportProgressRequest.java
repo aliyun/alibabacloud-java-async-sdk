@@ -63,10 +63,10 @@ public class DescribeExportProgressRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeExportProgressRequest response) {
-            super(response);
-            this.exportTaskId = response.exportTaskId;
-            this.instanceId = response.instanceId;
+        private Builder(DescribeExportProgressRequest request) {
+            super(request);
+            this.exportTaskId = request.exportTaskId;
+            this.instanceId = request.instanceId;
         } 
 
         /**

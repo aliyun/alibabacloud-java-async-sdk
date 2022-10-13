@@ -63,10 +63,10 @@ public class DescribeConversationContextRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeConversationContextRequest response) {
-            super(response);
-            this.conversationId = response.conversationId;
-            this.instanceId = response.instanceId;
+        private Builder(DescribeConversationContextRequest request) {
+            super(request);
+            this.conversationId = request.conversationId;
+            this.instanceId = request.instanceId;
         } 
 
         /**

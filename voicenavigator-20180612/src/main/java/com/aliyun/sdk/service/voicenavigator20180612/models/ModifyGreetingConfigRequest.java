@@ -90,12 +90,12 @@ public class ModifyGreetingConfigRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyGreetingConfigRequest response) {
-            super(response);
-            this.greetingWords = response.greetingWords;
-            this.instanceId = response.instanceId;
-            this.intentTrigger = response.intentTrigger;
-            this.sourceType = response.sourceType;
+        private Builder(ModifyGreetingConfigRequest request) {
+            super(request);
+            this.greetingWords = request.greetingWords;
+            this.instanceId = request.instanceId;
+            this.intentTrigger = request.intentTrigger;
+            this.sourceType = request.sourceType;
         } 
 
         /**
