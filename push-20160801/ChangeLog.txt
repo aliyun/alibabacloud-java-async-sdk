@@ -1,3 +1,7 @@
+2022-10-13 Version: 1.0.2
+- Supported AndroidNotificationGroup for Push and MassPush.
+- Add Honor channel support.
+
 2022-03-30 Version: 1.0.1
 - Supported SendChannels, AndroidMessageHuaweiUrgency, AndroidMessageHuaweiCategory for Push and MassPush.
 

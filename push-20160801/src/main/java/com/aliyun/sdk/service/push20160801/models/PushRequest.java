@@ -67,12 +67,19 @@ public class PushRequest extends Request {
     private String androidNotificationChannel;
 
     @Query
+    @NameInMap("AndroidNotificationGroup")
+    private String androidNotificationGroup;
+
+    @Query
+    @NameInMap("AndroidNotificationHonorChannel")
+    private String androidNotificationHonorChannel;
+
+    @Query
     @NameInMap("AndroidNotificationHuaweiChannel")
     private String androidNotificationHuaweiChannel;
 
     @Query
     @NameInMap("AndroidNotificationNotifyId")
-    @Validation(maximum = 999999999)
     private Integer androidNotificationNotifyId;
 
     @Query
@@ -121,14 +128,17 @@ public class PushRequest extends Request {
 
     @Query
     @NameInMap("AndroidXiaoMiActivity")
+    @Deprecated
     private String androidXiaoMiActivity;
 
     @Query
     @NameInMap("AndroidXiaoMiNotifyBody")
+    @Deprecated
     private String androidXiaoMiNotifyBody;
 
     @Query
     @NameInMap("AndroidXiaoMiNotifyTitle")
+    @Deprecated
     private String androidXiaoMiNotifyTitle;
 
     @Query
@@ -177,6 +187,7 @@ public class PushRequest extends Request {
 
     @Query
     @NameInMap("SendSpeed")
+    @Deprecated
     private Integer sendSpeed;
 
     @Query
@@ -297,6 +308,8 @@ public class PushRequest extends Request {
         this.androidNotificationBarPriority = builder.androidNotificationBarPriority;
         this.androidNotificationBarType = builder.androidNotificationBarType;
         this.androidNotificationChannel = builder.androidNotificationChannel;
+        this.androidNotificationGroup = builder.androidNotificationGroup;
+        this.androidNotificationHonorChannel = builder.androidNotificationHonorChannel;
         this.androidNotificationHuaweiChannel = builder.androidNotificationHuaweiChannel;
         this.androidNotificationNotifyId = builder.androidNotificationNotifyId;
         this.androidNotificationVivoChannel = builder.androidNotificationVivoChannel;
@@ -453,6 +466,20 @@ public class PushRequest extends Request {
      */
     public String getAndroidNotificationChannel() {
         return this.androidNotificationChannel;
+    }
+
+    /**
+     * @return androidNotificationGroup
+     */
+    public String getAndroidNotificationGroup() {
+        return this.androidNotificationGroup;
+    }
+
+    /**
+     * @return androidNotificationHonorChannel
+     */
+    public String getAndroidNotificationHonorChannel() {
+        return this.androidNotificationHonorChannel;
     }
 
     /**
@@ -833,6 +860,8 @@ public class PushRequest extends Request {
         private Integer androidNotificationBarPriority; 
         private Integer androidNotificationBarType; 
         private String androidNotificationChannel; 
+        private String androidNotificationGroup; 
+        private String androidNotificationHonorChannel; 
         private String androidNotificationHuaweiChannel; 
         private Integer androidNotificationNotifyId; 
         private String androidNotificationVivoChannel; 
@@ -905,6 +934,8 @@ public class PushRequest extends Request {
             this.androidNotificationBarPriority = request.androidNotificationBarPriority;
             this.androidNotificationBarType = request.androidNotificationBarType;
             this.androidNotificationChannel = request.androidNotificationChannel;
+            this.androidNotificationGroup = request.androidNotificationGroup;
+            this.androidNotificationHonorChannel = request.androidNotificationHonorChannel;
             this.androidNotificationHuaweiChannel = request.androidNotificationHuaweiChannel;
             this.androidNotificationNotifyId = request.androidNotificationNotifyId;
             this.androidNotificationVivoChannel = request.androidNotificationVivoChannel;
@@ -1073,6 +1104,24 @@ public class PushRequest extends Request {
         public Builder androidNotificationChannel(String androidNotificationChannel) {
             this.putQueryParameter("AndroidNotificationChannel", androidNotificationChannel);
             this.androidNotificationChannel = androidNotificationChannel;
+            return this;
+        }
+
+        /**
+         * AndroidNotificationGroup.
+         */
+        public Builder androidNotificationGroup(String androidNotificationGroup) {
+            this.putQueryParameter("AndroidNotificationGroup", androidNotificationGroup);
+            this.androidNotificationGroup = androidNotificationGroup;
+            return this;
+        }
+
+        /**
+         * AndroidNotificationHonorChannel.
+         */
+        public Builder androidNotificationHonorChannel(String androidNotificationHonorChannel) {
+            this.putQueryParameter("AndroidNotificationHonorChannel", androidNotificationHonorChannel);
+            this.androidNotificationHonorChannel = androidNotificationHonorChannel;
             return this;
         }
 

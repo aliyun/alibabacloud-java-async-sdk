@@ -54,8 +54,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<QueryAliasesResponse> queryAliases(QueryAliasesRequest request);
 
-    CompletableFuture<QueryDeviceCountResponse> queryDeviceCount(QueryDeviceCountRequest request);
-
     CompletableFuture<QueryDeviceInfoResponse> queryDeviceInfo(QueryDeviceInfoRequest request);
 
     CompletableFuture<QueryDeviceStatResponse> queryDeviceStat(QueryDeviceStatRequest request);

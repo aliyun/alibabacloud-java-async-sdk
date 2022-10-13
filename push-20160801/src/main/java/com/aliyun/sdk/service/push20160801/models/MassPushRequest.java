@@ -134,11 +134,16 @@ public class MassPushRequest extends Request {
         @NameInMap("AndroidNotificationChannel")
         private String androidNotificationChannel;
 
+        @NameInMap("AndroidNotificationGroup")
+        private String androidNotificationGroup;
+
+        @NameInMap("AndroidNotificationHonorChannel")
+        private String androidNotificationHonorChannel;
+
         @NameInMap("AndroidNotificationHuaweiChannel")
         private String androidNotificationHuaweiChannel;
 
         @NameInMap("AndroidNotificationNotifyId")
-        @Validation(maximum = 999999999)
         private Integer androidNotificationNotifyId;
 
         @NameInMap("AndroidNotificationVivoChannel")
@@ -175,12 +180,15 @@ public class MassPushRequest extends Request {
         private Integer androidVivoPushMode;
 
         @NameInMap("AndroidXiaoMiActivity")
+        @Deprecated
         private String androidXiaoMiActivity;
 
         @NameInMap("AndroidXiaoMiNotifyBody")
+        @Deprecated
         private String androidXiaoMiNotifyBody;
 
         @NameInMap("AndroidXiaoMiNotifyTitle")
+        @Deprecated
         private String androidXiaoMiNotifyTitle;
 
         @NameInMap("AndroidXiaomiBigPictureUrl")
@@ -214,6 +222,7 @@ public class MassPushRequest extends Request {
         private String sendChannels;
 
         @NameInMap("SendSpeed")
+        @Deprecated
         private Integer sendSpeed;
 
         @NameInMap("StoreOffline")
@@ -292,6 +301,8 @@ public class MassPushRequest extends Request {
             this.androidNotificationBarPriority = builder.androidNotificationBarPriority;
             this.androidNotificationBarType = builder.androidNotificationBarType;
             this.androidNotificationChannel = builder.androidNotificationChannel;
+            this.androidNotificationGroup = builder.androidNotificationGroup;
+            this.androidNotificationHonorChannel = builder.androidNotificationHonorChannel;
             this.androidNotificationHuaweiChannel = builder.androidNotificationHuaweiChannel;
             this.androidNotificationNotifyId = builder.androidNotificationNotifyId;
             this.androidNotificationVivoChannel = builder.androidNotificationVivoChannel;
@@ -437,6 +448,20 @@ public class MassPushRequest extends Request {
          */
         public String getAndroidNotificationChannel() {
             return this.androidNotificationChannel;
+        }
+
+        /**
+         * @return androidNotificationGroup
+         */
+        public String getAndroidNotificationGroup() {
+            return this.androidNotificationGroup;
+        }
+
+        /**
+         * @return androidNotificationHonorChannel
+         */
+        public String getAndroidNotificationHonorChannel() {
+            return this.androidNotificationHonorChannel;
         }
 
         /**
@@ -775,6 +800,8 @@ public class MassPushRequest extends Request {
             private Integer androidNotificationBarPriority; 
             private Integer androidNotificationBarType; 
             private String androidNotificationChannel; 
+            private String androidNotificationGroup; 
+            private String androidNotificationHonorChannel; 
             private String androidNotificationHuaweiChannel; 
             private Integer androidNotificationNotifyId; 
             private String androidNotificationVivoChannel; 
@@ -923,6 +950,22 @@ public class MassPushRequest extends Request {
              */
             public Builder androidNotificationChannel(String androidNotificationChannel) {
                 this.androidNotificationChannel = androidNotificationChannel;
+                return this;
+            }
+
+            /**
+             * AndroidNotificationGroup.
+             */
+            public Builder androidNotificationGroup(String androidNotificationGroup) {
+                this.androidNotificationGroup = androidNotificationGroup;
+                return this;
+            }
+
+            /**
+             * AndroidNotificationHonorChannel.
+             */
+            public Builder androidNotificationHonorChannel(String androidNotificationHonorChannel) {
+                this.androidNotificationHonorChannel = androidNotificationHonorChannel;
                 return this;
             }
 
