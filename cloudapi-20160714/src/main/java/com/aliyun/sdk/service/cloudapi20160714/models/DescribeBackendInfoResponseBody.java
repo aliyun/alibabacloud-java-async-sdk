@@ -353,6 +353,148 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
         } 
 
     }
+    public static class MockHeaders extends TeaModel {
+        @NameInMap("HeaderName")
+        private String headerName;
+
+        @NameInMap("HeaderValue")
+        private String headerValue;
+
+        private MockHeaders(Builder builder) {
+            this.headerName = builder.headerName;
+            this.headerValue = builder.headerValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static MockHeaders create() {
+            return builder().build();
+        }
+
+        /**
+         * @return headerName
+         */
+        public String getHeaderName() {
+            return this.headerName;
+        }
+
+        /**
+         * @return headerValue
+         */
+        public String getHeaderValue() {
+            return this.headerValue;
+        }
+
+        public static final class Builder {
+            private String headerName; 
+            private String headerValue; 
+
+            /**
+             * HeaderName.
+             */
+            public Builder headerName(String headerName) {
+                this.headerName = headerName;
+                return this;
+            }
+
+            /**
+             * HeaderValue.
+             */
+            public Builder headerValue(String headerValue) {
+                this.headerValue = headerValue;
+                return this;
+            }
+
+            public MockHeaders build() {
+                return new MockHeaders(this);
+            } 
+
+        } 
+
+    }
+    public static class MockConfig extends TeaModel {
+        @NameInMap("MockHeaders")
+        private java.util.List < MockHeaders> mockHeaders;
+
+        @NameInMap("MockResult")
+        private String mockResult;
+
+        @NameInMap("MockStatusCode")
+        private String mockStatusCode;
+
+        private MockConfig(Builder builder) {
+            this.mockHeaders = builder.mockHeaders;
+            this.mockResult = builder.mockResult;
+            this.mockStatusCode = builder.mockStatusCode;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static MockConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return mockHeaders
+         */
+        public java.util.List < MockHeaders> getMockHeaders() {
+            return this.mockHeaders;
+        }
+
+        /**
+         * @return mockResult
+         */
+        public String getMockResult() {
+            return this.mockResult;
+        }
+
+        /**
+         * @return mockStatusCode
+         */
+        public String getMockStatusCode() {
+            return this.mockStatusCode;
+        }
+
+        public static final class Builder {
+            private java.util.List < MockHeaders> mockHeaders; 
+            private String mockResult; 
+            private String mockStatusCode; 
+
+            /**
+             * MockHeaders.
+             */
+            public Builder mockHeaders(java.util.List < MockHeaders> mockHeaders) {
+                this.mockHeaders = mockHeaders;
+                return this;
+            }
+
+            /**
+             * MockResult.
+             */
+            public Builder mockResult(String mockResult) {
+                this.mockResult = mockResult;
+                return this;
+            }
+
+            /**
+             * MockStatusCode.
+             */
+            public Builder mockStatusCode(String mockStatusCode) {
+                this.mockStatusCode = mockStatusCode;
+                return this;
+            }
+
+            public MockConfig build() {
+                return new MockConfig(this);
+            } 
+
+        } 
+
+    }
     public static class OssConfig extends TeaModel {
         @NameInMap("BucketName")
         private String bucketName;
@@ -582,6 +724,9 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
         @NameInMap("FunctionComputeConfig")
         private FunctionComputeConfig functionComputeConfig;
 
+        @NameInMap("MockConfig")
+        private MockConfig mockConfig;
+
         @NameInMap("OssConfig")
         private OssConfig ossConfig;
 
@@ -597,6 +742,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
         private BackendConfig(Builder builder) {
             this.eventBridgeConfig = builder.eventBridgeConfig;
             this.functionComputeConfig = builder.functionComputeConfig;
+            this.mockConfig = builder.mockConfig;
             this.ossConfig = builder.ossConfig;
             this.serviceAddress = builder.serviceAddress;
             this.type = builder.type;
@@ -623,6 +769,13 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
          */
         public FunctionComputeConfig getFunctionComputeConfig() {
             return this.functionComputeConfig;
+        }
+
+        /**
+         * @return mockConfig
+         */
+        public MockConfig getMockConfig() {
+            return this.mockConfig;
         }
 
         /**
@@ -656,6 +809,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
         public static final class Builder {
             private EventBridgeConfig eventBridgeConfig; 
             private FunctionComputeConfig functionComputeConfig; 
+            private MockConfig mockConfig; 
             private OssConfig ossConfig; 
             private String serviceAddress; 
             private String type; 
@@ -674,6 +828,14 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
              */
             public Builder functionComputeConfig(FunctionComputeConfig functionComputeConfig) {
                 this.functionComputeConfig = functionComputeConfig;
+                return this;
+            }
+
+            /**
+             * MockConfig.
+             */
+            public Builder mockConfig(MockConfig mockConfig) {
+                this.mockConfig = mockConfig;
                 return this;
             }
 

@@ -708,6 +708,9 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         @NameInMap("WildcardDomainPatterns")
         private String wildcardDomainPatterns;
 
+        @NameInMap("WssEnable")
+        private String wssEnable;
+
         private DomainItem(Builder builder) {
             this.bindStageName = builder.bindStageName;
             this.certificateId = builder.certificateId;
@@ -721,6 +724,7 @@ public class DescribeApiGroupResponseBody extends TeaModel {
             this.domainWebSocketStatus = builder.domainWebSocketStatus;
             this.isHttpRedirectToHttps = builder.isHttpRedirectToHttps;
             this.wildcardDomainPatterns = builder.wildcardDomainPatterns;
+            this.wssEnable = builder.wssEnable;
         }
 
         public static Builder builder() {
@@ -815,6 +819,13 @@ public class DescribeApiGroupResponseBody extends TeaModel {
             return this.wildcardDomainPatterns;
         }
 
+        /**
+         * @return wssEnable
+         */
+        public String getWssEnable() {
+            return this.wssEnable;
+        }
+
         public static final class Builder {
             private String bindStageName; 
             private String certificateId; 
@@ -828,6 +839,7 @@ public class DescribeApiGroupResponseBody extends TeaModel {
             private String domainWebSocketStatus; 
             private Boolean isHttpRedirectToHttps; 
             private String wildcardDomainPatterns; 
+            private String wssEnable; 
 
             /**
              * BindStageName.
@@ -922,6 +934,14 @@ public class DescribeApiGroupResponseBody extends TeaModel {
              */
             public Builder wildcardDomainPatterns(String wildcardDomainPatterns) {
                 this.wildcardDomainPatterns = wildcardDomainPatterns;
+                return this;
+            }
+
+            /**
+             * WssEnable.
+             */
+            public Builder wssEnable(String wssEnable) {
+                this.wssEnable = wssEnable;
                 return this;
             }
 

@@ -46,6 +46,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateBackendModelResponse> createBackendModel(CreateBackendModelRequest request);
 
+    CompletableFuture<CreateDatasetResponse> createDataset(CreateDatasetRequest request);
+
+    CompletableFuture<CreateDatasetItemResponse> createDatasetItem(CreateDatasetItemRequest request);
+
     CompletableFuture<CreateInstanceResponse> createInstance(CreateInstanceRequest request);
 
     CompletableFuture<CreateIntranetDomainResponse> createIntranetDomain(CreateIntranetDomainRequest request);
@@ -79,6 +83,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteBackendResponse> deleteBackend(DeleteBackendRequest request);
 
     CompletableFuture<DeleteBackendModelResponse> deleteBackendModel(DeleteBackendModelRequest request);
+
+    CompletableFuture<DeleteDatasetResponse> deleteDataset(DeleteDatasetRequest request);
+
+    CompletableFuture<DeleteDatasetItemResponse> deleteDatasetItem(DeleteDatasetItemRequest request);
 
     CompletableFuture<DeleteDomainResponse> deleteDomain(DeleteDomainRequest request);
 
@@ -166,6 +174,14 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeBackendListResponse> describeBackendList(DescribeBackendListRequest request);
 
+    CompletableFuture<DescribeDatasetInfoResponse> describeDatasetInfo(DescribeDatasetInfoRequest request);
+
+    CompletableFuture<DescribeDatasetItemInfoResponse> describeDatasetItemInfo(DescribeDatasetItemInfoRequest request);
+
+    CompletableFuture<DescribeDatasetItemListResponse> describeDatasetItemList(DescribeDatasetItemListRequest request);
+
+    CompletableFuture<DescribeDatasetListResponse> describeDatasetList(DescribeDatasetListRequest request);
+
     CompletableFuture<DescribeDeployApiTaskResponse> describeDeployApiTask(DescribeDeployApiTaskRequest request);
 
     CompletableFuture<DescribeDeployedApiResponse> describeDeployedApi(DescribeDeployedApiRequest request);
@@ -247,6 +263,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyBackendResponse> modifyBackend(ModifyBackendRequest request);
 
     CompletableFuture<ModifyBackendModelResponse> modifyBackendModel(ModifyBackendModelRequest request);
+
+    CompletableFuture<ModifyDatasetResponse> modifyDataset(ModifyDatasetRequest request);
+
+    CompletableFuture<ModifyDatasetItemResponse> modifyDatasetItem(ModifyDatasetItemRequest request);
 
     CompletableFuture<ModifyInstanceSpecResponse> modifyInstanceSpec(ModifyInstanceSpecRequest request);
 
