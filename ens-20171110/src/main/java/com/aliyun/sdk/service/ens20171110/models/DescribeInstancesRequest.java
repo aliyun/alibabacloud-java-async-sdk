@@ -45,6 +45,10 @@ public class DescribeInstancesRequest extends Request {
     private String instanceResourceType;
 
     @Query
+    @NameInMap("IntranetIp")
+    private String intranetIp;
+
+    @Query
     @NameInMap("NetworkId")
     private String networkId;
 
@@ -86,6 +90,7 @@ public class DescribeInstancesRequest extends Request {
         this.instanceIds = builder.instanceIds;
         this.instanceName = builder.instanceName;
         this.instanceResourceType = builder.instanceResourceType;
+        this.intranetIp = builder.intranetIp;
         this.networkId = builder.networkId;
         this.orderByParams = builder.orderByParams;
         this.pageNumber = builder.pageNumber;
@@ -166,6 +171,13 @@ public class DescribeInstancesRequest extends Request {
     }
 
     /**
+     * @return intranetIp
+     */
+    public String getIntranetIp() {
+        return this.intranetIp;
+    }
+
+    /**
      * @return networkId
      */
     public String getNetworkId() {
@@ -230,6 +242,7 @@ public class DescribeInstancesRequest extends Request {
         private String instanceIds; 
         private String instanceName; 
         private String instanceResourceType; 
+        private String intranetIp; 
         private String networkId; 
         private String orderByParams; 
         private Integer pageNumber; 
@@ -253,6 +266,7 @@ public class DescribeInstancesRequest extends Request {
             this.instanceIds = request.instanceIds;
             this.instanceName = request.instanceName;
             this.instanceResourceType = request.instanceResourceType;
+            this.intranetIp = request.intranetIp;
             this.networkId = request.networkId;
             this.orderByParams = request.orderByParams;
             this.pageNumber = request.pageNumber;
@@ -332,6 +346,15 @@ public class DescribeInstancesRequest extends Request {
         public Builder instanceResourceType(String instanceResourceType) {
             this.putQueryParameter("InstanceResourceType", instanceResourceType);
             this.instanceResourceType = instanceResourceType;
+            return this;
+        }
+
+        /**
+         * IntranetIp.
+         */
+        public Builder intranetIp(String intranetIp) {
+            this.putQueryParameter("IntranetIp", intranetIp);
+            this.intranetIp = intranetIp;
             return this;
         }
 

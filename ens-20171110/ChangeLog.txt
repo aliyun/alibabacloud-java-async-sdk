@@ -1,3 +1,6 @@
+2022-10-13 Version: 1.0.4
+- Support DescribeAICImages.
+
 2022-09-22 Version: 1.0.3
 - Support ipv4-network.
 

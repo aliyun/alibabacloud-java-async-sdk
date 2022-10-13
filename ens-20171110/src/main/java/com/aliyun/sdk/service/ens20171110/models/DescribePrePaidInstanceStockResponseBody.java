@@ -33,6 +33,9 @@ public class DescribePrePaidInstanceStockResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("ResourceGap")
+    private String resourceGap;
+
     @NameInMap("SystemDiskSize")
     private Integer systemDiskSize;
 
@@ -44,6 +47,7 @@ public class DescribePrePaidInstanceStockResponseBody extends TeaModel {
         this.instanceSpec = builder.instanceSpec;
         this.memory = builder.memory;
         this.requestId = builder.requestId;
+        this.resourceGap = builder.resourceGap;
         this.systemDiskSize = builder.systemDiskSize;
     }
 
@@ -105,6 +109,13 @@ public class DescribePrePaidInstanceStockResponseBody extends TeaModel {
     }
 
     /**
+     * @return resourceGap
+     */
+    public String getResourceGap() {
+        return this.resourceGap;
+    }
+
+    /**
      * @return systemDiskSize
      */
     public Integer getSystemDiskSize() {
@@ -119,6 +130,7 @@ public class DescribePrePaidInstanceStockResponseBody extends TeaModel {
         private String instanceSpec; 
         private Integer memory; 
         private String requestId; 
+        private String resourceGap; 
         private Integer systemDiskSize; 
 
         /**
@@ -174,6 +186,14 @@ public class DescribePrePaidInstanceStockResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * ResourceGap.
+         */
+        public Builder resourceGap(String resourceGap) {
+            this.resourceGap = resourceGap;
             return this;
         }
 

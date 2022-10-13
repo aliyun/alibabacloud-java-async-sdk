@@ -124,6 +124,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteVSwitchResponse> deleteVSwitch(DeleteVSwitchRequest request);
 
+    CompletableFuture<DescribeAICImagesResponse> describeAICImages(DescribeAICImagesRequest request);
+
     CompletableFuture<DescribeARMServerInstancesResponse> describeARMServerInstances(DescribeARMServerInstancesRequest request);
 
     CompletableFuture<DescribeApplicationResponse> describeApplication(DescribeApplicationRequest request);
@@ -189,6 +191,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeExportImageInfoResponse> describeExportImageInfo(DescribeExportImageInfoRequest request);
 
     CompletableFuture<DescribeExportImageStatusResponse> describeExportImageStatus(DescribeExportImageStatusRequest request);
+
+    CompletableFuture<DescribeFileSystemsResponse> describeFileSystems(DescribeFileSystemsRequest request);
 
     CompletableFuture<DescribeForwardTableEntriesResponse> describeForwardTableEntries(DescribeForwardTableEntriesRequest request);
 

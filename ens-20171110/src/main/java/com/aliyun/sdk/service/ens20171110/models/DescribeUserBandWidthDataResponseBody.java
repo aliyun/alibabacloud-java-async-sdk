@@ -93,19 +93,19 @@ public class DescribeUserBandWidthDataResponseBody extends TeaModel {
 
     public static class BandWidthMonitorData extends TeaModel {
         @NameInMap("DownBandWidth")
-        private Integer downBandWidth;
+        private Long downBandWidth;
 
         @NameInMap("InternetRX")
-        private Integer internetRX;
+        private Long internetRX;
 
         @NameInMap("InternetTX")
-        private Integer internetTX;
+        private Long internetTX;
 
         @NameInMap("TimeStamp")
         private String timeStamp;
 
         @NameInMap("UpBandWidth")
-        private Integer upBandWidth;
+        private Long upBandWidth;
 
         private BandWidthMonitorData(Builder builder) {
             this.downBandWidth = builder.downBandWidth;
@@ -126,21 +126,21 @@ public class DescribeUserBandWidthDataResponseBody extends TeaModel {
         /**
          * @return downBandWidth
          */
-        public Integer getDownBandWidth() {
+        public Long getDownBandWidth() {
             return this.downBandWidth;
         }
 
         /**
          * @return internetRX
          */
-        public Integer getInternetRX() {
+        public Long getInternetRX() {
             return this.internetRX;
         }
 
         /**
          * @return internetTX
          */
-        public Integer getInternetTX() {
+        public Long getInternetTX() {
             return this.internetTX;
         }
 
@@ -154,21 +154,21 @@ public class DescribeUserBandWidthDataResponseBody extends TeaModel {
         /**
          * @return upBandWidth
          */
-        public Integer getUpBandWidth() {
+        public Long getUpBandWidth() {
             return this.upBandWidth;
         }
 
         public static final class Builder {
-            private Integer downBandWidth; 
-            private Integer internetRX; 
-            private Integer internetTX; 
+            private Long downBandWidth; 
+            private Long internetRX; 
+            private Long internetTX; 
             private String timeStamp; 
-            private Integer upBandWidth; 
+            private Long upBandWidth; 
 
             /**
              * DownBandWidth.
              */
-            public Builder downBandWidth(Integer downBandWidth) {
+            public Builder downBandWidth(Long downBandWidth) {
                 this.downBandWidth = downBandWidth;
                 return this;
             }
@@ -176,7 +176,7 @@ public class DescribeUserBandWidthDataResponseBody extends TeaModel {
             /**
              * InternetRX.
              */
-            public Builder internetRX(Integer internetRX) {
+            public Builder internetRX(Long internetRX) {
                 this.internetRX = internetRX;
                 return this;
             }
@@ -184,7 +184,7 @@ public class DescribeUserBandWidthDataResponseBody extends TeaModel {
             /**
              * InternetTX.
              */
-            public Builder internetTX(Integer internetTX) {
+            public Builder internetTX(Long internetTX) {
                 this.internetTX = internetTX;
                 return this;
             }
@@ -200,7 +200,7 @@ public class DescribeUserBandWidthDataResponseBody extends TeaModel {
             /**
              * UpBandWidth.
              */
-            public Builder upBandWidth(Integer upBandWidth) {
+            public Builder upBandWidth(Long upBandWidth) {
                 this.upBandWidth = upBandWidth;
                 return this;
             }

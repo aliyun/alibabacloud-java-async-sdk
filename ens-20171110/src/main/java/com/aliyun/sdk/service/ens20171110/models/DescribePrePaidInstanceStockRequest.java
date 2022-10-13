@@ -32,18 +32,12 @@ public class DescribePrePaidInstanceStockRequest extends Request {
     @Validation(required = true, minimum = 20)
     private Integer systemDiskSize;
 
-    @Query
-    @NameInMap("Version")
-    @Validation(required = true)
-    private String version;
-
     private DescribePrePaidInstanceStockRequest(Builder builder) {
         super(builder);
         this.dataDiskSize = builder.dataDiskSize;
         this.ensRegionId = builder.ensRegionId;
         this.instanceSpec = builder.instanceSpec;
         this.systemDiskSize = builder.systemDiskSize;
-        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -87,19 +81,11 @@ public class DescribePrePaidInstanceStockRequest extends Request {
         return this.systemDiskSize;
     }
 
-    /**
-     * @return version
-     */
-    public String getVersion() {
-        return this.version;
-    }
-
     public static final class Builder extends Request.Builder<DescribePrePaidInstanceStockRequest, Builder> {
         private Integer dataDiskSize; 
         private String ensRegionId; 
         private String instanceSpec; 
         private Integer systemDiskSize; 
-        private String version; 
 
         private Builder() {
             super();
@@ -111,7 +97,6 @@ public class DescribePrePaidInstanceStockRequest extends Request {
             this.ensRegionId = request.ensRegionId;
             this.instanceSpec = request.instanceSpec;
             this.systemDiskSize = request.systemDiskSize;
-            this.version = request.version;
         } 
 
         /**
@@ -147,15 +132,6 @@ public class DescribePrePaidInstanceStockRequest extends Request {
         public Builder systemDiskSize(Integer systemDiskSize) {
             this.putQueryParameter("SystemDiskSize", systemDiskSize);
             this.systemDiskSize = systemDiskSize;
-            return this;
-        }
-
-        /**
-         * Version.
-         */
-        public Builder version(String version) {
-            this.putQueryParameter("Version", version);
-            this.version = version;
             return this;
         }
 

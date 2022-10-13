@@ -39,11 +39,6 @@ public class DescribeUserBandWidthDataRequest extends Request {
     @Validation(required = true)
     private String startTime;
 
-    @Query
-    @NameInMap("Version")
-    @Validation(required = true)
-    private String version;
-
     private DescribeUserBandWidthDataRequest(Builder builder) {
         super(builder);
         this.endTime = builder.endTime;
@@ -52,7 +47,6 @@ public class DescribeUserBandWidthDataRequest extends Request {
         this.isp = builder.isp;
         this.period = builder.period;
         this.startTime = builder.startTime;
-        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -110,13 +104,6 @@ public class DescribeUserBandWidthDataRequest extends Request {
         return this.startTime;
     }
 
-    /**
-     * @return version
-     */
-    public String getVersion() {
-        return this.version;
-    }
-
     public static final class Builder extends Request.Builder<DescribeUserBandWidthDataRequest, Builder> {
         private String endTime; 
         private String ensRegionId; 
@@ -124,7 +111,6 @@ public class DescribeUserBandWidthDataRequest extends Request {
         private String isp; 
         private String period; 
         private String startTime; 
-        private String version; 
 
         private Builder() {
             super();
@@ -138,7 +124,6 @@ public class DescribeUserBandWidthDataRequest extends Request {
             this.isp = request.isp;
             this.period = request.period;
             this.startTime = request.startTime;
-            this.version = request.version;
         } 
 
         /**
@@ -192,15 +177,6 @@ public class DescribeUserBandWidthDataRequest extends Request {
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
             this.startTime = startTime;
-            return this;
-        }
-
-        /**
-         * Version.
-         */
-        public Builder version(String version) {
-            this.putQueryParameter("Version", version);
-            this.version = version;
             return this;
         }
 
