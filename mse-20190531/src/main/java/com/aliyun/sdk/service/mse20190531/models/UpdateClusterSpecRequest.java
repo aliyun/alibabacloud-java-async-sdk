@@ -18,7 +18,6 @@ public class UpdateClusterSpecRequest extends Request {
 
     @Query
     @NameInMap("ClusterId")
-    @Validation(required = true)
     private String clusterId;
 
     @Query
