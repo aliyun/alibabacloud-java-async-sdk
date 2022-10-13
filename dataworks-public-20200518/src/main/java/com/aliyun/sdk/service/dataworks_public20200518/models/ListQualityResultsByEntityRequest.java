@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListQualityResultsByEntityRequest</p>
  */
 public class ListQualityResultsByEntityRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Body
     @NameInMap("EndDate")
     @Validation(required = true)
@@ -37,10 +41,6 @@ public class ListQualityResultsByEntityRequest extends Request {
     @Validation(required = true)
     private String projectName;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Body
     @NameInMap("StartDate")
     @Validation(required = true)
@@ -48,12 +48,12 @@ public class ListQualityResultsByEntityRequest extends Request {
 
     private ListQualityResultsByEntityRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.endDate = builder.endDate;
         this.entityId = builder.entityId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.projectName = builder.projectName;
-        this.regionId = builder.regionId;
         this.startDate = builder.startDate;
     }
 
@@ -68,6 +68,13 @@ public class ListQualityResultsByEntityRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -106,13 +113,6 @@ public class ListQualityResultsByEntityRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return startDate
      */
     public String getStartDate() {
@@ -120,12 +120,12 @@ public class ListQualityResultsByEntityRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListQualityResultsByEntityRequest, Builder> {
+        private String regionId; 
         private String endDate; 
         private Integer entityId; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String projectName; 
-        private String regionId; 
         private String startDate; 
 
         private Builder() {
@@ -134,14 +134,23 @@ public class ListQualityResultsByEntityRequest extends Request {
 
         private Builder(ListQualityResultsByEntityRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.endDate = request.endDate;
             this.entityId = request.entityId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.projectName = request.projectName;
-            this.regionId = request.regionId;
             this.startDate = request.startDate;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * EndDate.
@@ -185,15 +194,6 @@ public class ListQualityResultsByEntityRequest extends Request {
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);
             this.projectName = projectName;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

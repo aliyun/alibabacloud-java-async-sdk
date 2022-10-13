@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetQualityRuleRequest</p>
  */
 public class GetQualityRuleRequest extends Request {
-    @Body
-    @NameInMap("ProjectName")
-    @Validation(required = true)
-    private String projectName;
-
     @Host
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
+
+    @Body
+    @NameInMap("ProjectName")
+    @Validation(required = true)
+    private String projectName;
 
     @Body
     @NameInMap("RuleId")
@@ -29,8 +29,8 @@ public class GetQualityRuleRequest extends Request {
 
     private GetQualityRuleRequest(Builder builder) {
         super(builder);
-        this.projectName = builder.projectName;
         this.regionId = builder.regionId;
+        this.projectName = builder.projectName;
         this.ruleId = builder.ruleId;
     }
 
@@ -48,17 +48,17 @@ public class GetQualityRuleRequest extends Request {
     }
 
     /**
-     * @return projectName
-     */
-    public String getProjectName() {
-        return this.projectName;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return projectName
+     */
+    public String getProjectName() {
+        return this.projectName;
     }
 
     /**
@@ -69,8 +69,8 @@ public class GetQualityRuleRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetQualityRuleRequest, Builder> {
-        private String projectName; 
         private String regionId; 
+        private String projectName; 
         private Long ruleId; 
 
         private Builder() {
@@ -79,19 +79,10 @@ public class GetQualityRuleRequest extends Request {
 
         private Builder(GetQualityRuleRequest request) {
             super(request);
-            this.projectName = request.projectName;
             this.regionId = request.regionId;
+            this.projectName = request.projectName;
             this.ruleId = request.ruleId;
         } 
-
-        /**
-         * ProjectName.
-         */
-        public Builder projectName(String projectName) {
-            this.putBodyParameter("ProjectName", projectName);
-            this.projectName = projectName;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -99,6 +90,15 @@ public class GetQualityRuleRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ProjectName.
+         */
+        public Builder projectName(String projectName) {
+            this.putBodyParameter("ProjectName", projectName);
+            this.projectName = projectName;
             return this;
         }
 

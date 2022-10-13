@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteFolderRequest</p>
  */
 public class DeleteFolderRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Body
     @NameInMap("FolderId")
     @Validation(required = true)
@@ -25,17 +30,12 @@ public class DeleteFolderRequest extends Request {
     @NameInMap("ProjectIdentifier")
     private String projectIdentifier;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     private DeleteFolderRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.folderId = builder.folderId;
         this.projectId = builder.projectId;
         this.projectIdentifier = builder.projectIdentifier;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -49,6 +49,13 @@ public class DeleteFolderRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -72,18 +79,11 @@ public class DeleteFolderRequest extends Request {
         return this.projectIdentifier;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<DeleteFolderRequest, Builder> {
+        private String regionId; 
         private String folderId; 
         private Long projectId; 
         private String projectIdentifier; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -91,11 +91,20 @@ public class DeleteFolderRequest extends Request {
 
         private Builder(DeleteFolderRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.folderId = request.folderId;
             this.projectId = request.projectId;
             this.projectIdentifier = request.projectIdentifier;
-            this.regionId = request.regionId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * FolderId.
@@ -121,15 +130,6 @@ public class DeleteFolderRequest extends Request {
         public Builder projectIdentifier(String projectIdentifier) {
             this.putBodyParameter("ProjectIdentifier", projectIdentifier);
             this.projectIdentifier = projectIdentifier;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListQualityResultsByRuleRequest</p>
  */
 public class ListQualityResultsByRuleRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Body
     @NameInMap("EndDate")
     @Validation(required = true)
@@ -32,10 +36,6 @@ public class ListQualityResultsByRuleRequest extends Request {
     @Validation(required = true)
     private String projectName;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Body
     @NameInMap("RuleId")
     @Validation(required = true, maximum = 2147483647, minimum = 1)
@@ -48,11 +48,11 @@ public class ListQualityResultsByRuleRequest extends Request {
 
     private ListQualityResultsByRuleRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.endDate = builder.endDate;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.projectName = builder.projectName;
-        this.regionId = builder.regionId;
         this.ruleId = builder.ruleId;
         this.startDate = builder.startDate;
     }
@@ -68,6 +68,13 @@ public class ListQualityResultsByRuleRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -99,13 +106,6 @@ public class ListQualityResultsByRuleRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return ruleId
      */
     public Integer getRuleId() {
@@ -120,11 +120,11 @@ public class ListQualityResultsByRuleRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListQualityResultsByRuleRequest, Builder> {
+        private String regionId; 
         private String endDate; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String projectName; 
-        private String regionId; 
         private Integer ruleId; 
         private String startDate; 
 
@@ -134,14 +134,23 @@ public class ListQualityResultsByRuleRequest extends Request {
 
         private Builder(ListQualityResultsByRuleRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.endDate = request.endDate;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.projectName = request.projectName;
-            this.regionId = request.regionId;
             this.ruleId = request.ruleId;
             this.startDate = request.startDate;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * EndDate.
@@ -176,15 +185,6 @@ public class ListQualityResultsByRuleRequest extends Request {
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);
             this.projectName = projectName;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

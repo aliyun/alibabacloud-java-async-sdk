@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateWorkbenchEventResultRequest</p>
  */
 public class UpdateWorkbenchEventResultRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("CheckResult")
     @Validation(required = true)
@@ -31,18 +36,13 @@ public class UpdateWorkbenchEventResultRequest extends Request {
     @Validation(required = true)
     private String messageId;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     private UpdateWorkbenchEventResultRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.checkResult = builder.checkResult;
         this.checkResultTip = builder.checkResultTip;
         this.extensionCode = builder.extensionCode;
         this.messageId = builder.messageId;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -56,6 +56,13 @@ public class UpdateWorkbenchEventResultRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -86,19 +93,12 @@ public class UpdateWorkbenchEventResultRequest extends Request {
         return this.messageId;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<UpdateWorkbenchEventResultRequest, Builder> {
+        private String regionId; 
         private String checkResult; 
         private String checkResultTip; 
         private String extensionCode; 
         private String messageId; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -106,12 +106,21 @@ public class UpdateWorkbenchEventResultRequest extends Request {
 
         private Builder(UpdateWorkbenchEventResultRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.checkResult = request.checkResult;
             this.checkResultTip = request.checkResultTip;
             this.extensionCode = request.extensionCode;
             this.messageId = request.messageId;
-            this.regionId = request.regionId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * CheckResult.
@@ -146,15 +155,6 @@ public class UpdateWorkbenchEventResultRequest extends Request {
         public Builder messageId(String messageId) {
             this.putQueryParameter("MessageId", messageId);
             this.messageId = messageId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

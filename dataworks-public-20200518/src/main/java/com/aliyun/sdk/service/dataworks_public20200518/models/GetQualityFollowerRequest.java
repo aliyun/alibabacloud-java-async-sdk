@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetQualityFollowerRequest</p>
  */
 public class GetQualityFollowerRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Body
     @NameInMap("EntityId")
     @Validation(required = true)
@@ -22,16 +27,11 @@ public class GetQualityFollowerRequest extends Request {
     @Validation(required = true)
     private String projectName;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     private GetQualityFollowerRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.entityId = builder.entityId;
         this.projectName = builder.projectName;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -48,6 +48,13 @@ public class GetQualityFollowerRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return entityId
      */
     public Long getEntityId() {
@@ -61,17 +68,10 @@ public class GetQualityFollowerRequest extends Request {
         return this.projectName;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<GetQualityFollowerRequest, Builder> {
+        private String regionId; 
         private Long entityId; 
         private String projectName; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -79,10 +79,19 @@ public class GetQualityFollowerRequest extends Request {
 
         private Builder(GetQualityFollowerRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.entityId = request.entityId;
             this.projectName = request.projectName;
-            this.regionId = request.regionId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * EntityId.
@@ -99,15 +108,6 @@ public class GetQualityFollowerRequest extends Request {
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);
             this.projectName = projectName;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListFileVersionsRequest</p>
  */
 public class ListFileVersionsRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Body
     @NameInMap("FileId")
     @Validation(required = true)
@@ -34,18 +38,14 @@ public class ListFileVersionsRequest extends Request {
     @NameInMap("ProjectIdentifier")
     private String projectIdentifier;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private ListFileVersionsRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.fileId = builder.fileId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.projectId = builder.projectId;
         this.projectIdentifier = builder.projectIdentifier;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -59,6 +59,13 @@ public class ListFileVersionsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -96,20 +103,13 @@ public class ListFileVersionsRequest extends Request {
         return this.projectIdentifier;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<ListFileVersionsRequest, Builder> {
+        private String regionId; 
         private Long fileId; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private Long projectId; 
         private String projectIdentifier; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -117,13 +117,22 @@ public class ListFileVersionsRequest extends Request {
 
         private Builder(ListFileVersionsRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.fileId = request.fileId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.projectId = request.projectId;
             this.projectIdentifier = request.projectIdentifier;
-            this.regionId = request.regionId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * FileId.
@@ -167,15 +176,6 @@ public class ListFileVersionsRequest extends Request {
         public Builder projectIdentifier(String projectIdentifier) {
             this.putBodyParameter("ProjectIdentifier", projectIdentifier);
             this.projectIdentifier = projectIdentifier;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

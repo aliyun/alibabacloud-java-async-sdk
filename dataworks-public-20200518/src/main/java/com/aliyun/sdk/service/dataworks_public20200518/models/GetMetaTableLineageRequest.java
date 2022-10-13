@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetMetaTableLineageRequest</p>
  */
 public class GetMetaTableLineageRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("ClusterId")
     private String clusterId;
@@ -37,11 +42,6 @@ public class GetMetaTableLineageRequest extends Request {
     @NameInMap("PageSize")
     private Integer pageSize;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Query
     @NameInMap("TableGuid")
     private String tableGuid;
@@ -52,13 +52,13 @@ public class GetMetaTableLineageRequest extends Request {
 
     private GetMetaTableLineageRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.clusterId = builder.clusterId;
         this.dataSourceType = builder.dataSourceType;
         this.databaseName = builder.databaseName;
         this.direction = builder.direction;
         this.nextPrimaryKey = builder.nextPrimaryKey;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
         this.tableGuid = builder.tableGuid;
         this.tableName = builder.tableName;
     }
@@ -74,6 +74,13 @@ public class GetMetaTableLineageRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -119,13 +126,6 @@ public class GetMetaTableLineageRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return tableGuid
      */
     public String getTableGuid() {
@@ -140,13 +140,13 @@ public class GetMetaTableLineageRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetMetaTableLineageRequest, Builder> {
+        private String regionId; 
         private String clusterId; 
         private String dataSourceType; 
         private String databaseName; 
         private String direction; 
         private String nextPrimaryKey; 
         private Integer pageSize; 
-        private String regionId; 
         private String tableGuid; 
         private String tableName; 
 
@@ -156,16 +156,25 @@ public class GetMetaTableLineageRequest extends Request {
 
         private Builder(GetMetaTableLineageRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.clusterId = request.clusterId;
             this.dataSourceType = request.dataSourceType;
             this.databaseName = request.databaseName;
             this.direction = request.direction;
             this.nextPrimaryKey = request.nextPrimaryKey;
             this.pageSize = request.pageSize;
-            this.regionId = request.regionId;
             this.tableGuid = request.tableGuid;
             this.tableName = request.tableName;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * ClusterId.
@@ -218,15 +227,6 @@ public class GetMetaTableLineageRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

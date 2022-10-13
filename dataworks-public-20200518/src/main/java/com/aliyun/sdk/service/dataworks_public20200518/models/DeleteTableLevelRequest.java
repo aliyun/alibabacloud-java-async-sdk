@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteTableLevelRequest</p>
  */
 public class DeleteTableLevelRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("LevelId")
     @Validation(required = true, minimum = 1)
@@ -22,16 +27,11 @@ public class DeleteTableLevelRequest extends Request {
     @Validation(required = true, minimum = 1)
     private Long projectId;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     private DeleteTableLevelRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.levelId = builder.levelId;
         this.projectId = builder.projectId;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -48,6 +48,13 @@ public class DeleteTableLevelRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return levelId
      */
     public Long getLevelId() {
@@ -61,17 +68,10 @@ public class DeleteTableLevelRequest extends Request {
         return this.projectId;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<DeleteTableLevelRequest, Builder> {
+        private String regionId; 
         private Long levelId; 
         private Long projectId; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -79,10 +79,19 @@ public class DeleteTableLevelRequest extends Request {
 
         private Builder(DeleteTableLevelRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.levelId = request.levelId;
             this.projectId = request.projectId;
-            this.regionId = request.regionId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * LevelId.
@@ -99,15 +108,6 @@ public class DeleteTableLevelRequest extends Request {
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
             this.projectId = projectId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

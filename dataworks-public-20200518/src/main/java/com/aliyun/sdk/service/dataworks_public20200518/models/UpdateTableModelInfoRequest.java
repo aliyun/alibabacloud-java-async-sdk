@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateTableModelInfoRequest</p>
  */
 public class UpdateTableModelInfoRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("FirstLevelThemeId")
     @Validation()
@@ -27,11 +32,6 @@ public class UpdateTableModelInfoRequest extends Request {
     @Validation(maximum = 2147483647)
     private Integer levelType;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Query
     @NameInMap("SecondLevelThemeId")
     @Validation()
@@ -44,10 +44,10 @@ public class UpdateTableModelInfoRequest extends Request {
 
     private UpdateTableModelInfoRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.firstLevelThemeId = builder.firstLevelThemeId;
         this.levelId = builder.levelId;
         this.levelType = builder.levelType;
-        this.regionId = builder.regionId;
         this.secondLevelThemeId = builder.secondLevelThemeId;
         this.tableGuid = builder.tableGuid;
     }
@@ -63,6 +63,13 @@ public class UpdateTableModelInfoRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -87,13 +94,6 @@ public class UpdateTableModelInfoRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return secondLevelThemeId
      */
     public Long getSecondLevelThemeId() {
@@ -108,10 +108,10 @@ public class UpdateTableModelInfoRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateTableModelInfoRequest, Builder> {
+        private String regionId; 
         private Long firstLevelThemeId; 
         private Long levelId; 
         private Integer levelType; 
-        private String regionId; 
         private Long secondLevelThemeId; 
         private String tableGuid; 
 
@@ -121,13 +121,22 @@ public class UpdateTableModelInfoRequest extends Request {
 
         private Builder(UpdateTableModelInfoRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.firstLevelThemeId = request.firstLevelThemeId;
             this.levelId = request.levelId;
             this.levelType = request.levelType;
-            this.regionId = request.regionId;
             this.secondLevelThemeId = request.secondLevelThemeId;
             this.tableGuid = request.tableGuid;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * FirstLevelThemeId.
@@ -153,15 +162,6 @@ public class UpdateTableModelInfoRequest extends Request {
         public Builder levelType(Integer levelType) {
             this.putQueryParameter("LevelType", levelType);
             this.levelType = levelType;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

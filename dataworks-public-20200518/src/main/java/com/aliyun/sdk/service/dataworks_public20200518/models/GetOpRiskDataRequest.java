@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetOpRiskDataRequest</p>
  */
 public class GetOpRiskDataRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("Date")
     @Validation(required = true)
@@ -31,22 +36,17 @@ public class GetOpRiskDataRequest extends Request {
     @Validation(required = true, maximum = 1000, minimum = 1)
     private Integer pageSize;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Query
     @NameInMap("RiskType")
     private String riskType;
 
     private GetOpRiskDataRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.date = builder.date;
         this.name = builder.name;
         this.pageNo = builder.pageNo;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
         this.riskType = builder.riskType;
     }
 
@@ -61,6 +61,13 @@ public class GetOpRiskDataRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -92,13 +99,6 @@ public class GetOpRiskDataRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return riskType
      */
     public String getRiskType() {
@@ -106,11 +106,11 @@ public class GetOpRiskDataRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetOpRiskDataRequest, Builder> {
+        private String regionId; 
         private String date; 
         private String name; 
         private Integer pageNo; 
         private Integer pageSize; 
-        private String regionId; 
         private String riskType; 
 
         private Builder() {
@@ -119,13 +119,22 @@ public class GetOpRiskDataRequest extends Request {
 
         private Builder(GetOpRiskDataRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.date = request.date;
             this.name = request.name;
             this.pageNo = request.pageNo;
             this.pageSize = request.pageSize;
-            this.regionId = request.regionId;
             this.riskType = request.riskType;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * Date.
@@ -160,15 +169,6 @@ public class GetOpRiskDataRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

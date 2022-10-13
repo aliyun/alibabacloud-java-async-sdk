@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateTableThemeRequest</p>
  */
 public class CreateTableThemeRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("Level")
     @Validation(required = true, maximum = 10, minimum = 1)
@@ -32,18 +37,13 @@ public class CreateTableThemeRequest extends Request {
     @Validation(minimum = 1)
     private Long projectId;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     private CreateTableThemeRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.level = builder.level;
         this.name = builder.name;
         this.parentId = builder.parentId;
         this.projectId = builder.projectId;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -57,6 +57,13 @@ public class CreateTableThemeRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -87,19 +94,12 @@ public class CreateTableThemeRequest extends Request {
         return this.projectId;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<CreateTableThemeRequest, Builder> {
+        private String regionId; 
         private Integer level; 
         private String name; 
         private Long parentId; 
         private Long projectId; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -107,12 +107,21 @@ public class CreateTableThemeRequest extends Request {
 
         private Builder(CreateTableThemeRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.level = request.level;
             this.name = request.name;
             this.parentId = request.parentId;
             this.projectId = request.projectId;
-            this.regionId = request.regionId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * Level.
@@ -147,15 +156,6 @@ public class CreateTableThemeRequest extends Request {
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
             this.projectId = projectId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

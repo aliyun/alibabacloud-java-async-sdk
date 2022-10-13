@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateBusinessRequest</p>
  */
 public class CreateBusinessRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Body
     @NameInMap("BusinessName")
     @Validation(required = true)
@@ -33,23 +38,18 @@ public class CreateBusinessRequest extends Request {
     @NameInMap("ProjectIdentifier")
     private String projectIdentifier;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Body
     @NameInMap("UseType")
     private String useType;
 
     private CreateBusinessRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.businessName = builder.businessName;
         this.description = builder.description;
         this.owner = builder.owner;
         this.projectId = builder.projectId;
         this.projectIdentifier = builder.projectIdentifier;
-        this.regionId = builder.regionId;
         this.useType = builder.useType;
     }
 
@@ -64,6 +64,13 @@ public class CreateBusinessRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -102,13 +109,6 @@ public class CreateBusinessRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return useType
      */
     public String getUseType() {
@@ -116,12 +116,12 @@ public class CreateBusinessRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateBusinessRequest, Builder> {
+        private String regionId; 
         private String businessName; 
         private String description; 
         private String owner; 
         private Long projectId; 
         private String projectIdentifier; 
-        private String regionId; 
         private String useType; 
 
         private Builder() {
@@ -130,14 +130,23 @@ public class CreateBusinessRequest extends Request {
 
         private Builder(CreateBusinessRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.businessName = request.businessName;
             this.description = request.description;
             this.owner = request.owner;
             this.projectId = request.projectId;
             this.projectIdentifier = request.projectIdentifier;
-            this.regionId = request.regionId;
             this.useType = request.useType;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * BusinessName.
@@ -181,15 +190,6 @@ public class CreateBusinessRequest extends Request {
         public Builder projectIdentifier(String projectIdentifier) {
             this.putBodyParameter("ProjectIdentifier", projectIdentifier);
             this.projectIdentifier = projectIdentifier;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

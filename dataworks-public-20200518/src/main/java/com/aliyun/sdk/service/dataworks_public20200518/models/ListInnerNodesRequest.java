@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListInnerNodesRequest</p>
  */
 public class ListInnerNodesRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Body
     @NameInMap("NodeName")
     private String nodeName;
@@ -44,13 +49,9 @@ public class ListInnerNodesRequest extends Request {
     @Validation(required = true)
     private Long projectId;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     private ListInnerNodesRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.nodeName = builder.nodeName;
         this.outerNodeId = builder.outerNodeId;
         this.pageNumber = builder.pageNumber;
@@ -58,7 +59,6 @@ public class ListInnerNodesRequest extends Request {
         this.programType = builder.programType;
         this.projectEnv = builder.projectEnv;
         this.projectId = builder.projectId;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -72,6 +72,13 @@ public class ListInnerNodesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -123,14 +130,8 @@ public class ListInnerNodesRequest extends Request {
         return this.projectId;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<ListInnerNodesRequest, Builder> {
+        private String regionId; 
         private String nodeName; 
         private Long outerNodeId; 
         private Integer pageNumber; 
@@ -138,7 +139,6 @@ public class ListInnerNodesRequest extends Request {
         private String programType; 
         private String projectEnv; 
         private Long projectId; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -146,6 +146,7 @@ public class ListInnerNodesRequest extends Request {
 
         private Builder(ListInnerNodesRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.nodeName = request.nodeName;
             this.outerNodeId = request.outerNodeId;
             this.pageNumber = request.pageNumber;
@@ -153,8 +154,16 @@ public class ListInnerNodesRequest extends Request {
             this.programType = request.programType;
             this.projectEnv = request.projectEnv;
             this.projectId = request.projectId;
-            this.regionId = request.regionId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * NodeName.
@@ -216,15 +225,6 @@ public class ListInnerNodesRequest extends Request {
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
             this.projectId = projectId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

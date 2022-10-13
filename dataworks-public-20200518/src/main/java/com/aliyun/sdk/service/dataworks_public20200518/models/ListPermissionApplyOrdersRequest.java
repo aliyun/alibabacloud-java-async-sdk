@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListPermissionApplyOrdersRequest</p>
  */
 public class ListPermissionApplyOrdersRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("EndTime")
     private Long endTime;
@@ -47,11 +52,6 @@ public class ListPermissionApplyOrdersRequest extends Request {
     @Validation(required = true, maximum = 1)
     private Integer queryType;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Query
     @NameInMap("StartTime")
     private Long startTime;
@@ -66,6 +66,7 @@ public class ListPermissionApplyOrdersRequest extends Request {
 
     private ListPermissionApplyOrdersRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.endTime = builder.endTime;
         this.engineType = builder.engineType;
         this.flowStatus = builder.flowStatus;
@@ -74,7 +75,6 @@ public class ListPermissionApplyOrdersRequest extends Request {
         this.pageNum = builder.pageNum;
         this.pageSize = builder.pageSize;
         this.queryType = builder.queryType;
-        this.regionId = builder.regionId;
         this.startTime = builder.startTime;
         this.tableName = builder.tableName;
         this.workspaceId = builder.workspaceId;
@@ -91,6 +91,13 @@ public class ListPermissionApplyOrdersRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -150,13 +157,6 @@ public class ListPermissionApplyOrdersRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return startTime
      */
     public Long getStartTime() {
@@ -178,6 +178,7 @@ public class ListPermissionApplyOrdersRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListPermissionApplyOrdersRequest, Builder> {
+        private String regionId; 
         private Long endTime; 
         private String engineType; 
         private Integer flowStatus; 
@@ -186,7 +187,6 @@ public class ListPermissionApplyOrdersRequest extends Request {
         private Integer pageNum; 
         private Integer pageSize; 
         private Integer queryType; 
-        private String regionId; 
         private Long startTime; 
         private String tableName; 
         private Integer workspaceId; 
@@ -197,6 +197,7 @@ public class ListPermissionApplyOrdersRequest extends Request {
 
         private Builder(ListPermissionApplyOrdersRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.endTime = request.endTime;
             this.engineType = request.engineType;
             this.flowStatus = request.flowStatus;
@@ -205,11 +206,19 @@ public class ListPermissionApplyOrdersRequest extends Request {
             this.pageNum = request.pageNum;
             this.pageSize = request.pageSize;
             this.queryType = request.queryType;
-            this.regionId = request.regionId;
             this.startTime = request.startTime;
             this.tableName = request.tableName;
             this.workspaceId = request.workspaceId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * EndTime.
@@ -280,15 +289,6 @@ public class ListPermissionApplyOrdersRequest extends Request {
         public Builder queryType(Integer queryType) {
             this.putQueryParameter("QueryType", queryType);
             this.queryType = queryType;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

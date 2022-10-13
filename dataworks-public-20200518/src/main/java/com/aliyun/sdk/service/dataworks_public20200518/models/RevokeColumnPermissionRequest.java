@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RevokeColumnPermissionRequest</p>
  */
 public class RevokeColumnPermissionRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("Columns")
     @Validation(required = true)
@@ -21,11 +26,6 @@ public class RevokeColumnPermissionRequest extends Request {
     @NameInMap("MaxComputeProjectName")
     @Validation(required = true)
     private String maxComputeProjectName;
-
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
 
     @Query
     @NameInMap("RevokeUserId")
@@ -47,9 +47,9 @@ public class RevokeColumnPermissionRequest extends Request {
 
     private RevokeColumnPermissionRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.columns = builder.columns;
         this.maxComputeProjectName = builder.maxComputeProjectName;
-        this.regionId = builder.regionId;
         this.revokeUserId = builder.revokeUserId;
         this.revokeUserName = builder.revokeUserName;
         this.tableName = builder.tableName;
@@ -70,6 +70,13 @@ public class RevokeColumnPermissionRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return columns
      */
     public String getColumns() {
@@ -81,13 +88,6 @@ public class RevokeColumnPermissionRequest extends Request {
      */
     public String getMaxComputeProjectName() {
         return this.maxComputeProjectName;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -119,9 +119,9 @@ public class RevokeColumnPermissionRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<RevokeColumnPermissionRequest, Builder> {
+        private String regionId; 
         private String columns; 
         private String maxComputeProjectName; 
-        private String regionId; 
         private String revokeUserId; 
         private String revokeUserName; 
         private String tableName; 
@@ -133,14 +133,23 @@ public class RevokeColumnPermissionRequest extends Request {
 
         private Builder(RevokeColumnPermissionRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.columns = request.columns;
             this.maxComputeProjectName = request.maxComputeProjectName;
-            this.regionId = request.regionId;
             this.revokeUserId = request.revokeUserId;
             this.revokeUserName = request.revokeUserName;
             this.tableName = request.tableName;
             this.workspaceId = request.workspaceId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * Columns.
@@ -157,15 +166,6 @@ public class RevokeColumnPermissionRequest extends Request {
         public Builder maxComputeProjectName(String maxComputeProjectName) {
             this.putQueryParameter("MaxComputeProjectName", maxComputeProjectName);
             this.maxComputeProjectName = maxComputeProjectName;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

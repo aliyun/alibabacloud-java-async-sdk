@@ -92,6 +92,9 @@ public class GetDISyncInstanceInfoResponseBody extends TeaModel {
     } 
 
     public static class StepDetail extends TeaModel {
+        @NameInMap("Info")
+        private String info;
+
         @NameInMap("Status")
         private String status;
 
@@ -102,6 +105,7 @@ public class GetDISyncInstanceInfoResponseBody extends TeaModel {
         private String stepName;
 
         private StepDetail(Builder builder) {
+            this.info = builder.info;
             this.status = builder.status;
             this.stepId = builder.stepId;
             this.stepName = builder.stepName;
@@ -113,6 +117,13 @@ public class GetDISyncInstanceInfoResponseBody extends TeaModel {
 
         public static StepDetail create() {
             return builder().build();
+        }
+
+        /**
+         * @return info
+         */
+        public String getInfo() {
+            return this.info;
         }
 
         /**
@@ -137,9 +148,18 @@ public class GetDISyncInstanceInfoResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String info; 
             private String status; 
             private Long stepId; 
             private String stepName; 
+
+            /**
+             * Info.
+             */
+            public Builder info(String info) {
+                this.info = info;
+                return this;
+            }
 
             /**
              * Status.

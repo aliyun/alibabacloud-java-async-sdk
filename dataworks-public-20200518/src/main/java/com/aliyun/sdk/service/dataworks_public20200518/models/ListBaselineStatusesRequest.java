@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListBaselineStatusesRequest</p>
  */
 public class ListBaselineStatusesRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Body
     @NameInMap("BaselineTypes")
     private String baselineTypes;
@@ -43,11 +48,6 @@ public class ListBaselineStatusesRequest extends Request {
     @NameInMap("Priority")
     private String priority;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Body
     @NameInMap("SearchText")
     private String searchText;
@@ -62,6 +62,7 @@ public class ListBaselineStatusesRequest extends Request {
 
     private ListBaselineStatusesRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.baselineTypes = builder.baselineTypes;
         this.bizdate = builder.bizdate;
         this.finishStatus = builder.finishStatus;
@@ -69,7 +70,6 @@ public class ListBaselineStatusesRequest extends Request {
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.priority = builder.priority;
-        this.regionId = builder.regionId;
         this.searchText = builder.searchText;
         this.status = builder.status;
         this.topicId = builder.topicId;
@@ -86,6 +86,13 @@ public class ListBaselineStatusesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -138,13 +145,6 @@ public class ListBaselineStatusesRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return searchText
      */
     public String getSearchText() {
@@ -166,6 +166,7 @@ public class ListBaselineStatusesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListBaselineStatusesRequest, Builder> {
+        private String regionId; 
         private String baselineTypes; 
         private String bizdate; 
         private String finishStatus; 
@@ -173,7 +174,6 @@ public class ListBaselineStatusesRequest extends Request {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String priority; 
-        private String regionId; 
         private String searchText; 
         private String status; 
         private Long topicId; 
@@ -184,6 +184,7 @@ public class ListBaselineStatusesRequest extends Request {
 
         private Builder(ListBaselineStatusesRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.baselineTypes = request.baselineTypes;
             this.bizdate = request.bizdate;
             this.finishStatus = request.finishStatus;
@@ -191,11 +192,19 @@ public class ListBaselineStatusesRequest extends Request {
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.priority = request.priority;
-            this.regionId = request.regionId;
             this.searchText = request.searchText;
             this.status = request.status;
             this.topicId = request.topicId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * BaselineTypes.
@@ -257,15 +266,6 @@ public class ListBaselineStatusesRequest extends Request {
         public Builder priority(String priority) {
             this.putBodyParameter("Priority", priority);
             this.priority = priority;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

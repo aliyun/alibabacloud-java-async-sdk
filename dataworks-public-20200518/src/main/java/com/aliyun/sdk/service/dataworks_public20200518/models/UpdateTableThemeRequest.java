@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateTableThemeRequest</p>
  */
 public class UpdateTableThemeRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("Name")
     @Validation(required = true)
@@ -22,11 +27,6 @@ public class UpdateTableThemeRequest extends Request {
     @Validation(minimum = 1)
     private Long projectId;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Query
     @NameInMap("ThemeId")
     @Validation(required = true, minimum = 1)
@@ -34,9 +34,9 @@ public class UpdateTableThemeRequest extends Request {
 
     private UpdateTableThemeRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.name = builder.name;
         this.projectId = builder.projectId;
-        this.regionId = builder.regionId;
         this.themeId = builder.themeId;
     }
 
@@ -54,6 +54,13 @@ public class UpdateTableThemeRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return name
      */
     public String getName() {
@@ -68,13 +75,6 @@ public class UpdateTableThemeRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return themeId
      */
     public Long getThemeId() {
@@ -82,9 +82,9 @@ public class UpdateTableThemeRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateTableThemeRequest, Builder> {
+        private String regionId; 
         private String name; 
         private Long projectId; 
-        private String regionId; 
         private Long themeId; 
 
         private Builder() {
@@ -93,11 +93,20 @@ public class UpdateTableThemeRequest extends Request {
 
         private Builder(UpdateTableThemeRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.name = request.name;
             this.projectId = request.projectId;
-            this.regionId = request.regionId;
             this.themeId = request.themeId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * Name.
@@ -114,15 +123,6 @@ public class UpdateTableThemeRequest extends Request {
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
             this.projectId = projectId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

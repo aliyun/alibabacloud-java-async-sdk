@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateMetaTableIntroWikiRequest</p>
  */
 public class UpdateMetaTableIntroWikiRequest extends Request {
-    @Body
-    @NameInMap("Content")
-    @Validation(required = true)
-    private String content;
-
     @Host
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
+
+    @Body
+    @NameInMap("Content")
+    @Validation(required = true)
+    private String content;
 
     @Query
     @NameInMap("TableGuid")
@@ -29,8 +29,8 @@ public class UpdateMetaTableIntroWikiRequest extends Request {
 
     private UpdateMetaTableIntroWikiRequest(Builder builder) {
         super(builder);
-        this.content = builder.content;
         this.regionId = builder.regionId;
+        this.content = builder.content;
         this.tableGuid = builder.tableGuid;
     }
 
@@ -48,17 +48,17 @@ public class UpdateMetaTableIntroWikiRequest extends Request {
     }
 
     /**
-     * @return content
-     */
-    public String getContent() {
-        return this.content;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return content
+     */
+    public String getContent() {
+        return this.content;
     }
 
     /**
@@ -69,8 +69,8 @@ public class UpdateMetaTableIntroWikiRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateMetaTableIntroWikiRequest, Builder> {
-        private String content; 
         private String regionId; 
+        private String content; 
         private String tableGuid; 
 
         private Builder() {
@@ -79,19 +79,10 @@ public class UpdateMetaTableIntroWikiRequest extends Request {
 
         private Builder(UpdateMetaTableIntroWikiRequest request) {
             super(request);
-            this.content = request.content;
             this.regionId = request.regionId;
+            this.content = request.content;
             this.tableGuid = request.tableGuid;
         } 
-
-        /**
-         * Content.
-         */
-        public Builder content(String content) {
-            this.putBodyParameter("Content", content);
-            this.content = content;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -99,6 +90,15 @@ public class UpdateMetaTableIntroWikiRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * Content.
+         */
+        public Builder content(String content) {
+            this.putBodyParameter("Content", content);
+            this.content = content;
             return this;
         }
 

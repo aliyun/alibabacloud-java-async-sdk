@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ImportDataSourcesRequest</p>
  */
 public class ImportDataSourcesRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("DataSources")
     @Validation(required = true)
@@ -22,16 +27,11 @@ public class ImportDataSourcesRequest extends Request {
     @Validation(required = true, maximum = 10000000000D, minimum = 1)
     private Long projectId;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     private ImportDataSourcesRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.dataSources = builder.dataSources;
         this.projectId = builder.projectId;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -48,6 +48,13 @@ public class ImportDataSourcesRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return dataSources
      */
     public String getDataSources() {
@@ -61,17 +68,10 @@ public class ImportDataSourcesRequest extends Request {
         return this.projectId;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<ImportDataSourcesRequest, Builder> {
+        private String regionId; 
         private String dataSources; 
         private Long projectId; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -79,10 +79,19 @@ public class ImportDataSourcesRequest extends Request {
 
         private Builder(ImportDataSourcesRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.dataSources = request.dataSources;
             this.projectId = request.projectId;
-            this.regionId = request.regionId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * DataSources.
@@ -99,15 +108,6 @@ public class ImportDataSourcesRequest extends Request {
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
             this.projectId = projectId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

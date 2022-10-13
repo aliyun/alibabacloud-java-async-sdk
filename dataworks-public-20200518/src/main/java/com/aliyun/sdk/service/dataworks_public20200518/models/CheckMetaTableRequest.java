@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CheckMetaTableRequest</p>
  */
 public class CheckMetaTableRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("ClusterId")
     private String clusterId;
@@ -24,11 +29,6 @@ public class CheckMetaTableRequest extends Request {
     @NameInMap("DatabaseName")
     private String databaseName;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Query
     @NameInMap("TableGuid")
     private String tableGuid;
@@ -39,10 +39,10 @@ public class CheckMetaTableRequest extends Request {
 
     private CheckMetaTableRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.clusterId = builder.clusterId;
         this.dataSourceType = builder.dataSourceType;
         this.databaseName = builder.databaseName;
-        this.regionId = builder.regionId;
         this.tableGuid = builder.tableGuid;
         this.tableName = builder.tableName;
     }
@@ -58,6 +58,13 @@ public class CheckMetaTableRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -82,13 +89,6 @@ public class CheckMetaTableRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return tableGuid
      */
     public String getTableGuid() {
@@ -103,10 +103,10 @@ public class CheckMetaTableRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CheckMetaTableRequest, Builder> {
+        private String regionId; 
         private String clusterId; 
         private String dataSourceType; 
         private String databaseName; 
-        private String regionId; 
         private String tableGuid; 
         private String tableName; 
 
@@ -116,13 +116,22 @@ public class CheckMetaTableRequest extends Request {
 
         private Builder(CheckMetaTableRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.clusterId = request.clusterId;
             this.dataSourceType = request.dataSourceType;
             this.databaseName = request.databaseName;
-            this.regionId = request.regionId;
             this.tableGuid = request.tableGuid;
             this.tableName = request.tableName;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * ClusterId.
@@ -148,15 +157,6 @@ public class CheckMetaTableRequest extends Request {
         public Builder databaseName(String databaseName) {
             this.putQueryParameter("DatabaseName", databaseName);
             this.databaseName = databaseName;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

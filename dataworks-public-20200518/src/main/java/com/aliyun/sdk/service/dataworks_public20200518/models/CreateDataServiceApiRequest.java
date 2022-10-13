@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateDataServiceApiRequest</p>
  */
 public class CreateDataServiceApiRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Body
     @NameInMap("ApiDescription")
     @Validation(required = true)
@@ -52,11 +57,6 @@ public class CreateDataServiceApiRequest extends Request {
     @Validation(required = true)
     private String protocols;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Body
     @NameInMap("RegistrationDetails")
     private String registrationDetails;
@@ -96,6 +96,7 @@ public class CreateDataServiceApiRequest extends Request {
 
     private CreateDataServiceApiRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.apiDescription = builder.apiDescription;
         this.apiMode = builder.apiMode;
         this.apiName = builder.apiName;
@@ -104,7 +105,6 @@ public class CreateDataServiceApiRequest extends Request {
         this.groupId = builder.groupId;
         this.projectId = builder.projectId;
         this.protocols = builder.protocols;
-        this.regionId = builder.regionId;
         this.registrationDetails = builder.registrationDetails;
         this.requestMethod = builder.requestMethod;
         this.responseContentType = builder.responseContentType;
@@ -126,6 +126,13 @@ public class CreateDataServiceApiRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -185,13 +192,6 @@ public class CreateDataServiceApiRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return registrationDetails
      */
     public String getRegistrationDetails() {
@@ -248,6 +248,7 @@ public class CreateDataServiceApiRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateDataServiceApiRequest, Builder> {
+        private String regionId; 
         private String apiDescription; 
         private Integer apiMode; 
         private String apiName; 
@@ -256,7 +257,6 @@ public class CreateDataServiceApiRequest extends Request {
         private String groupId; 
         private Long projectId; 
         private String protocols; 
-        private String regionId; 
         private String registrationDetails; 
         private Integer requestMethod; 
         private Integer responseContentType; 
@@ -272,6 +272,7 @@ public class CreateDataServiceApiRequest extends Request {
 
         private Builder(CreateDataServiceApiRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.apiDescription = request.apiDescription;
             this.apiMode = request.apiMode;
             this.apiName = request.apiName;
@@ -280,7 +281,6 @@ public class CreateDataServiceApiRequest extends Request {
             this.groupId = request.groupId;
             this.projectId = request.projectId;
             this.protocols = request.protocols;
-            this.regionId = request.regionId;
             this.registrationDetails = request.registrationDetails;
             this.requestMethod = request.requestMethod;
             this.responseContentType = request.responseContentType;
@@ -290,6 +290,15 @@ public class CreateDataServiceApiRequest extends Request {
             this.visibleRange = request.visibleRange;
             this.wizardDetails = request.wizardDetails;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * ApiDescription.
@@ -360,15 +369,6 @@ public class CreateDataServiceApiRequest extends Request {
         public Builder protocols(String protocols) {
             this.putBodyParameter("Protocols", protocols);
             this.protocols = protocols;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RemoveProjectMemberFromRoleRequest</p>
  */
 public class RemoveProjectMemberFromRoleRequest extends Request {
-    @Query
-    @NameInMap("ProjectId")
-    @Validation(required = true, maximum = 10000000)
-    private Long projectId;
-
     @Host
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
+
+    @Query
+    @NameInMap("ProjectId")
+    @Validation(required = true, maximum = 10000000)
+    private Long projectId;
 
     @Query
     @NameInMap("RoleCode")
@@ -34,8 +34,8 @@ public class RemoveProjectMemberFromRoleRequest extends Request {
 
     private RemoveProjectMemberFromRoleRequest(Builder builder) {
         super(builder);
-        this.projectId = builder.projectId;
         this.regionId = builder.regionId;
+        this.projectId = builder.projectId;
         this.roleCode = builder.roleCode;
         this.userId = builder.userId;
     }
@@ -54,17 +54,17 @@ public class RemoveProjectMemberFromRoleRequest extends Request {
     }
 
     /**
-     * @return projectId
-     */
-    public Long getProjectId() {
-        return this.projectId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return projectId
+     */
+    public Long getProjectId() {
+        return this.projectId;
     }
 
     /**
@@ -82,8 +82,8 @@ public class RemoveProjectMemberFromRoleRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<RemoveProjectMemberFromRoleRequest, Builder> {
-        private Long projectId; 
         private String regionId; 
+        private Long projectId; 
         private String roleCode; 
         private String userId; 
 
@@ -93,20 +93,11 @@ public class RemoveProjectMemberFromRoleRequest extends Request {
 
         private Builder(RemoveProjectMemberFromRoleRequest request) {
             super(request);
-            this.projectId = request.projectId;
             this.regionId = request.regionId;
+            this.projectId = request.projectId;
             this.roleCode = request.roleCode;
             this.userId = request.userId;
         } 
-
-        /**
-         * ProjectId.
-         */
-        public Builder projectId(Long projectId) {
-            this.putQueryParameter("ProjectId", projectId);
-            this.projectId = projectId;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -114,6 +105,15 @@ public class RemoveProjectMemberFromRoleRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ProjectId.
+         */
+        public Builder projectId(Long projectId) {
+            this.putQueryParameter("ProjectId", projectId);
+            this.projectId = projectId;
             return this;
         }
 

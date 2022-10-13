@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteQualityFollowerRequest</p>
  */
 public class DeleteQualityFollowerRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Body
     @NameInMap("FollowerId")
     @Validation(required = true)
@@ -22,16 +27,11 @@ public class DeleteQualityFollowerRequest extends Request {
     @Validation(required = true)
     private String projectName;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     private DeleteQualityFollowerRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.followerId = builder.followerId;
         this.projectName = builder.projectName;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -48,6 +48,13 @@ public class DeleteQualityFollowerRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return followerId
      */
     public Long getFollowerId() {
@@ -61,17 +68,10 @@ public class DeleteQualityFollowerRequest extends Request {
         return this.projectName;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<DeleteQualityFollowerRequest, Builder> {
+        private String regionId; 
         private Long followerId; 
         private String projectName; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -79,10 +79,19 @@ public class DeleteQualityFollowerRequest extends Request {
 
         private Builder(DeleteQualityFollowerRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.followerId = request.followerId;
             this.projectName = request.projectName;
-            this.regionId = request.regionId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * FollowerId.
@@ -99,15 +108,6 @@ public class DeleteQualityFollowerRequest extends Request {
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);
             this.projectName = projectName;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

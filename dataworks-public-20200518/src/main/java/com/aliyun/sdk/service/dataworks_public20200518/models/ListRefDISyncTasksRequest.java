@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListRefDISyncTasksRequest</p>
  */
 public class ListRefDISyncTasksRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("DatasourceName")
     @Validation(required = true)
@@ -36,11 +41,6 @@ public class ListRefDISyncTasksRequest extends Request {
     @Validation(required = true)
     private String refType;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Query
     @NameInMap("TaskType")
     @Validation(required = true)
@@ -48,12 +48,12 @@ public class ListRefDISyncTasksRequest extends Request {
 
     private ListRefDISyncTasksRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.datasourceName = builder.datasourceName;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.projectId = builder.projectId;
         this.refType = builder.refType;
-        this.regionId = builder.regionId;
         this.taskType = builder.taskType;
     }
 
@@ -68,6 +68,13 @@ public class ListRefDISyncTasksRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -106,13 +113,6 @@ public class ListRefDISyncTasksRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return taskType
      */
     public String getTaskType() {
@@ -120,12 +120,12 @@ public class ListRefDISyncTasksRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListRefDISyncTasksRequest, Builder> {
+        private String regionId; 
         private String datasourceName; 
         private Long pageNumber; 
         private Long pageSize; 
         private Long projectId; 
         private String refType; 
-        private String regionId; 
         private String taskType; 
 
         private Builder() {
@@ -134,14 +134,23 @@ public class ListRefDISyncTasksRequest extends Request {
 
         private Builder(ListRefDISyncTasksRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.datasourceName = request.datasourceName;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.projectId = request.projectId;
             this.refType = request.refType;
-            this.regionId = request.regionId;
             this.taskType = request.taskType;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * DatasourceName.
@@ -185,15 +194,6 @@ public class ListRefDISyncTasksRequest extends Request {
         public Builder refType(String refType) {
             this.putQueryParameter("RefType", refType);
             this.refType = refType;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

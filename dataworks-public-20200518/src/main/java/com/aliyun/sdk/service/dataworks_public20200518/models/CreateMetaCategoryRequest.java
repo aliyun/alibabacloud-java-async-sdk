@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateMetaCategoryRequest</p>
  */
 public class CreateMetaCategoryRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Body
     @NameInMap("Comment")
     private String comment;
@@ -25,17 +30,12 @@ public class CreateMetaCategoryRequest extends Request {
     @NameInMap("ParentId")
     private Long parentId;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     private CreateMetaCategoryRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.comment = builder.comment;
         this.name = builder.name;
         this.parentId = builder.parentId;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -49,6 +49,13 @@ public class CreateMetaCategoryRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -72,18 +79,11 @@ public class CreateMetaCategoryRequest extends Request {
         return this.parentId;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<CreateMetaCategoryRequest, Builder> {
+        private String regionId; 
         private String comment; 
         private String name; 
         private Long parentId; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -91,11 +91,20 @@ public class CreateMetaCategoryRequest extends Request {
 
         private Builder(CreateMetaCategoryRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.comment = request.comment;
             this.name = request.name;
             this.parentId = request.parentId;
-            this.regionId = request.regionId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * Comment.
@@ -121,15 +130,6 @@ public class CreateMetaCategoryRequest extends Request {
         public Builder parentId(Long parentId) {
             this.putBodyParameter("ParentId", parentId);
             this.parentId = parentId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

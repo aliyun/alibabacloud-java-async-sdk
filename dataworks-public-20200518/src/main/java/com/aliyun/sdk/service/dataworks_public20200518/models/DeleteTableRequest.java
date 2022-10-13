@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteTableRequest</p>
  */
 public class DeleteTableRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("AppGuid")
     private String appGuid;
@@ -26,11 +31,6 @@ public class DeleteTableRequest extends Request {
     @Validation(minimum = 1)
     private Long projectId;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Query
     @NameInMap("Schema")
     private String schema;
@@ -42,10 +42,10 @@ public class DeleteTableRequest extends Request {
 
     private DeleteTableRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.appGuid = builder.appGuid;
         this.envType = builder.envType;
         this.projectId = builder.projectId;
-        this.regionId = builder.regionId;
         this.schema = builder.schema;
         this.tableName = builder.tableName;
     }
@@ -61,6 +61,13 @@ public class DeleteTableRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -85,13 +92,6 @@ public class DeleteTableRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return schema
      */
     public String getSchema() {
@@ -106,10 +106,10 @@ public class DeleteTableRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteTableRequest, Builder> {
+        private String regionId; 
         private String appGuid; 
         private Integer envType; 
         private Long projectId; 
-        private String regionId; 
         private String schema; 
         private String tableName; 
 
@@ -119,13 +119,22 @@ public class DeleteTableRequest extends Request {
 
         private Builder(DeleteTableRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.appGuid = request.appGuid;
             this.envType = request.envType;
             this.projectId = request.projectId;
-            this.regionId = request.regionId;
             this.schema = request.schema;
             this.tableName = request.tableName;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * AppGuid.
@@ -151,15 +160,6 @@ public class DeleteTableRequest extends Request {
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
             this.projectId = projectId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

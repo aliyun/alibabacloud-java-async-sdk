@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetFolderRequest</p>
  */
 public class GetFolderRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Body
     @NameInMap("FolderId")
     private String folderId;
@@ -28,18 +33,13 @@ public class GetFolderRequest extends Request {
     @NameInMap("ProjectIdentifier")
     private String projectIdentifier;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     private GetFolderRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.folderId = builder.folderId;
         this.folderPath = builder.folderPath;
         this.projectId = builder.projectId;
         this.projectIdentifier = builder.projectIdentifier;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -53,6 +53,13 @@ public class GetFolderRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -83,19 +90,12 @@ public class GetFolderRequest extends Request {
         return this.projectIdentifier;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<GetFolderRequest, Builder> {
+        private String regionId; 
         private String folderId; 
         private String folderPath; 
         private Long projectId; 
         private String projectIdentifier; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -103,12 +103,21 @@ public class GetFolderRequest extends Request {
 
         private Builder(GetFolderRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.folderId = request.folderId;
             this.folderPath = request.folderPath;
             this.projectId = request.projectId;
             this.projectIdentifier = request.projectIdentifier;
-            this.regionId = request.regionId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * FolderId.
@@ -143,15 +152,6 @@ public class GetFolderRequest extends Request {
         public Builder projectIdentifier(String projectIdentifier) {
             this.putBodyParameter("ProjectIdentifier", projectIdentifier);
             this.projectIdentifier = projectIdentifier;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

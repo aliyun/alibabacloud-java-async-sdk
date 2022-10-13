@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListNodesRequest</p>
  */
 public class ListNodesRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Body
     @NameInMap("BizName")
     private String bizName;
@@ -47,13 +52,9 @@ public class ListNodesRequest extends Request {
     @Validation(required = true)
     private Long projectId;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     private ListNodesRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.bizName = builder.bizName;
         this.nodeName = builder.nodeName;
         this.owner = builder.owner;
@@ -62,7 +63,6 @@ public class ListNodesRequest extends Request {
         this.programType = builder.programType;
         this.projectEnv = builder.projectEnv;
         this.projectId = builder.projectId;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -76,6 +76,13 @@ public class ListNodesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -134,14 +141,8 @@ public class ListNodesRequest extends Request {
         return this.projectId;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<ListNodesRequest, Builder> {
+        private String regionId; 
         private String bizName; 
         private String nodeName; 
         private String owner; 
@@ -150,7 +151,6 @@ public class ListNodesRequest extends Request {
         private String programType; 
         private String projectEnv; 
         private Long projectId; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -158,6 +158,7 @@ public class ListNodesRequest extends Request {
 
         private Builder(ListNodesRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.bizName = request.bizName;
             this.nodeName = request.nodeName;
             this.owner = request.owner;
@@ -166,8 +167,16 @@ public class ListNodesRequest extends Request {
             this.programType = request.programType;
             this.projectEnv = request.projectEnv;
             this.projectId = request.projectId;
-            this.regionId = request.regionId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * BizName.
@@ -238,15 +247,6 @@ public class ListNodesRequest extends Request {
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
             this.projectId = projectId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

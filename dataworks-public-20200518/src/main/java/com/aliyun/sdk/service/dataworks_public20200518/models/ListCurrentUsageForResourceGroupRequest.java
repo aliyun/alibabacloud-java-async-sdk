@@ -12,13 +12,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListCurrentUsageForResourceGroupRequest</p>
  */
 public class ListCurrentUsageForResourceGroupRequest extends Request {
-    @Body
-    @NameInMap("ProjectEnv")
-    private String projectEnv;
-
     @Host
     @NameInMap("RegionId")
     private String regionId;
+
+    @Body
+    @NameInMap("ProjectEnv")
+    private String projectEnv;
 
     @Body
     @NameInMap("ResourceGroupIdentifier")
@@ -27,8 +27,8 @@ public class ListCurrentUsageForResourceGroupRequest extends Request {
 
     private ListCurrentUsageForResourceGroupRequest(Builder builder) {
         super(builder);
-        this.projectEnv = builder.projectEnv;
         this.regionId = builder.regionId;
+        this.projectEnv = builder.projectEnv;
         this.resourceGroupIdentifier = builder.resourceGroupIdentifier;
     }
 
@@ -46,17 +46,17 @@ public class ListCurrentUsageForResourceGroupRequest extends Request {
     }
 
     /**
-     * @return projectEnv
-     */
-    public String getProjectEnv() {
-        return this.projectEnv;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return projectEnv
+     */
+    public String getProjectEnv() {
+        return this.projectEnv;
     }
 
     /**
@@ -67,8 +67,8 @@ public class ListCurrentUsageForResourceGroupRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListCurrentUsageForResourceGroupRequest, Builder> {
-        private String projectEnv; 
         private String regionId; 
+        private String projectEnv; 
         private String resourceGroupIdentifier; 
 
         private Builder() {
@@ -77,19 +77,10 @@ public class ListCurrentUsageForResourceGroupRequest extends Request {
 
         private Builder(ListCurrentUsageForResourceGroupRequest request) {
             super(request);
-            this.projectEnv = request.projectEnv;
             this.regionId = request.regionId;
+            this.projectEnv = request.projectEnv;
             this.resourceGroupIdentifier = request.resourceGroupIdentifier;
         } 
-
-        /**
-         * ProjectEnv.
-         */
-        public Builder projectEnv(String projectEnv) {
-            this.putBodyParameter("ProjectEnv", projectEnv);
-            this.projectEnv = projectEnv;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -97,6 +88,15 @@ public class ListCurrentUsageForResourceGroupRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ProjectEnv.
+         */
+        public Builder projectEnv(String projectEnv) {
+            this.putBodyParameter("ProjectEnv", projectEnv);
+            this.projectEnv = projectEnv;
             return this;
         }
 

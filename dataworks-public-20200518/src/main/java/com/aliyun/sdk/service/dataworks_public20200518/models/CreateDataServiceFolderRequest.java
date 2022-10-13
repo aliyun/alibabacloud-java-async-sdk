@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateDataServiceFolderRequest</p>
  */
 public class CreateDataServiceFolderRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Body
     @NameInMap("FolderName")
     @Validation(required = true)
@@ -32,11 +37,6 @@ public class CreateDataServiceFolderRequest extends Request {
     @Validation(required = true, minimum = 1)
     private Long projectId;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Body
     @NameInMap("TenantId")
     @Validation(required = true, minimum = 1)
@@ -44,11 +44,11 @@ public class CreateDataServiceFolderRequest extends Request {
 
     private CreateDataServiceFolderRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.folderName = builder.folderName;
         this.groupId = builder.groupId;
         this.parentId = builder.parentId;
         this.projectId = builder.projectId;
-        this.regionId = builder.regionId;
         this.tenantId = builder.tenantId;
     }
 
@@ -63,6 +63,13 @@ public class CreateDataServiceFolderRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -94,13 +101,6 @@ public class CreateDataServiceFolderRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return tenantId
      */
     public Long getTenantId() {
@@ -108,11 +108,11 @@ public class CreateDataServiceFolderRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateDataServiceFolderRequest, Builder> {
+        private String regionId; 
         private String folderName; 
         private String groupId; 
         private Long parentId; 
         private Long projectId; 
-        private String regionId; 
         private Long tenantId; 
 
         private Builder() {
@@ -121,13 +121,22 @@ public class CreateDataServiceFolderRequest extends Request {
 
         private Builder(CreateDataServiceFolderRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.folderName = request.folderName;
             this.groupId = request.groupId;
             this.parentId = request.parentId;
             this.projectId = request.projectId;
-            this.regionId = request.regionId;
             this.tenantId = request.tenantId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * FolderName.
@@ -162,15 +171,6 @@ public class CreateDataServiceFolderRequest extends Request {
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
             this.projectId = projectId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

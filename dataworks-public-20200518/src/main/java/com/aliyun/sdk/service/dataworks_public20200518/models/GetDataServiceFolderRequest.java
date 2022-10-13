@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetDataServiceFolderRequest</p>
  */
 public class GetDataServiceFolderRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Body
     @NameInMap("FolderId")
     @Validation(required = true, minimum = 1)
@@ -22,11 +27,6 @@ public class GetDataServiceFolderRequest extends Request {
     @Validation(required = true, minimum = 1)
     private Long projectId;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Body
     @NameInMap("TenantId")
     @Validation(required = true, minimum = 1)
@@ -34,9 +34,9 @@ public class GetDataServiceFolderRequest extends Request {
 
     private GetDataServiceFolderRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.folderId = builder.folderId;
         this.projectId = builder.projectId;
-        this.regionId = builder.regionId;
         this.tenantId = builder.tenantId;
     }
 
@@ -54,6 +54,13 @@ public class GetDataServiceFolderRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return folderId
      */
     public Long getFolderId() {
@@ -68,13 +75,6 @@ public class GetDataServiceFolderRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return tenantId
      */
     public Long getTenantId() {
@@ -82,9 +82,9 @@ public class GetDataServiceFolderRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetDataServiceFolderRequest, Builder> {
+        private String regionId; 
         private Long folderId; 
         private Long projectId; 
-        private String regionId; 
         private Long tenantId; 
 
         private Builder() {
@@ -93,11 +93,20 @@ public class GetDataServiceFolderRequest extends Request {
 
         private Builder(GetDataServiceFolderRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.folderId = request.folderId;
             this.projectId = request.projectId;
-            this.regionId = request.regionId;
             this.tenantId = request.tenantId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * FolderId.
@@ -114,15 +123,6 @@ public class GetDataServiceFolderRequest extends Request {
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
             this.projectId = projectId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

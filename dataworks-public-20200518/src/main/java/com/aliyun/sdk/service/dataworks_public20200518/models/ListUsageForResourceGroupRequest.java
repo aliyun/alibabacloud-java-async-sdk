@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListUsageForResourceGroupRequest</p>
  */
 public class ListUsageForResourceGroupRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Body
     @NameInMap("EndTime")
     @Validation(required = true, minimum = 1547952690)
@@ -21,10 +25,6 @@ public class ListUsageForResourceGroupRequest extends Request {
     @NameInMap("ProjectEnv")
     @Validation(required = true)
     private String projectEnv;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Body
     @NameInMap("ResourceGroupIdentifier")
@@ -38,9 +38,9 @@ public class ListUsageForResourceGroupRequest extends Request {
 
     private ListUsageForResourceGroupRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.endTime = builder.endTime;
         this.projectEnv = builder.projectEnv;
-        this.regionId = builder.regionId;
         this.resourceGroupIdentifier = builder.resourceGroupIdentifier;
         this.startTime = builder.startTime;
     }
@@ -59,6 +59,13 @@ public class ListUsageForResourceGroupRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return endTime
      */
     public Long getEndTime() {
@@ -70,13 +77,6 @@ public class ListUsageForResourceGroupRequest extends Request {
      */
     public String getProjectEnv() {
         return this.projectEnv;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -94,9 +94,9 @@ public class ListUsageForResourceGroupRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListUsageForResourceGroupRequest, Builder> {
+        private String regionId; 
         private Long endTime; 
         private String projectEnv; 
-        private String regionId; 
         private String resourceGroupIdentifier; 
         private Long startTime; 
 
@@ -106,12 +106,21 @@ public class ListUsageForResourceGroupRequest extends Request {
 
         private Builder(ListUsageForResourceGroupRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.endTime = request.endTime;
             this.projectEnv = request.projectEnv;
-            this.regionId = request.regionId;
             this.resourceGroupIdentifier = request.resourceGroupIdentifier;
             this.startTime = request.startTime;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * 最晚当前时间
@@ -128,15 +137,6 @@ public class ListUsageForResourceGroupRequest extends Request {
         public Builder projectEnv(String projectEnv) {
             this.putBodyParameter("ProjectEnv", projectEnv);
             this.projectEnv = projectEnv;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

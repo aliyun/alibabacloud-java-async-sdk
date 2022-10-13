@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetDataServiceGroupRequest</p>
  */
 public class GetDataServiceGroupRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Body
     @NameInMap("GroupId")
     @Validation(required = true)
@@ -22,11 +27,6 @@ public class GetDataServiceGroupRequest extends Request {
     @Validation(required = true, minimum = 1)
     private Long projectId;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Body
     @NameInMap("TenantId")
     @Validation(required = true, minimum = 1)
@@ -34,9 +34,9 @@ public class GetDataServiceGroupRequest extends Request {
 
     private GetDataServiceGroupRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.groupId = builder.groupId;
         this.projectId = builder.projectId;
-        this.regionId = builder.regionId;
         this.tenantId = builder.tenantId;
     }
 
@@ -54,6 +54,13 @@ public class GetDataServiceGroupRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return groupId
      */
     public String getGroupId() {
@@ -68,13 +75,6 @@ public class GetDataServiceGroupRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return tenantId
      */
     public Long getTenantId() {
@@ -82,9 +82,9 @@ public class GetDataServiceGroupRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetDataServiceGroupRequest, Builder> {
+        private String regionId; 
         private String groupId; 
         private Long projectId; 
-        private String regionId; 
         private Long tenantId; 
 
         private Builder() {
@@ -93,11 +93,20 @@ public class GetDataServiceGroupRequest extends Request {
 
         private Builder(GetDataServiceGroupRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.groupId = request.groupId;
             this.projectId = request.projectId;
-            this.regionId = request.regionId;
             this.tenantId = request.tenantId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * GroupId.
@@ -114,15 +123,6 @@ public class GetDataServiceGroupRequest extends Request {
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
             this.projectId = projectId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

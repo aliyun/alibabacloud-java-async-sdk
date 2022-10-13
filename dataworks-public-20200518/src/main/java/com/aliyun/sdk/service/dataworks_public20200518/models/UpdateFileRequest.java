@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateFileRequest</p>
  */
 public class UpdateFileRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Body
     @NameInMap("AdvancedSettings")
     private String advancedSettings;
@@ -105,11 +110,6 @@ public class UpdateFileRequest extends Request {
     @NameInMap("ProjectIdentifier")
     private String projectIdentifier;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Body
     @NameInMap("RerunMode")
     private String rerunMode;
@@ -136,6 +136,7 @@ public class UpdateFileRequest extends Request {
 
     private UpdateFileRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.advancedSettings = builder.advancedSettings;
         this.autoParsing = builder.autoParsing;
         this.autoRerunIntervalMillis = builder.autoRerunIntervalMillis;
@@ -159,7 +160,6 @@ public class UpdateFileRequest extends Request {
         this.paraValue = builder.paraValue;
         this.projectId = builder.projectId;
         this.projectIdentifier = builder.projectIdentifier;
-        this.regionId = builder.regionId;
         this.rerunMode = builder.rerunMode;
         this.resourceGroupIdentifier = builder.resourceGroupIdentifier;
         this.schedulerType = builder.schedulerType;
@@ -179,6 +179,13 @@ public class UpdateFileRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -343,13 +350,6 @@ public class UpdateFileRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return rerunMode
      */
     public String getRerunMode() {
@@ -392,6 +392,7 @@ public class UpdateFileRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateFileRequest, Builder> {
+        private String regionId; 
         private String advancedSettings; 
         private Boolean autoParsing; 
         private Integer autoRerunIntervalMillis; 
@@ -415,7 +416,6 @@ public class UpdateFileRequest extends Request {
         private String paraValue; 
         private Long projectId; 
         private String projectIdentifier; 
-        private String regionId; 
         private String rerunMode; 
         private String resourceGroupIdentifier; 
         private String schedulerType; 
@@ -429,6 +429,7 @@ public class UpdateFileRequest extends Request {
 
         private Builder(UpdateFileRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.advancedSettings = request.advancedSettings;
             this.autoParsing = request.autoParsing;
             this.autoRerunIntervalMillis = request.autoRerunIntervalMillis;
@@ -452,7 +453,6 @@ public class UpdateFileRequest extends Request {
             this.paraValue = request.paraValue;
             this.projectId = request.projectId;
             this.projectIdentifier = request.projectIdentifier;
-            this.regionId = request.regionId;
             this.rerunMode = request.rerunMode;
             this.resourceGroupIdentifier = request.resourceGroupIdentifier;
             this.schedulerType = request.schedulerType;
@@ -460,6 +460,15 @@ public class UpdateFileRequest extends Request {
             this.startImmediately = request.startImmediately;
             this.stop = request.stop;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * AdvancedSettings.
@@ -665,15 +674,6 @@ public class UpdateFileRequest extends Request {
         public Builder projectIdentifier(String projectIdentifier) {
             this.putBodyParameter("ProjectIdentifier", projectIdentifier);
             this.projectIdentifier = projectIdentifier;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

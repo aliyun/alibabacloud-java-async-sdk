@@ -12,20 +12,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteConnectionRequest</p>
  */
 public class DeleteConnectionRequest extends Request {
-    @Query
-    @NameInMap("ConnectionId")
-    @Validation(required = true)
-    private Long connectionId;
-
     @Host
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
 
+    @Query
+    @NameInMap("ConnectionId")
+    @Validation(required = true)
+    private Long connectionId;
+
     private DeleteConnectionRequest(Builder builder) {
         super(builder);
-        this.connectionId = builder.connectionId;
         this.regionId = builder.regionId;
+        this.connectionId = builder.connectionId;
     }
 
     public static Builder builder() {
@@ -42,22 +42,22 @@ public class DeleteConnectionRequest extends Request {
     }
 
     /**
-     * @return connectionId
-     */
-    public Long getConnectionId() {
-        return this.connectionId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
     }
 
+    /**
+     * @return connectionId
+     */
+    public Long getConnectionId() {
+        return this.connectionId;
+    }
+
     public static final class Builder extends Request.Builder<DeleteConnectionRequest, Builder> {
-        private Long connectionId; 
         private String regionId; 
+        private Long connectionId; 
 
         private Builder() {
             super();
@@ -65,18 +65,9 @@ public class DeleteConnectionRequest extends Request {
 
         private Builder(DeleteConnectionRequest request) {
             super(request);
-            this.connectionId = request.connectionId;
             this.regionId = request.regionId;
+            this.connectionId = request.connectionId;
         } 
-
-        /**
-         * ConnectionId.
-         */
-        public Builder connectionId(Long connectionId) {
-            this.putQueryParameter("ConnectionId", connectionId);
-            this.connectionId = connectionId;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -84,6 +75,15 @@ public class DeleteConnectionRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ConnectionId.
+         */
+        public Builder connectionId(Long connectionId) {
+            this.putQueryParameter("ConnectionId", connectionId);
+            this.connectionId = connectionId;
             return this;
         }
 

@@ -12,20 +12,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListProjectRolesRequest</p>
  */
 public class ListProjectRolesRequest extends Request {
-    @Query
-    @NameInMap("ProjectId")
-    @Validation(required = true, maximum = 1000000)
-    private Long projectId;
-
     @Host
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
 
+    @Query
+    @NameInMap("ProjectId")
+    @Validation(required = true, maximum = 1000000)
+    private Long projectId;
+
     private ListProjectRolesRequest(Builder builder) {
         super(builder);
-        this.projectId = builder.projectId;
         this.regionId = builder.regionId;
+        this.projectId = builder.projectId;
     }
 
     public static Builder builder() {
@@ -42,22 +42,22 @@ public class ListProjectRolesRequest extends Request {
     }
 
     /**
-     * @return projectId
-     */
-    public Long getProjectId() {
-        return this.projectId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
     }
 
+    /**
+     * @return projectId
+     */
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
     public static final class Builder extends Request.Builder<ListProjectRolesRequest, Builder> {
-        private Long projectId; 
         private String regionId; 
+        private Long projectId; 
 
         private Builder() {
             super();
@@ -65,18 +65,9 @@ public class ListProjectRolesRequest extends Request {
 
         private Builder(ListProjectRolesRequest request) {
             super(request);
-            this.projectId = request.projectId;
             this.regionId = request.regionId;
+            this.projectId = request.projectId;
         } 
-
-        /**
-         * ProjectId.
-         */
-        public Builder projectId(Long projectId) {
-            this.putQueryParameter("ProjectId", projectId);
-            this.projectId = projectId;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -84,6 +75,15 @@ public class ListProjectRolesRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ProjectId.
+         */
+        public Builder projectId(Long projectId) {
+            this.putQueryParameter("ProjectId", projectId);
+            this.projectId = projectId;
             return this;
         }
 

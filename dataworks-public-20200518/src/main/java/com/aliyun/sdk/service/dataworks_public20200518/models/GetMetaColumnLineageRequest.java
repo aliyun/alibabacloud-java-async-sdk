@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetMetaColumnLineageRequest</p>
  */
 public class GetMetaColumnLineageRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("ClusterId")
     private String clusterId;
@@ -45,17 +50,13 @@ public class GetMetaColumnLineageRequest extends Request {
     @NameInMap("PageSize")
     private Integer pageSize;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Query
     @NameInMap("TableName")
     private String tableName;
 
     private GetMetaColumnLineageRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.clusterId = builder.clusterId;
         this.columnGuid = builder.columnGuid;
         this.columnName = builder.columnName;
@@ -64,7 +65,6 @@ public class GetMetaColumnLineageRequest extends Request {
         this.direction = builder.direction;
         this.pageNum = builder.pageNum;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
         this.tableName = builder.tableName;
     }
 
@@ -79,6 +79,13 @@ public class GetMetaColumnLineageRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -138,13 +145,6 @@ public class GetMetaColumnLineageRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return tableName
      */
     public String getTableName() {
@@ -152,6 +152,7 @@ public class GetMetaColumnLineageRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetMetaColumnLineageRequest, Builder> {
+        private String regionId; 
         private String clusterId; 
         private String columnGuid; 
         private String columnName; 
@@ -160,7 +161,6 @@ public class GetMetaColumnLineageRequest extends Request {
         private String direction; 
         private Integer pageNum; 
         private Integer pageSize; 
-        private String regionId; 
         private String tableName; 
 
         private Builder() {
@@ -169,6 +169,7 @@ public class GetMetaColumnLineageRequest extends Request {
 
         private Builder(GetMetaColumnLineageRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.clusterId = request.clusterId;
             this.columnGuid = request.columnGuid;
             this.columnName = request.columnName;
@@ -177,9 +178,17 @@ public class GetMetaColumnLineageRequest extends Request {
             this.direction = request.direction;
             this.pageNum = request.pageNum;
             this.pageSize = request.pageSize;
-            this.regionId = request.regionId;
             this.tableName = request.tableName;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * ClusterId.
@@ -250,15 +259,6 @@ public class GetMetaColumnLineageRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

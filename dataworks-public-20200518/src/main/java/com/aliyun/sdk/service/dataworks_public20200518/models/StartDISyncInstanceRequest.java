@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>StartDISyncInstanceRequest</p>
  */
 public class StartDISyncInstanceRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("FileId")
     @Validation(required = true, minimum = 1)
@@ -21,11 +26,6 @@ public class StartDISyncInstanceRequest extends Request {
     @NameInMap("ProjectId")
     @Validation(required = true, maximum = 10000000000D, minimum = 1)
     private Long projectId;
-
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
 
     @Query
     @NameInMap("StartParam")
@@ -38,9 +38,9 @@ public class StartDISyncInstanceRequest extends Request {
 
     private StartDISyncInstanceRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.fileId = builder.fileId;
         this.projectId = builder.projectId;
-        this.regionId = builder.regionId;
         this.startParam = builder.startParam;
         this.taskType = builder.taskType;
     }
@@ -59,6 +59,13 @@ public class StartDISyncInstanceRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return fileId
      */
     public Long getFileId() {
@@ -70,13 +77,6 @@ public class StartDISyncInstanceRequest extends Request {
      */
     public Long getProjectId() {
         return this.projectId;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -94,9 +94,9 @@ public class StartDISyncInstanceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<StartDISyncInstanceRequest, Builder> {
+        private String regionId; 
         private Long fileId; 
         private Long projectId; 
-        private String regionId; 
         private String startParam; 
         private String taskType; 
 
@@ -106,12 +106,21 @@ public class StartDISyncInstanceRequest extends Request {
 
         private Builder(StartDISyncInstanceRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.fileId = request.fileId;
             this.projectId = request.projectId;
-            this.regionId = request.regionId;
             this.startParam = request.startParam;
             this.taskType = request.taskType;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * FileId.
@@ -128,15 +137,6 @@ public class StartDISyncInstanceRequest extends Request {
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
             this.projectId = projectId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

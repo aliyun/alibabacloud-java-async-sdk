@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetDataSourceMetaRequest</p>
  */
 public class GetDataSourceMetaRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("DatasourceName")
     @Validation(required = true)
@@ -36,19 +41,14 @@ public class GetDataSourceMetaRequest extends Request {
     @Validation(required = true, maximum = 10000000000D, minimum = 1)
     private Long projectId;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     private GetDataSourceMetaRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.datasourceName = builder.datasourceName;
         this.envType = builder.envType;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.projectId = builder.projectId;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -62,6 +62,13 @@ public class GetDataSourceMetaRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -99,20 +106,13 @@ public class GetDataSourceMetaRequest extends Request {
         return this.projectId;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<GetDataSourceMetaRequest, Builder> {
+        private String regionId; 
         private String datasourceName; 
         private String envType; 
         private Long pageNumber; 
         private Long pageSize; 
         private Long projectId; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -120,13 +120,22 @@ public class GetDataSourceMetaRequest extends Request {
 
         private Builder(GetDataSourceMetaRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.datasourceName = request.datasourceName;
             this.envType = request.envType;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.projectId = request.projectId;
-            this.regionId = request.regionId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * DatasourceName.
@@ -170,15 +179,6 @@ public class GetDataSourceMetaRequest extends Request {
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
             this.projectId = projectId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

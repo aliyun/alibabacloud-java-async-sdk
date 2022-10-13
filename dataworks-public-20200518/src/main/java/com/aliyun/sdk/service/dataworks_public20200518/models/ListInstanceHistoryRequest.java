@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListInstanceHistoryRequest</p>
  */
 public class ListInstanceHistoryRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Body
     @NameInMap("InstanceId")
     @Validation(required = true)
@@ -21,16 +26,11 @@ public class ListInstanceHistoryRequest extends Request {
     @NameInMap("ProjectEnv")
     private String projectEnv;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     private ListInstanceHistoryRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
         this.projectEnv = builder.projectEnv;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -47,6 +47,13 @@ public class ListInstanceHistoryRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return instanceId
      */
     public Long getInstanceId() {
@@ -60,17 +67,10 @@ public class ListInstanceHistoryRequest extends Request {
         return this.projectEnv;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<ListInstanceHistoryRequest, Builder> {
+        private String regionId; 
         private Long instanceId; 
         private String projectEnv; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -78,10 +78,19 @@ public class ListInstanceHistoryRequest extends Request {
 
         private Builder(ListInstanceHistoryRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.instanceId = request.instanceId;
             this.projectEnv = request.projectEnv;
-            this.regionId = request.regionId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * InstanceId.
@@ -98,15 +107,6 @@ public class ListInstanceHistoryRequest extends Request {
         public Builder projectEnv(String projectEnv) {
             this.putBodyParameter("ProjectEnv", projectEnv);
             this.projectEnv = projectEnv;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

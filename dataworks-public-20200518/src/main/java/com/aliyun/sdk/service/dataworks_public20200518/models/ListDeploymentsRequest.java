@@ -12,6 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDeploymentsRequest</p>
  */
 public class ListDeploymentsRequest extends Request {
+    @Host
+    @NameInMap("Region")
+    private String region;
+
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Body
     @NameInMap("Creator")
     private String creator;
@@ -49,21 +58,14 @@ public class ListDeploymentsRequest extends Request {
     @NameInMap("ProjectIdentifier")
     private String projectIdentifier;
 
-    @Host
-    @NameInMap("Region")
-    private String region;
-
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Body
     @NameInMap("Status")
     private Integer status;
 
     private ListDeploymentsRequest(Builder builder) {
         super(builder);
+        this.region = builder.region;
+        this.regionId = builder.regionId;
         this.creator = builder.creator;
         this.endCreateTime = builder.endCreateTime;
         this.endExecuteTime = builder.endExecuteTime;
@@ -73,8 +75,6 @@ public class ListDeploymentsRequest extends Request {
         this.pageSize = builder.pageSize;
         this.projectId = builder.projectId;
         this.projectIdentifier = builder.projectIdentifier;
-        this.region = builder.region;
-        this.regionId = builder.regionId;
         this.status = builder.status;
     }
 
@@ -89,6 +89,20 @@ public class ListDeploymentsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return region
+     */
+    public String getRegion() {
+        return this.region;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -155,20 +169,6 @@ public class ListDeploymentsRequest extends Request {
     }
 
     /**
-     * @return region
-     */
-    public String getRegion() {
-        return this.region;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return status
      */
     public Integer getStatus() {
@@ -176,6 +176,8 @@ public class ListDeploymentsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListDeploymentsRequest, Builder> {
+        private String region; 
+        private String regionId; 
         private String creator; 
         private Long endCreateTime; 
         private Long endExecuteTime; 
@@ -185,8 +187,6 @@ public class ListDeploymentsRequest extends Request {
         private Integer pageSize; 
         private Long projectId; 
         private String projectIdentifier; 
-        private String region; 
-        private String regionId; 
         private Integer status; 
 
         private Builder() {
@@ -195,6 +195,8 @@ public class ListDeploymentsRequest extends Request {
 
         private Builder(ListDeploymentsRequest request) {
             super(request);
+            this.region = request.region;
+            this.regionId = request.regionId;
             this.creator = request.creator;
             this.endCreateTime = request.endCreateTime;
             this.endExecuteTime = request.endExecuteTime;
@@ -204,10 +206,26 @@ public class ListDeploymentsRequest extends Request {
             this.pageSize = request.pageSize;
             this.projectId = request.projectId;
             this.projectIdentifier = request.projectIdentifier;
-            this.region = request.region;
-            this.regionId = request.regionId;
             this.status = request.status;
         } 
+
+        /**
+         * Region.
+         */
+        public Builder region(String region) {
+            this.putHostParameter("Region", region);
+            this.region = region;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * Creator.
@@ -287,24 +305,6 @@ public class ListDeploymentsRequest extends Request {
         public Builder projectIdentifier(String projectIdentifier) {
             this.putBodyParameter("ProjectIdentifier", projectIdentifier);
             this.projectIdentifier = projectIdentifier;
-            return this;
-        }
-
-        /**
-         * Region.
-         */
-        public Builder region(String region) {
-            this.putHostParameter("Region", region);
-            this.region = region;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

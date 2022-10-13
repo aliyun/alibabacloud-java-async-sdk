@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDataServiceApplicationsRequest</p>
  */
 public class ListDataServiceApplicationsRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Body
     @NameInMap("PageNumber")
     private Integer pageNumber;
@@ -26,11 +31,6 @@ public class ListDataServiceApplicationsRequest extends Request {
     @Validation(required = true)
     private String projectIdList;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Body
     @NameInMap("TenantId")
     @Validation(required = true)
@@ -38,10 +38,10 @@ public class ListDataServiceApplicationsRequest extends Request {
 
     private ListDataServiceApplicationsRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.projectIdList = builder.projectIdList;
-        this.regionId = builder.regionId;
         this.tenantId = builder.tenantId;
     }
 
@@ -56,6 +56,13 @@ public class ListDataServiceApplicationsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -80,13 +87,6 @@ public class ListDataServiceApplicationsRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return tenantId
      */
     public Long getTenantId() {
@@ -94,10 +94,10 @@ public class ListDataServiceApplicationsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListDataServiceApplicationsRequest, Builder> {
+        private String regionId; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String projectIdList; 
-        private String regionId; 
         private Long tenantId; 
 
         private Builder() {
@@ -106,12 +106,21 @@ public class ListDataServiceApplicationsRequest extends Request {
 
         private Builder(ListDataServiceApplicationsRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.projectIdList = request.projectIdList;
-            this.regionId = request.regionId;
             this.tenantId = request.tenantId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * PageNumber.
@@ -137,15 +146,6 @@ public class ListDataServiceApplicationsRequest extends Request {
         public Builder projectIdList(String projectIdList) {
             this.putBodyParameter("ProjectIdList", projectIdList);
             this.projectIdList = projectIdList;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

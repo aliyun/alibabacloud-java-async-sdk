@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteQualityEntityRequest</p>
  */
 public class DeleteQualityEntityRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Body
     @NameInMap("EntityId")
     @Validation(required = true, maximum = 2147483647, minimum = 1)
@@ -27,17 +32,12 @@ public class DeleteQualityEntityRequest extends Request {
     @Validation(required = true)
     private String projectName;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     private DeleteQualityEntityRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.entityId = builder.entityId;
         this.envType = builder.envType;
         this.projectName = builder.projectName;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -51,6 +51,13 @@ public class DeleteQualityEntityRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -74,18 +81,11 @@ public class DeleteQualityEntityRequest extends Request {
         return this.projectName;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<DeleteQualityEntityRequest, Builder> {
+        private String regionId; 
         private Long entityId; 
         private String envType; 
         private String projectName; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -93,11 +93,20 @@ public class DeleteQualityEntityRequest extends Request {
 
         private Builder(DeleteQualityEntityRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.entityId = request.entityId;
             this.envType = request.envType;
             this.projectName = request.projectName;
-            this.regionId = request.regionId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * EntityId.
@@ -123,15 +132,6 @@ public class DeleteQualityEntityRequest extends Request {
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);
             this.projectName = projectName;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

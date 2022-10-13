@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateDataSourceRequest</p>
  */
 public class CreateDataSourceRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("Content")
     @Validation(required = true)
@@ -41,24 +46,19 @@ public class CreateDataSourceRequest extends Request {
     @Validation(required = true)
     private Long projectId;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Query
     @NameInMap("SubType")
     private String subType;
 
     private CreateDataSourceRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.content = builder.content;
         this.dataSourceType = builder.dataSourceType;
         this.description = builder.description;
         this.envType = builder.envType;
         this.name = builder.name;
         this.projectId = builder.projectId;
-        this.regionId = builder.regionId;
         this.subType = builder.subType;
     }
 
@@ -73,6 +73,13 @@ public class CreateDataSourceRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -118,13 +125,6 @@ public class CreateDataSourceRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return subType
      */
     public String getSubType() {
@@ -132,13 +132,13 @@ public class CreateDataSourceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateDataSourceRequest, Builder> {
+        private String regionId; 
         private String content; 
         private String dataSourceType; 
         private String description; 
         private Integer envType; 
         private String name; 
         private Long projectId; 
-        private String regionId; 
         private String subType; 
 
         private Builder() {
@@ -147,15 +147,24 @@ public class CreateDataSourceRequest extends Request {
 
         private Builder(CreateDataSourceRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.content = request.content;
             this.dataSourceType = request.dataSourceType;
             this.description = request.description;
             this.envType = request.envType;
             this.name = request.name;
             this.projectId = request.projectId;
-            this.regionId = request.regionId;
             this.subType = request.subType;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * Content.
@@ -208,15 +217,6 @@ public class CreateDataSourceRequest extends Request {
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
             this.projectId = projectId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

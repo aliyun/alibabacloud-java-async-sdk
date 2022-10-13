@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetManualDagInstancesRequest</p>
  */
 public class GetManualDagInstancesRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Body
     @NameInMap("DagId")
     @Validation(required = true)
@@ -27,17 +32,12 @@ public class GetManualDagInstancesRequest extends Request {
     @Validation(required = true)
     private String projectName;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     private GetManualDagInstancesRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.dagId = builder.dagId;
         this.projectEnv = builder.projectEnv;
         this.projectName = builder.projectName;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -51,6 +51,13 @@ public class GetManualDagInstancesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -74,18 +81,11 @@ public class GetManualDagInstancesRequest extends Request {
         return this.projectName;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<GetManualDagInstancesRequest, Builder> {
+        private String regionId; 
         private String dagId; 
         private String projectEnv; 
         private String projectName; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -93,11 +93,20 @@ public class GetManualDagInstancesRequest extends Request {
 
         private Builder(GetManualDagInstancesRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.dagId = request.dagId;
             this.projectEnv = request.projectEnv;
             this.projectName = request.projectName;
-            this.regionId = request.regionId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * DagId.
@@ -123,15 +132,6 @@ public class GetManualDagInstancesRequest extends Request {
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);
             this.projectName = projectName;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

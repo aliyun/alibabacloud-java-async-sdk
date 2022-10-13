@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateExportMigrationRequest</p>
  */
 public class CreateExportMigrationRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Body
     @NameInMap("Description")
     private String description;
@@ -39,20 +44,15 @@ public class CreateExportMigrationRequest extends Request {
     @Validation(required = true)
     private Long projectId;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     private CreateExportMigrationRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.description = builder.description;
         this.exportMode = builder.exportMode;
         this.exportObjectStatus = builder.exportObjectStatus;
         this.incrementalSince = builder.incrementalSince;
         this.name = builder.name;
         this.projectId = builder.projectId;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -66,6 +66,13 @@ public class CreateExportMigrationRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -110,21 +117,14 @@ public class CreateExportMigrationRequest extends Request {
         return this.projectId;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<CreateExportMigrationRequest, Builder> {
+        private String regionId; 
         private String description; 
         private String exportMode; 
         private String exportObjectStatus; 
         private Long incrementalSince; 
         private String name; 
         private Long projectId; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -132,14 +132,23 @@ public class CreateExportMigrationRequest extends Request {
 
         private Builder(CreateExportMigrationRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.description = request.description;
             this.exportMode = request.exportMode;
             this.exportObjectStatus = request.exportObjectStatus;
             this.incrementalSince = request.incrementalSince;
             this.name = request.name;
             this.projectId = request.projectId;
-            this.regionId = request.regionId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * Description.
@@ -192,15 +201,6 @@ public class CreateExportMigrationRequest extends Request {
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
             this.projectId = projectId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

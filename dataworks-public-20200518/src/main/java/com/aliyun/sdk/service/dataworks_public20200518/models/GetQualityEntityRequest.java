@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetQualityEntityRequest</p>
  */
 public class GetQualityEntityRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Body
     @NameInMap("EnvType")
     @Validation(required = true, maxLength = 64, minLength = 1)
@@ -27,10 +31,6 @@ public class GetQualityEntityRequest extends Request {
     @Validation(required = true, maxLength = 1024, minLength = 1)
     private String projectName;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Body
     @NameInMap("TableName")
     @Validation(required = true, maxLength = 128, minLength = 1)
@@ -38,10 +38,10 @@ public class GetQualityEntityRequest extends Request {
 
     private GetQualityEntityRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.envType = builder.envType;
         this.matchExpression = builder.matchExpression;
         this.projectName = builder.projectName;
-        this.regionId = builder.regionId;
         this.tableName = builder.tableName;
     }
 
@@ -56,6 +56,13 @@ public class GetQualityEntityRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -80,13 +87,6 @@ public class GetQualityEntityRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return tableName
      */
     public String getTableName() {
@@ -94,10 +94,10 @@ public class GetQualityEntityRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetQualityEntityRequest, Builder> {
+        private String regionId; 
         private String envType; 
         private String matchExpression; 
         private String projectName; 
-        private String regionId; 
         private String tableName; 
 
         private Builder() {
@@ -106,12 +106,21 @@ public class GetQualityEntityRequest extends Request {
 
         private Builder(GetQualityEntityRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.envType = request.envType;
             this.matchExpression = request.matchExpression;
             this.projectName = request.projectName;
-            this.regionId = request.regionId;
             this.tableName = request.tableName;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * EnvType.
@@ -137,15 +146,6 @@ public class GetQualityEntityRequest extends Request {
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);
             this.projectName = projectName;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

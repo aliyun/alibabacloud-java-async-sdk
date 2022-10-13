@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreatePermissionApplyOrderRequest</p>
  */
 public class CreatePermissionApplyOrderRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("ApplyObject")
     @Validation(required = true)
@@ -44,11 +49,6 @@ public class CreatePermissionApplyOrderRequest extends Request {
     @NameInMap("OrderType")
     private Integer orderType;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Query
     @NameInMap("WorkspaceId")
     @Validation(required = true, maximum = 999999)
@@ -56,6 +56,7 @@ public class CreatePermissionApplyOrderRequest extends Request {
 
     private CreatePermissionApplyOrderRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.applyObject = builder.applyObject;
         this.applyReason = builder.applyReason;
         this.applyUserIds = builder.applyUserIds;
@@ -63,7 +64,6 @@ public class CreatePermissionApplyOrderRequest extends Request {
         this.engineType = builder.engineType;
         this.maxComputeProjectName = builder.maxComputeProjectName;
         this.orderType = builder.orderType;
-        this.regionId = builder.regionId;
         this.workspaceId = builder.workspaceId;
     }
 
@@ -78,6 +78,13 @@ public class CreatePermissionApplyOrderRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -130,13 +137,6 @@ public class CreatePermissionApplyOrderRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return workspaceId
      */
     public Integer getWorkspaceId() {
@@ -144,6 +144,7 @@ public class CreatePermissionApplyOrderRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreatePermissionApplyOrderRequest, Builder> {
+        private String regionId; 
         private java.util.List < ApplyObject> applyObject; 
         private String applyReason; 
         private String applyUserIds; 
@@ -151,7 +152,6 @@ public class CreatePermissionApplyOrderRequest extends Request {
         private String engineType; 
         private String maxComputeProjectName; 
         private Integer orderType; 
-        private String regionId; 
         private Integer workspaceId; 
 
         private Builder() {
@@ -160,6 +160,7 @@ public class CreatePermissionApplyOrderRequest extends Request {
 
         private Builder(CreatePermissionApplyOrderRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.applyObject = request.applyObject;
             this.applyReason = request.applyReason;
             this.applyUserIds = request.applyUserIds;
@@ -167,9 +168,17 @@ public class CreatePermissionApplyOrderRequest extends Request {
             this.engineType = request.engineType;
             this.maxComputeProjectName = request.maxComputeProjectName;
             this.orderType = request.orderType;
-            this.regionId = request.regionId;
             this.workspaceId = request.workspaceId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * ApplyObject.
@@ -231,15 +240,6 @@ public class CreatePermissionApplyOrderRequest extends Request {
         public Builder orderType(Integer orderType) {
             this.putQueryParameter("OrderType", orderType);
             this.orderType = orderType;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

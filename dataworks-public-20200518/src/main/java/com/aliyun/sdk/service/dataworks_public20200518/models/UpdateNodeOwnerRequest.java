@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateNodeOwnerRequest</p>
  */
 public class UpdateNodeOwnerRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Body
     @NameInMap("NodeId")
     @Validation(required = true)
@@ -22,11 +27,6 @@ public class UpdateNodeOwnerRequest extends Request {
     @Validation(required = true)
     private String projectEnv;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Body
     @NameInMap("UserId")
     @Validation(required = true, maxLength = 64)
@@ -34,9 +34,9 @@ public class UpdateNodeOwnerRequest extends Request {
 
     private UpdateNodeOwnerRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.nodeId = builder.nodeId;
         this.projectEnv = builder.projectEnv;
-        this.regionId = builder.regionId;
         this.userId = builder.userId;
     }
 
@@ -54,6 +54,13 @@ public class UpdateNodeOwnerRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return nodeId
      */
     public Long getNodeId() {
@@ -68,13 +75,6 @@ public class UpdateNodeOwnerRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return userId
      */
     public String getUserId() {
@@ -82,9 +82,9 @@ public class UpdateNodeOwnerRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateNodeOwnerRequest, Builder> {
+        private String regionId; 
         private Long nodeId; 
         private String projectEnv; 
-        private String regionId; 
         private String userId; 
 
         private Builder() {
@@ -93,11 +93,20 @@ public class UpdateNodeOwnerRequest extends Request {
 
         private Builder(UpdateNodeOwnerRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.nodeId = request.nodeId;
             this.projectEnv = request.projectEnv;
-            this.regionId = request.regionId;
             this.userId = request.userId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * NodeId.
@@ -114,15 +123,6 @@ public class UpdateNodeOwnerRequest extends Request {
         public Builder projectEnv(String projectEnv) {
             this.putBodyParameter("ProjectEnv", projectEnv);
             this.projectEnv = projectEnv;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

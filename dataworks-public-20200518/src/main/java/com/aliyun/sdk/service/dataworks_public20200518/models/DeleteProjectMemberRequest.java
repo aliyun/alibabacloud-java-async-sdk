@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteProjectMemberRequest</p>
  */
 public class DeleteProjectMemberRequest extends Request {
-    @Query
-    @NameInMap("ProjectId")
-    @Validation(required = true, maximum = 100000000)
-    private Long projectId;
-
     @Host
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
+
+    @Query
+    @NameInMap("ProjectId")
+    @Validation(required = true, maximum = 100000000)
+    private Long projectId;
 
     @Query
     @NameInMap("UserId")
@@ -29,8 +29,8 @@ public class DeleteProjectMemberRequest extends Request {
 
     private DeleteProjectMemberRequest(Builder builder) {
         super(builder);
-        this.projectId = builder.projectId;
         this.regionId = builder.regionId;
+        this.projectId = builder.projectId;
         this.userId = builder.userId;
     }
 
@@ -48,17 +48,17 @@ public class DeleteProjectMemberRequest extends Request {
     }
 
     /**
-     * @return projectId
-     */
-    public Long getProjectId() {
-        return this.projectId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return projectId
+     */
+    public Long getProjectId() {
+        return this.projectId;
     }
 
     /**
@@ -69,8 +69,8 @@ public class DeleteProjectMemberRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteProjectMemberRequest, Builder> {
-        private Long projectId; 
         private String regionId; 
+        private Long projectId; 
         private String userId; 
 
         private Builder() {
@@ -79,19 +79,10 @@ public class DeleteProjectMemberRequest extends Request {
 
         private Builder(DeleteProjectMemberRequest request) {
             super(request);
-            this.projectId = request.projectId;
             this.regionId = request.regionId;
+            this.projectId = request.projectId;
             this.userId = request.userId;
         } 
-
-        /**
-         * ProjectId.
-         */
-        public Builder projectId(Long projectId) {
-            this.putQueryParameter("ProjectId", projectId);
-            this.projectId = projectId;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -99,6 +90,15 @@ public class DeleteProjectMemberRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ProjectId.
+         */
+        public Builder projectId(Long projectId) {
+            this.putQueryParameter("ProjectId", projectId);
+            this.projectId = projectId;
             return this;
         }
 

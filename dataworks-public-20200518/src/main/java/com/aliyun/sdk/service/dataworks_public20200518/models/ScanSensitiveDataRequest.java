@@ -12,20 +12,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ScanSensitiveDataRequest</p>
  */
 public class ScanSensitiveDataRequest extends Request {
-    @Query
-    @NameInMap("Data")
-    @Validation(required = true)
-    private String data;
-
     @Host
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
 
+    @Query
+    @NameInMap("Data")
+    @Validation(required = true)
+    private String data;
+
     private ScanSensitiveDataRequest(Builder builder) {
         super(builder);
-        this.data = builder.data;
         this.regionId = builder.regionId;
+        this.data = builder.data;
     }
 
     public static Builder builder() {
@@ -42,22 +42,22 @@ public class ScanSensitiveDataRequest extends Request {
     }
 
     /**
-     * @return data
-     */
-    public String getData() {
-        return this.data;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
     }
 
+    /**
+     * @return data
+     */
+    public String getData() {
+        return this.data;
+    }
+
     public static final class Builder extends Request.Builder<ScanSensitiveDataRequest, Builder> {
-        private String data; 
         private String regionId; 
+        private String data; 
 
         private Builder() {
             super();
@@ -65,18 +65,9 @@ public class ScanSensitiveDataRequest extends Request {
 
         private Builder(ScanSensitiveDataRequest request) {
             super(request);
-            this.data = request.data;
             this.regionId = request.regionId;
+            this.data = request.data;
         } 
-
-        /**
-         * Data.
-         */
-        public Builder data(String data) {
-            this.putQueryParameter("Data", data);
-            this.data = data;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -84,6 +75,15 @@ public class ScanSensitiveDataRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * Data.
+         */
+        public Builder data(String data) {
+            this.putQueryParameter("Data", data);
+            this.data = data;
             return this;
         }
 

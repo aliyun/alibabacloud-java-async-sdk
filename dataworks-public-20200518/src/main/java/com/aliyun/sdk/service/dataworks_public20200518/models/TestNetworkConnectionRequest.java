@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>TestNetworkConnectionRequest</p>
  */
 public class TestNetworkConnectionRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("DatasourceName")
     @Validation(required = true)
@@ -27,11 +32,6 @@ public class TestNetworkConnectionRequest extends Request {
     @Validation(required = true, maximum = 10000000000D, minimum = 1)
     private Long projectId;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Query
     @NameInMap("ResourceGroup")
     @Validation(required = true)
@@ -39,10 +39,10 @@ public class TestNetworkConnectionRequest extends Request {
 
     private TestNetworkConnectionRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.datasourceName = builder.datasourceName;
         this.envType = builder.envType;
         this.projectId = builder.projectId;
-        this.regionId = builder.regionId;
         this.resourceGroup = builder.resourceGroup;
     }
 
@@ -57,6 +57,13 @@ public class TestNetworkConnectionRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -81,13 +88,6 @@ public class TestNetworkConnectionRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return resourceGroup
      */
     public String getResourceGroup() {
@@ -95,10 +95,10 @@ public class TestNetworkConnectionRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<TestNetworkConnectionRequest, Builder> {
+        private String regionId; 
         private String datasourceName; 
         private String envType; 
         private Long projectId; 
-        private String regionId; 
         private String resourceGroup; 
 
         private Builder() {
@@ -107,12 +107,21 @@ public class TestNetworkConnectionRequest extends Request {
 
         private Builder(TestNetworkConnectionRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.datasourceName = request.datasourceName;
             this.envType = request.envType;
             this.projectId = request.projectId;
-            this.regionId = request.regionId;
             this.resourceGroup = request.resourceGroup;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * DatasourceName.
@@ -138,15 +147,6 @@ public class TestNetworkConnectionRequest extends Request {
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
             this.projectId = projectId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

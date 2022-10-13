@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListFilesRequest</p>
  */
 public class ListFilesRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Body
     @NameInMap("FileFolderPath")
     private String fileFolderPath;
@@ -49,17 +54,13 @@ public class ListFilesRequest extends Request {
     @NameInMap("ProjectIdentifier")
     private String projectIdentifier;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Body
     @NameInMap("UseType")
     private String useType;
 
     private ListFilesRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.fileFolderPath = builder.fileFolderPath;
         this.fileTypes = builder.fileTypes;
         this.keyword = builder.keyword;
@@ -69,7 +70,6 @@ public class ListFilesRequest extends Request {
         this.pageSize = builder.pageSize;
         this.projectId = builder.projectId;
         this.projectIdentifier = builder.projectIdentifier;
-        this.regionId = builder.regionId;
         this.useType = builder.useType;
     }
 
@@ -84,6 +84,13 @@ public class ListFilesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -150,13 +157,6 @@ public class ListFilesRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return useType
      */
     public String getUseType() {
@@ -164,6 +164,7 @@ public class ListFilesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListFilesRequest, Builder> {
+        private String regionId; 
         private String fileFolderPath; 
         private String fileTypes; 
         private String keyword; 
@@ -173,7 +174,6 @@ public class ListFilesRequest extends Request {
         private Integer pageSize; 
         private Long projectId; 
         private String projectIdentifier; 
-        private String regionId; 
         private String useType; 
 
         private Builder() {
@@ -182,6 +182,7 @@ public class ListFilesRequest extends Request {
 
         private Builder(ListFilesRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.fileFolderPath = request.fileFolderPath;
             this.fileTypes = request.fileTypes;
             this.keyword = request.keyword;
@@ -191,9 +192,17 @@ public class ListFilesRequest extends Request {
             this.pageSize = request.pageSize;
             this.projectId = request.projectId;
             this.projectIdentifier = request.projectIdentifier;
-            this.regionId = request.regionId;
             this.useType = request.useType;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * FileFolderPath.
@@ -273,15 +282,6 @@ public class ListFilesRequest extends Request {
         public Builder projectIdentifier(String projectIdentifier) {
             this.putBodyParameter("ProjectIdentifier", projectIdentifier);
             this.projectIdentifier = projectIdentifier;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

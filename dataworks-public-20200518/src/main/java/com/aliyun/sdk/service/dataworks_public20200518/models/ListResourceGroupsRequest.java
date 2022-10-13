@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListResourceGroupsRequest</p>
  */
 public class ListResourceGroupsRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("BizExtKey")
     private String bizExtKey;
@@ -20,11 +25,6 @@ public class ListResourceGroupsRequest extends Request {
     @NameInMap("Keyword")
     private String keyword;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Query
     @NameInMap("ResourceGroupType")
     @Validation(required = true)
@@ -32,9 +32,9 @@ public class ListResourceGroupsRequest extends Request {
 
     private ListResourceGroupsRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.bizExtKey = builder.bizExtKey;
         this.keyword = builder.keyword;
-        this.regionId = builder.regionId;
         this.resourceGroupType = builder.resourceGroupType;
     }
 
@@ -52,6 +52,13 @@ public class ListResourceGroupsRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return bizExtKey
      */
     public String getBizExtKey() {
@@ -66,13 +73,6 @@ public class ListResourceGroupsRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return resourceGroupType
      */
     public Integer getResourceGroupType() {
@@ -80,9 +80,9 @@ public class ListResourceGroupsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListResourceGroupsRequest, Builder> {
+        private String regionId; 
         private String bizExtKey; 
         private String keyword; 
-        private String regionId; 
         private Integer resourceGroupType; 
 
         private Builder() {
@@ -91,11 +91,20 @@ public class ListResourceGroupsRequest extends Request {
 
         private Builder(ListResourceGroupsRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.bizExtKey = request.bizExtKey;
             this.keyword = request.keyword;
-            this.regionId = request.regionId;
             this.resourceGroupType = request.resourceGroupType;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * BizExtKey.
@@ -112,15 +121,6 @@ public class ListResourceGroupsRequest extends Request {
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
             this.keyword = keyword;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

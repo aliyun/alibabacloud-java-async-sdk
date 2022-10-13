@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListShiftSchedulesRequest</p>
  */
 public class ListShiftSchedulesRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Body
     @NameInMap("Owner")
     private String owner;
@@ -26,21 +31,16 @@ public class ListShiftSchedulesRequest extends Request {
     @Validation(maximum = 100, minimum = 10)
     private Integer pageSize;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Body
     @NameInMap("ShiftScheduleName")
     private String shiftScheduleName;
 
     private ListShiftSchedulesRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.owner = builder.owner;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
         this.shiftScheduleName = builder.shiftScheduleName;
     }
 
@@ -55,6 +55,13 @@ public class ListShiftSchedulesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -79,13 +86,6 @@ public class ListShiftSchedulesRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return shiftScheduleName
      */
     public String getShiftScheduleName() {
@@ -93,10 +93,10 @@ public class ListShiftSchedulesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListShiftSchedulesRequest, Builder> {
+        private String regionId; 
         private String owner; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private String regionId; 
         private String shiftScheduleName; 
 
         private Builder() {
@@ -105,12 +105,21 @@ public class ListShiftSchedulesRequest extends Request {
 
         private Builder(ListShiftSchedulesRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.owner = request.owner;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
-            this.regionId = request.regionId;
             this.shiftScheduleName = request.shiftScheduleName;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * Owner.
@@ -136,15 +145,6 @@ public class ListShiftSchedulesRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
             this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

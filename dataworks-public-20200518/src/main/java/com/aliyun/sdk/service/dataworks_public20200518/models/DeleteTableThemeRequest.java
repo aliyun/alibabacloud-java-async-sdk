@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteTableThemeRequest</p>
  */
 public class DeleteTableThemeRequest extends Request {
-    @Query
-    @NameInMap("ProjectId")
-    @Validation(minimum = 1)
-    private Long projectId;
-
     @Host
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
+
+    @Query
+    @NameInMap("ProjectId")
+    @Validation(minimum = 1)
+    private Long projectId;
 
     @Query
     @NameInMap("ThemeId")
@@ -29,8 +29,8 @@ public class DeleteTableThemeRequest extends Request {
 
     private DeleteTableThemeRequest(Builder builder) {
         super(builder);
-        this.projectId = builder.projectId;
         this.regionId = builder.regionId;
+        this.projectId = builder.projectId;
         this.themeId = builder.themeId;
     }
 
@@ -48,17 +48,17 @@ public class DeleteTableThemeRequest extends Request {
     }
 
     /**
-     * @return projectId
-     */
-    public Long getProjectId() {
-        return this.projectId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return projectId
+     */
+    public Long getProjectId() {
+        return this.projectId;
     }
 
     /**
@@ -69,8 +69,8 @@ public class DeleteTableThemeRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteTableThemeRequest, Builder> {
-        private Long projectId; 
         private String regionId; 
+        private Long projectId; 
         private Long themeId; 
 
         private Builder() {
@@ -79,19 +79,10 @@ public class DeleteTableThemeRequest extends Request {
 
         private Builder(DeleteTableThemeRequest request) {
             super(request);
-            this.projectId = request.projectId;
             this.regionId = request.regionId;
+            this.projectId = request.projectId;
             this.themeId = request.themeId;
         } 
-
-        /**
-         * ProjectId.
-         */
-        public Builder projectId(Long projectId) {
-            this.putQueryParameter("ProjectId", projectId);
-            this.projectId = projectId;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -99,6 +90,15 @@ public class DeleteTableThemeRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ProjectId.
+         */
+        public Builder projectId(Long projectId) {
+            this.putQueryParameter("ProjectId", projectId);
+            this.projectId = projectId;
             return this;
         }
 

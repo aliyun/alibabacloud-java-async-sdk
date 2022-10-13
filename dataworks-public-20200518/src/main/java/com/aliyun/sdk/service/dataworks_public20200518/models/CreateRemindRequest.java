@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateRemindRequest</p>
  */
 public class CreateRemindRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Body
     @NameInMap("AlertInterval")
     private Integer alertInterval;
@@ -59,11 +64,6 @@ public class CreateRemindRequest extends Request {
     @NameInMap("ProjectId")
     private Long projectId;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Body
     @NameInMap("RemindName")
     @Validation(required = true)
@@ -85,6 +85,7 @@ public class CreateRemindRequest extends Request {
 
     private CreateRemindRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.alertInterval = builder.alertInterval;
         this.alertMethods = builder.alertMethods;
         this.alertTargets = builder.alertTargets;
@@ -96,7 +97,6 @@ public class CreateRemindRequest extends Request {
         this.maxAlertTimes = builder.maxAlertTimes;
         this.nodeIds = builder.nodeIds;
         this.projectId = builder.projectId;
-        this.regionId = builder.regionId;
         this.remindName = builder.remindName;
         this.remindType = builder.remindType;
         this.remindUnit = builder.remindUnit;
@@ -114,6 +114,13 @@ public class CreateRemindRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -194,13 +201,6 @@ public class CreateRemindRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return remindName
      */
     public String getRemindName() {
@@ -229,6 +229,7 @@ public class CreateRemindRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateRemindRequest, Builder> {
+        private String regionId; 
         private Integer alertInterval; 
         private String alertMethods; 
         private String alertTargets; 
@@ -240,7 +241,6 @@ public class CreateRemindRequest extends Request {
         private Integer maxAlertTimes; 
         private String nodeIds; 
         private Long projectId; 
-        private String regionId; 
         private String remindName; 
         private String remindType; 
         private String remindUnit; 
@@ -252,6 +252,7 @@ public class CreateRemindRequest extends Request {
 
         private Builder(CreateRemindRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.alertInterval = request.alertInterval;
             this.alertMethods = request.alertMethods;
             this.alertTargets = request.alertTargets;
@@ -263,12 +264,20 @@ public class CreateRemindRequest extends Request {
             this.maxAlertTimes = request.maxAlertTimes;
             this.nodeIds = request.nodeIds;
             this.projectId = request.projectId;
-            this.regionId = request.regionId;
             this.remindName = request.remindName;
             this.remindType = request.remindType;
             this.remindUnit = request.remindUnit;
             this.robotUrls = request.robotUrls;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * AlertInterval.
@@ -366,15 +375,6 @@ public class CreateRemindRequest extends Request {
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
             this.projectId = projectId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

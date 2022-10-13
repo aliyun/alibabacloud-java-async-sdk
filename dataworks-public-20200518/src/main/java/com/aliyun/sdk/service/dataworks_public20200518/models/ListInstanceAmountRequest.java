@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListInstanceAmountRequest</p>
  */
 public class ListInstanceAmountRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Body
     @NameInMap("BeginDate")
     @Validation(required = true)
@@ -27,17 +32,12 @@ public class ListInstanceAmountRequest extends Request {
     @Validation(required = true, maximum = 99999999999D, minimum = 2)
     private Long projectId;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     private ListInstanceAmountRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.beginDate = builder.beginDate;
         this.endDate = builder.endDate;
         this.projectId = builder.projectId;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -51,6 +51,13 @@ public class ListInstanceAmountRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -74,18 +81,11 @@ public class ListInstanceAmountRequest extends Request {
         return this.projectId;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<ListInstanceAmountRequest, Builder> {
+        private String regionId; 
         private String beginDate; 
         private String endDate; 
         private Long projectId; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -93,11 +93,20 @@ public class ListInstanceAmountRequest extends Request {
 
         private Builder(ListInstanceAmountRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.beginDate = request.beginDate;
             this.endDate = request.endDate;
             this.projectId = request.projectId;
-            this.regionId = request.regionId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * BeginDate.
@@ -123,15 +132,6 @@ public class ListInstanceAmountRequest extends Request {
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
             this.projectId = projectId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

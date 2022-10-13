@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateDISyncTaskRequest</p>
  */
 public class CreateDISyncTaskRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("ClientToken")
     private String clientToken;
@@ -20,11 +25,6 @@ public class CreateDISyncTaskRequest extends Request {
     @NameInMap("ProjectId")
     @Validation(required = true, maximum = 10000000000D, minimum = 1)
     private Long projectId;
-
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
 
     @Query
     @NameInMap("TaskContent")
@@ -46,9 +46,9 @@ public class CreateDISyncTaskRequest extends Request {
 
     private CreateDISyncTaskRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.clientToken = builder.clientToken;
         this.projectId = builder.projectId;
-        this.regionId = builder.regionId;
         this.taskContent = builder.taskContent;
         this.taskName = builder.taskName;
         this.taskParam = builder.taskParam;
@@ -69,6 +69,13 @@ public class CreateDISyncTaskRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return clientToken
      */
     public String getClientToken() {
@@ -80,13 +87,6 @@ public class CreateDISyncTaskRequest extends Request {
      */
     public Long getProjectId() {
         return this.projectId;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -118,9 +118,9 @@ public class CreateDISyncTaskRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateDISyncTaskRequest, Builder> {
+        private String regionId; 
         private String clientToken; 
         private Long projectId; 
-        private String regionId; 
         private String taskContent; 
         private String taskName; 
         private String taskParam; 
@@ -132,14 +132,23 @@ public class CreateDISyncTaskRequest extends Request {
 
         private Builder(CreateDISyncTaskRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.clientToken = request.clientToken;
             this.projectId = request.projectId;
-            this.regionId = request.regionId;
             this.taskContent = request.taskContent;
             this.taskName = request.taskName;
             this.taskParam = request.taskParam;
             this.taskType = request.taskType;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * ClientToken.
@@ -156,15 +165,6 @@ public class CreateDISyncTaskRequest extends Request {
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
             this.projectId = projectId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

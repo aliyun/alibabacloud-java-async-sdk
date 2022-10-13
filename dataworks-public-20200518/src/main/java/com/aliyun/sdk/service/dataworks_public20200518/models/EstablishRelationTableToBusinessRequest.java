@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>EstablishRelationTableToBusinessRequest</p>
  */
 public class EstablishRelationTableToBusinessRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Body
     @NameInMap("BusinessId")
     @Validation(required = true)
@@ -29,11 +34,6 @@ public class EstablishRelationTableToBusinessRequest extends Request {
     @NameInMap("ProjectIdentifier")
     private String projectIdentifier;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Body
     @NameInMap("TableGuid")
     @Validation(required = true)
@@ -41,11 +41,11 @@ public class EstablishRelationTableToBusinessRequest extends Request {
 
     private EstablishRelationTableToBusinessRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.businessId = builder.businessId;
         this.folderId = builder.folderId;
         this.projectId = builder.projectId;
         this.projectIdentifier = builder.projectIdentifier;
-        this.regionId = builder.regionId;
         this.tableGuid = builder.tableGuid;
     }
 
@@ -60,6 +60,13 @@ public class EstablishRelationTableToBusinessRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -91,13 +98,6 @@ public class EstablishRelationTableToBusinessRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return tableGuid
      */
     public String getTableGuid() {
@@ -105,11 +105,11 @@ public class EstablishRelationTableToBusinessRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<EstablishRelationTableToBusinessRequest, Builder> {
+        private String regionId; 
         private String businessId; 
         private String folderId; 
         private Long projectId; 
         private String projectIdentifier; 
-        private String regionId; 
         private String tableGuid; 
 
         private Builder() {
@@ -118,13 +118,22 @@ public class EstablishRelationTableToBusinessRequest extends Request {
 
         private Builder(EstablishRelationTableToBusinessRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.businessId = request.businessId;
             this.folderId = request.folderId;
             this.projectId = request.projectId;
             this.projectIdentifier = request.projectIdentifier;
-            this.regionId = request.regionId;
             this.tableGuid = request.tableGuid;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * BusinessId.
@@ -159,15 +168,6 @@ public class EstablishRelationTableToBusinessRequest extends Request {
         public Builder projectIdentifier(String projectIdentifier) {
             this.putBodyParameter("ProjectIdentifier", projectIdentifier);
             this.projectIdentifier = projectIdentifier;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

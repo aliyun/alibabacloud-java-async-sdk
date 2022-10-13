@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDagsRequest</p>
  */
 public class ListDagsRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Body
     @NameInMap("OpSeq")
     @Validation(required = true, minimum = 2)
@@ -22,16 +27,11 @@ public class ListDagsRequest extends Request {
     @Validation(required = true)
     private String projectEnv;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     private ListDagsRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.opSeq = builder.opSeq;
         this.projectEnv = builder.projectEnv;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -48,6 +48,13 @@ public class ListDagsRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return opSeq
      */
     public Long getOpSeq() {
@@ -61,17 +68,10 @@ public class ListDagsRequest extends Request {
         return this.projectEnv;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<ListDagsRequest, Builder> {
+        private String regionId; 
         private Long opSeq; 
         private String projectEnv; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -79,10 +79,19 @@ public class ListDagsRequest extends Request {
 
         private Builder(ListDagsRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.opSeq = request.opSeq;
             this.projectEnv = request.projectEnv;
-            this.regionId = request.regionId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * OpSeq.
@@ -99,15 +108,6 @@ public class ListDagsRequest extends Request {
         public Builder projectEnv(String projectEnv) {
             this.putBodyParameter("ProjectEnv", projectEnv);
             this.projectEnv = projectEnv;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

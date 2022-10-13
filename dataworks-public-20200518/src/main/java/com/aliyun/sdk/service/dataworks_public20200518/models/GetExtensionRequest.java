@@ -12,19 +12,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetExtensionRequest</p>
  */
 public class GetExtensionRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("ExtensionCode")
     @Validation(required = true)
     private String extensionCode;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private GetExtensionRequest(Builder builder) {
         super(builder);
-        this.extensionCode = builder.extensionCode;
         this.regionId = builder.regionId;
+        this.extensionCode = builder.extensionCode;
     }
 
     public static Builder builder() {
@@ -41,22 +41,22 @@ public class GetExtensionRequest extends Request {
     }
 
     /**
-     * @return extensionCode
-     */
-    public String getExtensionCode() {
-        return this.extensionCode;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
     }
 
+    /**
+     * @return extensionCode
+     */
+    public String getExtensionCode() {
+        return this.extensionCode;
+    }
+
     public static final class Builder extends Request.Builder<GetExtensionRequest, Builder> {
-        private String extensionCode; 
         private String regionId; 
+        private String extensionCode; 
 
         private Builder() {
             super();
@@ -64,18 +64,9 @@ public class GetExtensionRequest extends Request {
 
         private Builder(GetExtensionRequest request) {
             super(request);
-            this.extensionCode = request.extensionCode;
             this.regionId = request.regionId;
+            this.extensionCode = request.extensionCode;
         } 
-
-        /**
-         * ExtensionCode.
-         */
-        public Builder extensionCode(String extensionCode) {
-            this.putQueryParameter("ExtensionCode", extensionCode);
-            this.extensionCode = extensionCode;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -83,6 +74,15 @@ public class GetExtensionRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ExtensionCode.
+         */
+        public Builder extensionCode(String extensionCode) {
+            this.putQueryParameter("ExtensionCode", extensionCode);
+            this.extensionCode = extensionCode;
             return this;
         }
 

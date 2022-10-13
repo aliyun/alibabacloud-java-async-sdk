@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetMetaDBInfoRequest</p>
  */
 public class GetMetaDBInfoRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("AppGuid")
     private String appGuid;
@@ -28,18 +33,13 @@ public class GetMetaDBInfoRequest extends Request {
     @NameInMap("DatabaseName")
     private String databaseName;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     private GetMetaDBInfoRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.appGuid = builder.appGuid;
         this.clusterId = builder.clusterId;
         this.dataSourceType = builder.dataSourceType;
         this.databaseName = builder.databaseName;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -53,6 +53,13 @@ public class GetMetaDBInfoRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -83,19 +90,12 @@ public class GetMetaDBInfoRequest extends Request {
         return this.databaseName;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<GetMetaDBInfoRequest, Builder> {
+        private String regionId; 
         private String appGuid; 
         private String clusterId; 
         private String dataSourceType; 
         private String databaseName; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -103,12 +103,21 @@ public class GetMetaDBInfoRequest extends Request {
 
         private Builder(GetMetaDBInfoRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.appGuid = request.appGuid;
             this.clusterId = request.clusterId;
             this.dataSourceType = request.dataSourceType;
             this.databaseName = request.databaseName;
-            this.regionId = request.regionId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * AppGuid.
@@ -143,15 +152,6 @@ public class GetMetaDBInfoRequest extends Request {
         public Builder databaseName(String databaseName) {
             this.putQueryParameter("DatabaseName", databaseName);
             this.databaseName = databaseName;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

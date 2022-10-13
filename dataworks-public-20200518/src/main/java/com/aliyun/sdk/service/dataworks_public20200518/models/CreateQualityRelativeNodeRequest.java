@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateQualityRelativeNodeRequest</p>
  */
 public class CreateQualityRelativeNodeRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Body
     @NameInMap("EnvType")
     @Validation(required = true, maxLength = 40, minLength = 1)
@@ -37,10 +41,6 @@ public class CreateQualityRelativeNodeRequest extends Request {
     @Validation(required = true, maxLength = 128, minLength = 1)
     private String projectName;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Body
     @NameInMap("TableName")
     @Validation(required = true, maxLength = 128, minLength = 1)
@@ -58,12 +58,12 @@ public class CreateQualityRelativeNodeRequest extends Request {
 
     private CreateQualityRelativeNodeRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.envType = builder.envType;
         this.matchExpression = builder.matchExpression;
         this.nodeId = builder.nodeId;
         this.projectId = builder.projectId;
         this.projectName = builder.projectName;
-        this.regionId = builder.regionId;
         this.tableName = builder.tableName;
         this.targetNodeProjectId = builder.targetNodeProjectId;
         this.targetNodeProjectName = builder.targetNodeProjectName;
@@ -80,6 +80,13 @@ public class CreateQualityRelativeNodeRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -118,13 +125,6 @@ public class CreateQualityRelativeNodeRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return tableName
      */
     public String getTableName() {
@@ -146,12 +146,12 @@ public class CreateQualityRelativeNodeRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateQualityRelativeNodeRequest, Builder> {
+        private String regionId; 
         private String envType; 
         private String matchExpression; 
         private Long nodeId; 
         private Long projectId; 
         private String projectName; 
-        private String regionId; 
         private String tableName; 
         private Long targetNodeProjectId; 
         private String targetNodeProjectName; 
@@ -162,16 +162,25 @@ public class CreateQualityRelativeNodeRequest extends Request {
 
         private Builder(CreateQualityRelativeNodeRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.envType = request.envType;
             this.matchExpression = request.matchExpression;
             this.nodeId = request.nodeId;
             this.projectId = request.projectId;
             this.projectName = request.projectName;
-            this.regionId = request.regionId;
             this.tableName = request.tableName;
             this.targetNodeProjectId = request.targetNodeProjectId;
             this.targetNodeProjectName = request.targetNodeProjectName;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * EnvType.
@@ -215,15 +224,6 @@ public class CreateQualityRelativeNodeRequest extends Request {
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);
             this.projectName = projectName;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

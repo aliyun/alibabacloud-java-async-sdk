@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetBaselineStatusRequest</p>
  */
 public class GetBaselineStatusRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Body
     @NameInMap("BaselineId")
     @Validation(required = true)
@@ -27,17 +32,12 @@ public class GetBaselineStatusRequest extends Request {
     @Validation(required = true)
     private Integer inGroupId;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     private GetBaselineStatusRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.baselineId = builder.baselineId;
         this.bizdate = builder.bizdate;
         this.inGroupId = builder.inGroupId;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -51,6 +51,13 @@ public class GetBaselineStatusRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -74,18 +81,11 @@ public class GetBaselineStatusRequest extends Request {
         return this.inGroupId;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<GetBaselineStatusRequest, Builder> {
+        private String regionId; 
         private Long baselineId; 
         private String bizdate; 
         private Integer inGroupId; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -93,11 +93,20 @@ public class GetBaselineStatusRequest extends Request {
 
         private Builder(GetBaselineStatusRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.baselineId = request.baselineId;
             this.bizdate = request.bizdate;
             this.inGroupId = request.inGroupId;
-            this.regionId = request.regionId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * BaselineId.
@@ -123,15 +132,6 @@ public class GetBaselineStatusRequest extends Request {
         public Builder inGroupId(Integer inGroupId) {
             this.putBodyParameter("InGroupId", inGroupId);
             this.inGroupId = inGroupId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

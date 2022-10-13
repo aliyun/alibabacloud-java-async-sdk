@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListInstancesRequest</p>
  */
 public class ListInstancesRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Body
     @NameInMap("BeginBizdate")
     private String beginBizdate;
@@ -67,17 +72,13 @@ public class ListInstancesRequest extends Request {
     @Validation(required = true)
     private Long projectId;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Body
     @NameInMap("Status")
     private String status;
 
     private ListInstancesRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.beginBizdate = builder.beginBizdate;
         this.bizName = builder.bizName;
         this.bizdate = builder.bizdate;
@@ -91,7 +92,6 @@ public class ListInstancesRequest extends Request {
         this.programType = builder.programType;
         this.projectEnv = builder.projectEnv;
         this.projectId = builder.projectId;
-        this.regionId = builder.regionId;
         this.status = builder.status;
     }
 
@@ -106,6 +106,13 @@ public class ListInstancesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -200,13 +207,6 @@ public class ListInstancesRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return status
      */
     public String getStatus() {
@@ -214,6 +214,7 @@ public class ListInstancesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListInstancesRequest, Builder> {
+        private String regionId; 
         private String beginBizdate; 
         private String bizName; 
         private String bizdate; 
@@ -227,7 +228,6 @@ public class ListInstancesRequest extends Request {
         private String programType; 
         private String projectEnv; 
         private Long projectId; 
-        private String regionId; 
         private String status; 
 
         private Builder() {
@@ -236,6 +236,7 @@ public class ListInstancesRequest extends Request {
 
         private Builder(ListInstancesRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.beginBizdate = request.beginBizdate;
             this.bizName = request.bizName;
             this.bizdate = request.bizdate;
@@ -249,9 +250,17 @@ public class ListInstancesRequest extends Request {
             this.programType = request.programType;
             this.projectEnv = request.projectEnv;
             this.projectId = request.projectId;
-            this.regionId = request.regionId;
             this.status = request.status;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * BeginBizdate.
@@ -367,15 +376,6 @@ public class ListInstancesRequest extends Request {
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
             this.projectId = projectId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

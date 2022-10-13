@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateTableAddColumnRequest</p>
  */
 public class UpdateTableAddColumnRequest extends Request {
-    @Body
-    @NameInMap("Column")
-    @Validation(required = true)
-    private java.util.List < Column> column;
-
     @Host
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
+
+    @Body
+    @NameInMap("Column")
+    @Validation(required = true)
+    private java.util.List < Column> column;
 
     @Query
     @NameInMap("TableGuid")
@@ -29,8 +29,8 @@ public class UpdateTableAddColumnRequest extends Request {
 
     private UpdateTableAddColumnRequest(Builder builder) {
         super(builder);
-        this.column = builder.column;
         this.regionId = builder.regionId;
+        this.column = builder.column;
         this.tableGuid = builder.tableGuid;
     }
 
@@ -48,17 +48,17 @@ public class UpdateTableAddColumnRequest extends Request {
     }
 
     /**
-     * @return column
-     */
-    public java.util.List < Column> getColumn() {
-        return this.column;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return column
+     */
+    public java.util.List < Column> getColumn() {
+        return this.column;
     }
 
     /**
@@ -69,8 +69,8 @@ public class UpdateTableAddColumnRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateTableAddColumnRequest, Builder> {
-        private java.util.List < Column> column; 
         private String regionId; 
+        private java.util.List < Column> column; 
         private String tableGuid; 
 
         private Builder() {
@@ -79,19 +79,10 @@ public class UpdateTableAddColumnRequest extends Request {
 
         private Builder(UpdateTableAddColumnRequest request) {
             super(request);
-            this.column = request.column;
             this.regionId = request.regionId;
+            this.column = request.column;
             this.tableGuid = request.tableGuid;
         } 
-
-        /**
-         * Column.
-         */
-        public Builder column(java.util.List < Column> column) {
-            this.putBodyParameter("Column", column);
-            this.column = column;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -99,6 +90,15 @@ public class UpdateTableAddColumnRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * Column.
+         */
+        public Builder column(java.util.List < Column> column) {
+            this.putBodyParameter("Column", column);
+            this.column = column;
             return this;
         }
 

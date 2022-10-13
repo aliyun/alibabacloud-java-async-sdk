@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListProgramTypeCountRequest</p>
  */
 public class ListProgramTypeCountRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Body
     @NameInMap("ProjectEnv")
     @Validation(required = true)
@@ -22,16 +27,11 @@ public class ListProgramTypeCountRequest extends Request {
     @Validation(required = true, minimum = 1)
     private Long projectId;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     private ListProgramTypeCountRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.projectEnv = builder.projectEnv;
         this.projectId = builder.projectId;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -48,6 +48,13 @@ public class ListProgramTypeCountRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return projectEnv
      */
     public String getProjectEnv() {
@@ -61,17 +68,10 @@ public class ListProgramTypeCountRequest extends Request {
         return this.projectId;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<ListProgramTypeCountRequest, Builder> {
+        private String regionId; 
         private String projectEnv; 
         private Long projectId; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -79,10 +79,19 @@ public class ListProgramTypeCountRequest extends Request {
 
         private Builder(ListProgramTypeCountRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.projectEnv = request.projectEnv;
             this.projectId = request.projectId;
-            this.regionId = request.regionId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * ProjectEnv.
@@ -99,15 +108,6 @@ public class ListProgramTypeCountRequest extends Request {
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
             this.projectId = projectId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

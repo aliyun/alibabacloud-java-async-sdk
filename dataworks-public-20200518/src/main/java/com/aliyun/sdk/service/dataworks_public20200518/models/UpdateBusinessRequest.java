@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateBusinessRequest</p>
  */
 public class UpdateBusinessRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Body
     @NameInMap("BusinessId")
     @Validation(required = true)
@@ -37,20 +42,15 @@ public class UpdateBusinessRequest extends Request {
     @NameInMap("ProjectIdentifier")
     private String projectIdentifier;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     private UpdateBusinessRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.businessId = builder.businessId;
         this.businessName = builder.businessName;
         this.description = builder.description;
         this.owner = builder.owner;
         this.projectId = builder.projectId;
         this.projectIdentifier = builder.projectIdentifier;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -64,6 +64,13 @@ public class UpdateBusinessRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -108,21 +115,14 @@ public class UpdateBusinessRequest extends Request {
         return this.projectIdentifier;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<UpdateBusinessRequest, Builder> {
+        private String regionId; 
         private Long businessId; 
         private String businessName; 
         private String description; 
         private String owner; 
         private Long projectId; 
         private String projectIdentifier; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -130,14 +130,23 @@ public class UpdateBusinessRequest extends Request {
 
         private Builder(UpdateBusinessRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.businessId = request.businessId;
             this.businessName = request.businessName;
             this.description = request.description;
             this.owner = request.owner;
             this.projectId = request.projectId;
             this.projectIdentifier = request.projectIdentifier;
-            this.regionId = request.regionId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * BusinessId.
@@ -190,15 +199,6 @@ public class UpdateBusinessRequest extends Request {
         public Builder projectIdentifier(String projectIdentifier) {
             this.putBodyParameter("ProjectIdentifier", projectIdentifier);
             this.projectIdentifier = projectIdentifier;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

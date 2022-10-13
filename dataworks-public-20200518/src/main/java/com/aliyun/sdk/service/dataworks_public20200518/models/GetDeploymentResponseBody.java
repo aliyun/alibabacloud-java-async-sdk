@@ -151,6 +151,87 @@ public class GetDeploymentResponseBody extends TeaModel {
 
     } 
 
+    public static class DeployedItems extends TeaModel {
+        @NameInMap("FileId")
+        private Long fileId;
+
+        @NameInMap("FileVersion")
+        private Long fileVersion;
+
+        @NameInMap("Status")
+        private Integer status;
+
+        private DeployedItems(Builder builder) {
+            this.fileId = builder.fileId;
+            this.fileVersion = builder.fileVersion;
+            this.status = builder.status;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DeployedItems create() {
+            return builder().build();
+        }
+
+        /**
+         * @return fileId
+         */
+        public Long getFileId() {
+            return this.fileId;
+        }
+
+        /**
+         * @return fileVersion
+         */
+        public Long getFileVersion() {
+            return this.fileVersion;
+        }
+
+        /**
+         * @return status
+         */
+        public Integer getStatus() {
+            return this.status;
+        }
+
+        public static final class Builder {
+            private Long fileId; 
+            private Long fileVersion; 
+            private Integer status; 
+
+            /**
+             * FileId.
+             */
+            public Builder fileId(Long fileId) {
+                this.fileId = fileId;
+                return this;
+            }
+
+            /**
+             * FileVersion.
+             */
+            public Builder fileVersion(Long fileVersion) {
+                this.fileVersion = fileVersion;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(Integer status) {
+                this.status = status;
+                return this;
+            }
+
+            public DeployedItems build() {
+                return new DeployedItems(this);
+            } 
+
+        } 
+
+    }
     public static class Deployment extends TeaModel {
         @NameInMap("CheckingStatus")
         private Integer checkingStatus;
@@ -373,10 +454,14 @@ public class GetDeploymentResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
+        @NameInMap("DeployedItems")
+        private java.util.List < DeployedItems> deployedItems;
+
         @NameInMap("Deployment")
         private Deployment deployment;
 
         private Data(Builder builder) {
+            this.deployedItems = builder.deployedItems;
             this.deployment = builder.deployment;
         }
 
@@ -389,6 +474,13 @@ public class GetDeploymentResponseBody extends TeaModel {
         }
 
         /**
+         * @return deployedItems
+         */
+        public java.util.List < DeployedItems> getDeployedItems() {
+            return this.deployedItems;
+        }
+
+        /**
          * @return deployment
          */
         public Deployment getDeployment() {
@@ -396,7 +488,16 @@ public class GetDeploymentResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List < DeployedItems> deployedItems; 
             private Deployment deployment; 
+
+            /**
+             * DeployedItems.
+             */
+            public Builder deployedItems(java.util.List < DeployedItems> deployedItems) {
+                this.deployedItems = deployedItems;
+                return this;
+            }
 
             /**
              * Deployment.

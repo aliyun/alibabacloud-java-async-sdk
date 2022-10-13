@@ -12,20 +12,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListSuccessInstanceAmountRequest</p>
  */
 public class ListSuccessInstanceAmountRequest extends Request {
-    @Body
-    @NameInMap("ProjectId")
-    @Validation(required = true, maximum = 99999999999D, minimum = 2)
-    private Long projectId;
-
     @Host
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
 
+    @Body
+    @NameInMap("ProjectId")
+    @Validation(required = true, maximum = 99999999999D, minimum = 2)
+    private Long projectId;
+
     private ListSuccessInstanceAmountRequest(Builder builder) {
         super(builder);
-        this.projectId = builder.projectId;
         this.regionId = builder.regionId;
+        this.projectId = builder.projectId;
     }
 
     public static Builder builder() {
@@ -42,22 +42,22 @@ public class ListSuccessInstanceAmountRequest extends Request {
     }
 
     /**
-     * @return projectId
-     */
-    public Long getProjectId() {
-        return this.projectId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
     }
 
+    /**
+     * @return projectId
+     */
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
     public static final class Builder extends Request.Builder<ListSuccessInstanceAmountRequest, Builder> {
-        private Long projectId; 
         private String regionId; 
+        private Long projectId; 
 
         private Builder() {
             super();
@@ -65,18 +65,9 @@ public class ListSuccessInstanceAmountRequest extends Request {
 
         private Builder(ListSuccessInstanceAmountRequest request) {
             super(request);
-            this.projectId = request.projectId;
             this.regionId = request.regionId;
+            this.projectId = request.projectId;
         } 
-
-        /**
-         * ProjectId.
-         */
-        public Builder projectId(Long projectId) {
-            this.putBodyParameter("ProjectId", projectId);
-            this.projectId = projectId;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -84,6 +75,15 @@ public class ListSuccessInstanceAmountRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ProjectId.
+         */
+        public Builder projectId(Long projectId) {
+            this.putBodyParameter("ProjectId", projectId);
+            this.projectId = projectId;
             return this;
         }
 

@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddToMetaCategoryRequest</p>
  */
 public class AddToMetaCategoryRequest extends Request {
-    @Query
-    @NameInMap("CategoryId")
-    @Validation(required = true)
-    private Long categoryId;
-
     @Host
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
+
+    @Query
+    @NameInMap("CategoryId")
+    @Validation(required = true)
+    private Long categoryId;
 
     @Query
     @NameInMap("TableGuid")
@@ -29,8 +29,8 @@ public class AddToMetaCategoryRequest extends Request {
 
     private AddToMetaCategoryRequest(Builder builder) {
         super(builder);
-        this.categoryId = builder.categoryId;
         this.regionId = builder.regionId;
+        this.categoryId = builder.categoryId;
         this.tableGuid = builder.tableGuid;
     }
 
@@ -48,17 +48,17 @@ public class AddToMetaCategoryRequest extends Request {
     }
 
     /**
-     * @return categoryId
-     */
-    public Long getCategoryId() {
-        return this.categoryId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return categoryId
+     */
+    public Long getCategoryId() {
+        return this.categoryId;
     }
 
     /**
@@ -69,8 +69,8 @@ public class AddToMetaCategoryRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AddToMetaCategoryRequest, Builder> {
-        private Long categoryId; 
         private String regionId; 
+        private Long categoryId; 
         private String tableGuid; 
 
         private Builder() {
@@ -79,19 +79,10 @@ public class AddToMetaCategoryRequest extends Request {
 
         private Builder(AddToMetaCategoryRequest request) {
             super(request);
-            this.categoryId = request.categoryId;
             this.regionId = request.regionId;
+            this.categoryId = request.categoryId;
             this.tableGuid = request.tableGuid;
         } 
-
-        /**
-         * CategoryId.
-         */
-        public Builder categoryId(Long categoryId) {
-            this.putQueryParameter("CategoryId", categoryId);
-            this.categoryId = categoryId;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -99,6 +90,15 @@ public class AddToMetaCategoryRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * CategoryId.
+         */
+        public Builder categoryId(Long categoryId) {
+            this.putQueryParameter("CategoryId", categoryId);
+            this.categoryId = categoryId;
             return this;
         }
 

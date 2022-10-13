@@ -12,20 +12,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetNodeOnBaselineRequest</p>
  */
 public class GetNodeOnBaselineRequest extends Request {
-    @Body
-    @NameInMap("BaselineId")
-    @Validation(required = true)
-    private Long baselineId;
-
     @Host
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
 
+    @Body
+    @NameInMap("BaselineId")
+    @Validation(required = true)
+    private Long baselineId;
+
     private GetNodeOnBaselineRequest(Builder builder) {
         super(builder);
-        this.baselineId = builder.baselineId;
         this.regionId = builder.regionId;
+        this.baselineId = builder.baselineId;
     }
 
     public static Builder builder() {
@@ -42,22 +42,22 @@ public class GetNodeOnBaselineRequest extends Request {
     }
 
     /**
-     * @return baselineId
-     */
-    public Long getBaselineId() {
-        return this.baselineId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
     }
 
+    /**
+     * @return baselineId
+     */
+    public Long getBaselineId() {
+        return this.baselineId;
+    }
+
     public static final class Builder extends Request.Builder<GetNodeOnBaselineRequest, Builder> {
-        private Long baselineId; 
         private String regionId; 
+        private Long baselineId; 
 
         private Builder() {
             super();
@@ -65,18 +65,9 @@ public class GetNodeOnBaselineRequest extends Request {
 
         private Builder(GetNodeOnBaselineRequest request) {
             super(request);
-            this.baselineId = request.baselineId;
             this.regionId = request.regionId;
+            this.baselineId = request.baselineId;
         } 
-
-        /**
-         * BaselineId.
-         */
-        public Builder baselineId(Long baselineId) {
-            this.putBodyParameter("BaselineId", baselineId);
-            this.baselineId = baselineId;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -84,6 +75,15 @@ public class GetNodeOnBaselineRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * BaselineId.
+         */
+        public Builder baselineId(Long baselineId) {
+            this.putBodyParameter("BaselineId", baselineId);
+            this.baselineId = baselineId;
             return this;
         }
 

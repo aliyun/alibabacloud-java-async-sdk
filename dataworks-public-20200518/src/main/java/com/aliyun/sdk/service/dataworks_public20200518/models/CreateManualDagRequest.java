@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateManualDagRequest</p>
  */
 public class CreateManualDagRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Body
     @NameInMap("BizDate")
     @Validation(required = true)
@@ -48,13 +53,9 @@ public class CreateManualDagRequest extends Request {
     @Validation(required = true)
     private String projectName;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     private CreateManualDagRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.bizDate = builder.bizDate;
         this.dagParameters = builder.dagParameters;
         this.excludeNodeIds = builder.excludeNodeIds;
@@ -63,7 +64,6 @@ public class CreateManualDagRequest extends Request {
         this.nodeParameters = builder.nodeParameters;
         this.projectEnv = builder.projectEnv;
         this.projectName = builder.projectName;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -77,6 +77,13 @@ public class CreateManualDagRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -135,14 +142,8 @@ public class CreateManualDagRequest extends Request {
         return this.projectName;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<CreateManualDagRequest, Builder> {
+        private String regionId; 
         private String bizDate; 
         private String dagParameters; 
         private String excludeNodeIds; 
@@ -151,7 +152,6 @@ public class CreateManualDagRequest extends Request {
         private String nodeParameters; 
         private String projectEnv; 
         private String projectName; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -159,6 +159,7 @@ public class CreateManualDagRequest extends Request {
 
         private Builder(CreateManualDagRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.bizDate = request.bizDate;
             this.dagParameters = request.dagParameters;
             this.excludeNodeIds = request.excludeNodeIds;
@@ -167,8 +168,16 @@ public class CreateManualDagRequest extends Request {
             this.nodeParameters = request.nodeParameters;
             this.projectEnv = request.projectEnv;
             this.projectName = request.projectName;
-            this.regionId = request.regionId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * BizDate.
@@ -239,15 +248,6 @@ public class CreateManualDagRequest extends Request {
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);
             this.projectName = projectName;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

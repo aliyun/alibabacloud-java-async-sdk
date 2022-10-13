@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetSensitiveDataRequest</p>
  */
 public class GetSensitiveDataRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("Name")
     @Validation(required = true)
@@ -27,17 +32,12 @@ public class GetSensitiveDataRequest extends Request {
     @Validation(required = true, maximum = 1000, minimum = 1)
     private Integer pageSize;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     private GetSensitiveDataRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.name = builder.name;
         this.pageNo = builder.pageNo;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -51,6 +51,13 @@ public class GetSensitiveDataRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -74,18 +81,11 @@ public class GetSensitiveDataRequest extends Request {
         return this.pageSize;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<GetSensitiveDataRequest, Builder> {
+        private String regionId; 
         private String name; 
         private Integer pageNo; 
         private Integer pageSize; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -93,11 +93,20 @@ public class GetSensitiveDataRequest extends Request {
 
         private Builder(GetSensitiveDataRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.name = request.name;
             this.pageNo = request.pageNo;
             this.pageSize = request.pageSize;
-            this.regionId = request.regionId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * Name.
@@ -123,15 +132,6 @@ public class GetSensitiveDataRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

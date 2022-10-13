@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ApprovePermissionApplyOrderRequest</p>
  */
 public class ApprovePermissionApplyOrderRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("ApproveAction")
     @Validation(required = true, maximum = 5)
@@ -27,17 +32,12 @@ public class ApprovePermissionApplyOrderRequest extends Request {
     @Validation(required = true)
     private String flowId;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     private ApprovePermissionApplyOrderRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.approveAction = builder.approveAction;
         this.approveComment = builder.approveComment;
         this.flowId = builder.flowId;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -51,6 +51,13 @@ public class ApprovePermissionApplyOrderRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -74,18 +81,11 @@ public class ApprovePermissionApplyOrderRequest extends Request {
         return this.flowId;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<ApprovePermissionApplyOrderRequest, Builder> {
+        private String regionId; 
         private Integer approveAction; 
         private String approveComment; 
         private String flowId; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -93,11 +93,20 @@ public class ApprovePermissionApplyOrderRequest extends Request {
 
         private Builder(ApprovePermissionApplyOrderRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.approveAction = request.approveAction;
             this.approveComment = request.approveComment;
             this.flowId = request.flowId;
-            this.regionId = request.regionId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * ApproveAction.
@@ -123,15 +132,6 @@ public class ApprovePermissionApplyOrderRequest extends Request {
         public Builder flowId(String flowId) {
             this.putQueryParameter("FlowId", flowId);
             this.flowId = flowId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

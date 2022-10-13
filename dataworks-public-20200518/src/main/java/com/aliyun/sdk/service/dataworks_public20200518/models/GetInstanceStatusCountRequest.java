@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetInstanceStatusCountRequest</p>
  */
 public class GetInstanceStatusCountRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Body
     @NameInMap("BizDate")
     @Validation(required = true)
@@ -27,17 +32,12 @@ public class GetInstanceStatusCountRequest extends Request {
     @Validation(required = true, minimum = 1)
     private Long projectId;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     private GetInstanceStatusCountRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.bizDate = builder.bizDate;
         this.projectEnv = builder.projectEnv;
         this.projectId = builder.projectId;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -51,6 +51,13 @@ public class GetInstanceStatusCountRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -74,18 +81,11 @@ public class GetInstanceStatusCountRequest extends Request {
         return this.projectId;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<GetInstanceStatusCountRequest, Builder> {
+        private String regionId; 
         private String bizDate; 
         private String projectEnv; 
         private Long projectId; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -93,11 +93,20 @@ public class GetInstanceStatusCountRequest extends Request {
 
         private Builder(GetInstanceStatusCountRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.bizDate = request.bizDate;
             this.projectEnv = request.projectEnv;
             this.projectId = request.projectId;
-            this.regionId = request.regionId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * BizDate.
@@ -123,15 +132,6 @@ public class GetInstanceStatusCountRequest extends Request {
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
             this.projectId = projectId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetMetaTableThemeLevelRequest</p>
  */
 public class GetMetaTableThemeLevelRequest extends Request {
-    @Query
-    @NameInMap("DataSourceType")
-    @Validation(required = true)
-    private String dataSourceType;
-
     @Host
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
+
+    @Query
+    @NameInMap("DataSourceType")
+    @Validation(required = true)
+    private String dataSourceType;
 
     @Query
     @NameInMap("TableGuid")
@@ -29,8 +29,8 @@ public class GetMetaTableThemeLevelRequest extends Request {
 
     private GetMetaTableThemeLevelRequest(Builder builder) {
         super(builder);
-        this.dataSourceType = builder.dataSourceType;
         this.regionId = builder.regionId;
+        this.dataSourceType = builder.dataSourceType;
         this.tableGuid = builder.tableGuid;
     }
 
@@ -48,17 +48,17 @@ public class GetMetaTableThemeLevelRequest extends Request {
     }
 
     /**
-     * @return dataSourceType
-     */
-    public String getDataSourceType() {
-        return this.dataSourceType;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return dataSourceType
+     */
+    public String getDataSourceType() {
+        return this.dataSourceType;
     }
 
     /**
@@ -69,8 +69,8 @@ public class GetMetaTableThemeLevelRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetMetaTableThemeLevelRequest, Builder> {
-        private String dataSourceType; 
         private String regionId; 
+        private String dataSourceType; 
         private String tableGuid; 
 
         private Builder() {
@@ -79,19 +79,10 @@ public class GetMetaTableThemeLevelRequest extends Request {
 
         private Builder(GetMetaTableThemeLevelRequest request) {
             super(request);
-            this.dataSourceType = request.dataSourceType;
             this.regionId = request.regionId;
+            this.dataSourceType = request.dataSourceType;
             this.tableGuid = request.tableGuid;
         } 
-
-        /**
-         * DataSourceType.
-         */
-        public Builder dataSourceType(String dataSourceType) {
-            this.putQueryParameter("DataSourceType", dataSourceType);
-            this.dataSourceType = dataSourceType;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -99,6 +90,15 @@ public class GetMetaTableThemeLevelRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * DataSourceType.
+         */
+        public Builder dataSourceType(String dataSourceType) {
+            this.putQueryParameter("DataSourceType", dataSourceType);
+            this.dataSourceType = dataSourceType;
             return this;
         }
 

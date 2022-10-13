@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CheckFileDeploymentRequest</p>
  */
 public class CheckFileDeploymentRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Body
     @NameInMap("CheckDetailUrl")
     private String checkDetailUrl;
@@ -21,11 +26,6 @@ public class CheckFileDeploymentRequest extends Request {
     @Validation(required = true)
     private String checkerInstanceId;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Body
     @NameInMap("Status")
     @Validation(required = true)
@@ -33,9 +33,9 @@ public class CheckFileDeploymentRequest extends Request {
 
     private CheckFileDeploymentRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.checkDetailUrl = builder.checkDetailUrl;
         this.checkerInstanceId = builder.checkerInstanceId;
-        this.regionId = builder.regionId;
         this.status = builder.status;
     }
 
@@ -53,6 +53,13 @@ public class CheckFileDeploymentRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return checkDetailUrl
      */
     public String getCheckDetailUrl() {
@@ -67,13 +74,6 @@ public class CheckFileDeploymentRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return status
      */
     public String getStatus() {
@@ -81,9 +81,9 @@ public class CheckFileDeploymentRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CheckFileDeploymentRequest, Builder> {
+        private String regionId; 
         private String checkDetailUrl; 
         private String checkerInstanceId; 
-        private String regionId; 
         private String status; 
 
         private Builder() {
@@ -92,11 +92,20 @@ public class CheckFileDeploymentRequest extends Request {
 
         private Builder(CheckFileDeploymentRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.checkDetailUrl = request.checkDetailUrl;
             this.checkerInstanceId = request.checkerInstanceId;
-            this.regionId = request.regionId;
             this.status = request.status;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * CheckDetailUrl.
@@ -113,15 +122,6 @@ public class CheckFileDeploymentRequest extends Request {
         public Builder checkerInstanceId(String checkerInstanceId) {
             this.putBodyParameter("CheckerInstanceId", checkerInstanceId);
             this.checkerInstanceId = checkerInstanceId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

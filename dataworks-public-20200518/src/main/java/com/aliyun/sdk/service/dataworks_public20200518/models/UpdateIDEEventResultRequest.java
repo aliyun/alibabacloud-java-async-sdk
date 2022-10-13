@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateIDEEventResultRequest</p>
  */
 public class UpdateIDEEventResultRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Body
     @NameInMap("CheckResult")
     private String checkResult;
@@ -28,17 +32,13 @@ public class UpdateIDEEventResultRequest extends Request {
     @NameInMap("MessageId")
     private String messageId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private UpdateIDEEventResultRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.checkResult = builder.checkResult;
         this.checkResultTip = builder.checkResultTip;
         this.extensionCode = builder.extensionCode;
         this.messageId = builder.messageId;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -52,6 +52,13 @@ public class UpdateIDEEventResultRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -82,19 +89,12 @@ public class UpdateIDEEventResultRequest extends Request {
         return this.messageId;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<UpdateIDEEventResultRequest, Builder> {
+        private String regionId; 
         private String checkResult; 
         private String checkResultTip; 
         private String extensionCode; 
         private String messageId; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -102,12 +102,21 @@ public class UpdateIDEEventResultRequest extends Request {
 
         private Builder(UpdateIDEEventResultRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.checkResult = request.checkResult;
             this.checkResultTip = request.checkResultTip;
             this.extensionCode = request.extensionCode;
             this.messageId = request.messageId;
-            this.regionId = request.regionId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * CheckResult.
@@ -142,15 +151,6 @@ public class UpdateIDEEventResultRequest extends Request {
         public Builder messageId(String messageId) {
             this.putBodyParameter("MessageId", messageId);
             this.messageId = messageId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

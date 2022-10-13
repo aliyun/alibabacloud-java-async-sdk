@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetMigrationProcessRequest</p>
  */
 public class GetMigrationProcessRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Body
     @NameInMap("MigrationId")
     @Validation(required = true, minimum = 1)
@@ -22,16 +27,11 @@ public class GetMigrationProcessRequest extends Request {
     @Validation(required = true, minimum = 2)
     private Long projectId;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     private GetMigrationProcessRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.migrationId = builder.migrationId;
         this.projectId = builder.projectId;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -48,6 +48,13 @@ public class GetMigrationProcessRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return migrationId
      */
     public Long getMigrationId() {
@@ -61,17 +68,10 @@ public class GetMigrationProcessRequest extends Request {
         return this.projectId;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<GetMigrationProcessRequest, Builder> {
+        private String regionId; 
         private Long migrationId; 
         private Long projectId; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -79,10 +79,19 @@ public class GetMigrationProcessRequest extends Request {
 
         private Builder(GetMigrationProcessRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.migrationId = request.migrationId;
             this.projectId = request.projectId;
-            this.regionId = request.regionId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * MigrationId.
@@ -99,15 +108,6 @@ public class GetMigrationProcessRequest extends Request {
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
             this.projectId = projectId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

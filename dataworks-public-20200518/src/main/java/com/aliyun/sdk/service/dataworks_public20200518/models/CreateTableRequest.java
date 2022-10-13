@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateTableRequest</p>
  */
 public class CreateTableRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("AppGuid")
     private String appGuid;
@@ -81,11 +86,6 @@ public class CreateTableRequest extends Request {
     @Validation(minimum = 1)
     private Long projectId;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Query
     @NameInMap("Schema")
     private String schema;
@@ -105,6 +105,7 @@ public class CreateTableRequest extends Request {
 
     private CreateTableRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.appGuid = builder.appGuid;
         this.categoryId = builder.categoryId;
         this.clientToken = builder.clientToken;
@@ -121,7 +122,6 @@ public class CreateTableRequest extends Request {
         this.ownerId = builder.ownerId;
         this.physicsLevelId = builder.physicsLevelId;
         this.projectId = builder.projectId;
-        this.regionId = builder.regionId;
         this.schema = builder.schema;
         this.tableName = builder.tableName;
         this.themes = builder.themes;
@@ -139,6 +139,13 @@ public class CreateTableRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -254,13 +261,6 @@ public class CreateTableRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return schema
      */
     public String getSchema() {
@@ -289,6 +289,7 @@ public class CreateTableRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateTableRequest, Builder> {
+        private String regionId; 
         private String appGuid; 
         private Long categoryId; 
         private String clientToken; 
@@ -305,7 +306,6 @@ public class CreateTableRequest extends Request {
         private String ownerId; 
         private Long physicsLevelId; 
         private Long projectId; 
-        private String regionId; 
         private String schema; 
         private String tableName; 
         private java.util.List < Themes> themes; 
@@ -317,6 +317,7 @@ public class CreateTableRequest extends Request {
 
         private Builder(CreateTableRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.appGuid = request.appGuid;
             this.categoryId = request.categoryId;
             this.clientToken = request.clientToken;
@@ -333,12 +334,20 @@ public class CreateTableRequest extends Request {
             this.ownerId = request.ownerId;
             this.physicsLevelId = request.physicsLevelId;
             this.projectId = request.projectId;
-            this.regionId = request.regionId;
             this.schema = request.schema;
             this.tableName = request.tableName;
             this.themes = request.themes;
             this.visibility = request.visibility;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * AppGuid.
@@ -481,15 +490,6 @@ public class CreateTableRequest extends Request {
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
             this.projectId = projectId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

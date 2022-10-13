@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetOptionValueForProjectRequest</p>
  */
 public class GetOptionValueForProjectRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Body
     @NameInMap("ExtensionCode")
     private String extensionCode;
@@ -20,15 +24,11 @@ public class GetOptionValueForProjectRequest extends Request {
     @NameInMap("ProjectId")
     private String projectId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private GetOptionValueForProjectRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.extensionCode = builder.extensionCode;
         this.projectId = builder.projectId;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -45,6 +45,13 @@ public class GetOptionValueForProjectRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return extensionCode
      */
     public String getExtensionCode() {
@@ -58,17 +65,10 @@ public class GetOptionValueForProjectRequest extends Request {
         return this.projectId;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<GetOptionValueForProjectRequest, Builder> {
+        private String regionId; 
         private String extensionCode; 
         private String projectId; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -76,10 +76,19 @@ public class GetOptionValueForProjectRequest extends Request {
 
         private Builder(GetOptionValueForProjectRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.extensionCode = request.extensionCode;
             this.projectId = request.projectId;
-            this.regionId = request.regionId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * ExtensionCode.
@@ -96,15 +105,6 @@ public class GetOptionValueForProjectRequest extends Request {
         public Builder projectId(String projectId) {
             this.putBodyParameter("ProjectId", projectId);
             this.projectId = projectId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

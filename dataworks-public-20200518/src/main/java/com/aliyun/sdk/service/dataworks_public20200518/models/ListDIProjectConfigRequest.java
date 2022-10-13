@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDIProjectConfigRequest</p>
  */
 public class ListDIProjectConfigRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("DestinationType")
     @Validation(required = true)
@@ -22,20 +27,15 @@ public class ListDIProjectConfigRequest extends Request {
     @Validation(required = true, maximum = 10000000000D, minimum = 1)
     private Long projectId;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Query
     @NameInMap("SourceType")
     private String sourceType;
 
     private ListDIProjectConfigRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.destinationType = builder.destinationType;
         this.projectId = builder.projectId;
-        this.regionId = builder.regionId;
         this.sourceType = builder.sourceType;
     }
 
@@ -53,6 +53,13 @@ public class ListDIProjectConfigRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return destinationType
      */
     public String getDestinationType() {
@@ -67,13 +74,6 @@ public class ListDIProjectConfigRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return sourceType
      */
     public String getSourceType() {
@@ -81,9 +81,9 @@ public class ListDIProjectConfigRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListDIProjectConfigRequest, Builder> {
+        private String regionId; 
         private String destinationType; 
         private Long projectId; 
-        private String regionId; 
         private String sourceType; 
 
         private Builder() {
@@ -92,11 +92,20 @@ public class ListDIProjectConfigRequest extends Request {
 
         private Builder(ListDIProjectConfigRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.destinationType = request.destinationType;
             this.projectId = request.projectId;
-            this.regionId = request.regionId;
             this.sourceType = request.sourceType;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * DestinationType.
@@ -113,15 +122,6 @@ public class ListDIProjectConfigRequest extends Request {
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
             this.projectId = projectId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

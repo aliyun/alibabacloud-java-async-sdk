@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RunCycleDagNodesRequest</p>
  */
 public class RunCycleDagNodesRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Body
     @NameInMap("BizBeginTime")
     private String bizBeginTime;
@@ -53,11 +58,6 @@ public class RunCycleDagNodesRequest extends Request {
     @Validation(required = true)
     private String projectEnv;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Body
     @NameInMap("RootNodeId")
     @Validation(required = true)
@@ -74,6 +74,7 @@ public class RunCycleDagNodesRequest extends Request {
 
     private RunCycleDagNodesRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.bizBeginTime = builder.bizBeginTime;
         this.bizEndTime = builder.bizEndTime;
         this.endBizDate = builder.endBizDate;
@@ -83,7 +84,6 @@ public class RunCycleDagNodesRequest extends Request {
         this.nodeParams = builder.nodeParams;
         this.parallelism = builder.parallelism;
         this.projectEnv = builder.projectEnv;
-        this.regionId = builder.regionId;
         this.rootNodeId = builder.rootNodeId;
         this.startBizDate = builder.startBizDate;
         this.startFutureInstanceImmediately = builder.startFutureInstanceImmediately;
@@ -100,6 +100,13 @@ public class RunCycleDagNodesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -166,13 +173,6 @@ public class RunCycleDagNodesRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return rootNodeId
      */
     public Long getRootNodeId() {
@@ -194,6 +194,7 @@ public class RunCycleDagNodesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<RunCycleDagNodesRequest, Builder> {
+        private String regionId; 
         private String bizBeginTime; 
         private String bizEndTime; 
         private String endBizDate; 
@@ -203,7 +204,6 @@ public class RunCycleDagNodesRequest extends Request {
         private String nodeParams; 
         private Boolean parallelism; 
         private String projectEnv; 
-        private String regionId; 
         private Long rootNodeId; 
         private String startBizDate; 
         private Boolean startFutureInstanceImmediately; 
@@ -214,6 +214,7 @@ public class RunCycleDagNodesRequest extends Request {
 
         private Builder(RunCycleDagNodesRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.bizBeginTime = request.bizBeginTime;
             this.bizEndTime = request.bizEndTime;
             this.endBizDate = request.endBizDate;
@@ -223,11 +224,19 @@ public class RunCycleDagNodesRequest extends Request {
             this.nodeParams = request.nodeParams;
             this.parallelism = request.parallelism;
             this.projectEnv = request.projectEnv;
-            this.regionId = request.regionId;
             this.rootNodeId = request.rootNodeId;
             this.startBizDate = request.startBizDate;
             this.startFutureInstanceImmediately = request.startFutureInstanceImmediately;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * BizBeginTime.
@@ -307,15 +316,6 @@ public class RunCycleDagNodesRequest extends Request {
         public Builder projectEnv(String projectEnv) {
             this.putBodyParameter("ProjectEnv", projectEnv);
             this.projectEnv = projectEnv;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SetDataSourceShareRequest</p>
  */
 public class SetDataSourceShareRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("DatasourceName")
     @Validation(required = true)
@@ -30,22 +35,17 @@ public class SetDataSourceShareRequest extends Request {
     @NameInMap("ProjectPermissions")
     private String projectPermissions;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Query
     @NameInMap("UserPermissions")
     private String userPermissions;
 
     private SetDataSourceShareRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.datasourceName = builder.datasourceName;
         this.envType = builder.envType;
         this.projectId = builder.projectId;
         this.projectPermissions = builder.projectPermissions;
-        this.regionId = builder.regionId;
         this.userPermissions = builder.userPermissions;
     }
 
@@ -60,6 +60,13 @@ public class SetDataSourceShareRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -91,13 +98,6 @@ public class SetDataSourceShareRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return userPermissions
      */
     public String getUserPermissions() {
@@ -105,11 +105,11 @@ public class SetDataSourceShareRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SetDataSourceShareRequest, Builder> {
+        private String regionId; 
         private String datasourceName; 
         private String envType; 
         private Long projectId; 
         private String projectPermissions; 
-        private String regionId; 
         private String userPermissions; 
 
         private Builder() {
@@ -118,13 +118,22 @@ public class SetDataSourceShareRequest extends Request {
 
         private Builder(SetDataSourceShareRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.datasourceName = request.datasourceName;
             this.envType = request.envType;
             this.projectId = request.projectId;
             this.projectPermissions = request.projectPermissions;
-            this.regionId = request.regionId;
             this.userPermissions = request.userPermissions;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * DatasourceName.
@@ -159,15 +168,6 @@ public class SetDataSourceShareRequest extends Request {
         public Builder projectPermissions(String projectPermissions) {
             this.putQueryParameter("ProjectPermissions", projectPermissions);
             this.projectPermissions = projectPermissions;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

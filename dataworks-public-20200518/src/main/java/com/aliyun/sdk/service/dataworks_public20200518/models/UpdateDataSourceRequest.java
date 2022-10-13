@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateDataSourceRequest</p>
  */
 public class UpdateDataSourceRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("Content")
     private String content;
@@ -29,22 +34,17 @@ public class UpdateDataSourceRequest extends Request {
     @NameInMap("EnvType")
     private Integer envType;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Query
     @NameInMap("Status")
     private String status;
 
     private UpdateDataSourceRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.content = builder.content;
         this.dataSourceId = builder.dataSourceId;
         this.description = builder.description;
         this.envType = builder.envType;
-        this.regionId = builder.regionId;
         this.status = builder.status;
     }
 
@@ -59,6 +59,13 @@ public class UpdateDataSourceRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -90,13 +97,6 @@ public class UpdateDataSourceRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return status
      */
     public String getStatus() {
@@ -104,11 +104,11 @@ public class UpdateDataSourceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateDataSourceRequest, Builder> {
+        private String regionId; 
         private String content; 
         private Long dataSourceId; 
         private String description; 
         private Integer envType; 
-        private String regionId; 
         private String status; 
 
         private Builder() {
@@ -117,13 +117,22 @@ public class UpdateDataSourceRequest extends Request {
 
         private Builder(UpdateDataSourceRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.content = request.content;
             this.dataSourceId = request.dataSourceId;
             this.description = request.description;
             this.envType = request.envType;
-            this.regionId = request.regionId;
             this.status = request.status;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * Content.
@@ -158,15 +167,6 @@ public class UpdateDataSourceRequest extends Request {
         public Builder envType(Integer envType) {
             this.putQueryParameter("EnvType", envType);
             this.envType = envType;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

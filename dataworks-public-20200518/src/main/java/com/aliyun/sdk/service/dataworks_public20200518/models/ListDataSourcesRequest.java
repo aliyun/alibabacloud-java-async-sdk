@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDataSourcesRequest</p>
  */
 public class ListDataSourcesRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("DataSourceType")
     private String dataSourceType;
@@ -37,11 +42,6 @@ public class ListDataSourcesRequest extends Request {
     @Validation(required = true)
     private Long projectId;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Query
     @NameInMap("Status")
     private String status;
@@ -52,13 +52,13 @@ public class ListDataSourcesRequest extends Request {
 
     private ListDataSourcesRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.dataSourceType = builder.dataSourceType;
         this.envType = builder.envType;
         this.name = builder.name;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.projectId = builder.projectId;
-        this.regionId = builder.regionId;
         this.status = builder.status;
         this.subType = builder.subType;
     }
@@ -74,6 +74,13 @@ public class ListDataSourcesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -119,13 +126,6 @@ public class ListDataSourcesRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return status
      */
     public String getStatus() {
@@ -140,13 +140,13 @@ public class ListDataSourcesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListDataSourcesRequest, Builder> {
+        private String regionId; 
         private String dataSourceType; 
         private Integer envType; 
         private String name; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private Long projectId; 
-        private String regionId; 
         private String status; 
         private String subType; 
 
@@ -156,16 +156,25 @@ public class ListDataSourcesRequest extends Request {
 
         private Builder(ListDataSourcesRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.dataSourceType = request.dataSourceType;
             this.envType = request.envType;
             this.name = request.name;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.projectId = request.projectId;
-            this.regionId = request.regionId;
             this.status = request.status;
             this.subType = request.subType;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * DataSourceType.
@@ -218,15 +227,6 @@ public class ListDataSourcesRequest extends Request {
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
             this.projectId = projectId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

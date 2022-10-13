@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListTopicsRequest</p>
  */
 public class ListTopicsRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Body
     @NameInMap("BeginTime")
     @Validation(required = true)
@@ -44,11 +49,6 @@ public class ListTopicsRequest extends Request {
     @Validation(required = true, maximum = 100, minimum = 1)
     private Integer pageSize;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Body
     @NameInMap("TopicStatuses")
     private String topicStatuses;
@@ -59,6 +59,7 @@ public class ListTopicsRequest extends Request {
 
     private ListTopicsRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.beginTime = builder.beginTime;
         this.endTime = builder.endTime;
         this.instanceId = builder.instanceId;
@@ -66,7 +67,6 @@ public class ListTopicsRequest extends Request {
         this.owner = builder.owner;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
         this.topicStatuses = builder.topicStatuses;
         this.topicTypes = builder.topicTypes;
     }
@@ -82,6 +82,13 @@ public class ListTopicsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -134,13 +141,6 @@ public class ListTopicsRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return topicStatuses
      */
     public String getTopicStatuses() {
@@ -155,6 +155,7 @@ public class ListTopicsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListTopicsRequest, Builder> {
+        private String regionId; 
         private String beginTime; 
         private String endTime; 
         private Long instanceId; 
@@ -162,7 +163,6 @@ public class ListTopicsRequest extends Request {
         private String owner; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private String regionId; 
         private String topicStatuses; 
         private String topicTypes; 
 
@@ -172,6 +172,7 @@ public class ListTopicsRequest extends Request {
 
         private Builder(ListTopicsRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.beginTime = request.beginTime;
             this.endTime = request.endTime;
             this.instanceId = request.instanceId;
@@ -179,10 +180,18 @@ public class ListTopicsRequest extends Request {
             this.owner = request.owner;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
-            this.regionId = request.regionId;
             this.topicStatuses = request.topicStatuses;
             this.topicTypes = request.topicTypes;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * BeginTime.
@@ -244,15 +253,6 @@ public class ListTopicsRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
             this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

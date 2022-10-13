@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetDISyncTaskMetricInfoRequest</p>
  */
 public class GetDISyncTaskMetricInfoRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("EndDate")
     @Validation(required = true)
@@ -27,11 +32,6 @@ public class GetDISyncTaskMetricInfoRequest extends Request {
     @Validation(required = true)
     private Long projectId;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Query
     @NameInMap("StartDate")
     @Validation(required = true)
@@ -39,10 +39,10 @@ public class GetDISyncTaskMetricInfoRequest extends Request {
 
     private GetDISyncTaskMetricInfoRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.endDate = builder.endDate;
         this.fileId = builder.fileId;
         this.projectId = builder.projectId;
-        this.regionId = builder.regionId;
         this.startDate = builder.startDate;
     }
 
@@ -57,6 +57,13 @@ public class GetDISyncTaskMetricInfoRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -81,13 +88,6 @@ public class GetDISyncTaskMetricInfoRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return startDate
      */
     public Long getStartDate() {
@@ -95,10 +95,10 @@ public class GetDISyncTaskMetricInfoRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetDISyncTaskMetricInfoRequest, Builder> {
+        private String regionId; 
         private Long endDate; 
         private Long fileId; 
         private Long projectId; 
-        private String regionId; 
         private Long startDate; 
 
         private Builder() {
@@ -107,12 +107,21 @@ public class GetDISyncTaskMetricInfoRequest extends Request {
 
         private Builder(GetDISyncTaskMetricInfoRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.endDate = request.endDate;
             this.fileId = request.fileId;
             this.projectId = request.projectId;
-            this.regionId = request.regionId;
             this.startDate = request.startDate;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * EndDate.
@@ -138,15 +147,6 @@ public class GetDISyncTaskMetricInfoRequest extends Request {
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
             this.projectId = projectId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetMetaTableBasicInfoRequest</p>
  */
 public class GetMetaTableBasicInfoRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("ClusterId")
     private String clusterId;
@@ -28,11 +33,6 @@ public class GetMetaTableBasicInfoRequest extends Request {
     @NameInMap("Extension")
     private Boolean extension;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Query
     @NameInMap("TableGuid")
     private String tableGuid;
@@ -43,11 +43,11 @@ public class GetMetaTableBasicInfoRequest extends Request {
 
     private GetMetaTableBasicInfoRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.clusterId = builder.clusterId;
         this.dataSourceType = builder.dataSourceType;
         this.databaseName = builder.databaseName;
         this.extension = builder.extension;
-        this.regionId = builder.regionId;
         this.tableGuid = builder.tableGuid;
         this.tableName = builder.tableName;
     }
@@ -63,6 +63,13 @@ public class GetMetaTableBasicInfoRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -94,13 +101,6 @@ public class GetMetaTableBasicInfoRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return tableGuid
      */
     public String getTableGuid() {
@@ -115,11 +115,11 @@ public class GetMetaTableBasicInfoRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetMetaTableBasicInfoRequest, Builder> {
+        private String regionId; 
         private String clusterId; 
         private String dataSourceType; 
         private String databaseName; 
         private Boolean extension; 
-        private String regionId; 
         private String tableGuid; 
         private String tableName; 
 
@@ -129,14 +129,23 @@ public class GetMetaTableBasicInfoRequest extends Request {
 
         private Builder(GetMetaTableBasicInfoRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.clusterId = request.clusterId;
             this.dataSourceType = request.dataSourceType;
             this.databaseName = request.databaseName;
             this.extension = request.extension;
-            this.regionId = request.regionId;
             this.tableGuid = request.tableGuid;
             this.tableName = request.tableName;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * ClusterId.
@@ -171,15 +180,6 @@ public class GetMetaTableBasicInfoRequest extends Request {
         public Builder extension(Boolean extension) {
             this.putQueryParameter("Extension", extension);
             this.extension = extension;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListTableThemeRequest</p>
  */
 public class ListTableThemeRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("PageNum")
     @Validation(maximum = 2147483647, minimum = 1)
@@ -32,18 +37,13 @@ public class ListTableThemeRequest extends Request {
     @Validation(minimum = 1)
     private Long projectId;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     private ListTableThemeRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.pageNum = builder.pageNum;
         this.pageSize = builder.pageSize;
         this.parentId = builder.parentId;
         this.projectId = builder.projectId;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -57,6 +57,13 @@ public class ListTableThemeRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -87,19 +94,12 @@ public class ListTableThemeRequest extends Request {
         return this.projectId;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<ListTableThemeRequest, Builder> {
+        private String regionId; 
         private Integer pageNum; 
         private Integer pageSize; 
         private Long parentId; 
         private Long projectId; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -107,12 +107,21 @@ public class ListTableThemeRequest extends Request {
 
         private Builder(ListTableThemeRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.pageNum = request.pageNum;
             this.pageSize = request.pageSize;
             this.parentId = request.parentId;
             this.projectId = request.projectId;
-            this.regionId = request.regionId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * PageNum.
@@ -147,15 +156,6 @@ public class ListTableThemeRequest extends Request {
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
             this.projectId = projectId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

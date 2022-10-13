@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>TestDataServiceApiRequest</p>
  */
 public class TestDataServiceApiRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("ApiId")
     @Validation(required = true)
@@ -37,20 +42,15 @@ public class TestDataServiceApiRequest extends Request {
     @NameInMap("QueryParam")
     private java.util.List < QueryParam> queryParam;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     private TestDataServiceApiRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.apiId = builder.apiId;
         this.bodyContent = builder.bodyContent;
         this.bodyParams = builder.bodyParams;
         this.headParams = builder.headParams;
         this.pathParams = builder.pathParams;
         this.queryParam = builder.queryParam;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -64,6 +64,13 @@ public class TestDataServiceApiRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -108,21 +115,14 @@ public class TestDataServiceApiRequest extends Request {
         return this.queryParam;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<TestDataServiceApiRequest, Builder> {
+        private String regionId; 
         private Long apiId; 
         private String bodyContent; 
         private java.util.List < BodyParams> bodyParams; 
         private java.util.List < HeadParams> headParams; 
         private java.util.List < PathParams> pathParams; 
         private java.util.List < QueryParam> queryParam; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -130,14 +130,23 @@ public class TestDataServiceApiRequest extends Request {
 
         private Builder(TestDataServiceApiRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.apiId = request.apiId;
             this.bodyContent = request.bodyContent;
             this.bodyParams = request.bodyParams;
             this.headParams = request.headParams;
             this.pathParams = request.pathParams;
             this.queryParam = request.queryParam;
-            this.regionId = request.regionId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * ApiId.
@@ -190,15 +199,6 @@ public class TestDataServiceApiRequest extends Request {
         public Builder queryParam(java.util.List < QueryParam> queryParam) {
             this.putBodyParameter("QueryParam", queryParam);
             this.queryParam = queryParam;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

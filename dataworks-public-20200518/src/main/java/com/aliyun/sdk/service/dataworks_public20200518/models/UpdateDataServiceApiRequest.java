@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateDataServiceApiRequest</p>
  */
 public class UpdateDataServiceApiRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Body
     @NameInMap("ApiDescription")
     @Validation(required = true)
@@ -36,11 +41,6 @@ public class UpdateDataServiceApiRequest extends Request {
     @NameInMap("Protocols")
     @Validation(required = true)
     private String protocols;
-
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
 
     @Body
     @NameInMap("RegistrationDetails")
@@ -81,12 +81,12 @@ public class UpdateDataServiceApiRequest extends Request {
 
     private UpdateDataServiceApiRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.apiDescription = builder.apiDescription;
         this.apiId = builder.apiId;
         this.apiPath = builder.apiPath;
         this.projectId = builder.projectId;
         this.protocols = builder.protocols;
-        this.regionId = builder.regionId;
         this.registrationDetails = builder.registrationDetails;
         this.requestMethod = builder.requestMethod;
         this.responseContentType = builder.responseContentType;
@@ -108,6 +108,13 @@ public class UpdateDataServiceApiRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -143,13 +150,6 @@ public class UpdateDataServiceApiRequest extends Request {
      */
     public String getProtocols() {
         return this.protocols;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -209,12 +209,12 @@ public class UpdateDataServiceApiRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateDataServiceApiRequest, Builder> {
+        private String regionId; 
         private String apiDescription; 
         private Long apiId; 
         private String apiPath; 
         private Long projectId; 
         private String protocols; 
-        private String regionId; 
         private String registrationDetails; 
         private Integer requestMethod; 
         private Integer responseContentType; 
@@ -230,12 +230,12 @@ public class UpdateDataServiceApiRequest extends Request {
 
         private Builder(UpdateDataServiceApiRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.apiDescription = request.apiDescription;
             this.apiId = request.apiId;
             this.apiPath = request.apiPath;
             this.projectId = request.projectId;
             this.protocols = request.protocols;
-            this.regionId = request.regionId;
             this.registrationDetails = request.registrationDetails;
             this.requestMethod = request.requestMethod;
             this.responseContentType = request.responseContentType;
@@ -245,6 +245,15 @@ public class UpdateDataServiceApiRequest extends Request {
             this.visibleRange = request.visibleRange;
             this.wizardDetails = request.wizardDetails;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * ApiDescription.
@@ -288,15 +297,6 @@ public class UpdateDataServiceApiRequest extends Request {
         public Builder protocols(String protocols) {
             this.putBodyParameter("Protocols", protocols);
             this.protocols = protocols;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

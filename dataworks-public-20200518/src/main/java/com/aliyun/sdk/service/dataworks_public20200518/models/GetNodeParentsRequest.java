@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetNodeParentsRequest</p>
  */
 public class GetNodeParentsRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Body
     @NameInMap("NodeId")
     @Validation(required = true)
@@ -22,16 +27,11 @@ public class GetNodeParentsRequest extends Request {
     @Validation(required = true)
     private String projectEnv;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     private GetNodeParentsRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.nodeId = builder.nodeId;
         this.projectEnv = builder.projectEnv;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -48,6 +48,13 @@ public class GetNodeParentsRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return nodeId
      */
     public Long getNodeId() {
@@ -61,17 +68,10 @@ public class GetNodeParentsRequest extends Request {
         return this.projectEnv;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<GetNodeParentsRequest, Builder> {
+        private String regionId; 
         private Long nodeId; 
         private String projectEnv; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -79,10 +79,19 @@ public class GetNodeParentsRequest extends Request {
 
         private Builder(GetNodeParentsRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.nodeId = request.nodeId;
             this.projectEnv = request.projectEnv;
-            this.regionId = request.regionId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * NodeId.
@@ -99,15 +108,6 @@ public class GetNodeParentsRequest extends Request {
         public Builder projectEnv(String projectEnv) {
             this.putBodyParameter("ProjectEnv", projectEnv);
             this.projectEnv = projectEnv;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

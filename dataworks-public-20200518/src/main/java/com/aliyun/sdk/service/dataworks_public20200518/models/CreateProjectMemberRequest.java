@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateProjectMemberRequest</p>
  */
 public class CreateProjectMemberRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("ClientToken")
     private String clientToken;
@@ -20,11 +25,6 @@ public class CreateProjectMemberRequest extends Request {
     @NameInMap("ProjectId")
     @Validation(required = true, maximum = 100000000)
     private Long projectId;
-
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
 
     @Query
     @NameInMap("RoleCode")
@@ -37,9 +37,9 @@ public class CreateProjectMemberRequest extends Request {
 
     private CreateProjectMemberRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.clientToken = builder.clientToken;
         this.projectId = builder.projectId;
-        this.regionId = builder.regionId;
         this.roleCode = builder.roleCode;
         this.userId = builder.userId;
     }
@@ -58,6 +58,13 @@ public class CreateProjectMemberRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return clientToken
      */
     public String getClientToken() {
@@ -69,13 +76,6 @@ public class CreateProjectMemberRequest extends Request {
      */
     public Long getProjectId() {
         return this.projectId;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -93,9 +93,9 @@ public class CreateProjectMemberRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateProjectMemberRequest, Builder> {
+        private String regionId; 
         private String clientToken; 
         private Long projectId; 
-        private String regionId; 
         private String roleCode; 
         private String userId; 
 
@@ -105,12 +105,21 @@ public class CreateProjectMemberRequest extends Request {
 
         private Builder(CreateProjectMemberRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.clientToken = request.clientToken;
             this.projectId = request.projectId;
-            this.regionId = request.regionId;
             this.roleCode = request.roleCode;
             this.userId = request.userId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * ClientToken.
@@ -127,15 +136,6 @@ public class CreateProjectMemberRequest extends Request {
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
             this.projectId = projectId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

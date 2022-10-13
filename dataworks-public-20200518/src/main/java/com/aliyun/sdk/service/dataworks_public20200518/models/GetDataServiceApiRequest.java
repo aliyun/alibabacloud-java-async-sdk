@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetDataServiceApiRequest</p>
  */
 public class GetDataServiceApiRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Body
     @NameInMap("ApiId")
     @Validation(required = true)
@@ -22,11 +27,6 @@ public class GetDataServiceApiRequest extends Request {
     @Validation(required = true)
     private Long projectId;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Body
     @NameInMap("TenantId")
     @Validation(required = true)
@@ -34,9 +34,9 @@ public class GetDataServiceApiRequest extends Request {
 
     private GetDataServiceApiRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.apiId = builder.apiId;
         this.projectId = builder.projectId;
-        this.regionId = builder.regionId;
         this.tenantId = builder.tenantId;
     }
 
@@ -54,6 +54,13 @@ public class GetDataServiceApiRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return apiId
      */
     public Long getApiId() {
@@ -68,13 +75,6 @@ public class GetDataServiceApiRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return tenantId
      */
     public Long getTenantId() {
@@ -82,9 +82,9 @@ public class GetDataServiceApiRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetDataServiceApiRequest, Builder> {
+        private String regionId; 
         private Long apiId; 
         private Long projectId; 
-        private String regionId; 
         private Long tenantId; 
 
         private Builder() {
@@ -93,11 +93,20 @@ public class GetDataServiceApiRequest extends Request {
 
         private Builder(GetDataServiceApiRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.apiId = request.apiId;
             this.projectId = request.projectId;
-            this.regionId = request.regionId;
             this.tenantId = request.tenantId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * ApiId.
@@ -114,15 +123,6 @@ public class GetDataServiceApiRequest extends Request {
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
             this.projectId = projectId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

@@ -386,6 +386,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListUsageForResourceGroupResponse> listUsageForResourceGroup(ListUsageForResourceGroupRequest request);
 
+    CompletableFuture<OfflineNodeResponse> offlineNode(OfflineNodeRequest request);
+
     CompletableFuture<PublishDataServiceApiResponse> publishDataServiceApi(PublishDataServiceApiRequest request);
 
     CompletableFuture<QueryDISyncTaskConfigProcessResultResponse> queryDISyncTaskConfigProcessResult(QueryDISyncTaskConfigProcessResultRequest request);

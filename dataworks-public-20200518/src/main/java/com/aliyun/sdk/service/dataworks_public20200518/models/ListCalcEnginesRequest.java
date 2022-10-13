@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListCalcEnginesRequest</p>
  */
 public class ListCalcEnginesRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("CalcEngineType")
     @Validation(required = true)
@@ -38,20 +43,15 @@ public class ListCalcEnginesRequest extends Request {
     @Validation(required = true)
     private Long projectId;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     private ListCalcEnginesRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.calcEngineType = builder.calcEngineType;
         this.envType = builder.envType;
         this.name = builder.name;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.projectId = builder.projectId;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -65,6 +65,13 @@ public class ListCalcEnginesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -109,21 +116,14 @@ public class ListCalcEnginesRequest extends Request {
         return this.projectId;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<ListCalcEnginesRequest, Builder> {
+        private String regionId; 
         private String calcEngineType; 
         private String envType; 
         private String name; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private Long projectId; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -131,14 +131,23 @@ public class ListCalcEnginesRequest extends Request {
 
         private Builder(ListCalcEnginesRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.calcEngineType = request.calcEngineType;
             this.envType = request.envType;
             this.name = request.name;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.projectId = request.projectId;
-            this.regionId = request.regionId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * CalcEngineType.
@@ -191,15 +200,6 @@ public class ListCalcEnginesRequest extends Request {
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
             this.projectId = projectId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

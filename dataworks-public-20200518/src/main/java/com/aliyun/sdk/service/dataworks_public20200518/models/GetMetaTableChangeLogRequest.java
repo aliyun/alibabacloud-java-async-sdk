@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetMetaTableChangeLogRequest</p>
  */
 public class GetMetaTableChangeLogRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Body
     @NameInMap("ChangeType")
     private String changeType;
@@ -32,11 +37,6 @@ public class GetMetaTableChangeLogRequest extends Request {
     @NameInMap("PageSize")
     private Integer pageSize;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Body
     @NameInMap("StartDate")
     private String startDate;
@@ -48,12 +48,12 @@ public class GetMetaTableChangeLogRequest extends Request {
 
     private GetMetaTableChangeLogRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.changeType = builder.changeType;
         this.endDate = builder.endDate;
         this.objectType = builder.objectType;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
         this.startDate = builder.startDate;
         this.tableGuid = builder.tableGuid;
     }
@@ -69,6 +69,13 @@ public class GetMetaTableChangeLogRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -107,13 +114,6 @@ public class GetMetaTableChangeLogRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return startDate
      */
     public String getStartDate() {
@@ -128,12 +128,12 @@ public class GetMetaTableChangeLogRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetMetaTableChangeLogRequest, Builder> {
+        private String regionId; 
         private String changeType; 
         private String endDate; 
         private String objectType; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private String regionId; 
         private String startDate; 
         private String tableGuid; 
 
@@ -143,15 +143,24 @@ public class GetMetaTableChangeLogRequest extends Request {
 
         private Builder(GetMetaTableChangeLogRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.changeType = request.changeType;
             this.endDate = request.endDate;
             this.objectType = request.objectType;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
-            this.regionId = request.regionId;
             this.startDate = request.startDate;
             this.tableGuid = request.tableGuid;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * ChangeType.
@@ -195,15 +204,6 @@ public class GetMetaTableChangeLogRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
             this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

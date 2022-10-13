@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListCurrentTasksForResourceGroupRequest</p>
  */
 public class ListCurrentTasksForResourceGroupRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Body
     @NameInMap("PageNumber")
     private Integer pageNumber;
@@ -25,10 +29,6 @@ public class ListCurrentTasksForResourceGroupRequest extends Request {
     @Validation(required = true)
     private String projectEnv;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Body
     @NameInMap("ResourceGroupIdentifier")
     @Validation(required = true)
@@ -41,10 +41,10 @@ public class ListCurrentTasksForResourceGroupRequest extends Request {
 
     private ListCurrentTasksForResourceGroupRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.projectEnv = builder.projectEnv;
-        this.regionId = builder.regionId;
         this.resourceGroupIdentifier = builder.resourceGroupIdentifier;
         this.status = builder.status;
     }
@@ -60,6 +60,13 @@ public class ListCurrentTasksForResourceGroupRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -84,13 +91,6 @@ public class ListCurrentTasksForResourceGroupRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return resourceGroupIdentifier
      */
     public String getResourceGroupIdentifier() {
@@ -105,10 +105,10 @@ public class ListCurrentTasksForResourceGroupRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListCurrentTasksForResourceGroupRequest, Builder> {
+        private String regionId; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String projectEnv; 
-        private String regionId; 
         private String resourceGroupIdentifier; 
         private Integer status; 
 
@@ -118,13 +118,22 @@ public class ListCurrentTasksForResourceGroupRequest extends Request {
 
         private Builder(ListCurrentTasksForResourceGroupRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.projectEnv = request.projectEnv;
-            this.regionId = request.regionId;
             this.resourceGroupIdentifier = request.resourceGroupIdentifier;
             this.status = request.status;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * PageNumber.
@@ -150,15 +159,6 @@ public class ListCurrentTasksForResourceGroupRequest extends Request {
         public Builder projectEnv(String projectEnv) {
             this.putBodyParameter("ProjectEnv", projectEnv);
             this.projectEnv = projectEnv;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

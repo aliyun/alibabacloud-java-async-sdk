@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetInstanceLogRequest</p>
  */
 public class GetInstanceLogRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Body
     @NameInMap("InstanceHistoryId")
     private Long instanceHistoryId;
@@ -26,17 +31,12 @@ public class GetInstanceLogRequest extends Request {
     @Validation(required = true)
     private String projectEnv;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     private GetInstanceLogRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.instanceHistoryId = builder.instanceHistoryId;
         this.instanceId = builder.instanceId;
         this.projectEnv = builder.projectEnv;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -50,6 +50,13 @@ public class GetInstanceLogRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -73,18 +80,11 @@ public class GetInstanceLogRequest extends Request {
         return this.projectEnv;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<GetInstanceLogRequest, Builder> {
+        private String regionId; 
         private Long instanceHistoryId; 
         private Long instanceId; 
         private String projectEnv; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -92,11 +92,20 @@ public class GetInstanceLogRequest extends Request {
 
         private Builder(GetInstanceLogRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.instanceHistoryId = request.instanceHistoryId;
             this.instanceId = request.instanceId;
             this.projectEnv = request.projectEnv;
-            this.regionId = request.regionId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * InstanceHistoryId.
@@ -122,15 +131,6 @@ public class GetInstanceLogRequest extends Request {
         public Builder projectEnv(String projectEnv) {
             this.putBodyParameter("ProjectEnv", projectEnv);
             this.projectEnv = projectEnv;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

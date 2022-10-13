@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateQualityFollowerRequest</p>
  */
 public class CreateQualityFollowerRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Body
     @NameInMap("AlarmMode")
     @Validation(required = true)
@@ -32,18 +37,13 @@ public class CreateQualityFollowerRequest extends Request {
     @Validation(required = true)
     private String projectName;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     private CreateQualityFollowerRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.alarmMode = builder.alarmMode;
         this.entityId = builder.entityId;
         this.follower = builder.follower;
         this.projectName = builder.projectName;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -57,6 +57,13 @@ public class CreateQualityFollowerRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -87,19 +94,12 @@ public class CreateQualityFollowerRequest extends Request {
         return this.projectName;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<CreateQualityFollowerRequest, Builder> {
+        private String regionId; 
         private Integer alarmMode; 
         private Long entityId; 
         private String follower; 
         private String projectName; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -107,12 +107,21 @@ public class CreateQualityFollowerRequest extends Request {
 
         private Builder(CreateQualityFollowerRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.alarmMode = request.alarmMode;
             this.entityId = request.entityId;
             this.follower = request.follower;
             this.projectName = request.projectName;
-            this.regionId = request.regionId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * AlarmMode.
@@ -147,15 +156,6 @@ public class CreateQualityFollowerRequest extends Request {
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);
             this.projectName = projectName;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

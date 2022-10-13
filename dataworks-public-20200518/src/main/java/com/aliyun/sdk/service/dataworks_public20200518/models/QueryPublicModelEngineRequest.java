@@ -12,14 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryPublicModelEngineRequest</p>
  */
 public class QueryPublicModelEngineRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Body
     @NameInMap("ProjectId")
     @Validation(required = true)
     private String projectId;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Body
     @NameInMap("Text")
@@ -28,8 +28,8 @@ public class QueryPublicModelEngineRequest extends Request {
 
     private QueryPublicModelEngineRequest(Builder builder) {
         super(builder);
-        this.projectId = builder.projectId;
         this.regionId = builder.regionId;
+        this.projectId = builder.projectId;
         this.text = builder.text;
     }
 
@@ -47,17 +47,17 @@ public class QueryPublicModelEngineRequest extends Request {
     }
 
     /**
-     * @return projectId
-     */
-    public String getProjectId() {
-        return this.projectId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return projectId
+     */
+    public String getProjectId() {
+        return this.projectId;
     }
 
     /**
@@ -68,8 +68,8 @@ public class QueryPublicModelEngineRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<QueryPublicModelEngineRequest, Builder> {
-        private String projectId; 
         private String regionId; 
+        private String projectId; 
         private String text; 
 
         private Builder() {
@@ -78,19 +78,10 @@ public class QueryPublicModelEngineRequest extends Request {
 
         private Builder(QueryPublicModelEngineRequest request) {
             super(request);
-            this.projectId = request.projectId;
             this.regionId = request.regionId;
+            this.projectId = request.projectId;
             this.text = request.text;
         } 
-
-        /**
-         * ProjectId.
-         */
-        public Builder projectId(String projectId) {
-            this.putBodyParameter("ProjectId", projectId);
-            this.projectId = projectId;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -98,6 +89,15 @@ public class QueryPublicModelEngineRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ProjectId.
+         */
+        public Builder projectId(String projectId) {
+            this.putBodyParameter("ProjectId", projectId);
+            this.projectId = projectId;
             return this;
         }
 

@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetInstanceStatusStatisticRequest</p>
  */
 public class GetInstanceStatusStatisticRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Body
     @NameInMap("BizDate")
     @Validation(required = true, maxLength = 10, minLength = 10)
@@ -31,22 +36,17 @@ public class GetInstanceStatusStatisticRequest extends Request {
     @Validation(required = true, minimum = 1)
     private Long projectId;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Body
     @NameInMap("SchedulerType")
     private String schedulerType;
 
     private GetInstanceStatusStatisticRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.bizDate = builder.bizDate;
         this.dagType = builder.dagType;
         this.projectEnv = builder.projectEnv;
         this.projectId = builder.projectId;
-        this.regionId = builder.regionId;
         this.schedulerType = builder.schedulerType;
     }
 
@@ -61,6 +61,13 @@ public class GetInstanceStatusStatisticRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -92,13 +99,6 @@ public class GetInstanceStatusStatisticRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return schedulerType
      */
     public String getSchedulerType() {
@@ -106,11 +106,11 @@ public class GetInstanceStatusStatisticRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetInstanceStatusStatisticRequest, Builder> {
+        private String regionId; 
         private String bizDate; 
         private String dagType; 
         private String projectEnv; 
         private Long projectId; 
-        private String regionId; 
         private String schedulerType; 
 
         private Builder() {
@@ -119,13 +119,22 @@ public class GetInstanceStatusStatisticRequest extends Request {
 
         private Builder(GetInstanceStatusStatisticRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.bizDate = request.bizDate;
             this.dagType = request.dagType;
             this.projectEnv = request.projectEnv;
             this.projectId = request.projectId;
-            this.regionId = request.regionId;
             this.schedulerType = request.schedulerType;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * BizDate.
@@ -160,15 +169,6 @@ public class GetInstanceStatusStatisticRequest extends Request {
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
             this.projectId = projectId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

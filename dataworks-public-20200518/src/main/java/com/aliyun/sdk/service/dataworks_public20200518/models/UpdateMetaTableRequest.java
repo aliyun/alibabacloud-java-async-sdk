@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateMetaTableRequest</p>
  */
 public class UpdateMetaTableRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Body
     @NameInMap("AddedLabels")
     private String addedLabels;
@@ -38,11 +43,6 @@ public class UpdateMetaTableRequest extends Request {
     @Validation()
     private Long projectId;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Body
     @NameInMap("RemovedLabels")
     private String removedLabels;
@@ -66,13 +66,13 @@ public class UpdateMetaTableRequest extends Request {
 
     private UpdateMetaTableRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.addedLabels = builder.addedLabels;
         this.caption = builder.caption;
         this.categoryId = builder.categoryId;
         this.envType = builder.envType;
         this.newOwnerId = builder.newOwnerId;
         this.projectId = builder.projectId;
-        this.regionId = builder.regionId;
         this.removedLabels = builder.removedLabels;
         this.schema = builder.schema;
         this.tableGuid = builder.tableGuid;
@@ -91,6 +91,13 @@ public class UpdateMetaTableRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -136,13 +143,6 @@ public class UpdateMetaTableRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return removedLabels
      */
     public String getRemovedLabels() {
@@ -178,13 +178,13 @@ public class UpdateMetaTableRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateMetaTableRequest, Builder> {
+        private String regionId; 
         private String addedLabels; 
         private String caption; 
         private Long categoryId; 
         private Integer envType; 
         private String newOwnerId; 
         private Long projectId; 
-        private String regionId; 
         private String removedLabels; 
         private String schema; 
         private String tableGuid; 
@@ -197,19 +197,28 @@ public class UpdateMetaTableRequest extends Request {
 
         private Builder(UpdateMetaTableRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.addedLabels = request.addedLabels;
             this.caption = request.caption;
             this.categoryId = request.categoryId;
             this.envType = request.envType;
             this.newOwnerId = request.newOwnerId;
             this.projectId = request.projectId;
-            this.regionId = request.regionId;
             this.removedLabels = request.removedLabels;
             this.schema = request.schema;
             this.tableGuid = request.tableGuid;
             this.tableName = request.tableName;
             this.visibility = request.visibility;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * AddedLabels.
@@ -262,15 +271,6 @@ public class UpdateMetaTableRequest extends Request {
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
             this.projectId = projectId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

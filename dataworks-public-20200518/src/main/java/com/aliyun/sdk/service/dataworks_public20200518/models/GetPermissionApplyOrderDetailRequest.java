@@ -12,20 +12,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetPermissionApplyOrderDetailRequest</p>
  */
 public class GetPermissionApplyOrderDetailRequest extends Request {
-    @Query
-    @NameInMap("FlowId")
-    @Validation(required = true)
-    private String flowId;
-
     @Host
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
 
+    @Query
+    @NameInMap("FlowId")
+    @Validation(required = true)
+    private String flowId;
+
     private GetPermissionApplyOrderDetailRequest(Builder builder) {
         super(builder);
-        this.flowId = builder.flowId;
         this.regionId = builder.regionId;
+        this.flowId = builder.flowId;
     }
 
     public static Builder builder() {
@@ -42,22 +42,22 @@ public class GetPermissionApplyOrderDetailRequest extends Request {
     }
 
     /**
-     * @return flowId
-     */
-    public String getFlowId() {
-        return this.flowId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
     }
 
+    /**
+     * @return flowId
+     */
+    public String getFlowId() {
+        return this.flowId;
+    }
+
     public static final class Builder extends Request.Builder<GetPermissionApplyOrderDetailRequest, Builder> {
-        private String flowId; 
         private String regionId; 
+        private String flowId; 
 
         private Builder() {
             super();
@@ -65,18 +65,9 @@ public class GetPermissionApplyOrderDetailRequest extends Request {
 
         private Builder(GetPermissionApplyOrderDetailRequest request) {
             super(request);
-            this.flowId = request.flowId;
             this.regionId = request.regionId;
+            this.flowId = request.flowId;
         } 
-
-        /**
-         * FlowId.
-         */
-        public Builder flowId(String flowId) {
-            this.putQueryParameter("FlowId", flowId);
-            this.flowId = flowId;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -84,6 +75,15 @@ public class GetPermissionApplyOrderDetailRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * FlowId.
+         */
+        public Builder flowId(String flowId) {
+            this.putQueryParameter("FlowId", flowId);
+            this.flowId = flowId;
             return this;
         }
 

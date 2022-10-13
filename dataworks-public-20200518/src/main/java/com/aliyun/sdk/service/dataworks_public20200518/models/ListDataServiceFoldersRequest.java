@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDataServiceFoldersRequest</p>
  */
 public class ListDataServiceFoldersRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Body
     @NameInMap("FolderNameKeyword")
     private String folderNameKeyword;
@@ -35,11 +40,6 @@ public class ListDataServiceFoldersRequest extends Request {
     @Validation(required = true, minimum = 1)
     private Long projectId;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Body
     @NameInMap("TenantId")
     @Validation(required = true, minimum = 1)
@@ -47,12 +47,12 @@ public class ListDataServiceFoldersRequest extends Request {
 
     private ListDataServiceFoldersRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.folderNameKeyword = builder.folderNameKeyword;
         this.groupId = builder.groupId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.projectId = builder.projectId;
-        this.regionId = builder.regionId;
         this.tenantId = builder.tenantId;
     }
 
@@ -67,6 +67,13 @@ public class ListDataServiceFoldersRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -105,13 +112,6 @@ public class ListDataServiceFoldersRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return tenantId
      */
     public Long getTenantId() {
@@ -119,12 +119,12 @@ public class ListDataServiceFoldersRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListDataServiceFoldersRequest, Builder> {
+        private String regionId; 
         private String folderNameKeyword; 
         private String groupId; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private Long projectId; 
-        private String regionId; 
         private Long tenantId; 
 
         private Builder() {
@@ -133,14 +133,23 @@ public class ListDataServiceFoldersRequest extends Request {
 
         private Builder(ListDataServiceFoldersRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.folderNameKeyword = request.folderNameKeyword;
             this.groupId = request.groupId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.projectId = request.projectId;
-            this.regionId = request.regionId;
             this.tenantId = request.tenantId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * FolderNameKeyword.
@@ -184,15 +193,6 @@ public class ListDataServiceFoldersRequest extends Request {
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
             this.projectId = projectId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

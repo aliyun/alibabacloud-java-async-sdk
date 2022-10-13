@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListBaselineConfigsRequest</p>
  */
 public class ListBaselineConfigsRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Body
     @NameInMap("BaselineTypes")
     private String baselineTypes;
@@ -39,11 +44,6 @@ public class ListBaselineConfigsRequest extends Request {
     @Validation(required = true)
     private Long projectId;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Body
     @NameInMap("SearchText")
     private String searchText;
@@ -54,13 +54,13 @@ public class ListBaselineConfigsRequest extends Request {
 
     private ListBaselineConfigsRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.baselineTypes = builder.baselineTypes;
         this.owner = builder.owner;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.priority = builder.priority;
         this.projectId = builder.projectId;
-        this.regionId = builder.regionId;
         this.searchText = builder.searchText;
         this.useflag = builder.useflag;
     }
@@ -76,6 +76,13 @@ public class ListBaselineConfigsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -121,13 +128,6 @@ public class ListBaselineConfigsRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return searchText
      */
     public String getSearchText() {
@@ -142,13 +142,13 @@ public class ListBaselineConfigsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListBaselineConfigsRequest, Builder> {
+        private String regionId; 
         private String baselineTypes; 
         private String owner; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String priority; 
         private Long projectId; 
-        private String regionId; 
         private String searchText; 
         private Boolean useflag; 
 
@@ -158,16 +158,25 @@ public class ListBaselineConfigsRequest extends Request {
 
         private Builder(ListBaselineConfigsRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.baselineTypes = request.baselineTypes;
             this.owner = request.owner;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.priority = request.priority;
             this.projectId = request.projectId;
-            this.regionId = request.regionId;
             this.searchText = request.searchText;
             this.useflag = request.useflag;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * BaselineTypes.
@@ -220,15 +229,6 @@ public class ListBaselineConfigsRequest extends Request {
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
             this.projectId = projectId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

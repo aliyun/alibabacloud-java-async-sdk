@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListShiftPersonnelsRequest</p>
  */
 public class ListShiftPersonnelsRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Body
     @NameInMap("BeginTime")
     private Long beginTime;
@@ -19,10 +23,6 @@ public class ListShiftPersonnelsRequest extends Request {
     @Body
     @NameInMap("EndTime")
     private Long endTime;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Body
     @NameInMap("ShiftPersonUID")
@@ -38,9 +38,9 @@ public class ListShiftPersonnelsRequest extends Request {
 
     private ListShiftPersonnelsRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.beginTime = builder.beginTime;
         this.endTime = builder.endTime;
-        this.regionId = builder.regionId;
         this.shiftPersonUID = builder.shiftPersonUID;
         this.shiftScheduleIdentifier = builder.shiftScheduleIdentifier;
         this.userType = builder.userType;
@@ -60,6 +60,13 @@ public class ListShiftPersonnelsRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return beginTime
      */
     public Long getBeginTime() {
@@ -71,13 +78,6 @@ public class ListShiftPersonnelsRequest extends Request {
      */
     public Long getEndTime() {
         return this.endTime;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -102,9 +102,9 @@ public class ListShiftPersonnelsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListShiftPersonnelsRequest, Builder> {
+        private String regionId; 
         private Long beginTime; 
         private Long endTime; 
-        private String regionId; 
         private String shiftPersonUID; 
         private String shiftScheduleIdentifier; 
         private String userType; 
@@ -115,13 +115,22 @@ public class ListShiftPersonnelsRequest extends Request {
 
         private Builder(ListShiftPersonnelsRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.beginTime = request.beginTime;
             this.endTime = request.endTime;
-            this.regionId = request.regionId;
             this.shiftPersonUID = request.shiftPersonUID;
             this.shiftScheduleIdentifier = request.shiftScheduleIdentifier;
             this.userType = request.userType;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * BeginTime.
@@ -138,15 +147,6 @@ public class ListShiftPersonnelsRequest extends Request {
         public Builder endTime(Long endTime) {
             this.putBodyParameter("EndTime", endTime);
             this.endTime = endTime;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

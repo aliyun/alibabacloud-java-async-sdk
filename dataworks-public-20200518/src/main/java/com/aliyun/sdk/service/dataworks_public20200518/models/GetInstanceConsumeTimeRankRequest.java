@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetInstanceConsumeTimeRankRequest</p>
  */
 public class GetInstanceConsumeTimeRankRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Body
     @NameInMap("Bizdate")
     @Validation(required = true)
@@ -22,16 +27,11 @@ public class GetInstanceConsumeTimeRankRequest extends Request {
     @Validation(required = true, maximum = 99999999999D, minimum = 2)
     private Long projectId;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     private GetInstanceConsumeTimeRankRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.bizdate = builder.bizdate;
         this.projectId = builder.projectId;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -48,6 +48,13 @@ public class GetInstanceConsumeTimeRankRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return bizdate
      */
     public String getBizdate() {
@@ -61,17 +68,10 @@ public class GetInstanceConsumeTimeRankRequest extends Request {
         return this.projectId;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<GetInstanceConsumeTimeRankRequest, Builder> {
+        private String regionId; 
         private String bizdate; 
         private Long projectId; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -79,10 +79,19 @@ public class GetInstanceConsumeTimeRankRequest extends Request {
 
         private Builder(GetInstanceConsumeTimeRankRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.bizdate = request.bizdate;
             this.projectId = request.projectId;
-            this.regionId = request.regionId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * Bizdate.
@@ -99,15 +108,6 @@ public class GetInstanceConsumeTimeRankRequest extends Request {
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
             this.projectId = projectId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

@@ -12,20 +12,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteDataSourceRequest</p>
  */
 public class DeleteDataSourceRequest extends Request {
-    @Query
-    @NameInMap("DataSourceId")
-    @Validation(required = true)
-    private Long dataSourceId;
-
     @Host
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
 
+    @Query
+    @NameInMap("DataSourceId")
+    @Validation(required = true)
+    private Long dataSourceId;
+
     private DeleteDataSourceRequest(Builder builder) {
         super(builder);
-        this.dataSourceId = builder.dataSourceId;
         this.regionId = builder.regionId;
+        this.dataSourceId = builder.dataSourceId;
     }
 
     public static Builder builder() {
@@ -42,22 +42,22 @@ public class DeleteDataSourceRequest extends Request {
     }
 
     /**
-     * @return dataSourceId
-     */
-    public Long getDataSourceId() {
-        return this.dataSourceId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
     }
 
+    /**
+     * @return dataSourceId
+     */
+    public Long getDataSourceId() {
+        return this.dataSourceId;
+    }
+
     public static final class Builder extends Request.Builder<DeleteDataSourceRequest, Builder> {
-        private Long dataSourceId; 
         private String regionId; 
+        private Long dataSourceId; 
 
         private Builder() {
             super();
@@ -65,18 +65,9 @@ public class DeleteDataSourceRequest extends Request {
 
         private Builder(DeleteDataSourceRequest request) {
             super(request);
-            this.dataSourceId = request.dataSourceId;
             this.regionId = request.regionId;
+            this.dataSourceId = request.dataSourceId;
         } 
-
-        /**
-         * DataSourceId.
-         */
-        public Builder dataSourceId(Long dataSourceId) {
-            this.putQueryParameter("DataSourceId", dataSourceId);
-            this.dataSourceId = dataSourceId;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -84,6 +75,15 @@ public class DeleteDataSourceRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * DataSourceId.
+         */
+        public Builder dataSourceId(Long dataSourceId) {
+            this.putQueryParameter("DataSourceId", dataSourceId);
+            this.dataSourceId = dataSourceId;
             return this;
         }
 

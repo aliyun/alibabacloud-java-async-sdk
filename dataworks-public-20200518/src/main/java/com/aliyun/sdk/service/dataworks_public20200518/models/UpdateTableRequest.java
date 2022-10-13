@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateTableRequest</p>
  */
 public class UpdateTableRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("AppGuid")
     private String appGuid;
@@ -80,11 +85,6 @@ public class UpdateTableRequest extends Request {
     @Validation(minimum = 1)
     private Long projectId;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Query
     @NameInMap("Schema")
     private String schema;
@@ -104,6 +104,7 @@ public class UpdateTableRequest extends Request {
 
     private UpdateTableRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.appGuid = builder.appGuid;
         this.categoryId = builder.categoryId;
         this.columns = builder.columns;
@@ -120,7 +121,6 @@ public class UpdateTableRequest extends Request {
         this.ownerId = builder.ownerId;
         this.physicsLevelId = builder.physicsLevelId;
         this.projectId = builder.projectId;
-        this.regionId = builder.regionId;
         this.schema = builder.schema;
         this.tableName = builder.tableName;
         this.themes = builder.themes;
@@ -138,6 +138,13 @@ public class UpdateTableRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -253,13 +260,6 @@ public class UpdateTableRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return schema
      */
     public String getSchema() {
@@ -288,6 +288,7 @@ public class UpdateTableRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateTableRequest, Builder> {
+        private String regionId; 
         private String appGuid; 
         private Long categoryId; 
         private java.util.List < Columns> columns; 
@@ -304,7 +305,6 @@ public class UpdateTableRequest extends Request {
         private String ownerId; 
         private Long physicsLevelId; 
         private Long projectId; 
-        private String regionId; 
         private String schema; 
         private String tableName; 
         private java.util.List < Themes> themes; 
@@ -316,6 +316,7 @@ public class UpdateTableRequest extends Request {
 
         private Builder(UpdateTableRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.appGuid = request.appGuid;
             this.categoryId = request.categoryId;
             this.columns = request.columns;
@@ -332,12 +333,20 @@ public class UpdateTableRequest extends Request {
             this.ownerId = request.ownerId;
             this.physicsLevelId = request.physicsLevelId;
             this.projectId = request.projectId;
-            this.regionId = request.regionId;
             this.schema = request.schema;
             this.tableName = request.tableName;
             this.themes = request.themes;
             this.visibility = request.visibility;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * AppGuid.
@@ -480,15 +489,6 @@ public class UpdateTableRequest extends Request {
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
             this.projectId = projectId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

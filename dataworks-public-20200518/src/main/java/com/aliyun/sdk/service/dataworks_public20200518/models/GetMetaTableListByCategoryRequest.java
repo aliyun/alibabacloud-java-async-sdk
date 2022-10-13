@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetMetaTableListByCategoryRequest</p>
  */
 public class GetMetaTableListByCategoryRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("CategoryId")
     @Validation(required = true, minimum = 1)
@@ -25,17 +30,12 @@ public class GetMetaTableListByCategoryRequest extends Request {
     @NameInMap("PageSize")
     private Integer pageSize;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     private GetMetaTableListByCategoryRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.categoryId = builder.categoryId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -49,6 +49,13 @@ public class GetMetaTableListByCategoryRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -72,18 +79,11 @@ public class GetMetaTableListByCategoryRequest extends Request {
         return this.pageSize;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<GetMetaTableListByCategoryRequest, Builder> {
+        private String regionId; 
         private Long categoryId; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -91,11 +91,20 @@ public class GetMetaTableListByCategoryRequest extends Request {
 
         private Builder(GetMetaTableListByCategoryRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.categoryId = request.categoryId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
-            this.regionId = request.regionId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * CategoryId.
@@ -121,15 +130,6 @@ public class GetMetaTableListByCategoryRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SubmitFileRequest</p>
  */
 public class SubmitFileRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Body
     @NameInMap("Comment")
     private String comment;
@@ -29,22 +34,17 @@ public class SubmitFileRequest extends Request {
     @NameInMap("ProjectIdentifier")
     private String projectIdentifier;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Body
     @NameInMap("SkipAllDeployFileExtensions")
     private Boolean skipAllDeployFileExtensions;
 
     private SubmitFileRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.comment = builder.comment;
         this.fileId = builder.fileId;
         this.projectId = builder.projectId;
         this.projectIdentifier = builder.projectIdentifier;
-        this.regionId = builder.regionId;
         this.skipAllDeployFileExtensions = builder.skipAllDeployFileExtensions;
     }
 
@@ -59,6 +59,13 @@ public class SubmitFileRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -90,13 +97,6 @@ public class SubmitFileRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return skipAllDeployFileExtensions
      */
     public Boolean getSkipAllDeployFileExtensions() {
@@ -104,11 +104,11 @@ public class SubmitFileRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SubmitFileRequest, Builder> {
+        private String regionId; 
         private String comment; 
         private Long fileId; 
         private Long projectId; 
         private String projectIdentifier; 
-        private String regionId; 
         private Boolean skipAllDeployFileExtensions; 
 
         private Builder() {
@@ -117,13 +117,22 @@ public class SubmitFileRequest extends Request {
 
         private Builder(SubmitFileRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.comment = request.comment;
             this.fileId = request.fileId;
             this.projectId = request.projectId;
             this.projectIdentifier = request.projectIdentifier;
-            this.regionId = request.regionId;
             this.skipAllDeployFileExtensions = request.skipAllDeployFileExtensions;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * Comment.
@@ -158,15 +167,6 @@ public class SubmitFileRequest extends Request {
         public Builder projectIdentifier(String projectIdentifier) {
             this.putBodyParameter("ProjectIdentifier", projectIdentifier);
             this.projectIdentifier = projectIdentifier;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

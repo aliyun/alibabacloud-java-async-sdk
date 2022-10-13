@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAlertMessagesRequest</p>
  */
 public class ListAlertMessagesRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Body
     @NameInMap("AlertMethods")
     private String alertMethods;
@@ -48,17 +53,13 @@ public class ListAlertMessagesRequest extends Request {
     @Validation(required = true)
     private Integer pageSize;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Body
     @NameInMap("RemindId")
     private Long remindId;
 
     private ListAlertMessagesRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.alertMethods = builder.alertMethods;
         this.alertRuleTypes = builder.alertRuleTypes;
         this.alertUser = builder.alertUser;
@@ -67,7 +68,6 @@ public class ListAlertMessagesRequest extends Request {
         this.endTime = builder.endTime;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
         this.remindId = builder.remindId;
     }
 
@@ -82,6 +82,13 @@ public class ListAlertMessagesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -141,13 +148,6 @@ public class ListAlertMessagesRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return remindId
      */
     public Long getRemindId() {
@@ -155,6 +155,7 @@ public class ListAlertMessagesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListAlertMessagesRequest, Builder> {
+        private String regionId; 
         private String alertMethods; 
         private String alertRuleTypes; 
         private String alertUser; 
@@ -163,7 +164,6 @@ public class ListAlertMessagesRequest extends Request {
         private String endTime; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private String regionId; 
         private Long remindId; 
 
         private Builder() {
@@ -172,6 +172,7 @@ public class ListAlertMessagesRequest extends Request {
 
         private Builder(ListAlertMessagesRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.alertMethods = request.alertMethods;
             this.alertRuleTypes = request.alertRuleTypes;
             this.alertUser = request.alertUser;
@@ -180,9 +181,17 @@ public class ListAlertMessagesRequest extends Request {
             this.endTime = request.endTime;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
-            this.regionId = request.regionId;
             this.remindId = request.remindId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * AlertMethods.
@@ -253,15 +262,6 @@ public class ListAlertMessagesRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
             this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

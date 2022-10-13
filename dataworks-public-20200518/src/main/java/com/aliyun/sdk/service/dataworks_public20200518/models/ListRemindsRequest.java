@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListRemindsRequest</p>
  */
 public class ListRemindsRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Body
     @NameInMap("AlertTarget")
     private String alertTarget;
@@ -34,11 +39,6 @@ public class ListRemindsRequest extends Request {
     @Validation(required = true)
     private Integer pageSize;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Body
     @NameInMap("RemindTypes")
     private String remindTypes;
@@ -49,12 +49,12 @@ public class ListRemindsRequest extends Request {
 
     private ListRemindsRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.alertTarget = builder.alertTarget;
         this.founder = builder.founder;
         this.nodeId = builder.nodeId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
         this.remindTypes = builder.remindTypes;
         this.searchText = builder.searchText;
     }
@@ -70,6 +70,13 @@ public class ListRemindsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -108,13 +115,6 @@ public class ListRemindsRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return remindTypes
      */
     public String getRemindTypes() {
@@ -129,12 +129,12 @@ public class ListRemindsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListRemindsRequest, Builder> {
+        private String regionId; 
         private String alertTarget; 
         private String founder; 
         private Long nodeId; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private String regionId; 
         private String remindTypes; 
         private String searchText; 
 
@@ -144,15 +144,24 @@ public class ListRemindsRequest extends Request {
 
         private Builder(ListRemindsRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.alertTarget = request.alertTarget;
             this.founder = request.founder;
             this.nodeId = request.nodeId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
-            this.regionId = request.regionId;
             this.remindTypes = request.remindTypes;
             this.searchText = request.searchText;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * AlertTarget.
@@ -196,15 +205,6 @@ public class ListRemindsRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
             this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

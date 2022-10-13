@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateNodeRunModeRequest</p>
  */
 public class UpdateNodeRunModeRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Body
     @NameInMap("NodeId")
     @Validation(required = true)
@@ -22,11 +27,6 @@ public class UpdateNodeRunModeRequest extends Request {
     @Validation(required = true)
     private String projectEnv;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Body
     @NameInMap("SchedulerType")
     @Validation(required = true)
@@ -34,9 +34,9 @@ public class UpdateNodeRunModeRequest extends Request {
 
     private UpdateNodeRunModeRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.nodeId = builder.nodeId;
         this.projectEnv = builder.projectEnv;
-        this.regionId = builder.regionId;
         this.schedulerType = builder.schedulerType;
     }
 
@@ -54,6 +54,13 @@ public class UpdateNodeRunModeRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return nodeId
      */
     public Long getNodeId() {
@@ -68,13 +75,6 @@ public class UpdateNodeRunModeRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return schedulerType
      */
     public Integer getSchedulerType() {
@@ -82,9 +82,9 @@ public class UpdateNodeRunModeRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateNodeRunModeRequest, Builder> {
+        private String regionId; 
         private Long nodeId; 
         private String projectEnv; 
-        private String regionId; 
         private Integer schedulerType; 
 
         private Builder() {
@@ -93,11 +93,20 @@ public class UpdateNodeRunModeRequest extends Request {
 
         private Builder(UpdateNodeRunModeRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.nodeId = request.nodeId;
             this.projectEnv = request.projectEnv;
-            this.regionId = request.regionId;
             this.schedulerType = request.schedulerType;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * NodeId.
@@ -114,15 +123,6 @@ public class UpdateNodeRunModeRequest extends Request {
         public Builder projectEnv(String projectEnv) {
             this.putBodyParameter("ProjectEnv", projectEnv);
             this.projectEnv = projectEnv;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

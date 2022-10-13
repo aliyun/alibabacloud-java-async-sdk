@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateQualityRuleRequest</p>
  */
 public class CreateQualityRuleRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Body
     @NameInMap("BlockType")
     @Validation(required = true, maximum = 1)
@@ -66,11 +71,6 @@ public class CreateQualityRuleRequest extends Request {
     @NameInMap("PropertyType")
     private String propertyType;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Body
     @NameInMap("RuleName")
     @Validation(required = true, maxLength = 128)
@@ -99,6 +99,7 @@ public class CreateQualityRuleRequest extends Request {
 
     private CreateQualityRuleRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.blockType = builder.blockType;
         this.checker = builder.checker;
         this.comment = builder.comment;
@@ -111,7 +112,6 @@ public class CreateQualityRuleRequest extends Request {
         this.projectName = builder.projectName;
         this.property = builder.property;
         this.propertyType = builder.propertyType;
-        this.regionId = builder.regionId;
         this.ruleName = builder.ruleName;
         this.ruleType = builder.ruleType;
         this.templateId = builder.templateId;
@@ -131,6 +131,13 @@ public class CreateQualityRuleRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -218,13 +225,6 @@ public class CreateQualityRuleRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return ruleName
      */
     public String getRuleName() {
@@ -267,6 +267,7 @@ public class CreateQualityRuleRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateQualityRuleRequest, Builder> {
+        private String regionId; 
         private Integer blockType; 
         private Integer checker; 
         private String comment; 
@@ -279,7 +280,6 @@ public class CreateQualityRuleRequest extends Request {
         private String projectName; 
         private String property; 
         private String propertyType; 
-        private String regionId; 
         private String ruleName; 
         private Integer ruleType; 
         private Integer templateId; 
@@ -293,6 +293,7 @@ public class CreateQualityRuleRequest extends Request {
 
         private Builder(CreateQualityRuleRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.blockType = request.blockType;
             this.checker = request.checker;
             this.comment = request.comment;
@@ -305,7 +306,6 @@ public class CreateQualityRuleRequest extends Request {
             this.projectName = request.projectName;
             this.property = request.property;
             this.propertyType = request.propertyType;
-            this.regionId = request.regionId;
             this.ruleName = request.ruleName;
             this.ruleType = request.ruleType;
             this.templateId = request.templateId;
@@ -313,6 +313,15 @@ public class CreateQualityRuleRequest extends Request {
             this.warningThreshold = request.warningThreshold;
             this.whereCondition = request.whereCondition;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * BlockType.
@@ -419,15 +428,6 @@ public class CreateQualityRuleRequest extends Request {
         public Builder propertyType(String propertyType) {
             this.putBodyParameter("PropertyType", propertyType);
             this.propertyType = propertyType;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

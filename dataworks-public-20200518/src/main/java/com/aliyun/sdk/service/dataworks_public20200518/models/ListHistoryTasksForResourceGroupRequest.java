@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListHistoryTasksForResourceGroupRequest</p>
  */
 public class ListHistoryTasksForResourceGroupRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Body
     @NameInMap("EndTime")
     @Validation(required = true, minimum = 1547952690)
@@ -30,10 +34,6 @@ public class ListHistoryTasksForResourceGroupRequest extends Request {
     @NameInMap("ProjectEnv")
     private String projectEnv;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Body
     @NameInMap("ResourceGroupIdentifier")
     @Validation(required = true)
@@ -46,11 +46,11 @@ public class ListHistoryTasksForResourceGroupRequest extends Request {
 
     private ListHistoryTasksForResourceGroupRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.endTime = builder.endTime;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.projectEnv = builder.projectEnv;
-        this.regionId = builder.regionId;
         this.resourceGroupIdentifier = builder.resourceGroupIdentifier;
         this.startTime = builder.startTime;
     }
@@ -66,6 +66,13 @@ public class ListHistoryTasksForResourceGroupRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -97,13 +104,6 @@ public class ListHistoryTasksForResourceGroupRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return resourceGroupIdentifier
      */
     public String getResourceGroupIdentifier() {
@@ -118,11 +118,11 @@ public class ListHistoryTasksForResourceGroupRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListHistoryTasksForResourceGroupRequest, Builder> {
+        private String regionId; 
         private Long endTime; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String projectEnv; 
-        private String regionId; 
         private String resourceGroupIdentifier; 
         private Long startTime; 
 
@@ -132,14 +132,23 @@ public class ListHistoryTasksForResourceGroupRequest extends Request {
 
         private Builder(ListHistoryTasksForResourceGroupRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.endTime = request.endTime;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.projectEnv = request.projectEnv;
-            this.regionId = request.regionId;
             this.resourceGroupIdentifier = request.resourceGroupIdentifier;
             this.startTime = request.startTime;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * 最晚当前时间
@@ -174,15 +183,6 @@ public class ListHistoryTasksForResourceGroupRequest extends Request {
         public Builder projectEnv(String projectEnv) {
             this.putBodyParameter("ProjectEnv", projectEnv);
             this.projectEnv = projectEnv;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

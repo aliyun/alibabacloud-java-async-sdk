@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListExtensionsRequest</p>
  */
 public class ListExtensionsRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("PageNumber")
     private Integer pageNumber;
@@ -20,15 +24,11 @@ public class ListExtensionsRequest extends Request {
     @NameInMap("PageSize")
     private Integer pageSize;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private ListExtensionsRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -45,6 +45,13 @@ public class ListExtensionsRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -58,17 +65,10 @@ public class ListExtensionsRequest extends Request {
         return this.pageSize;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<ListExtensionsRequest, Builder> {
+        private String regionId; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -76,10 +76,19 @@ public class ListExtensionsRequest extends Request {
 
         private Builder(ListExtensionsRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
-            this.regionId = request.regionId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * PageNumber.
@@ -96,15 +105,6 @@ public class ListExtensionsRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateUdfFileRequest</p>
  */
 public class CreateUdfFileRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Body
     @NameInMap("ClassName")
     @Validation(required = true)
@@ -51,11 +56,6 @@ public class CreateUdfFileRequest extends Request {
     @NameInMap("ProjectIdentifier")
     private String projectIdentifier;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Body
     @NameInMap("Resources")
     @Validation(required = true)
@@ -71,6 +71,7 @@ public class CreateUdfFileRequest extends Request {
 
     private CreateUdfFileRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.className = builder.className;
         this.cmdDescription = builder.cmdDescription;
         this.example = builder.example;
@@ -80,7 +81,6 @@ public class CreateUdfFileRequest extends Request {
         this.parameterDescription = builder.parameterDescription;
         this.projectId = builder.projectId;
         this.projectIdentifier = builder.projectIdentifier;
-        this.regionId = builder.regionId;
         this.resources = builder.resources;
         this.returnValue = builder.returnValue;
         this.udfDescription = builder.udfDescription;
@@ -97,6 +97,13 @@ public class CreateUdfFileRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -163,13 +170,6 @@ public class CreateUdfFileRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return resources
      */
     public String getResources() {
@@ -191,6 +191,7 @@ public class CreateUdfFileRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateUdfFileRequest, Builder> {
+        private String regionId; 
         private String className; 
         private String cmdDescription; 
         private String example; 
@@ -200,7 +201,6 @@ public class CreateUdfFileRequest extends Request {
         private String parameterDescription; 
         private Long projectId; 
         private String projectIdentifier; 
-        private String regionId; 
         private String resources; 
         private String returnValue; 
         private String udfDescription; 
@@ -211,6 +211,7 @@ public class CreateUdfFileRequest extends Request {
 
         private Builder(CreateUdfFileRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.className = request.className;
             this.cmdDescription = request.cmdDescription;
             this.example = request.example;
@@ -220,11 +221,19 @@ public class CreateUdfFileRequest extends Request {
             this.parameterDescription = request.parameterDescription;
             this.projectId = request.projectId;
             this.projectIdentifier = request.projectIdentifier;
-            this.regionId = request.regionId;
             this.resources = request.resources;
             this.returnValue = request.returnValue;
             this.udfDescription = request.udfDescription;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * ClassName.
@@ -304,15 +313,6 @@ public class CreateUdfFileRequest extends Request {
         public Builder projectIdentifier(String projectIdentifier) {
             this.putBodyParameter("ProjectIdentifier", projectIdentifier);
             this.projectIdentifier = projectIdentifier;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

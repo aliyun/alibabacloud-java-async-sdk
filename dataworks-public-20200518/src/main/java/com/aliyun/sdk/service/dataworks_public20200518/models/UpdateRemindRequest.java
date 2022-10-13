@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateRemindRequest</p>
  */
 public class UpdateRemindRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Body
     @NameInMap("AlertInterval")
     @Validation(maximum = 1800, minimum = 1200)
@@ -58,11 +63,6 @@ public class UpdateRemindRequest extends Request {
     @NameInMap("ProjectId")
     private Long projectId;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Body
     @NameInMap("RemindId")
     @Validation(required = true)
@@ -90,6 +90,7 @@ public class UpdateRemindRequest extends Request {
 
     private UpdateRemindRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.alertInterval = builder.alertInterval;
         this.alertMethods = builder.alertMethods;
         this.alertTargets = builder.alertTargets;
@@ -101,7 +102,6 @@ public class UpdateRemindRequest extends Request {
         this.maxAlertTimes = builder.maxAlertTimes;
         this.nodeIds = builder.nodeIds;
         this.projectId = builder.projectId;
-        this.regionId = builder.regionId;
         this.remindId = builder.remindId;
         this.remindName = builder.remindName;
         this.remindType = builder.remindType;
@@ -121,6 +121,13 @@ public class UpdateRemindRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -201,13 +208,6 @@ public class UpdateRemindRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return remindId
      */
     public Long getRemindId() {
@@ -250,6 +250,7 @@ public class UpdateRemindRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateRemindRequest, Builder> {
+        private String regionId; 
         private Integer alertInterval; 
         private String alertMethods; 
         private String alertTargets; 
@@ -261,7 +262,6 @@ public class UpdateRemindRequest extends Request {
         private Integer maxAlertTimes; 
         private String nodeIds; 
         private Long projectId; 
-        private String regionId; 
         private Long remindId; 
         private String remindName; 
         private String remindType; 
@@ -275,6 +275,7 @@ public class UpdateRemindRequest extends Request {
 
         private Builder(UpdateRemindRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.alertInterval = request.alertInterval;
             this.alertMethods = request.alertMethods;
             this.alertTargets = request.alertTargets;
@@ -286,7 +287,6 @@ public class UpdateRemindRequest extends Request {
             this.maxAlertTimes = request.maxAlertTimes;
             this.nodeIds = request.nodeIds;
             this.projectId = request.projectId;
-            this.regionId = request.regionId;
             this.remindId = request.remindId;
             this.remindName = request.remindName;
             this.remindType = request.remindType;
@@ -294,6 +294,15 @@ public class UpdateRemindRequest extends Request {
             this.robotUrls = request.robotUrls;
             this.useFlag = request.useFlag;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * AlertInterval.
@@ -391,15 +400,6 @@ public class UpdateRemindRequest extends Request {
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
             this.projectId = projectId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

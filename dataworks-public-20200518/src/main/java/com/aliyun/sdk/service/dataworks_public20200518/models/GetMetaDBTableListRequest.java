@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetMetaDBTableListRequest</p>
  */
 public class GetMetaDBTableListRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("AppGuid")
     private String appGuid;
@@ -36,20 +41,15 @@ public class GetMetaDBTableListRequest extends Request {
     @NameInMap("PageSize")
     private Integer pageSize;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     private GetMetaDBTableListRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.appGuid = builder.appGuid;
         this.clusterId = builder.clusterId;
         this.dataSourceType = builder.dataSourceType;
         this.databaseName = builder.databaseName;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -63,6 +63,13 @@ public class GetMetaDBTableListRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -107,21 +114,14 @@ public class GetMetaDBTableListRequest extends Request {
         return this.pageSize;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<GetMetaDBTableListRequest, Builder> {
+        private String regionId; 
         private String appGuid; 
         private String clusterId; 
         private String dataSourceType; 
         private String databaseName; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -129,14 +129,23 @@ public class GetMetaDBTableListRequest extends Request {
 
         private Builder(GetMetaDBTableListRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.appGuid = request.appGuid;
             this.clusterId = request.clusterId;
             this.dataSourceType = request.dataSourceType;
             this.databaseName = request.databaseName;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
-            this.regionId = request.regionId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * AppGuid.
@@ -189,15 +198,6 @@ public class GetMetaDBTableListRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

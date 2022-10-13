@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetMetaTablePartitionRequest</p>
  */
 public class GetMetaTablePartitionRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("ClusterId")
     private String clusterId;
@@ -32,11 +37,6 @@ public class GetMetaTablePartitionRequest extends Request {
     @NameInMap("PageSize")
     private Integer pageSize;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Query
     @NameInMap("SortCriterion")
     private SortCriterion sortCriterion;
@@ -51,12 +51,12 @@ public class GetMetaTablePartitionRequest extends Request {
 
     private GetMetaTablePartitionRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.clusterId = builder.clusterId;
         this.dataSourceType = builder.dataSourceType;
         this.databaseName = builder.databaseName;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
         this.sortCriterion = builder.sortCriterion;
         this.tableGuid = builder.tableGuid;
         this.tableName = builder.tableName;
@@ -73,6 +73,13 @@ public class GetMetaTablePartitionRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -111,13 +118,6 @@ public class GetMetaTablePartitionRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return sortCriterion
      */
     public SortCriterion getSortCriterion() {
@@ -139,12 +139,12 @@ public class GetMetaTablePartitionRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetMetaTablePartitionRequest, Builder> {
+        private String regionId; 
         private String clusterId; 
         private String dataSourceType; 
         private String databaseName; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private String regionId; 
         private SortCriterion sortCriterion; 
         private String tableGuid; 
         private String tableName; 
@@ -155,16 +155,25 @@ public class GetMetaTablePartitionRequest extends Request {
 
         private Builder(GetMetaTablePartitionRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.clusterId = request.clusterId;
             this.dataSourceType = request.dataSourceType;
             this.databaseName = request.databaseName;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
-            this.regionId = request.regionId;
             this.sortCriterion = request.sortCriterion;
             this.tableGuid = request.tableGuid;
             this.tableName = request.tableName;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * ClusterId.
@@ -208,15 +217,6 @@ public class GetMetaTablePartitionRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

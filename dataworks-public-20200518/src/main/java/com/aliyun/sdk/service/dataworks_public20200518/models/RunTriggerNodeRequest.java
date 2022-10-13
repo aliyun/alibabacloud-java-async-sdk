@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RunTriggerNodeRequest</p>
  */
 public class RunTriggerNodeRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Body
     @NameInMap("AppId")
     @Validation(required = true)
@@ -32,18 +37,13 @@ public class RunTriggerNodeRequest extends Request {
     @Validation(required = true)
     private Long nodeId;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     private RunTriggerNodeRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.appId = builder.appId;
         this.bizDate = builder.bizDate;
         this.cycleTime = builder.cycleTime;
         this.nodeId = builder.nodeId;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -57,6 +57,13 @@ public class RunTriggerNodeRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -87,19 +94,12 @@ public class RunTriggerNodeRequest extends Request {
         return this.nodeId;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<RunTriggerNodeRequest, Builder> {
+        private String regionId; 
         private Long appId; 
         private Long bizDate; 
         private Long cycleTime; 
         private Long nodeId; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -107,12 +107,21 @@ public class RunTriggerNodeRequest extends Request {
 
         private Builder(RunTriggerNodeRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.appId = request.appId;
             this.bizDate = request.bizDate;
             this.cycleTime = request.cycleTime;
             this.nodeId = request.nodeId;
-            this.regionId = request.regionId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * AppId.
@@ -147,15 +156,6 @@ public class RunTriggerNodeRequest extends Request {
         public Builder nodeId(Long nodeId) {
             this.putBodyParameter("NodeId", nodeId);
             this.nodeId = nodeId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

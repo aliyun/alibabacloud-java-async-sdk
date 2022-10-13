@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DesensitizeDataRequest</p>
  */
 public class DesensitizeDataRequest extends Request {
-    @Body
-    @NameInMap("Data")
-    @Validation(required = true)
-    private String data;
-
     @Host
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
+
+    @Body
+    @NameInMap("Data")
+    @Validation(required = true)
+    private String data;
 
     @Body
     @NameInMap("SceneCode")
@@ -29,8 +29,8 @@ public class DesensitizeDataRequest extends Request {
 
     private DesensitizeDataRequest(Builder builder) {
         super(builder);
-        this.data = builder.data;
         this.regionId = builder.regionId;
+        this.data = builder.data;
         this.sceneCode = builder.sceneCode;
     }
 
@@ -48,17 +48,17 @@ public class DesensitizeDataRequest extends Request {
     }
 
     /**
-     * @return data
-     */
-    public String getData() {
-        return this.data;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return data
+     */
+    public String getData() {
+        return this.data;
     }
 
     /**
@@ -69,8 +69,8 @@ public class DesensitizeDataRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DesensitizeDataRequest, Builder> {
-        private String data; 
         private String regionId; 
+        private String data; 
         private String sceneCode; 
 
         private Builder() {
@@ -79,19 +79,10 @@ public class DesensitizeDataRequest extends Request {
 
         private Builder(DesensitizeDataRequest request) {
             super(request);
-            this.data = request.data;
             this.regionId = request.regionId;
+            this.data = request.data;
             this.sceneCode = request.sceneCode;
         } 
-
-        /**
-         * Data.
-         */
-        public Builder data(String data) {
-            this.putBodyParameter("Data", data);
-            this.data = data;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -99,6 +90,15 @@ public class DesensitizeDataRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * Data.
+         */
+        public Builder data(String data) {
+            this.putBodyParameter("Data", data);
+            this.data = data;
             return this;
         }
 

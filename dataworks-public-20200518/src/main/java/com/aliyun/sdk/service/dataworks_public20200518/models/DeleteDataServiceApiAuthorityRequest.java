@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteDataServiceApiAuthorityRequest</p>
  */
 public class DeleteDataServiceApiAuthorityRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Body
     @NameInMap("ApiId")
     @Validation(required = true, minimum = 1)
@@ -27,11 +32,6 @@ public class DeleteDataServiceApiAuthorityRequest extends Request {
     @Validation(required = true, minimum = 1)
     private Long projectId;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Body
     @NameInMap("TenantId")
     @Validation(required = true, minimum = 1)
@@ -39,10 +39,10 @@ public class DeleteDataServiceApiAuthorityRequest extends Request {
 
     private DeleteDataServiceApiAuthorityRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.apiId = builder.apiId;
         this.authorizedProjectId = builder.authorizedProjectId;
         this.projectId = builder.projectId;
-        this.regionId = builder.regionId;
         this.tenantId = builder.tenantId;
     }
 
@@ -57,6 +57,13 @@ public class DeleteDataServiceApiAuthorityRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -81,13 +88,6 @@ public class DeleteDataServiceApiAuthorityRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return tenantId
      */
     public Long getTenantId() {
@@ -95,10 +95,10 @@ public class DeleteDataServiceApiAuthorityRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteDataServiceApiAuthorityRequest, Builder> {
+        private String regionId; 
         private Long apiId; 
         private Long authorizedProjectId; 
         private Long projectId; 
-        private String regionId; 
         private Long tenantId; 
 
         private Builder() {
@@ -107,12 +107,21 @@ public class DeleteDataServiceApiAuthorityRequest extends Request {
 
         private Builder(DeleteDataServiceApiAuthorityRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.apiId = request.apiId;
             this.authorizedProjectId = request.authorizedProjectId;
             this.projectId = request.projectId;
-            this.regionId = request.regionId;
             this.tenantId = request.tenantId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * ApiId.
@@ -138,15 +147,6 @@ public class DeleteDataServiceApiAuthorityRequest extends Request {
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
             this.projectId = projectId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

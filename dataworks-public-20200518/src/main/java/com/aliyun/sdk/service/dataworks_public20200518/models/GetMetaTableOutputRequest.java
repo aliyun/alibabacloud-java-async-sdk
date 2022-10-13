@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetMetaTableOutputRequest</p>
  */
 public class GetMetaTableOutputRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("EndDate")
     @Validation(required = true)
@@ -25,11 +30,6 @@ public class GetMetaTableOutputRequest extends Request {
     @NameInMap("PageSize")
     private Integer pageSize;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Query
     @NameInMap("StartDate")
     @Validation(required = true)
@@ -42,10 +42,10 @@ public class GetMetaTableOutputRequest extends Request {
 
     private GetMetaTableOutputRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.endDate = builder.endDate;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
         this.startDate = builder.startDate;
         this.tableGuid = builder.tableGuid;
     }
@@ -61,6 +61,13 @@ public class GetMetaTableOutputRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -85,13 +92,6 @@ public class GetMetaTableOutputRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return startDate
      */
     public String getStartDate() {
@@ -106,10 +106,10 @@ public class GetMetaTableOutputRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetMetaTableOutputRequest, Builder> {
+        private String regionId; 
         private String endDate; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private String regionId; 
         private String startDate; 
         private String tableGuid; 
 
@@ -119,13 +119,22 @@ public class GetMetaTableOutputRequest extends Request {
 
         private Builder(GetMetaTableOutputRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.endDate = request.endDate;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
-            this.regionId = request.regionId;
             this.startDate = request.startDate;
             this.tableGuid = request.tableGuid;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * EndDate.
@@ -151,15 +160,6 @@ public class GetMetaTableOutputRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

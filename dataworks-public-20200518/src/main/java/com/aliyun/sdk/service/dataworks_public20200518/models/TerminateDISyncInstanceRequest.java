@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>TerminateDISyncInstanceRequest</p>
  */
 public class TerminateDISyncInstanceRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("FileId")
     @Validation(required = true, minimum = 1)
@@ -22,11 +27,6 @@ public class TerminateDISyncInstanceRequest extends Request {
     @Validation(required = true, maximum = 10000000000D, minimum = 1)
     private Long projectId;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Query
     @NameInMap("TaskType")
     @Validation(required = true)
@@ -34,9 +34,9 @@ public class TerminateDISyncInstanceRequest extends Request {
 
     private TerminateDISyncInstanceRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.fileId = builder.fileId;
         this.projectId = builder.projectId;
-        this.regionId = builder.regionId;
         this.taskType = builder.taskType;
     }
 
@@ -54,6 +54,13 @@ public class TerminateDISyncInstanceRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return fileId
      */
     public Long getFileId() {
@@ -68,13 +75,6 @@ public class TerminateDISyncInstanceRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return taskType
      */
     public String getTaskType() {
@@ -82,9 +82,9 @@ public class TerminateDISyncInstanceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<TerminateDISyncInstanceRequest, Builder> {
+        private String regionId; 
         private Long fileId; 
         private Long projectId; 
-        private String regionId; 
         private String taskType; 
 
         private Builder() {
@@ -93,11 +93,20 @@ public class TerminateDISyncInstanceRequest extends Request {
 
         private Builder(TerminateDISyncInstanceRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.fileId = request.fileId;
             this.projectId = request.projectId;
-            this.regionId = request.regionId;
             this.taskType = request.taskType;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * FileId.
@@ -114,15 +123,6 @@ public class TerminateDISyncInstanceRequest extends Request {
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
             this.projectId = projectId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

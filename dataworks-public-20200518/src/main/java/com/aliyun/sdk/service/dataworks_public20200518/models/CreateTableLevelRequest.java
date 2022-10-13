@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateTableLevelRequest</p>
  */
 public class CreateTableLevelRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("Description")
     private String description;
@@ -31,18 +36,13 @@ public class CreateTableLevelRequest extends Request {
     @Validation(minimum = 1)
     private Long projectId;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     private CreateTableLevelRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.description = builder.description;
         this.levelType = builder.levelType;
         this.name = builder.name;
         this.projectId = builder.projectId;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -56,6 +56,13 @@ public class CreateTableLevelRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -86,19 +93,12 @@ public class CreateTableLevelRequest extends Request {
         return this.projectId;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<CreateTableLevelRequest, Builder> {
+        private String regionId; 
         private String description; 
         private Integer levelType; 
         private String name; 
         private Long projectId; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -106,12 +106,21 @@ public class CreateTableLevelRequest extends Request {
 
         private Builder(CreateTableLevelRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.description = request.description;
             this.levelType = request.levelType;
             this.name = request.name;
             this.projectId = request.projectId;
-            this.regionId = request.regionId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * Description.
@@ -146,15 +155,6 @@ public class CreateTableLevelRequest extends Request {
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
             this.projectId = projectId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 
