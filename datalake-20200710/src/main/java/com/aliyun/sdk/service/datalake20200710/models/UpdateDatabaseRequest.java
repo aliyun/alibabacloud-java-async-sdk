@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateDatabaseRequest</p>
  */
 public class UpdateDatabaseRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Body
     @NameInMap("CatalogId")
     private String catalogId;
@@ -24,16 +28,12 @@ public class UpdateDatabaseRequest extends Request {
     @NameInMap("Name")
     private String name;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private UpdateDatabaseRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.catalogId = builder.catalogId;
         this.databaseInput = builder.databaseInput;
         this.name = builder.name;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -47,6 +47,13 @@ public class UpdateDatabaseRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -70,30 +77,32 @@ public class UpdateDatabaseRequest extends Request {
         return this.name;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<UpdateDatabaseRequest, Builder> {
+        private String regionId; 
         private String catalogId; 
         private DatabaseInput databaseInput; 
         private String name; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(UpdateDatabaseRequest response) {
-            super(response);
-            this.catalogId = response.catalogId;
-            this.databaseInput = response.databaseInput;
-            this.name = response.name;
-            this.regionId = response.regionId;
+        private Builder(UpdateDatabaseRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.catalogId = request.catalogId;
+            this.databaseInput = request.databaseInput;
+            this.name = request.name;
         } 
+
+        /**
+         * RegionId
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * CatalogId
@@ -119,15 +128,6 @@ public class UpdateDatabaseRequest extends Request {
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
             this.name = name;
-            return this;
-        }
-
-        /**
-         * RegionId
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

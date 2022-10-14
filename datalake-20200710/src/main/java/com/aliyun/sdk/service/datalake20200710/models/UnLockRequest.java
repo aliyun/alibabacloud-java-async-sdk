@@ -12,18 +12,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UnLockRequest</p>
  */
 public class UnLockRequest extends Request {
-    @Query
-    @NameInMap("LockId")
-    private Long lockId;
-
     @Host
     @NameInMap("RegionId")
     private String regionId;
 
+    @Query
+    @NameInMap("LockId")
+    private Long lockId;
+
     private UnLockRequest(Builder builder) {
         super(builder);
-        this.lockId = builder.lockId;
         this.regionId = builder.regionId;
+        this.lockId = builder.lockId;
     }
 
     public static Builder builder() {
@@ -40,41 +40,32 @@ public class UnLockRequest extends Request {
     }
 
     /**
-     * @return lockId
-     */
-    public Long getLockId() {
-        return this.lockId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
     }
 
+    /**
+     * @return lockId
+     */
+    public Long getLockId() {
+        return this.lockId;
+    }
+
     public static final class Builder extends Request.Builder<UnLockRequest, Builder> {
-        private Long lockId; 
         private String regionId; 
+        private Long lockId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(UnLockRequest response) {
-            super(response);
-            this.lockId = response.lockId;
-            this.regionId = response.regionId;
+        private Builder(UnLockRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.lockId = request.lockId;
         } 
-
-        /**
-         * LockId
-         */
-        public Builder lockId(Long lockId) {
-            this.putQueryParameter("LockId", lockId);
-            this.lockId = lockId;
-            return this;
-        }
 
         /**
          * RegionId
@@ -82,6 +73,15 @@ public class UnLockRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * LockId
+         */
+        public Builder lockId(Long lockId) {
+            this.putQueryParameter("LockId", lockId);
+            this.lockId = lockId;
             return this;
         }
 

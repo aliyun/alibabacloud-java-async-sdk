@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateDatabaseRequest</p>
  */
 public class CreateDatabaseRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Body
     @NameInMap("CatalogId")
     private String catalogId;
@@ -20,15 +24,11 @@ public class CreateDatabaseRequest extends Request {
     @NameInMap("DatabaseInput")
     private DatabaseInput databaseInput;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private CreateDatabaseRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.catalogId = builder.catalogId;
         this.databaseInput = builder.databaseInput;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -45,6 +45,13 @@ public class CreateDatabaseRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return catalogId
      */
     public String getCatalogId() {
@@ -58,28 +65,30 @@ public class CreateDatabaseRequest extends Request {
         return this.databaseInput;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<CreateDatabaseRequest, Builder> {
+        private String regionId; 
         private String catalogId; 
         private DatabaseInput databaseInput; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateDatabaseRequest response) {
-            super(response);
-            this.catalogId = response.catalogId;
-            this.databaseInput = response.databaseInput;
-            this.regionId = response.regionId;
+        private Builder(CreateDatabaseRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.catalogId = request.catalogId;
+            this.databaseInput = request.databaseInput;
         } 
+
+        /**
+         * RegionId
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * CatalogId
@@ -96,15 +105,6 @@ public class CreateDatabaseRequest extends Request {
         public Builder databaseInput(DatabaseInput databaseInput) {
             this.putBodyParameter("DatabaseInput", databaseInput);
             this.databaseInput = databaseInput;
-            return this;
-        }
-
-        /**
-         * RegionId
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

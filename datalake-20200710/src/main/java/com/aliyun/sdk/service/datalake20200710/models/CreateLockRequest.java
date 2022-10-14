@@ -12,18 +12,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateLockRequest</p>
  */
 public class CreateLockRequest extends Request {
-    @Body
-    @NameInMap("LockObjList")
-    private java.util.List < LockObj > lockObjList;
-
     @Host
     @NameInMap("RegionId")
     private String regionId;
 
+    @Body
+    @NameInMap("LockObjList")
+    private java.util.List < LockObj > lockObjList;
+
     private CreateLockRequest(Builder builder) {
         super(builder);
-        this.lockObjList = builder.lockObjList;
         this.regionId = builder.regionId;
+        this.lockObjList = builder.lockObjList;
     }
 
     public static Builder builder() {
@@ -40,41 +40,32 @@ public class CreateLockRequest extends Request {
     }
 
     /**
-     * @return lockObjList
-     */
-    public java.util.List < LockObj > getLockObjList() {
-        return this.lockObjList;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
     }
 
+    /**
+     * @return lockObjList
+     */
+    public java.util.List < LockObj > getLockObjList() {
+        return this.lockObjList;
+    }
+
     public static final class Builder extends Request.Builder<CreateLockRequest, Builder> {
-        private java.util.List < LockObj > lockObjList; 
         private String regionId; 
+        private java.util.List < LockObj > lockObjList; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateLockRequest response) {
-            super(response);
-            this.lockObjList = response.lockObjList;
-            this.regionId = response.regionId;
+        private Builder(CreateLockRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.lockObjList = request.lockObjList;
         } 
-
-        /**
-         * LockObjList
-         */
-        public Builder lockObjList(java.util.List < LockObj > lockObjList) {
-            this.putBodyParameter("LockObjList", lockObjList);
-            this.lockObjList = lockObjList;
-            return this;
-        }
 
         /**
          * RegionId
@@ -82,6 +73,15 @@ public class CreateLockRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * LockObjList
+         */
+        public Builder lockObjList(java.util.List < LockObj > lockObjList) {
+            this.putBodyParameter("LockObjList", lockObjList);
+            this.lockObjList = lockObjList;
             return this;
         }
 

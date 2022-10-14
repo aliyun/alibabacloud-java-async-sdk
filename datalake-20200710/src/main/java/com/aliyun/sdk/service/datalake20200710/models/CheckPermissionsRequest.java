@@ -12,18 +12,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CheckPermissionsRequest</p>
  */
 public class CheckPermissionsRequest extends Request {
-    @Body
-    @NameInMap("Body")
-    private AccessRequest body;
-
     @Host
     @NameInMap("RegionId")
     private String regionId;
 
+    @Body
+    @NameInMap("Body")
+    private AccessRequest body;
+
     private CheckPermissionsRequest(Builder builder) {
         super(builder);
-        this.body = builder.body;
         this.regionId = builder.regionId;
+        this.body = builder.body;
     }
 
     public static Builder builder() {
@@ -40,41 +40,32 @@ public class CheckPermissionsRequest extends Request {
     }
 
     /**
-     * @return body
-     */
-    public AccessRequest getBody() {
-        return this.body;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
     }
 
+    /**
+     * @return body
+     */
+    public AccessRequest getBody() {
+        return this.body;
+    }
+
     public static final class Builder extends Request.Builder<CheckPermissionsRequest, Builder> {
-        private AccessRequest body; 
         private String regionId; 
+        private AccessRequest body; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CheckPermissionsRequest response) {
-            super(response);
-            this.body = response.body;
-            this.regionId = response.regionId;
+        private Builder(CheckPermissionsRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.body = request.body;
         } 
-
-        /**
-         * Body.
-         */
-        public Builder body(AccessRequest body) {
-            this.putBodyParameter("Body", body);
-            this.body = body;
-            return this;
-        }
 
         /**
          * RegionId
@@ -82,6 +73,15 @@ public class CheckPermissionsRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * Body.
+         */
+        public Builder body(AccessRequest body) {
+            this.putBodyParameter("Body", body);
+            this.body = body;
             return this;
         }
 

@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetTableRequest</p>
  */
 public class GetTableRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("CatalogId")
     private String catalogId;
@@ -20,19 +24,15 @@ public class GetTableRequest extends Request {
     @NameInMap("DatabaseName")
     private String databaseName;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("TableName")
     private String tableName;
 
     private GetTableRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.catalogId = builder.catalogId;
         this.databaseName = builder.databaseName;
-        this.regionId = builder.regionId;
         this.tableName = builder.tableName;
     }
 
@@ -50,6 +50,13 @@ public class GetTableRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return catalogId
      */
     public String getCatalogId() {
@@ -64,13 +71,6 @@ public class GetTableRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return tableName
      */
     public String getTableName() {
@@ -78,22 +78,31 @@ public class GetTableRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetTableRequest, Builder> {
+        private String regionId; 
         private String catalogId; 
         private String databaseName; 
-        private String regionId; 
         private String tableName; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetTableRequest response) {
-            super(response);
-            this.catalogId = response.catalogId;
-            this.databaseName = response.databaseName;
-            this.regionId = response.regionId;
-            this.tableName = response.tableName;
+        private Builder(GetTableRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.catalogId = request.catalogId;
+            this.databaseName = request.databaseName;
+            this.tableName = request.tableName;
         } 
+
+        /**
+         * RegionId
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * CatalogId
@@ -110,15 +119,6 @@ public class GetTableRequest extends Request {
         public Builder databaseName(String databaseName) {
             this.putQueryParameter("DatabaseName", databaseName);
             this.databaseName = databaseName;
-            return this;
-        }
-
-        /**
-         * RegionId
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

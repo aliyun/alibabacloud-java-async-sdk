@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteFunctionRequest</p>
  */
 public class DeleteFunctionRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("CatalogId")
     private String catalogId;
@@ -24,16 +28,12 @@ public class DeleteFunctionRequest extends Request {
     @NameInMap("FunctionName")
     private String functionName;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private DeleteFunctionRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.catalogId = builder.catalogId;
         this.databaseName = builder.databaseName;
         this.functionName = builder.functionName;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -47,6 +47,13 @@ public class DeleteFunctionRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -70,30 +77,32 @@ public class DeleteFunctionRequest extends Request {
         return this.functionName;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<DeleteFunctionRequest, Builder> {
+        private String regionId; 
         private String catalogId; 
         private String databaseName; 
         private String functionName; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DeleteFunctionRequest response) {
-            super(response);
-            this.catalogId = response.catalogId;
-            this.databaseName = response.databaseName;
-            this.functionName = response.functionName;
-            this.regionId = response.regionId;
+        private Builder(DeleteFunctionRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.catalogId = request.catalogId;
+            this.databaseName = request.databaseName;
+            this.functionName = request.functionName;
         } 
+
+        /**
+         * RegionId
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * CatalogId
@@ -119,15 +128,6 @@ public class DeleteFunctionRequest extends Request {
         public Builder functionName(String functionName) {
             this.putQueryParameter("FunctionName", functionName);
             this.functionName = functionName;
-            return this;
-        }
-
-        /**
-         * RegionId
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

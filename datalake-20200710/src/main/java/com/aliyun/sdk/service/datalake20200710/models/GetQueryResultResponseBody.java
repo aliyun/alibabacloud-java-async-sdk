@@ -78,6 +78,9 @@ public class GetQueryResultResponseBody extends TeaModel {
     @NameInMap("Success")
     private Boolean success;
 
+    @NameInMap("TotalBytesProcessed")
+    private Long totalBytesProcessed;
+
     private GetQueryResultResponseBody(Builder builder) {
         this.duration = builder.duration;
         this.endTime = builder.endTime;
@@ -101,6 +104,7 @@ public class GetQueryResultResponseBody extends TeaModel {
         this.startTime = builder.startTime;
         this.status = builder.status;
         this.success = builder.success;
+        this.totalBytesProcessed = builder.totalBytesProcessed;
     }
 
     public static Builder builder() {
@@ -265,6 +269,13 @@ public class GetQueryResultResponseBody extends TeaModel {
         return this.success;
     }
 
+    /**
+     * @return totalBytesProcessed
+     */
+    public Long getTotalBytesProcessed() {
+        return this.totalBytesProcessed;
+    }
+
     public static final class Builder {
         private Long duration; 
         private String endTime; 
@@ -288,6 +299,7 @@ public class GetQueryResultResponseBody extends TeaModel {
         private String startTime; 
         private String status; 
         private Boolean success; 
+        private Long totalBytesProcessed; 
 
         /**
          * Duration.
@@ -462,6 +474,14 @@ public class GetQueryResultResponseBody extends TeaModel {
          */
         public Builder success(Boolean success) {
             this.success = success;
+            return this;
+        }
+
+        /**
+         * TotalBytesProcessed.
+         */
+        public Builder totalBytesProcessed(Long totalBytesProcessed) {
+            this.totalBytesProcessed = totalBytesProcessed;
             return this;
         }
 

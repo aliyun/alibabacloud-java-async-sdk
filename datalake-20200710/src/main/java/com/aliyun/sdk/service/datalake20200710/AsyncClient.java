@@ -36,23 +36,19 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<BatchGetTablesResponse> batchGetTables(BatchGetTablesRequest request);
 
+    CompletableFuture<BatchGrantPermissionsResponse> batchGrantPermissions(BatchGrantPermissionsRequest request);
+
+    CompletableFuture<BatchRevokePermissionsResponse> batchRevokePermissions(BatchRevokePermissionsRequest request);
+
     CompletableFuture<BatchUpdatePartitionsResponse> batchUpdatePartitions(BatchUpdatePartitionsRequest request);
 
     CompletableFuture<BatchUpdateTablesResponse> batchUpdateTables(BatchUpdateTablesRequest request);
 
     CompletableFuture<CancelQueryResponse> cancelQuery(CancelQueryRequest request);
 
-    CompletableFuture<CheckBlueprintInstanceNameResponse> checkBlueprintInstanceName(CheckBlueprintInstanceNameRequest request);
-
-    CompletableFuture<CheckConnectionResponse> checkConnection(CheckConnectionRequest request);
-
-    CompletableFuture<CheckConnectivityResponse> checkConnectivity(CheckConnectivityRequest request);
-
     CompletableFuture<CheckPermissionsResponse> checkPermissions(CheckPermissionsRequest request);
 
-    CompletableFuture<CreateBlueprintInstanceResponse> createBlueprintInstance(CreateBlueprintInstanceRequest request);
-
-    CompletableFuture<CreateDataSourceResponse> createDataSource(CreateDataSourceRequest request);
+    CompletableFuture<CreateCatalogResponse> createCatalog(CreateCatalogRequest request);
 
     CompletableFuture<CreateDatabaseResponse> createDatabase(CreateDatabaseRequest request);
 
@@ -60,39 +56,23 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateLockResponse> createLock(CreateLockRequest request);
 
-    CompletableFuture<CreateMetastoreCrawlerResponse> createMetastoreCrawler(CreateMetastoreCrawlerRequest request);
-
-    CompletableFuture<CreateMetastoreMigrationResponse> createMetastoreMigration(CreateMetastoreMigrationRequest request);
-
     CompletableFuture<CreatePartitionResponse> createPartition(CreatePartitionRequest request);
 
-    CompletableFuture<CreateSavedQueryResponse> createSavedQuery(CreateSavedQueryRequest request);
-
-    CompletableFuture<CreateStorageCollectorResponse> createStorageCollector(CreateStorageCollectorRequest request);
+    CompletableFuture<CreateRoleResponse> createRole(CreateRoleRequest request);
 
     CompletableFuture<CreateTableResponse> createTable(CreateTableRequest request);
 
-    CompletableFuture<CreateTpcdsDatabaseResponse> createTpcdsDatabase(CreateTpcdsDatabaseRequest request);
-
-    CompletableFuture<CreateUserFeedbackResponse> createUserFeedback(CreateUserFeedbackRequest request);
-
-    CompletableFuture<DeleteBlueprintInstanceResponse> deleteBlueprintInstance(DeleteBlueprintInstanceRequest request);
-
-    CompletableFuture<DeleteDataSourceResponse> deleteDataSource(DeleteDataSourceRequest request);
+    CompletableFuture<DeleteCatalogResponse> deleteCatalog(DeleteCatalogRequest request);
 
     CompletableFuture<DeleteDatabaseResponse> deleteDatabase(DeleteDatabaseRequest request);
 
     CompletableFuture<DeleteFunctionResponse> deleteFunction(DeleteFunctionRequest request);
 
-    CompletableFuture<DeleteMetastoreCrawlerResponse> deleteMetastoreCrawler(DeleteMetastoreCrawlerRequest request);
-
-    CompletableFuture<DeleteMetastoreMigrationResponse> deleteMetastoreMigration(DeleteMetastoreMigrationRequest request);
-
     CompletableFuture<DeletePartitionResponse> deletePartition(DeletePartitionRequest request);
 
     CompletableFuture<DeletePartitionColumnStatisticsResponse> deletePartitionColumnStatistics(DeletePartitionColumnStatisticsRequest request);
 
-    CompletableFuture<DeleteSavedQueryResponse> deleteSavedQuery(DeleteSavedQueryRequest request);
+    CompletableFuture<DeleteRoleResponse> deleteRole(DeleteRoleRequest request);
 
     CompletableFuture<DeleteTableResponse> deleteTable(DeleteTableRequest request);
 
@@ -100,41 +80,19 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteTableVersionResponse> deleteTableVersion(DeleteTableVersionRequest request);
 
-    CompletableFuture<DescribeBlueprintInstanceResponse> describeBlueprintInstance(DescribeBlueprintInstanceRequest request);
-
-    CompletableFuture<DescribeDataSourceResponse> describeDataSource(DescribeDataSourceRequest request);
-
-    CompletableFuture<DescribeMetastoreCrawlerResponse> describeMetastoreCrawler(DescribeMetastoreCrawlerRequest request);
-
     CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request);
-
-    CompletableFuture<ExportQueryResultResponse> exportQueryResult(ExportQueryResultRequest request);
 
     CompletableFuture<GetAsyncTaskStatusResponse> getAsyncTaskStatus(GetAsyncTaskStatusRequest request);
 
-    CompletableFuture<GetBlueprintInstanceResponse> getBlueprintInstance(GetBlueprintInstanceRequest request);
+    CompletableFuture<GetCatalogResponse> getCatalog(GetCatalogRequest request);
 
-    CompletableFuture<GetDataSourceResponse> getDataSource(GetDataSourceRequest request);
+    CompletableFuture<GetCatalogSettingsResponse> getCatalogSettings(GetCatalogSettingsRequest request);
 
     CompletableFuture<GetDatabaseResponse> getDatabase(GetDatabaseRequest request);
 
-    CompletableFuture<GetEtlResourceUsagesResponse> getEtlResourceUsages(GetEtlResourceUsagesRequest request);
-
     CompletableFuture<GetFunctionResponse> getFunction(GetFunctionRequest request);
 
-    CompletableFuture<GetIndicatorDetailsResponse> getIndicatorDetails(GetIndicatorDetailsRequest request);
-
-    CompletableFuture<GetLatestDateResponse> getLatestDate(GetLatestDateRequest request);
-
     CompletableFuture<GetLockResponse> getLock(GetLockRequest request);
-
-    CompletableFuture<GetMetaDataApiCallUsagesResponse> getMetaDataApiCallUsages(GetMetaDataApiCallUsagesRequest request);
-
-    CompletableFuture<GetMetaDataStorageUsagesResponse> getMetaDataStorageUsages(GetMetaDataStorageUsagesRequest request);
-
-    CompletableFuture<GetMetastoreMigrationResponse> getMetastoreMigration(GetMetastoreMigrationRequest request);
-
-    CompletableFuture<GetMigrationWorkflowInstanceLogInfoResponse> getMigrationWorkflowInstanceLogInfo(GetMigrationWorkflowInstanceLogInfoRequest request);
 
     CompletableFuture<GetPartitionResponse> getPartition(GetPartitionRequest request);
 
@@ -142,19 +100,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetQueryResultResponse> getQueryResult(GetQueryResultRequest request);
 
-    CompletableFuture<GetRdsDBInstanceAttributeResponse> getRdsDBInstanceAttribute(GetRdsDBInstanceAttributeRequest request);
-
-    CompletableFuture<GetRegionClusterInfoResponse> getRegionClusterInfo(GetRegionClusterInfoRequest request);
-
     CompletableFuture<GetRegionStatusResponse> getRegionStatus(GetRegionStatusRequest request);
 
+    CompletableFuture<GetRoleResponse> getRole(GetRoleRequest request);
+
     CompletableFuture<GetServiceStatusResponse> getServiceStatus(GetServiceStatusRequest request);
-
-    CompletableFuture<GetStatisticsResponse> getStatistics(GetStatisticsRequest request);
-
-    CompletableFuture<GetStorageAnalysisResponse> getStorageAnalysis(GetStorageAnalysisRequest request);
-
-    CompletableFuture<GetStorageRankResponse> getStorageRank(GetStorageRankRequest request);
 
     CompletableFuture<GetTableResponse> getTable(GetTableRequest request);
 
@@ -164,31 +114,19 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetTableVersionResponse> getTableVersion(GetTableVersionRequest request);
 
-    CompletableFuture<GetWorkflowInstanceResponse> getWorkflowInstance(GetWorkflowInstanceRequest request);
+    CompletableFuture<GrantPermissionsResponse> grantPermissions(GrantPermissionsRequest request);
 
-    CompletableFuture<ListBlueprintInstanceCreatorsResponse> listBlueprintInstanceCreators(ListBlueprintInstanceCreatorsRequest request);
+    CompletableFuture<GrantRoleToUsersResponse> grantRoleToUsers(GrantRoleToUsersRequest request);
 
-    CompletableFuture<ListBlueprintInstancesResponse> listBlueprintInstances(ListBlueprintInstancesRequest request);
+    CompletableFuture<GrantRolesToUserResponse> grantRolesToUser(GrantRolesToUserRequest request);
 
     CompletableFuture<ListCatalogsResponse> listCatalogs(ListCatalogsRequest request);
-
-    CompletableFuture<ListCrawlerWorkflowInstanceResponse> listCrawlerWorkflowInstance(ListCrawlerWorkflowInstanceRequest request);
-
-    CompletableFuture<ListDataSourcesResponse> listDataSources(ListDataSourcesRequest request);
 
     CompletableFuture<ListDatabasesResponse> listDatabases(ListDatabasesRequest request);
 
     CompletableFuture<ListFunctionNamesResponse> listFunctionNames(ListFunctionNamesRequest request);
 
     CompletableFuture<ListFunctionsResponse> listFunctions(ListFunctionsRequest request);
-
-    CompletableFuture<ListMetastoreCrawlerResponse> listMetastoreCrawler(ListMetastoreCrawlerRequest request);
-
-    CompletableFuture<ListMetastoreCrawlerCreatorsResponse> listMetastoreCrawlerCreators(ListMetastoreCrawlerCreatorsRequest request);
-
-    CompletableFuture<ListMetastoreMigrationsResponse> listMetastoreMigrations(ListMetastoreMigrationsRequest request);
-
-    CompletableFuture<ListMigrationWorkflowInstancesResponse> listMigrationWorkflowInstances(ListMigrationWorkflowInstancesRequest request);
 
     CompletableFuture<ListPartitionNamesResponse> listPartitionNames(ListPartitionNamesRequest request);
 
@@ -198,13 +136,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListPartitionsByFilterResponse> listPartitionsByFilter(ListPartitionsByFilterRequest request);
 
-    CompletableFuture<ListQueryHistoryResponse> listQueryHistory(ListQueryHistoryRequest request);
+    CompletableFuture<ListPermissionsResponse> listPermissions(ListPermissionsRequest request);
 
-    CompletableFuture<ListRdsDBInstancesResponse> listRdsDBInstances(ListRdsDBInstancesRequest request);
+    CompletableFuture<ListRoleUsersResponse> listRoleUsers(ListRoleUsersRequest request);
 
-    CompletableFuture<ListSavedQueryResponse> listSavedQuery(ListSavedQueryRequest request);
-
-    CompletableFuture<ListStorageCollectorResponse> listStorageCollector(ListStorageCollectorRequest request);
+    CompletableFuture<ListRolesResponse> listRoles(ListRolesRequest request);
 
     CompletableFuture<ListTableNamesResponse> listTableNames(ListTableNamesRequest request);
 
@@ -212,35 +148,25 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListTablesResponse> listTables(ListTablesRequest request);
 
-    CompletableFuture<ListWorkflowInstantencesResponse> listWorkflowInstantences(ListWorkflowInstantencesRequest request);
-
-    CompletableFuture<ListWorkspacesResponse> listWorkspaces(ListWorkspacesRequest request);
-
-    CompletableFuture<ModifyMetastoreCrawlerResponse> modifyMetastoreCrawler(ModifyMetastoreCrawlerRequest request);
-
-    CompletableFuture<ModifyWorkflowExecuteInfoResponse> modifyWorkflowExecuteInfo(ModifyWorkflowExecuteInfoRequest request);
-
-    CompletableFuture<PreviewMetastoreCrawlerResponse> previewMetastoreCrawler(PreviewMetastoreCrawlerRequest request);
+    CompletableFuture<ListUserRolesResponse> listUserRoles(ListUserRolesRequest request);
 
     CompletableFuture<RefreshLockResponse> refreshLock(RefreshLockRequest request);
-
-    CompletableFuture<RefreshUserSessionResponse> refreshUserSession(RefreshUserSessionRequest request);
 
     CompletableFuture<RenamePartitionResponse> renamePartition(RenamePartitionRequest request);
 
     CompletableFuture<RenameTableResponse> renameTable(RenameTableRequest request);
 
-    CompletableFuture<RunBlueprintInstanceWorkflowResponse> runBlueprintInstanceWorkflow(RunBlueprintInstanceWorkflowRequest request);
+    CompletableFuture<RevokePermissionsResponse> revokePermissions(RevokePermissionsRequest request);
 
-    CompletableFuture<RunCrawlerWorkflowResponse> runCrawlerWorkflow(RunCrawlerWorkflowRequest request);
+    CompletableFuture<RevokeRoleFromUsersResponse> revokeRoleFromUsers(RevokeRoleFromUsersRequest request);
+
+    CompletableFuture<RevokeRolesFromUserResponse> revokeRolesFromUser(RevokeRolesFromUserRequest request);
 
     CompletableFuture<RunMigrationWorkflowResponse> runMigrationWorkflow(RunMigrationWorkflowRequest request);
 
     CompletableFuture<SearchResponse> search(SearchRequest request);
 
-    CompletableFuture<StopBlueprintInstanceWorkflowResponse> stopBlueprintInstanceWorkflow(StopBlueprintInstanceWorkflowRequest request);
-
-    CompletableFuture<StopCrawlerWorkflowResponse> stopCrawlerWorkflow(StopCrawlerWorkflowRequest request);
+    CompletableFuture<SearchAcrossCatalogResponse> searchAcrossCatalog(SearchAcrossCatalogRequest request);
 
     CompletableFuture<StopMigrationWorkflowResponse> stopMigrationWorkflow(StopMigrationWorkflowRequest request);
 
@@ -248,26 +174,24 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<UnLockResponse> unLock(UnLockRequest request);
 
-    CompletableFuture<UpdateBlueprintInstanceResponse> updateBlueprintInstance(UpdateBlueprintInstanceRequest request);
+    CompletableFuture<UpdateCatalogResponse> updateCatalog(UpdateCatalogRequest request);
 
-    CompletableFuture<UpdateDataSourceResponse> updateDataSource(UpdateDataSourceRequest request);
+    CompletableFuture<UpdateCatalogSettingsResponse> updateCatalogSettings(UpdateCatalogSettingsRequest request);
 
     CompletableFuture<UpdateDatabaseResponse> updateDatabase(UpdateDatabaseRequest request);
 
     CompletableFuture<UpdateFunctionResponse> updateFunction(UpdateFunctionRequest request);
 
-    CompletableFuture<UpdateMetastoreMigrationResponse> updateMetastoreMigration(UpdateMetastoreMigrationRequest request);
-
     CompletableFuture<UpdatePartitionColumnStatisticsResponse> updatePartitionColumnStatistics(UpdatePartitionColumnStatisticsRequest request);
+
+    CompletableFuture<UpdatePermissionsResponse> updatePermissions(UpdatePermissionsRequest request);
+
+    CompletableFuture<UpdateRoleResponse> updateRole(UpdateRoleRequest request);
+
+    CompletableFuture<UpdateRoleUsersResponse> updateRoleUsers(UpdateRoleUsersRequest request);
 
     CompletableFuture<UpdateTableResponse> updateTable(UpdateTableRequest request);
 
     CompletableFuture<UpdateTableColumnStatisticsResponse> updateTableColumnStatistics(UpdateTableColumnStatisticsRequest request);
-
-    CompletableFuture<UpdateWorkflowExecuteInfoResponse> updateWorkflowExecuteInfo(UpdateWorkflowExecuteInfoRequest request);
-
-    CompletableFuture<UpdateWorkflowScheduleStatusResponse> updateWorkflowScheduleStatus(UpdateWorkflowScheduleStatusRequest request);
-
-    CompletableFuture<UpdateWorkspaceConfigResponse> updateWorkspaceConfig(UpdateWorkspaceConfigRequest request);
 
 }

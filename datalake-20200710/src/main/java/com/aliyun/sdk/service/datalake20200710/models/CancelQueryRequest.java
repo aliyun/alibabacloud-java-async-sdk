@@ -12,18 +12,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CancelQueryRequest</p>
  */
 public class CancelQueryRequest extends Request {
-    @Query
-    @NameInMap("QueryId")
-    private String queryId;
-
     @Host
     @NameInMap("RegionId")
     private String regionId;
 
+    @Query
+    @NameInMap("QueryId")
+    private String queryId;
+
     private CancelQueryRequest(Builder builder) {
         super(builder);
-        this.queryId = builder.queryId;
         this.regionId = builder.regionId;
+        this.queryId = builder.queryId;
     }
 
     public static Builder builder() {
@@ -40,41 +40,32 @@ public class CancelQueryRequest extends Request {
     }
 
     /**
-     * @return queryId
-     */
-    public String getQueryId() {
-        return this.queryId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
     }
 
+    /**
+     * @return queryId
+     */
+    public String getQueryId() {
+        return this.queryId;
+    }
+
     public static final class Builder extends Request.Builder<CancelQueryRequest, Builder> {
-        private String queryId; 
         private String regionId; 
+        private String queryId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CancelQueryRequest response) {
-            super(response);
-            this.queryId = response.queryId;
-            this.regionId = response.regionId;
+        private Builder(CancelQueryRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.queryId = request.queryId;
         } 
-
-        /**
-         * QueryId.
-         */
-        public Builder queryId(String queryId) {
-            this.putQueryParameter("QueryId", queryId);
-            this.queryId = queryId;
-            return this;
-        }
 
         /**
          * RegionId
@@ -82,6 +73,15 @@ public class CancelQueryRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * QueryId.
+         */
+        public Builder queryId(String queryId) {
+            this.putQueryParameter("QueryId", queryId);
+            this.queryId = queryId;
             return this;
         }
 

@@ -54,11 +54,17 @@ public class Table extends TeaModel {
     @NameInMap("Sd")
     private StorageDescriptor sd;
 
+    @NameInMap("TableId")
+    private String tableId;
+
     @NameInMap("TableName")
     private String tableName;
 
     @NameInMap("TableType")
     private String tableType;
+
+    @NameInMap("TableVersion")
+    private TableVersion tableVersion;
 
     @NameInMap("Temporary")
     private Boolean temporary;
@@ -87,8 +93,10 @@ public class Table extends TeaModel {
         this.retention = builder.retention;
         this.rewriteEnabled = builder.rewriteEnabled;
         this.sd = builder.sd;
+        this.tableId = builder.tableId;
         this.tableName = builder.tableName;
         this.tableType = builder.tableType;
+        this.tableVersion = builder.tableVersion;
         this.temporary = builder.temporary;
         this.updateTime = builder.updateTime;
         this.viewExpandedText = builder.viewExpandedText;
@@ -202,6 +210,13 @@ public class Table extends TeaModel {
     }
 
     /**
+     * @return tableId
+     */
+    public String getTableId() {
+        return this.tableId;
+    }
+
+    /**
      * @return tableName
      */
     public String getTableName() {
@@ -213,6 +228,13 @@ public class Table extends TeaModel {
      */
     public String getTableType() {
         return this.tableType;
+    }
+
+    /**
+     * @return tableVersion
+     */
+    public TableVersion getTableVersion() {
+        return this.tableVersion;
     }
 
     /**
@@ -258,8 +280,10 @@ public class Table extends TeaModel {
         private Integer retention; 
         private Boolean rewriteEnabled; 
         private StorageDescriptor sd; 
+        private String tableId; 
         private String tableName; 
         private String tableType; 
+        private TableVersion tableVersion; 
         private Boolean temporary; 
         private Integer updateTime; 
         private String viewExpandedText; 
@@ -378,6 +402,14 @@ public class Table extends TeaModel {
         }
 
         /**
+         * TableId
+         */
+        public Builder tableId(String tableId) {
+            this.tableId = tableId;
+            return this;
+        }
+
+        /**
          * TableName
          */
         public Builder tableName(String tableName) {
@@ -390,6 +422,14 @@ public class Table extends TeaModel {
          */
         public Builder tableType(String tableType) {
             this.tableType = tableType;
+            return this;
+        }
+
+        /**
+         * TableVersion
+         */
+        public Builder tableVersion(TableVersion tableVersion) {
+            this.tableVersion = tableVersion;
             return this;
         }
 

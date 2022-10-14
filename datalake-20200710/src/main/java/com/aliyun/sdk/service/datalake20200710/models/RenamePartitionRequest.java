@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RenamePartitionRequest</p>
  */
 public class RenamePartitionRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Body
     @NameInMap("CatalogId")
     private String catalogId;
@@ -32,18 +36,14 @@ public class RenamePartitionRequest extends Request {
     @NameInMap("TableName")
     private String tableName;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private RenamePartitionRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.catalogId = builder.catalogId;
         this.databaseName = builder.databaseName;
         this.partitionInput = builder.partitionInput;
         this.partitionValues = builder.partitionValues;
         this.tableName = builder.tableName;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -57,6 +57,13 @@ public class RenamePartitionRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -94,34 +101,36 @@ public class RenamePartitionRequest extends Request {
         return this.tableName;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<RenamePartitionRequest, Builder> {
+        private String regionId; 
         private String catalogId; 
         private String databaseName; 
         private PartitionInput partitionInput; 
         private java.util.List < String > partitionValues; 
         private String tableName; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(RenamePartitionRequest response) {
-            super(response);
-            this.catalogId = response.catalogId;
-            this.databaseName = response.databaseName;
-            this.partitionInput = response.partitionInput;
-            this.partitionValues = response.partitionValues;
-            this.tableName = response.tableName;
-            this.regionId = response.regionId;
+        private Builder(RenamePartitionRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.catalogId = request.catalogId;
+            this.databaseName = request.databaseName;
+            this.partitionInput = request.partitionInput;
+            this.partitionValues = request.partitionValues;
+            this.tableName = request.tableName;
         } 
+
+        /**
+         * RegionId
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * CatalogId
@@ -165,15 +174,6 @@ public class RenamePartitionRequest extends Request {
         public Builder tableName(String tableName) {
             this.putBodyParameter("TableName", tableName);
             this.tableName = tableName;
-            return this;
-        }
-
-        /**
-         * RegionId
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

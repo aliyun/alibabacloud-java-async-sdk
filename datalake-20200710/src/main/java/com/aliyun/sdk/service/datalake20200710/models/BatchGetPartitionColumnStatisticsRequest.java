@@ -113,14 +113,14 @@ public class BatchGetPartitionColumnStatisticsRequest extends Request {
             super();
         } 
 
-        private Builder(BatchGetPartitionColumnStatisticsRequest response) {
-            super(response);
-            this.regionId = response.regionId;
-            this.catalogId = response.catalogId;
-            this.columnNames = response.columnNames;
-            this.databaseName = response.databaseName;
-            this.partitionNames = response.partitionNames;
-            this.tableName = response.tableName;
+        private Builder(BatchGetPartitionColumnStatisticsRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.catalogId = request.catalogId;
+            this.columnNames = request.columnNames;
+            this.databaseName = request.databaseName;
+            this.partitionNames = request.partitionNames;
+            this.tableName = request.tableName;
         } 
 
         /**

@@ -33,6 +33,10 @@ public class SearchRequest extends Request {
     private String searchText;
 
     @Body
+    @NameInMap("SearchType")
+    private String searchType;
+
+    @Body
     @NameInMap("SortCriteria")
     private java.util.List < SortCriterion > sortCriteria;
 
@@ -43,6 +47,7 @@ public class SearchRequest extends Request {
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.searchText = builder.searchText;
+        this.searchType = builder.searchType;
         this.sortCriteria = builder.sortCriteria;
     }
 
@@ -95,6 +100,13 @@ public class SearchRequest extends Request {
     }
 
     /**
+     * @return searchType
+     */
+    public String getSearchType() {
+        return this.searchType;
+    }
+
+    /**
      * @return sortCriteria
      */
     public java.util.List < SortCriterion > getSortCriteria() {
@@ -107,20 +119,22 @@ public class SearchRequest extends Request {
         private Long pageNumber; 
         private Long pageSize; 
         private String searchText; 
+        private String searchType; 
         private java.util.List < SortCriterion > sortCriteria; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(SearchRequest response) {
-            super(response);
-            this.regionId = response.regionId;
-            this.catalogId = response.catalogId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.searchText = response.searchText;
-            this.sortCriteria = response.sortCriteria;
+        private Builder(SearchRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.catalogId = request.catalogId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.searchText = request.searchText;
+            this.searchType = request.searchType;
+            this.sortCriteria = request.sortCriteria;
         } 
 
         /**
@@ -165,6 +179,15 @@ public class SearchRequest extends Request {
         public Builder searchText(String searchText) {
             this.putBodyParameter("SearchText", searchText);
             this.searchText = searchText;
+            return this;
+        }
+
+        /**
+         * SearchType.
+         */
+        public Builder searchType(String searchType) {
+            this.putBodyParameter("SearchType", searchType);
+            this.searchType = searchType;
             return this;
         }
 

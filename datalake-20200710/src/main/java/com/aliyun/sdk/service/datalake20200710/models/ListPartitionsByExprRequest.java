@@ -48,9 +48,9 @@ public class ListPartitionsByExprRequest extends Request {
             super();
         } 
 
-        private Builder(ListPartitionsByExprRequest response) {
-            super(response);
-            this.regionId = response.regionId;
+        private Builder(ListPartitionsByExprRequest request) {
+            super(request);
+            this.regionId = request.regionId;
         } 
 
         /**

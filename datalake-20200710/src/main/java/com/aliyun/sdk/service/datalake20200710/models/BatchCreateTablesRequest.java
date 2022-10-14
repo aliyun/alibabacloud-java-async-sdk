@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BatchCreateTablesRequest</p>
  */
 public class BatchCreateTablesRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Body
     @NameInMap("CatalogId")
     private String catalogId;
@@ -28,17 +32,13 @@ public class BatchCreateTablesRequest extends Request {
     @NameInMap("TableInputs")
     private java.util.List < TableInput > tableInputs;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private BatchCreateTablesRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.catalogId = builder.catalogId;
         this.databaseName = builder.databaseName;
         this.ifNotExists = builder.ifNotExists;
         this.tableInputs = builder.tableInputs;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -52,6 +52,13 @@ public class BatchCreateTablesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -82,32 +89,34 @@ public class BatchCreateTablesRequest extends Request {
         return this.tableInputs;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<BatchCreateTablesRequest, Builder> {
+        private String regionId; 
         private String catalogId; 
         private String databaseName; 
         private Boolean ifNotExists; 
         private java.util.List < TableInput > tableInputs; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(BatchCreateTablesRequest response) {
-            super(response);
-            this.catalogId = response.catalogId;
-            this.databaseName = response.databaseName;
-            this.ifNotExists = response.ifNotExists;
-            this.tableInputs = response.tableInputs;
-            this.regionId = response.regionId;
+        private Builder(BatchCreateTablesRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.catalogId = request.catalogId;
+            this.databaseName = request.databaseName;
+            this.ifNotExists = request.ifNotExists;
+            this.tableInputs = request.tableInputs;
         } 
+
+        /**
+         * RegionId
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * CatalogId
@@ -142,15 +151,6 @@ public class BatchCreateTablesRequest extends Request {
         public Builder tableInputs(java.util.List < TableInput > tableInputs) {
             this.putBodyParameter("TableInputs", tableInputs);
             this.tableInputs = tableInputs;
-            return this;
-        }
-
-        /**
-         * RegionId
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

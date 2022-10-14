@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BatchGetTablesRequest</p>
  */
 public class BatchGetTablesRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Body
     @NameInMap("CatalogId")
     private String catalogId;
@@ -24,16 +28,12 @@ public class BatchGetTablesRequest extends Request {
     @NameInMap("TableNames")
     private java.util.List < String > tableNames;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private BatchGetTablesRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.catalogId = builder.catalogId;
         this.databaseName = builder.databaseName;
         this.tableNames = builder.tableNames;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -47,6 +47,13 @@ public class BatchGetTablesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -70,30 +77,32 @@ public class BatchGetTablesRequest extends Request {
         return this.tableNames;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<BatchGetTablesRequest, Builder> {
+        private String regionId; 
         private String catalogId; 
         private String databaseName; 
         private java.util.List < String > tableNames; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(BatchGetTablesRequest response) {
-            super(response);
-            this.catalogId = response.catalogId;
-            this.databaseName = response.databaseName;
-            this.tableNames = response.tableNames;
-            this.regionId = response.regionId;
+        private Builder(BatchGetTablesRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.catalogId = request.catalogId;
+            this.databaseName = request.databaseName;
+            this.tableNames = request.tableNames;
         } 
+
+        /**
+         * RegionId
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * CatalogId
@@ -119,15 +128,6 @@ public class BatchGetTablesRequest extends Request {
         public Builder tableNames(java.util.List < String > tableNames) {
             this.putBodyParameter("TableNames", tableNames);
             this.tableNames = tableNames;
-            return this;
-        }
-
-        /**
-         * RegionId
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

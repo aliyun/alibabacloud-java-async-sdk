@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetQueryResultRequest</p>
  */
 public class GetQueryResultRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("PageNumber")
     private Integer pageNumber;
@@ -24,16 +28,12 @@ public class GetQueryResultRequest extends Request {
     @NameInMap("QueryId")
     private String queryId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private GetQueryResultRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.queryId = builder.queryId;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -47,6 +47,13 @@ public class GetQueryResultRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -70,30 +77,32 @@ public class GetQueryResultRequest extends Request {
         return this.queryId;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<GetQueryResultRequest, Builder> {
+        private String regionId; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String queryId; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetQueryResultRequest response) {
-            super(response);
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.queryId = response.queryId;
-            this.regionId = response.regionId;
+        private Builder(GetQueryResultRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.queryId = request.queryId;
         } 
+
+        /**
+         * RegionId
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * PageNumber.
@@ -119,15 +128,6 @@ public class GetQueryResultRequest extends Request {
         public Builder queryId(String queryId) {
             this.putQueryParameter("QueryId", queryId);
             this.queryId = queryId;
-            return this;
-        }
-
-        /**
-         * RegionId
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

@@ -71,11 +71,11 @@ public class AccessRequest extends Request {
             super();
         } 
 
-        private Builder(AccessRequest response) {
-            super(response);
-            this.catalogId = response.catalogId;
-            this.principal = response.principal;
-            this.privilegeResources = response.privilegeResources;
+        private Builder(AccessRequest request) {
+            super(request);
+            this.catalogId = request.catalogId;
+            this.principal = request.principal;
+            this.privilegeResources = request.privilegeResources;
         } 
 
         /**

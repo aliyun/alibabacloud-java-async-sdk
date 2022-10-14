@@ -12,13 +12,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetAsyncTaskStatusRequest</p>
  */
 public class GetAsyncTaskStatusRequest extends Request {
-    @Query
-    @NameInMap("CatalogId")
-    private String catalogId;
-
     @Host
     @NameInMap("RegionId")
     private String regionId;
+
+    @Query
+    @NameInMap("CatalogId")
+    private String catalogId;
 
     @Query
     @NameInMap("TaskId")
@@ -26,8 +26,8 @@ public class GetAsyncTaskStatusRequest extends Request {
 
     private GetAsyncTaskStatusRequest(Builder builder) {
         super(builder);
-        this.catalogId = builder.catalogId;
         this.regionId = builder.regionId;
+        this.catalogId = builder.catalogId;
         this.taskId = builder.taskId;
     }
 
@@ -45,17 +45,17 @@ public class GetAsyncTaskStatusRequest extends Request {
     }
 
     /**
-     * @return catalogId
-     */
-    public String getCatalogId() {
-        return this.catalogId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return catalogId
+     */
+    public String getCatalogId() {
+        return this.catalogId;
     }
 
     /**
@@ -66,29 +66,20 @@ public class GetAsyncTaskStatusRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetAsyncTaskStatusRequest, Builder> {
-        private String catalogId; 
         private String regionId; 
+        private String catalogId; 
         private String taskId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetAsyncTaskStatusRequest response) {
-            super(response);
-            this.catalogId = response.catalogId;
-            this.regionId = response.regionId;
-            this.taskId = response.taskId;
+        private Builder(GetAsyncTaskStatusRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.catalogId = request.catalogId;
+            this.taskId = request.taskId;
         } 
-
-        /**
-         * CatalogId
-         */
-        public Builder catalogId(String catalogId) {
-            this.putQueryParameter("CatalogId", catalogId);
-            this.catalogId = catalogId;
-            return this;
-        }
 
         /**
          * RegionId
@@ -96,6 +87,15 @@ public class GetAsyncTaskStatusRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * CatalogId
+         */
+        public Builder catalogId(String catalogId) {
+            this.putQueryParameter("CatalogId", catalogId);
+            this.catalogId = catalogId;
             return this;
         }
 

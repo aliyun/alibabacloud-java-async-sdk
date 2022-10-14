@@ -1,3 +1,6 @@
+2022-10-14 Version: 1.0.1
+- Query support multi catalog.
+
 2022-02-21 Version: 1.0.0
 - Generated java-async 2020-07-10 for DataLake.
 

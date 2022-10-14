@@ -12,6 +12,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>TableProfile</p>
  */
 public class TableProfile extends TeaModel {
+    @NameInMap("CreateTime")
+    private String createTime;
+
+    @NameInMap("DatabaseName")
+    private String databaseName;
+
     @NameInMap("FileCnt")
     private Long fileCnt;
 
@@ -24,19 +30,29 @@ public class TableProfile extends TeaModel {
     @NameInMap("LastModifyTime")
     private String lastModifyTime;
 
+    @NameInMap("Location")
+    private String location;
+
     @NameInMap("PartitionCnt")
     private Long partitionCnt;
 
     @NameInMap("RecordCnt")
     private Long recordCnt;
 
+    @NameInMap("TableName")
+    private String tableName;
+
     private TableProfile(Builder builder) {
+        this.createTime = builder.createTime;
+        this.databaseName = builder.databaseName;
         this.fileCnt = builder.fileCnt;
         this.fileSize = builder.fileSize;
         this.isPartitioned = builder.isPartitioned;
         this.lastModifyTime = builder.lastModifyTime;
+        this.location = builder.location;
         this.partitionCnt = builder.partitionCnt;
         this.recordCnt = builder.recordCnt;
+        this.tableName = builder.tableName;
     }
 
     public static Builder builder() {
@@ -45,6 +61,20 @@ public class TableProfile extends TeaModel {
 
     public static TableProfile create() {
         return builder().build();
+    }
+
+    /**
+     * @return createTime
+     */
+    public String getCreateTime() {
+        return this.createTime;
+    }
+
+    /**
+     * @return databaseName
+     */
+    public String getDatabaseName() {
+        return this.databaseName;
     }
 
     /**
@@ -76,6 +106,13 @@ public class TableProfile extends TeaModel {
     }
 
     /**
+     * @return location
+     */
+    public String getLocation() {
+        return this.location;
+    }
+
+    /**
      * @return partitionCnt
      */
     public Long getPartitionCnt() {
@@ -89,13 +126,40 @@ public class TableProfile extends TeaModel {
         return this.recordCnt;
     }
 
+    /**
+     * @return tableName
+     */
+    public String getTableName() {
+        return this.tableName;
+    }
+
     public static final class Builder {
+        private String createTime; 
+        private String databaseName; 
         private Long fileCnt; 
         private Long fileSize; 
         private Boolean isPartitioned; 
         private String lastModifyTime; 
+        private String location; 
         private Long partitionCnt; 
         private Long recordCnt; 
+        private String tableName; 
+
+        /**
+         * 创建时间
+         */
+        public Builder createTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+
+        /**
+         * 库名称
+         */
+        public Builder databaseName(String databaseName) {
+            this.databaseName = databaseName;
+            return this;
+        }
 
         /**
          * 文件数量
@@ -130,6 +194,14 @@ public class TableProfile extends TeaModel {
         }
 
         /**
+         * 存储位置
+         */
+        public Builder location(String location) {
+            this.location = location;
+            return this;
+        }
+
+        /**
          * 分区数量
          */
         public Builder partitionCnt(Long partitionCnt) {
@@ -142,6 +214,14 @@ public class TableProfile extends TeaModel {
          */
         public Builder recordCnt(Long recordCnt) {
             this.recordCnt = recordCnt;
+            return this;
+        }
+
+        /**
+         * 表名称
+         */
+        public Builder tableName(String tableName) {
+            this.tableName = tableName;
             return this;
         }
 

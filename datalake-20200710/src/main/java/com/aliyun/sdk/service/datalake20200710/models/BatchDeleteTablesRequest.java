@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BatchDeleteTablesRequest</p>
  */
 public class BatchDeleteTablesRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Body
     @NameInMap("CatalogId")
     private String catalogId;
@@ -28,17 +32,13 @@ public class BatchDeleteTablesRequest extends Request {
     @NameInMap("TableNames")
     private java.util.List < String > tableNames;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private BatchDeleteTablesRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.catalogId = builder.catalogId;
         this.databaseName = builder.databaseName;
         this.ifExists = builder.ifExists;
         this.tableNames = builder.tableNames;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -52,6 +52,13 @@ public class BatchDeleteTablesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -82,32 +89,34 @@ public class BatchDeleteTablesRequest extends Request {
         return this.tableNames;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<BatchDeleteTablesRequest, Builder> {
+        private String regionId; 
         private String catalogId; 
         private String databaseName; 
         private Boolean ifExists; 
         private java.util.List < String > tableNames; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(BatchDeleteTablesRequest response) {
-            super(response);
-            this.catalogId = response.catalogId;
-            this.databaseName = response.databaseName;
-            this.ifExists = response.ifExists;
-            this.tableNames = response.tableNames;
-            this.regionId = response.regionId;
+        private Builder(BatchDeleteTablesRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.catalogId = request.catalogId;
+            this.databaseName = request.databaseName;
+            this.ifExists = request.ifExists;
+            this.tableNames = request.tableNames;
         } 
+
+        /**
+         * RegionId
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * CatalogId
@@ -142,15 +151,6 @@ public class BatchDeleteTablesRequest extends Request {
         public Builder tableNames(java.util.List < String > tableNames) {
             this.putBodyParameter("TableNames", tableNames);
             this.tableNames = tableNames;
-            return this;
-        }
-
-        /**
-         * RegionId
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

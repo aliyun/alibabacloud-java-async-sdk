@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListTablesRequest</p>
  */
 public class ListTablesRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("CatalogId")
     private String catalogId;
@@ -29,10 +33,6 @@ public class ListTablesRequest extends Request {
     @Validation(maximum = 1000000)
     private Integer pageSize;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("TableNamePattern")
     private String tableNamePattern;
@@ -43,11 +43,11 @@ public class ListTablesRequest extends Request {
 
     private ListTablesRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.catalogId = builder.catalogId;
         this.databaseName = builder.databaseName;
         this.nextPageToken = builder.nextPageToken;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
         this.tableNamePattern = builder.tableNamePattern;
         this.tableType = builder.tableType;
     }
@@ -63,6 +63,13 @@ public class ListTablesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -94,13 +101,6 @@ public class ListTablesRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return tableNamePattern
      */
     public String getTableNamePattern() {
@@ -115,11 +115,11 @@ public class ListTablesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListTablesRequest, Builder> {
+        private String regionId; 
         private String catalogId; 
         private String databaseName; 
         private String nextPageToken; 
         private Integer pageSize; 
-        private String regionId; 
         private String tableNamePattern; 
         private String tableType; 
 
@@ -127,16 +127,25 @@ public class ListTablesRequest extends Request {
             super();
         } 
 
-        private Builder(ListTablesRequest response) {
-            super(response);
-            this.catalogId = response.catalogId;
-            this.databaseName = response.databaseName;
-            this.nextPageToken = response.nextPageToken;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.tableNamePattern = response.tableNamePattern;
-            this.tableType = response.tableType;
+        private Builder(ListTablesRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.catalogId = request.catalogId;
+            this.databaseName = request.databaseName;
+            this.nextPageToken = request.nextPageToken;
+            this.pageSize = request.pageSize;
+            this.tableNamePattern = request.tableNamePattern;
+            this.tableType = request.tableType;
         } 
+
+        /**
+         * RegionId
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * CatalogId
@@ -171,15 +180,6 @@ public class ListTablesRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * RegionId
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

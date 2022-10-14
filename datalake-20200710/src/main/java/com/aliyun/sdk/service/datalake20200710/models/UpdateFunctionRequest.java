@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateFunctionRequest</p>
  */
 public class UpdateFunctionRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Body
     @NameInMap("CatalogId")
     private String catalogId;
@@ -28,17 +32,13 @@ public class UpdateFunctionRequest extends Request {
     @NameInMap("FunctionName")
     private String functionName;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private UpdateFunctionRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.catalogId = builder.catalogId;
         this.databaseName = builder.databaseName;
         this.functionInput = builder.functionInput;
         this.functionName = builder.functionName;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -52,6 +52,13 @@ public class UpdateFunctionRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -82,32 +89,34 @@ public class UpdateFunctionRequest extends Request {
         return this.functionName;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<UpdateFunctionRequest, Builder> {
+        private String regionId; 
         private String catalogId; 
         private String databaseName; 
         private FunctionInput functionInput; 
         private String functionName; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(UpdateFunctionRequest response) {
-            super(response);
-            this.catalogId = response.catalogId;
-            this.databaseName = response.databaseName;
-            this.functionInput = response.functionInput;
-            this.functionName = response.functionName;
-            this.regionId = response.regionId;
+        private Builder(UpdateFunctionRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.catalogId = request.catalogId;
+            this.databaseName = request.databaseName;
+            this.functionInput = request.functionInput;
+            this.functionName = request.functionName;
         } 
+
+        /**
+         * RegionId
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * CatalogId.
@@ -142,15 +151,6 @@ public class UpdateFunctionRequest extends Request {
         public Builder functionName(String functionName) {
             this.putBodyParameter("FunctionName", functionName);
             this.functionName = functionName;
-            return this;
-        }
-
-        /**
-         * RegionId
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

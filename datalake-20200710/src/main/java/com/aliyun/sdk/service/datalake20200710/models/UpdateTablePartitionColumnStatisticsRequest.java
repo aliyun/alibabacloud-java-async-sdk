@@ -131,16 +131,16 @@ public class UpdateTablePartitionColumnStatisticsRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateTablePartitionColumnStatisticsRequest response) {
-            super(response);
-            this.catalogId = response.catalogId;
-            this.columnStatisticsList = response.columnStatisticsList;
-            this.databaseName = response.databaseName;
-            this.engine = response.engine;
-            this.isStatsCompliant = response.isStatsCompliant;
-            this.tableName = response.tableName;
-            this.validWriteIdList = response.validWriteIdList;
-            this.writeId = response.writeId;
+        private Builder(UpdateTablePartitionColumnStatisticsRequest request) {
+            super(request);
+            this.catalogId = request.catalogId;
+            this.columnStatisticsList = request.columnStatisticsList;
+            this.databaseName = request.databaseName;
+            this.engine = request.engine;
+            this.isStatsCompliant = request.isStatsCompliant;
+            this.tableName = request.tableName;
+            this.validWriteIdList = request.validWriteIdList;
+            this.writeId = request.writeId;
         } 
 
         /**

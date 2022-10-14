@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDatabasesRequest</p>
  */
 public class ListDatabasesRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("CatalogId")
     private String catalogId;
@@ -29,17 +33,13 @@ public class ListDatabasesRequest extends Request {
     @Validation(maximum = 1000000)
     private Integer pageSize;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private ListDatabasesRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.catalogId = builder.catalogId;
         this.namePattern = builder.namePattern;
         this.nextPageToken = builder.nextPageToken;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -53,6 +53,13 @@ public class ListDatabasesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -83,32 +90,34 @@ public class ListDatabasesRequest extends Request {
         return this.pageSize;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<ListDatabasesRequest, Builder> {
+        private String regionId; 
         private String catalogId; 
         private String namePattern; 
         private String nextPageToken; 
         private Integer pageSize; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListDatabasesRequest response) {
-            super(response);
-            this.catalogId = response.catalogId;
-            this.namePattern = response.namePattern;
-            this.nextPageToken = response.nextPageToken;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
+        private Builder(ListDatabasesRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.catalogId = request.catalogId;
+            this.namePattern = request.namePattern;
+            this.nextPageToken = request.nextPageToken;
+            this.pageSize = request.pageSize;
         } 
+
+        /**
+         * RegionId
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * catalogId
@@ -143,15 +152,6 @@ public class ListDatabasesRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * RegionId
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

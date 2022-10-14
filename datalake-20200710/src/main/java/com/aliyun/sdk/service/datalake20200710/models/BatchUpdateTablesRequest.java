@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BatchUpdateTablesRequest</p>
  */
 public class BatchUpdateTablesRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Body
     @NameInMap("CatalogId")
     private String catalogId;
@@ -28,17 +32,13 @@ public class BatchUpdateTablesRequest extends Request {
     @NameInMap("TableInputs")
     private java.util.List < TableInput > tableInputs;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private BatchUpdateTablesRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.catalogId = builder.catalogId;
         this.databaseName = builder.databaseName;
         this.isAsync = builder.isAsync;
         this.tableInputs = builder.tableInputs;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -52,6 +52,13 @@ public class BatchUpdateTablesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -82,32 +89,34 @@ public class BatchUpdateTablesRequest extends Request {
         return this.tableInputs;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<BatchUpdateTablesRequest, Builder> {
+        private String regionId; 
         private String catalogId; 
         private String databaseName; 
         private Boolean isAsync; 
         private java.util.List < TableInput > tableInputs; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(BatchUpdateTablesRequest response) {
-            super(response);
-            this.catalogId = response.catalogId;
-            this.databaseName = response.databaseName;
-            this.isAsync = response.isAsync;
-            this.tableInputs = response.tableInputs;
-            this.regionId = response.regionId;
+        private Builder(BatchUpdateTablesRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.catalogId = request.catalogId;
+            this.databaseName = request.databaseName;
+            this.isAsync = request.isAsync;
+            this.tableInputs = request.tableInputs;
         } 
+
+        /**
+         * RegionId
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * CatalogId
@@ -142,15 +151,6 @@ public class BatchUpdateTablesRequest extends Request {
         public Builder tableInputs(java.util.List < TableInput > tableInputs) {
             this.putBodyParameter("TableInputs", tableInputs);
             this.tableInputs = tableInputs;
-            return this;
-        }
-
-        /**
-         * RegionId
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

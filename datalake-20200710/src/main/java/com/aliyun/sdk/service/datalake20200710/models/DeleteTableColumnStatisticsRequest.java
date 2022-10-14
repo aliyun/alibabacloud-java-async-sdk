@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteTableColumnStatisticsRequest</p>
  */
 public class DeleteTableColumnStatisticsRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("CatalogId")
     private String catalogId;
@@ -24,20 +28,16 @@ public class DeleteTableColumnStatisticsRequest extends Request {
     @NameInMap("DatabaseName")
     private String databaseName;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("TableName")
     private String tableName;
 
     private DeleteTableColumnStatisticsRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.catalogId = builder.catalogId;
         this.columnNames = builder.columnNames;
         this.databaseName = builder.databaseName;
-        this.regionId = builder.regionId;
         this.tableName = builder.tableName;
     }
 
@@ -52,6 +52,13 @@ public class DeleteTableColumnStatisticsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -76,13 +83,6 @@ public class DeleteTableColumnStatisticsRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return tableName
      */
     public String getTableName() {
@@ -90,24 +90,33 @@ public class DeleteTableColumnStatisticsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteTableColumnStatisticsRequest, Builder> {
+        private String regionId; 
         private String catalogId; 
         private java.util.List < String > columnNames; 
         private String databaseName; 
-        private String regionId; 
         private String tableName; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DeleteTableColumnStatisticsRequest response) {
-            super(response);
-            this.catalogId = response.catalogId;
-            this.columnNames = response.columnNames;
-            this.databaseName = response.databaseName;
-            this.regionId = response.regionId;
-            this.tableName = response.tableName;
+        private Builder(DeleteTableColumnStatisticsRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.catalogId = request.catalogId;
+            this.columnNames = request.columnNames;
+            this.databaseName = request.databaseName;
+            this.tableName = request.tableName;
         } 
+
+        /**
+         * RegionId
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * CatalogId
@@ -122,7 +131,8 @@ public class DeleteTableColumnStatisticsRequest extends Request {
          * ColumnNames.
          */
         public Builder columnNames(java.util.List < String > columnNames) {
-            this.putQueryParameter("ColumnNames", columnNames);
+            String columnNamesShrink = shrink(columnNames, "ColumnNames", "json");
+            this.putQueryParameter("ColumnNames", columnNamesShrink);
             this.columnNames = columnNames;
             return this;
         }
@@ -133,15 +143,6 @@ public class DeleteTableColumnStatisticsRequest extends Request {
         public Builder databaseName(String databaseName) {
             this.putQueryParameter("DatabaseName", databaseName);
             this.databaseName = databaseName;
-            return this;
-        }
-
-        /**
-         * RegionId
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

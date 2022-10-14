@@ -61,10 +61,10 @@ public class UpdateTableColumnStatisticsRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateTableColumnStatisticsRequest response) {
-            super(response);
-            this.regionId = response.regionId;
-            this.updateTablePartitionColumnStatisticsRequest = response.updateTablePartitionColumnStatisticsRequest;
+        private Builder(UpdateTableColumnStatisticsRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.updateTablePartitionColumnStatisticsRequest = request.updateTablePartitionColumnStatisticsRequest;
         } 
 
         /**

@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListPartitionsByFilterRequest</p>
  */
 public class ListPartitionsByFilterRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Body
     @NameInMap("CatalogId")
     private String catalogId;
@@ -40,12 +44,9 @@ public class ListPartitionsByFilterRequest extends Request {
     @NameInMap("TableName")
     private String tableName;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private ListPartitionsByFilterRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.catalogId = builder.catalogId;
         this.databaseName = builder.databaseName;
         this.filter = builder.filter;
@@ -53,7 +54,6 @@ public class ListPartitionsByFilterRequest extends Request {
         this.nextPageToken = builder.nextPageToken;
         this.pageSize = builder.pageSize;
         this.tableName = builder.tableName;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -67,6 +67,13 @@ public class ListPartitionsByFilterRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -118,14 +125,8 @@ public class ListPartitionsByFilterRequest extends Request {
         return this.tableName;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<ListPartitionsByFilterRequest, Builder> {
+        private String regionId; 
         private String catalogId; 
         private String databaseName; 
         private String filter; 
@@ -133,23 +134,31 @@ public class ListPartitionsByFilterRequest extends Request {
         private String nextPageToken; 
         private Integer pageSize; 
         private String tableName; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListPartitionsByFilterRequest response) {
-            super(response);
-            this.catalogId = response.catalogId;
-            this.databaseName = response.databaseName;
-            this.filter = response.filter;
-            this.isShareSd = response.isShareSd;
-            this.nextPageToken = response.nextPageToken;
-            this.pageSize = response.pageSize;
-            this.tableName = response.tableName;
-            this.regionId = response.regionId;
+        private Builder(ListPartitionsByFilterRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.catalogId = request.catalogId;
+            this.databaseName = request.databaseName;
+            this.filter = request.filter;
+            this.isShareSd = request.isShareSd;
+            this.nextPageToken = request.nextPageToken;
+            this.pageSize = request.pageSize;
+            this.tableName = request.tableName;
         } 
+
+        /**
+         * RegionId
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * CatalogId
@@ -211,15 +220,6 @@ public class ListPartitionsByFilterRequest extends Request {
         public Builder tableName(String tableName) {
             this.putBodyParameter("TableName", tableName);
             this.tableName = tableName;
-            return this;
-        }
-
-        /**
-         * RegionId
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

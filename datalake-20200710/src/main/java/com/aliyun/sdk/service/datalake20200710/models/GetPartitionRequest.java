@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetPartitionRequest</p>
  */
 public class GetPartitionRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Body
     @NameInMap("CatalogId")
     private String catalogId;
@@ -28,17 +32,13 @@ public class GetPartitionRequest extends Request {
     @NameInMap("TableName")
     private String tableName;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private GetPartitionRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.catalogId = builder.catalogId;
         this.databaseName = builder.databaseName;
         this.partitionValues = builder.partitionValues;
         this.tableName = builder.tableName;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -52,6 +52,13 @@ public class GetPartitionRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -82,32 +89,34 @@ public class GetPartitionRequest extends Request {
         return this.tableName;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<GetPartitionRequest, Builder> {
+        private String regionId; 
         private String catalogId; 
         private String databaseName; 
         private java.util.List < String > partitionValues; 
         private String tableName; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetPartitionRequest response) {
-            super(response);
-            this.catalogId = response.catalogId;
-            this.databaseName = response.databaseName;
-            this.partitionValues = response.partitionValues;
-            this.tableName = response.tableName;
-            this.regionId = response.regionId;
+        private Builder(GetPartitionRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.catalogId = request.catalogId;
+            this.databaseName = request.databaseName;
+            this.partitionValues = request.partitionValues;
+            this.tableName = request.tableName;
         } 
+
+        /**
+         * RegionId
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * CatalogId
@@ -142,15 +151,6 @@ public class GetPartitionRequest extends Request {
         public Builder tableName(String tableName) {
             this.putBodyParameter("TableName", tableName);
             this.tableName = tableName;
-            return this;
-        }
-
-        /**
-         * RegionId
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

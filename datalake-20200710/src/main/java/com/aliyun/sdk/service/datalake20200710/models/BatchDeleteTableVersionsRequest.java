@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BatchDeleteTableVersionsRequest</p>
  */
 public class BatchDeleteTableVersionsRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Body
     @NameInMap("CatalogId")
     private String catalogId;
@@ -28,17 +32,13 @@ public class BatchDeleteTableVersionsRequest extends Request {
     @NameInMap("VersionIds")
     private java.util.List < Integer > versionIds;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private BatchDeleteTableVersionsRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.catalogId = builder.catalogId;
         this.databaseName = builder.databaseName;
         this.tableName = builder.tableName;
         this.versionIds = builder.versionIds;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -52,6 +52,13 @@ public class BatchDeleteTableVersionsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -82,32 +89,34 @@ public class BatchDeleteTableVersionsRequest extends Request {
         return this.versionIds;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<BatchDeleteTableVersionsRequest, Builder> {
+        private String regionId; 
         private String catalogId; 
         private String databaseName; 
         private String tableName; 
         private java.util.List < Integer > versionIds; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(BatchDeleteTableVersionsRequest response) {
-            super(response);
-            this.catalogId = response.catalogId;
-            this.databaseName = response.databaseName;
-            this.tableName = response.tableName;
-            this.versionIds = response.versionIds;
-            this.regionId = response.regionId;
+        private Builder(BatchDeleteTableVersionsRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.catalogId = request.catalogId;
+            this.databaseName = request.databaseName;
+            this.tableName = request.tableName;
+            this.versionIds = request.versionIds;
         } 
+
+        /**
+         * RegionId
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * CatalogId
@@ -142,15 +151,6 @@ public class BatchDeleteTableVersionsRequest extends Request {
         public Builder versionIds(java.util.List < Integer > versionIds) {
             this.putBodyParameter("VersionIds", versionIds);
             this.versionIds = versionIds;
-            return this;
-        }
-
-        /**
-         * RegionId
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

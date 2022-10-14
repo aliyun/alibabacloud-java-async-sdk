@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RenameTableRequest</p>
  */
 public class RenameTableRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Body
     @NameInMap("CatalogId")
     private String catalogId;
@@ -32,18 +36,14 @@ public class RenameTableRequest extends Request {
     @NameInMap("TableName")
     private String tableName;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private RenameTableRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.catalogId = builder.catalogId;
         this.databaseName = builder.databaseName;
         this.isAsync = builder.isAsync;
         this.tableInput = builder.tableInput;
         this.tableName = builder.tableName;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -57,6 +57,13 @@ public class RenameTableRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -94,34 +101,36 @@ public class RenameTableRequest extends Request {
         return this.tableName;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<RenameTableRequest, Builder> {
+        private String regionId; 
         private String catalogId; 
         private String databaseName; 
         private Boolean isAsync; 
         private TableInput tableInput; 
         private String tableName; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(RenameTableRequest response) {
-            super(response);
-            this.catalogId = response.catalogId;
-            this.databaseName = response.databaseName;
-            this.isAsync = response.isAsync;
-            this.tableInput = response.tableInput;
-            this.tableName = response.tableName;
-            this.regionId = response.regionId;
+        private Builder(RenameTableRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.catalogId = request.catalogId;
+            this.databaseName = request.databaseName;
+            this.isAsync = request.isAsync;
+            this.tableInput = request.tableInput;
+            this.tableName = request.tableName;
         } 
+
+        /**
+         * RegionId
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * CatalogId
@@ -165,15 +174,6 @@ public class RenameTableRequest extends Request {
         public Builder tableName(String tableName) {
             this.putBodyParameter("TableName", tableName);
             this.tableName = tableName;
-            return this;
-        }
-
-        /**
-         * RegionId
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

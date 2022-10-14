@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteTableVersionRequest</p>
  */
 public class DeleteTableVersionRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("CatalogId")
     private String catalogId;
@@ -19,10 +23,6 @@ public class DeleteTableVersionRequest extends Request {
     @Query
     @NameInMap("DatabaseName")
     private String databaseName;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Query
     @NameInMap("TableName")
@@ -34,9 +34,9 @@ public class DeleteTableVersionRequest extends Request {
 
     private DeleteTableVersionRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.catalogId = builder.catalogId;
         this.databaseName = builder.databaseName;
-        this.regionId = builder.regionId;
         this.tableName = builder.tableName;
         this.versionId = builder.versionId;
     }
@@ -55,6 +55,13 @@ public class DeleteTableVersionRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return catalogId
      */
     public String getCatalogId() {
@@ -66,13 +73,6 @@ public class DeleteTableVersionRequest extends Request {
      */
     public String getDatabaseName() {
         return this.databaseName;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -90,9 +90,9 @@ public class DeleteTableVersionRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteTableVersionRequest, Builder> {
+        private String regionId; 
         private String catalogId; 
         private String databaseName; 
-        private String regionId; 
         private String tableName; 
         private Integer versionId; 
 
@@ -100,14 +100,23 @@ public class DeleteTableVersionRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteTableVersionRequest response) {
-            super(response);
-            this.catalogId = response.catalogId;
-            this.databaseName = response.databaseName;
-            this.regionId = response.regionId;
-            this.tableName = response.tableName;
-            this.versionId = response.versionId;
+        private Builder(DeleteTableVersionRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.catalogId = request.catalogId;
+            this.databaseName = request.databaseName;
+            this.tableName = request.tableName;
+            this.versionId = request.versionId;
         } 
+
+        /**
+         * RegionId
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * CatalogId
@@ -124,15 +133,6 @@ public class DeleteTableVersionRequest extends Request {
         public Builder databaseName(String databaseName) {
             this.putQueryParameter("DatabaseName", databaseName);
             this.databaseName = databaseName;
-            return this;
-        }
-
-        /**
-         * RegionId
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

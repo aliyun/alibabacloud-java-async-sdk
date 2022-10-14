@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetPartitionColumnStatisticsRequest</p>
  */
 public class GetPartitionColumnStatisticsRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("CatalogId")
     private String catalogId;
@@ -28,21 +32,17 @@ public class GetPartitionColumnStatisticsRequest extends Request {
     @NameInMap("PartitionNames")
     private java.util.List < String > partitionNames;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("TableName")
     private String tableName;
 
     private GetPartitionColumnStatisticsRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.catalogId = builder.catalogId;
         this.columnNames = builder.columnNames;
         this.databaseName = builder.databaseName;
         this.partitionNames = builder.partitionNames;
-        this.regionId = builder.regionId;
         this.tableName = builder.tableName;
     }
 
@@ -57,6 +57,13 @@ public class GetPartitionColumnStatisticsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -88,13 +95,6 @@ public class GetPartitionColumnStatisticsRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return tableName
      */
     public String getTableName() {
@@ -102,26 +102,35 @@ public class GetPartitionColumnStatisticsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetPartitionColumnStatisticsRequest, Builder> {
+        private String regionId; 
         private String catalogId; 
         private java.util.List < String > columnNames; 
         private String databaseName; 
         private java.util.List < String > partitionNames; 
-        private String regionId; 
         private String tableName; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetPartitionColumnStatisticsRequest response) {
-            super(response);
-            this.catalogId = response.catalogId;
-            this.columnNames = response.columnNames;
-            this.databaseName = response.databaseName;
-            this.partitionNames = response.partitionNames;
-            this.regionId = response.regionId;
-            this.tableName = response.tableName;
+        private Builder(GetPartitionColumnStatisticsRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.catalogId = request.catalogId;
+            this.columnNames = request.columnNames;
+            this.databaseName = request.databaseName;
+            this.partitionNames = request.partitionNames;
+            this.tableName = request.tableName;
         } 
+
+        /**
+         * RegionId
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * CatalogId
@@ -136,7 +145,8 @@ public class GetPartitionColumnStatisticsRequest extends Request {
          * ColumnNames.
          */
         public Builder columnNames(java.util.List < String > columnNames) {
-            this.putQueryParameter("ColumnNames", columnNames);
+            String columnNamesShrink = shrink(columnNames, "ColumnNames", "json");
+            this.putQueryParameter("ColumnNames", columnNamesShrink);
             this.columnNames = columnNames;
             return this;
         }
@@ -154,17 +164,9 @@ public class GetPartitionColumnStatisticsRequest extends Request {
          * PartitionNames.
          */
         public Builder partitionNames(java.util.List < String > partitionNames) {
-            this.putQueryParameter("PartitionNames", partitionNames);
+            String partitionNamesShrink = shrink(partitionNames, "PartitionNames", "json");
+            this.putQueryParameter("PartitionNames", partitionNamesShrink);
             this.partitionNames = partitionNames;
-            return this;
-        }
-
-        /**
-         * RegionId
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

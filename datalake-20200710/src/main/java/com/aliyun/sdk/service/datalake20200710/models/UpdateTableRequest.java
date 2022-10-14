@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateTableRequest</p>
  */
 public class UpdateTableRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Body
     @NameInMap("AllowPartitionKeyChange")
     private Boolean allowPartitionKeyChange;
@@ -40,12 +44,9 @@ public class UpdateTableRequest extends Request {
     @NameInMap("TableName")
     private String tableName;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private UpdateTableRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.allowPartitionKeyChange = builder.allowPartitionKeyChange;
         this.catalogId = builder.catalogId;
         this.databaseName = builder.databaseName;
@@ -53,7 +54,6 @@ public class UpdateTableRequest extends Request {
         this.skipArchive = builder.skipArchive;
         this.tableInput = builder.tableInput;
         this.tableName = builder.tableName;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -67,6 +67,13 @@ public class UpdateTableRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -118,14 +125,8 @@ public class UpdateTableRequest extends Request {
         return this.tableName;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<UpdateTableRequest, Builder> {
+        private String regionId; 
         private Boolean allowPartitionKeyChange; 
         private String catalogId; 
         private String databaseName; 
@@ -133,23 +134,31 @@ public class UpdateTableRequest extends Request {
         private Boolean skipArchive; 
         private TableInput tableInput; 
         private String tableName; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(UpdateTableRequest response) {
-            super(response);
-            this.allowPartitionKeyChange = response.allowPartitionKeyChange;
-            this.catalogId = response.catalogId;
-            this.databaseName = response.databaseName;
-            this.isAsync = response.isAsync;
-            this.skipArchive = response.skipArchive;
-            this.tableInput = response.tableInput;
-            this.tableName = response.tableName;
-            this.regionId = response.regionId;
+        private Builder(UpdateTableRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.allowPartitionKeyChange = request.allowPartitionKeyChange;
+            this.catalogId = request.catalogId;
+            this.databaseName = request.databaseName;
+            this.isAsync = request.isAsync;
+            this.skipArchive = request.skipArchive;
+            this.tableInput = request.tableInput;
+            this.tableName = request.tableName;
         } 
+
+        /**
+         * RegionId
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * AllowPartitionKeyChange
@@ -211,15 +220,6 @@ public class UpdateTableRequest extends Request {
         public Builder tableName(String tableName) {
             this.putBodyParameter("TableName", tableName);
             this.tableName = tableName;
-            return this;
-        }
-
-        /**
-         * RegionId
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

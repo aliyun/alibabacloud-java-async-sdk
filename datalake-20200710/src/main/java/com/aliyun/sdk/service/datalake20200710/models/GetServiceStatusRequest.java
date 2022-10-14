@@ -13,6 +13,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetServiceStatusRequest extends Request {
     @Host
+    @Query
     @NameInMap("RegionId")
     private String regionId;
 
@@ -48,9 +49,9 @@ public class GetServiceStatusRequest extends Request {
             super();
         } 
 
-        private Builder(GetServiceStatusRequest response) {
-            super(response);
-            this.regionId = response.regionId;
+        private Builder(GetServiceStatusRequest request) {
+            super(request);
+            this.regionId = request.regionId;
         } 
 
         /**
@@ -58,6 +59,7 @@ public class GetServiceStatusRequest extends Request {
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
+            this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
             return this;
         }

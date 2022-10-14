@@ -61,10 +61,10 @@ public class UpdatePartitionColumnStatisticsRequest extends Request {
             super();
         } 
 
-        private Builder(UpdatePartitionColumnStatisticsRequest response) {
-            super(response);
-            this.regionId = response.regionId;
-            this.updateTablePartitionColumnStatisticsRequest = response.updateTablePartitionColumnStatisticsRequest;
+        private Builder(UpdatePartitionColumnStatisticsRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.updateTablePartitionColumnStatisticsRequest = request.updateTablePartitionColumnStatisticsRequest;
         } 
 
         /**

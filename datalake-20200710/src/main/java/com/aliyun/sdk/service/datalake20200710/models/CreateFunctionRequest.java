@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateFunctionRequest</p>
  */
 public class CreateFunctionRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Body
     @NameInMap("CatalogId")
     private String catalogId;
@@ -24,16 +28,12 @@ public class CreateFunctionRequest extends Request {
     @NameInMap("FunctionInput")
     private FunctionInput functionInput;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private CreateFunctionRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.catalogId = builder.catalogId;
         this.databaseName = builder.databaseName;
         this.functionInput = builder.functionInput;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -47,6 +47,13 @@ public class CreateFunctionRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -70,30 +77,32 @@ public class CreateFunctionRequest extends Request {
         return this.functionInput;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<CreateFunctionRequest, Builder> {
+        private String regionId; 
         private String catalogId; 
         private String databaseName; 
         private FunctionInput functionInput; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateFunctionRequest response) {
-            super(response);
-            this.catalogId = response.catalogId;
-            this.databaseName = response.databaseName;
-            this.functionInput = response.functionInput;
-            this.regionId = response.regionId;
+        private Builder(CreateFunctionRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.catalogId = request.catalogId;
+            this.databaseName = request.databaseName;
+            this.functionInput = request.functionInput;
         } 
+
+        /**
+         * RegionId
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * CatalogId
@@ -119,15 +128,6 @@ public class CreateFunctionRequest extends Request {
         public Builder functionInput(FunctionInput functionInput) {
             this.putBodyParameter("FunctionInput", functionInput);
             this.functionInput = functionInput;
-            return this;
-        }
-
-        /**
-         * RegionId
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

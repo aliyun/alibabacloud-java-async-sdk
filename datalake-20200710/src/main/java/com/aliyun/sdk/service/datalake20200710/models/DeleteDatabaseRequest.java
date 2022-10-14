@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteDatabaseRequest</p>
  */
 public class DeleteDatabaseRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("Cascade")
     private Boolean cascade;
@@ -24,16 +28,12 @@ public class DeleteDatabaseRequest extends Request {
     @NameInMap("Name")
     private String name;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private DeleteDatabaseRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.cascade = builder.cascade;
         this.catalogId = builder.catalogId;
         this.name = builder.name;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -47,6 +47,13 @@ public class DeleteDatabaseRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -70,30 +77,32 @@ public class DeleteDatabaseRequest extends Request {
         return this.name;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<DeleteDatabaseRequest, Builder> {
+        private String regionId; 
         private Boolean cascade; 
         private String catalogId; 
         private String name; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DeleteDatabaseRequest response) {
-            super(response);
-            this.cascade = response.cascade;
-            this.catalogId = response.catalogId;
-            this.name = response.name;
-            this.regionId = response.regionId;
+        private Builder(DeleteDatabaseRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.cascade = request.cascade;
+            this.catalogId = request.catalogId;
+            this.name = request.name;
         } 
+
+        /**
+         * RegionId
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * Cascade
@@ -119,15 +128,6 @@ public class DeleteDatabaseRequest extends Request {
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
             this.name = name;
-            return this;
-        }
-
-        /**
-         * RegionId
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

@@ -17,16 +17,21 @@ public class SubmitQueryRequest extends Request {
     private String regionId;
 
     @Body
-    @NameInMap("Sql")
+    @NameInMap("catalogId")
+    private String catalogId;
+
+    @Body
+    @NameInMap("sql")
     private String sql;
 
     @Body
-    @NameInMap("WorkspaceId")
+    @NameInMap("workspaceId")
     private String workspaceId;
 
     private SubmitQueryRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.catalogId = builder.catalogId;
         this.sql = builder.sql;
         this.workspaceId = builder.workspaceId;
     }
@@ -52,6 +57,13 @@ public class SubmitQueryRequest extends Request {
     }
 
     /**
+     * @return catalogId
+     */
+    public String getCatalogId() {
+        return this.catalogId;
+    }
+
+    /**
      * @return sql
      */
     public String getSql() {
@@ -67,6 +79,7 @@ public class SubmitQueryRequest extends Request {
 
     public static final class Builder extends Request.Builder<SubmitQueryRequest, Builder> {
         private String regionId; 
+        private String catalogId; 
         private String sql; 
         private String workspaceId; 
 
@@ -74,11 +87,12 @@ public class SubmitQueryRequest extends Request {
             super();
         } 
 
-        private Builder(SubmitQueryRequest response) {
-            super(response);
-            this.regionId = response.regionId;
-            this.sql = response.sql;
-            this.workspaceId = response.workspaceId;
+        private Builder(SubmitQueryRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.catalogId = request.catalogId;
+            this.sql = request.sql;
+            this.workspaceId = request.workspaceId;
         } 
 
         /**
@@ -91,19 +105,28 @@ public class SubmitQueryRequest extends Request {
         }
 
         /**
-         * Sql.
+         * catalogId.
+         */
+        public Builder catalogId(String catalogId) {
+            this.putBodyParameter("catalogId", catalogId);
+            this.catalogId = catalogId;
+            return this;
+        }
+
+        /**
+         * sql.
          */
         public Builder sql(String sql) {
-            this.putBodyParameter("Sql", sql);
+            this.putBodyParameter("sql", sql);
             this.sql = sql;
             return this;
         }
 
         /**
-         * WorkspaceId.
+         * workspaceId.
          */
         public Builder workspaceId(String workspaceId) {
-            this.putBodyParameter("WorkspaceId", workspaceId);
+            this.putBodyParameter("workspaceId", workspaceId);
             this.workspaceId = workspaceId;
             return this;
         }

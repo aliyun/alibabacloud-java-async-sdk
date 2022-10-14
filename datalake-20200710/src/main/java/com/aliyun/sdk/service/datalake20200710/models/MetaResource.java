@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>MetaResource</p>
  */
 public class MetaResource extends TeaModel {
+    @NameInMap("CatalogResource")
+    private CatalogResource catalogResource;
+
     @NameInMap("ColumnResource")
     private ColumnResource columnResource;
 
@@ -28,6 +31,7 @@ public class MetaResource extends TeaModel {
     private TableResource tableResource;
 
     private MetaResource(Builder builder) {
+        this.catalogResource = builder.catalogResource;
         this.columnResource = builder.columnResource;
         this.databaseResource = builder.databaseResource;
         this.functionResource = builder.functionResource;
@@ -41,6 +45,13 @@ public class MetaResource extends TeaModel {
 
     public static MetaResource create() {
         return builder().build();
+    }
+
+    /**
+     * @return catalogResource
+     */
+    public CatalogResource getCatalogResource() {
+        return this.catalogResource;
     }
 
     /**
@@ -79,11 +90,20 @@ public class MetaResource extends TeaModel {
     }
 
     public static final class Builder {
+        private CatalogResource catalogResource; 
         private ColumnResource columnResource; 
         private DatabaseResource databaseResource; 
         private FunctionResource functionResource; 
         private String resourceType; 
         private TableResource tableResource; 
+
+        /**
+         * catalog resource
+         */
+        public Builder catalogResource(CatalogResource catalogResource) {
+            this.catalogResource = catalogResource;
+            return this;
+        }
 
         /**
          * column resource
@@ -110,7 +130,7 @@ public class MetaResource extends TeaModel {
         }
 
         /**
-         * DATABASE, TABLE, FUNCTION, COLUMN任选其一
+         * CATALOG,DATABASE, TABLE, FUNCTION, COLUMN任选其一
          */
         public Builder resourceType(String resourceType) {
             this.resourceType = resourceType;
