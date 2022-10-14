@@ -21,6 +21,10 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
     private String appIds;
 
     @Query
+    @NameInMap("DbGrayEnable")
+    private Boolean dbGrayEnable;
+
+    @Query
     @NameInMap("Enable")
     private Boolean enable;
 
@@ -80,6 +84,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
         this.appIds = builder.appIds;
+        this.dbGrayEnable = builder.dbGrayEnable;
         this.enable = builder.enable;
         this.entryApp = builder.entryApp;
         this.gmtCreate = builder.gmtCreate;
@@ -121,6 +126,13 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
      */
     public String getAppIds() {
         return this.appIds;
+    }
+
+    /**
+     * @return dbGrayEnable
+     */
+    public Boolean getDbGrayEnable() {
+        return this.dbGrayEnable;
     }
 
     /**
@@ -224,6 +236,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
     public static final class Builder extends Request.Builder<CreateOrUpdateSwimmingLaneGroupRequest, Builder> {
         private String acceptLanguage; 
         private String appIds; 
+        private Boolean dbGrayEnable; 
         private Boolean enable; 
         private String entryApp; 
         private String gmtCreate; 
@@ -247,6 +260,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
             this.appIds = request.appIds;
+            this.dbGrayEnable = request.dbGrayEnable;
             this.enable = request.enable;
             this.entryApp = request.entryApp;
             this.gmtCreate = request.gmtCreate;
@@ -278,6 +292,15 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         public Builder appIds(String appIds) {
             this.putQueryParameter("AppIds", appIds);
             this.appIds = appIds;
+            return this;
+        }
+
+        /**
+         * DbGrayEnable.
+         */
+        public Builder dbGrayEnable(Boolean dbGrayEnable) {
+            this.putQueryParameter("DbGrayEnable", dbGrayEnable);
+            this.dbGrayEnable = dbGrayEnable;
             return this;
         }
 
