@@ -131,6 +131,9 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         @NameInMap("GPUAmount")
         private Integer GPUAmount;
 
+        @NameInMap("GPUMemorySize")
+        private Float GPUMemorySize;
+
         @NameInMap("GPUSpec")
         private String GPUSpec;
 
@@ -211,6 +214,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             this.eniTrunkSupported = builder.eniTrunkSupported;
             this.eriQuantity = builder.eriQuantity;
             this.GPUAmount = builder.GPUAmount;
+            this.GPUMemorySize = builder.GPUMemorySize;
             this.GPUSpec = builder.GPUSpec;
             this.initialCredit = builder.initialCredit;
             this.instanceBandwidthRx = builder.instanceBandwidthRx;
@@ -332,6 +336,13 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
          */
         public Integer getGPUAmount() {
             return this.GPUAmount;
+        }
+
+        /**
+         * @return GPUMemorySize
+         */
+        public Float getGPUMemorySize() {
+            return this.GPUMemorySize;
         }
 
         /**
@@ -502,6 +513,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             private Boolean eniTrunkSupported; 
             private Integer eriQuantity; 
             private Integer GPUAmount; 
+            private Float GPUMemorySize; 
             private String GPUSpec; 
             private Integer initialCredit; 
             private Integer instanceBandwidthRx; 
@@ -626,6 +638,14 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
              */
             public Builder GPUAmount(Integer GPUAmount) {
                 this.GPUAmount = GPUAmount;
+                return this;
+            }
+
+            /**
+             * GPUMemorySize.
+             */
+            public Builder GPUMemorySize(Float GPUMemorySize) {
+                this.GPUMemorySize = GPUMemorySize;
                 return this;
             }
 
