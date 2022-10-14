@@ -21,6 +21,9 @@ public class AccessTokenResponseBody extends TeaModel {
     @NameInMap("message")
     private String message;
 
+    @NameInMap("module")
+    private Module module;
+
     @NameInMap("requestId")
     private String requestId;
 
@@ -31,6 +34,7 @@ public class AccessTokenResponseBody extends TeaModel {
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
+        this.module = builder.module;
         this.requestId = builder.requestId;
         this.traceId = builder.traceId;
     }
@@ -65,6 +69,13 @@ public class AccessTokenResponseBody extends TeaModel {
     }
 
     /**
+     * @return module
+     */
+    public Module getModule() {
+        return this.module;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -82,6 +93,7 @@ public class AccessTokenResponseBody extends TeaModel {
         private String code; 
         private Data data; 
         private String message; 
+        private Module module; 
         private String requestId; 
         private String traceId; 
 
@@ -94,7 +106,7 @@ public class AccessTokenResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * 请看module字段（作废）
          */
         public Builder data(Data data) {
             this.data = data;
@@ -106,6 +118,14 @@ public class AccessTokenResponseBody extends TeaModel {
          */
         public Builder message(String message) {
             this.message = message;
+            return this;
+        }
+
+        /**
+         * 请看module字段（作废）
+         */
+        public Builder module(Module module) {
+            this.module = module;
             return this;
         }
 
@@ -170,7 +190,7 @@ public class AccessTokenResponseBody extends TeaModel {
             private String token; 
 
             /**
-             * 过期时间，单位ms
+             * 过期时间，单位ms，token在存储时，不要接近expire的时间，最好远小于expire
              */
             public Builder expire(Long expire) {
                 this.expire = expire;
@@ -187,6 +207,87 @@ public class AccessTokenResponseBody extends TeaModel {
 
             public Data build() {
                 return new Data(this);
+            } 
+
+        } 
+
+    }
+    public static class Module extends TeaModel {
+        @NameInMap("expire")
+        private Long expire;
+
+        @NameInMap("start")
+        private Long start;
+
+        @NameInMap("token")
+        private String token;
+
+        private Module(Builder builder) {
+            this.expire = builder.expire;
+            this.start = builder.start;
+            this.token = builder.token;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Module create() {
+            return builder().build();
+        }
+
+        /**
+         * @return expire
+         */
+        public Long getExpire() {
+            return this.expire;
+        }
+
+        /**
+         * @return start
+         */
+        public Long getStart() {
+            return this.start;
+        }
+
+        /**
+         * @return token
+         */
+        public String getToken() {
+            return this.token;
+        }
+
+        public static final class Builder {
+            private Long expire; 
+            private Long start; 
+            private String token; 
+
+            /**
+             * 过期时间，单位ms，token在存储时，不要接近expire的时间，最好远小于expire
+             */
+            public Builder expire(Long expire) {
+                this.expire = expire;
+                return this;
+            }
+
+            /**
+             * 开始时间
+             */
+            public Builder start(Long start) {
+                this.start = start;
+                return this;
+            }
+
+            /**
+             * 令牌
+             */
+            public Builder token(String token) {
+                this.token = token;
+                return this;
+            }
+
+            public Module build() {
+                return new Module(this);
             } 
 
         } 
