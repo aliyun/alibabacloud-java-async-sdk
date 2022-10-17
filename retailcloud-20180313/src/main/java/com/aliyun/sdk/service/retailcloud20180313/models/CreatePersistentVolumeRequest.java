@@ -47,6 +47,10 @@ public class CreatePersistentVolumeRequest extends Request {
     private String name;
 
     @Body
+    @NameInMap("NasType")
+    private String nasType;
+
+    @Body
     @NameInMap("ReclaimPolicy")
     @Validation(required = true)
     private String reclaimPolicy;
@@ -65,6 +69,7 @@ public class CreatePersistentVolumeRequest extends Request {
         this.mountTargetDomain = builder.mountTargetDomain;
         this.NFSVersion = builder.NFSVersion;
         this.name = builder.name;
+        this.nasType = builder.nasType;
         this.reclaimPolicy = builder.reclaimPolicy;
         this.storageClass = builder.storageClass;
     }
@@ -132,6 +137,13 @@ public class CreatePersistentVolumeRequest extends Request {
     }
 
     /**
+     * @return nasType
+     */
+    public String getNasType() {
+        return this.nasType;
+    }
+
+    /**
      * @return reclaimPolicy
      */
     public String getReclaimPolicy() {
@@ -153,6 +165,7 @@ public class CreatePersistentVolumeRequest extends Request {
         private String mountTargetDomain; 
         private String NFSVersion; 
         private String name; 
+        private String nasType; 
         private String reclaimPolicy; 
         private String storageClass; 
 
@@ -169,6 +182,7 @@ public class CreatePersistentVolumeRequest extends Request {
             this.mountTargetDomain = request.mountTargetDomain;
             this.NFSVersion = request.NFSVersion;
             this.name = request.name;
+            this.nasType = request.nasType;
             this.reclaimPolicy = request.reclaimPolicy;
             this.storageClass = request.storageClass;
         } 
@@ -233,6 +247,15 @@ public class CreatePersistentVolumeRequest extends Request {
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
             this.name = name;
+            return this;
+        }
+
+        /**
+         * NasType.
+         */
+        public Builder nasType(String nasType) {
+            this.putBodyParameter("NasType", nasType);
+            this.nasType = nasType;
             return this;
         }
 
