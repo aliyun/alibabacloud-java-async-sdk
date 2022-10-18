@@ -42,6 +42,10 @@ public class ListTicketsRequest extends Request {
     @NameInMap("TicketId")
     private String ticketId;
 
+    @Body
+    @NameInMap("TicketIdList")
+    private java.util.List < String > ticketIdList;
+
     private ListTicketsRequest(Builder builder) {
         super(builder);
         this.endDate = builder.endDate;
@@ -51,6 +55,7 @@ public class ListTicketsRequest extends Request {
         this.startDate = builder.startDate;
         this.statusList = builder.statusList;
         this.ticketId = builder.ticketId;
+        this.ticketIdList = builder.ticketIdList;
     }
 
     public static Builder builder() {
@@ -115,6 +120,13 @@ public class ListTicketsRequest extends Request {
         return this.ticketId;
     }
 
+    /**
+     * @return ticketIdList
+     */
+    public java.util.List < String > getTicketIdList() {
+        return this.ticketIdList;
+    }
+
     public static final class Builder extends Request.Builder<ListTicketsRequest, Builder> {
         private Long endDate; 
         private String keyword; 
@@ -123,20 +135,22 @@ public class ListTicketsRequest extends Request {
         private Long startDate; 
         private java.util.List < String > statusList; 
         private String ticketId; 
+        private java.util.List < String > ticketIdList; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListTicketsRequest response) {
-            super(response);
-            this.endDate = response.endDate;
-            this.keyword = response.keyword;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.startDate = response.startDate;
-            this.statusList = response.statusList;
-            this.ticketId = response.ticketId;
+        private Builder(ListTicketsRequest request) {
+            super(request);
+            this.endDate = request.endDate;
+            this.keyword = request.keyword;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.startDate = request.startDate;
+            this.statusList = request.statusList;
+            this.ticketId = request.ticketId;
+            this.ticketIdList = request.ticketIdList;
         } 
 
         /**
@@ -199,6 +213,16 @@ public class ListTicketsRequest extends Request {
         public Builder ticketId(String ticketId) {
             this.putBodyParameter("TicketId", ticketId);
             this.ticketId = ticketId;
+            return this;
+        }
+
+        /**
+         * TicketIdList.
+         */
+        public Builder ticketIdList(java.util.List < String > ticketIdList) {
+            String ticketIdListShrink = shrink(ticketIdList, "TicketIdList", "simple");
+            this.putBodyParameter("TicketIdList", ticketIdListShrink);
+            this.ticketIdList = ticketIdList;
             return this;
         }
 

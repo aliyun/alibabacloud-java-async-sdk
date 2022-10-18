@@ -49,9 +49,9 @@ public class CloseTicketRequest extends Request {
             super();
         } 
 
-        private Builder(CloseTicketRequest response) {
-            super(response);
-            this.ticketId = response.ticketId;
+        private Builder(CloseTicketRequest request) {
+            super(request);
+            this.ticketId = request.ticketId;
         } 
 
         /**

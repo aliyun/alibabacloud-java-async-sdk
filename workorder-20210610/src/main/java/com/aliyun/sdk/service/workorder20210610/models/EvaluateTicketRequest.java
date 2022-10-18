@@ -90,12 +90,12 @@ public class EvaluateTicketRequest extends Request {
             super();
         } 
 
-        private Builder(EvaluateTicketRequest response) {
-            super(response);
-            this.content = response.content;
-            this.score = response.score;
-            this.solved = response.solved;
-            this.ticketId = response.ticketId;
+        private Builder(EvaluateTicketRequest request) {
+            super(request);
+            this.content = request.content;
+            this.score = request.score;
+            this.solved = request.solved;
+            this.ticketId = request.ticketId;
         } 
 
         /**

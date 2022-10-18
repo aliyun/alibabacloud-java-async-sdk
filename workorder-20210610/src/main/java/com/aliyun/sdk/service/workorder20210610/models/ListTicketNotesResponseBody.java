@@ -131,6 +131,67 @@ public class ListTicketNotesResponseBody extends TeaModel {
 
     } 
 
+    public static class Attachments extends TeaModel {
+        @NameInMap("Name")
+        private String name;
+
+        @NameInMap("Url")
+        private String url;
+
+        private Attachments(Builder builder) {
+            this.name = builder.name;
+            this.url = builder.url;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Attachments create() {
+            return builder().build();
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return url
+         */
+        public String getUrl() {
+            return this.url;
+        }
+
+        public static final class Builder {
+            private String name; 
+            private String url; 
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * Url.
+             */
+            public Builder url(String url) {
+                this.url = url;
+                return this;
+            }
+
+            public Attachments build() {
+                return new Attachments(this);
+            } 
+
+        } 
+
+    }
     public static class Dialog extends TeaModel {
         @NameInMap("Content")
         private String content;
@@ -254,6 +315,9 @@ public class ListTicketNotesResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
+        @NameInMap("Attachments")
+        private java.util.List < Attachments> attachments;
+
         @NameInMap("CreateTime")
         private Long createTime;
 
@@ -276,6 +340,7 @@ public class ListTicketNotesResponseBody extends TeaModel {
         private User user;
 
         private Data(Builder builder) {
+            this.attachments = builder.attachments;
             this.createTime = builder.createTime;
             this.dialog = builder.dialog;
             this.dialogId = builder.dialogId;
@@ -291,6 +356,13 @@ public class ListTicketNotesResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return attachments
+         */
+        public java.util.List < Attachments> getAttachments() {
+            return this.attachments;
         }
 
         /**
@@ -343,6 +415,7 @@ public class ListTicketNotesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List < Attachments> attachments; 
             private Long createTime; 
             private Dialog dialog; 
             private Long dialogId; 
@@ -350,6 +423,14 @@ public class ListTicketNotesResponseBody extends TeaModel {
             private String tip; 
             private Integer type; 
             private User user; 
+
+            /**
+             * Attachments.
+             */
+            public Builder attachments(java.util.List < Attachments> attachments) {
+                this.attachments = attachments;
+                return this;
+            }
 
             /**
              * CreateTime.

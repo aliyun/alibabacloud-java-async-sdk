@@ -22,6 +22,10 @@ public class ReplyTicketRequest extends Request {
     @Validation(required = true)
     private Boolean encrypt;
 
+    @Query
+    @NameInMap("FileNameList")
+    private java.util.List < String > fileNameList;
+
     @Body
     @NameInMap("TicketId")
     @Validation(required = true)
@@ -31,6 +35,7 @@ public class ReplyTicketRequest extends Request {
         super(builder);
         this.content = builder.content;
         this.encrypt = builder.encrypt;
+        this.fileNameList = builder.fileNameList;
         this.ticketId = builder.ticketId;
     }
 
@@ -62,6 +67,13 @@ public class ReplyTicketRequest extends Request {
     }
 
     /**
+     * @return fileNameList
+     */
+    public java.util.List < String > getFileNameList() {
+        return this.fileNameList;
+    }
+
+    /**
      * @return ticketId
      */
     public String getTicketId() {
@@ -71,17 +83,19 @@ public class ReplyTicketRequest extends Request {
     public static final class Builder extends Request.Builder<ReplyTicketRequest, Builder> {
         private String content; 
         private Boolean encrypt; 
+        private java.util.List < String > fileNameList; 
         private String ticketId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ReplyTicketRequest response) {
-            super(response);
-            this.content = response.content;
-            this.encrypt = response.encrypt;
-            this.ticketId = response.ticketId;
+        private Builder(ReplyTicketRequest request) {
+            super(request);
+            this.content = request.content;
+            this.encrypt = request.encrypt;
+            this.fileNameList = request.fileNameList;
+            this.ticketId = request.ticketId;
         } 
 
         /**
@@ -99,6 +113,16 @@ public class ReplyTicketRequest extends Request {
         public Builder encrypt(Boolean encrypt) {
             this.putBodyParameter("Encrypt", encrypt);
             this.encrypt = encrypt;
+            return this;
+        }
+
+        /**
+         * FileNameList.
+         */
+        public Builder fileNameList(java.util.List < String > fileNameList) {
+            String fileNameListShrink = shrink(fileNameList, "FileNameList", "simple");
+            this.putQueryParameter("FileNameList", fileNameListShrink);
+            this.fileNameList = fileNameList;
             return this;
         }
 

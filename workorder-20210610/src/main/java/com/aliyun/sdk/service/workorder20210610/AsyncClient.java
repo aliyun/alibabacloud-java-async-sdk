@@ -24,7 +24,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<EvaluateTicketResponse> evaluateTicket(EvaluateTicketRequest request);
 
+    CompletableFuture<GetAttachmentUploadUrlResponse> getAttachmentUploadUrl(GetAttachmentUploadUrlRequest request);
+
     CompletableFuture<GetMqConsumerTagResponse> getMqConsumerTag(GetMqConsumerTagRequest request);
+
+    CompletableFuture<GetTicketResponse> getTicket(GetTicketRequest request);
 
     CompletableFuture<ListCategoriesResponse> listCategories(ListCategoriesRequest request);
 
@@ -33,6 +37,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListTicketNotesResponse> listTicketNotes(ListTicketNotesRequest request);
 
     CompletableFuture<ListTicketsResponse> listTickets(ListTicketsRequest request);
+
+    CompletableFuture<ReopenTicketResponse> reopenTicket(ReopenTicketRequest request);
 
     CompletableFuture<ReplyTicketResponse> replyTicket(ReplyTicketRequest request);
 

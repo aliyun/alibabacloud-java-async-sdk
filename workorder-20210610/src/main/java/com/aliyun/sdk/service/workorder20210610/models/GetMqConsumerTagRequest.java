@@ -35,8 +35,8 @@ public class GetMqConsumerTagRequest extends Request {
             super();
         } 
 
-        private Builder(GetMqConsumerTagRequest response) {
-            super(response);
+        private Builder(GetMqConsumerTagRequest request) {
+            super(request);
         } 
 
         @Override

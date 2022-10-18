@@ -49,9 +49,9 @@ public class ListTicketNotesRequest extends Request {
             super();
         } 
 
-        private Builder(ListTicketNotesRequest response) {
-            super(response);
-            this.ticketId = response.ticketId;
+        private Builder(ListTicketNotesRequest request) {
+            super(request);
+            this.ticketId = request.ticketId;
         } 
 
         /**

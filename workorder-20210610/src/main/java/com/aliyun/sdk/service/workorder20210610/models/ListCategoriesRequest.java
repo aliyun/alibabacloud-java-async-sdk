@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListCategoriesRequest</p>
  */
 public class ListCategoriesRequest extends Request {
+    @Query
+    @NameInMap("Language")
+    private String language;
+
     @Body
     @NameInMap("Name")
     private String name;
@@ -23,6 +27,7 @@ public class ListCategoriesRequest extends Request {
 
     private ListCategoriesRequest(Builder builder) {
         super(builder);
+        this.language = builder.language;
         this.name = builder.name;
         this.productId = builder.productId;
     }
@@ -41,6 +46,13 @@ public class ListCategoriesRequest extends Request {
     }
 
     /**
+     * @return language
+     */
+    public String getLanguage() {
+        return this.language;
+    }
+
+    /**
      * @return name
      */
     public String getName() {
@@ -55,6 +67,7 @@ public class ListCategoriesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListCategoriesRequest, Builder> {
+        private String language; 
         private String name; 
         private Long productId; 
 
@@ -62,11 +75,21 @@ public class ListCategoriesRequest extends Request {
             super();
         } 
 
-        private Builder(ListCategoriesRequest response) {
-            super(response);
-            this.name = response.name;
-            this.productId = response.productId;
+        private Builder(ListCategoriesRequest request) {
+            super(request);
+            this.language = request.language;
+            this.name = request.name;
+            this.productId = request.productId;
         } 
+
+        /**
+         * Language.
+         */
+        public Builder language(String language) {
+            this.putQueryParameter("Language", language);
+            this.language = language;
+            return this;
+        }
 
         /**
          * Name.
