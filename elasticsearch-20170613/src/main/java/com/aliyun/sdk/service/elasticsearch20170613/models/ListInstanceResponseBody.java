@@ -667,6 +667,9 @@ public class ListInstanceResponseBody extends TeaModel {
         @NameInMap("diskType")
         private String diskType;
 
+        @NameInMap("performanceLevel")
+        private String performanceLevel;
+
         @NameInMap("spec")
         private String spec;
 
@@ -674,6 +677,7 @@ public class ListInstanceResponseBody extends TeaModel {
             this.disk = builder.disk;
             this.diskEncryption = builder.diskEncryption;
             this.diskType = builder.diskType;
+            this.performanceLevel = builder.performanceLevel;
             this.spec = builder.spec;
         }
 
@@ -707,6 +711,13 @@ public class ListInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return performanceLevel
+         */
+        public String getPerformanceLevel() {
+            return this.performanceLevel;
+        }
+
+        /**
          * @return spec
          */
         public String getSpec() {
@@ -717,6 +728,7 @@ public class ListInstanceResponseBody extends TeaModel {
             private Integer disk; 
             private Boolean diskEncryption; 
             private String diskType; 
+            private String performanceLevel; 
             private String spec; 
 
             /**
@@ -740,6 +752,14 @@ public class ListInstanceResponseBody extends TeaModel {
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
+                return this;
+            }
+
+            /**
+             * performanceLevel.
+             */
+            public Builder performanceLevel(String performanceLevel) {
+                this.performanceLevel = performanceLevel;
                 return this;
             }
 
@@ -886,6 +906,9 @@ public class ListInstanceResponseBody extends TeaModel {
         @NameInMap("updatedAt")
         private String updatedAt;
 
+        @NameInMap("vpcInstanceId")
+        private String vpcInstanceId;
+
         private Result(Builder builder) {
             this.advancedDedicateMaster = builder.advancedDedicateMaster;
             this.clientNodeConfiguration = builder.clientNodeConfiguration;
@@ -909,6 +932,7 @@ public class ListInstanceResponseBody extends TeaModel {
             this.status = builder.status;
             this.tags = builder.tags;
             this.updatedAt = builder.updatedAt;
+            this.vpcInstanceId = builder.vpcInstanceId;
         }
 
         public static Builder builder() {
@@ -1073,6 +1097,13 @@ public class ListInstanceResponseBody extends TeaModel {
             return this.updatedAt;
         }
 
+        /**
+         * @return vpcInstanceId
+         */
+        public String getVpcInstanceId() {
+            return this.vpcInstanceId;
+        }
+
         public static final class Builder {
             private Boolean advancedDedicateMaster; 
             private ClientNodeConfiguration clientNodeConfiguration; 
@@ -1096,6 +1127,7 @@ public class ListInstanceResponseBody extends TeaModel {
             private String status; 
             private java.util.List < Tags> tags; 
             private String updatedAt; 
+            private String vpcInstanceId; 
 
             /**
              * advancedDedicateMaster.
@@ -1270,6 +1302,14 @@ public class ListInstanceResponseBody extends TeaModel {
              */
             public Builder updatedAt(String updatedAt) {
                 this.updatedAt = updatedAt;
+                return this;
+            }
+
+            /**
+             * vpcInstanceId.
+             */
+            public Builder vpcInstanceId(String vpcInstanceId) {
+                this.vpcInstanceId = vpcInstanceId;
                 return this;
             }
 

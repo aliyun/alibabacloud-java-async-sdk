@@ -18,8 +18,9 @@ public class UpdateAdminPasswordRequest extends Request {
     private String instanceId;
 
     @Body
-    @NameInMap("body")
-    private String body;
+    @NameInMap("esAdminPassword")
+    @Validation(maxLength = 32, minLength = 8)
+    private String esAdminPassword;
 
     @Query
     @NameInMap("clientToken")
@@ -28,7 +29,7 @@ public class UpdateAdminPasswordRequest extends Request {
     private UpdateAdminPasswordRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
-        this.body = builder.body;
+        this.esAdminPassword = builder.esAdminPassword;
         this.clientToken = builder.clientToken;
     }
 
@@ -53,10 +54,10 @@ public class UpdateAdminPasswordRequest extends Request {
     }
 
     /**
-     * @return body
+     * @return esAdminPassword
      */
-    public String getBody() {
-        return this.body;
+    public String getEsAdminPassword() {
+        return this.esAdminPassword;
     }
 
     /**
@@ -68,7 +69,7 @@ public class UpdateAdminPasswordRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateAdminPasswordRequest, Builder> {
         private String instanceId; 
-        private String body; 
+        private String esAdminPassword; 
         private String clientToken; 
 
         private Builder() {
@@ -78,7 +79,7 @@ public class UpdateAdminPasswordRequest extends Request {
         private Builder(UpdateAdminPasswordRequest request) {
             super(request);
             this.instanceId = request.instanceId;
-            this.body = request.body;
+            this.esAdminPassword = request.esAdminPassword;
             this.clientToken = request.clientToken;
         } 
 
@@ -92,11 +93,11 @@ public class UpdateAdminPasswordRequest extends Request {
         }
 
         /**
-         * body.
+         * Elasticsearch实例的elastic账号的密码。
          */
-        public Builder body(String body) {
-            this.putBodyParameter("body", body);
-            this.body = body;
+        public Builder esAdminPassword(String esAdminPassword) {
+            this.putBodyParameter("esAdminPassword", esAdminPassword);
+            this.esAdminPassword = esAdminPassword;
             return this;
         }
 

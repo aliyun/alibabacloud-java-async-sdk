@@ -13,6 +13,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class NodeSpec extends TeaModel {
     @NameInMap("disk")
+    @Validation(maximum = 20480, minimum = 20)
     private Integer disk;
 
     @NameInMap("diskEncryption")
@@ -25,6 +26,7 @@ public class NodeSpec extends TeaModel {
     private String performanceLevel;
 
     @NameInMap("spec")
+    @Validation(required = true)
     private String spec;
 
     private NodeSpec(Builder builder) {

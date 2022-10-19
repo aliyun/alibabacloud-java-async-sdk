@@ -536,15 +536,120 @@ public class DescribeInstanceResponseBody extends TeaModel {
         } 
 
     }
+    public static class IkHotDicts extends TeaModel {
+        @NameInMap("fileSize")
+        private Integer fileSize;
+
+        @NameInMap("name")
+        private String name;
+
+        @NameInMap("sourceType")
+        private String sourceType;
+
+        @NameInMap("type")
+        private String type;
+
+        private IkHotDicts(Builder builder) {
+            this.fileSize = builder.fileSize;
+            this.name = builder.name;
+            this.sourceType = builder.sourceType;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static IkHotDicts create() {
+            return builder().build();
+        }
+
+        /**
+         * @return fileSize
+         */
+        public Integer getFileSize() {
+            return this.fileSize;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return sourceType
+         */
+        public String getSourceType() {
+            return this.sourceType;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private Integer fileSize; 
+            private String name; 
+            private String sourceType; 
+            private String type; 
+
+            /**
+             * fileSize.
+             */
+            public Builder fileSize(Integer fileSize) {
+                this.fileSize = fileSize;
+                return this;
+            }
+
+            /**
+             * name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * sourceType.
+             */
+            public Builder sourceType(String sourceType) {
+                this.sourceType = sourceType;
+                return this;
+            }
+
+            /**
+             * type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public IkHotDicts build() {
+                return new IkHotDicts(this);
+            } 
+
+        } 
+
+    }
     public static class KibanaConfiguration extends TeaModel {
         @NameInMap("amount")
         private Integer amount;
+
+        @NameInMap("disk")
+        private Integer disk;
 
         @NameInMap("spec")
         private String spec;
 
         private KibanaConfiguration(Builder builder) {
             this.amount = builder.amount;
+            this.disk = builder.disk;
             this.spec = builder.spec;
         }
 
@@ -564,6 +669,13 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return disk
+         */
+        public Integer getDisk() {
+            return this.disk;
+        }
+
+        /**
          * @return spec
          */
         public String getSpec() {
@@ -572,6 +684,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer amount; 
+            private Integer disk; 
             private String spec; 
 
             /**
@@ -579,6 +692,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
              */
             public Builder amount(Integer amount) {
                 this.amount = amount;
+                return this;
+            }
+
+            /**
+             * disk.
+             */
+            public Builder disk(Integer disk) {
+                this.disk = disk;
                 return this;
             }
 
@@ -910,6 +1031,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
         @NameInMap("diskType")
         private String diskType;
 
+        @NameInMap("performanceLevel")
+        private String performanceLevel;
+
         @NameInMap("spec")
         private String spec;
 
@@ -917,6 +1041,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             this.disk = builder.disk;
             this.diskEncryption = builder.diskEncryption;
             this.diskType = builder.diskType;
+            this.performanceLevel = builder.performanceLevel;
             this.spec = builder.spec;
         }
 
@@ -950,6 +1075,13 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return performanceLevel
+         */
+        public String getPerformanceLevel() {
+            return this.performanceLevel;
+        }
+
+        /**
          * @return spec
          */
         public String getSpec() {
@@ -960,6 +1092,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private Integer disk; 
             private Boolean diskEncryption; 
             private String diskType; 
+            private String performanceLevel; 
             private String spec; 
 
             /**
@@ -983,6 +1116,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
+                return this;
+            }
+
+            /**
+             * performanceLevel.
+             */
+            public Builder performanceLevel(String performanceLevel) {
+                this.performanceLevel = performanceLevel;
                 return this;
             }
 
@@ -1406,6 +1547,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
         @NameInMap("haveKibana")
         private Boolean haveKibana;
 
+        @NameInMap("ikHotDicts")
+        private java.util.List < IkHotDicts> ikHotDicts;
+
         @NameInMap("instanceId")
         private String instanceId;
 
@@ -1517,6 +1661,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             this.extendConfigs = builder.extendConfigs;
             this.haveClientNode = builder.haveClientNode;
             this.haveKibana = builder.haveKibana;
+            this.ikHotDicts = builder.ikHotDicts;
             this.instanceId = builder.instanceId;
             this.isNewDeployment = builder.isNewDeployment;
             this.kibanaConfiguration = builder.kibanaConfiguration;
@@ -1695,6 +1840,13 @@ public class DescribeInstanceResponseBody extends TeaModel {
          */
         public Boolean getHaveKibana() {
             return this.haveKibana;
+        }
+
+        /**
+         * @return ikHotDicts
+         */
+        public java.util.List < IkHotDicts> getIkHotDicts() {
+            return this.ikHotDicts;
         }
 
         /**
@@ -1928,6 +2080,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private java.util.List < java.util.Map<String, ?>> extendConfigs; 
             private Boolean haveClientNode; 
             private Boolean haveKibana; 
+            private java.util.List < IkHotDicts> ikHotDicts; 
             private String instanceId; 
             private Boolean isNewDeployment; 
             private KibanaConfiguration kibanaConfiguration; 
@@ -2116,6 +2269,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
              */
             public Builder haveKibana(Boolean haveKibana) {
                 this.haveKibana = haveKibana;
+                return this;
+            }
+
+            /**
+             * ikHotDicts.
+             */
+            public Builder ikHotDicts(java.util.List < IkHotDicts> ikHotDicts) {
+                this.ikHotDicts = ikHotDicts;
                 return this;
             }
 

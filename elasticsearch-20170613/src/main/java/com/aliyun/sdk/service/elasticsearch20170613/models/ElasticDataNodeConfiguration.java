@@ -13,9 +13,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ElasticDataNodeConfiguration extends TeaModel {
     @NameInMap("amount")
+    @Validation(maximum = 50, minimum = 2)
     private Long amount;
 
     @NameInMap("disk")
+    @Validation(maximum = 20480, minimum = 20)
     private Long disk;
 
     @NameInMap("diskEncryption")
@@ -28,6 +30,7 @@ public class ElasticDataNodeConfiguration extends TeaModel {
     private String performanceLevel;
 
     @NameInMap("spec")
+    @Validation(required = true)
     private String spec;
 
     private ElasticDataNodeConfiguration(Builder builder) {

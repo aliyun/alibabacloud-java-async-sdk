@@ -13,15 +13,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class MasterNodeConfiguration extends TeaModel {
     @NameInMap("amount")
+    @Validation(required = true, maximum = 3, minimum = 3)
     private Long amount;
 
     @NameInMap("disk")
+    @Validation(required = true, maximum = 20, minimum = 20)
     private Long disk;
 
     @NameInMap("diskType")
+    @Validation(required = true)
     private String diskType;
 
     @NameInMap("spec")
+    @Validation(required = true)
     private String spec;
 
     private MasterNodeConfiguration(Builder builder) {

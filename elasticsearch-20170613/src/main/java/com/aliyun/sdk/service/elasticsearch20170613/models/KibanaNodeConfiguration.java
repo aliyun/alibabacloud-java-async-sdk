@@ -13,12 +13,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class KibanaNodeConfiguration extends TeaModel {
     @NameInMap("amount")
+    @Validation(maximum = 1, minimum = 1)
     private Long amount;
 
     @NameInMap("disk")
     private Long disk;
 
     @NameInMap("spec")
+    @Validation(required = true)
     private String spec;
 
     private KibanaNodeConfiguration(Builder builder) {
