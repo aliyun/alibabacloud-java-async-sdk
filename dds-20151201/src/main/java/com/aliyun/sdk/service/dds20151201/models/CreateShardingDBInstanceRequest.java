@@ -123,6 +123,10 @@ public class CreateShardingDBInstanceRequest extends Request {
     private String storageEngine;
 
     @Query
+    @NameInMap("StorageType")
+    private String storageType;
+
+    @Query
     @NameInMap("VSwitchId")
     private String vSwitchId;
 
@@ -162,6 +166,7 @@ public class CreateShardingDBInstanceRequest extends Request {
         this.securityToken = builder.securityToken;
         this.srcDBInstanceId = builder.srcDBInstanceId;
         this.storageEngine = builder.storageEngine;
+        this.storageType = builder.storageType;
         this.vSwitchId = builder.vSwitchId;
         this.vpcId = builder.vpcId;
         this.zoneId = builder.zoneId;
@@ -363,6 +368,13 @@ public class CreateShardingDBInstanceRequest extends Request {
     }
 
     /**
+     * @return storageType
+     */
+    public String getStorageType() {
+        return this.storageType;
+    }
+
+    /**
      * @return vSwitchId
      */
     public String getVSwitchId() {
@@ -410,6 +422,7 @@ public class CreateShardingDBInstanceRequest extends Request {
         private String securityToken; 
         private String srcDBInstanceId; 
         private String storageEngine; 
+        private String storageType; 
         private String vSwitchId; 
         private String vpcId; 
         private String zoneId; 
@@ -446,6 +459,7 @@ public class CreateShardingDBInstanceRequest extends Request {
             this.securityToken = request.securityToken;
             this.srcDBInstanceId = request.srcDBInstanceId;
             this.storageEngine = request.storageEngine;
+            this.storageType = request.storageType;
             this.vSwitchId = request.vSwitchId;
             this.vpcId = request.vpcId;
             this.zoneId = request.zoneId;
@@ -682,6 +696,15 @@ public class CreateShardingDBInstanceRequest extends Request {
         public Builder storageEngine(String storageEngine) {
             this.putQueryParameter("StorageEngine", storageEngine);
             this.storageEngine = storageEngine;
+            return this;
+        }
+
+        /**
+         * StorageType.
+         */
+        public Builder storageType(String storageType) {
+            this.putQueryParameter("StorageType", storageType);
+            this.storageType = storageType;
             return this;
         }
 
