@@ -49,9 +49,9 @@ public class UploadAudioDataRequest extends Request {
             super();
         } 
 
-        private Builder(UploadAudioDataRequest response) {
-            super(response);
-            this.jsonStr = response.jsonStr;
+        private Builder(UploadAudioDataRequest request) {
+            super(request);
+            this.jsonStr = request.jsonStr;
         } 
 
         /**

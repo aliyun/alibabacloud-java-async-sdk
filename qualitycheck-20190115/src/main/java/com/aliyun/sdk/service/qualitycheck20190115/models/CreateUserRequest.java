@@ -49,9 +49,9 @@ public class CreateUserRequest extends Request {
             super();
         } 
 
-        private Builder(CreateUserRequest response) {
-            super(response);
-            this.jsonStr = response.jsonStr;
+        private Builder(CreateUserRequest request) {
+            super(request);
+            this.jsonStr = request.jsonStr;
         } 
 
         /**

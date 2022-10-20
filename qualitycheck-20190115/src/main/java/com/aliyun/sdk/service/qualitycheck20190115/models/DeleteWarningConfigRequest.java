@@ -49,9 +49,9 @@ public class DeleteWarningConfigRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteWarningConfigRequest response) {
-            super(response);
-            this.jsonStr = response.jsonStr;
+        private Builder(DeleteWarningConfigRequest request) {
+            super(request);
+            this.jsonStr = request.jsonStr;
         } 
 
         /**

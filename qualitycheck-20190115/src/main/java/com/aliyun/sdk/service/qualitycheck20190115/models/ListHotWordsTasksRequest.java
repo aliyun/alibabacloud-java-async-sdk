@@ -49,9 +49,9 @@ public class ListHotWordsTasksRequest extends Request {
             super();
         } 
 
-        private Builder(ListHotWordsTasksRequest response) {
-            super(response);
-            this.jsonStr = response.jsonStr;
+        private Builder(ListHotWordsTasksRequest request) {
+            super(request);
+            this.jsonStr = request.jsonStr;
         } 
 
         /**

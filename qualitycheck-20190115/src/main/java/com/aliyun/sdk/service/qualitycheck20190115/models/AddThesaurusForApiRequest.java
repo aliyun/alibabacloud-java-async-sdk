@@ -49,9 +49,9 @@ public class AddThesaurusForApiRequest extends Request {
             super();
         } 
 
-        private Builder(AddThesaurusForApiRequest response) {
-            super(response);
-            this.jsonStr = response.jsonStr;
+        private Builder(AddThesaurusForApiRequest request) {
+            super(request);
+            this.jsonStr = request.jsonStr;
         } 
 
         /**

@@ -49,9 +49,9 @@ public class GetThesaurusBySynonymForApiRequest extends Request {
             super();
         } 
 
-        private Builder(GetThesaurusBySynonymForApiRequest response) {
-            super(response);
-            this.jsonStr = response.jsonStr;
+        private Builder(GetThesaurusBySynonymForApiRequest request) {
+            super(request);
+            this.jsonStr = request.jsonStr;
         } 
 
         /**

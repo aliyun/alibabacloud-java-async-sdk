@@ -49,9 +49,9 @@ public class DelRuleCategoryRequest extends Request {
             super();
         } 
 
-        private Builder(DelRuleCategoryRequest response) {
-            super(response);
-            this.jsonStr = response.jsonStr;
+        private Builder(DelRuleCategoryRequest request) {
+            super(request);
+            this.jsonStr = request.jsonStr;
         } 
 
         /**

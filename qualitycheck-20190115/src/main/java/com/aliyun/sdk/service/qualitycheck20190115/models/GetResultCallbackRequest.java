@@ -49,9 +49,9 @@ public class GetResultCallbackRequest extends Request {
             super();
         } 
 
-        private Builder(GetResultCallbackRequest response) {
-            super(response);
-            this.jsonStr = response.jsonStr;
+        private Builder(GetResultCallbackRequest request) {
+            super(request);
+            this.jsonStr = request.jsonStr;
         } 
 
         /**

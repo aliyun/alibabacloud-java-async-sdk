@@ -49,9 +49,9 @@ public class VerifySentenceRequest extends Request {
             super();
         } 
 
-        private Builder(VerifySentenceRequest response) {
-            super(response);
-            this.jsonStr = response.jsonStr;
+        private Builder(VerifySentenceRequest request) {
+            super(request);
+            this.jsonStr = request.jsonStr;
         } 
 
         /**

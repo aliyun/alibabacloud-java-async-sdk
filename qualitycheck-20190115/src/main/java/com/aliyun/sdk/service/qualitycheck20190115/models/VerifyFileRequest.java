@@ -49,9 +49,9 @@ public class VerifyFileRequest extends Request {
             super();
         } 
 
-        private Builder(VerifyFileRequest response) {
-            super(response);
-            this.jsonStr = response.jsonStr;
+        private Builder(VerifyFileRequest request) {
+            super(request);
+            this.jsonStr = request.jsonStr;
         } 
 
         /**

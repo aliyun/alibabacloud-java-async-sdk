@@ -18,8 +18,6 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
-    CompletableFuture<ASResponse> aS(ASRequest request);
-
     CompletableFuture<AddBusinessCategoryResponse> addBusinessCategory(AddBusinessCategoryRequest request);
 
     CompletableFuture<AddRuleCategoryResponse> addRuleCategory(AddRuleCategoryRequest request);
@@ -28,11 +26,17 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AssignReviewerResponse> assignReviewer(AssignReviewerRequest request);
 
-    CompletableFuture<CeateWarningStrategyConfigResponse> ceateWarningStrategyConfig(CeateWarningStrategyConfigRequest request);
+    CompletableFuture<AssignReviewerBySessionGroupResponse> assignReviewerBySessionGroup(AssignReviewerBySessionGroupRequest request);
+
+    CompletableFuture<BatchSubmitReviewInfoResponse> batchSubmitReviewInfo(BatchSubmitReviewInfoRequest request);
 
     CompletableFuture<CreateAsrVocabResponse> createAsrVocab(CreateAsrVocabRequest request);
 
-    CompletableFuture<CreateHotWordsTaskResponse> createHotWordsTask(CreateHotWordsTaskRequest request);
+    CompletableFuture<CreateCheckTypeToSchemeResponse> createCheckTypeToScheme(CreateCheckTypeToSchemeRequest request);
+
+    CompletableFuture<CreateQualityCheckSchemeResponse> createQualityCheckScheme(CreateQualityCheckSchemeRequest request);
+
+    CompletableFuture<CreateSchemeTaskConfigResponse> createSchemeTaskConfig(CreateSchemeTaskConfigRequest request);
 
     CompletableFuture<CreateSkillGroupConfigResponse> createSkillGroupConfig(CreateSkillGroupConfigRequest request);
 
@@ -56,9 +60,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteDataSetResponse> deleteDataSet(DeleteDataSetRequest request);
 
-    CompletableFuture<DeleteHotWordsTaskResponse> deleteHotWordsTask(DeleteHotWordsTaskRequest request);
-
     CompletableFuture<DeletePrecisionTaskResponse> deletePrecisionTask(DeletePrecisionTaskRequest request);
+
+    CompletableFuture<DeleteQualityCheckSchemeResponse> deleteQualityCheckScheme(DeleteQualityCheckSchemeRequest request);
+
+    CompletableFuture<DeleteRuleResponse> deleteRule(DeleteRuleRequest request);
+
+    CompletableFuture<DeleteSchemeTaskConfigResponse> deleteSchemeTaskConfig(DeleteSchemeTaskConfigRequest request);
 
     CompletableFuture<DeleteScoreForApiResponse> deleteScoreForApi(DeleteScoreForApiRequest request);
 
@@ -88,6 +96,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetPrecisionTaskResponse> getPrecisionTask(GetPrecisionTaskRequest request);
 
+    CompletableFuture<GetQualityCheckSchemeResponse> getQualityCheckScheme(GetQualityCheckSchemeRequest request);
+
     CompletableFuture<GetResultResponse> getResult(GetResultRequest request);
 
     CompletableFuture<GetResultCallbackResponse> getResultCallback(GetResultCallbackRequest request);
@@ -96,15 +106,17 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetRuleResponse> getRule(GetRuleRequest request);
 
+    CompletableFuture<GetRuleByIdResponse> getRuleById(GetRuleByIdRequest request);
+
     CompletableFuture<GetRuleCategoryResponse> getRuleCategory(GetRuleCategoryRequest request);
 
     CompletableFuture<GetRuleDetailResponse> getRuleDetail(GetRuleDetailRequest request);
 
+    CompletableFuture<GetRulesCountListResponse> getRulesCountList(GetRulesCountListRequest request);
+
     CompletableFuture<GetScoreInfoResponse> getScoreInfo(GetScoreInfoRequest request);
 
     CompletableFuture<GetSkillGroupConfigResponse> getSkillGroupConfig(GetSkillGroupConfigRequest request);
-
-    CompletableFuture<GetSyncQualityCheckResultResponse> getSyncQualityCheckResult(GetSyncQualityCheckResultRequest request);
 
     CompletableFuture<GetSyncResultResponse> getSyncResult(GetSyncResultRequest request);
 
@@ -122,23 +134,23 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListAsrVocabResponse> listAsrVocab(ListAsrVocabRequest request);
 
-    CompletableFuture<ListBizTagDistributeResponse> listBizTagDistribute(ListBizTagDistributeRequest request);
+    CompletableFuture<ListBusinessSpacesResponse> listBusinessSpaces(ListBusinessSpacesRequest request);
 
-    CompletableFuture<ListHotWordsTaskExecResultsResponse> listHotWordsTaskExecResults(ListHotWordsTaskExecResultsRequest request);
-
-    CompletableFuture<ListHotWordsTaskHistoriesResponse> listHotWordsTaskHistories(ListHotWordsTaskHistoriesRequest request);
+    CompletableFuture<ListDataSetResponse> listDataSet(ListDataSetRequest request);
 
     CompletableFuture<ListHotWordsTasksResponse> listHotWordsTasks(ListHotWordsTasksRequest request);
 
     CompletableFuture<ListPrecisionTaskResponse> listPrecisionTask(ListPrecisionTaskRequest request);
 
+    CompletableFuture<ListQualityCheckSchemeResponse> listQualityCheckScheme(ListQualityCheckSchemeRequest request);
+
     CompletableFuture<ListRolesResponse> listRoles(ListRolesRequest request);
 
     CompletableFuture<ListRulesResponse> listRules(ListRulesRequest request);
 
-    CompletableFuture<ListSessionDurationDistributeResponse> listSessionDurationDistribute(ListSessionDurationDistributeRequest request);
+    CompletableFuture<ListSchemeTaskConfigResponse> listSchemeTaskConfig(ListSchemeTaskConfigRequest request);
 
-    CompletableFuture<ListSessionRateTrendResponse> listSessionRateTrend(ListSessionRateTrendRequest request);
+    CompletableFuture<ListSessionGroupResponse> listSessionGroup(ListSessionGroupRequest request);
 
     CompletableFuture<ListSkillGroupConfigResponse> listSkillGroupConfig(ListSkillGroupConfigRequest request);
 
@@ -152,6 +164,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<RestartAsrTaskResponse> restartAsrTask(RestartAsrTaskRequest request);
 
+    CompletableFuture<RevertAssignedSessionResponse> revertAssignedSession(RevertAssignedSessionRequest request);
+
+    CompletableFuture<RevertAssignedSessionGroupResponse> revertAssignedSessionGroup(RevertAssignedSessionGroupRequest request);
+
     CompletableFuture<SaveConfigDataSetResponse> saveConfigDataSet(SaveConfigDataSetRequest request);
 
     CompletableFuture<SubmitComplaintResponse> submitComplaint(SubmitComplaintRequest request);
@@ -164,13 +180,21 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<SyncQualityCheckResponse> syncQualityCheck(SyncQualityCheckRequest request);
 
-    CompletableFuture<UndoVerifyTaskResponse> undoVerifyTask(UndoVerifyTaskRequest request);
-
     CompletableFuture<UpdateAsrVocabResponse> updateAsrVocab(UpdateAsrVocabRequest request);
 
-    CompletableFuture<UpdateHotWordsTaskResponse> updateHotWordsTask(UpdateHotWordsTaskRequest request);
+    CompletableFuture<UpdateCheckTypeToSchemeResponse> updateCheckTypeToScheme(UpdateCheckTypeToSchemeRequest request);
+
+    CompletableFuture<UpdateQualityCheckDataResponse> updateQualityCheckData(UpdateQualityCheckDataRequest request);
+
+    CompletableFuture<UpdateQualityCheckSchemeResponse> updateQualityCheckScheme(UpdateQualityCheckSchemeRequest request);
 
     CompletableFuture<UpdateRuleResponse> updateRule(UpdateRuleRequest request);
+
+    CompletableFuture<UpdateRuleByIdResponse> updateRuleById(UpdateRuleByIdRequest request);
+
+    CompletableFuture<UpdateRuleToSchemeResponse> updateRuleToScheme(UpdateRuleToSchemeRequest request);
+
+    CompletableFuture<UpdateSchemeTaskConfigResponse> updateSchemeTaskConfig(UpdateSchemeTaskConfigRequest request);
 
     CompletableFuture<UpdateScoreForApiResponse> updateScoreForApi(UpdateScoreForApiRequest request);
 

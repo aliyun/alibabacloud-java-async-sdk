@@ -49,9 +49,9 @@ public class GetResultToReviewRequest extends Request {
             super();
         } 
 
-        private Builder(GetResultToReviewRequest response) {
-            super(response);
-            this.jsonStr = response.jsonStr;
+        private Builder(GetResultToReviewRequest request) {
+            super(request);
+            this.jsonStr = request.jsonStr;
         } 
 
         /**

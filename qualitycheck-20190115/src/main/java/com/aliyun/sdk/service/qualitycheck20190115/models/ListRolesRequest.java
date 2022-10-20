@@ -49,9 +49,9 @@ public class ListRolesRequest extends Request {
             super();
         } 
 
-        private Builder(ListRolesRequest response) {
-            super(response);
-            this.jsonStr = response.jsonStr;
+        private Builder(ListRolesRequest request) {
+            super(request);
+            this.jsonStr = request.jsonStr;
         } 
 
         /**

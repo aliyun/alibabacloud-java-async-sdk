@@ -49,9 +49,9 @@ public class SubmitQualityCheckTaskRequest extends Request {
             super();
         } 
 
-        private Builder(SubmitQualityCheckTaskRequest response) {
-            super(response);
-            this.jsonStr = response.jsonStr;
+        private Builder(SubmitQualityCheckTaskRequest request) {
+            super(request);
+            this.jsonStr = request.jsonStr;
         } 
 
         /**

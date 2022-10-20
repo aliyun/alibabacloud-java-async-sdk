@@ -49,9 +49,9 @@ public class DeleteUserRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteUserRequest response) {
-            super(response);
-            this.jsonStr = response.jsonStr;
+        private Builder(DeleteUserRequest request) {
+            super(request);
+            this.jsonStr = request.jsonStr;
         } 
 
         /**

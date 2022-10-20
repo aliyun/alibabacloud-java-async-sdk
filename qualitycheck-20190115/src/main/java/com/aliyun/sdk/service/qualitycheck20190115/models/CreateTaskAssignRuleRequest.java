@@ -49,9 +49,9 @@ public class CreateTaskAssignRuleRequest extends Request {
             super();
         } 
 
-        private Builder(CreateTaskAssignRuleRequest response) {
-            super(response);
-            this.jsonStr = response.jsonStr;
+        private Builder(CreateTaskAssignRuleRequest request) {
+            super(request);
+            this.jsonStr = request.jsonStr;
         } 
 
         /**

@@ -49,9 +49,9 @@ public class DelThesaurusForApiRequest extends Request {
             super();
         } 
 
-        private Builder(DelThesaurusForApiRequest response) {
-            super(response);
-            this.jsonStr = response.jsonStr;
+        private Builder(DelThesaurusForApiRequest request) {
+            super(request);
+            this.jsonStr = request.jsonStr;
         } 
 
         /**

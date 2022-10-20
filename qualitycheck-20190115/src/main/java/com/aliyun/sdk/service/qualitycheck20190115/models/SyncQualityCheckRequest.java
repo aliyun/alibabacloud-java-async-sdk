@@ -49,9 +49,9 @@ public class SyncQualityCheckRequest extends Request {
             super();
         } 
 
-        private Builder(SyncQualityCheckRequest response) {
-            super(response);
-            this.jsonStr = response.jsonStr;
+        private Builder(SyncQualityCheckRequest request) {
+            super(request);
+            this.jsonStr = request.jsonStr;
         } 
 
         /**

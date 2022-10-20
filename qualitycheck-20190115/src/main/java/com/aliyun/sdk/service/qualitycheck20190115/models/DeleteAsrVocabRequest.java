@@ -49,9 +49,9 @@ public class DeleteAsrVocabRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteAsrVocabRequest response) {
-            super(response);
-            this.jsonStr = response.jsonStr;
+        private Builder(DeleteAsrVocabRequest request) {
+            super(request);
+            this.jsonStr = request.jsonStr;
         } 
 
         /**

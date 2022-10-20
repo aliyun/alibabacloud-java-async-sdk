@@ -49,9 +49,9 @@ public class UploadDataSyncRequest extends Request {
             super();
         } 
 
-        private Builder(UploadDataSyncRequest response) {
-            super(response);
-            this.jsonStr = response.jsonStr;
+        private Builder(UploadDataSyncRequest request) {
+            super(request);
+            this.jsonStr = request.jsonStr;
         } 
 
         /**

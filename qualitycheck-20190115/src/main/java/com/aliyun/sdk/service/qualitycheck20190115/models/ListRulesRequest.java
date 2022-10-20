@@ -49,9 +49,9 @@ public class ListRulesRequest extends Request {
             super();
         } 
 
-        private Builder(ListRulesRequest response) {
-            super(response);
-            this.jsonStr = response.jsonStr;
+        private Builder(ListRulesRequest request) {
+            super(request);
+            this.jsonStr = request.jsonStr;
         } 
 
         /**

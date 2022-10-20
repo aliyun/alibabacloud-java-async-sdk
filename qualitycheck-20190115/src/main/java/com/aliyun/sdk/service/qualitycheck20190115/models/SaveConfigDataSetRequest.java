@@ -49,9 +49,9 @@ public class SaveConfigDataSetRequest extends Request {
             super();
         } 
 
-        private Builder(SaveConfigDataSetRequest response) {
-            super(response);
-            this.jsonStr = response.jsonStr;
+        private Builder(SaveConfigDataSetRequest request) {
+            super(request);
+            this.jsonStr = request.jsonStr;
         } 
 
         /**

@@ -49,9 +49,9 @@ public class DeletePrecisionTaskRequest extends Request {
             super();
         } 
 
-        private Builder(DeletePrecisionTaskRequest response) {
-            super(response);
-            this.jsonStr = response.jsonStr;
+        private Builder(DeletePrecisionTaskRequest request) {
+            super(request);
+            this.jsonStr = request.jsonStr;
         } 
 
         /**

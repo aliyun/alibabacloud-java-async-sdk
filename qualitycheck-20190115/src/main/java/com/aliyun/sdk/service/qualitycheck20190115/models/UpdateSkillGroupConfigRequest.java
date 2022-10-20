@@ -49,9 +49,9 @@ public class UpdateSkillGroupConfigRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateSkillGroupConfigRequest response) {
-            super(response);
-            this.jsonStr = response.jsonStr;
+        private Builder(UpdateSkillGroupConfigRequest request) {
+            super(request);
+            this.jsonStr = request.jsonStr;
         } 
 
         /**

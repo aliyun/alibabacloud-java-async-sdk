@@ -49,9 +49,9 @@ public class GetSyncResultRequest extends Request {
             super();
         } 
 
-        private Builder(GetSyncResultRequest response) {
-            super(response);
-            this.jsonStr = response.jsonStr;
+        private Builder(GetSyncResultRequest request) {
+            super(request);
+            this.jsonStr = request.jsonStr;
         } 
 
         /**

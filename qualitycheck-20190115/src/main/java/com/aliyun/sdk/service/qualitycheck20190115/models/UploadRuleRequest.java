@@ -49,9 +49,9 @@ public class UploadRuleRequest extends Request {
             super();
         } 
 
-        private Builder(UploadRuleRequest response) {
-            super(response);
-            this.jsonStr = response.jsonStr;
+        private Builder(UploadRuleRequest request) {
+            super(request);
+            this.jsonStr = request.jsonStr;
         } 
 
         /**

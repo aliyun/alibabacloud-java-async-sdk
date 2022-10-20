@@ -49,9 +49,9 @@ public class UpdateUserConfigRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateUserConfigRequest response) {
-            super(response);
-            this.jsonStr = response.jsonStr;
+        private Builder(UpdateUserConfigRequest request) {
+            super(request);
+            this.jsonStr = request.jsonStr;
         } 
 
         /**

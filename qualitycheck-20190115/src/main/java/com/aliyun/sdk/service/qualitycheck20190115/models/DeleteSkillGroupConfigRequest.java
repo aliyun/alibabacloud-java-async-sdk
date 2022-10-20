@@ -49,9 +49,9 @@ public class DeleteSkillGroupConfigRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteSkillGroupConfigRequest response) {
-            super(response);
-            this.jsonStr = response.jsonStr;
+        private Builder(DeleteSkillGroupConfigRequest request) {
+            super(request);
+            this.jsonStr = request.jsonStr;
         } 
 
         /**

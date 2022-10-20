@@ -49,9 +49,9 @@ public class DeleteCustomizationConfigRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteCustomizationConfigRequest response) {
-            super(response);
-            this.jsonStr = response.jsonStr;
+        private Builder(DeleteCustomizationConfigRequest request) {
+            super(request);
+            this.jsonStr = request.jsonStr;
         } 
 
         /**

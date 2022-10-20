@@ -49,9 +49,9 @@ public class AddBusinessCategoryRequest extends Request {
             super();
         } 
 
-        private Builder(AddBusinessCategoryRequest response) {
-            super(response);
-            this.jsonStr = response.jsonStr;
+        private Builder(AddBusinessCategoryRequest request) {
+            super(request);
+            this.jsonStr = request.jsonStr;
         } 
 
         /**

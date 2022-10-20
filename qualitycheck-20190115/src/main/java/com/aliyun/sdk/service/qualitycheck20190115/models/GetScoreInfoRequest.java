@@ -49,9 +49,9 @@ public class GetScoreInfoRequest extends Request {
             super();
         } 
 
-        private Builder(GetScoreInfoRequest response) {
-            super(response);
-            this.jsonStr = response.jsonStr;
+        private Builder(GetScoreInfoRequest request) {
+            super(request);
+            this.jsonStr = request.jsonStr;
         } 
 
         /**

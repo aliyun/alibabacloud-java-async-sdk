@@ -49,9 +49,9 @@ public class ListTaskAssignRulesRequest extends Request {
             super();
         } 
 
-        private Builder(ListTaskAssignRulesRequest response) {
-            super(response);
-            this.jsonStr = response.jsonStr;
+        private Builder(ListTaskAssignRulesRequest request) {
+            super(request);
+            this.jsonStr = request.jsonStr;
         } 
 
         /**

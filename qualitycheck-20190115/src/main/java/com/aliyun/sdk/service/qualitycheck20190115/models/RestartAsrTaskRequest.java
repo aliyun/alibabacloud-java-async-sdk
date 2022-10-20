@@ -49,9 +49,9 @@ public class RestartAsrTaskRequest extends Request {
             super();
         } 
 
-        private Builder(RestartAsrTaskRequest response) {
-            super(response);
-            this.jsonStr = response.jsonStr;
+        private Builder(RestartAsrTaskRequest request) {
+            super(request);
+            this.jsonStr = request.jsonStr;
         } 
 
         /**

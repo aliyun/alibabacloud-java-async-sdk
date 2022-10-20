@@ -1,0 +1,72 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.qualitycheck20190115.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link DeleteQualityCheckSchemeRequest} extends {@link RequestModel}
+ *
+ * <p>DeleteQualityCheckSchemeRequest</p>
+ */
+public class DeleteQualityCheckSchemeRequest extends Request {
+    @Query
+    @NameInMap("jsonStr")
+    private String jsonStr;
+
+    private DeleteQualityCheckSchemeRequest(Builder builder) {
+        super(builder);
+        this.jsonStr = builder.jsonStr;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static DeleteQualityCheckSchemeRequest create() {
+        return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return jsonStr
+     */
+    public String getJsonStr() {
+        return this.jsonStr;
+    }
+
+    public static final class Builder extends Request.Builder<DeleteQualityCheckSchemeRequest, Builder> {
+        private String jsonStr; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(DeleteQualityCheckSchemeRequest request) {
+            super(request);
+            this.jsonStr = request.jsonStr;
+        } 
+
+        /**
+         * jsonStr.
+         */
+        public Builder jsonStr(String jsonStr) {
+            this.putQueryParameter("jsonStr", jsonStr);
+            this.jsonStr = jsonStr;
+            return this;
+        }
+
+        @Override
+        public DeleteQualityCheckSchemeRequest build() {
+            return new DeleteQualityCheckSchemeRequest(this);
+        } 
+
+    } 
+
+}

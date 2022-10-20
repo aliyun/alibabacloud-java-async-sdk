@@ -49,9 +49,9 @@ public class UpdateAsrVocabRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateAsrVocabRequest response) {
-            super(response);
-            this.jsonStr = response.jsonStr;
+        private Builder(UpdateAsrVocabRequest request) {
+            super(request);
+            this.jsonStr = request.jsonStr;
         } 
 
         /**

@@ -49,9 +49,9 @@ public class DeleteTaskAssignRuleRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteTaskAssignRuleRequest response) {
-            super(response);
-            this.jsonStr = response.jsonStr;
+        private Builder(DeleteTaskAssignRuleRequest request) {
+            super(request);
+            this.jsonStr = request.jsonStr;
         } 
 
         /**

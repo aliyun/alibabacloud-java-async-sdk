@@ -49,9 +49,9 @@ public class InvalidRuleRequest extends Request {
             super();
         } 
 
-        private Builder(InvalidRuleRequest response) {
-            super(response);
-            this.jsonStr = response.jsonStr;
+        private Builder(InvalidRuleRequest request) {
+            super(request);
+            this.jsonStr = request.jsonStr;
         } 
 
         /**

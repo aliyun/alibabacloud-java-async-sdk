@@ -49,9 +49,9 @@ public class ListUsersRequest extends Request {
             super();
         } 
 
-        private Builder(ListUsersRequest response) {
-            super(response);
-            this.jsonStr = response.jsonStr;
+        private Builder(ListUsersRequest request) {
+            super(request);
+            this.jsonStr = request.jsonStr;
         } 
 
         /**

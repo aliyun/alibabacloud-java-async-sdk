@@ -49,9 +49,9 @@ public class ListPrecisionTaskRequest extends Request {
             super();
         } 
 
-        private Builder(ListPrecisionTaskRequest response) {
-            super(response);
-            this.jsonStr = response.jsonStr;
+        private Builder(ListPrecisionTaskRequest request) {
+            super(request);
+            this.jsonStr = request.jsonStr;
         } 
 
         /**

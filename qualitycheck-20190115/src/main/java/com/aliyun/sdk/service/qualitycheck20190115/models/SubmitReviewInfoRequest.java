@@ -49,9 +49,9 @@ public class SubmitReviewInfoRequest extends Request {
             super();
         } 
 
-        private Builder(SubmitReviewInfoRequest response) {
-            super(response);
-            this.jsonStr = response.jsonStr;
+        private Builder(SubmitReviewInfoRequest request) {
+            super(request);
+            this.jsonStr = request.jsonStr;
         } 
 
         /**

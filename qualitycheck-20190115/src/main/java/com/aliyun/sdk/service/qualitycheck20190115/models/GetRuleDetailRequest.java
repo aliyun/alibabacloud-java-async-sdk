@@ -49,9 +49,9 @@ public class GetRuleDetailRequest extends Request {
             super();
         } 
 
-        private Builder(GetRuleDetailRequest response) {
-            super(response);
-            this.jsonStr = response.jsonStr;
+        private Builder(GetRuleDetailRequest request) {
+            super(request);
+            this.jsonStr = request.jsonStr;
         } 
 
         /**

@@ -49,9 +49,9 @@ public class GetHitResultRequest extends Request {
             super();
         } 
 
-        private Builder(GetHitResultRequest response) {
-            super(response);
-            this.jsonStr = response.jsonStr;
+        private Builder(GetHitResultRequest request) {
+            super(request);
+            this.jsonStr = request.jsonStr;
         } 
 
         /**

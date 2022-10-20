@@ -49,9 +49,9 @@ public class HandleComplaintRequest extends Request {
             super();
         } 
 
-        private Builder(HandleComplaintRequest response) {
-            super(response);
-            this.jsonStr = response.jsonStr;
+        private Builder(HandleComplaintRequest request) {
+            super(request);
+            this.jsonStr = request.jsonStr;
         } 
 
         /**

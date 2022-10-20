@@ -49,9 +49,9 @@ public class DeleteScoreForApiRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteScoreForApiRequest response) {
-            super(response);
-            this.jsonStr = response.jsonStr;
+        private Builder(DeleteScoreForApiRequest request) {
+            super(request);
+            this.jsonStr = request.jsonStr;
         } 
 
         /**

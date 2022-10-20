@@ -48,9 +48,9 @@ public class GetAsrVocabRequest extends Request {
             super();
         } 
 
-        private Builder(GetAsrVocabRequest response) {
-            super(response);
-            this.jsonStr = response.jsonStr;
+        private Builder(GetAsrVocabRequest request) {
+            super(request);
+            this.jsonStr = request.jsonStr;
         } 
 
         /**

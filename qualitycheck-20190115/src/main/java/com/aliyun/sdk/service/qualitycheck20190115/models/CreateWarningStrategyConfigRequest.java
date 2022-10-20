@@ -49,9 +49,9 @@ public class CreateWarningStrategyConfigRequest extends Request {
             super();
         } 
 
-        private Builder(CreateWarningStrategyConfigRequest response) {
-            super(response);
-            this.jsonStr = response.jsonStr;
+        private Builder(CreateWarningStrategyConfigRequest request) {
+            super(request);
+            this.jsonStr = request.jsonStr;
         } 
 
         /**

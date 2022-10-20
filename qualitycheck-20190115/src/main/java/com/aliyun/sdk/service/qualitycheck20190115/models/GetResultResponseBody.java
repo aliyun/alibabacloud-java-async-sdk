@@ -913,6 +913,12 @@ public class GetResultResponseBody extends TeaModel {
         @NameInMap("Rid")
         private String rid;
 
+        @NameInMap("SchemeId")
+        private Long schemeId;
+
+        @NameInMap("SchemeVersion")
+        private Long schemeVersion;
+
         @NameInMap("Type")
         private String type;
 
@@ -921,6 +927,8 @@ public class GetResultResponseBody extends TeaModel {
             this.name = builder.name;
             this.reviewResult = builder.reviewResult;
             this.rid = builder.rid;
+            this.schemeId = builder.schemeId;
+            this.schemeVersion = builder.schemeVersion;
             this.type = builder.type;
         }
 
@@ -961,6 +969,20 @@ public class GetResultResponseBody extends TeaModel {
         }
 
         /**
+         * @return schemeId
+         */
+        public Long getSchemeId() {
+            return this.schemeId;
+        }
+
+        /**
+         * @return schemeVersion
+         */
+        public Long getSchemeVersion() {
+            return this.schemeVersion;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
@@ -972,6 +994,8 @@ public class GetResultResponseBody extends TeaModel {
             private String name; 
             private Integer reviewResult; 
             private String rid; 
+            private Long schemeId; 
+            private Long schemeVersion; 
             private String type; 
 
             /**
@@ -1003,6 +1027,22 @@ public class GetResultResponseBody extends TeaModel {
              */
             public Builder rid(String rid) {
                 this.rid = rid;
+                return this;
+            }
+
+            /**
+             * SchemeId.
+             */
+            public Builder schemeId(Long schemeId) {
+                this.schemeId = schemeId;
+                return this;
+            }
+
+            /**
+             * SchemeVersion.
+             */
+            public Builder schemeVersion(Long schemeVersion) {
+                this.schemeVersion = schemeVersion;
                 return this;
             }
 
@@ -1745,6 +1785,88 @@ public class GetResultResponseBody extends TeaModel {
         } 
 
     }
+    public static class SchemeIdList extends TeaModel {
+        @NameInMap("SchemeIdList")
+        private java.util.List < Long > schemeIdList;
+
+        private SchemeIdList(Builder builder) {
+            this.schemeIdList = builder.schemeIdList;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SchemeIdList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return schemeIdList
+         */
+        public java.util.List < Long > getSchemeIdList() {
+            return this.schemeIdList;
+        }
+
+        public static final class Builder {
+            private java.util.List < Long > schemeIdList; 
+
+            /**
+             * SchemeIdList.
+             */
+            public Builder schemeIdList(java.util.List < Long > schemeIdList) {
+                this.schemeIdList = schemeIdList;
+                return this;
+            }
+
+            public SchemeIdList build() {
+                return new SchemeIdList(this);
+            } 
+
+        } 
+
+    }
+    public static class SchemeNameList extends TeaModel {
+        @NameInMap("SchemeNameList")
+        private java.util.List < String > schemeNameList;
+
+        private SchemeNameList(Builder builder) {
+            this.schemeNameList = builder.schemeNameList;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SchemeNameList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return schemeNameList
+         */
+        public java.util.List < String > getSchemeNameList() {
+            return this.schemeNameList;
+        }
+
+        public static final class Builder {
+            private java.util.List < String > schemeNameList; 
+
+            /**
+             * SchemeNameList.
+             */
+            public Builder schemeNameList(java.util.List < String > schemeNameList) {
+                this.schemeNameList = schemeNameList;
+                return this;
+            }
+
+            public SchemeNameList build() {
+                return new SchemeNameList(this);
+            } 
+
+        } 
+
+    }
     public static class ResultInfo extends TeaModel {
         @NameInMap("Agent")
         private Agent agent;
@@ -1800,6 +1922,12 @@ public class GetResultResponseBody extends TeaModel {
         @NameInMap("Reviewer")
         private String reviewer;
 
+        @NameInMap("SchemeIdList")
+        private SchemeIdList schemeIdList;
+
+        @NameInMap("SchemeNameList")
+        private SchemeNameList schemeNameList;
+
         @NameInMap("Score")
         private Integer score;
 
@@ -1831,6 +1959,8 @@ public class GetResultResponseBody extends TeaModel {
             this.reviewTimeLong = builder.reviewTimeLong;
             this.reviewType = builder.reviewType;
             this.reviewer = builder.reviewer;
+            this.schemeIdList = builder.schemeIdList;
+            this.schemeNameList = builder.schemeNameList;
             this.score = builder.score;
             this.status = builder.status;
             this.taskId = builder.taskId;
@@ -1972,6 +2102,20 @@ public class GetResultResponseBody extends TeaModel {
         }
 
         /**
+         * @return schemeIdList
+         */
+        public SchemeIdList getSchemeIdList() {
+            return this.schemeIdList;
+        }
+
+        /**
+         * @return schemeNameList
+         */
+        public SchemeNameList getSchemeNameList() {
+            return this.schemeNameList;
+        }
+
+        /**
          * @return score
          */
         public Integer getScore() {
@@ -2018,6 +2162,8 @@ public class GetResultResponseBody extends TeaModel {
             private String reviewTimeLong; 
             private Integer reviewType; 
             private String reviewer; 
+            private SchemeIdList schemeIdList; 
+            private SchemeNameList schemeNameList; 
             private Integer score; 
             private Integer status; 
             private String taskId; 
@@ -2164,6 +2310,22 @@ public class GetResultResponseBody extends TeaModel {
              */
             public Builder reviewer(String reviewer) {
                 this.reviewer = reviewer;
+                return this;
+            }
+
+            /**
+             * SchemeIdList.
+             */
+            public Builder schemeIdList(SchemeIdList schemeIdList) {
+                this.schemeIdList = schemeIdList;
+                return this;
+            }
+
+            /**
+             * SchemeNameList.
+             */
+            public Builder schemeNameList(SchemeNameList schemeNameList) {
+                this.schemeNameList = schemeNameList;
                 return this;
             }
 

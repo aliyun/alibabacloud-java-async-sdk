@@ -49,9 +49,9 @@ public class UpdateRuleRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateRuleRequest response) {
-            super(response);
-            this.jsonStr = response.jsonStr;
+        private Builder(UpdateRuleRequest request) {
+            super(request);
+            this.jsonStr = request.jsonStr;
         } 
 
         /**

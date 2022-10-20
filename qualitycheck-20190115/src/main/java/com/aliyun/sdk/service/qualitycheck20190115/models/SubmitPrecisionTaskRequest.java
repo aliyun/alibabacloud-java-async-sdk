@@ -49,9 +49,9 @@ public class SubmitPrecisionTaskRequest extends Request {
             super();
         } 
 
-        private Builder(SubmitPrecisionTaskRequest response) {
-            super(response);
-            this.jsonStr = response.jsonStr;
+        private Builder(SubmitPrecisionTaskRequest request) {
+            super(request);
+            this.jsonStr = request.jsonStr;
         } 
 
         /**

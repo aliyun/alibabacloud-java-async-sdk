@@ -49,9 +49,9 @@ public class DeleteBusinessCategoryRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteBusinessCategoryRequest response) {
-            super(response);
-            this.jsonStr = response.jsonStr;
+        private Builder(DeleteBusinessCategoryRequest request) {
+            super(request);
+            this.jsonStr = request.jsonStr;
         } 
 
         /**

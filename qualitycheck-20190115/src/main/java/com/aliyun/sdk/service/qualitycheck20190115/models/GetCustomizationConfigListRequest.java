@@ -49,9 +49,9 @@ public class GetCustomizationConfigListRequest extends Request {
             super();
         } 
 
-        private Builder(GetCustomizationConfigListRequest response) {
-            super(response);
-            this.jsonStr = response.jsonStr;
+        private Builder(GetCustomizationConfigListRequest request) {
+            super(request);
+            this.jsonStr = request.jsonStr;
         } 
 
         /**

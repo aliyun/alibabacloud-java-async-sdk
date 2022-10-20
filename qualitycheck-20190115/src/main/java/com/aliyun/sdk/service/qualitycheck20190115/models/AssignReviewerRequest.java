@@ -49,9 +49,9 @@ public class AssignReviewerRequest extends Request {
             super();
         } 
 
-        private Builder(AssignReviewerRequest response) {
-            super(response);
-            this.jsonStr = response.jsonStr;
+        private Builder(AssignReviewerRequest request) {
+            super(request);
+            this.jsonStr = request.jsonStr;
         } 
 
         /**

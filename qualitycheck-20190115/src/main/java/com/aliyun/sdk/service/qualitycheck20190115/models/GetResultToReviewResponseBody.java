@@ -600,6 +600,9 @@ public class GetResultToReviewResponseBody extends TeaModel {
         @NameInMap("Cid")
         private String cid;
 
+        @NameInMap("CustomizeCode")
+        private String customizeCode;
+
         @NameInMap("From")
         private Integer from;
 
@@ -617,6 +620,7 @@ public class GetResultToReviewResponseBody extends TeaModel {
 
         private KeyWord(Builder builder) {
             this.cid = builder.cid;
+            this.customizeCode = builder.customizeCode;
             this.from = builder.from;
             this.pid = builder.pid;
             this.tid = builder.tid;
@@ -637,6 +641,13 @@ public class GetResultToReviewResponseBody extends TeaModel {
          */
         public String getCid() {
             return this.cid;
+        }
+
+        /**
+         * @return customizeCode
+         */
+        public String getCustomizeCode() {
+            return this.customizeCode;
         }
 
         /**
@@ -676,6 +687,7 @@ public class GetResultToReviewResponseBody extends TeaModel {
 
         public static final class Builder {
             private String cid; 
+            private String customizeCode; 
             private Integer from; 
             private Integer pid; 
             private String tid; 
@@ -687,6 +699,14 @@ public class GetResultToReviewResponseBody extends TeaModel {
              */
             public Builder cid(String cid) {
                 this.cid = cid;
+                return this;
+            }
+
+            /**
+             * CustomizeCode.
+             */
+            public Builder customizeCode(String customizeCode) {
+                this.customizeCode = customizeCode;
                 return this;
             }
 

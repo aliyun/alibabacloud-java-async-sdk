@@ -49,9 +49,9 @@ public class DeleteDataSetRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteDataSetRequest response) {
-            super(response);
-            this.jsonStr = response.jsonStr;
+        private Builder(DeleteDataSetRequest request) {
+            super(request);
+            this.jsonStr = request.jsonStr;
         } 
 
         /**

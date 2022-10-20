@@ -49,9 +49,9 @@ public class InsertSubScoreForApiRequest extends Request {
             super();
         } 
 
-        private Builder(InsertSubScoreForApiRequest response) {
-            super(response);
-            this.jsonStr = response.jsonStr;
+        private Builder(InsertSubScoreForApiRequest request) {
+            super(request);
+            this.jsonStr = request.jsonStr;
         } 
 
         /**

@@ -49,9 +49,9 @@ public class GetNextResultToVerifyRequest extends Request {
             super();
         } 
 
-        private Builder(GetNextResultToVerifyRequest response) {
-            super(response);
-            this.jsonStr = response.jsonStr;
+        private Builder(GetNextResultToVerifyRequest request) {
+            super(request);
+            this.jsonStr = request.jsonStr;
         } 
 
         /**

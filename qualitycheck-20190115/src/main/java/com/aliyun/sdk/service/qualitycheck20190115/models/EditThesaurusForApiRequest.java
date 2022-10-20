@@ -49,9 +49,9 @@ public class EditThesaurusForApiRequest extends Request {
             super();
         } 
 
-        private Builder(EditThesaurusForApiRequest response) {
-            super(response);
-            this.jsonStr = response.jsonStr;
+        private Builder(EditThesaurusForApiRequest request) {
+            super(request);
+            this.jsonStr = request.jsonStr;
         } 
 
         /**

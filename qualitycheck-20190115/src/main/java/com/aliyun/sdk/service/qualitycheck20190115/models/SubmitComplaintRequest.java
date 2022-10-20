@@ -49,9 +49,9 @@ public class SubmitComplaintRequest extends Request {
             super();
         } 
 
-        private Builder(SubmitComplaintRequest response) {
-            super(response);
-            this.jsonStr = response.jsonStr;
+        private Builder(SubmitComplaintRequest request) {
+            super(request);
+            this.jsonStr = request.jsonStr;
         } 
 
         /**
