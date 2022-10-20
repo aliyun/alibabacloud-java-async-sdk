@@ -20,19 +20,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ApplyConfigToMachineGroupResponse> applyConfigToMachineGroup(ApplyConfigToMachineGroupRequest request);
 
-    CompletableFuture<BatchCreateEtlMetaResponse> batchCreateEtlMeta(BatchCreateEtlMetaRequest request);
-
-    CompletableFuture<BatchModifyEtlMetaStatusResponse> batchModifyEtlMetaStatus(BatchModifyEtlMetaStatusRequest request);
-
-    CompletableFuture<BatchUpdateEtlMetaResponse> batchUpdateEtlMeta(BatchUpdateEtlMetaRequest request);
-
     CompletableFuture<CreateConsumerGroupResponse> createConsumerGroup(CreateConsumerGroupRequest request);
 
     CompletableFuture<CreateDomainResponse> createDomain(CreateDomainRequest request);
-
-    CompletableFuture<CreateEtlJobResponse> createEtlJob(CreateEtlJobRequest request);
-
-    CompletableFuture<CreateEtlMetaResponse> createEtlMeta(CreateEtlMetaRequest request);
 
     CompletableFuture<CreateIndexResponse> createIndex(CreateIndexRequest request);
 
@@ -58,10 +48,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteDomainResponse> deleteDomain(DeleteDomainRequest request);
 
-    CompletableFuture<DeleteEtlJobResponse> deleteEtlJob(DeleteEtlJobRequest request);
-
-    CompletableFuture<DeleteEtlMetaResponse> deleteEtlMeta(DeleteEtlMetaRequest request);
-
     CompletableFuture<DeleteExternalStoreResponse> deleteExternalStore(DeleteExternalStoreRequest request);
 
     CompletableFuture<DeleteIndexResponse> deleteIndex(DeleteIndexRequest request);
@@ -73,6 +59,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteMachineGroupResponse> deleteMachineGroup(DeleteMachineGroupRequest request);
 
     CompletableFuture<DeleteProjectResponse> deleteProject(DeleteProjectRequest request);
+
+    CompletableFuture<DeleteProjectPolicyResponse> deleteProjectPolicy(DeleteProjectPolicyRequest request);
 
     CompletableFuture<DeleteSavedSearchResponse> deleteSavedSearch(DeleteSavedSearchRequest request);
 
@@ -89,10 +77,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetCursorResponse> getCursor(GetCursorRequest request);
 
     CompletableFuture<GetCursorTimeResponse> getCursorTime(GetCursorTimeRequest request);
-
-    CompletableFuture<GetEtlJobResponse> getEtlJob(GetEtlJobRequest request);
-
-    CompletableFuture<GetEtlMetaResponse> getEtlMeta(GetEtlMetaRequest request);
 
     CompletableFuture<GetExternalStoreResponse> getExternalStore(GetExternalStoreRequest request);
 
@@ -112,21 +96,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetProjectLogsResponse> getProjectLogs(GetProjectLogsRequest request);
 
-    CompletableFuture<GetSavedSearchResponse> getSavedSearch(GetSavedSearchRequest request);
+    CompletableFuture<GetProjectPolicyResponse> getProjectPolicy(GetProjectPolicyRequest request);
 
-    CompletableFuture<GetShipperConfigResponse> getShipperConfig(GetShipperConfigRequest request);
+    CompletableFuture<GetSavedSearchResponse> getSavedSearch(GetSavedSearchRequest request);
 
     CompletableFuture<GetShipperStatusResponse> getShipperStatus(GetShipperStatusRequest request);
 
     CompletableFuture<ListConsumerGroupResponse> listConsumerGroup(ListConsumerGroupRequest request);
 
     CompletableFuture<ListDomainsResponse> listDomains(ListDomainsRequest request);
-
-    CompletableFuture<ListEtlJobResponse> listEtlJob(ListEtlJobRequest request);
-
-    CompletableFuture<ListEtlMetaResponse> listEtlMeta(ListEtlMetaRequest request);
-
-    CompletableFuture<ListEtlMetaNameResponse> listEtlMetaName(ListEtlMetaNameRequest request);
 
     CompletableFuture<ListExternalStoreResponse> listExternalStore(ListExternalStoreRequest request);
 
@@ -146,7 +124,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
 
-    CompletableFuture<MergeShardsResponse> mergeShards(MergeShardsRequest request);
+    CompletableFuture<PullDataResponse> pullData(PullDataRequest request);
+
+    CompletableFuture<PutProjectPolicyResponse> putProjectPolicy(PutProjectPolicyRequest request);
+
+    CompletableFuture<PutWebtrackingResponse> putWebtracking(PutWebtrackingRequest request);
 
     CompletableFuture<RemoveConfigFromMachineGroupResponse> removeConfigFromMachineGroup(RemoveConfigFromMachineGroupRequest request);
 
@@ -154,15 +136,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
 
-    CompletableFuture<UnTagResourcesResponse> unTagResources(UnTagResourcesRequest request);
-
-    CompletableFuture<UpdateCheckPointResponse> updateCheckPoint(UpdateCheckPointRequest request);
+    CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);
 
     CompletableFuture<UpdateConsumerGroupResponse> updateConsumerGroup(UpdateConsumerGroupRequest request);
-
-    CompletableFuture<UpdateEtlJobResponse> updateEtlJob(UpdateEtlJobRequest request);
-
-    CompletableFuture<UpdateEtlMetaResponse> updateEtlMeta(UpdateEtlMetaRequest request);
 
     CompletableFuture<UpdateIndexResponse> updateIndex(UpdateIndexRequest request);
 
@@ -171,6 +147,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateLoggingResponse> updateLogging(UpdateLoggingRequest request);
 
     CompletableFuture<UpdateMachineGroupResponse> updateMachineGroup(UpdateMachineGroupRequest request);
+
+    CompletableFuture<UpdateMachineGroupMachineResponse> updateMachineGroupMachine(UpdateMachineGroupMachineRequest request);
 
     CompletableFuture<UpdateOdpsShipperResponse> updateOdpsShipper(UpdateOdpsShipperRequest request);
 

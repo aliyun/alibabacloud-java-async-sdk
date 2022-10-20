@@ -32,18 +32,12 @@ public class GetCursorTimeRequest extends Request {
     @Validation(required = true)
     private String cursor;
 
-    @Query
-    @NameInMap("type")
-    @Validation(required = true)
-    private String type;
-
     private GetCursorTimeRequest(Builder builder) {
         super(builder);
         this.project = builder.project;
         this.logstore = builder.logstore;
         this.shardId = builder.shardId;
         this.cursor = builder.cursor;
-        this.type = builder.type;
     }
 
     public static Builder builder() {
@@ -87,19 +81,11 @@ public class GetCursorTimeRequest extends Request {
         return this.cursor;
     }
 
-    /**
-     * @return type
-     */
-    public String getType() {
-        return this.type;
-    }
-
     public static final class Builder extends Request.Builder<GetCursorTimeRequest, Builder> {
         private String project; 
         private String logstore; 
         private Integer shardId; 
         private String cursor; 
-        private String type; 
 
         private Builder() {
             super();
@@ -111,7 +97,6 @@ public class GetCursorTimeRequest extends Request {
             this.logstore = request.logstore;
             this.shardId = request.shardId;
             this.cursor = request.cursor;
-            this.type = request.type;
         } 
 
         /**
@@ -147,15 +132,6 @@ public class GetCursorTimeRequest extends Request {
         public Builder cursor(String cursor) {
             this.putQueryParameter("cursor", cursor);
             this.cursor = cursor;
-            return this;
-        }
-
-        /**
-         * 固定为 cursor_time 。
-         */
-        public Builder type(String type) {
-            this.putQueryParameter("type", type);
-            this.type = type;
             return this;
         }
 

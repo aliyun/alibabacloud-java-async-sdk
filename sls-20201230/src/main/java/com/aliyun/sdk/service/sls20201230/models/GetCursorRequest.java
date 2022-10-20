@@ -32,18 +32,12 @@ public class GetCursorRequest extends Request {
     @Validation(required = true)
     private String from;
 
-    @Query
-    @NameInMap("type")
-    @Validation(required = true)
-    private String type;
-
     private GetCursorRequest(Builder builder) {
         super(builder);
         this.project = builder.project;
         this.logstore = builder.logstore;
         this.shardId = builder.shardId;
         this.from = builder.from;
-        this.type = builder.type;
     }
 
     public static Builder builder() {
@@ -87,19 +81,11 @@ public class GetCursorRequest extends Request {
         return this.from;
     }
 
-    /**
-     * @return type
-     */
-    public String getType() {
-        return this.type;
-    }
-
     public static final class Builder extends Request.Builder<GetCursorRequest, Builder> {
         private String project; 
         private String logstore; 
         private Integer shardId; 
         private String from; 
-        private String type; 
 
         private Builder() {
             super();
@@ -111,7 +97,6 @@ public class GetCursorRequest extends Request {
             this.logstore = request.logstore;
             this.shardId = request.shardId;
             this.from = request.from;
-            this.type = request.type;
         } 
 
         /**
@@ -147,15 +132,6 @@ public class GetCursorRequest extends Request {
         public Builder from(String from) {
             this.putQueryParameter("from", from);
             this.from = from;
-            return this;
-        }
-
-        /**
-         * 这里固定为 cursor。
-         */
-        public Builder type(String type) {
-            this.putQueryParameter("type", type);
-            this.type = type;
             return this;
         }
 

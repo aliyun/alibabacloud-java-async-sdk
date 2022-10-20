@@ -23,14 +23,9 @@ public class SplitShardRequest extends Request {
     private String logstore;
 
     @Path
-    @NameInMap("shardID")
+    @NameInMap("shard")
     @Validation(required = true)
-    private Integer shardID;
-
-    @Query
-    @NameInMap("action")
-    @Validation(required = true)
-    private String action;
+    private Integer shard;
 
     @Query
     @NameInMap("key")
@@ -44,8 +39,7 @@ public class SplitShardRequest extends Request {
         super(builder);
         this.project = builder.project;
         this.logstore = builder.logstore;
-        this.shardID = builder.shardID;
-        this.action = builder.action;
+        this.shard = builder.shard;
         this.key = builder.key;
         this.shardCount = builder.shardCount;
     }
@@ -78,17 +72,10 @@ public class SplitShardRequest extends Request {
     }
 
     /**
-     * @return shardID
+     * @return shard
      */
-    public Integer getShardID() {
-        return this.shardID;
-    }
-
-    /**
-     * @return action
-     */
-    public String getAction() {
-        return this.action;
+    public Integer getShard() {
+        return this.shard;
     }
 
     /**
@@ -108,8 +95,7 @@ public class SplitShardRequest extends Request {
     public static final class Builder extends Request.Builder<SplitShardRequest, Builder> {
         private String project; 
         private String logstore; 
-        private Integer shardID; 
-        private String action; 
+        private Integer shard; 
         private String key; 
         private Integer shardCount; 
 
@@ -121,8 +107,7 @@ public class SplitShardRequest extends Request {
             super(request);
             this.project = request.project;
             this.logstore = request.logstore;
-            this.shardID = request.shardID;
-            this.action = request.action;
+            this.shard = request.shard;
             this.key = request.key;
             this.shardCount = request.shardCount;
         } 
@@ -148,18 +133,9 @@ public class SplitShardRequest extends Request {
         /**
          * 必须是一个 readwrite 状态的 shard 的 id。
          */
-        public Builder shardID(Integer shardID) {
-            this.putPathParameter("shardID", shardID);
-            this.shardID = shardID;
-            return this;
-        }
-
-        /**
-         * 这里固定为 split。
-         */
-        public Builder action(String action) {
-            this.putQueryParameter("action", action);
-            this.action = action;
+        public Builder shard(Integer shard) {
+            this.putPathParameter("shard", shard);
+            this.shard = shard;
             return this;
         }
 
