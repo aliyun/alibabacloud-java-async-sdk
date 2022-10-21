@@ -16,7 +16,7 @@ public class CarApplyQueryResponseBody extends TeaModel {
     private java.util.List < ApplyList> applyList;
 
     @NameInMap("code")
-    private Integer code;
+    private String code;
 
     @NameInMap("message")
     private String message;
@@ -61,7 +61,7 @@ public class CarApplyQueryResponseBody extends TeaModel {
     /**
      * @return code
      */
-    public Integer getCode() {
+    public String getCode() {
         return this.code;
     }
 
@@ -102,7 +102,7 @@ public class CarApplyQueryResponseBody extends TeaModel {
 
     public static final class Builder {
         private java.util.List < ApplyList> applyList; 
-        private Integer code; 
+        private String code; 
         private String message; 
         private String requestId; 
         private Boolean success; 
@@ -120,7 +120,7 @@ public class CarApplyQueryResponseBody extends TeaModel {
         /**
          * code.
          */
-        public Builder code(Integer code) {
+        public Builder code(String code) {
             this.code = code;
             return this;
         }

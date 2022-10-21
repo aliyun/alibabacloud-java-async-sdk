@@ -13,7 +13,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CitySearchResponseBody extends TeaModel {
     @NameInMap("code")
-    private Integer code;
+    private String code;
 
     @NameInMap("message")
     private String message;
@@ -50,7 +50,7 @@ public class CitySearchResponseBody extends TeaModel {
     /**
      * @return code
      */
-    public Integer getCode() {
+    public String getCode() {
         return this.code;
     }
 
@@ -90,7 +90,7 @@ public class CitySearchResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private Integer code; 
+        private String code; 
         private String message; 
         private Module module; 
         private String requestId; 
@@ -98,9 +98,9 @@ public class CitySearchResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * �������
+         * code.
          */
-        public Builder code(Integer code) {
+        public Builder code(String code) {
             this.code = code;
             return this;
         }
@@ -202,7 +202,7 @@ public class CitySearchResponseBody extends TeaModel {
             private Integer region; 
 
             /**
-             * �������
+             * code.
              */
             public Builder code(String code) {
                 this.code = code;

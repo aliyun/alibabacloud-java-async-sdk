@@ -13,7 +13,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ApplyModifyResponseBody extends TeaModel {
     @NameInMap("code")
-    private Integer code;
+    private String code;
 
     @NameInMap("message")
     private String message;
@@ -50,7 +50,7 @@ public class ApplyModifyResponseBody extends TeaModel {
     /**
      * @return code
      */
-    public Integer getCode() {
+    public String getCode() {
         return this.code;
     }
 
@@ -90,7 +90,7 @@ public class ApplyModifyResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private Integer code; 
+        private String code; 
         private String message; 
         private Module module; 
         private String requestId; 
@@ -100,7 +100,7 @@ public class ApplyModifyResponseBody extends TeaModel {
         /**
          * code.
          */
-        public Builder code(Integer code) {
+        public Builder code(String code) {
             this.code = code;
             return this;
         }

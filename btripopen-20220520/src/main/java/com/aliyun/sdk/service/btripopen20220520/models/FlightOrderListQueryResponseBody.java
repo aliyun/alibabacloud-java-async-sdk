@@ -13,7 +13,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class FlightOrderListQueryResponseBody extends TeaModel {
     @NameInMap("code")
-    private Integer code;
+    private String code;
 
     @NameInMap("message")
     private String message;
@@ -54,7 +54,7 @@ public class FlightOrderListQueryResponseBody extends TeaModel {
     /**
      * @return code
      */
-    public Integer getCode() {
+    public String getCode() {
         return this.code;
     }
 
@@ -101,7 +101,7 @@ public class FlightOrderListQueryResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private Integer code; 
+        private String code; 
         private String message; 
         private java.util.List < Module> module; 
         private PageInfo pageInfo; 
@@ -112,7 +112,7 @@ public class FlightOrderListQueryResponseBody extends TeaModel {
         /**
          * code.
          */
-        public Builder code(Integer code) {
+        public Builder code(String code) {
             this.code = code;
             return this;
         }

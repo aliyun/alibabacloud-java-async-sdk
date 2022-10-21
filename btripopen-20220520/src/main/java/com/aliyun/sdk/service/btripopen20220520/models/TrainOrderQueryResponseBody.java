@@ -12,17 +12,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>TrainOrderQueryResponseBody</p>
  */
 public class TrainOrderQueryResponseBody extends TeaModel {
+    @NameInMap("code")
+    private String code;
+
+    @NameInMap("message")
+    private String message;
+
     @NameInMap("module")
     private Module module;
 
     @NameInMap("requestId")
     private String requestId;
-
-    @NameInMap("result_code")
-    private Integer resultCode;
-
-    @NameInMap("result_msg")
-    private String resultMsg;
 
     @NameInMap("success")
     private Boolean success;
@@ -31,10 +31,10 @@ public class TrainOrderQueryResponseBody extends TeaModel {
     private String traceId;
 
     private TrainOrderQueryResponseBody(Builder builder) {
+        this.code = builder.code;
+        this.message = builder.message;
         this.module = builder.module;
         this.requestId = builder.requestId;
-        this.resultCode = builder.resultCode;
-        this.resultMsg = builder.resultMsg;
         this.success = builder.success;
         this.traceId = builder.traceId;
     }
@@ -45,6 +45,20 @@ public class TrainOrderQueryResponseBody extends TeaModel {
 
     public static TrainOrderQueryResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return code
+     */
+    public String getCode() {
+        return this.code;
+    }
+
+    /**
+     * @return message
+     */
+    public String getMessage() {
+        return this.message;
     }
 
     /**
@@ -62,20 +76,6 @@ public class TrainOrderQueryResponseBody extends TeaModel {
     }
 
     /**
-     * @return resultCode
-     */
-    public Integer getResultCode() {
-        return this.resultCode;
-    }
-
-    /**
-     * @return resultMsg
-     */
-    public String getResultMsg() {
-        return this.resultMsg;
-    }
-
-    /**
      * @return success
      */
     public Boolean getSuccess() {
@@ -90,12 +90,28 @@ public class TrainOrderQueryResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String code; 
+        private String message; 
         private Module module; 
         private String requestId; 
-        private Integer resultCode; 
-        private String resultMsg; 
         private Boolean success; 
         private String traceId; 
+
+        /**
+         * code.
+         */
+        public Builder code(String code) {
+            this.code = code;
+            return this;
+        }
+
+        /**
+         * message.
+         */
+        public Builder message(String message) {
+            this.message = message;
+            return this;
+        }
 
         /**
          * module.
@@ -110,22 +126,6 @@ public class TrainOrderQueryResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * result_code.
-         */
-        public Builder resultCode(Integer resultCode) {
-            this.resultCode = resultCode;
-            return this;
-        }
-
-        /**
-         * result_msg.
-         */
-        public Builder resultMsg(String resultMsg) {
-            this.resultMsg = resultMsg;
             return this;
         }
 

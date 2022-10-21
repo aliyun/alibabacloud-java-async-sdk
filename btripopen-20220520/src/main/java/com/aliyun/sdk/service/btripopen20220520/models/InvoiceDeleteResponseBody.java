@@ -13,7 +13,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class InvoiceDeleteResponseBody extends TeaModel {
     @NameInMap("code")
-    private Integer code;
+    private String code;
 
     @NameInMap("message")
     private String message;
@@ -46,7 +46,7 @@ public class InvoiceDeleteResponseBody extends TeaModel {
     /**
      * @return code
      */
-    public Integer getCode() {
+    public String getCode() {
         return this.code;
     }
 
@@ -79,16 +79,16 @@ public class InvoiceDeleteResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private Integer code; 
+        private String code; 
         private String message; 
         private String requestId; 
         private Boolean success; 
         private String traceId; 
 
         /**
-         * 结果代码
+         * code.
          */
-        public Builder code(Integer code) {
+        public Builder code(String code) {
             this.code = code;
             return this;
         }
