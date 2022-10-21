@@ -16,7 +16,7 @@ public class GetRuleByIdResponseBody extends TeaModel {
     private String code;
 
     @NameInMap("Data")
-    private String data;
+    private RulesInfo data;
 
     @NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
@@ -25,7 +25,7 @@ public class GetRuleByIdResponseBody extends TeaModel {
     private String message;
 
     @NameInMap("Messages")
-    private Messages messages;
+    private java.util.List < String > messages;
 
     @NameInMap("RequestId")
     private String requestId;
@@ -61,7 +61,7 @@ public class GetRuleByIdResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public String getData() {
+    public RulesInfo getData() {
         return this.data;
     }
 
@@ -82,7 +82,7 @@ public class GetRuleByIdResponseBody extends TeaModel {
     /**
      * @return messages
      */
-    public Messages getMessages() {
+    public java.util.List < String > getMessages() {
         return this.messages;
     }
 
@@ -102,10 +102,10 @@ public class GetRuleByIdResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private String data; 
+        private RulesInfo data; 
         private Integer httpStatusCode; 
         private String message; 
-        private Messages messages; 
+        private java.util.List < String > messages; 
         private String requestId; 
         private Boolean success; 
 
@@ -120,7 +120,7 @@ public class GetRuleByIdResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(String data) {
+        public Builder data(RulesInfo data) {
             this.data = data;
             return this;
         }
@@ -144,7 +144,7 @@ public class GetRuleByIdResponseBody extends TeaModel {
         /**
          * Messages.
          */
-        public Builder messages(Messages messages) {
+        public Builder messages(java.util.List < String > messages) {
             this.messages = messages;
             return this;
         }
@@ -171,45 +171,4 @@ public class GetRuleByIdResponseBody extends TeaModel {
 
     } 
 
-    public static class Messages extends TeaModel {
-        @NameInMap("Message")
-        private java.util.List < String > message;
-
-        private Messages(Builder builder) {
-            this.message = builder.message;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static Messages create() {
-            return builder().build();
-        }
-
-        /**
-         * @return message
-         */
-        public java.util.List < String > getMessage() {
-            return this.message;
-        }
-
-        public static final class Builder {
-            private java.util.List < String > message; 
-
-            /**
-             * Message.
-             */
-            public Builder message(java.util.List < String > message) {
-                this.message = message;
-                return this;
-            }
-
-            public Messages build() {
-                return new Messages(this);
-            } 
-
-        } 
-
-    }
 }

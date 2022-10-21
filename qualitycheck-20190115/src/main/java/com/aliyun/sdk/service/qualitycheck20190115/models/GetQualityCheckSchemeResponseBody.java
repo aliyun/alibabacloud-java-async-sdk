@@ -25,7 +25,7 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
     private String message;
 
     @NameInMap("Messages")
-    private Messages messages;
+    private java.util.List < String > messages;
 
     @NameInMap("RequestId")
     private String requestId;
@@ -82,7 +82,7 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
     /**
      * @return messages
      */
-    public Messages getMessages() {
+    public java.util.List < String > getMessages() {
         return this.messages;
     }
 
@@ -105,7 +105,7 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
         private Data data; 
         private Integer httpStatusCode; 
         private String message; 
-        private Messages messages; 
+        private java.util.List < String > messages; 
         private String requestId; 
         private Boolean success; 
 
@@ -144,7 +144,7 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
         /**
          * Messages.
          */
-        public Builder messages(Messages messages) {
+        public Builder messages(java.util.List < String > messages) {
             this.messages = messages;
             return this;
         }
@@ -171,88 +171,6 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
 
     } 
 
-    public static class RuleIds extends TeaModel {
-        @NameInMap("RuleId")
-        private java.util.List < String > ruleId;
-
-        private RuleIds(Builder builder) {
-            this.ruleId = builder.ruleId;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static RuleIds create() {
-            return builder().build();
-        }
-
-        /**
-         * @return ruleId
-         */
-        public java.util.List < String > getRuleId() {
-            return this.ruleId;
-        }
-
-        public static final class Builder {
-            private java.util.List < String > ruleId; 
-
-            /**
-             * RuleId.
-             */
-            public Builder ruleId(java.util.List < String > ruleId) {
-                this.ruleId = ruleId;
-                return this;
-            }
-
-            public RuleIds build() {
-                return new RuleIds(this);
-            } 
-
-        } 
-
-    }
-    public static class RuleList extends TeaModel {
-        @NameInMap("RuleList")
-        private java.util.List < String > ruleList;
-
-        private RuleList(Builder builder) {
-            this.ruleList = builder.ruleList;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static RuleList create() {
-            return builder().build();
-        }
-
-        /**
-         * @return ruleList
-         */
-        public java.util.List < String > getRuleList() {
-            return this.ruleList;
-        }
-
-        public static final class Builder {
-            private java.util.List < String > ruleList; 
-
-            /**
-             * RuleList.
-             */
-            public Builder ruleList(java.util.List < String > ruleList) {
-                this.ruleList = ruleList;
-                return this;
-            }
-
-            public RuleList build() {
-                return new RuleList(this);
-            } 
-
-        } 
-
-    }
     public static class SchemeCheckTypeList extends TeaModel {
         @NameInMap("CheckName")
         private String checkName;
@@ -394,47 +312,6 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
         } 
 
     }
-    public static class DataSchemeCheckTypeList extends TeaModel {
-        @NameInMap("SchemeCheckTypeList")
-        private java.util.List < SchemeCheckTypeList> schemeCheckTypeList;
-
-        private DataSchemeCheckTypeList(Builder builder) {
-            this.schemeCheckTypeList = builder.schemeCheckTypeList;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static DataSchemeCheckTypeList create() {
-            return builder().build();
-        }
-
-        /**
-         * @return schemeCheckTypeList
-         */
-        public java.util.List < SchemeCheckTypeList> getSchemeCheckTypeList() {
-            return this.schemeCheckTypeList;
-        }
-
-        public static final class Builder {
-            private java.util.List < SchemeCheckTypeList> schemeCheckTypeList; 
-
-            /**
-             * SchemeCheckTypeList.
-             */
-            public Builder schemeCheckTypeList(java.util.List < SchemeCheckTypeList> schemeCheckTypeList) {
-                this.schemeCheckTypeList = schemeCheckTypeList;
-                return this;
-            }
-
-            public DataSchemeCheckTypeList build() {
-                return new DataSchemeCheckTypeList(this);
-            } 
-
-        } 
-
-    }
     public static class Data extends TeaModel {
         @NameInMap("CreateTime")
         private String createTime;
@@ -451,17 +328,14 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
         @NameInMap("Name")
         private String name;
 
-        @NameInMap("PublishContent")
-        private String publishContent;
-
         @NameInMap("RuleIds")
-        private RuleIds ruleIds;
+        private java.util.List < String > ruleIds;
 
         @NameInMap("RuleList")
-        private RuleList ruleList;
+        private java.util.List < RulesInfo > ruleList;
 
         @NameInMap("SchemeCheckTypeList")
-        private DataSchemeCheckTypeList schemeCheckTypeList;
+        private java.util.List < SchemeCheckTypeList> schemeCheckTypeList;
 
         @NameInMap("SchemeId")
         private Long schemeId;
@@ -493,7 +367,6 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
             this.dataType = builder.dataType;
             this.description = builder.description;
             this.name = builder.name;
-            this.publishContent = builder.publishContent;
             this.ruleIds = builder.ruleIds;
             this.ruleList = builder.ruleList;
             this.schemeCheckTypeList = builder.schemeCheckTypeList;
@@ -551,30 +424,23 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
         }
 
         /**
-         * @return publishContent
-         */
-        public String getPublishContent() {
-            return this.publishContent;
-        }
-
-        /**
          * @return ruleIds
          */
-        public RuleIds getRuleIds() {
+        public java.util.List < String > getRuleIds() {
             return this.ruleIds;
         }
 
         /**
          * @return ruleList
          */
-        public RuleList getRuleList() {
+        public java.util.List < RulesInfo > getRuleList() {
             return this.ruleList;
         }
 
         /**
          * @return schemeCheckTypeList
          */
-        public DataSchemeCheckTypeList getSchemeCheckTypeList() {
+        public java.util.List < SchemeCheckTypeList> getSchemeCheckTypeList() {
             return this.schemeCheckTypeList;
         }
 
@@ -640,10 +506,9 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
             private Integer dataType; 
             private String description; 
             private String name; 
-            private String publishContent; 
-            private RuleIds ruleIds; 
-            private RuleList ruleList; 
-            private DataSchemeCheckTypeList schemeCheckTypeList; 
+            private java.util.List < String > ruleIds; 
+            private java.util.List < RulesInfo > ruleList; 
+            private java.util.List < SchemeCheckTypeList> schemeCheckTypeList; 
             private Long schemeId; 
             private Long schemeTemplateId; 
             private Integer status; 
@@ -694,17 +559,9 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
             }
 
             /**
-             * PublishContent.
-             */
-            public Builder publishContent(String publishContent) {
-                this.publishContent = publishContent;
-                return this;
-            }
-
-            /**
              * RuleIds.
              */
-            public Builder ruleIds(RuleIds ruleIds) {
+            public Builder ruleIds(java.util.List < String > ruleIds) {
                 this.ruleIds = ruleIds;
                 return this;
             }
@@ -712,7 +569,7 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
             /**
              * RuleList.
              */
-            public Builder ruleList(RuleList ruleList) {
+            public Builder ruleList(java.util.List < RulesInfo > ruleList) {
                 this.ruleList = ruleList;
                 return this;
             }
@@ -720,7 +577,7 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
             /**
              * SchemeCheckTypeList.
              */
-            public Builder schemeCheckTypeList(DataSchemeCheckTypeList schemeCheckTypeList) {
+            public Builder schemeCheckTypeList(java.util.List < SchemeCheckTypeList> schemeCheckTypeList) {
                 this.schemeCheckTypeList = schemeCheckTypeList;
                 return this;
             }
@@ -791,47 +648,6 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
 
             public Data build() {
                 return new Data(this);
-            } 
-
-        } 
-
-    }
-    public static class Messages extends TeaModel {
-        @NameInMap("Message")
-        private java.util.List < String > message;
-
-        private Messages(Builder builder) {
-            this.message = builder.message;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static Messages create() {
-            return builder().build();
-        }
-
-        /**
-         * @return message
-         */
-        public java.util.List < String > getMessage() {
-            return this.message;
-        }
-
-        public static final class Builder {
-            private java.util.List < String > message; 
-
-            /**
-             * Message.
-             */
-            public Builder message(java.util.List < String > message) {
-                this.message = message;
-                return this;
-            }
-
-            public Messages build() {
-                return new Messages(this);
             } 
 
         } 

@@ -22,6 +22,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AddRuleCategoryResponse> addRuleCategory(AddRuleCategoryRequest request);
 
+    CompletableFuture<AddRuleV4Response> addRuleV4(AddRuleV4Request request);
+
     CompletableFuture<AddThesaurusForApiResponse> addThesaurusForApi(AddThesaurusForApiRequest request);
 
     CompletableFuture<AssignReviewerResponse> assignReviewer(AssignReviewerRequest request);
@@ -65,6 +67,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteQualityCheckSchemeResponse> deleteQualityCheckScheme(DeleteQualityCheckSchemeRequest request);
 
     CompletableFuture<DeleteRuleResponse> deleteRule(DeleteRuleRequest request);
+
+    CompletableFuture<DeleteRuleV4Response> deleteRuleV4(DeleteRuleV4Request request);
 
     CompletableFuture<DeleteSchemeTaskConfigResponse> deleteSchemeTaskConfig(DeleteSchemeTaskConfigRequest request);
 
@@ -112,6 +116,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetRuleDetailResponse> getRuleDetail(GetRuleDetailRequest request);
 
+    CompletableFuture<GetRuleV4Response> getRuleV4(GetRuleV4Request request);
+
     CompletableFuture<GetRulesCountListResponse> getRulesCountList(GetRulesCountListRequest request);
 
     CompletableFuture<GetScoreInfoResponse> getScoreInfo(GetScoreInfoRequest request);
@@ -147,6 +153,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListRolesResponse> listRoles(ListRolesRequest request);
 
     CompletableFuture<ListRulesResponse> listRules(ListRulesRequest request);
+
+    CompletableFuture<ListRulesV4Response> listRulesV4(ListRulesV4Request request);
 
     CompletableFuture<ListSchemeTaskConfigResponse> listSchemeTaskConfig(ListSchemeTaskConfigRequest request);
 
@@ -193,6 +201,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateRuleByIdResponse> updateRuleById(UpdateRuleByIdRequest request);
 
     CompletableFuture<UpdateRuleToSchemeResponse> updateRuleToScheme(UpdateRuleToSchemeRequest request);
+
+    CompletableFuture<UpdateRuleV4Response> updateRuleV4(UpdateRuleV4Request request);
 
     CompletableFuture<UpdateSchemeTaskConfigResponse> updateSchemeTaskConfig(UpdateSchemeTaskConfigRequest request);
 
