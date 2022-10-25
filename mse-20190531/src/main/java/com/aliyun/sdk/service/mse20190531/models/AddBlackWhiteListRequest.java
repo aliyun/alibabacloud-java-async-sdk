@@ -29,10 +29,6 @@ public class AddBlackWhiteListRequest extends Request {
     private Boolean isWhite;
 
     @Query
-    @NameInMap("MseSessionId")
-    private String mseSessionId;
-
-    @Query
     @NameInMap("Name")
     private String name;
 
@@ -62,7 +58,6 @@ public class AddBlackWhiteListRequest extends Request {
         this.content = builder.content;
         this.gatewayUniqueId = builder.gatewayUniqueId;
         this.isWhite = builder.isWhite;
-        this.mseSessionId = builder.mseSessionId;
         this.name = builder.name;
         this.note = builder.note;
         this.resourceIdJsonList = builder.resourceIdJsonList;
@@ -113,13 +108,6 @@ public class AddBlackWhiteListRequest extends Request {
     }
 
     /**
-     * @return mseSessionId
-     */
-    public String getMseSessionId() {
-        return this.mseSessionId;
-    }
-
-    /**
      * @return name
      */
     public String getName() {
@@ -166,7 +154,6 @@ public class AddBlackWhiteListRequest extends Request {
         private String content; 
         private String gatewayUniqueId; 
         private Boolean isWhite; 
-        private String mseSessionId; 
         private String name; 
         private String note; 
         private String resourceIdJsonList; 
@@ -184,7 +171,6 @@ public class AddBlackWhiteListRequest extends Request {
             this.content = request.content;
             this.gatewayUniqueId = request.gatewayUniqueId;
             this.isWhite = request.isWhite;
-            this.mseSessionId = request.mseSessionId;
             this.name = request.name;
             this.note = request.note;
             this.resourceIdJsonList = request.resourceIdJsonList;
@@ -226,15 +212,6 @@ public class AddBlackWhiteListRequest extends Request {
         public Builder isWhite(Boolean isWhite) {
             this.putQueryParameter("IsWhite", isWhite);
             this.isWhite = isWhite;
-            return this;
-        }
-
-        /**
-         * MseSessionId.
-         */
-        public Builder mseSessionId(String mseSessionId) {
-            this.putQueryParameter("MseSessionId", mseSessionId);
-            this.mseSessionId = mseSessionId;
             return this;
         }
 

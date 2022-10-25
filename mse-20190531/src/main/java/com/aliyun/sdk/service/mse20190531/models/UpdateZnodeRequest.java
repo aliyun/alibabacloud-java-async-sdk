@@ -27,10 +27,6 @@ public class UpdateZnodeRequest extends Request {
     private String data;
 
     @Query
-    @NameInMap("MseSessionId")
-    private String mseSessionId;
-
-    @Query
     @NameInMap("Path")
     @Validation(required = true)
     private String path;
@@ -44,7 +40,6 @@ public class UpdateZnodeRequest extends Request {
         this.acceptLanguage = builder.acceptLanguage;
         this.clusterId = builder.clusterId;
         this.data = builder.data;
-        this.mseSessionId = builder.mseSessionId;
         this.path = builder.path;
         this.requestPars = builder.requestPars;
     }
@@ -84,13 +79,6 @@ public class UpdateZnodeRequest extends Request {
     }
 
     /**
-     * @return mseSessionId
-     */
-    public String getMseSessionId() {
-        return this.mseSessionId;
-    }
-
-    /**
      * @return path
      */
     public String getPath() {
@@ -108,7 +96,6 @@ public class UpdateZnodeRequest extends Request {
         private String acceptLanguage; 
         private String clusterId; 
         private String data; 
-        private String mseSessionId; 
         private String path; 
         private String requestPars; 
 
@@ -121,7 +108,6 @@ public class UpdateZnodeRequest extends Request {
             this.acceptLanguage = request.acceptLanguage;
             this.clusterId = request.clusterId;
             this.data = request.data;
-            this.mseSessionId = request.mseSessionId;
             this.path = request.path;
             this.requestPars = request.requestPars;
         } 
@@ -150,15 +136,6 @@ public class UpdateZnodeRequest extends Request {
         public Builder data(String data) {
             this.putQueryParameter("Data", data);
             this.data = data;
-            return this;
-        }
-
-        /**
-         * MseSessionId.
-         */
-        public Builder mseSessionId(String mseSessionId) {
-            this.putQueryParameter("MseSessionId", mseSessionId);
-            this.mseSessionId = mseSessionId;
             return this;
         }
 

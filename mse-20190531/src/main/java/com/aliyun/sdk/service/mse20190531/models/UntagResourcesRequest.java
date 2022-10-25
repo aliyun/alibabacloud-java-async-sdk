@@ -21,10 +21,6 @@ public class UntagResourcesRequest extends Request {
     private Boolean all;
 
     @Query
-    @NameInMap("MseSessionId")
-    private String mseSessionId;
-
-    @Query
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
@@ -47,7 +43,6 @@ public class UntagResourcesRequest extends Request {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
         this.all = builder.all;
-        this.mseSessionId = builder.mseSessionId;
         this.regionId = builder.regionId;
         this.resourceId = builder.resourceId;
         this.resourceType = builder.resourceType;
@@ -82,13 +77,6 @@ public class UntagResourcesRequest extends Request {
     }
 
     /**
-     * @return mseSessionId
-     */
-    public String getMseSessionId() {
-        return this.mseSessionId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -119,7 +107,6 @@ public class UntagResourcesRequest extends Request {
     public static final class Builder extends Request.Builder<UntagResourcesRequest, Builder> {
         private String acceptLanguage; 
         private Boolean all; 
-        private String mseSessionId; 
         private String regionId; 
         private java.util.List < String > resourceId; 
         private String resourceType; 
@@ -133,7 +120,6 @@ public class UntagResourcesRequest extends Request {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
             this.all = request.all;
-            this.mseSessionId = request.mseSessionId;
             this.regionId = request.regionId;
             this.resourceId = request.resourceId;
             this.resourceType = request.resourceType;
@@ -155,15 +141,6 @@ public class UntagResourcesRequest extends Request {
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
             this.all = all;
-            return this;
-        }
-
-        /**
-         * MseSessionId.
-         */
-        public Builder mseSessionId(String mseSessionId) {
-            this.putQueryParameter("MseSessionId", mseSessionId);
-            this.mseSessionId = mseSessionId;
             return this;
         }
 

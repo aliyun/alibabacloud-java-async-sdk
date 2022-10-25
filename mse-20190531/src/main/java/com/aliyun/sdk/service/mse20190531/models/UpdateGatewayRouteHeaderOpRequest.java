@@ -32,10 +32,6 @@ public class UpdateGatewayRouteHeaderOpRequest extends Request {
     @NameInMap("Id")
     private Long id;
 
-    @Query
-    @NameInMap("MseSessionId")
-    private String mseSessionId;
-
     private UpdateGatewayRouteHeaderOpRequest(Builder builder) {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
@@ -43,7 +39,6 @@ public class UpdateGatewayRouteHeaderOpRequest extends Request {
         this.gatewayUniqueId = builder.gatewayUniqueId;
         this.headerOpJSON = builder.headerOpJSON;
         this.id = builder.id;
-        this.mseSessionId = builder.mseSessionId;
     }
 
     public static Builder builder() {
@@ -94,20 +89,12 @@ public class UpdateGatewayRouteHeaderOpRequest extends Request {
         return this.id;
     }
 
-    /**
-     * @return mseSessionId
-     */
-    public String getMseSessionId() {
-        return this.mseSessionId;
-    }
-
     public static final class Builder extends Request.Builder<UpdateGatewayRouteHeaderOpRequest, Builder> {
         private String acceptLanguage; 
         private Long gatewayId; 
         private String gatewayUniqueId; 
         private String headerOpJSON; 
         private Long id; 
-        private String mseSessionId; 
 
         private Builder() {
             super();
@@ -120,7 +107,6 @@ public class UpdateGatewayRouteHeaderOpRequest extends Request {
             this.gatewayUniqueId = request.gatewayUniqueId;
             this.headerOpJSON = request.headerOpJSON;
             this.id = request.id;
-            this.mseSessionId = request.mseSessionId;
         } 
 
         /**
@@ -165,15 +151,6 @@ public class UpdateGatewayRouteHeaderOpRequest extends Request {
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
             this.id = id;
-            return this;
-        }
-
-        /**
-         * MseSessionId.
-         */
-        public Builder mseSessionId(String mseSessionId) {
-            this.putQueryParameter("MseSessionId", mseSessionId);
-            this.mseSessionId = mseSessionId;
             return this;
         }
 

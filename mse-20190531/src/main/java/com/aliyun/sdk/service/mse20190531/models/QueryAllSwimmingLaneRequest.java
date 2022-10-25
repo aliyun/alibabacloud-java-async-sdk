@@ -21,15 +21,10 @@ public class QueryAllSwimmingLaneRequest extends Request {
     @Validation(required = true)
     private Long groupId;
 
-    @Query
-    @NameInMap("MseSessionId")
-    private String mseSessionId;
-
     private QueryAllSwimmingLaneRequest(Builder builder) {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
         this.groupId = builder.groupId;
-        this.mseSessionId = builder.mseSessionId;
     }
 
     public static Builder builder() {
@@ -59,17 +54,9 @@ public class QueryAllSwimmingLaneRequest extends Request {
         return this.groupId;
     }
 
-    /**
-     * @return mseSessionId
-     */
-    public String getMseSessionId() {
-        return this.mseSessionId;
-    }
-
     public static final class Builder extends Request.Builder<QueryAllSwimmingLaneRequest, Builder> {
         private String acceptLanguage; 
         private Long groupId; 
-        private String mseSessionId; 
 
         private Builder() {
             super();
@@ -79,7 +66,6 @@ public class QueryAllSwimmingLaneRequest extends Request {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
             this.groupId = request.groupId;
-            this.mseSessionId = request.mseSessionId;
         } 
 
         /**
@@ -97,15 +83,6 @@ public class QueryAllSwimmingLaneRequest extends Request {
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);
             this.groupId = groupId;
-            return this;
-        }
-
-        /**
-         * MseSessionId.
-         */
-        public Builder mseSessionId(String mseSessionId) {
-            this.putQueryParameter("MseSessionId", mseSessionId);
-            this.mseSessionId = mseSessionId;
             return this;
         }
 

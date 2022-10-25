@@ -56,10 +56,6 @@ public class UpdateNacosConfigRequest extends Request {
     private String md5;
 
     @Query
-    @NameInMap("MseSessionId")
-    private String mseSessionId;
-
-    @Query
     @NameInMap("NamespaceId")
     private String namespaceId;
 
@@ -83,7 +79,6 @@ public class UpdateNacosConfigRequest extends Request {
         this.group = builder.group;
         this.instanceId = builder.instanceId;
         this.md5 = builder.md5;
-        this.mseSessionId = builder.mseSessionId;
         this.namespaceId = builder.namespaceId;
         this.tags = builder.tags;
         this.type = builder.type;
@@ -173,13 +168,6 @@ public class UpdateNacosConfigRequest extends Request {
     }
 
     /**
-     * @return mseSessionId
-     */
-    public String getMseSessionId() {
-        return this.mseSessionId;
-    }
-
-    /**
      * @return namespaceId
      */
     public String getNamespaceId() {
@@ -211,7 +199,6 @@ public class UpdateNacosConfigRequest extends Request {
         private String group; 
         private String instanceId; 
         private String md5; 
-        private String mseSessionId; 
         private String namespaceId; 
         private String tags; 
         private String type; 
@@ -232,7 +219,6 @@ public class UpdateNacosConfigRequest extends Request {
             this.group = request.group;
             this.instanceId = request.instanceId;
             this.md5 = request.md5;
-            this.mseSessionId = request.mseSessionId;
             this.namespaceId = request.namespaceId;
             this.tags = request.tags;
             this.type = request.type;
@@ -325,15 +311,6 @@ public class UpdateNacosConfigRequest extends Request {
         public Builder md5(String md5) {
             this.putQueryParameter("Md5", md5);
             this.md5 = md5;
-            return this;
-        }
-
-        /**
-         * MseSessionId.
-         */
-        public Builder mseSessionId(String mseSessionId) {
-            this.putQueryParameter("MseSessionId", mseSessionId);
-            this.mseSessionId = mseSessionId;
             return this;
         }
 

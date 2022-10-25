@@ -50,10 +50,6 @@ public class CreateNacosInstanceRequest extends Request {
     private String metadata;
 
     @Query
-    @NameInMap("MseSessionId")
-    private String mseSessionId;
-
-    @Query
     @NameInMap("NamespaceId")
     private String namespaceId;
 
@@ -82,7 +78,6 @@ public class CreateNacosInstanceRequest extends Request {
         this.instanceId = builder.instanceId;
         this.ip = builder.ip;
         this.metadata = builder.metadata;
-        this.mseSessionId = builder.mseSessionId;
         this.namespaceId = builder.namespaceId;
         this.port = builder.port;
         this.serviceName = builder.serviceName;
@@ -159,13 +154,6 @@ public class CreateNacosInstanceRequest extends Request {
     }
 
     /**
-     * @return mseSessionId
-     */
-    public String getMseSessionId() {
-        return this.mseSessionId;
-    }
-
-    /**
      * @return namespaceId
      */
     public String getNamespaceId() {
@@ -202,7 +190,6 @@ public class CreateNacosInstanceRequest extends Request {
         private String instanceId; 
         private String ip; 
         private String metadata; 
-        private String mseSessionId; 
         private String namespaceId; 
         private Integer port; 
         private String serviceName; 
@@ -222,7 +209,6 @@ public class CreateNacosInstanceRequest extends Request {
             this.instanceId = request.instanceId;
             this.ip = request.ip;
             this.metadata = request.metadata;
-            this.mseSessionId = request.mseSessionId;
             this.namespaceId = request.namespaceId;
             this.port = request.port;
             this.serviceName = request.serviceName;
@@ -298,15 +284,6 @@ public class CreateNacosInstanceRequest extends Request {
         public Builder metadata(String metadata) {
             this.putBodyParameter("Metadata", metadata);
             this.metadata = metadata;
-            return this;
-        }
-
-        /**
-         * MseSessionId.
-         */
-        public Builder mseSessionId(String mseSessionId) {
-            this.putQueryParameter("MseSessionId", mseSessionId);
-            this.mseSessionId = mseSessionId;
             return this;
         }
 

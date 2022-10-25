@@ -53,10 +53,6 @@ public class UpdateGatewayRouteRequest extends Request {
     private Long id;
 
     @Query
-    @NameInMap("MseSessionId")
-    private String mseSessionId;
-
-    @Query
     @NameInMap("Name")
     private String name;
 
@@ -88,7 +84,6 @@ public class UpdateGatewayRouteRequest extends Request {
         this.gatewayId = builder.gatewayId;
         this.gatewayUniqueId = builder.gatewayUniqueId;
         this.id = builder.id;
-        this.mseSessionId = builder.mseSessionId;
         this.name = builder.name;
         this.predicates = builder.predicates;
         this.redirectJSON = builder.redirectJSON;
@@ -180,13 +175,6 @@ public class UpdateGatewayRouteRequest extends Request {
     }
 
     /**
-     * @return mseSessionId
-     */
-    public String getMseSessionId() {
-        return this.mseSessionId;
-    }
-
-    /**
      * @return name
      */
     public String getName() {
@@ -232,7 +220,6 @@ public class UpdateGatewayRouteRequest extends Request {
         private Long gatewayId; 
         private String gatewayUniqueId; 
         private Long id; 
-        private String mseSessionId; 
         private String name; 
         private Predicates predicates; 
         private RedirectJSON redirectJSON; 
@@ -255,7 +242,6 @@ public class UpdateGatewayRouteRequest extends Request {
             this.gatewayId = request.gatewayId;
             this.gatewayUniqueId = request.gatewayUniqueId;
             this.id = request.id;
-            this.mseSessionId = request.mseSessionId;
             this.name = request.name;
             this.predicates = request.predicates;
             this.redirectJSON = request.redirectJSON;
@@ -352,15 +338,6 @@ public class UpdateGatewayRouteRequest extends Request {
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
             this.id = id;
-            return this;
-        }
-
-        /**
-         * MseSessionId.
-         */
-        public Builder mseSessionId(String mseSessionId) {
-            this.putQueryParameter("MseSessionId", mseSessionId);
-            this.mseSessionId = mseSessionId;
             return this;
         }
 

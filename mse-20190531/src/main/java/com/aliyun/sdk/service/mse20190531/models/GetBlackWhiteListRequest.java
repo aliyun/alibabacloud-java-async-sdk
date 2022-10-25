@@ -25,10 +25,6 @@ public class GetBlackWhiteListRequest extends Request {
     private Boolean isWhite;
 
     @Query
-    @NameInMap("MseSessionId")
-    private String mseSessionId;
-
-    @Query
     @NameInMap("ResourceType")
     private String resourceType;
 
@@ -41,7 +37,6 @@ public class GetBlackWhiteListRequest extends Request {
         this.acceptLanguage = builder.acceptLanguage;
         this.gatewayUniqueId = builder.gatewayUniqueId;
         this.isWhite = builder.isWhite;
-        this.mseSessionId = builder.mseSessionId;
         this.resourceType = builder.resourceType;
         this.type = builder.type;
     }
@@ -81,13 +76,6 @@ public class GetBlackWhiteListRequest extends Request {
     }
 
     /**
-     * @return mseSessionId
-     */
-    public String getMseSessionId() {
-        return this.mseSessionId;
-    }
-
-    /**
      * @return resourceType
      */
     public String getResourceType() {
@@ -105,7 +93,6 @@ public class GetBlackWhiteListRequest extends Request {
         private String acceptLanguage; 
         private String gatewayUniqueId; 
         private Boolean isWhite; 
-        private String mseSessionId; 
         private String resourceType; 
         private String type; 
 
@@ -118,7 +105,6 @@ public class GetBlackWhiteListRequest extends Request {
             this.acceptLanguage = request.acceptLanguage;
             this.gatewayUniqueId = request.gatewayUniqueId;
             this.isWhite = request.isWhite;
-            this.mseSessionId = request.mseSessionId;
             this.resourceType = request.resourceType;
             this.type = request.type;
         } 
@@ -147,15 +133,6 @@ public class GetBlackWhiteListRequest extends Request {
         public Builder isWhite(Boolean isWhite) {
             this.putQueryParameter("IsWhite", isWhite);
             this.isWhite = isWhite;
-            return this;
-        }
-
-        /**
-         * MseSessionId.
-         */
-        public Builder mseSessionId(String mseSessionId) {
-            this.putQueryParameter("MseSessionId", mseSessionId);
-            this.mseSessionId = mseSessionId;
             return this;
         }
 

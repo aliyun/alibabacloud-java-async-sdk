@@ -21,10 +21,6 @@ public class ListClustersRequest extends Request {
     private String clusterAliasName;
 
     @Query
-    @NameInMap("MseSessionId")
-    private String mseSessionId;
-
-    @Query
     @NameInMap("PageNum")
     @Validation(required = true)
     private Integer pageNum;
@@ -55,7 +51,6 @@ public class ListClustersRequest extends Request {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
         this.clusterAliasName = builder.clusterAliasName;
-        this.mseSessionId = builder.mseSessionId;
         this.pageNum = builder.pageNum;
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
@@ -89,13 +84,6 @@ public class ListClustersRequest extends Request {
      */
     public String getClusterAliasName() {
         return this.clusterAliasName;
-    }
-
-    /**
-     * @return mseSessionId
-     */
-    public String getMseSessionId() {
-        return this.mseSessionId;
     }
 
     /**
@@ -143,7 +131,6 @@ public class ListClustersRequest extends Request {
     public static final class Builder extends Request.Builder<ListClustersRequest, Builder> {
         private String acceptLanguage; 
         private String clusterAliasName; 
-        private String mseSessionId; 
         private Integer pageNum; 
         private Integer pageSize; 
         private String regionId; 
@@ -159,7 +146,6 @@ public class ListClustersRequest extends Request {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
             this.clusterAliasName = request.clusterAliasName;
-            this.mseSessionId = request.mseSessionId;
             this.pageNum = request.pageNum;
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
@@ -183,15 +169,6 @@ public class ListClustersRequest extends Request {
         public Builder clusterAliasName(String clusterAliasName) {
             this.putQueryParameter("ClusterAliasName", clusterAliasName);
             this.clusterAliasName = clusterAliasName;
-            return this;
-        }
-
-        /**
-         * MseSessionId.
-         */
-        public Builder mseSessionId(String mseSessionId) {
-            this.putQueryParameter("MseSessionId", mseSessionId);
-            this.mseSessionId = mseSessionId;
             return this;
         }
 

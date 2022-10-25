@@ -53,10 +53,6 @@ public class AddGatewayRouteRequest extends Request {
     private String gatewayUniqueId;
 
     @Query
-    @NameInMap("MseSessionId")
-    private String mseSessionId;
-
-    @Query
     @NameInMap("Name")
     private String name;
 
@@ -88,7 +84,6 @@ public class AddGatewayRouteRequest extends Request {
         this.fallbackServices = builder.fallbackServices;
         this.gatewayId = builder.gatewayId;
         this.gatewayUniqueId = builder.gatewayUniqueId;
-        this.mseSessionId = builder.mseSessionId;
         this.name = builder.name;
         this.predicates = builder.predicates;
         this.redirectJSON = builder.redirectJSON;
@@ -180,13 +175,6 @@ public class AddGatewayRouteRequest extends Request {
     }
 
     /**
-     * @return mseSessionId
-     */
-    public String getMseSessionId() {
-        return this.mseSessionId;
-    }
-
-    /**
      * @return name
      */
     public String getName() {
@@ -232,7 +220,6 @@ public class AddGatewayRouteRequest extends Request {
         private java.util.List < FallbackServices> fallbackServices; 
         private Long gatewayId; 
         private String gatewayUniqueId; 
-        private String mseSessionId; 
         private String name; 
         private Predicates predicates; 
         private RedirectJSON redirectJSON; 
@@ -255,7 +242,6 @@ public class AddGatewayRouteRequest extends Request {
             this.fallbackServices = request.fallbackServices;
             this.gatewayId = request.gatewayId;
             this.gatewayUniqueId = request.gatewayUniqueId;
-            this.mseSessionId = request.mseSessionId;
             this.name = request.name;
             this.predicates = request.predicates;
             this.redirectJSON = request.redirectJSON;
@@ -352,15 +338,6 @@ public class AddGatewayRouteRequest extends Request {
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
             this.gatewayUniqueId = gatewayUniqueId;
-            return this;
-        }
-
-        /**
-         * MseSessionId.
-         */
-        public Builder mseSessionId(String mseSessionId) {
-            this.putQueryParameter("MseSessionId", mseSessionId);
-            this.mseSessionId = mseSessionId;
             return this;
         }
 

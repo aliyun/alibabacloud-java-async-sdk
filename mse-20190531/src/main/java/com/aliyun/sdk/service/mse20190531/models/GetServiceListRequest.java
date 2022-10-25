@@ -25,10 +25,6 @@ public class GetServiceListRequest extends Request {
     private String ip;
 
     @Query
-    @NameInMap("MseSessionId")
-    private String mseSessionId;
-
-    @Query
     @NameInMap("Region")
     private String region;
 
@@ -45,7 +41,6 @@ public class GetServiceListRequest extends Request {
         this.acceptLanguage = builder.acceptLanguage;
         this.appId = builder.appId;
         this.ip = builder.ip;
-        this.mseSessionId = builder.mseSessionId;
         this.region = builder.region;
         this.serviceName = builder.serviceName;
         this.serviceType = builder.serviceType;
@@ -86,13 +81,6 @@ public class GetServiceListRequest extends Request {
     }
 
     /**
-     * @return mseSessionId
-     */
-    public String getMseSessionId() {
-        return this.mseSessionId;
-    }
-
-    /**
      * @return region
      */
     public String getRegion() {
@@ -117,7 +105,6 @@ public class GetServiceListRequest extends Request {
         private String acceptLanguage; 
         private String appId; 
         private String ip; 
-        private String mseSessionId; 
         private String region; 
         private String serviceName; 
         private String serviceType; 
@@ -131,7 +118,6 @@ public class GetServiceListRequest extends Request {
             this.acceptLanguage = request.acceptLanguage;
             this.appId = request.appId;
             this.ip = request.ip;
-            this.mseSessionId = request.mseSessionId;
             this.region = request.region;
             this.serviceName = request.serviceName;
             this.serviceType = request.serviceType;
@@ -161,15 +147,6 @@ public class GetServiceListRequest extends Request {
         public Builder ip(String ip) {
             this.putQueryParameter("Ip", ip);
             this.ip = ip;
-            return this;
-        }
-
-        /**
-         * MseSessionId.
-         */
-        public Builder mseSessionId(String mseSessionId) {
-            this.putQueryParameter("MseSessionId", mseSessionId);
-            this.mseSessionId = mseSessionId;
             return this;
         }
 

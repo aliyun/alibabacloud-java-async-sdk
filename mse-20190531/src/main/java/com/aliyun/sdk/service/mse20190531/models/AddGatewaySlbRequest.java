@@ -34,10 +34,6 @@ public class AddGatewaySlbRequest extends Request {
     private String httpsVServerGroupId;
 
     @Query
-    @NameInMap("MseSessionId")
-    private String mseSessionId;
-
-    @Query
     @NameInMap("ServiceWeight")
     private Integer serviceWeight;
 
@@ -61,7 +57,6 @@ public class AddGatewaySlbRequest extends Request {
         this.httpPort = builder.httpPort;
         this.httpsPort = builder.httpsPort;
         this.httpsVServerGroupId = builder.httpsVServerGroupId;
-        this.mseSessionId = builder.mseSessionId;
         this.serviceWeight = builder.serviceWeight;
         this.slbId = builder.slbId;
         this.type = builder.type;
@@ -117,13 +112,6 @@ public class AddGatewaySlbRequest extends Request {
     }
 
     /**
-     * @return mseSessionId
-     */
-    public String getMseSessionId() {
-        return this.mseSessionId;
-    }
-
-    /**
      * @return serviceWeight
      */
     public Integer getServiceWeight() {
@@ -157,7 +145,6 @@ public class AddGatewaySlbRequest extends Request {
         private Integer httpPort; 
         private Integer httpsPort; 
         private String httpsVServerGroupId; 
-        private String mseSessionId; 
         private Integer serviceWeight; 
         private String slbId; 
         private String type; 
@@ -174,7 +161,6 @@ public class AddGatewaySlbRequest extends Request {
             this.httpPort = request.httpPort;
             this.httpsPort = request.httpsPort;
             this.httpsVServerGroupId = request.httpsVServerGroupId;
-            this.mseSessionId = request.mseSessionId;
             this.serviceWeight = request.serviceWeight;
             this.slbId = request.slbId;
             this.type = request.type;
@@ -223,15 +209,6 @@ public class AddGatewaySlbRequest extends Request {
         public Builder httpsVServerGroupId(String httpsVServerGroupId) {
             this.putQueryParameter("HttpsVServerGroupId", httpsVServerGroupId);
             this.httpsVServerGroupId = httpsVServerGroupId;
-            return this;
-        }
-
-        /**
-         * MseSessionId.
-         */
-        public Builder mseSessionId(String mseSessionId) {
-            this.putQueryParameter("MseSessionId", mseSessionId);
-            this.mseSessionId = mseSessionId;
             return this;
         }
 

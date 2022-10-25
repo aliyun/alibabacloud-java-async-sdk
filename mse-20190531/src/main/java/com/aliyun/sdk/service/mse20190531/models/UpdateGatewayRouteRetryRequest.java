@@ -29,10 +29,6 @@ public class UpdateGatewayRouteRetryRequest extends Request {
     private Long id;
 
     @Query
-    @NameInMap("MseSessionId")
-    private String mseSessionId;
-
-    @Query
     @NameInMap("RetryJSON")
     private RetryJSON retryJSON;
 
@@ -42,7 +38,6 @@ public class UpdateGatewayRouteRetryRequest extends Request {
         this.gatewayId = builder.gatewayId;
         this.gatewayUniqueId = builder.gatewayUniqueId;
         this.id = builder.id;
-        this.mseSessionId = builder.mseSessionId;
         this.retryJSON = builder.retryJSON;
     }
 
@@ -88,13 +83,6 @@ public class UpdateGatewayRouteRetryRequest extends Request {
     }
 
     /**
-     * @return mseSessionId
-     */
-    public String getMseSessionId() {
-        return this.mseSessionId;
-    }
-
-    /**
      * @return retryJSON
      */
     public RetryJSON getRetryJSON() {
@@ -106,7 +94,6 @@ public class UpdateGatewayRouteRetryRequest extends Request {
         private Long gatewayId; 
         private String gatewayUniqueId; 
         private Long id; 
-        private String mseSessionId; 
         private RetryJSON retryJSON; 
 
         private Builder() {
@@ -119,7 +106,6 @@ public class UpdateGatewayRouteRetryRequest extends Request {
             this.gatewayId = request.gatewayId;
             this.gatewayUniqueId = request.gatewayUniqueId;
             this.id = request.id;
-            this.mseSessionId = request.mseSessionId;
             this.retryJSON = request.retryJSON;
         } 
 
@@ -156,15 +142,6 @@ public class UpdateGatewayRouteRetryRequest extends Request {
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
             this.id = id;
-            return this;
-        }
-
-        /**
-         * MseSessionId.
-         */
-        public Builder mseSessionId(String mseSessionId) {
-            this.putQueryParameter("MseSessionId", mseSessionId);
-            this.mseSessionId = mseSessionId;
             return this;
         }
 

@@ -49,10 +49,6 @@ public class CreateClusterRequest extends Request {
     private String instanceName;
 
     @Query
-    @NameInMap("MseSessionId")
-    private String mseSessionId;
-
-    @Query
     @NameInMap("MseVersion")
     private String mseVersion;
 
@@ -107,7 +103,6 @@ public class CreateClusterRequest extends Request {
         this.diskType = builder.diskType;
         this.instanceCount = builder.instanceCount;
         this.instanceName = builder.instanceName;
-        this.mseSessionId = builder.mseSessionId;
         this.mseVersion = builder.mseVersion;
         this.netType = builder.netType;
         this.privateSlbSpecification = builder.privateSlbSpecification;
@@ -188,13 +183,6 @@ public class CreateClusterRequest extends Request {
      */
     public String getInstanceName() {
         return this.instanceName;
-    }
-
-    /**
-     * @return mseSessionId
-     */
-    public String getMseSessionId() {
-        return this.mseSessionId;
     }
 
     /**
@@ -283,7 +271,6 @@ public class CreateClusterRequest extends Request {
         private String diskType; 
         private Integer instanceCount; 
         private String instanceName; 
-        private String mseSessionId; 
         private String mseVersion; 
         private String netType; 
         private String privateSlbSpecification; 
@@ -310,7 +297,6 @@ public class CreateClusterRequest extends Request {
             this.diskType = request.diskType;
             this.instanceCount = request.instanceCount;
             this.instanceName = request.instanceName;
-            this.mseSessionId = request.mseSessionId;
             this.mseVersion = request.mseVersion;
             this.netType = request.netType;
             this.privateSlbSpecification = request.privateSlbSpecification;
@@ -393,15 +379,6 @@ public class CreateClusterRequest extends Request {
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
             this.instanceName = instanceName;
-            return this;
-        }
-
-        /**
-         * MseSessionId.
-         */
-        public Builder mseSessionId(String mseSessionId) {
-            this.putQueryParameter("MseSessionId", mseSessionId);
-            this.mseSessionId = mseSessionId;
             return this;
         }
 

@@ -57,10 +57,6 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
     private Boolean messageQueueGrayEnable;
 
     @Query
-    @NameInMap("MseSessionId")
-    private String mseSessionId;
-
-    @Query
     @NameInMap("Name")
     private String name;
 
@@ -93,7 +89,6 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         this.licenseKey = builder.licenseKey;
         this.messageQueueFilterSide = builder.messageQueueFilterSide;
         this.messageQueueGrayEnable = builder.messageQueueGrayEnable;
-        this.mseSessionId = builder.mseSessionId;
         this.name = builder.name;
         this.region = builder.region;
         this.source = builder.source;
@@ -192,13 +187,6 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
     }
 
     /**
-     * @return mseSessionId
-     */
-    public String getMseSessionId() {
-        return this.mseSessionId;
-    }
-
-    /**
      * @return name
      */
     public String getName() {
@@ -245,7 +233,6 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         private String licenseKey; 
         private String messageQueueFilterSide; 
         private Boolean messageQueueGrayEnable; 
-        private String mseSessionId; 
         private String name; 
         private String region; 
         private String source; 
@@ -269,7 +256,6 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
             this.licenseKey = request.licenseKey;
             this.messageQueueFilterSide = request.messageQueueFilterSide;
             this.messageQueueGrayEnable = request.messageQueueGrayEnable;
-            this.mseSessionId = request.mseSessionId;
             this.name = request.name;
             this.region = request.region;
             this.source = request.source;
@@ -373,15 +359,6 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         public Builder messageQueueGrayEnable(Boolean messageQueueGrayEnable) {
             this.putQueryParameter("MessageQueueGrayEnable", messageQueueGrayEnable);
             this.messageQueueGrayEnable = messageQueueGrayEnable;
-            return this;
-        }
-
-        /**
-         * MseSessionId.
-         */
-        public Builder mseSessionId(String mseSessionId) {
-            this.putQueryParameter("MseSessionId", mseSessionId);
-            this.mseSessionId = mseSessionId;
             return this;
         }
 

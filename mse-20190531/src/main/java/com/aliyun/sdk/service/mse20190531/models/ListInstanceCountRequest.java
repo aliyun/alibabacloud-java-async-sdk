@@ -21,10 +21,6 @@ public class ListInstanceCountRequest extends Request {
     private String clusterType;
 
     @Query
-    @NameInMap("MseSessionId")
-    private String mseSessionId;
-
-    @Query
     @NameInMap("MseVersion")
     private String mseVersion;
 
@@ -40,7 +36,6 @@ public class ListInstanceCountRequest extends Request {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
         this.clusterType = builder.clusterType;
-        this.mseSessionId = builder.mseSessionId;
         this.mseVersion = builder.mseVersion;
         this.regionId = builder.regionId;
         this.requestPars = builder.requestPars;
@@ -74,13 +69,6 @@ public class ListInstanceCountRequest extends Request {
     }
 
     /**
-     * @return mseSessionId
-     */
-    public String getMseSessionId() {
-        return this.mseSessionId;
-    }
-
-    /**
      * @return mseVersion
      */
     public String getMseVersion() {
@@ -104,7 +92,6 @@ public class ListInstanceCountRequest extends Request {
     public static final class Builder extends Request.Builder<ListInstanceCountRequest, Builder> {
         private String acceptLanguage; 
         private String clusterType; 
-        private String mseSessionId; 
         private String mseVersion; 
         private String regionId; 
         private String requestPars; 
@@ -117,7 +104,6 @@ public class ListInstanceCountRequest extends Request {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
             this.clusterType = request.clusterType;
-            this.mseSessionId = request.mseSessionId;
             this.mseVersion = request.mseVersion;
             this.regionId = request.regionId;
             this.requestPars = request.requestPars;
@@ -138,15 +124,6 @@ public class ListInstanceCountRequest extends Request {
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("ClusterType", clusterType);
             this.clusterType = clusterType;
-            return this;
-        }
-
-        /**
-         * MseSessionId.
-         */
-        public Builder mseSessionId(String mseSessionId) {
-            this.putQueryParameter("MseSessionId", mseSessionId);
-            this.mseSessionId = mseSessionId;
             return this;
         }
 

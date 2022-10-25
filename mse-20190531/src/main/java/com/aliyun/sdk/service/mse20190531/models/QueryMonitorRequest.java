@@ -31,10 +31,6 @@ public class QueryMonitorRequest extends Request {
     private String monitorType;
 
     @Query
-    @NameInMap("MseSessionId")
-    private String mseSessionId;
-
-    @Query
     @NameInMap("RequestPars")
     private String requestPars;
 
@@ -53,7 +49,6 @@ public class QueryMonitorRequest extends Request {
         this.endTime = builder.endTime;
         this.instanceId = builder.instanceId;
         this.monitorType = builder.monitorType;
-        this.mseSessionId = builder.mseSessionId;
         this.requestPars = builder.requestPars;
         this.startTime = builder.startTime;
         this.step = builder.step;
@@ -101,13 +96,6 @@ public class QueryMonitorRequest extends Request {
     }
 
     /**
-     * @return mseSessionId
-     */
-    public String getMseSessionId() {
-        return this.mseSessionId;
-    }
-
-    /**
      * @return requestPars
      */
     public String getRequestPars() {
@@ -133,7 +121,6 @@ public class QueryMonitorRequest extends Request {
         private Long endTime; 
         private String instanceId; 
         private String monitorType; 
-        private String mseSessionId; 
         private String requestPars; 
         private Long startTime; 
         private Long step; 
@@ -148,7 +135,6 @@ public class QueryMonitorRequest extends Request {
             this.endTime = request.endTime;
             this.instanceId = request.instanceId;
             this.monitorType = request.monitorType;
-            this.mseSessionId = request.mseSessionId;
             this.requestPars = request.requestPars;
             this.startTime = request.startTime;
             this.step = request.step;
@@ -187,15 +173,6 @@ public class QueryMonitorRequest extends Request {
         public Builder monitorType(String monitorType) {
             this.putQueryParameter("MonitorType", monitorType);
             this.monitorType = monitorType;
-            return this;
-        }
-
-        /**
-         * MseSessionId.
-         */
-        public Builder mseSessionId(String mseSessionId) {
-            this.putQueryParameter("MseSessionId", mseSessionId);
-            this.mseSessionId = mseSessionId;
             return this;
         }
 

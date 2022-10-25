@@ -53,10 +53,6 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
     private String licenseKey;
 
     @Query
-    @NameInMap("MseSessionId")
-    private String mseSessionId;
-
-    @Query
     @NameInMap("Name")
     private String name;
 
@@ -92,7 +88,6 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         this.groupId = builder.groupId;
         this.id = builder.id;
         this.licenseKey = builder.licenseKey;
-        this.mseSessionId = builder.mseSessionId;
         this.name = builder.name;
         this.regionId = builder.regionId;
         this.source = builder.source;
@@ -185,13 +180,6 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
     }
 
     /**
-     * @return mseSessionId
-     */
-    public String getMseSessionId() {
-        return this.mseSessionId;
-    }
-
-    /**
      * @return name
      */
     public String getName() {
@@ -244,7 +232,6 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         private Long groupId; 
         private Long id; 
         private String licenseKey; 
-        private String mseSessionId; 
         private String name; 
         private String regionId; 
         private String source; 
@@ -268,7 +255,6 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             this.groupId = request.groupId;
             this.id = request.id;
             this.licenseKey = request.licenseKey;
-            this.mseSessionId = request.mseSessionId;
             this.name = request.name;
             this.regionId = request.regionId;
             this.source = request.source;
@@ -364,15 +350,6 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         public Builder licenseKey(String licenseKey) {
             this.putQueryParameter("LicenseKey", licenseKey);
             this.licenseKey = licenseKey;
-            return this;
-        }
-
-        /**
-         * MseSessionId.
-         */
-        public Builder mseSessionId(String mseSessionId) {
-            this.putQueryParameter("MseSessionId", mseSessionId);
-            this.mseSessionId = mseSessionId;
             return this;
         }
 

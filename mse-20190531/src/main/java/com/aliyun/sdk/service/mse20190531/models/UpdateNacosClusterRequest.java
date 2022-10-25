@@ -40,10 +40,6 @@ public class UpdateNacosClusterRequest extends Request {
     private String instanceId;
 
     @Query
-    @NameInMap("MseSessionId")
-    private String mseSessionId;
-
-    @Query
     @NameInMap("NamespaceId")
     private String namespaceId;
 
@@ -64,7 +60,6 @@ public class UpdateNacosClusterRequest extends Request {
         this.groupName = builder.groupName;
         this.healthChecker = builder.healthChecker;
         this.instanceId = builder.instanceId;
-        this.mseSessionId = builder.mseSessionId;
         this.namespaceId = builder.namespaceId;
         this.serviceName = builder.serviceName;
         this.useInstancePortForCheck = builder.useInstancePortForCheck;
@@ -126,13 +121,6 @@ public class UpdateNacosClusterRequest extends Request {
     }
 
     /**
-     * @return mseSessionId
-     */
-    public String getMseSessionId() {
-        return this.mseSessionId;
-    }
-
-    /**
      * @return namespaceId
      */
     public String getNamespaceId() {
@@ -160,7 +148,6 @@ public class UpdateNacosClusterRequest extends Request {
         private String groupName; 
         private String healthChecker; 
         private String instanceId; 
-        private String mseSessionId; 
         private String namespaceId; 
         private String serviceName; 
         private Boolean useInstancePortForCheck; 
@@ -177,7 +164,6 @@ public class UpdateNacosClusterRequest extends Request {
             this.groupName = request.groupName;
             this.healthChecker = request.healthChecker;
             this.instanceId = request.instanceId;
-            this.mseSessionId = request.mseSessionId;
             this.namespaceId = request.namespaceId;
             this.serviceName = request.serviceName;
             this.useInstancePortForCheck = request.useInstancePortForCheck;
@@ -234,15 +220,6 @@ public class UpdateNacosClusterRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * MseSessionId.
-         */
-        public Builder mseSessionId(String mseSessionId) {
-            this.putQueryParameter("MseSessionId", mseSessionId);
-            this.mseSessionId = mseSessionId;
             return this;
         }
 

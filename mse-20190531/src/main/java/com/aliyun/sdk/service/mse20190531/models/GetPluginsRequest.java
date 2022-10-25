@@ -30,10 +30,6 @@ public class GetPluginsRequest extends Request {
     private String gatewayUniqueId;
 
     @Query
-    @NameInMap("MseSessionId")
-    private String mseSessionId;
-
-    @Query
     @NameInMap("Name")
     private String name;
 
@@ -43,7 +39,6 @@ public class GetPluginsRequest extends Request {
         this.category = builder.category;
         this.enableOnly = builder.enableOnly;
         this.gatewayUniqueId = builder.gatewayUniqueId;
-        this.mseSessionId = builder.mseSessionId;
         this.name = builder.name;
     }
 
@@ -89,13 +84,6 @@ public class GetPluginsRequest extends Request {
     }
 
     /**
-     * @return mseSessionId
-     */
-    public String getMseSessionId() {
-        return this.mseSessionId;
-    }
-
-    /**
      * @return name
      */
     public String getName() {
@@ -107,7 +95,6 @@ public class GetPluginsRequest extends Request {
         private Integer category; 
         private Boolean enableOnly; 
         private String gatewayUniqueId; 
-        private String mseSessionId; 
         private String name; 
 
         private Builder() {
@@ -120,7 +107,6 @@ public class GetPluginsRequest extends Request {
             this.category = request.category;
             this.enableOnly = request.enableOnly;
             this.gatewayUniqueId = request.gatewayUniqueId;
-            this.mseSessionId = request.mseSessionId;
             this.name = request.name;
         } 
 
@@ -157,15 +143,6 @@ public class GetPluginsRequest extends Request {
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
             this.gatewayUniqueId = gatewayUniqueId;
-            return this;
-        }
-
-        /**
-         * MseSessionId.
-         */
-        public Builder mseSessionId(String mseSessionId) {
-            this.putQueryParameter("MseSessionId", mseSessionId);
-            this.mseSessionId = mseSessionId;
             return this;
         }
 

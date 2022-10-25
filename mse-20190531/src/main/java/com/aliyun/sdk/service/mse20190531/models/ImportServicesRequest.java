@@ -21,10 +21,6 @@ public class ImportServicesRequest extends Request {
     private String gatewayUniqueId;
 
     @Query
-    @NameInMap("MseSessionId")
-    private String mseSessionId;
-
-    @Query
     @NameInMap("ServiceList")
     private java.util.List < ServiceList> serviceList;
 
@@ -40,7 +36,6 @@ public class ImportServicesRequest extends Request {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
         this.gatewayUniqueId = builder.gatewayUniqueId;
-        this.mseSessionId = builder.mseSessionId;
         this.serviceList = builder.serviceList;
         this.sourceType = builder.sourceType;
         this.tlsSetting = builder.tlsSetting;
@@ -74,13 +69,6 @@ public class ImportServicesRequest extends Request {
     }
 
     /**
-     * @return mseSessionId
-     */
-    public String getMseSessionId() {
-        return this.mseSessionId;
-    }
-
-    /**
      * @return serviceList
      */
     public java.util.List < ServiceList> getServiceList() {
@@ -104,7 +92,6 @@ public class ImportServicesRequest extends Request {
     public static final class Builder extends Request.Builder<ImportServicesRequest, Builder> {
         private String acceptLanguage; 
         private String gatewayUniqueId; 
-        private String mseSessionId; 
         private java.util.List < ServiceList> serviceList; 
         private String sourceType; 
         private String tlsSetting; 
@@ -117,7 +104,6 @@ public class ImportServicesRequest extends Request {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
             this.gatewayUniqueId = request.gatewayUniqueId;
-            this.mseSessionId = request.mseSessionId;
             this.serviceList = request.serviceList;
             this.sourceType = request.sourceType;
             this.tlsSetting = request.tlsSetting;
@@ -138,15 +124,6 @@ public class ImportServicesRequest extends Request {
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
             this.gatewayUniqueId = gatewayUniqueId;
-            return this;
-        }
-
-        /**
-         * MseSessionId.
-         */
-        public Builder mseSessionId(String mseSessionId) {
-            this.putQueryParameter("MseSessionId", mseSessionId);
-            this.mseSessionId = mseSessionId;
             return this;
         }
 

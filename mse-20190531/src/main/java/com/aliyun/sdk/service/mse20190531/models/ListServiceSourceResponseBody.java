@@ -155,6 +155,9 @@ public class ListServiceSourceResponseBody extends TeaModel {
         @NameInMap("EnableIngress")
         private Boolean enableIngress;
 
+        @NameInMap("EnableStatus")
+        private Boolean enableStatus;
+
         @NameInMap("IngressClass")
         private String ingressClass;
 
@@ -163,6 +166,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
 
         private IngressOptions(Builder builder) {
             this.enableIngress = builder.enableIngress;
+            this.enableStatus = builder.enableStatus;
             this.ingressClass = builder.ingressClass;
             this.watchNamespace = builder.watchNamespace;
         }
@@ -183,6 +187,13 @@ public class ListServiceSourceResponseBody extends TeaModel {
         }
 
         /**
+         * @return enableStatus
+         */
+        public Boolean getEnableStatus() {
+            return this.enableStatus;
+        }
+
+        /**
          * @return ingressClass
          */
         public String getIngressClass() {
@@ -198,6 +209,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean enableIngress; 
+            private Boolean enableStatus; 
             private String ingressClass; 
             private String watchNamespace; 
 
@@ -206,6 +218,14 @@ public class ListServiceSourceResponseBody extends TeaModel {
              */
             public Builder enableIngress(Boolean enableIngress) {
                 this.enableIngress = enableIngress;
+                return this;
+            }
+
+            /**
+             * EnableStatus.
+             */
+            public Builder enableStatus(Boolean enableStatus) {
+                this.enableStatus = enableStatus;
                 return this;
             }
 
@@ -242,11 +262,17 @@ public class ListServiceSourceResponseBody extends TeaModel {
         @NameInMap("GatewayId")
         private Long gatewayId;
 
+        @NameInMap("GatewayUniqueId")
+        private String gatewayUniqueId;
+
         @NameInMap("GmtCreate")
         private String gmtCreate;
 
         @NameInMap("GmtModified")
         private String gmtModified;
+
+        @NameInMap("GroupList")
+        private java.util.List < String > groupList;
 
         @NameInMap("Id")
         private Long id;
@@ -256,6 +282,9 @@ public class ListServiceSourceResponseBody extends TeaModel {
 
         @NameInMap("Name")
         private String name;
+
+        @NameInMap("PathList")
+        private java.util.List < String > pathList;
 
         @NameInMap("Source")
         private String source;
@@ -270,11 +299,14 @@ public class ListServiceSourceResponseBody extends TeaModel {
             this.address = builder.address;
             this.bindingWithGateway = builder.bindingWithGateway;
             this.gatewayId = builder.gatewayId;
+            this.gatewayUniqueId = builder.gatewayUniqueId;
             this.gmtCreate = builder.gmtCreate;
             this.gmtModified = builder.gmtModified;
+            this.groupList = builder.groupList;
             this.id = builder.id;
             this.ingressOptions = builder.ingressOptions;
             this.name = builder.name;
+            this.pathList = builder.pathList;
             this.source = builder.source;
             this.sourceUniqueId = builder.sourceUniqueId;
             this.type = builder.type;
@@ -310,6 +342,13 @@ public class ListServiceSourceResponseBody extends TeaModel {
         }
 
         /**
+         * @return gatewayUniqueId
+         */
+        public String getGatewayUniqueId() {
+            return this.gatewayUniqueId;
+        }
+
+        /**
          * @return gmtCreate
          */
         public String getGmtCreate() {
@@ -321,6 +360,13 @@ public class ListServiceSourceResponseBody extends TeaModel {
          */
         public String getGmtModified() {
             return this.gmtModified;
+        }
+
+        /**
+         * @return groupList
+         */
+        public java.util.List < String > getGroupList() {
+            return this.groupList;
         }
 
         /**
@@ -342,6 +388,13 @@ public class ListServiceSourceResponseBody extends TeaModel {
          */
         public String getName() {
             return this.name;
+        }
+
+        /**
+         * @return pathList
+         */
+        public java.util.List < String > getPathList() {
+            return this.pathList;
         }
 
         /**
@@ -369,11 +422,14 @@ public class ListServiceSourceResponseBody extends TeaModel {
             private String address; 
             private Integer bindingWithGateway; 
             private Long gatewayId; 
+            private String gatewayUniqueId; 
             private String gmtCreate; 
             private String gmtModified; 
+            private java.util.List < String > groupList; 
             private Long id; 
             private IngressOptions ingressOptions; 
             private String name; 
+            private java.util.List < String > pathList; 
             private String source; 
             private String sourceUniqueId; 
             private String type; 
@@ -403,6 +459,14 @@ public class ListServiceSourceResponseBody extends TeaModel {
             }
 
             /**
+             * GatewayUniqueId.
+             */
+            public Builder gatewayUniqueId(String gatewayUniqueId) {
+                this.gatewayUniqueId = gatewayUniqueId;
+                return this;
+            }
+
+            /**
              * GmtCreate.
              */
             public Builder gmtCreate(String gmtCreate) {
@@ -415,6 +479,14 @@ public class ListServiceSourceResponseBody extends TeaModel {
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
+                return this;
+            }
+
+            /**
+             * GroupList.
+             */
+            public Builder groupList(java.util.List < String > groupList) {
+                this.groupList = groupList;
                 return this;
             }
 
@@ -439,6 +511,14 @@ public class ListServiceSourceResponseBody extends TeaModel {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * PathList.
+             */
+            public Builder pathList(java.util.List < String > pathList) {
+                this.pathList = pathList;
                 return this;
             }
 

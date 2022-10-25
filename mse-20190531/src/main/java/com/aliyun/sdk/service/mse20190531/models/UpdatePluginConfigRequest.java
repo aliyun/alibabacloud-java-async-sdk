@@ -50,10 +50,6 @@ public class UpdatePluginConfigRequest extends Request {
     private Long id;
 
     @Query
-    @NameInMap("MseSessionId")
-    private String mseSessionId;
-
-    @Query
     @NameInMap("PluginId")
     @Validation(required = true)
     private Long pluginId;
@@ -69,7 +65,6 @@ public class UpdatePluginConfigRequest extends Request {
         this.gmtCreate = builder.gmtCreate;
         this.gmtModified = builder.gmtModified;
         this.id = builder.id;
-        this.mseSessionId = builder.mseSessionId;
         this.pluginId = builder.pluginId;
     }
 
@@ -150,13 +145,6 @@ public class UpdatePluginConfigRequest extends Request {
     }
 
     /**
-     * @return mseSessionId
-     */
-    public String getMseSessionId() {
-        return this.mseSessionId;
-    }
-
-    /**
      * @return pluginId
      */
     public Long getPluginId() {
@@ -173,7 +161,6 @@ public class UpdatePluginConfigRequest extends Request {
         private String gmtCreate; 
         private String gmtModified; 
         private Long id; 
-        private String mseSessionId; 
         private Long pluginId; 
 
         private Builder() {
@@ -191,7 +178,6 @@ public class UpdatePluginConfigRequest extends Request {
             this.gmtCreate = request.gmtCreate;
             this.gmtModified = request.gmtModified;
             this.id = request.id;
-            this.mseSessionId = request.mseSessionId;
             this.pluginId = request.pluginId;
         } 
 
@@ -273,15 +259,6 @@ public class UpdatePluginConfigRequest extends Request {
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
             this.id = id;
-            return this;
-        }
-
-        /**
-         * MseSessionId.
-         */
-        public Builder mseSessionId(String mseSessionId) {
-            this.putQueryParameter("MseSessionId", mseSessionId);
-            this.mseSessionId = mseSessionId;
             return this;
         }
 

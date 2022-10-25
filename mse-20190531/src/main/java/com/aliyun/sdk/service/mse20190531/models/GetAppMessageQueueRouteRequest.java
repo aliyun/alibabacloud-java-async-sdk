@@ -22,10 +22,6 @@ public class GetAppMessageQueueRouteRequest extends Request {
     private String appId;
 
     @Query
-    @NameInMap("MseSessionId")
-    private String mseSessionId;
-
-    @Query
     @NameInMap("Region")
     @Validation(required = true)
     private String region;
@@ -34,7 +30,6 @@ public class GetAppMessageQueueRouteRequest extends Request {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
         this.appId = builder.appId;
-        this.mseSessionId = builder.mseSessionId;
         this.region = builder.region;
     }
 
@@ -66,13 +61,6 @@ public class GetAppMessageQueueRouteRequest extends Request {
     }
 
     /**
-     * @return mseSessionId
-     */
-    public String getMseSessionId() {
-        return this.mseSessionId;
-    }
-
-    /**
      * @return region
      */
     public String getRegion() {
@@ -82,7 +70,6 @@ public class GetAppMessageQueueRouteRequest extends Request {
     public static final class Builder extends Request.Builder<GetAppMessageQueueRouteRequest, Builder> {
         private String acceptLanguage; 
         private String appId; 
-        private String mseSessionId; 
         private String region; 
 
         private Builder() {
@@ -93,7 +80,6 @@ public class GetAppMessageQueueRouteRequest extends Request {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
             this.appId = request.appId;
-            this.mseSessionId = request.mseSessionId;
             this.region = request.region;
         } 
 
@@ -112,15 +98,6 @@ public class GetAppMessageQueueRouteRequest extends Request {
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
             this.appId = appId;
-            return this;
-        }
-
-        /**
-         * MseSessionId.
-         */
-        public Builder mseSessionId(String mseSessionId) {
-            this.putQueryParameter("MseSessionId", mseSessionId);
-            this.mseSessionId = mseSessionId;
             return this;
         }
 

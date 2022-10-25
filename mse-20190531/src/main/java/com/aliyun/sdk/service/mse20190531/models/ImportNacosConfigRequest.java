@@ -27,10 +27,6 @@ public class ImportNacosConfigRequest extends Request {
     private String instanceId;
 
     @Query
-    @NameInMap("MseSessionId")
-    private String mseSessionId;
-
-    @Query
     @NameInMap("NamespaceId")
     private String namespaceId;
 
@@ -43,7 +39,6 @@ public class ImportNacosConfigRequest extends Request {
         this.acceptLanguage = builder.acceptLanguage;
         this.fileUrl = builder.fileUrl;
         this.instanceId = builder.instanceId;
-        this.mseSessionId = builder.mseSessionId;
         this.namespaceId = builder.namespaceId;
         this.policy = builder.policy;
     }
@@ -83,13 +78,6 @@ public class ImportNacosConfigRequest extends Request {
     }
 
     /**
-     * @return mseSessionId
-     */
-    public String getMseSessionId() {
-        return this.mseSessionId;
-    }
-
-    /**
      * @return namespaceId
      */
     public String getNamespaceId() {
@@ -107,7 +95,6 @@ public class ImportNacosConfigRequest extends Request {
         private String acceptLanguage; 
         private String fileUrl; 
         private String instanceId; 
-        private String mseSessionId; 
         private String namespaceId; 
         private String policy; 
 
@@ -120,7 +107,6 @@ public class ImportNacosConfigRequest extends Request {
             this.acceptLanguage = request.acceptLanguage;
             this.fileUrl = request.fileUrl;
             this.instanceId = request.instanceId;
-            this.mseSessionId = request.mseSessionId;
             this.namespaceId = request.namespaceId;
             this.policy = request.policy;
         } 
@@ -149,15 +135,6 @@ public class ImportNacosConfigRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * MseSessionId.
-         */
-        public Builder mseSessionId(String mseSessionId) {
-            this.putQueryParameter("MseSessionId", mseSessionId);
-            this.mseSessionId = mseSessionId;
             return this;
         }
 

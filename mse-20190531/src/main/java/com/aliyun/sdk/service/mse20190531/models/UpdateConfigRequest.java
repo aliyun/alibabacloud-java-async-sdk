@@ -69,10 +69,6 @@ public class UpdateConfigRequest extends Request {
     private String minSessionTimeout;
 
     @Query
-    @NameInMap("MseSessionId")
-    private String mseSessionId;
-
-    @Query
     @NameInMap("NamingAuthEnabled")
     private Boolean namingAuthEnabled;
 
@@ -120,7 +116,6 @@ public class UpdateConfigRequest extends Request {
         this.maxClientCnxns = builder.maxClientCnxns;
         this.maxSessionTimeout = builder.maxSessionTimeout;
         this.minSessionTimeout = builder.minSessionTimeout;
-        this.mseSessionId = builder.mseSessionId;
         this.namingAuthEnabled = builder.namingAuthEnabled;
         this.openSuperAcl = builder.openSuperAcl;
         this.passWord = builder.passWord;
@@ -243,13 +238,6 @@ public class UpdateConfigRequest extends Request {
     }
 
     /**
-     * @return mseSessionId
-     */
-    public String getMseSessionId() {
-        return this.mseSessionId;
-    }
-
-    /**
      * @return namingAuthEnabled
      */
     public Boolean getNamingAuthEnabled() {
@@ -320,7 +308,6 @@ public class UpdateConfigRequest extends Request {
         private String maxClientCnxns; 
         private String maxSessionTimeout; 
         private String minSessionTimeout; 
-        private String mseSessionId; 
         private Boolean namingAuthEnabled; 
         private String openSuperAcl; 
         private String passWord; 
@@ -350,7 +337,6 @@ public class UpdateConfigRequest extends Request {
             this.maxClientCnxns = request.maxClientCnxns;
             this.maxSessionTimeout = request.maxSessionTimeout;
             this.minSessionTimeout = request.minSessionTimeout;
-            this.mseSessionId = request.mseSessionId;
             this.namingAuthEnabled = request.namingAuthEnabled;
             this.openSuperAcl = request.openSuperAcl;
             this.passWord = request.passWord;
@@ -484,15 +470,6 @@ public class UpdateConfigRequest extends Request {
         public Builder minSessionTimeout(String minSessionTimeout) {
             this.putQueryParameter("MinSessionTimeout", minSessionTimeout);
             this.minSessionTimeout = minSessionTimeout;
-            return this;
-        }
-
-        /**
-         * MseSessionId.
-         */
-        public Builder mseSessionId(String mseSessionId) {
-            this.putQueryParameter("MseSessionId", mseSessionId);
-            this.mseSessionId = mseSessionId;
             return this;
         }
 

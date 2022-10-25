@@ -25,10 +25,6 @@ public class ListApplicationsWithTagRulesRequest extends Request {
     private String appName;
 
     @Query
-    @NameInMap("MseSessionId")
-    private String mseSessionId;
-
-    @Query
     @NameInMap("PageNumber")
     @Validation(required = true)
     private Integer pageNumber;
@@ -53,7 +49,6 @@ public class ListApplicationsWithTagRulesRequest extends Request {
         this.acceptLanguage = builder.acceptLanguage;
         this.appId = builder.appId;
         this.appName = builder.appName;
-        this.mseSessionId = builder.mseSessionId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.region = builder.region;
@@ -95,13 +90,6 @@ public class ListApplicationsWithTagRulesRequest extends Request {
     }
 
     /**
-     * @return mseSessionId
-     */
-    public String getMseSessionId() {
-        return this.mseSessionId;
-    }
-
-    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -133,7 +121,6 @@ public class ListApplicationsWithTagRulesRequest extends Request {
         private String acceptLanguage; 
         private String appId; 
         private String appName; 
-        private String mseSessionId; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String region; 
@@ -148,7 +135,6 @@ public class ListApplicationsWithTagRulesRequest extends Request {
             this.acceptLanguage = request.acceptLanguage;
             this.appId = request.appId;
             this.appName = request.appName;
-            this.mseSessionId = request.mseSessionId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.region = request.region;
@@ -179,15 +165,6 @@ public class ListApplicationsWithTagRulesRequest extends Request {
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
             this.appName = appName;
-            return this;
-        }
-
-        /**
-         * MseSessionId.
-         */
-        public Builder mseSessionId(String mseSessionId) {
-            this.putQueryParameter("MseSessionId", mseSessionId);
-            this.mseSessionId = mseSessionId;
             return this;
         }
 

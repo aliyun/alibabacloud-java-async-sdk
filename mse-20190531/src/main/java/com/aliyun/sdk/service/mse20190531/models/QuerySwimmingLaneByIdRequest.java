@@ -21,15 +21,10 @@ public class QuerySwimmingLaneByIdRequest extends Request {
     @Validation(required = true)
     private Long laneId;
 
-    @Query
-    @NameInMap("MseSessionId")
-    private String mseSessionId;
-
     private QuerySwimmingLaneByIdRequest(Builder builder) {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
         this.laneId = builder.laneId;
-        this.mseSessionId = builder.mseSessionId;
     }
 
     public static Builder builder() {
@@ -59,17 +54,9 @@ public class QuerySwimmingLaneByIdRequest extends Request {
         return this.laneId;
     }
 
-    /**
-     * @return mseSessionId
-     */
-    public String getMseSessionId() {
-        return this.mseSessionId;
-    }
-
     public static final class Builder extends Request.Builder<QuerySwimmingLaneByIdRequest, Builder> {
         private String acceptLanguage; 
         private Long laneId; 
-        private String mseSessionId; 
 
         private Builder() {
             super();
@@ -79,7 +66,6 @@ public class QuerySwimmingLaneByIdRequest extends Request {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
             this.laneId = request.laneId;
-            this.mseSessionId = request.mseSessionId;
         } 
 
         /**
@@ -97,15 +83,6 @@ public class QuerySwimmingLaneByIdRequest extends Request {
         public Builder laneId(Long laneId) {
             this.putQueryParameter("LaneId", laneId);
             this.laneId = laneId;
-            return this;
-        }
-
-        /**
-         * MseSessionId.
-         */
-        public Builder mseSessionId(String mseSessionId) {
-            this.putQueryParameter("MseSessionId", mseSessionId);
-            this.mseSessionId = mseSessionId;
             return this;
         }
 

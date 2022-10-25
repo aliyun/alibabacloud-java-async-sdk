@@ -22,10 +22,6 @@ public class ListZnodeChildrenRequest extends Request {
     private String clusterId;
 
     @Query
-    @NameInMap("MseSessionId")
-    private String mseSessionId;
-
-    @Query
     @NameInMap("Path")
     @Validation(required = true)
     private String path;
@@ -34,7 +30,6 @@ public class ListZnodeChildrenRequest extends Request {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
         this.clusterId = builder.clusterId;
-        this.mseSessionId = builder.mseSessionId;
         this.path = builder.path;
     }
 
@@ -66,13 +61,6 @@ public class ListZnodeChildrenRequest extends Request {
     }
 
     /**
-     * @return mseSessionId
-     */
-    public String getMseSessionId() {
-        return this.mseSessionId;
-    }
-
-    /**
      * @return path
      */
     public String getPath() {
@@ -82,7 +70,6 @@ public class ListZnodeChildrenRequest extends Request {
     public static final class Builder extends Request.Builder<ListZnodeChildrenRequest, Builder> {
         private String acceptLanguage; 
         private String clusterId; 
-        private String mseSessionId; 
         private String path; 
 
         private Builder() {
@@ -93,7 +80,6 @@ public class ListZnodeChildrenRequest extends Request {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
             this.clusterId = request.clusterId;
-            this.mseSessionId = request.mseSessionId;
             this.path = request.path;
         } 
 
@@ -112,15 +98,6 @@ public class ListZnodeChildrenRequest extends Request {
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
             this.clusterId = clusterId;
-            return this;
-        }
-
-        /**
-         * MseSessionId.
-         */
-        public Builder mseSessionId(String mseSessionId) {
-            this.putQueryParameter("MseSessionId", mseSessionId);
-            this.mseSessionId = mseSessionId;
             return this;
         }
 

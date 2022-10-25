@@ -25,10 +25,6 @@ public class QueryClusterDetailRequest extends Request {
     private String instanceId;
 
     @Query
-    @NameInMap("MseSessionId")
-    private String mseSessionId;
-
-    @Query
     @NameInMap("OrderId")
     private String orderId;
 
@@ -37,7 +33,6 @@ public class QueryClusterDetailRequest extends Request {
         this.acceptLanguage = builder.acceptLanguage;
         this.aclSwitch = builder.aclSwitch;
         this.instanceId = builder.instanceId;
-        this.mseSessionId = builder.mseSessionId;
         this.orderId = builder.orderId;
     }
 
@@ -76,13 +71,6 @@ public class QueryClusterDetailRequest extends Request {
     }
 
     /**
-     * @return mseSessionId
-     */
-    public String getMseSessionId() {
-        return this.mseSessionId;
-    }
-
-    /**
      * @return orderId
      */
     public String getOrderId() {
@@ -93,7 +81,6 @@ public class QueryClusterDetailRequest extends Request {
         private String acceptLanguage; 
         private Boolean aclSwitch; 
         private String instanceId; 
-        private String mseSessionId; 
         private String orderId; 
 
         private Builder() {
@@ -105,7 +92,6 @@ public class QueryClusterDetailRequest extends Request {
             this.acceptLanguage = request.acceptLanguage;
             this.aclSwitch = request.aclSwitch;
             this.instanceId = request.instanceId;
-            this.mseSessionId = request.mseSessionId;
             this.orderId = request.orderId;
         } 
 
@@ -133,15 +119,6 @@ public class QueryClusterDetailRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * MseSessionId.
-         */
-        public Builder mseSessionId(String mseSessionId) {
-            this.putQueryParameter("MseSessionId", mseSessionId);
-            this.mseSessionId = mseSessionId;
             return this;
         }
 

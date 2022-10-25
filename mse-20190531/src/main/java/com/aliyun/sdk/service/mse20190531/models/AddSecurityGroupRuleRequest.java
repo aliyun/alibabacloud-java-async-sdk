@@ -26,10 +26,6 @@ public class AddSecurityGroupRuleRequest extends Request {
     private String gatewayUniqueId;
 
     @Query
-    @NameInMap("MseSessionId")
-    private String mseSessionId;
-
-    @Query
     @NameInMap("PortRange")
     @Validation(required = true)
     private String portRange;
@@ -44,7 +40,6 @@ public class AddSecurityGroupRuleRequest extends Request {
         this.acceptLanguage = builder.acceptLanguage;
         this.description = builder.description;
         this.gatewayUniqueId = builder.gatewayUniqueId;
-        this.mseSessionId = builder.mseSessionId;
         this.portRange = builder.portRange;
         this.securityGroupId = builder.securityGroupId;
     }
@@ -84,13 +79,6 @@ public class AddSecurityGroupRuleRequest extends Request {
     }
 
     /**
-     * @return mseSessionId
-     */
-    public String getMseSessionId() {
-        return this.mseSessionId;
-    }
-
-    /**
      * @return portRange
      */
     public String getPortRange() {
@@ -108,7 +96,6 @@ public class AddSecurityGroupRuleRequest extends Request {
         private String acceptLanguage; 
         private String description; 
         private String gatewayUniqueId; 
-        private String mseSessionId; 
         private String portRange; 
         private String securityGroupId; 
 
@@ -121,7 +108,6 @@ public class AddSecurityGroupRuleRequest extends Request {
             this.acceptLanguage = request.acceptLanguage;
             this.description = request.description;
             this.gatewayUniqueId = request.gatewayUniqueId;
-            this.mseSessionId = request.mseSessionId;
             this.portRange = request.portRange;
             this.securityGroupId = request.securityGroupId;
         } 
@@ -150,15 +136,6 @@ public class AddSecurityGroupRuleRequest extends Request {
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
             this.gatewayUniqueId = gatewayUniqueId;
-            return this;
-        }
-
-        /**
-         * MseSessionId.
-         */
-        public Builder mseSessionId(String mseSessionId) {
-            this.putQueryParameter("MseSessionId", mseSessionId);
-            this.mseSessionId = mseSessionId;
             return this;
         }
 

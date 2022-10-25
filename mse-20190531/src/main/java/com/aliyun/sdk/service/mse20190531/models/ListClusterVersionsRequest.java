@@ -21,10 +21,6 @@ public class ListClusterVersionsRequest extends Request {
     private String clusterType;
 
     @Query
-    @NameInMap("MseSessionId")
-    private String mseSessionId;
-
-    @Query
     @NameInMap("MseVersion")
     private String mseVersion;
 
@@ -32,7 +28,6 @@ public class ListClusterVersionsRequest extends Request {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
         this.clusterType = builder.clusterType;
-        this.mseSessionId = builder.mseSessionId;
         this.mseVersion = builder.mseVersion;
     }
 
@@ -64,13 +59,6 @@ public class ListClusterVersionsRequest extends Request {
     }
 
     /**
-     * @return mseSessionId
-     */
-    public String getMseSessionId() {
-        return this.mseSessionId;
-    }
-
-    /**
      * @return mseVersion
      */
     public String getMseVersion() {
@@ -80,7 +68,6 @@ public class ListClusterVersionsRequest extends Request {
     public static final class Builder extends Request.Builder<ListClusterVersionsRequest, Builder> {
         private String acceptLanguage; 
         private String clusterType; 
-        private String mseSessionId; 
         private String mseVersion; 
 
         private Builder() {
@@ -91,7 +78,6 @@ public class ListClusterVersionsRequest extends Request {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
             this.clusterType = request.clusterType;
-            this.mseSessionId = request.mseSessionId;
             this.mseVersion = request.mseVersion;
         } 
 
@@ -110,15 +96,6 @@ public class ListClusterVersionsRequest extends Request {
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("ClusterType", clusterType);
             this.clusterType = clusterType;
-            return this;
-        }
-
-        /**
-         * MseSessionId.
-         */
-        public Builder mseSessionId(String mseSessionId) {
-            this.putQueryParameter("MseSessionId", mseSessionId);
-            this.mseSessionId = mseSessionId;
             return this;
         }
 

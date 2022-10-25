@@ -21,15 +21,10 @@ public class ListSecurityGroupRequest extends Request {
     @Validation(required = true)
     private String gatewayUniqueId;
 
-    @Query
-    @NameInMap("MseSessionId")
-    private String mseSessionId;
-
     private ListSecurityGroupRequest(Builder builder) {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
         this.gatewayUniqueId = builder.gatewayUniqueId;
-        this.mseSessionId = builder.mseSessionId;
     }
 
     public static Builder builder() {
@@ -59,17 +54,9 @@ public class ListSecurityGroupRequest extends Request {
         return this.gatewayUniqueId;
     }
 
-    /**
-     * @return mseSessionId
-     */
-    public String getMseSessionId() {
-        return this.mseSessionId;
-    }
-
     public static final class Builder extends Request.Builder<ListSecurityGroupRequest, Builder> {
         private String acceptLanguage; 
         private String gatewayUniqueId; 
-        private String mseSessionId; 
 
         private Builder() {
             super();
@@ -79,7 +66,6 @@ public class ListSecurityGroupRequest extends Request {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
             this.gatewayUniqueId = request.gatewayUniqueId;
-            this.mseSessionId = request.mseSessionId;
         } 
 
         /**
@@ -97,15 +83,6 @@ public class ListSecurityGroupRequest extends Request {
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
             this.gatewayUniqueId = gatewayUniqueId;
-            return this;
-        }
-
-        /**
-         * MseSessionId.
-         */
-        public Builder mseSessionId(String mseSessionId) {
-            this.putQueryParameter("MseSessionId", mseSessionId);
-            this.mseSessionId = mseSessionId;
             return this;
         }
 

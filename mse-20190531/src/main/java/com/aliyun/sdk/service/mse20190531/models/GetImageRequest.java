@@ -17,10 +17,6 @@ public class GetImageRequest extends Request {
     private String acceptLanguage;
 
     @Query
-    @NameInMap("MseSessionId")
-    private String mseSessionId;
-
-    @Query
     @NameInMap("VersionCode")
     @Validation(required = true)
     private String versionCode;
@@ -28,7 +24,6 @@ public class GetImageRequest extends Request {
     private GetImageRequest(Builder builder) {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
-        this.mseSessionId = builder.mseSessionId;
         this.versionCode = builder.versionCode;
     }
 
@@ -53,13 +48,6 @@ public class GetImageRequest extends Request {
     }
 
     /**
-     * @return mseSessionId
-     */
-    public String getMseSessionId() {
-        return this.mseSessionId;
-    }
-
-    /**
      * @return versionCode
      */
     public String getVersionCode() {
@@ -68,7 +56,6 @@ public class GetImageRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetImageRequest, Builder> {
         private String acceptLanguage; 
-        private String mseSessionId; 
         private String versionCode; 
 
         private Builder() {
@@ -78,7 +65,6 @@ public class GetImageRequest extends Request {
         private Builder(GetImageRequest request) {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
-            this.mseSessionId = request.mseSessionId;
             this.versionCode = request.versionCode;
         } 
 
@@ -88,15 +74,6 @@ public class GetImageRequest extends Request {
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
             this.acceptLanguage = acceptLanguage;
-            return this;
-        }
-
-        /**
-         * MseSessionId.
-         */
-        public Builder mseSessionId(String mseSessionId) {
-            this.putQueryParameter("MseSessionId", mseSessionId);
-            this.mseSessionId = mseSessionId;
             return this;
         }
 

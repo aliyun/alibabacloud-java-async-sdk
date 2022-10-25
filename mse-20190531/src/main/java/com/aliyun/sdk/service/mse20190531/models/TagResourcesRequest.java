@@ -17,10 +17,6 @@ public class TagResourcesRequest extends Request {
     private String acceptLanguage;
 
     @Query
-    @NameInMap("MseSessionId")
-    private String mseSessionId;
-
-    @Query
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
@@ -42,7 +38,6 @@ public class TagResourcesRequest extends Request {
     private TagResourcesRequest(Builder builder) {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
-        this.mseSessionId = builder.mseSessionId;
         this.regionId = builder.regionId;
         this.resourceId = builder.resourceId;
         this.resourceType = builder.resourceType;
@@ -67,13 +62,6 @@ public class TagResourcesRequest extends Request {
      */
     public String getAcceptLanguage() {
         return this.acceptLanguage;
-    }
-
-    /**
-     * @return mseSessionId
-     */
-    public String getMseSessionId() {
-        return this.mseSessionId;
     }
 
     /**
@@ -106,7 +94,6 @@ public class TagResourcesRequest extends Request {
 
     public static final class Builder extends Request.Builder<TagResourcesRequest, Builder> {
         private String acceptLanguage; 
-        private String mseSessionId; 
         private String regionId; 
         private java.util.List < String > resourceId; 
         private String resourceType; 
@@ -119,7 +106,6 @@ public class TagResourcesRequest extends Request {
         private Builder(TagResourcesRequest request) {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
-            this.mseSessionId = request.mseSessionId;
             this.regionId = request.regionId;
             this.resourceId = request.resourceId;
             this.resourceType = request.resourceType;
@@ -132,15 +118,6 @@ public class TagResourcesRequest extends Request {
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
             this.acceptLanguage = acceptLanguage;
-            return this;
-        }
-
-        /**
-         * MseSessionId.
-         */
-        public Builder mseSessionId(String mseSessionId) {
-            this.putQueryParameter("MseSessionId", mseSessionId);
-            this.mseSessionId = mseSessionId;
             return this;
         }
 

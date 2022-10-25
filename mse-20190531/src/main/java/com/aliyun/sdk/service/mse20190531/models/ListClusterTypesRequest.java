@@ -21,10 +21,6 @@ public class ListClusterTypesRequest extends Request {
     private String connectType;
 
     @Query
-    @NameInMap("MseSessionId")
-    private String mseSessionId;
-
-    @Query
     @NameInMap("MseVersion")
     private String mseVersion;
 
@@ -36,7 +32,6 @@ public class ListClusterTypesRequest extends Request {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
         this.connectType = builder.connectType;
-        this.mseSessionId = builder.mseSessionId;
         this.mseVersion = builder.mseVersion;
         this.regionId = builder.regionId;
     }
@@ -69,13 +64,6 @@ public class ListClusterTypesRequest extends Request {
     }
 
     /**
-     * @return mseSessionId
-     */
-    public String getMseSessionId() {
-        return this.mseSessionId;
-    }
-
-    /**
      * @return mseVersion
      */
     public String getMseVersion() {
@@ -92,7 +80,6 @@ public class ListClusterTypesRequest extends Request {
     public static final class Builder extends Request.Builder<ListClusterTypesRequest, Builder> {
         private String acceptLanguage; 
         private String connectType; 
-        private String mseSessionId; 
         private String mseVersion; 
         private String regionId; 
 
@@ -104,7 +91,6 @@ public class ListClusterTypesRequest extends Request {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
             this.connectType = request.connectType;
-            this.mseSessionId = request.mseSessionId;
             this.mseVersion = request.mseVersion;
             this.regionId = request.regionId;
         } 
@@ -124,15 +110,6 @@ public class ListClusterTypesRequest extends Request {
         public Builder connectType(String connectType) {
             this.putQueryParameter("ConnectType", connectType);
             this.connectType = connectType;
-            return this;
-        }
-
-        /**
-         * MseSessionId.
-         */
-        public Builder mseSessionId(String mseSessionId) {
-            this.putQueryParameter("MseSessionId", mseSessionId);
-            this.mseSessionId = mseSessionId;
             return this;
         }
 

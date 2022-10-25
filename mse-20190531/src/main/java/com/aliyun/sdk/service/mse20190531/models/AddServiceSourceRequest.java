@@ -33,12 +33,12 @@ public class AddServiceSourceRequest extends Request {
     private IngressOptionsRequest ingressOptionsRequest;
 
     @Query
-    @NameInMap("MseSessionId")
-    private String mseSessionId;
-
-    @Query
     @NameInMap("Name")
     private String name;
+
+    @Query
+    @NameInMap("PathList")
+    private java.util.List < String > pathList;
 
     @Query
     @NameInMap("Source")
@@ -55,8 +55,8 @@ public class AddServiceSourceRequest extends Request {
         this.gatewayUniqueId = builder.gatewayUniqueId;
         this.groupList = builder.groupList;
         this.ingressOptionsRequest = builder.ingressOptionsRequest;
-        this.mseSessionId = builder.mseSessionId;
         this.name = builder.name;
+        this.pathList = builder.pathList;
         this.source = builder.source;
         this.type = builder.type;
     }
@@ -110,17 +110,17 @@ public class AddServiceSourceRequest extends Request {
     }
 
     /**
-     * @return mseSessionId
-     */
-    public String getMseSessionId() {
-        return this.mseSessionId;
-    }
-
-    /**
      * @return name
      */
     public String getName() {
         return this.name;
+    }
+
+    /**
+     * @return pathList
+     */
+    public java.util.List < String > getPathList() {
+        return this.pathList;
     }
 
     /**
@@ -143,8 +143,8 @@ public class AddServiceSourceRequest extends Request {
         private String gatewayUniqueId; 
         private java.util.List < String > groupList; 
         private IngressOptionsRequest ingressOptionsRequest; 
-        private String mseSessionId; 
         private String name; 
+        private java.util.List < String > pathList; 
         private String source; 
         private String type; 
 
@@ -159,8 +159,8 @@ public class AddServiceSourceRequest extends Request {
             this.gatewayUniqueId = request.gatewayUniqueId;
             this.groupList = request.groupList;
             this.ingressOptionsRequest = request.ingressOptionsRequest;
-            this.mseSessionId = request.mseSessionId;
             this.name = request.name;
+            this.pathList = request.pathList;
             this.source = request.source;
             this.type = request.type;
         } 
@@ -213,20 +213,21 @@ public class AddServiceSourceRequest extends Request {
         }
 
         /**
-         * MseSessionId.
-         */
-        public Builder mseSessionId(String mseSessionId) {
-            this.putQueryParameter("MseSessionId", mseSessionId);
-            this.mseSessionId = mseSessionId;
-            return this;
-        }
-
-        /**
          * Name.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
             this.name = name;
+            return this;
+        }
+
+        /**
+         * PathList.
+         */
+        public Builder pathList(java.util.List < String > pathList) {
+            String pathListShrink = shrink(pathList, "PathList", "json");
+            this.putQueryParameter("PathList", pathListShrink);
+            this.pathList = pathList;
             return this;
         }
 
@@ -259,6 +260,9 @@ public class AddServiceSourceRequest extends Request {
         @NameInMap("EnableIngress")
         private Boolean enableIngress;
 
+        @NameInMap("EnableStatus")
+        private Boolean enableStatus;
+
         @NameInMap("IngressClass")
         private String ingressClass;
 
@@ -267,6 +271,7 @@ public class AddServiceSourceRequest extends Request {
 
         private IngressOptionsRequest(Builder builder) {
             this.enableIngress = builder.enableIngress;
+            this.enableStatus = builder.enableStatus;
             this.ingressClass = builder.ingressClass;
             this.watchNamespace = builder.watchNamespace;
         }
@@ -287,6 +292,13 @@ public class AddServiceSourceRequest extends Request {
         }
 
         /**
+         * @return enableStatus
+         */
+        public Boolean getEnableStatus() {
+            return this.enableStatus;
+        }
+
+        /**
          * @return ingressClass
          */
         public String getIngressClass() {
@@ -302,6 +314,7 @@ public class AddServiceSourceRequest extends Request {
 
         public static final class Builder {
             private Boolean enableIngress; 
+            private Boolean enableStatus; 
             private String ingressClass; 
             private String watchNamespace; 
 
@@ -310,6 +323,14 @@ public class AddServiceSourceRequest extends Request {
              */
             public Builder enableIngress(Boolean enableIngress) {
                 this.enableIngress = enableIngress;
+                return this;
+            }
+
+            /**
+             * EnableStatus.
+             */
+            public Builder enableStatus(Boolean enableStatus) {
+                this.enableStatus = enableStatus;
                 return this;
             }
 

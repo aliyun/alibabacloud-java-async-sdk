@@ -26,10 +26,6 @@ public class ApplyTagPoliciesRequest extends Request {
     private Boolean enable;
 
     @Query
-    @NameInMap("MseSessionId")
-    private String mseSessionId;
-
-    @Query
     @NameInMap("NamespaceId")
     private String namespaceId;
 
@@ -52,7 +48,6 @@ public class ApplyTagPoliciesRequest extends Request {
         this.acceptLanguage = builder.acceptLanguage;
         this.appId = builder.appId;
         this.enable = builder.enable;
-        this.mseSessionId = builder.mseSessionId;
         this.namespaceId = builder.namespaceId;
         this.region = builder.region;
         this.rules = builder.rules;
@@ -94,13 +89,6 @@ public class ApplyTagPoliciesRequest extends Request {
     }
 
     /**
-     * @return mseSessionId
-     */
-    public String getMseSessionId() {
-        return this.mseSessionId;
-    }
-
-    /**
      * @return namespaceId
      */
     public String getNamespaceId() {
@@ -132,7 +120,6 @@ public class ApplyTagPoliciesRequest extends Request {
         private String acceptLanguage; 
         private String appId; 
         private Boolean enable; 
-        private String mseSessionId; 
         private String namespaceId; 
         private String region; 
         private String rules; 
@@ -147,7 +134,6 @@ public class ApplyTagPoliciesRequest extends Request {
             this.acceptLanguage = request.acceptLanguage;
             this.appId = request.appId;
             this.enable = request.enable;
-            this.mseSessionId = request.mseSessionId;
             this.namespaceId = request.namespaceId;
             this.region = request.region;
             this.rules = request.rules;
@@ -178,15 +164,6 @@ public class ApplyTagPoliciesRequest extends Request {
         public Builder enable(Boolean enable) {
             this.putQueryParameter("Enable", enable);
             this.enable = enable;
-            return this;
-        }
-
-        /**
-         * MseSessionId.
-         */
-        public Builder mseSessionId(String mseSessionId) {
-            this.putQueryParameter("MseSessionId", mseSessionId);
-            this.mseSessionId = mseSessionId;
             return this;
         }
 

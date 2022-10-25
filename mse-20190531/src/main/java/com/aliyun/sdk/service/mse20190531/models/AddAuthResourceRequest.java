@@ -33,10 +33,6 @@ public class AddAuthResourceRequest extends Request {
     private String matchType;
 
     @Query
-    @NameInMap("MseSessionId")
-    private String mseSessionId;
-
-    @Query
     @NameInMap("Path")
     private String path;
 
@@ -47,7 +43,6 @@ public class AddAuthResourceRequest extends Request {
         this.domainId = builder.domainId;
         this.gatewayUniqueId = builder.gatewayUniqueId;
         this.matchType = builder.matchType;
-        this.mseSessionId = builder.mseSessionId;
         this.path = builder.path;
     }
 
@@ -100,13 +95,6 @@ public class AddAuthResourceRequest extends Request {
     }
 
     /**
-     * @return mseSessionId
-     */
-    public String getMseSessionId() {
-        return this.mseSessionId;
-    }
-
-    /**
      * @return path
      */
     public String getPath() {
@@ -119,7 +107,6 @@ public class AddAuthResourceRequest extends Request {
         private Long domainId; 
         private String gatewayUniqueId; 
         private String matchType; 
-        private String mseSessionId; 
         private String path; 
 
         private Builder() {
@@ -133,7 +120,6 @@ public class AddAuthResourceRequest extends Request {
             this.domainId = request.domainId;
             this.gatewayUniqueId = request.gatewayUniqueId;
             this.matchType = request.matchType;
-            this.mseSessionId = request.mseSessionId;
             this.path = request.path;
         } 
 
@@ -179,15 +165,6 @@ public class AddAuthResourceRequest extends Request {
         public Builder matchType(String matchType) {
             this.putQueryParameter("MatchType", matchType);
             this.matchType = matchType;
-            return this;
-        }
-
-        /**
-         * MseSessionId.
-         */
-        public Builder mseSessionId(String mseSessionId) {
-            this.putQueryParameter("MseSessionId", mseSessionId);
-            this.mseSessionId = mseSessionId;
             return this;
         }
 

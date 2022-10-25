@@ -22,10 +22,6 @@ public class GetPluginConfigRequest extends Request {
     private String gatewayUniqueId;
 
     @Query
-    @NameInMap("MseSessionId")
-    private String mseSessionId;
-
-    @Query
     @NameInMap("PluginId")
     @Validation(required = true)
     private Long pluginId;
@@ -34,7 +30,6 @@ public class GetPluginConfigRequest extends Request {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
         this.gatewayUniqueId = builder.gatewayUniqueId;
-        this.mseSessionId = builder.mseSessionId;
         this.pluginId = builder.pluginId;
     }
 
@@ -66,13 +61,6 @@ public class GetPluginConfigRequest extends Request {
     }
 
     /**
-     * @return mseSessionId
-     */
-    public String getMseSessionId() {
-        return this.mseSessionId;
-    }
-
-    /**
      * @return pluginId
      */
     public Long getPluginId() {
@@ -82,7 +70,6 @@ public class GetPluginConfigRequest extends Request {
     public static final class Builder extends Request.Builder<GetPluginConfigRequest, Builder> {
         private String acceptLanguage; 
         private String gatewayUniqueId; 
-        private String mseSessionId; 
         private Long pluginId; 
 
         private Builder() {
@@ -93,7 +80,6 @@ public class GetPluginConfigRequest extends Request {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
             this.gatewayUniqueId = request.gatewayUniqueId;
-            this.mseSessionId = request.mseSessionId;
             this.pluginId = request.pluginId;
         } 
 
@@ -112,15 +98,6 @@ public class GetPluginConfigRequest extends Request {
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
             this.gatewayUniqueId = gatewayUniqueId;
-            return this;
-        }
-
-        /**
-         * MseSessionId.
-         */
-        public Builder mseSessionId(String mseSessionId) {
-            this.putQueryParameter("MseSessionId", mseSessionId);
-            this.mseSessionId = mseSessionId;
             return this;
         }
 

@@ -46,10 +46,6 @@ public class ModifyLosslessRuleRequest extends Request {
     private Long funcType;
 
     @Query
-    @NameInMap("MseSessionId")
-    private String mseSessionId;
-
-    @Query
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
@@ -81,7 +77,6 @@ public class ModifyLosslessRuleRequest extends Request {
         this.delayTime = builder.delayTime;
         this.enable = builder.enable;
         this.funcType = builder.funcType;
-        this.mseSessionId = builder.mseSessionId;
         this.regionId = builder.regionId;
         this.related = builder.related;
         this.shutdownWaitSeconds = builder.shutdownWaitSeconds;
@@ -152,13 +147,6 @@ public class ModifyLosslessRuleRequest extends Request {
     }
 
     /**
-     * @return mseSessionId
-     */
-    public String getMseSessionId() {
-        return this.mseSessionId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -201,7 +189,6 @@ public class ModifyLosslessRuleRequest extends Request {
         private Long delayTime; 
         private Boolean enable; 
         private Long funcType; 
-        private String mseSessionId; 
         private String regionId; 
         private Boolean related; 
         private Integer shutdownWaitSeconds; 
@@ -221,7 +208,6 @@ public class ModifyLosslessRuleRequest extends Request {
             this.delayTime = request.delayTime;
             this.enable = request.enable;
             this.funcType = request.funcType;
-            this.mseSessionId = request.mseSessionId;
             this.regionId = request.regionId;
             this.related = request.related;
             this.shutdownWaitSeconds = request.shutdownWaitSeconds;
@@ -289,15 +275,6 @@ public class ModifyLosslessRuleRequest extends Request {
         public Builder funcType(Long funcType) {
             this.putQueryParameter("FuncType", funcType);
             this.funcType = funcType;
-            return this;
-        }
-
-        /**
-         * MseSessionId.
-         */
-        public Builder mseSessionId(String mseSessionId) {
-            this.putQueryParameter("MseSessionId", mseSessionId);
-            this.mseSessionId = mseSessionId;
             return this;
         }
 

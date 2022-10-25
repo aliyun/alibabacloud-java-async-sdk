@@ -37,10 +37,6 @@ public class AddGatewayRequest extends Request {
     private String internetSlbSpec;
 
     @Query
-    @NameInMap("MseSessionId")
-    private String mseSessionId;
-
-    @Query
     @NameInMap("Name")
     private String name;
 
@@ -93,7 +89,6 @@ public class AddGatewayRequest extends Request {
         this.enableXtrace = builder.enableXtrace;
         this.enterpriseSecurityGroup = builder.enterpriseSecurityGroup;
         this.internetSlbSpec = builder.internetSlbSpec;
-        this.mseSessionId = builder.mseSessionId;
         this.name = builder.name;
         this.region = builder.region;
         this.replica = builder.replica;
@@ -159,13 +154,6 @@ public class AddGatewayRequest extends Request {
      */
     public String getInternetSlbSpec() {
         return this.internetSlbSpec;
-    }
-
-    /**
-     * @return mseSessionId
-     */
-    public String getMseSessionId() {
-        return this.mseSessionId;
     }
 
     /**
@@ -245,7 +233,6 @@ public class AddGatewayRequest extends Request {
         private Boolean enableXtrace; 
         private Boolean enterpriseSecurityGroup; 
         private String internetSlbSpec; 
-        private String mseSessionId; 
         private String name; 
         private String region; 
         private Integer replica; 
@@ -269,7 +256,6 @@ public class AddGatewayRequest extends Request {
             this.enableXtrace = request.enableXtrace;
             this.enterpriseSecurityGroup = request.enterpriseSecurityGroup;
             this.internetSlbSpec = request.internetSlbSpec;
-            this.mseSessionId = request.mseSessionId;
             this.name = request.name;
             this.region = request.region;
             this.replica = request.replica;
@@ -333,15 +319,6 @@ public class AddGatewayRequest extends Request {
         public Builder internetSlbSpec(String internetSlbSpec) {
             this.putQueryParameter("InternetSlbSpec", internetSlbSpec);
             this.internetSlbSpec = internetSlbSpec;
-            return this;
-        }
-
-        /**
-         * MseSessionId.
-         */
-        public Builder mseSessionId(String mseSessionId) {
-            this.putQueryParameter("MseSessionId", mseSessionId);
-            this.mseSessionId = mseSessionId;
             return this;
         }
 

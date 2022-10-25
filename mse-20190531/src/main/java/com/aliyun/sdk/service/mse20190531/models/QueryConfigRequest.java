@@ -29,10 +29,6 @@ public class QueryConfigRequest extends Request {
     private String instanceId;
 
     @Query
-    @NameInMap("MseSessionId")
-    private String mseSessionId;
-
-    @Query
     @NameInMap("RequestPars")
     private String requestPars;
 
@@ -42,7 +38,6 @@ public class QueryConfigRequest extends Request {
         this.clusterId = builder.clusterId;
         this.configType = builder.configType;
         this.instanceId = builder.instanceId;
-        this.mseSessionId = builder.mseSessionId;
         this.requestPars = builder.requestPars;
     }
 
@@ -88,13 +83,6 @@ public class QueryConfigRequest extends Request {
     }
 
     /**
-     * @return mseSessionId
-     */
-    public String getMseSessionId() {
-        return this.mseSessionId;
-    }
-
-    /**
      * @return requestPars
      */
     public String getRequestPars() {
@@ -106,7 +94,6 @@ public class QueryConfigRequest extends Request {
         private String clusterId; 
         private String configType; 
         private String instanceId; 
-        private String mseSessionId; 
         private String requestPars; 
 
         private Builder() {
@@ -119,7 +106,6 @@ public class QueryConfigRequest extends Request {
             this.clusterId = request.clusterId;
             this.configType = request.configType;
             this.instanceId = request.instanceId;
-            this.mseSessionId = request.mseSessionId;
             this.requestPars = request.requestPars;
         } 
 
@@ -156,15 +142,6 @@ public class QueryConfigRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * MseSessionId.
-         */
-        public Builder mseSessionId(String mseSessionId) {
-            this.putQueryParameter("MseSessionId", mseSessionId);
-            this.mseSessionId = mseSessionId;
             return this;
         }
 

@@ -29,10 +29,6 @@ public class AddGatewayDomainRequest extends Request {
     private String http2;
 
     @Query
-    @NameInMap("MseSessionId")
-    private String mseSessionId;
-
-    @Query
     @NameInMap("MustHttps")
     private Boolean mustHttps;
 
@@ -58,7 +54,6 @@ public class AddGatewayDomainRequest extends Request {
         this.certIdentifier = builder.certIdentifier;
         this.gatewayUniqueId = builder.gatewayUniqueId;
         this.http2 = builder.http2;
-        this.mseSessionId = builder.mseSessionId;
         this.mustHttps = builder.mustHttps;
         this.name = builder.name;
         this.protocol = builder.protocol;
@@ -108,13 +103,6 @@ public class AddGatewayDomainRequest extends Request {
     }
 
     /**
-     * @return mseSessionId
-     */
-    public String getMseSessionId() {
-        return this.mseSessionId;
-    }
-
-    /**
      * @return mustHttps
      */
     public Boolean getMustHttps() {
@@ -154,7 +142,6 @@ public class AddGatewayDomainRequest extends Request {
         private String certIdentifier; 
         private String gatewayUniqueId; 
         private String http2; 
-        private String mseSessionId; 
         private Boolean mustHttps; 
         private String name; 
         private String protocol; 
@@ -171,7 +158,6 @@ public class AddGatewayDomainRequest extends Request {
             this.certIdentifier = request.certIdentifier;
             this.gatewayUniqueId = request.gatewayUniqueId;
             this.http2 = request.http2;
-            this.mseSessionId = request.mseSessionId;
             this.mustHttps = request.mustHttps;
             this.name = request.name;
             this.protocol = request.protocol;
@@ -212,15 +198,6 @@ public class AddGatewayDomainRequest extends Request {
         public Builder http2(String http2) {
             this.putQueryParameter("Http2", http2);
             this.http2 = http2;
-            return this;
-        }
-
-        /**
-         * MseSessionId.
-         */
-        public Builder mseSessionId(String mseSessionId) {
-            this.putQueryParameter("MseSessionId", mseSessionId);
-            this.mseSessionId = mseSessionId;
             return this;
         }
 

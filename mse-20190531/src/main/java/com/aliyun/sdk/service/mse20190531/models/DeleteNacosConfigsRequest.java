@@ -27,10 +27,6 @@ public class DeleteNacosConfigsRequest extends Request {
     private String instanceId;
 
     @Query
-    @NameInMap("MseSessionId")
-    private String mseSessionId;
-
-    @Query
     @NameInMap("NamespaceId")
     @Validation(required = true)
     private String namespaceId;
@@ -40,7 +36,6 @@ public class DeleteNacosConfigsRequest extends Request {
         this.acceptLanguage = builder.acceptLanguage;
         this.ids = builder.ids;
         this.instanceId = builder.instanceId;
-        this.mseSessionId = builder.mseSessionId;
         this.namespaceId = builder.namespaceId;
     }
 
@@ -79,13 +74,6 @@ public class DeleteNacosConfigsRequest extends Request {
     }
 
     /**
-     * @return mseSessionId
-     */
-    public String getMseSessionId() {
-        return this.mseSessionId;
-    }
-
-    /**
      * @return namespaceId
      */
     public String getNamespaceId() {
@@ -96,7 +84,6 @@ public class DeleteNacosConfigsRequest extends Request {
         private String acceptLanguage; 
         private String ids; 
         private String instanceId; 
-        private String mseSessionId; 
         private String namespaceId; 
 
         private Builder() {
@@ -108,7 +95,6 @@ public class DeleteNacosConfigsRequest extends Request {
             this.acceptLanguage = request.acceptLanguage;
             this.ids = request.ids;
             this.instanceId = request.instanceId;
-            this.mseSessionId = request.mseSessionId;
             this.namespaceId = request.namespaceId;
         } 
 
@@ -136,15 +122,6 @@ public class DeleteNacosConfigsRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * MseSessionId.
-         */
-        public Builder mseSessionId(String mseSessionId) {
-            this.putQueryParameter("MseSessionId", mseSessionId);
-            this.mseSessionId = mseSessionId;
             return this;
         }
 

@@ -17,10 +17,6 @@ public class ListInstancesRequest extends Request {
     private String acceptLanguage;
 
     @Query
-    @NameInMap("MseSessionId")
-    private String mseSessionId;
-
-    @Query
     @NameInMap("Region")
     @Validation(required = true)
     private String region;
@@ -33,7 +29,6 @@ public class ListInstancesRequest extends Request {
     private ListInstancesRequest(Builder builder) {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
-        this.mseSessionId = builder.mseSessionId;
         this.region = builder.region;
         this.userId = builder.userId;
     }
@@ -59,13 +54,6 @@ public class ListInstancesRequest extends Request {
     }
 
     /**
-     * @return mseSessionId
-     */
-    public String getMseSessionId() {
-        return this.mseSessionId;
-    }
-
-    /**
      * @return region
      */
     public String getRegion() {
@@ -81,7 +69,6 @@ public class ListInstancesRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListInstancesRequest, Builder> {
         private String acceptLanguage; 
-        private String mseSessionId; 
         private String region; 
         private String userId; 
 
@@ -92,7 +79,6 @@ public class ListInstancesRequest extends Request {
         private Builder(ListInstancesRequest request) {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
-            this.mseSessionId = request.mseSessionId;
             this.region = request.region;
             this.userId = request.userId;
         } 
@@ -103,15 +89,6 @@ public class ListInstancesRequest extends Request {
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
             this.acceptLanguage = acceptLanguage;
-            return this;
-        }
-
-        /**
-         * MseSessionId.
-         */
-        public Builder mseSessionId(String mseSessionId) {
-            this.putQueryParameter("MseSessionId", mseSessionId);
-            this.mseSessionId = mseSessionId;
             return this;
         }
 

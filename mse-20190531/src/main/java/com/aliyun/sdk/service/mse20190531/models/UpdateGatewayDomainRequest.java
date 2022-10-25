@@ -33,10 +33,6 @@ public class UpdateGatewayDomainRequest extends Request {
     private Long id;
 
     @Query
-    @NameInMap("MseSessionId")
-    private String mseSessionId;
-
-    @Query
     @NameInMap("MustHttps")
     private Boolean mustHttps;
 
@@ -59,7 +55,6 @@ public class UpdateGatewayDomainRequest extends Request {
         this.gatewayUniqueId = builder.gatewayUniqueId;
         this.http2 = builder.http2;
         this.id = builder.id;
-        this.mseSessionId = builder.mseSessionId;
         this.mustHttps = builder.mustHttps;
         this.protocol = builder.protocol;
         this.tlsMax = builder.tlsMax;
@@ -115,13 +110,6 @@ public class UpdateGatewayDomainRequest extends Request {
     }
 
     /**
-     * @return mseSessionId
-     */
-    public String getMseSessionId() {
-        return this.mseSessionId;
-    }
-
-    /**
      * @return mustHttps
      */
     public Boolean getMustHttps() {
@@ -155,7 +143,6 @@ public class UpdateGatewayDomainRequest extends Request {
         private String gatewayUniqueId; 
         private String http2; 
         private Long id; 
-        private String mseSessionId; 
         private Boolean mustHttps; 
         private String protocol; 
         private String tlsMax; 
@@ -172,7 +159,6 @@ public class UpdateGatewayDomainRequest extends Request {
             this.gatewayUniqueId = request.gatewayUniqueId;
             this.http2 = request.http2;
             this.id = request.id;
-            this.mseSessionId = request.mseSessionId;
             this.mustHttps = request.mustHttps;
             this.protocol = request.protocol;
             this.tlsMax = request.tlsMax;
@@ -221,15 +207,6 @@ public class UpdateGatewayDomainRequest extends Request {
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
             this.id = id;
-            return this;
-        }
-
-        /**
-         * MseSessionId.
-         */
-        public Builder mseSessionId(String mseSessionId) {
-            this.putQueryParameter("MseSessionId", mseSessionId);
-            this.mseSessionId = mseSessionId;
             return this;
         }
 

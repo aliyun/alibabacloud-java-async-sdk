@@ -25,10 +25,6 @@ public class QueryZnodeDetailRequest extends Request {
     private String instanceId;
 
     @Query
-    @NameInMap("MseSessionId")
-    private String mseSessionId;
-
-    @Query
     @NameInMap("Path")
     @Validation(required = true)
     private String path;
@@ -42,7 +38,6 @@ public class QueryZnodeDetailRequest extends Request {
         this.acceptLanguage = builder.acceptLanguage;
         this.clusterId = builder.clusterId;
         this.instanceId = builder.instanceId;
-        this.mseSessionId = builder.mseSessionId;
         this.path = builder.path;
         this.requestPars = builder.requestPars;
     }
@@ -82,13 +77,6 @@ public class QueryZnodeDetailRequest extends Request {
     }
 
     /**
-     * @return mseSessionId
-     */
-    public String getMseSessionId() {
-        return this.mseSessionId;
-    }
-
-    /**
      * @return path
      */
     public String getPath() {
@@ -106,7 +94,6 @@ public class QueryZnodeDetailRequest extends Request {
         private String acceptLanguage; 
         private String clusterId; 
         private String instanceId; 
-        private String mseSessionId; 
         private String path; 
         private String requestPars; 
 
@@ -119,7 +106,6 @@ public class QueryZnodeDetailRequest extends Request {
             this.acceptLanguage = request.acceptLanguage;
             this.clusterId = request.clusterId;
             this.instanceId = request.instanceId;
-            this.mseSessionId = request.mseSessionId;
             this.path = request.path;
             this.requestPars = request.requestPars;
         } 
@@ -148,15 +134,6 @@ public class QueryZnodeDetailRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * MseSessionId.
-         */
-        public Builder mseSessionId(String mseSessionId) {
-            this.putQueryParameter("MseSessionId", mseSessionId);
-            this.mseSessionId = mseSessionId;
             return this;
         }
 

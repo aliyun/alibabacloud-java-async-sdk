@@ -21,10 +21,6 @@ public class OfflineGatewayRouteRequest extends Request {
     private String gatewayUniqueId;
 
     @Query
-    @NameInMap("MseSessionId")
-    private String mseSessionId;
-
-    @Query
     @NameInMap("RouteId")
     private String routeId;
 
@@ -32,7 +28,6 @@ public class OfflineGatewayRouteRequest extends Request {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
         this.gatewayUniqueId = builder.gatewayUniqueId;
-        this.mseSessionId = builder.mseSessionId;
         this.routeId = builder.routeId;
     }
 
@@ -64,13 +59,6 @@ public class OfflineGatewayRouteRequest extends Request {
     }
 
     /**
-     * @return mseSessionId
-     */
-    public String getMseSessionId() {
-        return this.mseSessionId;
-    }
-
-    /**
      * @return routeId
      */
     public String getRouteId() {
@@ -80,7 +68,6 @@ public class OfflineGatewayRouteRequest extends Request {
     public static final class Builder extends Request.Builder<OfflineGatewayRouteRequest, Builder> {
         private String acceptLanguage; 
         private String gatewayUniqueId; 
-        private String mseSessionId; 
         private String routeId; 
 
         private Builder() {
@@ -91,7 +78,6 @@ public class OfflineGatewayRouteRequest extends Request {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
             this.gatewayUniqueId = request.gatewayUniqueId;
-            this.mseSessionId = request.mseSessionId;
             this.routeId = request.routeId;
         } 
 
@@ -110,15 +96,6 @@ public class OfflineGatewayRouteRequest extends Request {
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
             this.gatewayUniqueId = gatewayUniqueId;
-            return this;
-        }
-
-        /**
-         * MseSessionId.
-         */
-        public Builder mseSessionId(String mseSessionId) {
-            this.putQueryParameter("MseSessionId", mseSessionId);
-            this.mseSessionId = mseSessionId;
             return this;
         }
 
