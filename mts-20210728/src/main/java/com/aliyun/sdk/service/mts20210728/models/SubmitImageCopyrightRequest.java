@@ -13,12 +13,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class SubmitImageCopyrightRequest extends Request {
     @Body
-    @NameInMap("Input")
-    private String input;
-
-    @Body
     @NameInMap("Level")
-    @Validation(required = true)
     private Long level;
 
     @Body
@@ -34,18 +29,12 @@ public class SubmitImageCopyrightRequest extends Request {
     @NameInMap("Params")
     private String params;
 
-    @Body
-    @NameInMap("Url")
-    private String url;
-
     private SubmitImageCopyrightRequest(Builder builder) {
         super(builder);
-        this.input = builder.input;
         this.level = builder.level;
         this.message = builder.message;
         this.output = builder.output;
         this.params = builder.params;
-        this.url = builder.url;
     }
 
     public static Builder builder() {
@@ -59,13 +48,6 @@ public class SubmitImageCopyrightRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return input
-     */
-    public String getInput() {
-        return this.input;
     }
 
     /**
@@ -96,20 +78,11 @@ public class SubmitImageCopyrightRequest extends Request {
         return this.params;
     }
 
-    /**
-     * @return url
-     */
-    public String getUrl() {
-        return this.url;
-    }
-
     public static final class Builder extends Request.Builder<SubmitImageCopyrightRequest, Builder> {
-        private String input; 
         private Long level; 
         private String message; 
         private String output; 
         private String params; 
-        private String url; 
 
         private Builder() {
             super();
@@ -117,22 +90,11 @@ public class SubmitImageCopyrightRequest extends Request {
 
         private Builder(SubmitImageCopyrightRequest request) {
             super(request);
-            this.input = request.input;
             this.level = request.level;
             this.message = request.message;
             this.output = request.output;
             this.params = request.params;
-            this.url = request.url;
         } 
-
-        /**
-         * 需要加水印的图片oss地址(Input和url二选一)
-         */
-        public Builder input(String input) {
-            this.putBodyParameter("Input", input);
-            this.input = input;
-            return this;
-        }
 
         /**
          * 水印强度
@@ -167,15 +129,6 @@ public class SubmitImageCopyrightRequest extends Request {
         public Builder params(String params) {
             this.putBodyParameter("Params", params);
             this.params = params;
-            return this;
-        }
-
-        /**
-         * 外部url链接(Input和url二选一)
-         */
-        public Builder url(String url) {
-            this.putBodyParameter("Url", url);
-            this.url = url;
             return this;
         }
 

@@ -39,6 +39,10 @@ public class SubmitCopyrightJobRequest extends Request {
     private String output;
 
     @Body
+    @NameInMap("Params")
+    private String params;
+
+    @Body
     @NameInMap("StartTime")
     private Long startTime;
 
@@ -66,6 +70,7 @@ public class SubmitCopyrightJobRequest extends Request {
         this.level = builder.level;
         this.message = builder.message;
         this.output = builder.output;
+        this.params = builder.params;
         this.startTime = builder.startTime;
         this.totalTime = builder.totalTime;
         this.url = builder.url;
@@ -129,6 +134,13 @@ public class SubmitCopyrightJobRequest extends Request {
     }
 
     /**
+     * @return params
+     */
+    public String getParams() {
+        return this.params;
+    }
+
+    /**
      * @return startTime
      */
     public Long getStartTime() {
@@ -170,6 +182,7 @@ public class SubmitCopyrightJobRequest extends Request {
         private Long level; 
         private String message; 
         private String output; 
+        private String params; 
         private Long startTime; 
         private Long totalTime; 
         private String url; 
@@ -188,6 +201,7 @@ public class SubmitCopyrightJobRequest extends Request {
             this.level = request.level;
             this.message = request.message;
             this.output = request.output;
+            this.params = request.params;
             this.startTime = request.startTime;
             this.totalTime = request.totalTime;
             this.url = request.url;
@@ -246,6 +260,15 @@ public class SubmitCopyrightJobRequest extends Request {
         public Builder output(String output) {
             this.putBodyParameter("Output", output);
             this.output = output;
+            return this;
+        }
+
+        /**
+         * 水印参数
+         */
+        public Builder params(String params) {
+            this.putBodyParameter("Params", params);
+            this.params = params;
             return this;
         }
 

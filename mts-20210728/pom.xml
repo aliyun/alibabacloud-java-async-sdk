@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>alibabacloud-mts20210728</artifactId>
-  <version>3.3.8</version>
+  <version>3.3.9</version>
   <packaging>jar</packaging>
   <name>alibabacloud-mts20210728</name>
   <description>Alibaba Cloud Mts (20210728) Async SDK for Java
