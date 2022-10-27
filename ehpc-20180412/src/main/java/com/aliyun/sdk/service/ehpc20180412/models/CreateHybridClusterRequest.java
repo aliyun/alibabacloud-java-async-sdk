@@ -12,6 +12,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateHybridClusterRequest</p>
  */
 public class CreateHybridClusterRequest extends Request {
+    @Query
     @NameInMap("EcsOrder")
     private EcsOrder ecsOrder;
 
@@ -506,50 +507,51 @@ public class CreateHybridClusterRequest extends Request {
             super();
         } 
 
-        private Builder(CreateHybridClusterRequest response) {
-            super(response);
-            this.ecsOrder = response.ecsOrder;
-            this.application = response.application;
-            this.clientToken = response.clientToken;
-            this.clientVersion = response.clientVersion;
-            this.computeSpotPriceLimit = response.computeSpotPriceLimit;
-            this.computeSpotStrategy = response.computeSpotStrategy;
-            this.description = response.description;
-            this.domain = response.domain;
-            this.ehpcVersion = response.ehpcVersion;
-            this.imageId = response.imageId;
-            this.imageOwnerAlias = response.imageOwnerAlias;
-            this.jobQueue = response.jobQueue;
-            this.keyPairName = response.keyPairName;
-            this.location = response.location;
-            this.multiOs = response.multiOs;
-            this.name = response.name;
-            this.nodes = response.nodes;
-            this.onPremiseVolumeLocalPath = response.onPremiseVolumeLocalPath;
-            this.onPremiseVolumeMountPoint = response.onPremiseVolumeMountPoint;
-            this.onPremiseVolumeProtocol = response.onPremiseVolumeProtocol;
-            this.onPremiseVolumeRemotePath = response.onPremiseVolumeRemotePath;
-            this.osTag = response.osTag;
-            this.password = response.password;
-            this.postInstallScript = response.postInstallScript;
-            this.remoteDirectory = response.remoteDirectory;
-            this.resourceGroupId = response.resourceGroupId;
-            this.schedulerPreInstall = response.schedulerPreInstall;
-            this.securityGroupId = response.securityGroupId;
-            this.securityGroupName = response.securityGroupName;
-            this.vSwitchId = response.vSwitchId;
-            this.volumeId = response.volumeId;
-            this.volumeMountpoint = response.volumeMountpoint;
-            this.volumeProtocol = response.volumeProtocol;
-            this.volumeType = response.volumeType;
-            this.vpcId = response.vpcId;
-            this.zoneId = response.zoneId;
+        private Builder(CreateHybridClusterRequest request) {
+            super(request);
+            this.ecsOrder = request.ecsOrder;
+            this.application = request.application;
+            this.clientToken = request.clientToken;
+            this.clientVersion = request.clientVersion;
+            this.computeSpotPriceLimit = request.computeSpotPriceLimit;
+            this.computeSpotStrategy = request.computeSpotStrategy;
+            this.description = request.description;
+            this.domain = request.domain;
+            this.ehpcVersion = request.ehpcVersion;
+            this.imageId = request.imageId;
+            this.imageOwnerAlias = request.imageOwnerAlias;
+            this.jobQueue = request.jobQueue;
+            this.keyPairName = request.keyPairName;
+            this.location = request.location;
+            this.multiOs = request.multiOs;
+            this.name = request.name;
+            this.nodes = request.nodes;
+            this.onPremiseVolumeLocalPath = request.onPremiseVolumeLocalPath;
+            this.onPremiseVolumeMountPoint = request.onPremiseVolumeMountPoint;
+            this.onPremiseVolumeProtocol = request.onPremiseVolumeProtocol;
+            this.onPremiseVolumeRemotePath = request.onPremiseVolumeRemotePath;
+            this.osTag = request.osTag;
+            this.password = request.password;
+            this.postInstallScript = request.postInstallScript;
+            this.remoteDirectory = request.remoteDirectory;
+            this.resourceGroupId = request.resourceGroupId;
+            this.schedulerPreInstall = request.schedulerPreInstall;
+            this.securityGroupId = request.securityGroupId;
+            this.securityGroupName = request.securityGroupName;
+            this.vSwitchId = request.vSwitchId;
+            this.volumeId = request.volumeId;
+            this.volumeMountpoint = request.volumeMountpoint;
+            this.volumeProtocol = request.volumeProtocol;
+            this.volumeType = request.volumeType;
+            this.vpcId = request.vpcId;
+            this.zoneId = request.zoneId;
         } 
 
         /**
          * EcsOrder.
          */
         public Builder ecsOrder(EcsOrder ecsOrder) {
+            this.putQueryParameter("EcsOrder", ecsOrder);
             this.ecsOrder = ecsOrder;
             return this;
         }
@@ -918,13 +920,59 @@ public class CreateHybridClusterRequest extends Request {
         } 
 
     }
+    public static class Manager extends TeaModel {
+        @NameInMap("InstanceType")
+        private String instanceType;
+
+        private Manager(Builder builder) {
+            this.instanceType = builder.instanceType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Manager create() {
+            return builder().build();
+        }
+
+        /**
+         * @return instanceType
+         */
+        public String getInstanceType() {
+            return this.instanceType;
+        }
+
+        public static final class Builder {
+            private String instanceType; 
+
+            /**
+             * InstanceType.
+             */
+            public Builder instanceType(String instanceType) {
+                this.instanceType = instanceType;
+                return this;
+            }
+
+            public Manager build() {
+                return new Manager(this);
+            } 
+
+        } 
+
+    }
     public static class EcsOrder extends TeaModel {
         @NameInMap("Compute")
         @Validation(required = true)
         private Compute compute;
 
+        @NameInMap("Manager")
+        @Validation(required = true)
+        private Manager manager;
+
         private EcsOrder(Builder builder) {
             this.compute = builder.compute;
+            this.manager = builder.manager;
         }
 
         public static Builder builder() {
@@ -942,14 +990,30 @@ public class CreateHybridClusterRequest extends Request {
             return this.compute;
         }
 
+        /**
+         * @return manager
+         */
+        public Manager getManager() {
+            return this.manager;
+        }
+
         public static final class Builder {
             private Compute compute; 
+            private Manager manager; 
 
             /**
              * Compute.
              */
             public Builder compute(Compute compute) {
                 this.compute = compute;
+                return this;
+            }
+
+            /**
+             * Manager.
+             */
+            public Builder manager(Manager manager) {
+                this.manager = manager;
                 return this;
             }
 
@@ -1005,6 +1069,9 @@ public class CreateHybridClusterRequest extends Request {
         @NameInMap("AccountType")
         private String accountType;
 
+        @NameInMap("Dir")
+        private String dir;
+
         @NameInMap("HostName")
         private String hostName;
 
@@ -1019,6 +1086,7 @@ public class CreateHybridClusterRequest extends Request {
 
         private Nodes(Builder builder) {
             this.accountType = builder.accountType;
+            this.dir = builder.dir;
             this.hostName = builder.hostName;
             this.ipAddress = builder.ipAddress;
             this.role = builder.role;
@@ -1038,6 +1106,13 @@ public class CreateHybridClusterRequest extends Request {
          */
         public String getAccountType() {
             return this.accountType;
+        }
+
+        /**
+         * @return dir
+         */
+        public String getDir() {
+            return this.dir;
         }
 
         /**
@@ -1070,6 +1145,7 @@ public class CreateHybridClusterRequest extends Request {
 
         public static final class Builder {
             private String accountType; 
+            private String dir; 
             private String hostName; 
             private String ipAddress; 
             private String role; 
@@ -1080,6 +1156,14 @@ public class CreateHybridClusterRequest extends Request {
              */
             public Builder accountType(String accountType) {
                 this.accountType = accountType;
+                return this;
+            }
+
+            /**
+             * Dir.
+             */
+            public Builder dir(String dir) {
+                this.dir = dir;
                 return this;
             }
 

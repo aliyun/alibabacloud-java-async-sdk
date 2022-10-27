@@ -61,10 +61,10 @@ public class ListSoftwaresRequest extends Request {
             super();
         } 
 
-        private Builder(ListSoftwaresRequest response) {
-            super(response);
-            this.ehpcVersion = response.ehpcVersion;
-            this.osTag = response.osTag;
+        private Builder(ListSoftwaresRequest request) {
+            super(request);
+            this.ehpcVersion = request.ehpcVersion;
+            this.osTag = request.osTag;
         } 
 
         /**

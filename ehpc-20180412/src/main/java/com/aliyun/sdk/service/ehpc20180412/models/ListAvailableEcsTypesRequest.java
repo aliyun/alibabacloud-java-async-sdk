@@ -87,12 +87,12 @@ public class ListAvailableEcsTypesRequest extends Request {
             super();
         } 
 
-        private Builder(ListAvailableEcsTypesRequest response) {
-            super(response);
-            this.instanceChargeType = response.instanceChargeType;
-            this.showSoldOut = response.showSoldOut;
-            this.spotStrategy = response.spotStrategy;
-            this.zoneId = response.zoneId;
+        private Builder(ListAvailableEcsTypesRequest request) {
+            super(request);
+            this.instanceChargeType = request.instanceChargeType;
+            this.showSoldOut = request.showSoldOut;
+            this.spotStrategy = request.spotStrategy;
+            this.zoneId = request.zoneId;
         } 
 
         /**

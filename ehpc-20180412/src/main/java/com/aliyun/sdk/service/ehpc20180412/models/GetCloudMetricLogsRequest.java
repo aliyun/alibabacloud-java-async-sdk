@@ -155,17 +155,17 @@ public class GetCloudMetricLogsRequest extends Request {
             super();
         } 
 
-        private Builder(GetCloudMetricLogsRequest response) {
-            super(response);
-            this.aggregationInterval = response.aggregationInterval;
-            this.aggregationType = response.aggregationType;
-            this.clusterId = response.clusterId;
-            this.filter = response.filter;
-            this.from = response.from;
-            this.metricCategories = response.metricCategories;
-            this.metricScope = response.metricScope;
-            this.reverse = response.reverse;
-            this.to = response.to;
+        private Builder(GetCloudMetricLogsRequest request) {
+            super(request);
+            this.aggregationInterval = request.aggregationInterval;
+            this.aggregationType = request.aggregationType;
+            this.clusterId = request.clusterId;
+            this.filter = request.filter;
+            this.from = request.from;
+            this.metricCategories = request.metricCategories;
+            this.metricScope = request.metricScope;
+            this.reverse = request.reverse;
+            this.to = request.to;
         } 
 
         /**

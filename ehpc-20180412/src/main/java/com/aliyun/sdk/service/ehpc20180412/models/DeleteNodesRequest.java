@@ -89,12 +89,12 @@ public class DeleteNodesRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteNodesRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.instance = response.instance;
-            this.releaseInstance = response.releaseInstance;
-            this.sync = response.sync;
+        private Builder(DeleteNodesRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.instance = request.instance;
+            this.releaseInstance = request.releaseInstance;
+            this.sync = request.sync;
         } 
 
         /**

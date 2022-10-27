@@ -103,13 +103,13 @@ public class MountNFSRequest extends Request {
             super();
         } 
 
-        private Builder(MountNFSRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.mountDir = response.mountDir;
-            this.nfsDir = response.nfsDir;
-            this.protocolType = response.protocolType;
-            this.remoteDir = response.remoteDir;
+        private Builder(MountNFSRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.mountDir = request.mountDir;
+            this.nfsDir = request.nfsDir;
+            this.protocolType = request.protocolType;
+            this.remoteDir = request.remoteDir;
         } 
 
         /**

@@ -63,10 +63,10 @@ public class InstallSoftwareRequest extends Request {
             super();
         } 
 
-        private Builder(InstallSoftwareRequest response) {
-            super(response);
-            this.application = response.application;
-            this.clusterId = response.clusterId;
+        private Builder(InstallSoftwareRequest request) {
+            super(request);
+            this.application = request.application;
+            this.clusterId = request.clusterId;
         } 
 
         /**

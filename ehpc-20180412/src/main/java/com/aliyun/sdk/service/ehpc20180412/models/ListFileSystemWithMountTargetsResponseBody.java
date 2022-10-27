@@ -438,6 +438,9 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
         @NameInMap("StorageType")
         private String storageType;
 
+        @NameInMap("VpcId")
+        private String vpcId;
+
         private FileSystems(Builder builder) {
             this.bandWidth = builder.bandWidth;
             this.capacity = builder.capacity;
@@ -453,6 +456,7 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
             this.regionId = builder.regionId;
             this.status = builder.status;
             this.storageType = builder.storageType;
+            this.vpcId = builder.vpcId;
         }
 
         public static Builder builder() {
@@ -561,6 +565,13 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
             return this.storageType;
         }
 
+        /**
+         * @return vpcId
+         */
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
         public static final class Builder {
             private Integer bandWidth; 
             private Integer capacity; 
@@ -576,6 +587,7 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
             private String regionId; 
             private String status; 
             private String storageType; 
+            private String vpcId; 
 
             /**
              * BandWidth.
@@ -686,6 +698,14 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;
+                return this;
+            }
+
+            /**
+             * VpcId.
+             */
+            public Builder vpcId(String vpcId) {
+                this.vpcId = vpcId;
                 return this;
             }
 

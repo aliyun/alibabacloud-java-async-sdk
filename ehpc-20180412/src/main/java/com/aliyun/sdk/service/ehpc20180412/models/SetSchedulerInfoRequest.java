@@ -103,13 +103,13 @@ public class SetSchedulerInfoRequest extends Request {
             super();
         } 
 
-        private Builder(SetSchedulerInfoRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.pbsInfo = response.pbsInfo;
-            this.regionId = response.regionId;
-            this.scheduler = response.scheduler;
-            this.slurmInfo = response.slurmInfo;
+        private Builder(SetSchedulerInfoRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.pbsInfo = request.pbsInfo;
+            this.regionId = request.regionId;
+            this.scheduler = request.scheduler;
+            this.slurmInfo = request.slurmInfo;
         } 
 
         /**
@@ -229,6 +229,9 @@ public class SetSchedulerInfoRequest extends Request {
         @NameInMap("Cpus")
         private Integer cpus;
 
+        @NameInMap("MaxJobs")
+        private Integer maxJobs;
+
         @NameInMap("Mem")
         private String mem;
 
@@ -243,6 +246,7 @@ public class SetSchedulerInfoRequest extends Request {
 
         private ResourceLimit(Builder builder) {
             this.cpus = builder.cpus;
+            this.maxJobs = builder.maxJobs;
             this.mem = builder.mem;
             this.nodes = builder.nodes;
             this.queue = builder.queue;
@@ -262,6 +266,13 @@ public class SetSchedulerInfoRequest extends Request {
          */
         public Integer getCpus() {
             return this.cpus;
+        }
+
+        /**
+         * @return maxJobs
+         */
+        public Integer getMaxJobs() {
+            return this.maxJobs;
         }
 
         /**
@@ -294,6 +305,7 @@ public class SetSchedulerInfoRequest extends Request {
 
         public static final class Builder {
             private Integer cpus; 
+            private Integer maxJobs; 
             private String mem; 
             private Integer nodes; 
             private String queue; 
@@ -304,6 +316,14 @@ public class SetSchedulerInfoRequest extends Request {
              */
             public Builder cpus(Integer cpus) {
                 this.cpus = cpus;
+                return this;
+            }
+
+            /**
+             * MaxJobs.
+             */
+            public Builder maxJobs(Integer maxJobs) {
+                this.maxJobs = maxJobs;
                 return this;
             }
 
@@ -359,11 +379,19 @@ public class SetSchedulerInfoRequest extends Request {
         @NameInMap("SchedInterval")
         private Integer schedInterval;
 
+        @NameInMap("SchedMaxJobs")
+        private Integer schedMaxJobs;
+
+        @NameInMap("SchedMaxQueuedJobs")
+        private Integer schedMaxQueuedJobs;
+
         private PbsInfo(Builder builder) {
             this.aclLimit = builder.aclLimit;
             this.jobHistoryDuration = builder.jobHistoryDuration;
             this.resourceLimit = builder.resourceLimit;
             this.schedInterval = builder.schedInterval;
+            this.schedMaxJobs = builder.schedMaxJobs;
+            this.schedMaxQueuedJobs = builder.schedMaxQueuedJobs;
         }
 
         public static Builder builder() {
@@ -402,11 +430,27 @@ public class SetSchedulerInfoRequest extends Request {
             return this.schedInterval;
         }
 
+        /**
+         * @return schedMaxJobs
+         */
+        public Integer getSchedMaxJobs() {
+            return this.schedMaxJobs;
+        }
+
+        /**
+         * @return schedMaxQueuedJobs
+         */
+        public Integer getSchedMaxQueuedJobs() {
+            return this.schedMaxQueuedJobs;
+        }
+
         public static final class Builder {
             private java.util.List < AclLimit> aclLimit; 
             private Integer jobHistoryDuration; 
             private java.util.List < ResourceLimit> resourceLimit; 
             private Integer schedInterval; 
+            private Integer schedMaxJobs; 
+            private Integer schedMaxQueuedJobs; 
 
             /**
              * AclLimit.
@@ -437,6 +481,22 @@ public class SetSchedulerInfoRequest extends Request {
              */
             public Builder schedInterval(Integer schedInterval) {
                 this.schedInterval = schedInterval;
+                return this;
+            }
+
+            /**
+             * SchedMaxJobs.
+             */
+            public Builder schedMaxJobs(Integer schedMaxJobs) {
+                this.schedMaxJobs = schedMaxJobs;
+                return this;
+            }
+
+            /**
+             * SchedMaxQueuedJobs.
+             */
+            public Builder schedMaxQueuedJobs(Integer schedMaxQueuedJobs) {
+                this.schedMaxQueuedJobs = schedMaxQueuedJobs;
                 return this;
             }
 

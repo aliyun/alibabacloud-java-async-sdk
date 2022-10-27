@@ -87,12 +87,12 @@ public class ListCustomImagesRequest extends Request {
             super();
         } 
 
-        private Builder(ListCustomImagesRequest response) {
-            super(response);
-            this.baseOsTag = response.baseOsTag;
-            this.clusterId = response.clusterId;
-            this.imageOwnerAlias = response.imageOwnerAlias;
-            this.instanceType = response.instanceType;
+        private Builder(ListCustomImagesRequest request) {
+            super(request);
+            this.baseOsTag = request.baseOsTag;
+            this.clusterId = request.clusterId;
+            this.imageOwnerAlias = request.imageOwnerAlias;
+            this.instanceType = request.instanceType;
         } 
 
         /**

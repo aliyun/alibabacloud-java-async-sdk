@@ -116,14 +116,14 @@ public class RunCloudMetricProfilingRequest extends Request {
             super();
         } 
 
-        private Builder(RunCloudMetricProfilingRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.duration = response.duration;
-            this.freq = response.freq;
-            this.hostName = response.hostName;
-            this.processId = response.processId;
-            this.regionId = response.regionId;
+        private Builder(RunCloudMetricProfilingRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.duration = request.duration;
+            this.freq = request.freq;
+            this.hostName = request.hostName;
+            this.processId = request.processId;
+            this.regionId = request.regionId;
         } 
 
         /**

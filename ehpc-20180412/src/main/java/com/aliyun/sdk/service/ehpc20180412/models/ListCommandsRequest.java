@@ -89,12 +89,12 @@ public class ListCommandsRequest extends Request {
             super();
         } 
 
-        private Builder(ListCommandsRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.commandId = response.commandId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
+        private Builder(ListCommandsRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.commandId = request.commandId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
 
         /**

@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeImageRequest</p>
  */
 public class DescribeImageRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("ClusterId")
     @Validation(required = true)
@@ -25,11 +30,6 @@ public class DescribeImageRequest extends Request {
     @NameInMap("ImageTag")
     private String imageTag;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Query
     @NameInMap("Repository")
     @Validation(required = true)
@@ -37,10 +37,10 @@ public class DescribeImageRequest extends Request {
 
     private DescribeImageRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.clusterId = builder.clusterId;
         this.containerType = builder.containerType;
         this.imageTag = builder.imageTag;
-        this.regionId = builder.regionId;
         this.repository = builder.repository;
     }
 
@@ -55,6 +55,13 @@ public class DescribeImageRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -79,13 +86,6 @@ public class DescribeImageRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return repository
      */
     public String getRepository() {
@@ -93,24 +93,33 @@ public class DescribeImageRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeImageRequest, Builder> {
+        private String regionId; 
         private String clusterId; 
         private String containerType; 
         private String imageTag; 
-        private String regionId; 
         private String repository; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeImageRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.containerType = response.containerType;
-            this.imageTag = response.imageTag;
-            this.regionId = response.regionId;
-            this.repository = response.repository;
+        private Builder(DescribeImageRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.clusterId = request.clusterId;
+            this.containerType = request.containerType;
+            this.imageTag = request.imageTag;
+            this.repository = request.repository;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * ClusterId.
@@ -136,15 +145,6 @@ public class DescribeImageRequest extends Request {
         public Builder imageTag(String imageTag) {
             this.putQueryParameter("ImageTag", imageTag);
             this.imageTag = imageTag;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

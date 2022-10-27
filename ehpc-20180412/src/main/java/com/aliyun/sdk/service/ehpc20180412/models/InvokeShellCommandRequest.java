@@ -102,13 +102,13 @@ public class InvokeShellCommandRequest extends Request {
             super();
         } 
 
-        private Builder(InvokeShellCommandRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.command = response.command;
-            this.instance = response.instance;
-            this.timeout = response.timeout;
-            this.workingDir = response.workingDir;
+        private Builder(InvokeShellCommandRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.command = request.command;
+            this.instance = request.instance;
+            this.timeout = request.timeout;
+            this.workingDir = request.workingDir;
         } 
 
         /**

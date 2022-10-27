@@ -63,10 +63,10 @@ public class AddUsersRequest extends Request {
             super();
         } 
 
-        private Builder(AddUsersRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.user = response.user;
+        private Builder(AddUsersRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.user = request.user;
         } 
 
         /**

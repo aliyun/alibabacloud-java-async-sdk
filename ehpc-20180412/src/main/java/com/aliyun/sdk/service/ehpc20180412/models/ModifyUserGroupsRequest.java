@@ -63,10 +63,10 @@ public class ModifyUserGroupsRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyUserGroupsRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.user = response.user;
+        private Builder(ModifyUserGroupsRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.user = request.user;
         } 
 
         /**

@@ -13,12 +13,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListQueuesRequest extends Request {
     @Query
+    @NameInMap("Async")
+    private Boolean async;
+
+    @Query
     @NameInMap("ClusterId")
     @Validation(required = true)
     private String clusterId;
 
     private ListQueuesRequest(Builder builder) {
         super(builder);
+        this.async = builder.async;
         this.clusterId = builder.clusterId;
     }
 
@@ -36,6 +41,13 @@ public class ListQueuesRequest extends Request {
     }
 
     /**
+     * @return async
+     */
+    public Boolean getAsync() {
+        return this.async;
+    }
+
+    /**
      * @return clusterId
      */
     public String getClusterId() {
@@ -43,16 +55,27 @@ public class ListQueuesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListQueuesRequest, Builder> {
+        private Boolean async; 
         private String clusterId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListQueuesRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
+        private Builder(ListQueuesRequest request) {
+            super(request);
+            this.async = request.async;
+            this.clusterId = request.clusterId;
         } 
+
+        /**
+         * Async.
+         */
+        public Builder async(Boolean async) {
+            this.putQueryParameter("Async", async);
+            this.async = async;
+            return this;
+        }
 
         /**
          * ClusterId.

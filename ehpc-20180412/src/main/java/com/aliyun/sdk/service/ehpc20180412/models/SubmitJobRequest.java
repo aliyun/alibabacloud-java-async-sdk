@@ -338,31 +338,31 @@ public class SubmitJobRequest extends Request {
             super();
         } 
 
-        private Builder(SubmitJobRequest response) {
-            super(response);
-            this.arrayRequest = response.arrayRequest;
-            this.clockTime = response.clockTime;
-            this.clusterId = response.clusterId;
-            this.commandLine = response.commandLine;
-            this.containerId = response.containerId;
-            this.gpu = response.gpu;
-            this.inputFileUrl = response.inputFileUrl;
-            this.jobQueue = response.jobQueue;
-            this.mem = response.mem;
-            this.name = response.name;
-            this.node = response.node;
-            this.packagePath = response.packagePath;
-            this.postCmdLine = response.postCmdLine;
-            this.priority = response.priority;
-            this.reRunable = response.reRunable;
-            this.runasUser = response.runasUser;
-            this.runasUserPassword = response.runasUserPassword;
-            this.stderrRedirectPath = response.stderrRedirectPath;
-            this.stdoutRedirectPath = response.stdoutRedirectPath;
-            this.task = response.task;
-            this.thread = response.thread;
-            this.unzipCmd = response.unzipCmd;
-            this.variables = response.variables;
+        private Builder(SubmitJobRequest request) {
+            super(request);
+            this.arrayRequest = request.arrayRequest;
+            this.clockTime = request.clockTime;
+            this.clusterId = request.clusterId;
+            this.commandLine = request.commandLine;
+            this.containerId = request.containerId;
+            this.gpu = request.gpu;
+            this.inputFileUrl = request.inputFileUrl;
+            this.jobQueue = request.jobQueue;
+            this.mem = request.mem;
+            this.name = request.name;
+            this.node = request.node;
+            this.packagePath = request.packagePath;
+            this.postCmdLine = request.postCmdLine;
+            this.priority = request.priority;
+            this.reRunable = request.reRunable;
+            this.runasUser = request.runasUser;
+            this.runasUserPassword = request.runasUserPassword;
+            this.stderrRedirectPath = request.stderrRedirectPath;
+            this.stdoutRedirectPath = request.stdoutRedirectPath;
+            this.task = request.task;
+            this.thread = request.thread;
+            this.unzipCmd = request.unzipCmd;
+            this.variables = request.variables;
         } 
 
         /**

@@ -12,6 +12,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateClusterRequest</p>
  */
 public class CreateClusterRequest extends Request {
+    @Query
     @NameInMap("EcsOrder")
     private EcsOrder ecsOrder;
 
@@ -66,6 +67,10 @@ public class CreateClusterRequest extends Request {
     @Query
     @NameInMap("Description")
     private String description;
+
+    @Query
+    @NameInMap("Domain")
+    private String domain;
 
     @Query
     @NameInMap("EcsChargeType")
@@ -182,12 +187,20 @@ public class CreateClusterRequest extends Request {
     private String systemDiskType;
 
     @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
+    @Query
     @NameInMap("VSwitchId")
     private String vSwitchId;
 
     @Query
     @NameInMap("VolumeId")
     private String volumeId;
+
+    @Query
+    @NameInMap("VolumeMountOption")
+    private String volumeMountOption;
 
     @Query
     @NameInMap("VolumeMountpoint")
@@ -233,6 +246,7 @@ public class CreateClusterRequest extends Request {
         this.computeSpotStrategy = builder.computeSpotStrategy;
         this.deployMode = builder.deployMode;
         this.description = builder.description;
+        this.domain = builder.domain;
         this.ecsChargeType = builder.ecsChargeType;
         this.ehpcVersion = builder.ehpcVersion;
         this.haEnable = builder.haEnable;
@@ -261,8 +275,10 @@ public class CreateClusterRequest extends Request {
         this.systemDiskLevel = builder.systemDiskLevel;
         this.systemDiskSize = builder.systemDiskSize;
         this.systemDiskType = builder.systemDiskType;
+        this.tag = builder.tag;
         this.vSwitchId = builder.vSwitchId;
         this.volumeId = builder.volumeId;
+        this.volumeMountOption = builder.volumeMountOption;
         this.volumeMountpoint = builder.volumeMountpoint;
         this.volumeProtocol = builder.volumeProtocol;
         this.volumeType = builder.volumeType;
@@ -381,6 +397,13 @@ public class CreateClusterRequest extends Request {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return domain
+     */
+    public String getDomain() {
+        return this.domain;
     }
 
     /**
@@ -580,6 +603,13 @@ public class CreateClusterRequest extends Request {
     }
 
     /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
      * @return vSwitchId
      */
     public String getVSwitchId() {
@@ -591,6 +621,13 @@ public class CreateClusterRequest extends Request {
      */
     public String getVolumeId() {
         return this.volumeId;
+    }
+
+    /**
+     * @return volumeMountOption
+     */
+    public String getVolumeMountOption() {
+        return this.volumeMountOption;
     }
 
     /**
@@ -657,6 +694,7 @@ public class CreateClusterRequest extends Request {
         private String computeSpotStrategy; 
         private String deployMode; 
         private String description; 
+        private String domain; 
         private String ecsChargeType; 
         private String ehpcVersion; 
         private Boolean haEnable; 
@@ -685,8 +723,10 @@ public class CreateClusterRequest extends Request {
         private String systemDiskLevel; 
         private Integer systemDiskSize; 
         private String systemDiskType; 
+        private java.util.List < Tag> tag; 
         private String vSwitchId; 
         private String volumeId; 
+        private String volumeMountOption; 
         private String volumeMountpoint; 
         private String volumeProtocol; 
         private String volumeType; 
@@ -699,65 +739,69 @@ public class CreateClusterRequest extends Request {
             super();
         } 
 
-        private Builder(CreateClusterRequest response) {
-            super(response);
-            this.ecsOrder = response.ecsOrder;
-            this.accountType = response.accountType;
-            this.additionalVolumes = response.additionalVolumes;
-            this.application = response.application;
-            this.autoRenew = response.autoRenew;
-            this.autoRenewPeriod = response.autoRenewPeriod;
-            this.clientToken = response.clientToken;
-            this.clientVersion = response.clientVersion;
-            this.clusterVersion = response.clusterVersion;
-            this.computeEnableHt = response.computeEnableHt;
-            this.computeSpotPriceLimit = response.computeSpotPriceLimit;
-            this.computeSpotStrategy = response.computeSpotStrategy;
-            this.deployMode = response.deployMode;
-            this.description = response.description;
-            this.ecsChargeType = response.ecsChargeType;
-            this.ehpcVersion = response.ehpcVersion;
-            this.haEnable = response.haEnable;
-            this.imageId = response.imageId;
-            this.imageOwnerAlias = response.imageOwnerAlias;
-            this.inputFileUrl = response.inputFileUrl;
-            this.isComputeEss = response.isComputeEss;
-            this.jobQueue = response.jobQueue;
-            this.keyPairName = response.keyPairName;
-            this.name = response.name;
-            this.osTag = response.osTag;
-            this.password = response.password;
-            this.period = response.period;
-            this.periodUnit = response.periodUnit;
-            this.plugin = response.plugin;
-            this.postInstallScript = response.postInstallScript;
-            this.ramNodeTypes = response.ramNodeTypes;
-            this.ramRoleName = response.ramRoleName;
-            this.remoteDirectory = response.remoteDirectory;
-            this.remoteVisEnable = response.remoteVisEnable;
-            this.resourceGroupId = response.resourceGroupId;
-            this.sccClusterId = response.sccClusterId;
-            this.schedulerType = response.schedulerType;
-            this.securityGroupId = response.securityGroupId;
-            this.securityGroupName = response.securityGroupName;
-            this.systemDiskLevel = response.systemDiskLevel;
-            this.systemDiskSize = response.systemDiskSize;
-            this.systemDiskType = response.systemDiskType;
-            this.vSwitchId = response.vSwitchId;
-            this.volumeId = response.volumeId;
-            this.volumeMountpoint = response.volumeMountpoint;
-            this.volumeProtocol = response.volumeProtocol;
-            this.volumeType = response.volumeType;
-            this.vpcId = response.vpcId;
-            this.withoutAgent = response.withoutAgent;
-            this.withoutElasticIp = response.withoutElasticIp;
-            this.zoneId = response.zoneId;
+        private Builder(CreateClusterRequest request) {
+            super(request);
+            this.ecsOrder = request.ecsOrder;
+            this.accountType = request.accountType;
+            this.additionalVolumes = request.additionalVolumes;
+            this.application = request.application;
+            this.autoRenew = request.autoRenew;
+            this.autoRenewPeriod = request.autoRenewPeriod;
+            this.clientToken = request.clientToken;
+            this.clientVersion = request.clientVersion;
+            this.clusterVersion = request.clusterVersion;
+            this.computeEnableHt = request.computeEnableHt;
+            this.computeSpotPriceLimit = request.computeSpotPriceLimit;
+            this.computeSpotStrategy = request.computeSpotStrategy;
+            this.deployMode = request.deployMode;
+            this.description = request.description;
+            this.domain = request.domain;
+            this.ecsChargeType = request.ecsChargeType;
+            this.ehpcVersion = request.ehpcVersion;
+            this.haEnable = request.haEnable;
+            this.imageId = request.imageId;
+            this.imageOwnerAlias = request.imageOwnerAlias;
+            this.inputFileUrl = request.inputFileUrl;
+            this.isComputeEss = request.isComputeEss;
+            this.jobQueue = request.jobQueue;
+            this.keyPairName = request.keyPairName;
+            this.name = request.name;
+            this.osTag = request.osTag;
+            this.password = request.password;
+            this.period = request.period;
+            this.periodUnit = request.periodUnit;
+            this.plugin = request.plugin;
+            this.postInstallScript = request.postInstallScript;
+            this.ramNodeTypes = request.ramNodeTypes;
+            this.ramRoleName = request.ramRoleName;
+            this.remoteDirectory = request.remoteDirectory;
+            this.remoteVisEnable = request.remoteVisEnable;
+            this.resourceGroupId = request.resourceGroupId;
+            this.sccClusterId = request.sccClusterId;
+            this.schedulerType = request.schedulerType;
+            this.securityGroupId = request.securityGroupId;
+            this.securityGroupName = request.securityGroupName;
+            this.systemDiskLevel = request.systemDiskLevel;
+            this.systemDiskSize = request.systemDiskSize;
+            this.systemDiskType = request.systemDiskType;
+            this.tag = request.tag;
+            this.vSwitchId = request.vSwitchId;
+            this.volumeId = request.volumeId;
+            this.volumeMountOption = request.volumeMountOption;
+            this.volumeMountpoint = request.volumeMountpoint;
+            this.volumeProtocol = request.volumeProtocol;
+            this.volumeType = request.volumeType;
+            this.vpcId = request.vpcId;
+            this.withoutAgent = request.withoutAgent;
+            this.withoutElasticIp = request.withoutElasticIp;
+            this.zoneId = request.zoneId;
         } 
 
         /**
          * EcsOrder.
          */
         public Builder ecsOrder(EcsOrder ecsOrder) {
+            this.putQueryParameter("EcsOrder", ecsOrder);
             this.ecsOrder = ecsOrder;
             return this;
         }
@@ -876,6 +920,15 @@ public class CreateClusterRequest extends Request {
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * Domain.
+         */
+        public Builder domain(String domain) {
+            this.putQueryParameter("Domain", domain);
+            this.domain = domain;
             return this;
         }
 
@@ -1132,6 +1185,15 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
+         * 标签列表，最多包含20个子项
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
          * VSwitchId.
          */
         public Builder vSwitchId(String vSwitchId) {
@@ -1146,6 +1208,15 @@ public class CreateClusterRequest extends Request {
         public Builder volumeId(String volumeId) {
             this.putQueryParameter("VolumeId", volumeId);
             this.volumeId = volumeId;
+            return this;
+        }
+
+        /**
+         * VolumeMountOption.
+         */
+        public Builder volumeMountOption(String volumeMountOption) {
+            this.putQueryParameter("VolumeMountOption", volumeMountOption);
+            this.volumeMountOption = volumeMountOption;
             return this;
         }
 
@@ -1551,6 +1622,9 @@ public class CreateClusterRequest extends Request {
         @NameInMap("VolumeId")
         private String volumeId;
 
+        @NameInMap("VolumeMountOption")
+        private String volumeMountOption;
+
         @NameInMap("VolumeMountpoint")
         private String volumeMountpoint;
 
@@ -1567,6 +1641,7 @@ public class CreateClusterRequest extends Request {
             this.remoteDirectory = builder.remoteDirectory;
             this.roles = builder.roles;
             this.volumeId = builder.volumeId;
+            this.volumeMountOption = builder.volumeMountOption;
             this.volumeMountpoint = builder.volumeMountpoint;
             this.volumeProtocol = builder.volumeProtocol;
             this.volumeType = builder.volumeType;
@@ -1623,6 +1698,13 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
+         * @return volumeMountOption
+         */
+        public String getVolumeMountOption() {
+            return this.volumeMountOption;
+        }
+
+        /**
          * @return volumeMountpoint
          */
         public String getVolumeMountpoint() {
@@ -1650,6 +1732,7 @@ public class CreateClusterRequest extends Request {
             private String remoteDirectory; 
             private java.util.List < Roles> roles; 
             private String volumeId; 
+            private String volumeMountOption; 
             private String volumeMountpoint; 
             private String volumeProtocol; 
             private String volumeType; 
@@ -1699,6 +1782,14 @@ public class CreateClusterRequest extends Request {
              */
             public Builder volumeId(String volumeId) {
                 this.volumeId = volumeId;
+                return this;
+            }
+
+            /**
+             * VolumeMountOption.
+             */
+            public Builder volumeMountOption(String volumeMountOption) {
+                this.volumeMountOption = volumeMountOption;
                 return this;
             }
 
@@ -1760,7 +1851,7 @@ public class CreateClusterRequest extends Request {
             private String tag; 
 
             /**
-             * Tag.
+             * 标签列表，最多包含20个子项
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -1830,6 +1921,67 @@ public class CreateClusterRequest extends Request {
 
             public PostInstallScript build() {
                 return new PostInstallScript(this);
+            } 
+
+        } 
+
+    }
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * 标签键
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * 标签值
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
             } 
 
         } 

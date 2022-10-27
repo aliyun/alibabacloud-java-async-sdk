@@ -49,9 +49,9 @@ public class GetClusterVolumesRequest extends Request {
             super();
         } 
 
-        private Builder(GetClusterVolumesRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
+        private Builder(GetClusterVolumesRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
         } 
 
         /**

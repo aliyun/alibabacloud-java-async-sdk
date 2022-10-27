@@ -102,13 +102,13 @@ public class AddContainerAppRequest extends Request {
             super();
         } 
 
-        private Builder(AddContainerAppRequest response) {
-            super(response);
-            this.containerType = response.containerType;
-            this.description = response.description;
-            this.imageTag = response.imageTag;
-            this.name = response.name;
-            this.repository = response.repository;
+        private Builder(AddContainerAppRequest request) {
+            super(request);
+            this.containerType = request.containerType;
+            this.description = request.description;
+            this.imageTag = request.imageTag;
+            this.name = request.name;
+            this.repository = request.repository;
         } 
 
         /**

@@ -62,10 +62,10 @@ public class ListContainerAppsRequest extends Request {
             super();
         } 
 
-        private Builder(ListContainerAppsRequest response) {
-            super(response);
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
+        private Builder(ListContainerAppsRequest request) {
+            super(request);
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
 
         /**

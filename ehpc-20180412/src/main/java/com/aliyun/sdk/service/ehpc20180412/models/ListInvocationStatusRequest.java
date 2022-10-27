@@ -63,10 +63,10 @@ public class ListInvocationStatusRequest extends Request {
             super();
         } 
 
-        private Builder(ListInvocationStatusRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.commandId = response.commandId;
+        private Builder(ListInvocationStatusRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.commandId = request.commandId;
         } 
 
         /**

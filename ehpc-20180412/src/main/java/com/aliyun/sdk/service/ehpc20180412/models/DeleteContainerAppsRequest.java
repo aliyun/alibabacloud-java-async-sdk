@@ -49,9 +49,9 @@ public class DeleteContainerAppsRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteContainerAppsRequest response) {
-            super(response);
-            this.containerApp = response.containerApp;
+        private Builder(DeleteContainerAppsRequest request) {
+            super(request);
+            this.containerApp = request.containerApp;
         } 
 
         /**

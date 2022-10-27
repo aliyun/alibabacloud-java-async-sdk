@@ -76,11 +76,11 @@ public class AddSecurityGroupRequest extends Request {
             super();
         } 
 
-        private Builder(AddSecurityGroupRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.clusterId = response.clusterId;
-            this.securityGroupId = response.securityGroupId;
+        private Builder(AddSecurityGroupRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.clusterId = request.clusterId;
+            this.securityGroupId = request.securityGroupId;
         } 
 
         /**

@@ -62,10 +62,10 @@ public class ModifyContainerAppAttributesRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyContainerAppAttributesRequest response) {
-            super(response);
-            this.containerId = response.containerId;
-            this.description = response.description;
+        private Builder(ModifyContainerAppAttributesRequest request) {
+            super(request);
+            this.containerId = request.containerId;
+            this.description = request.description;
         } 
 
         /**

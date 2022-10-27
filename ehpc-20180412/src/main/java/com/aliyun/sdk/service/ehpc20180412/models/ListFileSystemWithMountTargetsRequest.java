@@ -62,10 +62,10 @@ public class ListFileSystemWithMountTargetsRequest extends Request {
             super();
         } 
 
-        private Builder(ListFileSystemWithMountTargetsRequest response) {
-            super(response);
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
+        private Builder(ListFileSystemWithMountTargetsRequest request) {
+            super(request);
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
 
         /**

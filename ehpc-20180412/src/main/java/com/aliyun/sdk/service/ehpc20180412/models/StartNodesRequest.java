@@ -76,11 +76,11 @@ public class StartNodesRequest extends Request {
             super();
         } 
 
-        private Builder(StartNodesRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.instance = response.instance;
-            this.role = response.role;
+        private Builder(StartNodesRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.instance = request.instance;
+            this.role = request.role;
         } 
 
         /**

@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListNodesByQueueRequest extends Request {
     @Query
+    @NameInMap("Async")
+    private Boolean async;
+
+    @Query
     @NameInMap("ClusterId")
     @Validation(required = true)
     private String clusterId;
@@ -33,6 +37,7 @@ public class ListNodesByQueueRequest extends Request {
 
     private ListNodesByQueueRequest(Builder builder) {
         super(builder);
+        this.async = builder.async;
         this.clusterId = builder.clusterId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -50,6 +55,13 @@ public class ListNodesByQueueRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return async
+     */
+    public Boolean getAsync() {
+        return this.async;
     }
 
     /**
@@ -81,6 +93,7 @@ public class ListNodesByQueueRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListNodesByQueueRequest, Builder> {
+        private Boolean async; 
         private String clusterId; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -90,13 +103,23 @@ public class ListNodesByQueueRequest extends Request {
             super();
         } 
 
-        private Builder(ListNodesByQueueRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.queueName = response.queueName;
+        private Builder(ListNodesByQueueRequest request) {
+            super(request);
+            this.async = request.async;
+            this.clusterId = request.clusterId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.queueName = request.queueName;
         } 
+
+        /**
+         * Async.
+         */
+        public Builder async(Boolean async) {
+            this.putQueryParameter("Async", async);
+            this.async = async;
+            return this;
+        }
 
         /**
          * ClusterId.

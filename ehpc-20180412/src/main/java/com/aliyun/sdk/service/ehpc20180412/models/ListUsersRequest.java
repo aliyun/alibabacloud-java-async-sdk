@@ -76,11 +76,11 @@ public class ListUsersRequest extends Request {
             super();
         } 
 
-        private Builder(ListUsersRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
+        private Builder(ListUsersRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
 
         /**

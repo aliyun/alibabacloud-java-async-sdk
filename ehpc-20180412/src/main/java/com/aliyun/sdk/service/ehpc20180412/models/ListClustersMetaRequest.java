@@ -62,10 +62,10 @@ public class ListClustersMetaRequest extends Request {
             super();
         } 
 
-        private Builder(ListClustersMetaRequest response) {
-            super(response);
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
+        private Builder(ListClustersMetaRequest request) {
+            super(request);
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
 
         /**

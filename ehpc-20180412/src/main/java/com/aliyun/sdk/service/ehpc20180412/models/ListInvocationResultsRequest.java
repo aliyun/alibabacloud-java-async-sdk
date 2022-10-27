@@ -116,14 +116,14 @@ public class ListInvocationResultsRequest extends Request {
             super();
         } 
 
-        private Builder(ListInvocationResultsRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.commandId = response.commandId;
-            this.instance = response.instance;
-            this.invokeRecordStatus = response.invokeRecordStatus;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
+        private Builder(ListInvocationResultsRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.commandId = request.commandId;
+            this.instance = request.instance;
+            this.invokeRecordStatus = request.invokeRecordStatus;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
 
         /**

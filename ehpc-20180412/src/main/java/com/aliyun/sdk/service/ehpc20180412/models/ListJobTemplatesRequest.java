@@ -75,11 +75,11 @@ public class ListJobTemplatesRequest extends Request {
             super();
         } 
 
-        private Builder(ListJobTemplatesRequest response) {
-            super(response);
-            this.name = response.name;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
+        private Builder(ListJobTemplatesRequest request) {
+            super(request);
+            this.name = request.name;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
 
         /**

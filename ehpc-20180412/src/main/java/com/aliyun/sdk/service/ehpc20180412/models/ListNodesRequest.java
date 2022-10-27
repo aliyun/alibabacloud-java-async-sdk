@@ -180,19 +180,19 @@ public class ListNodesRequest extends Request {
             super();
         } 
 
-        private Builder(ListNodesRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.filter = response.filter;
-            this.hostName = response.hostName;
-            this.hostNamePrefix = response.hostNamePrefix;
-            this.hostNameSuffix = response.hostNameSuffix;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.privateIpAddress = response.privateIpAddress;
-            this.role = response.role;
-            this.sequence = response.sequence;
-            this.sortBy = response.sortBy;
+        private Builder(ListNodesRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.filter = request.filter;
+            this.hostName = request.hostName;
+            this.hostNamePrefix = request.hostNamePrefix;
+            this.hostNameSuffix = request.hostNameSuffix;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.privateIpAddress = request.privateIpAddress;
+            this.role = request.role;
+            this.sequence = request.sequence;
+            this.sortBy = request.sortBy;
         } 
 
         /**

@@ -105,13 +105,13 @@ public class CreateJobFileRequest extends Request {
             super();
         } 
 
-        private Builder(CreateJobFileRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.content = response.content;
-            this.runasUser = response.runasUser;
-            this.runasUserPassword = response.runasUserPassword;
-            this.targetFile = response.targetFile;
+        private Builder(CreateJobFileRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.content = request.content;
+            this.runasUser = request.runasUser;
+            this.runasUserPassword = request.runasUserPassword;
+            this.targetFile = request.targetFile;
         } 
 
         /**

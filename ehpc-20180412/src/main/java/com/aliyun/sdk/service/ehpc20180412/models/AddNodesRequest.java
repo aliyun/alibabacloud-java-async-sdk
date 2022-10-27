@@ -429,38 +429,38 @@ public class AddNodesRequest extends Request {
             super();
         } 
 
-        private Builder(AddNodesRequest response) {
-            super(response);
-            this.allocatePublicAddress = response.allocatePublicAddress;
-            this.autoRenew = response.autoRenew;
-            this.autoRenewPeriod = response.autoRenewPeriod;
-            this.clientToken = response.clientToken;
-            this.clusterId = response.clusterId;
-            this.computeEnableHt = response.computeEnableHt;
-            this.computeSpotPriceLimit = response.computeSpotPriceLimit;
-            this.computeSpotStrategy = response.computeSpotStrategy;
-            this.count = response.count;
-            this.createMode = response.createMode;
-            this.dataDisks = response.dataDisks;
-            this.ecsChargeType = response.ecsChargeType;
-            this.hostNamePrefix = response.hostNamePrefix;
-            this.hostNameSuffix = response.hostNameSuffix;
-            this.imageId = response.imageId;
-            this.imageOwnerAlias = response.imageOwnerAlias;
-            this.instanceType = response.instanceType;
-            this.internetChargeType = response.internetChargeType;
-            this.internetMaxBandWidthIn = response.internetMaxBandWidthIn;
-            this.internetMaxBandWidthOut = response.internetMaxBandWidthOut;
-            this.jobQueue = response.jobQueue;
-            this.minCount = response.minCount;
-            this.period = response.period;
-            this.periodUnit = response.periodUnit;
-            this.sync = response.sync;
-            this.systemDiskLevel = response.systemDiskLevel;
-            this.systemDiskSize = response.systemDiskSize;
-            this.systemDiskType = response.systemDiskType;
-            this.vSwitchId = response.vSwitchId;
-            this.zoneId = response.zoneId;
+        private Builder(AddNodesRequest request) {
+            super(request);
+            this.allocatePublicAddress = request.allocatePublicAddress;
+            this.autoRenew = request.autoRenew;
+            this.autoRenewPeriod = request.autoRenewPeriod;
+            this.clientToken = request.clientToken;
+            this.clusterId = request.clusterId;
+            this.computeEnableHt = request.computeEnableHt;
+            this.computeSpotPriceLimit = request.computeSpotPriceLimit;
+            this.computeSpotStrategy = request.computeSpotStrategy;
+            this.count = request.count;
+            this.createMode = request.createMode;
+            this.dataDisks = request.dataDisks;
+            this.ecsChargeType = request.ecsChargeType;
+            this.hostNamePrefix = request.hostNamePrefix;
+            this.hostNameSuffix = request.hostNameSuffix;
+            this.imageId = request.imageId;
+            this.imageOwnerAlias = request.imageOwnerAlias;
+            this.instanceType = request.instanceType;
+            this.internetChargeType = request.internetChargeType;
+            this.internetMaxBandWidthIn = request.internetMaxBandWidthIn;
+            this.internetMaxBandWidthOut = request.internetMaxBandWidthOut;
+            this.jobQueue = request.jobQueue;
+            this.minCount = request.minCount;
+            this.period = request.period;
+            this.periodUnit = request.periodUnit;
+            this.sync = request.sync;
+            this.systemDiskLevel = request.systemDiskLevel;
+            this.systemDiskSize = request.systemDiskSize;
+            this.systemDiskType = request.systemDiskType;
+            this.vSwitchId = request.vSwitchId;
+            this.zoneId = request.zoneId;
         } 
 
         /**

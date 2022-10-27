@@ -49,9 +49,9 @@ public class DescribeNFSClientStatusRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeNFSClientStatusRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
+        private Builder(DescribeNFSClientStatusRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
         } 
 
         /**

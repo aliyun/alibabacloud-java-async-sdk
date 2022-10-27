@@ -63,10 +63,10 @@ public class DeleteUsersRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteUsersRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.user = response.user;
+        private Builder(DeleteUsersRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.user = request.user;
         } 
 
         /**

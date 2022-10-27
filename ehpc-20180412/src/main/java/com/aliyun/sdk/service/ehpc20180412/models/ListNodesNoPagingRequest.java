@@ -88,12 +88,12 @@ public class ListNodesNoPagingRequest extends Request {
             super();
         } 
 
-        private Builder(ListNodesNoPagingRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.hostName = response.hostName;
-            this.role = response.role;
-            this.sequence = response.sequence;
+        private Builder(ListNodesNoPagingRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.hostName = request.hostName;
+            this.role = request.role;
+            this.sequence = request.sequence;
         } 
 
         /**

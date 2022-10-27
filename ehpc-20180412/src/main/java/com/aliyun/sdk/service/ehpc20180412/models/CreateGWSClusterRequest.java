@@ -89,12 +89,12 @@ public class CreateGWSClusterRequest extends Request {
             super();
         } 
 
-        private Builder(CreateGWSClusterRequest response) {
-            super(response);
-            this.clusterType = response.clusterType;
-            this.name = response.name;
-            this.vSwitchId = response.vSwitchId;
-            this.vpcId = response.vpcId;
+        private Builder(CreateGWSClusterRequest request) {
+            super(request);
+            this.clusterType = request.clusterType;
+            this.name = request.name;
+            this.vSwitchId = request.vSwitchId;
+            this.vpcId = request.vpcId;
         } 
 
         /**

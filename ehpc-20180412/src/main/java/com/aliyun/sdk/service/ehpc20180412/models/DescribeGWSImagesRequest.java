@@ -62,10 +62,10 @@ public class DescribeGWSImagesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeGWSImagesRequest response) {
-            super(response);
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
+        private Builder(DescribeGWSImagesRequest request) {
+            super(request);
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
 
         /**

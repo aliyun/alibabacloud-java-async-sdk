@@ -62,10 +62,10 @@ public class UpdateClusterVolumesRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateClusterVolumesRequest response) {
-            super(response);
-            this.additionalVolumes = response.additionalVolumes;
-            this.clusterId = response.clusterId;
+        private Builder(UpdateClusterVolumesRequest request) {
+            super(request);
+            this.additionalVolumes = request.additionalVolumes;
+            this.clusterId = request.clusterId;
         } 
 
         /**

@@ -49,9 +49,9 @@ public class DescribeContainerAppRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeContainerAppRequest response) {
-            super(response);
-            this.containerId = response.containerId;
+        private Builder(DescribeContainerAppRequest request) {
+            super(request);
+            this.containerId = request.containerId;
         } 
 
         /**

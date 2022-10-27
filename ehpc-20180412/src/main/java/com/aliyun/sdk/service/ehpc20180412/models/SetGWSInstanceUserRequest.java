@@ -75,11 +75,11 @@ public class SetGWSInstanceUserRequest extends Request {
             super();
         } 
 
-        private Builder(SetGWSInstanceUserRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.userName = response.userName;
-            this.userUid = response.userUid;
+        private Builder(SetGWSInstanceUserRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.userName = request.userName;
+            this.userUid = request.userUid;
         } 
 
         /**

@@ -131,15 +131,15 @@ public class SetGWSClusterPolicyRequest extends Request {
             super();
         } 
 
-        private Builder(SetGWSClusterPolicyRequest response) {
-            super(response);
-            this.asyncMode = response.asyncMode;
-            this.clipboard = response.clipboard;
-            this.clusterId = response.clusterId;
-            this.localDrive = response.localDrive;
-            this.udpPort = response.udpPort;
-            this.usbRedirect = response.usbRedirect;
-            this.watermark = response.watermark;
+        private Builder(SetGWSClusterPolicyRequest request) {
+            super(request);
+            this.asyncMode = request.asyncMode;
+            this.clipboard = request.clipboard;
+            this.clusterId = request.clusterId;
+            this.localDrive = request.localDrive;
+            this.udpPort = request.udpPort;
+            this.usbRedirect = request.usbRedirect;
+            this.watermark = request.watermark;
         } 
 
         /**

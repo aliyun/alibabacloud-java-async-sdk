@@ -62,6 +62,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteJobsResponse> deleteJobs(DeleteJobsRequest request);
 
+    CompletableFuture<DeleteLocalImageResponse> deleteLocalImage(DeleteLocalImageRequest request);
+
     CompletableFuture<DeleteNodesResponse> deleteNodes(DeleteNodesRequest request);
 
     CompletableFuture<DeleteQueueResponse> deleteQueue(DeleteQueueRequest request);
@@ -75,6 +77,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeClusterResponse> describeCluster(DescribeClusterRequest request);
 
     CompletableFuture<DescribeContainerAppResponse> describeContainerApp(DescribeContainerAppRequest request);
+
+    CompletableFuture<DescribeEstackImageResponse> describeEstackImage(DescribeEstackImageRequest request);
 
     CompletableFuture<DescribeGWSClusterPolicyResponse> describeGWSClusterPolicy(DescribeGWSClusterPolicyRequest request);
 
@@ -108,17 +112,25 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetClusterVolumesResponse> getClusterVolumes(GetClusterVolumesRequest request);
 
+    CompletableFuture<GetCommonImageResponse> getCommonImage(GetCommonImageRequest request);
+
     CompletableFuture<GetGWSConnectTicketResponse> getGWSConnectTicket(GetGWSConnectTicketRequest request);
 
     CompletableFuture<GetHybridClusterConfigResponse> getHybridClusterConfig(GetHybridClusterConfigRequest request);
 
     CompletableFuture<GetIfEcsTypeSupportHtConfigResponse> getIfEcsTypeSupportHtConfig(GetIfEcsTypeSupportHtConfigRequest request);
 
+    CompletableFuture<GetPostScriptsResponse> getPostScripts(GetPostScriptsRequest request);
+
     CompletableFuture<GetSchedulerInfoResponse> getSchedulerInfo(GetSchedulerInfoRequest request);
+
+    CompletableFuture<GetUserImageResponse> getUserImage(GetUserImageRequest request);
 
     CompletableFuture<GetVisualServiceStatusResponse> getVisualServiceStatus(GetVisualServiceStatusRequest request);
 
     CompletableFuture<InitializeEHPCResponse> initializeEHPC(InitializeEHPCRequest request);
+
+    CompletableFuture<InspectImageResponse> inspectImage(InspectImageRequest request);
 
     CompletableFuture<InstallSoftwareResponse> installSoftware(InstallSoftwareRequest request);
 
@@ -135,6 +147,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListClustersMetaResponse> listClustersMeta(ListClustersMetaRequest request);
 
     CompletableFuture<ListCommandsResponse> listCommands(ListCommandsRequest request);
+
+    CompletableFuture<ListCommunityImagesResponse> listCommunityImages(ListCommunityImagesRequest request);
 
     CompletableFuture<ListContainerAppsResponse> listContainerApps(ListContainerAppsRequest request);
 
@@ -160,6 +174,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListJobsResponse> listJobs(ListJobsRequest request);
 
+    CompletableFuture<ListJobsWithFiltersResponse> listJobsWithFilters(ListJobsWithFiltersRequest request);
+
     CompletableFuture<ListNodesResponse> listNodes(ListNodesRequest request);
 
     CompletableFuture<ListNodesByQueueResponse> listNodesByQueue(ListNodesByQueueRequest request);
@@ -176,9 +192,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListSoftwaresResponse> listSoftwares(ListSoftwaresRequest request);
 
+    CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
+
     CompletableFuture<ListTasksResponse> listTasks(ListTasksRequest request);
 
+    CompletableFuture<ListUpgradeClientsResponse> listUpgradeClients(ListUpgradeClientsRequest request);
+
     CompletableFuture<ListUsersResponse> listUsers(ListUsersRequest request);
+
+    CompletableFuture<ListUsersAsyncResponse> listUsersAsync(ListUsersAsyncRequest request);
 
     CompletableFuture<ListVolumesResponse> listVolumes(ListVolumesRequest request);
 
@@ -216,6 +238,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<SetGWSInstanceUserResponse> setGWSInstanceUser(SetGWSInstanceUserRequest request);
 
+    CompletableFuture<SetPostScriptsResponse> setPostScripts(SetPostScriptsRequest request);
+
     CompletableFuture<SetQueueResponse> setQueue(SetQueueRequest request);
 
     CompletableFuture<SetSchedulerInfoResponse> setSchedulerInfo(SetSchedulerInfoRequest request);
@@ -240,7 +264,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<SubmitJobResponse> submitJob(SubmitJobRequest request);
 
+    CompletableFuture<SummaryImagesResponse> summaryImages(SummaryImagesRequest request);
+
+    CompletableFuture<SummaryImagesInfoResponse> summaryImagesInfo(SummaryImagesInfoRequest request);
+
     CompletableFuture<SyncUsersResponse> syncUsers(SyncUsersRequest request);
+
+    CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
+
+    CompletableFuture<UnTagResourcesResponse> unTagResources(UnTagResourcesRequest request);
 
     CompletableFuture<UninstallSoftwareResponse> uninstallSoftware(UninstallSoftwareRequest request);
 

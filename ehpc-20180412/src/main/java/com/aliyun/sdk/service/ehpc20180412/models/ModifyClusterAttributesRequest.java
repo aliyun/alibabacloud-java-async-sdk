@@ -101,13 +101,13 @@ public class ModifyClusterAttributesRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyClusterAttributesRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.description = response.description;
-            this.imageId = response.imageId;
-            this.imageOwnerAlias = response.imageOwnerAlias;
-            this.name = response.name;
+        private Builder(ModifyClusterAttributesRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.description = request.description;
+            this.imageId = request.imageId;
+            this.imageOwnerAlias = request.imageOwnerAlias;
+            this.name = request.name;
         } 
 
         /**

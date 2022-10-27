@@ -76,11 +76,11 @@ public class StopNodesRequest extends Request {
             super();
         } 
 
-        private Builder(StopNodesRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.instance = response.instance;
-            this.role = response.role;
+        private Builder(StopNodesRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.instance = request.instance;
+            this.role = request.role;
         } 
 
         /**

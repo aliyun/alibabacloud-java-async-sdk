@@ -118,14 +118,14 @@ public class DescribeImagePriceRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeImagePriceRequest response) {
-            super(response);
-            this.amount = response.amount;
-            this.imageId = response.imageId;
-            this.orderType = response.orderType;
-            this.period = response.period;
-            this.priceUnit = response.priceUnit;
-            this.skuCode = response.skuCode;
+        private Builder(DescribeImagePriceRequest request) {
+            super(request);
+            this.amount = request.amount;
+            this.imageId = request.imageId;
+            this.orderType = request.orderType;
+            this.period = request.period;
+            this.priceUnit = request.priceUnit;
+            this.skuCode = request.skuCode;
         } 
 
         /**

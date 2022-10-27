@@ -301,28 +301,28 @@ public class CreateJobTemplateRequest extends Request {
             super();
         } 
 
-        private Builder(CreateJobTemplateRequest response) {
-            super(response);
-            this.arrayRequest = response.arrayRequest;
-            this.clockTime = response.clockTime;
-            this.commandLine = response.commandLine;
-            this.gpu = response.gpu;
-            this.inputFileUrl = response.inputFileUrl;
-            this.mem = response.mem;
-            this.name = response.name;
-            this.node = response.node;
-            this.packagePath = response.packagePath;
-            this.priority = response.priority;
-            this.queue = response.queue;
-            this.reRunable = response.reRunable;
-            this.runasUser = response.runasUser;
-            this.stderrRedirectPath = response.stderrRedirectPath;
-            this.stdoutRedirectPath = response.stdoutRedirectPath;
-            this.task = response.task;
-            this.thread = response.thread;
-            this.unzipCmd = response.unzipCmd;
-            this.variables = response.variables;
-            this.withUnzipCmd = response.withUnzipCmd;
+        private Builder(CreateJobTemplateRequest request) {
+            super(request);
+            this.arrayRequest = request.arrayRequest;
+            this.clockTime = request.clockTime;
+            this.commandLine = request.commandLine;
+            this.gpu = request.gpu;
+            this.inputFileUrl = request.inputFileUrl;
+            this.mem = request.mem;
+            this.name = request.name;
+            this.node = request.node;
+            this.packagePath = request.packagePath;
+            this.priority = request.priority;
+            this.queue = request.queue;
+            this.reRunable = request.reRunable;
+            this.runasUser = request.runasUser;
+            this.stderrRedirectPath = request.stderrRedirectPath;
+            this.stdoutRedirectPath = request.stdoutRedirectPath;
+            this.task = request.task;
+            this.thread = request.thread;
+            this.unzipCmd = request.unzipCmd;
+            this.variables = request.variables;
+            this.withUnzipCmd = request.withUnzipCmd;
         } 
 
         /**

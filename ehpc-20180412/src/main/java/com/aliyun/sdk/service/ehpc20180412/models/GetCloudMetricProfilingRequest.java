@@ -76,11 +76,11 @@ public class GetCloudMetricProfilingRequest extends Request {
             super();
         } 
 
-        private Builder(GetCloudMetricProfilingRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.profilingId = response.profilingId;
-            this.regionId = response.regionId;
+        private Builder(GetCloudMetricProfilingRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.profilingId = request.profilingId;
+            this.regionId = request.regionId;
         } 
 
         /**

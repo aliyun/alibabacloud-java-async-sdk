@@ -115,14 +115,14 @@ public class ListJobsRequest extends Request {
             super();
         } 
 
-        private Builder(ListJobsRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.owner = response.owner;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.rerunable = response.rerunable;
-            this.state = response.state;
+        private Builder(ListJobsRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.owner = request.owner;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.rerunable = request.rerunable;
+            this.state = request.state;
         } 
 
         /**

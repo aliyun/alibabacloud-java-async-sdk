@@ -90,12 +90,12 @@ public class UpdateQueueConfigRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateQueueConfigRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.computeInstanceType = response.computeInstanceType;
-            this.queueName = response.queueName;
-            this.resourceGroupId = response.resourceGroupId;
+        private Builder(UpdateQueueConfigRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.computeInstanceType = request.computeInstanceType;
+            this.queueName = request.queueName;
+            this.resourceGroupId = request.resourceGroupId;
         } 
 
         /**

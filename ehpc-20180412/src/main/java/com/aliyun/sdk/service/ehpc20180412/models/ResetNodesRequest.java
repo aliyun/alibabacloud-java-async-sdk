@@ -63,10 +63,10 @@ public class ResetNodesRequest extends Request {
             super();
         } 
 
-        private Builder(ResetNodesRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.instance = response.instance;
+        private Builder(ResetNodesRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.instance = request.instance;
         } 
 
         /**

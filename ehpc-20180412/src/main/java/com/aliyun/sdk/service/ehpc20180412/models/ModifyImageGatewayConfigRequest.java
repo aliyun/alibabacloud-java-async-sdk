@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyImageGatewayConfigRequest</p>
  */
 public class ModifyImageGatewayConfigRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("ClusterId")
     @Validation(required = true)
@@ -45,16 +49,13 @@ public class ModifyImageGatewayConfigRequest extends Request {
     @NameInMap("PullUpdateTimeout")
     private Integer pullUpdateTimeout;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("Repo")
     private java.util.List < Repo> repo;
 
     private ModifyImageGatewayConfigRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.clusterId = builder.clusterId;
         this.DBPassword = builder.DBPassword;
         this.DBServerInfo = builder.DBServerInfo;
@@ -63,7 +64,6 @@ public class ModifyImageGatewayConfigRequest extends Request {
         this.defaultRepoLocation = builder.defaultRepoLocation;
         this.imageExpirationTimeout = builder.imageExpirationTimeout;
         this.pullUpdateTimeout = builder.pullUpdateTimeout;
-        this.regionId = builder.regionId;
         this.repo = builder.repo;
     }
 
@@ -78,6 +78,13 @@ public class ModifyImageGatewayConfigRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -137,13 +144,6 @@ public class ModifyImageGatewayConfigRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return repo
      */
     public java.util.List < Repo> getRepo() {
@@ -151,6 +151,7 @@ public class ModifyImageGatewayConfigRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyImageGatewayConfigRequest, Builder> {
+        private String regionId; 
         private String clusterId; 
         private String DBPassword; 
         private String DBServerInfo; 
@@ -159,26 +160,34 @@ public class ModifyImageGatewayConfigRequest extends Request {
         private String defaultRepoLocation; 
         private String imageExpirationTimeout; 
         private Integer pullUpdateTimeout; 
-        private String regionId; 
         private java.util.List < Repo> repo; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ModifyImageGatewayConfigRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.DBPassword = response.DBPassword;
-            this.DBServerInfo = response.DBServerInfo;
-            this.DBType = response.DBType;
-            this.DBUsername = response.DBUsername;
-            this.defaultRepoLocation = response.defaultRepoLocation;
-            this.imageExpirationTimeout = response.imageExpirationTimeout;
-            this.pullUpdateTimeout = response.pullUpdateTimeout;
-            this.regionId = response.regionId;
-            this.repo = response.repo;
+        private Builder(ModifyImageGatewayConfigRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.clusterId = request.clusterId;
+            this.DBPassword = request.DBPassword;
+            this.DBServerInfo = request.DBServerInfo;
+            this.DBType = request.DBType;
+            this.DBUsername = request.DBUsername;
+            this.defaultRepoLocation = request.defaultRepoLocation;
+            this.imageExpirationTimeout = request.imageExpirationTimeout;
+            this.pullUpdateTimeout = request.pullUpdateTimeout;
+            this.repo = request.repo;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * ClusterId.
@@ -249,15 +258,6 @@ public class ModifyImageGatewayConfigRequest extends Request {
         public Builder pullUpdateTimeout(Integer pullUpdateTimeout) {
             this.putQueryParameter("PullUpdateTimeout", pullUpdateTimeout);
             this.pullUpdateTimeout = pullUpdateTimeout;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

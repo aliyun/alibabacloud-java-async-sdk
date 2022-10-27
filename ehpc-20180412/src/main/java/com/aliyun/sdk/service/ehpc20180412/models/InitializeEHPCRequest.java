@@ -48,9 +48,9 @@ public class InitializeEHPCRequest extends Request {
             super();
         } 
 
-        private Builder(InitializeEHPCRequest response) {
-            super(response);
-            this.regionId = response.regionId;
+        private Builder(InitializeEHPCRequest request) {
+            super(request);
+            this.regionId = request.regionId;
         } 
 
         /**

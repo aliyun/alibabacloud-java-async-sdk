@@ -77,11 +77,11 @@ public class GetSchedulerInfoRequest extends Request {
             super();
         } 
 
-        private Builder(GetSchedulerInfoRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.regionId = response.regionId;
-            this.scheduler = response.scheduler;
+        private Builder(GetSchedulerInfoRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.regionId = request.regionId;
+            this.scheduler = request.scheduler;
         } 
 
         /**

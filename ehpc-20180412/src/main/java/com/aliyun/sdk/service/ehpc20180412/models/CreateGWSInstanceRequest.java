@@ -264,25 +264,25 @@ public class CreateGWSInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(CreateGWSInstanceRequest response) {
-            super(response);
-            this.allocatePublicAddress = response.allocatePublicAddress;
-            this.appList = response.appList;
-            this.autoRenew = response.autoRenew;
-            this.clusterId = response.clusterId;
-            this.imageId = response.imageId;
-            this.instanceChargeType = response.instanceChargeType;
-            this.instanceType = response.instanceType;
-            this.internetChargeType = response.internetChargeType;
-            this.internetMaxBandwidthIn = response.internetMaxBandwidthIn;
-            this.internetMaxBandwidthOut = response.internetMaxBandwidthOut;
-            this.name = response.name;
-            this.period = response.period;
-            this.periodUnit = response.periodUnit;
-            this.systemDiskCategory = response.systemDiskCategory;
-            this.systemDiskSize = response.systemDiskSize;
-            this.vSwitchId = response.vSwitchId;
-            this.workMode = response.workMode;
+        private Builder(CreateGWSInstanceRequest request) {
+            super(request);
+            this.allocatePublicAddress = request.allocatePublicAddress;
+            this.appList = request.appList;
+            this.autoRenew = request.autoRenew;
+            this.clusterId = request.clusterId;
+            this.imageId = request.imageId;
+            this.instanceChargeType = request.instanceChargeType;
+            this.instanceType = request.instanceType;
+            this.internetChargeType = request.internetChargeType;
+            this.internetMaxBandwidthIn = request.internetMaxBandwidthIn;
+            this.internetMaxBandwidthOut = request.internetMaxBandwidthOut;
+            this.name = request.name;
+            this.period = request.period;
+            this.periodUnit = request.periodUnit;
+            this.systemDiskCategory = request.systemDiskCategory;
+            this.systemDiskSize = request.systemDiskSize;
+            this.vSwitchId = request.vSwitchId;
+            this.workMode = request.workMode;
         } 
 
         /**

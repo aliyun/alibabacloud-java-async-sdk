@@ -35,8 +35,8 @@ public class ListRegionsRequest extends Request {
             super();
         } 
 
-        private Builder(ListRegionsRequest response) {
-            super(response);
+        private Builder(ListRegionsRequest request) {
+            super(request);
         } 
 
         @Override

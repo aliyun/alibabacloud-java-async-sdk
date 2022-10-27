@@ -62,10 +62,10 @@ public class UpgradeClientRequest extends Request {
             super();
         } 
 
-        private Builder(UpgradeClientRequest response) {
-            super(response);
-            this.clientVersion = response.clientVersion;
-            this.clusterId = response.clusterId;
+        private Builder(UpgradeClientRequest request) {
+            super(request);
+            this.clientVersion = request.clientVersion;
+            this.clusterId = request.clusterId;
         } 
 
         /**

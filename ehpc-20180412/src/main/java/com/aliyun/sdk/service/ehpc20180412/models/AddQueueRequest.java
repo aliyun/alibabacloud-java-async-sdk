@@ -63,10 +63,10 @@ public class AddQueueRequest extends Request {
             super();
         } 
 
-        private Builder(AddQueueRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.queueName = response.queueName;
+        private Builder(AddQueueRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.queueName = request.queueName;
         } 
 
         /**

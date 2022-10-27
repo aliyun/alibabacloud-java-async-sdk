@@ -89,12 +89,12 @@ public class DescribePriceRequest extends Request {
             super();
         } 
 
-        private Builder(DescribePriceRequest response) {
-            super(response);
-            this.chargeType = response.chargeType;
-            this.commodities = response.commodities;
-            this.orderType = response.orderType;
-            this.priceUnit = response.priceUnit;
+        private Builder(DescribePriceRequest request) {
+            super(request);
+            this.chargeType = request.chargeType;
+            this.commodities = request.commodities;
+            this.orderType = request.orderType;
+            this.priceUnit = request.priceUnit;
         } 
 
         /**

@@ -49,9 +49,9 @@ public class GetIfEcsTypeSupportHtConfigRequest extends Request {
             super();
         } 
 
-        private Builder(GetIfEcsTypeSupportHtConfigRequest response) {
-            super(response);
-            this.instanceType = response.instanceType;
+        private Builder(GetIfEcsTypeSupportHtConfigRequest request) {
+            super(request);
+            this.instanceType = request.instanceType;
         } 
 
         /**

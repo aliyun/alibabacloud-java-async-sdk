@@ -62,10 +62,10 @@ public class DeleteClusterRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteClusterRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.releaseInstance = response.releaseInstance;
+        private Builder(DeleteClusterRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.releaseInstance = request.releaseInstance;
         } 
 
         /**

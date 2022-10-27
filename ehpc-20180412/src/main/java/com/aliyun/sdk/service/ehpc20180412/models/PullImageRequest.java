@@ -89,12 +89,12 @@ public class PullImageRequest extends Request {
             super();
         } 
 
-        private Builder(PullImageRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.containerType = response.containerType;
-            this.imageTag = response.imageTag;
-            this.repository = response.repository;
+        private Builder(PullImageRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.containerType = request.containerType;
+            this.imageTag = request.imageTag;
+            this.repository = request.repository;
         } 
 
         /**

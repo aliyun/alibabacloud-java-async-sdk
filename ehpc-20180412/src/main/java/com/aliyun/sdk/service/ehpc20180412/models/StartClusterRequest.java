@@ -49,9 +49,9 @@ public class StartClusterRequest extends Request {
             super();
         } 
 
-        private Builder(StartClusterRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
+        private Builder(StartClusterRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
         } 
 
         /**

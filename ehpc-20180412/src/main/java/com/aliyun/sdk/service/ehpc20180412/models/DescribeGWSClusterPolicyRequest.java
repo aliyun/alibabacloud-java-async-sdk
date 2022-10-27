@@ -75,11 +75,11 @@ public class DescribeGWSClusterPolicyRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeGWSClusterPolicyRequest response) {
-            super(response);
-            this.asyncMode = response.asyncMode;
-            this.clusterId = response.clusterId;
-            this.taskId = response.taskId;
+        private Builder(DescribeGWSClusterPolicyRequest request) {
+            super(request);
+            this.asyncMode = request.asyncMode;
+            this.clusterId = request.clusterId;
+            this.taskId = request.taskId;
         } 
 
         /**

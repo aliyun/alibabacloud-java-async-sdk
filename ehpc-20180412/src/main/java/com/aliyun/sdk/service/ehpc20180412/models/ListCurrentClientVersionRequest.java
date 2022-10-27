@@ -35,8 +35,8 @@ public class ListCurrentClientVersionRequest extends Request {
             super();
         } 
 
-        private Builder(ListCurrentClientVersionRequest response) {
-            super(response);
+        private Builder(ListCurrentClientVersionRequest request) {
+            super(request);
         } 
 
         @Override

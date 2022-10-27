@@ -91,12 +91,12 @@ public class ModifyVisualServicePasswdRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyVisualServicePasswdRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.passwd = response.passwd;
-            this.runasUser = response.runasUser;
-            this.runasUserPassword = response.runasUserPassword;
+        private Builder(ModifyVisualServicePasswdRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.passwd = request.passwd;
+            this.runasUser = request.runasUser;
+            this.runasUserPassword = request.runasUserPassword;
         } 
 
         /**

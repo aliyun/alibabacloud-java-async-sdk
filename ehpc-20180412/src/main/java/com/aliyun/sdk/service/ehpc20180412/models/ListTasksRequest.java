@@ -103,13 +103,13 @@ public class ListTasksRequest extends Request {
             super();
         } 
 
-        private Builder(ListTasksRequest response) {
-            super(response);
-            this.archived = response.archived;
-            this.clusterId = response.clusterId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.taskId = response.taskId;
+        private Builder(ListTasksRequest request) {
+            super(request);
+            this.archived = request.archived;
+            this.clusterId = request.clusterId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.taskId = request.taskId;
         } 
 
         /**

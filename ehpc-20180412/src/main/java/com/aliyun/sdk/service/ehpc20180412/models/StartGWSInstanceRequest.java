@@ -49,9 +49,9 @@ public class StartGWSInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(StartGWSInstanceRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
+        private Builder(StartGWSInstanceRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
         } 
 
         /**

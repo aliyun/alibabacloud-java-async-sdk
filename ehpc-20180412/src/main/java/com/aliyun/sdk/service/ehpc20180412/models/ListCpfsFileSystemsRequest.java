@@ -75,11 +75,11 @@ public class ListCpfsFileSystemsRequest extends Request {
             super();
         } 
 
-        private Builder(ListCpfsFileSystemsRequest response) {
-            super(response);
-            this.fileSystemId = response.fileSystemId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
+        private Builder(ListCpfsFileSystemsRequest request) {
+            super(request);
+            this.fileSystemId = request.fileSystemId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
 
         /**

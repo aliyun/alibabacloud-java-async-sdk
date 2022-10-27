@@ -77,11 +77,11 @@ public class StartVisualServiceRequest extends Request {
             super();
         } 
 
-        private Builder(StartVisualServiceRequest response) {
-            super(response);
-            this.cidrIp = response.cidrIp;
-            this.clusterId = response.clusterId;
-            this.port = response.port;
+        private Builder(StartVisualServiceRequest request) {
+            super(request);
+            this.cidrIp = request.cidrIp;
+            this.clusterId = request.clusterId;
+            this.port = request.port;
         } 
 
         /**

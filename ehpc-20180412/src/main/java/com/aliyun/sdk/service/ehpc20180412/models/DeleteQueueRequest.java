@@ -63,10 +63,10 @@ public class DeleteQueueRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteQueueRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.queueName = response.queueName;
+        private Builder(DeleteQueueRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.queueName = request.queueName;
         } 
 
         /**

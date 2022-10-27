@@ -233,23 +233,23 @@ public class SetAutoScaleConfigRequest extends Request {
             super();
         } 
 
-        private Builder(SetAutoScaleConfigRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.enableAutoGrow = response.enableAutoGrow;
-            this.enableAutoShrink = response.enableAutoShrink;
-            this.excludeNodes = response.excludeNodes;
-            this.extraNodesGrowRatio = response.extraNodesGrowRatio;
-            this.growIntervalInMinutes = response.growIntervalInMinutes;
-            this.growRatio = response.growRatio;
-            this.growTimeoutInMinutes = response.growTimeoutInMinutes;
-            this.imageId = response.imageId;
-            this.maxNodesInCluster = response.maxNodesInCluster;
-            this.queues = response.queues;
-            this.shrinkIdleTimes = response.shrinkIdleTimes;
-            this.shrinkIntervalInMinutes = response.shrinkIntervalInMinutes;
-            this.spotPriceLimit = response.spotPriceLimit;
-            this.spotStrategy = response.spotStrategy;
+        private Builder(SetAutoScaleConfigRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.enableAutoGrow = request.enableAutoGrow;
+            this.enableAutoShrink = request.enableAutoShrink;
+            this.excludeNodes = request.excludeNodes;
+            this.extraNodesGrowRatio = request.extraNodesGrowRatio;
+            this.growIntervalInMinutes = request.growIntervalInMinutes;
+            this.growRatio = request.growRatio;
+            this.growTimeoutInMinutes = request.growTimeoutInMinutes;
+            this.imageId = request.imageId;
+            this.maxNodesInCluster = request.maxNodesInCluster;
+            this.queues = request.queues;
+            this.shrinkIdleTimes = request.shrinkIdleTimes;
+            this.shrinkIntervalInMinutes = request.shrinkIntervalInMinutes;
+            this.spotPriceLimit = request.spotPriceLimit;
+            this.spotStrategy = request.spotStrategy;
         } 
 
         /**
@@ -681,8 +681,14 @@ public class SetAutoScaleConfigRequest extends Request {
         @NameInMap("MaxNodesInQueue")
         private Integer maxNodesInQueue;
 
+        @NameInMap("MaxNodesPerCycle")
+        private Long maxNodesPerCycle;
+
         @NameInMap("MinNodesInQueue")
         private Integer minNodesInQueue;
+
+        @NameInMap("MinNodesPerCycle")
+        private Long minNodesPerCycle;
 
         @NameInMap("QueueImageId")
         private String queueImageId;
@@ -714,7 +720,9 @@ public class SetAutoScaleConfigRequest extends Request {
             this.instanceType = builder.instanceType;
             this.instanceTypes = builder.instanceTypes;
             this.maxNodesInQueue = builder.maxNodesInQueue;
+            this.maxNodesPerCycle = builder.maxNodesPerCycle;
             this.minNodesInQueue = builder.minNodesInQueue;
+            this.minNodesPerCycle = builder.minNodesPerCycle;
             this.queueImageId = builder.queueImageId;
             this.queueName = builder.queueName;
             this.spotPriceLimit = builder.spotPriceLimit;
@@ -789,10 +797,24 @@ public class SetAutoScaleConfigRequest extends Request {
         }
 
         /**
+         * @return maxNodesPerCycle
+         */
+        public Long getMaxNodesPerCycle() {
+            return this.maxNodesPerCycle;
+        }
+
+        /**
          * @return minNodesInQueue
          */
         public Integer getMinNodesInQueue() {
             return this.minNodesInQueue;
+        }
+
+        /**
+         * @return minNodesPerCycle
+         */
+        public Long getMinNodesPerCycle() {
+            return this.minNodesPerCycle;
         }
 
         /**
@@ -853,7 +875,9 @@ public class SetAutoScaleConfigRequest extends Request {
             private String instanceType; 
             private java.util.List < InstanceTypes> instanceTypes; 
             private Integer maxNodesInQueue; 
+            private Long maxNodesPerCycle; 
             private Integer minNodesInQueue; 
+            private Long minNodesPerCycle; 
             private String queueImageId; 
             private String queueName; 
             private Float spotPriceLimit; 
@@ -927,10 +951,26 @@ public class SetAutoScaleConfigRequest extends Request {
             }
 
             /**
+             * MaxNodesPerCycle.
+             */
+            public Builder maxNodesPerCycle(Long maxNodesPerCycle) {
+                this.maxNodesPerCycle = maxNodesPerCycle;
+                return this;
+            }
+
+            /**
              * MinNodesInQueue.
              */
             public Builder minNodesInQueue(Integer minNodesInQueue) {
                 this.minNodesInQueue = minNodesInQueue;
+                return this;
+            }
+
+            /**
+             * MinNodesPerCycle.
+             */
+            public Builder minNodesPerCycle(Long minNodesPerCycle) {
+                this.minNodesPerCycle = minNodesPerCycle;
                 return this;
             }
 

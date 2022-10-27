@@ -89,12 +89,12 @@ public class ListContainerImagesRequest extends Request {
             super();
         } 
 
-        private Builder(ListContainerImagesRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.containerType = response.containerType;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
+        private Builder(ListContainerImagesRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.containerType = request.containerType;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
 
         /**

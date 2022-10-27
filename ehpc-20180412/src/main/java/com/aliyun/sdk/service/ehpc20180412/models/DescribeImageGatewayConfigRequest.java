@@ -49,9 +49,9 @@ public class DescribeImageGatewayConfigRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeImageGatewayConfigRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
+        private Builder(DescribeImageGatewayConfigRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
         } 
 
         /**

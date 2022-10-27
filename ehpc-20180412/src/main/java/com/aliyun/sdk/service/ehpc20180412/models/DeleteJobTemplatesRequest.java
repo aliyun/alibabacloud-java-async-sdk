@@ -49,9 +49,9 @@ public class DeleteJobTemplatesRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteJobTemplatesRequest response) {
-            super(response);
-            this.templates = response.templates;
+        private Builder(DeleteJobTemplatesRequest request) {
+            super(request);
+            this.templates = request.templates;
         } 
 
         /**

@@ -77,11 +77,11 @@ public class SetQueueRequest extends Request {
             super();
         } 
 
-        private Builder(SetQueueRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.node = response.node;
-            this.queueName = response.queueName;
+        private Builder(SetQueueRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.node = request.node;
+            this.queueName = request.queueName;
         } 
 
         /**

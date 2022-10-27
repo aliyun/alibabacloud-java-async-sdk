@@ -1,3 +1,6 @@
+2022-10-27 Version: 1.0.1
+- ListNodesByQueue and ListJobsWithFilters add Async.
+
 2022-02-21 Version: 1.0.0
 - Generated java-async 2018-04-12 for EHPC.
 

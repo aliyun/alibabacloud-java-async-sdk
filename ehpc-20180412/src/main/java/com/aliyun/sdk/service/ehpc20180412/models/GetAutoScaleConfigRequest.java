@@ -49,9 +49,9 @@ public class GetAutoScaleConfigRequest extends Request {
             super();
         } 
 
-        private Builder(GetAutoScaleConfigRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
+        private Builder(GetAutoScaleConfigRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
         } 
 
         /**

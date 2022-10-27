@@ -62,10 +62,10 @@ public class GetGWSConnectTicketRequest extends Request {
             super();
         } 
 
-        private Builder(GetGWSConnectTicketRequest response) {
-            super(response);
-            this.appName = response.appName;
-            this.instanceId = response.instanceId;
+        private Builder(GetGWSConnectTicketRequest request) {
+            super(request);
+            this.appName = request.appName;
+            this.instanceId = request.instanceId;
         } 
 
         /**

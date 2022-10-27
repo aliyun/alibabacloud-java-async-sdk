@@ -61,10 +61,10 @@ public class ListImagesRequest extends Request {
             super();
         } 
 
-        private Builder(ListImagesRequest response) {
-            super(response);
-            this.baseOsTag = response.baseOsTag;
-            this.instanceType = response.instanceType;
+        private Builder(ListImagesRequest request) {
+            super(request);
+            this.baseOsTag = request.baseOsTag;
+            this.instanceType = request.instanceType;
         } 
 
         /**

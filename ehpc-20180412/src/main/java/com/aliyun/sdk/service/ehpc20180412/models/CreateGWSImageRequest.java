@@ -62,10 +62,10 @@ public class CreateGWSImageRequest extends Request {
             super();
         } 
 
-        private Builder(CreateGWSImageRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.name = response.name;
+        private Builder(CreateGWSImageRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.name = request.name;
         } 
 
         /**

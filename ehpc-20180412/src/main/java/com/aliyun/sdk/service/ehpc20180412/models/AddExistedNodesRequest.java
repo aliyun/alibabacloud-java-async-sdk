@@ -13,10 +13,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class AddExistedNodesRequest extends Request {
     @Query
-    @NameInMap("ClientToken")
-    private String clientToken;
-
-    @Query
     @NameInMap("ClusterId")
     @Validation(required = true)
     private String clusterId;
@@ -42,7 +38,6 @@ public class AddExistedNodesRequest extends Request {
 
     private AddExistedNodesRequest(Builder builder) {
         super(builder);
-        this.clientToken = builder.clientToken;
         this.clusterId = builder.clusterId;
         this.imageId = builder.imageId;
         this.imageOwnerAlias = builder.imageOwnerAlias;
@@ -61,13 +56,6 @@ public class AddExistedNodesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return clientToken
-     */
-    public String getClientToken() {
-        return this.clientToken;
     }
 
     /**
@@ -106,7 +94,6 @@ public class AddExistedNodesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AddExistedNodesRequest, Builder> {
-        private String clientToken; 
         private String clusterId; 
         private String imageId; 
         private String imageOwnerAlias; 
@@ -117,24 +104,14 @@ public class AddExistedNodesRequest extends Request {
             super();
         } 
 
-        private Builder(AddExistedNodesRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.clusterId = response.clusterId;
-            this.imageId = response.imageId;
-            this.imageOwnerAlias = response.imageOwnerAlias;
-            this.instance = response.instance;
-            this.jobQueue = response.jobQueue;
+        private Builder(AddExistedNodesRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.imageId = request.imageId;
+            this.imageOwnerAlias = request.imageOwnerAlias;
+            this.instance = request.instance;
+            this.jobQueue = request.jobQueue;
         } 
-
-        /**
-         * ClientToken.
-         */
-        public Builder clientToken(String clientToken) {
-            this.putQueryParameter("ClientToken", clientToken);
-            this.clientToken = clientToken;
-            return this;
-        }
 
         /**
          * ClusterId.

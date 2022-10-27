@@ -49,9 +49,9 @@ public class GetVisualServiceStatusRequest extends Request {
             super();
         } 
 
-        private Builder(GetVisualServiceStatusRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
+        private Builder(GetVisualServiceStatusRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
         } 
 
         /**

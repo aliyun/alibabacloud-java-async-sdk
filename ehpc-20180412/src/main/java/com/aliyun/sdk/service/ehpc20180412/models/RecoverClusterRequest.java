@@ -127,15 +127,15 @@ public class RecoverClusterRequest extends Request {
             super();
         } 
 
-        private Builder(RecoverClusterRequest response) {
-            super(response);
-            this.accountType = response.accountType;
-            this.clientVersion = response.clientVersion;
-            this.clusterId = response.clusterId;
-            this.imageId = response.imageId;
-            this.imageOwnerAlias = response.imageOwnerAlias;
-            this.osTag = response.osTag;
-            this.schedulerType = response.schedulerType;
+        private Builder(RecoverClusterRequest request) {
+            super(request);
+            this.accountType = request.accountType;
+            this.clientVersion = request.clientVersion;
+            this.clusterId = request.clusterId;
+            this.imageId = request.imageId;
+            this.imageOwnerAlias = request.imageOwnerAlias;
+            this.osTag = request.osTag;
+            this.schedulerType = request.schedulerType;
         } 
 
         /**

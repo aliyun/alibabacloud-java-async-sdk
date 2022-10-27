@@ -114,14 +114,14 @@ public class DescribeGWSInstancesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeGWSInstancesRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.instanceId = response.instanceId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.userName = response.userName;
-            this.userUid = response.userUid;
+        private Builder(DescribeGWSInstancesRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.instanceId = request.instanceId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.userName = request.userName;
+            this.userUid = request.userUid;
         } 
 
         /**

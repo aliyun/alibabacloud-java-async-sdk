@@ -62,10 +62,10 @@ public class GetHybridClusterConfigRequest extends Request {
             super();
         } 
 
-        private Builder(GetHybridClusterConfigRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.node = response.node;
+        private Builder(GetHybridClusterConfigRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.node = request.node;
         } 
 
         /**

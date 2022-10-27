@@ -49,9 +49,9 @@ public class ListInstalledSoftwareRequest extends Request {
             super();
         } 
 
-        private Builder(ListInstalledSoftwareRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
+        private Builder(ListInstalledSoftwareRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
         } 
 
         /**

@@ -154,17 +154,17 @@ public class GetAccountingReportRequest extends Request {
             super();
         } 
 
-        private Builder(GetAccountingReportRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.dim = response.dim;
-            this.endTime = response.endTime;
-            this.filterValue = response.filterValue;
-            this.jobId = response.jobId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.reportType = response.reportType;
-            this.startTime = response.startTime;
+        private Builder(GetAccountingReportRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.dim = request.dim;
+            this.endTime = request.endTime;
+            this.filterValue = request.filterValue;
+            this.jobId = request.jobId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.reportType = request.reportType;
+            this.startTime = request.startTime;
         } 
 
         /**

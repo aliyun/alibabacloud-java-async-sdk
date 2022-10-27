@@ -780,8 +780,14 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
         @NameInMap("MaxNodesInQueue")
         private Integer maxNodesInQueue;
 
+        @NameInMap("MaxNodesPerCycle")
+        private Long maxNodesPerCycle;
+
         @NameInMap("MinNodesInQueue")
         private Integer minNodesInQueue;
+
+        @NameInMap("MinNodesPerCycle")
+        private Long minNodesPerCycle;
 
         @NameInMap("QueueImageId")
         private String queueImageId;
@@ -816,7 +822,9 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
             this.instanceType = builder.instanceType;
             this.instanceTypes = builder.instanceTypes;
             this.maxNodesInQueue = builder.maxNodesInQueue;
+            this.maxNodesPerCycle = builder.maxNodesPerCycle;
             this.minNodesInQueue = builder.minNodesInQueue;
+            this.minNodesPerCycle = builder.minNodesPerCycle;
             this.queueImageId = builder.queueImageId;
             this.queueName = builder.queueName;
             this.resourceGroupId = builder.resourceGroupId;
@@ -892,10 +900,24 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
+         * @return maxNodesPerCycle
+         */
+        public Long getMaxNodesPerCycle() {
+            return this.maxNodesPerCycle;
+        }
+
+        /**
          * @return minNodesInQueue
          */
         public Integer getMinNodesInQueue() {
             return this.minNodesInQueue;
+        }
+
+        /**
+         * @return minNodesPerCycle
+         */
+        public Long getMinNodesPerCycle() {
+            return this.minNodesPerCycle;
         }
 
         /**
@@ -963,7 +985,9 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
             private String instanceType; 
             private InstanceTypes instanceTypes; 
             private Integer maxNodesInQueue; 
+            private Long maxNodesPerCycle; 
             private Integer minNodesInQueue; 
+            private Long minNodesPerCycle; 
             private String queueImageId; 
             private String queueName; 
             private String resourceGroupId; 
@@ -1038,10 +1062,26 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
             }
 
             /**
+             * MaxNodesPerCycle.
+             */
+            public Builder maxNodesPerCycle(Long maxNodesPerCycle) {
+                this.maxNodesPerCycle = maxNodesPerCycle;
+                return this;
+            }
+
+            /**
              * MinNodesInQueue.
              */
             public Builder minNodesInQueue(Integer minNodesInQueue) {
                 this.minNodesInQueue = minNodesInQueue;
+                return this;
+            }
+
+            /**
+             * MinNodesPerCycle.
+             */
+            public Builder minNodesPerCycle(Long minNodesPerCycle) {
+                this.minNodesPerCycle = minNodesPerCycle;
                 return this;
             }
 

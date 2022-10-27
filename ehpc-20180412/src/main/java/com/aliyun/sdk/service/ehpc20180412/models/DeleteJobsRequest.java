@@ -63,10 +63,10 @@ public class DeleteJobsRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteJobsRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.jobs = response.jobs;
+        private Builder(DeleteJobsRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.jobs = request.jobs;
         } 
 
         /**

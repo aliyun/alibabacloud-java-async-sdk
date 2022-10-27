@@ -14,10 +14,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class SyncUsersRequest extends Request {
     @Query
     @NameInMap("ClusterId")
+    @Validation(required = true)
     private String clusterId;
 
     @Query
     @NameInMap("RegionId")
+    @Validation(required = true)
     private String regionId;
 
     private SyncUsersRequest(Builder builder) {
@@ -61,10 +63,10 @@ public class SyncUsersRequest extends Request {
             super();
         } 
 
-        private Builder(SyncUsersRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.regionId = response.regionId;
+        private Builder(SyncUsersRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.regionId = request.regionId;
         } 
 
         /**

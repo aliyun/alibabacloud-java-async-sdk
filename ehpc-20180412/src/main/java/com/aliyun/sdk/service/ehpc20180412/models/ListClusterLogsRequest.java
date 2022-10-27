@@ -76,11 +76,11 @@ public class ListClusterLogsRequest extends Request {
             super();
         } 
 
-        private Builder(ListClusterLogsRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
+        private Builder(ListClusterLogsRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
 
         /**

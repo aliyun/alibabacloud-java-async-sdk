@@ -49,9 +49,9 @@ public class DeleteGWSInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteGWSInstanceRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
+        private Builder(DeleteGWSInstanceRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
         } 
 
         /**

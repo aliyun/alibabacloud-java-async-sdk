@@ -63,10 +63,10 @@ public class RerunJobsRequest extends Request {
             super();
         } 
 
-        private Builder(RerunJobsRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.jobs = response.jobs;
+        private Builder(RerunJobsRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.jobs = request.jobs;
         } 
 
         /**

@@ -63,10 +63,10 @@ public class UninstallSoftwareRequest extends Request {
             super();
         } 
 
-        private Builder(UninstallSoftwareRequest response) {
-            super(response);
-            this.application = response.application;
-            this.clusterId = response.clusterId;
+        private Builder(UninstallSoftwareRequest request) {
+            super(request);
+            this.application = request.application;
+            this.clusterId = request.clusterId;
         } 
 
         /**

@@ -543,14 +543,14 @@ public class DescribeClusterResponseBody extends TeaModel {
         private String hostName;
 
         @NameInMap("IP")
-        private String IP;
+        private String ip;
 
         @NameInMap("Type")
         private String type;
 
         private OnPremiseInfo(Builder builder) {
             this.hostName = builder.hostName;
-            this.IP = builder.IP;
+            this.ip = builder.ip;
             this.type = builder.type;
         }
 
@@ -570,10 +570,10 @@ public class DescribeClusterResponseBody extends TeaModel {
         }
 
         /**
-         * @return IP
+         * @return ip
          */
-        public String getIP() {
-            return this.IP;
+        public String getIp() {
+            return this.ip;
         }
 
         /**
@@ -585,7 +585,7 @@ public class DescribeClusterResponseBody extends TeaModel {
 
         public static final class Builder {
             private String hostName; 
-            private String IP; 
+            private String ip; 
             private String type; 
 
             /**
@@ -599,8 +599,8 @@ public class DescribeClusterResponseBody extends TeaModel {
             /**
              * IP.
              */
-            public Builder IP(String IP) {
-                this.IP = IP;
+            public Builder ip(String ip) {
+                this.ip = ip;
                 return this;
             }
 

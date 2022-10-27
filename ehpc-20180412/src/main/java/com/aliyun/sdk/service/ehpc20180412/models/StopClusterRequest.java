@@ -49,9 +49,9 @@ public class StopClusterRequest extends Request {
             super();
         } 
 
-        private Builder(StopClusterRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
+        private Builder(StopClusterRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
         } 
 
         /**

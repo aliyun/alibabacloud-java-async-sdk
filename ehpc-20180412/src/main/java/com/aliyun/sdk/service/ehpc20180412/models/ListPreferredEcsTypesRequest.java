@@ -75,11 +75,11 @@ public class ListPreferredEcsTypesRequest extends Request {
             super();
         } 
 
-        private Builder(ListPreferredEcsTypesRequest response) {
-            super(response);
-            this.instanceChargeType = response.instanceChargeType;
-            this.spotStrategy = response.spotStrategy;
-            this.zoneId = response.zoneId;
+        private Builder(ListPreferredEcsTypesRequest request) {
+            super(request);
+            this.instanceChargeType = request.instanceChargeType;
+            this.spotStrategy = request.spotStrategy;
+            this.zoneId = request.zoneId;
         } 
 
         /**

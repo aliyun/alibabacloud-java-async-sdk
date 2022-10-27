@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteImageRequest</p>
  */
 public class DeleteImageRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("ClusterId")
     @Validation(required = true)
@@ -25,10 +29,6 @@ public class DeleteImageRequest extends Request {
     @NameInMap("ImageTag")
     private String imageTag;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("Repository")
     @Validation(required = true)
@@ -36,10 +36,10 @@ public class DeleteImageRequest extends Request {
 
     private DeleteImageRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.clusterId = builder.clusterId;
         this.containerType = builder.containerType;
         this.imageTag = builder.imageTag;
-        this.regionId = builder.regionId;
         this.repository = builder.repository;
     }
 
@@ -54,6 +54,13 @@ public class DeleteImageRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -78,13 +85,6 @@ public class DeleteImageRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return repository
      */
     public String getRepository() {
@@ -92,24 +92,33 @@ public class DeleteImageRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteImageRequest, Builder> {
+        private String regionId; 
         private String clusterId; 
         private String containerType; 
         private String imageTag; 
-        private String regionId; 
         private String repository; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DeleteImageRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.containerType = response.containerType;
-            this.imageTag = response.imageTag;
-            this.regionId = response.regionId;
-            this.repository = response.repository;
+        private Builder(DeleteImageRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.clusterId = request.clusterId;
+            this.containerType = request.containerType;
+            this.imageTag = request.imageTag;
+            this.repository = request.repository;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * ClusterId.
@@ -135,15 +144,6 @@ public class DeleteImageRequest extends Request {
         public Builder imageTag(String imageTag) {
             this.putQueryParameter("ImageTag", imageTag);
             this.imageTag = imageTag;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

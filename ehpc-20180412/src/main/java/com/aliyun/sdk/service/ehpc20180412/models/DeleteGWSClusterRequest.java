@@ -49,9 +49,9 @@ public class DeleteGWSClusterRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteGWSClusterRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
+        private Builder(DeleteGWSClusterRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
         } 
 
         /**

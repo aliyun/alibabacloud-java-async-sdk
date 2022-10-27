@@ -35,8 +35,8 @@ public class QueryServicePackAndPriceRequest extends Request {
             super();
         } 
 
-        private Builder(QueryServicePackAndPriceRequest response) {
-            super(response);
+        private Builder(QueryServicePackAndPriceRequest request) {
+            super(request);
         } 
 
         @Override

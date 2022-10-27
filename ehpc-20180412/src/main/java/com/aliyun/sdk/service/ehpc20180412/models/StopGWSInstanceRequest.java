@@ -49,9 +49,9 @@ public class StopGWSInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(StopGWSInstanceRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
+        private Builder(StopGWSInstanceRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
         } 
 
         /**

@@ -49,9 +49,9 @@ public class ListSecurityGroupsRequest extends Request {
             super();
         } 
 
-        private Builder(ListSecurityGroupsRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
+        private Builder(ListSecurityGroupsRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
         } 
 
         /**

@@ -63,10 +63,10 @@ public class DescribeJobRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeJobRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.jobId = response.jobId;
+        private Builder(DescribeJobRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.jobId = request.jobId;
         } 
 
         /**

@@ -63,10 +63,10 @@ public class StopJobsRequest extends Request {
             super();
         } 
 
-        private Builder(StopJobsRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.jobs = response.jobs;
+        private Builder(StopJobsRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.jobs = request.jobs;
         } 
 
         /**

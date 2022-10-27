@@ -62,10 +62,10 @@ public class ListVolumesRequest extends Request {
             super();
         } 
 
-        private Builder(ListVolumesRequest response) {
-            super(response);
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
+        private Builder(ListVolumesRequest request) {
+            super(request);
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
 
         /**

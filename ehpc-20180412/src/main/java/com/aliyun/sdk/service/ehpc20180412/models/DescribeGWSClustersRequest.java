@@ -75,11 +75,11 @@ public class DescribeGWSClustersRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeGWSClustersRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
+        private Builder(DescribeGWSClustersRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
 
         /**

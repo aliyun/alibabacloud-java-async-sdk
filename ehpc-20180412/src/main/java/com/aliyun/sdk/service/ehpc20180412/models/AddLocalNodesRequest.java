@@ -22,10 +22,15 @@ public class AddLocalNodesRequest extends Request {
     @Validation(required = true)
     private String nodes;
 
+    @Query
+    @NameInMap("Queue")
+    private String queue;
+
     private AddLocalNodesRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
         this.nodes = builder.nodes;
+        this.queue = builder.queue;
     }
 
     public static Builder builder() {
@@ -55,18 +60,27 @@ public class AddLocalNodesRequest extends Request {
         return this.nodes;
     }
 
+    /**
+     * @return queue
+     */
+    public String getQueue() {
+        return this.queue;
+    }
+
     public static final class Builder extends Request.Builder<AddLocalNodesRequest, Builder> {
         private String clusterId; 
         private String nodes; 
+        private String queue; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(AddLocalNodesRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.nodes = response.nodes;
+        private Builder(AddLocalNodesRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.nodes = request.nodes;
+            this.queue = request.queue;
         } 
 
         /**
@@ -84,6 +98,15 @@ public class AddLocalNodesRequest extends Request {
         public Builder nodes(String nodes) {
             this.putQueryParameter("Nodes", nodes);
             this.nodes = nodes;
+            return this;
+        }
+
+        /**
+         * Queue.
+         */
+        public Builder queue(String queue) {
+            this.putQueryParameter("Queue", queue);
+            this.queue = queue;
             return this;
         }
 

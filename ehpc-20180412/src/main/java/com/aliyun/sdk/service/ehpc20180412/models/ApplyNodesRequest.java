@@ -393,35 +393,35 @@ public class ApplyNodesRequest extends Request {
             super();
         } 
 
-        private Builder(ApplyNodesRequest response) {
-            super(response);
-            this.allocatePublicAddress = response.allocatePublicAddress;
-            this.clusterId = response.clusterId;
-            this.computeSpotPriceLimit = response.computeSpotPriceLimit;
-            this.computeSpotStrategy = response.computeSpotStrategy;
-            this.cores = response.cores;
-            this.hostNamePrefix = response.hostNamePrefix;
-            this.hostNameSuffix = response.hostNameSuffix;
-            this.imageId = response.imageId;
-            this.instanceFamilyLevel = response.instanceFamilyLevel;
-            this.instanceTypeModel = response.instanceTypeModel;
-            this.internetChargeType = response.internetChargeType;
-            this.internetMaxBandWidthIn = response.internetMaxBandWidthIn;
-            this.internetMaxBandWidthOut = response.internetMaxBandWidthOut;
-            this.interval = response.interval;
-            this.jobQueue = response.jobQueue;
-            this.memory = response.memory;
-            this.priorityStrategy = response.priorityStrategy;
-            this.resourceAmountType = response.resourceAmountType;
-            this.round = response.round;
-            this.strictResourceProvision = response.strictResourceProvision;
-            this.strictSatisfiedTargetCapacity = response.strictSatisfiedTargetCapacity;
-            this.systemDiskLevel = response.systemDiskLevel;
-            this.systemDiskSize = response.systemDiskSize;
-            this.systemDiskType = response.systemDiskType;
-            this.tag = response.tag;
-            this.targetCapacity = response.targetCapacity;
-            this.zoneInfos = response.zoneInfos;
+        private Builder(ApplyNodesRequest request) {
+            super(request);
+            this.allocatePublicAddress = request.allocatePublicAddress;
+            this.clusterId = request.clusterId;
+            this.computeSpotPriceLimit = request.computeSpotPriceLimit;
+            this.computeSpotStrategy = request.computeSpotStrategy;
+            this.cores = request.cores;
+            this.hostNamePrefix = request.hostNamePrefix;
+            this.hostNameSuffix = request.hostNameSuffix;
+            this.imageId = request.imageId;
+            this.instanceFamilyLevel = request.instanceFamilyLevel;
+            this.instanceTypeModel = request.instanceTypeModel;
+            this.internetChargeType = request.internetChargeType;
+            this.internetMaxBandWidthIn = request.internetMaxBandWidthIn;
+            this.internetMaxBandWidthOut = request.internetMaxBandWidthOut;
+            this.interval = request.interval;
+            this.jobQueue = request.jobQueue;
+            this.memory = request.memory;
+            this.priorityStrategy = request.priorityStrategy;
+            this.resourceAmountType = request.resourceAmountType;
+            this.round = request.round;
+            this.strictResourceProvision = request.strictResourceProvision;
+            this.strictSatisfiedTargetCapacity = request.strictSatisfiedTargetCapacity;
+            this.systemDiskLevel = request.systemDiskLevel;
+            this.systemDiskSize = request.systemDiskSize;
+            this.systemDiskType = request.systemDiskType;
+            this.tag = request.tag;
+            this.targetCapacity = request.targetCapacity;
+            this.zoneInfos = request.zoneInfos;
         } 
 
         /**
