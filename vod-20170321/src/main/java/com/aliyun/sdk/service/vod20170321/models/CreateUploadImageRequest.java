@@ -34,6 +34,10 @@ public class CreateUploadImageRequest extends Request {
     private String imageType;
 
     @Query
+    @NameInMap("OriginalFileName")
+    private String originalFileName;
+
+    @Query
     @NameInMap("StorageLocation")
     private String storageLocation;
 
@@ -56,6 +60,7 @@ public class CreateUploadImageRequest extends Request {
         this.description = builder.description;
         this.imageExt = builder.imageExt;
         this.imageType = builder.imageType;
+        this.originalFileName = builder.originalFileName;
         this.storageLocation = builder.storageLocation;
         this.tags = builder.tags;
         this.title = builder.title;
@@ -111,6 +116,13 @@ public class CreateUploadImageRequest extends Request {
     }
 
     /**
+     * @return originalFileName
+     */
+    public String getOriginalFileName() {
+        return this.originalFileName;
+    }
+
+    /**
      * @return storageLocation
      */
     public String getStorageLocation() {
@@ -144,6 +156,7 @@ public class CreateUploadImageRequest extends Request {
         private String description; 
         private String imageExt; 
         private String imageType; 
+        private String originalFileName; 
         private String storageLocation; 
         private String tags; 
         private String title; 
@@ -160,6 +173,7 @@ public class CreateUploadImageRequest extends Request {
             this.description = request.description;
             this.imageExt = request.imageExt;
             this.imageType = request.imageType;
+            this.originalFileName = request.originalFileName;
             this.storageLocation = request.storageLocation;
             this.tags = request.tags;
             this.title = request.title;
@@ -208,6 +222,15 @@ public class CreateUploadImageRequest extends Request {
         public Builder imageType(String imageType) {
             this.putQueryParameter("ImageType", imageType);
             this.imageType = imageType;
+            return this;
+        }
+
+        /**
+         * OriginalFileName.
+         */
+        public Builder originalFileName(String originalFileName) {
+            this.putQueryParameter("OriginalFileName", originalFileName);
+            this.originalFileName = originalFileName;
             return this;
         }
 
