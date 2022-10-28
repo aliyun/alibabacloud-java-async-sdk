@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListStackOperationRisksResponseBody</p>
  */
 public class ListStackOperationRisksResponseBody extends TeaModel {
+    @NameInMap("MissingPolicyActions")
+    private java.util.List < String > missingPolicyActions;
+
     @NameInMap("RequestId")
     private String requestId;
 
@@ -19,6 +22,7 @@ public class ListStackOperationRisksResponseBody extends TeaModel {
     private java.util.List < RiskResources> riskResources;
 
     private ListStackOperationRisksResponseBody(Builder builder) {
+        this.missingPolicyActions = builder.missingPolicyActions;
         this.requestId = builder.requestId;
         this.riskResources = builder.riskResources;
     }
@@ -29,6 +33,13 @@ public class ListStackOperationRisksResponseBody extends TeaModel {
 
     public static ListStackOperationRisksResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return missingPolicyActions
+     */
+    public java.util.List < String > getMissingPolicyActions() {
+        return this.missingPolicyActions;
     }
 
     /**
@@ -46,8 +57,17 @@ public class ListStackOperationRisksResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private java.util.List < String > missingPolicyActions; 
         private String requestId; 
         private java.util.List < RiskResources> riskResources; 
+
+        /**
+         * MissingPolicyActions.
+         */
+        public Builder missingPolicyActions(java.util.List < String > missingPolicyActions) {
+            this.missingPolicyActions = missingPolicyActions;
+            return this;
+        }
 
         /**
          * RequestId.

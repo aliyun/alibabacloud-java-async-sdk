@@ -21,6 +21,10 @@ public class CreateTemplateRequest extends Request {
     private String resourceGroupId;
 
     @Query
+    @NameInMap("Tags")
+    private java.util.List < Tags> tags;
+
+    @Query
     @NameInMap("TemplateBody")
     private String templateBody;
 
@@ -37,6 +41,7 @@ public class CreateTemplateRequest extends Request {
         super(builder);
         this.description = builder.description;
         this.resourceGroupId = builder.resourceGroupId;
+        this.tags = builder.tags;
         this.templateBody = builder.templateBody;
         this.templateName = builder.templateName;
         this.templateURL = builder.templateURL;
@@ -70,6 +75,13 @@ public class CreateTemplateRequest extends Request {
     }
 
     /**
+     * @return tags
+     */
+    public java.util.List < Tags> getTags() {
+        return this.tags;
+    }
+
+    /**
      * @return templateBody
      */
     public String getTemplateBody() {
@@ -93,6 +105,7 @@ public class CreateTemplateRequest extends Request {
     public static final class Builder extends Request.Builder<CreateTemplateRequest, Builder> {
         private String description; 
         private String resourceGroupId; 
+        private java.util.List < Tags> tags; 
         private String templateBody; 
         private String templateName; 
         private String templateURL; 
@@ -105,6 +118,7 @@ public class CreateTemplateRequest extends Request {
             super(request);
             this.description = request.description;
             this.resourceGroupId = request.resourceGroupId;
+            this.tags = request.tags;
             this.templateBody = request.templateBody;
             this.templateName = request.templateName;
             this.templateURL = request.templateURL;
@@ -125,6 +139,15 @@ public class CreateTemplateRequest extends Request {
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
             this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * Tags.
+         */
+        public Builder tags(java.util.List < Tags> tags) {
+            this.putQueryParameter("Tags", tags);
+            this.tags = tags;
             return this;
         }
 
@@ -162,4 +185,66 @@ public class CreateTemplateRequest extends Request {
 
     } 
 
+    public static class Tags extends TeaModel {
+        @NameInMap("Key")
+        @Validation(required = true)
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
 }

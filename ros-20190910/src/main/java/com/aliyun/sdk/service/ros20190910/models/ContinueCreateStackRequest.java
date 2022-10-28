@@ -33,6 +33,10 @@ public class ContinueCreateStackRequest extends Request {
     private String ramRoleName;
 
     @Query
+    @NameInMap("RecreatingOptions")
+    private java.util.List < String > recreatingOptions;
+
+    @Query
     @NameInMap("RecreatingResources")
     private java.util.List < String > recreatingResources;
 
@@ -69,6 +73,7 @@ public class ContinueCreateStackRequest extends Request {
         this.parallelism = builder.parallelism;
         this.parameters = builder.parameters;
         this.ramRoleName = builder.ramRoleName;
+        this.recreatingOptions = builder.recreatingOptions;
         this.recreatingResources = builder.recreatingResources;
         this.regionId = builder.regionId;
         this.stackId = builder.stackId;
@@ -127,6 +132,13 @@ public class ContinueCreateStackRequest extends Request {
     }
 
     /**
+     * @return recreatingOptions
+     */
+    public java.util.List < String > getRecreatingOptions() {
+        return this.recreatingOptions;
+    }
+
+    /**
      * @return recreatingResources
      */
     public java.util.List < String > getRecreatingResources() {
@@ -181,6 +193,7 @@ public class ContinueCreateStackRequest extends Request {
         private Long parallelism; 
         private java.util.List < Parameters> parameters; 
         private String ramRoleName; 
+        private java.util.List < String > recreatingOptions; 
         private java.util.List < String > recreatingResources; 
         private String regionId; 
         private String stackId; 
@@ -200,6 +213,7 @@ public class ContinueCreateStackRequest extends Request {
             this.parallelism = request.parallelism;
             this.parameters = request.parameters;
             this.ramRoleName = request.ramRoleName;
+            this.recreatingOptions = request.recreatingOptions;
             this.recreatingResources = request.recreatingResources;
             this.regionId = request.regionId;
             this.stackId = request.stackId;
@@ -251,6 +265,15 @@ public class ContinueCreateStackRequest extends Request {
         public Builder ramRoleName(String ramRoleName) {
             this.putQueryParameter("RamRoleName", ramRoleName);
             this.ramRoleName = ramRoleName;
+            return this;
+        }
+
+        /**
+         * RecreatingOptions.
+         */
+        public Builder recreatingOptions(java.util.List < String > recreatingOptions) {
+            this.putQueryParameter("RecreatingOptions", recreatingOptions);
+            this.recreatingOptions = recreatingOptions;
             return this;
         }
 

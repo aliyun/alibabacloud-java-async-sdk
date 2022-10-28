@@ -55,6 +55,10 @@ public class CreateStackGroupRequest extends Request {
     private String stackGroupName;
 
     @Query
+    @NameInMap("Tags")
+    private java.util.List < Tags> tags;
+
+    @Query
     @NameInMap("TemplateBody")
     private String templateBody;
 
@@ -82,6 +86,7 @@ public class CreateStackGroupRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.stackGroupName = builder.stackGroupName;
+        this.tags = builder.tags;
         this.templateBody = builder.templateBody;
         this.templateId = builder.templateId;
         this.templateURL = builder.templateURL;
@@ -172,6 +177,13 @@ public class CreateStackGroupRequest extends Request {
     }
 
     /**
+     * @return tags
+     */
+    public java.util.List < Tags> getTags() {
+        return this.tags;
+    }
+
+    /**
      * @return templateBody
      */
     public String getTemplateBody() {
@@ -210,6 +222,7 @@ public class CreateStackGroupRequest extends Request {
         private String regionId; 
         private String resourceGroupId; 
         private String stackGroupName; 
+        private java.util.List < Tags> tags; 
         private String templateBody; 
         private String templateId; 
         private String templateURL; 
@@ -231,6 +244,7 @@ public class CreateStackGroupRequest extends Request {
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
             this.stackGroupName = request.stackGroupName;
+            this.tags = request.tags;
             this.templateBody = request.templateBody;
             this.templateId = request.templateId;
             this.templateURL = request.templateURL;
@@ -325,6 +339,15 @@ public class CreateStackGroupRequest extends Request {
         public Builder stackGroupName(String stackGroupName) {
             this.putQueryParameter("StackGroupName", stackGroupName);
             this.stackGroupName = stackGroupName;
+            return this;
+        }
+
+        /**
+         * Tags.
+         */
+        public Builder tags(java.util.List < Tags> tags) {
+            this.putQueryParameter("Tags", tags);
+            this.tags = tags;
             return this;
         }
 
@@ -490,6 +513,68 @@ public class CreateStackGroupRequest extends Request {
 
             public Parameters build() {
                 return new Parameters(this);
+            } 
+
+        } 
+
+    }
+    public static class Tags extends TeaModel {
+        @NameInMap("Key")
+        @Validation(required = true)
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
             } 
 
         } 

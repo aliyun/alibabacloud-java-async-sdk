@@ -103,6 +103,7 @@ com/aliyun/sdk/service/ros20190910/models/GetFeatureDetailsResponseBody$Terrafor
 com/aliyun/sdk/service/ros20190910/models/DescribeRegionsResponse.class
 com/aliyun/sdk/service/ros20190910/models/UpdateTemplateResponseBody.class
 com/aliyun/sdk/service/ros20190910/models/UpdateTemplateScratchRequest$SourceTag.class
+com/aliyun/sdk/service/ros20190910/models/CreateStackGroupRequest$Tags$Builder.class
 com/aliyun/sdk/service/ros20190910/models/CreateChangeSetRequest.class
 com/aliyun/sdk/service/ros20190910/models/SetTemplatePermissionResponseBody$1.class
 com/aliyun/sdk/service/ros20190910/models/UntagResourcesResponse$BuilderImpl.class
@@ -419,6 +420,7 @@ com/aliyun/sdk/service/ros20190910/models/GetFeatureDetailsRequest$Builder.class
 com/aliyun/sdk/service/ros20190910/models/GetStackGroupOperationRequest$Builder.class
 com/aliyun/sdk/service/ros20190910/models/ValidateTemplateResponseBody$ResourceTypes$Builder.class
 com/aliyun/sdk/service/ros20190910/models/CreateStackGroupRequest.class
+com/aliyun/sdk/service/ros20190910/models/CreateTemplateRequest$Tags$Builder.class
 com/aliyun/sdk/service/ros20190910/models/GetStackPolicyResponseBody.class
 com/aliyun/sdk/service/ros20190910/models/UpdateStackInstancesRequest$ParameterOverrides$Builder.class
 com/aliyun/sdk/service/ros20190910/models/ListStackResourceDriftsResponse$1.class
@@ -498,6 +500,7 @@ com/aliyun/sdk/service/ros20190910/models/SetTemplatePermissionResponseBody.clas
 com/aliyun/sdk/service/ros20190910/models/ListStackGroupOperationsResponse$Builder.class
 com/aliyun/sdk/service/ros20190910/models/UpdateStackGroupRequest$Parameters.class
 com/aliyun/sdk/service/ros20190910/models/DetectStackDriftResponseBody$1.class
+com/aliyun/sdk/service/ros20190910/models/CreateStackGroupRequest$Tags.class
 com/aliyun/sdk/service/ros20190910/models/DeleteTemplateScratchRequest$Builder.class
 com/aliyun/sdk/service/ros20190910/models/ListStackResourceDriftsRequest$1.class
 com/aliyun/sdk/service/ros20190910/models/CreateTemplateResponse$1.class
@@ -700,6 +703,7 @@ com/aliyun/sdk/service/ros20190910/models/SetDeletionProtectionResponse$BuilderI
 com/aliyun/sdk/service/ros20190910/models/GetResourceTypeTemplateRequest.class
 com/aliyun/sdk/service/ros20190910/models/CreateTemplateScratchResponseBody$1.class
 com/aliyun/sdk/service/ros20190910/models/ListStackOperationRisksResponseBody$RiskResources.class
+com/aliyun/sdk/service/ros20190910/models/GetServiceProvisionsResponseBody$ApiForCreation.class
 com/aliyun/sdk/service/ros20190910/models/ListChangeSetsResponse$1.class
 com/aliyun/sdk/service/ros20190910/models/ListStackResourceDriftsResponseBody$ResourceDrifts$Builder.class
 com/aliyun/sdk/service/ros20190910/models/DeleteTemplateScratchResponseBody.class
@@ -806,6 +810,7 @@ com/aliyun/sdk/service/ros20190910/models/ListStackOperationRisksResponse.class
 com/aliyun/sdk/service/ros20190910/models/GetStackGroupResponseBody$Parameters.class
 com/aliyun/sdk/service/ros20190910/models/ValidateTemplateResponseBody$ResourceTypes.class
 com/aliyun/sdk/service/ros20190910/models/ListStackOperationRisksRequest$1.class
+com/aliyun/sdk/service/ros20190910/models/CreateTemplateRequest$Tags.class
 com/aliyun/sdk/service/ros20190910/models/ExecuteChangeSetResponse.class
 com/aliyun/sdk/service/ros20190910/models/GetStackGroupOperationRequest.class
 com/aliyun/sdk/service/ros20190910/models/SetTemplatePermissionRequest$Builder.class
@@ -916,6 +921,7 @@ com/aliyun/sdk/service/ros20190910/models/DeleteChangeSetResponseBody.class
 com/aliyun/sdk/service/ros20190910/models/GetTemplateScratchResponseBody$SourceTag$Builder.class
 com/aliyun/sdk/service/ros20190910/models/GetResourceTypeTemplateResponse.class
 com/aliyun/sdk/service/ros20190910/models/ListStackResourceDriftsResponse$BuilderImpl.class
+com/aliyun/sdk/service/ros20190910/models/GetServiceProvisionsResponseBody$ApiForCreation$Builder.class
 com/aliyun/sdk/service/ros20190910/models/UpdateTemplateScratchResponseBody$Builder.class
 com/aliyun/sdk/service/ros20190910/models/ListStackResourcesResponse$BuilderImpl.class
 com/aliyun/sdk/service/ros20190910/models/UpdateTemplateResponse$Builder.class

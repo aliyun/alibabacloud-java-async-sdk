@@ -71,7 +71,111 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
 
     } 
 
+    public static class ApiForCreation extends TeaModel {
+        @NameInMap("ApiName")
+        private String apiName;
+
+        @NameInMap("ApiProductId")
+        private String apiProductId;
+
+        @NameInMap("ApiType")
+        private String apiType;
+
+        @NameInMap("Parameters")
+        private java.util.Map < String, ? > parameters;
+
+        private ApiForCreation(Builder builder) {
+            this.apiName = builder.apiName;
+            this.apiProductId = builder.apiProductId;
+            this.apiType = builder.apiType;
+            this.parameters = builder.parameters;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ApiForCreation create() {
+            return builder().build();
+        }
+
+        /**
+         * @return apiName
+         */
+        public String getApiName() {
+            return this.apiName;
+        }
+
+        /**
+         * @return apiProductId
+         */
+        public String getApiProductId() {
+            return this.apiProductId;
+        }
+
+        /**
+         * @return apiType
+         */
+        public String getApiType() {
+            return this.apiType;
+        }
+
+        /**
+         * @return parameters
+         */
+        public java.util.Map < String, ? > getParameters() {
+            return this.parameters;
+        }
+
+        public static final class Builder {
+            private String apiName; 
+            private String apiProductId; 
+            private String apiType; 
+            private java.util.Map < String, ? > parameters; 
+
+            /**
+             * ApiName.
+             */
+            public Builder apiName(String apiName) {
+                this.apiName = apiName;
+                return this;
+            }
+
+            /**
+             * ApiProductId.
+             */
+            public Builder apiProductId(String apiProductId) {
+                this.apiProductId = apiProductId;
+                return this;
+            }
+
+            /**
+             * ApiType.
+             */
+            public Builder apiType(String apiType) {
+                this.apiType = apiType;
+                return this;
+            }
+
+            /**
+             * Parameters.
+             */
+            public Builder parameters(java.util.Map < String, ? > parameters) {
+                this.parameters = parameters;
+                return this;
+            }
+
+            public ApiForCreation build() {
+                return new ApiForCreation(this);
+            } 
+
+        } 
+
+    }
     public static class Roles extends TeaModel {
+        @NameInMap("ApiForCreation")
+        private ApiForCreation apiForCreation;
+
         @NameInMap("Created")
         private Boolean created;
 
@@ -82,6 +186,7 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
         private String roleName;
 
         private Roles(Builder builder) {
+            this.apiForCreation = builder.apiForCreation;
             this.created = builder.created;
             this.function = builder.function;
             this.roleName = builder.roleName;
@@ -93,6 +198,13 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
 
         public static Roles create() {
             return builder().build();
+        }
+
+        /**
+         * @return apiForCreation
+         */
+        public ApiForCreation getApiForCreation() {
+            return this.apiForCreation;
         }
 
         /**
@@ -117,9 +229,18 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private ApiForCreation apiForCreation; 
             private Boolean created; 
             private String function; 
             private String roleName; 
+
+            /**
+             * ApiForCreation.
+             */
+            public Builder apiForCreation(ApiForCreation apiForCreation) {
+                this.apiForCreation = apiForCreation;
+                return this;
+            }
 
             /**
              * Created.

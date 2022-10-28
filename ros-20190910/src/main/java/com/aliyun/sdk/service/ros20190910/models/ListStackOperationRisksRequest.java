@@ -39,8 +39,23 @@ public class ListStackOperationRisksRequest extends Request {
 
     @Query
     @NameInMap("StackId")
-    @Validation(required = true)
     private String stackId;
+
+    @Query
+    @NameInMap("TemplateBody")
+    private String templateBody;
+
+    @Query
+    @NameInMap("TemplateId")
+    private String templateId;
+
+    @Query
+    @NameInMap("TemplateURL")
+    private String templateURL;
+
+    @Query
+    @NameInMap("TemplateVersion")
+    private String templateVersion;
 
     private ListStackOperationRisksRequest(Builder builder) {
         super(builder);
@@ -51,6 +66,10 @@ public class ListStackOperationRisksRequest extends Request {
         this.retainAllResources = builder.retainAllResources;
         this.retainResources = builder.retainResources;
         this.stackId = builder.stackId;
+        this.templateBody = builder.templateBody;
+        this.templateId = builder.templateId;
+        this.templateURL = builder.templateURL;
+        this.templateVersion = builder.templateVersion;
     }
 
     public static Builder builder() {
@@ -115,6 +134,34 @@ public class ListStackOperationRisksRequest extends Request {
         return this.stackId;
     }
 
+    /**
+     * @return templateBody
+     */
+    public String getTemplateBody() {
+        return this.templateBody;
+    }
+
+    /**
+     * @return templateId
+     */
+    public String getTemplateId() {
+        return this.templateId;
+    }
+
+    /**
+     * @return templateURL
+     */
+    public String getTemplateURL() {
+        return this.templateURL;
+    }
+
+    /**
+     * @return templateVersion
+     */
+    public String getTemplateVersion() {
+        return this.templateVersion;
+    }
+
     public static final class Builder extends Request.Builder<ListStackOperationRisksRequest, Builder> {
         private String clientToken; 
         private String operationType; 
@@ -123,6 +170,10 @@ public class ListStackOperationRisksRequest extends Request {
         private Boolean retainAllResources; 
         private java.util.List < String > retainResources; 
         private String stackId; 
+        private String templateBody; 
+        private String templateId; 
+        private String templateURL; 
+        private String templateVersion; 
 
         private Builder() {
             super();
@@ -137,6 +188,10 @@ public class ListStackOperationRisksRequest extends Request {
             this.retainAllResources = request.retainAllResources;
             this.retainResources = request.retainResources;
             this.stackId = request.stackId;
+            this.templateBody = request.templateBody;
+            this.templateId = request.templateId;
+            this.templateURL = request.templateURL;
+            this.templateVersion = request.templateVersion;
         } 
 
         /**
@@ -199,6 +254,42 @@ public class ListStackOperationRisksRequest extends Request {
         public Builder stackId(String stackId) {
             this.putQueryParameter("StackId", stackId);
             this.stackId = stackId;
+            return this;
+        }
+
+        /**
+         * TemplateBody.
+         */
+        public Builder templateBody(String templateBody) {
+            this.putQueryParameter("TemplateBody", templateBody);
+            this.templateBody = templateBody;
+            return this;
+        }
+
+        /**
+         * TemplateId.
+         */
+        public Builder templateId(String templateId) {
+            this.putQueryParameter("TemplateId", templateId);
+            this.templateId = templateId;
+            return this;
+        }
+
+        /**
+         * TemplateURL.
+         */
+        public Builder templateURL(String templateURL) {
+            this.putQueryParameter("TemplateURL", templateURL);
+            this.templateURL = templateURL;
+            return this;
+        }
+
+        /**
+         * TemplateVersion.
+         */
+        public Builder templateVersion(String templateVersion) {
+            this.putQueryParameter("TemplateVersion", templateVersion);
+            this.templateVersion = templateVersion;
             return this;
         }
 
