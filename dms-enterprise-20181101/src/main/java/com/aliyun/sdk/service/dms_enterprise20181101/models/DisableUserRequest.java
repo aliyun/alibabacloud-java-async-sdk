@@ -75,11 +75,11 @@ public class DisableUserRequest extends Request {
             super();
         } 
 
-        private Builder(DisableUserRequest response) {
-            super(response);
-            this.regionId = response.regionId;
-            this.tid = response.tid;
-            this.uid = response.uid;
+        private Builder(DisableUserRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.tid = request.tid;
+            this.uid = request.uid;
         } 
 
         /**

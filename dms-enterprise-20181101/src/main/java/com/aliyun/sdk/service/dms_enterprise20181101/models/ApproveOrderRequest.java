@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ApproveOrderRequest</p>
  */
 public class ApproveOrderRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("ApprovalType")
     @Validation(required = true)
@@ -20,10 +24,6 @@ public class ApproveOrderRequest extends Request {
     @Query
     @NameInMap("Comment")
     private String comment;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Query
     @NameInMap("Tid")
@@ -36,9 +36,9 @@ public class ApproveOrderRequest extends Request {
 
     private ApproveOrderRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.approvalType = builder.approvalType;
         this.comment = builder.comment;
-        this.regionId = builder.regionId;
         this.tid = builder.tid;
         this.workflowInstanceId = builder.workflowInstanceId;
     }
@@ -57,6 +57,13 @@ public class ApproveOrderRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return approvalType
      */
     public String getApprovalType() {
@@ -68,13 +75,6 @@ public class ApproveOrderRequest extends Request {
      */
     public String getComment() {
         return this.comment;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -92,9 +92,9 @@ public class ApproveOrderRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ApproveOrderRequest, Builder> {
+        private String regionId; 
         private String approvalType; 
         private String comment; 
-        private String regionId; 
         private Long tid; 
         private Long workflowInstanceId; 
 
@@ -102,14 +102,23 @@ public class ApproveOrderRequest extends Request {
             super();
         } 
 
-        private Builder(ApproveOrderRequest response) {
-            super(response);
-            this.approvalType = response.approvalType;
-            this.comment = response.comment;
-            this.regionId = response.regionId;
-            this.tid = response.tid;
-            this.workflowInstanceId = response.workflowInstanceId;
+        private Builder(ApproveOrderRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.approvalType = request.approvalType;
+            this.comment = request.comment;
+            this.tid = request.tid;
+            this.workflowInstanceId = request.workflowInstanceId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * ApprovalType.
@@ -126,15 +135,6 @@ public class ApproveOrderRequest extends Request {
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
             this.comment = comment;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

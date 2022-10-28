@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDBTaskSQLJobDetailRequest</p>
  */
 public class ListDBTaskSQLJobDetailRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("JobId")
     @Validation(required = true, minimum = 1)
@@ -25,10 +29,6 @@ public class ListDBTaskSQLJobDetailRequest extends Request {
     @NameInMap("PageSize")
     private Long pageSize;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("Tid")
     @Validation(minimum = 1)
@@ -36,10 +36,10 @@ public class ListDBTaskSQLJobDetailRequest extends Request {
 
     private ListDBTaskSQLJobDetailRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.jobId = builder.jobId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
         this.tid = builder.tid;
     }
 
@@ -54,6 +54,13 @@ public class ListDBTaskSQLJobDetailRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -78,13 +85,6 @@ public class ListDBTaskSQLJobDetailRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return tid
      */
     public Long getTid() {
@@ -92,24 +92,33 @@ public class ListDBTaskSQLJobDetailRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListDBTaskSQLJobDetailRequest, Builder> {
+        private String regionId; 
         private Long jobId; 
         private Long pageNumber; 
         private Long pageSize; 
-        private String regionId; 
         private Long tid; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListDBTaskSQLJobDetailRequest response) {
-            super(response);
-            this.jobId = response.jobId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.tid = response.tid;
+        private Builder(ListDBTaskSQLJobDetailRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.jobId = request.jobId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.tid = request.tid;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * JobId.
@@ -135,15 +144,6 @@ public class ListDBTaskSQLJobDetailRequest extends Request {
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

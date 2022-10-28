@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ExecuteScriptRequest</p>
  */
 public class ExecuteScriptRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("DbId")
     @Validation(required = true, minimum = 1)
@@ -21,10 +25,6 @@ public class ExecuteScriptRequest extends Request {
     @NameInMap("Logic")
     @Validation(required = true)
     private Boolean logic;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Query
     @NameInMap("Script")
@@ -37,9 +37,9 @@ public class ExecuteScriptRequest extends Request {
 
     private ExecuteScriptRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.dbId = builder.dbId;
         this.logic = builder.logic;
-        this.regionId = builder.regionId;
         this.script = builder.script;
         this.tid = builder.tid;
     }
@@ -58,6 +58,13 @@ public class ExecuteScriptRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return dbId
      */
     public Integer getDbId() {
@@ -69,13 +76,6 @@ public class ExecuteScriptRequest extends Request {
      */
     public Boolean getLogic() {
         return this.logic;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -93,9 +93,9 @@ public class ExecuteScriptRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ExecuteScriptRequest, Builder> {
+        private String regionId; 
         private Integer dbId; 
         private Boolean logic; 
-        private String regionId; 
         private String script; 
         private Long tid; 
 
@@ -103,14 +103,23 @@ public class ExecuteScriptRequest extends Request {
             super();
         } 
 
-        private Builder(ExecuteScriptRequest response) {
-            super(response);
-            this.dbId = response.dbId;
-            this.logic = response.logic;
-            this.regionId = response.regionId;
-            this.script = response.script;
-            this.tid = response.tid;
+        private Builder(ExecuteScriptRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.dbId = request.dbId;
+            this.logic = request.logic;
+            this.script = request.script;
+            this.tid = request.tid;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * DbId.
@@ -127,15 +136,6 @@ public class ExecuteScriptRequest extends Request {
         public Builder logic(Boolean logic) {
             this.putQueryParameter("Logic", logic);
             this.logic = logic;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

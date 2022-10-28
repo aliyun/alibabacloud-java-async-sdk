@@ -75,11 +75,11 @@ public class GetApprovalDetailRequest extends Request {
             super();
         } 
 
-        private Builder(GetApprovalDetailRequest response) {
-            super(response);
-            this.regionId = response.regionId;
-            this.tid = response.tid;
-            this.workflowInstanceId = response.workflowInstanceId;
+        private Builder(GetApprovalDetailRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.tid = request.tid;
+            this.workflowInstanceId = request.workflowInstanceId;
         } 
 
         /**

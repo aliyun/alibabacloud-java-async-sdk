@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetStructSyncJobAnalyzeResultRequest</p>
  */
 public class GetStructSyncJobAnalyzeResultRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("CompareType")
     private String compareType;
@@ -31,10 +35,6 @@ public class GetStructSyncJobAnalyzeResultRequest extends Request {
     @Validation(maximum = 200, minimum = 1)
     private Long pageSize;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("Tid")
     @Validation(minimum = 1)
@@ -42,11 +42,11 @@ public class GetStructSyncJobAnalyzeResultRequest extends Request {
 
     private GetStructSyncJobAnalyzeResultRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.compareType = builder.compareType;
         this.orderId = builder.orderId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
         this.tid = builder.tid;
     }
 
@@ -61,6 +61,13 @@ public class GetStructSyncJobAnalyzeResultRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -92,13 +99,6 @@ public class GetStructSyncJobAnalyzeResultRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return tid
      */
     public Long getTid() {
@@ -106,26 +106,35 @@ public class GetStructSyncJobAnalyzeResultRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetStructSyncJobAnalyzeResultRequest, Builder> {
+        private String regionId; 
         private String compareType; 
         private Long orderId; 
         private Long pageNumber; 
         private Long pageSize; 
-        private String regionId; 
         private Long tid; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetStructSyncJobAnalyzeResultRequest response) {
-            super(response);
-            this.compareType = response.compareType;
-            this.orderId = response.orderId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.tid = response.tid;
+        private Builder(GetStructSyncJobAnalyzeResultRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.compareType = request.compareType;
+            this.orderId = request.orderId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.tid = request.tid;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * CompareType.
@@ -160,15 +169,6 @@ public class GetStructSyncJobAnalyzeResultRequest extends Request {
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

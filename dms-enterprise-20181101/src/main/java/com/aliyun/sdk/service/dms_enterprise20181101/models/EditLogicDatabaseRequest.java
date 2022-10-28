@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>EditLogicDatabaseRequest</p>
  */
 public class EditLogicDatabaseRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("Alias")
     @Validation(required = true)
@@ -27,10 +31,6 @@ public class EditLogicDatabaseRequest extends Request {
     @Validation(required = true)
     private Long logicDbId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("Tid")
     @Validation(minimum = 1)
@@ -38,10 +38,10 @@ public class EditLogicDatabaseRequest extends Request {
 
     private EditLogicDatabaseRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.alias = builder.alias;
         this.databaseIds = builder.databaseIds;
         this.logicDbId = builder.logicDbId;
-        this.regionId = builder.regionId;
         this.tid = builder.tid;
     }
 
@@ -56,6 +56,13 @@ public class EditLogicDatabaseRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -80,13 +87,6 @@ public class EditLogicDatabaseRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return tid
      */
     public Long getTid() {
@@ -94,24 +94,33 @@ public class EditLogicDatabaseRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<EditLogicDatabaseRequest, Builder> {
+        private String regionId; 
         private String alias; 
         private java.util.List < Long > databaseIds; 
         private Long logicDbId; 
-        private String regionId; 
         private Long tid; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(EditLogicDatabaseRequest response) {
-            super(response);
-            this.alias = response.alias;
-            this.databaseIds = response.databaseIds;
-            this.logicDbId = response.logicDbId;
-            this.regionId = response.regionId;
-            this.tid = response.tid;
+        private Builder(EditLogicDatabaseRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.alias = request.alias;
+            this.databaseIds = request.databaseIds;
+            this.logicDbId = request.logicDbId;
+            this.tid = request.tid;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * Alias.
@@ -126,7 +135,8 @@ public class EditLogicDatabaseRequest extends Request {
          * DatabaseIds.
          */
         public Builder databaseIds(java.util.List < Long > databaseIds) {
-            this.putQueryParameter("DatabaseIds", databaseIds);
+            String databaseIdsShrink = shrink(databaseIds, "DatabaseIds", "json");
+            this.putQueryParameter("DatabaseIds", databaseIdsShrink);
             this.databaseIds = databaseIds;
             return this;
         }
@@ -137,15 +147,6 @@ public class EditLogicDatabaseRequest extends Request {
         public Builder logicDbId(Long logicDbId) {
             this.putQueryParameter("LogicDbId", logicDbId);
             this.logicDbId = logicDbId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

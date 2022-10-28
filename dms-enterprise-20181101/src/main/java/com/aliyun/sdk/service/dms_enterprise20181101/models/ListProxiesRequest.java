@@ -62,10 +62,10 @@ public class ListProxiesRequest extends Request {
             super();
         } 
 
-        private Builder(ListProxiesRequest response) {
-            super(response);
-            this.regionId = response.regionId;
-            this.tid = response.tid;
+        private Builder(ListProxiesRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.tid = request.tid;
         } 
 
         /**

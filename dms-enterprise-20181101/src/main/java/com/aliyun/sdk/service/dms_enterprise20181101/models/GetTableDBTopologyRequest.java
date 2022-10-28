@@ -76,11 +76,11 @@ public class GetTableDBTopologyRequest extends Request {
             super();
         } 
 
-        private Builder(GetTableDBTopologyRequest response) {
-            super(response);
-            this.regionId = response.regionId;
-            this.tableGuid = response.tableGuid;
-            this.tid = response.tid;
+        private Builder(GetTableDBTopologyRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.tableGuid = request.tableGuid;
+            this.tid = request.tid;
         } 
 
         /**

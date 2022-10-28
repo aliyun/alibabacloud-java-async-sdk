@@ -30,14 +30,17 @@ public class GetProxyResponseBody extends TeaModel {
     @NameInMap("InstanceId")
     private Long instanceId;
 
-    @NameInMap("MysqlPort")
-    private Integer mysqlPort;
-
     @NameInMap("PrivateEnable")
     private Boolean privateEnable;
 
     @NameInMap("PrivateHost")
     private String privateHost;
+
+    @NameInMap("ProtocolPort")
+    private Integer protocolPort;
+
+    @NameInMap("ProtocolType")
+    private String protocolType;
 
     @NameInMap("ProxyId")
     private Long proxyId;
@@ -61,9 +64,10 @@ public class GetProxyResponseBody extends TeaModel {
         this.errorMessage = builder.errorMessage;
         this.httpsPort = builder.httpsPort;
         this.instanceId = builder.instanceId;
-        this.mysqlPort = builder.mysqlPort;
         this.privateEnable = builder.privateEnable;
         this.privateHost = builder.privateHost;
+        this.protocolPort = builder.protocolPort;
+        this.protocolType = builder.protocolType;
         this.proxyId = builder.proxyId;
         this.publicEnable = builder.publicEnable;
         this.publicHost = builder.publicHost;
@@ -122,13 +126,6 @@ public class GetProxyResponseBody extends TeaModel {
     }
 
     /**
-     * @return mysqlPort
-     */
-    public Integer getMysqlPort() {
-        return this.mysqlPort;
-    }
-
-    /**
      * @return privateEnable
      */
     public Boolean getPrivateEnable() {
@@ -140,6 +137,20 @@ public class GetProxyResponseBody extends TeaModel {
      */
     public String getPrivateHost() {
         return this.privateHost;
+    }
+
+    /**
+     * @return protocolPort
+     */
+    public Integer getProtocolPort() {
+        return this.protocolPort;
+    }
+
+    /**
+     * @return protocolType
+     */
+    public String getProtocolType() {
+        return this.protocolType;
     }
 
     /**
@@ -184,9 +195,10 @@ public class GetProxyResponseBody extends TeaModel {
         private String errorMessage; 
         private Integer httpsPort; 
         private Long instanceId; 
-        private Integer mysqlPort; 
         private Boolean privateEnable; 
         private String privateHost; 
+        private Integer protocolPort; 
+        private String protocolType; 
         private Long proxyId; 
         private Boolean publicEnable; 
         private String publicHost; 
@@ -242,14 +254,6 @@ public class GetProxyResponseBody extends TeaModel {
         }
 
         /**
-         * MysqlPort.
-         */
-        public Builder mysqlPort(Integer mysqlPort) {
-            this.mysqlPort = mysqlPort;
-            return this;
-        }
-
-        /**
          * PrivateEnable.
          */
         public Builder privateEnable(Boolean privateEnable) {
@@ -262,6 +266,22 @@ public class GetProxyResponseBody extends TeaModel {
          */
         public Builder privateHost(String privateHost) {
             this.privateHost = privateHost;
+            return this;
+        }
+
+        /**
+         * 数据库协议连接端口号
+         */
+        public Builder protocolPort(Integer protocolPort) {
+            this.protocolPort = protocolPort;
+            return this;
+        }
+
+        /**
+         * 数据库协议类型，例如：MYSQL
+         */
+        public Builder protocolType(String protocolType) {
+            this.protocolType = protocolType;
             return this;
         }
 

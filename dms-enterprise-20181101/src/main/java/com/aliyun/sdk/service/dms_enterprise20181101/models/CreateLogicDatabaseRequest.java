@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateLogicDatabaseRequest</p>
  */
 public class CreateLogicDatabaseRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("Alias")
     @Validation(required = true)
@@ -22,10 +26,6 @@ public class CreateLogicDatabaseRequest extends Request {
     @Validation(required = true)
     private java.util.List < Long > databaseIds;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("Tid")
     @Validation(minimum = 1)
@@ -33,9 +33,9 @@ public class CreateLogicDatabaseRequest extends Request {
 
     private CreateLogicDatabaseRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.alias = builder.alias;
         this.databaseIds = builder.databaseIds;
-        this.regionId = builder.regionId;
         this.tid = builder.tid;
     }
 
@@ -53,6 +53,13 @@ public class CreateLogicDatabaseRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return alias
      */
     public String getAlias() {
@@ -67,13 +74,6 @@ public class CreateLogicDatabaseRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return tid
      */
     public Long getTid() {
@@ -81,22 +81,31 @@ public class CreateLogicDatabaseRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateLogicDatabaseRequest, Builder> {
+        private String regionId; 
         private String alias; 
         private java.util.List < Long > databaseIds; 
-        private String regionId; 
         private Long tid; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateLogicDatabaseRequest response) {
-            super(response);
-            this.alias = response.alias;
-            this.databaseIds = response.databaseIds;
-            this.regionId = response.regionId;
-            this.tid = response.tid;
+        private Builder(CreateLogicDatabaseRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.alias = request.alias;
+            this.databaseIds = request.databaseIds;
+            this.tid = request.tid;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * Alias.
@@ -111,17 +120,9 @@ public class CreateLogicDatabaseRequest extends Request {
          * DatabaseIds.
          */
         public Builder databaseIds(java.util.List < Long > databaseIds) {
-            this.putQueryParameter("DatabaseIds", databaseIds);
+            String databaseIdsShrink = shrink(databaseIds, "DatabaseIds", "json");
+            this.putQueryParameter("DatabaseIds", databaseIdsShrink);
             this.databaseIds = databaseIds;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

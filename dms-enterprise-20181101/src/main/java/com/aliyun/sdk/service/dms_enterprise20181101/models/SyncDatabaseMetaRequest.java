@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SyncDatabaseMetaRequest</p>
  */
 public class SyncDatabaseMetaRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("DbId")
     @Validation(required = true)
@@ -21,19 +25,15 @@ public class SyncDatabaseMetaRequest extends Request {
     @NameInMap("Logic")
     private Boolean logic;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("Tid")
     private Long tid;
 
     private SyncDatabaseMetaRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.dbId = builder.dbId;
         this.logic = builder.logic;
-        this.regionId = builder.regionId;
         this.tid = builder.tid;
     }
 
@@ -51,6 +51,13 @@ public class SyncDatabaseMetaRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return dbId
      */
     public String getDbId() {
@@ -65,13 +72,6 @@ public class SyncDatabaseMetaRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return tid
      */
     public Long getTid() {
@@ -79,22 +79,31 @@ public class SyncDatabaseMetaRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SyncDatabaseMetaRequest, Builder> {
+        private String regionId; 
         private String dbId; 
         private Boolean logic; 
-        private String regionId; 
         private Long tid; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(SyncDatabaseMetaRequest response) {
-            super(response);
-            this.dbId = response.dbId;
-            this.logic = response.logic;
-            this.regionId = response.regionId;
-            this.tid = response.tid;
+        private Builder(SyncDatabaseMetaRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.dbId = request.dbId;
+            this.logic = request.logic;
+            this.tid = request.tid;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * DbId.
@@ -111,15 +120,6 @@ public class SyncDatabaseMetaRequest extends Request {
         public Builder logic(Boolean logic) {
             this.putQueryParameter("Logic", logic);
             this.logic = logic;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

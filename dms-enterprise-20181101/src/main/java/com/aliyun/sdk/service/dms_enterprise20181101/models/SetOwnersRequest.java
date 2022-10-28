@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SetOwnersRequest</p>
  */
 public class SetOwnersRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("OwnerIds")
     @Validation(required = true)
@@ -21,10 +25,6 @@ public class SetOwnersRequest extends Request {
     @NameInMap("OwnerType")
     @Validation(required = true)
     private String ownerType;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Query
     @NameInMap("ResourceId")
@@ -37,9 +37,9 @@ public class SetOwnersRequest extends Request {
 
     private SetOwnersRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.ownerIds = builder.ownerIds;
         this.ownerType = builder.ownerType;
-        this.regionId = builder.regionId;
         this.resourceId = builder.resourceId;
         this.tid = builder.tid;
     }
@@ -58,6 +58,13 @@ public class SetOwnersRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return ownerIds
      */
     public String getOwnerIds() {
@@ -69,13 +76,6 @@ public class SetOwnersRequest extends Request {
      */
     public String getOwnerType() {
         return this.ownerType;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -93,9 +93,9 @@ public class SetOwnersRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SetOwnersRequest, Builder> {
+        private String regionId; 
         private String ownerIds; 
         private String ownerType; 
-        private String regionId; 
         private String resourceId; 
         private Long tid; 
 
@@ -103,14 +103,23 @@ public class SetOwnersRequest extends Request {
             super();
         } 
 
-        private Builder(SetOwnersRequest response) {
-            super(response);
-            this.ownerIds = response.ownerIds;
-            this.ownerType = response.ownerType;
-            this.regionId = response.regionId;
-            this.resourceId = response.resourceId;
-            this.tid = response.tid;
+        private Builder(SetOwnersRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.ownerIds = request.ownerIds;
+            this.ownerType = request.ownerType;
+            this.resourceId = request.resourceId;
+            this.tid = request.tid;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * OwnerIds.
@@ -127,15 +136,6 @@ public class SetOwnersRequest extends Request {
         public Builder ownerType(String ownerType) {
             this.putQueryParameter("OwnerType", ownerType);
             this.ownerType = ownerType;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

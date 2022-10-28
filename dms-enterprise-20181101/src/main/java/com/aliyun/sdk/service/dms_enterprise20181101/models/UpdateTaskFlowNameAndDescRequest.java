@@ -1,0 +1,167 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.dms_enterprise20181101.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link UpdateTaskFlowNameAndDescRequest} extends {@link RequestModel}
+ *
+ * <p>UpdateTaskFlowNameAndDescRequest</p>
+ */
+public class UpdateTaskFlowNameAndDescRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
+    @Query
+    @NameInMap("DagId")
+    @Validation(required = true)
+    private Long dagId;
+
+    @Query
+    @NameInMap("DagName")
+    @Validation(required = true)
+    private String dagName;
+
+    @Query
+    @NameInMap("Description")
+    private String description;
+
+    @Query
+    @NameInMap("Tid")
+    @Validation(minimum = 1)
+    private Long tid;
+
+    private UpdateTaskFlowNameAndDescRequest(Builder builder) {
+        super(builder);
+        this.regionId = builder.regionId;
+        this.dagId = builder.dagId;
+        this.dagName = builder.dagName;
+        this.description = builder.description;
+        this.tid = builder.tid;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static UpdateTaskFlowNameAndDescRequest create() {
+        return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return dagId
+     */
+    public Long getDagId() {
+        return this.dagId;
+    }
+
+    /**
+     * @return dagName
+     */
+    public String getDagName() {
+        return this.dagName;
+    }
+
+    /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
+     * @return tid
+     */
+    public Long getTid() {
+        return this.tid;
+    }
+
+    public static final class Builder extends Request.Builder<UpdateTaskFlowNameAndDescRequest, Builder> {
+        private String regionId; 
+        private Long dagId; 
+        private String dagName; 
+        private String description; 
+        private Long tid; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(UpdateTaskFlowNameAndDescRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.dagId = request.dagId;
+            this.dagName = request.dagName;
+            this.description = request.description;
+            this.tid = request.tid;
+        } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * DagId.
+         */
+        public Builder dagId(Long dagId) {
+            this.putQueryParameter("DagId", dagId);
+            this.dagId = dagId;
+            return this;
+        }
+
+        /**
+         * DagName.
+         */
+        public Builder dagName(String dagName) {
+            this.putQueryParameter("DagName", dagName);
+            this.dagName = dagName;
+            return this;
+        }
+
+        /**
+         * Description.
+         */
+        public Builder description(String description) {
+            this.putQueryParameter("Description", description);
+            this.description = description;
+            return this;
+        }
+
+        /**
+         * Tid.
+         */
+        public Builder tid(Long tid) {
+            this.putQueryParameter("Tid", tid);
+            this.tid = tid;
+            return this;
+        }
+
+        @Override
+        public UpdateTaskFlowNameAndDescRequest build() {
+            return new UpdateTaskFlowNameAndDescRequest(this);
+        } 
+
+    } 
+
+}

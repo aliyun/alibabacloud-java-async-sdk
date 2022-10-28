@@ -90,12 +90,12 @@ public class DeleteLogicTableRouteConfigRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteLogicTableRouteConfigRequest response) {
-            super(response);
-            this.regionId = response.regionId;
-            this.routeKey = response.routeKey;
-            this.tableId = response.tableId;
-            this.tid = response.tid;
+        private Builder(DeleteLogicTableRouteConfigRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.routeKey = request.routeKey;
+            this.tableId = request.tableId;
+            this.tid = request.tid;
         } 
 
         /**

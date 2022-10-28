@@ -1,0 +1,104 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.dms_enterprise20181101.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link ListTaskFlowConstantsResponse} extends {@link TeaModel}
+ *
+ * <p>ListTaskFlowConstantsResponse</p>
+ */
+public class ListTaskFlowConstantsResponse extends Response {
+    @NameInMap("headers")
+    @Validation(required = true)
+    private java.util.Map < String, String > headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    private ListTaskFlowConstantsResponseBody body;
+
+    private ListTaskFlowConstantsResponse(BuilderImpl builder) {
+        super(builder);
+        this.headers = builder.headers;
+        this.body = builder.body;
+    }
+
+    public static ListTaskFlowConstantsResponse create() {
+        return new BuilderImpl().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new BuilderImpl(this);
+    }
+
+    /**
+     * @return headers
+     */
+    public java.util.Map < String, String > getHeaders() {
+        return this.headers;
+    }
+
+    /**
+     * @return body
+     */
+    public ListTaskFlowConstantsResponseBody getBody() {
+        return this.body;
+    }
+
+    public interface Builder extends Response.Builder<ListTaskFlowConstantsResponse, Builder> {
+
+        Builder headers(java.util.Map < String, String > headers);
+
+        Builder body(ListTaskFlowConstantsResponseBody body);
+
+        @Override
+        ListTaskFlowConstantsResponse build();
+
+    } 
+
+    private static final class BuilderImpl
+            extends Response.BuilderImpl<ListTaskFlowConstantsResponse, Builder>
+            implements Builder {
+        private java.util.Map < String, String > headers; 
+        private ListTaskFlowConstantsResponseBody body; 
+
+        private BuilderImpl() {
+            super();
+        } 
+
+        private BuilderImpl(ListTaskFlowConstantsResponse response) {
+            super(response);
+            this.headers = response.headers;
+            this.body = response.body;
+        } 
+
+        /**
+         * headers.
+         */
+        @Override
+        public Builder headers(java.util.Map < String, String > headers) {
+            this.headers = headers;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        @Override
+        public Builder body(ListTaskFlowConstantsResponseBody body) {
+            this.body = body;
+            return this;
+        }
+
+        @Override
+        public ListTaskFlowConstantsResponse build() {
+            return new ListTaskFlowConstantsResponse(this);
+        } 
+
+    } 
+
+}

@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ExecuteDataCorrectRequest</p>
  */
 public class ExecuteDataCorrectRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("ActionDetail")
     private java.util.Map < String, ? > actionDetail;
@@ -21,19 +25,15 @@ public class ExecuteDataCorrectRequest extends Request {
     @Validation(required = true)
     private Long orderId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("Tid")
     private String tid;
 
     private ExecuteDataCorrectRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.actionDetail = builder.actionDetail;
         this.orderId = builder.orderId;
-        this.regionId = builder.regionId;
         this.tid = builder.tid;
     }
 
@@ -51,6 +51,13 @@ public class ExecuteDataCorrectRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return actionDetail
      */
     public java.util.Map < String, ? > getActionDetail() {
@@ -65,13 +72,6 @@ public class ExecuteDataCorrectRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return tid
      */
     public String getTid() {
@@ -79,28 +79,38 @@ public class ExecuteDataCorrectRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ExecuteDataCorrectRequest, Builder> {
+        private String regionId; 
         private java.util.Map < String, ? > actionDetail; 
         private Long orderId; 
-        private String regionId; 
         private String tid; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ExecuteDataCorrectRequest response) {
-            super(response);
-            this.actionDetail = response.actionDetail;
-            this.orderId = response.orderId;
-            this.regionId = response.regionId;
-            this.tid = response.tid;
+        private Builder(ExecuteDataCorrectRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.actionDetail = request.actionDetail;
+            this.orderId = request.orderId;
+            this.tid = request.tid;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * ActionDetail.
          */
         public Builder actionDetail(java.util.Map < String, ? > actionDetail) {
-            this.putQueryParameter("ActionDetail", actionDetail);
+            String actionDetailShrink = shrink(actionDetail, "ActionDetail", "json");
+            this.putQueryParameter("ActionDetail", actionDetailShrink);
             this.actionDetail = actionDetail;
             return this;
         }
@@ -111,15 +121,6 @@ public class ExecuteDataCorrectRequest extends Request {
         public Builder orderId(Long orderId) {
             this.putQueryParameter("OrderId", orderId);
             this.orderId = orderId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

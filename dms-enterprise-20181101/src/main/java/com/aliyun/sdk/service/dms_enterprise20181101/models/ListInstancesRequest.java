@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListInstancesRequest</p>
  */
 public class ListInstancesRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("DbType")
     private String dbType;
@@ -40,10 +44,6 @@ public class ListInstancesRequest extends Request {
     @NameInMap("PageSize")
     private Integer pageSize;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("SearchKey")
     private String searchKey;
@@ -54,6 +54,7 @@ public class ListInstancesRequest extends Request {
 
     private ListInstancesRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.dbType = builder.dbType;
         this.envType = builder.envType;
         this.instanceSource = builder.instanceSource;
@@ -61,7 +62,6 @@ public class ListInstancesRequest extends Request {
         this.netType = builder.netType;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
         this.searchKey = builder.searchKey;
         this.tid = builder.tid;
     }
@@ -77,6 +77,13 @@ public class ListInstancesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -129,13 +136,6 @@ public class ListInstancesRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return searchKey
      */
     public String getSearchKey() {
@@ -150,6 +150,7 @@ public class ListInstancesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListInstancesRequest, Builder> {
+        private String regionId; 
         private String dbType; 
         private String envType; 
         private String instanceSource; 
@@ -157,7 +158,6 @@ public class ListInstancesRequest extends Request {
         private String netType; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private String regionId; 
         private String searchKey; 
         private Long tid; 
 
@@ -165,19 +165,28 @@ public class ListInstancesRequest extends Request {
             super();
         } 
 
-        private Builder(ListInstancesRequest response) {
-            super(response);
-            this.dbType = response.dbType;
-            this.envType = response.envType;
-            this.instanceSource = response.instanceSource;
-            this.instanceState = response.instanceState;
-            this.netType = response.netType;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.searchKey = response.searchKey;
-            this.tid = response.tid;
+        private Builder(ListInstancesRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.dbType = request.dbType;
+            this.envType = request.envType;
+            this.instanceSource = request.instanceSource;
+            this.instanceState = request.instanceState;
+            this.netType = request.netType;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.searchKey = request.searchKey;
+            this.tid = request.tid;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * DbType.
@@ -239,15 +248,6 @@ public class ListInstancesRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

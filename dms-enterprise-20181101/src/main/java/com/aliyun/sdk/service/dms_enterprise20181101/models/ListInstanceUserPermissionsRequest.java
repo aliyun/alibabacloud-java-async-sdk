@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListInstanceUserPermissionsRequest</p>
  */
 public class ListInstanceUserPermissionsRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
@@ -25,10 +29,6 @@ public class ListInstanceUserPermissionsRequest extends Request {
     @NameInMap("PageSize")
     private Integer pageSize;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("Tid")
     private Long tid;
@@ -39,10 +39,10 @@ public class ListInstanceUserPermissionsRequest extends Request {
 
     private ListInstanceUserPermissionsRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
         this.tid = builder.tid;
         this.userName = builder.userName;
     }
@@ -58,6 +58,13 @@ public class ListInstanceUserPermissionsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -82,13 +89,6 @@ public class ListInstanceUserPermissionsRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return tid
      */
     public Long getTid() {
@@ -103,10 +103,10 @@ public class ListInstanceUserPermissionsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListInstanceUserPermissionsRequest, Builder> {
+        private String regionId; 
         private String instanceId; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private String regionId; 
         private Long tid; 
         private String userName; 
 
@@ -114,15 +114,24 @@ public class ListInstanceUserPermissionsRequest extends Request {
             super();
         } 
 
-        private Builder(ListInstanceUserPermissionsRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.tid = response.tid;
-            this.userName = response.userName;
+        private Builder(ListInstanceUserPermissionsRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.instanceId = request.instanceId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.tid = request.tid;
+            this.userName = request.userName;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * InstanceId.
@@ -148,15 +157,6 @@ public class ListInstanceUserPermissionsRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

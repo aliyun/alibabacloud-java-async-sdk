@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateUserRequest</p>
  */
 public class UpdateUserRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("MaxExecuteCount")
     private Long maxExecuteCount;
@@ -23,10 +27,6 @@ public class UpdateUserRequest extends Request {
     @Query
     @NameInMap("Mobile")
     private String mobile;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Query
     @NameInMap("RoleNames")
@@ -47,10 +47,10 @@ public class UpdateUserRequest extends Request {
 
     private UpdateUserRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.maxExecuteCount = builder.maxExecuteCount;
         this.maxResultCount = builder.maxResultCount;
         this.mobile = builder.mobile;
-        this.regionId = builder.regionId;
         this.roleNames = builder.roleNames;
         this.tid = builder.tid;
         this.uid = builder.uid;
@@ -68,6 +68,13 @@ public class UpdateUserRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -89,13 +96,6 @@ public class UpdateUserRequest extends Request {
      */
     public String getMobile() {
         return this.mobile;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -127,10 +127,10 @@ public class UpdateUserRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateUserRequest, Builder> {
+        private String regionId; 
         private Long maxExecuteCount; 
         private Long maxResultCount; 
         private String mobile; 
-        private String regionId; 
         private String roleNames; 
         private Long tid; 
         private Long uid; 
@@ -140,17 +140,26 @@ public class UpdateUserRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateUserRequest response) {
-            super(response);
-            this.maxExecuteCount = response.maxExecuteCount;
-            this.maxResultCount = response.maxResultCount;
-            this.mobile = response.mobile;
-            this.regionId = response.regionId;
-            this.roleNames = response.roleNames;
-            this.tid = response.tid;
-            this.uid = response.uid;
-            this.userNick = response.userNick;
+        private Builder(UpdateUserRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.maxExecuteCount = request.maxExecuteCount;
+            this.maxResultCount = request.maxResultCount;
+            this.mobile = request.mobile;
+            this.roleNames = request.roleNames;
+            this.tid = request.tid;
+            this.uid = request.uid;
+            this.userNick = request.userNick;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * MaxExecuteCount.
@@ -176,15 +185,6 @@ public class UpdateUserRequest extends Request {
         public Builder mobile(String mobile) {
             this.putQueryParameter("Mobile", mobile);
             this.mobile = mobile;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

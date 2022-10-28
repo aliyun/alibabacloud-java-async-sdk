@@ -355,6 +355,9 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("SafeRuleId")
         private String safeRuleId;
 
+        @NameInMap("SellSitd")
+        private Boolean sellSitd;
+
         @NameInMap("Sid")
         private String sid;
 
@@ -391,6 +394,7 @@ public class ListInstancesResponseBody extends TeaModel {
             this.port = builder.port;
             this.queryTimeout = builder.queryTimeout;
             this.safeRuleId = builder.safeRuleId;
+            this.sellSitd = builder.sellSitd;
             this.sid = builder.sid;
             this.standardGroup = builder.standardGroup;
             this.state = builder.state;
@@ -547,6 +551,13 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return sellSitd
+         */
+        public Boolean getSellSitd() {
+            return this.sellSitd;
+        }
+
+        /**
          * @return sid
          */
         public String getSid() {
@@ -602,6 +613,7 @@ public class ListInstancesResponseBody extends TeaModel {
             private Integer port; 
             private Integer queryTimeout; 
             private String safeRuleId; 
+            private Boolean sellSitd; 
             private String sid; 
             private StandardGroup standardGroup; 
             private String state; 
@@ -765,6 +777,14 @@ public class ListInstancesResponseBody extends TeaModel {
              */
             public Builder safeRuleId(String safeRuleId) {
                 this.safeRuleId = safeRuleId;
+                return this;
+            }
+
+            /**
+             * 为true，敏感数据保护开启，否则未开启
+             */
+            public Builder sellSitd(Boolean sellSitd) {
+                this.sellSitd = sellSitd;
                 return this;
             }
 

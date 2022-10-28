@@ -12,13 +12,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListIndexesRequest</p>
  */
 public class ListIndexesRequest extends Request {
-    @Query
-    @NameInMap("Logic")
-    private Boolean logic;
-
     @Host
     @NameInMap("RegionId")
     private String regionId;
+
+    @Query
+    @NameInMap("Logic")
+    private Boolean logic;
 
     @Query
     @NameInMap("TableId")
@@ -31,8 +31,8 @@ public class ListIndexesRequest extends Request {
 
     private ListIndexesRequest(Builder builder) {
         super(builder);
-        this.logic = builder.logic;
         this.regionId = builder.regionId;
+        this.logic = builder.logic;
         this.tableId = builder.tableId;
         this.tid = builder.tid;
     }
@@ -51,17 +51,17 @@ public class ListIndexesRequest extends Request {
     }
 
     /**
-     * @return logic
-     */
-    public Boolean getLogic() {
-        return this.logic;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return logic
+     */
+    public Boolean getLogic() {
+        return this.logic;
     }
 
     /**
@@ -79,8 +79,8 @@ public class ListIndexesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListIndexesRequest, Builder> {
-        private Boolean logic; 
         private String regionId; 
+        private Boolean logic; 
         private String tableId; 
         private Long tid; 
 
@@ -88,22 +88,13 @@ public class ListIndexesRequest extends Request {
             super();
         } 
 
-        private Builder(ListIndexesRequest response) {
-            super(response);
-            this.logic = response.logic;
-            this.regionId = response.regionId;
-            this.tableId = response.tableId;
-            this.tid = response.tid;
+        private Builder(ListIndexesRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.logic = request.logic;
+            this.tableId = request.tableId;
+            this.tid = request.tid;
         } 
-
-        /**
-         * Logic.
-         */
-        public Builder logic(Boolean logic) {
-            this.putQueryParameter("Logic", logic);
-            this.logic = logic;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -111,6 +102,15 @@ public class ListIndexesRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * Logic.
+         */
+        public Builder logic(Boolean logic) {
+            this.putQueryParameter("Logic", logic);
+            this.logic = logic;
             return this;
         }
 

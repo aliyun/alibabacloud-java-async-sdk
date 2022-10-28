@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListSensitiveColumnsDetailRequest</p>
  */
 public class ListSensitiveColumnsDetailRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("ColumnName")
     @Validation(required = true)
@@ -24,10 +28,6 @@ public class ListSensitiveColumnsDetailRequest extends Request {
     @Query
     @NameInMap("Logic")
     private Boolean logic;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Query
     @NameInMap("SchemaName")
@@ -45,10 +45,10 @@ public class ListSensitiveColumnsDetailRequest extends Request {
 
     private ListSensitiveColumnsDetailRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.columnName = builder.columnName;
         this.dbId = builder.dbId;
         this.logic = builder.logic;
-        this.regionId = builder.regionId;
         this.schemaName = builder.schemaName;
         this.tableName = builder.tableName;
         this.tid = builder.tid;
@@ -65,6 +65,13 @@ public class ListSensitiveColumnsDetailRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -89,13 +96,6 @@ public class ListSensitiveColumnsDetailRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return schemaName
      */
     public String getSchemaName() {
@@ -117,10 +117,10 @@ public class ListSensitiveColumnsDetailRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListSensitiveColumnsDetailRequest, Builder> {
+        private String regionId; 
         private String columnName; 
         private Long dbId; 
         private Boolean logic; 
-        private String regionId; 
         private String schemaName; 
         private String tableName; 
         private Long tid; 
@@ -129,16 +129,25 @@ public class ListSensitiveColumnsDetailRequest extends Request {
             super();
         } 
 
-        private Builder(ListSensitiveColumnsDetailRequest response) {
-            super(response);
-            this.columnName = response.columnName;
-            this.dbId = response.dbId;
-            this.logic = response.logic;
-            this.regionId = response.regionId;
-            this.schemaName = response.schemaName;
-            this.tableName = response.tableName;
-            this.tid = response.tid;
+        private Builder(ListSensitiveColumnsDetailRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.columnName = request.columnName;
+            this.dbId = request.dbId;
+            this.logic = request.logic;
+            this.schemaName = request.schemaName;
+            this.tableName = request.tableName;
+            this.tid = request.tid;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * ColumnName.
@@ -164,15 +173,6 @@ public class ListSensitiveColumnsDetailRequest extends Request {
         public Builder logic(Boolean logic) {
             this.putQueryParameter("Logic", logic);
             this.logic = logic;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

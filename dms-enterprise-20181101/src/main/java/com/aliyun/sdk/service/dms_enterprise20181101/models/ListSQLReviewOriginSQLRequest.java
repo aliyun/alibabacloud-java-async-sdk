@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListSQLReviewOriginSQLRequest</p>
  */
 public class ListSQLReviewOriginSQLRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("OrderActionDetail")
     private OrderActionDetail orderActionDetail;
@@ -21,10 +25,6 @@ public class ListSQLReviewOriginSQLRequest extends Request {
     @Validation(required = true, minimum = 1)
     private Long orderId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("Tid")
     @Validation(minimum = 1)
@@ -32,9 +32,9 @@ public class ListSQLReviewOriginSQLRequest extends Request {
 
     private ListSQLReviewOriginSQLRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.orderActionDetail = builder.orderActionDetail;
         this.orderId = builder.orderId;
-        this.regionId = builder.regionId;
         this.tid = builder.tid;
     }
 
@@ -52,6 +52,13 @@ public class ListSQLReviewOriginSQLRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return orderActionDetail
      */
     public OrderActionDetail getOrderActionDetail() {
@@ -66,13 +73,6 @@ public class ListSQLReviewOriginSQLRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return tid
      */
     public Long getTid() {
@@ -80,28 +80,38 @@ public class ListSQLReviewOriginSQLRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListSQLReviewOriginSQLRequest, Builder> {
+        private String regionId; 
         private OrderActionDetail orderActionDetail; 
         private Long orderId; 
-        private String regionId; 
         private Long tid; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListSQLReviewOriginSQLRequest response) {
-            super(response);
-            this.orderActionDetail = response.orderActionDetail;
-            this.orderId = response.orderId;
-            this.regionId = response.regionId;
-            this.tid = response.tid;
+        private Builder(ListSQLReviewOriginSQLRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.orderActionDetail = request.orderActionDetail;
+            this.orderId = request.orderId;
+            this.tid = request.tid;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * OrderActionDetail.
          */
         public Builder orderActionDetail(OrderActionDetail orderActionDetail) {
-            this.putQueryParameter("OrderActionDetail", orderActionDetail);
+            String orderActionDetailShrink = shrink(orderActionDetail, "OrderActionDetail", "json");
+            this.putQueryParameter("OrderActionDetail", orderActionDetailShrink);
             this.orderActionDetail = orderActionDetail;
             return this;
         }
@@ -112,15 +122,6 @@ public class ListSQLReviewOriginSQLRequest extends Request {
         public Builder orderId(Long orderId) {
             this.putQueryParameter("OrderId", orderId);
             this.orderId = orderId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

@@ -12,14 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetUserUploadFileJobRequest</p>
  */
 public class GetUserUploadFileJobRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("JobKey")
     @Validation(required = true)
     private String jobKey;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Query
     @NameInMap("Tid")
@@ -28,8 +28,8 @@ public class GetUserUploadFileJobRequest extends Request {
 
     private GetUserUploadFileJobRequest(Builder builder) {
         super(builder);
-        this.jobKey = builder.jobKey;
         this.regionId = builder.regionId;
+        this.jobKey = builder.jobKey;
         this.tid = builder.tid;
     }
 
@@ -47,17 +47,17 @@ public class GetUserUploadFileJobRequest extends Request {
     }
 
     /**
-     * @return jobKey
-     */
-    public String getJobKey() {
-        return this.jobKey;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return jobKey
+     */
+    public String getJobKey() {
+        return this.jobKey;
     }
 
     /**
@@ -68,29 +68,20 @@ public class GetUserUploadFileJobRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetUserUploadFileJobRequest, Builder> {
-        private String jobKey; 
         private String regionId; 
+        private String jobKey; 
         private Long tid; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetUserUploadFileJobRequest response) {
-            super(response);
-            this.jobKey = response.jobKey;
-            this.regionId = response.regionId;
-            this.tid = response.tid;
+        private Builder(GetUserUploadFileJobRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.jobKey = request.jobKey;
+            this.tid = request.tid;
         } 
-
-        /**
-         * JobKey.
-         */
-        public Builder jobKey(String jobKey) {
-            this.putQueryParameter("JobKey", jobKey);
-            this.jobKey = jobKey;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -98,6 +89,15 @@ public class GetUserUploadFileJobRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * JobKey.
+         */
+        public Builder jobKey(String jobKey) {
+            this.putQueryParameter("JobKey", jobKey);
+            this.jobKey = jobKey;
             return this;
         }
 

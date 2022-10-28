@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CloseOrderRequest</p>
  */
 public class CloseOrderRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("CloseReason")
     @Validation(required = true)
@@ -22,19 +26,15 @@ public class CloseOrderRequest extends Request {
     @Validation(required = true)
     private Long orderId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("Tid")
     private Long tid;
 
     private CloseOrderRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.closeReason = builder.closeReason;
         this.orderId = builder.orderId;
-        this.regionId = builder.regionId;
         this.tid = builder.tid;
     }
 
@@ -52,6 +52,13 @@ public class CloseOrderRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return closeReason
      */
     public String getCloseReason() {
@@ -66,13 +73,6 @@ public class CloseOrderRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return tid
      */
     public Long getTid() {
@@ -80,22 +80,31 @@ public class CloseOrderRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CloseOrderRequest, Builder> {
+        private String regionId; 
         private String closeReason; 
         private Long orderId; 
-        private String regionId; 
         private Long tid; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CloseOrderRequest response) {
-            super(response);
-            this.closeReason = response.closeReason;
-            this.orderId = response.orderId;
-            this.regionId = response.regionId;
-            this.tid = response.tid;
+        private Builder(CloseOrderRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.closeReason = request.closeReason;
+            this.orderId = request.orderId;
+            this.tid = request.tid;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * CloseReason.
@@ -112,15 +121,6 @@ public class CloseOrderRequest extends Request {
         public Builder orderId(Long orderId) {
             this.putQueryParameter("OrderId", orderId);
             this.orderId = orderId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

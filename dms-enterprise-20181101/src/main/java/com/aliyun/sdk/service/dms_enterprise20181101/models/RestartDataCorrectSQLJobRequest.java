@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RestartDataCorrectSQLJobRequest</p>
  */
 public class RestartDataCorrectSQLJobRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("JobId")
     private Long jobId;
@@ -20,10 +24,6 @@ public class RestartDataCorrectSQLJobRequest extends Request {
     @NameInMap("OrderId")
     @Validation(required = true, minimum = 1)
     private Long orderId;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Query
     @NameInMap("Tid")
@@ -37,9 +37,9 @@ public class RestartDataCorrectSQLJobRequest extends Request {
 
     private RestartDataCorrectSQLJobRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.jobId = builder.jobId;
         this.orderId = builder.orderId;
-        this.regionId = builder.regionId;
         this.tid = builder.tid;
         this.type = builder.type;
     }
@@ -58,6 +58,13 @@ public class RestartDataCorrectSQLJobRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return jobId
      */
     public Long getJobId() {
@@ -69,13 +76,6 @@ public class RestartDataCorrectSQLJobRequest extends Request {
      */
     public Long getOrderId() {
         return this.orderId;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -93,9 +93,9 @@ public class RestartDataCorrectSQLJobRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<RestartDataCorrectSQLJobRequest, Builder> {
+        private String regionId; 
         private Long jobId; 
         private Long orderId; 
-        private String regionId; 
         private Long tid; 
         private String type; 
 
@@ -103,14 +103,23 @@ public class RestartDataCorrectSQLJobRequest extends Request {
             super();
         } 
 
-        private Builder(RestartDataCorrectSQLJobRequest response) {
-            super(response);
-            this.jobId = response.jobId;
-            this.orderId = response.orderId;
-            this.regionId = response.regionId;
-            this.tid = response.tid;
-            this.type = response.type;
+        private Builder(RestartDataCorrectSQLJobRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.jobId = request.jobId;
+            this.orderId = request.orderId;
+            this.tid = request.tid;
+            this.type = request.type;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * JobId.
@@ -127,15 +136,6 @@ public class RestartDataCorrectSQLJobRequest extends Request {
         public Builder orderId(Long orderId) {
             this.putQueryParameter("OrderId", orderId);
             this.orderId = orderId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

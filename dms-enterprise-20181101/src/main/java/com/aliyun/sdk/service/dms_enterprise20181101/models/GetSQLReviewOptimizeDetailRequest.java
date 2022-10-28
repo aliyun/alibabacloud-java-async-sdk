@@ -76,11 +76,11 @@ public class GetSQLReviewOptimizeDetailRequest extends Request {
             super();
         } 
 
-        private Builder(GetSQLReviewOptimizeDetailRequest response) {
-            super(response);
-            this.regionId = response.regionId;
-            this.SQLReviewQueryKey = response.SQLReviewQueryKey;
-            this.tid = response.tid;
+        private Builder(GetSQLReviewOptimizeDetailRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.SQLReviewQueryKey = request.SQLReviewQueryKey;
+            this.tid = request.tid;
         } 
 
         /**

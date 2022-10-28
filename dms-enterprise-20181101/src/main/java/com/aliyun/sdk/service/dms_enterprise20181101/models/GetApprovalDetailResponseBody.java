@@ -519,6 +519,9 @@ public class GetApprovalDetailResponseBody extends TeaModel {
         @NameInMap("ReasonList")
         private ReasonList reasonList;
 
+        @NameInMap("TemplateId")
+        private Long templateId;
+
         @NameInMap("Title")
         private String title;
 
@@ -536,6 +539,7 @@ public class GetApprovalDetailResponseBody extends TeaModel {
             this.orderId = builder.orderId;
             this.orderType = builder.orderType;
             this.reasonList = builder.reasonList;
+            this.templateId = builder.templateId;
             this.title = builder.title;
             this.workflowInsCode = builder.workflowInsCode;
             this.workflowNodes = builder.workflowNodes;
@@ -599,6 +603,13 @@ public class GetApprovalDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return templateId
+         */
+        public Long getTemplateId() {
+            return this.templateId;
+        }
+
+        /**
          * @return title
          */
         public String getTitle() {
@@ -627,6 +638,7 @@ public class GetApprovalDetailResponseBody extends TeaModel {
             private Long orderId; 
             private String orderType; 
             private ReasonList reasonList; 
+            private Long templateId; 
             private String title; 
             private String workflowInsCode; 
             private WorkflowNodes workflowNodes; 
@@ -684,6 +696,14 @@ public class GetApprovalDetailResponseBody extends TeaModel {
              */
             public Builder reasonList(ReasonList reasonList) {
                 this.reasonList = reasonList;
+                return this;
+            }
+
+            /**
+             * 工作流模板ID
+             */
+            public Builder templateId(Long templateId) {
+                this.templateId = templateId;
                 return this;
             }
 

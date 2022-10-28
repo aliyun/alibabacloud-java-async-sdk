@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateDataImportOrderRequest</p>
  */
 public class CreateDataImportOrderRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("AttachmentKey")
     private String attachmentKey;
@@ -26,10 +30,6 @@ public class CreateDataImportOrderRequest extends Request {
     @Validation(required = true)
     private Param param;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("RelatedUserList")
     private java.util.List < Long > relatedUserList;
@@ -41,10 +41,10 @@ public class CreateDataImportOrderRequest extends Request {
 
     private CreateDataImportOrderRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.attachmentKey = builder.attachmentKey;
         this.comment = builder.comment;
         this.param = builder.param;
-        this.regionId = builder.regionId;
         this.relatedUserList = builder.relatedUserList;
         this.tid = builder.tid;
     }
@@ -60,6 +60,13 @@ public class CreateDataImportOrderRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -84,13 +91,6 @@ public class CreateDataImportOrderRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return relatedUserList
      */
     public java.util.List < Long > getRelatedUserList() {
@@ -105,10 +105,10 @@ public class CreateDataImportOrderRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateDataImportOrderRequest, Builder> {
+        private String regionId; 
         private String attachmentKey; 
         private String comment; 
         private Param param; 
-        private String regionId; 
         private java.util.List < Long > relatedUserList; 
         private Long tid; 
 
@@ -116,15 +116,24 @@ public class CreateDataImportOrderRequest extends Request {
             super();
         } 
 
-        private Builder(CreateDataImportOrderRequest response) {
-            super(response);
-            this.attachmentKey = response.attachmentKey;
-            this.comment = response.comment;
-            this.param = response.param;
-            this.regionId = response.regionId;
-            this.relatedUserList = response.relatedUserList;
-            this.tid = response.tid;
+        private Builder(CreateDataImportOrderRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.attachmentKey = request.attachmentKey;
+            this.comment = request.comment;
+            this.param = request.param;
+            this.relatedUserList = request.relatedUserList;
+            this.tid = request.tid;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * AttachmentKey.
@@ -148,17 +157,9 @@ public class CreateDataImportOrderRequest extends Request {
          * Param.
          */
         public Builder param(Param param) {
-            this.putQueryParameter("Param", param);
+            String paramShrink = shrink(param, "Param", "json");
+            this.putQueryParameter("Param", paramShrink);
             this.param = param;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 
@@ -166,7 +167,8 @@ public class CreateDataImportOrderRequest extends Request {
          * RelatedUserList.
          */
         public Builder relatedUserList(java.util.List < Long > relatedUserList) {
-            this.putQueryParameter("RelatedUserList", relatedUserList);
+            String relatedUserListShrink = shrink(relatedUserList, "RelatedUserList", "json");
+            this.putQueryParameter("RelatedUserList", relatedUserListShrink);
             this.relatedUserList = relatedUserList;
             return this;
         }

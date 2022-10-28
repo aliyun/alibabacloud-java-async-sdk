@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreatePublishGroupTaskRequest</p>
  */
 public class CreatePublishGroupTaskRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("DbId")
     @Validation(required = true)
@@ -36,22 +40,18 @@ public class CreatePublishGroupTaskRequest extends Request {
     @Validation(required = true)
     private String publishStrategy;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("Tid")
     private Long tid;
 
     private CreatePublishGroupTaskRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.dbId = builder.dbId;
         this.logic = builder.logic;
         this.orderId = builder.orderId;
         this.planTime = builder.planTime;
         this.publishStrategy = builder.publishStrategy;
-        this.regionId = builder.regionId;
         this.tid = builder.tid;
     }
 
@@ -66,6 +66,13 @@ public class CreatePublishGroupTaskRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -104,13 +111,6 @@ public class CreatePublishGroupTaskRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return tid
      */
     public Long getTid() {
@@ -118,28 +118,37 @@ public class CreatePublishGroupTaskRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreatePublishGroupTaskRequest, Builder> {
+        private String regionId; 
         private Integer dbId; 
         private Boolean logic; 
         private Long orderId; 
         private String planTime; 
         private String publishStrategy; 
-        private String regionId; 
         private Long tid; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreatePublishGroupTaskRequest response) {
-            super(response);
-            this.dbId = response.dbId;
-            this.logic = response.logic;
-            this.orderId = response.orderId;
-            this.planTime = response.planTime;
-            this.publishStrategy = response.publishStrategy;
-            this.regionId = response.regionId;
-            this.tid = response.tid;
+        private Builder(CreatePublishGroupTaskRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.dbId = request.dbId;
+            this.logic = request.logic;
+            this.orderId = request.orderId;
+            this.planTime = request.planTime;
+            this.publishStrategy = request.publishStrategy;
+            this.tid = request.tid;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * DbId.
@@ -183,15 +192,6 @@ public class CreatePublishGroupTaskRequest extends Request {
         public Builder publishStrategy(String publishStrategy) {
             this.putQueryParameter("PublishStrategy", publishStrategy);
             this.publishStrategy = publishStrategy;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

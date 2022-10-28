@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListLogicTablesRequest</p>
  */
 public class ListLogicTablesRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("DatabaseId")
     @Validation(required = true)
@@ -24,10 +28,6 @@ public class ListLogicTablesRequest extends Request {
     @Query
     @NameInMap("PageSize")
     private Integer pageSize;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Query
     @NameInMap("ReturnGuid")
@@ -43,10 +43,10 @@ public class ListLogicTablesRequest extends Request {
 
     private ListLogicTablesRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.databaseId = builder.databaseId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
         this.returnGuid = builder.returnGuid;
         this.searchName = builder.searchName;
         this.tid = builder.tid;
@@ -63,6 +63,13 @@ public class ListLogicTablesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -87,13 +94,6 @@ public class ListLogicTablesRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return returnGuid
      */
     public Boolean getReturnGuid() {
@@ -115,10 +115,10 @@ public class ListLogicTablesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListLogicTablesRequest, Builder> {
+        private String regionId; 
         private String databaseId; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private String regionId; 
         private Boolean returnGuid; 
         private String searchName; 
         private Long tid; 
@@ -127,16 +127,25 @@ public class ListLogicTablesRequest extends Request {
             super();
         } 
 
-        private Builder(ListLogicTablesRequest response) {
-            super(response);
-            this.databaseId = response.databaseId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.returnGuid = response.returnGuid;
-            this.searchName = response.searchName;
-            this.tid = response.tid;
+        private Builder(ListLogicTablesRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.databaseId = request.databaseId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.returnGuid = request.returnGuid;
+            this.searchName = request.searchName;
+            this.tid = request.tid;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * DatabaseId.
@@ -162,15 +171,6 @@ public class ListLogicTablesRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

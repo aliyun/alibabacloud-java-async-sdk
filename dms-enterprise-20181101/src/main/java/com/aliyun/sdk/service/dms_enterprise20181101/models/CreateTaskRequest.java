@@ -1,0 +1,260 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.dms_enterprise20181101.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link CreateTaskRequest} extends {@link RequestModel}
+ *
+ * <p>CreateTaskRequest</p>
+ */
+public class CreateTaskRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
+    @Query
+    @NameInMap("DagId")
+    @Validation(required = true)
+    private Long dagId;
+
+    @Query
+    @NameInMap("GraphParam")
+    private String graphParam;
+
+    @Query
+    @NameInMap("NodeContent")
+    private String nodeContent;
+
+    @Query
+    @NameInMap("NodeName")
+    @Validation(required = true)
+    private String nodeName;
+
+    @Query
+    @NameInMap("NodeOutput")
+    private String nodeOutput;
+
+    @Query
+    @NameInMap("NodeType")
+    @Validation(required = true)
+    private String nodeType;
+
+    @Query
+    @NameInMap("Tid")
+    @Validation(minimum = 1)
+    private Long tid;
+
+    @Query
+    @NameInMap("TimeVariables")
+    private String timeVariables;
+
+    private CreateTaskRequest(Builder builder) {
+        super(builder);
+        this.regionId = builder.regionId;
+        this.dagId = builder.dagId;
+        this.graphParam = builder.graphParam;
+        this.nodeContent = builder.nodeContent;
+        this.nodeName = builder.nodeName;
+        this.nodeOutput = builder.nodeOutput;
+        this.nodeType = builder.nodeType;
+        this.tid = builder.tid;
+        this.timeVariables = builder.timeVariables;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static CreateTaskRequest create() {
+        return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return dagId
+     */
+    public Long getDagId() {
+        return this.dagId;
+    }
+
+    /**
+     * @return graphParam
+     */
+    public String getGraphParam() {
+        return this.graphParam;
+    }
+
+    /**
+     * @return nodeContent
+     */
+    public String getNodeContent() {
+        return this.nodeContent;
+    }
+
+    /**
+     * @return nodeName
+     */
+    public String getNodeName() {
+        return this.nodeName;
+    }
+
+    /**
+     * @return nodeOutput
+     */
+    public String getNodeOutput() {
+        return this.nodeOutput;
+    }
+
+    /**
+     * @return nodeType
+     */
+    public String getNodeType() {
+        return this.nodeType;
+    }
+
+    /**
+     * @return tid
+     */
+    public Long getTid() {
+        return this.tid;
+    }
+
+    /**
+     * @return timeVariables
+     */
+    public String getTimeVariables() {
+        return this.timeVariables;
+    }
+
+    public static final class Builder extends Request.Builder<CreateTaskRequest, Builder> {
+        private String regionId; 
+        private Long dagId; 
+        private String graphParam; 
+        private String nodeContent; 
+        private String nodeName; 
+        private String nodeOutput; 
+        private String nodeType; 
+        private Long tid; 
+        private String timeVariables; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(CreateTaskRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.dagId = request.dagId;
+            this.graphParam = request.graphParam;
+            this.nodeContent = request.nodeContent;
+            this.nodeName = request.nodeName;
+            this.nodeOutput = request.nodeOutput;
+            this.nodeType = request.nodeType;
+            this.tid = request.tid;
+            this.timeVariables = request.timeVariables;
+        } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * DagId.
+         */
+        public Builder dagId(Long dagId) {
+            this.putQueryParameter("DagId", dagId);
+            this.dagId = dagId;
+            return this;
+        }
+
+        /**
+         * GraphParam.
+         */
+        public Builder graphParam(String graphParam) {
+            this.putQueryParameter("GraphParam", graphParam);
+            this.graphParam = graphParam;
+            return this;
+        }
+
+        /**
+         * NodeContent.
+         */
+        public Builder nodeContent(String nodeContent) {
+            this.putQueryParameter("NodeContent", nodeContent);
+            this.nodeContent = nodeContent;
+            return this;
+        }
+
+        /**
+         * NodeName.
+         */
+        public Builder nodeName(String nodeName) {
+            this.putQueryParameter("NodeName", nodeName);
+            this.nodeName = nodeName;
+            return this;
+        }
+
+        /**
+         * NodeOutput.
+         */
+        public Builder nodeOutput(String nodeOutput) {
+            this.putQueryParameter("NodeOutput", nodeOutput);
+            this.nodeOutput = nodeOutput;
+            return this;
+        }
+
+        /**
+         * NodeType.
+         */
+        public Builder nodeType(String nodeType) {
+            this.putQueryParameter("NodeType", nodeType);
+            this.nodeType = nodeType;
+            return this;
+        }
+
+        /**
+         * Tid.
+         */
+        public Builder tid(Long tid) {
+            this.putQueryParameter("Tid", tid);
+            this.tid = tid;
+            return this;
+        }
+
+        /**
+         * TimeVariables.
+         */
+        public Builder timeVariables(String timeVariables) {
+            this.putQueryParameter("TimeVariables", timeVariables);
+            this.timeVariables = timeVariables;
+            return this;
+        }
+
+        @Override
+        public CreateTaskRequest build() {
+            return new CreateTaskRequest(this);
+        } 
+
+    } 
+
+}

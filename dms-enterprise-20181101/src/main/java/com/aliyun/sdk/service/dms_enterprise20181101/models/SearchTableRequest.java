@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SearchTableRequest</p>
  */
 public class SearchTableRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("DbType")
     private String dbType;
@@ -27,10 +31,6 @@ public class SearchTableRequest extends Request {
     @Query
     @NameInMap("PageSize")
     private Integer pageSize;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Query
     @NameInMap("ReturnGuid")
@@ -54,11 +54,11 @@ public class SearchTableRequest extends Request {
 
     private SearchTableRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.dbType = builder.dbType;
         this.envType = builder.envType;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
         this.returnGuid = builder.returnGuid;
         this.searchKey = builder.searchKey;
         this.searchRange = builder.searchRange;
@@ -77,6 +77,13 @@ public class SearchTableRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -105,13 +112,6 @@ public class SearchTableRequest extends Request {
      */
     public Integer getPageSize() {
         return this.pageSize;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -150,11 +150,11 @@ public class SearchTableRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SearchTableRequest, Builder> {
+        private String regionId; 
         private String dbType; 
         private String envType; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private String regionId; 
         private Boolean returnGuid; 
         private String searchKey; 
         private String searchRange; 
@@ -165,19 +165,28 @@ public class SearchTableRequest extends Request {
             super();
         } 
 
-        private Builder(SearchTableRequest response) {
-            super(response);
-            this.dbType = response.dbType;
-            this.envType = response.envType;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.returnGuid = response.returnGuid;
-            this.searchKey = response.searchKey;
-            this.searchRange = response.searchRange;
-            this.searchTarget = response.searchTarget;
-            this.tid = response.tid;
+        private Builder(SearchTableRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.dbType = request.dbType;
+            this.envType = request.envType;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.returnGuid = request.returnGuid;
+            this.searchKey = request.searchKey;
+            this.searchRange = request.searchRange;
+            this.searchTarget = request.searchTarget;
+            this.tid = request.tid;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * DbType.
@@ -212,15 +221,6 @@ public class SearchTableRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

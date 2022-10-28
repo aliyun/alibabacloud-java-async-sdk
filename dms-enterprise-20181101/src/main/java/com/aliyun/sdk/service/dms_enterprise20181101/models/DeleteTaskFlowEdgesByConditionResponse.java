@@ -1,0 +1,104 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.dms_enterprise20181101.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link DeleteTaskFlowEdgesByConditionResponse} extends {@link TeaModel}
+ *
+ * <p>DeleteTaskFlowEdgesByConditionResponse</p>
+ */
+public class DeleteTaskFlowEdgesByConditionResponse extends Response {
+    @NameInMap("headers")
+    @Validation(required = true)
+    private java.util.Map < String, String > headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    private DeleteTaskFlowEdgesByConditionResponseBody body;
+
+    private DeleteTaskFlowEdgesByConditionResponse(BuilderImpl builder) {
+        super(builder);
+        this.headers = builder.headers;
+        this.body = builder.body;
+    }
+
+    public static DeleteTaskFlowEdgesByConditionResponse create() {
+        return new BuilderImpl().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new BuilderImpl(this);
+    }
+
+    /**
+     * @return headers
+     */
+    public java.util.Map < String, String > getHeaders() {
+        return this.headers;
+    }
+
+    /**
+     * @return body
+     */
+    public DeleteTaskFlowEdgesByConditionResponseBody getBody() {
+        return this.body;
+    }
+
+    public interface Builder extends Response.Builder<DeleteTaskFlowEdgesByConditionResponse, Builder> {
+
+        Builder headers(java.util.Map < String, String > headers);
+
+        Builder body(DeleteTaskFlowEdgesByConditionResponseBody body);
+
+        @Override
+        DeleteTaskFlowEdgesByConditionResponse build();
+
+    } 
+
+    private static final class BuilderImpl
+            extends Response.BuilderImpl<DeleteTaskFlowEdgesByConditionResponse, Builder>
+            implements Builder {
+        private java.util.Map < String, String > headers; 
+        private DeleteTaskFlowEdgesByConditionResponseBody body; 
+
+        private BuilderImpl() {
+            super();
+        } 
+
+        private BuilderImpl(DeleteTaskFlowEdgesByConditionResponse response) {
+            super(response);
+            this.headers = response.headers;
+            this.body = response.body;
+        } 
+
+        /**
+         * headers.
+         */
+        @Override
+        public Builder headers(java.util.Map < String, String > headers) {
+            this.headers = headers;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        @Override
+        public Builder body(DeleteTaskFlowEdgesByConditionResponseBody body) {
+            this.body = body;
+            return this;
+        }
+
+        @Override
+        public DeleteTaskFlowEdgesByConditionResponse build() {
+            return new DeleteTaskFlowEdgesByConditionResponse(this);
+        } 
+
+    } 
+
+}

@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListInstanceLoginAuditLogRequest</p>
  */
 public class ListInstanceLoginAuditLogRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("EndTime")
     @Validation(required = true)
@@ -30,10 +34,6 @@ public class ListInstanceLoginAuditLogRequest extends Request {
     @Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("SearchName")
     private String searchName;
@@ -50,11 +50,11 @@ public class ListInstanceLoginAuditLogRequest extends Request {
 
     private ListInstanceLoginAuditLogRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.endTime = builder.endTime;
         this.opUserName = builder.opUserName;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
         this.searchName = builder.searchName;
         this.startTime = builder.startTime;
         this.tid = builder.tid;
@@ -71,6 +71,13 @@ public class ListInstanceLoginAuditLogRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -102,13 +109,6 @@ public class ListInstanceLoginAuditLogRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return searchName
      */
     public String getSearchName() {
@@ -130,11 +130,11 @@ public class ListInstanceLoginAuditLogRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListInstanceLoginAuditLogRequest, Builder> {
+        private String regionId; 
         private String endTime; 
         private String opUserName; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private String regionId; 
         private String searchName; 
         private String startTime; 
         private Long tid; 
@@ -143,17 +143,26 @@ public class ListInstanceLoginAuditLogRequest extends Request {
             super();
         } 
 
-        private Builder(ListInstanceLoginAuditLogRequest response) {
-            super(response);
-            this.endTime = response.endTime;
-            this.opUserName = response.opUserName;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.searchName = response.searchName;
-            this.startTime = response.startTime;
-            this.tid = response.tid;
+        private Builder(ListInstanceLoginAuditLogRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.endTime = request.endTime;
+            this.opUserName = request.opUserName;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.searchName = request.searchName;
+            this.startTime = request.startTime;
+            this.tid = request.tid;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * EndTime.
@@ -188,15 +197,6 @@ public class ListInstanceLoginAuditLogRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

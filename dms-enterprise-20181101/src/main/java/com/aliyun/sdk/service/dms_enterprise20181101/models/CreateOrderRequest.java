@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateOrderRequest</p>
  */
 public class CreateOrderRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("AttachmentKey")
     private String attachmentKey;
@@ -31,10 +35,6 @@ public class CreateOrderRequest extends Request {
     @Validation(required = true)
     private String pluginType;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("RelatedUserList")
     private String relatedUserList;
@@ -45,11 +45,11 @@ public class CreateOrderRequest extends Request {
 
     private CreateOrderRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.attachmentKey = builder.attachmentKey;
         this.comment = builder.comment;
         this.pluginParam = builder.pluginParam;
         this.pluginType = builder.pluginType;
-        this.regionId = builder.regionId;
         this.relatedUserList = builder.relatedUserList;
         this.tid = builder.tid;
     }
@@ -65,6 +65,13 @@ public class CreateOrderRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -96,13 +103,6 @@ public class CreateOrderRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return relatedUserList
      */
     public String getRelatedUserList() {
@@ -117,11 +117,11 @@ public class CreateOrderRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateOrderRequest, Builder> {
+        private String regionId; 
         private String attachmentKey; 
         private String comment; 
         private java.util.Map < String, ? > pluginParam; 
         private String pluginType; 
-        private String regionId; 
         private String relatedUserList; 
         private Long tid; 
 
@@ -129,16 +129,25 @@ public class CreateOrderRequest extends Request {
             super();
         } 
 
-        private Builder(CreateOrderRequest response) {
-            super(response);
-            this.attachmentKey = response.attachmentKey;
-            this.comment = response.comment;
-            this.pluginParam = response.pluginParam;
-            this.pluginType = response.pluginType;
-            this.regionId = response.regionId;
-            this.relatedUserList = response.relatedUserList;
-            this.tid = response.tid;
+        private Builder(CreateOrderRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.attachmentKey = request.attachmentKey;
+            this.comment = request.comment;
+            this.pluginParam = request.pluginParam;
+            this.pluginType = request.pluginType;
+            this.relatedUserList = request.relatedUserList;
+            this.tid = request.tid;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * AttachmentKey.
@@ -162,7 +171,8 @@ public class CreateOrderRequest extends Request {
          * PluginParam.
          */
         public Builder pluginParam(java.util.Map < String, ? > pluginParam) {
-            this.putBodyParameter("PluginParam", pluginParam);
+            String pluginParamShrink = shrink(pluginParam, "PluginParam", "json");
+            this.putBodyParameter("PluginParam", pluginParamShrink);
             this.pluginParam = pluginParam;
             return this;
         }
@@ -173,15 +183,6 @@ public class CreateOrderRequest extends Request {
         public Builder pluginType(String pluginType) {
             this.putQueryParameter("PluginType", pluginType);
             this.pluginType = pluginType;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

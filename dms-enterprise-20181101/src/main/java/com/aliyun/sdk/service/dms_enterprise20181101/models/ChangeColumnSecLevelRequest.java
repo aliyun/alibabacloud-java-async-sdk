@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ChangeColumnSecLevelRequest</p>
  */
 public class ChangeColumnSecLevelRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("ColumnName")
     @Validation(required = true)
@@ -32,10 +36,6 @@ public class ChangeColumnSecLevelRequest extends Request {
     @Validation(required = true)
     private String newLevel;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("SchemaName")
     @Validation(required = true)
@@ -52,11 +52,11 @@ public class ChangeColumnSecLevelRequest extends Request {
 
     private ChangeColumnSecLevelRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.columnName = builder.columnName;
         this.dbId = builder.dbId;
         this.isLogic = builder.isLogic;
         this.newLevel = builder.newLevel;
-        this.regionId = builder.regionId;
         this.schemaName = builder.schemaName;
         this.tableName = builder.tableName;
         this.tid = builder.tid;
@@ -73,6 +73,13 @@ public class ChangeColumnSecLevelRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -104,13 +111,6 @@ public class ChangeColumnSecLevelRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return schemaName
      */
     public String getSchemaName() {
@@ -132,11 +132,11 @@ public class ChangeColumnSecLevelRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ChangeColumnSecLevelRequest, Builder> {
+        private String regionId; 
         private String columnName; 
         private Long dbId; 
         private Boolean isLogic; 
         private String newLevel; 
-        private String regionId; 
         private String schemaName; 
         private String tableName; 
         private Long tid; 
@@ -145,17 +145,26 @@ public class ChangeColumnSecLevelRequest extends Request {
             super();
         } 
 
-        private Builder(ChangeColumnSecLevelRequest response) {
-            super(response);
-            this.columnName = response.columnName;
-            this.dbId = response.dbId;
-            this.isLogic = response.isLogic;
-            this.newLevel = response.newLevel;
-            this.regionId = response.regionId;
-            this.schemaName = response.schemaName;
-            this.tableName = response.tableName;
-            this.tid = response.tid;
+        private Builder(ChangeColumnSecLevelRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.columnName = request.columnName;
+            this.dbId = request.dbId;
+            this.isLogic = request.isLogic;
+            this.newLevel = request.newLevel;
+            this.schemaName = request.schemaName;
+            this.tableName = request.tableName;
+            this.tid = request.tid;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * ColumnName.
@@ -190,15 +199,6 @@ public class ChangeColumnSecLevelRequest extends Request {
         public Builder newLevel(String newLevel) {
             this.putQueryParameter("NewLevel", newLevel);
             this.newLevel = newLevel;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

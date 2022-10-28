@@ -12,14 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetLogicDatabaseRequest</p>
  */
 public class GetLogicDatabaseRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("DbId")
     @Validation(required = true)
     private String dbId;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Query
     @NameInMap("Tid")
@@ -27,8 +27,8 @@ public class GetLogicDatabaseRequest extends Request {
 
     private GetLogicDatabaseRequest(Builder builder) {
         super(builder);
-        this.dbId = builder.dbId;
         this.regionId = builder.regionId;
+        this.dbId = builder.dbId;
         this.tid = builder.tid;
     }
 
@@ -46,17 +46,17 @@ public class GetLogicDatabaseRequest extends Request {
     }
 
     /**
-     * @return dbId
-     */
-    public String getDbId() {
-        return this.dbId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return dbId
+     */
+    public String getDbId() {
+        return this.dbId;
     }
 
     /**
@@ -67,29 +67,20 @@ public class GetLogicDatabaseRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetLogicDatabaseRequest, Builder> {
-        private String dbId; 
         private String regionId; 
+        private String dbId; 
         private Long tid; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetLogicDatabaseRequest response) {
-            super(response);
-            this.dbId = response.dbId;
-            this.regionId = response.regionId;
-            this.tid = response.tid;
+        private Builder(GetLogicDatabaseRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.dbId = request.dbId;
+            this.tid = request.tid;
         } 
-
-        /**
-         * DbId.
-         */
-        public Builder dbId(String dbId) {
-            this.putQueryParameter("DbId", dbId);
-            this.dbId = dbId;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -97,6 +88,15 @@ public class GetLogicDatabaseRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * DbId.
+         */
+        public Builder dbId(String dbId) {
+            this.putQueryParameter("DbId", dbId);
+            this.dbId = dbId;
             return this;
         }
 

@@ -12,14 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetOrderBaseInfoRequest</p>
  */
 public class GetOrderBaseInfoRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("OrderId")
     @Validation(required = true)
     private Long orderId;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Query
     @NameInMap("Tid")
@@ -27,8 +27,8 @@ public class GetOrderBaseInfoRequest extends Request {
 
     private GetOrderBaseInfoRequest(Builder builder) {
         super(builder);
-        this.orderId = builder.orderId;
         this.regionId = builder.regionId;
+        this.orderId = builder.orderId;
         this.tid = builder.tid;
     }
 
@@ -46,17 +46,17 @@ public class GetOrderBaseInfoRequest extends Request {
     }
 
     /**
-     * @return orderId
-     */
-    public Long getOrderId() {
-        return this.orderId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return orderId
+     */
+    public Long getOrderId() {
+        return this.orderId;
     }
 
     /**
@@ -67,29 +67,20 @@ public class GetOrderBaseInfoRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetOrderBaseInfoRequest, Builder> {
-        private Long orderId; 
         private String regionId; 
+        private Long orderId; 
         private Long tid; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetOrderBaseInfoRequest response) {
-            super(response);
-            this.orderId = response.orderId;
-            this.regionId = response.regionId;
-            this.tid = response.tid;
+        private Builder(GetOrderBaseInfoRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.orderId = request.orderId;
+            this.tid = request.tid;
         } 
-
-        /**
-         * OrderId.
-         */
-        public Builder orderId(Long orderId) {
-            this.putQueryParameter("OrderId", orderId);
-            this.orderId = orderId;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -97,6 +88,15 @@ public class GetOrderBaseInfoRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * OrderId.
+         */
+        public Builder orderId(Long orderId) {
+            this.putQueryParameter("OrderId", orderId);
+            this.orderId = orderId;
             return this;
         }
 

@@ -173,6 +173,9 @@ public class ListSQLReviewOriginSQLResponseBody extends TeaModel {
         @NameInMap("SQLId")
         private Long SQLId;
 
+        @NameInMap("SQLName")
+        private String SQLName;
+
         @NameInMap("SQLReviewQueryKey")
         private String SQLReviewQueryKey;
 
@@ -190,6 +193,7 @@ public class ListSQLReviewOriginSQLResponseBody extends TeaModel {
             this.reviewSummary = builder.reviewSummary;
             this.SQLContent = builder.SQLContent;
             this.SQLId = builder.SQLId;
+            this.SQLName = builder.SQLName;
             this.SQLReviewQueryKey = builder.SQLReviewQueryKey;
             this.sqlHash = builder.sqlHash;
             this.statusDesc = builder.statusDesc;
@@ -253,6 +257,13 @@ public class ListSQLReviewOriginSQLResponseBody extends TeaModel {
         }
 
         /**
+         * @return SQLName
+         */
+        public String getSQLName() {
+            return this.SQLName;
+        }
+
+        /**
          * @return SQLReviewQueryKey
          */
         public String getSQLReviewQueryKey() {
@@ -281,6 +292,7 @@ public class ListSQLReviewOriginSQLResponseBody extends TeaModel {
             private String reviewSummary; 
             private String SQLContent; 
             private Long SQLId; 
+            private String SQLName; 
             private String SQLReviewQueryKey; 
             private String sqlHash; 
             private String statusDesc; 
@@ -338,6 +350,14 @@ public class ListSQLReviewOriginSQLResponseBody extends TeaModel {
              */
             public Builder SQLId(Long SQLId) {
                 this.SQLId = SQLId;
+                return this;
+            }
+
+            /**
+             * SQLName.
+             */
+            public Builder SQLName(String SQLName) {
+                this.SQLName = SQLName;
                 return this;
             }
 

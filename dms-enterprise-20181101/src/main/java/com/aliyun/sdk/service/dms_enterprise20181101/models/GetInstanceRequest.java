@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetInstanceRequest</p>
  */
 public class GetInstanceRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("Host")
     @Validation(required = true)
@@ -21,10 +25,6 @@ public class GetInstanceRequest extends Request {
     @NameInMap("Port")
     @Validation(required = true)
     private Integer port;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Query
     @NameInMap("Sid")
@@ -36,9 +36,9 @@ public class GetInstanceRequest extends Request {
 
     private GetInstanceRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.host = builder.host;
         this.port = builder.port;
-        this.regionId = builder.regionId;
         this.sid = builder.sid;
         this.tid = builder.tid;
     }
@@ -57,6 +57,13 @@ public class GetInstanceRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return host
      */
     public String getHost() {
@@ -68,13 +75,6 @@ public class GetInstanceRequest extends Request {
      */
     public Integer getPort() {
         return this.port;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -92,9 +92,9 @@ public class GetInstanceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetInstanceRequest, Builder> {
+        private String regionId; 
         private String host; 
         private Integer port; 
-        private String regionId; 
         private String sid; 
         private Long tid; 
 
@@ -102,14 +102,23 @@ public class GetInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(GetInstanceRequest response) {
-            super(response);
-            this.host = response.host;
-            this.port = response.port;
-            this.regionId = response.regionId;
-            this.sid = response.sid;
-            this.tid = response.tid;
+        private Builder(GetInstanceRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.host = request.host;
+            this.port = request.port;
+            this.sid = request.sid;
+            this.tid = request.tid;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * Host.
@@ -126,15 +135,6 @@ public class GetInstanceRequest extends Request {
         public Builder port(Integer port) {
             this.putQueryParameter("Port", port);
             this.port = port;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

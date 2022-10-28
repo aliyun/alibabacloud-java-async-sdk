@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateSQLReviewOrderRequest</p>
  */
 public class CreateSQLReviewOrderRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("Comment")
     @Validation(required = true)
@@ -21,10 +25,6 @@ public class CreateSQLReviewOrderRequest extends Request {
     @NameInMap("Param")
     @Validation(required = true)
     private Param param;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Query
     @NameInMap("RelatedUserList")
@@ -37,9 +37,9 @@ public class CreateSQLReviewOrderRequest extends Request {
 
     private CreateSQLReviewOrderRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.comment = builder.comment;
         this.param = builder.param;
-        this.regionId = builder.regionId;
         this.relatedUserList = builder.relatedUserList;
         this.tid = builder.tid;
     }
@@ -58,6 +58,13 @@ public class CreateSQLReviewOrderRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return comment
      */
     public String getComment() {
@@ -69,13 +76,6 @@ public class CreateSQLReviewOrderRequest extends Request {
      */
     public Param getParam() {
         return this.param;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -93,9 +93,9 @@ public class CreateSQLReviewOrderRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateSQLReviewOrderRequest, Builder> {
+        private String regionId; 
         private String comment; 
         private Param param; 
-        private String regionId; 
         private java.util.List < Long > relatedUserList; 
         private Long tid; 
 
@@ -103,14 +103,23 @@ public class CreateSQLReviewOrderRequest extends Request {
             super();
         } 
 
-        private Builder(CreateSQLReviewOrderRequest response) {
-            super(response);
-            this.comment = response.comment;
-            this.param = response.param;
-            this.regionId = response.regionId;
-            this.relatedUserList = response.relatedUserList;
-            this.tid = response.tid;
+        private Builder(CreateSQLReviewOrderRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.comment = request.comment;
+            this.param = request.param;
+            this.relatedUserList = request.relatedUserList;
+            this.tid = request.tid;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * Comment.
@@ -125,17 +134,9 @@ public class CreateSQLReviewOrderRequest extends Request {
          * Param.
          */
         public Builder param(Param param) {
-            this.putQueryParameter("Param", param);
+            String paramShrink = shrink(param, "Param", "json");
+            this.putQueryParameter("Param", paramShrink);
             this.param = param;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 
@@ -143,7 +144,8 @@ public class CreateSQLReviewOrderRequest extends Request {
          * RelatedUserList.
          */
         public Builder relatedUserList(java.util.List < Long > relatedUserList) {
-            this.putQueryParameter("RelatedUserList", relatedUserList);
+            String relatedUserListShrink = shrink(relatedUserList, "RelatedUserList", "json");
+            this.putQueryParameter("RelatedUserList", relatedUserListShrink);
             this.relatedUserList = relatedUserList;
             return this;
         }

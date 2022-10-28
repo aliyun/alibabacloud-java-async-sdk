@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateUploadOSSFileJobRequest</p>
  */
 public class CreateUploadOSSFileJobRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("FileName")
     @Validation(required = true)
@@ -21,10 +25,6 @@ public class CreateUploadOSSFileJobRequest extends Request {
     @NameInMap("FileSource")
     @Validation(required = true)
     private String fileSource;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Query
     @NameInMap("Tid")
@@ -38,9 +38,9 @@ public class CreateUploadOSSFileJobRequest extends Request {
 
     private CreateUploadOSSFileJobRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.fileName = builder.fileName;
         this.fileSource = builder.fileSource;
-        this.regionId = builder.regionId;
         this.tid = builder.tid;
         this.uploadTarget = builder.uploadTarget;
     }
@@ -59,6 +59,13 @@ public class CreateUploadOSSFileJobRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return fileName
      */
     public String getFileName() {
@@ -70,13 +77,6 @@ public class CreateUploadOSSFileJobRequest extends Request {
      */
     public String getFileSource() {
         return this.fileSource;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -94,9 +94,9 @@ public class CreateUploadOSSFileJobRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateUploadOSSFileJobRequest, Builder> {
+        private String regionId; 
         private String fileName; 
         private String fileSource; 
-        private String regionId; 
         private Long tid; 
         private UploadTarget uploadTarget; 
 
@@ -104,14 +104,23 @@ public class CreateUploadOSSFileJobRequest extends Request {
             super();
         } 
 
-        private Builder(CreateUploadOSSFileJobRequest response) {
-            super(response);
-            this.fileName = response.fileName;
-            this.fileSource = response.fileSource;
-            this.regionId = response.regionId;
-            this.tid = response.tid;
-            this.uploadTarget = response.uploadTarget;
+        private Builder(CreateUploadOSSFileJobRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.fileName = request.fileName;
+            this.fileSource = request.fileSource;
+            this.tid = request.tid;
+            this.uploadTarget = request.uploadTarget;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * FileName.
@@ -132,15 +141,6 @@ public class CreateUploadOSSFileJobRequest extends Request {
         }
 
         /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
          * Tid.
          */
         public Builder tid(Long tid) {
@@ -153,7 +153,8 @@ public class CreateUploadOSSFileJobRequest extends Request {
          * UploadTarget.
          */
         public Builder uploadTarget(UploadTarget uploadTarget) {
-            this.putQueryParameter("UploadTarget", uploadTarget);
+            String uploadTargetShrink = shrink(uploadTarget, "UploadTarget", "json");
+            this.putQueryParameter("UploadTarget", uploadTargetShrink);
             this.uploadTarget = uploadTarget;
             return this;
         }

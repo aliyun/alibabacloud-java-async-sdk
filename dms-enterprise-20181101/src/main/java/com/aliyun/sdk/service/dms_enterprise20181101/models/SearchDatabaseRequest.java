@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SearchDatabaseRequest</p>
  */
 public class SearchDatabaseRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("DbType")
     private String dbType;
@@ -27,10 +31,6 @@ public class SearchDatabaseRequest extends Request {
     @Query
     @NameInMap("PageSize")
     private Integer pageSize;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Query
     @NameInMap("SearchKey")
@@ -50,11 +50,11 @@ public class SearchDatabaseRequest extends Request {
 
     private SearchDatabaseRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.dbType = builder.dbType;
         this.envType = builder.envType;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
         this.searchKey = builder.searchKey;
         this.searchRange = builder.searchRange;
         this.searchTarget = builder.searchTarget;
@@ -72,6 +72,13 @@ public class SearchDatabaseRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -103,13 +110,6 @@ public class SearchDatabaseRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return searchKey
      */
     public String getSearchKey() {
@@ -138,11 +138,11 @@ public class SearchDatabaseRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SearchDatabaseRequest, Builder> {
+        private String regionId; 
         private String dbType; 
         private String envType; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private String regionId; 
         private String searchKey; 
         private String searchRange; 
         private String searchTarget; 
@@ -152,18 +152,27 @@ public class SearchDatabaseRequest extends Request {
             super();
         } 
 
-        private Builder(SearchDatabaseRequest response) {
-            super(response);
-            this.dbType = response.dbType;
-            this.envType = response.envType;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.searchKey = response.searchKey;
-            this.searchRange = response.searchRange;
-            this.searchTarget = response.searchTarget;
-            this.tid = response.tid;
+        private Builder(SearchDatabaseRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.dbType = request.dbType;
+            this.envType = request.envType;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.searchKey = request.searchKey;
+            this.searchRange = request.searchRange;
+            this.searchTarget = request.searchTarget;
+            this.tid = request.tid;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * DbType.
@@ -198,15 +207,6 @@ public class SearchDatabaseRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

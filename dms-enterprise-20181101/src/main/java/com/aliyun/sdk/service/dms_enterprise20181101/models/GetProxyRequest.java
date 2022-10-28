@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetProxyRequest</p>
  */
 public class GetProxyRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("InstanceId")
     private Long instanceId;
@@ -20,10 +24,6 @@ public class GetProxyRequest extends Request {
     @NameInMap("ProxyId")
     private Long proxyId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("Tid")
     @Validation(minimum = 1)
@@ -31,9 +31,9 @@ public class GetProxyRequest extends Request {
 
     private GetProxyRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
         this.proxyId = builder.proxyId;
-        this.regionId = builder.regionId;
         this.tid = builder.tid;
     }
 
@@ -51,6 +51,13 @@ public class GetProxyRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return instanceId
      */
     public Long getInstanceId() {
@@ -65,13 +72,6 @@ public class GetProxyRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return tid
      */
     public Long getTid() {
@@ -79,22 +79,31 @@ public class GetProxyRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetProxyRequest, Builder> {
+        private String regionId; 
         private Long instanceId; 
         private Long proxyId; 
-        private String regionId; 
         private Long tid; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetProxyRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.proxyId = response.proxyId;
-            this.regionId = response.regionId;
-            this.tid = response.tid;
+        private Builder(GetProxyRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.instanceId = request.instanceId;
+            this.proxyId = request.proxyId;
+            this.tid = request.tid;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * InstanceId.
@@ -111,15 +120,6 @@ public class GetProxyRequest extends Request {
         public Builder proxyId(Long proxyId) {
             this.putQueryParameter("ProxyId", proxyId);
             this.proxyId = proxyId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

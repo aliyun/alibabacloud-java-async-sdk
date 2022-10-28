@@ -12,14 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDDLPublishRecordsRequest</p>
  */
 public class ListDDLPublishRecordsRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("OrderId")
     @Validation(required = true, minimum = 1)
     private Long orderId;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Query
     @NameInMap("Tid")
@@ -28,8 +28,8 @@ public class ListDDLPublishRecordsRequest extends Request {
 
     private ListDDLPublishRecordsRequest(Builder builder) {
         super(builder);
-        this.orderId = builder.orderId;
         this.regionId = builder.regionId;
+        this.orderId = builder.orderId;
         this.tid = builder.tid;
     }
 
@@ -47,17 +47,17 @@ public class ListDDLPublishRecordsRequest extends Request {
     }
 
     /**
-     * @return orderId
-     */
-    public Long getOrderId() {
-        return this.orderId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return orderId
+     */
+    public Long getOrderId() {
+        return this.orderId;
     }
 
     /**
@@ -68,29 +68,20 @@ public class ListDDLPublishRecordsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListDDLPublishRecordsRequest, Builder> {
-        private Long orderId; 
         private String regionId; 
+        private Long orderId; 
         private Long tid; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListDDLPublishRecordsRequest response) {
-            super(response);
-            this.orderId = response.orderId;
-            this.regionId = response.regionId;
-            this.tid = response.tid;
+        private Builder(ListDDLPublishRecordsRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.orderId = request.orderId;
+            this.tid = request.tid;
         } 
-
-        /**
-         * OrderId.
-         */
-        public Builder orderId(Long orderId) {
-            this.putQueryParameter("OrderId", orderId);
-            this.orderId = orderId;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -98,6 +89,15 @@ public class ListDDLPublishRecordsRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * OrderId.
+         */
+        public Builder orderId(Long orderId) {
+            this.putQueryParameter("OrderId", orderId);
+            this.orderId = orderId;
             return this;
         }
 

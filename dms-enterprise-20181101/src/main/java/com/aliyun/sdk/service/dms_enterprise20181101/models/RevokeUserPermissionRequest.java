@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RevokeUserPermissionRequest</p>
  */
 public class RevokeUserPermissionRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("DbId")
     private String dbId;
@@ -33,10 +37,6 @@ public class RevokeUserPermissionRequest extends Request {
     @NameInMap("PermTypes")
     @Validation(required = true)
     private String permTypes;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Query
     @NameInMap("TableId")
@@ -62,12 +62,12 @@ public class RevokeUserPermissionRequest extends Request {
 
     private RevokeUserPermissionRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.dbId = builder.dbId;
         this.dsType = builder.dsType;
         this.instanceId = builder.instanceId;
         this.logic = builder.logic;
         this.permTypes = builder.permTypes;
-        this.regionId = builder.regionId;
         this.tableId = builder.tableId;
         this.tableName = builder.tableName;
         this.tid = builder.tid;
@@ -86,6 +86,13 @@ public class RevokeUserPermissionRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -124,13 +131,6 @@ public class RevokeUserPermissionRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return tableId
      */
     public String getTableId() {
@@ -166,12 +166,12 @@ public class RevokeUserPermissionRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<RevokeUserPermissionRequest, Builder> {
+        private String regionId; 
         private String dbId; 
         private String dsType; 
         private Long instanceId; 
         private Boolean logic; 
         private String permTypes; 
-        private String regionId; 
         private String tableId; 
         private String tableName; 
         private Long tid; 
@@ -182,20 +182,29 @@ public class RevokeUserPermissionRequest extends Request {
             super();
         } 
 
-        private Builder(RevokeUserPermissionRequest response) {
-            super(response);
-            this.dbId = response.dbId;
-            this.dsType = response.dsType;
-            this.instanceId = response.instanceId;
-            this.logic = response.logic;
-            this.permTypes = response.permTypes;
-            this.regionId = response.regionId;
-            this.tableId = response.tableId;
-            this.tableName = response.tableName;
-            this.tid = response.tid;
-            this.userAccessId = response.userAccessId;
-            this.userId = response.userId;
+        private Builder(RevokeUserPermissionRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.dbId = request.dbId;
+            this.dsType = request.dsType;
+            this.instanceId = request.instanceId;
+            this.logic = request.logic;
+            this.permTypes = request.permTypes;
+            this.tableId = request.tableId;
+            this.tableName = request.tableName;
+            this.tid = request.tid;
+            this.userAccessId = request.userAccessId;
+            this.userId = request.userId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * DbId.
@@ -239,15 +248,6 @@ public class RevokeUserPermissionRequest extends Request {
         public Builder permTypes(String permTypes) {
             this.putQueryParameter("PermTypes", permTypes);
             this.permTypes = permTypes;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

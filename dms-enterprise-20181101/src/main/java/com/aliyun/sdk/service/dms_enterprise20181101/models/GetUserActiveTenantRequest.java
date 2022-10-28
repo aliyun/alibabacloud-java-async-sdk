@@ -62,10 +62,10 @@ public class GetUserActiveTenantRequest extends Request {
             super();
         } 
 
-        private Builder(GetUserActiveTenantRequest response) {
-            super(response);
-            this.regionId = response.regionId;
-            this.tid = response.tid;
+        private Builder(GetUserActiveTenantRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.tid = request.tid;
         } 
 
         /**

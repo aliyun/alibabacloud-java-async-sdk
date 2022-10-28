@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListOrdersRequest</p>
  */
 public class ListOrdersRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("EndTime")
     private String endTime;
@@ -36,10 +40,6 @@ public class ListOrdersRequest extends Request {
     @NameInMap("PluginType")
     private String pluginType;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("SearchContent")
     private String searchContent;
@@ -58,13 +58,13 @@ public class ListOrdersRequest extends Request {
 
     private ListOrdersRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.endTime = builder.endTime;
         this.orderResultType = builder.orderResultType;
         this.orderStatus = builder.orderStatus;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.pluginType = builder.pluginType;
-        this.regionId = builder.regionId;
         this.searchContent = builder.searchContent;
         this.searchDateType = builder.searchDateType;
         this.startTime = builder.startTime;
@@ -82,6 +82,13 @@ public class ListOrdersRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -127,13 +134,6 @@ public class ListOrdersRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return searchContent
      */
     public String getSearchContent() {
@@ -162,13 +162,13 @@ public class ListOrdersRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListOrdersRequest, Builder> {
+        private String regionId; 
         private String endTime; 
         private String orderResultType; 
         private String orderStatus; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String pluginType; 
-        private String regionId; 
         private String searchContent; 
         private String searchDateType; 
         private String startTime; 
@@ -178,20 +178,29 @@ public class ListOrdersRequest extends Request {
             super();
         } 
 
-        private Builder(ListOrdersRequest response) {
-            super(response);
-            this.endTime = response.endTime;
-            this.orderResultType = response.orderResultType;
-            this.orderStatus = response.orderStatus;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.pluginType = response.pluginType;
-            this.regionId = response.regionId;
-            this.searchContent = response.searchContent;
-            this.searchDateType = response.searchDateType;
-            this.startTime = response.startTime;
-            this.tid = response.tid;
+        private Builder(ListOrdersRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.endTime = request.endTime;
+            this.orderResultType = request.orderResultType;
+            this.orderStatus = request.orderStatus;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.pluginType = request.pluginType;
+            this.searchContent = request.searchContent;
+            this.searchDateType = request.searchDateType;
+            this.startTime = request.startTime;
+            this.tid = request.tid;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * EndTime.
@@ -244,15 +253,6 @@ public class ListOrdersRequest extends Request {
         public Builder pluginType(String pluginType) {
             this.putQueryParameter("PluginType", pluginType);
             this.pluginType = pluginType;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

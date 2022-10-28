@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListSensitiveColumnsRequest</p>
  */
 public class ListSensitiveColumnsRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("ColumnName")
     private String columnName;
@@ -32,10 +36,6 @@ public class ListSensitiveColumnsRequest extends Request {
     @NameInMap("PageSize")
     private Integer pageSize;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("SchemaName")
     private String schemaName;
@@ -54,12 +54,12 @@ public class ListSensitiveColumnsRequest extends Request {
 
     private ListSensitiveColumnsRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.columnName = builder.columnName;
         this.dbId = builder.dbId;
         this.logic = builder.logic;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
         this.schemaName = builder.schemaName;
         this.securityLevel = builder.securityLevel;
         this.tableName = builder.tableName;
@@ -77,6 +77,13 @@ public class ListSensitiveColumnsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -115,13 +122,6 @@ public class ListSensitiveColumnsRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return schemaName
      */
     public String getSchemaName() {
@@ -150,12 +150,12 @@ public class ListSensitiveColumnsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListSensitiveColumnsRequest, Builder> {
+        private String regionId; 
         private String columnName; 
         private Long dbId; 
         private Boolean logic; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private String regionId; 
         private String schemaName; 
         private String securityLevel; 
         private String tableName; 
@@ -165,19 +165,28 @@ public class ListSensitiveColumnsRequest extends Request {
             super();
         } 
 
-        private Builder(ListSensitiveColumnsRequest response) {
-            super(response);
-            this.columnName = response.columnName;
-            this.dbId = response.dbId;
-            this.logic = response.logic;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.schemaName = response.schemaName;
-            this.securityLevel = response.securityLevel;
-            this.tableName = response.tableName;
-            this.tid = response.tid;
+        private Builder(ListSensitiveColumnsRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.columnName = request.columnName;
+            this.dbId = request.dbId;
+            this.logic = request.logic;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.schemaName = request.schemaName;
+            this.securityLevel = request.securityLevel;
+            this.tableName = request.tableName;
+            this.tid = request.tid;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * ColumnName.
@@ -221,15 +230,6 @@ public class ListSensitiveColumnsRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

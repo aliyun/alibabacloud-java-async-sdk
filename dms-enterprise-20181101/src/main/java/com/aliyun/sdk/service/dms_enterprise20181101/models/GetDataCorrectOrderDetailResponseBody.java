@@ -660,6 +660,9 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
         @NameInMap("DatabaseList")
         private DatabaseList databaseList;
 
+        @NameInMap("ExecMode")
+        private String execMode;
+
         @NameInMap("OrderDetail")
         private OrderDetail orderDetail;
 
@@ -671,6 +674,7 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
 
         private DataCorrectOrderDetail(Builder builder) {
             this.databaseList = builder.databaseList;
+            this.execMode = builder.execMode;
             this.orderDetail = builder.orderDetail;
             this.preCheckDetail = builder.preCheckDetail;
             this.status = builder.status;
@@ -689,6 +693,13 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
          */
         public DatabaseList getDatabaseList() {
             return this.databaseList;
+        }
+
+        /**
+         * @return execMode
+         */
+        public String getExecMode() {
+            return this.execMode;
         }
 
         /**
@@ -714,6 +725,7 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private DatabaseList databaseList; 
+            private String execMode; 
             private OrderDetail orderDetail; 
             private PreCheckDetail preCheckDetail; 
             private String status; 
@@ -723,6 +735,14 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
              */
             public Builder databaseList(DatabaseList databaseList) {
                 this.databaseList = databaseList;
+                return this;
+            }
+
+            /**
+             * ExecMode.
+             */
+            public Builder execMode(String execMode) {
+                this.execMode = execMode;
                 return this;
             }
 

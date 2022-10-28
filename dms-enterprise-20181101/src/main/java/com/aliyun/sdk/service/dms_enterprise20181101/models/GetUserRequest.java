@@ -87,12 +87,12 @@ public class GetUserRequest extends Request {
             super();
         } 
 
-        private Builder(GetUserRequest response) {
-            super(response);
-            this.regionId = response.regionId;
-            this.tid = response.tid;
-            this.uid = response.uid;
-            this.userId = response.userId;
+        private Builder(GetUserRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.tid = request.tid;
+            this.uid = request.uid;
+            this.userId = request.userId;
         } 
 
         /**

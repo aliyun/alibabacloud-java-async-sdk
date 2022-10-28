@@ -104,13 +104,13 @@ public class AddLogicTableRouteConfigRequest extends Request {
             super();
         } 
 
-        private Builder(AddLogicTableRouteConfigRequest response) {
-            super(response);
-            this.regionId = response.regionId;
-            this.routeExpr = response.routeExpr;
-            this.routeKey = response.routeKey;
-            this.tableId = response.tableId;
-            this.tid = response.tid;
+        private Builder(AddLogicTableRouteConfigRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.routeExpr = request.routeExpr;
+            this.routeKey = request.routeKey;
+            this.tableId = request.tableId;
+            this.tid = request.tid;
         } 
 
         /**

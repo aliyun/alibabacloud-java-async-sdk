@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SyncInstanceMetaRequest</p>
  */
 public class SyncInstanceMetaRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("IgnoreTable")
     private Boolean ignoreTable;
@@ -21,19 +25,15 @@ public class SyncInstanceMetaRequest extends Request {
     @Validation(required = true)
     private String instanceId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("Tid")
     private Long tid;
 
     private SyncInstanceMetaRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.ignoreTable = builder.ignoreTable;
         this.instanceId = builder.instanceId;
-        this.regionId = builder.regionId;
         this.tid = builder.tid;
     }
 
@@ -51,6 +51,13 @@ public class SyncInstanceMetaRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return ignoreTable
      */
     public Boolean getIgnoreTable() {
@@ -65,13 +72,6 @@ public class SyncInstanceMetaRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return tid
      */
     public Long getTid() {
@@ -79,22 +79,31 @@ public class SyncInstanceMetaRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SyncInstanceMetaRequest, Builder> {
+        private String regionId; 
         private Boolean ignoreTable; 
         private String instanceId; 
-        private String regionId; 
         private Long tid; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(SyncInstanceMetaRequest response) {
-            super(response);
-            this.ignoreTable = response.ignoreTable;
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
-            this.tid = response.tid;
+        private Builder(SyncInstanceMetaRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.ignoreTable = request.ignoreTable;
+            this.instanceId = request.instanceId;
+            this.tid = request.tid;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * IgnoreTable.
@@ -111,15 +120,6 @@ public class SyncInstanceMetaRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

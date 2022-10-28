@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateInstanceRequest</p>
  */
 public class UpdateInstanceRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("DataLinkName")
     private String dataLinkName;
@@ -42,6 +46,10 @@ public class UpdateInstanceRequest extends Request {
     @Query
     @NameInMap("EcsRegion")
     private String ecsRegion;
+
+    @Query
+    @NameInMap("EnableSellSitd")
+    private String enableSellSitd;
 
     @Query
     @NameInMap("EnvType")
@@ -88,10 +96,6 @@ public class UpdateInstanceRequest extends Request {
     @Validation(required = true)
     private Integer queryTimeout;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("SafeRuleId")
     @Validation(required = true)
@@ -104,6 +108,14 @@ public class UpdateInstanceRequest extends Request {
     @Query
     @NameInMap("SkipTest")
     private Boolean skipTest;
+
+    @Query
+    @NameInMap("TemplateId")
+    private Long templateId;
+
+    @Query
+    @NameInMap("TemplateType")
+    private String templateType;
 
     @Query
     @NameInMap("Tid")
@@ -119,6 +131,7 @@ public class UpdateInstanceRequest extends Request {
 
     private UpdateInstanceRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.dataLinkName = builder.dataLinkName;
         this.databasePassword = builder.databasePassword;
         this.databaseUser = builder.databaseUser;
@@ -126,6 +139,7 @@ public class UpdateInstanceRequest extends Request {
         this.ddlOnline = builder.ddlOnline;
         this.ecsInstanceId = builder.ecsInstanceId;
         this.ecsRegion = builder.ecsRegion;
+        this.enableSellSitd = builder.enableSellSitd;
         this.envType = builder.envType;
         this.exportTimeout = builder.exportTimeout;
         this.host = builder.host;
@@ -135,10 +149,11 @@ public class UpdateInstanceRequest extends Request {
         this.instanceType = builder.instanceType;
         this.port = builder.port;
         this.queryTimeout = builder.queryTimeout;
-        this.regionId = builder.regionId;
         this.safeRuleId = builder.safeRuleId;
         this.sid = builder.sid;
         this.skipTest = builder.skipTest;
+        this.templateId = builder.templateId;
+        this.templateType = builder.templateType;
         this.tid = builder.tid;
         this.useDsql = builder.useDsql;
         this.vpcId = builder.vpcId;
@@ -155,6 +170,13 @@ public class UpdateInstanceRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -204,6 +226,13 @@ public class UpdateInstanceRequest extends Request {
      */
     public String getEcsRegion() {
         return this.ecsRegion;
+    }
+
+    /**
+     * @return enableSellSitd
+     */
+    public String getEnableSellSitd() {
+        return this.enableSellSitd;
     }
 
     /**
@@ -270,13 +299,6 @@ public class UpdateInstanceRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return safeRuleId
      */
     public String getSafeRuleId() {
@@ -295,6 +317,20 @@ public class UpdateInstanceRequest extends Request {
      */
     public Boolean getSkipTest() {
         return this.skipTest;
+    }
+
+    /**
+     * @return templateId
+     */
+    public Long getTemplateId() {
+        return this.templateId;
+    }
+
+    /**
+     * @return templateType
+     */
+    public String getTemplateType() {
+        return this.templateType;
     }
 
     /**
@@ -319,6 +355,7 @@ public class UpdateInstanceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateInstanceRequest, Builder> {
+        private String regionId; 
         private String dataLinkName; 
         private String databasePassword; 
         private String databaseUser; 
@@ -326,6 +363,7 @@ public class UpdateInstanceRequest extends Request {
         private Integer ddlOnline; 
         private String ecsInstanceId; 
         private String ecsRegion; 
+        private String enableSellSitd; 
         private String envType; 
         private Integer exportTimeout; 
         private String host; 
@@ -335,10 +373,11 @@ public class UpdateInstanceRequest extends Request {
         private String instanceType; 
         private Integer port; 
         private Integer queryTimeout; 
-        private String regionId; 
         private String safeRuleId; 
         private String sid; 
         private Boolean skipTest; 
+        private Long templateId; 
+        private String templateType; 
         private Long tid; 
         private Integer useDsql; 
         private String vpcId; 
@@ -347,32 +386,44 @@ public class UpdateInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateInstanceRequest response) {
-            super(response);
-            this.dataLinkName = response.dataLinkName;
-            this.databasePassword = response.databasePassword;
-            this.databaseUser = response.databaseUser;
-            this.dbaId = response.dbaId;
-            this.ddlOnline = response.ddlOnline;
-            this.ecsInstanceId = response.ecsInstanceId;
-            this.ecsRegion = response.ecsRegion;
-            this.envType = response.envType;
-            this.exportTimeout = response.exportTimeout;
-            this.host = response.host;
-            this.instanceAlias = response.instanceAlias;
-            this.instanceId = response.instanceId;
-            this.instanceSource = response.instanceSource;
-            this.instanceType = response.instanceType;
-            this.port = response.port;
-            this.queryTimeout = response.queryTimeout;
-            this.regionId = response.regionId;
-            this.safeRuleId = response.safeRuleId;
-            this.sid = response.sid;
-            this.skipTest = response.skipTest;
-            this.tid = response.tid;
-            this.useDsql = response.useDsql;
-            this.vpcId = response.vpcId;
+        private Builder(UpdateInstanceRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.dataLinkName = request.dataLinkName;
+            this.databasePassword = request.databasePassword;
+            this.databaseUser = request.databaseUser;
+            this.dbaId = request.dbaId;
+            this.ddlOnline = request.ddlOnline;
+            this.ecsInstanceId = request.ecsInstanceId;
+            this.ecsRegion = request.ecsRegion;
+            this.enableSellSitd = request.enableSellSitd;
+            this.envType = request.envType;
+            this.exportTimeout = request.exportTimeout;
+            this.host = request.host;
+            this.instanceAlias = request.instanceAlias;
+            this.instanceId = request.instanceId;
+            this.instanceSource = request.instanceSource;
+            this.instanceType = request.instanceType;
+            this.port = request.port;
+            this.queryTimeout = request.queryTimeout;
+            this.safeRuleId = request.safeRuleId;
+            this.sid = request.sid;
+            this.skipTest = request.skipTest;
+            this.templateId = request.templateId;
+            this.templateType = request.templateType;
+            this.tid = request.tid;
+            this.useDsql = request.useDsql;
+            this.vpcId = request.vpcId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * DataLinkName.
@@ -434,6 +485,18 @@ public class UpdateInstanceRequest extends Request {
         public Builder ecsRegion(String ecsRegion) {
             this.putQueryParameter("EcsRegion", ecsRegion);
             this.ecsRegion = ecsRegion;
+            return this;
+        }
+
+        /**
+         * - Y：开启敏感数据保护
+         * <p>
+         * - N：关闭敏感数据保护
+         * - 为NULL或其它：不更新敏感数据保护的状态（保持原始的开启或关闭状态）
+         */
+        public Builder enableSellSitd(String enableSellSitd) {
+            this.putQueryParameter("EnableSellSitd", enableSellSitd);
+            this.enableSellSitd = enableSellSitd;
             return this;
         }
 
@@ -519,15 +582,6 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
          * SafeRuleId.
          */
         public Builder safeRuleId(String safeRuleId) {
@@ -551,6 +605,24 @@ public class UpdateInstanceRequest extends Request {
         public Builder skipTest(Boolean skipTest) {
             this.putQueryParameter("SkipTest", skipTest);
             this.skipTest = skipTest;
+            return this;
+        }
+
+        /**
+         * 更新分类分级模板ID，可从ListClassificationTemplates获取
+         */
+        public Builder templateId(Long templateId) {
+            this.putQueryParameter("TemplateId", templateId);
+            this.templateId = templateId;
+            return this;
+        }
+
+        /**
+         * 更新分类分级模板类型，可从ListClassificationTemplates获取
+         */
+        public Builder templateType(String templateType) {
+            this.putQueryParameter("TemplateType", templateType);
+            this.templateType = templateType;
             return this;
         }
 

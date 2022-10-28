@@ -76,11 +76,11 @@ public class ListLogicTableRouteConfigRequest extends Request {
             super();
         } 
 
-        private Builder(ListLogicTableRouteConfigRequest response) {
-            super(response);
-            this.regionId = response.regionId;
-            this.tableId = response.tableId;
-            this.tid = response.tid;
+        private Builder(ListLogicTableRouteConfigRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.tableId = request.tableId;
+            this.tid = request.tid;
         } 
 
         /**

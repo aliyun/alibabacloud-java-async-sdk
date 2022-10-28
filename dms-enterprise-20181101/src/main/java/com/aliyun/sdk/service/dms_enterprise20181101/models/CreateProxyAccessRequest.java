@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateProxyAccessRequest</p>
  */
 public class CreateProxyAccessRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("IndepAccount")
     private String indepAccount;
@@ -25,10 +29,6 @@ public class CreateProxyAccessRequest extends Request {
     @Validation(required = true)
     private Long proxyId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("Tid")
     @Validation(minimum = 1)
@@ -41,10 +41,10 @@ public class CreateProxyAccessRequest extends Request {
 
     private CreateProxyAccessRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.indepAccount = builder.indepAccount;
         this.indepPassword = builder.indepPassword;
         this.proxyId = builder.proxyId;
-        this.regionId = builder.regionId;
         this.tid = builder.tid;
         this.userId = builder.userId;
     }
@@ -60,6 +60,13 @@ public class CreateProxyAccessRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -84,13 +91,6 @@ public class CreateProxyAccessRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return tid
      */
     public Long getTid() {
@@ -105,10 +105,10 @@ public class CreateProxyAccessRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateProxyAccessRequest, Builder> {
+        private String regionId; 
         private String indepAccount; 
         private String indepPassword; 
         private Long proxyId; 
-        private String regionId; 
         private Long tid; 
         private Long userId; 
 
@@ -116,15 +116,24 @@ public class CreateProxyAccessRequest extends Request {
             super();
         } 
 
-        private Builder(CreateProxyAccessRequest response) {
-            super(response);
-            this.indepAccount = response.indepAccount;
-            this.indepPassword = response.indepPassword;
-            this.proxyId = response.proxyId;
-            this.regionId = response.regionId;
-            this.tid = response.tid;
-            this.userId = response.userId;
+        private Builder(CreateProxyAccessRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.indepAccount = request.indepAccount;
+            this.indepPassword = request.indepPassword;
+            this.proxyId = request.proxyId;
+            this.tid = request.tid;
+            this.userId = request.userId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * IndepAccount.
@@ -150,15 +159,6 @@ public class CreateProxyAccessRequest extends Request {
         public Builder proxyId(Long proxyId) {
             this.putQueryParameter("ProxyId", proxyId);
             this.proxyId = proxyId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

@@ -12,14 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetPhysicalDatabaseRequest</p>
  */
 public class GetPhysicalDatabaseRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("DbId")
     @Validation(required = true, minimum = 1)
     private Long dbId;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Query
     @NameInMap("Tid")
@@ -28,8 +28,8 @@ public class GetPhysicalDatabaseRequest extends Request {
 
     private GetPhysicalDatabaseRequest(Builder builder) {
         super(builder);
-        this.dbId = builder.dbId;
         this.regionId = builder.regionId;
+        this.dbId = builder.dbId;
         this.tid = builder.tid;
     }
 
@@ -47,17 +47,17 @@ public class GetPhysicalDatabaseRequest extends Request {
     }
 
     /**
-     * @return dbId
-     */
-    public Long getDbId() {
-        return this.dbId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return dbId
+     */
+    public Long getDbId() {
+        return this.dbId;
     }
 
     /**
@@ -68,29 +68,20 @@ public class GetPhysicalDatabaseRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetPhysicalDatabaseRequest, Builder> {
-        private Long dbId; 
         private String regionId; 
+        private Long dbId; 
         private Long tid; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetPhysicalDatabaseRequest response) {
-            super(response);
-            this.dbId = response.dbId;
-            this.regionId = response.regionId;
-            this.tid = response.tid;
+        private Builder(GetPhysicalDatabaseRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.dbId = request.dbId;
+            this.tid = request.tid;
         } 
-
-        /**
-         * DbId.
-         */
-        public Builder dbId(Long dbId) {
-            this.putQueryParameter("DbId", dbId);
-            this.dbId = dbId;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -98,6 +89,15 @@ public class GetPhysicalDatabaseRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * DbId.
+         */
+        public Builder dbId(Long dbId) {
+            this.putQueryParameter("DbId", dbId);
+            this.dbId = dbId;
             return this;
         }
 

@@ -62,10 +62,10 @@ public class ListUserTenantsRequest extends Request {
             super();
         } 
 
-        private Builder(ListUserTenantsRequest response) {
-            super(response);
-            this.regionId = response.regionId;
-            this.tid = response.tid;
+        private Builder(ListUserTenantsRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.tid = request.tid;
         } 
 
         /**

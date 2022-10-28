@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDatabaseUserPermssionsRequest</p>
  */
 public class ListDatabaseUserPermssionsRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("DbId")
     @Validation(required = true)
@@ -34,10 +38,6 @@ public class ListDatabaseUserPermssionsRequest extends Request {
     @Validation(required = true)
     private String permType;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("Tid")
     private Long tid;
@@ -48,12 +48,12 @@ public class ListDatabaseUserPermssionsRequest extends Request {
 
     private ListDatabaseUserPermssionsRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.dbId = builder.dbId;
         this.logic = builder.logic;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.permType = builder.permType;
-        this.regionId = builder.regionId;
         this.tid = builder.tid;
         this.userName = builder.userName;
     }
@@ -69,6 +69,13 @@ public class ListDatabaseUserPermssionsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -107,13 +114,6 @@ public class ListDatabaseUserPermssionsRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return tid
      */
     public Long getTid() {
@@ -128,12 +128,12 @@ public class ListDatabaseUserPermssionsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListDatabaseUserPermssionsRequest, Builder> {
+        private String regionId; 
         private String dbId; 
         private Boolean logic; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String permType; 
-        private String regionId; 
         private Long tid; 
         private String userName; 
 
@@ -141,17 +141,26 @@ public class ListDatabaseUserPermssionsRequest extends Request {
             super();
         } 
 
-        private Builder(ListDatabaseUserPermssionsRequest response) {
-            super(response);
-            this.dbId = response.dbId;
-            this.logic = response.logic;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.permType = response.permType;
-            this.regionId = response.regionId;
-            this.tid = response.tid;
-            this.userName = response.userName;
+        private Builder(ListDatabaseUserPermssionsRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.dbId = request.dbId;
+            this.logic = request.logic;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.permType = request.permType;
+            this.tid = request.tid;
+            this.userName = request.userName;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * DbId.
@@ -195,15 +204,6 @@ public class ListDatabaseUserPermssionsRequest extends Request {
         public Builder permType(String permType) {
             this.putQueryParameter("PermType", permType);
             this.permType = permType;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

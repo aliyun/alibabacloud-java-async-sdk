@@ -12,14 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetDBTaskSQLJobLogRequest</p>
  */
 public class GetDBTaskSQLJobLogRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("JobId")
     @Validation(required = true, minimum = 1)
     private Long jobId;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Query
     @NameInMap("Tid")
@@ -28,8 +28,8 @@ public class GetDBTaskSQLJobLogRequest extends Request {
 
     private GetDBTaskSQLJobLogRequest(Builder builder) {
         super(builder);
-        this.jobId = builder.jobId;
         this.regionId = builder.regionId;
+        this.jobId = builder.jobId;
         this.tid = builder.tid;
     }
 
@@ -47,17 +47,17 @@ public class GetDBTaskSQLJobLogRequest extends Request {
     }
 
     /**
-     * @return jobId
-     */
-    public Long getJobId() {
-        return this.jobId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return jobId
+     */
+    public Long getJobId() {
+        return this.jobId;
     }
 
     /**
@@ -68,29 +68,20 @@ public class GetDBTaskSQLJobLogRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetDBTaskSQLJobLogRequest, Builder> {
-        private Long jobId; 
         private String regionId; 
+        private Long jobId; 
         private Long tid; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetDBTaskSQLJobLogRequest response) {
-            super(response);
-            this.jobId = response.jobId;
-            this.regionId = response.regionId;
-            this.tid = response.tid;
+        private Builder(GetDBTaskSQLJobLogRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.jobId = request.jobId;
+            this.tid = request.tid;
         } 
-
-        /**
-         * JobId.
-         */
-        public Builder jobId(Long jobId) {
-            this.putQueryParameter("JobId", jobId);
-            this.jobId = jobId;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -98,6 +89,15 @@ public class GetDBTaskSQLJobLogRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * JobId.
+         */
+        public Builder jobId(Long jobId) {
+            this.putQueryParameter("JobId", jobId);
+            this.jobId = jobId;
             return this;
         }
 

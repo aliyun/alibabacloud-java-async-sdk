@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateProxyRequest</p>
  */
 public class CreateProxyRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
@@ -21,10 +25,6 @@ public class CreateProxyRequest extends Request {
     @NameInMap("Password")
     @Validation(required = true)
     private String password;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Query
     @NameInMap("Tid")
@@ -38,9 +38,9 @@ public class CreateProxyRequest extends Request {
 
     private CreateProxyRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
         this.password = builder.password;
-        this.regionId = builder.regionId;
         this.tid = builder.tid;
         this.username = builder.username;
     }
@@ -59,6 +59,13 @@ public class CreateProxyRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return instanceId
      */
     public Long getInstanceId() {
@@ -70,13 +77,6 @@ public class CreateProxyRequest extends Request {
      */
     public String getPassword() {
         return this.password;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -94,9 +94,9 @@ public class CreateProxyRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateProxyRequest, Builder> {
+        private String regionId; 
         private Long instanceId; 
         private String password; 
-        private String regionId; 
         private Long tid; 
         private String username; 
 
@@ -104,14 +104,23 @@ public class CreateProxyRequest extends Request {
             super();
         } 
 
-        private Builder(CreateProxyRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.password = response.password;
-            this.regionId = response.regionId;
-            this.tid = response.tid;
-            this.username = response.username;
+        private Builder(CreateProxyRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.instanceId = request.instanceId;
+            this.password = request.password;
+            this.tid = request.tid;
+            this.username = request.username;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * InstanceId.
@@ -128,15 +137,6 @@ public class CreateProxyRequest extends Request {
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
             this.password = password;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

@@ -12,14 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteProxyAccessRequest</p>
  */
 public class DeleteProxyAccessRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("ProxyAccessId")
     @Validation(required = true)
     private Long proxyAccessId;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Query
     @NameInMap("Tid")
@@ -28,8 +28,8 @@ public class DeleteProxyAccessRequest extends Request {
 
     private DeleteProxyAccessRequest(Builder builder) {
         super(builder);
-        this.proxyAccessId = builder.proxyAccessId;
         this.regionId = builder.regionId;
+        this.proxyAccessId = builder.proxyAccessId;
         this.tid = builder.tid;
     }
 
@@ -47,17 +47,17 @@ public class DeleteProxyAccessRequest extends Request {
     }
 
     /**
-     * @return proxyAccessId
-     */
-    public Long getProxyAccessId() {
-        return this.proxyAccessId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return proxyAccessId
+     */
+    public Long getProxyAccessId() {
+        return this.proxyAccessId;
     }
 
     /**
@@ -68,29 +68,20 @@ public class DeleteProxyAccessRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteProxyAccessRequest, Builder> {
-        private Long proxyAccessId; 
         private String regionId; 
+        private Long proxyAccessId; 
         private Long tid; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DeleteProxyAccessRequest response) {
-            super(response);
-            this.proxyAccessId = response.proxyAccessId;
-            this.regionId = response.regionId;
-            this.tid = response.tid;
+        private Builder(DeleteProxyAccessRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.proxyAccessId = request.proxyAccessId;
+            this.tid = request.tid;
         } 
-
-        /**
-         * ProxyAccessId.
-         */
-        public Builder proxyAccessId(Long proxyAccessId) {
-            this.putQueryParameter("ProxyAccessId", proxyAccessId);
-            this.proxyAccessId = proxyAccessId;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -98,6 +89,15 @@ public class DeleteProxyAccessRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ProxyAccessId.
+         */
+        public Builder proxyAccessId(Long proxyAccessId) {
+            this.putQueryParameter("ProxyAccessId", proxyAccessId);
+            this.proxyAccessId = proxyAccessId;
             return this;
         }
 

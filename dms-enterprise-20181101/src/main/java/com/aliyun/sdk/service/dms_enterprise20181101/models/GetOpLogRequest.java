@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetOpLogRequest</p>
  */
 public class GetOpLogRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("EndTime")
     @Validation(required = true)
@@ -31,10 +35,6 @@ public class GetOpLogRequest extends Request {
     @Validation(required = true)
     private Integer pageSize;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("StartTime")
     @Validation(required = true)
@@ -46,11 +46,11 @@ public class GetOpLogRequest extends Request {
 
     private GetOpLogRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.endTime = builder.endTime;
         this.module = builder.module;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
         this.startTime = builder.startTime;
         this.tid = builder.tid;
     }
@@ -66,6 +66,13 @@ public class GetOpLogRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -97,13 +104,6 @@ public class GetOpLogRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -118,11 +118,11 @@ public class GetOpLogRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetOpLogRequest, Builder> {
+        private String regionId; 
         private String endTime; 
         private String module; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private String regionId; 
         private String startTime; 
         private Long tid; 
 
@@ -130,16 +130,25 @@ public class GetOpLogRequest extends Request {
             super();
         } 
 
-        private Builder(GetOpLogRequest response) {
-            super(response);
-            this.endTime = response.endTime;
-            this.module = response.module;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.startTime = response.startTime;
-            this.tid = response.tid;
+        private Builder(GetOpLogRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.endTime = request.endTime;
+            this.module = request.module;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.startTime = request.startTime;
+            this.tid = request.tid;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * EndTime.
@@ -174,15 +183,6 @@ public class GetOpLogRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

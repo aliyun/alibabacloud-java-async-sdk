@@ -75,11 +75,11 @@ public class EnableUserRequest extends Request {
             super();
         } 
 
-        private Builder(EnableUserRequest response) {
-            super(response);
-            this.regionId = response.regionId;
-            this.tid = response.tid;
-            this.uid = response.uid;
+        private Builder(EnableUserRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.tid = request.tid;
+            this.uid = request.uid;
         } 
 
         /**

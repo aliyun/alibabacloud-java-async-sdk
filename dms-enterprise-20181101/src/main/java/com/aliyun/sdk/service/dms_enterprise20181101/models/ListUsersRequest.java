@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListUsersRequest</p>
  */
 public class ListUsersRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("PageNumber")
     private Integer pageNumber;
@@ -19,10 +23,6 @@ public class ListUsersRequest extends Request {
     @Query
     @NameInMap("PageSize")
     private Integer pageSize;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Query
     @NameInMap("Role")
@@ -42,9 +42,9 @@ public class ListUsersRequest extends Request {
 
     private ListUsersRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
         this.role = builder.role;
         this.searchKey = builder.searchKey;
         this.tid = builder.tid;
@@ -65,6 +65,13 @@ public class ListUsersRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -76,13 +83,6 @@ public class ListUsersRequest extends Request {
      */
     public Integer getPageSize() {
         return this.pageSize;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -114,9 +114,9 @@ public class ListUsersRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListUsersRequest, Builder> {
+        private String regionId; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private String regionId; 
         private String role; 
         private String searchKey; 
         private Long tid; 
@@ -126,16 +126,25 @@ public class ListUsersRequest extends Request {
             super();
         } 
 
-        private Builder(ListUsersRequest response) {
-            super(response);
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.role = response.role;
-            this.searchKey = response.searchKey;
-            this.tid = response.tid;
-            this.userState = response.userState;
+        private Builder(ListUsersRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.role = request.role;
+            this.searchKey = request.searchKey;
+            this.tid = request.tid;
+            this.userState = request.userState;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * PageNumber.
@@ -152,15 +161,6 @@ public class ListUsersRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

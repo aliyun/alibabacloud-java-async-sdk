@@ -12,13 +12,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RegisterUserRequest</p>
  */
 public class RegisterUserRequest extends Request {
-    @Query
-    @NameInMap("Mobile")
-    private String mobile;
-
     @Host
     @NameInMap("RegionId")
     private String regionId;
+
+    @Query
+    @NameInMap("Mobile")
+    private String mobile;
 
     @Query
     @NameInMap("RoleNames")
@@ -39,8 +39,8 @@ public class RegisterUserRequest extends Request {
 
     private RegisterUserRequest(Builder builder) {
         super(builder);
-        this.mobile = builder.mobile;
         this.regionId = builder.regionId;
+        this.mobile = builder.mobile;
         this.roleNames = builder.roleNames;
         this.tid = builder.tid;
         this.uid = builder.uid;
@@ -61,17 +61,17 @@ public class RegisterUserRequest extends Request {
     }
 
     /**
-     * @return mobile
-     */
-    public String getMobile() {
-        return this.mobile;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return mobile
+     */
+    public String getMobile() {
+        return this.mobile;
     }
 
     /**
@@ -103,8 +103,8 @@ public class RegisterUserRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<RegisterUserRequest, Builder> {
-        private String mobile; 
         private String regionId; 
+        private String mobile; 
         private String roleNames; 
         private Long tid; 
         private String uid; 
@@ -114,24 +114,15 @@ public class RegisterUserRequest extends Request {
             super();
         } 
 
-        private Builder(RegisterUserRequest response) {
-            super(response);
-            this.mobile = response.mobile;
-            this.regionId = response.regionId;
-            this.roleNames = response.roleNames;
-            this.tid = response.tid;
-            this.uid = response.uid;
-            this.userNick = response.userNick;
+        private Builder(RegisterUserRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.mobile = request.mobile;
+            this.roleNames = request.roleNames;
+            this.tid = request.tid;
+            this.uid = request.uid;
+            this.userNick = request.userNick;
         } 
-
-        /**
-         * Mobile.
-         */
-        public Builder mobile(String mobile) {
-            this.putQueryParameter("Mobile", mobile);
-            this.mobile = mobile;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -139,6 +130,15 @@ public class RegisterUserRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * Mobile.
+         */
+        public Builder mobile(String mobile) {
+            this.putQueryParameter("Mobile", mobile);
+            this.mobile = mobile;
             return this;
         }
 

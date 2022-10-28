@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListUserPermissionsRequest</p>
  */
 public class ListUserPermissionsRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("DatabaseName")
     private String databaseName;
@@ -41,10 +45,6 @@ public class ListUserPermissionsRequest extends Request {
     @Validation(required = true)
     private String permType;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("SearchKey")
     private String searchKey;
@@ -60,6 +60,7 @@ public class ListUserPermissionsRequest extends Request {
 
     private ListUserPermissionsRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.databaseName = builder.databaseName;
         this.dbType = builder.dbType;
         this.envType = builder.envType;
@@ -67,7 +68,6 @@ public class ListUserPermissionsRequest extends Request {
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.permType = builder.permType;
-        this.regionId = builder.regionId;
         this.searchKey = builder.searchKey;
         this.tid = builder.tid;
         this.userId = builder.userId;
@@ -84,6 +84,13 @@ public class ListUserPermissionsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -136,13 +143,6 @@ public class ListUserPermissionsRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return searchKey
      */
     public String getSearchKey() {
@@ -164,6 +164,7 @@ public class ListUserPermissionsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListUserPermissionsRequest, Builder> {
+        private String regionId; 
         private String databaseName; 
         private String dbType; 
         private String envType; 
@@ -171,7 +172,6 @@ public class ListUserPermissionsRequest extends Request {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String permType; 
-        private String regionId; 
         private String searchKey; 
         private Long tid; 
         private String userId; 
@@ -180,20 +180,29 @@ public class ListUserPermissionsRequest extends Request {
             super();
         } 
 
-        private Builder(ListUserPermissionsRequest response) {
-            super(response);
-            this.databaseName = response.databaseName;
-            this.dbType = response.dbType;
-            this.envType = response.envType;
-            this.logic = response.logic;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.permType = response.permType;
-            this.regionId = response.regionId;
-            this.searchKey = response.searchKey;
-            this.tid = response.tid;
-            this.userId = response.userId;
+        private Builder(ListUserPermissionsRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.databaseName = request.databaseName;
+            this.dbType = request.dbType;
+            this.envType = request.envType;
+            this.logic = request.logic;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.permType = request.permType;
+            this.searchKey = request.searchKey;
+            this.tid = request.tid;
+            this.userId = request.userId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * DatabaseName.
@@ -255,15 +264,6 @@ public class ListUserPermissionsRequest extends Request {
         public Builder permType(String permType) {
             this.putQueryParameter("PermType", permType);
             this.permType = permType;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetDatabaseRequest</p>
  */
 public class GetDatabaseRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("Host")
     @Validation(required = true)
@@ -21,10 +25,6 @@ public class GetDatabaseRequest extends Request {
     @NameInMap("Port")
     @Validation(required = true)
     private Integer port;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Query
     @NameInMap("SchemaName")
@@ -41,9 +41,9 @@ public class GetDatabaseRequest extends Request {
 
     private GetDatabaseRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.host = builder.host;
         this.port = builder.port;
-        this.regionId = builder.regionId;
         this.schemaName = builder.schemaName;
         this.sid = builder.sid;
         this.tid = builder.tid;
@@ -63,6 +63,13 @@ public class GetDatabaseRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return host
      */
     public String getHost() {
@@ -74,13 +81,6 @@ public class GetDatabaseRequest extends Request {
      */
     public Integer getPort() {
         return this.port;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -105,9 +105,9 @@ public class GetDatabaseRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetDatabaseRequest, Builder> {
+        private String regionId; 
         private String host; 
         private Integer port; 
-        private String regionId; 
         private String schemaName; 
         private String sid; 
         private Long tid; 
@@ -116,15 +116,24 @@ public class GetDatabaseRequest extends Request {
             super();
         } 
 
-        private Builder(GetDatabaseRequest response) {
-            super(response);
-            this.host = response.host;
-            this.port = response.port;
-            this.regionId = response.regionId;
-            this.schemaName = response.schemaName;
-            this.sid = response.sid;
-            this.tid = response.tid;
+        private Builder(GetDatabaseRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.host = request.host;
+            this.port = request.port;
+            this.schemaName = request.schemaName;
+            this.sid = request.sid;
+            this.tid = request.tid;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * Host.
@@ -141,15 +150,6 @@ public class GetDatabaseRequest extends Request {
         public Builder port(Integer port) {
             this.putQueryParameter("Port", port);
             this.port = port;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

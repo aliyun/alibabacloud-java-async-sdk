@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateUploadFileJobRequest</p>
  */
 public class CreateUploadFileJobRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("FileName")
     @Validation(required = true)
@@ -21,10 +25,6 @@ public class CreateUploadFileJobRequest extends Request {
     @NameInMap("FileSource")
     @Validation(required = true)
     private String fileSource;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Query
     @NameInMap("Tid")
@@ -38,9 +38,9 @@ public class CreateUploadFileJobRequest extends Request {
 
     private CreateUploadFileJobRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.fileName = builder.fileName;
         this.fileSource = builder.fileSource;
-        this.regionId = builder.regionId;
         this.tid = builder.tid;
         this.uploadURL = builder.uploadURL;
     }
@@ -59,6 +59,13 @@ public class CreateUploadFileJobRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return fileName
      */
     public String getFileName() {
@@ -70,13 +77,6 @@ public class CreateUploadFileJobRequest extends Request {
      */
     public String getFileSource() {
         return this.fileSource;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -94,9 +94,9 @@ public class CreateUploadFileJobRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateUploadFileJobRequest, Builder> {
+        private String regionId; 
         private String fileName; 
         private String fileSource; 
-        private String regionId; 
         private Long tid; 
         private String uploadURL; 
 
@@ -104,14 +104,23 @@ public class CreateUploadFileJobRequest extends Request {
             super();
         } 
 
-        private Builder(CreateUploadFileJobRequest response) {
-            super(response);
-            this.fileName = response.fileName;
-            this.fileSource = response.fileSource;
-            this.regionId = response.regionId;
-            this.tid = response.tid;
-            this.uploadURL = response.uploadURL;
+        private Builder(CreateUploadFileJobRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.fileName = request.fileName;
+            this.fileSource = request.fileSource;
+            this.tid = request.tid;
+            this.uploadURL = request.uploadURL;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * FileName.
@@ -128,15 +137,6 @@ public class CreateUploadFileJobRequest extends Request {
         public Builder fileSource(String fileSource) {
             this.putQueryParameter("FileSource", fileSource);
             this.fileSource = fileSource;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

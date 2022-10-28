@@ -76,11 +76,11 @@ public class GetMetaTableDetailInfoRequest extends Request {
             super();
         } 
 
-        private Builder(GetMetaTableDetailInfoRequest response) {
-            super(response);
-            this.regionId = response.regionId;
-            this.tableGuid = response.tableGuid;
-            this.tid = response.tid;
+        private Builder(GetMetaTableDetailInfoRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.tableGuid = request.tableGuid;
+            this.tid = request.tid;
         } 
 
         /**

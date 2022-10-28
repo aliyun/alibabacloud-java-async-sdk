@@ -74,11 +74,11 @@ public class ListWorkFlowNodesRequest extends Request {
             super();
         } 
 
-        private Builder(ListWorkFlowNodesRequest response) {
-            super(response);
-            this.regionId = response.regionId;
-            this.searchName = response.searchName;
-            this.tid = response.tid;
+        private Builder(ListWorkFlowNodesRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.searchName = request.searchName;
+            this.tid = request.tid;
         } 
 
         /**

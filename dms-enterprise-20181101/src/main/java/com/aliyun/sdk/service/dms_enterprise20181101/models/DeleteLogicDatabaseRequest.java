@@ -12,14 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteLogicDatabaseRequest</p>
  */
 public class DeleteLogicDatabaseRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("LogicDbId")
     @Validation(required = true)
     private Long logicDbId;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Query
     @NameInMap("Tid")
@@ -28,8 +28,8 @@ public class DeleteLogicDatabaseRequest extends Request {
 
     private DeleteLogicDatabaseRequest(Builder builder) {
         super(builder);
-        this.logicDbId = builder.logicDbId;
         this.regionId = builder.regionId;
+        this.logicDbId = builder.logicDbId;
         this.tid = builder.tid;
     }
 
@@ -47,17 +47,17 @@ public class DeleteLogicDatabaseRequest extends Request {
     }
 
     /**
-     * @return logicDbId
-     */
-    public Long getLogicDbId() {
-        return this.logicDbId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return logicDbId
+     */
+    public Long getLogicDbId() {
+        return this.logicDbId;
     }
 
     /**
@@ -68,29 +68,20 @@ public class DeleteLogicDatabaseRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteLogicDatabaseRequest, Builder> {
-        private Long logicDbId; 
         private String regionId; 
+        private Long logicDbId; 
         private Long tid; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DeleteLogicDatabaseRequest response) {
-            super(response);
-            this.logicDbId = response.logicDbId;
-            this.regionId = response.regionId;
-            this.tid = response.tid;
+        private Builder(DeleteLogicDatabaseRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.logicDbId = request.logicDbId;
+            this.tid = request.tid;
         } 
-
-        /**
-         * LogicDbId.
-         */
-        public Builder logicDbId(Long logicDbId) {
-            this.putQueryParameter("LogicDbId", logicDbId);
-            this.logicDbId = logicDbId;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -98,6 +89,15 @@ public class DeleteLogicDatabaseRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * LogicDbId.
+         */
+        public Builder logicDbId(Long logicDbId) {
+            this.putQueryParameter("LogicDbId", logicDbId);
+            this.logicDbId = logicDbId;
             return this;
         }
 

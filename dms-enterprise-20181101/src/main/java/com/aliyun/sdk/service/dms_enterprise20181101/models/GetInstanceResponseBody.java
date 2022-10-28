@@ -335,6 +335,9 @@ public class GetInstanceResponseBody extends TeaModel {
         @NameInMap("SafeRuleId")
         private String safeRuleId;
 
+        @NameInMap("SellSitd")
+        private String sellSitd;
+
         @NameInMap("Sid")
         private String sid;
 
@@ -371,6 +374,7 @@ public class GetInstanceResponseBody extends TeaModel {
             this.port = builder.port;
             this.queryTimeout = builder.queryTimeout;
             this.safeRuleId = builder.safeRuleId;
+            this.sellSitd = builder.sellSitd;
             this.sid = builder.sid;
             this.standardGroup = builder.standardGroup;
             this.state = builder.state;
@@ -527,6 +531,13 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return sellSitd
+         */
+        public String getSellSitd() {
+            return this.sellSitd;
+        }
+
+        /**
          * @return sid
          */
         public String getSid() {
@@ -582,6 +593,7 @@ public class GetInstanceResponseBody extends TeaModel {
             private Integer port; 
             private Integer queryTimeout; 
             private String safeRuleId; 
+            private String sellSitd; 
             private String sid; 
             private StandardGroup standardGroup; 
             private String state; 
@@ -745,6 +757,14 @@ public class GetInstanceResponseBody extends TeaModel {
              */
             public Builder safeRuleId(String safeRuleId) {
                 this.safeRuleId = safeRuleId;
+                return this;
+            }
+
+            /**
+             * 为true，敏感数据保护开启，否则未开启
+             */
+            public Builder sellSitd(String sellSitd) {
+                this.sellSitd = sellSitd;
                 return this;
             }
 
