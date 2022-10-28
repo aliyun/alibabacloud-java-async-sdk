@@ -200,6 +200,15 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         @NameInMap("CharacterSetName")
         private String characterSetName;
 
+        @NameInMap("Collate")
+        private String collate;
+
+        @NameInMap("ConnLimit")
+        private String connLimit;
+
+        @NameInMap("Ctype")
+        private String ctype;
+
         @NameInMap("DBDescription")
         private String DBDescription;
 
@@ -224,12 +233,18 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         @NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
+        @NameInMap("Tablespace")
+        private String tablespace;
+
         @NameInMap("TotalCount")
         private Integer totalCount;
 
         private Database(Builder builder) {
             this.accounts = builder.accounts;
             this.characterSetName = builder.characterSetName;
+            this.collate = builder.collate;
+            this.connLimit = builder.connLimit;
+            this.ctype = builder.ctype;
             this.DBDescription = builder.DBDescription;
             this.DBInstanceId = builder.DBInstanceId;
             this.DBName = builder.DBName;
@@ -238,6 +253,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             this.pageNumber = builder.pageNumber;
             this.pageSize = builder.pageSize;
             this.resourceGroupId = builder.resourceGroupId;
+            this.tablespace = builder.tablespace;
             this.totalCount = builder.totalCount;
         }
 
@@ -261,6 +277,27 @@ public class DescribeDatabasesResponseBody extends TeaModel {
          */
         public String getCharacterSetName() {
             return this.characterSetName;
+        }
+
+        /**
+         * @return collate
+         */
+        public String getCollate() {
+            return this.collate;
+        }
+
+        /**
+         * @return connLimit
+         */
+        public String getConnLimit() {
+            return this.connLimit;
+        }
+
+        /**
+         * @return ctype
+         */
+        public String getCtype() {
+            return this.ctype;
         }
 
         /**
@@ -320,6 +357,13 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         }
 
         /**
+         * @return tablespace
+         */
+        public String getTablespace() {
+            return this.tablespace;
+        }
+
+        /**
          * @return totalCount
          */
         public Integer getTotalCount() {
@@ -329,6 +373,9 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         public static final class Builder {
             private Accounts accounts; 
             private String characterSetName; 
+            private String collate; 
+            private String connLimit; 
+            private String ctype; 
             private String DBDescription; 
             private String DBInstanceId; 
             private String DBName; 
@@ -337,6 +384,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private String resourceGroupId; 
+            private String tablespace; 
             private Integer totalCount; 
 
             /**
@@ -352,6 +400,30 @@ public class DescribeDatabasesResponseBody extends TeaModel {
              */
             public Builder characterSetName(String characterSetName) {
                 this.characterSetName = characterSetName;
+                return this;
+            }
+
+            /**
+             * Collate.
+             */
+            public Builder collate(String collate) {
+                this.collate = collate;
+                return this;
+            }
+
+            /**
+             * ConnLimit.
+             */
+            public Builder connLimit(String connLimit) {
+                this.connLimit = connLimit;
+                return this;
+            }
+
+            /**
+             * Ctype.
+             */
+            public Builder ctype(String ctype) {
+                this.ctype = ctype;
                 return this;
             }
 
@@ -416,6 +488,14 @@ public class DescribeDatabasesResponseBody extends TeaModel {
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * Tablespace.
+             */
+            public Builder tablespace(String tablespace) {
+                this.tablespace = tablespace;
                 return this;
             }
 

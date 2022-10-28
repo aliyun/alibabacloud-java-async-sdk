@@ -286,6 +286,15 @@ public class DescribeAccountsResponseBody extends TeaModel {
         @NameInMap("AccountType")
         private String accountType;
 
+        @NameInMap("BypassRLS")
+        private String bypassRLS;
+
+        @NameInMap("CreateDB")
+        private String createDB;
+
+        @NameInMap("CreateRole")
+        private String createRole;
+
         @NameInMap("DBInstanceId")
         private String DBInstanceId;
 
@@ -295,14 +304,25 @@ public class DescribeAccountsResponseBody extends TeaModel {
         @NameInMap("PrivExceeded")
         private String privExceeded;
 
+        @NameInMap("Replication")
+        private String replication;
+
+        @NameInMap("ValidUntil")
+        private String validUntil;
+
         private DBInstanceAccount(Builder builder) {
             this.accountDescription = builder.accountDescription;
             this.accountName = builder.accountName;
             this.accountStatus = builder.accountStatus;
             this.accountType = builder.accountType;
+            this.bypassRLS = builder.bypassRLS;
+            this.createDB = builder.createDB;
+            this.createRole = builder.createRole;
             this.DBInstanceId = builder.DBInstanceId;
             this.databasePrivileges = builder.databasePrivileges;
             this.privExceeded = builder.privExceeded;
+            this.replication = builder.replication;
+            this.validUntil = builder.validUntil;
         }
 
         public static Builder builder() {
@@ -342,6 +362,27 @@ public class DescribeAccountsResponseBody extends TeaModel {
         }
 
         /**
+         * @return bypassRLS
+         */
+        public String getBypassRLS() {
+            return this.bypassRLS;
+        }
+
+        /**
+         * @return createDB
+         */
+        public String getCreateDB() {
+            return this.createDB;
+        }
+
+        /**
+         * @return createRole
+         */
+        public String getCreateRole() {
+            return this.createRole;
+        }
+
+        /**
          * @return DBInstanceId
          */
         public String getDBInstanceId() {
@@ -362,14 +403,33 @@ public class DescribeAccountsResponseBody extends TeaModel {
             return this.privExceeded;
         }
 
+        /**
+         * @return replication
+         */
+        public String getReplication() {
+            return this.replication;
+        }
+
+        /**
+         * @return validUntil
+         */
+        public String getValidUntil() {
+            return this.validUntil;
+        }
+
         public static final class Builder {
             private String accountDescription; 
             private String accountName; 
             private String accountStatus; 
             private String accountType; 
+            private String bypassRLS; 
+            private String createDB; 
+            private String createRole; 
             private String DBInstanceId; 
             private DatabasePrivileges databasePrivileges; 
             private String privExceeded; 
+            private String replication; 
+            private String validUntil; 
 
             /**
              * AccountDescription.
@@ -404,6 +464,30 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
+             * BypassRLS.
+             */
+            public Builder bypassRLS(String bypassRLS) {
+                this.bypassRLS = bypassRLS;
+                return this;
+            }
+
+            /**
+             * CreateDB.
+             */
+            public Builder createDB(String createDB) {
+                this.createDB = createDB;
+                return this;
+            }
+
+            /**
+             * CreateRole.
+             */
+            public Builder createRole(String createRole) {
+                this.createRole = createRole;
+                return this;
+            }
+
+            /**
              * DBInstanceId.
              */
             public Builder DBInstanceId(String DBInstanceId) {
@@ -424,6 +508,22 @@ public class DescribeAccountsResponseBody extends TeaModel {
              */
             public Builder privExceeded(String privExceeded) {
                 this.privExceeded = privExceeded;
+                return this;
+            }
+
+            /**
+             * Replication.
+             */
+            public Builder replication(String replication) {
+                this.replication = replication;
+                return this;
+            }
+
+            /**
+             * ValidUntil.
+             */
+            public Builder validUntil(String validUntil) {
+                this.validUntil = validUntil;
                 return this;
             }
 

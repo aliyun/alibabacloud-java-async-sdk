@@ -28,6 +28,10 @@ public class DescribeDBInstancePerformanceRequest extends Request {
     private String key;
 
     @Query
+    @NameInMap("NodeId")
+    private String nodeId;
+
+    @Query
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
@@ -41,6 +45,7 @@ public class DescribeDBInstancePerformanceRequest extends Request {
         this.DBInstanceId = builder.DBInstanceId;
         this.endTime = builder.endTime;
         this.key = builder.key;
+        this.nodeId = builder.nodeId;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.startTime = builder.startTime;
     }
@@ -80,6 +85,13 @@ public class DescribeDBInstancePerformanceRequest extends Request {
     }
 
     /**
+     * @return nodeId
+     */
+    public String getNodeId() {
+        return this.nodeId;
+    }
+
+    /**
      * @return resourceOwnerId
      */
     public Long getResourceOwnerId() {
@@ -97,6 +109,7 @@ public class DescribeDBInstancePerformanceRequest extends Request {
         private String DBInstanceId; 
         private String endTime; 
         private String key; 
+        private String nodeId; 
         private Long resourceOwnerId; 
         private String startTime; 
 
@@ -109,6 +122,7 @@ public class DescribeDBInstancePerformanceRequest extends Request {
             this.DBInstanceId = request.DBInstanceId;
             this.endTime = request.endTime;
             this.key = request.key;
+            this.nodeId = request.nodeId;
             this.resourceOwnerId = request.resourceOwnerId;
             this.startTime = request.startTime;
         } 
@@ -137,6 +151,15 @@ public class DescribeDBInstancePerformanceRequest extends Request {
         public Builder key(String key) {
             this.putQueryParameter("Key", key);
             this.key = key;
+            return this;
+        }
+
+        /**
+         * NodeId.
+         */
+        public Builder nodeId(String nodeId) {
+            this.putQueryParameter("NodeId", nodeId);
+            this.nodeId = nodeId;
             return this;
         }
 

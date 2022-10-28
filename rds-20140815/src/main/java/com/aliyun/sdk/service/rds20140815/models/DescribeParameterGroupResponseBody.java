@@ -15,11 +15,15 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
     @NameInMap("ParamGroup")
     private ParamGroup paramGroup;
 
+    @NameInMap("RelatedCustinsInfo")
+    private RelatedCustinsInfo relatedCustinsInfo;
+
     @NameInMap("RequestId")
     private String requestId;
 
     private DescribeParameterGroupResponseBody(Builder builder) {
         this.paramGroup = builder.paramGroup;
+        this.relatedCustinsInfo = builder.relatedCustinsInfo;
         this.requestId = builder.requestId;
     }
 
@@ -39,6 +43,13 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
     }
 
     /**
+     * @return relatedCustinsInfo
+     */
+    public RelatedCustinsInfo getRelatedCustinsInfo() {
+        return this.relatedCustinsInfo;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -47,6 +58,7 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
 
     public static final class Builder {
         private ParamGroup paramGroup; 
+        private RelatedCustinsInfo relatedCustinsInfo; 
         private String requestId; 
 
         /**
@@ -54,6 +66,14 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
          */
         public Builder paramGroup(ParamGroup paramGroup) {
             this.paramGroup = paramGroup;
+            return this;
+        }
+
+        /**
+         * RelatedCustinsInfo.
+         */
+        public Builder relatedCustinsInfo(RelatedCustinsInfo relatedCustinsInfo) {
+            this.relatedCustinsInfo = relatedCustinsInfo;
             return this;
         }
 
@@ -450,6 +470,108 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
 
             public ParamGroup build() {
                 return new ParamGroup(this);
+            } 
+
+        } 
+
+    }
+    public static class RelatedCustinsInfoRelatedCustinsInfo extends TeaModel {
+        @NameInMap("AppliedTime")
+        private String appliedTime;
+
+        @NameInMap("DBInstanceName")
+        private String DBInstanceName;
+
+        private RelatedCustinsInfoRelatedCustinsInfo(Builder builder) {
+            this.appliedTime = builder.appliedTime;
+            this.DBInstanceName = builder.DBInstanceName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RelatedCustinsInfoRelatedCustinsInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return appliedTime
+         */
+        public String getAppliedTime() {
+            return this.appliedTime;
+        }
+
+        /**
+         * @return DBInstanceName
+         */
+        public String getDBInstanceName() {
+            return this.DBInstanceName;
+        }
+
+        public static final class Builder {
+            private String appliedTime; 
+            private String DBInstanceName; 
+
+            /**
+             * AppliedTime.
+             */
+            public Builder appliedTime(String appliedTime) {
+                this.appliedTime = appliedTime;
+                return this;
+            }
+
+            /**
+             * DBInstanceName.
+             */
+            public Builder DBInstanceName(String DBInstanceName) {
+                this.DBInstanceName = DBInstanceName;
+                return this;
+            }
+
+            public RelatedCustinsInfoRelatedCustinsInfo build() {
+                return new RelatedCustinsInfoRelatedCustinsInfo(this);
+            } 
+
+        } 
+
+    }
+    public static class RelatedCustinsInfo extends TeaModel {
+        @NameInMap("RelatedCustinsInfo")
+        private java.util.List < RelatedCustinsInfoRelatedCustinsInfo> relatedCustinsInfo;
+
+        private RelatedCustinsInfo(Builder builder) {
+            this.relatedCustinsInfo = builder.relatedCustinsInfo;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RelatedCustinsInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return relatedCustinsInfo
+         */
+        public java.util.List < RelatedCustinsInfoRelatedCustinsInfo> getRelatedCustinsInfo() {
+            return this.relatedCustinsInfo;
+        }
+
+        public static final class Builder {
+            private java.util.List < RelatedCustinsInfoRelatedCustinsInfo> relatedCustinsInfo; 
+
+            /**
+             * RelatedCustinsInfo.
+             */
+            public Builder relatedCustinsInfo(java.util.List < RelatedCustinsInfoRelatedCustinsInfo> relatedCustinsInfo) {
+                this.relatedCustinsInfo = relatedCustinsInfo;
+                return this;
+            }
+
+            public RelatedCustinsInfo build() {
+                return new RelatedCustinsInfo(this);
             } 
 
         } 
