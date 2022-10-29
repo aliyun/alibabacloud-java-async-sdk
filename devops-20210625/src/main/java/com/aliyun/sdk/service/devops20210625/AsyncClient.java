@@ -22,6 +22,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AddWebhookResponse> addWebhook(AddWebhookRequest request);
 
+    CompletableFuture<CreateFileResponse> createFile(CreateFileRequest request);
+
     CompletableFuture<CreateFlowTagResponse> createFlowTag(CreateFlowTagRequest request);
 
     CompletableFuture<CreateFlowTagGroupResponse> createFlowTagGroup(CreateFlowTagGroupRequest request);
@@ -29,6 +31,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateHostGroupResponse> createHostGroup(CreateHostGroupRequest request);
 
     CompletableFuture<CreateOAuthTokenResponse> createOAuthToken(CreateOAuthTokenRequest request);
+
+    CompletableFuture<CreatePipelineGroupResponse> createPipelineGroup(CreatePipelineGroupRequest request);
 
     CompletableFuture<CreateProjectResponse> createProject(CreateProjectRequest request);
 
@@ -46,6 +50,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateWorkspaceResponse> createWorkspace(CreateWorkspaceRequest request);
 
+    CompletableFuture<DeleteFileResponse> deleteFile(DeleteFileRequest request);
+
     CompletableFuture<DeleteFlowTagResponse> deleteFlowTag(DeleteFlowTagRequest request);
 
     CompletableFuture<DeleteFlowTagGroupResponse> deleteFlowTagGroup(DeleteFlowTagGroupRequest request);
@@ -54,7 +60,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeletePipelineResponse> deletePipeline(DeletePipelineRequest request);
 
+    CompletableFuture<DeletePipelineGroupResponse> deletePipelineGroup(DeletePipelineGroupRequest request);
+
     CompletableFuture<DeleteProjectResponse> deleteProject(DeleteProjectRequest request);
+
+    CompletableFuture<DeleteRepositoryResponse> deleteRepository(DeleteRepositoryRequest request);
 
     CompletableFuture<DeleteResourceMemberResponse> deleteResourceMember(DeleteResourceMemberRequest request);
 
@@ -65,6 +75,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetCodeupOrganizationResponse> getCodeupOrganization(GetCodeupOrganizationRequest request);
 
     CompletableFuture<GetCustomFieldOptionResponse> getCustomFieldOption(GetCustomFieldOptionRequest request);
+
+    CompletableFuture<GetFileBlobsResponse> getFileBlobs(GetFileBlobsRequest request);
 
     CompletableFuture<GetFileLastCommitResponse> getFileLastCommit(GetFileLastCommitRequest request);
 
@@ -79,6 +91,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetPipelineArtifactUrlResponse> getPipelineArtifactUrl(GetPipelineArtifactUrlRequest request);
 
     CompletableFuture<GetPipelineEmasArtifactUrlResponse> getPipelineEmasArtifactUrl(GetPipelineEmasArtifactUrlRequest request);
+
+    CompletableFuture<GetPipelineGroupResponse> getPipelineGroup(GetPipelineGroupRequest request);
 
     CompletableFuture<GetPipelineRunResponse> getPipelineRun(GetPipelineRunRequest request);
 
@@ -104,11 +118,17 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetWorkspaceResponse> getWorkspace(GetWorkspaceRequest request);
 
+    CompletableFuture<JoinPipelineGroupResponse> joinPipelineGroup(JoinPipelineGroupRequest request);
+
     CompletableFuture<ListFlowTagGroupsResponse> listFlowTagGroups(ListFlowTagGroupsRequest request);
 
     CompletableFuture<ListHostGroupsResponse> listHostGroups(ListHostGroupsRequest request);
 
     CompletableFuture<ListOrganizationMembersResponse> listOrganizationMembers(ListOrganizationMembersRequest request);
+
+    CompletableFuture<ListPipelineGroupPipelinesResponse> listPipelineGroupPipelines(ListPipelineGroupPipelinesRequest request);
+
+    CompletableFuture<ListPipelineGroupsResponse> listPipelineGroups(ListPipelineGroupsRequest request);
 
     CompletableFuture<ListPipelineJobHistorysResponse> listPipelineJobHistorys(ListPipelineJobHistorysRequest request);
 
@@ -128,7 +148,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListRepositoriesResponse> listRepositories(ListRepositoriesRequest request);
 
+    CompletableFuture<ListRepositoryCommitDiffResponse> listRepositoryCommitDiff(ListRepositoryCommitDiffRequest request);
+
     CompletableFuture<ListRepositoryMemberWithInheritedResponse> listRepositoryMemberWithInherited(ListRepositoryMemberWithInheritedRequest request);
+
+    CompletableFuture<ListRepositoryTreeResponse> listRepositoryTree(ListRepositoryTreeRequest request);
 
     CompletableFuture<ListRepositoryWebhookResponse> listRepositoryWebhook(ListRepositoryWebhookRequest request);
 
@@ -182,6 +206,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<TriggerRepositoryMirrorSyncResponse> triggerRepositoryMirrorSync(TriggerRepositoryMirrorSyncRequest request);
 
+    CompletableFuture<UpdateFileResponse> updateFile(UpdateFileRequest request);
+
     CompletableFuture<UpdateFlowTagResponse> updateFlowTag(UpdateFlowTagRequest request);
 
     CompletableFuture<UpdateFlowTagGroupResponse> updateFlowTagGroup(UpdateFlowTagGroupRequest request);
@@ -190,7 +216,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<UpdatePipelineBaseInfoResponse> updatePipelineBaseInfo(UpdatePipelineBaseInfoRequest request);
 
+    CompletableFuture<UpdatePipelineGroupResponse> updatePipelineGroup(UpdatePipelineGroupRequest request);
+
     CompletableFuture<UpdateProjectMemberResponse> updateProjectMember(UpdateProjectMemberRequest request);
+
+    CompletableFuture<UpdateProtectedBranchesResponse> updateProtectedBranches(UpdateProtectedBranchesRequest request);
+
+    CompletableFuture<UpdateRepositoryResponse> updateRepository(UpdateRepositoryRequest request);
+
+    CompletableFuture<UpdateRepositoryMemberResponse> updateRepositoryMember(UpdateRepositoryMemberRequest request);
 
     CompletableFuture<UpdateResourceMemberResponse> updateResourceMember(UpdateResourceMemberRequest request);
 

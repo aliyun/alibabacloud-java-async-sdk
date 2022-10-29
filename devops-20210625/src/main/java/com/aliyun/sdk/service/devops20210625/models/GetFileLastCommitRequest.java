@@ -36,6 +36,10 @@ public class GetFileLastCommitRequest extends Request {
     @Validation(required = true)
     private String sha;
 
+    @Query
+    @NameInMap("showSignature")
+    private Boolean showSignature;
+
     private GetFileLastCommitRequest(Builder builder) {
         super(builder);
         this.repositoryId = builder.repositoryId;
@@ -43,6 +47,7 @@ public class GetFileLastCommitRequest extends Request {
         this.filepath = builder.filepath;
         this.organizationId = builder.organizationId;
         this.sha = builder.sha;
+        this.showSignature = builder.showSignature;
     }
 
     public static Builder builder() {
@@ -93,12 +98,20 @@ public class GetFileLastCommitRequest extends Request {
         return this.sha;
     }
 
+    /**
+     * @return showSignature
+     */
+    public Boolean getShowSignature() {
+        return this.showSignature;
+    }
+
     public static final class Builder extends Request.Builder<GetFileLastCommitRequest, Builder> {
         private Long repositoryId; 
         private String accessToken; 
         private String filepath; 
         private String organizationId; 
         private String sha; 
+        private Boolean showSignature; 
 
         private Builder() {
             super();
@@ -111,6 +124,7 @@ public class GetFileLastCommitRequest extends Request {
             this.filepath = request.filepath;
             this.organizationId = request.organizationId;
             this.sha = request.sha;
+            this.showSignature = request.showSignature;
         } 
 
         /**
@@ -155,6 +169,15 @@ public class GetFileLastCommitRequest extends Request {
         public Builder sha(String sha) {
             this.putQueryParameter("sha", sha);
             this.sha = sha;
+            return this;
+        }
+
+        /**
+         * showSignature.
+         */
+        public Builder showSignature(Boolean showSignature) {
+            this.putQueryParameter("showSignature", showSignature);
+            this.showSignature = showSignature;
             return this;
         }
 

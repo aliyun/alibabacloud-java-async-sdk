@@ -23,7 +23,6 @@ public class GetWorkItemWorkFlowInfoRequest extends Request {
 
     @Query
     @NameInMap("configurationId")
-    @Validation(required = true)
     private String configurationId;
 
     private GetWorkItemWorkFlowInfoRequest(Builder builder) {

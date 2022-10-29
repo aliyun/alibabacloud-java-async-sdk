@@ -131,6 +131,168 @@ public class GetWorkItemActivityResponseBody extends TeaModel {
 
     } 
 
+    public static class NewValue extends TeaModel {
+        @NameInMap("displayValue")
+        private String displayValue;
+
+        @NameInMap("plainValue")
+        private String plainValue;
+
+        @NameInMap("resourceType")
+        private String resourceType;
+
+        private NewValue(Builder builder) {
+            this.displayValue = builder.displayValue;
+            this.plainValue = builder.plainValue;
+            this.resourceType = builder.resourceType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NewValue create() {
+            return builder().build();
+        }
+
+        /**
+         * @return displayValue
+         */
+        public String getDisplayValue() {
+            return this.displayValue;
+        }
+
+        /**
+         * @return plainValue
+         */
+        public String getPlainValue() {
+            return this.plainValue;
+        }
+
+        /**
+         * @return resourceType
+         */
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+        public static final class Builder {
+            private String displayValue; 
+            private String plainValue; 
+            private String resourceType; 
+
+            /**
+             * displayValue.
+             */
+            public Builder displayValue(String displayValue) {
+                this.displayValue = displayValue;
+                return this;
+            }
+
+            /**
+             * plainValue.
+             */
+            public Builder plainValue(String plainValue) {
+                this.plainValue = plainValue;
+                return this;
+            }
+
+            /**
+             * resourceType.
+             */
+            public Builder resourceType(String resourceType) {
+                this.resourceType = resourceType;
+                return this;
+            }
+
+            public NewValue build() {
+                return new NewValue(this);
+            } 
+
+        } 
+
+    }
+    public static class OldValue extends TeaModel {
+        @NameInMap("displayValue")
+        private String displayValue;
+
+        @NameInMap("plainValue")
+        private String plainValue;
+
+        @NameInMap("resourceType")
+        private String resourceType;
+
+        private OldValue(Builder builder) {
+            this.displayValue = builder.displayValue;
+            this.plainValue = builder.plainValue;
+            this.resourceType = builder.resourceType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static OldValue create() {
+            return builder().build();
+        }
+
+        /**
+         * @return displayValue
+         */
+        public String getDisplayValue() {
+            return this.displayValue;
+        }
+
+        /**
+         * @return plainValue
+         */
+        public String getPlainValue() {
+            return this.plainValue;
+        }
+
+        /**
+         * @return resourceType
+         */
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+        public static final class Builder {
+            private String displayValue; 
+            private String plainValue; 
+            private String resourceType; 
+
+            /**
+             * displayValue.
+             */
+            public Builder displayValue(String displayValue) {
+                this.displayValue = displayValue;
+                return this;
+            }
+
+            /**
+             * plainValue.
+             */
+            public Builder plainValue(String plainValue) {
+                this.plainValue = plainValue;
+                return this;
+            }
+
+            /**
+             * resourceType.
+             */
+            public Builder resourceType(String resourceType) {
+                this.resourceType = resourceType;
+                return this;
+            }
+
+            public OldValue build() {
+                return new OldValue(this);
+            } 
+
+        } 
+
+    }
     public static class Property extends TeaModel {
         @NameInMap("displayName")
         private String displayName;
@@ -245,6 +407,12 @@ public class GetWorkItemActivityResponseBody extends TeaModel {
         @NameInMap("eventType")
         private String eventType;
 
+        @NameInMap("newValue")
+        private java.util.List < NewValue> newValue;
+
+        @NameInMap("oldValue")
+        private java.util.List < OldValue> oldValue;
+
         @NameInMap("operator")
         private String operator;
 
@@ -262,6 +430,8 @@ public class GetWorkItemActivityResponseBody extends TeaModel {
             this.eventId = builder.eventId;
             this.eventTime = builder.eventTime;
             this.eventType = builder.eventType;
+            this.newValue = builder.newValue;
+            this.oldValue = builder.oldValue;
             this.operator = builder.operator;
             this.parentEventId = builder.parentEventId;
             this.property = builder.property;
@@ -305,6 +475,20 @@ public class GetWorkItemActivityResponseBody extends TeaModel {
         }
 
         /**
+         * @return newValue
+         */
+        public java.util.List < NewValue> getNewValue() {
+            return this.newValue;
+        }
+
+        /**
+         * @return oldValue
+         */
+        public java.util.List < OldValue> getOldValue() {
+            return this.oldValue;
+        }
+
+        /**
          * @return operator
          */
         public String getOperator() {
@@ -337,6 +521,8 @@ public class GetWorkItemActivityResponseBody extends TeaModel {
             private Long eventId; 
             private Long eventTime; 
             private String eventType; 
+            private java.util.List < NewValue> newValue; 
+            private java.util.List < OldValue> oldValue; 
             private String operator; 
             private Long parentEventId; 
             private Property property; 
@@ -371,6 +557,22 @@ public class GetWorkItemActivityResponseBody extends TeaModel {
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
+                return this;
+            }
+
+            /**
+             * newValue.
+             */
+            public Builder newValue(java.util.List < NewValue> newValue) {
+                this.newValue = newValue;
+                return this;
+            }
+
+            /**
+             * oldValue.
+             */
+            public Builder oldValue(java.util.List < OldValue> oldValue) {
+                this.oldValue = oldValue;
                 return this;
             }
 

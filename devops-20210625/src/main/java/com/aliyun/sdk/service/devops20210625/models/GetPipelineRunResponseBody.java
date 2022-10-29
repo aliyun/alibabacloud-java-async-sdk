@@ -352,7 +352,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
             }
 
             /**
-             * API参数
+             * params.
              */
             public Builder params(java.util.Map < String, ? > params) {
                 this.params = params;

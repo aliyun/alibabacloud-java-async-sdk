@@ -178,6 +178,9 @@ public class ListPipelinesResponseBody extends TeaModel {
         @NameInMap("creatorAccountId")
         private String creatorAccountId;
 
+        @NameInMap("groupId")
+        private Long groupId;
+
         @NameInMap("pipelineId")
         private Long pipelineId;
 
@@ -187,6 +190,7 @@ public class ListPipelinesResponseBody extends TeaModel {
         private Pipelines(Builder builder) {
             this.createTime = builder.createTime;
             this.creatorAccountId = builder.creatorAccountId;
+            this.groupId = builder.groupId;
             this.pipelineId = builder.pipelineId;
             this.pipelineName = builder.pipelineName;
         }
@@ -214,6 +218,13 @@ public class ListPipelinesResponseBody extends TeaModel {
         }
 
         /**
+         * @return groupId
+         */
+        public Long getGroupId() {
+            return this.groupId;
+        }
+
+        /**
          * @return pipelineId
          */
         public Long getPipelineId() {
@@ -230,6 +241,7 @@ public class ListPipelinesResponseBody extends TeaModel {
         public static final class Builder {
             private Long createTime; 
             private String creatorAccountId; 
+            private Long groupId; 
             private Long pipelineId; 
             private String pipelineName; 
 
@@ -246,6 +258,14 @@ public class ListPipelinesResponseBody extends TeaModel {
              */
             public Builder creatorAccountId(String creatorAccountId) {
                 this.creatorAccountId = creatorAccountId;
+                return this;
+            }
+
+            /**
+             * groupId.
+             */
+            public Builder groupId(Long groupId) {
+                this.groupId = groupId;
                 return this;
             }
 

@@ -71,7 +71,6 @@ public class CreateRepositoryRequest extends Request {
 
     @Body
     @NameInMap("namespaceId")
-    @Validation(required = true)
     private Long namespaceId;
 
     @Body

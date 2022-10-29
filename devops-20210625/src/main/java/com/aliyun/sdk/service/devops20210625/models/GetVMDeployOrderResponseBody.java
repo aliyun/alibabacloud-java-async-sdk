@@ -136,7 +136,7 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
         private Boolean disable;
 
         @NameInMap("params")
-        private java.util.Map < String, ? > params;
+        private Object params;
 
         @NameInMap("type")
         private String type;
@@ -165,7 +165,7 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
         /**
          * @return params
          */
-        public java.util.Map < String, ? > getParams() {
+        public Object getParams() {
             return this.params;
         }
 
@@ -178,7 +178,7 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean disable; 
-            private java.util.Map < String, ? > params; 
+            private Object params; 
             private String type; 
 
             /**
@@ -190,9 +190,9 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
             }
 
             /**
-             * 参数
+             * params.
              */
-            public Builder params(java.util.Map < String, ? > params) {
+            public Builder params(Object params) {
                 this.params = params;
                 return this;
             }
@@ -217,7 +217,7 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
         private Boolean disable;
 
         @NameInMap("params")
-        private java.util.Map < String, ? > params;
+        private Object params;
 
         @NameInMap("type")
         private String type;
@@ -246,7 +246,7 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
         /**
          * @return params
          */
-        public java.util.Map < String, ? > getParams() {
+        public Object getParams() {
             return this.params;
         }
 
@@ -259,7 +259,7 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean disable; 
-            private java.util.Map < String, ? > params; 
+            private Object params; 
             private String type; 
 
             /**
@@ -271,9 +271,9 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
             }
 
             /**
-             * 参数
+             * params.
              */
-            public Builder params(java.util.Map < String, ? > params) {
+            public Builder params(Object params) {
                 this.params = params;
                 return this;
             }
