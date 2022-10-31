@@ -117,14 +117,14 @@ public class ResumeLiveStreamRequest extends Request {
             super();
         } 
 
-        private Builder(ResumeLiveStreamRequest response) {
-            super(response);
-            this.appName = response.appName;
-            this.domainName = response.domainName;
-            this.liveStreamType = response.liveStreamType;
-            this.ownerId = response.ownerId;
-            this.securityToken = response.securityToken;
-            this.streamName = response.streamName;
+        private Builder(ResumeLiveStreamRequest request) {
+            super(request);
+            this.appName = request.appName;
+            this.domainName = request.domainName;
+            this.liveStreamType = request.liveStreamType;
+            this.ownerId = request.ownerId;
+            this.securityToken = request.securityToken;
+            this.streamName = request.streamName;
         } 
 
         /**

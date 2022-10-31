@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteMultiRateConfigRequest</p>
  */
 public class DeleteMultiRateConfigRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("App")
     @Validation(required = true)
@@ -35,22 +39,18 @@ public class DeleteMultiRateConfigRequest extends Request {
     @NameInMap("OwnerId")
     private Long ownerId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("Templates")
     private String templates;
 
     private DeleteMultiRateConfigRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.app = builder.app;
         this.deleteAll = builder.deleteAll;
         this.domainName = builder.domainName;
         this.groupId = builder.groupId;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
         this.templates = builder.templates;
     }
 
@@ -65,6 +65,13 @@ public class DeleteMultiRateConfigRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -103,13 +110,6 @@ public class DeleteMultiRateConfigRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return templates
      */
     public String getTemplates() {
@@ -117,28 +117,37 @@ public class DeleteMultiRateConfigRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteMultiRateConfigRequest, Builder> {
+        private String regionId; 
         private String app; 
         private String deleteAll; 
         private String domainName; 
         private String groupId; 
         private Long ownerId; 
-        private String regionId; 
         private String templates; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DeleteMultiRateConfigRequest response) {
-            super(response);
-            this.app = response.app;
-            this.deleteAll = response.deleteAll;
-            this.domainName = response.domainName;
-            this.groupId = response.groupId;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.templates = response.templates;
+        private Builder(DeleteMultiRateConfigRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.app = request.app;
+            this.deleteAll = request.deleteAll;
+            this.domainName = request.domainName;
+            this.groupId = request.groupId;
+            this.ownerId = request.ownerId;
+            this.templates = request.templates;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * App.
@@ -182,15 +191,6 @@ public class DeleteMultiRateConfigRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

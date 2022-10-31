@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddLiveAudioAuditConfigRequest</p>
  */
 public class AddLiveAudioAuditConfigRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("AppName")
     @Validation(required = true)
@@ -42,10 +46,6 @@ public class AddLiveAudioAuditConfigRequest extends Request {
     @NameInMap("OwnerId")
     private Long ownerId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("StreamName")
     @Validation(required = true)
@@ -53,6 +53,7 @@ public class AddLiveAudioAuditConfigRequest extends Request {
 
     private AddLiveAudioAuditConfigRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.appName = builder.appName;
         this.bizType = builder.bizType;
         this.domainName = builder.domainName;
@@ -60,7 +61,6 @@ public class AddLiveAudioAuditConfigRequest extends Request {
         this.ossEndpoint = builder.ossEndpoint;
         this.ossObject = builder.ossObject;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
         this.streamName = builder.streamName;
     }
 
@@ -75,6 +75,13 @@ public class AddLiveAudioAuditConfigRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -127,13 +134,6 @@ public class AddLiveAudioAuditConfigRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return streamName
      */
     public String getStreamName() {
@@ -141,6 +141,7 @@ public class AddLiveAudioAuditConfigRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AddLiveAudioAuditConfigRequest, Builder> {
+        private String regionId; 
         private String appName; 
         private String bizType; 
         private String domainName; 
@@ -148,25 +149,33 @@ public class AddLiveAudioAuditConfigRequest extends Request {
         private String ossEndpoint; 
         private String ossObject; 
         private Long ownerId; 
-        private String regionId; 
         private String streamName; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(AddLiveAudioAuditConfigRequest response) {
-            super(response);
-            this.appName = response.appName;
-            this.bizType = response.bizType;
-            this.domainName = response.domainName;
-            this.ossBucket = response.ossBucket;
-            this.ossEndpoint = response.ossEndpoint;
-            this.ossObject = response.ossObject;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.streamName = response.streamName;
+        private Builder(AddLiveAudioAuditConfigRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.appName = request.appName;
+            this.bizType = request.bizType;
+            this.domainName = request.domainName;
+            this.ossBucket = request.ossBucket;
+            this.ossEndpoint = request.ossEndpoint;
+            this.ossObject = request.ossObject;
+            this.ownerId = request.ownerId;
+            this.streamName = request.streamName;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * AppName.
@@ -228,15 +237,6 @@ public class AddLiveAudioAuditConfigRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

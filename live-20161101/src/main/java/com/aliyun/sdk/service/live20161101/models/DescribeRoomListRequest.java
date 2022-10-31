@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeRoomListRequest</p>
  */
 public class DescribeRoomListRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("AnchorId")
     private String anchorId;
@@ -41,10 +45,6 @@ public class DescribeRoomListRequest extends Request {
     @NameInMap("PageSize")
     private Integer pageSize;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("RoomId")
     private String roomId;
@@ -59,6 +59,7 @@ public class DescribeRoomListRequest extends Request {
 
     private DescribeRoomListRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.anchorId = builder.anchorId;
         this.appId = builder.appId;
         this.endTime = builder.endTime;
@@ -66,7 +67,6 @@ public class DescribeRoomListRequest extends Request {
         this.ownerId = builder.ownerId;
         this.pageNum = builder.pageNum;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
         this.roomId = builder.roomId;
         this.roomStatus = builder.roomStatus;
         this.startTime = builder.startTime;
@@ -83,6 +83,13 @@ public class DescribeRoomListRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -135,13 +142,6 @@ public class DescribeRoomListRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return roomId
      */
     public String getRoomId() {
@@ -163,6 +163,7 @@ public class DescribeRoomListRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeRoomListRequest, Builder> {
+        private String regionId; 
         private String anchorId; 
         private String appId; 
         private String endTime; 
@@ -170,7 +171,6 @@ public class DescribeRoomListRequest extends Request {
         private Long ownerId; 
         private Integer pageNum; 
         private Integer pageSize; 
-        private String regionId; 
         private String roomId; 
         private Integer roomStatus; 
         private String startTime; 
@@ -179,20 +179,29 @@ public class DescribeRoomListRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeRoomListRequest response) {
-            super(response);
-            this.anchorId = response.anchorId;
-            this.appId = response.appId;
-            this.endTime = response.endTime;
-            this.order = response.order;
-            this.ownerId = response.ownerId;
-            this.pageNum = response.pageNum;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.roomId = response.roomId;
-            this.roomStatus = response.roomStatus;
-            this.startTime = response.startTime;
+        private Builder(DescribeRoomListRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.anchorId = request.anchorId;
+            this.appId = request.appId;
+            this.endTime = request.endTime;
+            this.order = request.order;
+            this.ownerId = request.ownerId;
+            this.pageNum = request.pageNum;
+            this.pageSize = request.pageSize;
+            this.roomId = request.roomId;
+            this.roomStatus = request.roomStatus;
+            this.startTime = request.startTime;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * AnchorId.
@@ -254,15 +263,6 @@ public class DescribeRoomListRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

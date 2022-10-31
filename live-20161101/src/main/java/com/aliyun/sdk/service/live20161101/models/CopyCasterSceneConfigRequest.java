@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CopyCasterSceneConfigRequest</p>
  */
 public class CopyCasterSceneConfigRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("CasterId")
     @Validation(required = true)
@@ -26,10 +30,6 @@ public class CopyCasterSceneConfigRequest extends Request {
     @NameInMap("OwnerId")
     private Long ownerId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("ToSceneId")
     @Validation(required = true)
@@ -37,10 +37,10 @@ public class CopyCasterSceneConfigRequest extends Request {
 
     private CopyCasterSceneConfigRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.casterId = builder.casterId;
         this.fromSceneId = builder.fromSceneId;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
         this.toSceneId = builder.toSceneId;
     }
 
@@ -55,6 +55,13 @@ public class CopyCasterSceneConfigRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -79,13 +86,6 @@ public class CopyCasterSceneConfigRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return toSceneId
      */
     public String getToSceneId() {
@@ -93,24 +93,33 @@ public class CopyCasterSceneConfigRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CopyCasterSceneConfigRequest, Builder> {
+        private String regionId; 
         private String casterId; 
         private String fromSceneId; 
         private Long ownerId; 
-        private String regionId; 
         private String toSceneId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CopyCasterSceneConfigRequest response) {
-            super(response);
-            this.casterId = response.casterId;
-            this.fromSceneId = response.fromSceneId;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.toSceneId = response.toSceneId;
+        private Builder(CopyCasterSceneConfigRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.casterId = request.casterId;
+            this.fromSceneId = request.fromSceneId;
+            this.ownerId = request.ownerId;
+            this.toSceneId = request.toSceneId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * CasterId.
@@ -136,15 +145,6 @@ public class CopyCasterSceneConfigRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

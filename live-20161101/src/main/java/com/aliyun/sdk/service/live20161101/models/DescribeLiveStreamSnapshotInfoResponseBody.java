@@ -95,6 +95,12 @@ public class DescribeLiveStreamSnapshotInfoResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         private String createTime;
 
+        @NameInMap("CreateTimestamp")
+        private Long createTimestamp;
+
+        @NameInMap("IsOverlay")
+        private Boolean isOverlay;
+
         @NameInMap("OssBucket")
         private String ossBucket;
 
@@ -106,6 +112,8 @@ public class DescribeLiveStreamSnapshotInfoResponseBody extends TeaModel {
 
         private LiveStreamSnapshotInfo(Builder builder) {
             this.createTime = builder.createTime;
+            this.createTimestamp = builder.createTimestamp;
+            this.isOverlay = builder.isOverlay;
             this.ossBucket = builder.ossBucket;
             this.ossEndpoint = builder.ossEndpoint;
             this.ossObject = builder.ossObject;
@@ -124,6 +132,20 @@ public class DescribeLiveStreamSnapshotInfoResponseBody extends TeaModel {
          */
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        /**
+         * @return createTimestamp
+         */
+        public Long getCreateTimestamp() {
+            return this.createTimestamp;
+        }
+
+        /**
+         * @return isOverlay
+         */
+        public Boolean getIsOverlay() {
+            return this.isOverlay;
         }
 
         /**
@@ -149,6 +171,8 @@ public class DescribeLiveStreamSnapshotInfoResponseBody extends TeaModel {
 
         public static final class Builder {
             private String createTime; 
+            private Long createTimestamp; 
+            private Boolean isOverlay; 
             private String ossBucket; 
             private String ossEndpoint; 
             private String ossObject; 
@@ -158,6 +182,22 @@ public class DescribeLiveStreamSnapshotInfoResponseBody extends TeaModel {
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * CreateTimestamp.
+             */
+            public Builder createTimestamp(Long createTimestamp) {
+                this.createTimestamp = createTimestamp;
+                return this;
+            }
+
+            /**
+             * IsOverlay.
+             */
+            public Builder isOverlay(Boolean isOverlay) {
+                this.isOverlay = isOverlay;
                 return this;
             }
 

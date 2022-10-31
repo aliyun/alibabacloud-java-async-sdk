@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddLiveRecordVodConfigRequest</p>
  */
 public class AddLiveRecordVodConfigRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("AppName")
     @Validation(required = true)
@@ -39,10 +43,6 @@ public class AddLiveRecordVodConfigRequest extends Request {
     @NameInMap("OwnerId")
     private Long ownerId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("StorageLocation")
     private String storageLocation;
@@ -58,13 +58,13 @@ public class AddLiveRecordVodConfigRequest extends Request {
 
     private AddLiveRecordVodConfigRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.appName = builder.appName;
         this.autoCompose = builder.autoCompose;
         this.composeVodTranscodeGroupId = builder.composeVodTranscodeGroupId;
         this.cycleDuration = builder.cycleDuration;
         this.domainName = builder.domainName;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
         this.storageLocation = builder.storageLocation;
         this.streamName = builder.streamName;
         this.vodTranscodeGroupId = builder.vodTranscodeGroupId;
@@ -81,6 +81,13 @@ public class AddLiveRecordVodConfigRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -126,13 +133,6 @@ public class AddLiveRecordVodConfigRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return storageLocation
      */
     public String getStorageLocation() {
@@ -154,13 +154,13 @@ public class AddLiveRecordVodConfigRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AddLiveRecordVodConfigRequest, Builder> {
+        private String regionId; 
         private String appName; 
         private String autoCompose; 
         private String composeVodTranscodeGroupId; 
         private Integer cycleDuration; 
         private String domainName; 
         private Long ownerId; 
-        private String regionId; 
         private String storageLocation; 
         private String streamName; 
         private String vodTranscodeGroupId; 
@@ -169,19 +169,28 @@ public class AddLiveRecordVodConfigRequest extends Request {
             super();
         } 
 
-        private Builder(AddLiveRecordVodConfigRequest response) {
-            super(response);
-            this.appName = response.appName;
-            this.autoCompose = response.autoCompose;
-            this.composeVodTranscodeGroupId = response.composeVodTranscodeGroupId;
-            this.cycleDuration = response.cycleDuration;
-            this.domainName = response.domainName;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.storageLocation = response.storageLocation;
-            this.streamName = response.streamName;
-            this.vodTranscodeGroupId = response.vodTranscodeGroupId;
+        private Builder(AddLiveRecordVodConfigRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.appName = request.appName;
+            this.autoCompose = request.autoCompose;
+            this.composeVodTranscodeGroupId = request.composeVodTranscodeGroupId;
+            this.cycleDuration = request.cycleDuration;
+            this.domainName = request.domainName;
+            this.ownerId = request.ownerId;
+            this.storageLocation = request.storageLocation;
+            this.streamName = request.streamName;
+            this.vodTranscodeGroupId = request.vodTranscodeGroupId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * AppName.
@@ -234,15 +243,6 @@ public class AddLiveRecordVodConfigRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

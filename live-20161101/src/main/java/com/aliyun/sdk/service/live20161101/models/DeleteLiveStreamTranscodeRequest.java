@@ -103,13 +103,13 @@ public class DeleteLiveStreamTranscodeRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteLiveStreamTranscodeRequest response) {
-            super(response);
-            this.app = response.app;
-            this.domain = response.domain;
-            this.ownerId = response.ownerId;
-            this.securityToken = response.securityToken;
-            this.template = response.template;
+        private Builder(DeleteLiveStreamTranscodeRequest request) {
+            super(request);
+            this.app = request.app;
+            this.domain = request.domain;
+            this.ownerId = request.ownerId;
+            this.securityToken = request.securityToken;
+            this.template = request.template;
         } 
 
         /**

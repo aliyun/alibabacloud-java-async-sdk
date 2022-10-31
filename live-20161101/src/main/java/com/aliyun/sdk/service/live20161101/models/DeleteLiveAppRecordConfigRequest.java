@@ -102,13 +102,13 @@ public class DeleteLiveAppRecordConfigRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteLiveAppRecordConfigRequest response) {
-            super(response);
-            this.appName = response.appName;
-            this.domainName = response.domainName;
-            this.ownerId = response.ownerId;
-            this.securityToken = response.securityToken;
-            this.streamName = response.streamName;
+        private Builder(DeleteLiveAppRecordConfigRequest request) {
+            super(request);
+            this.appName = request.appName;
+            this.domainName = request.domainName;
+            this.ownerId = request.ownerId;
+            this.securityToken = request.securityToken;
+            this.streamName = request.streamName;
         } 
 
         /**

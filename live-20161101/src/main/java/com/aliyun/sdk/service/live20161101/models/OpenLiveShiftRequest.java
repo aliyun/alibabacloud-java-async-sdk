@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>OpenLiveShiftRequest</p>
  */
 public class OpenLiveShiftRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("AppName")
     private String appName;
@@ -33,10 +37,6 @@ public class OpenLiveShiftRequest extends Request {
     @NameInMap("OwnerId")
     private Long ownerId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("StreamName")
     private String streamName;
@@ -47,12 +47,12 @@ public class OpenLiveShiftRequest extends Request {
 
     private OpenLiveShiftRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.appName = builder.appName;
         this.domainName = builder.domainName;
         this.duration = builder.duration;
         this.ignoreTranscode = builder.ignoreTranscode;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
         this.streamName = builder.streamName;
         this.vision = builder.vision;
     }
@@ -68,6 +68,13 @@ public class OpenLiveShiftRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -106,13 +113,6 @@ public class OpenLiveShiftRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return streamName
      */
     public String getStreamName() {
@@ -127,12 +127,12 @@ public class OpenLiveShiftRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<OpenLiveShiftRequest, Builder> {
+        private String regionId; 
         private String appName; 
         private String domainName; 
         private Integer duration; 
         private Boolean ignoreTranscode; 
         private Long ownerId; 
-        private String regionId; 
         private String streamName; 
         private Integer vision; 
 
@@ -140,17 +140,26 @@ public class OpenLiveShiftRequest extends Request {
             super();
         } 
 
-        private Builder(OpenLiveShiftRequest response) {
-            super(response);
-            this.appName = response.appName;
-            this.domainName = response.domainName;
-            this.duration = response.duration;
-            this.ignoreTranscode = response.ignoreTranscode;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.streamName = response.streamName;
-            this.vision = response.vision;
+        private Builder(OpenLiveShiftRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.appName = request.appName;
+            this.domainName = request.domainName;
+            this.duration = request.duration;
+            this.ignoreTranscode = request.ignoreTranscode;
+            this.ownerId = request.ownerId;
+            this.streamName = request.streamName;
+            this.vision = request.vision;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * AppName.
@@ -194,15 +203,6 @@ public class OpenLiveShiftRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeLiveDetectPornDataRequest</p>
  */
 public class DescribeLiveDetectPornDataRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("App")
     private String app;
@@ -36,10 +40,6 @@ public class DescribeLiveDetectPornDataRequest extends Request {
     @NameInMap("Region")
     private String region;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("Scene")
     private String scene;
@@ -58,13 +58,13 @@ public class DescribeLiveDetectPornDataRequest extends Request {
 
     private DescribeLiveDetectPornDataRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.app = builder.app;
         this.domainName = builder.domainName;
         this.endTime = builder.endTime;
         this.fee = builder.fee;
         this.ownerId = builder.ownerId;
         this.region = builder.region;
-        this.regionId = builder.regionId;
         this.scene = builder.scene;
         this.splitBy = builder.splitBy;
         this.startTime = builder.startTime;
@@ -82,6 +82,13 @@ public class DescribeLiveDetectPornDataRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -127,13 +134,6 @@ public class DescribeLiveDetectPornDataRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return scene
      */
     public String getScene() {
@@ -162,13 +162,13 @@ public class DescribeLiveDetectPornDataRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeLiveDetectPornDataRequest, Builder> {
+        private String regionId; 
         private String app; 
         private String domainName; 
         private String endTime; 
         private String fee; 
         private Long ownerId; 
         private String region; 
-        private String regionId; 
         private String scene; 
         private String splitBy; 
         private String startTime; 
@@ -178,20 +178,29 @@ public class DescribeLiveDetectPornDataRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeLiveDetectPornDataRequest response) {
-            super(response);
-            this.app = response.app;
-            this.domainName = response.domainName;
-            this.endTime = response.endTime;
-            this.fee = response.fee;
-            this.ownerId = response.ownerId;
-            this.region = response.region;
-            this.regionId = response.regionId;
-            this.scene = response.scene;
-            this.splitBy = response.splitBy;
-            this.startTime = response.startTime;
-            this.stream = response.stream;
+        private Builder(DescribeLiveDetectPornDataRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.app = request.app;
+            this.domainName = request.domainName;
+            this.endTime = request.endTime;
+            this.fee = request.fee;
+            this.ownerId = request.ownerId;
+            this.region = request.region;
+            this.scene = request.scene;
+            this.splitBy = request.splitBy;
+            this.startTime = request.startTime;
+            this.stream = request.stream;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * App.
@@ -244,15 +253,6 @@ public class DescribeLiveDetectPornDataRequest extends Request {
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
             this.region = region;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

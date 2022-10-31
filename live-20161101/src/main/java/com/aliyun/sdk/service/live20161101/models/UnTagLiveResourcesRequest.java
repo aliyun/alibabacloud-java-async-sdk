@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UnTagLiveResourcesRequest</p>
  */
 public class UnTagLiveResourcesRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("All")
     private Boolean all;
@@ -19,10 +23,6 @@ public class UnTagLiveResourcesRequest extends Request {
     @Query
     @NameInMap("OwnerId")
     private Long ownerId;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Query
     @NameInMap("ResourceId")
@@ -40,9 +40,9 @@ public class UnTagLiveResourcesRequest extends Request {
 
     private UnTagLiveResourcesRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.all = builder.all;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
         this.resourceId = builder.resourceId;
         this.resourceType = builder.resourceType;
         this.tagKey = builder.tagKey;
@@ -62,6 +62,13 @@ public class UnTagLiveResourcesRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return all
      */
     public Boolean getAll() {
@@ -73,13 +80,6 @@ public class UnTagLiveResourcesRequest extends Request {
      */
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -104,9 +104,9 @@ public class UnTagLiveResourcesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UnTagLiveResourcesRequest, Builder> {
+        private String regionId; 
         private Boolean all; 
         private Long ownerId; 
-        private String regionId; 
         private java.util.List < String > resourceId; 
         private String resourceType; 
         private java.util.List < String > tagKey; 
@@ -115,15 +115,24 @@ public class UnTagLiveResourcesRequest extends Request {
             super();
         } 
 
-        private Builder(UnTagLiveResourcesRequest response) {
-            super(response);
-            this.all = response.all;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceId = response.resourceId;
-            this.resourceType = response.resourceType;
-            this.tagKey = response.tagKey;
+        private Builder(UnTagLiveResourcesRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.all = request.all;
+            this.ownerId = request.ownerId;
+            this.resourceId = request.resourceId;
+            this.resourceType = request.resourceType;
+            this.tagKey = request.tagKey;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * All.
@@ -140,15 +149,6 @@ public class UnTagLiveResourcesRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

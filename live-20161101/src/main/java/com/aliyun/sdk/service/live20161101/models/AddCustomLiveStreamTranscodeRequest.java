@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddCustomLiveStreamTranscodeRequest</p>
  */
 public class AddCustomLiveStreamTranscodeRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("App")
     @Validation(required = true)
@@ -78,10 +82,6 @@ public class AddCustomLiveStreamTranscodeRequest extends Request {
     @NameInMap("Profile")
     private Integer profile;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("Template")
     @Validation(required = true)
@@ -102,6 +102,7 @@ public class AddCustomLiveStreamTranscodeRequest extends Request {
 
     private AddCustomLiveStreamTranscodeRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.app = builder.app;
         this.audioBitrate = builder.audioBitrate;
         this.audioChannelNum = builder.audioChannelNum;
@@ -118,7 +119,6 @@ public class AddCustomLiveStreamTranscodeRequest extends Request {
         this.kmsUID = builder.kmsUID;
         this.ownerId = builder.ownerId;
         this.profile = builder.profile;
-        this.regionId = builder.regionId;
         this.template = builder.template;
         this.templateType = builder.templateType;
         this.videoBitrate = builder.videoBitrate;
@@ -136,6 +136,13 @@ public class AddCustomLiveStreamTranscodeRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -251,13 +258,6 @@ public class AddCustomLiveStreamTranscodeRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return template
      */
     public String getTemplate() {
@@ -286,6 +286,7 @@ public class AddCustomLiveStreamTranscodeRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AddCustomLiveStreamTranscodeRequest, Builder> {
+        private String regionId; 
         private String app; 
         private Integer audioBitrate; 
         private Integer audioChannelNum; 
@@ -302,7 +303,6 @@ public class AddCustomLiveStreamTranscodeRequest extends Request {
         private String kmsUID; 
         private Long ownerId; 
         private Integer profile; 
-        private String regionId; 
         private String template; 
         private String templateType; 
         private Integer videoBitrate; 
@@ -312,30 +312,39 @@ public class AddCustomLiveStreamTranscodeRequest extends Request {
             super();
         } 
 
-        private Builder(AddCustomLiveStreamTranscodeRequest response) {
-            super(response);
-            this.app = response.app;
-            this.audioBitrate = response.audioBitrate;
-            this.audioChannelNum = response.audioChannelNum;
-            this.audioCodec = response.audioCodec;
-            this.audioProfile = response.audioProfile;
-            this.audioRate = response.audioRate;
-            this.domain = response.domain;
-            this.encryptParameters = response.encryptParameters;
-            this.FPS = response.FPS;
-            this.gop = response.gop;
-            this.height = response.height;
-            this.kmsKeyExpireInterval = response.kmsKeyExpireInterval;
-            this.kmsKeyID = response.kmsKeyID;
-            this.kmsUID = response.kmsUID;
-            this.ownerId = response.ownerId;
-            this.profile = response.profile;
-            this.regionId = response.regionId;
-            this.template = response.template;
-            this.templateType = response.templateType;
-            this.videoBitrate = response.videoBitrate;
-            this.width = response.width;
+        private Builder(AddCustomLiveStreamTranscodeRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.app = request.app;
+            this.audioBitrate = request.audioBitrate;
+            this.audioChannelNum = request.audioChannelNum;
+            this.audioCodec = request.audioCodec;
+            this.audioProfile = request.audioProfile;
+            this.audioRate = request.audioRate;
+            this.domain = request.domain;
+            this.encryptParameters = request.encryptParameters;
+            this.FPS = request.FPS;
+            this.gop = request.gop;
+            this.height = request.height;
+            this.kmsKeyExpireInterval = request.kmsKeyExpireInterval;
+            this.kmsKeyID = request.kmsKeyID;
+            this.kmsUID = request.kmsUID;
+            this.ownerId = request.ownerId;
+            this.profile = request.profile;
+            this.template = request.template;
+            this.templateType = request.templateType;
+            this.videoBitrate = request.videoBitrate;
+            this.width = request.width;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * App.
@@ -478,15 +487,6 @@ public class AddCustomLiveStreamTranscodeRequest extends Request {
         public Builder profile(Integer profile) {
             this.putQueryParameter("Profile", profile);
             this.profile = profile;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

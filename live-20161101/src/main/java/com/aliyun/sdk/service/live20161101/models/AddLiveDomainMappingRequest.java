@@ -89,12 +89,12 @@ public class AddLiveDomainMappingRequest extends Request {
             super();
         } 
 
-        private Builder(AddLiveDomainMappingRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.pullDomain = response.pullDomain;
-            this.pushDomain = response.pushDomain;
-            this.securityToken = response.securityToken;
+        private Builder(AddLiveDomainMappingRequest request) {
+            super(request);
+            this.ownerId = request.ownerId;
+            this.pullDomain = request.pullDomain;
+            this.pushDomain = request.pushDomain;
+            this.securityToken = request.securityToken;
         } 
 
         /**

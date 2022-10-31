@@ -155,17 +155,17 @@ public class AddLiveDomainRequest extends Request {
             super();
         } 
 
-        private Builder(AddLiveDomainRequest response) {
-            super(response);
-            this.checkUrl = response.checkUrl;
-            this.domainName = response.domainName;
-            this.liveDomainType = response.liveDomainType;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.region = response.region;
-            this.scope = response.scope;
-            this.securityToken = response.securityToken;
-            this.topLevelDomain = response.topLevelDomain;
+        private Builder(AddLiveDomainRequest request) {
+            super(request);
+            this.checkUrl = request.checkUrl;
+            this.domainName = request.domainName;
+            this.liveDomainType = request.liveDomainType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.region = request.region;
+            this.scope = request.scope;
+            this.securityToken = request.securityToken;
+            this.topLevelDomain = request.topLevelDomain;
         } 
 
         /**

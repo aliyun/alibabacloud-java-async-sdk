@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeLiveStreamOptimizedFeatureConfigRequest</p>
  */
 public class DescribeLiveStreamOptimizedFeatureConfigRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("ConfigName")
     @Validation(required = true)
@@ -26,16 +30,12 @@ public class DescribeLiveStreamOptimizedFeatureConfigRequest extends Request {
     @NameInMap("OwnerId")
     private Long ownerId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private DescribeLiveStreamOptimizedFeatureConfigRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.configName = builder.configName;
         this.domainName = builder.domainName;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -49,6 +49,13 @@ public class DescribeLiveStreamOptimizedFeatureConfigRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -72,30 +79,32 @@ public class DescribeLiveStreamOptimizedFeatureConfigRequest extends Request {
         return this.ownerId;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<DescribeLiveStreamOptimizedFeatureConfigRequest, Builder> {
+        private String regionId; 
         private String configName; 
         private String domainName; 
         private Long ownerId; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeLiveStreamOptimizedFeatureConfigRequest response) {
-            super(response);
-            this.configName = response.configName;
-            this.domainName = response.domainName;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
+        private Builder(DescribeLiveStreamOptimizedFeatureConfigRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.configName = request.configName;
+            this.domainName = request.domainName;
+            this.ownerId = request.ownerId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * ConfigName.
@@ -121,15 +130,6 @@ public class DescribeLiveStreamOptimizedFeatureConfigRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

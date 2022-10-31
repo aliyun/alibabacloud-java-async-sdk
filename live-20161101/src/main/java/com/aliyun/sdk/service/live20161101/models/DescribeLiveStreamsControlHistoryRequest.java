@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeLiveStreamsControlHistoryRequest</p>
  */
 public class DescribeLiveStreamsControlHistoryRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("AppName")
     private String appName;
@@ -30,10 +34,6 @@ public class DescribeLiveStreamsControlHistoryRequest extends Request {
     @NameInMap("OwnerId")
     private Long ownerId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("StartTime")
     @Validation(required = true)
@@ -41,11 +41,11 @@ public class DescribeLiveStreamsControlHistoryRequest extends Request {
 
     private DescribeLiveStreamsControlHistoryRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.appName = builder.appName;
         this.domainName = builder.domainName;
         this.endTime = builder.endTime;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
         this.startTime = builder.startTime;
     }
 
@@ -60,6 +60,13 @@ public class DescribeLiveStreamsControlHistoryRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -91,13 +98,6 @@ public class DescribeLiveStreamsControlHistoryRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -105,26 +105,35 @@ public class DescribeLiveStreamsControlHistoryRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeLiveStreamsControlHistoryRequest, Builder> {
+        private String regionId; 
         private String appName; 
         private String domainName; 
         private String endTime; 
         private Long ownerId; 
-        private String regionId; 
         private String startTime; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeLiveStreamsControlHistoryRequest response) {
-            super(response);
-            this.appName = response.appName;
-            this.domainName = response.domainName;
-            this.endTime = response.endTime;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.startTime = response.startTime;
+        private Builder(DescribeLiveStreamsControlHistoryRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.appName = request.appName;
+            this.domainName = request.domainName;
+            this.endTime = request.endTime;
+            this.ownerId = request.ownerId;
+            this.startTime = request.startTime;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * AppName.
@@ -159,15 +168,6 @@ public class DescribeLiveStreamsControlHistoryRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddLiveStreamTranscodeRequest</p>
  */
 public class AddLiveStreamTranscodeRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("App")
     @Validation(required = true)
@@ -34,10 +38,6 @@ public class AddLiveStreamTranscodeRequest extends Request {
     @NameInMap("OwnerId")
     private Long ownerId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("Template")
     @Validation(required = true)
@@ -45,12 +45,12 @@ public class AddLiveStreamTranscodeRequest extends Request {
 
     private AddLiveStreamTranscodeRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.app = builder.app;
         this.domain = builder.domain;
         this.encryptParameters = builder.encryptParameters;
         this.lazy = builder.lazy;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
         this.template = builder.template;
     }
 
@@ -65,6 +65,13 @@ public class AddLiveStreamTranscodeRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -103,13 +110,6 @@ public class AddLiveStreamTranscodeRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return template
      */
     public String getTemplate() {
@@ -117,28 +117,37 @@ public class AddLiveStreamTranscodeRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AddLiveStreamTranscodeRequest, Builder> {
+        private String regionId; 
         private String app; 
         private String domain; 
         private String encryptParameters; 
         private String lazy; 
         private Long ownerId; 
-        private String regionId; 
         private String template; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(AddLiveStreamTranscodeRequest response) {
-            super(response);
-            this.app = response.app;
-            this.domain = response.domain;
-            this.encryptParameters = response.encryptParameters;
-            this.lazy = response.lazy;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.template = response.template;
+        private Builder(AddLiveStreamTranscodeRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.app = request.app;
+            this.domain = request.domain;
+            this.encryptParameters = request.encryptParameters;
+            this.lazy = request.lazy;
+            this.ownerId = request.ownerId;
+            this.template = request.template;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * App.
@@ -182,15 +191,6 @@ public class AddLiveStreamTranscodeRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

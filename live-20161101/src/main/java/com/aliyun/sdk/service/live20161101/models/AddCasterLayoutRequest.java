@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddCasterLayoutRequest</p>
  */
 public class AddCasterLayoutRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("AudioLayer")
     @Validation(required = true)
@@ -36,10 +40,6 @@ public class AddCasterLayoutRequest extends Request {
     @NameInMap("OwnerId")
     private Long ownerId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("VideoLayer")
     @Validation(required = true)
@@ -47,12 +47,12 @@ public class AddCasterLayoutRequest extends Request {
 
     private AddCasterLayoutRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.audioLayer = builder.audioLayer;
         this.blendList = builder.blendList;
         this.casterId = builder.casterId;
         this.mixList = builder.mixList;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
         this.videoLayer = builder.videoLayer;
     }
 
@@ -67,6 +67,13 @@ public class AddCasterLayoutRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -105,13 +112,6 @@ public class AddCasterLayoutRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return videoLayer
      */
     public java.util.List < VideoLayer> getVideoLayer() {
@@ -119,28 +119,37 @@ public class AddCasterLayoutRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AddCasterLayoutRequest, Builder> {
+        private String regionId; 
         private java.util.List < AudioLayer> audioLayer; 
         private java.util.List < String > blendList; 
         private String casterId; 
         private java.util.List < String > mixList; 
         private Long ownerId; 
-        private String regionId; 
         private java.util.List < VideoLayer> videoLayer; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(AddCasterLayoutRequest response) {
-            super(response);
-            this.audioLayer = response.audioLayer;
-            this.blendList = response.blendList;
-            this.casterId = response.casterId;
-            this.mixList = response.mixList;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.videoLayer = response.videoLayer;
+        private Builder(AddCasterLayoutRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.audioLayer = request.audioLayer;
+            this.blendList = request.blendList;
+            this.casterId = request.casterId;
+            this.mixList = request.mixList;
+            this.ownerId = request.ownerId;
+            this.videoLayer = request.videoLayer;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * AudioLayer.
@@ -184,15 +193,6 @@ public class AddCasterLayoutRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

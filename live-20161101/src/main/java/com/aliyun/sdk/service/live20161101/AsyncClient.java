@@ -34,10 +34,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AddCustomLiveStreamTranscodeResponse> addCustomLiveStreamTranscode(AddCustomLiveStreamTranscodeRequest request);
 
-    CompletableFuture<AddDRMCertificateResponse> addDRMCertificate(AddDRMCertificateRequest request);
-
-    CompletableFuture<AddLiveASRConfigResponse> addLiveASRConfig(AddLiveASRConfigRequest request);
-
     CompletableFuture<AddLiveAppRecordConfigResponse> addLiveAppRecordConfig(AddLiveAppRecordConfigRequest request);
 
     CompletableFuture<AddLiveAppSnapshotConfigResponse> addLiveAppSnapshotConfig(AddLiveAppSnapshotConfigRequest request);
@@ -82,29 +78,19 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AllowPushStreamResponse> allowPushStream(AllowPushStreamRequest request);
 
-    CompletableFuture<ApplyBoardTokenResponse> applyBoardToken(ApplyBoardTokenRequest request);
-
-    CompletableFuture<ApplyRecordTokenResponse> applyRecordToken(ApplyRecordTokenRequest request);
-
     CompletableFuture<BatchDeleteLiveDomainConfigsResponse> batchDeleteLiveDomainConfigs(BatchDeleteLiveDomainConfigsRequest request);
 
     CompletableFuture<BatchSetLiveDomainConfigsResponse> batchSetLiveDomainConfigs(BatchSetLiveDomainConfigsRequest request);
 
-    CompletableFuture<CheckServiceForRoleResponse> checkServiceForRole(CheckServiceForRoleRequest request);
+    CompletableFuture<CancelMuteAllGroupUserResponse> cancelMuteAllGroupUser(CancelMuteAllGroupUserRequest request);
 
     CompletableFuture<CloseLiveShiftResponse> closeLiveShift(CloseLiveShiftRequest request);
 
-    CompletableFuture<CompleteBoardResponse> completeBoard(CompleteBoardRequest request);
-
-    CompletableFuture<CompleteBoardRecordResponse> completeBoardRecord(CompleteBoardRecordRequest request);
-
-    CompletableFuture<ControlHtmlResourceResponse> controlHtmlResource(ControlHtmlResourceRequest request);
+    CompletableFuture<CloseMessageGroupResponse> closeMessageGroup(CloseMessageGroupRequest request);
 
     CompletableFuture<CopyCasterResponse> copyCaster(CopyCasterRequest request);
 
     CompletableFuture<CopyCasterSceneConfigResponse> copyCasterSceneConfig(CopyCasterSceneConfigRequest request);
-
-    CompletableFuture<CreateBoardResponse> createBoard(CreateBoardRequest request);
 
     CompletableFuture<CreateCasterResponse> createCaster(CreateCasterRequest request);
 
@@ -116,11 +102,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateLiveStreamRecordIndexFilesResponse> createLiveStreamRecordIndexFiles(CreateLiveStreamRecordIndexFilesRequest request);
 
+    CompletableFuture<CreateLiveTranscodeTemplateResponse> createLiveTranscodeTemplate(CreateLiveTranscodeTemplateRequest request);
+
+    CompletableFuture<CreateMessageGroupResponse> createMessageGroup(CreateMessageGroupRequest request);
+
     CompletableFuture<CreateMixStreamResponse> createMixStream(CreateMixStreamRequest request);
-
-    CompletableFuture<CreateRoomResponse> createRoom(CreateRoomRequest request);
-
-    CompletableFuture<DeleteBoardResponse> deleteBoard(DeleteBoardRequest request);
 
     CompletableFuture<DeleteCasterResponse> deleteCaster(DeleteCasterRequest request);
 
@@ -139,10 +125,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteCasterVideoResourceResponse> deleteCasterVideoResource(DeleteCasterVideoResourceRequest request);
 
     CompletableFuture<DeleteCustomTemplateResponse> deleteCustomTemplate(DeleteCustomTemplateRequest request);
-
-    CompletableFuture<DeleteHtmlResourceResponse> deleteHtmlResource(DeleteHtmlResourceRequest request);
-
-    CompletableFuture<DeleteLiveASRConfigResponse> deleteLiveASRConfig(DeleteLiveASRConfigRequest request);
 
     CompletableFuture<DeleteLiveAppRecordConfigResponse> deleteLiveAppRecordConfig(DeleteLiveAppRecordConfigRequest request);
 
@@ -180,6 +162,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteLiveStreamMonitorResponse> deleteLiveStreamMonitor(DeleteLiveStreamMonitorRequest request);
 
+    CompletableFuture<DeleteLiveStreamRecordIndexFilesResponse> deleteLiveStreamRecordIndexFiles(DeleteLiveStreamRecordIndexFilesRequest request);
+
     CompletableFuture<DeleteLiveStreamTranscodeResponse> deleteLiveStreamTranscode(DeleteLiveStreamTranscodeRequest request);
 
     CompletableFuture<DeleteLiveStreamWatermarkResponse> deleteLiveStreamWatermark(DeleteLiveStreamWatermarkRequest request);
@@ -187,6 +171,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteLiveStreamWatermarkRuleResponse> deleteLiveStreamWatermarkRule(DeleteLiveStreamWatermarkRuleRequest request);
 
     CompletableFuture<DeleteLiveStreamsNotifyUrlConfigResponse> deleteLiveStreamsNotifyUrlConfig(DeleteLiveStreamsNotifyUrlConfigRequest request);
+
+    CompletableFuture<DeleteMessageAppResponse> deleteMessageApp(DeleteMessageAppRequest request);
 
     CompletableFuture<DeleteMixStreamResponse> deleteMixStream(DeleteMixStreamRequest request);
 
@@ -200,13 +186,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteSnapshotCallbackAuthResponse> deleteSnapshotCallbackAuth(DeleteSnapshotCallbackAuthRequest request);
 
+    CompletableFuture<DeleteSnapshotFilesResponse> deleteSnapshotFiles(DeleteSnapshotFilesRequest request);
+
     CompletableFuture<DeleteStudioLayoutResponse> deleteStudioLayout(DeleteStudioLayoutRequest request);
 
-    CompletableFuture<DescribeBoardEventsResponse> describeBoardEvents(DescribeBoardEventsRequest request);
-
-    CompletableFuture<DescribeBoardSnapshotResponse> describeBoardSnapshot(DescribeBoardSnapshotRequest request);
-
-    CompletableFuture<DescribeBoardsResponse> describeBoards(DescribeBoardsRequest request);
+    CompletableFuture<DescribeAutoShowListTasksResponse> describeAutoShowListTasks(DescribeAutoShowListTasksRequest request);
 
     CompletableFuture<DescribeCasterChannelsResponse> describeCasterChannels(DescribeCasterChannelsRequest request);
 
@@ -214,13 +198,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeCasterConfigResponse> describeCasterConfig(DescribeCasterConfigRequest request);
 
-    CompletableFuture<DescribeCasterHtmlResourceResponse> describeCasterHtmlResource(DescribeCasterHtmlResourceRequest request);
-
     CompletableFuture<DescribeCasterLayoutsResponse> describeCasterLayouts(DescribeCasterLayoutsRequest request);
 
     CompletableFuture<DescribeCasterProgramResponse> describeCasterProgram(DescribeCasterProgramRequest request);
-
-    CompletableFuture<DescribeCasterRtcInfoResponse> describeCasterRtcInfo(DescribeCasterRtcInfoRequest request);
 
     CompletableFuture<DescribeCasterSceneAudioResponse> describeCasterSceneAudio(DescribeCasterSceneAudioRequest request);
 
@@ -234,8 +214,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeCastersResponse> describeCasters(DescribeCastersRequest request);
 
-    CompletableFuture<DescribeDRMCertListResponse> describeDRMCertList(DescribeDRMCertListRequest request);
-
     CompletableFuture<DescribeDomainUsageDataResponse> describeDomainUsageData(DescribeDomainUsageDataRequest request);
 
     CompletableFuture<DescribeDomainWithIntegrityResponse> describeDomainWithIntegrity(DescribeDomainWithIntegrityRequest request);
@@ -243,10 +221,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeForbidPushStreamRoomListResponse> describeForbidPushStreamRoomList(DescribeForbidPushStreamRoomListRequest request);
 
     CompletableFuture<DescribeHlsLiveStreamRealTimeBpsDataResponse> describeHlsLiveStreamRealTimeBpsData(DescribeHlsLiveStreamRealTimeBpsDataRequest request);
-
-    CompletableFuture<DescribeHtmlResourceResponse> describeHtmlResource(DescribeHtmlResourceRequest request);
-
-    CompletableFuture<DescribeLiveAsrConfigResponse> describeLiveAsrConfig(DescribeLiveAsrConfigRequest request);
 
     CompletableFuture<DescribeLiveAudioAuditConfigResponse> describeLiveAudioAuditConfig(DescribeLiveAudioAuditConfigRequest request);
 
@@ -262,6 +236,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeLiveDomainBpsDataResponse> describeLiveDomainBpsData(DescribeLiveDomainBpsDataRequest request);
 
+    CompletableFuture<DescribeLiveDomainBpsDataByLayerResponse> describeLiveDomainBpsDataByLayer(DescribeLiveDomainBpsDataByLayerRequest request);
+
     CompletableFuture<DescribeLiveDomainBpsDataByTimeStampResponse> describeLiveDomainBpsDataByTimeStamp(DescribeLiveDomainBpsDataByTimeStampRequest request);
 
     CompletableFuture<DescribeLiveDomainCertificateInfoResponse> describeLiveDomainCertificateInfo(DescribeLiveDomainCertificateInfoRequest request);
@@ -271,8 +247,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeLiveDomainDetailResponse> describeLiveDomainDetail(DescribeLiveDomainDetailRequest request);
 
     CompletableFuture<DescribeLiveDomainFrameRateAndBitRateDataResponse> describeLiveDomainFrameRateAndBitRateData(DescribeLiveDomainFrameRateAndBitRateDataRequest request);
-
-    CompletableFuture<DescribeLiveDomainHttpsDataResponse> describeLiveDomainHttpsData(DescribeLiveDomainHttpsDataRequest request);
 
     CompletableFuture<DescribeLiveDomainLimitResponse> describeLiveDomainLimit(DescribeLiveDomainLimitRequest request);
 
@@ -302,31 +276,23 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeLiveDomainSnapshotDataResponse> describeLiveDomainSnapshotData(DescribeLiveDomainSnapshotDataRequest request);
 
-    CompletableFuture<DescribeLiveDomainSrcHttpCodeDataResponse> describeLiveDomainSrcHttpCodeData(DescribeLiveDomainSrcHttpCodeDataRequest request);
-
     CompletableFuture<DescribeLiveDomainStagingConfigResponse> describeLiveDomainStagingConfig(DescribeLiveDomainStagingConfigRequest request);
 
     CompletableFuture<DescribeLiveDomainStreamTranscodeDataResponse> describeLiveDomainStreamTranscodeData(DescribeLiveDomainStreamTranscodeDataRequest request);
-
-    CompletableFuture<DescribeLiveDomainStreamWaterLevelResponse> describeLiveDomainStreamWaterLevel(DescribeLiveDomainStreamWaterLevelRequest request);
 
     CompletableFuture<DescribeLiveDomainTimeShiftDataResponse> describeLiveDomainTimeShiftData(DescribeLiveDomainTimeShiftDataRequest request);
 
     CompletableFuture<DescribeLiveDomainTrafficDataResponse> describeLiveDomainTrafficData(DescribeLiveDomainTrafficDataRequest request);
 
-    CompletableFuture<DescribeLiveDomainTrancodeDataResponse> describeLiveDomainTrancodeData(DescribeLiveDomainTrancodeDataRequest request);
-
     CompletableFuture<DescribeLiveDomainTranscodeDataResponse> describeLiveDomainTranscodeData(DescribeLiveDomainTranscodeDataRequest request);
-
-    CompletableFuture<DescribeLiveDomainUvDataResponse> describeLiveDomainUvData(DescribeLiveDomainUvDataRequest request);
 
     CompletableFuture<DescribeLiveDrmUsageDataResponse> describeLiveDrmUsageData(DescribeLiveDrmUsageDataRequest request);
 
     CompletableFuture<DescribeLiveEdgeTransferResponse> describeLiveEdgeTransfer(DescribeLiveEdgeTransferRequest request);
 
-    CompletableFuture<DescribeLiveIpInfoResponse> describeLiveIpInfo(DescribeLiveIpInfoRequest request);
-
     CompletableFuture<DescribeLiveLazyPullStreamConfigResponse> describeLiveLazyPullStreamConfig(DescribeLiveLazyPullStreamConfigRequest request);
+
+    CompletableFuture<DescribeLiveProducerUsageDataResponse> describeLiveProducerUsageData(DescribeLiveProducerUsageDataRequest request);
 
     CompletableFuture<DescribeLivePullStreamConfigResponse> describeLivePullStreamConfig(DescribeLivePullStreamConfigRequest request);
 
@@ -346,21 +312,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeLiveSnapshotDetectPornConfigResponse> describeLiveSnapshotDetectPornConfig(DescribeLiveSnapshotDetectPornConfigRequest request);
 
-    CompletableFuture<DescribeLiveStagingIpResponse> describeLiveStagingIp(DescribeLiveStagingIpRequest request);
-
     CompletableFuture<DescribeLiveStreamBitRateDataResponse> describeLiveStreamBitRateData(DescribeLiveStreamBitRateDataRequest request);
 
     CompletableFuture<DescribeLiveStreamCountResponse> describeLiveStreamCount(DescribeLiveStreamCountRequest request);
 
     CompletableFuture<DescribeLiveStreamDelayConfigResponse> describeLiveStreamDelayConfig(DescribeLiveStreamDelayConfigRequest request);
 
-    CompletableFuture<DescribeLiveStreamGRTNDashboardResponse> describeLiveStreamGRTNDashboard(DescribeLiveStreamGRTNDashboardRequest request);
-
-    CompletableFuture<DescribeLiveStreamGRTNStreamDataResponse> describeLiveStreamGRTNStreamData(DescribeLiveStreamGRTNStreamDataRequest request);
-
-    CompletableFuture<DescribeLiveStreamGRTNStreamInfoResponse> describeLiveStreamGRTNStreamInfo(DescribeLiveStreamGRTNStreamInfoRequest request);
-
     CompletableFuture<DescribeLiveStreamHistoryUserNumResponse> describeLiveStreamHistoryUserNum(DescribeLiveStreamHistoryUserNumRequest request);
+
+    CompletableFuture<DescribeLiveStreamMetricDetailDataResponse> describeLiveStreamMetricDetailData(DescribeLiveStreamMetricDetailDataRequest request);
 
     CompletableFuture<DescribeLiveStreamMonitorListResponse> describeLiveStreamMonitorList(DescribeLiveStreamMonitorListRequest request);
 
@@ -373,8 +333,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeLiveStreamRecordIndexFilesResponse> describeLiveStreamRecordIndexFiles(DescribeLiveStreamRecordIndexFilesRequest request);
 
     CompletableFuture<DescribeLiveStreamSnapshotInfoResponse> describeLiveStreamSnapshotInfo(DescribeLiveStreamSnapshotInfoRequest request);
-
-    CompletableFuture<DescribeLiveStreamSpecificConfigResponse> describeLiveStreamSpecificConfig(DescribeLiveStreamSpecificConfigRequest request);
 
     CompletableFuture<DescribeLiveStreamStateResponse> describeLiveStreamState(DescribeLiveStreamStateRequest request);
 
@@ -400,19 +358,25 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeLiveTopDomainsByFlowResponse> describeLiveTopDomainsByFlow(DescribeLiveTopDomainsByFlowRequest request);
 
-    CompletableFuture<DescribeLiveTranscodeInfoResponse> describeLiveTranscodeInfo(DescribeLiveTranscodeInfoRequest request);
+    CompletableFuture<DescribeLiveUserBillPredictionResponse> describeLiveUserBillPrediction(DescribeLiveUserBillPredictionRequest request);
 
     CompletableFuture<DescribeLiveUserDomainsResponse> describeLiveUserDomains(DescribeLiveUserDomainsRequest request);
 
     CompletableFuture<DescribeLiveUserTagsResponse> describeLiveUserTags(DescribeLiveUserTagsRequest request);
 
-    CompletableFuture<DescribeLiveVerifyContentResponse> describeLiveVerifyContent(DescribeLiveVerifyContentRequest request);
+    CompletableFuture<DescribeMeterLiveRtcDurationResponse> describeMeterLiveRtcDuration(DescribeMeterLiveRtcDurationRequest request);
 
     CompletableFuture<DescribeMixStreamListResponse> describeMixStreamList(DescribeMixStreamListRequest request);
 
-    CompletableFuture<DescribeRecordResponse> describeRecord(DescribeRecordRequest request);
+    CompletableFuture<DescribeRTSNativeSDKFirstFrameCostResponse> describeRTSNativeSDKFirstFrameCost(DescribeRTSNativeSDKFirstFrameCostRequest request);
 
-    CompletableFuture<DescribeRecordsResponse> describeRecords(DescribeRecordsRequest request);
+    CompletableFuture<DescribeRTSNativeSDKFirstFrameDelayResponse> describeRTSNativeSDKFirstFrameDelay(DescribeRTSNativeSDKFirstFrameDelayRequest request);
+
+    CompletableFuture<DescribeRTSNativeSDKPlayFailStatusResponse> describeRTSNativeSDKPlayFailStatus(DescribeRTSNativeSDKPlayFailStatusRequest request);
+
+    CompletableFuture<DescribeRTSNativeSDKPlayTimeResponse> describeRTSNativeSDKPlayTime(DescribeRTSNativeSDKPlayTimeRequest request);
+
+    CompletableFuture<DescribeRTSNativeSDKVvDataResponse> describeRTSNativeSDKVvData(DescribeRTSNativeSDKVvDataRequest request);
 
     CompletableFuture<DescribeRoomKickoutUserListResponse> describeRoomKickoutUserList(DescribeRoomKickoutUserListRequest request);
 
@@ -434,21 +398,19 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeUpPeakPublishStreamDataResponse> describeUpPeakPublishStreamData(DescribeUpPeakPublishStreamDataRequest request);
 
-    CompletableFuture<DescribeUserLiveDomainsResponse> describeUserLiveDomains(DescribeUserLiveDomainsRequest request);
-
     CompletableFuture<DisableLiveRealtimeLogDeliveryResponse> disableLiveRealtimeLogDelivery(DisableLiveRealtimeLogDeliveryRequest request);
 
-    CompletableFuture<EditHtmlResourceResponse> editHtmlResource(EditHtmlResourceRequest request);
+    CompletableFuture<DynamicUpdateWaterMarkStreamRuleResponse> dynamicUpdateWaterMarkStreamRule(DynamicUpdateWaterMarkStreamRuleRequest request);
 
     CompletableFuture<EditPlaylistResponse> editPlaylist(EditPlaylistRequest request);
+
+    CompletableFuture<EditShowAndReplaceResponse> editShowAndReplace(EditShowAndReplaceRequest request);
 
     CompletableFuture<EffectCasterUrgentResponse> effectCasterUrgent(EffectCasterUrgentRequest request);
 
     CompletableFuture<EffectCasterVideoResourceResponse> effectCasterVideoResource(EffectCasterVideoResourceRequest request);
 
     CompletableFuture<EnableLiveRealtimeLogDeliveryResponse> enableLiveRealtimeLogDelivery(EnableLiveRealtimeLogDeliveryRequest request);
-
-    CompletableFuture<ForbidLiveCustomStreamResponse> forbidLiveCustomStream(ForbidLiveCustomStreamRequest request);
 
     CompletableFuture<ForbidLiveStreamResponse> forbidLiveStream(ForbidLiveStreamRequest request);
 
@@ -458,13 +420,25 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetCustomTemplateResponse> getCustomTemplate(GetCustomTemplateRequest request);
 
-    CompletableFuture<GetCustomTemplatesResponse> getCustomTemplates(GetCustomTemplatesRequest request);
+    CompletableFuture<GetEditingJobInfoResponse> getEditingJobInfo(GetEditingJobInfoRequest request);
+
+    CompletableFuture<GetMessageGroupResponse> getMessageGroup(GetMessageGroupRequest request);
+
+    CompletableFuture<GetMessageTokenResponse> getMessageToken(GetMessageTokenRequest request);
+
+    CompletableFuture<GetMessageUserInfoResponse> getMessageUserInfo(GetMessageUserInfoRequest request);
 
     CompletableFuture<GetMultiRateConfigResponse> getMultiRateConfig(GetMultiRateConfigRequest request);
 
     CompletableFuture<GetMultiRateConfigListResponse> getMultiRateConfigList(GetMultiRateConfigListRequest request);
 
-    CompletableFuture<JoinBoardResponse> joinBoard(JoinBoardRequest request);
+    CompletableFuture<HotLiveRtcStreamResponse> hotLiveRtcStream(HotLiveRtcStreamRequest request);
+
+    CompletableFuture<InitializeAutoShowListTaskResponse> initializeAutoShowListTask(InitializeAutoShowListTaskRequest request);
+
+    CompletableFuture<JoinMessageGroupResponse> joinMessageGroup(JoinMessageGroupRequest request);
+
+    CompletableFuture<LeaveMessageGroupResponse> leaveMessageGroup(LeaveMessageGroupRequest request);
 
     CompletableFuture<ListLiveRealtimeLogDeliveryResponse> listLiveRealtimeLogDelivery(ListLiveRealtimeLogDeliveryRequest request);
 
@@ -472,11 +446,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListLiveRealtimeLogDeliveryInfosResponse> listLiveRealtimeLogDeliveryInfos(ListLiveRealtimeLogDeliveryInfosRequest request);
 
+    CompletableFuture<ListMessageResponse> listMessage(ListMessageRequest request);
+
+    CompletableFuture<ListMessageGroupResponse> listMessageGroup(ListMessageGroupRequest request);
+
+    CompletableFuture<ListMessageGroupUserResponse> listMessageGroupUser(ListMessageGroupUserRequest request);
+
     CompletableFuture<ListPlaylistResponse> listPlaylist(ListPlaylistRequest request);
 
     CompletableFuture<ListPlaylistItemsResponse> listPlaylistItems(ListPlaylistItemsRequest request);
-
-    CompletableFuture<ManageSnapshotAuthResponse> manageSnapshotAuth(ManageSnapshotAuthRequest request);
 
     CompletableFuture<ModifyCasterComponentResponse> modifyCasterComponent(ModifyCasterComponentRequest request);
 
@@ -518,8 +496,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<SendRoomUserNotificationResponse> sendRoomUserNotification(SendRoomUserNotificationRequest request);
 
-    CompletableFuture<SetBoardCallbackResponse> setBoardCallback(SetBoardCallbackRequest request);
-
     CompletableFuture<SetCasterChannelResponse> setCasterChannel(SetCasterChannelRequest request);
 
     CompletableFuture<SetCasterConfigResponse> setCasterConfig(SetCasterConfigRequest request);
@@ -527,6 +503,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SetCasterSceneConfigResponse> setCasterSceneConfig(SetCasterSceneConfigRequest request);
 
     CompletableFuture<SetCasterSyncGroupResponse> setCasterSyncGroup(SetCasterSyncGroupRequest request);
+
+    CompletableFuture<SetCasterTimedEventResponse> setCasterTimedEvent(SetCasterTimedEventRequest request);
 
     CompletableFuture<SetLiveDomainCertificateResponse> setLiveDomainCertificate(SetLiveDomainCertificateRequest request);
 
@@ -538,25 +516,17 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<SetLiveStreamDelayConfigResponse> setLiveStreamDelayConfig(SetLiveStreamDelayConfigRequest request);
 
-    CompletableFuture<SetLiveStreamMonitorConfigResponse> setLiveStreamMonitorConfig(SetLiveStreamMonitorConfigRequest request);
-
     CompletableFuture<SetLiveStreamOptimizedFeatureConfigResponse> setLiveStreamOptimizedFeatureConfig(SetLiveStreamOptimizedFeatureConfigRequest request);
-
-    CompletableFuture<SetLiveStreamSpecificConfigResponse> setLiveStreamSpecificConfig(SetLiveStreamSpecificConfigRequest request);
 
     CompletableFuture<SetLiveStreamsNotifyUrlConfigResponse> setLiveStreamsNotifyUrlConfig(SetLiveStreamsNotifyUrlConfigRequest request);
 
     CompletableFuture<SetSnapshotCallbackAuthResponse> setSnapshotCallbackAuth(SetSnapshotCallbackAuthRequest request);
-
-    CompletableFuture<StartBoardRecordResponse> startBoardRecord(StartBoardRecordRequest request);
 
     CompletableFuture<StartCasterResponse> startCaster(StartCasterRequest request);
 
     CompletableFuture<StartCasterSceneResponse> startCasterScene(StartCasterSceneRequest request);
 
     CompletableFuture<StartLiveDomainResponse> startLiveDomain(StartLiveDomainRequest request);
-
-    CompletableFuture<StartLiveIndexResponse> startLiveIndex(StartLiveIndexRequest request);
 
     CompletableFuture<StartLiveStreamMonitorResponse> startLiveStreamMonitor(StartLiveStreamMonitorRequest request);
 
@@ -568,8 +538,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<StopLiveDomainResponse> stopLiveDomain(StopLiveDomainRequest request);
 
-    CompletableFuture<StopLiveIndexResponse> stopLiveIndex(StopLiveIndexRequest request);
-
     CompletableFuture<StopLiveStreamMonitorResponse> stopLiveStreamMonitor(StopLiveStreamMonitorRequest request);
 
     CompletableFuture<StopPlaylistResponse> stopPlaylist(StopPlaylistRequest request);
@@ -578,17 +546,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<UnTagLiveResourcesResponse> unTagLiveResources(UnTagLiveResourcesRequest request);
 
-    CompletableFuture<UpdateBoardResponse> updateBoard(UpdateBoardRequest request);
-
-    CompletableFuture<UpdateBoardCallbackResponse> updateBoardCallback(UpdateBoardCallbackRequest request);
-
     CompletableFuture<UpdateCasterSceneAudioResponse> updateCasterSceneAudio(UpdateCasterSceneAudioRequest request);
 
     CompletableFuture<UpdateCasterSceneConfigResponse> updateCasterSceneConfig(UpdateCasterSceneConfigRequest request);
-
-    CompletableFuture<UpdateKmsIdResponse> updateKmsId(UpdateKmsIdRequest request);
-
-    CompletableFuture<UpdateLiveASRConfigResponse> updateLiveASRConfig(UpdateLiveASRConfigRequest request);
 
     CompletableFuture<UpdateLiveAppSnapshotConfigResponse> updateLiveAppSnapshotConfig(UpdateLiveAppSnapshotConfigRequest request);
 

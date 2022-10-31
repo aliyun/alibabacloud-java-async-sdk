@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddCasterEpisodeRequest</p>
  */
 public class AddCasterEpisodeRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("CasterId")
     @Validation(required = true)
@@ -39,10 +43,6 @@ public class AddCasterEpisodeRequest extends Request {
     @NameInMap("OwnerId")
     private Long ownerId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("ResourceId")
     private String resourceId;
@@ -59,13 +59,13 @@ public class AddCasterEpisodeRequest extends Request {
 
     private AddCasterEpisodeRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.casterId = builder.casterId;
         this.componentId = builder.componentId;
         this.endTime = builder.endTime;
         this.episodeName = builder.episodeName;
         this.episodeType = builder.episodeType;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
         this.resourceId = builder.resourceId;
         this.startTime = builder.startTime;
         this.switchType = builder.switchType;
@@ -82,6 +82,13 @@ public class AddCasterEpisodeRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -127,13 +134,6 @@ public class AddCasterEpisodeRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return resourceId
      */
     public String getResourceId() {
@@ -155,13 +155,13 @@ public class AddCasterEpisodeRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AddCasterEpisodeRequest, Builder> {
+        private String regionId; 
         private String casterId; 
         private java.util.List < String > componentId; 
         private String endTime; 
         private String episodeName; 
         private String episodeType; 
         private Long ownerId; 
-        private String regionId; 
         private String resourceId; 
         private String startTime; 
         private String switchType; 
@@ -170,19 +170,28 @@ public class AddCasterEpisodeRequest extends Request {
             super();
         } 
 
-        private Builder(AddCasterEpisodeRequest response) {
-            super(response);
-            this.casterId = response.casterId;
-            this.componentId = response.componentId;
-            this.endTime = response.endTime;
-            this.episodeName = response.episodeName;
-            this.episodeType = response.episodeType;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceId = response.resourceId;
-            this.startTime = response.startTime;
-            this.switchType = response.switchType;
+        private Builder(AddCasterEpisodeRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.casterId = request.casterId;
+            this.componentId = request.componentId;
+            this.endTime = request.endTime;
+            this.episodeName = request.episodeName;
+            this.episodeType = request.episodeType;
+            this.ownerId = request.ownerId;
+            this.resourceId = request.resourceId;
+            this.startTime = request.startTime;
+            this.switchType = request.switchType;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * CasterId.
@@ -235,15 +244,6 @@ public class AddCasterEpisodeRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

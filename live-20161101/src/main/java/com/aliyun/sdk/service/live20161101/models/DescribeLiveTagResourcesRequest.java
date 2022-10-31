@@ -12,13 +12,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeLiveTagResourcesRequest</p>
  */
 public class DescribeLiveTagResourcesRequest extends Request {
-    @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
     @Host
     @NameInMap("RegionId")
     private String regionId;
+
+    @Query
+    @NameInMap("OwnerId")
+    private Long ownerId;
 
     @Query
     @NameInMap("ResourceId")
@@ -36,8 +36,8 @@ public class DescribeLiveTagResourcesRequest extends Request {
 
     private DescribeLiveTagResourcesRequest(Builder builder) {
         super(builder);
-        this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
+        this.ownerId = builder.ownerId;
         this.resourceId = builder.resourceId;
         this.resourceType = builder.resourceType;
         this.tag = builder.tag;
@@ -57,17 +57,17 @@ public class DescribeLiveTagResourcesRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     /**
@@ -92,8 +92,8 @@ public class DescribeLiveTagResourcesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeLiveTagResourcesRequest, Builder> {
-        private Long ownerId; 
         private String regionId; 
+        private Long ownerId; 
         private java.util.List < String > resourceId; 
         private String resourceType; 
         private java.util.List < Tag> tag; 
@@ -102,23 +102,14 @@ public class DescribeLiveTagResourcesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeLiveTagResourcesRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceId = response.resourceId;
-            this.resourceType = response.resourceType;
-            this.tag = response.tag;
+        private Builder(DescribeLiveTagResourcesRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.ownerId = request.ownerId;
+            this.resourceId = request.resourceId;
+            this.resourceType = request.resourceType;
+            this.tag = request.tag;
         } 
-
-        /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -126,6 +117,15 @@ public class DescribeLiveTagResourcesRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
             return this;
         }
 

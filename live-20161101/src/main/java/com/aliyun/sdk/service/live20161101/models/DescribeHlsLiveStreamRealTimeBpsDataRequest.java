@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeHlsLiveStreamRealTimeBpsDataRequest</p>
  */
 public class DescribeHlsLiveStreamRealTimeBpsDataRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("DomainName")
     private String domainName;
@@ -20,10 +24,6 @@ public class DescribeHlsLiveStreamRealTimeBpsDataRequest extends Request {
     @NameInMap("OwnerId")
     private Long ownerId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("Time")
     @Validation(required = true)
@@ -31,9 +31,9 @@ public class DescribeHlsLiveStreamRealTimeBpsDataRequest extends Request {
 
     private DescribeHlsLiveStreamRealTimeBpsDataRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.domainName = builder.domainName;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
         this.time = builder.time;
     }
 
@@ -51,6 +51,13 @@ public class DescribeHlsLiveStreamRealTimeBpsDataRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return domainName
      */
     public String getDomainName() {
@@ -65,13 +72,6 @@ public class DescribeHlsLiveStreamRealTimeBpsDataRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return time
      */
     public String getTime() {
@@ -79,22 +79,31 @@ public class DescribeHlsLiveStreamRealTimeBpsDataRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeHlsLiveStreamRealTimeBpsDataRequest, Builder> {
+        private String regionId; 
         private String domainName; 
         private Long ownerId; 
-        private String regionId; 
         private String time; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeHlsLiveStreamRealTimeBpsDataRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.time = response.time;
+        private Builder(DescribeHlsLiveStreamRealTimeBpsDataRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.domainName = request.domainName;
+            this.ownerId = request.ownerId;
+            this.time = request.time;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * DomainName.
@@ -111,15 +120,6 @@ public class DescribeHlsLiveStreamRealTimeBpsDataRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

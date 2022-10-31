@@ -114,14 +114,14 @@ public class UpdateLiveRecordNotifyConfigRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateLiveRecordNotifyConfigRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.needStatusNotify = response.needStatusNotify;
-            this.notifyUrl = response.notifyUrl;
-            this.onDemandUrl = response.onDemandUrl;
-            this.ownerId = response.ownerId;
-            this.securityToken = response.securityToken;
+        private Builder(UpdateLiveRecordNotifyConfigRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.needStatusNotify = request.needStatusNotify;
+            this.notifyUrl = request.notifyUrl;
+            this.onDemandUrl = request.onDemandUrl;
+            this.ownerId = request.ownerId;
+            this.securityToken = request.securityToken;
         } 
 
         /**

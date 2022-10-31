@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddTrancodeSEIRequest</p>
  */
 public class AddTrancodeSEIRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("AppName")
     @Validation(required = true)
@@ -36,10 +40,6 @@ public class AddTrancodeSEIRequest extends Request {
     @Validation(required = true)
     private String pattern;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("Repeat")
     @Validation(required = true)
@@ -57,12 +57,12 @@ public class AddTrancodeSEIRequest extends Request {
 
     private AddTrancodeSEIRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.appName = builder.appName;
         this.delay = builder.delay;
         this.domainName = builder.domainName;
         this.ownerId = builder.ownerId;
         this.pattern = builder.pattern;
-        this.regionId = builder.regionId;
         this.repeat = builder.repeat;
         this.streamName = builder.streamName;
         this.text = builder.text;
@@ -79,6 +79,13 @@ public class AddTrancodeSEIRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -117,13 +124,6 @@ public class AddTrancodeSEIRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return repeat
      */
     public Integer getRepeat() {
@@ -145,12 +145,12 @@ public class AddTrancodeSEIRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AddTrancodeSEIRequest, Builder> {
+        private String regionId; 
         private String appName; 
         private Integer delay; 
         private String domainName; 
         private Long ownerId; 
         private String pattern; 
-        private String regionId; 
         private Integer repeat; 
         private String streamName; 
         private String text; 
@@ -159,18 +159,27 @@ public class AddTrancodeSEIRequest extends Request {
             super();
         } 
 
-        private Builder(AddTrancodeSEIRequest response) {
-            super(response);
-            this.appName = response.appName;
-            this.delay = response.delay;
-            this.domainName = response.domainName;
-            this.ownerId = response.ownerId;
-            this.pattern = response.pattern;
-            this.regionId = response.regionId;
-            this.repeat = response.repeat;
-            this.streamName = response.streamName;
-            this.text = response.text;
+        private Builder(AddTrancodeSEIRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.appName = request.appName;
+            this.delay = request.delay;
+            this.domainName = request.domainName;
+            this.ownerId = request.ownerId;
+            this.pattern = request.pattern;
+            this.repeat = request.repeat;
+            this.streamName = request.streamName;
+            this.text = request.text;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * AppName.
@@ -214,15 +223,6 @@ public class AddTrancodeSEIRequest extends Request {
         public Builder pattern(String pattern) {
             this.putQueryParameter("Pattern", pattern);
             this.pattern = pattern;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeLiveDomainStagingConfigRequest</p>
  */
 public class DescribeLiveDomainStagingConfigRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("DomainName")
     @Validation(required = true)
@@ -26,16 +30,12 @@ public class DescribeLiveDomainStagingConfigRequest extends Request {
     @NameInMap("OwnerId")
     private Long ownerId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private DescribeLiveDomainStagingConfigRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.domainName = builder.domainName;
         this.functionNames = builder.functionNames;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -49,6 +49,13 @@ public class DescribeLiveDomainStagingConfigRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -72,30 +79,32 @@ public class DescribeLiveDomainStagingConfigRequest extends Request {
         return this.ownerId;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<DescribeLiveDomainStagingConfigRequest, Builder> {
+        private String regionId; 
         private String domainName; 
         private String functionNames; 
         private Long ownerId; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeLiveDomainStagingConfigRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.functionNames = response.functionNames;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
+        private Builder(DescribeLiveDomainStagingConfigRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.domainName = request.domainName;
+            this.functionNames = request.functionNames;
+            this.ownerId = request.ownerId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * DomainName.
@@ -121,15 +130,6 @@ public class DescribeLiveDomainStagingConfigRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

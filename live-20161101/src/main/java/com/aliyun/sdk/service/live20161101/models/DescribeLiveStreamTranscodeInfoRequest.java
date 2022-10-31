@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeLiveStreamTranscodeInfoRequest</p>
  */
 public class DescribeLiveStreamTranscodeInfoRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("DomainTranscodeName")
     @Validation(required = true)
@@ -21,15 +25,11 @@ public class DescribeLiveStreamTranscodeInfoRequest extends Request {
     @NameInMap("OwnerId")
     private Long ownerId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private DescribeLiveStreamTranscodeInfoRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.domainTranscodeName = builder.domainTranscodeName;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -46,6 +46,13 @@ public class DescribeLiveStreamTranscodeInfoRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return domainTranscodeName
      */
     public String getDomainTranscodeName() {
@@ -59,28 +66,30 @@ public class DescribeLiveStreamTranscodeInfoRequest extends Request {
         return this.ownerId;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<DescribeLiveStreamTranscodeInfoRequest, Builder> {
+        private String regionId; 
         private String domainTranscodeName; 
         private Long ownerId; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeLiveStreamTranscodeInfoRequest response) {
-            super(response);
-            this.domainTranscodeName = response.domainTranscodeName;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
+        private Builder(DescribeLiveStreamTranscodeInfoRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.domainTranscodeName = request.domainTranscodeName;
+            this.ownerId = request.ownerId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * DomainTranscodeName.
@@ -97,15 +106,6 @@ public class DescribeLiveStreamTranscodeInfoRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

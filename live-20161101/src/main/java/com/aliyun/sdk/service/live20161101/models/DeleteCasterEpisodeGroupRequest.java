@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteCasterEpisodeGroupRequest</p>
  */
 public class DeleteCasterEpisodeGroupRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("OwnerId")
     private Long ownerId;
@@ -21,15 +25,11 @@ public class DeleteCasterEpisodeGroupRequest extends Request {
     @Validation(required = true)
     private String programId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private DeleteCasterEpisodeGroupRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.ownerId = builder.ownerId;
         this.programId = builder.programId;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -46,6 +46,13 @@ public class DeleteCasterEpisodeGroupRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return ownerId
      */
     public Long getOwnerId() {
@@ -59,28 +66,30 @@ public class DeleteCasterEpisodeGroupRequest extends Request {
         return this.programId;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<DeleteCasterEpisodeGroupRequest, Builder> {
+        private String regionId; 
         private Long ownerId; 
         private String programId; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DeleteCasterEpisodeGroupRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.programId = response.programId;
-            this.regionId = response.regionId;
+        private Builder(DeleteCasterEpisodeGroupRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.ownerId = request.ownerId;
+            this.programId = request.programId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * OwnerId.
@@ -97,15 +106,6 @@ public class DeleteCasterEpisodeGroupRequest extends Request {
         public Builder programId(String programId) {
             this.putQueryParameter("ProgramId", programId);
             this.programId = programId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

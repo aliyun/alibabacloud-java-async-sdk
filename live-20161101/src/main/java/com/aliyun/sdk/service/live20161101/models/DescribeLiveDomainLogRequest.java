@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeLiveDomainLogRequest</p>
  */
 public class DescribeLiveDomainLogRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("DomainName")
     @Validation(required = true)
@@ -33,22 +37,18 @@ public class DescribeLiveDomainLogRequest extends Request {
     @NameInMap("PageSize")
     private Long pageSize;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("StartTime")
     private String startTime;
 
     private DescribeLiveDomainLogRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.domainName = builder.domainName;
         this.endTime = builder.endTime;
         this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
         this.startTime = builder.startTime;
     }
 
@@ -63,6 +63,13 @@ public class DescribeLiveDomainLogRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -101,13 +108,6 @@ public class DescribeLiveDomainLogRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -115,28 +115,37 @@ public class DescribeLiveDomainLogRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeLiveDomainLogRequest, Builder> {
+        private String regionId; 
         private String domainName; 
         private String endTime; 
         private Long ownerId; 
         private Long pageNumber; 
         private Long pageSize; 
-        private String regionId; 
         private String startTime; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeLiveDomainLogRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.endTime = response.endTime;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.startTime = response.startTime;
+        private Builder(DescribeLiveDomainLogRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.domainName = request.domainName;
+            this.endTime = request.endTime;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.startTime = request.startTime;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * DomainName.
@@ -180,15 +189,6 @@ public class DescribeLiveDomainLogRequest extends Request {
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

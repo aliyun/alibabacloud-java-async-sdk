@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeLiveDomainRecordDataRequest</p>
  */
 public class DescribeLiveDomainRecordDataRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("DomainName")
     private String domainName;
@@ -29,10 +33,6 @@ public class DescribeLiveDomainRecordDataRequest extends Request {
     @NameInMap("RecordType")
     private String recordType;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("StartTime")
     @Validation(required = true)
@@ -40,11 +40,11 @@ public class DescribeLiveDomainRecordDataRequest extends Request {
 
     private DescribeLiveDomainRecordDataRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.domainName = builder.domainName;
         this.endTime = builder.endTime;
         this.ownerId = builder.ownerId;
         this.recordType = builder.recordType;
-        this.regionId = builder.regionId;
         this.startTime = builder.startTime;
     }
 
@@ -59,6 +59,13 @@ public class DescribeLiveDomainRecordDataRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -90,13 +97,6 @@ public class DescribeLiveDomainRecordDataRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -104,26 +104,35 @@ public class DescribeLiveDomainRecordDataRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeLiveDomainRecordDataRequest, Builder> {
+        private String regionId; 
         private String domainName; 
         private String endTime; 
         private Long ownerId; 
         private String recordType; 
-        private String regionId; 
         private String startTime; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeLiveDomainRecordDataRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.endTime = response.endTime;
-            this.ownerId = response.ownerId;
-            this.recordType = response.recordType;
-            this.regionId = response.regionId;
-            this.startTime = response.startTime;
+        private Builder(DescribeLiveDomainRecordDataRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.domainName = request.domainName;
+            this.endTime = request.endTime;
+            this.ownerId = request.ownerId;
+            this.recordType = request.recordType;
+            this.startTime = request.startTime;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * DomainName.
@@ -158,15 +167,6 @@ public class DescribeLiveDomainRecordDataRequest extends Request {
         public Builder recordType(String recordType) {
             this.putQueryParameter("RecordType", recordType);
             this.recordType = recordType;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeletePlaylistItemsRequest</p>
  */
 public class DeletePlaylistItemsRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("OwnerId")
     private Long ownerId;
@@ -26,16 +30,12 @@ public class DeletePlaylistItemsRequest extends Request {
     @Validation(required = true)
     private String programItemIds;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private DeletePlaylistItemsRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.ownerId = builder.ownerId;
         this.programId = builder.programId;
         this.programItemIds = builder.programItemIds;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -49,6 +49,13 @@ public class DeletePlaylistItemsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -72,30 +79,32 @@ public class DeletePlaylistItemsRequest extends Request {
         return this.programItemIds;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<DeletePlaylistItemsRequest, Builder> {
+        private String regionId; 
         private Long ownerId; 
         private String programId; 
         private String programItemIds; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DeletePlaylistItemsRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.programId = response.programId;
-            this.programItemIds = response.programItemIds;
-            this.regionId = response.regionId;
+        private Builder(DeletePlaylistItemsRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.ownerId = request.ownerId;
+            this.programId = request.programId;
+            this.programItemIds = request.programItemIds;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * OwnerId.
@@ -121,15 +130,6 @@ public class DeletePlaylistItemsRequest extends Request {
         public Builder programItemIds(String programItemIds) {
             this.putQueryParameter("ProgramItemIds", programItemIds);
             this.programItemIds = programItemIds;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

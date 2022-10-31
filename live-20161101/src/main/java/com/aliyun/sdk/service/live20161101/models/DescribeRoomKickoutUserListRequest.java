@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeRoomKickoutUserListRequest</p>
  */
 public class DescribeRoomKickoutUserListRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("AppId")
     @Validation(required = true)
@@ -33,10 +37,6 @@ public class DescribeRoomKickoutUserListRequest extends Request {
     @NameInMap("PageSize")
     private Integer pageSize;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("RoomId")
     @Validation(required = true)
@@ -44,12 +44,12 @@ public class DescribeRoomKickoutUserListRequest extends Request {
 
     private DescribeRoomKickoutUserListRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.appId = builder.appId;
         this.order = builder.order;
         this.ownerId = builder.ownerId;
         this.pageNum = builder.pageNum;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
         this.roomId = builder.roomId;
     }
 
@@ -64,6 +64,13 @@ public class DescribeRoomKickoutUserListRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -102,13 +109,6 @@ public class DescribeRoomKickoutUserListRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return roomId
      */
     public String getRoomId() {
@@ -116,28 +116,37 @@ public class DescribeRoomKickoutUserListRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeRoomKickoutUserListRequest, Builder> {
+        private String regionId; 
         private String appId; 
         private String order; 
         private Long ownerId; 
         private Integer pageNum; 
         private Integer pageSize; 
-        private String regionId; 
         private String roomId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeRoomKickoutUserListRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.order = response.order;
-            this.ownerId = response.ownerId;
-            this.pageNum = response.pageNum;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.roomId = response.roomId;
+        private Builder(DescribeRoomKickoutUserListRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.appId = request.appId;
+            this.order = request.order;
+            this.ownerId = request.ownerId;
+            this.pageNum = request.pageNum;
+            this.pageSize = request.pageSize;
+            this.roomId = request.roomId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * AppId.
@@ -181,15 +190,6 @@ public class DescribeRoomKickoutUserListRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SetLiveLazyPullStreamInfoConfigRequest</p>
  */
 public class SetLiveLazyPullStreamInfoConfigRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("AppName")
     @Validation(required = true)
@@ -40,19 +44,15 @@ public class SetLiveLazyPullStreamInfoConfigRequest extends Request {
     @Validation(required = true)
     private String pullProtocol;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private SetLiveLazyPullStreamInfoConfigRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.appName = builder.appName;
         this.domainName = builder.domainName;
         this.ownerId = builder.ownerId;
         this.pullAppName = builder.pullAppName;
         this.pullDomainName = builder.pullDomainName;
         this.pullProtocol = builder.pullProtocol;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -66,6 +66,13 @@ public class SetLiveLazyPullStreamInfoConfigRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -110,36 +117,38 @@ public class SetLiveLazyPullStreamInfoConfigRequest extends Request {
         return this.pullProtocol;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<SetLiveLazyPullStreamInfoConfigRequest, Builder> {
+        private String regionId; 
         private String appName; 
         private String domainName; 
         private Long ownerId; 
         private String pullAppName; 
         private String pullDomainName; 
         private String pullProtocol; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(SetLiveLazyPullStreamInfoConfigRequest response) {
-            super(response);
-            this.appName = response.appName;
-            this.domainName = response.domainName;
-            this.ownerId = response.ownerId;
-            this.pullAppName = response.pullAppName;
-            this.pullDomainName = response.pullDomainName;
-            this.pullProtocol = response.pullProtocol;
-            this.regionId = response.regionId;
+        private Builder(SetLiveLazyPullStreamInfoConfigRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.appName = request.appName;
+            this.domainName = request.domainName;
+            this.ownerId = request.ownerId;
+            this.pullAppName = request.pullAppName;
+            this.pullDomainName = request.pullDomainName;
+            this.pullProtocol = request.pullProtocol;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * AppName.
@@ -192,15 +201,6 @@ public class SetLiveLazyPullStreamInfoConfigRequest extends Request {
         public Builder pullProtocol(String pullProtocol) {
             this.putQueryParameter("PullProtocol", pullProtocol);
             this.pullProtocol = pullProtocol;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

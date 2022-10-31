@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeLiveTopDomainsByFlowRequest</p>
  */
 public class DescribeLiveTopDomainsByFlowRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("EndTime")
     private String endTime;
@@ -25,20 +29,16 @@ public class DescribeLiveTopDomainsByFlowRequest extends Request {
     @NameInMap("OwnerId")
     private Long ownerId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("StartTime")
     private String startTime;
 
     private DescribeLiveTopDomainsByFlowRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.endTime = builder.endTime;
         this.limit = builder.limit;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
         this.startTime = builder.startTime;
     }
 
@@ -53,6 +53,13 @@ public class DescribeLiveTopDomainsByFlowRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -77,13 +84,6 @@ public class DescribeLiveTopDomainsByFlowRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -91,24 +91,33 @@ public class DescribeLiveTopDomainsByFlowRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeLiveTopDomainsByFlowRequest, Builder> {
+        private String regionId; 
         private String endTime; 
         private Long limit; 
         private Long ownerId; 
-        private String regionId; 
         private String startTime; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeLiveTopDomainsByFlowRequest response) {
-            super(response);
-            this.endTime = response.endTime;
-            this.limit = response.limit;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.startTime = response.startTime;
+        private Builder(DescribeLiveTopDomainsByFlowRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.endTime = request.endTime;
+            this.limit = request.limit;
+            this.ownerId = request.ownerId;
+            this.startTime = request.startTime;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * EndTime.
@@ -134,15 +143,6 @@ public class DescribeLiveTopDomainsByFlowRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

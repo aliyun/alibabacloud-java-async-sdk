@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateLiveStreamMonitorRequest</p>
  */
 public class UpdateLiveStreamMonitorRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("App")
     private String app;
@@ -41,16 +45,13 @@ public class UpdateLiveStreamMonitorRequest extends Request {
     @NameInMap("OwnerId")
     private Long ownerId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("Stream")
     private String stream;
 
     private UpdateLiveStreamMonitorRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.app = builder.app;
         this.domain = builder.domain;
         this.inputList = builder.inputList;
@@ -58,7 +59,6 @@ public class UpdateLiveStreamMonitorRequest extends Request {
         this.monitorName = builder.monitorName;
         this.outputTemplate = builder.outputTemplate;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
         this.stream = builder.stream;
     }
 
@@ -73,6 +73,13 @@ public class UpdateLiveStreamMonitorRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -125,13 +132,6 @@ public class UpdateLiveStreamMonitorRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return stream
      */
     public String getStream() {
@@ -139,6 +139,7 @@ public class UpdateLiveStreamMonitorRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateLiveStreamMonitorRequest, Builder> {
+        private String regionId; 
         private String app; 
         private String domain; 
         private String inputList; 
@@ -146,25 +147,33 @@ public class UpdateLiveStreamMonitorRequest extends Request {
         private String monitorName; 
         private String outputTemplate; 
         private Long ownerId; 
-        private String regionId; 
         private String stream; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(UpdateLiveStreamMonitorRequest response) {
-            super(response);
-            this.app = response.app;
-            this.domain = response.domain;
-            this.inputList = response.inputList;
-            this.monitorId = response.monitorId;
-            this.monitorName = response.monitorName;
-            this.outputTemplate = response.outputTemplate;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.stream = response.stream;
+        private Builder(UpdateLiveStreamMonitorRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.app = request.app;
+            this.domain = request.domain;
+            this.inputList = request.inputList;
+            this.monitorId = request.monitorId;
+            this.monitorName = request.monitorName;
+            this.outputTemplate = request.outputTemplate;
+            this.ownerId = request.ownerId;
+            this.stream = request.stream;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * App.
@@ -226,15 +235,6 @@ public class UpdateLiveStreamMonitorRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

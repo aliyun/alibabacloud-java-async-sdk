@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeForbidPushStreamRoomListRequest</p>
  */
 public class DescribeForbidPushStreamRoomListRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("AppId")
     @Validation(required = true)
@@ -33,18 +37,14 @@ public class DescribeForbidPushStreamRoomListRequest extends Request {
     @NameInMap("PageSize")
     private Integer pageSize;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private DescribeForbidPushStreamRoomListRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.appId = builder.appId;
         this.order = builder.order;
         this.ownerId = builder.ownerId;
         this.pageNum = builder.pageNum;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -58,6 +58,13 @@ public class DescribeForbidPushStreamRoomListRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -95,34 +102,36 @@ public class DescribeForbidPushStreamRoomListRequest extends Request {
         return this.pageSize;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<DescribeForbidPushStreamRoomListRequest, Builder> {
+        private String regionId; 
         private String appId; 
         private String order; 
         private Long ownerId; 
         private Integer pageNum; 
         private Integer pageSize; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeForbidPushStreamRoomListRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.order = response.order;
-            this.ownerId = response.ownerId;
-            this.pageNum = response.pageNum;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
+        private Builder(DescribeForbidPushStreamRoomListRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.appId = request.appId;
+            this.order = request.order;
+            this.ownerId = request.ownerId;
+            this.pageNum = request.pageNum;
+            this.pageSize = request.pageSize;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * AppId.
@@ -166,15 +175,6 @@ public class DescribeForbidPushStreamRoomListRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

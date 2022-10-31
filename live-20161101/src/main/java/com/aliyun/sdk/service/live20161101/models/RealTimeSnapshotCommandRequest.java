@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RealTimeSnapshotCommandRequest</p>
  */
 public class RealTimeSnapshotCommandRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("AppName")
     @Validation(required = true)
@@ -39,9 +43,9 @@ public class RealTimeSnapshotCommandRequest extends Request {
     @NameInMap("OwnerId")
     private Long ownerId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
+    @Query
+    @NameInMap("Source")
+    private Integer source;
 
     @Query
     @NameInMap("StreamName")
@@ -50,13 +54,14 @@ public class RealTimeSnapshotCommandRequest extends Request {
 
     private RealTimeSnapshotCommandRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.appName = builder.appName;
         this.command = builder.command;
         this.domainName = builder.domainName;
         this.interval = builder.interval;
         this.mode = builder.mode;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
+        this.source = builder.source;
         this.streamName = builder.streamName;
     }
 
@@ -71,6 +76,13 @@ public class RealTimeSnapshotCommandRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -116,10 +128,10 @@ public class RealTimeSnapshotCommandRequest extends Request {
     }
 
     /**
-     * @return regionId
+     * @return source
      */
-    public String getRegionId() {
-        return this.regionId;
+    public Integer getSource() {
+        return this.source;
     }
 
     /**
@@ -130,30 +142,41 @@ public class RealTimeSnapshotCommandRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<RealTimeSnapshotCommandRequest, Builder> {
+        private String regionId; 
         private String appName; 
         private String command; 
         private String domainName; 
         private Integer interval; 
         private Integer mode; 
         private Long ownerId; 
-        private String regionId; 
+        private Integer source; 
         private String streamName; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(RealTimeSnapshotCommandRequest response) {
-            super(response);
-            this.appName = response.appName;
-            this.command = response.command;
-            this.domainName = response.domainName;
-            this.interval = response.interval;
-            this.mode = response.mode;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.streamName = response.streamName;
+        private Builder(RealTimeSnapshotCommandRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.appName = request.appName;
+            this.command = request.command;
+            this.domainName = request.domainName;
+            this.interval = request.interval;
+            this.mode = request.mode;
+            this.ownerId = request.ownerId;
+            this.source = request.source;
+            this.streamName = request.streamName;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * AppName.
@@ -210,11 +233,11 @@ public class RealTimeSnapshotCommandRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * Source.
          */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
+        public Builder source(Integer source) {
+            this.putQueryParameter("Source", source);
+            this.source = source;
             return this;
         }
 

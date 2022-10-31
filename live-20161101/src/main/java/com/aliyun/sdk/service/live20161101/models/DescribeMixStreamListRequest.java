@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeMixStreamListRequest</p>
  */
 public class DescribeMixStreamListRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("AppName")
     private String appName;
@@ -40,10 +44,6 @@ public class DescribeMixStreamListRequest extends Request {
     @NameInMap("PageSize")
     private Integer pageSize;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("StartTime")
     private String startTime;
@@ -54,6 +54,7 @@ public class DescribeMixStreamListRequest extends Request {
 
     private DescribeMixStreamListRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.appName = builder.appName;
         this.domainName = builder.domainName;
         this.endTime = builder.endTime;
@@ -61,7 +62,6 @@ public class DescribeMixStreamListRequest extends Request {
         this.ownerId = builder.ownerId;
         this.pageNo = builder.pageNo;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
         this.startTime = builder.startTime;
         this.streamName = builder.streamName;
     }
@@ -77,6 +77,13 @@ public class DescribeMixStreamListRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -129,13 +136,6 @@ public class DescribeMixStreamListRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -150,6 +150,7 @@ public class DescribeMixStreamListRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeMixStreamListRequest, Builder> {
+        private String regionId; 
         private String appName; 
         private String domainName; 
         private String endTime; 
@@ -157,7 +158,6 @@ public class DescribeMixStreamListRequest extends Request {
         private Long ownerId; 
         private Integer pageNo; 
         private Integer pageSize; 
-        private String regionId; 
         private String startTime; 
         private String streamName; 
 
@@ -165,19 +165,28 @@ public class DescribeMixStreamListRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeMixStreamListRequest response) {
-            super(response);
-            this.appName = response.appName;
-            this.domainName = response.domainName;
-            this.endTime = response.endTime;
-            this.mixStreamId = response.mixStreamId;
-            this.ownerId = response.ownerId;
-            this.pageNo = response.pageNo;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.startTime = response.startTime;
-            this.streamName = response.streamName;
+        private Builder(DescribeMixStreamListRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.appName = request.appName;
+            this.domainName = request.domainName;
+            this.endTime = request.endTime;
+            this.mixStreamId = request.mixStreamId;
+            this.ownerId = request.ownerId;
+            this.pageNo = request.pageNo;
+            this.pageSize = request.pageSize;
+            this.startTime = request.startTime;
+            this.streamName = request.streamName;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * AppName.
@@ -239,15 +248,6 @@ public class DescribeMixStreamListRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

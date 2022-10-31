@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddLiveDomainPlayMappingRequest</p>
  */
 public class AddLiveDomainPlayMappingRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("OwnerId")
     private Long ownerId;
@@ -26,16 +30,12 @@ public class AddLiveDomainPlayMappingRequest extends Request {
     @Validation(required = true)
     private String pullDomain;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private AddLiveDomainPlayMappingRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.ownerId = builder.ownerId;
         this.playDomain = builder.playDomain;
         this.pullDomain = builder.pullDomain;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -49,6 +49,13 @@ public class AddLiveDomainPlayMappingRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -72,30 +79,32 @@ public class AddLiveDomainPlayMappingRequest extends Request {
         return this.pullDomain;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<AddLiveDomainPlayMappingRequest, Builder> {
+        private String regionId; 
         private Long ownerId; 
         private String playDomain; 
         private String pullDomain; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(AddLiveDomainPlayMappingRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.playDomain = response.playDomain;
-            this.pullDomain = response.pullDomain;
-            this.regionId = response.regionId;
+        private Builder(AddLiveDomainPlayMappingRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.ownerId = request.ownerId;
+            this.playDomain = request.playDomain;
+            this.pullDomain = request.pullDomain;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * OwnerId.
@@ -121,15 +130,6 @@ public class AddLiveDomainPlayMappingRequest extends Request {
         public Builder pullDomain(String pullDomain) {
             this.putQueryParameter("PullDomain", pullDomain);
             this.pullDomain = pullDomain;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

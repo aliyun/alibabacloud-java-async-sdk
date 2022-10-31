@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeLiveDrmUsageDataRequest</p>
  */
 public class DescribeLiveDrmUsageDataRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("DomainName")
     private String domainName;
@@ -29,10 +33,6 @@ public class DescribeLiveDrmUsageDataRequest extends Request {
     @NameInMap("OwnerId")
     private Long ownerId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("SplitBy")
     private String splitBy;
@@ -44,11 +44,11 @@ public class DescribeLiveDrmUsageDataRequest extends Request {
 
     private DescribeLiveDrmUsageDataRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.domainName = builder.domainName;
         this.endTime = builder.endTime;
         this.interval = builder.interval;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
         this.splitBy = builder.splitBy;
         this.startTime = builder.startTime;
     }
@@ -64,6 +64,13 @@ public class DescribeLiveDrmUsageDataRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -95,13 +102,6 @@ public class DescribeLiveDrmUsageDataRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return splitBy
      */
     public String getSplitBy() {
@@ -116,11 +116,11 @@ public class DescribeLiveDrmUsageDataRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeLiveDrmUsageDataRequest, Builder> {
+        private String regionId; 
         private String domainName; 
         private String endTime; 
         private String interval; 
         private Long ownerId; 
-        private String regionId; 
         private String splitBy; 
         private String startTime; 
 
@@ -128,16 +128,25 @@ public class DescribeLiveDrmUsageDataRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeLiveDrmUsageDataRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.endTime = response.endTime;
-            this.interval = response.interval;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.splitBy = response.splitBy;
-            this.startTime = response.startTime;
+        private Builder(DescribeLiveDrmUsageDataRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.domainName = request.domainName;
+            this.endTime = request.endTime;
+            this.interval = request.interval;
+            this.ownerId = request.ownerId;
+            this.splitBy = request.splitBy;
+            this.startTime = request.startTime;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * DomainName.
@@ -172,15 +181,6 @@ public class DescribeLiveDrmUsageDataRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

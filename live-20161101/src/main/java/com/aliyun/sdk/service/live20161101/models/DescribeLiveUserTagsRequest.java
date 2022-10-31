@@ -12,18 +12,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeLiveUserTagsRequest</p>
  */
 public class DescribeLiveUserTagsRequest extends Request {
-    @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
     @Host
     @NameInMap("RegionId")
     private String regionId;
 
+    @Query
+    @NameInMap("OwnerId")
+    private Long ownerId;
+
     private DescribeLiveUserTagsRequest(Builder builder) {
         super(builder);
-        this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
+        this.ownerId = builder.ownerId;
     }
 
     public static Builder builder() {
@@ -40,41 +40,32 @@ public class DescribeLiveUserTagsRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
     }
 
+    /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
     public static final class Builder extends Request.Builder<DescribeLiveUserTagsRequest, Builder> {
-        private Long ownerId; 
         private String regionId; 
+        private Long ownerId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeLiveUserTagsRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
+        private Builder(DescribeLiveUserTagsRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.ownerId = request.ownerId;
         } 
-
-        /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -82,6 +73,15 @@ public class DescribeLiveUserTagsRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
             return this;
         }
 

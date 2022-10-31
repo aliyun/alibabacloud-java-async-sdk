@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>EditPlaylistRequest</p>
  */
 public class EditPlaylistRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("OwnerId")
     private Long ownerId;
@@ -30,17 +34,13 @@ public class EditPlaylistRequest extends Request {
     @Validation(required = true)
     private String programItems;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private EditPlaylistRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.ownerId = builder.ownerId;
         this.programConfig = builder.programConfig;
         this.programId = builder.programId;
         this.programItems = builder.programItems;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -54,6 +54,13 @@ public class EditPlaylistRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -84,32 +91,34 @@ public class EditPlaylistRequest extends Request {
         return this.programItems;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<EditPlaylistRequest, Builder> {
+        private String regionId; 
         private Long ownerId; 
         private String programConfig; 
         private String programId; 
         private String programItems; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(EditPlaylistRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.programConfig = response.programConfig;
-            this.programId = response.programId;
-            this.programItems = response.programItems;
-            this.regionId = response.regionId;
+        private Builder(EditPlaylistRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.ownerId = request.ownerId;
+            this.programConfig = request.programConfig;
+            this.programId = request.programId;
+            this.programItems = request.programItems;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * OwnerId.
@@ -144,15 +153,6 @@ public class EditPlaylistRequest extends Request {
         public Builder programItems(String programItems) {
             this.putQueryParameter("ProgramItems", programItems);
             this.programItems = programItems;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

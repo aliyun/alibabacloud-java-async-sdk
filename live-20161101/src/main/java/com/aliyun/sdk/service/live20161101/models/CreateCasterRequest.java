@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateCasterRequest</p>
  */
 public class CreateCasterRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("CasterName")
     private String casterName;
@@ -47,12 +51,9 @@ public class CreateCasterRequest extends Request {
     @NameInMap("PurchaseTime")
     private String purchaseTime;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private CreateCasterRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.casterName = builder.casterName;
         this.casterTemplate = builder.casterTemplate;
         this.chargeType = builder.chargeType;
@@ -61,7 +62,6 @@ public class CreateCasterRequest extends Request {
         this.normType = builder.normType;
         this.ownerId = builder.ownerId;
         this.purchaseTime = builder.purchaseTime;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -75,6 +75,13 @@ public class CreateCasterRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -133,14 +140,8 @@ public class CreateCasterRequest extends Request {
         return this.purchaseTime;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<CreateCasterRequest, Builder> {
+        private String regionId; 
         private String casterName; 
         private String casterTemplate; 
         private String chargeType; 
@@ -149,24 +150,32 @@ public class CreateCasterRequest extends Request {
         private Integer normType; 
         private Long ownerId; 
         private String purchaseTime; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateCasterRequest response) {
-            super(response);
-            this.casterName = response.casterName;
-            this.casterTemplate = response.casterTemplate;
-            this.chargeType = response.chargeType;
-            this.clientToken = response.clientToken;
-            this.expireTime = response.expireTime;
-            this.normType = response.normType;
-            this.ownerId = response.ownerId;
-            this.purchaseTime = response.purchaseTime;
-            this.regionId = response.regionId;
+        private Builder(CreateCasterRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.casterName = request.casterName;
+            this.casterTemplate = request.casterTemplate;
+            this.chargeType = request.chargeType;
+            this.clientToken = request.clientToken;
+            this.expireTime = request.expireTime;
+            this.normType = request.normType;
+            this.ownerId = request.ownerId;
+            this.purchaseTime = request.purchaseTime;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * CasterName.
@@ -237,15 +246,6 @@ public class CreateCasterRequest extends Request {
         public Builder purchaseTime(String purchaseTime) {
             this.putQueryParameter("PurchaseTime", purchaseTime);
             this.purchaseTime = purchaseTime;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

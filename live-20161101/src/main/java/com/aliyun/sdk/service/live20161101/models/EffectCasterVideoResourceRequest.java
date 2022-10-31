@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>EffectCasterVideoResourceRequest</p>
  */
 public class EffectCasterVideoResourceRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("CasterId")
     @Validation(required = true)
@@ -20,10 +24,6 @@ public class EffectCasterVideoResourceRequest extends Request {
     @Query
     @NameInMap("OwnerId")
     private Long ownerId;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Query
     @NameInMap("ResourceId")
@@ -37,9 +37,9 @@ public class EffectCasterVideoResourceRequest extends Request {
 
     private EffectCasterVideoResourceRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.casterId = builder.casterId;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
         this.resourceId = builder.resourceId;
         this.sceneId = builder.sceneId;
     }
@@ -58,6 +58,13 @@ public class EffectCasterVideoResourceRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return casterId
      */
     public String getCasterId() {
@@ -69,13 +76,6 @@ public class EffectCasterVideoResourceRequest extends Request {
      */
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -93,9 +93,9 @@ public class EffectCasterVideoResourceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<EffectCasterVideoResourceRequest, Builder> {
+        private String regionId; 
         private String casterId; 
         private Long ownerId; 
-        private String regionId; 
         private String resourceId; 
         private String sceneId; 
 
@@ -103,14 +103,23 @@ public class EffectCasterVideoResourceRequest extends Request {
             super();
         } 
 
-        private Builder(EffectCasterVideoResourceRequest response) {
-            super(response);
-            this.casterId = response.casterId;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceId = response.resourceId;
-            this.sceneId = response.sceneId;
+        private Builder(EffectCasterVideoResourceRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.casterId = request.casterId;
+            this.ownerId = request.ownerId;
+            this.resourceId = request.resourceId;
+            this.sceneId = request.sceneId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * CasterId.
@@ -127,15 +136,6 @@ public class EffectCasterVideoResourceRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

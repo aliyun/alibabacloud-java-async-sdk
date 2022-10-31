@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteCasterVideoResourceRequest</p>
  */
 public class DeleteCasterVideoResourceRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("CasterId")
     @Validation(required = true)
@@ -21,10 +25,6 @@ public class DeleteCasterVideoResourceRequest extends Request {
     @NameInMap("OwnerId")
     private Long ownerId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("ResourceId")
     @Validation(required = true)
@@ -32,9 +32,9 @@ public class DeleteCasterVideoResourceRequest extends Request {
 
     private DeleteCasterVideoResourceRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.casterId = builder.casterId;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
         this.resourceId = builder.resourceId;
     }
 
@@ -52,6 +52,13 @@ public class DeleteCasterVideoResourceRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return casterId
      */
     public String getCasterId() {
@@ -66,13 +73,6 @@ public class DeleteCasterVideoResourceRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return resourceId
      */
     public String getResourceId() {
@@ -80,22 +80,31 @@ public class DeleteCasterVideoResourceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteCasterVideoResourceRequest, Builder> {
+        private String regionId; 
         private String casterId; 
         private Long ownerId; 
-        private String regionId; 
         private String resourceId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DeleteCasterVideoResourceRequest response) {
-            super(response);
-            this.casterId = response.casterId;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceId = response.resourceId;
+        private Builder(DeleteCasterVideoResourceRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.casterId = request.casterId;
+            this.ownerId = request.ownerId;
+            this.resourceId = request.resourceId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * CasterId.
@@ -112,15 +121,6 @@ public class DeleteCasterVideoResourceRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

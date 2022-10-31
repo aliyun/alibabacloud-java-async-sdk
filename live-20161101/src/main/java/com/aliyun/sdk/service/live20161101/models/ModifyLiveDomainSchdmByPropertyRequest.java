@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyLiveDomainSchdmByPropertyRequest</p>
  */
 public class ModifyLiveDomainSchdmByPropertyRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("DomainName")
     @Validation(required = true)
@@ -26,16 +30,12 @@ public class ModifyLiveDomainSchdmByPropertyRequest extends Request {
     @Validation(required = true)
     private String property;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private ModifyLiveDomainSchdmByPropertyRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.domainName = builder.domainName;
         this.ownerId = builder.ownerId;
         this.property = builder.property;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -49,6 +49,13 @@ public class ModifyLiveDomainSchdmByPropertyRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -72,30 +79,32 @@ public class ModifyLiveDomainSchdmByPropertyRequest extends Request {
         return this.property;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<ModifyLiveDomainSchdmByPropertyRequest, Builder> {
+        private String regionId; 
         private String domainName; 
         private Long ownerId; 
         private String property; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ModifyLiveDomainSchdmByPropertyRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.ownerId = response.ownerId;
-            this.property = response.property;
-            this.regionId = response.regionId;
+        private Builder(ModifyLiveDomainSchdmByPropertyRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.domainName = request.domainName;
+            this.ownerId = request.ownerId;
+            this.property = request.property;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * DomainName.
@@ -121,15 +130,6 @@ public class ModifyLiveDomainSchdmByPropertyRequest extends Request {
         public Builder property(String property) {
             this.putQueryParameter("Property", property);
             this.property = property;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

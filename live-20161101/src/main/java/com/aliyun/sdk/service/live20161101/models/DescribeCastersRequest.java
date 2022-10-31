@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCastersRequest</p>
  */
 public class DescribeCastersRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("CasterId")
     private String casterId;
@@ -29,6 +33,10 @@ public class DescribeCastersRequest extends Request {
     private String endTime;
 
     @Query
+    @NameInMap("NormType")
+    private String normType;
+
+    @Query
     @NameInMap("OrderByModifyAsc")
     private String orderByModifyAsc;
 
@@ -44,10 +52,6 @@ public class DescribeCastersRequest extends Request {
     @NameInMap("PageSize")
     private Integer pageSize;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("StartTime")
     private String startTime;
@@ -58,15 +62,16 @@ public class DescribeCastersRequest extends Request {
 
     private DescribeCastersRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.casterId = builder.casterId;
         this.casterName = builder.casterName;
         this.chargeType = builder.chargeType;
         this.endTime = builder.endTime;
+        this.normType = builder.normType;
         this.orderByModifyAsc = builder.orderByModifyAsc;
         this.ownerId = builder.ownerId;
         this.pageNum = builder.pageNum;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
         this.startTime = builder.startTime;
         this.status = builder.status;
     }
@@ -82,6 +87,13 @@ public class DescribeCastersRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -113,6 +125,13 @@ public class DescribeCastersRequest extends Request {
     }
 
     /**
+     * @return normType
+     */
+    public String getNormType() {
+        return this.normType;
+    }
+
+    /**
      * @return orderByModifyAsc
      */
     public String getOrderByModifyAsc() {
@@ -141,13 +160,6 @@ public class DescribeCastersRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -162,15 +174,16 @@ public class DescribeCastersRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeCastersRequest, Builder> {
+        private String regionId; 
         private String casterId; 
         private String casterName; 
         private Integer chargeType; 
         private String endTime; 
+        private String normType; 
         private String orderByModifyAsc; 
         private Long ownerId; 
         private Integer pageNum; 
         private Integer pageSize; 
-        private String regionId; 
         private String startTime; 
         private Integer status; 
 
@@ -178,20 +191,30 @@ public class DescribeCastersRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeCastersRequest response) {
-            super(response);
-            this.casterId = response.casterId;
-            this.casterName = response.casterName;
-            this.chargeType = response.chargeType;
-            this.endTime = response.endTime;
-            this.orderByModifyAsc = response.orderByModifyAsc;
-            this.ownerId = response.ownerId;
-            this.pageNum = response.pageNum;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.startTime = response.startTime;
-            this.status = response.status;
+        private Builder(DescribeCastersRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.casterId = request.casterId;
+            this.casterName = request.casterName;
+            this.chargeType = request.chargeType;
+            this.endTime = request.endTime;
+            this.normType = request.normType;
+            this.orderByModifyAsc = request.orderByModifyAsc;
+            this.ownerId = request.ownerId;
+            this.pageNum = request.pageNum;
+            this.pageSize = request.pageSize;
+            this.startTime = request.startTime;
+            this.status = request.status;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * CasterId.
@@ -230,6 +253,15 @@ public class DescribeCastersRequest extends Request {
         }
 
         /**
+         * NormType.
+         */
+        public Builder normType(String normType) {
+            this.putQueryParameter("NormType", normType);
+            this.normType = normType;
+            return this;
+        }
+
+        /**
          * OrderByModifyAsc.
          */
         public Builder orderByModifyAsc(String orderByModifyAsc) {
@@ -262,15 +294,6 @@ public class DescribeCastersRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

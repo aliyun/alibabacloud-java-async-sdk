@@ -81,10 +81,14 @@ public class DescribeLiveDomainLimitResponseBody extends TeaModel {
         @NameInMap("LimitTranscodeNum")
         private Integer limitTranscodeNum;
 
+        @NameInMap("LimitTransferNum")
+        private Integer limitTransferNum;
+
         private LiveDomainLimit(Builder builder) {
             this.domainName = builder.domainName;
             this.limitNum = builder.limitNum;
             this.limitTranscodeNum = builder.limitTranscodeNum;
+            this.limitTransferNum = builder.limitTransferNum;
         }
 
         public static Builder builder() {
@@ -116,10 +120,18 @@ public class DescribeLiveDomainLimitResponseBody extends TeaModel {
             return this.limitTranscodeNum;
         }
 
+        /**
+         * @return limitTransferNum
+         */
+        public Integer getLimitTransferNum() {
+            return this.limitTransferNum;
+        }
+
         public static final class Builder {
             private String domainName; 
             private Integer limitNum; 
             private Integer limitTranscodeNum; 
+            private Integer limitTransferNum; 
 
             /**
              * DomainName.
@@ -142,6 +154,14 @@ public class DescribeLiveDomainLimitResponseBody extends TeaModel {
              */
             public Builder limitTranscodeNum(Integer limitTranscodeNum) {
                 this.limitTranscodeNum = limitTranscodeNum;
+                return this;
+            }
+
+            /**
+             * LimitTransferNum.
+             */
+            public Builder limitTransferNum(Integer limitTransferNum) {
+                this.limitTransferNum = limitTransferNum;
                 return this;
             }
 

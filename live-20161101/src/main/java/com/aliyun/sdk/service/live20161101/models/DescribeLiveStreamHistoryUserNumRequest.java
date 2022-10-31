@@ -131,15 +131,15 @@ public class DescribeLiveStreamHistoryUserNumRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeLiveStreamHistoryUserNumRequest response) {
-            super(response);
-            this.appName = response.appName;
-            this.domainName = response.domainName;
-            this.endTime = response.endTime;
-            this.ownerId = response.ownerId;
-            this.securityToken = response.securityToken;
-            this.startTime = response.startTime;
-            this.streamName = response.streamName;
+        private Builder(DescribeLiveStreamHistoryUserNumRequest request) {
+            super(request);
+            this.appName = request.appName;
+            this.domainName = request.domainName;
+            this.endTime = request.endTime;
+            this.ownerId = request.ownerId;
+            this.securityToken = request.securityToken;
+            this.startTime = request.startTime;
+            this.streamName = request.streamName;
         } 
 
         /**

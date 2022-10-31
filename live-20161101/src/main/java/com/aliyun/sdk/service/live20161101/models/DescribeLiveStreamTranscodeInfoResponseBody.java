@@ -460,6 +460,9 @@ public class DescribeLiveStreamTranscodeInfoResponseBody extends TeaModel {
         @NameInMap("EncryptParameters")
         private EncryptParameters encryptParameters;
 
+        @NameInMap("IsLazy")
+        private Boolean isLazy;
+
         @NameInMap("TranscodeApp")
         private String transcodeApp;
 
@@ -472,6 +475,7 @@ public class DescribeLiveStreamTranscodeInfoResponseBody extends TeaModel {
         private DomainTranscodeInfo(Builder builder) {
             this.customTranscodeParameters = builder.customTranscodeParameters;
             this.encryptParameters = builder.encryptParameters;
+            this.isLazy = builder.isLazy;
             this.transcodeApp = builder.transcodeApp;
             this.transcodeName = builder.transcodeName;
             this.transcodeTemplate = builder.transcodeTemplate;
@@ -500,6 +504,13 @@ public class DescribeLiveStreamTranscodeInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return isLazy
+         */
+        public Boolean getIsLazy() {
+            return this.isLazy;
+        }
+
+        /**
          * @return transcodeApp
          */
         public String getTranscodeApp() {
@@ -523,6 +534,7 @@ public class DescribeLiveStreamTranscodeInfoResponseBody extends TeaModel {
         public static final class Builder {
             private CustomTranscodeParameters customTranscodeParameters; 
             private EncryptParameters encryptParameters; 
+            private Boolean isLazy; 
             private String transcodeApp; 
             private String transcodeName; 
             private String transcodeTemplate; 
@@ -540,6 +552,14 @@ public class DescribeLiveStreamTranscodeInfoResponseBody extends TeaModel {
              */
             public Builder encryptParameters(EncryptParameters encryptParameters) {
                 this.encryptParameters = encryptParameters;
+                return this;
+            }
+
+            /**
+             * IsLazy.
+             */
+            public Builder isLazy(Boolean isLazy) {
+                this.isLazy = isLazy;
                 return this;
             }
 

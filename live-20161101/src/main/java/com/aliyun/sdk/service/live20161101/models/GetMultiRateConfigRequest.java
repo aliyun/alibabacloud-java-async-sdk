@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetMultiRateConfigRequest</p>
  */
 public class GetMultiRateConfigRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("App")
     @Validation(required = true)
@@ -31,17 +35,13 @@ public class GetMultiRateConfigRequest extends Request {
     @NameInMap("OwnerId")
     private Long ownerId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private GetMultiRateConfigRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.app = builder.app;
         this.domainName = builder.domainName;
         this.groupId = builder.groupId;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -55,6 +55,13 @@ public class GetMultiRateConfigRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -85,32 +92,34 @@ public class GetMultiRateConfigRequest extends Request {
         return this.ownerId;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<GetMultiRateConfigRequest, Builder> {
+        private String regionId; 
         private String app; 
         private String domainName; 
         private String groupId; 
         private Long ownerId; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetMultiRateConfigRequest response) {
-            super(response);
-            this.app = response.app;
-            this.domainName = response.domainName;
-            this.groupId = response.groupId;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
+        private Builder(GetMultiRateConfigRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.app = request.app;
+            this.domainName = request.domainName;
+            this.groupId = request.groupId;
+            this.ownerId = request.ownerId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * App.
@@ -145,15 +154,6 @@ public class GetMultiRateConfigRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

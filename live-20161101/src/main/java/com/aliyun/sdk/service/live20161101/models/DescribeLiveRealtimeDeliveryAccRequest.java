@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeLiveRealtimeDeliveryAccRequest</p>
  */
 public class DescribeLiveRealtimeDeliveryAccRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("DomainName")
     private String domainName;
@@ -36,23 +40,19 @@ public class DescribeLiveRealtimeDeliveryAccRequest extends Request {
     @NameInMap("Project")
     private String project;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("StartTime")
     private String startTime;
 
     private DescribeLiveRealtimeDeliveryAccRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.domainName = builder.domainName;
         this.endTime = builder.endTime;
         this.interval = builder.interval;
         this.logStore = builder.logStore;
         this.ownerId = builder.ownerId;
         this.project = builder.project;
-        this.regionId = builder.regionId;
         this.startTime = builder.startTime;
     }
 
@@ -67,6 +67,13 @@ public class DescribeLiveRealtimeDeliveryAccRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -112,13 +119,6 @@ public class DescribeLiveRealtimeDeliveryAccRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -126,30 +126,39 @@ public class DescribeLiveRealtimeDeliveryAccRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeLiveRealtimeDeliveryAccRequest, Builder> {
+        private String regionId; 
         private String domainName; 
         private String endTime; 
         private String interval; 
         private String logStore; 
         private Long ownerId; 
         private String project; 
-        private String regionId; 
         private String startTime; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeLiveRealtimeDeliveryAccRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.endTime = response.endTime;
-            this.interval = response.interval;
-            this.logStore = response.logStore;
-            this.ownerId = response.ownerId;
-            this.project = response.project;
-            this.regionId = response.regionId;
-            this.startTime = response.startTime;
+        private Builder(DescribeLiveRealtimeDeliveryAccRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.domainName = request.domainName;
+            this.endTime = request.endTime;
+            this.interval = request.interval;
+            this.logStore = request.logStore;
+            this.ownerId = request.ownerId;
+            this.project = request.project;
+            this.startTime = request.startTime;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * DomainName.
@@ -202,15 +211,6 @@ public class DescribeLiveRealtimeDeliveryAccRequest extends Request {
         public Builder project(String project) {
             this.putQueryParameter("Project", project);
             this.project = project;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

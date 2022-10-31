@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeLiveDomainRealTimeBpsDataRequest</p>
  */
 public class DescribeLiveDomainRealTimeBpsDataRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("DomainName")
     @Validation(required = true)
@@ -33,22 +37,18 @@ public class DescribeLiveDomainRealTimeBpsDataRequest extends Request {
     @NameInMap("OwnerId")
     private Long ownerId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("StartTime")
     private String startTime;
 
     private DescribeLiveDomainRealTimeBpsDataRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.domainName = builder.domainName;
         this.endTime = builder.endTime;
         this.ispNameEn = builder.ispNameEn;
         this.locationNameEn = builder.locationNameEn;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
         this.startTime = builder.startTime;
     }
 
@@ -63,6 +63,13 @@ public class DescribeLiveDomainRealTimeBpsDataRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -101,13 +108,6 @@ public class DescribeLiveDomainRealTimeBpsDataRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -115,28 +115,37 @@ public class DescribeLiveDomainRealTimeBpsDataRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeLiveDomainRealTimeBpsDataRequest, Builder> {
+        private String regionId; 
         private String domainName; 
         private String endTime; 
         private String ispNameEn; 
         private String locationNameEn; 
         private Long ownerId; 
-        private String regionId; 
         private String startTime; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeLiveDomainRealTimeBpsDataRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.endTime = response.endTime;
-            this.ispNameEn = response.ispNameEn;
-            this.locationNameEn = response.locationNameEn;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.startTime = response.startTime;
+        private Builder(DescribeLiveDomainRealTimeBpsDataRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.domainName = request.domainName;
+            this.endTime = request.endTime;
+            this.ispNameEn = request.ispNameEn;
+            this.locationNameEn = request.locationNameEn;
+            this.ownerId = request.ownerId;
+            this.startTime = request.startTime;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * DomainName.
@@ -180,15 +189,6 @@ public class DescribeLiveDomainRealTimeBpsDataRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

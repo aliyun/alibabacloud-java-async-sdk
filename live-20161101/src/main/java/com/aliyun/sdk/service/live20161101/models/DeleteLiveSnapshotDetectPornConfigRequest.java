@@ -89,12 +89,12 @@ public class DeleteLiveSnapshotDetectPornConfigRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteLiveSnapshotDetectPornConfigRequest response) {
-            super(response);
-            this.appName = response.appName;
-            this.domainName = response.domainName;
-            this.ownerId = response.ownerId;
-            this.securityToken = response.securityToken;
+        private Builder(DeleteLiveSnapshotDetectPornConfigRequest request) {
+            super(request);
+            this.appName = request.appName;
+            this.domainName = request.domainName;
+            this.ownerId = request.ownerId;
+            this.securityToken = request.securityToken;
         } 
 
         /**

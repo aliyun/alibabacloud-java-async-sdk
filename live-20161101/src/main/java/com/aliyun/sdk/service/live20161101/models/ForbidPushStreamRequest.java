@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ForbidPushStreamRequest</p>
  */
 public class ForbidPushStreamRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("AppId")
     @Validation(required = true)
@@ -25,10 +29,6 @@ public class ForbidPushStreamRequest extends Request {
     @NameInMap("OwnerId")
     private Long ownerId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("RoomId")
     @Validation(required = true)
@@ -40,10 +40,10 @@ public class ForbidPushStreamRequest extends Request {
 
     private ForbidPushStreamRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.appId = builder.appId;
         this.endTime = builder.endTime;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
         this.roomId = builder.roomId;
         this.userData = builder.userData;
     }
@@ -59,6 +59,13 @@ public class ForbidPushStreamRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -83,13 +90,6 @@ public class ForbidPushStreamRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return roomId
      */
     public String getRoomId() {
@@ -104,10 +104,10 @@ public class ForbidPushStreamRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ForbidPushStreamRequest, Builder> {
+        private String regionId; 
         private String appId; 
         private String endTime; 
         private Long ownerId; 
-        private String regionId; 
         private String roomId; 
         private String userData; 
 
@@ -115,15 +115,24 @@ public class ForbidPushStreamRequest extends Request {
             super();
         } 
 
-        private Builder(ForbidPushStreamRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.endTime = response.endTime;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.roomId = response.roomId;
-            this.userData = response.userData;
+        private Builder(ForbidPushStreamRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.appId = request.appId;
+            this.endTime = request.endTime;
+            this.ownerId = request.ownerId;
+            this.roomId = request.roomId;
+            this.userData = request.userData;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * AppId.
@@ -149,15 +158,6 @@ public class ForbidPushStreamRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

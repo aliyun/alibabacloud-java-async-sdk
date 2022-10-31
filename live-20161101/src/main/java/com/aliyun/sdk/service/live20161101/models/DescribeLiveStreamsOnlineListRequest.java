@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeLiveStreamsOnlineListRequest</p>
  */
 public class DescribeLiveStreamsOnlineListRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("AppName")
     private String appName;
@@ -20,6 +24,10 @@ public class DescribeLiveStreamsOnlineListRequest extends Request {
     @NameInMap("DomainName")
     @Validation(required = true)
     private String domainName;
+
+    @Query
+    @NameInMap("OnlyStream")
+    private String onlyStream;
 
     @Query
     @NameInMap("OwnerId")
@@ -37,10 +45,6 @@ public class DescribeLiveStreamsOnlineListRequest extends Request {
     @NameInMap("QueryType")
     private String queryType;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("StreamName")
     private String streamName;
@@ -51,13 +55,14 @@ public class DescribeLiveStreamsOnlineListRequest extends Request {
 
     private DescribeLiveStreamsOnlineListRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.appName = builder.appName;
         this.domainName = builder.domainName;
+        this.onlyStream = builder.onlyStream;
         this.ownerId = builder.ownerId;
         this.pageNum = builder.pageNum;
         this.pageSize = builder.pageSize;
         this.queryType = builder.queryType;
-        this.regionId = builder.regionId;
         this.streamName = builder.streamName;
         this.streamType = builder.streamType;
     }
@@ -76,6 +81,13 @@ public class DescribeLiveStreamsOnlineListRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return appName
      */
     public String getAppName() {
@@ -87,6 +99,13 @@ public class DescribeLiveStreamsOnlineListRequest extends Request {
      */
     public String getDomainName() {
         return this.domainName;
+    }
+
+    /**
+     * @return onlyStream
+     */
+    public String getOnlyStream() {
+        return this.onlyStream;
     }
 
     /**
@@ -118,13 +137,6 @@ public class DescribeLiveStreamsOnlineListRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return streamName
      */
     public String getStreamName() {
@@ -139,13 +151,14 @@ public class DescribeLiveStreamsOnlineListRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeLiveStreamsOnlineListRequest, Builder> {
+        private String regionId; 
         private String appName; 
         private String domainName; 
+        private String onlyStream; 
         private Long ownerId; 
         private Integer pageNum; 
         private Integer pageSize; 
         private String queryType; 
-        private String regionId; 
         private String streamName; 
         private String streamType; 
 
@@ -153,18 +166,28 @@ public class DescribeLiveStreamsOnlineListRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeLiveStreamsOnlineListRequest response) {
-            super(response);
-            this.appName = response.appName;
-            this.domainName = response.domainName;
-            this.ownerId = response.ownerId;
-            this.pageNum = response.pageNum;
-            this.pageSize = response.pageSize;
-            this.queryType = response.queryType;
-            this.regionId = response.regionId;
-            this.streamName = response.streamName;
-            this.streamType = response.streamType;
+        private Builder(DescribeLiveStreamsOnlineListRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.appName = request.appName;
+            this.domainName = request.domainName;
+            this.onlyStream = request.onlyStream;
+            this.ownerId = request.ownerId;
+            this.pageNum = request.pageNum;
+            this.pageSize = request.pageSize;
+            this.queryType = request.queryType;
+            this.streamName = request.streamName;
+            this.streamType = request.streamType;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * AppName.
@@ -181,6 +204,15 @@ public class DescribeLiveStreamsOnlineListRequest extends Request {
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
             this.domainName = domainName;
+            return this;
+        }
+
+        /**
+         * OnlyStream.
+         */
+        public Builder onlyStream(String onlyStream) {
+            this.putQueryParameter("OnlyStream", onlyStream);
+            this.onlyStream = onlyStream;
             return this;
         }
 
@@ -217,15 +249,6 @@ public class DescribeLiveStreamsOnlineListRequest extends Request {
         public Builder queryType(String queryType) {
             this.putQueryParameter("QueryType", queryType);
             this.queryType = queryType;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

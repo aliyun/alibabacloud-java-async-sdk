@@ -89,12 +89,12 @@ public class AddLiveDetectNotifyConfigRequest extends Request {
             super();
         } 
 
-        private Builder(AddLiveDetectNotifyConfigRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.notifyUrl = response.notifyUrl;
-            this.ownerId = response.ownerId;
-            this.securityToken = response.securityToken;
+        private Builder(AddLiveDetectNotifyConfigRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.notifyUrl = request.notifyUrl;
+            this.ownerId = request.ownerId;
+            this.securityToken = request.securityToken;
         } 
 
         /**

@@ -173,18 +173,18 @@ public class CreateLiveStreamRecordIndexFilesRequest extends Request {
             super();
         } 
 
-        private Builder(CreateLiveStreamRecordIndexFilesRequest response) {
-            super(response);
-            this.appName = response.appName;
-            this.domainName = response.domainName;
-            this.endTime = response.endTime;
-            this.ossBucket = response.ossBucket;
-            this.ossEndpoint = response.ossEndpoint;
-            this.ossObject = response.ossObject;
-            this.ownerId = response.ownerId;
-            this.securityToken = response.securityToken;
-            this.startTime = response.startTime;
-            this.streamName = response.streamName;
+        private Builder(CreateLiveStreamRecordIndexFilesRequest request) {
+            super(request);
+            this.appName = request.appName;
+            this.domainName = request.domainName;
+            this.endTime = request.endTime;
+            this.ossBucket = request.ossBucket;
+            this.ossEndpoint = request.ossEndpoint;
+            this.ossObject = request.ossObject;
+            this.ownerId = request.ownerId;
+            this.securityToken = request.securityToken;
+            this.startTime = request.startTime;
+            this.streamName = request.streamName;
         } 
 
         /**

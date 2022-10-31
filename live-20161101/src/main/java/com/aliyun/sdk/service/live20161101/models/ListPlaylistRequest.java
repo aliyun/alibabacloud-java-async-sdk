@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListPlaylistRequest</p>
  */
 public class ListPlaylistRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("OwnerId")
     private Long ownerId;
@@ -28,17 +32,13 @@ public class ListPlaylistRequest extends Request {
     @NameInMap("ProgramId")
     private String programId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private ListPlaylistRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.ownerId = builder.ownerId;
         this.page = builder.page;
         this.pageSize = builder.pageSize;
         this.programId = builder.programId;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -52,6 +52,13 @@ public class ListPlaylistRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -82,32 +89,34 @@ public class ListPlaylistRequest extends Request {
         return this.programId;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<ListPlaylistRequest, Builder> {
+        private String regionId; 
         private Long ownerId; 
         private Integer page; 
         private Integer pageSize; 
         private String programId; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListPlaylistRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.page = response.page;
-            this.pageSize = response.pageSize;
-            this.programId = response.programId;
-            this.regionId = response.regionId;
+        private Builder(ListPlaylistRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.ownerId = request.ownerId;
+            this.page = request.page;
+            this.pageSize = request.pageSize;
+            this.programId = request.programId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * OwnerId.
@@ -142,15 +151,6 @@ public class ListPlaylistRequest extends Request {
         public Builder programId(String programId) {
             this.putQueryParameter("ProgramId", programId);
             this.programId = programId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

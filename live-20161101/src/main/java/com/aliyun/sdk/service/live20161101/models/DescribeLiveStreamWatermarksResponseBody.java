@@ -103,10 +103,10 @@ public class DescribeLiveStreamWatermarksResponseBody extends TeaModel {
         private Integer type;
 
         @NameInMap("XOffset")
-        private Float XOffset;
+        private Float xOffset;
 
         @NameInMap("YOffset")
-        private Float YOffset;
+        private Float yOffset;
 
         private Watermark(Builder builder) {
             this.description = builder.description;
@@ -119,8 +119,8 @@ public class DescribeLiveStreamWatermarksResponseBody extends TeaModel {
             this.templateId = builder.templateId;
             this.transparency = builder.transparency;
             this.type = builder.type;
-            this.XOffset = builder.XOffset;
-            this.YOffset = builder.YOffset;
+            this.xOffset = builder.xOffset;
+            this.yOffset = builder.yOffset;
         }
 
         public static Builder builder() {
@@ -202,17 +202,17 @@ public class DescribeLiveStreamWatermarksResponseBody extends TeaModel {
         }
 
         /**
-         * @return XOffset
+         * @return xOffset
          */
         public Float getXOffset() {
-            return this.XOffset;
+            return this.xOffset;
         }
 
         /**
-         * @return YOffset
+         * @return yOffset
          */
         public Float getYOffset() {
-            return this.YOffset;
+            return this.yOffset;
         }
 
         public static final class Builder {
@@ -226,8 +226,8 @@ public class DescribeLiveStreamWatermarksResponseBody extends TeaModel {
             private String templateId; 
             private Integer transparency; 
             private Integer type; 
-            private Float XOffset; 
-            private Float YOffset; 
+            private Float xOffset; 
+            private Float yOffset; 
 
             /**
              * Description.
@@ -312,16 +312,16 @@ public class DescribeLiveStreamWatermarksResponseBody extends TeaModel {
             /**
              * XOffset.
              */
-            public Builder XOffset(Float XOffset) {
-                this.XOffset = XOffset;
+            public Builder xOffset(Float xOffset) {
+                this.xOffset = xOffset;
                 return this;
             }
 
             /**
              * YOffset.
              */
-            public Builder YOffset(Float YOffset) {
-                this.YOffset = YOffset;
+            public Builder yOffset(Float yOffset) {
+                this.yOffset = yOffset;
                 return this;
             }
 

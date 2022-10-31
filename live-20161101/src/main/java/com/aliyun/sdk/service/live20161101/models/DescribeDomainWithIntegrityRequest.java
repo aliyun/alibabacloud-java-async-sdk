@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDomainWithIntegrityRequest</p>
  */
 public class DescribeDomainWithIntegrityRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("EndTime")
     @Validation(required = true)
@@ -26,10 +30,6 @@ public class DescribeDomainWithIntegrityRequest extends Request {
     @NameInMap("OwnerId")
     private Long ownerId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("StartTime")
     @Validation(required = true)
@@ -37,10 +37,10 @@ public class DescribeDomainWithIntegrityRequest extends Request {
 
     private DescribeDomainWithIntegrityRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.endTime = builder.endTime;
         this.integrity = builder.integrity;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
         this.startTime = builder.startTime;
     }
 
@@ -55,6 +55,13 @@ public class DescribeDomainWithIntegrityRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -79,13 +86,6 @@ public class DescribeDomainWithIntegrityRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -93,24 +93,33 @@ public class DescribeDomainWithIntegrityRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeDomainWithIntegrityRequest, Builder> {
+        private String regionId; 
         private String endTime; 
         private Float integrity; 
         private Long ownerId; 
-        private String regionId; 
         private String startTime; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeDomainWithIntegrityRequest response) {
-            super(response);
-            this.endTime = response.endTime;
-            this.integrity = response.integrity;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.startTime = response.startTime;
+        private Builder(DescribeDomainWithIntegrityRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.endTime = request.endTime;
+            this.integrity = request.integrity;
+            this.ownerId = request.ownerId;
+            this.startTime = request.startTime;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * EndTime.
@@ -136,15 +145,6 @@ public class DescribeDomainWithIntegrityRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

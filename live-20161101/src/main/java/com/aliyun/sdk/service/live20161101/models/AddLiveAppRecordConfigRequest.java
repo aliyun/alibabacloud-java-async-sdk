@@ -208,21 +208,21 @@ public class AddLiveAppRecordConfigRequest extends Request {
             super();
         } 
 
-        private Builder(AddLiveAppRecordConfigRequest response) {
-            super(response);
-            this.appName = response.appName;
-            this.domainName = response.domainName;
-            this.endTime = response.endTime;
-            this.onDemand = response.onDemand;
-            this.ossBucket = response.ossBucket;
-            this.ossEndpoint = response.ossEndpoint;
-            this.ownerId = response.ownerId;
-            this.recordFormat = response.recordFormat;
-            this.securityToken = response.securityToken;
-            this.startTime = response.startTime;
-            this.streamName = response.streamName;
-            this.transcodeRecordFormat = response.transcodeRecordFormat;
-            this.transcodeTemplates = response.transcodeTemplates;
+        private Builder(AddLiveAppRecordConfigRequest request) {
+            super(request);
+            this.appName = request.appName;
+            this.domainName = request.domainName;
+            this.endTime = request.endTime;
+            this.onDemand = request.onDemand;
+            this.ossBucket = request.ossBucket;
+            this.ossEndpoint = request.ossEndpoint;
+            this.ownerId = request.ownerId;
+            this.recordFormat = request.recordFormat;
+            this.securityToken = request.securityToken;
+            this.startTime = request.startTime;
+            this.streamName = request.streamName;
+            this.transcodeRecordFormat = request.transcodeRecordFormat;
+            this.transcodeTemplates = request.transcodeTemplates;
         } 
 
         /**

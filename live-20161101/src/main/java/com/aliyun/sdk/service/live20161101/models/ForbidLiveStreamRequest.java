@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ForbidLiveStreamRequest</p>
  */
 public class ForbidLiveStreamRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("AppName")
     @Validation(required = true)
@@ -35,10 +39,6 @@ public class ForbidLiveStreamRequest extends Request {
     @NameInMap("OwnerId")
     private Long ownerId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("ResumeTime")
     private String resumeTime;
@@ -50,12 +50,12 @@ public class ForbidLiveStreamRequest extends Request {
 
     private ForbidLiveStreamRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.appName = builder.appName;
         this.domainName = builder.domainName;
         this.liveStreamType = builder.liveStreamType;
         this.oneshot = builder.oneshot;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
         this.resumeTime = builder.resumeTime;
         this.streamName = builder.streamName;
     }
@@ -71,6 +71,13 @@ public class ForbidLiveStreamRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -109,13 +116,6 @@ public class ForbidLiveStreamRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return resumeTime
      */
     public String getResumeTime() {
@@ -130,12 +130,12 @@ public class ForbidLiveStreamRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ForbidLiveStreamRequest, Builder> {
+        private String regionId; 
         private String appName; 
         private String domainName; 
         private String liveStreamType; 
         private String oneshot; 
         private Long ownerId; 
-        private String regionId; 
         private String resumeTime; 
         private String streamName; 
 
@@ -143,17 +143,26 @@ public class ForbidLiveStreamRequest extends Request {
             super();
         } 
 
-        private Builder(ForbidLiveStreamRequest response) {
-            super(response);
-            this.appName = response.appName;
-            this.domainName = response.domainName;
-            this.liveStreamType = response.liveStreamType;
-            this.oneshot = response.oneshot;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resumeTime = response.resumeTime;
-            this.streamName = response.streamName;
+        private Builder(ForbidLiveStreamRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.appName = request.appName;
+            this.domainName = request.domainName;
+            this.liveStreamType = request.liveStreamType;
+            this.oneshot = request.oneshot;
+            this.ownerId = request.ownerId;
+            this.resumeTime = request.resumeTime;
+            this.streamName = request.streamName;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * AppName.
@@ -197,15 +206,6 @@ public class ForbidLiveStreamRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

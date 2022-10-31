@@ -74,11 +74,11 @@ public class DescribeLiveCertificateListRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeLiveCertificateListRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.ownerId = response.ownerId;
-            this.securityToken = response.securityToken;
+        private Builder(DescribeLiveCertificateListRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.ownerId = request.ownerId;
+            this.securityToken = request.securityToken;
         } 
 
         /**

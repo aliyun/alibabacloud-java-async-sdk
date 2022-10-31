@@ -102,13 +102,13 @@ public class BatchDeleteLiveDomainConfigsRequest extends Request {
             super();
         } 
 
-        private Builder(BatchDeleteLiveDomainConfigsRequest response) {
-            super(response);
-            this.domainNames = response.domainNames;
-            this.functionNames = response.functionNames;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.securityToken = response.securityToken;
+        private Builder(BatchDeleteLiveDomainConfigsRequest request) {
+            super(request);
+            this.domainNames = request.domainNames;
+            this.functionNames = request.functionNames;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.securityToken = request.securityToken;
         } 
 
         /**

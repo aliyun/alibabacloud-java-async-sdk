@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SetLiveStreamDelayConfigRequest</p>
  */
 public class SetLiveStreamDelayConfigRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("DomainName")
     @Validation(required = true)
@@ -37,10 +41,6 @@ public class SetLiveStreamDelayConfigRequest extends Request {
     @NameInMap("OwnerId")
     private Long ownerId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("RtmpDelay")
     private Integer rtmpDelay;
@@ -51,13 +51,13 @@ public class SetLiveStreamDelayConfigRequest extends Request {
 
     private SetLiveStreamDelayConfigRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.domainName = builder.domainName;
         this.flvDelay = builder.flvDelay;
         this.flvLevel = builder.flvLevel;
         this.hlsDelay = builder.hlsDelay;
         this.hlsLevel = builder.hlsLevel;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
         this.rtmpDelay = builder.rtmpDelay;
         this.rtmpLevel = builder.rtmpLevel;
     }
@@ -73,6 +73,13 @@ public class SetLiveStreamDelayConfigRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -118,13 +125,6 @@ public class SetLiveStreamDelayConfigRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return rtmpDelay
      */
     public Integer getRtmpDelay() {
@@ -139,13 +139,13 @@ public class SetLiveStreamDelayConfigRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SetLiveStreamDelayConfigRequest, Builder> {
+        private String regionId; 
         private String domainName; 
         private Integer flvDelay; 
         private String flvLevel; 
         private Integer hlsDelay; 
         private String hlsLevel; 
         private Long ownerId; 
-        private String regionId; 
         private Integer rtmpDelay; 
         private String rtmpLevel; 
 
@@ -153,18 +153,27 @@ public class SetLiveStreamDelayConfigRequest extends Request {
             super();
         } 
 
-        private Builder(SetLiveStreamDelayConfigRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.flvDelay = response.flvDelay;
-            this.flvLevel = response.flvLevel;
-            this.hlsDelay = response.hlsDelay;
-            this.hlsLevel = response.hlsLevel;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.rtmpDelay = response.rtmpDelay;
-            this.rtmpLevel = response.rtmpLevel;
+        private Builder(SetLiveStreamDelayConfigRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.domainName = request.domainName;
+            this.flvDelay = request.flvDelay;
+            this.flvLevel = request.flvLevel;
+            this.hlsDelay = request.hlsDelay;
+            this.hlsLevel = request.hlsLevel;
+            this.ownerId = request.ownerId;
+            this.rtmpDelay = request.rtmpDelay;
+            this.rtmpLevel = request.rtmpLevel;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * DomainName.
@@ -217,15 +226,6 @@ public class SetLiveStreamDelayConfigRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

@@ -88,12 +88,12 @@ public class DeleteLiveDomainRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteLiveDomainRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.securityToken = response.securityToken;
+        private Builder(DeleteLiveDomainRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.securityToken = request.securityToken;
         } 
 
         /**

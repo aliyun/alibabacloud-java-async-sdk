@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeLiveStreamStateRequest</p>
  */
 public class DescribeLiveStreamStateRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("AppName")
     @Validation(required = true)
@@ -26,10 +30,6 @@ public class DescribeLiveStreamStateRequest extends Request {
     @NameInMap("OwnerId")
     private Long ownerId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("StreamName")
     @Validation(required = true)
@@ -37,10 +37,10 @@ public class DescribeLiveStreamStateRequest extends Request {
 
     private DescribeLiveStreamStateRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.appName = builder.appName;
         this.domainName = builder.domainName;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
         this.streamName = builder.streamName;
     }
 
@@ -55,6 +55,13 @@ public class DescribeLiveStreamStateRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -79,13 +86,6 @@ public class DescribeLiveStreamStateRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return streamName
      */
     public String getStreamName() {
@@ -93,24 +93,33 @@ public class DescribeLiveStreamStateRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeLiveStreamStateRequest, Builder> {
+        private String regionId; 
         private String appName; 
         private String domainName; 
         private Long ownerId; 
-        private String regionId; 
         private String streamName; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeLiveStreamStateRequest response) {
-            super(response);
-            this.appName = response.appName;
-            this.domainName = response.domainName;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.streamName = response.streamName;
+        private Builder(DescribeLiveStreamStateRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.appName = request.appName;
+            this.domainName = request.domainName;
+            this.ownerId = request.ownerId;
+            this.streamName = request.streamName;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * AppName.
@@ -136,15 +145,6 @@ public class DescribeLiveStreamStateRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

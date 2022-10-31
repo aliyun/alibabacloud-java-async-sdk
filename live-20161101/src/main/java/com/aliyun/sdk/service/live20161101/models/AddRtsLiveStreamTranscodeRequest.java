@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddRtsLiveStreamTranscodeRequest</p>
  */
 public class AddRtsLiveStreamTranscodeRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("App")
     @Validation(required = true)
@@ -74,10 +78,6 @@ public class AddRtsLiveStreamTranscodeRequest extends Request {
     @NameInMap("Profile")
     private Integer profile;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("Template")
     @Validation(required = true)
@@ -98,6 +98,7 @@ public class AddRtsLiveStreamTranscodeRequest extends Request {
 
     private AddRtsLiveStreamTranscodeRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.app = builder.app;
         this.audioBitrate = builder.audioBitrate;
         this.audioChannelNum = builder.audioChannelNum;
@@ -113,7 +114,6 @@ public class AddRtsLiveStreamTranscodeRequest extends Request {
         this.opus = builder.opus;
         this.ownerId = builder.ownerId;
         this.profile = builder.profile;
-        this.regionId = builder.regionId;
         this.template = builder.template;
         this.templateType = builder.templateType;
         this.videoBitrate = builder.videoBitrate;
@@ -131,6 +131,13 @@ public class AddRtsLiveStreamTranscodeRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -239,13 +246,6 @@ public class AddRtsLiveStreamTranscodeRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return template
      */
     public String getTemplate() {
@@ -274,6 +274,7 @@ public class AddRtsLiveStreamTranscodeRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AddRtsLiveStreamTranscodeRequest, Builder> {
+        private String regionId; 
         private String app; 
         private Integer audioBitrate; 
         private Integer audioChannelNum; 
@@ -289,7 +290,6 @@ public class AddRtsLiveStreamTranscodeRequest extends Request {
         private Boolean opus; 
         private Long ownerId; 
         private Integer profile; 
-        private String regionId; 
         private String template; 
         private String templateType; 
         private Integer videoBitrate; 
@@ -299,29 +299,38 @@ public class AddRtsLiveStreamTranscodeRequest extends Request {
             super();
         } 
 
-        private Builder(AddRtsLiveStreamTranscodeRequest response) {
-            super(response);
-            this.app = response.app;
-            this.audioBitrate = response.audioBitrate;
-            this.audioChannelNum = response.audioChannelNum;
-            this.audioCodec = response.audioCodec;
-            this.audioProfile = response.audioProfile;
-            this.audioRate = response.audioRate;
-            this.deleteBframes = response.deleteBframes;
-            this.domain = response.domain;
-            this.FPS = response.FPS;
-            this.gop = response.gop;
-            this.height = response.height;
-            this.lazy = response.lazy;
-            this.opus = response.opus;
-            this.ownerId = response.ownerId;
-            this.profile = response.profile;
-            this.regionId = response.regionId;
-            this.template = response.template;
-            this.templateType = response.templateType;
-            this.videoBitrate = response.videoBitrate;
-            this.width = response.width;
+        private Builder(AddRtsLiveStreamTranscodeRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.app = request.app;
+            this.audioBitrate = request.audioBitrate;
+            this.audioChannelNum = request.audioChannelNum;
+            this.audioCodec = request.audioCodec;
+            this.audioProfile = request.audioProfile;
+            this.audioRate = request.audioRate;
+            this.deleteBframes = request.deleteBframes;
+            this.domain = request.domain;
+            this.FPS = request.FPS;
+            this.gop = request.gop;
+            this.height = request.height;
+            this.lazy = request.lazy;
+            this.opus = request.opus;
+            this.ownerId = request.ownerId;
+            this.profile = request.profile;
+            this.template = request.template;
+            this.templateType = request.templateType;
+            this.videoBitrate = request.videoBitrate;
+            this.width = request.width;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * App.
@@ -455,15 +464,6 @@ public class AddRtsLiveStreamTranscodeRequest extends Request {
         public Builder profile(Integer profile) {
             this.putQueryParameter("Profile", profile);
             this.profile = profile;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeToutiaoLivePlayRequest</p>
  */
 public class DescribeToutiaoLivePlayRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("App")
     @Validation(required = true)
@@ -31,10 +35,6 @@ public class DescribeToutiaoLivePlayRequest extends Request {
     @NameInMap("OwnerId")
     private Long ownerId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("StartTime")
     @Validation(required = true)
@@ -47,11 +47,11 @@ public class DescribeToutiaoLivePlayRequest extends Request {
 
     private DescribeToutiaoLivePlayRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.app = builder.app;
         this.domain = builder.domain;
         this.endTime = builder.endTime;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
         this.startTime = builder.startTime;
         this.stream = builder.stream;
     }
@@ -67,6 +67,13 @@ public class DescribeToutiaoLivePlayRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -98,13 +105,6 @@ public class DescribeToutiaoLivePlayRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -119,11 +119,11 @@ public class DescribeToutiaoLivePlayRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeToutiaoLivePlayRequest, Builder> {
+        private String regionId; 
         private String app; 
         private String domain; 
         private String endTime; 
         private Long ownerId; 
-        private String regionId; 
         private String startTime; 
         private String stream; 
 
@@ -131,16 +131,25 @@ public class DescribeToutiaoLivePlayRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeToutiaoLivePlayRequest response) {
-            super(response);
-            this.app = response.app;
-            this.domain = response.domain;
-            this.endTime = response.endTime;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.startTime = response.startTime;
-            this.stream = response.stream;
+        private Builder(DescribeToutiaoLivePlayRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.app = request.app;
+            this.domain = request.domain;
+            this.endTime = request.endTime;
+            this.ownerId = request.ownerId;
+            this.startTime = request.startTime;
+            this.stream = request.stream;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * App.
@@ -175,15 +184,6 @@ public class DescribeToutiaoLivePlayRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

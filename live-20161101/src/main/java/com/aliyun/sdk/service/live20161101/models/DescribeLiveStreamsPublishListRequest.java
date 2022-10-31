@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeLiveStreamsPublishListRequest</p>
  */
 public class DescribeLiveStreamsPublishListRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("AppName")
     private String appName;
@@ -46,10 +50,6 @@ public class DescribeLiveStreamsPublishListRequest extends Request {
     @NameInMap("QueryType")
     private String queryType;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("StartTime")
     @Validation(required = true)
@@ -65,6 +65,7 @@ public class DescribeLiveStreamsPublishListRequest extends Request {
 
     private DescribeLiveStreamsPublishListRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.appName = builder.appName;
         this.domainName = builder.domainName;
         this.endTime = builder.endTime;
@@ -73,7 +74,6 @@ public class DescribeLiveStreamsPublishListRequest extends Request {
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.queryType = builder.queryType;
-        this.regionId = builder.regionId;
         this.startTime = builder.startTime;
         this.streamName = builder.streamName;
         this.streamType = builder.streamType;
@@ -90,6 +90,13 @@ public class DescribeLiveStreamsPublishListRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -149,13 +156,6 @@ public class DescribeLiveStreamsPublishListRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -177,6 +177,7 @@ public class DescribeLiveStreamsPublishListRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeLiveStreamsPublishListRequest, Builder> {
+        private String regionId; 
         private String appName; 
         private String domainName; 
         private String endTime; 
@@ -185,7 +186,6 @@ public class DescribeLiveStreamsPublishListRequest extends Request {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String queryType; 
-        private String regionId; 
         private String startTime; 
         private String streamName; 
         private String streamType; 
@@ -194,21 +194,30 @@ public class DescribeLiveStreamsPublishListRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeLiveStreamsPublishListRequest response) {
-            super(response);
-            this.appName = response.appName;
-            this.domainName = response.domainName;
-            this.endTime = response.endTime;
-            this.orderBy = response.orderBy;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.queryType = response.queryType;
-            this.regionId = response.regionId;
-            this.startTime = response.startTime;
-            this.streamName = response.streamName;
-            this.streamType = response.streamType;
+        private Builder(DescribeLiveStreamsPublishListRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.appName = request.appName;
+            this.domainName = request.domainName;
+            this.endTime = request.endTime;
+            this.orderBy = request.orderBy;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.queryType = request.queryType;
+            this.startTime = request.startTime;
+            this.streamName = request.streamName;
+            this.streamType = request.streamType;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * AppName.
@@ -279,15 +288,6 @@ public class DescribeLiveStreamsPublishListRequest extends Request {
         public Builder queryType(String queryType) {
             this.putQueryParameter("QueryType", queryType);
             this.queryType = queryType;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

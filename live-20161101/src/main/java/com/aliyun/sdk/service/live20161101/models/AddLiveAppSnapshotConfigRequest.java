@@ -170,18 +170,18 @@ public class AddLiveAppSnapshotConfigRequest extends Request {
             super();
         } 
 
-        private Builder(AddLiveAppSnapshotConfigRequest response) {
-            super(response);
-            this.appName = response.appName;
-            this.callback = response.callback;
-            this.domainName = response.domainName;
-            this.ossBucket = response.ossBucket;
-            this.ossEndpoint = response.ossEndpoint;
-            this.overwriteOssObject = response.overwriteOssObject;
-            this.ownerId = response.ownerId;
-            this.securityToken = response.securityToken;
-            this.sequenceOssObject = response.sequenceOssObject;
-            this.timeInterval = response.timeInterval;
+        private Builder(AddLiveAppSnapshotConfigRequest request) {
+            super(request);
+            this.appName = request.appName;
+            this.callback = request.callback;
+            this.domainName = request.domainName;
+            this.ossBucket = request.ossBucket;
+            this.ossEndpoint = request.ossEndpoint;
+            this.overwriteOssObject = request.overwriteOssObject;
+            this.ownerId = request.ownerId;
+            this.securityToken = request.securityToken;
+            this.sequenceOssObject = request.sequenceOssObject;
+            this.timeInterval = request.timeInterval;
         } 
 
         /**

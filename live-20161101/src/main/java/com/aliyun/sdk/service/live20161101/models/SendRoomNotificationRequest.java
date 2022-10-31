@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SendRoomNotificationRequest</p>
  */
 public class SendRoomNotificationRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("AppId")
     @Validation(required = true)
@@ -34,10 +38,6 @@ public class SendRoomNotificationRequest extends Request {
     @NameInMap("Priority")
     private Integer priority;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("RoomId")
     @Validation(required = true)
@@ -45,12 +45,12 @@ public class SendRoomNotificationRequest extends Request {
 
     private SendRoomNotificationRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.appId = builder.appId;
         this.appUid = builder.appUid;
         this.data = builder.data;
         this.ownerId = builder.ownerId;
         this.priority = builder.priority;
-        this.regionId = builder.regionId;
         this.roomId = builder.roomId;
     }
 
@@ -65,6 +65,13 @@ public class SendRoomNotificationRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -103,13 +110,6 @@ public class SendRoomNotificationRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return roomId
      */
     public String getRoomId() {
@@ -117,28 +117,37 @@ public class SendRoomNotificationRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SendRoomNotificationRequest, Builder> {
+        private String regionId; 
         private String appId; 
         private String appUid; 
         private String data; 
         private Long ownerId; 
         private Integer priority; 
-        private String regionId; 
         private String roomId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(SendRoomNotificationRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.appUid = response.appUid;
-            this.data = response.data;
-            this.ownerId = response.ownerId;
-            this.priority = response.priority;
-            this.regionId = response.regionId;
-            this.roomId = response.roomId;
+        private Builder(SendRoomNotificationRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.appId = request.appId;
+            this.appUid = request.appUid;
+            this.data = request.data;
+            this.ownerId = request.ownerId;
+            this.priority = request.priority;
+            this.roomId = request.roomId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * AppId.
@@ -182,15 +191,6 @@ public class SendRoomNotificationRequest extends Request {
         public Builder priority(Integer priority) {
             this.putQueryParameter("Priority", priority);
             this.priority = priority;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

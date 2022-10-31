@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeLiveDomainStreamTranscodeDataRequest</p>
  */
 public class DescribeLiveDomainStreamTranscodeDataRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("DomainName")
     private String domainName;
@@ -29,10 +33,6 @@ public class DescribeLiveDomainStreamTranscodeDataRequest extends Request {
     @NameInMap("OwnerId")
     private Long ownerId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("Split")
     private String split;
@@ -44,11 +44,11 @@ public class DescribeLiveDomainStreamTranscodeDataRequest extends Request {
 
     private DescribeLiveDomainStreamTranscodeDataRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.domainName = builder.domainName;
         this.endTime = builder.endTime;
         this.interval = builder.interval;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
         this.split = builder.split;
         this.startTime = builder.startTime;
     }
@@ -64,6 +64,13 @@ public class DescribeLiveDomainStreamTranscodeDataRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -95,13 +102,6 @@ public class DescribeLiveDomainStreamTranscodeDataRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return split
      */
     public String getSplit() {
@@ -116,11 +116,11 @@ public class DescribeLiveDomainStreamTranscodeDataRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeLiveDomainStreamTranscodeDataRequest, Builder> {
+        private String regionId; 
         private String domainName; 
         private String endTime; 
         private String interval; 
         private Long ownerId; 
-        private String regionId; 
         private String split; 
         private String startTime; 
 
@@ -128,16 +128,25 @@ public class DescribeLiveDomainStreamTranscodeDataRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeLiveDomainStreamTranscodeDataRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.endTime = response.endTime;
-            this.interval = response.interval;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.split = response.split;
-            this.startTime = response.startTime;
+        private Builder(DescribeLiveDomainStreamTranscodeDataRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.domainName = request.domainName;
+            this.endTime = request.endTime;
+            this.interval = request.interval;
+            this.ownerId = request.ownerId;
+            this.split = request.split;
+            this.startTime = request.startTime;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * DomainName.
@@ -172,15 +181,6 @@ public class DescribeLiveDomainStreamTranscodeDataRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

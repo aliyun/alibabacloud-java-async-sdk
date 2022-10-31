@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeLiveRecordVodConfigsRequest</p>
  */
 public class DescribeLiveRecordVodConfigsRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("AppName")
     private String appName;
@@ -34,22 +38,18 @@ public class DescribeLiveRecordVodConfigsRequest extends Request {
     @Validation(maximum = 100, minimum = 5)
     private Long pageSize;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("StreamName")
     private String streamName;
 
     private DescribeLiveRecordVodConfigsRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.appName = builder.appName;
         this.domainName = builder.domainName;
         this.ownerId = builder.ownerId;
         this.pageNum = builder.pageNum;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
         this.streamName = builder.streamName;
     }
 
@@ -64,6 +64,13 @@ public class DescribeLiveRecordVodConfigsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -102,13 +109,6 @@ public class DescribeLiveRecordVodConfigsRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return streamName
      */
     public String getStreamName() {
@@ -116,28 +116,37 @@ public class DescribeLiveRecordVodConfigsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeLiveRecordVodConfigsRequest, Builder> {
+        private String regionId; 
         private String appName; 
         private String domainName; 
         private Long ownerId; 
         private Long pageNum; 
         private Long pageSize; 
-        private String regionId; 
         private String streamName; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeLiveRecordVodConfigsRequest response) {
-            super(response);
-            this.appName = response.appName;
-            this.domainName = response.domainName;
-            this.ownerId = response.ownerId;
-            this.pageNum = response.pageNum;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.streamName = response.streamName;
+        private Builder(DescribeLiveRecordVodConfigsRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.appName = request.appName;
+            this.domainName = request.domainName;
+            this.ownerId = request.ownerId;
+            this.pageNum = request.pageNum;
+            this.pageSize = request.pageSize;
+            this.streamName = request.streamName;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * AppName.
@@ -181,15 +190,6 @@ public class DescribeLiveRecordVodConfigsRequest extends Request {
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteCasterSceneConfigRequest</p>
  */
 public class DeleteCasterSceneConfigRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("CasterId")
     @Validation(required = true)
@@ -20,10 +24,6 @@ public class DeleteCasterSceneConfigRequest extends Request {
     @Query
     @NameInMap("OwnerId")
     private Long ownerId;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Query
     @NameInMap("SceneId")
@@ -37,9 +37,9 @@ public class DeleteCasterSceneConfigRequest extends Request {
 
     private DeleteCasterSceneConfigRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.casterId = builder.casterId;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
         this.sceneId = builder.sceneId;
         this.type = builder.type;
     }
@@ -58,6 +58,13 @@ public class DeleteCasterSceneConfigRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return casterId
      */
     public String getCasterId() {
@@ -69,13 +76,6 @@ public class DeleteCasterSceneConfigRequest extends Request {
      */
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -93,9 +93,9 @@ public class DeleteCasterSceneConfigRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteCasterSceneConfigRequest, Builder> {
+        private String regionId; 
         private String casterId; 
         private Long ownerId; 
-        private String regionId; 
         private String sceneId; 
         private String type; 
 
@@ -103,14 +103,23 @@ public class DeleteCasterSceneConfigRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteCasterSceneConfigRequest response) {
-            super(response);
-            this.casterId = response.casterId;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.sceneId = response.sceneId;
-            this.type = response.type;
+        private Builder(DeleteCasterSceneConfigRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.casterId = request.casterId;
+            this.ownerId = request.ownerId;
+            this.sceneId = request.sceneId;
+            this.type = request.type;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * CasterId.
@@ -127,15 +136,6 @@ public class DeleteCasterSceneConfigRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCasterSceneAudioRequest</p>
  */
 public class DescribeCasterSceneAudioRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("CasterId")
     @Validation(required = true)
@@ -21,10 +25,6 @@ public class DescribeCasterSceneAudioRequest extends Request {
     @NameInMap("OwnerId")
     private Long ownerId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("SceneId")
     @Validation(required = true)
@@ -32,9 +32,9 @@ public class DescribeCasterSceneAudioRequest extends Request {
 
     private DescribeCasterSceneAudioRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.casterId = builder.casterId;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
         this.sceneId = builder.sceneId;
     }
 
@@ -52,6 +52,13 @@ public class DescribeCasterSceneAudioRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return casterId
      */
     public String getCasterId() {
@@ -66,13 +73,6 @@ public class DescribeCasterSceneAudioRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return sceneId
      */
     public String getSceneId() {
@@ -80,22 +80,31 @@ public class DescribeCasterSceneAudioRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeCasterSceneAudioRequest, Builder> {
+        private String regionId; 
         private String casterId; 
         private Long ownerId; 
-        private String regionId; 
         private String sceneId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeCasterSceneAudioRequest response) {
-            super(response);
-            this.casterId = response.casterId;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.sceneId = response.sceneId;
+        private Builder(DescribeCasterSceneAudioRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.casterId = request.casterId;
+            this.ownerId = request.ownerId;
+            this.sceneId = request.sceneId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * CasterId.
@@ -112,15 +121,6 @@ public class DescribeCasterSceneAudioRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

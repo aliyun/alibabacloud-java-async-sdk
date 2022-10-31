@@ -89,12 +89,12 @@ public class DeleteLiveAppSnapshotConfigRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteLiveAppSnapshotConfigRequest response) {
-            super(response);
-            this.appName = response.appName;
-            this.domainName = response.domainName;
-            this.ownerId = response.ownerId;
-            this.securityToken = response.securityToken;
+        private Builder(DeleteLiveAppSnapshotConfigRequest request) {
+            super(request);
+            this.appName = request.appName;
+            this.domainName = request.domainName;
+            this.ownerId = request.ownerId;
+            this.securityToken = request.securityToken;
         } 
 
         /**

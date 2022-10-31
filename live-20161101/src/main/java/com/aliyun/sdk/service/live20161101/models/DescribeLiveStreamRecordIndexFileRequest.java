@@ -117,14 +117,14 @@ public class DescribeLiveStreamRecordIndexFileRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeLiveStreamRecordIndexFileRequest response) {
-            super(response);
-            this.appName = response.appName;
-            this.domainName = response.domainName;
-            this.ownerId = response.ownerId;
-            this.recordId = response.recordId;
-            this.securityToken = response.securityToken;
-            this.streamName = response.streamName;
+        private Builder(DescribeLiveStreamRecordIndexFileRequest request) {
+            super(request);
+            this.appName = request.appName;
+            this.domainName = request.domainName;
+            this.ownerId = request.ownerId;
+            this.recordId = request.recordId;
+            this.securityToken = request.securityToken;
+            this.streamName = request.streamName;
         } 
 
         /**

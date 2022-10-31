@@ -12,13 +12,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetAllCustomTemplatesRequest</p>
  */
 public class GetAllCustomTemplatesRequest extends Request {
-    @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
     @Host
     @NameInMap("RegionId")
     private String regionId;
+
+    @Query
+    @NameInMap("OwnerId")
+    private Long ownerId;
 
     @Query
     @NameInMap("UserId")
@@ -26,8 +26,8 @@ public class GetAllCustomTemplatesRequest extends Request {
 
     private GetAllCustomTemplatesRequest(Builder builder) {
         super(builder);
-        this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
+        this.ownerId = builder.ownerId;
         this.userId = builder.userId;
     }
 
@@ -45,17 +45,17 @@ public class GetAllCustomTemplatesRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     /**
@@ -66,29 +66,20 @@ public class GetAllCustomTemplatesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetAllCustomTemplatesRequest, Builder> {
-        private Long ownerId; 
         private String regionId; 
+        private Long ownerId; 
         private String userId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetAllCustomTemplatesRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.userId = response.userId;
+        private Builder(GetAllCustomTemplatesRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.ownerId = request.ownerId;
+            this.userId = request.userId;
         } 
-
-        /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -96,6 +87,15 @@ public class GetAllCustomTemplatesRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
             return this;
         }
 

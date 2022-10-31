@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddCasterEpisodeGroupContentRequest</p>
  */
 public class AddCasterEpisodeGroupContentRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("ClientToken")
     @Validation(required = true)
@@ -26,16 +30,12 @@ public class AddCasterEpisodeGroupContentRequest extends Request {
     @NameInMap("OwnerId")
     private Long ownerId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private AddCasterEpisodeGroupContentRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.clientToken = builder.clientToken;
         this.content = builder.content;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -49,6 +49,13 @@ public class AddCasterEpisodeGroupContentRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -72,30 +79,32 @@ public class AddCasterEpisodeGroupContentRequest extends Request {
         return this.ownerId;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<AddCasterEpisodeGroupContentRequest, Builder> {
+        private String regionId; 
         private String clientToken; 
         private String content; 
         private Long ownerId; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(AddCasterEpisodeGroupContentRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.content = response.content;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
+        private Builder(AddCasterEpisodeGroupContentRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.clientToken = request.clientToken;
+            this.content = request.content;
+            this.ownerId = request.ownerId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * ClientToken.
@@ -121,15 +130,6 @@ public class AddCasterEpisodeGroupContentRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

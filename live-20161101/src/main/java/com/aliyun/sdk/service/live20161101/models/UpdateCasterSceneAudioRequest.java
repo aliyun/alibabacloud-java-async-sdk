@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateCasterSceneAudioRequest</p>
  */
 public class UpdateCasterSceneAudioRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("AudioLayer")
     private java.util.List < AudioLayer> audioLayer;
@@ -33,10 +37,6 @@ public class UpdateCasterSceneAudioRequest extends Request {
     @NameInMap("OwnerId")
     private Long ownerId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("SceneId")
     @Validation(required = true)
@@ -44,12 +44,12 @@ public class UpdateCasterSceneAudioRequest extends Request {
 
     private UpdateCasterSceneAudioRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.audioLayer = builder.audioLayer;
         this.casterId = builder.casterId;
         this.followEnable = builder.followEnable;
         this.mixList = builder.mixList;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
         this.sceneId = builder.sceneId;
     }
 
@@ -64,6 +64,13 @@ public class UpdateCasterSceneAudioRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -102,13 +109,6 @@ public class UpdateCasterSceneAudioRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return sceneId
      */
     public String getSceneId() {
@@ -116,28 +116,37 @@ public class UpdateCasterSceneAudioRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateCasterSceneAudioRequest, Builder> {
+        private String regionId; 
         private java.util.List < AudioLayer> audioLayer; 
         private String casterId; 
         private Integer followEnable; 
         private java.util.List < String > mixList; 
         private Long ownerId; 
-        private String regionId; 
         private String sceneId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(UpdateCasterSceneAudioRequest response) {
-            super(response);
-            this.audioLayer = response.audioLayer;
-            this.casterId = response.casterId;
-            this.followEnable = response.followEnable;
-            this.mixList = response.mixList;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.sceneId = response.sceneId;
+        private Builder(UpdateCasterSceneAudioRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.audioLayer = request.audioLayer;
+            this.casterId = request.casterId;
+            this.followEnable = request.followEnable;
+            this.mixList = request.mixList;
+            this.ownerId = request.ownerId;
+            this.sceneId = request.sceneId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * AudioLayer.
@@ -181,15 +190,6 @@ public class UpdateCasterSceneAudioRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

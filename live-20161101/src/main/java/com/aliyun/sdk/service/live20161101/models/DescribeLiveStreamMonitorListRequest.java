@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeLiveStreamMonitorListRequest</p>
  */
 public class DescribeLiveStreamMonitorListRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("MonitorId")
     private String monitorId;
@@ -32,22 +36,18 @@ public class DescribeLiveStreamMonitorListRequest extends Request {
     @NameInMap("PageSize")
     private Integer pageSize;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("Status")
     private Integer status;
 
     private DescribeLiveStreamMonitorListRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.monitorId = builder.monitorId;
         this.orderRule = builder.orderRule;
         this.ownerId = builder.ownerId;
         this.pageNum = builder.pageNum;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
         this.status = builder.status;
     }
 
@@ -62,6 +62,13 @@ public class DescribeLiveStreamMonitorListRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -100,13 +107,6 @@ public class DescribeLiveStreamMonitorListRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return status
      */
     public Integer getStatus() {
@@ -114,28 +114,37 @@ public class DescribeLiveStreamMonitorListRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeLiveStreamMonitorListRequest, Builder> {
+        private String regionId; 
         private String monitorId; 
         private Integer orderRule; 
         private Long ownerId; 
         private Integer pageNum; 
         private Integer pageSize; 
-        private String regionId; 
         private Integer status; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeLiveStreamMonitorListRequest response) {
-            super(response);
-            this.monitorId = response.monitorId;
-            this.orderRule = response.orderRule;
-            this.ownerId = response.ownerId;
-            this.pageNum = response.pageNum;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.status = response.status;
+        private Builder(DescribeLiveStreamMonitorListRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.monitorId = request.monitorId;
+            this.orderRule = request.orderRule;
+            this.ownerId = request.ownerId;
+            this.pageNum = request.pageNum;
+            this.pageSize = request.pageSize;
+            this.status = request.status;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * MonitorId.
@@ -179,15 +188,6 @@ public class DescribeLiveStreamMonitorListRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddLiveAudioAuditNotifyConfigRequest</p>
  */
 public class AddLiveAudioAuditNotifyConfigRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("Callback")
     private String callback;
@@ -29,17 +33,13 @@ public class AddLiveAudioAuditNotifyConfigRequest extends Request {
     @NameInMap("OwnerId")
     private Long ownerId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private AddLiveAudioAuditNotifyConfigRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.callback = builder.callback;
         this.callbackTemplate = builder.callbackTemplate;
         this.domainName = builder.domainName;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -53,6 +53,13 @@ public class AddLiveAudioAuditNotifyConfigRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -83,32 +90,34 @@ public class AddLiveAudioAuditNotifyConfigRequest extends Request {
         return this.ownerId;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<AddLiveAudioAuditNotifyConfigRequest, Builder> {
+        private String regionId; 
         private String callback; 
         private String callbackTemplate; 
         private String domainName; 
         private Long ownerId; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(AddLiveAudioAuditNotifyConfigRequest response) {
-            super(response);
-            this.callback = response.callback;
-            this.callbackTemplate = response.callbackTemplate;
-            this.domainName = response.domainName;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
+        private Builder(AddLiveAudioAuditNotifyConfigRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.callback = request.callback;
+            this.callbackTemplate = request.callbackTemplate;
+            this.domainName = request.domainName;
+            this.ownerId = request.ownerId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * Callback.
@@ -143,15 +152,6 @@ public class AddLiveAudioAuditNotifyConfigRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

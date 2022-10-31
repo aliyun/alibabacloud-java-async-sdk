@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateLiveStreamWatermarkRequest</p>
  */
 public class UpdateLiveStreamWatermarkRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("Description")
     private String description;
@@ -44,10 +48,6 @@ public class UpdateLiveStreamWatermarkRequest extends Request {
     @NameInMap("RefWidth")
     private Integer refWidth;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("TemplateId")
     @Validation(required = true)
@@ -59,14 +59,15 @@ public class UpdateLiveStreamWatermarkRequest extends Request {
 
     @Query
     @NameInMap("XOffset")
-    private Float XOffset;
+    private Float xOffset;
 
     @Query
     @NameInMap("YOffset")
-    private Float YOffset;
+    private Float yOffset;
 
     private UpdateLiveStreamWatermarkRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.description = builder.description;
         this.height = builder.height;
         this.name = builder.name;
@@ -75,11 +76,10 @@ public class UpdateLiveStreamWatermarkRequest extends Request {
         this.pictureUrl = builder.pictureUrl;
         this.refHeight = builder.refHeight;
         this.refWidth = builder.refWidth;
-        this.regionId = builder.regionId;
         this.templateId = builder.templateId;
         this.transparency = builder.transparency;
-        this.XOffset = builder.XOffset;
-        this.YOffset = builder.YOffset;
+        this.xOffset = builder.xOffset;
+        this.yOffset = builder.yOffset;
     }
 
     public static Builder builder() {
@@ -93,6 +93,13 @@ public class UpdateLiveStreamWatermarkRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -152,13 +159,6 @@ public class UpdateLiveStreamWatermarkRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return templateId
      */
     public String getTemplateId() {
@@ -173,20 +173,21 @@ public class UpdateLiveStreamWatermarkRequest extends Request {
     }
 
     /**
-     * @return XOffset
+     * @return xOffset
      */
     public Float getXOffset() {
-        return this.XOffset;
+        return this.xOffset;
     }
 
     /**
-     * @return YOffset
+     * @return yOffset
      */
     public Float getYOffset() {
-        return this.YOffset;
+        return this.yOffset;
     }
 
     public static final class Builder extends Request.Builder<UpdateLiveStreamWatermarkRequest, Builder> {
+        private String regionId; 
         private String description; 
         private Integer height; 
         private String name; 
@@ -195,32 +196,40 @@ public class UpdateLiveStreamWatermarkRequest extends Request {
         private String pictureUrl; 
         private Integer refHeight; 
         private Integer refWidth; 
-        private String regionId; 
         private String templateId; 
         private Integer transparency; 
-        private Float XOffset; 
-        private Float YOffset; 
+        private Float xOffset; 
+        private Float yOffset; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(UpdateLiveStreamWatermarkRequest response) {
-            super(response);
-            this.description = response.description;
-            this.height = response.height;
-            this.name = response.name;
-            this.offsetCorner = response.offsetCorner;
-            this.ownerId = response.ownerId;
-            this.pictureUrl = response.pictureUrl;
-            this.refHeight = response.refHeight;
-            this.refWidth = response.refWidth;
-            this.regionId = response.regionId;
-            this.templateId = response.templateId;
-            this.transparency = response.transparency;
-            this.XOffset = response.XOffset;
-            this.YOffset = response.YOffset;
+        private Builder(UpdateLiveStreamWatermarkRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.description = request.description;
+            this.height = request.height;
+            this.name = request.name;
+            this.offsetCorner = request.offsetCorner;
+            this.ownerId = request.ownerId;
+            this.pictureUrl = request.pictureUrl;
+            this.refHeight = request.refHeight;
+            this.refWidth = request.refWidth;
+            this.templateId = request.templateId;
+            this.transparency = request.transparency;
+            this.xOffset = request.xOffset;
+            this.yOffset = request.yOffset;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * Description.
@@ -295,15 +304,6 @@ public class UpdateLiveStreamWatermarkRequest extends Request {
         }
 
         /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
          * TemplateId.
          */
         public Builder templateId(String templateId) {
@@ -324,18 +324,18 @@ public class UpdateLiveStreamWatermarkRequest extends Request {
         /**
          * XOffset.
          */
-        public Builder XOffset(Float XOffset) {
-            this.putQueryParameter("XOffset", XOffset);
-            this.XOffset = XOffset;
+        public Builder xOffset(Float xOffset) {
+            this.putQueryParameter("XOffset", xOffset);
+            this.xOffset = xOffset;
             return this;
         }
 
         /**
          * YOffset.
          */
-        public Builder YOffset(Float YOffset) {
-            this.putQueryParameter("YOffset", YOffset);
-            this.YOffset = YOffset;
+        public Builder yOffset(Float yOffset) {
+            this.putQueryParameter("YOffset", yOffset);
+            this.yOffset = yOffset;
             return this;
         }
 

@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyCasterVideoResourceRequest</p>
  */
 public class ModifyCasterVideoResourceRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("BeginOffset")
     private Integer beginOffset;
@@ -41,10 +45,6 @@ public class ModifyCasterVideoResourceRequest extends Request {
     @NameInMap("PtsCallbackInterval")
     private Integer ptsCallbackInterval;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("RepeatNum")
     @Validation(maximum = 60)
@@ -65,6 +65,7 @@ public class ModifyCasterVideoResourceRequest extends Request {
 
     private ModifyCasterVideoResourceRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.beginOffset = builder.beginOffset;
         this.casterId = builder.casterId;
         this.endOffset = builder.endOffset;
@@ -72,7 +73,6 @@ public class ModifyCasterVideoResourceRequest extends Request {
         this.materialId = builder.materialId;
         this.ownerId = builder.ownerId;
         this.ptsCallbackInterval = builder.ptsCallbackInterval;
-        this.regionId = builder.regionId;
         this.repeatNum = builder.repeatNum;
         this.resourceId = builder.resourceId;
         this.resourceName = builder.resourceName;
@@ -90,6 +90,13 @@ public class ModifyCasterVideoResourceRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -142,13 +149,6 @@ public class ModifyCasterVideoResourceRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return repeatNum
      */
     public Integer getRepeatNum() {
@@ -177,6 +177,7 @@ public class ModifyCasterVideoResourceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyCasterVideoResourceRequest, Builder> {
+        private String regionId; 
         private Integer beginOffset; 
         private String casterId; 
         private Integer endOffset; 
@@ -184,7 +185,6 @@ public class ModifyCasterVideoResourceRequest extends Request {
         private String materialId; 
         private Long ownerId; 
         private Integer ptsCallbackInterval; 
-        private String regionId; 
         private Integer repeatNum; 
         private String resourceId; 
         private String resourceName; 
@@ -194,21 +194,30 @@ public class ModifyCasterVideoResourceRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyCasterVideoResourceRequest response) {
-            super(response);
-            this.beginOffset = response.beginOffset;
-            this.casterId = response.casterId;
-            this.endOffset = response.endOffset;
-            this.liveStreamUrl = response.liveStreamUrl;
-            this.materialId = response.materialId;
-            this.ownerId = response.ownerId;
-            this.ptsCallbackInterval = response.ptsCallbackInterval;
-            this.regionId = response.regionId;
-            this.repeatNum = response.repeatNum;
-            this.resourceId = response.resourceId;
-            this.resourceName = response.resourceName;
-            this.vodUrl = response.vodUrl;
+        private Builder(ModifyCasterVideoResourceRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.beginOffset = request.beginOffset;
+            this.casterId = request.casterId;
+            this.endOffset = request.endOffset;
+            this.liveStreamUrl = request.liveStreamUrl;
+            this.materialId = request.materialId;
+            this.ownerId = request.ownerId;
+            this.ptsCallbackInterval = request.ptsCallbackInterval;
+            this.repeatNum = request.repeatNum;
+            this.resourceId = request.resourceId;
+            this.resourceName = request.resourceName;
+            this.vodUrl = request.vodUrl;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * BeginOffset.
@@ -270,15 +279,6 @@ public class ModifyCasterVideoResourceRequest extends Request {
         public Builder ptsCallbackInterval(Integer ptsCallbackInterval) {
             this.putQueryParameter("PtsCallbackInterval", ptsCallbackInterval);
             this.ptsCallbackInterval = ptsCallbackInterval;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

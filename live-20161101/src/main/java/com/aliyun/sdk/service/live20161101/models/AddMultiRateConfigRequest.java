@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddMultiRateConfigRequest</p>
  */
 public class AddMultiRateConfigRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("App")
     @Validation(required = true)
@@ -44,10 +48,6 @@ public class AddMultiRateConfigRequest extends Request {
     @NameInMap("OwnerId")
     private Long ownerId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("Templates")
     @Validation(required = true)
@@ -55,6 +55,7 @@ public class AddMultiRateConfigRequest extends Request {
 
     private AddMultiRateConfigRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.app = builder.app;
         this.avFormat = builder.avFormat;
         this.domainName = builder.domainName;
@@ -62,7 +63,6 @@ public class AddMultiRateConfigRequest extends Request {
         this.isLazy = builder.isLazy;
         this.isTimeAlign = builder.isTimeAlign;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
         this.templates = builder.templates;
     }
 
@@ -77,6 +77,13 @@ public class AddMultiRateConfigRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -129,13 +136,6 @@ public class AddMultiRateConfigRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return templates
      */
     public String getTemplates() {
@@ -143,6 +143,7 @@ public class AddMultiRateConfigRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AddMultiRateConfigRequest, Builder> {
+        private String regionId; 
         private String app; 
         private String avFormat; 
         private String domainName; 
@@ -150,25 +151,33 @@ public class AddMultiRateConfigRequest extends Request {
         private String isLazy; 
         private String isTimeAlign; 
         private Long ownerId; 
-        private String regionId; 
         private String templates; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(AddMultiRateConfigRequest response) {
-            super(response);
-            this.app = response.app;
-            this.avFormat = response.avFormat;
-            this.domainName = response.domainName;
-            this.groupId = response.groupId;
-            this.isLazy = response.isLazy;
-            this.isTimeAlign = response.isTimeAlign;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.templates = response.templates;
+        private Builder(AddMultiRateConfigRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.app = request.app;
+            this.avFormat = request.avFormat;
+            this.domainName = request.domainName;
+            this.groupId = request.groupId;
+            this.isLazy = request.isLazy;
+            this.isTimeAlign = request.isTimeAlign;
+            this.ownerId = request.ownerId;
+            this.templates = request.templates;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * App.
@@ -230,15 +239,6 @@ public class AddMultiRateConfigRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

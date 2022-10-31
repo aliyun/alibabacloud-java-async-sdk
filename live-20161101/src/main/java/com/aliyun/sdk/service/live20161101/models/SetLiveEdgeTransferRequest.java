@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SetLiveEdgeTransferRequest</p>
  */
 public class SetLiveEdgeTransferRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("AppName")
     private String appName;
@@ -29,10 +33,6 @@ public class SetLiveEdgeTransferRequest extends Request {
     @NameInMap("OwnerId")
     private Long ownerId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("StreamName")
     private String streamName;
@@ -47,11 +47,11 @@ public class SetLiveEdgeTransferRequest extends Request {
 
     private SetLiveEdgeTransferRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.appName = builder.appName;
         this.domainName = builder.domainName;
         this.httpDns = builder.httpDns;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
         this.streamName = builder.streamName;
         this.targetDomainList = builder.targetDomainList;
         this.transferArgs = builder.transferArgs;
@@ -68,6 +68,13 @@ public class SetLiveEdgeTransferRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -99,13 +106,6 @@ public class SetLiveEdgeTransferRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return streamName
      */
     public String getStreamName() {
@@ -127,11 +127,11 @@ public class SetLiveEdgeTransferRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SetLiveEdgeTransferRequest, Builder> {
+        private String regionId; 
         private String appName; 
         private String domainName; 
         private String httpDns; 
         private Long ownerId; 
-        private String regionId; 
         private String streamName; 
         private String targetDomainList; 
         private String transferArgs; 
@@ -140,17 +140,26 @@ public class SetLiveEdgeTransferRequest extends Request {
             super();
         } 
 
-        private Builder(SetLiveEdgeTransferRequest response) {
-            super(response);
-            this.appName = response.appName;
-            this.domainName = response.domainName;
-            this.httpDns = response.httpDns;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.streamName = response.streamName;
-            this.targetDomainList = response.targetDomainList;
-            this.transferArgs = response.transferArgs;
+        private Builder(SetLiveEdgeTransferRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.appName = request.appName;
+            this.domainName = request.domainName;
+            this.httpDns = request.httpDns;
+            this.ownerId = request.ownerId;
+            this.streamName = request.streamName;
+            this.targetDomainList = request.targetDomainList;
+            this.transferArgs = request.transferArgs;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * AppName.
@@ -185,15 +194,6 @@ public class SetLiveEdgeTransferRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

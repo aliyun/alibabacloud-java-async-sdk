@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SetCasterConfigRequest</p>
  */
 public class SetCasterConfigRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("CallbackUrl")
     private String callbackUrl;
@@ -53,13 +57,13 @@ public class SetCasterConfigRequest extends Request {
     @NameInMap("RecordConfig")
     private String recordConfig;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("SideOutputUrl")
     private String sideOutputUrl;
+
+    @Query
+    @NameInMap("SideOutputUrlList")
+    private String sideOutputUrlList;
 
     @Query
     @NameInMap("SyncGroupsConfig")
@@ -70,11 +74,16 @@ public class SetCasterConfigRequest extends Request {
     private String transcodeConfig;
 
     @Query
+    @NameInMap("UrgentLiveStreamUrl")
+    private String urgentLiveStreamUrl;
+
+    @Query
     @NameInMap("UrgentMaterialId")
     private String urgentMaterialId;
 
     private SetCasterConfigRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.callbackUrl = builder.callbackUrl;
         this.casterId = builder.casterId;
         this.casterName = builder.casterName;
@@ -85,10 +94,11 @@ public class SetCasterConfigRequest extends Request {
         this.programEffect = builder.programEffect;
         this.programName = builder.programName;
         this.recordConfig = builder.recordConfig;
-        this.regionId = builder.regionId;
         this.sideOutputUrl = builder.sideOutputUrl;
+        this.sideOutputUrlList = builder.sideOutputUrlList;
         this.syncGroupsConfig = builder.syncGroupsConfig;
         this.transcodeConfig = builder.transcodeConfig;
+        this.urgentLiveStreamUrl = builder.urgentLiveStreamUrl;
         this.urgentMaterialId = builder.urgentMaterialId;
     }
 
@@ -103,6 +113,13 @@ public class SetCasterConfigRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -176,17 +193,17 @@ public class SetCasterConfigRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return sideOutputUrl
      */
     public String getSideOutputUrl() {
         return this.sideOutputUrl;
+    }
+
+    /**
+     * @return sideOutputUrlList
+     */
+    public String getSideOutputUrlList() {
+        return this.sideOutputUrlList;
     }
 
     /**
@@ -204,6 +221,13 @@ public class SetCasterConfigRequest extends Request {
     }
 
     /**
+     * @return urgentLiveStreamUrl
+     */
+    public String getUrgentLiveStreamUrl() {
+        return this.urgentLiveStreamUrl;
+    }
+
+    /**
      * @return urgentMaterialId
      */
     public String getUrgentMaterialId() {
@@ -211,6 +235,7 @@ public class SetCasterConfigRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SetCasterConfigRequest, Builder> {
+        private String regionId; 
         private String callbackUrl; 
         private String casterId; 
         private String casterName; 
@@ -221,34 +246,46 @@ public class SetCasterConfigRequest extends Request {
         private Integer programEffect; 
         private String programName; 
         private String recordConfig; 
-        private String regionId; 
         private String sideOutputUrl; 
+        private String sideOutputUrlList; 
         private String syncGroupsConfig; 
         private String transcodeConfig; 
+        private String urgentLiveStreamUrl; 
         private String urgentMaterialId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(SetCasterConfigRequest response) {
-            super(response);
-            this.callbackUrl = response.callbackUrl;
-            this.casterId = response.casterId;
-            this.casterName = response.casterName;
-            this.channelEnable = response.channelEnable;
-            this.delay = response.delay;
-            this.domainName = response.domainName;
-            this.ownerId = response.ownerId;
-            this.programEffect = response.programEffect;
-            this.programName = response.programName;
-            this.recordConfig = response.recordConfig;
-            this.regionId = response.regionId;
-            this.sideOutputUrl = response.sideOutputUrl;
-            this.syncGroupsConfig = response.syncGroupsConfig;
-            this.transcodeConfig = response.transcodeConfig;
-            this.urgentMaterialId = response.urgentMaterialId;
+        private Builder(SetCasterConfigRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.callbackUrl = request.callbackUrl;
+            this.casterId = request.casterId;
+            this.casterName = request.casterName;
+            this.channelEnable = request.channelEnable;
+            this.delay = request.delay;
+            this.domainName = request.domainName;
+            this.ownerId = request.ownerId;
+            this.programEffect = request.programEffect;
+            this.programName = request.programName;
+            this.recordConfig = request.recordConfig;
+            this.sideOutputUrl = request.sideOutputUrl;
+            this.sideOutputUrlList = request.sideOutputUrlList;
+            this.syncGroupsConfig = request.syncGroupsConfig;
+            this.transcodeConfig = request.transcodeConfig;
+            this.urgentLiveStreamUrl = request.urgentLiveStreamUrl;
+            this.urgentMaterialId = request.urgentMaterialId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * CallbackUrl.
@@ -341,20 +378,20 @@ public class SetCasterConfigRequest extends Request {
         }
 
         /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
          * SideOutputUrl.
          */
         public Builder sideOutputUrl(String sideOutputUrl) {
             this.putQueryParameter("SideOutputUrl", sideOutputUrl);
             this.sideOutputUrl = sideOutputUrl;
+            return this;
+        }
+
+        /**
+         * SideOutputUrlList.
+         */
+        public Builder sideOutputUrlList(String sideOutputUrlList) {
+            this.putQueryParameter("SideOutputUrlList", sideOutputUrlList);
+            this.sideOutputUrlList = sideOutputUrlList;
             return this;
         }
 
@@ -373,6 +410,15 @@ public class SetCasterConfigRequest extends Request {
         public Builder transcodeConfig(String transcodeConfig) {
             this.putQueryParameter("TranscodeConfig", transcodeConfig);
             this.transcodeConfig = transcodeConfig;
+            return this;
+        }
+
+        /**
+         * UrgentLiveStreamUrl.
+         */
+        public Builder urgentLiveStreamUrl(String urgentLiveStreamUrl) {
+            this.putQueryParameter("UrgentLiveStreamUrl", urgentLiveStreamUrl);
+            this.urgentLiveStreamUrl = urgentLiveStreamUrl;
             return this;
         }
 

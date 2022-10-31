@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateLiveRealTimeLogDeliveryRequest</p>
  */
 public class CreateLiveRealTimeLogDeliveryRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("DomainName")
     @Validation(required = true)
@@ -36,18 +40,14 @@ public class CreateLiveRealTimeLogDeliveryRequest extends Request {
     @Validation(required = true)
     private String region;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private CreateLiveRealTimeLogDeliveryRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.domainName = builder.domainName;
         this.logstore = builder.logstore;
         this.ownerId = builder.ownerId;
         this.project = builder.project;
         this.region = builder.region;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -61,6 +61,13 @@ public class CreateLiveRealTimeLogDeliveryRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -98,34 +105,36 @@ public class CreateLiveRealTimeLogDeliveryRequest extends Request {
         return this.region;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<CreateLiveRealTimeLogDeliveryRequest, Builder> {
+        private String regionId; 
         private String domainName; 
         private String logstore; 
         private Long ownerId; 
         private String project; 
         private String region; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateLiveRealTimeLogDeliveryRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.logstore = response.logstore;
-            this.ownerId = response.ownerId;
-            this.project = response.project;
-            this.region = response.region;
-            this.regionId = response.regionId;
+        private Builder(CreateLiveRealTimeLogDeliveryRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.domainName = request.domainName;
+            this.logstore = request.logstore;
+            this.ownerId = request.ownerId;
+            this.project = request.project;
+            this.region = request.region;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * DomainName.
@@ -169,15 +178,6 @@ public class CreateLiveRealTimeLogDeliveryRequest extends Request {
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
             this.region = region;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

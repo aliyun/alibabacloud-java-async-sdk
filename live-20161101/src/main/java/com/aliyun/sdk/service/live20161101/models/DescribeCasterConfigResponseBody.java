@@ -45,11 +45,17 @@ public class DescribeCasterConfigResponseBody extends TeaModel {
     @NameInMap("SideOutputUrl")
     private String sideOutputUrl;
 
+    @NameInMap("SideOutputUrlList")
+    private String sideOutputUrlList;
+
     @NameInMap("SyncGroupsConfig")
     private SyncGroupsConfig syncGroupsConfig;
 
     @NameInMap("TranscodeConfig")
     private TranscodeConfig transcodeConfig;
+
+    @NameInMap("UrgentLiveStreamUrl")
+    private String urgentLiveStreamUrl;
 
     @NameInMap("UrgentMaterialId")
     private String urgentMaterialId;
@@ -66,8 +72,10 @@ public class DescribeCasterConfigResponseBody extends TeaModel {
         this.recordConfig = builder.recordConfig;
         this.requestId = builder.requestId;
         this.sideOutputUrl = builder.sideOutputUrl;
+        this.sideOutputUrlList = builder.sideOutputUrlList;
         this.syncGroupsConfig = builder.syncGroupsConfig;
         this.transcodeConfig = builder.transcodeConfig;
+        this.urgentLiveStreamUrl = builder.urgentLiveStreamUrl;
         this.urgentMaterialId = builder.urgentMaterialId;
     }
 
@@ -157,6 +165,13 @@ public class DescribeCasterConfigResponseBody extends TeaModel {
     }
 
     /**
+     * @return sideOutputUrlList
+     */
+    public String getSideOutputUrlList() {
+        return this.sideOutputUrlList;
+    }
+
+    /**
      * @return syncGroupsConfig
      */
     public SyncGroupsConfig getSyncGroupsConfig() {
@@ -168,6 +183,13 @@ public class DescribeCasterConfigResponseBody extends TeaModel {
      */
     public TranscodeConfig getTranscodeConfig() {
         return this.transcodeConfig;
+    }
+
+    /**
+     * @return urgentLiveStreamUrl
+     */
+    public String getUrgentLiveStreamUrl() {
+        return this.urgentLiveStreamUrl;
     }
 
     /**
@@ -189,8 +211,10 @@ public class DescribeCasterConfigResponseBody extends TeaModel {
         private RecordConfig recordConfig; 
         private String requestId; 
         private String sideOutputUrl; 
+        private String sideOutputUrlList; 
         private SyncGroupsConfig syncGroupsConfig; 
         private TranscodeConfig transcodeConfig; 
+        private String urgentLiveStreamUrl; 
         private String urgentMaterialId; 
 
         /**
@@ -282,6 +306,14 @@ public class DescribeCasterConfigResponseBody extends TeaModel {
         }
 
         /**
+         * SideOutputUrlList.
+         */
+        public Builder sideOutputUrlList(String sideOutputUrlList) {
+            this.sideOutputUrlList = sideOutputUrlList;
+            return this;
+        }
+
+        /**
          * SyncGroupsConfig.
          */
         public Builder syncGroupsConfig(SyncGroupsConfig syncGroupsConfig) {
@@ -294,6 +326,14 @@ public class DescribeCasterConfigResponseBody extends TeaModel {
          */
         public Builder transcodeConfig(TranscodeConfig transcodeConfig) {
             this.transcodeConfig = transcodeConfig;
+            return this;
+        }
+
+        /**
+         * UrgentLiveStreamUrl.
+         */
+        public Builder urgentLiveStreamUrl(String urgentLiveStreamUrl) {
+            this.urgentLiveStreamUrl = urgentLiveStreamUrl;
             return this;
         }
 

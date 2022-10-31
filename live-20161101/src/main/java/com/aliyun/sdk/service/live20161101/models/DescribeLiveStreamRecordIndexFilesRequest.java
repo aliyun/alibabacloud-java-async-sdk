@@ -171,18 +171,18 @@ public class DescribeLiveStreamRecordIndexFilesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeLiveStreamRecordIndexFilesRequest response) {
-            super(response);
-            this.appName = response.appName;
-            this.domainName = response.domainName;
-            this.endTime = response.endTime;
-            this.order = response.order;
-            this.ownerId = response.ownerId;
-            this.pageNum = response.pageNum;
-            this.pageSize = response.pageSize;
-            this.securityToken = response.securityToken;
-            this.startTime = response.startTime;
-            this.streamName = response.streamName;
+        private Builder(DescribeLiveStreamRecordIndexFilesRequest request) {
+            super(request);
+            this.appName = request.appName;
+            this.domainName = request.domainName;
+            this.endTime = request.endTime;
+            this.order = request.order;
+            this.ownerId = request.ownerId;
+            this.pageNum = request.pageNum;
+            this.pageSize = request.pageSize;
+            this.securityToken = request.securityToken;
+            this.startTime = request.startTime;
+            this.streamName = request.streamName;
         } 
 
         /**

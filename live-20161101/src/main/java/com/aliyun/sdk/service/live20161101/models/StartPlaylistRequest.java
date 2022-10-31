@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>StartPlaylistRequest</p>
  */
 public class StartPlaylistRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("Offset")
     private Integer offset;
@@ -25,10 +29,6 @@ public class StartPlaylistRequest extends Request {
     @Validation(required = true)
     private String programId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("ResumeMode")
     private String resumeMode;
@@ -39,10 +39,10 @@ public class StartPlaylistRequest extends Request {
 
     private StartPlaylistRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.offset = builder.offset;
         this.ownerId = builder.ownerId;
         this.programId = builder.programId;
-        this.regionId = builder.regionId;
         this.resumeMode = builder.resumeMode;
         this.startItemId = builder.startItemId;
     }
@@ -58,6 +58,13 @@ public class StartPlaylistRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -82,13 +89,6 @@ public class StartPlaylistRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return resumeMode
      */
     public String getResumeMode() {
@@ -103,10 +103,10 @@ public class StartPlaylistRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<StartPlaylistRequest, Builder> {
+        private String regionId; 
         private Integer offset; 
         private Long ownerId; 
         private String programId; 
-        private String regionId; 
         private String resumeMode; 
         private String startItemId; 
 
@@ -114,15 +114,24 @@ public class StartPlaylistRequest extends Request {
             super();
         } 
 
-        private Builder(StartPlaylistRequest response) {
-            super(response);
-            this.offset = response.offset;
-            this.ownerId = response.ownerId;
-            this.programId = response.programId;
-            this.regionId = response.regionId;
-            this.resumeMode = response.resumeMode;
-            this.startItemId = response.startItemId;
+        private Builder(StartPlaylistRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.offset = request.offset;
+            this.ownerId = request.ownerId;
+            this.programId = request.programId;
+            this.resumeMode = request.resumeMode;
+            this.startItemId = request.startItemId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * Offset.
@@ -148,15 +157,6 @@ public class StartPlaylistRequest extends Request {
         public Builder programId(String programId) {
             this.putQueryParameter("ProgramId", programId);
             this.programId = programId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

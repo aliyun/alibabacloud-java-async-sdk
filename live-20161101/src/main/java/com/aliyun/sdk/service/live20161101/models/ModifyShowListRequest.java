@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyShowListRequest</p>
  */
 public class ModifyShowListRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("CasterId")
     @Validation(required = true)
@@ -29,10 +33,6 @@ public class ModifyShowListRequest extends Request {
     @NameInMap("OwnerId")
     private Long ownerId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("RepeatTimes")
     private Integer repeatTimes;
@@ -47,11 +47,11 @@ public class ModifyShowListRequest extends Request {
 
     private ModifyShowListRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.casterId = builder.casterId;
         this.highPriorityShowId = builder.highPriorityShowId;
         this.highPriorityShowStartTime = builder.highPriorityShowStartTime;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
         this.repeatTimes = builder.repeatTimes;
         this.showId = builder.showId;
         this.spot = builder.spot;
@@ -68,6 +68,13 @@ public class ModifyShowListRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -99,13 +106,6 @@ public class ModifyShowListRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return repeatTimes
      */
     public Integer getRepeatTimes() {
@@ -127,11 +127,11 @@ public class ModifyShowListRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyShowListRequest, Builder> {
+        private String regionId; 
         private String casterId; 
         private String highPriorityShowId; 
         private String highPriorityShowStartTime; 
         private Long ownerId; 
-        private String regionId; 
         private Integer repeatTimes; 
         private String showId; 
         private Integer spot; 
@@ -140,17 +140,26 @@ public class ModifyShowListRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyShowListRequest response) {
-            super(response);
-            this.casterId = response.casterId;
-            this.highPriorityShowId = response.highPriorityShowId;
-            this.highPriorityShowStartTime = response.highPriorityShowStartTime;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.repeatTimes = response.repeatTimes;
-            this.showId = response.showId;
-            this.spot = response.spot;
+        private Builder(ModifyShowListRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.casterId = request.casterId;
+            this.highPriorityShowId = request.highPriorityShowId;
+            this.highPriorityShowStartTime = request.highPriorityShowStartTime;
+            this.ownerId = request.ownerId;
+            this.repeatTimes = request.repeatTimes;
+            this.showId = request.showId;
+            this.spot = request.spot;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * CasterId.
@@ -185,15 +194,6 @@ public class ModifyShowListRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

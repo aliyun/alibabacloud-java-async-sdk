@@ -153,18 +153,18 @@ public class DescribeLiveDomainPvUvDataResponseBody extends TeaModel {
 
     public static class PvUvDataInfo extends TeaModel {
         @NameInMap("PV")
-        private String PV;
+        private String pv;
 
         @NameInMap("TimeStamp")
         private String timeStamp;
 
         @NameInMap("UV")
-        private String UV;
+        private String uv;
 
         private PvUvDataInfo(Builder builder) {
-            this.PV = builder.PV;
+            this.pv = builder.pv;
             this.timeStamp = builder.timeStamp;
-            this.UV = builder.UV;
+            this.uv = builder.uv;
         }
 
         public static Builder builder() {
@@ -176,10 +176,10 @@ public class DescribeLiveDomainPvUvDataResponseBody extends TeaModel {
         }
 
         /**
-         * @return PV
+         * @return pv
          */
-        public String getPV() {
-            return this.PV;
+        public String getPv() {
+            return this.pv;
         }
 
         /**
@@ -190,22 +190,22 @@ public class DescribeLiveDomainPvUvDataResponseBody extends TeaModel {
         }
 
         /**
-         * @return UV
+         * @return uv
          */
-        public String getUV() {
-            return this.UV;
+        public String getUv() {
+            return this.uv;
         }
 
         public static final class Builder {
-            private String PV; 
+            private String pv; 
             private String timeStamp; 
-            private String UV; 
+            private String uv; 
 
             /**
              * PV.
              */
-            public Builder PV(String PV) {
-                this.PV = PV;
+            public Builder pv(String pv) {
+                this.pv = pv;
                 return this;
             }
 
@@ -220,8 +220,8 @@ public class DescribeLiveDomainPvUvDataResponseBody extends TeaModel {
             /**
              * UV.
              */
-            public Builder UV(String UV) {
-                this.UV = UV;
+            public Builder uv(String uv) {
+                this.uv = uv;
                 return this;
             }
 

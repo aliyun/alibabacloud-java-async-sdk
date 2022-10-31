@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateCustomTemplateRequest</p>
  */
 public class CreateCustomTemplateRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("CustomTemplate")
     @Validation(required = true)
@@ -21,10 +25,6 @@ public class CreateCustomTemplateRequest extends Request {
     @NameInMap("OwnerId")
     private Long ownerId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("Template")
     @Validation(required = true)
@@ -32,9 +32,9 @@ public class CreateCustomTemplateRequest extends Request {
 
     private CreateCustomTemplateRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.customTemplate = builder.customTemplate;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
         this.template = builder.template;
     }
 
@@ -52,6 +52,13 @@ public class CreateCustomTemplateRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return customTemplate
      */
     public String getCustomTemplate() {
@@ -66,13 +73,6 @@ public class CreateCustomTemplateRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return template
      */
     public String getTemplate() {
@@ -80,22 +80,31 @@ public class CreateCustomTemplateRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateCustomTemplateRequest, Builder> {
+        private String regionId; 
         private String customTemplate; 
         private Long ownerId; 
-        private String regionId; 
         private String template; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateCustomTemplateRequest response) {
-            super(response);
-            this.customTemplate = response.customTemplate;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.template = response.template;
+        private Builder(CreateCustomTemplateRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.customTemplate = request.customTemplate;
+            this.ownerId = request.ownerId;
+            this.template = request.template;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * CustomTemplate.
@@ -112,15 +121,6 @@ public class CreateCustomTemplateRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

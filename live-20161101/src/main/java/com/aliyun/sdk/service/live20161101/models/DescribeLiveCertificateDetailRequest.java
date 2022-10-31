@@ -75,11 +75,11 @@ public class DescribeLiveCertificateDetailRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeLiveCertificateDetailRequest response) {
-            super(response);
-            this.certName = response.certName;
-            this.ownerId = response.ownerId;
-            this.securityToken = response.securityToken;
+        private Builder(DescribeLiveCertificateDetailRequest request) {
+            super(request);
+            this.certName = request.certName;
+            this.ownerId = request.ownerId;
+            this.securityToken = request.securityToken;
         } 
 
         /**

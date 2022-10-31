@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyStudioLayoutRequest</p>
  */
 public class ModifyStudioLayoutRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("BgImageConfig")
     private String bgImageConfig;
@@ -46,16 +50,13 @@ public class ModifyStudioLayoutRequest extends Request {
     @NameInMap("OwnerId")
     private Long ownerId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("ScreenInputConfigList")
     private String screenInputConfigList;
 
     private ModifyStudioLayoutRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.bgImageConfig = builder.bgImageConfig;
         this.casterId = builder.casterId;
         this.commonConfig = builder.commonConfig;
@@ -64,7 +65,6 @@ public class ModifyStudioLayoutRequest extends Request {
         this.layoutName = builder.layoutName;
         this.mediaInputConfigList = builder.mediaInputConfigList;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
         this.screenInputConfigList = builder.screenInputConfigList;
     }
 
@@ -79,6 +79,13 @@ public class ModifyStudioLayoutRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -138,13 +145,6 @@ public class ModifyStudioLayoutRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return screenInputConfigList
      */
     public String getScreenInputConfigList() {
@@ -152,6 +152,7 @@ public class ModifyStudioLayoutRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyStudioLayoutRequest, Builder> {
+        private String regionId; 
         private String bgImageConfig; 
         private String casterId; 
         private String commonConfig; 
@@ -160,26 +161,34 @@ public class ModifyStudioLayoutRequest extends Request {
         private String layoutName; 
         private String mediaInputConfigList; 
         private Long ownerId; 
-        private String regionId; 
         private String screenInputConfigList; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ModifyStudioLayoutRequest response) {
-            super(response);
-            this.bgImageConfig = response.bgImageConfig;
-            this.casterId = response.casterId;
-            this.commonConfig = response.commonConfig;
-            this.layerOrderConfigList = response.layerOrderConfigList;
-            this.layoutId = response.layoutId;
-            this.layoutName = response.layoutName;
-            this.mediaInputConfigList = response.mediaInputConfigList;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.screenInputConfigList = response.screenInputConfigList;
+        private Builder(ModifyStudioLayoutRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.bgImageConfig = request.bgImageConfig;
+            this.casterId = request.casterId;
+            this.commonConfig = request.commonConfig;
+            this.layerOrderConfigList = request.layerOrderConfigList;
+            this.layoutId = request.layoutId;
+            this.layoutName = request.layoutName;
+            this.mediaInputConfigList = request.mediaInputConfigList;
+            this.ownerId = request.ownerId;
+            this.screenInputConfigList = request.screenInputConfigList;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * BgImageConfig.
@@ -250,15 +259,6 @@ public class ModifyStudioLayoutRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

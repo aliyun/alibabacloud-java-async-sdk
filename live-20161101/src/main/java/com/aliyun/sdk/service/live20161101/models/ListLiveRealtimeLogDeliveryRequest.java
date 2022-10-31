@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListLiveRealtimeLogDeliveryRequest</p>
  */
 public class ListLiveRealtimeLogDeliveryRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("LiveOpenapiReserve")
     private String liveOpenapiReserve;
@@ -20,15 +24,11 @@ public class ListLiveRealtimeLogDeliveryRequest extends Request {
     @NameInMap("OwnerId")
     private Long ownerId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private ListLiveRealtimeLogDeliveryRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.liveOpenapiReserve = builder.liveOpenapiReserve;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -45,6 +45,13 @@ public class ListLiveRealtimeLogDeliveryRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return liveOpenapiReserve
      */
     public String getLiveOpenapiReserve() {
@@ -58,28 +65,30 @@ public class ListLiveRealtimeLogDeliveryRequest extends Request {
         return this.ownerId;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<ListLiveRealtimeLogDeliveryRequest, Builder> {
+        private String regionId; 
         private String liveOpenapiReserve; 
         private Long ownerId; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListLiveRealtimeLogDeliveryRequest response) {
-            super(response);
-            this.liveOpenapiReserve = response.liveOpenapiReserve;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
+        private Builder(ListLiveRealtimeLogDeliveryRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.liveOpenapiReserve = request.liveOpenapiReserve;
+            this.ownerId = request.ownerId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * LiveOpenapiReserve.
@@ -96,15 +105,6 @@ public class ListLiveRealtimeLogDeliveryRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

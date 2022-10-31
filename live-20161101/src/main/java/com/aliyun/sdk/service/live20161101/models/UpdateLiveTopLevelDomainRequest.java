@@ -76,11 +76,11 @@ public class UpdateLiveTopLevelDomainRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateLiveTopLevelDomainRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.securityToken = response.securityToken;
-            this.topLevelDomain = response.topLevelDomain;
+        private Builder(UpdateLiveTopLevelDomainRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.securityToken = request.securityToken;
+            this.topLevelDomain = request.topLevelDomain;
         } 
 
         /**

@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyCasterComponentRequest</p>
  */
 public class ModifyCasterComponentRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("CaptionLayerContent")
     private String captionLayerContent;
@@ -50,16 +54,13 @@ public class ModifyCasterComponentRequest extends Request {
     @NameInMap("OwnerId")
     private Long ownerId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("TextLayerContent")
     private String textLayerContent;
 
     private ModifyCasterComponentRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.captionLayerContent = builder.captionLayerContent;
         this.casterId = builder.casterId;
         this.componentId = builder.componentId;
@@ -69,7 +70,6 @@ public class ModifyCasterComponentRequest extends Request {
         this.effect = builder.effect;
         this.imageLayerContent = builder.imageLayerContent;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
         this.textLayerContent = builder.textLayerContent;
     }
 
@@ -84,6 +84,13 @@ public class ModifyCasterComponentRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -150,13 +157,6 @@ public class ModifyCasterComponentRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return textLayerContent
      */
     public String getTextLayerContent() {
@@ -164,6 +164,7 @@ public class ModifyCasterComponentRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyCasterComponentRequest, Builder> {
+        private String regionId; 
         private String captionLayerContent; 
         private String casterId; 
         private String componentId; 
@@ -173,27 +174,35 @@ public class ModifyCasterComponentRequest extends Request {
         private String effect; 
         private String imageLayerContent; 
         private Long ownerId; 
-        private String regionId; 
         private String textLayerContent; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ModifyCasterComponentRequest response) {
-            super(response);
-            this.captionLayerContent = response.captionLayerContent;
-            this.casterId = response.casterId;
-            this.componentId = response.componentId;
-            this.componentLayer = response.componentLayer;
-            this.componentName = response.componentName;
-            this.componentType = response.componentType;
-            this.effect = response.effect;
-            this.imageLayerContent = response.imageLayerContent;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.textLayerContent = response.textLayerContent;
+        private Builder(ModifyCasterComponentRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.captionLayerContent = request.captionLayerContent;
+            this.casterId = request.casterId;
+            this.componentId = request.componentId;
+            this.componentLayer = request.componentLayer;
+            this.componentName = request.componentName;
+            this.componentType = request.componentType;
+            this.effect = request.effect;
+            this.imageLayerContent = request.imageLayerContent;
+            this.ownerId = request.ownerId;
+            this.textLayerContent = request.textLayerContent;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * CaptionLayerContent.
@@ -273,15 +282,6 @@ public class ModifyCasterComponentRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

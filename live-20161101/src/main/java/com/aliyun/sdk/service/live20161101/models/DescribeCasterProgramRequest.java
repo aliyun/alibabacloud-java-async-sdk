@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCasterProgramRequest</p>
  */
 public class DescribeCasterProgramRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("CasterId")
     @Validation(required = true)
@@ -41,10 +45,6 @@ public class DescribeCasterProgramRequest extends Request {
     @NameInMap("PageSize")
     private Integer pageSize;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("StartTime")
     private String startTime;
@@ -55,6 +55,7 @@ public class DescribeCasterProgramRequest extends Request {
 
     private DescribeCasterProgramRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.casterId = builder.casterId;
         this.endTime = builder.endTime;
         this.episodeId = builder.episodeId;
@@ -62,7 +63,6 @@ public class DescribeCasterProgramRequest extends Request {
         this.ownerId = builder.ownerId;
         this.pageNum = builder.pageNum;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
         this.startTime = builder.startTime;
         this.status = builder.status;
     }
@@ -78,6 +78,13 @@ public class DescribeCasterProgramRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -130,13 +137,6 @@ public class DescribeCasterProgramRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -151,6 +151,7 @@ public class DescribeCasterProgramRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeCasterProgramRequest, Builder> {
+        private String regionId; 
         private String casterId; 
         private String endTime; 
         private String episodeId; 
@@ -158,7 +159,6 @@ public class DescribeCasterProgramRequest extends Request {
         private Long ownerId; 
         private Integer pageNum; 
         private Integer pageSize; 
-        private String regionId; 
         private String startTime; 
         private Integer status; 
 
@@ -166,19 +166,28 @@ public class DescribeCasterProgramRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeCasterProgramRequest response) {
-            super(response);
-            this.casterId = response.casterId;
-            this.endTime = response.endTime;
-            this.episodeId = response.episodeId;
-            this.episodeType = response.episodeType;
-            this.ownerId = response.ownerId;
-            this.pageNum = response.pageNum;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.startTime = response.startTime;
-            this.status = response.status;
+        private Builder(DescribeCasterProgramRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.casterId = request.casterId;
+            this.endTime = request.endTime;
+            this.episodeId = request.episodeId;
+            this.episodeType = request.episodeType;
+            this.ownerId = request.ownerId;
+            this.pageNum = request.pageNum;
+            this.pageSize = request.pageSize;
+            this.startTime = request.startTime;
+            this.status = request.status;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * CasterId.
@@ -240,15 +249,6 @@ public class DescribeCasterProgramRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

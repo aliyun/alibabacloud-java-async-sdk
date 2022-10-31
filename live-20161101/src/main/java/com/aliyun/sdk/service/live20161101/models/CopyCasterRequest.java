@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CopyCasterRequest</p>
  */
 public class CopyCasterRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("CasterName")
     @Validation(required = true)
@@ -26,10 +30,6 @@ public class CopyCasterRequest extends Request {
     @NameInMap("OwnerId")
     private Long ownerId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("SrcCasterId")
     @Validation(required = true)
@@ -37,10 +37,10 @@ public class CopyCasterRequest extends Request {
 
     private CopyCasterRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.casterName = builder.casterName;
         this.clientToken = builder.clientToken;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
         this.srcCasterId = builder.srcCasterId;
     }
 
@@ -55,6 +55,13 @@ public class CopyCasterRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -79,13 +86,6 @@ public class CopyCasterRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return srcCasterId
      */
     public String getSrcCasterId() {
@@ -93,24 +93,33 @@ public class CopyCasterRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CopyCasterRequest, Builder> {
+        private String regionId; 
         private String casterName; 
         private String clientToken; 
         private Long ownerId; 
-        private String regionId; 
         private String srcCasterId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CopyCasterRequest response) {
-            super(response);
-            this.casterName = response.casterName;
-            this.clientToken = response.clientToken;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.srcCasterId = response.srcCasterId;
+        private Builder(CopyCasterRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.casterName = request.casterName;
+            this.clientToken = request.clientToken;
+            this.ownerId = request.ownerId;
+            this.srcCasterId = request.srcCasterId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * CasterName.
@@ -136,15 +145,6 @@ public class CopyCasterRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

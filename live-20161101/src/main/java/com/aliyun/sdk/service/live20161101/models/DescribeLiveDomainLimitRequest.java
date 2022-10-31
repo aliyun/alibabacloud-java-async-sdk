@@ -12,29 +12,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeLiveDomainLimitRequest</p>
  */
 public class DescribeLiveDomainLimitRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("DomainName")
     @Validation(required = true)
     private String domainName;
 
     @Query
-    @NameInMap("LiveapiRequestFrom")
-    private String liveapiRequestFrom;
-
-    @Query
     @NameInMap("OwnerId")
     private Long ownerId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private DescribeLiveDomainLimitRequest(Builder builder) {
         super(builder);
-        this.domainName = builder.domainName;
-        this.liveapiRequestFrom = builder.liveapiRequestFrom;
-        this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
+        this.domainName = builder.domainName;
+        this.ownerId = builder.ownerId;
     }
 
     public static Builder builder() {
@@ -51,17 +46,17 @@ public class DescribeLiveDomainLimitRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return domainName
      */
     public String getDomainName() {
         return this.domainName;
-    }
-
-    /**
-     * @return liveapiRequestFrom
-     */
-    public String getLiveapiRequestFrom() {
-        return this.liveapiRequestFrom;
     }
 
     /**
@@ -71,30 +66,30 @@ public class DescribeLiveDomainLimitRequest extends Request {
         return this.ownerId;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<DescribeLiveDomainLimitRequest, Builder> {
-        private String domainName; 
-        private String liveapiRequestFrom; 
-        private Long ownerId; 
         private String regionId; 
+        private String domainName; 
+        private Long ownerId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeLiveDomainLimitRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.liveapiRequestFrom = response.liveapiRequestFrom;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
+        private Builder(DescribeLiveDomainLimitRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.domainName = request.domainName;
+            this.ownerId = request.ownerId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * DomainName.
@@ -106,29 +101,11 @@ public class DescribeLiveDomainLimitRequest extends Request {
         }
 
         /**
-         * LiveapiRequestFrom.
-         */
-        public Builder liveapiRequestFrom(String liveapiRequestFrom) {
-            this.putQueryParameter("LiveapiRequestFrom", liveapiRequestFrom);
-            this.liveapiRequestFrom = liveapiRequestFrom;
-            return this;
-        }
-
-        /**
          * OwnerId.
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

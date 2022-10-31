@@ -76,15 +76,15 @@ public class DescribeLiveDomainRecordDataResponseBody extends TeaModel {
         private Integer FLV;
 
         @NameInMap("MP4")
-        private Integer MP4;
+        private Integer mP4;
 
         @NameInMap("TS")
-        private Integer TS;
+        private Integer ts;
 
         private Detail(Builder builder) {
             this.FLV = builder.FLV;
-            this.MP4 = builder.MP4;
-            this.TS = builder.TS;
+            this.mP4 = builder.mP4;
+            this.ts = builder.ts;
         }
 
         public static Builder builder() {
@@ -103,23 +103,23 @@ public class DescribeLiveDomainRecordDataResponseBody extends TeaModel {
         }
 
         /**
-         * @return MP4
+         * @return mP4
          */
         public Integer getMP4() {
-            return this.MP4;
+            return this.mP4;
         }
 
         /**
-         * @return TS
+         * @return ts
          */
-        public Integer getTS() {
-            return this.TS;
+        public Integer getTs() {
+            return this.ts;
         }
 
         public static final class Builder {
             private Integer FLV; 
-            private Integer MP4; 
-            private Integer TS; 
+            private Integer mP4; 
+            private Integer ts; 
 
             /**
              * FLV.
@@ -132,16 +132,16 @@ public class DescribeLiveDomainRecordDataResponseBody extends TeaModel {
             /**
              * MP4.
              */
-            public Builder MP4(Integer MP4) {
-                this.MP4 = MP4;
+            public Builder mP4(Integer mP4) {
+                this.mP4 = mP4;
                 return this;
             }
 
             /**
              * TS.
              */
-            public Builder TS(Integer TS) {
-                this.TS = TS;
+            public Builder ts(Integer ts) {
+                this.ts = ts;
                 return this;
             }
 

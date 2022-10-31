@@ -154,17 +154,17 @@ public class SetLiveDomainCertificateRequest extends Request {
             super();
         } 
 
-        private Builder(SetLiveDomainCertificateRequest response) {
-            super(response);
-            this.certName = response.certName;
-            this.certType = response.certType;
-            this.domainName = response.domainName;
-            this.forceSet = response.forceSet;
-            this.ownerId = response.ownerId;
-            this.SSLPri = response.SSLPri;
-            this.SSLProtocol = response.SSLProtocol;
-            this.SSLPub = response.SSLPub;
-            this.securityToken = response.securityToken;
+        private Builder(SetLiveDomainCertificateRequest request) {
+            super(request);
+            this.certName = request.certName;
+            this.certType = request.certType;
+            this.domainName = request.domainName;
+            this.forceSet = request.forceSet;
+            this.ownerId = request.ownerId;
+            this.SSLPri = request.SSLPri;
+            this.SSLProtocol = request.SSLProtocol;
+            this.SSLPub = request.SSLPub;
+            this.securityToken = request.securityToken;
         } 
 
         /**

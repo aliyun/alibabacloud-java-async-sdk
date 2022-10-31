@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeLiveDomainOnlineUserNumRequest</p>
  */
 public class DescribeLiveDomainOnlineUserNumRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("DomainName")
     @Validation(required = true)
@@ -25,16 +29,12 @@ public class DescribeLiveDomainOnlineUserNumRequest extends Request {
     @NameInMap("QueryTime")
     private String queryTime;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private DescribeLiveDomainOnlineUserNumRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.domainName = builder.domainName;
         this.ownerId = builder.ownerId;
         this.queryTime = builder.queryTime;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -48,6 +48,13 @@ public class DescribeLiveDomainOnlineUserNumRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -71,30 +78,32 @@ public class DescribeLiveDomainOnlineUserNumRequest extends Request {
         return this.queryTime;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<DescribeLiveDomainOnlineUserNumRequest, Builder> {
+        private String regionId; 
         private String domainName; 
         private Long ownerId; 
         private String queryTime; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeLiveDomainOnlineUserNumRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.ownerId = response.ownerId;
-            this.queryTime = response.queryTime;
-            this.regionId = response.regionId;
+        private Builder(DescribeLiveDomainOnlineUserNumRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.domainName = request.domainName;
+            this.ownerId = request.ownerId;
+            this.queryTime = request.queryTime;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * DomainName.
@@ -120,15 +129,6 @@ public class DescribeLiveDomainOnlineUserNumRequest extends Request {
         public Builder queryTime(String queryTime) {
             this.putQueryParameter("QueryTime", queryTime);
             this.queryTime = queryTime;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

@@ -18,9 +18,17 @@ public class RemoveShowFromShowListResponseBody extends TeaModel {
     @NameInMap("ShowId")
     private String showId;
 
+    @NameInMap("failedList")
+    private String failedList;
+
+    @NameInMap("successfulShowIds")
+    private String successfulShowIds;
+
     private RemoveShowFromShowListResponseBody(Builder builder) {
         this.requestId = builder.requestId;
         this.showId = builder.showId;
+        this.failedList = builder.failedList;
+        this.successfulShowIds = builder.successfulShowIds;
     }
 
     public static Builder builder() {
@@ -45,9 +53,25 @@ public class RemoveShowFromShowListResponseBody extends TeaModel {
         return this.showId;
     }
 
+    /**
+     * @return failedList
+     */
+    public String getFailedList() {
+        return this.failedList;
+    }
+
+    /**
+     * @return successfulShowIds
+     */
+    public String getSuccessfulShowIds() {
+        return this.successfulShowIds;
+    }
+
     public static final class Builder {
         private String requestId; 
         private String showId; 
+        private String failedList; 
+        private String successfulShowIds; 
 
         /**
          * RequestId.
@@ -62,6 +86,22 @@ public class RemoveShowFromShowListResponseBody extends TeaModel {
          */
         public Builder showId(String showId) {
             this.showId = showId;
+            return this;
+        }
+
+        /**
+         * failedList.
+         */
+        public Builder failedList(String failedList) {
+            this.failedList = failedList;
+            return this;
+        }
+
+        /**
+         * successfulShowIds.
+         */
+        public Builder successfulShowIds(String successfulShowIds) {
+            this.successfulShowIds = successfulShowIds;
             return this;
         }
 

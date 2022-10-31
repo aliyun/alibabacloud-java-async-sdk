@@ -75,11 +75,11 @@ public class DeleteLiveDetectNotifyConfigRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteLiveDetectNotifyConfigRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.ownerId = response.ownerId;
-            this.securityToken = response.securityToken;
+        private Builder(DeleteLiveDetectNotifyConfigRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.ownerId = request.ownerId;
+            this.securityToken = request.securityToken;
         } 
 
         /**

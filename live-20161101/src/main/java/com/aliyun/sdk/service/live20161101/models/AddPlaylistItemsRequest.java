@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddPlaylistItemsRequest</p>
  */
 public class AddPlaylistItemsRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("CasterId")
     @Validation(required = true)
@@ -34,18 +38,14 @@ public class AddPlaylistItemsRequest extends Request {
     @Validation(required = true)
     private String programItems;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private AddPlaylistItemsRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.casterId = builder.casterId;
         this.ownerId = builder.ownerId;
         this.programConfig = builder.programConfig;
         this.programId = builder.programId;
         this.programItems = builder.programItems;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -59,6 +59,13 @@ public class AddPlaylistItemsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -96,34 +103,36 @@ public class AddPlaylistItemsRequest extends Request {
         return this.programItems;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<AddPlaylistItemsRequest, Builder> {
+        private String regionId; 
         private String casterId; 
         private Long ownerId; 
         private String programConfig; 
         private String programId; 
         private String programItems; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(AddPlaylistItemsRequest response) {
-            super(response);
-            this.casterId = response.casterId;
-            this.ownerId = response.ownerId;
-            this.programConfig = response.programConfig;
-            this.programId = response.programId;
-            this.programItems = response.programItems;
-            this.regionId = response.regionId;
+        private Builder(AddPlaylistItemsRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.casterId = request.casterId;
+            this.ownerId = request.ownerId;
+            this.programConfig = request.programConfig;
+            this.programId = request.programId;
+            this.programItems = request.programItems;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * CasterId.
@@ -167,15 +176,6 @@ public class AddPlaylistItemsRequest extends Request {
         public Builder programItems(String programItems) {
             this.putQueryParameter("ProgramItems", programItems);
             this.programItems = programItems;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

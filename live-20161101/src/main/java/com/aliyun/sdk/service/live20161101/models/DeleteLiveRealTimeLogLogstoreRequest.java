@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteLiveRealTimeLogLogstoreRequest</p>
  */
 public class DeleteLiveRealTimeLogLogstoreRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("Logstore")
     @Validation(required = true)
@@ -31,17 +35,13 @@ public class DeleteLiveRealTimeLogLogstoreRequest extends Request {
     @Validation(required = true)
     private String region;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private DeleteLiveRealTimeLogLogstoreRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.logstore = builder.logstore;
         this.ownerId = builder.ownerId;
         this.project = builder.project;
         this.region = builder.region;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -55,6 +55,13 @@ public class DeleteLiveRealTimeLogLogstoreRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -85,32 +92,34 @@ public class DeleteLiveRealTimeLogLogstoreRequest extends Request {
         return this.region;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<DeleteLiveRealTimeLogLogstoreRequest, Builder> {
+        private String regionId; 
         private String logstore; 
         private Long ownerId; 
         private String project; 
         private String region; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DeleteLiveRealTimeLogLogstoreRequest response) {
-            super(response);
-            this.logstore = response.logstore;
-            this.ownerId = response.ownerId;
-            this.project = response.project;
-            this.region = response.region;
-            this.regionId = response.regionId;
+        private Builder(DeleteLiveRealTimeLogLogstoreRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.logstore = request.logstore;
+            this.ownerId = request.ownerId;
+            this.project = request.project;
+            this.region = request.region;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * Logstore.
@@ -145,15 +154,6 @@ public class DeleteLiveRealTimeLogLogstoreRequest extends Request {
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
             this.region = region;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

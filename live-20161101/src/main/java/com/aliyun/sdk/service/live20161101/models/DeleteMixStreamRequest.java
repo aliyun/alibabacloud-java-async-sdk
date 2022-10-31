@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteMixStreamRequest</p>
  */
 public class DeleteMixStreamRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("AppName")
     private String appName;
@@ -30,21 +34,17 @@ public class DeleteMixStreamRequest extends Request {
     @NameInMap("OwnerId")
     private Long ownerId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("StreamName")
     private String streamName;
 
     private DeleteMixStreamRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.appName = builder.appName;
         this.domainName = builder.domainName;
         this.mixStreamId = builder.mixStreamId;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
         this.streamName = builder.streamName;
     }
 
@@ -59,6 +59,13 @@ public class DeleteMixStreamRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -90,13 +97,6 @@ public class DeleteMixStreamRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return streamName
      */
     public String getStreamName() {
@@ -104,26 +104,35 @@ public class DeleteMixStreamRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteMixStreamRequest, Builder> {
+        private String regionId; 
         private String appName; 
         private String domainName; 
         private String mixStreamId; 
         private Long ownerId; 
-        private String regionId; 
         private String streamName; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DeleteMixStreamRequest response) {
-            super(response);
-            this.appName = response.appName;
-            this.domainName = response.domainName;
-            this.mixStreamId = response.mixStreamId;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.streamName = response.streamName;
+        private Builder(DeleteMixStreamRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.appName = request.appName;
+            this.domainName = request.domainName;
+            this.mixStreamId = request.mixStreamId;
+            this.ownerId = request.ownerId;
+            this.streamName = request.streamName;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * AppName.
@@ -158,15 +167,6 @@ public class DeleteMixStreamRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

@@ -157,17 +157,17 @@ public class AddLiveSnapshotDetectPornConfigRequest extends Request {
             super();
         } 
 
-        private Builder(AddLiveSnapshotDetectPornConfigRequest response) {
-            super(response);
-            this.appName = response.appName;
-            this.domainName = response.domainName;
-            this.interval = response.interval;
-            this.ossBucket = response.ossBucket;
-            this.ossEndpoint = response.ossEndpoint;
-            this.ossObject = response.ossObject;
-            this.ownerId = response.ownerId;
-            this.scene = response.scene;
-            this.securityToken = response.securityToken;
+        private Builder(AddLiveSnapshotDetectPornConfigRequest request) {
+            super(request);
+            this.appName = request.appName;
+            this.domainName = request.domainName;
+            this.interval = request.interval;
+            this.ossBucket = request.ossBucket;
+            this.ossEndpoint = request.ossEndpoint;
+            this.ossObject = request.ossObject;
+            this.ownerId = request.ownerId;
+            this.scene = request.scene;
+            this.securityToken = request.securityToken;
         } 
 
         /**

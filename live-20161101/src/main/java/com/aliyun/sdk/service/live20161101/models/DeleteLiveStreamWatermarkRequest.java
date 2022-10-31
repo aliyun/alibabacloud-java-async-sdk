@@ -12,13 +12,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteLiveStreamWatermarkRequest</p>
  */
 public class DeleteLiveStreamWatermarkRequest extends Request {
-    @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
     @Host
     @NameInMap("RegionId")
     private String regionId;
+
+    @Query
+    @NameInMap("OwnerId")
+    private Long ownerId;
 
     @Query
     @NameInMap("TemplateId")
@@ -27,8 +27,8 @@ public class DeleteLiveStreamWatermarkRequest extends Request {
 
     private DeleteLiveStreamWatermarkRequest(Builder builder) {
         super(builder);
-        this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
+        this.ownerId = builder.ownerId;
         this.templateId = builder.templateId;
     }
 
@@ -46,17 +46,17 @@ public class DeleteLiveStreamWatermarkRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     /**
@@ -67,29 +67,20 @@ public class DeleteLiveStreamWatermarkRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteLiveStreamWatermarkRequest, Builder> {
-        private Long ownerId; 
         private String regionId; 
+        private Long ownerId; 
         private String templateId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DeleteLiveStreamWatermarkRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.templateId = response.templateId;
+        private Builder(DeleteLiveStreamWatermarkRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.ownerId = request.ownerId;
+            this.templateId = request.templateId;
         } 
-
-        /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -97,6 +88,15 @@ public class DeleteLiveStreamWatermarkRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
             return this;
         }
 

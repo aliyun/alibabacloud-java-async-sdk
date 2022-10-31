@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SetCasterChannelRequest</p>
  */
 public class SetCasterChannelRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("CasterId")
     @Validation(required = true)
@@ -34,10 +38,6 @@ public class SetCasterChannelRequest extends Request {
     @NameInMap("PlayStatus")
     private Integer playStatus;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("ResourceId")
     private String resourceId;
@@ -48,12 +48,12 @@ public class SetCasterChannelRequest extends Request {
 
     private SetCasterChannelRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.casterId = builder.casterId;
         this.channelId = builder.channelId;
         this.faceBeauty = builder.faceBeauty;
         this.ownerId = builder.ownerId;
         this.playStatus = builder.playStatus;
-        this.regionId = builder.regionId;
         this.resourceId = builder.resourceId;
         this.seekOffset = builder.seekOffset;
     }
@@ -69,6 +69,13 @@ public class SetCasterChannelRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -107,13 +114,6 @@ public class SetCasterChannelRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return resourceId
      */
     public String getResourceId() {
@@ -128,12 +128,12 @@ public class SetCasterChannelRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SetCasterChannelRequest, Builder> {
+        private String regionId; 
         private String casterId; 
         private String channelId; 
         private String faceBeauty; 
         private Long ownerId; 
         private Integer playStatus; 
-        private String regionId; 
         private String resourceId; 
         private Integer seekOffset; 
 
@@ -141,17 +141,26 @@ public class SetCasterChannelRequest extends Request {
             super();
         } 
 
-        private Builder(SetCasterChannelRequest response) {
-            super(response);
-            this.casterId = response.casterId;
-            this.channelId = response.channelId;
-            this.faceBeauty = response.faceBeauty;
-            this.ownerId = response.ownerId;
-            this.playStatus = response.playStatus;
-            this.regionId = response.regionId;
-            this.resourceId = response.resourceId;
-            this.seekOffset = response.seekOffset;
+        private Builder(SetCasterChannelRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.casterId = request.casterId;
+            this.channelId = request.channelId;
+            this.faceBeauty = request.faceBeauty;
+            this.ownerId = request.ownerId;
+            this.playStatus = request.playStatus;
+            this.resourceId = request.resourceId;
+            this.seekOffset = request.seekOffset;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * CasterId.
@@ -195,15 +204,6 @@ public class SetCasterChannelRequest extends Request {
         public Builder playStatus(Integer playStatus) {
             this.putQueryParameter("PlayStatus", playStatus);
             this.playStatus = playStatus;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

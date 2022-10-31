@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateLiveStreamWatermarkRuleRequest</p>
  */
 public class UpdateLiveStreamWatermarkRuleRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("Description")
     private String description;
@@ -24,10 +28,6 @@ public class UpdateLiveStreamWatermarkRuleRequest extends Request {
     @NameInMap("OwnerId")
     private Long ownerId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("RuleId")
     @Validation(required = true)
@@ -39,10 +39,10 @@ public class UpdateLiveStreamWatermarkRuleRequest extends Request {
 
     private UpdateLiveStreamWatermarkRuleRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.description = builder.description;
         this.name = builder.name;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
         this.ruleId = builder.ruleId;
         this.templateId = builder.templateId;
     }
@@ -58,6 +58,13 @@ public class UpdateLiveStreamWatermarkRuleRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -82,13 +89,6 @@ public class UpdateLiveStreamWatermarkRuleRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return ruleId
      */
     public String getRuleId() {
@@ -103,10 +103,10 @@ public class UpdateLiveStreamWatermarkRuleRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateLiveStreamWatermarkRuleRequest, Builder> {
+        private String regionId; 
         private String description; 
         private String name; 
         private Long ownerId; 
-        private String regionId; 
         private String ruleId; 
         private String templateId; 
 
@@ -114,15 +114,24 @@ public class UpdateLiveStreamWatermarkRuleRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateLiveStreamWatermarkRuleRequest response) {
-            super(response);
-            this.description = response.description;
-            this.name = response.name;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.ruleId = response.ruleId;
-            this.templateId = response.templateId;
+        private Builder(UpdateLiveStreamWatermarkRuleRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.description = request.description;
+            this.name = request.name;
+            this.ownerId = request.ownerId;
+            this.ruleId = request.ruleId;
+            this.templateId = request.templateId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * Description.
@@ -148,15 +157,6 @@ public class UpdateLiveStreamWatermarkRuleRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

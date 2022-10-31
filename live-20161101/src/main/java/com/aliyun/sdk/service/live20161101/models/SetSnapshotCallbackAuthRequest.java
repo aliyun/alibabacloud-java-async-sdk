@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SetSnapshotCallbackAuthRequest</p>
  */
 public class SetSnapshotCallbackAuthRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("CallbackAuthKey")
     @Validation(required = true)
@@ -31,17 +35,13 @@ public class SetSnapshotCallbackAuthRequest extends Request {
     @NameInMap("OwnerId")
     private Long ownerId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private SetSnapshotCallbackAuthRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.callbackAuthKey = builder.callbackAuthKey;
         this.callbackReqAuth = builder.callbackReqAuth;
         this.domainName = builder.domainName;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -55,6 +55,13 @@ public class SetSnapshotCallbackAuthRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -85,32 +92,34 @@ public class SetSnapshotCallbackAuthRequest extends Request {
         return this.ownerId;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<SetSnapshotCallbackAuthRequest, Builder> {
+        private String regionId; 
         private String callbackAuthKey; 
         private String callbackReqAuth; 
         private String domainName; 
         private Long ownerId; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(SetSnapshotCallbackAuthRequest response) {
-            super(response);
-            this.callbackAuthKey = response.callbackAuthKey;
-            this.callbackReqAuth = response.callbackReqAuth;
-            this.domainName = response.domainName;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
+        private Builder(SetSnapshotCallbackAuthRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.callbackAuthKey = request.callbackAuthKey;
+            this.callbackReqAuth = request.callbackReqAuth;
+            this.domainName = request.domainName;
+            this.ownerId = request.ownerId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * CallbackAuthKey.
@@ -145,15 +154,6 @@ public class SetSnapshotCallbackAuthRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

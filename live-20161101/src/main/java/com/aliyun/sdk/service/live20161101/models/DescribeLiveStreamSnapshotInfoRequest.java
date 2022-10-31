@@ -158,17 +158,17 @@ public class DescribeLiveStreamSnapshotInfoRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeLiveStreamSnapshotInfoRequest response) {
-            super(response);
-            this.appName = response.appName;
-            this.domainName = response.domainName;
-            this.endTime = response.endTime;
-            this.limit = response.limit;
-            this.order = response.order;
-            this.ownerId = response.ownerId;
-            this.securityToken = response.securityToken;
-            this.startTime = response.startTime;
-            this.streamName = response.streamName;
+        private Builder(DescribeLiveStreamSnapshotInfoRequest request) {
+            super(request);
+            this.appName = request.appName;
+            this.domainName = request.domainName;
+            this.endTime = request.endTime;
+            this.limit = request.limit;
+            this.order = request.order;
+            this.ownerId = request.ownerId;
+            this.securityToken = request.securityToken;
+            this.startTime = request.startTime;
+            this.streamName = request.streamName;
         } 
 
         /**
