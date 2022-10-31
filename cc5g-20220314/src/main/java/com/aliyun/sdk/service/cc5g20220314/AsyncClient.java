@@ -20,23 +20,35 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AddDNSAuthorizationRuleResponse> addDNSAuthorizationRule(AddDNSAuthorizationRuleRequest request);
 
+    CompletableFuture<AddGroupDnsAuthorizationRuleResponse> addGroupDnsAuthorizationRule(AddGroupDnsAuthorizationRuleRequest request);
+
+    CompletableFuture<AddWirelessCloudConnectorToGroupResponse> addWirelessCloudConnectorToGroup(AddWirelessCloudConnectorToGroupRequest request);
+
     CompletableFuture<AttachVpcToNetLinkResponse> attachVpcToNetLink(AttachVpcToNetLinkRequest request);
 
     CompletableFuture<CreateAuthorizationRuleResponse> createAuthorizationRule(CreateAuthorizationRuleRequest request);
 
     CompletableFuture<CreateBatchOperateCardsTaskResponse> createBatchOperateCardsTask(CreateBatchOperateCardsTaskRequest request);
 
+    CompletableFuture<CreateGroupAuthorizationRuleResponse> createGroupAuthorizationRule(CreateGroupAuthorizationRuleRequest request);
+
     CompletableFuture<CreateIoTCloudConnectorBackhaulRouteResponse> createIoTCloudConnectorBackhaulRoute(CreateIoTCloudConnectorBackhaulRouteRequest request);
 
     CompletableFuture<CreateWirelessCloudConnectorResponse> createWirelessCloudConnector(CreateWirelessCloudConnectorRequest request);
+
+    CompletableFuture<CreateWirelessCloudConnectorGroupResponse> createWirelessCloudConnectorGroup(CreateWirelessCloudConnectorGroupRequest request);
 
     CompletableFuture<DeleteAuthorizationRuleResponse> deleteAuthorizationRule(DeleteAuthorizationRuleRequest request);
 
     CompletableFuture<DeleteBatchOperateCardsTaskResponse> deleteBatchOperateCardsTask(DeleteBatchOperateCardsTaskRequest request);
 
+    CompletableFuture<DeleteGroupAuthorizationRuleResponse> deleteGroupAuthorizationRule(DeleteGroupAuthorizationRuleRequest request);
+
     CompletableFuture<DeleteIoTCloudConnectorBackhaulRouteResponse> deleteIoTCloudConnectorBackhaulRoute(DeleteIoTCloudConnectorBackhaulRouteRequest request);
 
     CompletableFuture<DeleteWirelessCloudConnectorResponse> deleteWirelessCloudConnector(DeleteWirelessCloudConnectorRequest request);
+
+    CompletableFuture<DeleteWirelessCloudConnectorGroupResponse> deleteWirelessCloudConnectorGroup(DeleteWirelessCloudConnectorGroupRequest request);
 
     CompletableFuture<DetachVpcFromNetLinkResponse> detachVpcFromNetLink(DetachVpcFromNetLinkRequest request);
 
@@ -66,11 +78,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListDiagnoseInfoForSingleCardResponse> listDiagnoseInfoForSingleCard(ListDiagnoseInfoForSingleCardRequest request);
 
+    CompletableFuture<ListGroupAuthorizationRulesResponse> listGroupAuthorizationRules(ListGroupAuthorizationRulesRequest request);
+
     CompletableFuture<ListIoTCloudConnectorBackhaulRouteResponse> listIoTCloudConnectorBackhaulRoute(ListIoTCloudConnectorBackhaulRouteRequest request);
 
     CompletableFuture<ListOrdersResponse> listOrders(ListOrdersRequest request);
 
     CompletableFuture<ListRegionsResponse> listRegions(ListRegionsRequest request);
+
+    CompletableFuture<ListWirelessCloudConnectorGroupsResponse> listWirelessCloudConnectorGroups(ListWirelessCloudConnectorGroupsRequest request);
 
     CompletableFuture<ListWirelessCloudConnectorsResponse> listWirelessCloudConnectors(ListWirelessCloudConnectorsRequest request);
 
@@ -81,6 +97,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyWirelessCloudConnectorFeatureResponse> modifyWirelessCloudConnectorFeature(ModifyWirelessCloudConnectorFeatureRequest request);
 
     CompletableFuture<OpenCc5gServiceResponse> openCc5gService(OpenCc5gServiceRequest request);
+
+    CompletableFuture<RemoveWirelessCloudConnectorFromGroupResponse> removeWirelessCloudConnectorFromGroup(RemoveWirelessCloudConnectorFromGroupRequest request);
 
     CompletableFuture<ResumeCardsResponse> resumeCards(ResumeCardsRequest request);
 
@@ -102,6 +120,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<UpdateDNSAuthorizationRuleResponse> updateDNSAuthorizationRule(UpdateDNSAuthorizationRuleRequest request);
 
+    CompletableFuture<UpdateGroupAuthorizationRuleResponse> updateGroupAuthorizationRule(UpdateGroupAuthorizationRuleRequest request);
+
+    CompletableFuture<UpdateGroupDnsAuthorizationRuleResponse> updateGroupDnsAuthorizationRule(UpdateGroupDnsAuthorizationRuleRequest request);
+
     CompletableFuture<UpdateWirelessCloudConnectorResponse> updateWirelessCloudConnector(UpdateWirelessCloudConnectorRequest request);
+
+    CompletableFuture<UpdateWirelessCloudConnectorGroupResponse> updateWirelessCloudConnectorGroup(UpdateWirelessCloudConnectorGroupRequest request);
 
 }

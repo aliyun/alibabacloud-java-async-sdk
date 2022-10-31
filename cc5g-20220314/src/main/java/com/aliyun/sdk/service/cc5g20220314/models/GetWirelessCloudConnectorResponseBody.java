@@ -54,6 +54,9 @@ public class GetWirelessCloudConnectorResponseBody extends TeaModel {
     @NameInMap("UseCase")
     private String useCase;
 
+    @NameInMap("WirelessCloudConnectorGroupId")
+    private String wirelessCloudConnectorGroupId;
+
     @NameInMap("WirelessCloudConnectorId")
     private String wirelessCloudConnectorId;
 
@@ -72,6 +75,7 @@ public class GetWirelessCloudConnectorResponseBody extends TeaModel {
         this.serviceType = builder.serviceType;
         this.status = builder.status;
         this.useCase = builder.useCase;
+        this.wirelessCloudConnectorGroupId = builder.wirelessCloudConnectorGroupId;
         this.wirelessCloudConnectorId = builder.wirelessCloudConnectorId;
     }
 
@@ -182,6 +186,13 @@ public class GetWirelessCloudConnectorResponseBody extends TeaModel {
     }
 
     /**
+     * @return wirelessCloudConnectorGroupId
+     */
+    public String getWirelessCloudConnectorGroupId() {
+        return this.wirelessCloudConnectorGroupId;
+    }
+
+    /**
      * @return wirelessCloudConnectorId
      */
     public String getWirelessCloudConnectorId() {
@@ -203,6 +214,7 @@ public class GetWirelessCloudConnectorResponseBody extends TeaModel {
         private String serviceType; 
         private String status; 
         private String useCase; 
+        private String wirelessCloudConnectorGroupId; 
         private String wirelessCloudConnectorId; 
 
         /**
@@ -314,6 +326,14 @@ public class GetWirelessCloudConnectorResponseBody extends TeaModel {
          */
         public Builder useCase(String useCase) {
             this.useCase = useCase;
+            return this;
+        }
+
+        /**
+         * WirelessCloudConnectorGroupId.
+         */
+        public Builder wirelessCloudConnectorGroupId(String wirelessCloudConnectorGroupId) {
+            this.wirelessCloudConnectorGroupId = wirelessCloudConnectorGroupId;
             return this;
         }
 
