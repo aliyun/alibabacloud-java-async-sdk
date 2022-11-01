@@ -3,6 +3,8 @@ package com.aliyun.sdk.service.fc_open20210406;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.fc_open20210406.models.*;
+import com.aliyun.sdk.gateway.pop.Configuration;
+import com.aliyun.sdk.gateway.pop.auth.SignatureVersion;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -11,7 +13,7 @@ import java.util.concurrent.CompletableFuture;
 public interface AsyncClient extends SdkAutoCloseable {
 
     static DefaultAsyncClientBuilder builder() {
-        return new DefaultAsyncClientBuilder();
+        return new DefaultAsyncClientBuilder().serviceConfiguration(Configuration.create().setSignatureVersion(SignatureVersion.V3));
     }
 
     static AsyncClient create() {

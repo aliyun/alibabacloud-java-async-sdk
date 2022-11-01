@@ -55,6 +55,10 @@ public class UpdateFunctionRequest extends Request {
     private Code code;
 
     @Body
+    @NameInMap("cpu")
+    private Float cpu;
+
+    @Body
     @NameInMap("customContainerConfig")
     private CustomContainerConfig customContainerConfig;
 
@@ -73,6 +77,10 @@ public class UpdateFunctionRequest extends Request {
     @Body
     @NameInMap("description")
     private String description;
+
+    @Body
+    @NameInMap("diskSize")
+    private Integer diskSize;
 
     @Body
     @NameInMap("environmentVariables")
@@ -130,11 +138,13 @@ public class UpdateFunctionRequest extends Request {
         this.instanceConcurrency = builder.instanceConcurrency;
         this.caPort = builder.caPort;
         this.code = builder.code;
+        this.cpu = builder.cpu;
         this.customContainerConfig = builder.customContainerConfig;
         this.customDNS = builder.customDNS;
         this.customHealthCheckConfig = builder.customHealthCheckConfig;
         this.customRuntimeConfig = builder.customRuntimeConfig;
         this.description = builder.description;
+        this.diskSize = builder.diskSize;
         this.environmentVariables = builder.environmentVariables;
         this.handler = builder.handler;
         this.initializationTimeout = builder.initializationTimeout;
@@ -232,6 +242,13 @@ public class UpdateFunctionRequest extends Request {
     }
 
     /**
+     * @return cpu
+     */
+    public Float getCpu() {
+        return this.cpu;
+    }
+
+    /**
      * @return customContainerConfig
      */
     public CustomContainerConfig getCustomContainerConfig() {
@@ -264,6 +281,13 @@ public class UpdateFunctionRequest extends Request {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return diskSize
+     */
+    public Integer getDiskSize() {
+        return this.diskSize;
     }
 
     /**
@@ -354,11 +378,13 @@ public class UpdateFunctionRequest extends Request {
         private Integer instanceConcurrency; 
         private Integer caPort; 
         private Code code; 
+        private Float cpu; 
         private CustomContainerConfig customContainerConfig; 
         private CustomDNS customDNS; 
         private CustomHealthCheckConfig customHealthCheckConfig; 
         private CustomRuntimeConfig customRuntimeConfig; 
         private String description; 
+        private Integer diskSize; 
         private java.util.Map < String, String > environmentVariables; 
         private String handler; 
         private Integer initializationTimeout; 
@@ -387,11 +413,13 @@ public class UpdateFunctionRequest extends Request {
             this.instanceConcurrency = request.instanceConcurrency;
             this.caPort = request.caPort;
             this.code = request.code;
+            this.cpu = request.cpu;
             this.customContainerConfig = request.customContainerConfig;
             this.customDNS = request.customDNS;
             this.customHealthCheckConfig = request.customHealthCheckConfig;
             this.customRuntimeConfig = request.customRuntimeConfig;
             this.description = request.description;
+            this.diskSize = request.diskSize;
             this.environmentVariables = request.environmentVariables;
             this.handler = request.handler;
             this.initializationTimeout = request.initializationTimeout;
@@ -496,6 +524,15 @@ public class UpdateFunctionRequest extends Request {
         }
 
         /**
+         * function的CPU规格，单位为vCPU，为0.05vCPU的倍数
+         */
+        public Builder cpu(Float cpu) {
+            this.putBodyParameter("cpu", cpu);
+            this.cpu = cpu;
+            return this;
+        }
+
+        /**
          * customContainerConfig.
          */
         public Builder customContainerConfig(CustomContainerConfig customContainerConfig) {
@@ -537,6 +574,15 @@ public class UpdateFunctionRequest extends Request {
         public Builder description(String description) {
             this.putBodyParameter("description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * function的磁盘规格，单位为MB，可选值为512MB或10240MB
+         */
+        public Builder diskSize(Integer diskSize) {
+            this.putBodyParameter("diskSize", diskSize);
+            this.diskSize = diskSize;
             return this;
         }
 

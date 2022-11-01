@@ -41,6 +41,10 @@ public class CreateFunctionRequest extends Request {
     private Code code;
 
     @Body
+    @NameInMap("cpu")
+    private Float cpu;
+
+    @Body
     @NameInMap("customContainerConfig")
     private CustomContainerConfig customContainerConfig;
 
@@ -59,6 +63,10 @@ public class CreateFunctionRequest extends Request {
     @Body
     @NameInMap("description")
     private String description;
+
+    @Body
+    @NameInMap("diskSize")
+    private Integer diskSize;
 
     @Body
     @NameInMap("environmentVariables")
@@ -124,11 +132,13 @@ public class CreateFunctionRequest extends Request {
         this.xFcTraceId = builder.xFcTraceId;
         this.caPort = builder.caPort;
         this.code = builder.code;
+        this.cpu = builder.cpu;
         this.customContainerConfig = builder.customContainerConfig;
         this.customDNS = builder.customDNS;
         this.customHealthCheckConfig = builder.customHealthCheckConfig;
         this.customRuntimeConfig = builder.customRuntimeConfig;
         this.description = builder.description;
+        this.diskSize = builder.diskSize;
         this.environmentVariables = builder.environmentVariables;
         this.functionName = builder.functionName;
         this.handler = builder.handler;
@@ -207,6 +217,13 @@ public class CreateFunctionRequest extends Request {
     }
 
     /**
+     * @return cpu
+     */
+    public Float getCpu() {
+        return this.cpu;
+    }
+
+    /**
      * @return customContainerConfig
      */
     public CustomContainerConfig getCustomContainerConfig() {
@@ -239,6 +256,13 @@ public class CreateFunctionRequest extends Request {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return diskSize
+     */
+    public Integer getDiskSize() {
+        return this.diskSize;
     }
 
     /**
@@ -340,11 +364,13 @@ public class CreateFunctionRequest extends Request {
         private String xFcTraceId; 
         private Integer caPort; 
         private Code code; 
+        private Float cpu; 
         private CustomContainerConfig customContainerConfig; 
         private CustomDNS customDNS; 
         private CustomHealthCheckConfig customHealthCheckConfig; 
         private CustomRuntimeConfig customRuntimeConfig; 
         private String description; 
+        private Integer diskSize; 
         private java.util.Map < String, String > environmentVariables; 
         private String functionName; 
         private String handler; 
@@ -372,11 +398,13 @@ public class CreateFunctionRequest extends Request {
             this.xFcTraceId = request.xFcTraceId;
             this.caPort = request.caPort;
             this.code = request.code;
+            this.cpu = request.cpu;
             this.customContainerConfig = request.customContainerConfig;
             this.customDNS = request.customDNS;
             this.customHealthCheckConfig = request.customHealthCheckConfig;
             this.customRuntimeConfig = request.customRuntimeConfig;
             this.description = request.description;
+            this.diskSize = request.diskSize;
             this.environmentVariables = request.environmentVariables;
             this.functionName = request.functionName;
             this.handler = request.handler;
@@ -456,6 +484,15 @@ public class CreateFunctionRequest extends Request {
         }
 
         /**
+         * function的CPU规格，单位为vCPU，为0.05vCPU的倍数
+         */
+        public Builder cpu(Float cpu) {
+            this.putBodyParameter("cpu", cpu);
+            this.cpu = cpu;
+            return this;
+        }
+
+        /**
          * customContainerConfig.
          */
         public Builder customContainerConfig(CustomContainerConfig customContainerConfig) {
@@ -497,6 +534,15 @@ public class CreateFunctionRequest extends Request {
         public Builder description(String description) {
             this.putBodyParameter("description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * function的磁盘规格，单位为MB，可选值为512MB或10240MB
+         */
+        public Builder diskSize(Integer diskSize) {
+            this.putBodyParameter("diskSize", diskSize);
+            this.diskSize = diskSize;
             return this;
         }
 

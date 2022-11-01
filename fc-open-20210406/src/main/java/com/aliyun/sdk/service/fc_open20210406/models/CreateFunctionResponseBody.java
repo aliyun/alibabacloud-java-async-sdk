@@ -21,6 +21,9 @@ public class CreateFunctionResponseBody extends TeaModel {
     @NameInMap("codeSize")
     private Long codeSize;
 
+    @NameInMap("cpu")
+    private Float cpu;
+
     @NameInMap("createdTime")
     private String createdTime;
 
@@ -38,6 +41,9 @@ public class CreateFunctionResponseBody extends TeaModel {
 
     @NameInMap("description")
     private String description;
+
+    @NameInMap("diskSize")
+    private Integer diskSize;
 
     @NameInMap("environmentVariables")
     private java.util.Map < String, String > environmentVariables;
@@ -88,12 +94,14 @@ public class CreateFunctionResponseBody extends TeaModel {
         this.caPort = builder.caPort;
         this.codeChecksum = builder.codeChecksum;
         this.codeSize = builder.codeSize;
+        this.cpu = builder.cpu;
         this.createdTime = builder.createdTime;
         this.customContainerConfig = builder.customContainerConfig;
         this.customDNS = builder.customDNS;
         this.customHealthCheckConfig = builder.customHealthCheckConfig;
         this.customRuntimeConfig = builder.customRuntimeConfig;
         this.description = builder.description;
+        this.diskSize = builder.diskSize;
         this.environmentVariables = builder.environmentVariables;
         this.functionId = builder.functionId;
         this.functionName = builder.functionName;
@@ -141,6 +149,13 @@ public class CreateFunctionResponseBody extends TeaModel {
     }
 
     /**
+     * @return cpu
+     */
+    public Float getCpu() {
+        return this.cpu;
+    }
+
+    /**
      * @return createdTime
      */
     public String getCreatedTime() {
@@ -180,6 +195,13 @@ public class CreateFunctionResponseBody extends TeaModel {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return diskSize
+     */
+    public Integer getDiskSize() {
+        return this.diskSize;
     }
 
     /**
@@ -291,12 +313,14 @@ public class CreateFunctionResponseBody extends TeaModel {
         private Integer caPort; 
         private String codeChecksum; 
         private Long codeSize; 
+        private Float cpu; 
         private String createdTime; 
         private CustomContainerConfig customContainerConfig; 
         private CustomDNS customDNS; 
         private CustomHealthCheckConfig customHealthCheckConfig; 
         private CustomRuntimeConfig customRuntimeConfig; 
         private String description; 
+        private Integer diskSize; 
         private java.util.Map < String, String > environmentVariables; 
         private String functionId; 
         private String functionName; 
@@ -334,6 +358,14 @@ public class CreateFunctionResponseBody extends TeaModel {
          */
         public Builder codeSize(Long codeSize) {
             this.codeSize = codeSize;
+            return this;
+        }
+
+        /**
+         * function的CPU规格，单位为vCPU，为0.05vCPU的倍数
+         */
+        public Builder cpu(Float cpu) {
+            this.cpu = cpu;
             return this;
         }
 
@@ -382,6 +414,14 @@ public class CreateFunctionResponseBody extends TeaModel {
          */
         public Builder description(String description) {
             this.description = description;
+            return this;
+        }
+
+        /**
+         * function的磁盘规格，单位为MB，可选值为512MB或10240MB
+         */
+        public Builder diskSize(Integer diskSize) {
+            this.diskSize = diskSize;
             return this;
         }
 
@@ -482,7 +522,7 @@ public class CreateFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * function设置的内存大小，单位为MB
+         * function的内存规格，单位为MB，为64MB的倍数
          */
         public Builder memorySize(Integer memorySize) {
             this.memorySize = memorySize;

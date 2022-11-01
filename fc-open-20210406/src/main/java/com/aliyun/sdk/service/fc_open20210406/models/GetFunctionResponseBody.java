@@ -21,6 +21,9 @@ public class GetFunctionResponseBody extends TeaModel {
     @NameInMap("codeSize")
     private Long codeSize;
 
+    @NameInMap("cpu")
+    private Float cpu;
+
     @NameInMap("createdTime")
     private String createdTime;
 
@@ -38,6 +41,9 @@ public class GetFunctionResponseBody extends TeaModel {
 
     @NameInMap("description")
     private String description;
+
+    @NameInMap("diskSize")
+    private Integer diskSize;
 
     @NameInMap("environmentVariables")
     private java.util.Map < String, String > environmentVariables;
@@ -75,6 +81,9 @@ public class GetFunctionResponseBody extends TeaModel {
     @NameInMap("layers")
     private java.util.List < String > layers;
 
+    @NameInMap("layersArnV2")
+    private java.util.List < String > layersArnV2;
+
     @NameInMap("memorySize")
     private Integer memorySize;
 
@@ -88,12 +97,14 @@ public class GetFunctionResponseBody extends TeaModel {
         this.caPort = builder.caPort;
         this.codeChecksum = builder.codeChecksum;
         this.codeSize = builder.codeSize;
+        this.cpu = builder.cpu;
         this.createdTime = builder.createdTime;
         this.customContainerConfig = builder.customContainerConfig;
         this.customDNS = builder.customDNS;
         this.customHealthCheckConfig = builder.customHealthCheckConfig;
         this.customRuntimeConfig = builder.customRuntimeConfig;
         this.description = builder.description;
+        this.diskSize = builder.diskSize;
         this.environmentVariables = builder.environmentVariables;
         this.functionId = builder.functionId;
         this.functionName = builder.functionName;
@@ -106,6 +117,7 @@ public class GetFunctionResponseBody extends TeaModel {
         this.instanceType = builder.instanceType;
         this.lastModifiedTime = builder.lastModifiedTime;
         this.layers = builder.layers;
+        this.layersArnV2 = builder.layersArnV2;
         this.memorySize = builder.memorySize;
         this.runtime = builder.runtime;
         this.timeout = builder.timeout;
@@ -138,6 +150,13 @@ public class GetFunctionResponseBody extends TeaModel {
      */
     public Long getCodeSize() {
         return this.codeSize;
+    }
+
+    /**
+     * @return cpu
+     */
+    public Float getCpu() {
+        return this.cpu;
     }
 
     /**
@@ -180,6 +199,13 @@ public class GetFunctionResponseBody extends TeaModel {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return diskSize
+     */
+    public Integer getDiskSize() {
+        return this.diskSize;
     }
 
     /**
@@ -267,6 +293,13 @@ public class GetFunctionResponseBody extends TeaModel {
     }
 
     /**
+     * @return layersArnV2
+     */
+    public java.util.List < String > getLayersArnV2() {
+        return this.layersArnV2;
+    }
+
+    /**
      * @return memorySize
      */
     public Integer getMemorySize() {
@@ -291,12 +324,14 @@ public class GetFunctionResponseBody extends TeaModel {
         private Integer caPort; 
         private String codeChecksum; 
         private Long codeSize; 
+        private Float cpu; 
         private String createdTime; 
         private CustomContainerConfigInfo customContainerConfig; 
         private CustomDNS customDNS; 
         private CustomHealthCheckConfig customHealthCheckConfig; 
         private CustomRuntimeConfig customRuntimeConfig; 
         private String description; 
+        private Integer diskSize; 
         private java.util.Map < String, String > environmentVariables; 
         private String functionId; 
         private String functionName; 
@@ -309,6 +344,7 @@ public class GetFunctionResponseBody extends TeaModel {
         private String instanceType; 
         private String lastModifiedTime; 
         private java.util.List < String > layers; 
+        private java.util.List < String > layersArnV2; 
         private Integer memorySize; 
         private String runtime; 
         private Integer timeout; 
@@ -334,6 +370,14 @@ public class GetFunctionResponseBody extends TeaModel {
          */
         public Builder codeSize(Long codeSize) {
             this.codeSize = codeSize;
+            return this;
+        }
+
+        /**
+         * function的CPU规格，单位为vCPU，为0.05vCPU的倍数
+         */
+        public Builder cpu(Float cpu) {
+            this.cpu = cpu;
             return this;
         }
 
@@ -382,6 +426,14 @@ public class GetFunctionResponseBody extends TeaModel {
          */
         public Builder description(String description) {
             this.description = description;
+            return this;
+        }
+
+        /**
+         * function的磁盘规格，单位为MB，可选值为512MB或10240MB
+         */
+        public Builder diskSize(Integer diskSize) {
+            this.diskSize = diskSize;
             return this;
         }
 
@@ -482,7 +534,15 @@ public class GetFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * function设置的内存大小，单位为MB
+         * layersArnV2.
+         */
+        public Builder layersArnV2(java.util.List < String > layersArnV2) {
+            this.layersArnV2 = layersArnV2;
+            return this;
+        }
+
+        /**
+         * function的内存规格，单位为MB，为64MB的倍数
          */
         public Builder memorySize(Integer memorySize) {
             this.memorySize = memorySize;

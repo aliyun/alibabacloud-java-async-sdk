@@ -22,10 +22,6 @@ public class ListStatefulAsyncInvocationsRequest extends Request {
     @Validation(required = true)
     private String functionName;
 
-    @Host
-    @NameInMap("AccountID")
-    private String accountID;
-
     @Header
     @NameInMap("X-Fc-Account-Id")
     private String xFcAccountId;
@@ -90,7 +86,6 @@ public class ListStatefulAsyncInvocationsRequest extends Request {
         super(builder);
         this.serviceName = builder.serviceName;
         this.functionName = builder.functionName;
-        this.accountID = builder.accountID;
         this.xFcAccountId = builder.xFcAccountId;
         this.xFcCodeChecksum = builder.xFcCodeChecksum;
         this.xFcDate = builder.xFcDate;
@@ -133,13 +128,6 @@ public class ListStatefulAsyncInvocationsRequest extends Request {
      */
     public String getFunctionName() {
         return this.functionName;
-    }
-
-    /**
-     * @return accountID
-     */
-    public String getAccountID() {
-        return this.accountID;
     }
 
     /**
@@ -250,7 +238,6 @@ public class ListStatefulAsyncInvocationsRequest extends Request {
     public static final class Builder extends Request.Builder<ListStatefulAsyncInvocationsRequest, Builder> {
         private String serviceName; 
         private String functionName; 
-        private String accountID; 
         private String xFcAccountId; 
         private String xFcCodeChecksum; 
         private String xFcDate; 
@@ -275,7 +262,6 @@ public class ListStatefulAsyncInvocationsRequest extends Request {
             super(request);
             this.serviceName = request.serviceName;
             this.functionName = request.functionName;
-            this.accountID = request.accountID;
             this.xFcAccountId = request.xFcAccountId;
             this.xFcCodeChecksum = request.xFcCodeChecksum;
             this.xFcDate = request.xFcDate;
@@ -308,15 +294,6 @@ public class ListStatefulAsyncInvocationsRequest extends Request {
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
             this.functionName = functionName;
-            return this;
-        }
-
-        /**
-         * AccountID.
-         */
-        public Builder accountID(String accountID) {
-            this.putHostParameter("AccountID", accountID);
-            this.accountID = accountID;
             return this;
         }
 

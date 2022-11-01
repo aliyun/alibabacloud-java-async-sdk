@@ -37,6 +37,7 @@ com/aliyun/sdk/service/fc_open20210406/models/PutProvisionConfigResponseBody$1.c
 com/aliyun/sdk/service/fc_open20210406/models/SourceRabbitMQParameters$Builder.class
 com/aliyun/sdk/service/fc_open20210406/models/ListLayersResponseBody$1.class
 com/aliyun/sdk/service/fc_open20210406/models/ListCustomDomainsRequest$1.class
+com/aliyun/sdk/service/fc_open20210406/models/Trigger.class
 com/aliyun/sdk/service/fc_open20210406/models/GetLayerVersionRequest.class
 com/aliyun/sdk/service/fc_open20210406/models/OpenReservedCapacity$1.class
 com/aliyun/sdk/service/fc_open20210406/models/DeleteCustomDomainResponse$BuilderImpl.class
@@ -347,6 +348,7 @@ com/aliyun/sdk/service/fc_open20210406/models/DeleteTriggerResponse$Builder.clas
 com/aliyun/sdk/service/fc_open20210406/models/ListTriggersRequest.class
 com/aliyun/sdk/service/fc_open20210406/models/PublishServiceVersionRequest$1.class
 com/aliyun/sdk/service/fc_open20210406/models/PublishServiceVersionResponseBody.class
+com/aliyun/sdk/service/fc_open20210406/models/Trigger$Builder.class
 com/aliyun/sdk/service/fc_open20210406/models/UpdateTriggerResponseBody$1.class
 com/aliyun/sdk/service/fc_open20210406/models/ListEventSourcesResponseBody.class
 com/aliyun/sdk/service/fc_open20210406/models/ListServiceVersionsResponseBody.class
@@ -492,6 +494,7 @@ com/aliyun/sdk/service/fc_open20210406/models/UntagResourceRequest.class
 com/aliyun/sdk/service/fc_open20210406/models/GetServiceResponse$1.class
 com/aliyun/sdk/service/fc_open20210406/models/UpdateCustomDomainResponse$Builder.class
 com/aliyun/sdk/service/fc_open20210406/models/UpdateCustomDomainRequest$Builder.class
+com/aliyun/sdk/service/fc_open20210406/models/Trigger$1.class
 com/aliyun/sdk/service/fc_open20210406/models/PutLayerACLResponse$Builder.class
 com/aliyun/sdk/service/fc_open20210406/models/ListTriggersResponseBody$1.class
 com/aliyun/sdk/service/fc_open20210406/models/GetLayerVersionResponse$BuilderImpl.class
