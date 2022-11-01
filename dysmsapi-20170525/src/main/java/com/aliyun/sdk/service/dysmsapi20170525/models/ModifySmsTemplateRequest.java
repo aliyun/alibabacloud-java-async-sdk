@@ -144,16 +144,16 @@ public class ModifySmsTemplateRequest extends Request {
             super();
         } 
 
-        private Builder(ModifySmsTemplateRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.remark = response.remark;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.templateCode = response.templateCode;
-            this.templateContent = response.templateContent;
-            this.templateName = response.templateName;
-            this.templateType = response.templateType;
+        private Builder(ModifySmsTemplateRequest request) {
+            super(request);
+            this.ownerId = request.ownerId;
+            this.remark = request.remark;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.templateCode = request.templateCode;
+            this.templateContent = request.templateContent;
+            this.templateName = request.templateName;
+            this.templateType = request.templateType;
         } 
 
         /**

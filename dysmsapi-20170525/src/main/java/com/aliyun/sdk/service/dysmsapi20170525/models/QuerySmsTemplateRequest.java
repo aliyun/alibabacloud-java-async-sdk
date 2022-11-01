@@ -88,12 +88,12 @@ public class QuerySmsTemplateRequest extends Request {
             super();
         } 
 
-        private Builder(QuerySmsTemplateRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.templateCode = response.templateCode;
+        private Builder(QuerySmsTemplateRequest request) {
+            super(request);
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.templateCode = request.templateCode;
         } 
 
         /**

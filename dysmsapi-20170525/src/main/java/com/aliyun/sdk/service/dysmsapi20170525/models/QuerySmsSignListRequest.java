@@ -101,13 +101,13 @@ public class QuerySmsSignListRequest extends Request {
             super();
         } 
 
-        private Builder(QuerySmsSignListRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.pageIndex = response.pageIndex;
-            this.pageSize = response.pageSize;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(QuerySmsSignListRequest request) {
+            super(request);
+            this.ownerId = request.ownerId;
+            this.pageIndex = request.pageIndex;
+            this.pageSize = request.pageSize;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

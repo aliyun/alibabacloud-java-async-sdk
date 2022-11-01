@@ -116,14 +116,14 @@ public class AddShortUrlRequest extends Request {
             super();
         } 
 
-        private Builder(AddShortUrlRequest response) {
-            super(response);
-            this.effectiveDays = response.effectiveDays;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.shortUrlName = response.shortUrlName;
-            this.sourceUrl = response.sourceUrl;
+        private Builder(AddShortUrlRequest request) {
+            super(request);
+            this.effectiveDays = request.effectiveDays;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.shortUrlName = request.shortUrlName;
+            this.sourceUrl = request.sourceUrl;
         } 
 
         /**

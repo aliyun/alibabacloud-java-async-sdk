@@ -24,17 +24,31 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AddSmsTemplateResponse> addSmsTemplate(AddSmsTemplateRequest request);
 
+    CompletableFuture<CheckMobilesCardSupportResponse> checkMobilesCardSupport(CheckMobilesCardSupportRequest request);
+
+    CompletableFuture<CreateCardSmsTemplateResponse> createCardSmsTemplate(CreateCardSmsTemplateRequest request);
+
     CompletableFuture<DeleteShortUrlResponse> deleteShortUrl(DeleteShortUrlRequest request);
 
     CompletableFuture<DeleteSmsSignResponse> deleteSmsSign(DeleteSmsSignRequest request);
 
     CompletableFuture<DeleteSmsTemplateResponse> deleteSmsTemplate(DeleteSmsTemplateRequest request);
 
+    CompletableFuture<GetCardSmsLinkResponse> getCardSmsLink(GetCardSmsLinkRequest request);
+
+    CompletableFuture<GetMediaResourceIdResponse> getMediaResourceId(GetMediaResourceIdRequest request);
+
+    CompletableFuture<GetOSSInfoForCardTemplateResponse> getOSSInfoForCardTemplate(GetOSSInfoForCardTemplateRequest request);
+
     CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
 
     CompletableFuture<ModifySmsSignResponse> modifySmsSign(ModifySmsSignRequest request);
 
     CompletableFuture<ModifySmsTemplateResponse> modifySmsTemplate(ModifySmsTemplateRequest request);
+
+    CompletableFuture<QueryCardSmsTemplateResponse> queryCardSmsTemplate(QueryCardSmsTemplateRequest request);
+
+    CompletableFuture<QueryCardSmsTemplateReportResponse> queryCardSmsTemplateReport(QueryCardSmsTemplateReportRequest request);
 
     CompletableFuture<QuerySendDetailsResponse> querySendDetails(QuerySendDetailsRequest request);
 
@@ -50,7 +64,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<QuerySmsTemplateListResponse> querySmsTemplateList(QuerySmsTemplateListRequest request);
 
+    CompletableFuture<SendBatchCardSmsResponse> sendBatchCardSms(SendBatchCardSmsRequest request);
+
     CompletableFuture<SendBatchSmsResponse> sendBatchSms(SendBatchSmsRequest request);
+
+    CompletableFuture<SendCardSmsResponse> sendCardSms(SendCardSmsRequest request);
 
     CompletableFuture<SendSmsResponse> sendSms(SendSmsRequest request);
 

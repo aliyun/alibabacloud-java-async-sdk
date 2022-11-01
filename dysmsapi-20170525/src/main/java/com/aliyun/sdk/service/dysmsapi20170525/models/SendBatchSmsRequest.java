@@ -13,10 +13,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class SendBatchSmsRequest extends Request {
     @Query
+    @NameInMap("OutId")
+    private String outId;
+
+    @Query
     @NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
+    @Body
     @NameInMap("PhoneNumberJson")
     @Validation(required = true)
     private String phoneNumberJson;
@@ -29,12 +33,12 @@ public class SendBatchSmsRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
+    @Body
     @NameInMap("SignNameJson")
     @Validation(required = true)
     private String signNameJson;
 
-    @Query
+    @Body
     @NameInMap("SmsUpExtendCodeJson")
     private String smsUpExtendCodeJson;
 
@@ -43,12 +47,13 @@ public class SendBatchSmsRequest extends Request {
     @Validation(required = true)
     private String templateCode;
 
-    @Query
+    @Body
     @NameInMap("TemplateParamJson")
     private String templateParamJson;
 
     private SendBatchSmsRequest(Builder builder) {
         super(builder);
+        this.outId = builder.outId;
         this.ownerId = builder.ownerId;
         this.phoneNumberJson = builder.phoneNumberJson;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -70,6 +75,13 @@ public class SendBatchSmsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return outId
+     */
+    public String getOutId() {
+        return this.outId;
     }
 
     /**
@@ -129,6 +141,7 @@ public class SendBatchSmsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SendBatchSmsRequest, Builder> {
+        private String outId; 
         private Long ownerId; 
         private String phoneNumberJson; 
         private String resourceOwnerAccount; 
@@ -142,17 +155,27 @@ public class SendBatchSmsRequest extends Request {
             super();
         } 
 
-        private Builder(SendBatchSmsRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.phoneNumberJson = response.phoneNumberJson;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.signNameJson = response.signNameJson;
-            this.smsUpExtendCodeJson = response.smsUpExtendCodeJson;
-            this.templateCode = response.templateCode;
-            this.templateParamJson = response.templateParamJson;
+        private Builder(SendBatchSmsRequest request) {
+            super(request);
+            this.outId = request.outId;
+            this.ownerId = request.ownerId;
+            this.phoneNumberJson = request.phoneNumberJson;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.signNameJson = request.signNameJson;
+            this.smsUpExtendCodeJson = request.smsUpExtendCodeJson;
+            this.templateCode = request.templateCode;
+            this.templateParamJson = request.templateParamJson;
         } 
+
+        /**
+         * OutId.
+         */
+        public Builder outId(String outId) {
+            this.putQueryParameter("OutId", outId);
+            this.outId = outId;
+            return this;
+        }
 
         /**
          * OwnerId.
@@ -167,7 +190,7 @@ public class SendBatchSmsRequest extends Request {
          * PhoneNumberJson.
          */
         public Builder phoneNumberJson(String phoneNumberJson) {
-            this.putQueryParameter("PhoneNumberJson", phoneNumberJson);
+            this.putBodyParameter("PhoneNumberJson", phoneNumberJson);
             this.phoneNumberJson = phoneNumberJson;
             return this;
         }
@@ -194,7 +217,7 @@ public class SendBatchSmsRequest extends Request {
          * SignNameJson.
          */
         public Builder signNameJson(String signNameJson) {
-            this.putQueryParameter("SignNameJson", signNameJson);
+            this.putBodyParameter("SignNameJson", signNameJson);
             this.signNameJson = signNameJson;
             return this;
         }
@@ -203,7 +226,7 @@ public class SendBatchSmsRequest extends Request {
          * SmsUpExtendCodeJson.
          */
         public Builder smsUpExtendCodeJson(String smsUpExtendCodeJson) {
-            this.putQueryParameter("SmsUpExtendCodeJson", smsUpExtendCodeJson);
+            this.putBodyParameter("SmsUpExtendCodeJson", smsUpExtendCodeJson);
             this.smsUpExtendCodeJson = smsUpExtendCodeJson;
             return this;
         }
@@ -221,7 +244,7 @@ public class SendBatchSmsRequest extends Request {
          * TemplateParamJson.
          */
         public Builder templateParamJson(String templateParamJson) {
-            this.putQueryParameter("TemplateParamJson", templateParamJson);
+            this.putBodyParameter("TemplateParamJson", templateParamJson);
             this.templateParamJson = templateParamJson;
             return this;
         }

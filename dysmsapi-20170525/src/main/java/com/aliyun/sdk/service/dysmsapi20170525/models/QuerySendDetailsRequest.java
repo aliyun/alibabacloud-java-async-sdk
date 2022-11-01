@@ -143,16 +143,16 @@ public class QuerySendDetailsRequest extends Request {
             super();
         } 
 
-        private Builder(QuerySendDetailsRequest response) {
-            super(response);
-            this.bizId = response.bizId;
-            this.currentPage = response.currentPage;
-            this.ownerId = response.ownerId;
-            this.pageSize = response.pageSize;
-            this.phoneNumber = response.phoneNumber;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.sendDate = response.sendDate;
+        private Builder(QuerySendDetailsRequest request) {
+            super(request);
+            this.bizId = request.bizId;
+            this.currentPage = request.currentPage;
+            this.ownerId = request.ownerId;
+            this.pageSize = request.pageSize;
+            this.phoneNumber = request.phoneNumber;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sendDate = request.sendDate;
         } 
 
         /**

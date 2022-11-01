@@ -15,8 +15,14 @@ public class QuerySmsSignListResponseBody extends TeaModel {
     @NameInMap("Code")
     private String code;
 
+    @NameInMap("CurrentPage")
+    private Integer currentPage;
+
     @NameInMap("Message")
     private String message;
+
+    @NameInMap("PageSize")
+    private Integer pageSize;
 
     @NameInMap("RequestId")
     private String requestId;
@@ -24,11 +30,17 @@ public class QuerySmsSignListResponseBody extends TeaModel {
     @NameInMap("SmsSignList")
     private java.util.List < SmsSignList> smsSignList;
 
+    @NameInMap("TotalCount")
+    private Long totalCount;
+
     private QuerySmsSignListResponseBody(Builder builder) {
         this.code = builder.code;
+        this.currentPage = builder.currentPage;
         this.message = builder.message;
+        this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
         this.smsSignList = builder.smsSignList;
+        this.totalCount = builder.totalCount;
     }
 
     public static Builder builder() {
@@ -47,10 +59,24 @@ public class QuerySmsSignListResponseBody extends TeaModel {
     }
 
     /**
+     * @return currentPage
+     */
+    public Integer getCurrentPage() {
+        return this.currentPage;
+    }
+
+    /**
      * @return message
      */
     public String getMessage() {
         return this.message;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     /**
@@ -67,11 +93,21 @@ public class QuerySmsSignListResponseBody extends TeaModel {
         return this.smsSignList;
     }
 
+    /**
+     * @return totalCount
+     */
+    public Long getTotalCount() {
+        return this.totalCount;
+    }
+
     public static final class Builder {
         private String code; 
+        private Integer currentPage; 
         private String message; 
+        private Integer pageSize; 
         private String requestId; 
         private java.util.List < SmsSignList> smsSignList; 
+        private Long totalCount; 
 
         /**
          * Code.
@@ -82,10 +118,26 @@ public class QuerySmsSignListResponseBody extends TeaModel {
         }
 
         /**
+         * CurrentPage.
+         */
+        public Builder currentPage(Integer currentPage) {
+            this.currentPage = currentPage;
+            return this;
+        }
+
+        /**
          * Message.
          */
         public Builder message(String message) {
             this.message = message;
+            return this;
+        }
+
+        /**
+         * PageSize.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.pageSize = pageSize;
             return this;
         }
 
@@ -102,6 +154,14 @@ public class QuerySmsSignListResponseBody extends TeaModel {
          */
         public Builder smsSignList(java.util.List < SmsSignList> smsSignList) {
             this.smsSignList = smsSignList;
+            return this;
+        }
+
+        /**
+         * TotalCount.
+         */
+        public Builder totalCount(Long totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
 

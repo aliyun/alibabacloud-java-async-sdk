@@ -155,17 +155,17 @@ public class SendSmsRequest extends Request {
             super();
         } 
 
-        private Builder(SendSmsRequest response) {
-            super(response);
-            this.outId = response.outId;
-            this.ownerId = response.ownerId;
-            this.phoneNumbers = response.phoneNumbers;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.signName = response.signName;
-            this.smsUpExtendCode = response.smsUpExtendCode;
-            this.templateCode = response.templateCode;
-            this.templateParam = response.templateParam;
+        private Builder(SendSmsRequest request) {
+            super(request);
+            this.outId = request.outId;
+            this.ownerId = request.ownerId;
+            this.phoneNumbers = request.phoneNumbers;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.signName = request.signName;
+            this.smsUpExtendCode = request.smsUpExtendCode;
+            this.templateCode = request.templateCode;
+            this.templateParam = request.templateParam;
         } 
 
         /**

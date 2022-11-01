@@ -15,8 +15,14 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
     @NameInMap("Code")
     private String code;
 
+    @NameInMap("CurrentPage")
+    private Integer currentPage;
+
     @NameInMap("Message")
     private String message;
+
+    @NameInMap("PageSize")
+    private Integer pageSize;
 
     @NameInMap("RequestId")
     private String requestId;
@@ -24,11 +30,17 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
     @NameInMap("SmsTemplateList")
     private java.util.List < SmsTemplateList> smsTemplateList;
 
+    @NameInMap("TotalCount")
+    private Long totalCount;
+
     private QuerySmsTemplateListResponseBody(Builder builder) {
         this.code = builder.code;
+        this.currentPage = builder.currentPage;
         this.message = builder.message;
+        this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
         this.smsTemplateList = builder.smsTemplateList;
+        this.totalCount = builder.totalCount;
     }
 
     public static Builder builder() {
@@ -47,10 +59,24 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
     }
 
     /**
+     * @return currentPage
+     */
+    public Integer getCurrentPage() {
+        return this.currentPage;
+    }
+
+    /**
      * @return message
      */
     public String getMessage() {
         return this.message;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     /**
@@ -67,11 +93,21 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
         return this.smsTemplateList;
     }
 
+    /**
+     * @return totalCount
+     */
+    public Long getTotalCount() {
+        return this.totalCount;
+    }
+
     public static final class Builder {
         private String code; 
+        private Integer currentPage; 
         private String message; 
+        private Integer pageSize; 
         private String requestId; 
         private java.util.List < SmsTemplateList> smsTemplateList; 
+        private Long totalCount; 
 
         /**
          * Code.
@@ -82,10 +118,26 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
         }
 
         /**
+         * CurrentPage.
+         */
+        public Builder currentPage(Integer currentPage) {
+            this.currentPage = currentPage;
+            return this;
+        }
+
+        /**
          * Message.
          */
         public Builder message(String message) {
             this.message = message;
+            return this;
+        }
+
+        /**
+         * PageSize.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.pageSize = pageSize;
             return this;
         }
 
@@ -102,6 +154,14 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
          */
         public Builder smsTemplateList(java.util.List < SmsTemplateList> smsTemplateList) {
             this.smsTemplateList = smsTemplateList;
+            return this;
+        }
+
+        /**
+         * TotalCount.
+         */
+        public Builder totalCount(Long totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
 
@@ -202,6 +262,9 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
         @NameInMap("OrderId")
         private String orderId;
 
+        @NameInMap("OuterTemplateType")
+        private Integer outerTemplateType;
+
         @NameInMap("Reason")
         private Reason reason;
 
@@ -221,6 +284,7 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
             this.auditStatus = builder.auditStatus;
             this.createDate = builder.createDate;
             this.orderId = builder.orderId;
+            this.outerTemplateType = builder.outerTemplateType;
             this.reason = builder.reason;
             this.templateCode = builder.templateCode;
             this.templateContent = builder.templateContent;
@@ -255,6 +319,13 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
          */
         public String getOrderId() {
             return this.orderId;
+        }
+
+        /**
+         * @return outerTemplateType
+         */
+        public Integer getOuterTemplateType() {
+            return this.outerTemplateType;
         }
 
         /**
@@ -296,6 +367,7 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
             private String auditStatus; 
             private String createDate; 
             private String orderId; 
+            private Integer outerTemplateType; 
             private Reason reason; 
             private String templateCode; 
             private String templateContent; 
@@ -323,6 +395,14 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
              */
             public Builder orderId(String orderId) {
                 this.orderId = orderId;
+                return this;
+            }
+
+            /**
+             * OuterTemplateType.
+             */
+            public Builder outerTemplateType(Integer outerTemplateType) {
+                this.outerTemplateType = outerTemplateType;
                 return this;
             }
 

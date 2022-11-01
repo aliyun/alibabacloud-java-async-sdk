@@ -45,9 +45,17 @@ public class QuerySendStatisticsRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
+    @NameInMap("SignName")
+    private String signName;
+
+    @Query
     @NameInMap("StartDate")
     @Validation(required = true)
     private String startDate;
+
+    @Query
+    @NameInMap("TemplateType")
+    private Integer templateType;
 
     private QuerySendStatisticsRequest(Builder builder) {
         super(builder);
@@ -58,7 +66,9 @@ public class QuerySendStatisticsRequest extends Request {
         this.pageSize = builder.pageSize;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.signName = builder.signName;
         this.startDate = builder.startDate;
+        this.templateType = builder.templateType;
     }
 
     public static Builder builder() {
@@ -124,10 +134,24 @@ public class QuerySendStatisticsRequest extends Request {
     }
 
     /**
+     * @return signName
+     */
+    public String getSignName() {
+        return this.signName;
+    }
+
+    /**
      * @return startDate
      */
     public String getStartDate() {
         return this.startDate;
+    }
+
+    /**
+     * @return templateType
+     */
+    public Integer getTemplateType() {
+        return this.templateType;
     }
 
     public static final class Builder extends Request.Builder<QuerySendStatisticsRequest, Builder> {
@@ -138,22 +162,26 @@ public class QuerySendStatisticsRequest extends Request {
         private Integer pageSize; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String signName; 
         private String startDate; 
+        private Integer templateType; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(QuerySendStatisticsRequest response) {
-            super(response);
-            this.endDate = response.endDate;
-            this.isGlobe = response.isGlobe;
-            this.ownerId = response.ownerId;
-            this.pageIndex = response.pageIndex;
-            this.pageSize = response.pageSize;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.startDate = response.startDate;
+        private Builder(QuerySendStatisticsRequest request) {
+            super(request);
+            this.endDate = request.endDate;
+            this.isGlobe = request.isGlobe;
+            this.ownerId = request.ownerId;
+            this.pageIndex = request.pageIndex;
+            this.pageSize = request.pageSize;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.signName = request.signName;
+            this.startDate = request.startDate;
+            this.templateType = request.templateType;
         } 
 
         /**
@@ -220,11 +248,29 @@ public class QuerySendStatisticsRequest extends Request {
         }
 
         /**
+         * SignName.
+         */
+        public Builder signName(String signName) {
+            this.putQueryParameter("SignName", signName);
+            this.signName = signName;
+            return this;
+        }
+
+        /**
          * StartDate.
          */
         public Builder startDate(String startDate) {
             this.putQueryParameter("StartDate", startDate);
             this.startDate = startDate;
+            return this;
+        }
+
+        /**
+         * TemplateType.
+         */
+        public Builder templateType(Integer templateType) {
+            this.putQueryParameter("TemplateType", templateType);
+            this.templateType = templateType;
             return this;
         }
 

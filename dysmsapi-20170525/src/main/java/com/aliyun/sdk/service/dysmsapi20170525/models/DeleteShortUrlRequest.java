@@ -88,12 +88,12 @@ public class DeleteShortUrlRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteShortUrlRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.sourceUrl = response.sourceUrl;
+        private Builder(DeleteShortUrlRequest request) {
+            super(request);
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceUrl = request.sourceUrl;
         } 
 
         /**

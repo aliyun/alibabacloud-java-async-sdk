@@ -44,6 +44,10 @@ public class ModifySmsSignRequest extends Request {
     @Validation(required = true)
     private Integer signSource;
 
+    @Query
+    @NameInMap("SignType")
+    private Integer signType;
+
     private ModifySmsSignRequest(Builder builder) {
         super(builder);
         this.ownerId = builder.ownerId;
@@ -53,6 +57,7 @@ public class ModifySmsSignRequest extends Request {
         this.signFileList = builder.signFileList;
         this.signName = builder.signName;
         this.signSource = builder.signSource;
+        this.signType = builder.signType;
     }
 
     public static Builder builder() {
@@ -117,6 +122,13 @@ public class ModifySmsSignRequest extends Request {
         return this.signSource;
     }
 
+    /**
+     * @return signType
+     */
+    public Integer getSignType() {
+        return this.signType;
+    }
+
     public static final class Builder extends Request.Builder<ModifySmsSignRequest, Builder> {
         private Long ownerId; 
         private String remark; 
@@ -125,20 +137,22 @@ public class ModifySmsSignRequest extends Request {
         private java.util.List < SignFileList> signFileList; 
         private String signName; 
         private Integer signSource; 
+        private Integer signType; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ModifySmsSignRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.remark = response.remark;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.signFileList = response.signFileList;
-            this.signName = response.signName;
-            this.signSource = response.signSource;
+        private Builder(ModifySmsSignRequest request) {
+            super(request);
+            this.ownerId = request.ownerId;
+            this.remark = request.remark;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.signFileList = request.signFileList;
+            this.signName = request.signName;
+            this.signSource = request.signSource;
+            this.signType = request.signType;
         } 
 
         /**
@@ -201,6 +215,15 @@ public class ModifySmsSignRequest extends Request {
         public Builder signSource(Integer signSource) {
             this.putQueryParameter("SignSource", signSource);
             this.signSource = signSource;
+            return this;
+        }
+
+        /**
+         * SignType.
+         */
+        public Builder signType(Integer signType) {
+            this.putQueryParameter("SignType", signType);
+            this.signType = signType;
             return this;
         }
 

@@ -130,15 +130,15 @@ public class AddSmsTemplateRequest extends Request {
             super();
         } 
 
-        private Builder(AddSmsTemplateRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.remark = response.remark;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.templateContent = response.templateContent;
-            this.templateName = response.templateName;
-            this.templateType = response.templateType;
+        private Builder(AddSmsTemplateRequest request) {
+            super(request);
+            this.ownerId = request.ownerId;
+            this.remark = request.remark;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.templateContent = request.templateContent;
+            this.templateName = request.templateName;
+            this.templateType = request.templateType;
         } 
 
         /**

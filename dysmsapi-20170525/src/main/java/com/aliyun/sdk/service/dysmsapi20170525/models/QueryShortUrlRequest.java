@@ -88,12 +88,12 @@ public class QueryShortUrlRequest extends Request {
             super();
         } 
 
-        private Builder(QueryShortUrlRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.shortUrl = response.shortUrl;
+        private Builder(QueryShortUrlRequest request) {
+            super(request);
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.shortUrl = request.shortUrl;
         } 
 
         /**
