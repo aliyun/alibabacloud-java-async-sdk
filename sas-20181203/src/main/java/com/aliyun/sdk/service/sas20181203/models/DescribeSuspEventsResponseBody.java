@@ -545,6 +545,9 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         @NameInMap("Uuid")
         private String uuid;
 
+        @NameInMap("clusterId")
+        private String clusterId;
+
         private SuspEvents(Builder builder) {
             this.advanced = builder.advanced;
             this.alarmEventName = builder.alarmEventName;
@@ -596,6 +599,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             this.tacticItems = builder.tacticItems;
             this.uniqueInfo = builder.uniqueInfo;
             this.uuid = builder.uuid;
+            this.clusterId = builder.clusterId;
         }
 
         public static Builder builder() {
@@ -956,6 +960,13 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             return this.uuid;
         }
 
+        /**
+         * @return clusterId
+         */
+        public String getClusterId() {
+            return this.clusterId;
+        }
+
         public static final class Builder {
             private Boolean advanced; 
             private String alarmEventName; 
@@ -1007,6 +1018,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             private java.util.List < TacticItems> tacticItems; 
             private String uniqueInfo; 
             private String uuid; 
+            private String clusterId; 
 
             /**
              * Advanced.
@@ -1405,6 +1417,14 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
+                return this;
+            }
+
+            /**
+             * clusterId.
+             */
+            public Builder clusterId(String clusterId) {
+                this.clusterId = clusterId;
                 return this;
             }
 

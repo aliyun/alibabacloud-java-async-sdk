@@ -18,6 +18,7 @@ public class DescribeSuspiciousOverallConfigRequest extends Request {
 
     @Query
     @NameInMap("Type")
+    @Validation(required = true)
     private String type;
 
     private DescribeSuspiciousOverallConfigRequest(Builder builder) {

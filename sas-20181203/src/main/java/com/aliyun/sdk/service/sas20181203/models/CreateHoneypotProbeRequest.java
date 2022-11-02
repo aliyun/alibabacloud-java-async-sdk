@@ -22,10 +22,12 @@ public class CreateHoneypotProbeRequest extends Request {
 
     @Query
     @NameInMap("ControlNodeId")
+    @Validation(required = true)
     private String controlNodeId;
 
     @Query
     @NameInMap("DisplayName")
+    @Validation(required = true)
     private String displayName;
 
     @Query
@@ -38,6 +40,7 @@ public class CreateHoneypotProbeRequest extends Request {
 
     @Query
     @NameInMap("ProbeType")
+    @Validation(required = true)
     private String probeType;
 
     @Query

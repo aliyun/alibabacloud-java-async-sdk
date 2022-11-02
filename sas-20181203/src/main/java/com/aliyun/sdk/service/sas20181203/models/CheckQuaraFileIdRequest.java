@@ -14,6 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class CheckQuaraFileIdRequest extends Request {
     @Query
     @NameInMap("QuaraFileIds")
+    @Validation(required = true)
     private java.util.List < String > quaraFileIds;
 
     @Query

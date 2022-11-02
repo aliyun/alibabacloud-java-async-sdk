@@ -27,12 +27,16 @@ public class DescribeLogstoreStorageResponseBody extends TeaModel {
     @NameInMap("Used")
     private Long used;
 
+    @NameInMap("UserProject")
+    private String userProject;
+
     private DescribeLogstoreStorageResponseBody(Builder builder) {
         this.logstore = builder.logstore;
         this.preserve = builder.preserve;
         this.requestId = builder.requestId;
         this.ttl = builder.ttl;
         this.used = builder.used;
+        this.userProject = builder.userProject;
     }
 
     public static Builder builder() {
@@ -78,12 +82,20 @@ public class DescribeLogstoreStorageResponseBody extends TeaModel {
         return this.used;
     }
 
+    /**
+     * @return userProject
+     */
+    public String getUserProject() {
+        return this.userProject;
+    }
+
     public static final class Builder {
         private String logstore; 
         private Long preserve; 
         private String requestId; 
         private Integer ttl; 
         private Long used; 
+        private String userProject; 
 
         /**
          * Logstore.
@@ -122,6 +134,14 @@ public class DescribeLogstoreStorageResponseBody extends TeaModel {
          */
         public Builder used(Long used) {
             this.used = used;
+            return this;
+        }
+
+        /**
+         * UserProject.
+         */
+        public Builder userProject(String userProject) {
+            this.userProject = userProject;
             return this;
         }
 

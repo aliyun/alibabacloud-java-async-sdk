@@ -26,6 +26,7 @@ public class ModifyAntiBruteForceRuleRequest extends Request {
 
     @Query
     @NameInMap("Id")
+    @Validation(required = true)
     private Long id;
 
     @Query

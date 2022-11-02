@@ -13,22 +13,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CheckUserHasEcsRequest extends Request {
     @Query
-    @NameInMap("CurrentPage")
-    private Integer currentPage;
-
-    @Query
     @NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("PageSize")
-    private Integer pageSize;
-
     private CheckUserHasEcsRequest(Builder builder) {
         super(builder);
-        this.currentPage = builder.currentPage;
         this.lang = builder.lang;
-        this.pageSize = builder.pageSize;
     }
 
     public static Builder builder() {
@@ -45,30 +35,14 @@ public class CheckUserHasEcsRequest extends Request {
     }
 
     /**
-     * @return currentPage
-     */
-    public Integer getCurrentPage() {
-        return this.currentPage;
-    }
-
-    /**
      * @return lang
      */
     public String getLang() {
         return this.lang;
     }
 
-    /**
-     * @return pageSize
-     */
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
     public static final class Builder extends Request.Builder<CheckUserHasEcsRequest, Builder> {
-        private Integer currentPage; 
         private String lang; 
-        private Integer pageSize; 
 
         private Builder() {
             super();
@@ -76,19 +50,8 @@ public class CheckUserHasEcsRequest extends Request {
 
         private Builder(CheckUserHasEcsRequest request) {
             super(request);
-            this.currentPage = request.currentPage;
             this.lang = request.lang;
-            this.pageSize = request.pageSize;
         } 
-
-        /**
-         * CurrentPage.
-         */
-        public Builder currentPage(Integer currentPage) {
-            this.putQueryParameter("CurrentPage", currentPage);
-            this.currentPage = currentPage;
-            return this;
-        }
 
         /**
          * Lang.
@@ -96,15 +59,6 @@ public class CheckUserHasEcsRequest extends Request {
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
             this.lang = lang;
-            return this;
-        }
-
-        /**
-         * PageSize.
-         */
-        public Builder pageSize(Integer pageSize) {
-            this.putQueryParameter("PageSize", pageSize);
-            this.pageSize = pageSize;
             return this;
         }
 

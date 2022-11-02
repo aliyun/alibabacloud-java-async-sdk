@@ -22,6 +22,7 @@ public class HandleSecurityEventsRequest extends Request {
 
     @Query
     @NameInMap("OperationCode")
+    @Validation(required = true)
     private String operationCode;
 
     @Query
@@ -30,6 +31,7 @@ public class HandleSecurityEventsRequest extends Request {
 
     @Query
     @NameInMap("SecurityEventIds")
+    @Validation(required = true)
     private java.util.List < String > securityEventIds;
 
     @Query

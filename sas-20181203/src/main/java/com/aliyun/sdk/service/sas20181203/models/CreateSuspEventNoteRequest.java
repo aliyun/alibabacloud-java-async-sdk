@@ -14,10 +14,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class CreateSuspEventNoteRequest extends Request {
     @Query
     @NameInMap("EventId")
+    @Validation(required = true)
     private Long eventId;
 
     @Query
     @NameInMap("Note")
+    @Validation(required = true)
     private String note;
 
     private CreateSuspEventNoteRequest(Builder builder) {

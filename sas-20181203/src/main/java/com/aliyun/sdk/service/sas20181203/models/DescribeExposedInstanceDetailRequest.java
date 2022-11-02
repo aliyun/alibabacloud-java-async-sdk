@@ -14,6 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DescribeExposedInstanceDetailRequest extends Request {
     @Query
     @NameInMap("Uuid")
+    @Validation(required = true)
     private String uuid;
 
     private DescribeExposedInstanceDetailRequest(Builder builder) {

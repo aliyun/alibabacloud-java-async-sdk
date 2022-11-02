@@ -168,6 +168,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeFrontVulPatchListResponseBody$
 com/aliyun/sdk/service/sas20181203/models/DescribeSecurityCheckScheduleConfigResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/DescribeRiskCheckItemResultRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeImageVulListResponseBody$ExtendContentJson$Builder.class
+com/aliyun/sdk/service/sas20181203/models/QueryIncidentTracingSubNodesCountRequest.class
 com/aliyun/sdk/service/sas20181203/models/InstallCloudMonitorResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/ModifyLoginSwitchConfigResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/CreateFileDetectUploadUrlResponse$1.class
@@ -301,6 +302,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeDomainDetailResponse$Builder.c
 com/aliyun/sdk/service/sas20181203/models/UnbindAegisRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/ListAvailableHoneypotRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/CreateFileDetectRequest$Builder.class
+com/aliyun/sdk/service/sas20181203/models/QueryIncidentTracingSubNodesCountRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/UninstallBackupClientResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeStrategyDetailResponseBody$RiskTypeWhiteListQueryResultList$Builder.class
 com/aliyun/sdk/service/sas20181203/models/ModifyClearLogstoreStorageResponse$Builder.class
@@ -350,6 +352,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeSuspEventQuaraFilesResponseBod
 com/aliyun/sdk/service/sas20181203/models/CreateFileDetectUploadUrlRequest$HashKeyContextList$Builder.class
 com/aliyun/sdk/service/sas20181203/models/ModifySecurityCheckScheduleConfigRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/DeleteVpcHoneyPotResponseBody.class
+com/aliyun/sdk/service/sas20181203/models/QueryIncidentTracingSubNodesCountRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/ExportRecordResponse.class
 com/aliyun/sdk/service/sas20181203/models/InstallCloudMonitorResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/ModifyRiskCheckStatusResponse$BuilderImpl.class

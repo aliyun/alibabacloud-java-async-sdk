@@ -17,6 +17,10 @@ public class DescribeSuspEventsRequest extends Request {
     private String alarmUniqueInfo;
 
     @Query
+    @NameInMap("AssetsTypeList")
+    private java.util.List < String > assetsTypeList;
+
+    @Query
     @NameInMap("ClusterId")
     private String clusterId;
 
@@ -127,6 +131,7 @@ public class DescribeSuspEventsRequest extends Request {
     private DescribeSuspEventsRequest(Builder builder) {
         super(builder);
         this.alarmUniqueInfo = builder.alarmUniqueInfo;
+        this.assetsTypeList = builder.assetsTypeList;
         this.clusterId = builder.clusterId;
         this.containerFieldName = builder.containerFieldName;
         this.containerFieldValue = builder.containerFieldValue;
@@ -174,6 +179,13 @@ public class DescribeSuspEventsRequest extends Request {
      */
     public String getAlarmUniqueInfo() {
         return this.alarmUniqueInfo;
+    }
+
+    /**
+     * @return assetsTypeList
+     */
+    public java.util.List < String > getAssetsTypeList() {
+        return this.assetsTypeList;
     }
 
     /**
@@ -367,6 +379,7 @@ public class DescribeSuspEventsRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeSuspEventsRequest, Builder> {
         private String alarmUniqueInfo; 
+        private java.util.List < String > assetsTypeList; 
         private String clusterId; 
         private String containerFieldName; 
         private String containerFieldValue; 
@@ -402,6 +415,7 @@ public class DescribeSuspEventsRequest extends Request {
         private Builder(DescribeSuspEventsRequest request) {
             super(request);
             this.alarmUniqueInfo = request.alarmUniqueInfo;
+            this.assetsTypeList = request.assetsTypeList;
             this.clusterId = request.clusterId;
             this.containerFieldName = request.containerFieldName;
             this.containerFieldValue = request.containerFieldValue;
@@ -437,6 +451,15 @@ public class DescribeSuspEventsRequest extends Request {
         public Builder alarmUniqueInfo(String alarmUniqueInfo) {
             this.putQueryParameter("AlarmUniqueInfo", alarmUniqueInfo);
             this.alarmUniqueInfo = alarmUniqueInfo;
+            return this;
+        }
+
+        /**
+         * AssetsTypeList.
+         */
+        public Builder assetsTypeList(java.util.List < String > assetsTypeList) {
+            this.putQueryParameter("AssetsTypeList", assetsTypeList);
+            this.assetsTypeList = assetsTypeList;
             return this;
         }
 

@@ -22,6 +22,7 @@ public class ModifyCreateVulWhitelistRequest extends Request {
 
     @Query
     @NameInMap("Whitelist")
+    @Validation(required = true)
     private String whitelist;
 
     private ModifyCreateVulWhitelistRequest(Builder builder) {

@@ -14,6 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ModifyStrategyTargetRequest extends Request {
     @Query
     @NameInMap("Config")
+    @Validation(required = true)
     private String config;
 
     @Query
@@ -22,10 +23,12 @@ public class ModifyStrategyTargetRequest extends Request {
 
     @Query
     @NameInMap("Target")
+    @Validation(required = true)
     private String target;
 
     @Query
     @NameInMap("Type")
+    @Validation(required = true)
     private String type;
 
     private ModifyStrategyTargetRequest(Builder builder) {

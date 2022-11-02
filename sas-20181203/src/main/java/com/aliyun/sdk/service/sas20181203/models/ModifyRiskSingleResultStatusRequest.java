@@ -14,6 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ModifyRiskSingleResultStatusRequest extends Request {
     @Query
     @NameInMap("Ids")
+    @Validation(required = true)
     private java.util.List < String > ids;
 
     @Query
@@ -30,6 +31,7 @@ public class ModifyRiskSingleResultStatusRequest extends Request {
 
     @Query
     @NameInMap("Status")
+    @Validation(required = true)
     private String status;
 
     @Query

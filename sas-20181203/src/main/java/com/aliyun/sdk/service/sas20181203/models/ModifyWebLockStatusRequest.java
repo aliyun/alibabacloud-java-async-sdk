@@ -22,10 +22,12 @@ public class ModifyWebLockStatusRequest extends Request {
 
     @Query
     @NameInMap("Status")
+    @Validation(required = true)
     private String status;
 
     @Query
     @NameInMap("Uuid")
+    @Validation(required = true)
     private String uuid;
 
     private ModifyWebLockStatusRequest(Builder builder) {

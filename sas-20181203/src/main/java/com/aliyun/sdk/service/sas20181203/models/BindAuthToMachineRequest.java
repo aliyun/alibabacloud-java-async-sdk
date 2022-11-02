@@ -14,6 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class BindAuthToMachineRequest extends Request {
     @Query
     @NameInMap("AuthVersion")
+    @Validation(required = true)
     private Integer authVersion;
 
     @Query

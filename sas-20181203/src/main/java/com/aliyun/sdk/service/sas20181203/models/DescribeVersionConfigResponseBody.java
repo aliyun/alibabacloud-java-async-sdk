@@ -72,6 +72,9 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     @NameInMap("SlsCapacity")
     private Long slsCapacity;
 
+    @NameInMap("ThreatAnalysisCapacity")
+    private Long threatAnalysisCapacity;
+
     @NameInMap("UserDefinedAlarms")
     private Integer userDefinedAlarms;
 
@@ -108,6 +111,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         this.sasLog = builder.sasLog;
         this.sasScreen = builder.sasScreen;
         this.slsCapacity = builder.slsCapacity;
+        this.threatAnalysisCapacity = builder.threatAnalysisCapacity;
         this.userDefinedAlarms = builder.userDefinedAlarms;
         this.version = builder.version;
         this.vmCores = builder.vmCores;
@@ -264,6 +268,13 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     }
 
     /**
+     * @return threatAnalysisCapacity
+     */
+    public Long getThreatAnalysisCapacity() {
+        return this.threatAnalysisCapacity;
+    }
+
+    /**
      * @return userDefinedAlarms
      */
     public Integer getUserDefinedAlarms() {
@@ -319,6 +330,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         private Integer sasLog; 
         private Integer sasScreen; 
         private Long slsCapacity; 
+        private Long threatAnalysisCapacity; 
         private Integer userDefinedAlarms; 
         private Integer version; 
         private Integer vmCores; 
@@ -482,6 +494,14 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
          */
         public Builder slsCapacity(Long slsCapacity) {
             this.slsCapacity = slsCapacity;
+            return this;
+        }
+
+        /**
+         * ThreatAnalysisCapacity.
+         */
+        public Builder threatAnalysisCapacity(Long threatAnalysisCapacity) {
+            this.threatAnalysisCapacity = threatAnalysisCapacity;
             return this;
         }
 

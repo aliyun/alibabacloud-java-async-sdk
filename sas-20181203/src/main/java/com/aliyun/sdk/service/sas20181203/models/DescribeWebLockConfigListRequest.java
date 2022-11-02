@@ -22,6 +22,7 @@ public class DescribeWebLockConfigListRequest extends Request {
 
     @Query
     @NameInMap("Uuid")
+    @Validation(required = true)
     private String uuid;
 
     private DescribeWebLockConfigListRequest(Builder builder) {

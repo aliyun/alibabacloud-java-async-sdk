@@ -14,10 +14,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ModifyWebLockCreateConfigRequest extends Request {
     @Query
     @NameInMap("DefenceMode")
+    @Validation(required = true)
     private String defenceMode;
 
     @Query
     @NameInMap("Dir")
+    @Validation(required = true)
     private String dir;
 
     @Query
@@ -46,6 +48,7 @@ public class ModifyWebLockCreateConfigRequest extends Request {
 
     @Query
     @NameInMap("LocalBackupDir")
+    @Validation(required = true)
     private String localBackupDir;
 
     @Query
@@ -58,6 +61,7 @@ public class ModifyWebLockCreateConfigRequest extends Request {
 
     @Query
     @NameInMap("Uuid")
+    @Validation(required = true)
     private String uuid;
 
     private ModifyWebLockCreateConfigRequest(Builder builder) {

@@ -19,10 +19,12 @@ public class ModifyStrategyRequest extends Request {
 
     @Query
     @NameInMap("CycleDays")
+    @Validation(required = true)
     private String cycleDays;
 
     @Query
     @NameInMap("CycleStartTime")
+    @Validation(required = true)
     private String cycleStartTime;
 
     @Query

@@ -18,6 +18,7 @@ public class DescribeCommonOverallConfigRequest extends Request {
 
     @Query
     @NameInMap("Type")
+    @Validation(required = true)
     private String type;
 
     private DescribeCommonOverallConfigRequest(Builder builder) {

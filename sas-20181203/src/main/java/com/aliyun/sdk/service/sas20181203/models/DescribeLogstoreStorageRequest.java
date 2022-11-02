@@ -14,6 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DescribeLogstoreStorageRequest extends Request {
     @Query
     @NameInMap("From")
+    @Validation(required = true)
     private String from;
 
     @Query
