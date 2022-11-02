@@ -1,0 +1,143 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.waf_openapi20211001.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link DescribeRuleHitsTopResourceRequest} extends {@link RequestModel}
+ *
+ * <p>DescribeRuleHitsTopResourceRequest</p>
+ */
+public class DescribeRuleHitsTopResourceRequest extends Request {
+    @Query
+    @NameInMap("EndTimestamp")
+    private String endTimestamp;
+
+    @Query
+    @NameInMap("InstanceId")
+    @Validation(required = true)
+    private String instanceId;
+
+    @Query
+    @NameInMap("RuleType")
+    private String ruleType;
+
+    @Query
+    @NameInMap("StartTimestamp")
+    @Validation(required = true)
+    private String startTimestamp;
+
+    private DescribeRuleHitsTopResourceRequest(Builder builder) {
+        super(builder);
+        this.endTimestamp = builder.endTimestamp;
+        this.instanceId = builder.instanceId;
+        this.ruleType = builder.ruleType;
+        this.startTimestamp = builder.startTimestamp;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static DescribeRuleHitsTopResourceRequest create() {
+        return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return endTimestamp
+     */
+    public String getEndTimestamp() {
+        return this.endTimestamp;
+    }
+
+    /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    /**
+     * @return ruleType
+     */
+    public String getRuleType() {
+        return this.ruleType;
+    }
+
+    /**
+     * @return startTimestamp
+     */
+    public String getStartTimestamp() {
+        return this.startTimestamp;
+    }
+
+    public static final class Builder extends Request.Builder<DescribeRuleHitsTopResourceRequest, Builder> {
+        private String endTimestamp; 
+        private String instanceId; 
+        private String ruleType; 
+        private String startTimestamp; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(DescribeRuleHitsTopResourceRequest request) {
+            super(request);
+            this.endTimestamp = request.endTimestamp;
+            this.instanceId = request.instanceId;
+            this.ruleType = request.ruleType;
+            this.startTimestamp = request.startTimestamp;
+        } 
+
+        /**
+         * EndTimestamp.
+         */
+        public Builder endTimestamp(String endTimestamp) {
+            this.putQueryParameter("EndTimestamp", endTimestamp);
+            this.endTimestamp = endTimestamp;
+            return this;
+        }
+
+        /**
+         * InstanceId.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * RuleType.
+         */
+        public Builder ruleType(String ruleType) {
+            this.putQueryParameter("RuleType", ruleType);
+            this.ruleType = ruleType;
+            return this;
+        }
+
+        /**
+         * StartTimestamp.
+         */
+        public Builder startTimestamp(String startTimestamp) {
+            this.putQueryParameter("StartTimestamp", startTimestamp);
+            this.startTimestamp = startTimestamp;
+            return this;
+        }
+
+        @Override
+        public DescribeRuleHitsTopResourceRequest build() {
+            return new DescribeRuleHitsTopResourceRequest(this);
+        } 
+
+    } 
+
+}

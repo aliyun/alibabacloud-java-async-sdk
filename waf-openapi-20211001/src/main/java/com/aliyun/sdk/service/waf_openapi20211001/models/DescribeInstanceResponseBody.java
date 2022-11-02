@@ -18,8 +18,17 @@ public class DescribeInstanceResponseBody extends TeaModel {
     @NameInMap("Edition")
     private String edition;
 
+    @NameInMap("EndTime")
+    private Long endTime;
+
+    @NameInMap("InDebt")
+    private String inDebt;
+
     @NameInMap("InstanceId")
     private String instanceId;
+
+    @NameInMap("PayType")
+    private String payType;
 
     @NameInMap("RegionId")
     private String regionId;
@@ -27,12 +36,23 @@ public class DescribeInstanceResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("StartTime")
+    private Long startTime;
+
+    @NameInMap("Status")
+    private Integer status;
+
     private DescribeInstanceResponseBody(Builder builder) {
         this.details = builder.details;
         this.edition = builder.edition;
+        this.endTime = builder.endTime;
+        this.inDebt = builder.inDebt;
         this.instanceId = builder.instanceId;
+        this.payType = builder.payType;
         this.regionId = builder.regionId;
         this.requestId = builder.requestId;
+        this.startTime = builder.startTime;
+        this.status = builder.status;
     }
 
     public static Builder builder() {
@@ -58,10 +78,31 @@ public class DescribeInstanceResponseBody extends TeaModel {
     }
 
     /**
+     * @return endTime
+     */
+    public Long getEndTime() {
+        return this.endTime;
+    }
+
+    /**
+     * @return inDebt
+     */
+    public String getInDebt() {
+        return this.inDebt;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    /**
+     * @return payType
+     */
+    public String getPayType() {
+        return this.payType;
     }
 
     /**
@@ -78,12 +119,31 @@ public class DescribeInstanceResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return startTime
+     */
+    public Long getStartTime() {
+        return this.startTime;
+    }
+
+    /**
+     * @return status
+     */
+    public Integer getStatus() {
+        return this.status;
+    }
+
     public static final class Builder {
         private Details details; 
         private String edition; 
+        private Long endTime; 
+        private String inDebt; 
         private String instanceId; 
+        private String payType; 
         private String regionId; 
         private String requestId; 
+        private Long startTime; 
+        private Integer status; 
 
         /**
          * 实例详情
@@ -102,10 +162,34 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * EndTime.
+         */
+        public Builder endTime(Long endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * InDebt.
+         */
+        public Builder inDebt(String inDebt) {
+            this.inDebt = inDebt;
+            return this;
+        }
+
+        /**
          * 实例ID
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * PayType.
+         */
+        public Builder payType(String payType) {
+            this.payType = payType;
             return this;
         }
 
@@ -122,6 +206,22 @@ public class DescribeInstanceResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * StartTime.
+         */
+        public Builder startTime(Long startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+
+        /**
+         * Status.
+         */
+        public Builder status(Integer status) {
+            this.status = status;
             return this;
         }
 
@@ -152,6 +252,18 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
         @NameInMap("BaseWafGroupRuleTemplateMaxCount")
         private Long baseWafGroupRuleTemplateMaxCount;
+
+        @NameInMap("Bot")
+        private Boolean bot;
+
+        @NameInMap("BotApp")
+        private String botApp;
+
+        @NameInMap("BotTemplateMaxCount")
+        private Long botTemplateMaxCount;
+
+        @NameInMap("BotWeb")
+        private String botWeb;
 
         @NameInMap("CnameResourceMaxCount")
         private Long cnameResourceMaxCount;
@@ -195,6 +307,15 @@ public class DescribeInstanceResponseBody extends TeaModel {
         @NameInMap("DefenseObjectMaxCount")
         private Long defenseObjectMaxCount;
 
+        @NameInMap("Dlp")
+        private Boolean dlp;
+
+        @NameInMap("DlpRuleInTemplateMaxCount")
+        private Long dlpRuleInTemplateMaxCount;
+
+        @NameInMap("DlpTemplateMaxCount")
+        private Long dlpTemplateMaxCount;
+
         @NameInMap("ExclusiveIp")
         private Boolean exclusiveIp;
 
@@ -231,6 +352,15 @@ public class DescribeInstanceResponseBody extends TeaModel {
         @NameInMap("MajorProtectionTemplateMaxCount")
         private Long majorProtectionTemplateMaxCount;
 
+        @NameInMap("Tamperproof")
+        private Boolean tamperproof;
+
+        @NameInMap("TamperproofRuleInTemplateMaxCount")
+        private Long tamperproofRuleInTemplateMaxCount;
+
+        @NameInMap("TamperproofTemplateMaxCount")
+        private Long tamperproofTemplateMaxCount;
+
         @NameInMap("VastIpBlacklistInFileMaxCount")
         private Long vastIpBlacklistInFileMaxCount;
 
@@ -263,6 +393,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             this.baseWafGroup = builder.baseWafGroup;
             this.baseWafGroupRuleInTemplateMaxCount = builder.baseWafGroupRuleInTemplateMaxCount;
             this.baseWafGroupRuleTemplateMaxCount = builder.baseWafGroupRuleTemplateMaxCount;
+            this.bot = builder.bot;
+            this.botApp = builder.botApp;
+            this.botTemplateMaxCount = builder.botTemplateMaxCount;
+            this.botWeb = builder.botWeb;
             this.cnameResourceMaxCount = builder.cnameResourceMaxCount;
             this.customResponse = builder.customResponse;
             this.customResponseRuleInTemplateMaxCount = builder.customResponseRuleInTemplateMaxCount;
@@ -277,6 +411,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
             this.defenseObjectInGroupMaxCount = builder.defenseObjectInGroupMaxCount;
             this.defenseObjectInTemplateMaxCount = builder.defenseObjectInTemplateMaxCount;
             this.defenseObjectMaxCount = builder.defenseObjectMaxCount;
+            this.dlp = builder.dlp;
+            this.dlpRuleInTemplateMaxCount = builder.dlpRuleInTemplateMaxCount;
+            this.dlpTemplateMaxCount = builder.dlpTemplateMaxCount;
             this.exclusiveIp = builder.exclusiveIp;
             this.gslb = builder.gslb;
             this.httpPorts = builder.httpPorts;
@@ -289,6 +426,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
             this.logService = builder.logService;
             this.majorProtection = builder.majorProtection;
             this.majorProtectionTemplateMaxCount = builder.majorProtectionTemplateMaxCount;
+            this.tamperproof = builder.tamperproof;
+            this.tamperproofRuleInTemplateMaxCount = builder.tamperproofRuleInTemplateMaxCount;
+            this.tamperproofTemplateMaxCount = builder.tamperproofTemplateMaxCount;
             this.vastIpBlacklistInFileMaxCount = builder.vastIpBlacklistInFileMaxCount;
             this.vastIpBlacklistInOperationMaxCount = builder.vastIpBlacklistInOperationMaxCount;
             this.vastIpBlacklistMaxCount = builder.vastIpBlacklistMaxCount;
@@ -354,6 +494,34 @@ public class DescribeInstanceResponseBody extends TeaModel {
          */
         public Long getBaseWafGroupRuleTemplateMaxCount() {
             return this.baseWafGroupRuleTemplateMaxCount;
+        }
+
+        /**
+         * @return bot
+         */
+        public Boolean getBot() {
+            return this.bot;
+        }
+
+        /**
+         * @return botApp
+         */
+        public String getBotApp() {
+            return this.botApp;
+        }
+
+        /**
+         * @return botTemplateMaxCount
+         */
+        public Long getBotTemplateMaxCount() {
+            return this.botTemplateMaxCount;
+        }
+
+        /**
+         * @return botWeb
+         */
+        public String getBotWeb() {
+            return this.botWeb;
         }
 
         /**
@@ -455,6 +623,27 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return dlp
+         */
+        public Boolean getDlp() {
+            return this.dlp;
+        }
+
+        /**
+         * @return dlpRuleInTemplateMaxCount
+         */
+        public Long getDlpRuleInTemplateMaxCount() {
+            return this.dlpRuleInTemplateMaxCount;
+        }
+
+        /**
+         * @return dlpTemplateMaxCount
+         */
+        public Long getDlpTemplateMaxCount() {
+            return this.dlpTemplateMaxCount;
+        }
+
+        /**
          * @return exclusiveIp
          */
         public Boolean getExclusiveIp() {
@@ -539,6 +728,27 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return tamperproof
+         */
+        public Boolean getTamperproof() {
+            return this.tamperproof;
+        }
+
+        /**
+         * @return tamperproofRuleInTemplateMaxCount
+         */
+        public Long getTamperproofRuleInTemplateMaxCount() {
+            return this.tamperproofRuleInTemplateMaxCount;
+        }
+
+        /**
+         * @return tamperproofTemplateMaxCount
+         */
+        public Long getTamperproofTemplateMaxCount() {
+            return this.tamperproofTemplateMaxCount;
+        }
+
+        /**
          * @return vastIpBlacklistInFileMaxCount
          */
         public Long getVastIpBlacklistInFileMaxCount() {
@@ -602,6 +812,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private Boolean baseWafGroup; 
             private Long baseWafGroupRuleInTemplateMaxCount; 
             private Long baseWafGroupRuleTemplateMaxCount; 
+            private Boolean bot; 
+            private String botApp; 
+            private Long botTemplateMaxCount; 
+            private String botWeb; 
             private Long cnameResourceMaxCount; 
             private Boolean customResponse; 
             private Long customResponseRuleInTemplateMaxCount; 
@@ -616,6 +830,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private Long defenseObjectInGroupMaxCount; 
             private Long defenseObjectInTemplateMaxCount; 
             private Long defenseObjectMaxCount; 
+            private Boolean dlp; 
+            private Long dlpRuleInTemplateMaxCount; 
+            private Long dlpTemplateMaxCount; 
             private Boolean exclusiveIp; 
             private Boolean gslb; 
             private String httpPorts; 
@@ -628,6 +845,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private Boolean logService; 
             private Boolean majorProtection; 
             private Long majorProtectionTemplateMaxCount; 
+            private Boolean tamperproof; 
+            private Long tamperproofRuleInTemplateMaxCount; 
+            private Long tamperproofTemplateMaxCount; 
             private Long vastIpBlacklistInFileMaxCount; 
             private Long vastIpBlacklistInOperationMaxCount; 
             private Long vastIpBlacklistMaxCount; 
@@ -690,6 +910,38 @@ public class DescribeInstanceResponseBody extends TeaModel {
              */
             public Builder baseWafGroupRuleTemplateMaxCount(Long baseWafGroupRuleTemplateMaxCount) {
                 this.baseWafGroupRuleTemplateMaxCount = baseWafGroupRuleTemplateMaxCount;
+                return this;
+            }
+
+            /**
+             * Bot.
+             */
+            public Builder bot(Boolean bot) {
+                this.bot = bot;
+                return this;
+            }
+
+            /**
+             * BotApp.
+             */
+            public Builder botApp(String botApp) {
+                this.botApp = botApp;
+                return this;
+            }
+
+            /**
+             * BotTemplateMaxCount.
+             */
+            public Builder botTemplateMaxCount(Long botTemplateMaxCount) {
+                this.botTemplateMaxCount = botTemplateMaxCount;
+                return this;
+            }
+
+            /**
+             * BotWeb.
+             */
+            public Builder botWeb(String botWeb) {
+                this.botWeb = botWeb;
                 return this;
             }
 
@@ -806,6 +1058,30 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
+             * Dlp.
+             */
+            public Builder dlp(Boolean dlp) {
+                this.dlp = dlp;
+                return this;
+            }
+
+            /**
+             * DlpRuleInTemplateMaxCount.
+             */
+            public Builder dlpRuleInTemplateMaxCount(Long dlpRuleInTemplateMaxCount) {
+                this.dlpRuleInTemplateMaxCount = dlpRuleInTemplateMaxCount;
+                return this;
+            }
+
+            /**
+             * DlpTemplateMaxCount.
+             */
+            public Builder dlpTemplateMaxCount(Long dlpTemplateMaxCount) {
+                this.dlpTemplateMaxCount = dlpTemplateMaxCount;
+                return this;
+            }
+
+            /**
              * 独享IP
              */
             public Builder exclusiveIp(Boolean exclusiveIp) {
@@ -898,6 +1174,30 @@ public class DescribeInstanceResponseBody extends TeaModel {
              */
             public Builder majorProtectionTemplateMaxCount(Long majorProtectionTemplateMaxCount) {
                 this.majorProtectionTemplateMaxCount = majorProtectionTemplateMaxCount;
+                return this;
+            }
+
+            /**
+             * Tamperproof.
+             */
+            public Builder tamperproof(Boolean tamperproof) {
+                this.tamperproof = tamperproof;
+                return this;
+            }
+
+            /**
+             * TamperproofRuleInTemplateMaxCount.
+             */
+            public Builder tamperproofRuleInTemplateMaxCount(Long tamperproofRuleInTemplateMaxCount) {
+                this.tamperproofRuleInTemplateMaxCount = tamperproofRuleInTemplateMaxCount;
+                return this;
+            }
+
+            /**
+             * TamperproofTemplateMaxCount.
+             */
+            public Builder tamperproofTemplateMaxCount(Long tamperproofTemplateMaxCount) {
+                this.tamperproofTemplateMaxCount = tamperproofTemplateMaxCount;
                 return this;
             }
 
