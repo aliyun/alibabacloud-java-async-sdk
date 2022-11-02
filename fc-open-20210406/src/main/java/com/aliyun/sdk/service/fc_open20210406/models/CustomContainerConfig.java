@@ -27,12 +27,16 @@ public class CustomContainerConfig extends TeaModel {
     @NameInMap("instanceID")
     private String instanceID;
 
+    @NameInMap("webServerMode")
+    private Boolean webServerMode;
+
     private CustomContainerConfig(Builder builder) {
         this.accelerationType = builder.accelerationType;
         this.args = builder.args;
         this.command = builder.command;
         this.image = builder.image;
         this.instanceID = builder.instanceID;
+        this.webServerMode = builder.webServerMode;
     }
 
     public static Builder builder() {
@@ -78,12 +82,20 @@ public class CustomContainerConfig extends TeaModel {
         return this.instanceID;
     }
 
+    /**
+     * @return webServerMode
+     */
+    public Boolean getWebServerMode() {
+        return this.webServerMode;
+    }
+
     public static final class Builder {
         private String accelerationType; 
         private String args; 
         private String command; 
         private String image; 
         private String instanceID; 
+        private Boolean webServerMode; 
 
         /**
          * 镜像加速类型，取值Default为开启加速，None为关闭加速，默认开启
@@ -122,6 +134,14 @@ public class CustomContainerConfig extends TeaModel {
          */
         public Builder instanceID(String instanceID) {
             this.instanceID = instanceID;
+            return this;
+        }
+
+        /**
+         * 镜像运行是否为Web Server模式，取值true需要在容器镜像中实现Web Server来监听端口并处理请求，取值false需要容器运行后主动退出进程，并且ExitCode需要为0。默认true
+         */
+        public Builder webServerMode(Boolean webServerMode) {
+            this.webServerMode = webServerMode;
             return this;
         }
 
