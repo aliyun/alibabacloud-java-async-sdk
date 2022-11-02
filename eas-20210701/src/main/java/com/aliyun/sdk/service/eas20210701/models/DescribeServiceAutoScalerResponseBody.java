@@ -15,8 +15,8 @@ public class DescribeServiceAutoScalerResponseBody extends TeaModel {
     @NameInMap("Behavior")
     private java.util.Map < String, ? > behavior;
 
-    @NameInMap("CurrentValues")
-    private java.util.Map < String, ? > currentValues;
+    @NameInMap("CurrentMetrics")
+    private java.util.List < CurrentMetrics> currentMetrics;
 
     @NameInMap("MaxReplica")
     private Integer maxReplica;
@@ -27,20 +27,20 @@ public class DescribeServiceAutoScalerResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("ScaleStrategies")
+    private java.util.List < ScaleStrategies> scaleStrategies;
+
     @NameInMap("ServiceName")
     private String serviceName;
 
-    @NameInMap("Strategies")
-    private java.util.Map < String, ? > strategies;
-
     private DescribeServiceAutoScalerResponseBody(Builder builder) {
         this.behavior = builder.behavior;
-        this.currentValues = builder.currentValues;
+        this.currentMetrics = builder.currentMetrics;
         this.maxReplica = builder.maxReplica;
         this.minReplica = builder.minReplica;
         this.requestId = builder.requestId;
+        this.scaleStrategies = builder.scaleStrategies;
         this.serviceName = builder.serviceName;
-        this.strategies = builder.strategies;
     }
 
     public static Builder builder() {
@@ -59,10 +59,10 @@ public class DescribeServiceAutoScalerResponseBody extends TeaModel {
     }
 
     /**
-     * @return currentValues
+     * @return currentMetrics
      */
-    public java.util.Map < String, ? > getCurrentValues() {
-        return this.currentValues;
+    public java.util.List < CurrentMetrics> getCurrentMetrics() {
+        return this.currentMetrics;
     }
 
     /**
@@ -87,27 +87,27 @@ public class DescribeServiceAutoScalerResponseBody extends TeaModel {
     }
 
     /**
+     * @return scaleStrategies
+     */
+    public java.util.List < ScaleStrategies> getScaleStrategies() {
+        return this.scaleStrategies;
+    }
+
+    /**
      * @return serviceName
      */
     public String getServiceName() {
         return this.serviceName;
     }
 
-    /**
-     * @return strategies
-     */
-    public java.util.Map < String, ? > getStrategies() {
-        return this.strategies;
-    }
-
     public static final class Builder {
         private java.util.Map < String, ? > behavior; 
-        private java.util.Map < String, ? > currentValues; 
+        private java.util.List < CurrentMetrics> currentMetrics; 
         private Integer maxReplica; 
         private Integer minReplica; 
         private String requestId; 
+        private java.util.List < ScaleStrategies> scaleStrategies; 
         private String serviceName; 
-        private java.util.Map < String, ? > strategies; 
 
         /**
          * Behavior.
@@ -118,10 +118,10 @@ public class DescribeServiceAutoScalerResponseBody extends TeaModel {
         }
 
         /**
-         * CurrentValues.
+         * CurrentMetrics.
          */
-        public Builder currentValues(java.util.Map < String, ? > currentValues) {
-            this.currentValues = currentValues;
+        public Builder currentMetrics(java.util.List < CurrentMetrics> currentMetrics) {
+            this.currentMetrics = currentMetrics;
             return this;
         }
 
@@ -150,18 +150,18 @@ public class DescribeServiceAutoScalerResponseBody extends TeaModel {
         }
 
         /**
-         * 服务名字
+         * ScaleStrategies.
          */
-        public Builder serviceName(String serviceName) {
-            this.serviceName = serviceName;
+        public Builder scaleStrategies(java.util.List < ScaleStrategies> scaleStrategies) {
+            this.scaleStrategies = scaleStrategies;
             return this;
         }
 
         /**
-         * 扩缩控制器控制策略
+         * 服务名字
          */
-        public Builder strategies(java.util.Map < String, ? > strategies) {
-            this.strategies = strategies;
+        public Builder serviceName(String serviceName) {
+            this.serviceName = serviceName;
             return this;
         }
 
@@ -171,4 +171,166 @@ public class DescribeServiceAutoScalerResponseBody extends TeaModel {
 
     } 
 
+    public static class CurrentMetrics extends TeaModel {
+        @NameInMap("metricName")
+        private String metricName;
+
+        @NameInMap("service")
+        private String service;
+
+        @NameInMap("value")
+        private Float value;
+
+        private CurrentMetrics(Builder builder) {
+            this.metricName = builder.metricName;
+            this.service = builder.service;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CurrentMetrics create() {
+            return builder().build();
+        }
+
+        /**
+         * @return metricName
+         */
+        public String getMetricName() {
+            return this.metricName;
+        }
+
+        /**
+         * @return service
+         */
+        public String getService() {
+            return this.service;
+        }
+
+        /**
+         * @return value
+         */
+        public Float getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String metricName; 
+            private String service; 
+            private Float value; 
+
+            /**
+             * metricName.
+             */
+            public Builder metricName(String metricName) {
+                this.metricName = metricName;
+                return this;
+            }
+
+            /**
+             * service.
+             */
+            public Builder service(String service) {
+                this.service = service;
+                return this;
+            }
+
+            /**
+             * value.
+             */
+            public Builder value(Float value) {
+                this.value = value;
+                return this;
+            }
+
+            public CurrentMetrics build() {
+                return new CurrentMetrics(this);
+            } 
+
+        } 
+
+    }
+    public static class ScaleStrategies extends TeaModel {
+        @NameInMap("metricName")
+        private String metricName;
+
+        @NameInMap("service")
+        private String service;
+
+        @NameInMap("threshold")
+        private Float threshold;
+
+        private ScaleStrategies(Builder builder) {
+            this.metricName = builder.metricName;
+            this.service = builder.service;
+            this.threshold = builder.threshold;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ScaleStrategies create() {
+            return builder().build();
+        }
+
+        /**
+         * @return metricName
+         */
+        public String getMetricName() {
+            return this.metricName;
+        }
+
+        /**
+         * @return service
+         */
+        public String getService() {
+            return this.service;
+        }
+
+        /**
+         * @return threshold
+         */
+        public Float getThreshold() {
+            return this.threshold;
+        }
+
+        public static final class Builder {
+            private String metricName; 
+            private String service; 
+            private Float threshold; 
+
+            /**
+             * metricName.
+             */
+            public Builder metricName(String metricName) {
+                this.metricName = metricName;
+                return this;
+            }
+
+            /**
+             * service.
+             */
+            public Builder service(String service) {
+                this.service = service;
+                return this;
+            }
+
+            /**
+             * threshold.
+             */
+            public Builder threshold(Float threshold) {
+                this.threshold = threshold;
+                return this;
+            }
+
+            public ScaleStrategies build() {
+                return new ScaleStrategies(this);
+            } 
+
+        } 
+
+    }
 }

@@ -17,6 +17,10 @@ public class ListServicesRequest extends Request {
     private String filter;
 
     @Query
+    @NameInMap("GroupName")
+    private String groupName;
+
+    @Query
     @NameInMap("Order")
     private String order;
 
@@ -35,6 +39,7 @@ public class ListServicesRequest extends Request {
     private ListServicesRequest(Builder builder) {
         super(builder);
         this.filter = builder.filter;
+        this.groupName = builder.groupName;
         this.order = builder.order;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -59,6 +64,13 @@ public class ListServicesRequest extends Request {
      */
     public String getFilter() {
         return this.filter;
+    }
+
+    /**
+     * @return groupName
+     */
+    public String getGroupName() {
+        return this.groupName;
     }
 
     /**
@@ -91,6 +103,7 @@ public class ListServicesRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListServicesRequest, Builder> {
         private String filter; 
+        private String groupName; 
         private String order; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -103,6 +116,7 @@ public class ListServicesRequest extends Request {
         private Builder(ListServicesRequest request) {
             super(request);
             this.filter = request.filter;
+            this.groupName = request.groupName;
             this.order = request.order;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
@@ -115,6 +129,15 @@ public class ListServicesRequest extends Request {
         public Builder filter(String filter) {
             this.putQueryParameter("Filter", filter);
             this.filter = filter;
+            return this;
+        }
+
+        /**
+         * 服务组名称过滤
+         */
+        public Builder groupName(String groupName) {
+            this.putQueryParameter("GroupName", groupName);
+            this.groupName = groupName;
             return this;
         }
 

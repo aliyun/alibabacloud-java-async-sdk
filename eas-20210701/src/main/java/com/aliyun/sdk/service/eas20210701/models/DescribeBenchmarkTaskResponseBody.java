@@ -21,6 +21,9 @@ public class DescribeBenchmarkTaskResponseBody extends TeaModel {
     @NameInMap("DesiredAgent")
     private Long desiredAgent;
 
+    @NameInMap("Endpoint")
+    private String endpoint;
+
     @NameInMap("Message")
     private String message;
 
@@ -52,6 +55,7 @@ public class DescribeBenchmarkTaskResponseBody extends TeaModel {
         this.availableAgent = builder.availableAgent;
         this.callerUid = builder.callerUid;
         this.desiredAgent = builder.desiredAgent;
+        this.endpoint = builder.endpoint;
         this.message = builder.message;
         this.parentUid = builder.parentUid;
         this.reason = builder.reason;
@@ -90,6 +94,13 @@ public class DescribeBenchmarkTaskResponseBody extends TeaModel {
      */
     public Long getDesiredAgent() {
         return this.desiredAgent;
+    }
+
+    /**
+     * @return endpoint
+     */
+    public String getEndpoint() {
+        return this.endpoint;
     }
 
     /**
@@ -159,6 +170,7 @@ public class DescribeBenchmarkTaskResponseBody extends TeaModel {
         private Long availableAgent; 
         private String callerUid; 
         private Long desiredAgent; 
+        private String endpoint; 
         private String message; 
         private String parentUid; 
         private String reason; 
@@ -190,6 +202,14 @@ public class DescribeBenchmarkTaskResponseBody extends TeaModel {
          */
         public Builder desiredAgent(Long desiredAgent) {
             this.desiredAgent = desiredAgent;
+            return this;
+        }
+
+        /**
+         * Endpoint.
+         */
+        public Builder endpoint(String endpoint) {
+            this.endpoint = endpoint;
             return this;
         }
 

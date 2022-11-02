@@ -58,6 +58,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeBenchmarkTaskReportResponse> describeBenchmarkTaskReport(DescribeBenchmarkTaskReportRequest request);
 
+    CompletableFuture<DescribeGroupResponse> describeGroup(DescribeGroupRequest request);
+
     CompletableFuture<DescribeResourceResponse> describeResource(DescribeResourceRequest request);
 
     CompletableFuture<DescribeResourceDLinkResponse> describeResourceDLink(DescribeResourceDLinkRequest request);
@@ -70,11 +72,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeServiceCronScalerResponse> describeServiceCronScaler(DescribeServiceCronScalerRequest request);
 
+    CompletableFuture<DescribeServiceEventResponse> describeServiceEvent(DescribeServiceEventRequest request);
+
     CompletableFuture<DescribeServiceLogResponse> describeServiceLog(DescribeServiceLogRequest request);
 
     CompletableFuture<DescribeServiceMirrorResponse> describeServiceMirror(DescribeServiceMirrorRequest request);
 
     CompletableFuture<ListBenchmarkTaskResponse> listBenchmarkTask(ListBenchmarkTaskRequest request);
+
+    CompletableFuture<ListGroupsResponse> listGroups(ListGroupsRequest request);
 
     CompletableFuture<ListResourceInstanceWorkerResponse> listResourceInstanceWorker(ListResourceInstanceWorkerRequest request);
 
@@ -85,6 +91,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListResourcesResponse> listResources(ListResourcesRequest request);
 
     CompletableFuture<ListServiceInstancesResponse> listServiceInstances(ListServiceInstancesRequest request);
+
+    CompletableFuture<ListServiceVersionsResponse> listServiceVersions(ListServiceVersionsRequest request);
 
     CompletableFuture<ListServicesResponse> listServices(ListServicesRequest request);
 

@@ -15,20 +15,20 @@ public class CreateBenchmarkTaskResponseBody extends TeaModel {
     @NameInMap("Message")
     private String message;
 
-    @NameInMap("Name")
-    private String name;
-
     @NameInMap("Region")
     private String region;
 
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("TaskName")
+    private String taskName;
+
     private CreateBenchmarkTaskResponseBody(Builder builder) {
         this.message = builder.message;
-        this.name = builder.name;
         this.region = builder.region;
         this.requestId = builder.requestId;
+        this.taskName = builder.taskName;
     }
 
     public static Builder builder() {
@@ -47,13 +47,6 @@ public class CreateBenchmarkTaskResponseBody extends TeaModel {
     }
 
     /**
-     * @return name
-     */
-    public String getName() {
-        return this.name;
-    }
-
-    /**
      * @return region
      */
     public String getRegion() {
@@ -67,25 +60,24 @@ public class CreateBenchmarkTaskResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return taskName
+     */
+    public String getTaskName() {
+        return this.taskName;
+    }
+
     public static final class Builder {
         private String message; 
-        private String name; 
         private String region; 
         private String requestId; 
+        private String taskName; 
 
         /**
          * Message.
          */
         public Builder message(String message) {
             this.message = message;
-            return this;
-        }
-
-        /**
-         * Name.
-         */
-        public Builder name(String name) {
-            this.name = name;
             return this;
         }
 
@@ -102,6 +94,14 @@ public class CreateBenchmarkTaskResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * TaskName.
+         */
+        public Builder taskName(String taskName) {
+            this.taskName = taskName;
             return this;
         }
 

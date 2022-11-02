@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ResourceInstance</p>
  */
 public class ResourceInstance extends TeaModel {
+    @NameInMap("Arch")
+    private String arch;
+
     @NameInMap("AutoRenewal")
     private Boolean autoRenewal;
 
@@ -29,6 +32,9 @@ public class ResourceInstance extends TeaModel {
 
     @NameInMap("InstanceGpuCount")
     private Integer instanceGpuCount;
+
+    @NameInMap("InstanceGpuMemory")
+    private String instanceGpuMemory;
 
     @NameInMap("InstanceId")
     private String instanceId;
@@ -57,13 +63,21 @@ public class ResourceInstance extends TeaModel {
     @NameInMap("InstanceUsedMemory")
     private String instanceUsedMemory;
 
+    @NameInMap("Region")
+    private String region;
+
+    @NameInMap("Zone")
+    private String zone;
+
     private ResourceInstance(Builder builder) {
+        this.arch = builder.arch;
         this.autoRenewal = builder.autoRenewal;
         this.chargeType = builder.chargeType;
         this.createTime = builder.createTime;
         this.expiredTime = builder.expiredTime;
         this.instanceCpuCount = builder.instanceCpuCount;
         this.instanceGpuCount = builder.instanceGpuCount;
+        this.instanceGpuMemory = builder.instanceGpuMemory;
         this.instanceId = builder.instanceId;
         this.instanceIp = builder.instanceIp;
         this.instanceMemory = builder.instanceMemory;
@@ -73,6 +87,8 @@ public class ResourceInstance extends TeaModel {
         this.instanceUsedCpu = builder.instanceUsedCpu;
         this.instanceUsedGpu = builder.instanceUsedGpu;
         this.instanceUsedMemory = builder.instanceUsedMemory;
+        this.region = builder.region;
+        this.zone = builder.zone;
     }
 
     public static Builder builder() {
@@ -81,6 +97,13 @@ public class ResourceInstance extends TeaModel {
 
     public static ResourceInstance create() {
         return builder().build();
+    }
+
+    /**
+     * @return arch
+     */
+    public String getArch() {
+        return this.arch;
     }
 
     /**
@@ -123,6 +146,13 @@ public class ResourceInstance extends TeaModel {
      */
     public Integer getInstanceGpuCount() {
         return this.instanceGpuCount;
+    }
+
+    /**
+     * @return instanceGpuMemory
+     */
+    public String getInstanceGpuMemory() {
+        return this.instanceGpuMemory;
     }
 
     /**
@@ -188,13 +218,29 @@ public class ResourceInstance extends TeaModel {
         return this.instanceUsedMemory;
     }
 
+    /**
+     * @return region
+     */
+    public String getRegion() {
+        return this.region;
+    }
+
+    /**
+     * @return zone
+     */
+    public String getZone() {
+        return this.zone;
+    }
+
     public static final class Builder {
+        private String arch; 
         private Boolean autoRenewal; 
         private String chargeType; 
         private String createTime; 
         private String expiredTime; 
         private Integer instanceCpuCount; 
         private Integer instanceGpuCount; 
+        private String instanceGpuMemory; 
         private String instanceId; 
         private String instanceIp; 
         private String instanceMemory; 
@@ -204,6 +250,16 @@ public class ResourceInstance extends TeaModel {
         private Float instanceUsedCpu; 
         private Integer instanceUsedGpu; 
         private String instanceUsedMemory; 
+        private String region; 
+        private String zone; 
+
+        /**
+         * 实例系统架构
+         */
+        public Builder arch(String arch) {
+            this.arch = arch;
+            return this;
+        }
 
         /**
          * 实例是否自动续费
@@ -250,6 +306,14 @@ public class ResourceInstance extends TeaModel {
          */
         public Builder instanceGpuCount(Integer instanceGpuCount) {
             this.instanceGpuCount = instanceGpuCount;
+            return this;
+        }
+
+        /**
+         * 实例的显存大小
+         */
+        public Builder instanceGpuMemory(String instanceGpuMemory) {
+            this.instanceGpuMemory = instanceGpuMemory;
             return this;
         }
 
@@ -322,6 +386,22 @@ public class ResourceInstance extends TeaModel {
          */
         public Builder instanceUsedMemory(String instanceUsedMemory) {
             this.instanceUsedMemory = instanceUsedMemory;
+            return this;
+        }
+
+        /**
+         * 实例所属区域
+         */
+        public Builder region(String region) {
+            this.region = region;
+            return this;
+        }
+
+        /**
+         * 实例所属可用区
+         */
+        public Builder zone(String zone) {
+            this.zone = zone;
             return this;
         }
 

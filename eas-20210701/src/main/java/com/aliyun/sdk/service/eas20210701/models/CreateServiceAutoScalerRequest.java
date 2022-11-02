@@ -33,9 +33,9 @@ public class CreateServiceAutoScalerRequest extends Request {
     private Integer min;
 
     @Body
-    @NameInMap("strategies")
+    @NameInMap("scaleStrategies")
     @Validation(required = true)
-    private Strategies strategies;
+    private java.util.List < ScaleStrategies> scaleStrategies;
 
     private CreateServiceAutoScalerRequest(Builder builder) {
         super(builder);
@@ -43,7 +43,7 @@ public class CreateServiceAutoScalerRequest extends Request {
         this.serviceName = builder.serviceName;
         this.max = builder.max;
         this.min = builder.min;
-        this.strategies = builder.strategies;
+        this.scaleStrategies = builder.scaleStrategies;
     }
 
     public static Builder builder() {
@@ -88,10 +88,10 @@ public class CreateServiceAutoScalerRequest extends Request {
     }
 
     /**
-     * @return strategies
+     * @return scaleStrategies
      */
-    public Strategies getStrategies() {
-        return this.strategies;
+    public java.util.List < ScaleStrategies> getScaleStrategies() {
+        return this.scaleStrategies;
     }
 
     public static final class Builder extends Request.Builder<CreateServiceAutoScalerRequest, Builder> {
@@ -99,7 +99,7 @@ public class CreateServiceAutoScalerRequest extends Request {
         private String serviceName; 
         private Integer max; 
         private Integer min; 
-        private Strategies strategies; 
+        private java.util.List < ScaleStrategies> scaleStrategies; 
 
         private Builder() {
             super();
@@ -111,7 +111,7 @@ public class CreateServiceAutoScalerRequest extends Request {
             this.serviceName = request.serviceName;
             this.max = request.max;
             this.min = request.min;
-            this.strategies = request.strategies;
+            this.scaleStrategies = request.scaleStrategies;
         } 
 
         /**
@@ -151,11 +151,11 @@ public class CreateServiceAutoScalerRequest extends Request {
         }
 
         /**
-         * map 类型的策略定义
+         * scaleStrategies.
          */
-        public Builder strategies(Strategies strategies) {
-            this.putBodyParameter("strategies", strategies);
-            this.strategies = strategies;
+        public Builder scaleStrategies(java.util.List < ScaleStrategies> scaleStrategies) {
+            this.putBodyParameter("scaleStrategies", scaleStrategies);
+            this.scaleStrategies = scaleStrategies;
             return this;
         }
 
@@ -166,62 +166,84 @@ public class CreateServiceAutoScalerRequest extends Request {
 
     } 
 
-    public static class Strategies extends TeaModel {
-        @NameInMap("cpu")
-        private Float cpu;
+    public static class ScaleStrategies extends TeaModel {
+        @NameInMap("metricName")
+        @Validation(required = true)
+        private String metricName;
 
-        @NameInMap("qps")
-        private Float qps;
+        @NameInMap("service")
+        private String service;
 
-        private Strategies(Builder builder) {
-            this.cpu = builder.cpu;
-            this.qps = builder.qps;
+        @NameInMap("threshold")
+        @Validation(required = true)
+        private Float threshold;
+
+        private ScaleStrategies(Builder builder) {
+            this.metricName = builder.metricName;
+            this.service = builder.service;
+            this.threshold = builder.threshold;
         }
 
         public static Builder builder() {
             return new Builder();
         }
 
-        public static Strategies create() {
+        public static ScaleStrategies create() {
             return builder().build();
         }
 
         /**
-         * @return cpu
+         * @return metricName
          */
-        public Float getCpu() {
-            return this.cpu;
+        public String getMetricName() {
+            return this.metricName;
         }
 
         /**
-         * @return qps
+         * @return service
          */
-        public Float getQps() {
-            return this.qps;
+        public String getService() {
+            return this.service;
+        }
+
+        /**
+         * @return threshold
+         */
+        public Float getThreshold() {
+            return this.threshold;
         }
 
         public static final class Builder {
-            private Float cpu; 
-            private Float qps; 
+            private String metricName; 
+            private String service; 
+            private Float threshold; 
 
             /**
-             * 最大 replica 数，需要大于MinReplica
+             * metricName.
              */
-            public Builder cpu(Float cpu) {
-                this.cpu = cpu;
+            public Builder metricName(String metricName) {
+                this.metricName = metricName;
                 return this;
             }
 
             /**
-             * 每个实例支持的最大qps数，超出即扩容
+             * service.
              */
-            public Builder qps(Float qps) {
-                this.qps = qps;
+            public Builder service(String service) {
+                this.service = service;
                 return this;
             }
 
-            public Strategies build() {
-                return new Strategies(this);
+            /**
+             * threshold.
+             */
+            public Builder threshold(Float threshold) {
+                this.threshold = threshold;
+                return this;
+            }
+
+            public ScaleStrategies build() {
+                return new ScaleStrategies(this);
             } 
 
         } 

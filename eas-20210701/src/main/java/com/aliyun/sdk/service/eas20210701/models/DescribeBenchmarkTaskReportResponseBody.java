@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeBenchmarkTaskReportResponseBody</p>
  */
 public class DescribeBenchmarkTaskReportResponseBody extends TeaModel {
+    @NameInMap("Data")
+    private Object data;
+
     @NameInMap("ReportUrl")
     private String reportUrl;
 
@@ -19,6 +22,7 @@ public class DescribeBenchmarkTaskReportResponseBody extends TeaModel {
     private String requestId;
 
     private DescribeBenchmarkTaskReportResponseBody(Builder builder) {
+        this.data = builder.data;
         this.reportUrl = builder.reportUrl;
         this.requestId = builder.requestId;
     }
@@ -29,6 +33,13 @@ public class DescribeBenchmarkTaskReportResponseBody extends TeaModel {
 
     public static DescribeBenchmarkTaskReportResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return data
+     */
+    public Object getData() {
+        return this.data;
     }
 
     /**
@@ -46,8 +57,17 @@ public class DescribeBenchmarkTaskReportResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private Object data; 
         private String reportUrl; 
         private String requestId; 
+
+        /**
+         * Data.
+         */
+        public Builder data(Object data) {
+            this.data = data;
+            return this;
+        }
 
         /**
          * ReportUrl.

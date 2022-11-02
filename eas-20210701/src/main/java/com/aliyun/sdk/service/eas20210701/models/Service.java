@@ -75,6 +75,12 @@ public class Service extends TeaModel {
     @NameInMap("ResourceAlias")
     private String resourceAlias;
 
+    @NameInMap("Role")
+    private String role;
+
+    @NameInMap("RoleAttrs")
+    private String roleAttrs;
+
     @NameInMap("RunningInstance")
     private Integer runningInstance;
 
@@ -130,6 +136,8 @@ public class Service extends TeaModel {
         this.requestId = builder.requestId;
         this.resource = builder.resource;
         this.resourceAlias = builder.resourceAlias;
+        this.role = builder.role;
+        this.roleAttrs = builder.roleAttrs;
         this.runningInstance = builder.runningInstance;
         this.serviceConfig = builder.serviceConfig;
         this.serviceGroup = builder.serviceGroup;
@@ -299,6 +307,20 @@ public class Service extends TeaModel {
     }
 
     /**
+     * @return role
+     */
+    public String getRole() {
+        return this.role;
+    }
+
+    /**
+     * @return roleAttrs
+     */
+    public String getRoleAttrs() {
+        return this.roleAttrs;
+    }
+
+    /**
      * @return runningInstance
      */
     public Integer getRunningInstance() {
@@ -397,6 +419,8 @@ public class Service extends TeaModel {
         private String requestId; 
         private String resource; 
         private String resourceAlias; 
+        private String role; 
+        private String roleAttrs; 
         private Integer runningInstance; 
         private String serviceConfig; 
         private String serviceGroup; 
@@ -574,6 +598,22 @@ public class Service extends TeaModel {
          */
         public Builder resourceAlias(String resourceAlias) {
             this.resourceAlias = resourceAlias;
+            return this;
+        }
+
+        /**
+         * 服务角色
+         */
+        public Builder role(String role) {
+            this.role = role;
+            return this;
+        }
+
+        /**
+         * 服务角色额外属性
+         */
+        public Builder roleAttrs(String roleAttrs) {
+            this.roleAttrs = roleAttrs;
             return this;
         }
 

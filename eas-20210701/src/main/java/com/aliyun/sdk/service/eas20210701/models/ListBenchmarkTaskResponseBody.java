@@ -12,15 +12,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListBenchmarkTaskResponseBody</p>
  */
 public class ListBenchmarkTaskResponseBody extends TeaModel {
+    @NameInMap("PageNumber")
+    private Integer pageNumber;
+
+    @NameInMap("PageSize")
+    private Integer pageSize;
+
     @NameInMap("RequestId")
     private String requestId;
 
     @NameInMap("Tasks")
     private java.util.List < Tasks> tasks;
 
+    @NameInMap("TotalCount")
+    private Integer totalCount;
+
     private ListBenchmarkTaskResponseBody(Builder builder) {
+        this.pageNumber = builder.pageNumber;
+        this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
         this.tasks = builder.tasks;
+        this.totalCount = builder.totalCount;
     }
 
     public static Builder builder() {
@@ -29,6 +41,20 @@ public class ListBenchmarkTaskResponseBody extends TeaModel {
 
     public static ListBenchmarkTaskResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     /**
@@ -45,9 +71,35 @@ public class ListBenchmarkTaskResponseBody extends TeaModel {
         return this.tasks;
     }
 
+    /**
+     * @return totalCount
+     */
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public static final class Builder {
+        private Integer pageNumber; 
+        private Integer pageSize; 
         private String requestId; 
         private java.util.List < Tasks> tasks; 
+        private Integer totalCount; 
+
+        /**
+         * PageNumber.
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * PageSize.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
 
         /**
          * RequestId.
@@ -62,6 +114,14 @@ public class ListBenchmarkTaskResponseBody extends TeaModel {
          */
         public Builder tasks(java.util.List < Tasks> tasks) {
             this.tasks = tasks;
+            return this;
+        }
+
+        /**
+         * TotalCount.
+         */
+        public Builder totalCount(Integer totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
 
