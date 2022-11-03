@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CorpTokenRequest extends Request {
     @Query
+    @NameInMap("app_secret")
+    private String appSecret;
+
+    @Query
     @NameInMap("corp_id")
     @Validation(required = true)
     private String corpId;
@@ -24,11 +28,11 @@ public class CorpTokenRequest extends Request {
 
     @Header
     @NameInMap("x-acs-btrip-access-token")
-    @Validation(required = true)
     private String xAcsBtripAccessToken;
 
     private CorpTokenRequest(Builder builder) {
         super(builder);
+        this.appSecret = builder.appSecret;
         this.corpId = builder.corpId;
         this.type = builder.type;
         this.xAcsBtripAccessToken = builder.xAcsBtripAccessToken;
@@ -45,6 +49,13 @@ public class CorpTokenRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return appSecret
+     */
+    public String getAppSecret() {
+        return this.appSecret;
     }
 
     /**
@@ -69,6 +80,7 @@ public class CorpTokenRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CorpTokenRequest, Builder> {
+        private String appSecret; 
         private String corpId; 
         private Integer type; 
         private String xAcsBtripAccessToken; 
@@ -79,10 +91,20 @@ public class CorpTokenRequest extends Request {
 
         private Builder(CorpTokenRequest request) {
             super(request);
+            this.appSecret = request.appSecret;
             this.corpId = request.corpId;
             this.type = request.type;
             this.xAcsBtripAccessToken = request.xAcsBtripAccessToken;
         } 
+
+        /**
+         * app_secret.
+         */
+        public Builder appSecret(String appSecret) {
+            this.putQueryParameter("app_secret", appSecret);
+            this.appSecret = appSecret;
+            return this;
+        }
 
         /**
          * 企业id，值可以在开放平台中的关联企业查看。
