@@ -20,6 +20,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ChangeApplicationInfoResponse> changeApplicationInfo(ChangeApplicationInfoRequest request);
 
+    CompletableFuture<ChargeFlowResponse> chargeFlow(ChargeFlowRequest request);
+
     CompletableFuture<CreateApplicationInfoResponse> createApplicationInfo(CreateApplicationInfoRequest request);
 
     CompletableFuture<GetAliyunXgipTokenResponse> getAliyunXgipToken(GetAliyunXgipTokenRequest request);
@@ -34,9 +36,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetFreeFlowUsageStatisticResponse> getFreeFlowUsageStatistic(GetFreeFlowUsageStatisticRequest request);
 
+    CompletableFuture<GetInventoryInfoResponse> getInventoryInfo(GetInventoryInfoRequest request);
+
+    CompletableFuture<GetItemInstListResponse> getItemInstList(GetItemInstListRequest request);
+
     CompletableFuture<GetItemListResponse> getItemList(GetItemListRequest request);
 
     CompletableFuture<GetOrderFreeFlowProductStatusResponse> getOrderFreeFlowProductStatus(GetOrderFreeFlowProductStatusRequest request);
+
+    CompletableFuture<GetOrderItemListResponse> getOrderItemList(GetOrderItemListRequest request);
 
     CompletableFuture<GetQosFlowUsageResponse> getQosFlowUsage(GetQosFlowUsageRequest request);
 
@@ -56,13 +64,23 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<OrderQosProductResponse> orderQosProduct(OrderQosProductRequest request);
 
+    CompletableFuture<QueryOrderListResponse> queryOrderList(QueryOrderListRequest request);
+
     CompletableFuture<SaveApplicationInfoResponse> saveApplicationInfo(SaveApplicationInfoRequest request);
+
+    CompletableFuture<SdkChargeFlowResponse> sdkChargeFlow(SdkChargeFlowRequest request);
+
+    CompletableFuture<SdkGetInventoryInfoResponse> sdkGetInventoryInfo(SdkGetInventoryInfoRequest request);
+
+    CompletableFuture<SdkGetItemInstListResponse> sdkGetItemInstList(SdkGetItemInstListRequest request);
 
     CompletableFuture<SdkOrderQosProductResponse> sdkOrderQosProduct(SdkOrderQosProductRequest request);
 
     CompletableFuture<SdkValidateStatusResponse> sdkValidateStatus(SdkValidateStatusRequest request);
 
     CompletableFuture<ValidControllerAuthorResponse> validControllerAuthor(ValidControllerAuthorRequest request);
+
+    CompletableFuture<ValidFlowResponse> validFlow(ValidFlowRequest request);
 
     CompletableFuture<ValidateStatusResponse> validateStatus(ValidateStatusRequest request);
 
