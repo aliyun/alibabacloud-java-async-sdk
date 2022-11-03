@@ -82,6 +82,7 @@ com/aliyun/sdk/service/cloudapi20160714/models/DescribeApiQpsDataResponseBody$1.
 com/aliyun/sdk/service/cloudapi20160714/models/ModifyBackendResponseBody$1.class
 com/aliyun/sdk/service/cloudapi20160714/models/DescribeDeployedApisResponseBody$DeployedApiItem$Builder.class
 com/aliyun/sdk/service/cloudapi20160714/models/ModifyAppRequest$Builder.class
+com/aliyun/sdk/service/cloudapi20160714/models/QueryRequestLogsResponseBody$RequestLog.class
 com/aliyun/sdk/service/cloudapi20160714/models/DescribeAppAttributesRequest$1.class
 com/aliyun/sdk/service/cloudapi20160714/models/DescribeApiSignaturesResponseBody$ApiSignatureItem.class
 com/aliyun/sdk/service/cloudapi20160714/models/DescribeAppAttributesResponseBody$Apps$Builder.class
@@ -125,6 +126,7 @@ com/aliyun/sdk/service/cloudapi20160714/models/SwitchApiResponse$BuilderImpl.cla
 com/aliyun/sdk/service/cloudapi20160714/models/SdkGenerateByGroupRequest$Builder.class
 com/aliyun/sdk/service/cloudapi20160714/models/DescribeAppAttributesResponseBody.class
 com/aliyun/sdk/service/cloudapi20160714/models/ModifySignatureRequest$1.class
+com/aliyun/sdk/service/cloudapi20160714/models/QueryRequestLogsResponseBody$RequestLogs$Builder.class
 com/aliyun/sdk/service/cloudapi20160714/models/DescribeModelsResponseBody$ModelDetails$Builder.class
 com/aliyun/sdk/service/cloudapi20160714/models/DescribeApiGroupsResponseBody$TagInfo$Builder.class
 com/aliyun/sdk/service/cloudapi20160714/models/DescribeApisByAppResponse$1.class
@@ -137,6 +139,7 @@ com/aliyun/sdk/service/cloudapi20160714/models/DescribeModelsResponse$1.class
 com/aliyun/sdk/service/cloudapi20160714/models/DescribeApiTrafficDataResponse$Builder.class
 com/aliyun/sdk/service/cloudapi20160714/models/DescribeDeployedApisRequest$Builder.class
 com/aliyun/sdk/service/cloudapi20160714/models/CreateApiGroupResponseBody$Builder.class
+com/aliyun/sdk/service/cloudapi20160714/models/QueryRequestLogsResponseBody$RequestLog$Builder.class
 com/aliyun/sdk/service/cloudapi20160714/models/DescribePurchasedApisRequest.class
 com/aliyun/sdk/service/cloudapi20160714/models/RemoveIpControlPolicyItemRequest.class
 com/aliyun/sdk/service/cloudapi20160714/models/DescribeLogConfigResponseBody.class
@@ -632,6 +635,7 @@ com/aliyun/sdk/service/cloudapi20160714/models/DescribeApiGroupVpcWhitelistReque
 com/aliyun/sdk/service/cloudapi20160714/models/DescribeZonesResponseBody$Zones$Builder.class
 com/aliyun/sdk/service/cloudapi20160714/models/DescribePluginsByApiRequest$1.class
 com/aliyun/sdk/service/cloudapi20160714/models/DescribeAbolishApiTaskResponseBody$ApiAbolishResult$Builder.class
+com/aliyun/sdk/service/cloudapi20160714/models/QueryRequestLogsResponse$1.class
 com/aliyun/sdk/service/cloudapi20160714/models/DeployApiResponse$BuilderImpl.class
 com/aliyun/sdk/service/cloudapi20160714/models/DeleteAllTrafficSpecialControlResponseBody.class
 com/aliyun/sdk/service/cloudapi20160714/models/ReactivateDomainResponse.class
@@ -669,6 +673,7 @@ com/aliyun/sdk/service/cloudapi20160714/models/DeleteBackendResponse$Builder.cla
 com/aliyun/sdk/service/cloudapi20160714/models/DeleteInstanceRequest$Tag.class
 com/aliyun/sdk/service/cloudapi20160714/models/ModifyLogConfigRequest$Builder.class
 com/aliyun/sdk/service/cloudapi20160714/models/DeleteApiStageVariableResponseBody.class
+com/aliyun/sdk/service/cloudapi20160714/models/QueryRequestLogsResponseBody$RequestLogs.class
 com/aliyun/sdk/service/cloudapi20160714/models/DescribePluginsResponseBody$Tags.class
 com/aliyun/sdk/service/cloudapi20160714/models/CreatePluginResponse$1.class
 com/aliyun/sdk/service/cloudapi20160714/models/SdkGenerateByAppResponseBody.class
@@ -931,6 +936,7 @@ com/aliyun/sdk/service/cloudapi20160714/models/SetDomainCertificateResponseBody$
 com/aliyun/sdk/service/cloudapi20160714/models/DeleteTrafficSpecialControlResponse.class
 com/aliyun/sdk/service/cloudapi20160714/models/DescribePluginsRequest.class
 com/aliyun/sdk/service/cloudapi20160714/models/DescribeInstancesResponse.class
+com/aliyun/sdk/service/cloudapi20160714/models/QueryRequestLogsResponseBody$1.class
 com/aliyun/sdk/service/cloudapi20160714/models/DescribeInstancesResponseBody$Instances.class
 com/aliyun/sdk/service/cloudapi20160714/models/CreateAppRequest$1.class
 com/aliyun/sdk/service/cloudapi20160714/models/DescribeApiResponseBody$ErrorCodeSamples.class
@@ -1184,6 +1190,7 @@ com/aliyun/sdk/service/cloudapi20160714/models/DescribeMarketRemainsQuotaRespons
 com/aliyun/sdk/service/cloudapi20160714/models/DescribeModelsRequest$Builder.class
 com/aliyun/sdk/service/cloudapi20160714/models/DeleteTrafficControlResponseBody$Builder.class
 com/aliyun/sdk/service/cloudapi20160714/models/CreateIpControlResponse$Builder.class
+com/aliyun/sdk/service/cloudapi20160714/models/QueryRequestLogsResponse$BuilderImpl.class
 com/aliyun/sdk/service/cloudapi20160714/models/DeleteInstanceResponseBody.class
 com/aliyun/sdk/service/cloudapi20160714/models/BatchDeployApisRequest.class
 com/aliyun/sdk/service/cloudapi20160714/models/RemoveVpcAccessAndAbolishApisResponse$1.class
@@ -1375,6 +1382,7 @@ com/aliyun/sdk/service/cloudapi20160714/models/BatchAbolishApisRequest$Api$Build
 com/aliyun/sdk/service/cloudapi20160714/models/DescribeApisByIpControlResponseBody$1.class
 com/aliyun/sdk/service/cloudapi20160714/models/ModifyPluginResponseBody.class
 com/aliyun/sdk/service/cloudapi20160714/models/DeleteModelRequest$1.class
+com/aliyun/sdk/service/cloudapi20160714/models/QueryRequestLogsResponse$Builder.class
 com/aliyun/sdk/service/cloudapi20160714/models/DescribeApiHistoryResponseBody$RequestConfig.class
 com/aliyun/sdk/service/cloudapi20160714/models/DescribeIpControlPolicyItemsResponseBody$IpControlPolicyItems$Builder.class
 com/aliyun/sdk/service/cloudapi20160714/models/AbolishApiResponse$Builder.class
@@ -1443,6 +1451,7 @@ com/aliyun/sdk/service/cloudapi20160714/models/DescribeAccessControlListAttribut
 com/aliyun/sdk/service/cloudapi20160714/models/DeleteSignatureRequest$1.class
 com/aliyun/sdk/service/cloudapi20160714/models/DescribeApiGroupsRequest.class
 com/aliyun/sdk/service/cloudapi20160714/models/ModifySignatureResponseBody.class
+com/aliyun/sdk/service/cloudapi20160714/models/QueryRequestLogsRequest.class
 com/aliyun/sdk/service/cloudapi20160714/models/DescribeApiTrafficDataResponseBody$MonitorItem$Builder.class
 com/aliyun/sdk/service/cloudapi20160714/models/DescribePluginTemplatesResponse$Builder.class
 com/aliyun/sdk/service/cloudapi20160714/models/DescribeVpcAccessesResponseBody$VpcAccessAttributes.class
@@ -1491,6 +1500,7 @@ com/aliyun/sdk/service/cloudapi20160714/models/DescribeAppsRequest$Builder.class
 com/aliyun/sdk/service/cloudapi20160714/models/DescribeSignaturesResponse$Builder.class
 com/aliyun/sdk/service/cloudapi20160714/models/DescribeApiIpControlsResponse$Builder.class
 com/aliyun/sdk/service/cloudapi20160714/models/DescribeApisRequest.class
+com/aliyun/sdk/service/cloudapi20160714/models/QueryRequestLogsRequest$1.class
 com/aliyun/sdk/service/cloudapi20160714/models/DescribeAbolishApiTaskRequest.class
 com/aliyun/sdk/service/cloudapi20160714/models/ModifyLogConfigResponse$1.class
 com/aliyun/sdk/service/cloudapi20160714/models/DescribeAppResponseBody$1.class
@@ -2010,6 +2020,7 @@ com/aliyun/sdk/service/cloudapi20160714/models/DescribeDeployedApiResponseBody$S
 com/aliyun/sdk/service/cloudapi20160714/models/CreateApiStageVariableResponse$BuilderImpl.class
 com/aliyun/sdk/service/cloudapi20160714/models/DescribeInstancesResponseBody$InstanceSpecAttributes$Builder.class
 com/aliyun/sdk/service/cloudapi20160714/models/RemoveVpcAccessAndAbolishApisResponse$BuilderImpl.class
+com/aliyun/sdk/service/cloudapi20160714/models/QueryRequestLogsRequest$Builder.class
 com/aliyun/sdk/service/cloudapi20160714/models/DeleteBackendModelResponse$BuilderImpl.class
 com/aliyun/sdk/service/cloudapi20160714/models/DescribeDeployedApiResponseBody$RequestParameter.class
 com/aliyun/sdk/service/cloudapi20160714/models/DescribeApiResponseBody$DeployedInfo.class
@@ -2018,6 +2029,7 @@ com/aliyun/sdk/service/cloudapi20160714/models/DescribePluginsResponse.class
 com/aliyun/sdk/service/cloudapi20160714/models/ModifyApiConfigurationResponse.class
 com/aliyun/sdk/service/cloudapi20160714/models/SetDomainCertificateRequest$Builder.class
 com/aliyun/sdk/service/cloudapi20160714/models/DescribeApiMarketAttributesResponseBody.class
+com/aliyun/sdk/service/cloudapi20160714/models/QueryRequestLogsResponseBody$Builder.class
 com/aliyun/sdk/service/cloudapi20160714/models/RemoveSignatureApisResponseBody$Builder.class
 com/aliyun/sdk/service/cloudapi20160714/models/SetWildcardDomainPatternsResponse$Builder.class
 com/aliyun/sdk/service/cloudapi20160714/models/CreatePluginResponse$BuilderImpl.class
@@ -2081,6 +2093,7 @@ com/aliyun/sdk/service/cloudapi20160714/models/DeleteAccessControlListResponse$B
 com/aliyun/sdk/service/cloudapi20160714/models/DeleteDatasetItemResponseBody$Builder.class
 com/aliyun/sdk/service/cloudapi20160714/models/DeleteAccessControlListResponse$1.class
 com/aliyun/sdk/service/cloudapi20160714/models/AddIpControlPolicyItemResponse$BuilderImpl.class
+com/aliyun/sdk/service/cloudapi20160714/models/QueryRequestLogsResponse.class
 com/aliyun/sdk/service/cloudapi20160714/models/DescribeApiHistoryResponseBody$CustomSystemParameters.class
 com/aliyun/sdk/service/cloudapi20160714/models/CreateDatasetItemResponse$1.class
 com/aliyun/sdk/service/cloudapi20160714/models/DescribeDatasetItemListRequest.class
@@ -2137,6 +2150,7 @@ com/aliyun/sdk/service/cloudapi20160714/models/DescribeApiMarketAttributesRespon
 com/aliyun/sdk/service/cloudapi20160714/models/DescribeAuthorizedApisResponseBody$AuthorizedApi$Builder.class
 com/aliyun/sdk/service/cloudapi20160714/models/RemoveIpControlPolicyItemResponseBody$Builder.class
 com/aliyun/sdk/service/cloudapi20160714/models/DeleteMonitorGroupRequest.class
+com/aliyun/sdk/service/cloudapi20160714/models/QueryRequestLogsResponseBody.class
 com/aliyun/sdk/service/cloudapi20160714/models/AbolishApiResponseBody.class
 com/aliyun/sdk/service/cloudapi20160714/models/DeleteIpControlRequest.class
 com/aliyun/sdk/service/cloudapi20160714/models/DescribeAuthorizedApisRequest$1.class

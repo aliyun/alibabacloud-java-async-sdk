@@ -288,6 +288,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<OpenApiGatewayServiceResponse> openApiGatewayService(OpenApiGatewayServiceRequest request);
 
+    CompletableFuture<QueryRequestLogsResponse> queryRequestLogs(QueryRequestLogsRequest request);
+
     CompletableFuture<ReactivateDomainResponse> reactivateDomain(ReactivateDomainRequest request);
 
     CompletableFuture<RemoveAccessControlListEntryResponse> removeAccessControlListEntry(RemoveAccessControlListEntryRequest request);
