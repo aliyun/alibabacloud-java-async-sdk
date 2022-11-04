@@ -132,6 +132,9 @@ public class GetStyleTopResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
+        @NameInMap("BuyerTags")
+        private String buyerTags;
+
         @NameInMap("CateName")
         private String cateName;
 
@@ -160,6 +163,7 @@ public class GetStyleTopResponseBody extends TeaModel {
         private String title;
 
         private Data(Builder builder) {
+            this.buyerTags = builder.buyerTags;
             this.cateName = builder.cateName;
             this.color = builder.color;
             this.images = builder.images;
@@ -177,6 +181,13 @@ public class GetStyleTopResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return buyerTags
+         */
+        public String getBuyerTags() {
+            return this.buyerTags;
         }
 
         /**
@@ -243,6 +254,7 @@ public class GetStyleTopResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String buyerTags; 
             private String cateName; 
             private String color; 
             private java.util.List < String > images; 
@@ -252,6 +264,14 @@ public class GetStyleTopResponseBody extends TeaModel {
             private Double searchVolume; 
             private String style; 
             private String title; 
+
+            /**
+             * BuyerTags.
+             */
+            public Builder buyerTags(String buyerTags) {
+                this.buyerTags = buyerTags;
+                return this;
+            }
 
             /**
              * CateName.

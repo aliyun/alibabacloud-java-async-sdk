@@ -18,6 +18,10 @@ public class GetStyleTopRequest extends Request {
     private String cateIds;
 
     @Body
+    @NameInMap("PageIndex")
+    private Long pageIndex;
+
+    @Body
     @NameInMap("SortOrder")
     @Validation(required = true)
     private Long sortOrder;
@@ -30,6 +34,7 @@ public class GetStyleTopRequest extends Request {
     private GetStyleTopRequest(Builder builder) {
         super(builder);
         this.cateIds = builder.cateIds;
+        this.pageIndex = builder.pageIndex;
         this.sortOrder = builder.sortOrder;
         this.timeDisplay = builder.timeDisplay;
     }
@@ -55,6 +60,13 @@ public class GetStyleTopRequest extends Request {
     }
 
     /**
+     * @return pageIndex
+     */
+    public Long getPageIndex() {
+        return this.pageIndex;
+    }
+
+    /**
      * @return sortOrder
      */
     public Long getSortOrder() {
@@ -70,6 +82,7 @@ public class GetStyleTopRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetStyleTopRequest, Builder> {
         private String cateIds; 
+        private Long pageIndex; 
         private Long sortOrder; 
         private Long timeDisplay; 
 
@@ -80,6 +93,7 @@ public class GetStyleTopRequest extends Request {
         private Builder(GetStyleTopRequest request) {
             super(request);
             this.cateIds = request.cateIds;
+            this.pageIndex = request.pageIndex;
             this.sortOrder = request.sortOrder;
             this.timeDisplay = request.timeDisplay;
         } 
@@ -90,6 +104,15 @@ public class GetStyleTopRequest extends Request {
         public Builder cateIds(String cateIds) {
             this.putBodyParameter("CateIds", cateIds);
             this.cateIds = cateIds;
+            return this;
+        }
+
+        /**
+         * PageIndex.
+         */
+        public Builder pageIndex(Long pageIndex) {
+            this.putBodyParameter("PageIndex", pageIndex);
+            this.pageIndex = pageIndex;
             return this;
         }
 
