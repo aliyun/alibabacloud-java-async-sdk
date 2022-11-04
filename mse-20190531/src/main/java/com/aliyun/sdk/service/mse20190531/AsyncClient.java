@@ -60,10 +60,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateNacosServiceResponse> createNacosService(CreateNacosServiceRequest request);
 
-    CompletableFuture<CreateOrUpdateSwimmingLaneResponse> createOrUpdateSwimmingLane(CreateOrUpdateSwimmingLaneRequest request);
-
-    CompletableFuture<CreateOrUpdateSwimmingLaneGroupResponse> createOrUpdateSwimmingLaneGroup(CreateOrUpdateSwimmingLaneGroupRequest request);
-
     CompletableFuture<CreateZnodeResponse> createZnode(CreateZnodeRequest request);
 
     CompletableFuture<DeleteAuthResourceResponse> deleteAuthResource(DeleteAuthResourceRequest request);
@@ -190,8 +186,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListInstanceCountResponse> listInstanceCount(ListInstanceCountRequest request);
 
-    CompletableFuture<ListInstancesResponse> listInstances(ListInstancesRequest request);
-
     CompletableFuture<ListListenersByConfigResponse> listListenersByConfig(ListListenersByConfigRequest request);
 
     CompletableFuture<ListListenersByIpResponse> listListenersByIp(ListListenersByIpRequest request);
@@ -209,10 +203,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListServiceSourceResponse> listServiceSource(ListServiceSourceRequest request);
 
     CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
-
-    CompletableFuture<ListUserInstancesResponse> listUserInstances(ListUserInstancesRequest request);
-
-    CompletableFuture<ListVgroupsResponse> listVgroups(ListVgroupsRequest request);
 
     CompletableFuture<ListZnodeChildrenResponse> listZnodeChildren(ListZnodeChildrenRequest request);
 
