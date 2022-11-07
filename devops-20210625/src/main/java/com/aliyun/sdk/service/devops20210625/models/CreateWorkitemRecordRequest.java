@@ -1,0 +1,240 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.devops20210625.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link CreateWorkitemRecordRequest} extends {@link RequestModel}
+ *
+ * <p>CreateWorkitemRecordRequest</p>
+ */
+public class CreateWorkitemRecordRequest extends Request {
+    @Path
+    @NameInMap("organizationId")
+    @Validation(required = true)
+    private String organizationId;
+
+    @Body
+    @NameInMap("actualTime")
+    @Validation(required = true)
+    private String actualTime;
+
+    @Body
+    @NameInMap("description")
+    private String description;
+
+    @Body
+    @NameInMap("gmtEnd")
+    @Validation(required = true)
+    private String gmtEnd;
+
+    @Body
+    @NameInMap("gmtStart")
+    @Validation(required = true)
+    private String gmtStart;
+
+    @Body
+    @NameInMap("recordUserIdentifier")
+    @Validation(required = true)
+    private String recordUserIdentifier;
+
+    @Body
+    @NameInMap("type")
+    @Validation(required = true)
+    private String type;
+
+    @Body
+    @NameInMap("workitemIdentifier")
+    @Validation(required = true)
+    private String workitemIdentifier;
+
+    private CreateWorkitemRecordRequest(Builder builder) {
+        super(builder);
+        this.organizationId = builder.organizationId;
+        this.actualTime = builder.actualTime;
+        this.description = builder.description;
+        this.gmtEnd = builder.gmtEnd;
+        this.gmtStart = builder.gmtStart;
+        this.recordUserIdentifier = builder.recordUserIdentifier;
+        this.type = builder.type;
+        this.workitemIdentifier = builder.workitemIdentifier;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static CreateWorkitemRecordRequest create() {
+        return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return organizationId
+     */
+    public String getOrganizationId() {
+        return this.organizationId;
+    }
+
+    /**
+     * @return actualTime
+     */
+    public String getActualTime() {
+        return this.actualTime;
+    }
+
+    /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
+     * @return gmtEnd
+     */
+    public String getGmtEnd() {
+        return this.gmtEnd;
+    }
+
+    /**
+     * @return gmtStart
+     */
+    public String getGmtStart() {
+        return this.gmtStart;
+    }
+
+    /**
+     * @return recordUserIdentifier
+     */
+    public String getRecordUserIdentifier() {
+        return this.recordUserIdentifier;
+    }
+
+    /**
+     * @return type
+     */
+    public String getType() {
+        return this.type;
+    }
+
+    /**
+     * @return workitemIdentifier
+     */
+    public String getWorkitemIdentifier() {
+        return this.workitemIdentifier;
+    }
+
+    public static final class Builder extends Request.Builder<CreateWorkitemRecordRequest, Builder> {
+        private String organizationId; 
+        private String actualTime; 
+        private String description; 
+        private String gmtEnd; 
+        private String gmtStart; 
+        private String recordUserIdentifier; 
+        private String type; 
+        private String workitemIdentifier; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(CreateWorkitemRecordRequest request) {
+            super(request);
+            this.organizationId = request.organizationId;
+            this.actualTime = request.actualTime;
+            this.description = request.description;
+            this.gmtEnd = request.gmtEnd;
+            this.gmtStart = request.gmtStart;
+            this.recordUserIdentifier = request.recordUserIdentifier;
+            this.type = request.type;
+            this.workitemIdentifier = request.workitemIdentifier;
+        } 
+
+        /**
+         * organizationId.
+         */
+        public Builder organizationId(String organizationId) {
+            this.putPathParameter("organizationId", organizationId);
+            this.organizationId = organizationId;
+            return this;
+        }
+
+        /**
+         * 花费工时，最大为9999
+         */
+        public Builder actualTime(String actualTime) {
+            this.putBodyParameter("actualTime", actualTime);
+            this.actualTime = actualTime;
+            return this;
+        }
+
+        /**
+         * 描述
+         */
+        public Builder description(String description) {
+            this.putBodyParameter("description", description);
+            this.description = description;
+            return this;
+        }
+
+        /**
+         * 结束时间，开始时间不能大于结束时间
+         */
+        public Builder gmtEnd(String gmtEnd) {
+            this.putBodyParameter("gmtEnd", gmtEnd);
+            this.gmtEnd = gmtEnd;
+            return this;
+        }
+
+        /**
+         * 开始时间
+         */
+        public Builder gmtStart(String gmtStart) {
+            this.putBodyParameter("gmtStart", gmtStart);
+            this.gmtStart = gmtStart;
+            return this;
+        }
+
+        /**
+         * 登记人,为用户的aliyunPk
+         */
+        public Builder recordUserIdentifier(String recordUserIdentifier) {
+            this.putBodyParameter("recordUserIdentifier", recordUserIdentifier);
+            this.recordUserIdentifier = recordUserIdentifier;
+            return this;
+        }
+
+        /**
+         * 类型，从获取工时类型接口获取
+         */
+        public Builder type(String type) {
+            this.putBodyParameter("type", type);
+            this.type = type;
+            return this;
+        }
+
+        /**
+         * 工作项id
+         */
+        public Builder workitemIdentifier(String workitemIdentifier) {
+            this.putBodyParameter("workitemIdentifier", workitemIdentifier);
+            this.workitemIdentifier = workitemIdentifier;
+            return this;
+        }
+
+        @Override
+        public CreateWorkitemRecordRequest build() {
+            return new CreateWorkitemRecordRequest(this);
+        } 
+
+    } 
+
+}

@@ -22,6 +22,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AddWebhookResponse> addWebhook(AddWebhookRequest request);
 
+    CompletableFuture<CreateBranchResponse> createBranch(CreateBranchRequest request);
+
     CompletableFuture<CreateFileResponse> createFile(CreateFileRequest request);
 
     CompletableFuture<CreateFlowTagResponse> createFlowTag(CreateFlowTagRequest request);
@@ -48,7 +50,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateWorkitemResponse> createWorkitem(CreateWorkitemRequest request);
 
+    CompletableFuture<CreateWorkitemCommentResponse> createWorkitemComment(CreateWorkitemCommentRequest request);
+
+    CompletableFuture<CreateWorkitemEstimateResponse> createWorkitemEstimate(CreateWorkitemEstimateRequest request);
+
+    CompletableFuture<CreateWorkitemRecordResponse> createWorkitemRecord(CreateWorkitemRecordRequest request);
+
     CompletableFuture<CreateWorkspaceResponse> createWorkspace(CreateWorkspaceRequest request);
+
+    CompletableFuture<DeleteBranchResponse> deleteBranch(DeleteBranchRequest request);
 
     CompletableFuture<DeleteFileResponse> deleteFile(DeleteFileRequest request);
 
@@ -64,13 +74,21 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteProjectResponse> deleteProject(DeleteProjectRequest request);
 
+    CompletableFuture<DeleteProtectedBranchResponse> deleteProtectedBranch(DeleteProtectedBranchRequest request);
+
     CompletableFuture<DeleteRepositoryResponse> deleteRepository(DeleteRepositoryRequest request);
 
     CompletableFuture<DeleteResourceMemberResponse> deleteResourceMember(DeleteResourceMemberRequest request);
 
     CompletableFuture<DeleteVariableGroupResponse> deleteVariableGroup(DeleteVariableGroupRequest request);
 
+    CompletableFuture<DeleteWorkitemAllCommentResponse> deleteWorkitemAllComment(DeleteWorkitemAllCommentRequest request);
+
+    CompletableFuture<DeleteWorkitemCommentResponse> deleteWorkitemComment(DeleteWorkitemCommentRequest request);
+
     CompletableFuture<FrozenWorkspaceResponse> frozenWorkspace(FrozenWorkspaceRequest request);
+
+    CompletableFuture<GetBranchInfoResponse> getBranchInfo(GetBranchInfoRequest request);
 
     CompletableFuture<GetCodeupOrganizationResponse> getCodeupOrganization(GetCodeupOrganizationRequest request);
 
@@ -116,6 +134,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetWorkItemWorkFlowInfoResponse> getWorkItemWorkFlowInfo(GetWorkItemWorkFlowInfoRequest request);
 
+    CompletableFuture<GetWorkitemCommentListResponse> getWorkitemCommentList(GetWorkitemCommentListRequest request);
+
+    CompletableFuture<GetWorkitemRelationsResponse> getWorkitemRelations(GetWorkitemRelationsRequest request);
+
+    CompletableFuture<GetWorkitemTimeTypeListResponse> getWorkitemTimeTypeList(GetWorkitemTimeTypeListRequest request);
+
     CompletableFuture<GetWorkspaceResponse> getWorkspace(GetWorkspaceRequest request);
 
     CompletableFuture<JoinPipelineGroupResponse> joinPipelineGroup(JoinPipelineGroupRequest request);
@@ -146,7 +170,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListProjectsResponse> listProjects(ListProjectsRequest request);
 
+    CompletableFuture<ListProtectedBranchesResponse> listProtectedBranches(ListProtectedBranchesRequest request);
+
     CompletableFuture<ListRepositoriesResponse> listRepositories(ListRepositoriesRequest request);
+
+    CompletableFuture<ListRepositoryBranchesResponse> listRepositoryBranches(ListRepositoryBranchesRequest request);
 
     CompletableFuture<ListRepositoryCommitDiffResponse> listRepositoryCommitDiff(ListRepositoryCommitDiffRequest request);
 
@@ -231,5 +259,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateVariableGroupResponse> updateVariableGroup(UpdateVariableGroupRequest request);
 
     CompletableFuture<UpdateWorkItemResponse> updateWorkItem(UpdateWorkItemRequest request);
+
+    CompletableFuture<UpdateWorkitemCommentResponse> updateWorkitemComment(UpdateWorkitemCommentRequest request);
 
 }
