@@ -41,6 +41,10 @@ public class ListApplicationGroupsRequest extends Request {
     private String resourceId;
 
     @Query
+    @NameInMap("ResourceProduct")
+    private String resourceProduct;
+
+    @Query
     @NameInMap("ResourceType")
     private String resourceType;
 
@@ -53,6 +57,7 @@ public class ListApplicationGroupsRequest extends Request {
         this.product = builder.product;
         this.regionId = builder.regionId;
         this.resourceId = builder.resourceId;
+        this.resourceProduct = builder.resourceProduct;
         this.resourceType = builder.resourceType;
     }
 
@@ -119,6 +124,13 @@ public class ListApplicationGroupsRequest extends Request {
     }
 
     /**
+     * @return resourceProduct
+     */
+    public String getResourceProduct() {
+        return this.resourceProduct;
+    }
+
+    /**
      * @return resourceType
      */
     public String getResourceType() {
@@ -133,6 +145,7 @@ public class ListApplicationGroupsRequest extends Request {
         private String product; 
         private String regionId; 
         private String resourceId; 
+        private String resourceProduct; 
         private String resourceType; 
 
         private Builder() {
@@ -148,6 +161,7 @@ public class ListApplicationGroupsRequest extends Request {
             this.product = request.product;
             this.regionId = request.regionId;
             this.resourceId = request.resourceId;
+            this.resourceProduct = request.resourceProduct;
             this.resourceType = request.resourceType;
         } 
 
@@ -211,6 +225,15 @@ public class ListApplicationGroupsRequest extends Request {
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
             this.resourceId = resourceId;
+            return this;
+        }
+
+        /**
+         * ResourceProduct.
+         */
+        public Builder resourceProduct(String resourceProduct) {
+            this.putQueryParameter("ResourceProduct", resourceProduct);
+            this.resourceProduct = resourceProduct;
             return this;
         }
 

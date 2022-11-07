@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListStateConfigurationsResponseBody</p>
  */
 public class ListStateConfigurationsResponseBody extends TeaModel {
+    @NameInMap("NextToken")
+    private String nextToken;
+
     @NameInMap("RequestId")
     private String requestId;
 
@@ -19,6 +22,7 @@ public class ListStateConfigurationsResponseBody extends TeaModel {
     private java.util.List < StateConfigurations> stateConfigurations;
 
     private ListStateConfigurationsResponseBody(Builder builder) {
+        this.nextToken = builder.nextToken;
         this.requestId = builder.requestId;
         this.stateConfigurations = builder.stateConfigurations;
     }
@@ -29,6 +33,13 @@ public class ListStateConfigurationsResponseBody extends TeaModel {
 
     public static ListStateConfigurationsResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     /**
@@ -46,8 +57,17 @@ public class ListStateConfigurationsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String nextToken; 
         private String requestId; 
         private java.util.List < StateConfigurations> stateConfigurations; 
+
+        /**
+         * NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.nextToken = nextToken;
+            return this;
+        }
 
         /**
          * RequestId.

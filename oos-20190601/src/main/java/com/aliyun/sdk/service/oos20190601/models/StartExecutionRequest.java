@@ -58,8 +58,11 @@ public class StartExecutionRequest extends Request {
 
     @Query
     @NameInMap("TemplateName")
-    @Validation(required = true)
     private String templateName;
+
+    @Query
+    @NameInMap("TemplateURL")
+    private String templateURL;
 
     @Query
     @NameInMap("TemplateVersion")
@@ -79,6 +82,7 @@ public class StartExecutionRequest extends Request {
         this.tags = builder.tags;
         this.templateContent = builder.templateContent;
         this.templateName = builder.templateName;
+        this.templateURL = builder.templateURL;
         this.templateVersion = builder.templateVersion;
     }
 
@@ -180,6 +184,13 @@ public class StartExecutionRequest extends Request {
     }
 
     /**
+     * @return templateURL
+     */
+    public String getTemplateURL() {
+        return this.templateURL;
+    }
+
+    /**
      * @return templateVersion
      */
     public String getTemplateVersion() {
@@ -199,6 +210,7 @@ public class StartExecutionRequest extends Request {
         private java.util.Map < String, ? > tags; 
         private String templateContent; 
         private String templateName; 
+        private String templateURL; 
         private String templateVersion; 
 
         private Builder() {
@@ -219,6 +231,7 @@ public class StartExecutionRequest extends Request {
             this.tags = request.tags;
             this.templateContent = request.templateContent;
             this.templateName = request.templateName;
+            this.templateURL = request.templateURL;
             this.templateVersion = request.templateVersion;
         } 
 
@@ -328,6 +341,15 @@ public class StartExecutionRequest extends Request {
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);
             this.templateName = templateName;
+            return this;
+        }
+
+        /**
+         * TemplateURL.
+         */
+        public Builder templateURL(String templateURL) {
+            this.putQueryParameter("TemplateURL", templateURL);
+            this.templateURL = templateURL;
             return this;
         }
 

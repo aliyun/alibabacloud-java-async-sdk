@@ -14,17 +14,21 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ValidateTemplateContentRequest extends Request {
     @Query
     @NameInMap("Content")
-    @Validation(required = true)
     private String content;
 
     @Query
     @NameInMap("RegionId")
     private String regionId;
 
+    @Query
+    @NameInMap("TemplateURL")
+    private String templateURL;
+
     private ValidateTemplateContentRequest(Builder builder) {
         super(builder);
         this.content = builder.content;
         this.regionId = builder.regionId;
+        this.templateURL = builder.templateURL;
     }
 
     public static Builder builder() {
@@ -54,9 +58,17 @@ public class ValidateTemplateContentRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return templateURL
+     */
+    public String getTemplateURL() {
+        return this.templateURL;
+    }
+
     public static final class Builder extends Request.Builder<ValidateTemplateContentRequest, Builder> {
         private String content; 
         private String regionId; 
+        private String templateURL; 
 
         private Builder() {
             super();
@@ -66,6 +78,7 @@ public class ValidateTemplateContentRequest extends Request {
             super(request);
             this.content = request.content;
             this.regionId = request.regionId;
+            this.templateURL = request.templateURL;
         } 
 
         /**
@@ -83,6 +96,15 @@ public class ValidateTemplateContentRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * TemplateURL.
+         */
+        public Builder templateURL(String templateURL) {
+            this.putQueryParameter("TemplateURL", templateURL);
+            this.templateURL = templateURL;
             return this;
         }
 

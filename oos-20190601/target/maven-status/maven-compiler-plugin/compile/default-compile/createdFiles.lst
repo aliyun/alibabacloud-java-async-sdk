@@ -11,7 +11,9 @@ com/aliyun/sdk/service/oos20190601/models/ListResourceExecutionStatusResponse$Bu
 com/aliyun/sdk/service/oos20190601/models/DeleteExecutionsResponseBody.class
 com/aliyun/sdk/service/oos20190601/models/SearchInventoryResponseBody.class
 com/aliyun/sdk/service/oos20190601/models/ListPatchBaselinesRequest.class
+com/aliyun/sdk/service/oos20190601/models/GetOpsItemResponse$1.class
 com/aliyun/sdk/service/oos20190601/models/GetTemplateRequest.class
+com/aliyun/sdk/service/oos20190601/models/UpdateOpsItemResponseBody$OpsItem.class
 com/aliyun/sdk/service/oos20190601/models/ListTaskExecutionsResponse$BuilderImpl.class
 com/aliyun/sdk/service/oos20190601/models/ContinueDeployApplicationGroupResponse$BuilderImpl.class
 com/aliyun/sdk/service/oos20190601/models/GetPatchBaselineResponseBody$Builder.class
@@ -59,6 +61,7 @@ com/aliyun/sdk/service/oos20190601/models/GetTemplateRequest$Builder.class
 com/aliyun/sdk/service/oos20190601/models/CreateSecretParameterResponseBody$Builder.class
 com/aliyun/sdk/service/oos20190601/models/SearchInventoryResponse.class
 com/aliyun/sdk/service/oos20190601/models/ListInstancePatchesResponse$BuilderImpl.class
+com/aliyun/sdk/service/oos20190601/models/CreateOpsItemResponseBody$1.class
 com/aliyun/sdk/service/oos20190601/models/UpdateExecutionResponseBody$1.class
 com/aliyun/sdk/service/oos20190601/models/CreateStateConfigurationResponseBody$StateConfiguration.class
 com/aliyun/sdk/service/oos20190601/models/GetInventorySchemaResponseBody$1.class
@@ -86,6 +89,7 @@ com/aliyun/sdk/service/oos20190601/models/GetInventorySchemaResponse$Builder.cla
 com/aliyun/sdk/service/oos20190601/models/ListPatchBaselinesResponseBody$PatchBaselines.class
 com/aliyun/sdk/service/oos20190601/models/CreateParameterResponseBody.class
 com/aliyun/sdk/service/oos20190601/models/ListTagKeysResponse$1.class
+com/aliyun/sdk/service/oos20190601/models/UpdateOpsItemRequest.class
 com/aliyun/sdk/service/oos20190601/models/CreatePatchBaselineResponseBody.class
 com/aliyun/sdk/service/oos20190601/models/ListParameterVersionsResponse.class
 com/aliyun/sdk/service/oos20190601/models/UpdateTemplateResponse$Builder.class
@@ -102,10 +106,12 @@ com/aliyun/sdk/service/oos20190601/models/ContinueDeployApplicationGroupResponse
 com/aliyun/sdk/service/oos20190601/models/ListTagValuesRequest$Builder.class
 com/aliyun/sdk/service/oos20190601/models/DeployApplicationGroupResponse$1.class
 com/aliyun/sdk/service/oos20190601/models/CreatePatchBaselineRequest$1.class
+com/aliyun/sdk/service/oos20190601/models/GetOpsItemResponseBody$OpsItem$Builder.class
 com/aliyun/sdk/service/oos20190601/models/DeleteTemplateRequest.class
 com/aliyun/sdk/service/oos20190601/models/CreateSecretParameterResponseBody$1.class
 com/aliyun/sdk/service/oos20190601/models/GetSecretParametersResponseBody$1.class
 com/aliyun/sdk/service/oos20190601/models/GetParameterResponseBody$1.class
+com/aliyun/sdk/service/oos20190601/models/GetOpsItemResponse$BuilderImpl.class
 com/aliyun/sdk/service/oos20190601/models/SetServiceSettingsResponseBody$Builder.class
 com/aliyun/sdk/service/oos20190601/models/ListSecretParameterVersionsResponse.class
 com/aliyun/sdk/service/oos20190601/models/ChangeResourceGroupResponse.class
@@ -128,7 +134,9 @@ com/aliyun/sdk/service/oos20190601/models/NotifyExecutionRequest.class
 com/aliyun/sdk/service/oos20190601/models/CreateStateConfigurationResponse$Builder.class
 com/aliyun/sdk/service/oos20190601/models/ListTagResourcesRequest$1.class
 com/aliyun/sdk/service/oos20190601/models/ListParametersResponse$1.class
+com/aliyun/sdk/service/oos20190601/models/ListOpsItemsRequest$Filter.class
 com/aliyun/sdk/service/oos20190601/models/DeleteApplicationResponse.class
+com/aliyun/sdk/service/oos20190601/models/CreateOpsItemResponse$Builder.class
 com/aliyun/sdk/service/oos20190601/models/GetServiceSettingsRequest$1.class
 com/aliyun/sdk/service/oos20190601/models/GetApplicationGroupResponse$Builder.class
 com/aliyun/sdk/service/oos20190601/models/ListTaskExecutionsResponseBody$TaskExecutions$Builder.class
@@ -159,6 +167,7 @@ com/aliyun/sdk/service/oos20190601/models/GetExecutionTemplateResponse.class
 com/aliyun/sdk/service/oos20190601/models/TagResourcesRequest$Builder.class
 com/aliyun/sdk/service/oos20190601/models/ListInventoryEntriesResponse$Builder.class
 com/aliyun/sdk/service/oos20190601/models/DeleteStateConfigurationsRequest.class
+com/aliyun/sdk/service/oos20190601/models/CreateOpsItemResponse.class
 com/aliyun/sdk/service/oos20190601/models/GetExecutionTemplateResponse$Builder.class
 com/aliyun/sdk/service/oos20190601/models/ListApplicationGroupsResponseBody$Builder.class
 com/aliyun/sdk/service/oos20190601/models/DeployApplicationGroupResponse.class
@@ -189,6 +198,7 @@ com/aliyun/sdk/service/oos20190601/models/CreateTemplateRequest.class
 com/aliyun/sdk/service/oos20190601/models/GetExecutionTemplateResponse$BuilderImpl.class
 com/aliyun/sdk/service/oos20190601/models/CreateApplicationRequest$1.class
 com/aliyun/sdk/service/oos20190601/models/CreateSecretParameterResponse$Builder.class
+com/aliyun/sdk/service/oos20190601/models/ListOpsItemsResponseBody$Builder.class
 com/aliyun/sdk/service/oos20190601/models/UpdateSecretParameterResponseBody$1.class
 com/aliyun/sdk/service/oos20190601/models/UpdateApplicationGroupRequest$1.class
 com/aliyun/sdk/service/oos20190601/models/ListTemplateVersionsRequest$1.class
@@ -207,8 +217,10 @@ com/aliyun/sdk/service/oos20190601/models/DeleteTemplateResponse.class
 com/aliyun/sdk/service/oos20190601/models/GetExecutionTemplateResponse$1.class
 com/aliyun/sdk/service/oos20190601/models/DeployApplicationGroupResponseBody.class
 com/aliyun/sdk/service/oos20190601/models/ListTagKeysResponseBody$1.class
+com/aliyun/sdk/service/oos20190601/models/ListOpsItemsResponseBody$OpsItems.class
 com/aliyun/sdk/service/oos20190601/models/ListInstancePatchesResponse$Builder.class
 com/aliyun/sdk/service/oos20190601/models/GetInventorySchemaResponseBody$Schemas$Builder.class
+com/aliyun/sdk/service/oos20190601/models/CreateOpsItemResponseBody$OpsItem.class
 com/aliyun/sdk/service/oos20190601/models/GetPatchBaselineRequest$1.class
 com/aliyun/sdk/service/oos20190601/models/UpdateParameterRequest.class
 com/aliyun/sdk/service/oos20190601/models/ListSecretParameterVersionsRequest$Builder.class
@@ -221,10 +233,12 @@ com/aliyun/sdk/service/oos20190601/models/ListStateConfigurationsResponseBody$St
 com/aliyun/sdk/service/oos20190601/models/UpdateTemplateResponseBody$1.class
 com/aliyun/sdk/service/oos20190601/models/ListExecutionRiskyTasksRequest$1.class
 com/aliyun/sdk/service/oos20190601/models/GetInventorySchemaResponseBody$Attributes.class
+com/aliyun/sdk/service/oos20190601/models/UpdateOpsItemRequest$Builder.class
 com/aliyun/sdk/service/oos20190601/models/GenerateExecutionPolicyResponseBody$Builder.class
 com/aliyun/sdk/service/oos20190601/models/UpdateParameterResponseBody$Parameter$Builder.class
 com/aliyun/sdk/service/oos20190601/models/CreateStateConfigurationResponseBody$1.class
 com/aliyun/sdk/service/oos20190601/models/UpdateParameterResponse.class
+com/aliyun/sdk/service/oos20190601/models/ListOpsItemsResponse$1.class
 com/aliyun/sdk/service/oos20190601/models/ListExecutionsResponseBody$Executions.class
 com/aliyun/sdk/service/oos20190601/models/ListExecutionLogsRequest.class
 com/aliyun/sdk/service/oos20190601/models/DeletePatchBaselineResponse$1.class
@@ -277,11 +291,14 @@ com/aliyun/sdk/service/oos20190601/models/ListTemplateVersionsResponse.class
 com/aliyun/sdk/service/oos20190601/models/ValidateTemplateContentResponse$BuilderImpl.class
 com/aliyun/sdk/service/oos20190601/models/GetApplicationGroupRequest$Builder.class
 com/aliyun/sdk/service/oos20190601/models/ListActionsResponse$Builder.class
+com/aliyun/sdk/service/oos20190601/models/GetOpsItemRequest$Builder.class
 com/aliyun/sdk/service/oos20190601/models/StartExecutionResponseBody$CurrentTasks.class
 com/aliyun/sdk/service/oos20190601/models/CreatePatchBaselineResponseBody$PatchBaseline.class
 com/aliyun/sdk/service/oos20190601/models/ListApplicationsResponseBody$Applications$Builder.class
 com/aliyun/sdk/service/oos20190601/models/CreateApplicationResponse$Builder.class
 com/aliyun/sdk/service/oos20190601/models/ListInstancePatchesRequest.class
+com/aliyun/sdk/service/oos20190601/models/GetOpsItemRequest$1.class
+com/aliyun/sdk/service/oos20190601/models/ListOpsItemsResponseBody$1.class
 com/aliyun/sdk/service/oos20190601/models/UpdateSecretParameterResponse.class
 com/aliyun/sdk/service/oos20190601/models/GetInventorySchemaResponse$BuilderImpl.class
 com/aliyun/sdk/service/oos20190601/models/ListTemplateVersionsResponseBody$TemplateVersions$Builder.class
@@ -305,6 +322,7 @@ com/aliyun/sdk/service/oos20190601/models/UpdatePatchBaselineRequest.class
 com/aliyun/sdk/service/oos20190601/models/DeployApplicationGroupRequest.class
 com/aliyun/sdk/service/oos20190601/models/GetParametersRequest$Builder.class
 com/aliyun/sdk/service/oos20190601/models/UpdateSecretParameterResponseBody.class
+com/aliyun/sdk/service/oos20190601/models/GetOpsItemResponse$Builder.class
 com/aliyun/sdk/service/oos20190601/models/DeleteExecutionsResponse$BuilderImpl.class
 com/aliyun/sdk/service/oos20190601/models/UpdateApplicationGroupResponse.class
 com/aliyun/sdk/service/oos20190601/models/ListTagKeysRequest.class
@@ -313,6 +331,7 @@ com/aliyun/sdk/service/oos20190601/models/GetSecretParameterResponse$Builder.cla
 com/aliyun/sdk/service/oos20190601/models/DeletePatchBaselineRequest.class
 com/aliyun/sdk/service/oos20190601/models/GetPatchBaselineRequest$Builder.class
 com/aliyun/sdk/service/oos20190601/models/CancelExecutionResponseBody$1.class
+com/aliyun/sdk/service/oos20190601/models/CreateOpsItemRequest.class
 com/aliyun/sdk/service/oos20190601/models/ListInstancePatchStatesRequest$Builder.class
 com/aliyun/sdk/service/oos20190601/models/CreateParameterResponse.class
 com/aliyun/sdk/service/oos20190601/models/UpdatePatchBaselineResponseBody$PatchBaseline.class
@@ -353,6 +372,7 @@ com/aliyun/sdk/service/oos20190601/models/GenerateExecutionPolicyRequest$1.class
 com/aliyun/sdk/service/oos20190601/models/ListExecutionsResponseBody$Executions$Builder.class
 com/aliyun/sdk/service/oos20190601/models/DeletePatchBaselineResponseBody$1.class
 com/aliyun/sdk/service/oos20190601/models/ListTaskExecutionsResponseBody.class
+com/aliyun/sdk/service/oos20190601/models/ListOpsItemsResponse$Builder.class
 com/aliyun/sdk/service/oos20190601/models/DeleteTemplatesRequest$Builder.class
 com/aliyun/sdk/service/oos20190601/models/ListTemplateVersionsResponse$BuilderImpl.class
 com/aliyun/sdk/service/oos20190601/models/ListTemplatesResponseBody$Templates.class
@@ -382,6 +402,7 @@ com/aliyun/sdk/service/oos20190601/models/GetSecretParameterResponse$1.class
 com/aliyun/sdk/service/oos20190601/models/CreatePatchBaselineResponseBody$PatchBaseline$Builder.class
 com/aliyun/sdk/service/oos20190601/models/ChangeResourceGroupRequest$1.class
 com/aliyun/sdk/service/oos20190601/models/ListTagResourcesResponse$Builder.class
+com/aliyun/sdk/service/oos20190601/models/UpdateOpsItemResponse$Builder.class
 com/aliyun/sdk/service/oos20190601/models/UpdateExecutionRequest$Builder.class
 com/aliyun/sdk/service/oos20190601/models/DeleteApplicationResponseBody$1.class
 com/aliyun/sdk/service/oos20190601/models/CreateApplicationGroupResponseBody.class
@@ -415,9 +436,11 @@ com/aliyun/sdk/service/oos20190601/models/RegisterDefaultPatchBaselineResponseBo
 com/aliyun/sdk/service/oos20190601/models/GetParameterResponseBody$Parameter$Builder.class
 com/aliyun/sdk/service/oos20190601/models/ListStateConfigurationsResponse$Builder.class
 com/aliyun/sdk/service/oos20190601/models/UpdateStateConfigurationRequest$Builder.class
+com/aliyun/sdk/service/oos20190601/models/UpdateOpsItemResponseBody$Builder.class
 com/aliyun/sdk/service/oos20190601/models/GetParametersByPathResponse$1.class
 com/aliyun/sdk/service/oos20190601/models/ListParameterVersionsResponse$1.class
 com/aliyun/sdk/service/oos20190601/models/ListInstancePatchStatesRequest.class
+com/aliyun/sdk/service/oos20190601/models/UpdateOpsItemRequest$1.class
 com/aliyun/sdk/service/oos20190601/models/DeleteApplicationRequest$1.class
 com/aliyun/sdk/service/oos20190601/models/TriggerExecutionRequest$Builder.class
 com/aliyun/sdk/service/oos20190601/models/GetParametersResponse$1.class
@@ -425,8 +448,11 @@ com/aliyun/sdk/service/oos20190601/models/UpdateApplicationResponse$1.class
 com/aliyun/sdk/service/oos20190601/models/ListApplicationsRequest$1.class
 com/aliyun/sdk/service/oos20190601/models/GetParameterRequest$1.class
 com/aliyun/sdk/service/oos20190601/models/CreateApplicationGroupResponse$1.class
+com/aliyun/sdk/service/oos20190601/models/UpdateOpsItemResponseBody.class
 com/aliyun/sdk/service/oos20190601/models/GetSecretParametersResponse$1.class
+com/aliyun/sdk/service/oos20190601/models/UpdateOpsItemResponse.class
 com/aliyun/sdk/service/oos20190601/models/ListInstancePatchStatesRequest$1.class
+com/aliyun/sdk/service/oos20190601/models/GetOpsItemResponseBody$Builder.class
 com/aliyun/sdk/service/oos20190601/models/GetTemplateResponseBody$Template$Builder.class
 com/aliyun/sdk/service/oos20190601/models/StartExecutionResponseBody$CurrentTasks$Builder.class
 com/aliyun/sdk/service/oos20190601/models/CreatePatchBaselineRequest$Builder.class
@@ -435,6 +461,7 @@ com/aliyun/sdk/service/oos20190601/models/ListApplicationGroupsResponse$Builder.
 com/aliyun/sdk/service/oos20190601/models/DeletePatchBaselineResponseBody$Builder.class
 com/aliyun/sdk/service/oos20190601/models/CreateParameterRequest.class
 com/aliyun/sdk/service/oos20190601/models/UpdateParameterRequest$Builder.class
+com/aliyun/sdk/service/oos20190601/models/ListOpsItemsResponse.class
 com/aliyun/sdk/service/oos20190601/models/UpdatePatchBaselineRequest$Builder.class
 com/aliyun/sdk/service/oos20190601/models/CreateApplicationGroupResponse$BuilderImpl.class
 com/aliyun/sdk/service/oos20190601/models/ListInventoryEntriesResponseBody$Builder.class
@@ -465,6 +492,7 @@ com/aliyun/sdk/service/oos20190601/models/UpdateTemplateResponse.class
 com/aliyun/sdk/service/oos20190601/models/TriggerExecutionResponseBody$Builder.class
 com/aliyun/sdk/service/oos20190601/models/ListResourceExecutionStatusResponseBody$ResourceExecutionStatus$Builder.class
 com/aliyun/sdk/service/oos20190601/models/DeleteSecretParameterResponseBody$Builder.class
+com/aliyun/sdk/service/oos20190601/models/CreateOpsItemRequest$Builder.class
 com/aliyun/sdk/service/oos20190601/models/ListResourceExecutionStatusResponse.class
 com/aliyun/sdk/service/oos20190601/models/DeleteStateConfigurationsResponse$1.class
 com/aliyun/sdk/service/oos20190601/models/GetPatchBaselineResponse$BuilderImpl.class
@@ -484,6 +512,7 @@ com/aliyun/sdk/service/oos20190601/models/ListExecutionRiskyTasksResponse$1.clas
 com/aliyun/sdk/service/oos20190601/models/UpdateStateConfigurationResponseBody.class
 com/aliyun/sdk/service/oos20190601/models/GetSecretParameterResponse$BuilderImpl.class
 com/aliyun/sdk/service/oos20190601/models/CreateApplicationGroupRequest$1.class
+com/aliyun/sdk/service/oos20190601/models/ListOpsItemsResponse$BuilderImpl.class
 com/aliyun/sdk/service/oos20190601/models/TriggerExecutionResponse$Builder.class
 com/aliyun/sdk/service/oos20190601/models/GetTemplateResponse$Builder.class
 com/aliyun/sdk/service/oos20190601/models/ListTemplatesResponseBody$Builder.class
@@ -494,10 +523,13 @@ com/aliyun/sdk/service/oos20190601/models/ListApplicationGroupsResponse$BuilderI
 com/aliyun/sdk/service/oos20190601/models/DeleteApplicationGroupResponseBody.class
 com/aliyun/sdk/service/oos20190601/models/DeleteApplicationResponseBody$Builder.class
 com/aliyun/sdk/service/oos20190601/models/DeleteParameterResponse.class
+com/aliyun/sdk/service/oos20190601/models/UpdateOpsItemResponseBody$1.class
+com/aliyun/sdk/service/oos20190601/models/ListOpsItemsResponseBody.class
 com/aliyun/sdk/service/oos20190601/models/ListSecretParametersRequest$1.class
 com/aliyun/sdk/service/oos20190601/models/ListTemplateVersionsResponseBody$1.class
 com/aliyun/sdk/service/oos20190601/models/ListApplicationGroupsRequest$1.class
 com/aliyun/sdk/service/oos20190601/models/NotifyExecutionResponse$Builder.class
+com/aliyun/sdk/service/oos20190601/models/UpdateOpsItemResponse$BuilderImpl.class
 com/aliyun/sdk/service/oos20190601/models/ListInstancePatchStatesResponse$BuilderImpl.class
 com/aliyun/sdk/service/oos20190601/models/CancelExecutionResponseBody.class
 com/aliyun/sdk/service/oos20190601/models/GetParametersByPathResponseBody$Parameters$Builder.class
@@ -512,10 +544,12 @@ com/aliyun/sdk/service/oos20190601/models/GenerateExecutionPolicyRequest.class
 com/aliyun/sdk/service/oos20190601/models/StartExecutionResponse$BuilderImpl.class
 com/aliyun/sdk/service/oos20190601/models/ListTemplateVersionsResponseBody$TemplateVersions.class
 com/aliyun/sdk/service/oos20190601/models/RegisterDefaultPatchBaselineResponseBody$PatchBaseline.class
+com/aliyun/sdk/service/oos20190601/models/GetOpsItemRequest.class
 com/aliyun/sdk/service/oos20190601/models/GetSecretParameterResponseBody.class
 com/aliyun/sdk/service/oos20190601/models/GetPatchBaselineResponse$1.class
 com/aliyun/sdk/service/oos20190601/models/GenerateExecutionPolicyResponse.class
 com/aliyun/sdk/service/oos20190601/models/GetExecutionTemplateResponseBody$Builder.class
+com/aliyun/sdk/service/oos20190601/models/UpdateOpsItemResponse$1.class
 com/aliyun/sdk/service/oos20190601/models/CreateParameterResponseBody$Builder.class
 com/aliyun/sdk/service/oos20190601/models/DeleteSecretParameterResponse$1.class
 com/aliyun/sdk/service/oos20190601/models/CreatePatchBaselineResponseBody$1.class
@@ -526,8 +560,10 @@ com/aliyun/sdk/service/oos20190601/models/ListParametersResponse$BuilderImpl.cla
 com/aliyun/sdk/service/oos20190601/models/ContinueDeployApplicationGroupResponseBody$Builder.class
 com/aliyun/sdk/service/oos20190601/models/CreateApplicationResponse$BuilderImpl.class
 com/aliyun/sdk/service/oos20190601/models/ListSecretParameterVersionsResponseBody$1.class
+com/aliyun/sdk/service/oos20190601/models/ListOpsItemsResponseBody$OpsItems$Builder.class
 com/aliyun/sdk/service/oos20190601/models/ListParameterVersionsResponse$BuilderImpl.class
 com/aliyun/sdk/service/oos20190601/models/GetSecretParametersRequest.class
+com/aliyun/sdk/service/oos20190601/models/GetOpsItemResponseBody$1.class
 com/aliyun/sdk/service/oos20190601/models/ListTaskExecutionsResponseBody$1.class
 com/aliyun/sdk/service/oos20190601/models/DeleteTemplateResponse$BuilderImpl.class
 com/aliyun/sdk/service/oos20190601/models/GetSecretParametersByPathResponseBody.class
@@ -535,6 +571,8 @@ com/aliyun/sdk/service/oos20190601/models/DeletePatchBaselineResponse$Builder.cl
 com/aliyun/sdk/service/oos20190601/models/NotifyExecutionResponse$1.class
 com/aliyun/sdk/service/oos20190601/models/ListParameterVersionsResponse$Builder.class
 com/aliyun/sdk/service/oos20190601/models/SearchInventoryRequest$Filter$Builder.class
+com/aliyun/sdk/service/oos20190601/models/CreateOpsItemResponseBody$Builder.class
+com/aliyun/sdk/service/oos20190601/models/GetOpsItemResponseBody.class
 com/aliyun/sdk/service/oos20190601/models/GetApplicationResponseBody.class
 com/aliyun/sdk/service/oos20190601/models/ListActionsResponse$1.class
 com/aliyun/sdk/service/oos20190601/models/SearchInventoryResponse$1.class
@@ -609,6 +647,7 @@ com/aliyun/sdk/service/oos20190601/models/DeleteTemplatesResponseBody.class
 com/aliyun/sdk/service/oos20190601/models/ListInstancePatchesResponseBody$Builder.class
 com/aliyun/sdk/service/oos20190601/models/DescribeRegionsResponseBody$Builder.class
 com/aliyun/sdk/service/oos20190601/models/GetSecretParametersByPathResponse$1.class
+com/aliyun/sdk/service/oos20190601/models/ListOpsItemsRequest$1.class
 com/aliyun/sdk/service/oos20190601/models/ListInstancePatchStatesResponseBody$1.class
 com/aliyun/sdk/service/oos20190601/models/TriggerExecutionResponseBody.class
 com/aliyun/sdk/service/oos20190601/models/CreateApplicationGroupResponseBody$ApplicationGroup.class
@@ -687,6 +726,7 @@ com/aliyun/sdk/service/oos20190601/models/CreatePatchBaselineResponse$1.class
 com/aliyun/sdk/service/oos20190601/models/GetTemplateResponseBody$1.class
 com/aliyun/sdk/service/oos20190601/models/DeleteApplicationGroupResponse$1.class
 com/aliyun/sdk/service/oos20190601/models/GetInventorySchemaResponseBody$Builder.class
+com/aliyun/sdk/service/oos20190601/models/CreateOpsItemRequest$1.class
 com/aliyun/sdk/service/oos20190601/models/UntagResourcesResponseBody$Builder.class
 com/aliyun/sdk/service/oos20190601/models/ListSecretParametersResponseBody$1.class
 com/aliyun/sdk/service/oos20190601/models/CancelExecutionRequest$Builder.class
@@ -721,6 +761,7 @@ com/aliyun/sdk/service/oos20190601/models/ListSecretParameterVersionsResponse$1.
 com/aliyun/sdk/service/oos20190601/models/DeleteParameterResponse$BuilderImpl.class
 com/aliyun/sdk/service/oos20190601/models/UpdateStateConfigurationResponseBody$StateConfiguration.class
 com/aliyun/sdk/service/oos20190601/models/ListResourceExecutionStatusResponseBody$Builder.class
+com/aliyun/sdk/service/oos20190601/models/CreateOpsItemResponse$1.class
 com/aliyun/sdk/service/oos20190601/models/ListSecretParametersRequest$Builder.class
 com/aliyun/sdk/service/oos20190601/models/CreateSecretParameterResponse$1.class
 com/aliyun/sdk/service/oos20190601/models/GetApplicationGroupRequest$1.class
@@ -729,6 +770,7 @@ com/aliyun/sdk/service/oos20190601/models/DeleteTemplatesResponse$1.class
 com/aliyun/sdk/service/oos20190601/models/ValidateTemplateContentResponseBody.class
 com/aliyun/sdk/service/oos20190601/models/DeleteExecutionsRequest$Builder.class
 com/aliyun/sdk/service/oos20190601/models/ListPatchBaselinesResponseBody$1.class
+com/aliyun/sdk/service/oos20190601/models/UpdateOpsItemResponseBody$OpsItem$Builder.class
 com/aliyun/sdk/service/oos20190601/models/GetPatchBaselineResponseBody.class
 com/aliyun/sdk/service/oos20190601/models/GetSecretParametersResponseBody$Builder.class
 com/aliyun/sdk/service/oos20190601/models/CreateSecretParameterRequest$1.class
@@ -757,6 +799,7 @@ com/aliyun/sdk/service/oos20190601/models/GenerateExecutionPolicyResponseBody.cl
 com/aliyun/sdk/service/oos20190601/models/ValidateTemplateContentResponse$1.class
 com/aliyun/sdk/service/oos20190601/models/GetPatchBaselineResponseBody$PatchBaseline.class
 com/aliyun/sdk/service/oos20190601/models/ValidateTemplateContentResponseBody$Tasks$Builder.class
+com/aliyun/sdk/service/oos20190601/models/ListOpsItemsRequest.class
 com/aliyun/sdk/service/oos20190601/models/ListExecutionRiskyTasksRequest.class
 com/aliyun/sdk/service/oos20190601/models/ListActionsResponse$BuilderImpl.class
 com/aliyun/sdk/service/oos20190601/models/GetParametersResponseBody$Builder.class
@@ -785,7 +828,10 @@ com/aliyun/sdk/service/oos20190601/models/DeleteSecretParameterRequest.class
 com/aliyun/sdk/service/oos20190601/models/GetServiceSettingsResponse$1.class
 com/aliyun/sdk/service/oos20190601/models/GetParameterResponseBody$Builder.class
 com/aliyun/sdk/service/oos20190601/models/CreateStateConfigurationResponseBody$Builder.class
+com/aliyun/sdk/service/oos20190601/models/GetOpsItemResponseBody$OpsItem.class
 com/aliyun/sdk/service/oos20190601/models/StartExecutionResponse.class
+com/aliyun/sdk/service/oos20190601/models/CreateOpsItemResponseBody$OpsItem$Builder.class
+com/aliyun/sdk/service/oos20190601/models/CreateOpsItemResponseBody.class
 com/aliyun/sdk/service/oos20190601/models/UpdateExecutionResponse.class
 com/aliyun/sdk/service/oos20190601/models/UpdateSecretParameterRequest$Builder.class
 com/aliyun/sdk/service/oos20190601/models/ListExecutionLogsRequest$Builder.class
@@ -794,10 +840,12 @@ com/aliyun/sdk/service/oos20190601/models/ValidateTemplateContentRequest$Builder
 com/aliyun/sdk/service/oos20190601/models/UpdateTemplateResponseBody$Template.class
 com/aliyun/sdk/service/oos20190601/models/ListSecretParametersResponse.class
 com/aliyun/sdk/service/oos20190601/models/ListParametersResponse$Builder.class
+com/aliyun/sdk/service/oos20190601/models/CreateOpsItemResponse$BuilderImpl.class
 com/aliyun/sdk/service/oos20190601/models/ListExecutionRiskyTasksResponse$Builder.class
 com/aliyun/sdk/service/oos20190601/models/CreateTemplateRequest$Builder.class
 com/aliyun/sdk/service/oos20190601/models/DeleteApplicationGroupResponse$Builder.class
 com/aliyun/sdk/service/oos20190601/models/UpdateSecretParameterResponseBody$Parameter.class
+com/aliyun/sdk/service/oos20190601/models/GetOpsItemResponse.class
 com/aliyun/sdk/service/oos20190601/models/ListParameterVersionsResponseBody$Builder.class
 com/aliyun/sdk/service/oos20190601/models/CreateApplicationGroupResponseBody$1.class
 com/aliyun/sdk/service/oos20190601/models/TagResourcesResponse$BuilderImpl.class
@@ -833,6 +881,7 @@ com/aliyun/sdk/service/oos20190601/models/ListExecutionsResponseBody$CurrentTask
 com/aliyun/sdk/service/oos20190601/models/SetServiceSettingsResponseBody.class
 com/aliyun/sdk/service/oos20190601/models/GetApplicationGroupResponse$1.class
 com/aliyun/sdk/service/oos20190601/models/CreateSecretParameterResponse.class
+com/aliyun/sdk/service/oos20190601/models/ListOpsItemsRequest$Filter$Builder.class
 com/aliyun/sdk/service/oos20190601/models/ListTagKeysRequest$1.class
 com/aliyun/sdk/service/oos20190601/models/ValidateTemplateContentResponseBody$Builder.class
 com/aliyun/sdk/service/oos20190601/models/TriggerExecutionResponseBody$1.class
@@ -852,6 +901,7 @@ com/aliyun/sdk/service/oos20190601/models/GetApplicationResponse$BuilderImpl.cla
 com/aliyun/sdk/service/oos20190601/models/NotifyExecutionResponseBody$Builder.class
 com/aliyun/sdk/service/oos20190601/models/ListTemplatesRequest$1.class
 com/aliyun/sdk/service/oos20190601/models/CreateApplicationResponse$1.class
+com/aliyun/sdk/service/oos20190601/models/ListOpsItemsRequest$Builder.class
 com/aliyun/sdk/service/oos20190601/models/GetSecretParameterRequest$Builder.class
 com/aliyun/sdk/service/oos20190601/models/GetServiceSettingsRequest.class
 com/aliyun/sdk/service/oos20190601/models/ListPatchBaselinesResponseBody$Builder.class

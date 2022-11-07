@@ -28,6 +28,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateApplicationGroupResponse> createApplicationGroup(CreateApplicationGroupRequest request);
 
+    CompletableFuture<CreateOpsItemResponse> createOpsItem(CreateOpsItemRequest request);
+
     CompletableFuture<CreateParameterResponse> createParameter(CreateParameterRequest request);
 
     CompletableFuture<CreatePatchBaselineResponse> createPatchBaseline(CreatePatchBaselineRequest request);
@@ -70,6 +72,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetInventorySchemaResponse> getInventorySchema(GetInventorySchemaRequest request);
 
+    CompletableFuture<GetOpsItemResponse> getOpsItem(GetOpsItemRequest request);
+
     CompletableFuture<GetParameterResponse> getParameter(GetParameterRequest request);
 
     CompletableFuture<GetParametersResponse> getParameters(GetParametersRequest request);
@@ -105,6 +109,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListInstancePatchesResponse> listInstancePatches(ListInstancePatchesRequest request);
 
     CompletableFuture<ListInventoryEntriesResponse> listInventoryEntries(ListInventoryEntriesRequest request);
+
+    CompletableFuture<ListOpsItemsResponse> listOpsItems(ListOpsItemsRequest request);
 
     CompletableFuture<ListParameterVersionsResponse> listParameterVersions(ListParameterVersionsRequest request);
 
@@ -153,6 +159,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateApplicationGroupResponse> updateApplicationGroup(UpdateApplicationGroupRequest request);
 
     CompletableFuture<UpdateExecutionResponse> updateExecution(UpdateExecutionRequest request);
+
+    CompletableFuture<UpdateOpsItemResponse> updateOpsItem(UpdateOpsItemRequest request);
 
     CompletableFuture<UpdateParameterResponse> updateParameter(UpdateParameterRequest request);
 
