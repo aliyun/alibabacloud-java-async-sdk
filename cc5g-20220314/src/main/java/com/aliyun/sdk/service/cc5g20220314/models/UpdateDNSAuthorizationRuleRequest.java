@@ -14,6 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class UpdateDNSAuthorizationRuleRequest extends Request {
     @Query
     @NameInMap("AuthorizationRuleId")
+    @Validation(required = true)
     private String authorizationRuleId;
 
     @Query
