@@ -60,6 +60,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateNacosServiceResponse> createNacosService(CreateNacosServiceRequest request);
 
+    CompletableFuture<CreateOrUpdateSwimmingLaneResponse> createOrUpdateSwimmingLane(CreateOrUpdateSwimmingLaneRequest request);
+
+    CompletableFuture<CreateOrUpdateSwimmingLaneGroupResponse> createOrUpdateSwimmingLaneGroup(CreateOrUpdateSwimmingLaneGroupRequest request);
+
     CompletableFuture<CreateZnodeResponse> createZnode(CreateZnodeRequest request);
 
     CompletableFuture<DeleteAuthResourceResponse> deleteAuthResource(DeleteAuthResourceRequest request);
