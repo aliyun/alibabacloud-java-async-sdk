@@ -201,6 +201,9 @@ public class ListGatewayRequest extends Request {
         @NameInMap("Name")
         private String name;
 
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
         @NameInMap("Vpc")
         private String vpc;
 
@@ -210,6 +213,7 @@ public class ListGatewayRequest extends Request {
             this.instanceId = builder.instanceId;
             this.mseTag = builder.mseTag;
             this.name = builder.name;
+            this.resourceGroupId = builder.resourceGroupId;
             this.vpc = builder.vpc;
         }
 
@@ -257,6 +261,13 @@ public class ListGatewayRequest extends Request {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return vpc
          */
         public String getVpc() {
@@ -269,6 +280,7 @@ public class ListGatewayRequest extends Request {
             private String instanceId; 
             private String mseTag; 
             private String name; 
+            private String resourceGroupId; 
             private String vpc; 
 
             /**
@@ -308,6 +320,14 @@ public class ListGatewayRequest extends Request {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 

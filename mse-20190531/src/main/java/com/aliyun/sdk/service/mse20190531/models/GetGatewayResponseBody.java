@@ -333,6 +333,9 @@ public class GetGatewayResponseBody extends TeaModel {
         @NameInMap("Replica")
         private Integer replica;
 
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
         @NameInMap("SecurityGroup")
         private String securityGroup;
 
@@ -371,6 +374,7 @@ public class GetGatewayResponseBody extends TeaModel {
             this.primaryUser = builder.primaryUser;
             this.region = builder.region;
             this.replica = builder.replica;
+            this.resourceGroupId = builder.resourceGroupId;
             this.securityGroup = builder.securityGroup;
             this.spec = builder.spec;
             this.status = builder.status;
@@ -481,6 +485,13 @@ public class GetGatewayResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return securityGroup
          */
         public String getSecurityGroup() {
@@ -550,6 +561,7 @@ public class GetGatewayResponseBody extends TeaModel {
             private String primaryUser; 
             private String region; 
             private Integer replica; 
+            private String resourceGroupId; 
             private String securityGroup; 
             private String spec; 
             private Integer status; 
@@ -660,6 +672,14 @@ public class GetGatewayResponseBody extends TeaModel {
              */
             public Builder replica(Integer replica) {
                 this.replica = replica;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 

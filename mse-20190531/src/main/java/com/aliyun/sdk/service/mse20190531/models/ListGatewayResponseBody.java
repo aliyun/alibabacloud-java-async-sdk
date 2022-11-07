@@ -661,6 +661,9 @@ public class ListGatewayResponseBody extends TeaModel {
         @NameInMap("Replica")
         private Integer replica;
 
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
         @NameInMap("RollBack")
         private Boolean rollBack;
 
@@ -711,6 +714,7 @@ public class ListGatewayResponseBody extends TeaModel {
             this.primaryUser = builder.primaryUser;
             this.region = builder.region;
             this.replica = builder.replica;
+            this.resourceGroupId = builder.resourceGroupId;
             this.rollBack = builder.rollBack;
             this.slb = builder.slb;
             this.spec = builder.spec;
@@ -885,6 +889,13 @@ public class ListGatewayResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return rollBack
          */
         public Boolean getRollBack() {
@@ -970,6 +981,7 @@ public class ListGatewayResponseBody extends TeaModel {
             private String primaryUser; 
             private String region; 
             private Integer replica; 
+            private String resourceGroupId; 
             private Boolean rollBack; 
             private java.util.List < Slb> slb; 
             private String spec; 
@@ -1153,6 +1165,14 @@ public class ListGatewayResponseBody extends TeaModel {
              */
             public Builder replica(Integer replica) {
                 this.replica = replica;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 

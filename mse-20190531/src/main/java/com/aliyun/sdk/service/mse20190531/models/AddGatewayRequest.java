@@ -51,6 +51,10 @@ public class AddGatewayRequest extends Request {
     private Integer replica;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("SlbSpec")
     private String slbSpec;
 
@@ -92,6 +96,7 @@ public class AddGatewayRequest extends Request {
         this.name = builder.name;
         this.region = builder.region;
         this.replica = builder.replica;
+        this.resourceGroupId = builder.resourceGroupId;
         this.slbSpec = builder.slbSpec;
         this.spec = builder.spec;
         this.tag = builder.tag;
@@ -178,6 +183,13 @@ public class AddGatewayRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return slbSpec
      */
     public String getSlbSpec() {
@@ -236,6 +248,7 @@ public class AddGatewayRequest extends Request {
         private String name; 
         private String region; 
         private Integer replica; 
+        private String resourceGroupId; 
         private String slbSpec; 
         private String spec; 
         private java.util.List < Tag> tag; 
@@ -259,6 +272,7 @@ public class AddGatewayRequest extends Request {
             this.name = request.name;
             this.region = request.region;
             this.replica = request.replica;
+            this.resourceGroupId = request.resourceGroupId;
             this.slbSpec = request.slbSpec;
             this.spec = request.spec;
             this.tag = request.tag;
@@ -346,6 +360,15 @@ public class AddGatewayRequest extends Request {
         public Builder replica(Integer replica) {
             this.putQueryParameter("Replica", replica);
             this.replica = replica;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 
