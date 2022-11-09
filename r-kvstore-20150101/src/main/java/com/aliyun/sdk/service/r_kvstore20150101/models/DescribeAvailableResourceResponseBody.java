@@ -1,0 +1,1052 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.r_kvstore20150101.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link DescribeAvailableResourceResponseBody} extends {@link TeaModel}
+ *
+ * <p>DescribeAvailableResourceResponseBody</p>
+ */
+public class DescribeAvailableResourceResponseBody extends TeaModel {
+    @NameInMap("AvailableZones")
+    private AvailableZones availableZones;
+
+    @NameInMap("RequestId")
+    private String requestId;
+
+    private DescribeAvailableResourceResponseBody(Builder builder) {
+        this.availableZones = builder.availableZones;
+        this.requestId = builder.requestId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static DescribeAvailableResourceResponseBody create() {
+        return builder().build();
+    }
+
+    /**
+     * @return availableZones
+     */
+    public AvailableZones getAvailableZones() {
+        return this.availableZones;
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public static final class Builder {
+        private AvailableZones availableZones; 
+        private String requestId; 
+
+        /**
+         * AvailableZones.
+         */
+        public Builder availableZones(AvailableZones availableZones) {
+            this.availableZones = availableZones;
+            return this;
+        }
+
+        /**
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        public DescribeAvailableResourceResponseBody build() {
+            return new DescribeAvailableResourceResponseBody(this);
+        } 
+
+    } 
+
+    public static class AvailableResource extends TeaModel {
+        @NameInMap("Capacity")
+        private Long capacity;
+
+        @NameInMap("InstanceClass")
+        private String instanceClass;
+
+        @NameInMap("InstanceClassRemark")
+        private String instanceClassRemark;
+
+        private AvailableResource(Builder builder) {
+            this.capacity = builder.capacity;
+            this.instanceClass = builder.instanceClass;
+            this.instanceClassRemark = builder.instanceClassRemark;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AvailableResource create() {
+            return builder().build();
+        }
+
+        /**
+         * @return capacity
+         */
+        public Long getCapacity() {
+            return this.capacity;
+        }
+
+        /**
+         * @return instanceClass
+         */
+        public String getInstanceClass() {
+            return this.instanceClass;
+        }
+
+        /**
+         * @return instanceClassRemark
+         */
+        public String getInstanceClassRemark() {
+            return this.instanceClassRemark;
+        }
+
+        public static final class Builder {
+            private Long capacity; 
+            private String instanceClass; 
+            private String instanceClassRemark; 
+
+            /**
+             * Capacity.
+             */
+            public Builder capacity(Long capacity) {
+                this.capacity = capacity;
+                return this;
+            }
+
+            /**
+             * InstanceClass.
+             */
+            public Builder instanceClass(String instanceClass) {
+                this.instanceClass = instanceClass;
+                return this;
+            }
+
+            /**
+             * InstanceClassRemark.
+             */
+            public Builder instanceClassRemark(String instanceClassRemark) {
+                this.instanceClassRemark = instanceClassRemark;
+                return this;
+            }
+
+            public AvailableResource build() {
+                return new AvailableResource(this);
+            } 
+
+        } 
+
+    }
+    public static class AvailableResources extends TeaModel {
+        @NameInMap("AvailableResource")
+        private java.util.List < AvailableResource> availableResource;
+
+        private AvailableResources(Builder builder) {
+            this.availableResource = builder.availableResource;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AvailableResources create() {
+            return builder().build();
+        }
+
+        /**
+         * @return availableResource
+         */
+        public java.util.List < AvailableResource> getAvailableResource() {
+            return this.availableResource;
+        }
+
+        public static final class Builder {
+            private java.util.List < AvailableResource> availableResource; 
+
+            /**
+             * AvailableResource.
+             */
+            public Builder availableResource(java.util.List < AvailableResource> availableResource) {
+                this.availableResource = availableResource;
+                return this;
+            }
+
+            public AvailableResources build() {
+                return new AvailableResources(this);
+            } 
+
+        } 
+
+    }
+    public static class SupportedNodeType extends TeaModel {
+        @NameInMap("AvailableResources")
+        private AvailableResources availableResources;
+
+        @NameInMap("SupportedNodeType")
+        private String supportedNodeType;
+
+        private SupportedNodeType(Builder builder) {
+            this.availableResources = builder.availableResources;
+            this.supportedNodeType = builder.supportedNodeType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SupportedNodeType create() {
+            return builder().build();
+        }
+
+        /**
+         * @return availableResources
+         */
+        public AvailableResources getAvailableResources() {
+            return this.availableResources;
+        }
+
+        /**
+         * @return supportedNodeType
+         */
+        public String getSupportedNodeType() {
+            return this.supportedNodeType;
+        }
+
+        public static final class Builder {
+            private AvailableResources availableResources; 
+            private String supportedNodeType; 
+
+            /**
+             * AvailableResources.
+             */
+            public Builder availableResources(AvailableResources availableResources) {
+                this.availableResources = availableResources;
+                return this;
+            }
+
+            /**
+             * SupportedNodeType.
+             */
+            public Builder supportedNodeType(String supportedNodeType) {
+                this.supportedNodeType = supportedNodeType;
+                return this;
+            }
+
+            public SupportedNodeType build() {
+                return new SupportedNodeType(this);
+            } 
+
+        } 
+
+    }
+    public static class SupportedNodeTypes extends TeaModel {
+        @NameInMap("SupportedNodeType")
+        private java.util.List < SupportedNodeType> supportedNodeType;
+
+        private SupportedNodeTypes(Builder builder) {
+            this.supportedNodeType = builder.supportedNodeType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SupportedNodeTypes create() {
+            return builder().build();
+        }
+
+        /**
+         * @return supportedNodeType
+         */
+        public java.util.List < SupportedNodeType> getSupportedNodeType() {
+            return this.supportedNodeType;
+        }
+
+        public static final class Builder {
+            private java.util.List < SupportedNodeType> supportedNodeType; 
+
+            /**
+             * SupportedNodeType.
+             */
+            public Builder supportedNodeType(java.util.List < SupportedNodeType> supportedNodeType) {
+                this.supportedNodeType = supportedNodeType;
+                return this;
+            }
+
+            public SupportedNodeTypes build() {
+                return new SupportedNodeTypes(this);
+            } 
+
+        } 
+
+    }
+    public static class SupportedShardNumber extends TeaModel {
+        @NameInMap("ShardNumber")
+        private String shardNumber;
+
+        @NameInMap("SupportedNodeTypes")
+        private SupportedNodeTypes supportedNodeTypes;
+
+        private SupportedShardNumber(Builder builder) {
+            this.shardNumber = builder.shardNumber;
+            this.supportedNodeTypes = builder.supportedNodeTypes;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SupportedShardNumber create() {
+            return builder().build();
+        }
+
+        /**
+         * @return shardNumber
+         */
+        public String getShardNumber() {
+            return this.shardNumber;
+        }
+
+        /**
+         * @return supportedNodeTypes
+         */
+        public SupportedNodeTypes getSupportedNodeTypes() {
+            return this.supportedNodeTypes;
+        }
+
+        public static final class Builder {
+            private String shardNumber; 
+            private SupportedNodeTypes supportedNodeTypes; 
+
+            /**
+             * ShardNumber.
+             */
+            public Builder shardNumber(String shardNumber) {
+                this.shardNumber = shardNumber;
+                return this;
+            }
+
+            /**
+             * SupportedNodeTypes.
+             */
+            public Builder supportedNodeTypes(SupportedNodeTypes supportedNodeTypes) {
+                this.supportedNodeTypes = supportedNodeTypes;
+                return this;
+            }
+
+            public SupportedShardNumber build() {
+                return new SupportedShardNumber(this);
+            } 
+
+        } 
+
+    }
+    public static class SupportedShardNumbers extends TeaModel {
+        @NameInMap("SupportedShardNumber")
+        private java.util.List < SupportedShardNumber> supportedShardNumber;
+
+        private SupportedShardNumbers(Builder builder) {
+            this.supportedShardNumber = builder.supportedShardNumber;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SupportedShardNumbers create() {
+            return builder().build();
+        }
+
+        /**
+         * @return supportedShardNumber
+         */
+        public java.util.List < SupportedShardNumber> getSupportedShardNumber() {
+            return this.supportedShardNumber;
+        }
+
+        public static final class Builder {
+            private java.util.List < SupportedShardNumber> supportedShardNumber; 
+
+            /**
+             * SupportedShardNumber.
+             */
+            public Builder supportedShardNumber(java.util.List < SupportedShardNumber> supportedShardNumber) {
+                this.supportedShardNumber = supportedShardNumber;
+                return this;
+            }
+
+            public SupportedShardNumbers build() {
+                return new SupportedShardNumbers(this);
+            } 
+
+        } 
+
+    }
+    public static class SupportedArchitectureType extends TeaModel {
+        @NameInMap("Architecture")
+        private String architecture;
+
+        @NameInMap("SupportedShardNumbers")
+        private SupportedShardNumbers supportedShardNumbers;
+
+        private SupportedArchitectureType(Builder builder) {
+            this.architecture = builder.architecture;
+            this.supportedShardNumbers = builder.supportedShardNumbers;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SupportedArchitectureType create() {
+            return builder().build();
+        }
+
+        /**
+         * @return architecture
+         */
+        public String getArchitecture() {
+            return this.architecture;
+        }
+
+        /**
+         * @return supportedShardNumbers
+         */
+        public SupportedShardNumbers getSupportedShardNumbers() {
+            return this.supportedShardNumbers;
+        }
+
+        public static final class Builder {
+            private String architecture; 
+            private SupportedShardNumbers supportedShardNumbers; 
+
+            /**
+             * Architecture.
+             */
+            public Builder architecture(String architecture) {
+                this.architecture = architecture;
+                return this;
+            }
+
+            /**
+             * SupportedShardNumbers.
+             */
+            public Builder supportedShardNumbers(SupportedShardNumbers supportedShardNumbers) {
+                this.supportedShardNumbers = supportedShardNumbers;
+                return this;
+            }
+
+            public SupportedArchitectureType build() {
+                return new SupportedArchitectureType(this);
+            } 
+
+        } 
+
+    }
+    public static class SupportedArchitectureTypes extends TeaModel {
+        @NameInMap("SupportedArchitectureType")
+        private java.util.List < SupportedArchitectureType> supportedArchitectureType;
+
+        private SupportedArchitectureTypes(Builder builder) {
+            this.supportedArchitectureType = builder.supportedArchitectureType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SupportedArchitectureTypes create() {
+            return builder().build();
+        }
+
+        /**
+         * @return supportedArchitectureType
+         */
+        public java.util.List < SupportedArchitectureType> getSupportedArchitectureType() {
+            return this.supportedArchitectureType;
+        }
+
+        public static final class Builder {
+            private java.util.List < SupportedArchitectureType> supportedArchitectureType; 
+
+            /**
+             * SupportedArchitectureType.
+             */
+            public Builder supportedArchitectureType(java.util.List < SupportedArchitectureType> supportedArchitectureType) {
+                this.supportedArchitectureType = supportedArchitectureType;
+                return this;
+            }
+
+            public SupportedArchitectureTypes build() {
+                return new SupportedArchitectureTypes(this);
+            } 
+
+        } 
+
+    }
+    public static class SupportedEngineVersion extends TeaModel {
+        @NameInMap("SupportedArchitectureTypes")
+        private SupportedArchitectureTypes supportedArchitectureTypes;
+
+        @NameInMap("Version")
+        private String version;
+
+        private SupportedEngineVersion(Builder builder) {
+            this.supportedArchitectureTypes = builder.supportedArchitectureTypes;
+            this.version = builder.version;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SupportedEngineVersion create() {
+            return builder().build();
+        }
+
+        /**
+         * @return supportedArchitectureTypes
+         */
+        public SupportedArchitectureTypes getSupportedArchitectureTypes() {
+            return this.supportedArchitectureTypes;
+        }
+
+        /**
+         * @return version
+         */
+        public String getVersion() {
+            return this.version;
+        }
+
+        public static final class Builder {
+            private SupportedArchitectureTypes supportedArchitectureTypes; 
+            private String version; 
+
+            /**
+             * SupportedArchitectureTypes.
+             */
+            public Builder supportedArchitectureTypes(SupportedArchitectureTypes supportedArchitectureTypes) {
+                this.supportedArchitectureTypes = supportedArchitectureTypes;
+                return this;
+            }
+
+            /**
+             * Version.
+             */
+            public Builder version(String version) {
+                this.version = version;
+                return this;
+            }
+
+            public SupportedEngineVersion build() {
+                return new SupportedEngineVersion(this);
+            } 
+
+        } 
+
+    }
+    public static class SupportedEngineVersions extends TeaModel {
+        @NameInMap("SupportedEngineVersion")
+        private java.util.List < SupportedEngineVersion> supportedEngineVersion;
+
+        private SupportedEngineVersions(Builder builder) {
+            this.supportedEngineVersion = builder.supportedEngineVersion;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SupportedEngineVersions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return supportedEngineVersion
+         */
+        public java.util.List < SupportedEngineVersion> getSupportedEngineVersion() {
+            return this.supportedEngineVersion;
+        }
+
+        public static final class Builder {
+            private java.util.List < SupportedEngineVersion> supportedEngineVersion; 
+
+            /**
+             * SupportedEngineVersion.
+             */
+            public Builder supportedEngineVersion(java.util.List < SupportedEngineVersion> supportedEngineVersion) {
+                this.supportedEngineVersion = supportedEngineVersion;
+                return this;
+            }
+
+            public SupportedEngineVersions build() {
+                return new SupportedEngineVersions(this);
+            } 
+
+        } 
+
+    }
+    public static class SupportedSeriesType extends TeaModel {
+        @NameInMap("SeriesType")
+        private String seriesType;
+
+        @NameInMap("SupportedEngineVersions")
+        private SupportedEngineVersions supportedEngineVersions;
+
+        private SupportedSeriesType(Builder builder) {
+            this.seriesType = builder.seriesType;
+            this.supportedEngineVersions = builder.supportedEngineVersions;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SupportedSeriesType create() {
+            return builder().build();
+        }
+
+        /**
+         * @return seriesType
+         */
+        public String getSeriesType() {
+            return this.seriesType;
+        }
+
+        /**
+         * @return supportedEngineVersions
+         */
+        public SupportedEngineVersions getSupportedEngineVersions() {
+            return this.supportedEngineVersions;
+        }
+
+        public static final class Builder {
+            private String seriesType; 
+            private SupportedEngineVersions supportedEngineVersions; 
+
+            /**
+             * SeriesType.
+             */
+            public Builder seriesType(String seriesType) {
+                this.seriesType = seriesType;
+                return this;
+            }
+
+            /**
+             * SupportedEngineVersions.
+             */
+            public Builder supportedEngineVersions(SupportedEngineVersions supportedEngineVersions) {
+                this.supportedEngineVersions = supportedEngineVersions;
+                return this;
+            }
+
+            public SupportedSeriesType build() {
+                return new SupportedSeriesType(this);
+            } 
+
+        } 
+
+    }
+    public static class SupportedSeriesTypes extends TeaModel {
+        @NameInMap("SupportedSeriesType")
+        private java.util.List < SupportedSeriesType> supportedSeriesType;
+
+        private SupportedSeriesTypes(Builder builder) {
+            this.supportedSeriesType = builder.supportedSeriesType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SupportedSeriesTypes create() {
+            return builder().build();
+        }
+
+        /**
+         * @return supportedSeriesType
+         */
+        public java.util.List < SupportedSeriesType> getSupportedSeriesType() {
+            return this.supportedSeriesType;
+        }
+
+        public static final class Builder {
+            private java.util.List < SupportedSeriesType> supportedSeriesType; 
+
+            /**
+             * SupportedSeriesType.
+             */
+            public Builder supportedSeriesType(java.util.List < SupportedSeriesType> supportedSeriesType) {
+                this.supportedSeriesType = supportedSeriesType;
+                return this;
+            }
+
+            public SupportedSeriesTypes build() {
+                return new SupportedSeriesTypes(this);
+            } 
+
+        } 
+
+    }
+    public static class SupportedEditionType extends TeaModel {
+        @NameInMap("EditionType")
+        private String editionType;
+
+        @NameInMap("SupportedSeriesTypes")
+        private SupportedSeriesTypes supportedSeriesTypes;
+
+        private SupportedEditionType(Builder builder) {
+            this.editionType = builder.editionType;
+            this.supportedSeriesTypes = builder.supportedSeriesTypes;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SupportedEditionType create() {
+            return builder().build();
+        }
+
+        /**
+         * @return editionType
+         */
+        public String getEditionType() {
+            return this.editionType;
+        }
+
+        /**
+         * @return supportedSeriesTypes
+         */
+        public SupportedSeriesTypes getSupportedSeriesTypes() {
+            return this.supportedSeriesTypes;
+        }
+
+        public static final class Builder {
+            private String editionType; 
+            private SupportedSeriesTypes supportedSeriesTypes; 
+
+            /**
+             * EditionType.
+             */
+            public Builder editionType(String editionType) {
+                this.editionType = editionType;
+                return this;
+            }
+
+            /**
+             * SupportedSeriesTypes.
+             */
+            public Builder supportedSeriesTypes(SupportedSeriesTypes supportedSeriesTypes) {
+                this.supportedSeriesTypes = supportedSeriesTypes;
+                return this;
+            }
+
+            public SupportedEditionType build() {
+                return new SupportedEditionType(this);
+            } 
+
+        } 
+
+    }
+    public static class SupportedEditionTypes extends TeaModel {
+        @NameInMap("SupportedEditionType")
+        private java.util.List < SupportedEditionType> supportedEditionType;
+
+        private SupportedEditionTypes(Builder builder) {
+            this.supportedEditionType = builder.supportedEditionType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SupportedEditionTypes create() {
+            return builder().build();
+        }
+
+        /**
+         * @return supportedEditionType
+         */
+        public java.util.List < SupportedEditionType> getSupportedEditionType() {
+            return this.supportedEditionType;
+        }
+
+        public static final class Builder {
+            private java.util.List < SupportedEditionType> supportedEditionType; 
+
+            /**
+             * SupportedEditionType.
+             */
+            public Builder supportedEditionType(java.util.List < SupportedEditionType> supportedEditionType) {
+                this.supportedEditionType = supportedEditionType;
+                return this;
+            }
+
+            public SupportedEditionTypes build() {
+                return new SupportedEditionTypes(this);
+            } 
+
+        } 
+
+    }
+    public static class SupportedEngine extends TeaModel {
+        @NameInMap("Engine")
+        private String engine;
+
+        @NameInMap("SupportedEditionTypes")
+        private SupportedEditionTypes supportedEditionTypes;
+
+        private SupportedEngine(Builder builder) {
+            this.engine = builder.engine;
+            this.supportedEditionTypes = builder.supportedEditionTypes;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SupportedEngine create() {
+            return builder().build();
+        }
+
+        /**
+         * @return engine
+         */
+        public String getEngine() {
+            return this.engine;
+        }
+
+        /**
+         * @return supportedEditionTypes
+         */
+        public SupportedEditionTypes getSupportedEditionTypes() {
+            return this.supportedEditionTypes;
+        }
+
+        public static final class Builder {
+            private String engine; 
+            private SupportedEditionTypes supportedEditionTypes; 
+
+            /**
+             * Engine.
+             */
+            public Builder engine(String engine) {
+                this.engine = engine;
+                return this;
+            }
+
+            /**
+             * SupportedEditionTypes.
+             */
+            public Builder supportedEditionTypes(SupportedEditionTypes supportedEditionTypes) {
+                this.supportedEditionTypes = supportedEditionTypes;
+                return this;
+            }
+
+            public SupportedEngine build() {
+                return new SupportedEngine(this);
+            } 
+
+        } 
+
+    }
+    public static class SupportedEngines extends TeaModel {
+        @NameInMap("SupportedEngine")
+        private java.util.List < SupportedEngine> supportedEngine;
+
+        private SupportedEngines(Builder builder) {
+            this.supportedEngine = builder.supportedEngine;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SupportedEngines create() {
+            return builder().build();
+        }
+
+        /**
+         * @return supportedEngine
+         */
+        public java.util.List < SupportedEngine> getSupportedEngine() {
+            return this.supportedEngine;
+        }
+
+        public static final class Builder {
+            private java.util.List < SupportedEngine> supportedEngine; 
+
+            /**
+             * SupportedEngine.
+             */
+            public Builder supportedEngine(java.util.List < SupportedEngine> supportedEngine) {
+                this.supportedEngine = supportedEngine;
+                return this;
+            }
+
+            public SupportedEngines build() {
+                return new SupportedEngines(this);
+            } 
+
+        } 
+
+    }
+    public static class AvailableZone extends TeaModel {
+        @NameInMap("RegionId")
+        private String regionId;
+
+        @NameInMap("SupportedEngines")
+        private SupportedEngines supportedEngines;
+
+        @NameInMap("ZoneId")
+        private String zoneId;
+
+        @NameInMap("ZoneName")
+        private String zoneName;
+
+        private AvailableZone(Builder builder) {
+            this.regionId = builder.regionId;
+            this.supportedEngines = builder.supportedEngines;
+            this.zoneId = builder.zoneId;
+            this.zoneName = builder.zoneName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AvailableZone create() {
+            return builder().build();
+        }
+
+        /**
+         * @return regionId
+         */
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        /**
+         * @return supportedEngines
+         */
+        public SupportedEngines getSupportedEngines() {
+            return this.supportedEngines;
+        }
+
+        /**
+         * @return zoneId
+         */
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
+        /**
+         * @return zoneName
+         */
+        public String getZoneName() {
+            return this.zoneName;
+        }
+
+        public static final class Builder {
+            private String regionId; 
+            private SupportedEngines supportedEngines; 
+            private String zoneId; 
+            private String zoneName; 
+
+            /**
+             * RegionId.
+             */
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * SupportedEngines.
+             */
+            public Builder supportedEngines(SupportedEngines supportedEngines) {
+                this.supportedEngines = supportedEngines;
+                return this;
+            }
+
+            /**
+             * ZoneId.
+             */
+            public Builder zoneId(String zoneId) {
+                this.zoneId = zoneId;
+                return this;
+            }
+
+            /**
+             * ZoneName.
+             */
+            public Builder zoneName(String zoneName) {
+                this.zoneName = zoneName;
+                return this;
+            }
+
+            public AvailableZone build() {
+                return new AvailableZone(this);
+            } 
+
+        } 
+
+    }
+    public static class AvailableZones extends TeaModel {
+        @NameInMap("AvailableZone")
+        private java.util.List < AvailableZone> availableZone;
+
+        private AvailableZones(Builder builder) {
+            this.availableZone = builder.availableZone;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AvailableZones create() {
+            return builder().build();
+        }
+
+        /**
+         * @return availableZone
+         */
+        public java.util.List < AvailableZone> getAvailableZone() {
+            return this.availableZone;
+        }
+
+        public static final class Builder {
+            private java.util.List < AvailableZone> availableZone; 
+
+            /**
+             * AvailableZone.
+             */
+            public Builder availableZone(java.util.List < AvailableZone> availableZone) {
+                this.availableZone = availableZone;
+                return this;
+            }
+
+            public AvailableZones build() {
+                return new AvailableZones(this);
+            } 
+
+        } 
+
+    }
+}
