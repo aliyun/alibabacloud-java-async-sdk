@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListClassesRequest</p>
  */
 public class ListClassesRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Body
     @NameInMap("AppId")
     @Validation(required = true)
@@ -25,20 +29,16 @@ public class ListClassesRequest extends Request {
     @NameInMap("PageSize")
     private Integer pageSize;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Body
     @NameInMap("Status")
     private Integer status;
 
     private ListClassesRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.appId = builder.appId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
         this.status = builder.status;
     }
 
@@ -53,6 +53,13 @@ public class ListClassesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -77,13 +84,6 @@ public class ListClassesRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return status
      */
     public Integer getStatus() {
@@ -91,10 +91,10 @@ public class ListClassesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListClassesRequest, Builder> {
+        private String regionId; 
         private String appId; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private String regionId; 
         private Integer status; 
 
         private Builder() {
@@ -103,12 +103,21 @@ public class ListClassesRequest extends Request {
 
         private Builder(ListClassesRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.appId = request.appId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
-            this.regionId = request.regionId;
             this.status = request.status;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * 应用唯一标识，由6位小写字母、数字组成。
@@ -134,15 +143,6 @@ public class ListClassesRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
             this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

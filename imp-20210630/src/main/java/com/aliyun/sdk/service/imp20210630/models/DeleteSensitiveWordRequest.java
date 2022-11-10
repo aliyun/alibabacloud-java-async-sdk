@@ -12,14 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteSensitiveWordRequest</p>
  */
 public class DeleteSensitiveWordRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Body
     @NameInMap("AppId")
     @Validation(required = true)
     private String appId;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Body
     @NameInMap("WordList")
@@ -27,8 +27,8 @@ public class DeleteSensitiveWordRequest extends Request {
 
     private DeleteSensitiveWordRequest(Builder builder) {
         super(builder);
-        this.appId = builder.appId;
         this.regionId = builder.regionId;
+        this.appId = builder.appId;
         this.wordList = builder.wordList;
     }
 
@@ -46,17 +46,17 @@ public class DeleteSensitiveWordRequest extends Request {
     }
 
     /**
-     * @return appId
-     */
-    public String getAppId() {
-        return this.appId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return appId
+     */
+    public String getAppId() {
+        return this.appId;
     }
 
     /**
@@ -67,8 +67,8 @@ public class DeleteSensitiveWordRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteSensitiveWordRequest, Builder> {
-        private String appId; 
         private String regionId; 
+        private String appId; 
         private java.util.List < String > wordList; 
 
         private Builder() {
@@ -77,19 +77,10 @@ public class DeleteSensitiveWordRequest extends Request {
 
         private Builder(DeleteSensitiveWordRequest request) {
             super(request);
-            this.appId = request.appId;
             this.regionId = request.regionId;
+            this.appId = request.appId;
             this.wordList = request.wordList;
         } 
-
-        /**
-         * 弹幕发送者的用户ID，最大长度不超过32个字节。
-         */
-        public Builder appId(String appId) {
-            this.putBodyParameter("AppId", appId);
-            this.appId = appId;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -97,6 +88,15 @@ public class DeleteSensitiveWordRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * 弹幕发送者的用户ID，最大长度不超过32个字节。
+         */
+        public Builder appId(String appId) {
+            this.putBodyParameter("AppId", appId);
+            this.appId = appId;
             return this;
         }
 

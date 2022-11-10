@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SendCustomMessageToUsersRequest</p>
  */
 public class SendCustomMessageToUsersRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Body
     @NameInMap("AppId")
     @Validation(required = true)
@@ -27,10 +31,6 @@ public class SendCustomMessageToUsersRequest extends Request {
     @Validation(required = true)
     private java.util.List < String > receiverList;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Body
     @NameInMap("RoomId")
     @Validation(required = true)
@@ -38,10 +38,10 @@ public class SendCustomMessageToUsersRequest extends Request {
 
     private SendCustomMessageToUsersRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.appId = builder.appId;
         this.body = builder.body;
         this.receiverList = builder.receiverList;
-        this.regionId = builder.regionId;
         this.roomId = builder.roomId;
     }
 
@@ -56,6 +56,13 @@ public class SendCustomMessageToUsersRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -80,13 +87,6 @@ public class SendCustomMessageToUsersRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return roomId
      */
     public String getRoomId() {
@@ -94,10 +94,10 @@ public class SendCustomMessageToUsersRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SendCustomMessageToUsersRequest, Builder> {
+        private String regionId; 
         private String appId; 
         private String body; 
         private java.util.List < String > receiverList; 
-        private String regionId; 
         private String roomId; 
 
         private Builder() {
@@ -106,12 +106,21 @@ public class SendCustomMessageToUsersRequest extends Request {
 
         private Builder(SendCustomMessageToUsersRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.appId = request.appId;
             this.body = request.body;
             this.receiverList = request.receiverList;
-            this.regionId = request.regionId;
             this.roomId = request.roomId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * 应用唯一标识，由6位小写字母、数字组成。
@@ -137,15 +146,6 @@ public class SendCustomMessageToUsersRequest extends Request {
         public Builder receiverList(java.util.List < String > receiverList) {
             this.putBodyParameter("ReceiverList", receiverList);
             this.receiverList = receiverList;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteConferenceRequest</p>
  */
 public class DeleteConferenceRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Body
     @NameInMap("AppId")
     @Validation(required = true)
@@ -21,10 +25,6 @@ public class DeleteConferenceRequest extends Request {
     @NameInMap("ConferenceId")
     @Validation(required = true)
     private String conferenceId;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Body
     @NameInMap("RoomId")
@@ -38,9 +38,9 @@ public class DeleteConferenceRequest extends Request {
 
     private DeleteConferenceRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.appId = builder.appId;
         this.conferenceId = builder.conferenceId;
-        this.regionId = builder.regionId;
         this.roomId = builder.roomId;
         this.userId = builder.userId;
     }
@@ -59,6 +59,13 @@ public class DeleteConferenceRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return appId
      */
     public String getAppId() {
@@ -70,13 +77,6 @@ public class DeleteConferenceRequest extends Request {
      */
     public String getConferenceId() {
         return this.conferenceId;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -94,9 +94,9 @@ public class DeleteConferenceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteConferenceRequest, Builder> {
+        private String regionId; 
         private String appId; 
         private String conferenceId; 
-        private String regionId; 
         private String roomId; 
         private String userId; 
 
@@ -106,12 +106,21 @@ public class DeleteConferenceRequest extends Request {
 
         private Builder(DeleteConferenceRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.appId = request.appId;
             this.conferenceId = request.conferenceId;
-            this.regionId = request.regionId;
             this.roomId = request.roomId;
             this.userId = request.userId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * 租户名
@@ -128,15 +137,6 @@ public class DeleteConferenceRequest extends Request {
         public Builder conferenceId(String conferenceId) {
             this.putBodyParameter("ConferenceId", conferenceId);
             this.conferenceId = conferenceId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

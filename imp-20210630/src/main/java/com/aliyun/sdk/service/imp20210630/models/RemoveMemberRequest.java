@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RemoveMemberRequest</p>
  */
 public class RemoveMemberRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Body
     @NameInMap("ConferenceId")
     @Validation(required = true)
@@ -22,10 +26,6 @@ public class RemoveMemberRequest extends Request {
     @Validation(required = true)
     private String fromUserId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Body
     @NameInMap("ToUserId")
     @Validation(required = true)
@@ -33,9 +33,9 @@ public class RemoveMemberRequest extends Request {
 
     private RemoveMemberRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.conferenceId = builder.conferenceId;
         this.fromUserId = builder.fromUserId;
-        this.regionId = builder.regionId;
         this.toUserId = builder.toUserId;
     }
 
@@ -53,6 +53,13 @@ public class RemoveMemberRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return conferenceId
      */
     public String getConferenceId() {
@@ -67,13 +74,6 @@ public class RemoveMemberRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return toUserId
      */
     public String getToUserId() {
@@ -81,9 +81,9 @@ public class RemoveMemberRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<RemoveMemberRequest, Builder> {
+        private String regionId; 
         private String conferenceId; 
         private String fromUserId; 
-        private String regionId; 
         private String toUserId; 
 
         private Builder() {
@@ -92,11 +92,20 @@ public class RemoveMemberRequest extends Request {
 
         private Builder(RemoveMemberRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.conferenceId = request.conferenceId;
             this.fromUserId = request.fromUserId;
-            this.regionId = request.regionId;
             this.toUserId = request.toUserId;
         } 
+
+        /**
+         * 地域
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * 会议唯一标识
@@ -113,15 +122,6 @@ public class RemoveMemberRequest extends Request {
         public Builder fromUserId(String fromUserId) {
             this.putBodyParameter("FromUserId", fromUserId);
             this.fromUserId = fromUserId;
-            return this;
-        }
-
-        /**
-         * 地域
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

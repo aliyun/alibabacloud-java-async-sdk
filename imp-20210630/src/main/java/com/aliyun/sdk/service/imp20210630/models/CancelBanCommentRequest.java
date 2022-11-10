@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CancelBanCommentRequest</p>
  */
 public class CancelBanCommentRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Body
     @NameInMap("AppId")
     @Validation(required = true)
@@ -21,10 +25,6 @@ public class CancelBanCommentRequest extends Request {
     @NameInMap("BanCommentUser")
     @Validation(required = true)
     private String banCommentUser;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Body
     @NameInMap("RoomId")
@@ -38,9 +38,9 @@ public class CancelBanCommentRequest extends Request {
 
     private CancelBanCommentRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.appId = builder.appId;
         this.banCommentUser = builder.banCommentUser;
-        this.regionId = builder.regionId;
         this.roomId = builder.roomId;
         this.userId = builder.userId;
     }
@@ -59,6 +59,13 @@ public class CancelBanCommentRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return appId
      */
     public String getAppId() {
@@ -70,13 +77,6 @@ public class CancelBanCommentRequest extends Request {
      */
     public String getBanCommentUser() {
         return this.banCommentUser;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -94,9 +94,9 @@ public class CancelBanCommentRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CancelBanCommentRequest, Builder> {
+        private String regionId; 
         private String appId; 
         private String banCommentUser; 
-        private String regionId; 
         private String roomId; 
         private String userId; 
 
@@ -106,12 +106,21 @@ public class CancelBanCommentRequest extends Request {
 
         private Builder(CancelBanCommentRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.appId = request.appId;
             this.banCommentUser = request.banCommentUser;
-            this.regionId = request.regionId;
             this.roomId = request.roomId;
             this.userId = request.userId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * 应用唯一标识，由6位小写字母、数字组成。
@@ -128,15 +137,6 @@ public class CancelBanCommentRequest extends Request {
         public Builder banCommentUser(String banCommentUser) {
             this.putBodyParameter("BanCommentUser", banCommentUser);
             this.banCommentUser = banCommentUser;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

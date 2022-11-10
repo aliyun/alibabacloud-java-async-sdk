@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateShareScreenLayoutRequest</p>
  */
 public class UpdateShareScreenLayoutRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Body
     @NameInMap("AppId")
     @Validation(required = true)
@@ -43,12 +47,9 @@ public class UpdateShareScreenLayoutRequest extends Request {
     @NameInMap("OverlayY")
     private Float overlayY;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private UpdateShareScreenLayoutRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.appId = builder.appId;
         this.classId = builder.classId;
         this.enableOverlay = builder.enableOverlay;
@@ -56,7 +57,6 @@ public class UpdateShareScreenLayoutRequest extends Request {
         this.overlayWidth = builder.overlayWidth;
         this.overlayX = builder.overlayX;
         this.overlayY = builder.overlayY;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -70,6 +70,13 @@ public class UpdateShareScreenLayoutRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -121,14 +128,8 @@ public class UpdateShareScreenLayoutRequest extends Request {
         return this.overlayY;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<UpdateShareScreenLayoutRequest, Builder> {
+        private String regionId; 
         private String appId; 
         private String classId; 
         private Boolean enableOverlay; 
@@ -136,7 +137,6 @@ public class UpdateShareScreenLayoutRequest extends Request {
         private Float overlayWidth; 
         private Float overlayX; 
         private Float overlayY; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -144,6 +144,7 @@ public class UpdateShareScreenLayoutRequest extends Request {
 
         private Builder(UpdateShareScreenLayoutRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.appId = request.appId;
             this.classId = request.classId;
             this.enableOverlay = request.enableOverlay;
@@ -151,8 +152,16 @@ public class UpdateShareScreenLayoutRequest extends Request {
             this.overlayWidth = request.overlayWidth;
             this.overlayX = request.overlayX;
             this.overlayY = request.overlayY;
-            this.regionId = request.regionId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * 应用唯一标识，由6位小写字母、数字组成。
@@ -214,15 +223,6 @@ public class UpdateShareScreenLayoutRequest extends Request {
         public Builder overlayY(Float overlayY) {
             this.putBodyParameter("OverlayY", overlayY);
             this.overlayY = overlayY;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

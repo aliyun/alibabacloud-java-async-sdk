@@ -12,19 +12,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetLiveRequest</p>
  */
 public class GetLiveRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Body
     @NameInMap("LiveId")
     @Validation(required = true)
     private String liveId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private GetLiveRequest(Builder builder) {
         super(builder);
-        this.liveId = builder.liveId;
         this.regionId = builder.regionId;
+        this.liveId = builder.liveId;
     }
 
     public static Builder builder() {
@@ -41,22 +41,22 @@ public class GetLiveRequest extends Request {
     }
 
     /**
-     * @return liveId
-     */
-    public String getLiveId() {
-        return this.liveId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
     }
 
+    /**
+     * @return liveId
+     */
+    public String getLiveId() {
+        return this.liveId;
+    }
+
     public static final class Builder extends Request.Builder<GetLiveRequest, Builder> {
-        private String liveId; 
         private String regionId; 
+        private String liveId; 
 
         private Builder() {
             super();
@@ -64,18 +64,9 @@ public class GetLiveRequest extends Request {
 
         private Builder(GetLiveRequest request) {
             super(request);
-            this.liveId = request.liveId;
             this.regionId = request.regionId;
+            this.liveId = request.liveId;
         } 
-
-        /**
-         * 直播资源的唯一标识ID
-         */
-        public Builder liveId(String liveId) {
-            this.putBodyParameter("LiveId", liveId);
-            this.liveId = liveId;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -83,6 +74,15 @@ public class GetLiveRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * 直播资源的唯一标识ID
+         */
+        public Builder liveId(String liveId) {
+            this.putBodyParameter("LiveId", liveId);
+            this.liveId = liveId;
             return this;
         }
 

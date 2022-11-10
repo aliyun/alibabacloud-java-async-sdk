@@ -12,14 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PublishLiveRequest</p>
  */
 public class PublishLiveRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Body
     @NameInMap("LiveId")
     @Validation(required = true)
     private String liveId;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Body
     @NameInMap("UserId")
@@ -28,8 +28,8 @@ public class PublishLiveRequest extends Request {
 
     private PublishLiveRequest(Builder builder) {
         super(builder);
-        this.liveId = builder.liveId;
         this.regionId = builder.regionId;
+        this.liveId = builder.liveId;
         this.userId = builder.userId;
     }
 
@@ -47,17 +47,17 @@ public class PublishLiveRequest extends Request {
     }
 
     /**
-     * @return liveId
-     */
-    public String getLiveId() {
-        return this.liveId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return liveId
+     */
+    public String getLiveId() {
+        return this.liveId;
     }
 
     /**
@@ -68,8 +68,8 @@ public class PublishLiveRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<PublishLiveRequest, Builder> {
-        private String liveId; 
         private String regionId; 
+        private String liveId; 
         private String userId; 
 
         private Builder() {
@@ -78,19 +78,10 @@ public class PublishLiveRequest extends Request {
 
         private Builder(PublishLiveRequest request) {
             super(request);
-            this.liveId = request.liveId;
             this.regionId = request.regionId;
+            this.liveId = request.liveId;
             this.userId = request.userId;
         } 
-
-        /**
-         * 直播资源的唯一标识ID
-         */
-        public Builder liveId(String liveId) {
-            this.putBodyParameter("LiveId", liveId);
-            this.liveId = liveId;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -98,6 +89,15 @@ public class PublishLiveRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * 直播资源的唯一标识ID
+         */
+        public Builder liveId(String liveId) {
+            this.putBodyParameter("LiveId", liveId);
+            this.liveId = liveId;
             return this;
         }
 

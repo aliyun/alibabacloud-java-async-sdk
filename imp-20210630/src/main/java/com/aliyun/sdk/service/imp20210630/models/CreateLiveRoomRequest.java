@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateLiveRoomRequest</p>
  */
 public class CreateLiveRoomRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Body
     @NameInMap("AnchorId")
     @Validation(required = true)
@@ -42,10 +46,6 @@ public class CreateLiveRoomRequest extends Request {
     @NameInMap("Notice")
     private String notice;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Body
     @NameInMap("Title")
     @Validation(required = true)
@@ -57,6 +57,7 @@ public class CreateLiveRoomRequest extends Request {
 
     private CreateLiveRoomRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.anchorId = builder.anchorId;
         this.anchorNick = builder.anchorNick;
         this.appId = builder.appId;
@@ -64,7 +65,6 @@ public class CreateLiveRoomRequest extends Request {
         this.enableLinkMic = builder.enableLinkMic;
         this.extension = builder.extension;
         this.notice = builder.notice;
-        this.regionId = builder.regionId;
         this.title = builder.title;
         this.userId = builder.userId;
     }
@@ -80,6 +80,13 @@ public class CreateLiveRoomRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -132,13 +139,6 @@ public class CreateLiveRoomRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return title
      */
     public String getTitle() {
@@ -153,6 +153,7 @@ public class CreateLiveRoomRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateLiveRoomRequest, Builder> {
+        private String regionId; 
         private String anchorId; 
         private String anchorNick; 
         private String appId; 
@@ -160,7 +161,6 @@ public class CreateLiveRoomRequest extends Request {
         private Boolean enableLinkMic; 
         private java.util.Map < String, String > extension; 
         private String notice; 
-        private String regionId; 
         private String title; 
         private String userId; 
 
@@ -170,6 +170,7 @@ public class CreateLiveRoomRequest extends Request {
 
         private Builder(CreateLiveRoomRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.anchorId = request.anchorId;
             this.anchorNick = request.anchorNick;
             this.appId = request.appId;
@@ -177,10 +178,18 @@ public class CreateLiveRoomRequest extends Request {
             this.enableLinkMic = request.enableLinkMic;
             this.extension = request.extension;
             this.notice = request.notice;
-            this.regionId = request.regionId;
             this.title = request.title;
             this.userId = request.userId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * 主播id，仅支持英文和数字，最大长度36位。
@@ -243,15 +252,6 @@ public class CreateLiveRoomRequest extends Request {
         public Builder notice(String notice) {
             this.putBodyParameter("Notice", notice);
             this.notice = notice;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

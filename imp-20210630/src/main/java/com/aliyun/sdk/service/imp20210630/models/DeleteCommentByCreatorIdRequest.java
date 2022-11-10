@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteCommentByCreatorIdRequest</p>
  */
 public class DeleteCommentByCreatorIdRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Body
     @NameInMap("AppId")
     @Validation(required = true)
@@ -26,10 +30,6 @@ public class DeleteCommentByCreatorIdRequest extends Request {
     @Validation(required = true)
     private String creatorId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Body
     @NameInMap("RoomId")
     @Validation(required = true)
@@ -42,10 +42,10 @@ public class DeleteCommentByCreatorIdRequest extends Request {
 
     private DeleteCommentByCreatorIdRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.appId = builder.appId;
         this.commentIdList = builder.commentIdList;
         this.creatorId = builder.creatorId;
-        this.regionId = builder.regionId;
         this.roomId = builder.roomId;
         this.userId = builder.userId;
     }
@@ -61,6 +61,13 @@ public class DeleteCommentByCreatorIdRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -85,13 +92,6 @@ public class DeleteCommentByCreatorIdRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return roomId
      */
     public String getRoomId() {
@@ -106,10 +106,10 @@ public class DeleteCommentByCreatorIdRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteCommentByCreatorIdRequest, Builder> {
+        private String regionId; 
         private String appId; 
         private java.util.List < String > commentIdList; 
         private String creatorId; 
-        private String regionId; 
         private String roomId; 
         private String userId; 
 
@@ -119,13 +119,22 @@ public class DeleteCommentByCreatorIdRequest extends Request {
 
         private Builder(DeleteCommentByCreatorIdRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.appId = request.appId;
             this.commentIdList = request.commentIdList;
             this.creatorId = request.creatorId;
-            this.regionId = request.regionId;
             this.roomId = request.roomId;
             this.userId = request.userId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * 应用唯一标识，可以包含小写字母、数字，长度为6个字符。
@@ -151,15 +160,6 @@ public class DeleteCommentByCreatorIdRequest extends Request {
         public Builder creatorId(String creatorId) {
             this.putBodyParameter("CreatorId", creatorId);
             this.creatorId = creatorId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteCommentRequest</p>
  */
 public class DeleteCommentRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Body
     @NameInMap("AppId")
     @Validation(required = true)
@@ -21,10 +25,6 @@ public class DeleteCommentRequest extends Request {
     @NameInMap("CommentIdList")
     @Validation(required = true)
     private java.util.List < String > commentIdList;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Body
     @NameInMap("RoomId")
@@ -38,9 +38,9 @@ public class DeleteCommentRequest extends Request {
 
     private DeleteCommentRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.appId = builder.appId;
         this.commentIdList = builder.commentIdList;
-        this.regionId = builder.regionId;
         this.roomId = builder.roomId;
         this.userId = builder.userId;
     }
@@ -59,6 +59,13 @@ public class DeleteCommentRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return appId
      */
     public String getAppId() {
@@ -70,13 +77,6 @@ public class DeleteCommentRequest extends Request {
      */
     public java.util.List < String > getCommentIdList() {
         return this.commentIdList;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -94,9 +94,9 @@ public class DeleteCommentRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteCommentRequest, Builder> {
+        private String regionId; 
         private String appId; 
         private java.util.List < String > commentIdList; 
-        private String regionId; 
         private String roomId; 
         private String userId; 
 
@@ -106,12 +106,21 @@ public class DeleteCommentRequest extends Request {
 
         private Builder(DeleteCommentRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.appId = request.appId;
             this.commentIdList = request.commentIdList;
-            this.regionId = request.regionId;
             this.roomId = request.roomId;
             this.userId = request.userId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * 应用唯一标识，可以包含小写字母、数字，长度为6个字符。
@@ -128,15 +137,6 @@ public class DeleteCommentRequest extends Request {
         public Builder commentIdList(java.util.List < String > commentIdList) {
             this.putBodyParameter("CommentIdList", commentIdList);
             this.commentIdList = commentIdList;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

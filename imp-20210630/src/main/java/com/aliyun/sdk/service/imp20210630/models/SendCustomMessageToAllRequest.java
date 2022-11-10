@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SendCustomMessageToAllRequest</p>
  */
 public class SendCustomMessageToAllRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Body
     @NameInMap("AppId")
     @Validation(required = true)
@@ -22,10 +26,6 @@ public class SendCustomMessageToAllRequest extends Request {
     @Validation(required = true)
     private String body;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Body
     @NameInMap("RoomId")
     @Validation(required = true)
@@ -33,9 +33,9 @@ public class SendCustomMessageToAllRequest extends Request {
 
     private SendCustomMessageToAllRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.appId = builder.appId;
         this.body = builder.body;
-        this.regionId = builder.regionId;
         this.roomId = builder.roomId;
     }
 
@@ -53,6 +53,13 @@ public class SendCustomMessageToAllRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return appId
      */
     public String getAppId() {
@@ -67,13 +74,6 @@ public class SendCustomMessageToAllRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return roomId
      */
     public String getRoomId() {
@@ -81,9 +81,9 @@ public class SendCustomMessageToAllRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SendCustomMessageToAllRequest, Builder> {
+        private String regionId; 
         private String appId; 
         private String body; 
-        private String regionId; 
         private String roomId; 
 
         private Builder() {
@@ -92,11 +92,20 @@ public class SendCustomMessageToAllRequest extends Request {
 
         private Builder(SendCustomMessageToAllRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.appId = request.appId;
             this.body = request.body;
-            this.regionId = request.regionId;
             this.roomId = request.roomId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * 应用唯一标识，由6位小写字母、数字组成。
@@ -113,15 +122,6 @@ public class SendCustomMessageToAllRequest extends Request {
         public Builder body(String body) {
             this.putBodyParameter("Body", body);
             this.body = body;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

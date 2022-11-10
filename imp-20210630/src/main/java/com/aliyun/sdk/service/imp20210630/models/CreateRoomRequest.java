@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateRoomRequest</p>
  */
 public class CreateRoomRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Body
     @NameInMap("AppId")
     @Validation(required = true)
@@ -24,10 +28,6 @@ public class CreateRoomRequest extends Request {
     @Body
     @NameInMap("Notice")
     private String notice;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Body
     @NameInMap("RoomId")
@@ -49,10 +49,10 @@ public class CreateRoomRequest extends Request {
 
     private CreateRoomRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.appId = builder.appId;
         this.extension = builder.extension;
         this.notice = builder.notice;
-        this.regionId = builder.regionId;
         this.roomId = builder.roomId;
         this.roomOwnerId = builder.roomOwnerId;
         this.templateId = builder.templateId;
@@ -70,6 +70,13 @@ public class CreateRoomRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -91,13 +98,6 @@ public class CreateRoomRequest extends Request {
      */
     public String getNotice() {
         return this.notice;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -129,10 +129,10 @@ public class CreateRoomRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateRoomRequest, Builder> {
+        private String regionId; 
         private String appId; 
         private java.util.Map < String, String > extension; 
         private String notice; 
-        private String regionId; 
         private String roomId; 
         private String roomOwnerId; 
         private String templateId; 
@@ -144,15 +144,24 @@ public class CreateRoomRequest extends Request {
 
         private Builder(CreateRoomRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.appId = request.appId;
             this.extension = request.extension;
             this.notice = request.notice;
-            this.regionId = request.regionId;
             this.roomId = request.roomId;
             this.roomOwnerId = request.roomOwnerId;
             this.templateId = request.templateId;
             this.title = request.title;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * 应用唯一标识，由6位小写字母、数字组成。
@@ -179,15 +188,6 @@ public class CreateRoomRequest extends Request {
         public Builder notice(String notice) {
             this.putBodyParameter("Notice", notice);
             this.notice = notice;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

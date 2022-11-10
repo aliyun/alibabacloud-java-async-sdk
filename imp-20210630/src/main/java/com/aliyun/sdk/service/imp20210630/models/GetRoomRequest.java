@@ -12,14 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetRoomRequest</p>
  */
 public class GetRoomRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Body
     @NameInMap("AppId")
     @Validation(required = true)
     private String appId;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Body
     @NameInMap("RoomId")
@@ -28,8 +28,8 @@ public class GetRoomRequest extends Request {
 
     private GetRoomRequest(Builder builder) {
         super(builder);
-        this.appId = builder.appId;
         this.regionId = builder.regionId;
+        this.appId = builder.appId;
         this.roomId = builder.roomId;
     }
 
@@ -47,17 +47,17 @@ public class GetRoomRequest extends Request {
     }
 
     /**
-     * @return appId
-     */
-    public String getAppId() {
-        return this.appId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return appId
+     */
+    public String getAppId() {
+        return this.appId;
     }
 
     /**
@@ -68,8 +68,8 @@ public class GetRoomRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetRoomRequest, Builder> {
-        private String appId; 
         private String regionId; 
+        private String appId; 
         private String roomId; 
 
         private Builder() {
@@ -78,19 +78,10 @@ public class GetRoomRequest extends Request {
 
         private Builder(GetRoomRequest request) {
             super(request);
-            this.appId = request.appId;
             this.regionId = request.regionId;
+            this.appId = request.appId;
             this.roomId = request.roomId;
         } 
-
-        /**
-         * 应用唯一标识，由6位小写字母、数字组成。
-         */
-        public Builder appId(String appId) {
-            this.putBodyParameter("AppId", appId);
-            this.appId = appId;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -98,6 +89,15 @@ public class GetRoomRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * 应用唯一标识，由6位小写字母、数字组成。
+         */
+        public Builder appId(String appId) {
+            this.putBodyParameter("AppId", appId);
+            this.appId = appId;
             return this;
         }
 

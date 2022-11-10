@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateClassRequest</p>
  */
 public class CreateClassRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Body
     @NameInMap("AppId")
     @Validation(required = true)
@@ -27,10 +31,6 @@ public class CreateClassRequest extends Request {
     @Validation(required = true)
     private String createUserId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Body
     @NameInMap("Title")
     @Validation(required = true)
@@ -38,10 +38,10 @@ public class CreateClassRequest extends Request {
 
     private CreateClassRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.appId = builder.appId;
         this.createNickname = builder.createNickname;
         this.createUserId = builder.createUserId;
-        this.regionId = builder.regionId;
         this.title = builder.title;
     }
 
@@ -56,6 +56,13 @@ public class CreateClassRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -80,13 +87,6 @@ public class CreateClassRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return title
      */
     public String getTitle() {
@@ -94,10 +94,10 @@ public class CreateClassRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateClassRequest, Builder> {
+        private String regionId; 
         private String appId; 
         private String createNickname; 
         private String createUserId; 
-        private String regionId; 
         private String title; 
 
         private Builder() {
@@ -106,12 +106,21 @@ public class CreateClassRequest extends Request {
 
         private Builder(CreateClassRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.appId = request.appId;
             this.createNickname = request.createNickname;
             this.createUserId = request.createUserId;
-            this.regionId = request.regionId;
             this.title = request.title;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * 应用唯一标识，由6位小写字母、数字组成。
@@ -137,15 +146,6 @@ public class CreateClassRequest extends Request {
         public Builder createUserId(String createUserId) {
             this.putBodyParameter("CreateUserId", createUserId);
             this.createUserId = createUserId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

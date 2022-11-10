@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetStandardRoomJumpUrlRequest</p>
  */
 public class GetStandardRoomJumpUrlRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Body
     @NameInMap("AppId")
     @Validation(required = true)
@@ -37,10 +41,6 @@ public class GetStandardRoomJumpUrlRequest extends Request {
     @Validation(required = true)
     private String platform;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Body
     @NameInMap("UserId")
     @Validation(required = true)
@@ -53,12 +53,12 @@ public class GetStandardRoomJumpUrlRequest extends Request {
 
     private GetStandardRoomJumpUrlRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.appId = builder.appId;
         this.appKey = builder.appKey;
         this.bizId = builder.bizId;
         this.bizType = builder.bizType;
         this.platform = builder.platform;
-        this.regionId = builder.regionId;
         this.userId = builder.userId;
         this.userNick = builder.userNick;
     }
@@ -74,6 +74,13 @@ public class GetStandardRoomJumpUrlRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -112,13 +119,6 @@ public class GetStandardRoomJumpUrlRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return userId
      */
     public String getUserId() {
@@ -133,12 +133,12 @@ public class GetStandardRoomJumpUrlRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetStandardRoomJumpUrlRequest, Builder> {
+        private String regionId; 
         private String appId; 
         private String appKey; 
         private String bizId; 
         private String bizType; 
         private String platform; 
-        private String regionId; 
         private String userId; 
         private String userNick; 
 
@@ -148,15 +148,24 @@ public class GetStandardRoomJumpUrlRequest extends Request {
 
         private Builder(GetStandardRoomJumpUrlRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.appId = request.appId;
             this.appKey = request.appKey;
             this.bizId = request.bizId;
             this.bizType = request.bizType;
             this.platform = request.platform;
-            this.regionId = request.regionId;
             this.userId = request.userId;
             this.userNick = request.userNick;
         } 
+
+        /**
+         * cn-shanghai
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * 用户的应用ID，在控制台创建应用时生成
@@ -200,15 +209,6 @@ public class GetStandardRoomJumpUrlRequest extends Request {
         public Builder platform(String platform) {
             this.putBodyParameter("Platform", platform);
             this.platform = platform;
-            return this;
-        }
-
-        /**
-         * cn-shanghai
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListCommentsRequest</p>
  */
 public class ListCommentsRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Body
     @NameInMap("AppId")
     @Validation(required = true)
@@ -31,10 +35,6 @@ public class ListCommentsRequest extends Request {
     @Validation(required = true)
     private Integer pageSize;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Body
     @NameInMap("RoomId")
     @Validation(required = true)
@@ -51,11 +51,11 @@ public class ListCommentsRequest extends Request {
 
     private ListCommentsRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.appId = builder.appId;
         this.creatorId = builder.creatorId;
         this.pageNum = builder.pageNum;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
         this.roomId = builder.roomId;
         this.sortType = builder.sortType;
         this.userId = builder.userId;
@@ -72,6 +72,13 @@ public class ListCommentsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -103,13 +110,6 @@ public class ListCommentsRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return roomId
      */
     public String getRoomId() {
@@ -131,11 +131,11 @@ public class ListCommentsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListCommentsRequest, Builder> {
+        private String regionId; 
         private String appId; 
         private String creatorId; 
         private Integer pageNum; 
         private Integer pageSize; 
-        private String regionId; 
         private String roomId; 
         private Integer sortType; 
         private String userId; 
@@ -146,15 +146,24 @@ public class ListCommentsRequest extends Request {
 
         private Builder(ListCommentsRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.appId = request.appId;
             this.creatorId = request.creatorId;
             this.pageNum = request.pageNum;
             this.pageSize = request.pageSize;
-            this.regionId = request.regionId;
             this.roomId = request.roomId;
             this.sortType = request.sortType;
             this.userId = request.userId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * 用户的应用ID，在控制台创建应用时生成。包含小写字母、数字，长度为6个字符。
@@ -189,15 +198,6 @@ public class ListCommentsRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
             this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

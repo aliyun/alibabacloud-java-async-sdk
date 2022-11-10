@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetAuthTokenRequest</p>
  */
 public class GetAuthTokenRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Body
     @NameInMap("AppId")
     @Validation(required = true)
@@ -27,10 +31,6 @@ public class GetAuthTokenRequest extends Request {
     @Validation(required = true)
     private String deviceId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Body
     @NameInMap("UserId")
     @Validation(required = true)
@@ -38,10 +38,10 @@ public class GetAuthTokenRequest extends Request {
 
     private GetAuthTokenRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.appId = builder.appId;
         this.appKey = builder.appKey;
         this.deviceId = builder.deviceId;
-        this.regionId = builder.regionId;
         this.userId = builder.userId;
     }
 
@@ -56,6 +56,13 @@ public class GetAuthTokenRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -80,13 +87,6 @@ public class GetAuthTokenRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return userId
      */
     public String getUserId() {
@@ -94,10 +94,10 @@ public class GetAuthTokenRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetAuthTokenRequest, Builder> {
+        private String regionId; 
         private String appId; 
         private String appKey; 
         private String deviceId; 
-        private String regionId; 
         private String userId; 
 
         private Builder() {
@@ -106,12 +106,21 @@ public class GetAuthTokenRequest extends Request {
 
         private Builder(GetAuthTokenRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.appId = request.appId;
             this.appKey = request.appKey;
             this.deviceId = request.deviceId;
-            this.regionId = request.regionId;
             this.userId = request.userId;
         } 
+
+        /**
+         * cn-shanghai
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * 用户的应用ID，在控制台创建应用时生成
@@ -137,15 +146,6 @@ public class GetAuthTokenRequest extends Request {
         public Builder deviceId(String deviceId) {
             this.putBodyParameter("DeviceId", deviceId);
             this.deviceId = deviceId;
-            return this;
-        }
-
-        /**
-         * cn-shanghai
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

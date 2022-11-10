@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateLiveRequest</p>
  */
 public class CreateLiveRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Body
     @NameInMap("AnchorId")
     private String anchorId;
@@ -33,10 +37,6 @@ public class CreateLiveRequest extends Request {
     @NameInMap("LiveId")
     private String liveId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Body
     @NameInMap("RoomId")
     @Validation(required = true)
@@ -53,12 +53,12 @@ public class CreateLiveRequest extends Request {
 
     private CreateLiveRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.anchorId = builder.anchorId;
         this.appId = builder.appId;
         this.codeLevel = builder.codeLevel;
         this.introduction = builder.introduction;
         this.liveId = builder.liveId;
-        this.regionId = builder.regionId;
         this.roomId = builder.roomId;
         this.title = builder.title;
         this.userId = builder.userId;
@@ -75,6 +75,13 @@ public class CreateLiveRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -113,13 +120,6 @@ public class CreateLiveRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return roomId
      */
     public String getRoomId() {
@@ -141,12 +141,12 @@ public class CreateLiveRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateLiveRequest, Builder> {
+        private String regionId; 
         private String anchorId; 
         private String appId; 
         private Integer codeLevel; 
         private String introduction; 
         private String liveId; 
-        private String regionId; 
         private String roomId; 
         private String title; 
         private String userId; 
@@ -157,16 +157,25 @@ public class CreateLiveRequest extends Request {
 
         private Builder(CreateLiveRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.anchorId = request.anchorId;
             this.appId = request.appId;
             this.codeLevel = request.codeLevel;
             this.introduction = request.introduction;
             this.liveId = request.liveId;
-            this.regionId = request.regionId;
             this.roomId = request.roomId;
             this.title = request.title;
             this.userId = request.userId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * 主播ID，支持中英文，最大长度128位，缺省时主播为当前创建直播用户。
@@ -210,15 +219,6 @@ public class CreateLiveRequest extends Request {
         public Builder liveId(String liveId) {
             this.putBodyParameter("LiveId", liveId);
             this.liveId = liveId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

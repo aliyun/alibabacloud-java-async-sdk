@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>StopLiveRequest</p>
  */
 public class StopLiveRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Body
     @NameInMap("AppId")
     @Validation(required = true)
@@ -21,10 +25,6 @@ public class StopLiveRequest extends Request {
     @NameInMap("LiveId")
     @Validation(required = true)
     private String liveId;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Body
     @NameInMap("RoomId")
@@ -38,9 +38,9 @@ public class StopLiveRequest extends Request {
 
     private StopLiveRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.appId = builder.appId;
         this.liveId = builder.liveId;
-        this.regionId = builder.regionId;
         this.roomId = builder.roomId;
         this.userId = builder.userId;
     }
@@ -59,6 +59,13 @@ public class StopLiveRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return appId
      */
     public String getAppId() {
@@ -70,13 +77,6 @@ public class StopLiveRequest extends Request {
      */
     public String getLiveId() {
         return this.liveId;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -94,9 +94,9 @@ public class StopLiveRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<StopLiveRequest, Builder> {
+        private String regionId; 
         private String appId; 
         private String liveId; 
-        private String regionId; 
         private String roomId; 
         private String userId; 
 
@@ -106,12 +106,21 @@ public class StopLiveRequest extends Request {
 
         private Builder(StopLiveRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.appId = request.appId;
             this.liveId = request.liveId;
-            this.regionId = request.regionId;
             this.roomId = request.roomId;
             this.userId = request.userId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * 租户名
@@ -128,15 +137,6 @@ public class StopLiveRequest extends Request {
         public Builder liveId(String liveId) {
             this.putBodyParameter("LiveId", liveId);
             this.liveId = liveId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

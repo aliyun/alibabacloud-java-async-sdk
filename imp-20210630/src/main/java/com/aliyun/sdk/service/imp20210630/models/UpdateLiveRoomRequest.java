@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateLiveRoomRequest</p>
  */
 public class UpdateLiveRoomRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Body
     @NameInMap("AnchorId")
     private String anchorId;
@@ -42,10 +46,6 @@ public class UpdateLiveRoomRequest extends Request {
     @NameInMap("Notice")
     private String notice;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Body
     @NameInMap("Title")
     private String title;
@@ -56,6 +56,7 @@ public class UpdateLiveRoomRequest extends Request {
 
     private UpdateLiveRoomRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.anchorId = builder.anchorId;
         this.anchorNick = builder.anchorNick;
         this.appId = builder.appId;
@@ -63,7 +64,6 @@ public class UpdateLiveRoomRequest extends Request {
         this.extension = builder.extension;
         this.liveId = builder.liveId;
         this.notice = builder.notice;
-        this.regionId = builder.regionId;
         this.title = builder.title;
         this.userId = builder.userId;
     }
@@ -79,6 +79,13 @@ public class UpdateLiveRoomRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -131,13 +138,6 @@ public class UpdateLiveRoomRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return title
      */
     public String getTitle() {
@@ -152,6 +152,7 @@ public class UpdateLiveRoomRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateLiveRoomRequest, Builder> {
+        private String regionId; 
         private String anchorId; 
         private String anchorNick; 
         private String appId; 
@@ -159,7 +160,6 @@ public class UpdateLiveRoomRequest extends Request {
         private java.util.Map < String, String > extension; 
         private String liveId; 
         private String notice; 
-        private String regionId; 
         private String title; 
         private String userId; 
 
@@ -169,6 +169,7 @@ public class UpdateLiveRoomRequest extends Request {
 
         private Builder(UpdateLiveRoomRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.anchorId = request.anchorId;
             this.anchorNick = request.anchorNick;
             this.appId = request.appId;
@@ -176,10 +177,18 @@ public class UpdateLiveRoomRequest extends Request {
             this.extension = request.extension;
             this.liveId = request.liveId;
             this.notice = request.notice;
-            this.regionId = request.regionId;
             this.title = request.title;
             this.userId = request.userId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * 主播id，仅支持英文和数字，最大长度36位。
@@ -242,15 +251,6 @@ public class UpdateLiveRoomRequest extends Request {
         public Builder notice(String notice) {
             this.putBodyParameter("Notice", notice);
             this.notice = notice;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

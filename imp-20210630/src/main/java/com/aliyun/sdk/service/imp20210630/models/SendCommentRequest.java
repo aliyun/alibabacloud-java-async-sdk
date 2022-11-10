@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SendCommentRequest</p>
  */
 public class SendCommentRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Body
     @NameInMap("AppId")
     @Validation(required = true)
@@ -25,10 +29,6 @@ public class SendCommentRequest extends Request {
     @Body
     @NameInMap("Extension")
     private java.util.Map < String, String > extension;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Body
     @NameInMap("RoomId")
@@ -46,10 +46,10 @@ public class SendCommentRequest extends Request {
 
     private SendCommentRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.appId = builder.appId;
         this.content = builder.content;
         this.extension = builder.extension;
-        this.regionId = builder.regionId;
         this.roomId = builder.roomId;
         this.senderId = builder.senderId;
         this.senderNick = builder.senderNick;
@@ -66,6 +66,13 @@ public class SendCommentRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -90,13 +97,6 @@ public class SendCommentRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return roomId
      */
     public String getRoomId() {
@@ -118,10 +118,10 @@ public class SendCommentRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SendCommentRequest, Builder> {
+        private String regionId; 
         private String appId; 
         private String content; 
         private java.util.Map < String, String > extension; 
-        private String regionId; 
         private String roomId; 
         private String senderId; 
         private String senderNick; 
@@ -132,14 +132,23 @@ public class SendCommentRequest extends Request {
 
         private Builder(SendCommentRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.appId = request.appId;
             this.content = request.content;
             this.extension = request.extension;
-            this.regionId = request.regionId;
             this.roomId = request.roomId;
             this.senderId = request.senderId;
             this.senderNick = request.senderNick;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * 应用唯一标识，可以包含小写字母、数字，长度为6个字符。
@@ -166,15 +175,6 @@ public class SendCommentRequest extends Request {
             String extensionShrink = shrink(extension, "Extension", "json");
             this.putBodyParameter("Extension", extensionShrink);
             this.extension = extension;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

@@ -12,19 +12,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetConferenceRequest</p>
  */
 public class GetConferenceRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Body
     @NameInMap("ConferenceId")
     @Validation(required = true)
     private String conferenceId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private GetConferenceRequest(Builder builder) {
         super(builder);
-        this.conferenceId = builder.conferenceId;
         this.regionId = builder.regionId;
+        this.conferenceId = builder.conferenceId;
     }
 
     public static Builder builder() {
@@ -41,22 +41,22 @@ public class GetConferenceRequest extends Request {
     }
 
     /**
-     * @return conferenceId
-     */
-    public String getConferenceId() {
-        return this.conferenceId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
     }
 
+    /**
+     * @return conferenceId
+     */
+    public String getConferenceId() {
+        return this.conferenceId;
+    }
+
     public static final class Builder extends Request.Builder<GetConferenceRequest, Builder> {
-        private String conferenceId; 
         private String regionId; 
+        private String conferenceId; 
 
         private Builder() {
             super();
@@ -64,18 +64,9 @@ public class GetConferenceRequest extends Request {
 
         private Builder(GetConferenceRequest request) {
             super(request);
-            this.conferenceId = request.conferenceId;
             this.regionId = request.regionId;
+            this.conferenceId = request.conferenceId;
         } 
-
-        /**
-         * 会议资源唯一标识。
-         */
-        public Builder conferenceId(String conferenceId) {
-            this.putBodyParameter("ConferenceId", conferenceId);
-            this.conferenceId = conferenceId;
-            return this;
-        }
 
         /**
          * 地域
@@ -83,6 +74,15 @@ public class GetConferenceRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * 会议资源唯一标识。
+         */
+        public Builder conferenceId(String conferenceId) {
+            this.putBodyParameter("ConferenceId", conferenceId);
+            this.conferenceId = conferenceId;
             return this;
         }
 

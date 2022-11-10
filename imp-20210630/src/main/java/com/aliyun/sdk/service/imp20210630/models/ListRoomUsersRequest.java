@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListRoomUsersRequest</p>
  */
 public class ListRoomUsersRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Body
     @NameInMap("AppId")
     @Validation(required = true)
@@ -26,10 +30,6 @@ public class ListRoomUsersRequest extends Request {
     @Validation(maximum = 50, minimum = 1)
     private Integer pageSize;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Body
     @NameInMap("RoomId")
     @Validation(required = true)
@@ -37,10 +37,10 @@ public class ListRoomUsersRequest extends Request {
 
     private ListRoomUsersRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.appId = builder.appId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
         this.roomId = builder.roomId;
     }
 
@@ -55,6 +55,13 @@ public class ListRoomUsersRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -79,13 +86,6 @@ public class ListRoomUsersRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return roomId
      */
     public String getRoomId() {
@@ -93,10 +93,10 @@ public class ListRoomUsersRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListRoomUsersRequest, Builder> {
+        private String regionId; 
         private String appId; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private String regionId; 
         private String roomId; 
 
         private Builder() {
@@ -105,12 +105,21 @@ public class ListRoomUsersRequest extends Request {
 
         private Builder(ListRoomUsersRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.appId = request.appId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
-            this.regionId = request.regionId;
             this.roomId = request.roomId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * 应用唯一标识，由6位小写字母、数字组成。
@@ -136,15 +145,6 @@ public class ListRoomUsersRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
             this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>KickRoomUserRequest</p>
  */
 public class KickRoomUserRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Body
     @NameInMap("AppId")
     @Validation(required = true)
@@ -26,10 +30,6 @@ public class KickRoomUserRequest extends Request {
     @Validation(required = true)
     private String kickUser;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Body
     @NameInMap("RoomId")
     @Validation(required = true)
@@ -42,10 +42,10 @@ public class KickRoomUserRequest extends Request {
 
     private KickRoomUserRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.appId = builder.appId;
         this.blockTime = builder.blockTime;
         this.kickUser = builder.kickUser;
-        this.regionId = builder.regionId;
         this.roomId = builder.roomId;
         this.userId = builder.userId;
     }
@@ -61,6 +61,13 @@ public class KickRoomUserRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -85,13 +92,6 @@ public class KickRoomUserRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return roomId
      */
     public String getRoomId() {
@@ -106,10 +106,10 @@ public class KickRoomUserRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<KickRoomUserRequest, Builder> {
+        private String regionId; 
         private String appId; 
         private Long blockTime; 
         private String kickUser; 
-        private String regionId; 
         private String roomId; 
         private String userId; 
 
@@ -119,13 +119,22 @@ public class KickRoomUserRequest extends Request {
 
         private Builder(KickRoomUserRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.appId = request.appId;
             this.blockTime = request.blockTime;
             this.kickUser = request.kickUser;
-            this.regionId = request.regionId;
             this.roomId = request.roomId;
             this.userId = request.userId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * 应用唯一标识，由6位小写字母、数字组成。
@@ -151,15 +160,6 @@ public class KickRoomUserRequest extends Request {
         public Builder kickUser(String kickUser) {
             this.putBodyParameter("KickUser", kickUser);
             this.kickUser = kickUser;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetLiveRoomUserStatisticsRequest</p>
  */
 public class GetLiveRoomUserStatisticsRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Body
     @NameInMap("AppId")
     @Validation(required = true)
@@ -30,17 +34,13 @@ public class GetLiveRoomUserStatisticsRequest extends Request {
     @NameInMap("PageSize")
     private String pageSize;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private GetLiveRoomUserStatisticsRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.appId = builder.appId;
         this.liveId = builder.liveId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -54,6 +54,13 @@ public class GetLiveRoomUserStatisticsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -84,19 +91,12 @@ public class GetLiveRoomUserStatisticsRequest extends Request {
         return this.pageSize;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<GetLiveRoomUserStatisticsRequest, Builder> {
+        private String regionId; 
         private String appId; 
         private String liveId; 
         private String pageNumber; 
         private String pageSize; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -104,12 +104,21 @@ public class GetLiveRoomUserStatisticsRequest extends Request {
 
         private Builder(GetLiveRoomUserStatisticsRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.appId = request.appId;
             this.liveId = request.liveId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
-            this.regionId = request.regionId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * 应用唯一标识，由6位小写字母、数字组成。
@@ -144,15 +153,6 @@ public class GetLiveRoomUserStatisticsRequest extends Request {
         public Builder pageSize(String pageSize) {
             this.putBodyParameter("PageSize", pageSize);
             this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

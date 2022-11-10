@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateLiveRequest</p>
  */
 public class UpdateLiveRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Body
     @NameInMap("Introduction")
     private String introduction;
@@ -21,19 +25,15 @@ public class UpdateLiveRequest extends Request {
     @Validation(required = true)
     private String liveId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Body
     @NameInMap("Title")
     private String title;
 
     private UpdateLiveRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.introduction = builder.introduction;
         this.liveId = builder.liveId;
-        this.regionId = builder.regionId;
         this.title = builder.title;
     }
 
@@ -51,6 +51,13 @@ public class UpdateLiveRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return introduction
      */
     public String getIntroduction() {
@@ -65,13 +72,6 @@ public class UpdateLiveRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return title
      */
     public String getTitle() {
@@ -79,9 +79,9 @@ public class UpdateLiveRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateLiveRequest, Builder> {
+        private String regionId; 
         private String introduction; 
         private String liveId; 
-        private String regionId; 
         private String title; 
 
         private Builder() {
@@ -90,11 +90,20 @@ public class UpdateLiveRequest extends Request {
 
         private Builder(UpdateLiveRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.introduction = request.introduction;
             this.liveId = request.liveId;
-            this.regionId = request.regionId;
             this.title = request.title;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * 直播简介，支持中英文，最大长度2048位
@@ -111,15 +120,6 @@ public class UpdateLiveRequest extends Request {
         public Builder liveId(String liveId) {
             this.putBodyParameter("LiveId", liveId);
             this.liveId = liveId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

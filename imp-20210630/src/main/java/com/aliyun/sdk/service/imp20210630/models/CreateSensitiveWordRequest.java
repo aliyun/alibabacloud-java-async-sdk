@@ -12,14 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateSensitiveWordRequest</p>
  */
 public class CreateSensitiveWordRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Body
     @NameInMap("AppId")
     @Validation(required = true)
     private String appId;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Body
     @NameInMap("WordList")
@@ -28,8 +28,8 @@ public class CreateSensitiveWordRequest extends Request {
 
     private CreateSensitiveWordRequest(Builder builder) {
         super(builder);
-        this.appId = builder.appId;
         this.regionId = builder.regionId;
+        this.appId = builder.appId;
         this.wordList = builder.wordList;
     }
 
@@ -47,17 +47,17 @@ public class CreateSensitiveWordRequest extends Request {
     }
 
     /**
-     * @return appId
-     */
-    public String getAppId() {
-        return this.appId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return appId
+     */
+    public String getAppId() {
+        return this.appId;
     }
 
     /**
@@ -68,8 +68,8 @@ public class CreateSensitiveWordRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateSensitiveWordRequest, Builder> {
-        private String appId; 
         private String regionId; 
+        private String appId; 
         private java.util.List < String > wordList; 
 
         private Builder() {
@@ -78,19 +78,10 @@ public class CreateSensitiveWordRequest extends Request {
 
         private Builder(CreateSensitiveWordRequest request) {
             super(request);
-            this.appId = request.appId;
             this.regionId = request.regionId;
+            this.appId = request.appId;
             this.wordList = request.wordList;
         } 
-
-        /**
-         * 用户的应用ID，在控制台创建应用时生成。包含小写字母、数字，长度为6个字符。
-         */
-        public Builder appId(String appId) {
-            this.putBodyParameter("AppId", appId);
-            this.appId = appId;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -98,6 +89,15 @@ public class CreateSensitiveWordRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * 用户的应用ID，在控制台创建应用时生成。包含小写字母、数字，长度为6个字符。
+         */
+        public Builder appId(String appId) {
+            this.putBodyParameter("AppId", appId);
+            this.appId = appId;
             return this;
         }
 

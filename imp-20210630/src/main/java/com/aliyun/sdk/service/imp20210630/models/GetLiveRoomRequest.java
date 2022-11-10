@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetLiveRoomRequest</p>
  */
 public class GetLiveRoomRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Body
     @NameInMap("AppId")
     @Validation(required = true)
@@ -22,15 +26,11 @@ public class GetLiveRoomRequest extends Request {
     @Validation(required = true)
     private String liveId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private GetLiveRoomRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.appId = builder.appId;
         this.liveId = builder.liveId;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -47,6 +47,13 @@ public class GetLiveRoomRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return appId
      */
     public String getAppId() {
@@ -60,17 +67,10 @@ public class GetLiveRoomRequest extends Request {
         return this.liveId;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<GetLiveRoomRequest, Builder> {
+        private String regionId; 
         private String appId; 
         private String liveId; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -78,10 +78,19 @@ public class GetLiveRoomRequest extends Request {
 
         private Builder(GetLiveRoomRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.appId = request.appId;
             this.liveId = request.liveId;
-            this.regionId = request.regionId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * 应用唯一标识，由6位小写字母、数字组成。
@@ -98,15 +107,6 @@ public class GetLiveRoomRequest extends Request {
         public Builder liveId(String liveId) {
             this.putBodyParameter("LiveId", liveId);
             this.liveId = liveId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 
