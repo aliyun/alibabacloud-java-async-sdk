@@ -1,0 +1,97 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.alinlp20200629.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link GetOperationChMedicalRequest} extends {@link RequestModel}
+ *
+ * <p>GetOperationChMedicalRequest</p>
+ */
+public class GetOperationChMedicalRequest extends Request {
+    @Body
+    @NameInMap("Name")
+    @Validation(required = true)
+    private String name;
+
+    @Body
+    @NameInMap("ServiceCode")
+    @Validation(required = true)
+    private String serviceCode;
+
+    private GetOperationChMedicalRequest(Builder builder) {
+        super(builder);
+        this.name = builder.name;
+        this.serviceCode = builder.serviceCode;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static GetOperationChMedicalRequest create() {
+        return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return name
+     */
+    public String getName() {
+        return this.name;
+    }
+
+    /**
+     * @return serviceCode
+     */
+    public String getServiceCode() {
+        return this.serviceCode;
+    }
+
+    public static final class Builder extends Request.Builder<GetOperationChMedicalRequest, Builder> {
+        private String name; 
+        private String serviceCode; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(GetOperationChMedicalRequest request) {
+            super(request);
+            this.name = request.name;
+            this.serviceCode = request.serviceCode;
+        } 
+
+        /**
+         * Name.
+         */
+        public Builder name(String name) {
+            this.putBodyParameter("Name", name);
+            this.name = name;
+            return this;
+        }
+
+        /**
+         * ServiceCode.
+         */
+        public Builder serviceCode(String serviceCode) {
+            this.putBodyParameter("ServiceCode", serviceCode);
+            this.serviceCode = serviceCode;
+            return this;
+        }
+
+        @Override
+        public GetOperationChMedicalRequest build() {
+            return new GetOperationChMedicalRequest(this);
+        } 
+
+    } 
+
+}
