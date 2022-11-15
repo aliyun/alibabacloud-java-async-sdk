@@ -28,6 +28,8 @@ com/aliyun/sdk/service/qualitycheck20190115/models/UploadDataSyncResponseBody$Re
 com/aliyun/sdk/service/qualitycheck20190115/models/DeleteWarningConfigResponse$1.class
 com/aliyun/sdk/service/qualitycheck20190115/models/DeletePrecisionTaskResponseBody.class
 com/aliyun/sdk/service/qualitycheck20190115/models/GetWarningStrategyConfigResponseBody$DataWarningStrategyList$Builder.class
+com/aliyun/sdk/service/qualitycheck20190115/models/TestRuleV4Request$1.class
+com/aliyun/sdk/service/qualitycheck20190115/models/TestRuleV4Response$BuilderImpl.class
 com/aliyun/sdk/service/qualitycheck20190115/models/AssignReviewerBySessionGroupResponseBody$Messages$Builder.class
 com/aliyun/sdk/service/qualitycheck20190115/models/GetResultToReviewResponseBody$KeyWords.class
 com/aliyun/sdk/service/qualitycheck20190115/models/ListTaskAssignRulesResponseBody$Agent$Builder.class
@@ -240,6 +242,7 @@ com/aliyun/sdk/service/qualitycheck20190115/models/RestartAsrTaskResponse.class
 com/aliyun/sdk/service/qualitycheck20190115/models/GetQualityCheckSchemeResponse$1.class
 com/aliyun/sdk/service/qualitycheck20190115/models/AddThesaurusForApiResponseBody$Builder.class
 com/aliyun/sdk/service/qualitycheck20190115/models/GetAsrVocabResponseBody$Data$Builder.class
+com/aliyun/sdk/service/qualitycheck20190115/models/TestRuleV4ResponseBody$Phrase$Builder.class
 com/aliyun/sdk/service/qualitycheck20190115/models/UpdateUserResponse$Builder.class
 com/aliyun/sdk/service/qualitycheck20190115/models/UpdateUserConfigResponseBody$1.class
 com/aliyun/sdk/service/qualitycheck20190115/models/ListSkillGroupConfigResponseBody$AllRuleList.class
@@ -269,6 +272,7 @@ com/aliyun/sdk/service/qualitycheck20190115/models/ListRolesResponse.class
 com/aliyun/sdk/service/qualitycheck20190115/models/GetNextResultToVerifyResponseBody$Target$Builder.class
 com/aliyun/sdk/service/qualitycheck20190115/models/SchemeCheckType$TaskFlowScoreInfoList.class
 com/aliyun/sdk/service/qualitycheck20190115/models/VerifySentenceRequest$Builder.class
+com/aliyun/sdk/service/qualitycheck20190115/models/TestRuleV4ResponseBody$Data.class
 com/aliyun/sdk/service/qualitycheck20190115/models/DeleteWarningConfigResponse.class
 com/aliyun/sdk/service/qualitycheck20190115/models/ListQualityCheckSchemeRequest$Builder.class
 com/aliyun/sdk/service/qualitycheck20190115/models/ListAsrVocabResponse$BuilderImpl.class
@@ -547,6 +551,8 @@ com/aliyun/sdk/service/qualitycheck20190115/models/UpdateTaskAssignRuleRequest$1
 com/aliyun/sdk/service/qualitycheck20190115/models/DeleteWarningConfigResponseBody$1.class
 com/aliyun/sdk/service/qualitycheck20190115/models/RulesInfo$Builder.class
 com/aliyun/sdk/service/qualitycheck20190115/models/ListQualityCheckSchemeResponseBody$RuleList$Builder.class
+com/aliyun/sdk/service/qualitycheck20190115/models/TestRuleV4ResponseBody$HitRuleReviewInfoList.class
+com/aliyun/sdk/service/qualitycheck20190115/models/TestRuleV4ResponseBody$HitTaskFlowList.class
 com/aliyun/sdk/service/qualitycheck20190115/models/GetNextResultToVerifyResponse$BuilderImpl.class
 com/aliyun/sdk/service/qualitycheck20190115/models/CreateSkillGroupConfigResponseBody$Builder.class
 com/aliyun/sdk/service/qualitycheck20190115/models/GetResultToReviewResponseBody$Builder.class
@@ -581,6 +587,7 @@ com/aliyun/sdk/service/qualitycheck20190115/models/GetRuleV4Response$1.class
 com/aliyun/sdk/service/qualitycheck20190115/models/AddThesaurusForApiResponse.class
 com/aliyun/sdk/service/qualitycheck20190115/models/ListDataSetRequest.class
 com/aliyun/sdk/service/qualitycheck20190115/models/GetResultResponseBody$SchemeNameList.class
+com/aliyun/sdk/service/qualitycheck20190115/models/TestRuleV4ResponseBody$BranchInfoList$Builder.class
 com/aliyun/sdk/service/qualitycheck20190115/models/ListWarningConfigResponse$BuilderImpl.class
 com/aliyun/sdk/service/qualitycheck20190115/models/UpdateUserResponseBody$Builder.class
 com/aliyun/sdk/service/qualitycheck20190115/models/UploadAudioDataResponse$BuilderImpl.class
@@ -642,6 +649,7 @@ com/aliyun/sdk/service/qualitycheck20190115/models/GetRuleDetailResponseBody$Bui
 com/aliyun/sdk/service/qualitycheck20190115/models/GetResultToReviewResponseBody$ManualScoreInfo.class
 com/aliyun/sdk/service/qualitycheck20190115/models/VerifyFileResponseBody$Builder.class
 com/aliyun/sdk/service/qualitycheck20190115/models/GetSkillGroupConfigResponseBody$Builder.class
+com/aliyun/sdk/service/qualitycheck20190115/models/TestRuleV4Response.class
 com/aliyun/sdk/service/qualitycheck20190115/models/AddRuleCategoryRequest$1.class
 com/aliyun/sdk/service/qualitycheck20190115/models/UpdateRuleToSchemeRequest$1.class
 com/aliyun/sdk/service/qualitycheck20190115/models/UpdateTaskAssignRuleResponse.class
@@ -743,6 +751,7 @@ com/aliyun/sdk/service/qualitycheck20190115/models/CreateWarningStrategyConfigRe
 com/aliyun/sdk/service/qualitycheck20190115/models/GraphFlowNode$NextNodes.class
 com/aliyun/sdk/service/qualitycheck20190115/models/UpdateSchemeTaskConfigRequest$1.class
 com/aliyun/sdk/service/qualitycheck20190115/models/ListPrecisionTaskResponse$1.class
+com/aliyun/sdk/service/qualitycheck20190115/models/TestRuleV4ResponseBody$ConditionHitInfoList.class
 com/aliyun/sdk/service/qualitycheck20190115/models/RestartAsrTaskResponse$1.class
 com/aliyun/sdk/service/qualitycheck20190115/models/ListWarningConfigResponseBody$WarningConfigInfo$Builder.class
 com/aliyun/sdk/service/qualitycheck20190115/models/VerifySentenceResponseBody$Target$Builder.class
@@ -759,8 +768,10 @@ com/aliyun/sdk/service/qualitycheck20190115/models/DeleteCustomizationConfigResp
 com/aliyun/sdk/service/qualitycheck20190115/models/SubmitQualityCheckTaskResponseBody$Builder.class
 com/aliyun/sdk/service/qualitycheck20190115/models/UpdateSchemeTaskConfigResponseBody$Messages.class
 com/aliyun/sdk/service/qualitycheck20190115/models/CreateSchemeTaskConfigResponseBody$Messages$Builder.class
+com/aliyun/sdk/service/qualitycheck20190115/models/TestRuleV4Response$1.class
 com/aliyun/sdk/service/qualitycheck20190115/models/DeletePrecisionTaskResponseBody$Builder.class
 com/aliyun/sdk/service/qualitycheck20190115/models/EditThesaurusForApiResponseBody$1.class
+com/aliyun/sdk/service/qualitycheck20190115/models/TestRuleV4ResponseBody$UnhitRuleReviewInfoList$Builder.class
 com/aliyun/sdk/service/qualitycheck20190115/models/InvalidRuleRequest.class
 com/aliyun/sdk/service/qualitycheck20190115/models/UpdateQualityCheckSchemeResponseBody$Builder.class
 com/aliyun/sdk/service/qualitycheck20190115/models/ListHotWordsTasksResponseBody$HotWordsTaskPo.class
@@ -768,6 +779,7 @@ com/aliyun/sdk/service/qualitycheck20190115/models/SyncQualityCheckResponse$Buil
 com/aliyun/sdk/service/qualitycheck20190115/models/GetCustomizationConfigListResponseBody$ModelCustomizationDataSetPo$Builder.class
 com/aliyun/sdk/service/qualitycheck20190115/models/ListWarningConfigResponseBody.class
 com/aliyun/sdk/service/qualitycheck20190115/models/DeletePrecisionTaskResponse.class
+com/aliyun/sdk/service/qualitycheck20190115/models/TestRuleV4ResponseBody$ConditionHitInfoList$Builder.class
 com/aliyun/sdk/service/qualitycheck20190115/models/ListSkillGroupConfigRequest$1.class
 com/aliyun/sdk/service/qualitycheck20190115/models/ListTaskAssignRulesResponseBody$SkillGroup.class
 com/aliyun/sdk/service/qualitycheck20190115/models/DeleteQualityCheckSchemeResponseBody$Messages$Builder.class
@@ -816,13 +828,16 @@ com/aliyun/sdk/service/qualitycheck20190115/models/GetNextResultToVerifyResponse
 com/aliyun/sdk/service/qualitycheck20190115/models/NextNodeSituations.class
 com/aliyun/sdk/service/qualitycheck20190115/models/ListUsersResponseBody$1.class
 com/aliyun/sdk/service/qualitycheck20190115/models/CreateAsrVocabResponse.class
+com/aliyun/sdk/service/qualitycheck20190115/models/TestRuleV4Request$Builder.class
 com/aliyun/sdk/service/qualitycheck20190115/models/SaveConfigDataSetResponseBody.class
 com/aliyun/sdk/service/qualitycheck20190115/models/GetSyncResultResponseBody$Hits.class
 com/aliyun/sdk/service/qualitycheck20190115/models/GetResultCallbackRequest.class
 com/aliyun/sdk/service/qualitycheck20190115/models/GetSkillGroupConfigResponse$1.class
+com/aliyun/sdk/service/qualitycheck20190115/models/TestRuleV4ResponseBody$HitTaskFlowList$Builder.class
 com/aliyun/sdk/service/qualitycheck20190115/models/GetResultToReviewResponseBody$ComplainHistories$Builder.class
 com/aliyun/sdk/service/qualitycheck20190115/models/GetResultResponseBody$HitScore$Builder.class
 com/aliyun/sdk/service/qualitycheck20190115/models/InvalidRuleResponseBody.class
+com/aliyun/sdk/service/qualitycheck20190115/models/TestRuleV4ResponseBody$Data$Builder.class
 com/aliyun/sdk/service/qualitycheck20190115/models/DelRuleCategoryResponse$BuilderImpl.class
 com/aliyun/sdk/service/qualitycheck20190115/models/CreateWarningStrategyConfigResponse$1.class
 com/aliyun/sdk/service/qualitycheck20190115/models/RevertAssignedSessionResponseBody.class
@@ -853,6 +868,7 @@ com/aliyun/sdk/service/qualitycheck20190115/models/DelThesaurusForApiResponseBod
 com/aliyun/sdk/service/qualitycheck20190115/models/DelRuleCategoryRequest.class
 com/aliyun/sdk/service/qualitycheck20190115/models/GetRuleDetailResponseBody$BusinessCategoryBasicInfo$Builder.class
 com/aliyun/sdk/service/qualitycheck20190115/models/UploadDataSyncResponse$Builder.class
+com/aliyun/sdk/service/qualitycheck20190115/models/TestRuleV4ResponseBody$KeyWords.class
 com/aliyun/sdk/service/qualitycheck20190115/models/UpdateSkillGroupConfigResponse$1.class
 com/aliyun/sdk/service/qualitycheck20190115/models/DeleteAsrVocabRequest$1.class
 com/aliyun/sdk/service/qualitycheck20190115/models/SchemeCheckType$1.class
@@ -968,6 +984,7 @@ com/aliyun/sdk/service/qualitycheck20190115/models/ListRulesResponseBody$1.class
 com/aliyun/sdk/service/qualitycheck20190115/models/CreateSchemeTaskConfigResponse$BuilderImpl.class
 com/aliyun/sdk/service/qualitycheck20190115/models/CreateSchemeTaskConfigRequest$1.class
 com/aliyun/sdk/service/qualitycheck20190115/models/UploadDataSyncResponseBody.class
+com/aliyun/sdk/service/qualitycheck20190115/models/TestRuleV4ResponseBody$KeyWords$Builder.class
 com/aliyun/sdk/service/qualitycheck20190115/models/VerifySentenceRequest$1.class
 com/aliyun/sdk/service/qualitycheck20190115/models/DeleteUserResponse$1.class
 com/aliyun/sdk/service/qualitycheck20190115/models/DeleteBusinessCategoryRequest.class
@@ -1164,6 +1181,7 @@ com/aliyun/sdk/service/qualitycheck20190115/models/ListSessionGroupRequest.class
 com/aliyun/sdk/service/qualitycheck20190115/models/UpdateQualityCheckSchemeResponse$BuilderImpl.class
 com/aliyun/sdk/service/qualitycheck20190115/models/CreateWarningConfigResponseBody$Builder.class
 com/aliyun/sdk/service/qualitycheck20190115/models/GetResultToReviewResponseBody$Dialogue.class
+com/aliyun/sdk/service/qualitycheck20190115/models/TestRuleV4Response$Builder.class
 com/aliyun/sdk/service/qualitycheck20190115/models/GetScoreInfoResponse$Builder.class
 com/aliyun/sdk/service/qualitycheck20190115/models/AssignReviewerRequest$1.class
 com/aliyun/sdk/service/qualitycheck20190115/models/AssignReviewerBySessionGroupResponseBody$Messages.class
@@ -1258,10 +1276,12 @@ com/aliyun/sdk/service/qualitycheck20190115/models/DelRuleCategoryResponseBody$B
 com/aliyun/sdk/service/qualitycheck20190115/models/GetResultResponseBody$Data$Builder.class
 com/aliyun/sdk/service/qualitycheck20190115/models/DelThesaurusForApiResponseBody.class
 com/aliyun/sdk/service/qualitycheck20190115/models/CreateUserRequest$1.class
+com/aliyun/sdk/service/qualitycheck20190115/models/TestRuleV4ResponseBody$Builder.class
 com/aliyun/sdk/service/qualitycheck20190115/models/GetCustomizationConfigListResponse$1.class
 com/aliyun/sdk/service/qualitycheck20190115/models/UpdateWarningConfigResponse$1.class
 com/aliyun/sdk/service/qualitycheck20190115/models/GetHitResultResponseBody$ResultInfo.class
 com/aliyun/sdk/service/qualitycheck20190115/models/InsertScoreForApiRequest$1.class
+com/aliyun/sdk/service/qualitycheck20190115/models/TestRuleV4ResponseBody$UnhitRuleReviewInfoList.class
 com/aliyun/sdk/service/qualitycheck20190115/models/DeleteRuleV4Request$Builder.class
 com/aliyun/sdk/service/qualitycheck20190115/models/GetHitResultRequest$Builder.class
 com/aliyun/sdk/service/qualitycheck20190115/models/AddRuleV4ResponseBody$1.class
@@ -1283,6 +1303,7 @@ com/aliyun/sdk/service/qualitycheck20190115/models/ListTaskAssignRulesResponse$B
 com/aliyun/sdk/service/qualitycheck20190115/models/GetCustomizationConfigListResponse$Builder.class
 com/aliyun/sdk/service/qualitycheck20190115/models/UpdateRuleV4ResponseBody$Messages.class
 com/aliyun/sdk/service/qualitycheck20190115/models/DeleteRuleV4ResponseBody$Messages.class
+com/aliyun/sdk/service/qualitycheck20190115/models/TestRuleV4ResponseBody$Phrase.class
 com/aliyun/sdk/service/qualitycheck20190115/models/GetThesaurusBySynonymForApiRequest.class
 com/aliyun/sdk/service/qualitycheck20190115/models/DeleteSkillGroupConfigResponse$Builder.class
 com/aliyun/sdk/service/qualitycheck20190115/models/GetRuleDetailResponseBody$Triggers.class
@@ -1428,6 +1449,7 @@ com/aliyun/sdk/service/qualitycheck20190115/models/UpdateSkillGroupConfigRespons
 com/aliyun/sdk/service/qualitycheck20190115/models/DeleteSkillGroupConfigRequest$Builder.class
 com/aliyun/sdk/service/qualitycheck20190115/models/AddBusinessCategoryResponse.class
 com/aliyun/sdk/service/qualitycheck20190115/models/GetRuleDetailResponseBody$Conditions$Builder.class
+com/aliyun/sdk/service/qualitycheck20190115/models/TestRuleV4ResponseBody.class
 com/aliyun/sdk/service/qualitycheck20190115/models/ListSchemeTaskConfigResponseBody$DataData.class
 com/aliyun/sdk/service/qualitycheck20190115/models/ListSchemeTaskConfigResponseBody$DataSchemeList.class
 com/aliyun/sdk/service/qualitycheck20190115/models/GetResultResponseBody$ResultInfo$Builder.class
@@ -1449,6 +1471,7 @@ com/aliyun/sdk/service/qualitycheck20190115/models/SchemeCheckType.class
 com/aliyun/sdk/service/qualitycheck20190115/models/AddThesaurusForApiResponse$BuilderImpl.class
 com/aliyun/sdk/service/qualitycheck20190115/models/GraphFlowNode.class
 com/aliyun/sdk/service/qualitycheck20190115/models/GetResultToReviewResponseBody$Data.class
+com/aliyun/sdk/service/qualitycheck20190115/models/TestRuleV4Request.class
 com/aliyun/sdk/service/qualitycheck20190115/models/VerifyFileRequest$1.class
 com/aliyun/sdk/service/qualitycheck20190115/models/UpdateRuleV4ResponseBody$Messages$Builder.class
 com/aliyun/sdk/service/qualitycheck20190115/models/GetRuleCategoryResponse$Builder.class
@@ -1468,6 +1491,7 @@ com/aliyun/sdk/service/qualitycheck20190115/models/SubmitPrecisionTaskResponse.c
 com/aliyun/sdk/service/qualitycheck20190115/models/BatchSubmitReviewInfoRequest.class
 com/aliyun/sdk/service/qualitycheck20190115/models/ListQualityCheckSchemeResponseBody$1.class
 com/aliyun/sdk/service/qualitycheck20190115/models/GetQualityCheckSchemeResponseBody.class
+com/aliyun/sdk/service/qualitycheck20190115/models/TestRuleV4ResponseBody$BranchInfoList.class
 com/aliyun/sdk/service/qualitycheck20190115/models/GetWarningStrategyConfigResponseBody$WarningStrategyList.class
 com/aliyun/sdk/service/qualitycheck20190115/models/CreateAsrVocabResponseBody.class
 com/aliyun/sdk/service/qualitycheck20190115/models/GetRuleCategoryResponse$1.class
@@ -1565,6 +1589,7 @@ com/aliyun/sdk/service/qualitycheck20190115/models/GetNextResultToVerifyResponse
 com/aliyun/sdk/service/qualitycheck20190115/models/ListPrecisionTaskResponseBody$Data.class
 com/aliyun/sdk/service/qualitycheck20190115/models/SyncQualityCheckRequest$Builder.class
 com/aliyun/sdk/service/qualitycheck20190115/models/GetBusinessCategoryListResponse$Builder.class
+com/aliyun/sdk/service/qualitycheck20190115/models/TestRuleV4ResponseBody$1.class
 com/aliyun/sdk/service/qualitycheck20190115/models/ListSkillGroupConfigResponseBody$SkillGroupScreens.class
 com/aliyun/sdk/service/qualitycheck20190115/models/UploadRuleResponseBody$Data.class
 com/aliyun/sdk/service/qualitycheck20190115/models/ListSessionGroupResponseBody$Builder.class
@@ -1620,6 +1645,7 @@ com/aliyun/sdk/service/qualitycheck20190115/models/UpdateRuleToSchemeRequest$Bui
 com/aliyun/sdk/service/qualitycheck20190115/models/UpdateScoreForApiResponse$Builder.class
 com/aliyun/sdk/service/qualitycheck20190115/models/UploadAudioDataResponse$Builder.class
 com/aliyun/sdk/service/qualitycheck20190115/models/DeleteSchemeTaskConfigResponseBody.class
+com/aliyun/sdk/service/qualitycheck20190115/models/TestRuleV4ResponseBody$HitRuleReviewInfoList$Builder.class
 com/aliyun/sdk/service/qualitycheck20190115/models/GetRuleDetailResponseBody$Pvalues$Builder.class
 com/aliyun/sdk/service/qualitycheck20190115/models/GetResultToReviewResponseBody$HitRuleReviewInfo$Builder.class
 com/aliyun/sdk/service/qualitycheck20190115/models/SaveConfigDataSetResponse.class

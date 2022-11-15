@@ -188,6 +188,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<SyncQualityCheckResponse> syncQualityCheck(SyncQualityCheckRequest request);
 
+    CompletableFuture<TestRuleV4Response> testRuleV4(TestRuleV4Request request);
+
     CompletableFuture<UpdateAsrVocabResponse> updateAsrVocab(UpdateAsrVocabRequest request);
 
     CompletableFuture<UpdateCheckTypeToSchemeResponse> updateCheckTypeToScheme(UpdateCheckTypeToSchemeRequest request);
