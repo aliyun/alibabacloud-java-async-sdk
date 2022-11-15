@@ -19,7 +19,7 @@ public class StopSingleCardRequest extends Request {
 
     @Query
     @NameInMap("OptMsisdns")
-    private java.util.Map < String, ? > optMsisdns;
+    private java.util.List < String > optMsisdns;
 
     private StopSingleCardRequest(Builder builder) {
         super(builder);
@@ -50,13 +50,13 @@ public class StopSingleCardRequest extends Request {
     /**
      * @return optMsisdns
      */
-    public java.util.Map < String, ? > getOptMsisdns() {
+    public java.util.List < String > getOptMsisdns() {
         return this.optMsisdns;
     }
 
     public static final class Builder extends Request.Builder<StopSingleCardRequest, Builder> {
         private String iccid; 
-        private java.util.Map < String, ? > optMsisdns; 
+        private java.util.List < String > optMsisdns; 
 
         private Builder() {
             super();
@@ -80,7 +80,7 @@ public class StopSingleCardRequest extends Request {
         /**
          * OptMsisdns.
          */
-        public Builder optMsisdns(java.util.Map < String, ? > optMsisdns) {
+        public Builder optMsisdns(java.util.List < String > optMsisdns) {
             String optMsisdnsShrink = shrink(optMsisdns, "OptMsisdns", "json");
             this.putQueryParameter("OptMsisdns", optMsisdnsShrink);
             this.optMsisdns = optMsisdns;

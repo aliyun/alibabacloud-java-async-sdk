@@ -276,6 +276,12 @@ public class ListOrderResponseBody extends TeaModel {
         @NameInMap("AliFee")
         private String aliFee;
 
+        @NameInMap("ApnName")
+        private String apnName;
+
+        @NameInMap("ApnRegion")
+        private String apnRegion;
+
         @NameInMap("BillingCycle")
         private String billingCycle;
 
@@ -336,11 +342,16 @@ public class ListOrderResponseBody extends TeaModel {
         @NameInMap("PoolNo")
         private String poolNo;
 
+        @NameInMap("ResourceQuantity")
+        private Long resourceQuantity;
+
         @NameInMap("Vendor")
         private String vendor;
 
         private List(Builder builder) {
             this.aliFee = builder.aliFee;
+            this.apnName = builder.apnName;
+            this.apnRegion = builder.apnRegion;
             this.billingCycle = builder.billingCycle;
             this.buyNum = builder.buyNum;
             this.cardPayCount = builder.cardPayCount;
@@ -361,6 +372,7 @@ public class ListOrderResponseBody extends TeaModel {
             this.poolCapacity = builder.poolCapacity;
             this.poolCapacityUnit = builder.poolCapacityUnit;
             this.poolNo = builder.poolNo;
+            this.resourceQuantity = builder.resourceQuantity;
             this.vendor = builder.vendor;
         }
 
@@ -377,6 +389,20 @@ public class ListOrderResponseBody extends TeaModel {
          */
         public String getAliFee() {
             return this.aliFee;
+        }
+
+        /**
+         * @return apnName
+         */
+        public String getApnName() {
+            return this.apnName;
+        }
+
+        /**
+         * @return apnRegion
+         */
+        public String getApnRegion() {
+            return this.apnRegion;
         }
 
         /**
@@ -520,6 +546,13 @@ public class ListOrderResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceQuantity
+         */
+        public Long getResourceQuantity() {
+            return this.resourceQuantity;
+        }
+
+        /**
          * @return vendor
          */
         public String getVendor() {
@@ -528,6 +561,8 @@ public class ListOrderResponseBody extends TeaModel {
 
         public static final class Builder {
             private String aliFee; 
+            private String apnName; 
+            private String apnRegion; 
             private String billingCycle; 
             private Integer buyNum; 
             private Integer cardPayCount; 
@@ -548,6 +583,7 @@ public class ListOrderResponseBody extends TeaModel {
             private String poolCapacity; 
             private String poolCapacityUnit; 
             private String poolNo; 
+            private Long resourceQuantity; 
             private String vendor; 
 
             /**
@@ -555,6 +591,22 @@ public class ListOrderResponseBody extends TeaModel {
              */
             public Builder aliFee(String aliFee) {
                 this.aliFee = aliFee;
+                return this;
+            }
+
+            /**
+             * ApnName.
+             */
+            public Builder apnName(String apnName) {
+                this.apnName = apnName;
+                return this;
+            }
+
+            /**
+             * ApnRegion.
+             */
+            public Builder apnRegion(String apnRegion) {
+                this.apnRegion = apnRegion;
                 return this;
             }
 
@@ -715,6 +767,14 @@ public class ListOrderResponseBody extends TeaModel {
              */
             public Builder poolNo(String poolNo) {
                 this.poolNo = poolNo;
+                return this;
+            }
+
+            /**
+             * ResourceQuantity.
+             */
+            public Builder resourceQuantity(Long resourceQuantity) {
+                this.resourceQuantity = resourceQuantity;
                 return this;
             }
 
