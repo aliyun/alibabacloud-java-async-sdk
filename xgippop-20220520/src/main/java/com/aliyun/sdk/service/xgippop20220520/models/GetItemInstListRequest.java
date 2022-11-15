@@ -36,6 +36,10 @@ public class GetItemInstListRequest extends Request {
     private Integer pageSize;
 
     @Query
+    @NameInMap("Status")
+    private String status;
+
+    @Query
     @NameInMap("UId")
     private Long uId;
 
@@ -46,6 +50,7 @@ public class GetItemInstListRequest extends Request {
         this.itemCode = builder.itemCode;
         this.mobile = builder.mobile;
         this.pageSize = builder.pageSize;
+        this.status = builder.status;
         this.uId = builder.uId;
     }
 
@@ -98,6 +103,13 @@ public class GetItemInstListRequest extends Request {
     }
 
     /**
+     * @return status
+     */
+    public String getStatus() {
+        return this.status;
+    }
+
+    /**
      * @return uId
      */
     public Long getUId() {
@@ -110,6 +122,7 @@ public class GetItemInstListRequest extends Request {
         private String itemCode; 
         private String mobile; 
         private Integer pageSize; 
+        private String status; 
         private Long uId; 
 
         private Builder() {
@@ -123,6 +136,7 @@ public class GetItemInstListRequest extends Request {
             this.itemCode = request.itemCode;
             this.mobile = request.mobile;
             this.pageSize = request.pageSize;
+            this.status = request.status;
             this.uId = request.uId;
         } 
 
@@ -168,6 +182,15 @@ public class GetItemInstListRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * Status.
+         */
+        public Builder status(String status) {
+            this.putQueryParameter("Status", status);
+            this.status = status;
             return this;
         }
 

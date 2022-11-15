@@ -152,18 +152,22 @@ public class ChargeFlowResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
+        @NameInMap("BizCode")
+        private String bizCode;
+
+        @NameInMap("CustomerFlowOrderId")
+        private String customerFlowOrderId;
+
         @NameInMap("CustomerFlowRequestId")
         private String customerFlowRequestId;
 
-        @NameInMap("Mobile")
-        private String mobile;
-
         @NameInMap("Status")
-        private Boolean status;
+        private String status;
 
         private Data(Builder builder) {
+            this.bizCode = builder.bizCode;
+            this.customerFlowOrderId = builder.customerFlowOrderId;
             this.customerFlowRequestId = builder.customerFlowRequestId;
-            this.mobile = builder.mobile;
             this.status = builder.status;
         }
 
@@ -176,6 +180,20 @@ public class ChargeFlowResponseBody extends TeaModel {
         }
 
         /**
+         * @return bizCode
+         */
+        public String getBizCode() {
+            return this.bizCode;
+        }
+
+        /**
+         * @return customerFlowOrderId
+         */
+        public String getCustomerFlowOrderId() {
+            return this.customerFlowOrderId;
+        }
+
+        /**
          * @return customerFlowRequestId
          */
         public String getCustomerFlowRequestId() {
@@ -183,23 +201,33 @@ public class ChargeFlowResponseBody extends TeaModel {
         }
 
         /**
-         * @return mobile
-         */
-        public String getMobile() {
-            return this.mobile;
-        }
-
-        /**
          * @return status
          */
-        public Boolean getStatus() {
+        public String getStatus() {
             return this.status;
         }
 
         public static final class Builder {
+            private String bizCode; 
+            private String customerFlowOrderId; 
             private String customerFlowRequestId; 
-            private String mobile; 
-            private Boolean status; 
+            private String status; 
+
+            /**
+             * 业务编码
+             */
+            public Builder bizCode(String bizCode) {
+                this.bizCode = bizCode;
+                return this;
+            }
+
+            /**
+             * C端免流订单ID
+             */
+            public Builder customerFlowOrderId(String customerFlowOrderId) {
+                this.customerFlowOrderId = customerFlowOrderId;
+                return this;
+            }
 
             /**
              * CustomerFlowRequestId.
@@ -210,17 +238,9 @@ public class ChargeFlowResponseBody extends TeaModel {
             }
 
             /**
-             * 流量充值号码
+             * 执行中ordering、成功success、失败fail
              */
-            public Builder mobile(String mobile) {
-                this.mobile = mobile;
-                return this;
-            }
-
-            /**
-             * Status.
-             */
-            public Builder status(Boolean status) {
+            public Builder status(String status) {
                 this.status = status;
                 return this;
             }

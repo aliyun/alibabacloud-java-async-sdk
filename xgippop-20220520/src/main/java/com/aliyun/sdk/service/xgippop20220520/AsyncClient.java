@@ -68,11 +68,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<SaveApplicationInfoResponse> saveApplicationInfo(SaveApplicationInfoRequest request);
 
-    CompletableFuture<SdkChargeFlowResponse> sdkChargeFlow(SdkChargeFlowRequest request);
-
     CompletableFuture<SdkGetInventoryInfoResponse> sdkGetInventoryInfo(SdkGetInventoryInfoRequest request);
-
-    CompletableFuture<SdkGetItemInstListResponse> sdkGetItemInstList(SdkGetItemInstListRequest request);
 
     CompletableFuture<SdkOrderQosProductResponse> sdkOrderQosProduct(SdkOrderQosProductRequest request);
 

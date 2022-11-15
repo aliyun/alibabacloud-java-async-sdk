@@ -170,6 +170,9 @@ public class QueryOrderListResponseBody extends TeaModel {
         @NameInMap("OrderTime")
         private String orderTime;
 
+        @NameInMap("OutBizNo")
+        private String outBizNo;
+
         @NameInMap("ProductId")
         private String productId;
 
@@ -186,6 +189,7 @@ public class QueryOrderListResponseBody extends TeaModel {
             this.operator = builder.operator;
             this.orderId = builder.orderId;
             this.orderTime = builder.orderTime;
+            this.outBizNo = builder.outBizNo;
             this.productId = builder.productId;
             this.productName = builder.productName;
             this.status = builder.status;
@@ -242,6 +246,13 @@ public class QueryOrderListResponseBody extends TeaModel {
         }
 
         /**
+         * @return outBizNo
+         */
+        public String getOutBizNo() {
+            return this.outBizNo;
+        }
+
+        /**
          * @return productId
          */
         public String getProductId() {
@@ -269,6 +280,7 @@ public class QueryOrderListResponseBody extends TeaModel {
             private String operator; 
             private String orderId; 
             private String orderTime; 
+            private String outBizNo; 
             private String productId; 
             private String productName; 
             private String status; 
@@ -318,6 +330,14 @@ public class QueryOrderListResponseBody extends TeaModel {
              */
             public Builder orderTime(String orderTime) {
                 this.orderTime = orderTime;
+                return this;
+            }
+
+            /**
+             * OutBizNo.
+             */
+            public Builder outBizNo(String outBizNo) {
+                this.outBizNo = outBizNo;
                 return this;
             }
 

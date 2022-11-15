@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>alibabacloud-xgippop20220520</artifactId>
-  <version>1.0.67</version>
+  <version>1.0.68</version>
   <packaging>jar</packaging>
   <name>alibabacloud-xgippop20220520</name>
   <description>Alibaba Cloud XgipPop (20220520) Async SDK for Java

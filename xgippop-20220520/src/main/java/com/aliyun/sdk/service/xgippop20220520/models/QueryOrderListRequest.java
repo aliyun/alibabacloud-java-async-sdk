@@ -19,16 +19,24 @@ public class QueryOrderListRequest extends Request {
 
     @Query
     @NameInMap("InstanceId")
-    @Validation(required = true)
     private String instanceId;
 
     @Query
     @NameInMap("ItemCode")
+    @Validation(required = true)
     private String itemCode;
 
     @Query
     @NameInMap("Mobile")
     private String mobile;
+
+    @Query
+    @NameInMap("OrderTime")
+    private String orderTime;
+
+    @Query
+    @NameInMap("OutBizNo")
+    private String outBizNo;
 
     @Query
     @NameInMap("PageSize")
@@ -45,6 +53,8 @@ public class QueryOrderListRequest extends Request {
         this.instanceId = builder.instanceId;
         this.itemCode = builder.itemCode;
         this.mobile = builder.mobile;
+        this.orderTime = builder.orderTime;
+        this.outBizNo = builder.outBizNo;
         this.pageSize = builder.pageSize;
         this.uId = builder.uId;
     }
@@ -91,6 +101,20 @@ public class QueryOrderListRequest extends Request {
     }
 
     /**
+     * @return orderTime
+     */
+    public String getOrderTime() {
+        return this.orderTime;
+    }
+
+    /**
+     * @return outBizNo
+     */
+    public String getOutBizNo() {
+        return this.outBizNo;
+    }
+
+    /**
      * @return pageSize
      */
     public Integer getPageSize() {
@@ -109,6 +133,8 @@ public class QueryOrderListRequest extends Request {
         private String instanceId; 
         private String itemCode; 
         private String mobile; 
+        private String orderTime; 
+        private String outBizNo; 
         private Integer pageSize; 
         private Long uId; 
 
@@ -122,6 +148,8 @@ public class QueryOrderListRequest extends Request {
             this.instanceId = request.instanceId;
             this.itemCode = request.itemCode;
             this.mobile = request.mobile;
+            this.orderTime = request.orderTime;
+            this.outBizNo = request.outBizNo;
             this.pageSize = request.pageSize;
             this.uId = request.uId;
         } 
@@ -159,6 +187,24 @@ public class QueryOrderListRequest extends Request {
         public Builder mobile(String mobile) {
             this.putQueryParameter("Mobile", mobile);
             this.mobile = mobile;
+            return this;
+        }
+
+        /**
+         * OrderTime.
+         */
+        public Builder orderTime(String orderTime) {
+            this.putQueryParameter("OrderTime", orderTime);
+            this.orderTime = orderTime;
+            return this;
+        }
+
+        /**
+         * OutBizNo.
+         */
+        public Builder outBizNo(String outBizNo) {
+            this.putQueryParameter("OutBizNo", outBizNo);
+            this.outBizNo = outBizNo;
             return this;
         }
 
