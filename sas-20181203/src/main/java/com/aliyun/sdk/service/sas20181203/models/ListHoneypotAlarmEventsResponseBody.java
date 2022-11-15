@@ -420,12 +420,6 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
         @NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("LastRowKey")
-        private String lastRowKey;
-
-        @NameInMap("NextToken")
-        private String nextToken;
-
         @NameInMap("PageSize")
         private Integer pageSize;
 
@@ -435,8 +429,6 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
         private PageInfo(Builder builder) {
             this.count = builder.count;
             this.currentPage = builder.currentPage;
-            this.lastRowKey = builder.lastRowKey;
-            this.nextToken = builder.nextToken;
             this.pageSize = builder.pageSize;
             this.totalCount = builder.totalCount;
         }
@@ -464,20 +456,6 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
         }
 
         /**
-         * @return lastRowKey
-         */
-        public String getLastRowKey() {
-            return this.lastRowKey;
-        }
-
-        /**
-         * @return nextToken
-         */
-        public String getNextToken() {
-            return this.nextToken;
-        }
-
-        /**
          * @return pageSize
          */
         public Integer getPageSize() {
@@ -494,8 +472,6 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
         public static final class Builder {
             private Integer count; 
             private Integer currentPage; 
-            private String lastRowKey; 
-            private String nextToken; 
             private Integer pageSize; 
             private Integer totalCount; 
 
@@ -512,22 +488,6 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
-                return this;
-            }
-
-            /**
-             * LastRowKey.
-             */
-            public Builder lastRowKey(String lastRowKey) {
-                this.lastRowKey = lastRowKey;
-                return this;
-            }
-
-            /**
-             * NextToken.
-             */
-            public Builder nextToken(String nextToken) {
-                this.nextToken = nextToken;
                 return this;
             }
 
