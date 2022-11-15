@@ -18,7 +18,6 @@ public class GetMseSourceRequest extends Request {
 
     @Query
     @NameInMap("GatewayUniqueId")
-    @Validation(required = true)
     private String gatewayUniqueId;
 
     @Query

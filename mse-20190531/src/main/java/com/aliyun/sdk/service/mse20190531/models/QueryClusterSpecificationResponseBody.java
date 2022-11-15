@@ -178,28 +178,12 @@ public class QueryClusterSpecificationResponseBody extends TeaModel {
         @NameInMap("CpuCapacity")
         private String cpuCapacity;
 
-        @NameInMap("DiskCapacity")
-        private String diskCapacity;
-
-        @NameInMap("InstanceCount")
-        private String instanceCount;
-
-        @NameInMap("MaxCon")
-        private String maxCon;
-
-        @NameInMap("MaxTps")
-        private String maxTps;
-
         @NameInMap("MemoryCapacity")
         private String memoryCapacity;
 
         private Data(Builder builder) {
             this.clusterSpecificationName = builder.clusterSpecificationName;
             this.cpuCapacity = builder.cpuCapacity;
-            this.diskCapacity = builder.diskCapacity;
-            this.instanceCount = builder.instanceCount;
-            this.maxCon = builder.maxCon;
-            this.maxTps = builder.maxTps;
             this.memoryCapacity = builder.memoryCapacity;
         }
 
@@ -226,34 +210,6 @@ public class QueryClusterSpecificationResponseBody extends TeaModel {
         }
 
         /**
-         * @return diskCapacity
-         */
-        public String getDiskCapacity() {
-            return this.diskCapacity;
-        }
-
-        /**
-         * @return instanceCount
-         */
-        public String getInstanceCount() {
-            return this.instanceCount;
-        }
-
-        /**
-         * @return maxCon
-         */
-        public String getMaxCon() {
-            return this.maxCon;
-        }
-
-        /**
-         * @return maxTps
-         */
-        public String getMaxTps() {
-            return this.maxTps;
-        }
-
-        /**
          * @return memoryCapacity
          */
         public String getMemoryCapacity() {
@@ -263,10 +219,6 @@ public class QueryClusterSpecificationResponseBody extends TeaModel {
         public static final class Builder {
             private String clusterSpecificationName; 
             private String cpuCapacity; 
-            private String diskCapacity; 
-            private String instanceCount; 
-            private String maxCon; 
-            private String maxTps; 
             private String memoryCapacity; 
 
             /**
@@ -282,38 +234,6 @@ public class QueryClusterSpecificationResponseBody extends TeaModel {
              */
             public Builder cpuCapacity(String cpuCapacity) {
                 this.cpuCapacity = cpuCapacity;
-                return this;
-            }
-
-            /**
-             * DiskCapacity.
-             */
-            public Builder diskCapacity(String diskCapacity) {
-                this.diskCapacity = diskCapacity;
-                return this;
-            }
-
-            /**
-             * InstanceCount.
-             */
-            public Builder instanceCount(String instanceCount) {
-                this.instanceCount = instanceCount;
-                return this;
-            }
-
-            /**
-             * MaxCon.
-             */
-            public Builder maxCon(String maxCon) {
-                this.maxCon = maxCon;
-                return this;
-            }
-
-            /**
-             * MaxTps.
-             */
-            public Builder maxTps(String maxTps) {
-                this.maxTps = maxTps;
                 return this;
             }
 

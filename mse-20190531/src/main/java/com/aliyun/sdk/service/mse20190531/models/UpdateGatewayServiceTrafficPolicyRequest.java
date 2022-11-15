@@ -22,6 +22,7 @@ public class UpdateGatewayServiceTrafficPolicyRequest extends Request {
 
     @Query
     @NameInMap("GatewayTrafficPolicy")
+    @Validation(required = true)
     private TrafficPolicy gatewayTrafficPolicy;
 
     @Query
