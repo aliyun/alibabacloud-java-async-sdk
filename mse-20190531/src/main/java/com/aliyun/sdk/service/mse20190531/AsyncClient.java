@@ -108,6 +108,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetApplicationListResponse> getApplicationList(GetApplicationListRequest request);
 
+    CompletableFuture<GetApplicationListWithMetircsResponse> getApplicationListWithMetircs(GetApplicationListWithMetircsRequest request);
+
     CompletableFuture<GetBlackWhiteListResponse> getBlackWhiteList(GetBlackWhiteListRequest request);
 
     CompletableFuture<GetEngineNamepaceResponse> getEngineNamepace(GetEngineNamepaceRequest request);
