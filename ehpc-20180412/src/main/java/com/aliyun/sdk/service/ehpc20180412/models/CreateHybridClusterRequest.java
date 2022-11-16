@@ -98,6 +98,10 @@ public class CreateHybridClusterRequest extends Request {
     private String onPremiseVolumeRemotePath;
 
     @Query
+    @NameInMap("OpenldapPar")
+    private OpenldapPar openldapPar;
+
+    @Query
     @NameInMap("OsTag")
     @Validation(required = true)
     private String osTag;
@@ -105,6 +109,10 @@ public class CreateHybridClusterRequest extends Request {
     @Query
     @NameInMap("Password")
     private String password;
+
+    @Query
+    @NameInMap("Plugin")
+    private String plugin;
 
     @Query
     @NameInMap("PostInstallScript")
@@ -157,6 +165,10 @@ public class CreateHybridClusterRequest extends Request {
     private String vpcId;
 
     @Query
+    @NameInMap("WinAdPar")
+    private WinAdPar winAdPar;
+
+    @Query
     @NameInMap("ZoneId")
     private String zoneId;
 
@@ -183,8 +195,10 @@ public class CreateHybridClusterRequest extends Request {
         this.onPremiseVolumeMountPoint = builder.onPremiseVolumeMountPoint;
         this.onPremiseVolumeProtocol = builder.onPremiseVolumeProtocol;
         this.onPremiseVolumeRemotePath = builder.onPremiseVolumeRemotePath;
+        this.openldapPar = builder.openldapPar;
         this.osTag = builder.osTag;
         this.password = builder.password;
+        this.plugin = builder.plugin;
         this.postInstallScript = builder.postInstallScript;
         this.remoteDirectory = builder.remoteDirectory;
         this.resourceGroupId = builder.resourceGroupId;
@@ -197,6 +211,7 @@ public class CreateHybridClusterRequest extends Request {
         this.volumeProtocol = builder.volumeProtocol;
         this.volumeType = builder.volumeType;
         this.vpcId = builder.vpcId;
+        this.winAdPar = builder.winAdPar;
         this.zoneId = builder.zoneId;
     }
 
@@ -361,6 +376,13 @@ public class CreateHybridClusterRequest extends Request {
     }
 
     /**
+     * @return openldapPar
+     */
+    public OpenldapPar getOpenldapPar() {
+        return this.openldapPar;
+    }
+
+    /**
      * @return osTag
      */
     public String getOsTag() {
@@ -372,6 +394,13 @@ public class CreateHybridClusterRequest extends Request {
      */
     public String getPassword() {
         return this.password;
+    }
+
+    /**
+     * @return plugin
+     */
+    public String getPlugin() {
+        return this.plugin;
     }
 
     /**
@@ -459,6 +488,13 @@ public class CreateHybridClusterRequest extends Request {
     }
 
     /**
+     * @return winAdPar
+     */
+    public WinAdPar getWinAdPar() {
+        return this.winAdPar;
+    }
+
+    /**
      * @return zoneId
      */
     public String getZoneId() {
@@ -487,8 +523,10 @@ public class CreateHybridClusterRequest extends Request {
         private String onPremiseVolumeMountPoint; 
         private String onPremiseVolumeProtocol; 
         private String onPremiseVolumeRemotePath; 
+        private OpenldapPar openldapPar; 
         private String osTag; 
         private String password; 
+        private String plugin; 
         private java.util.List < PostInstallScript> postInstallScript; 
         private String remoteDirectory; 
         private String resourceGroupId; 
@@ -501,6 +539,7 @@ public class CreateHybridClusterRequest extends Request {
         private String volumeProtocol; 
         private String volumeType; 
         private String vpcId; 
+        private WinAdPar winAdPar; 
         private String zoneId; 
 
         private Builder() {
@@ -530,8 +569,10 @@ public class CreateHybridClusterRequest extends Request {
             this.onPremiseVolumeMountPoint = request.onPremiseVolumeMountPoint;
             this.onPremiseVolumeProtocol = request.onPremiseVolumeProtocol;
             this.onPremiseVolumeRemotePath = request.onPremiseVolumeRemotePath;
+            this.openldapPar = request.openldapPar;
             this.osTag = request.osTag;
             this.password = request.password;
+            this.plugin = request.plugin;
             this.postInstallScript = request.postInstallScript;
             this.remoteDirectory = request.remoteDirectory;
             this.resourceGroupId = request.resourceGroupId;
@@ -544,6 +585,7 @@ public class CreateHybridClusterRequest extends Request {
             this.volumeProtocol = request.volumeProtocol;
             this.volumeType = request.volumeType;
             this.vpcId = request.vpcId;
+            this.winAdPar = request.winAdPar;
             this.zoneId = request.zoneId;
         } 
 
@@ -737,6 +779,15 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
+         * OpenldapPar.
+         */
+        public Builder openldapPar(OpenldapPar openldapPar) {
+            this.putQueryParameter("OpenldapPar", openldapPar);
+            this.openldapPar = openldapPar;
+            return this;
+        }
+
+        /**
          * OsTag.
          */
         public Builder osTag(String osTag) {
@@ -751,6 +802,15 @@ public class CreateHybridClusterRequest extends Request {
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
             this.password = password;
+            return this;
+        }
+
+        /**
+         * Plugin.
+         */
+        public Builder plugin(String plugin) {
+            this.putQueryParameter("Plugin", plugin);
+            this.plugin = plugin;
             return this;
         }
 
@@ -859,6 +919,15 @@ public class CreateHybridClusterRequest extends Request {
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
             this.vpcId = vpcId;
+            return this;
+        }
+
+        /**
+         * WinAdPar.
+         */
+        public Builder winAdPar(WinAdPar winAdPar) {
+            this.putQueryParameter("WinAdPar", winAdPar);
+            this.winAdPar = winAdPar;
             return this;
         }
 
@@ -1206,6 +1275,67 @@ public class CreateHybridClusterRequest extends Request {
         } 
 
     }
+    public static class OpenldapPar extends TeaModel {
+        @NameInMap("BaseDn")
+        private String baseDn;
+
+        @NameInMap("LdapServerIp")
+        private String ldapServerIp;
+
+        private OpenldapPar(Builder builder) {
+            this.baseDn = builder.baseDn;
+            this.ldapServerIp = builder.ldapServerIp;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static OpenldapPar create() {
+            return builder().build();
+        }
+
+        /**
+         * @return baseDn
+         */
+        public String getBaseDn() {
+            return this.baseDn;
+        }
+
+        /**
+         * @return ldapServerIp
+         */
+        public String getLdapServerIp() {
+            return this.ldapServerIp;
+        }
+
+        public static final class Builder {
+            private String baseDn; 
+            private String ldapServerIp; 
+
+            /**
+             * BaseDn.
+             */
+            public Builder baseDn(String baseDn) {
+                this.baseDn = baseDn;
+                return this;
+            }
+
+            /**
+             * LdapServerIp.
+             */
+            public Builder ldapServerIp(String ldapServerIp) {
+                this.ldapServerIp = ldapServerIp;
+                return this;
+            }
+
+            public OpenldapPar build() {
+                return new OpenldapPar(this);
+            } 
+
+        } 
+
+    }
     public static class PostInstallScript extends TeaModel {
         @NameInMap("Args")
         private String args;
@@ -1262,6 +1392,107 @@ public class CreateHybridClusterRequest extends Request {
 
             public PostInstallScript build() {
                 return new PostInstallScript(this);
+            } 
+
+        } 
+
+    }
+    public static class WinAdPar extends TeaModel {
+        @NameInMap("AdDc")
+        private String adDc;
+
+        @NameInMap("AdIp")
+        private String adIp;
+
+        @NameInMap("AdUser")
+        private String adUser;
+
+        @NameInMap("AdUserPasswd")
+        private String adUserPasswd;
+
+        private WinAdPar(Builder builder) {
+            this.adDc = builder.adDc;
+            this.adIp = builder.adIp;
+            this.adUser = builder.adUser;
+            this.adUserPasswd = builder.adUserPasswd;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static WinAdPar create() {
+            return builder().build();
+        }
+
+        /**
+         * @return adDc
+         */
+        public String getAdDc() {
+            return this.adDc;
+        }
+
+        /**
+         * @return adIp
+         */
+        public String getAdIp() {
+            return this.adIp;
+        }
+
+        /**
+         * @return adUser
+         */
+        public String getAdUser() {
+            return this.adUser;
+        }
+
+        /**
+         * @return adUserPasswd
+         */
+        public String getAdUserPasswd() {
+            return this.adUserPasswd;
+        }
+
+        public static final class Builder {
+            private String adDc; 
+            private String adIp; 
+            private String adUser; 
+            private String adUserPasswd; 
+
+            /**
+             * AdDc.
+             */
+            public Builder adDc(String adDc) {
+                this.adDc = adDc;
+                return this;
+            }
+
+            /**
+             * AdIp.
+             */
+            public Builder adIp(String adIp) {
+                this.adIp = adIp;
+                return this;
+            }
+
+            /**
+             * AdUser.
+             */
+            public Builder adUser(String adUser) {
+                this.adUser = adUser;
+                return this;
+            }
+
+            /**
+             * AdUserPasswd.
+             */
+            public Builder adUserPasswd(String adUserPasswd) {
+                this.adUserPasswd = adUserPasswd;
+                return this;
+            }
+
+            public WinAdPar build() {
+                return new WinAdPar(this);
             } 
 
         } 

@@ -81,7 +81,6 @@ public class SubmitJobRequest extends Request {
 
     @Query
     @NameInMap("RunasUserPassword")
-    @Validation(required = true)
     private String runasUserPassword;
 
     @Query

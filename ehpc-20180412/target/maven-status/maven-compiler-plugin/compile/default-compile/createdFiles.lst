@@ -710,6 +710,7 @@ com/aliyun/sdk/service/ehpc20180412/models/DeleteImageResponse$1.class
 com/aliyun/sdk/service/ehpc20180412/models/CreateGWSImageResponseBody$1.class
 com/aliyun/sdk/service/ehpc20180412/models/DescribePriceRequest$Commodities$Builder.class
 com/aliyun/sdk/service/ehpc20180412/models/DeleteGWSClusterResponseBody$1.class
+com/aliyun/sdk/service/ehpc20180412/models/CreateHybridClusterRequest$OpenldapPar$Builder.class
 com/aliyun/sdk/service/ehpc20180412/models/DescribePriceResponse$Builder.class
 com/aliyun/sdk/service/ehpc20180412/models/DescribeGWSInstancesRequest.class
 com/aliyun/sdk/service/ehpc20180412/models/DescribePriceRequest$DataDisks.class
@@ -1043,6 +1044,7 @@ com/aliyun/sdk/service/ehpc20180412/models/RerunJobsResponse$BuilderImpl.class
 com/aliyun/sdk/service/ehpc20180412/models/ListClusterLogsResponseBody.class
 com/aliyun/sdk/service/ehpc20180412/models/ListJobsWithFiltersResponse$Builder.class
 com/aliyun/sdk/service/ehpc20180412/models/ListNodesResponseBody$Nodes$Builder.class
+com/aliyun/sdk/service/ehpc20180412/models/CreateHybridClusterRequest$OpenldapPar.class
 com/aliyun/sdk/service/ehpc20180412/models/MountNFSResponse$1.class
 com/aliyun/sdk/service/ehpc20180412/models/RunCloudMetricProfilingRequest$1.class
 com/aliyun/sdk/service/ehpc20180412/models/ListNodesNoPagingResponseBody$1.class
@@ -1371,6 +1373,7 @@ com/aliyun/sdk/service/ehpc20180412/models/CreateHybridClusterRequest$PostInstal
 com/aliyun/sdk/service/ehpc20180412/models/ListCommandsRequest.class
 com/aliyun/sdk/service/ehpc20180412/models/DescribeNFSClientStatusResponseBody$Result.class
 com/aliyun/sdk/service/ehpc20180412/models/GetClusterVolumesResponseBody$VolumeInfo.class
+com/aliyun/sdk/service/ehpc20180412/models/CreateHybridClusterRequest$WinAdPar$Builder.class
 com/aliyun/sdk/service/ehpc20180412/models/InvokeShellCommandResponseBody$InstanceIds$Builder.class
 com/aliyun/sdk/service/ehpc20180412/models/DeleteJobTemplatesRequest.class
 com/aliyun/sdk/service/ehpc20180412/models/StopClusterResponse$BuilderImpl.class
@@ -1712,6 +1715,7 @@ com/aliyun/sdk/service/ehpc20180412/models/ListVolumesResponse$BuilderImpl.class
 com/aliyun/sdk/service/ehpc20180412/models/SetAutoScaleConfigRequest$DataDisks.class
 com/aliyun/sdk/service/ehpc20180412/models/CreateClusterRequest$AdditionalVolumes.class
 com/aliyun/sdk/service/ehpc20180412/models/DescribeAutoScaleConfigResponse$1.class
+com/aliyun/sdk/service/ehpc20180412/models/CreateHybridClusterRequest$WinAdPar.class
 com/aliyun/sdk/service/ehpc20180412/models/DescribeGWSClustersResponseBody$Builder.class
 com/aliyun/sdk/service/ehpc20180412/models/ListCommunityImagesResponseBody$BaseOsTag.class
 com/aliyun/sdk/service/ehpc20180412/models/ModifyImageGatewayConfigRequest$Builder.class
