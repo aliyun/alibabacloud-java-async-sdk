@@ -111,6 +111,67 @@ public class ListResourceGroupsResponseBody extends TeaModel {
 
     } 
 
+    public static class Tags extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
     public static class Data extends TeaModel {
         @NameInMap("BizExtKey")
         private String bizExtKey;
@@ -142,6 +203,9 @@ public class ListResourceGroupsResponseBody extends TeaModel {
         @NameInMap("ResourceGroupType")
         private String resourceGroupType;
 
+        @NameInMap("ResourceManagerResourceGroupId")
+        private String resourceManagerResourceGroupId;
+
         @NameInMap("Sequence")
         private Integer sequence;
 
@@ -150,6 +214,9 @@ public class ListResourceGroupsResponseBody extends TeaModel {
 
         @NameInMap("Status")
         private Integer status;
+
+        @NameInMap("Tags")
+        private java.util.List < Tags> tags;
 
         @NameInMap("TenantId")
         private Long tenantId;
@@ -168,9 +235,11 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             this.mode = builder.mode;
             this.name = builder.name;
             this.resourceGroupType = builder.resourceGroupType;
+            this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
             this.sequence = builder.sequence;
             this.specs = builder.specs;
             this.status = builder.status;
+            this.tags = builder.tags;
             this.tenantId = builder.tenantId;
             this.updateTime = builder.updateTime;
         }
@@ -254,6 +323,13 @@ public class ListResourceGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceManagerResourceGroupId
+         */
+        public String getResourceManagerResourceGroupId() {
+            return this.resourceManagerResourceGroupId;
+        }
+
+        /**
          * @return sequence
          */
         public Integer getSequence() {
@@ -272,6 +348,13 @@ public class ListResourceGroupsResponseBody extends TeaModel {
          */
         public Integer getStatus() {
             return this.status;
+        }
+
+        /**
+         * @return tags
+         */
+        public java.util.List < Tags> getTags() {
+            return this.tags;
         }
 
         /**
@@ -299,9 +382,11 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             private String mode; 
             private String name; 
             private String resourceGroupType; 
+            private String resourceManagerResourceGroupId; 
             private Integer sequence; 
             private java.util.Map < String, ? > specs; 
             private Integer status; 
+            private java.util.List < Tags> tags; 
             private Long tenantId; 
             private String updateTime; 
 
@@ -386,6 +471,14 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
+             * ResourceManagerResourceGroupId.
+             */
+            public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
+                this.resourceManagerResourceGroupId = resourceManagerResourceGroupId;
+                return this;
+            }
+
+            /**
              * Sequence.
              */
             public Builder sequence(Integer sequence) {
@@ -406,6 +499,14 @@ public class ListResourceGroupsResponseBody extends TeaModel {
              */
             public Builder status(Integer status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List < Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 

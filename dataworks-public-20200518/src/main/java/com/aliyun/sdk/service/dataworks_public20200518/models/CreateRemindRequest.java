@@ -83,6 +83,10 @@ public class CreateRemindRequest extends Request {
     @NameInMap("RobotUrls")
     private String robotUrls;
 
+    @Body
+    @NameInMap("Webhooks")
+    private String webhooks;
+
     private CreateRemindRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -101,6 +105,7 @@ public class CreateRemindRequest extends Request {
         this.remindType = builder.remindType;
         this.remindUnit = builder.remindUnit;
         this.robotUrls = builder.robotUrls;
+        this.webhooks = builder.webhooks;
     }
 
     public static Builder builder() {
@@ -228,6 +233,13 @@ public class CreateRemindRequest extends Request {
         return this.robotUrls;
     }
 
+    /**
+     * @return webhooks
+     */
+    public String getWebhooks() {
+        return this.webhooks;
+    }
+
     public static final class Builder extends Request.Builder<CreateRemindRequest, Builder> {
         private String regionId; 
         private Integer alertInterval; 
@@ -245,6 +257,7 @@ public class CreateRemindRequest extends Request {
         private String remindType; 
         private String remindUnit; 
         private String robotUrls; 
+        private String webhooks; 
 
         private Builder() {
             super();
@@ -268,6 +281,7 @@ public class CreateRemindRequest extends Request {
             this.remindType = request.remindType;
             this.remindUnit = request.remindUnit;
             this.robotUrls = request.robotUrls;
+            this.webhooks = request.webhooks;
         } 
 
         /**
@@ -411,6 +425,15 @@ public class CreateRemindRequest extends Request {
         public Builder robotUrls(String robotUrls) {
             this.putBodyParameter("RobotUrls", robotUrls);
             this.robotUrls = robotUrls;
+            return this;
+        }
+
+        /**
+         * Webhooks.
+         */
+        public Builder webhooks(String webhooks) {
+            this.putBodyParameter("Webhooks", webhooks);
+            this.webhooks = webhooks;
             return this;
         }
 

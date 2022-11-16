@@ -32,6 +32,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CheckMetaTableResponse> checkMetaTable(CheckMetaTableRequest request);
 
+    CompletableFuture<CreateBaselineResponse> createBaseline(CreateBaselineRequest request);
+
     CompletableFuture<CreateBusinessResponse> createBusiness(CreateBusinessRequest request);
 
     CompletableFuture<CreateConnectionResponse> createConnection(CreateConnectionRequest request);
@@ -83,6 +85,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateTableThemeResponse> createTableTheme(CreateTableThemeRequest request);
 
     CompletableFuture<CreateUdfFileResponse> createUdfFile(CreateUdfFileRequest request);
+
+    CompletableFuture<DeleteBaselineResponse> deleteBaseline(DeleteBaselineRequest request);
 
     CompletableFuture<DeleteBusinessResponse> deleteBusiness(DeleteBusinessRequest request);
 
@@ -136,6 +140,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GenerateDISyncTaskConfigForUpdatingResponse> generateDISyncTaskConfigForUpdating(GenerateDISyncTaskConfigForUpdatingRequest request);
 
+    CompletableFuture<GetBaselineResponse> getBaseline(GetBaselineRequest request);
+
     CompletableFuture<GetBaselineConfigResponse> getBaselineConfig(GetBaselineConfigRequest request);
 
     CompletableFuture<GetBaselineKeyPathResponse> getBaselineKeyPath(GetBaselineKeyPathRequest request);
@@ -149,8 +155,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetDISyncInstanceInfoResponse> getDISyncInstanceInfo(GetDISyncInstanceInfoRequest request);
 
     CompletableFuture<GetDISyncTaskResponse> getDISyncTask(GetDISyncTaskRequest request);
-
-    CompletableFuture<GetDISyncTaskMetricInfoResponse> getDISyncTaskMetricInfo(GetDISyncTaskMetricInfoRequest request);
 
     CompletableFuture<GetDagResponse> getDag(GetDagRequest request);
 
@@ -278,15 +282,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListBaselineStatusesResponse> listBaselineStatuses(ListBaselineStatusesRequest request);
 
+    CompletableFuture<ListBaselinesResponse> listBaselines(ListBaselinesRequest request);
+
     CompletableFuture<ListBusinessResponse> listBusiness(ListBusinessRequest request);
 
     CompletableFuture<ListCalcEnginesResponse> listCalcEngines(ListCalcEnginesRequest request);
 
     CompletableFuture<ListConnectionsResponse> listConnections(ListConnectionsRequest request);
-
-    CompletableFuture<ListCurrentTasksForResourceGroupResponse> listCurrentTasksForResourceGroup(ListCurrentTasksForResourceGroupRequest request);
-
-    CompletableFuture<ListCurrentUsageForResourceGroupResponse> listCurrentUsageForResourceGroup(ListCurrentUsageForResourceGroupRequest request);
 
     CompletableFuture<ListDIProjectConfigResponse> listDIProjectConfig(ListDIProjectConfigRequest request);
 
@@ -312,6 +314,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListDeploymentsResponse> listDeployments(ListDeploymentsRequest request);
 
+    CompletableFuture<ListEnabledExtensionsForProjectResponse> listEnabledExtensionsForProject(ListEnabledExtensionsForProjectRequest request);
+
     CompletableFuture<ListExtensionsResponse> listExtensions(ListExtensionsRequest request);
 
     CompletableFuture<ListFileTypeResponse> listFileType(ListFileTypeRequest request);
@@ -321,8 +325,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListFilesResponse> listFiles(ListFilesRequest request);
 
     CompletableFuture<ListFoldersResponse> listFolders(ListFoldersRequest request);
-
-    CompletableFuture<ListHistoryTasksForResourceGroupResponse> listHistoryTasksForResourceGroup(ListHistoryTasksForResourceGroupRequest request);
 
     CompletableFuture<ListInnerNodesResponse> listInnerNodes(ListInnerNodesRequest request);
 
@@ -384,8 +386,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListTopicsResponse> listTopics(ListTopicsRequest request);
 
-    CompletableFuture<ListUsageForResourceGroupResponse> listUsageForResourceGroup(ListUsageForResourceGroupRequest request);
-
     CompletableFuture<OfflineNodeResponse> offlineNode(OfflineNodeRequest request);
 
     CompletableFuture<PublishDataServiceApiResponse> publishDataServiceApi(PublishDataServiceApiRequest request);
@@ -443,6 +443,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<TopTenElapsedTimeInstanceResponse> topTenElapsedTimeInstance(TopTenElapsedTimeInstanceRequest request);
 
     CompletableFuture<TopTenErrorTimesInstanceResponse> topTenErrorTimesInstance(TopTenErrorTimesInstanceRequest request);
+
+    CompletableFuture<UpdateBaselineResponse> updateBaseline(UpdateBaselineRequest request);
 
     CompletableFuture<UpdateBusinessResponse> updateBusiness(UpdateBusinessRequest request);
 

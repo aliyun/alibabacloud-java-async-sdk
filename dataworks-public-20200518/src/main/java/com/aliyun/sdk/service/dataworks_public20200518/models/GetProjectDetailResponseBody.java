@@ -111,12 +111,76 @@ public class GetProjectDetailResponseBody extends TeaModel {
 
     } 
 
+    public static class Tags extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
     public static class Data extends TeaModel {
         @NameInMap("DefaultDiResourceGroupIdentifier")
         private String defaultDiResourceGroupIdentifier;
 
         @NameInMap("DevelopmentType")
         private Integer developmentType;
+
+        @NameInMap("DisableDevelopment")
+        private Boolean disableDevelopment;
 
         @NameInMap("EnvTypes")
         private java.util.List < String > envTypes;
@@ -129,6 +193,9 @@ public class GetProjectDetailResponseBody extends TeaModel {
 
         @NameInMap("IsAllowDownload")
         private Integer isAllowDownload;
+
+        @NameInMap("IsDefault")
+        private Integer isDefault;
 
         @NameInMap("ProjectDescription")
         private String projectDescription;
@@ -154,6 +221,9 @@ public class GetProjectDetailResponseBody extends TeaModel {
         @NameInMap("ResidentArea")
         private String residentArea;
 
+        @NameInMap("ResourceManagerResourceGroupId")
+        private String resourceManagerResourceGroupId;
+
         @NameInMap("SchedulerMaxRetryTimes")
         private Integer schedulerMaxRetryTimes;
 
@@ -163,16 +233,27 @@ public class GetProjectDetailResponseBody extends TeaModel {
         @NameInMap("Status")
         private Integer status;
 
+        @NameInMap("TablePrivacyMode")
+        private Integer tablePrivacyMode;
+
+        @NameInMap("Tags")
+        private java.util.List < Tags> tags;
+
         @NameInMap("TenantId")
         private Long tenantId;
+
+        @NameInMap("UseProxyOdpsAccount")
+        private Boolean useProxyOdpsAccount;
 
         private Data(Builder builder) {
             this.defaultDiResourceGroupIdentifier = builder.defaultDiResourceGroupIdentifier;
             this.developmentType = builder.developmentType;
+            this.disableDevelopment = builder.disableDevelopment;
             this.envTypes = builder.envTypes;
             this.gmtCreate = builder.gmtCreate;
             this.gmtModified = builder.gmtModified;
             this.isAllowDownload = builder.isAllowDownload;
+            this.isDefault = builder.isDefault;
             this.projectDescription = builder.projectDescription;
             this.projectId = builder.projectId;
             this.projectIdentifier = builder.projectIdentifier;
@@ -181,10 +262,14 @@ public class GetProjectDetailResponseBody extends TeaModel {
             this.projectOwnerBaseId = builder.projectOwnerBaseId;
             this.protectedMode = builder.protectedMode;
             this.residentArea = builder.residentArea;
+            this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
             this.schedulerMaxRetryTimes = builder.schedulerMaxRetryTimes;
             this.schedulerRetryInterval = builder.schedulerRetryInterval;
             this.status = builder.status;
+            this.tablePrivacyMode = builder.tablePrivacyMode;
+            this.tags = builder.tags;
             this.tenantId = builder.tenantId;
+            this.useProxyOdpsAccount = builder.useProxyOdpsAccount;
         }
 
         public static Builder builder() {
@@ -207,6 +292,13 @@ public class GetProjectDetailResponseBody extends TeaModel {
          */
         public Integer getDevelopmentType() {
             return this.developmentType;
+        }
+
+        /**
+         * @return disableDevelopment
+         */
+        public Boolean getDisableDevelopment() {
+            return this.disableDevelopment;
         }
 
         /**
@@ -235,6 +327,13 @@ public class GetProjectDetailResponseBody extends TeaModel {
          */
         public Integer getIsAllowDownload() {
             return this.isAllowDownload;
+        }
+
+        /**
+         * @return isDefault
+         */
+        public Integer getIsDefault() {
+            return this.isDefault;
         }
 
         /**
@@ -294,6 +393,13 @@ public class GetProjectDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceManagerResourceGroupId
+         */
+        public String getResourceManagerResourceGroupId() {
+            return this.resourceManagerResourceGroupId;
+        }
+
+        /**
          * @return schedulerMaxRetryTimes
          */
         public Integer getSchedulerMaxRetryTimes() {
@@ -315,19 +421,42 @@ public class GetProjectDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return tablePrivacyMode
+         */
+        public Integer getTablePrivacyMode() {
+            return this.tablePrivacyMode;
+        }
+
+        /**
+         * @return tags
+         */
+        public java.util.List < Tags> getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return tenantId
          */
         public Long getTenantId() {
             return this.tenantId;
         }
 
+        /**
+         * @return useProxyOdpsAccount
+         */
+        public Boolean getUseProxyOdpsAccount() {
+            return this.useProxyOdpsAccount;
+        }
+
         public static final class Builder {
             private String defaultDiResourceGroupIdentifier; 
             private Integer developmentType; 
+            private Boolean disableDevelopment; 
             private java.util.List < String > envTypes; 
             private String gmtCreate; 
             private String gmtModified; 
             private Integer isAllowDownload; 
+            private Integer isDefault; 
             private String projectDescription; 
             private Integer projectId; 
             private String projectIdentifier; 
@@ -336,10 +465,14 @@ public class GetProjectDetailResponseBody extends TeaModel {
             private String projectOwnerBaseId; 
             private Integer protectedMode; 
             private String residentArea; 
+            private String resourceManagerResourceGroupId; 
             private Integer schedulerMaxRetryTimes; 
             private Integer schedulerRetryInterval; 
             private Integer status; 
+            private Integer tablePrivacyMode; 
+            private java.util.List < Tags> tags; 
             private Long tenantId; 
+            private Boolean useProxyOdpsAccount; 
 
             /**
              * DefaultDiResourceGroupIdentifier.
@@ -354,6 +487,14 @@ public class GetProjectDetailResponseBody extends TeaModel {
              */
             public Builder developmentType(Integer developmentType) {
                 this.developmentType = developmentType;
+                return this;
+            }
+
+            /**
+             * DisableDevelopment.
+             */
+            public Builder disableDevelopment(Boolean disableDevelopment) {
+                this.disableDevelopment = disableDevelopment;
                 return this;
             }
 
@@ -386,6 +527,14 @@ public class GetProjectDetailResponseBody extends TeaModel {
              */
             public Builder isAllowDownload(Integer isAllowDownload) {
                 this.isAllowDownload = isAllowDownload;
+                return this;
+            }
+
+            /**
+             * IsDefault.
+             */
+            public Builder isDefault(Integer isDefault) {
+                this.isDefault = isDefault;
                 return this;
             }
 
@@ -454,6 +603,14 @@ public class GetProjectDetailResponseBody extends TeaModel {
             }
 
             /**
+             * ResourceManagerResourceGroupId.
+             */
+            public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
+                this.resourceManagerResourceGroupId = resourceManagerResourceGroupId;
+                return this;
+            }
+
+            /**
              * SchedulerMaxRetryTimes.
              */
             public Builder schedulerMaxRetryTimes(Integer schedulerMaxRetryTimes) {
@@ -478,10 +635,34 @@ public class GetProjectDetailResponseBody extends TeaModel {
             }
 
             /**
+             * TablePrivacyMode.
+             */
+            public Builder tablePrivacyMode(Integer tablePrivacyMode) {
+                this.tablePrivacyMode = tablePrivacyMode;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List < Tags> tags) {
+                this.tags = tags;
+                return this;
+            }
+
+            /**
              * TenantId.
              */
             public Builder tenantId(Long tenantId) {
                 this.tenantId = tenantId;
+                return this;
+            }
+
+            /**
+             * UseProxyOdpsAccount.
+             */
+            public Builder useProxyOdpsAccount(Boolean useProxyOdpsAccount) {
+                this.useProxyOdpsAccount = useProxyOdpsAccount;
                 return this;
             }
 

@@ -71,7 +71,74 @@ public class ListProjectsResponseBody extends TeaModel {
 
     } 
 
+    public static class Tags extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
     public static class ProjectList extends TeaModel {
+        @NameInMap("DisableDevelopment")
+        private Boolean disableDevelopment;
+
+        @NameInMap("IsDefault")
+        private Integer isDefault;
+
         @NameInMap("ProjectDescription")
         private String projectDescription;
 
@@ -93,7 +160,21 @@ public class ListProjectsResponseBody extends TeaModel {
         @NameInMap("ProjectStatusCode")
         private String projectStatusCode;
 
+        @NameInMap("ResourceManagerResourceGroupId")
+        private String resourceManagerResourceGroupId;
+
+        @NameInMap("TablePrivacyMode")
+        private Integer tablePrivacyMode;
+
+        @NameInMap("Tags")
+        private java.util.List < Tags> tags;
+
+        @NameInMap("UseProxyOdpsAccount")
+        private Boolean useProxyOdpsAccount;
+
         private ProjectList(Builder builder) {
+            this.disableDevelopment = builder.disableDevelopment;
+            this.isDefault = builder.isDefault;
             this.projectDescription = builder.projectDescription;
             this.projectId = builder.projectId;
             this.projectIdentifier = builder.projectIdentifier;
@@ -101,6 +182,10 @@ public class ListProjectsResponseBody extends TeaModel {
             this.projectOwnerBaseId = builder.projectOwnerBaseId;
             this.projectStatus = builder.projectStatus;
             this.projectStatusCode = builder.projectStatusCode;
+            this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
+            this.tablePrivacyMode = builder.tablePrivacyMode;
+            this.tags = builder.tags;
+            this.useProxyOdpsAccount = builder.useProxyOdpsAccount;
         }
 
         public static Builder builder() {
@@ -109,6 +194,20 @@ public class ListProjectsResponseBody extends TeaModel {
 
         public static ProjectList create() {
             return builder().build();
+        }
+
+        /**
+         * @return disableDevelopment
+         */
+        public Boolean getDisableDevelopment() {
+            return this.disableDevelopment;
+        }
+
+        /**
+         * @return isDefault
+         */
+        public Integer getIsDefault() {
+            return this.isDefault;
         }
 
         /**
@@ -160,7 +259,37 @@ public class ListProjectsResponseBody extends TeaModel {
             return this.projectStatusCode;
         }
 
+        /**
+         * @return resourceManagerResourceGroupId
+         */
+        public String getResourceManagerResourceGroupId() {
+            return this.resourceManagerResourceGroupId;
+        }
+
+        /**
+         * @return tablePrivacyMode
+         */
+        public Integer getTablePrivacyMode() {
+            return this.tablePrivacyMode;
+        }
+
+        /**
+         * @return tags
+         */
+        public java.util.List < Tags> getTags() {
+            return this.tags;
+        }
+
+        /**
+         * @return useProxyOdpsAccount
+         */
+        public Boolean getUseProxyOdpsAccount() {
+            return this.useProxyOdpsAccount;
+        }
+
         public static final class Builder {
+            private Boolean disableDevelopment; 
+            private Integer isDefault; 
             private String projectDescription; 
             private Long projectId; 
             private String projectIdentifier; 
@@ -168,6 +297,26 @@ public class ListProjectsResponseBody extends TeaModel {
             private String projectOwnerBaseId; 
             private Integer projectStatus; 
             private String projectStatusCode; 
+            private String resourceManagerResourceGroupId; 
+            private Integer tablePrivacyMode; 
+            private java.util.List < Tags> tags; 
+            private Boolean useProxyOdpsAccount; 
+
+            /**
+             * DisableDevelopment.
+             */
+            public Builder disableDevelopment(Boolean disableDevelopment) {
+                this.disableDevelopment = disableDevelopment;
+                return this;
+            }
+
+            /**
+             * IsDefault.
+             */
+            public Builder isDefault(Integer isDefault) {
+                this.isDefault = isDefault;
+                return this;
+            }
 
             /**
              * ProjectDescription.
@@ -222,6 +371,38 @@ public class ListProjectsResponseBody extends TeaModel {
              */
             public Builder projectStatusCode(String projectStatusCode) {
                 this.projectStatusCode = projectStatusCode;
+                return this;
+            }
+
+            /**
+             * ResourceManagerResourceGroupId.
+             */
+            public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
+                this.resourceManagerResourceGroupId = resourceManagerResourceGroupId;
+                return this;
+            }
+
+            /**
+             * TablePrivacyMode.
+             */
+            public Builder tablePrivacyMode(Integer tablePrivacyMode) {
+                this.tablePrivacyMode = tablePrivacyMode;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List < Tags> tags) {
+                this.tags = tags;
+                return this;
+            }
+
+            /**
+             * UseProxyOdpsAccount.
+             */
+            public Builder useProxyOdpsAccount(Boolean useProxyOdpsAccount) {
+                this.useProxyOdpsAccount = useProxyOdpsAccount;
                 return this;
             }
 

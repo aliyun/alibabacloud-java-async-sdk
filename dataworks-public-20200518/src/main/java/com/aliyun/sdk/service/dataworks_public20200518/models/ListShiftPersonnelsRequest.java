@@ -18,10 +18,12 @@ public class ListShiftPersonnelsRequest extends Request {
 
     @Body
     @NameInMap("BeginTime")
+    @Validation(required = true)
     private Long beginTime;
 
     @Body
     @NameInMap("EndTime")
+    @Validation(required = true)
     private Long endTime;
 
     @Body
@@ -30,6 +32,7 @@ public class ListShiftPersonnelsRequest extends Request {
 
     @Body
     @NameInMap("ShiftScheduleIdentifier")
+    @Validation(required = true)
     private String shiftScheduleIdentifier;
 
     @Body

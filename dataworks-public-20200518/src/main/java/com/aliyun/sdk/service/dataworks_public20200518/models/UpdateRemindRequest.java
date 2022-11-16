@@ -88,6 +88,10 @@ public class UpdateRemindRequest extends Request {
     @NameInMap("UseFlag")
     private Boolean useFlag;
 
+    @Body
+    @NameInMap("Webhooks")
+    private String webhooks;
+
     private UpdateRemindRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -108,6 +112,7 @@ public class UpdateRemindRequest extends Request {
         this.remindUnit = builder.remindUnit;
         this.robotUrls = builder.robotUrls;
         this.useFlag = builder.useFlag;
+        this.webhooks = builder.webhooks;
     }
 
     public static Builder builder() {
@@ -249,6 +254,13 @@ public class UpdateRemindRequest extends Request {
         return this.useFlag;
     }
 
+    /**
+     * @return webhooks
+     */
+    public String getWebhooks() {
+        return this.webhooks;
+    }
+
     public static final class Builder extends Request.Builder<UpdateRemindRequest, Builder> {
         private String regionId; 
         private Integer alertInterval; 
@@ -268,6 +280,7 @@ public class UpdateRemindRequest extends Request {
         private String remindUnit; 
         private String robotUrls; 
         private Boolean useFlag; 
+        private String webhooks; 
 
         private Builder() {
             super();
@@ -293,6 +306,7 @@ public class UpdateRemindRequest extends Request {
             this.remindUnit = request.remindUnit;
             this.robotUrls = request.robotUrls;
             this.useFlag = request.useFlag;
+            this.webhooks = request.webhooks;
         } 
 
         /**
@@ -454,6 +468,15 @@ public class UpdateRemindRequest extends Request {
         public Builder useFlag(Boolean useFlag) {
             this.putBodyParameter("UseFlag", useFlag);
             this.useFlag = useFlag;
+            return this;
+        }
+
+        /**
+         * Webhooks.
+         */
+        public Builder webhooks(String webhooks) {
+            this.putBodyParameter("Webhooks", webhooks);
+            this.webhooks = webhooks;
             return this;
         }
 

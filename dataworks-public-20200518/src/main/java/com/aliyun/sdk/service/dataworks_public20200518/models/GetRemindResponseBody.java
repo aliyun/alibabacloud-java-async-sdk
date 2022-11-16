@@ -534,6 +534,9 @@ public class GetRemindResponseBody extends TeaModel {
         @NameInMap("Useflag")
         private Boolean useflag;
 
+        @NameInMap("Webhooks")
+        private java.util.List < String > webhooks;
+
         private Data(Builder builder) {
             this.alertInterval = builder.alertInterval;
             this.alertMethods = builder.alertMethods;
@@ -554,6 +557,7 @@ public class GetRemindResponseBody extends TeaModel {
             this.remindUnit = builder.remindUnit;
             this.robots = builder.robots;
             this.useflag = builder.useflag;
+            this.webhooks = builder.webhooks;
         }
 
         public static Builder builder() {
@@ -697,6 +701,13 @@ public class GetRemindResponseBody extends TeaModel {
             return this.useflag;
         }
 
+        /**
+         * @return webhooks
+         */
+        public java.util.List < String > getWebhooks() {
+            return this.webhooks;
+        }
+
         public static final class Builder {
             private Integer alertInterval; 
             private java.util.List < String > alertMethods; 
@@ -717,6 +728,7 @@ public class GetRemindResponseBody extends TeaModel {
             private String remindUnit; 
             private java.util.List < Robots> robots; 
             private Boolean useflag; 
+            private java.util.List < String > webhooks; 
 
             /**
              * AlertInterval.
@@ -867,6 +879,14 @@ public class GetRemindResponseBody extends TeaModel {
              */
             public Builder useflag(Boolean useflag) {
                 this.useflag = useflag;
+                return this;
+            }
+
+            /**
+             * Webhooks.
+             */
+            public Builder webhooks(java.util.List < String > webhooks) {
+                this.webhooks = webhooks;
                 return this;
             }
 
