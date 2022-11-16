@@ -246,6 +246,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<EnableInstanceAccessControlResponse> enableInstanceAccessControl(EnableInstanceAccessControlRequest request);
 
+    CompletableFuture<ImportOASResponse> importOAS(ImportOASRequest request);
+
     CompletableFuture<ImportSwaggerResponse> importSwagger(ImportSwaggerRequest request);
 
     CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
