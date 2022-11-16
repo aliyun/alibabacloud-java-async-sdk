@@ -96,6 +96,9 @@ public class GetUserResponseBody extends TeaModel {
         @NameInMap("LockExpireTime")
         private Long lockExpireTime;
 
+        @NameInMap("PasswordExpireTime")
+        private Long passwordExpireTime;
+
         @NameInMap("PhoneNumber")
         private String phoneNumber;
 
@@ -141,6 +144,7 @@ public class GetUserResponseBody extends TeaModel {
             this.emailVerified = builder.emailVerified;
             this.instanceId = builder.instanceId;
             this.lockExpireTime = builder.lockExpireTime;
+            this.passwordExpireTime = builder.passwordExpireTime;
             this.phoneNumber = builder.phoneNumber;
             this.phoneNumberVerified = builder.phoneNumberVerified;
             this.phoneRegion = builder.phoneRegion;
@@ -217,6 +221,13 @@ public class GetUserResponseBody extends TeaModel {
          */
         public Long getLockExpireTime() {
             return this.lockExpireTime;
+        }
+
+        /**
+         * @return passwordExpireTime
+         */
+        public Long getPasswordExpireTime() {
+            return this.passwordExpireTime;
         }
 
         /**
@@ -312,6 +323,7 @@ public class GetUserResponseBody extends TeaModel {
             private Boolean emailVerified; 
             private String instanceId; 
             private Long lockExpireTime; 
+            private Long passwordExpireTime; 
             private String phoneNumber; 
             private Boolean phoneNumberVerified; 
             private String phoneRegion; 
@@ -386,6 +398,14 @@ public class GetUserResponseBody extends TeaModel {
              */
             public Builder lockExpireTime(Long lockExpireTime) {
                 this.lockExpireTime = lockExpireTime;
+                return this;
+            }
+
+            /**
+             * PasswordExpireTime.
+             */
+            public Builder passwordExpireTime(Long passwordExpireTime) {
+                this.passwordExpireTime = passwordExpireTime;
                 return this;
             }
 

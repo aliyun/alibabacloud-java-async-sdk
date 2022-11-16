@@ -84,6 +84,9 @@ public class GetApplicationResponseBody extends TeaModel {
         @NameInMap("ApplicationSourceType")
         private String applicationSourceType;
 
+        @NameInMap("ApplicationTemplateId")
+        private String applicationTemplateId;
+
         @NameInMap("AuthorizationType")
         private String authorizationType;
 
@@ -125,6 +128,7 @@ public class GetApplicationResponseBody extends TeaModel {
             this.applicationId = builder.applicationId;
             this.applicationName = builder.applicationName;
             this.applicationSourceType = builder.applicationSourceType;
+            this.applicationTemplateId = builder.applicationTemplateId;
             this.authorizationType = builder.authorizationType;
             this.clientId = builder.clientId;
             this.createTime = builder.createTime;
@@ -173,6 +177,13 @@ public class GetApplicationResponseBody extends TeaModel {
          */
         public String getApplicationSourceType() {
             return this.applicationSourceType;
+        }
+
+        /**
+         * @return applicationTemplateId
+         */
+        public String getApplicationTemplateId() {
+            return this.applicationTemplateId;
         }
 
         /**
@@ -264,6 +275,7 @@ public class GetApplicationResponseBody extends TeaModel {
             private String applicationId; 
             private String applicationName; 
             private String applicationSourceType; 
+            private String applicationTemplateId; 
             private String authorizationType; 
             private String clientId; 
             private Long createTime; 
@@ -306,6 +318,14 @@ public class GetApplicationResponseBody extends TeaModel {
              */
             public Builder applicationSourceType(String applicationSourceType) {
                 this.applicationSourceType = applicationSourceType;
+                return this;
+            }
+
+            /**
+             * 创建来源应用模板id。当且仅当创建来源为应用模板时才返回。
+             */
+            public Builder applicationTemplateId(String applicationTemplateId) {
+                this.applicationTemplateId = applicationTemplateId;
                 return this;
             }
 
