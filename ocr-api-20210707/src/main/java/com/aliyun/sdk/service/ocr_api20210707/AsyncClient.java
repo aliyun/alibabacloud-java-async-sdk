@@ -3,6 +3,8 @@ package com.aliyun.sdk.service.ocr_api20210707;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.ocr_api20210707.models.*;
+import com.aliyun.sdk.gateway.pop.Configuration;
+import com.aliyun.sdk.gateway.pop.auth.SignatureVersion;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -11,7 +13,7 @@ import java.util.concurrent.CompletableFuture;
 public interface AsyncClient extends SdkAutoCloseable {
 
     static DefaultAsyncClientBuilder builder() {
-        return new DefaultAsyncClientBuilder();
+        return new DefaultAsyncClientBuilder().serviceConfiguration(Configuration.create().setSignatureVersion(SignatureVersion.V3));
     }
 
     static AsyncClient create() {
@@ -91,6 +93,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RecognizeHouseholdResponse> recognizeHousehold(RecognizeHouseholdRequest request);
 
     CompletableFuture<RecognizeIdcardResponse> recognizeIdcard(RecognizeIdcardRequest request);
+
+    CompletableFuture<RecognizeInternationalBusinessLicenseResponse> recognizeInternationalBusinessLicense(RecognizeInternationalBusinessLicenseRequest request);
 
     CompletableFuture<RecognizeInternationalIdcardResponse> recognizeInternationalIdcard(RecognizeInternationalIdcardRequest request);
 

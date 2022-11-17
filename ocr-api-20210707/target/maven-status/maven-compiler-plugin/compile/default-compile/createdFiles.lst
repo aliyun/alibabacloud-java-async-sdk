@@ -22,6 +22,7 @@ com/aliyun/sdk/service/ocr_api20210707/models/RecognizeHotelConsumeRequest.class
 com/aliyun/sdk/service/ocr_api20210707/models/RecognizeVehicleLicenseResponseBody$1.class
 com/aliyun/sdk/service/ocr_api20210707/models/RecognizeRideHailingItineraryRequest.class
 com/aliyun/sdk/service/ocr_api20210707/models/RecognizeAdvancedRequest$Builder.class
+com/aliyun/sdk/service/ocr_api20210707/models/RecognizeInternationalBusinessLicenseResponseBody.class
 com/aliyun/sdk/service/ocr_api20210707/models/RecognizeBusinessLicenseRequest$1.class
 com/aliyun/sdk/service/ocr_api20210707/models/RecognizeBirthCertificationResponseBody$Builder.class
 com/aliyun/sdk/service/ocr_api20210707/models/RecognizeHealthCodeRequest$1.class
@@ -160,7 +161,9 @@ com/aliyun/sdk/service/ocr_api20210707/models/RecognizeUsedCarInvoiceResponse.cl
 com/aliyun/sdk/service/ocr_api20210707/models/RecognizeEnglishResponse$BuilderImpl.class
 com/aliyun/sdk/service/ocr_api20210707/models/RecognizeMixedInvoicesResponseBody$Builder.class
 com/aliyun/sdk/service/ocr_api20210707/models/RecognizeEduPaperOcrRequest$Builder.class
+com/aliyun/sdk/service/ocr_api20210707/models/RecognizeInternationalBusinessLicenseResponse$Builder.class
 com/aliyun/sdk/service/ocr_api20210707/models/RecognizeSocialSecurityCardVersionIIResponseBody$1.class
+com/aliyun/sdk/service/ocr_api20210707/models/RecognizeInternationalBusinessLicenseResponse.class
 com/aliyun/sdk/service/ocr_api20210707/models/RecognizeTrainInvoiceResponseBody.class
 com/aliyun/sdk/service/ocr_api20210707/models/RecognizePaymentRecordRequest$Builder.class
 com/aliyun/sdk/service/ocr_api20210707/models/RecognizeAirItineraryRequest$1.class
@@ -206,6 +209,7 @@ com/aliyun/sdk/service/ocr_api20210707/models/RecognizeJanpaneseResponse.class
 com/aliyun/sdk/service/ocr_api20210707/models/RecognizeTravelCardResponse$1.class
 com/aliyun/sdk/service/ocr_api20210707/models/RecognizeHealthCodeResponse$1.class
 com/aliyun/sdk/service/ocr_api20210707/models/RecognizeWaybillResponseBody.class
+com/aliyun/sdk/service/ocr_api20210707/models/RecognizeInternationalBusinessLicenseRequest$Builder.class
 com/aliyun/sdk/service/ocr_api20210707/models/RecognizeExitEntryPermitToHKResponseBody$Builder.class
 com/aliyun/sdk/service/ocr_api20210707/models/RecognizeDocumentStructureResponse$BuilderImpl.class
 com/aliyun/sdk/service/ocr_api20210707/models/RecognizeThaiRequest$Builder.class
@@ -240,6 +244,7 @@ com/aliyun/sdk/service/ocr_api20210707/models/RecognizeHotelConsumeResponse$1.cl
 com/aliyun/sdk/service/ocr_api20210707/models/RecognizeDrivingLicenseRequest$Builder.class
 com/aliyun/sdk/service/ocr_api20210707/models/RecognizeInvoiceRequest.class
 com/aliyun/sdk/service/ocr_api20210707/models/RecognizePaymentRecordResponse$BuilderImpl.class
+com/aliyun/sdk/service/ocr_api20210707/models/RecognizeInternationalBusinessLicenseRequest.class
 com/aliyun/sdk/service/ocr_api20210707/models/RecognizeRussianResponse$Builder.class
 com/aliyun/sdk/service/ocr_api20210707/models/RecognizePaymentRecordRequest$1.class
 com/aliyun/sdk/service/ocr_api20210707/models/RecognizeBankAccountLicenseResponseBody.class
@@ -283,6 +288,7 @@ com/aliyun/sdk/service/ocr_api20210707/models/RecognizeJanpaneseResponseBody$1.c
 com/aliyun/sdk/service/ocr_api20210707/models/RecognizeVehicleCertificationRequest$Builder.class
 com/aliyun/sdk/service/ocr_api20210707/models/RecognizeEduPaperStructedResponseBody$Builder.class
 com/aliyun/sdk/service/ocr_api20210707/models/RecognizeVehicleCertificationResponseBody.class
+com/aliyun/sdk/service/ocr_api20210707/models/RecognizeInternationalBusinessLicenseResponseBody$1.class
 com/aliyun/sdk/service/ocr_api20210707/models/RecognizeHealthCodeRequest$Builder.class
 com/aliyun/sdk/service/ocr_api20210707/models/RecognizeChinesePassportResponse$BuilderImpl.class
 com/aliyun/sdk/service/ocr_api20210707/models/RecognizeInternationalIdcardRequest$Builder.class
@@ -363,6 +369,7 @@ com/aliyun/sdk/service/ocr_api20210707/models/RecognizeMedicalDeviceProduceLicen
 com/aliyun/sdk/service/ocr_api20210707/models/RecognizeTollInvoiceRequest$1.class
 com/aliyun/sdk/service/ocr_api20210707/models/RecognizeTollInvoiceResponse$BuilderImpl.class
 com/aliyun/sdk/service/ocr_api20210707/models/RecognizeMedicalDeviceManageLicenseRequest.class
+com/aliyun/sdk/service/ocr_api20210707/models/RecognizeInternationalBusinessLicenseResponse$1.class
 com/aliyun/sdk/service/ocr_api20210707/models/RecognizePassportRequest.class
 com/aliyun/sdk/service/ocr_api20210707/models/RecognizeCarNumberResponse$1.class
 com/aliyun/sdk/service/ocr_api20210707/models/RecognizeCosmeticProduceLicenseRequest$1.class
@@ -396,6 +403,7 @@ com/aliyun/sdk/service/ocr_api20210707/models/RecognizeMedicalDeviceManageLicens
 com/aliyun/sdk/service/ocr_api20210707/models/RecognizeBirthCertificationResponse$1.class
 com/aliyun/sdk/service/ocr_api20210707/models/RecognizeEduPaperStructedResponse$1.class
 com/aliyun/sdk/service/ocr_api20210707/models/RecognizeTradeMarkCertificationResponseBody.class
+com/aliyun/sdk/service/ocr_api20210707/models/RecognizeInternationalBusinessLicenseResponseBody$Builder.class
 com/aliyun/sdk/service/ocr_api20210707/models/RecognizeShoppingReceiptRequest.class
 com/aliyun/sdk/service/ocr_api20210707/models/RecognizeExitEntryPermitToHKResponse.class
 com/aliyun/sdk/service/ocr_api20210707/models/RecognizeEduFormulaResponseBody$1.class
@@ -462,6 +470,7 @@ com/aliyun/sdk/service/ocr_api20210707/models/RecognizeTrainInvoiceRequest$Build
 com/aliyun/sdk/service/ocr_api20210707/models/RecognizeCosmeticProduceLicenseRequest$Builder.class
 com/aliyun/sdk/service/ocr_api20210707/models/RecognizeVehicleLicenseRequest$Builder.class
 com/aliyun/sdk/service/ocr_api20210707/models/RecognizeVehicleRegistrationResponse$1.class
+com/aliyun/sdk/service/ocr_api20210707/models/RecognizeInternationalBusinessLicenseResponse$BuilderImpl.class
 com/aliyun/sdk/service/ocr_api20210707/models/RecognizeBusShipTicketRequest.class
 com/aliyun/sdk/service/ocr_api20210707/models/RecognizeMixedInvoicesRequest$Builder.class
 com/aliyun/sdk/service/ocr_api20210707/models/RecognizeShoppingReceiptResponse$BuilderImpl.class
@@ -598,6 +607,7 @@ com/aliyun/sdk/service/ocr_api20210707/models/RecognizeEduQuestionOcrResponseBod
 com/aliyun/sdk/service/ocr_api20210707/models/RecognizeRideHailingItineraryResponse$Builder.class
 com/aliyun/sdk/service/ocr_api20210707/models/RecognizeHouseholdResponse.class
 com/aliyun/sdk/service/ocr_api20210707/models/RecognizeEduPaperOcrResponseBody$1.class
+com/aliyun/sdk/service/ocr_api20210707/models/RecognizeInternationalBusinessLicenseRequest$1.class
 com/aliyun/sdk/service/ocr_api20210707/models/RecognizeTradeMarkCertificationRequest$Builder.class
 com/aliyun/sdk/service/ocr_api20210707/models/RecognizeCarInvoiceRequest$Builder.class
 com/aliyun/sdk/service/ocr_api20210707/models/RecognizeBankAccountLicenseResponse$BuilderImpl.class

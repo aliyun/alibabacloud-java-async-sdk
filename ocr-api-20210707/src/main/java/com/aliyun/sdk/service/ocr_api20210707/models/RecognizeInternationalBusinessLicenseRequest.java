@@ -7,22 +7,27 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link RecognizeVehicleLicenseRequest} extends {@link RequestModel}
+ * {@link RecognizeInternationalBusinessLicenseRequest} extends {@link RequestModel}
  *
- * <p>RecognizeVehicleLicenseRequest</p>
+ * <p>RecognizeInternationalBusinessLicenseRequest</p>
  */
-public class RecognizeVehicleLicenseRequest extends Request {
+public class RecognizeInternationalBusinessLicenseRequest extends Request {
+    @Query
+    @NameInMap("Country")
+    @Validation(required = true)
+    private String country;
+
     @Query
     @NameInMap("Url")
-    @Validation(maxLength = 2048)
     private String url;
 
     @Body
     @NameInMap("body")
     private java.io.InputStream body;
 
-    private RecognizeVehicleLicenseRequest(Builder builder) {
+    private RecognizeInternationalBusinessLicenseRequest(Builder builder) {
         super(builder);
+        this.country = builder.country;
         this.url = builder.url;
         this.body = builder.body;
     }
@@ -31,13 +36,20 @@ public class RecognizeVehicleLicenseRequest extends Request {
         return new Builder();
     }
 
-    public static RecognizeVehicleLicenseRequest create() {
+    public static RecognizeInternationalBusinessLicenseRequest create() {
         return builder().build();
     }
 
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return country
+     */
+    public String getCountry() {
+        return this.country;
     }
 
     /**
@@ -54,7 +66,8 @@ public class RecognizeVehicleLicenseRequest extends Request {
         return this.body;
     }
 
-    public static final class Builder extends Request.Builder<RecognizeVehicleLicenseRequest, Builder> {
+    public static final class Builder extends Request.Builder<RecognizeInternationalBusinessLicenseRequest, Builder> {
+        private String country; 
         private String url; 
         private java.io.InputStream body; 
 
@@ -62,11 +75,21 @@ public class RecognizeVehicleLicenseRequest extends Request {
             super();
         } 
 
-        private Builder(RecognizeVehicleLicenseRequest request) {
+        private Builder(RecognizeInternationalBusinessLicenseRequest request) {
             super(request);
+            this.country = request.country;
             this.url = request.url;
             this.body = request.body;
         } 
+
+        /**
+         * 国家名称
+         */
+        public Builder country(String country) {
+            this.putQueryParameter("Country", country);
+            this.country = country;
+            return this;
+        }
 
         /**
          * 图片链接（长度不超 2048，不支持 base64）
@@ -87,8 +110,8 @@ public class RecognizeVehicleLicenseRequest extends Request {
         }
 
         @Override
-        public RecognizeVehicleLicenseRequest build() {
-            return new RecognizeVehicleLicenseRequest(this);
+        public RecognizeInternationalBusinessLicenseRequest build() {
+            return new RecognizeInternationalBusinessLicenseRequest(this);
         } 
 
     } 
