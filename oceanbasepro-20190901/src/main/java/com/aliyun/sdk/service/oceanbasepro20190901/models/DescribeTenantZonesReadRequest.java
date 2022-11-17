@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeTenantZonesReadRequest</p>
  */
 public class DescribeTenantZonesReadRequest extends Request {
-    @Body
-    @NameInMap("InstanceId")
-    @Validation(required = true)
-    private String instanceId;
-
     @Host
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
+
+    @Body
+    @NameInMap("InstanceId")
+    @Validation(required = true)
+    private String instanceId;
 
     @Body
     @NameInMap("TenantId")
@@ -29,8 +29,8 @@ public class DescribeTenantZonesReadRequest extends Request {
 
     private DescribeTenantZonesReadRequest(Builder builder) {
         super(builder);
-        this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
+        this.instanceId = builder.instanceId;
         this.tenantId = builder.tenantId;
     }
 
@@ -48,17 +48,17 @@ public class DescribeTenantZonesReadRequest extends Request {
     }
 
     /**
-     * @return instanceId
-     */
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     /**
@@ -69,29 +69,20 @@ public class DescribeTenantZonesReadRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeTenantZonesReadRequest, Builder> {
-        private String instanceId; 
         private String regionId; 
+        private String instanceId; 
         private String tenantId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeTenantZonesReadRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
-            this.tenantId = response.tenantId;
+        private Builder(DescribeTenantZonesReadRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.instanceId = request.instanceId;
+            this.tenantId = request.tenantId;
         } 
-
-        /**
-         * Oceanbase集群ID。
-         */
-        public Builder instanceId(String instanceId) {
-            this.putBodyParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
 
         /**
          * 地域ID。
@@ -99,6 +90,15 @@ public class DescribeTenantZonesReadRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * Oceanbase集群ID。
+         */
+        public Builder instanceId(String instanceId) {
+            this.putBodyParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
             return this;
         }
 

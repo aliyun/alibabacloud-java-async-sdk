@@ -84,9 +84,6 @@ public class DescribeSQLPlansResponseBody extends TeaModel {
         @NameInMap("FirstLoadTimeUTCString")
         private String firstLoadTimeUTCString;
 
-        @NameInMap("ForcedOutlineId")
-        private Long forcedOutlineId;
-
         @NameInMap("HitCount")
         private Integer hitCount;
 
@@ -128,7 +125,6 @@ public class DescribeSQLPlansResponseBody extends TeaModel {
             this.avgExecutionTimeMS = builder.avgExecutionTimeMS;
             this.firstLoadTime = builder.firstLoadTime;
             this.firstLoadTimeUTCString = builder.firstLoadTimeUTCString;
-            this.forcedOutlineId = builder.forcedOutlineId;
             this.hitCount = builder.hitCount;
             this.mergedVersion = builder.mergedVersion;
             this.nodeIp = builder.nodeIp;
@@ -177,13 +173,6 @@ public class DescribeSQLPlansResponseBody extends TeaModel {
          */
         public String getFirstLoadTimeUTCString() {
             return this.firstLoadTimeUTCString;
-        }
-
-        /**
-         * @return forcedOutlineId
-         */
-        public Long getForcedOutlineId() {
-            return this.forcedOutlineId;
         }
 
         /**
@@ -275,7 +264,6 @@ public class DescribeSQLPlansResponseBody extends TeaModel {
             private Long avgExecutionTimeMS; 
             private Long firstLoadTime; 
             private String firstLoadTimeUTCString; 
-            private Long forcedOutlineId; 
             private Integer hitCount; 
             private Integer mergedVersion; 
             private String nodeIp; 
@@ -298,7 +286,7 @@ public class DescribeSQLPlansResponseBody extends TeaModel {
             }
 
             /**
-             * AvgExecutionTimeMS.
+             * 平均执行时间
              */
             public Builder avgExecutionTimeMS(Long avgExecutionTimeMS) {
                 this.avgExecutionTimeMS = avgExecutionTimeMS;
@@ -318,14 +306,6 @@ public class DescribeSQLPlansResponseBody extends TeaModel {
              */
             public Builder firstLoadTimeUTCString(String firstLoadTimeUTCString) {
                 this.firstLoadTimeUTCString = firstLoadTimeUTCString;
-                return this;
-            }
-
-            /**
-             * ForcedOutlineId.
-             */
-            public Builder forcedOutlineId(Long forcedOutlineId) {
-                this.forcedOutlineId = forcedOutlineId;
                 return this;
             }
 

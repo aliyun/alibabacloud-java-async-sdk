@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateInstanceRequest</p>
  */
 public class CreateInstanceRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Body
     @NameInMap("AutoRenew")
     private Boolean autoRenew;
@@ -27,13 +32,24 @@ public class CreateInstanceRequest extends Request {
 
     @Body
     @NameInMap("DiskSize")
-    @Validation(required = true)
     private Long diskSize;
+
+    @Body
+    @NameInMap("DiskType")
+    private String diskType;
 
     @Body
     @NameInMap("InstanceClass")
     @Validation(required = true)
     private String instanceClass;
+
+    @Body
+    @NameInMap("InstanceName")
+    private String instanceName;
+
+    @Body
+    @NameInMap("ObVersion")
+    private String obVersion;
 
     @Body
     @NameInMap("Period")
@@ -42,11 +58,6 @@ public class CreateInstanceRequest extends Request {
     @Body
     @NameInMap("PeriodUnit")
     private String periodUnit;
-
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
 
     @Body
     @NameInMap("ResourceGroupId")
@@ -64,14 +75,17 @@ public class CreateInstanceRequest extends Request {
 
     private CreateInstanceRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.autoRenew = builder.autoRenew;
         this.autoRenewPeriod = builder.autoRenewPeriod;
         this.chargeType = builder.chargeType;
         this.diskSize = builder.diskSize;
+        this.diskType = builder.diskType;
         this.instanceClass = builder.instanceClass;
+        this.instanceName = builder.instanceName;
+        this.obVersion = builder.obVersion;
         this.period = builder.period;
         this.periodUnit = builder.periodUnit;
-        this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.series = builder.series;
         this.zones = builder.zones;
@@ -88,6 +102,13 @@ public class CreateInstanceRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -119,10 +140,31 @@ public class CreateInstanceRequest extends Request {
     }
 
     /**
+     * @return diskType
+     */
+    public String getDiskType() {
+        return this.diskType;
+    }
+
+    /**
      * @return instanceClass
      */
     public String getInstanceClass() {
         return this.instanceClass;
+    }
+
+    /**
+     * @return instanceName
+     */
+    public String getInstanceName() {
+        return this.instanceName;
+    }
+
+    /**
+     * @return obVersion
+     */
+    public String getObVersion() {
+        return this.obVersion;
     }
 
     /**
@@ -137,13 +179,6 @@ public class CreateInstanceRequest extends Request {
      */
     public String getPeriodUnit() {
         return this.periodUnit;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -168,14 +203,17 @@ public class CreateInstanceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateInstanceRequest, Builder> {
+        private String regionId; 
         private Boolean autoRenew; 
         private Long autoRenewPeriod; 
         private String chargeType; 
         private Long diskSize; 
+        private String diskType; 
         private String instanceClass; 
+        private String instanceName; 
+        private String obVersion; 
         private Long period; 
         private String periodUnit; 
-        private String regionId; 
         private String resourceGroupId; 
         private String series; 
         private String zones; 
@@ -184,20 +222,32 @@ public class CreateInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(CreateInstanceRequest response) {
-            super(response);
-            this.autoRenew = response.autoRenew;
-            this.autoRenewPeriod = response.autoRenewPeriod;
-            this.chargeType = response.chargeType;
-            this.diskSize = response.diskSize;
-            this.instanceClass = response.instanceClass;
-            this.period = response.period;
-            this.periodUnit = response.periodUnit;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.series = response.series;
-            this.zones = response.zones;
+        private Builder(CreateInstanceRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.autoRenew = request.autoRenew;
+            this.autoRenewPeriod = request.autoRenewPeriod;
+            this.chargeType = request.chargeType;
+            this.diskSize = request.diskSize;
+            this.diskType = request.diskType;
+            this.instanceClass = request.instanceClass;
+            this.instanceName = request.instanceName;
+            this.obVersion = request.obVersion;
+            this.period = request.period;
+            this.periodUnit = request.periodUnit;
+            this.resourceGroupId = request.resourceGroupId;
+            this.series = request.series;
+            this.zones = request.zones;
         } 
+
+        /**
+         * 实例所属的地域ID。您可以调用DescribeRegions查看最新的阿里云地域列表。
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * 是否要自动续费。当参数ChargeType取值PrePaid时生效。取值范围：  true：自动续费。 false（默认）：不自动续费。
@@ -227,11 +277,20 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * 存储空间大小，单位GB。  存储空间的限制根据集群规格不同而不同，具体如下：  - 8C32GB：100GB~10000GB  - 14C70GB：200GB~1000GB  - 30C180GB：400GB~10000GB  - 62C400G：800GB-10000GB。  各套餐的存储空间默认值为其最小值。
+         * 存储空间大小，单位GB。  存储空间的限制根据集群规格不同而不同，具体如下：  - 8C32GB：100GB~10000GB  - 14C70GB：200GB~10000GB  - 30C180GB：400GB~10000GB  - 62C400G：800GB-10000GB。  各套餐的存储空间默认值为其最小值。
          */
         public Builder diskSize(Long diskSize) {
             this.putBodyParameter("DiskSize", diskSize);
             this.diskSize = diskSize;
+            return this;
+        }
+
+        /**
+         * 集群的存储类型。仅在标准集群版（云盘）下生效。当前支持两种类型：- cloud_essd_pl1：云盘ESSD PL1; -- cloud_essd_pl1：云盘ESSD PL1; - cloud_essd_pl0：云盘ESSD PL0。默认值为cloud_essd_pl1。
+         */
+        public Builder diskType(String diskType) {
+            this.putBodyParameter("DiskType", diskType);
+            this.diskType = diskType;
             return this;
         }
 
@@ -241,6 +300,24 @@ public class CreateInstanceRequest extends Request {
         public Builder instanceClass(String instanceClass) {
             this.putBodyParameter("InstanceClass", instanceClass);
             this.instanceClass = instanceClass;
+            return this;
+        }
+
+        /**
+         * 集群名称。
+         */
+        public Builder instanceName(String instanceName) {
+            this.putBodyParameter("InstanceName", instanceName);
+            this.instanceName = instanceName;
+            return this;
+        }
+
+        /**
+         * Oceanbase Server的版本号。
+         */
+        public Builder obVersion(String obVersion) {
+            this.putBodyParameter("ObVersion", obVersion);
+            this.obVersion = obVersion;
             return this;
         }
 
@@ -263,15 +340,6 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * 实例所属的地域ID。您可以调用DescribeRegions查看最新的阿里云地域列表。
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
          * 实例所在的企业资源组ID
          */
         public Builder resourceGroupId(String resourceGroupId) {
@@ -281,7 +349,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * Oceanbase集群的系列  - normal（默认）：高可用版本  - basic：基础版本
+         * 实例的系列  - normal（默认）：标准集群版（云盘）  - normal_ssd：标准集群版（本地盘） - history：历史库集群版。
          */
         public Builder series(String series) {
             this.putBodyParameter("Series", series);

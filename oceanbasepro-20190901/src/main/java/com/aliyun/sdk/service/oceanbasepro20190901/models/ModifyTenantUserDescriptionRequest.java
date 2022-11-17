@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyTenantUserDescriptionRequest</p>
  */
 public class ModifyTenantUserDescriptionRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Body
     @NameInMap("Description")
     @Validation(required = true)
@@ -21,10 +25,6 @@ public class ModifyTenantUserDescriptionRequest extends Request {
     @NameInMap("InstanceId")
     @Validation(required = true)
     private String instanceId;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Body
     @NameInMap("TenantId")
@@ -38,9 +38,9 @@ public class ModifyTenantUserDescriptionRequest extends Request {
 
     private ModifyTenantUserDescriptionRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.description = builder.description;
         this.instanceId = builder.instanceId;
-        this.regionId = builder.regionId;
         this.tenantId = builder.tenantId;
         this.userName = builder.userName;
     }
@@ -59,6 +59,13 @@ public class ModifyTenantUserDescriptionRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return description
      */
     public String getDescription() {
@@ -70,13 +77,6 @@ public class ModifyTenantUserDescriptionRequest extends Request {
      */
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -94,9 +94,9 @@ public class ModifyTenantUserDescriptionRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyTenantUserDescriptionRequest, Builder> {
+        private String regionId; 
         private String description; 
         private String instanceId; 
-        private String regionId; 
         private String tenantId; 
         private String userName; 
 
@@ -104,14 +104,23 @@ public class ModifyTenantUserDescriptionRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyTenantUserDescriptionRequest response) {
-            super(response);
-            this.description = response.description;
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
-            this.tenantId = response.tenantId;
-            this.userName = response.userName;
+        private Builder(ModifyTenantUserDescriptionRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.description = request.description;
+            this.instanceId = request.instanceId;
+            this.tenantId = request.tenantId;
+            this.userName = request.userName;
         } 
+
+        /**
+         * 地域ID。
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * 数据库描述信息。
@@ -128,15 +137,6 @@ public class ModifyTenantUserDescriptionRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * 地域ID。
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

@@ -118,7 +118,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * TableName.
+             * 数据库表名
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -214,6 +214,9 @@ public class DescribeDatabasesResponseBody extends TeaModel {
 
     }
     public static class Databases extends TeaModel {
+        @NameInMap("Collation")
+        private String collation;
+
         @NameInMap("CreateTime")
         private String createTime;
 
@@ -248,6 +251,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         private java.util.List < Users> users;
 
         private Databases(Builder builder) {
+            this.collation = builder.collation;
             this.createTime = builder.createTime;
             this.dataSize = builder.dataSize;
             this.databaseName = builder.databaseName;
@@ -267,6 +271,13 @@ public class DescribeDatabasesResponseBody extends TeaModel {
 
         public static Databases create() {
             return builder().build();
+        }
+
+        /**
+         * @return collation
+         */
+        public String getCollation() {
+            return this.collation;
         }
 
         /**
@@ -347,6 +358,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String collation; 
             private String createTime; 
             private Double dataSize; 
             private String databaseName; 
@@ -360,7 +372,15 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             private java.util.List < Users> users; 
 
             /**
-             * CreateTime.
+             * 字符序
+             */
+            public Builder collation(String collation) {
+                this.collation = collation;
+                return this;
+            }
+
+            /**
+             * 创建时间
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -368,7 +388,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * 实际数据大小
+             * 实际数据大小单位（GB）
              */
             public Builder dataSize(Double dataSize) {
                 this.dataSize = dataSize;
@@ -384,7 +404,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * DbType.
+             * 数据库类型
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -408,7 +428,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * 所需容量
+             * 所需容量 单位（GB）
              */
             public Builder requiredSize(Double requiredSize) {
                 this.requiredSize = requiredSize;
@@ -424,7 +444,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * Tables.
+             * 数据库表信息
              */
             public Builder tables(java.util.List < Tables> tables) {
                 this.tables = tables;

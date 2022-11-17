@@ -12,20 +12,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceTopologyRequest</p>
  */
 public class DescribeInstanceTopologyRequest extends Request {
-    @Body
-    @NameInMap("InstanceId")
-    @Validation(required = true)
-    private String instanceId;
-
     @Host
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
 
+    @Body
+    @NameInMap("InstanceId")
+    @Validation(required = true)
+    private String instanceId;
+
     private DescribeInstanceTopologyRequest(Builder builder) {
         super(builder);
-        this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
+        this.instanceId = builder.instanceId;
     }
 
     public static Builder builder() {
@@ -42,41 +42,32 @@ public class DescribeInstanceTopologyRequest extends Request {
     }
 
     /**
-     * @return instanceId
-     */
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
     }
 
+    /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
     public static final class Builder extends Request.Builder<DescribeInstanceTopologyRequest, Builder> {
-        private String instanceId; 
         private String regionId; 
+        private String instanceId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeInstanceTopologyRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
+        private Builder(DescribeInstanceTopologyRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.instanceId = request.instanceId;
         } 
-
-        /**
-         * Oceanbase集群ID。
-         */
-        public Builder instanceId(String instanceId) {
-            this.putBodyParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
 
         /**
          * 地域ID。
@@ -84,6 +75,15 @@ public class DescribeInstanceTopologyRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * Oceanbase集群ID。
+         */
+        public Builder instanceId(String instanceId) {
+            this.putBodyParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
             return this;
         }
 

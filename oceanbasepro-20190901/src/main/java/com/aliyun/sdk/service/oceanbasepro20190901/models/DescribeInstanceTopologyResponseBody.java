@@ -87,6 +87,9 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         @NameInMap("UnitCpu")
         private Float unitCpu;
 
+        @NameInMap("UnitDataSize")
+        private Long unitDataSize;
+
         @NameInMap("UnitId")
         private String unitId;
 
@@ -102,6 +105,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             this.manualMigrate = builder.manualMigrate;
             this.nodeId = builder.nodeId;
             this.unitCpu = builder.unitCpu;
+            this.unitDataSize = builder.unitDataSize;
             this.unitId = builder.unitId;
             this.unitMemory = builder.unitMemory;
             this.unitStatus = builder.unitStatus;
@@ -151,6 +155,13 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         }
 
         /**
+         * @return unitDataSize
+         */
+        public Long getUnitDataSize() {
+            return this.unitDataSize;
+        }
+
+        /**
          * @return unitId
          */
         public String getUnitId() {
@@ -177,6 +188,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             private Boolean manualMigrate; 
             private String nodeId; 
             private Float unitCpu; 
+            private Long unitDataSize; 
             private String unitId; 
             private Float unitMemory; 
             private String unitStatus; 
@@ -218,6 +230,14 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
              */
             public Builder unitCpu(Float unitCpu) {
                 this.unitCpu = unitCpu;
+                return this;
+            }
+
+            /**
+             * Unit使用的数据量大小。
+             */
+            public Builder unitDataSize(Long unitDataSize) {
+                this.unitDataSize = unitDataSize;
                 return this;
             }
 
@@ -354,6 +374,9 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
 
     }
     public static class Tenants extends TeaModel {
+        @NameInMap("PrimaryZoneDeployType")
+        private String primaryZoneDeployType;
+
         @NameInMap("TenantCpu")
         private Float tenantCpu;
 
@@ -382,6 +405,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         private java.util.List < TenantZones> tenantZones;
 
         private Tenants(Builder builder) {
+            this.primaryZoneDeployType = builder.primaryZoneDeployType;
             this.tenantCpu = builder.tenantCpu;
             this.tenantDeployType = builder.tenantDeployType;
             this.tenantId = builder.tenantId;
@@ -399,6 +423,13 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
 
         public static Tenants create() {
             return builder().build();
+        }
+
+        /**
+         * @return primaryZoneDeployType
+         */
+        public String getPrimaryZoneDeployType() {
+            return this.primaryZoneDeployType;
         }
 
         /**
@@ -465,6 +496,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String primaryZoneDeployType; 
             private Float tenantCpu; 
             private String tenantDeployType; 
             private String tenantId; 
@@ -474,6 +506,14 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             private String tenantStatus; 
             private Integer tenantUnitNum; 
             private java.util.List < TenantZones> tenantZones; 
+
+            /**
+             * 主可用区部署模式
+             */
+            public Builder primaryZoneDeployType(String primaryZoneDeployType) {
+                this.primaryZoneDeployType = primaryZoneDeployType;
+                return this;
+            }
 
             /**
              * 租户CPU，单位：核。
@@ -617,10 +657,10 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
     }
     public static class DiskSize extends TeaModel {
         @NameInMap("TotalDiskSize")
-        private Long totalDiskSize;
+        private Double totalDiskSize;
 
         @NameInMap("UsedDiskSize")
-        private Long usedDiskSize;
+        private Double usedDiskSize;
 
         private DiskSize(Builder builder) {
             this.totalDiskSize = builder.totalDiskSize;
@@ -638,25 +678,25 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         /**
          * @return totalDiskSize
          */
-        public Long getTotalDiskSize() {
+        public Double getTotalDiskSize() {
             return this.totalDiskSize;
         }
 
         /**
          * @return usedDiskSize
          */
-        public Long getUsedDiskSize() {
+        public Double getUsedDiskSize() {
             return this.usedDiskSize;
         }
 
         public static final class Builder {
-            private Long totalDiskSize; 
-            private Long usedDiskSize; 
+            private Double totalDiskSize; 
+            private Double usedDiskSize; 
 
             /**
              * 节点总存储空间，单位：GB。
              */
-            public Builder totalDiskSize(Long totalDiskSize) {
+            public Builder totalDiskSize(Double totalDiskSize) {
                 this.totalDiskSize = totalDiskSize;
                 return this;
             }
@@ -664,7 +704,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             /**
              * 节点已使用的存储空间，单位：GB。
              */
-            public Builder usedDiskSize(Long usedDiskSize) {
+            public Builder usedDiskSize(Double usedDiskSize) {
                 this.usedDiskSize = usedDiskSize;
                 return this;
             }
@@ -919,6 +959,108 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         } 
 
     }
+    public static class ZoneResourceDiskSize extends TeaModel {
+        @NameInMap("MaxDiskUsedObServer")
+        private java.util.List < String > maxDiskUsedObServer;
+
+        @NameInMap("MaxDiskUsedPercent")
+        private Double maxDiskUsedPercent;
+
+        private ZoneResourceDiskSize(Builder builder) {
+            this.maxDiskUsedObServer = builder.maxDiskUsedObServer;
+            this.maxDiskUsedPercent = builder.maxDiskUsedPercent;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ZoneResourceDiskSize create() {
+            return builder().build();
+        }
+
+        /**
+         * @return maxDiskUsedObServer
+         */
+        public java.util.List < String > getMaxDiskUsedObServer() {
+            return this.maxDiskUsedObServer;
+        }
+
+        /**
+         * @return maxDiskUsedPercent
+         */
+        public Double getMaxDiskUsedPercent() {
+            return this.maxDiskUsedPercent;
+        }
+
+        public static final class Builder {
+            private java.util.List < String > maxDiskUsedObServer; 
+            private Double maxDiskUsedPercent; 
+
+            /**
+             * MaxDiskUsedObServer.
+             */
+            public Builder maxDiskUsedObServer(java.util.List < String > maxDiskUsedObServer) {
+                this.maxDiskUsedObServer = maxDiskUsedObServer;
+                return this;
+            }
+
+            /**
+             * 最大磁盘使用量百分比
+             */
+            public Builder maxDiskUsedPercent(Double maxDiskUsedPercent) {
+                this.maxDiskUsedPercent = maxDiskUsedPercent;
+                return this;
+            }
+
+            public ZoneResourceDiskSize build() {
+                return new ZoneResourceDiskSize(this);
+            } 
+
+        } 
+
+    }
+    public static class ZoneResource extends TeaModel {
+        @NameInMap("DiskSize")
+        private ZoneResourceDiskSize diskSize;
+
+        private ZoneResource(Builder builder) {
+            this.diskSize = builder.diskSize;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ZoneResource create() {
+            return builder().build();
+        }
+
+        /**
+         * @return diskSize
+         */
+        public ZoneResourceDiskSize getDiskSize() {
+            return this.diskSize;
+        }
+
+        public static final class Builder {
+            private ZoneResourceDiskSize diskSize; 
+
+            /**
+             * 存储资源信息
+             */
+            public Builder diskSize(ZoneResourceDiskSize diskSize) {
+                this.diskSize = diskSize;
+                return this;
+            }
+
+            public ZoneResource build() {
+                return new ZoneResource(this);
+            } 
+
+        } 
+
+    }
     public static class Zones extends TeaModel {
         @NameInMap("Nodes")
         private java.util.List < Nodes> nodes;
@@ -932,11 +1074,15 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         @NameInMap("ZoneId")
         private String zoneId;
 
+        @NameInMap("ZoneResource")
+        private ZoneResource zoneResource;
+
         private Zones(Builder builder) {
             this.nodes = builder.nodes;
             this.region = builder.region;
             this.zoneDisk = builder.zoneDisk;
             this.zoneId = builder.zoneId;
+            this.zoneResource = builder.zoneResource;
         }
 
         public static Builder builder() {
@@ -975,11 +1121,19 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             return this.zoneId;
         }
 
+        /**
+         * @return zoneResource
+         */
+        public ZoneResource getZoneResource() {
+            return this.zoneResource;
+        }
+
         public static final class Builder {
             private java.util.List < Nodes> nodes; 
             private String region; 
             private String zoneDisk; 
             private String zoneId; 
+            private ZoneResource zoneResource; 
 
             /**
              * 节点信息。
@@ -1010,6 +1164,14 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
+                return this;
+            }
+
+            /**
+             * zone资源信息
+             */
+            public Builder zoneResource(ZoneResource zoneResource) {
+                this.zoneResource = zoneResource;
                 return this;
             }
 

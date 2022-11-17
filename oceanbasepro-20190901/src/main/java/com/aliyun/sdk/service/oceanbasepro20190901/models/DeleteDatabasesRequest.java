@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteDatabasesRequest</p>
  */
 public class DeleteDatabasesRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Body
     @NameInMap("DatabaseNames")
     @Validation(required = true)
@@ -21,10 +25,6 @@ public class DeleteDatabasesRequest extends Request {
     @NameInMap("InstanceId")
     private String instanceId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Body
     @NameInMap("TenantId")
     @Validation(required = true)
@@ -32,9 +32,9 @@ public class DeleteDatabasesRequest extends Request {
 
     private DeleteDatabasesRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.databaseNames = builder.databaseNames;
         this.instanceId = builder.instanceId;
-        this.regionId = builder.regionId;
         this.tenantId = builder.tenantId;
     }
 
@@ -52,6 +52,13 @@ public class DeleteDatabasesRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return databaseNames
      */
     public String getDatabaseNames() {
@@ -66,13 +73,6 @@ public class DeleteDatabasesRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return tenantId
      */
     public String getTenantId() {
@@ -80,22 +80,31 @@ public class DeleteDatabasesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteDatabasesRequest, Builder> {
+        private String regionId; 
         private String databaseNames; 
         private String instanceId; 
-        private String regionId; 
         private String tenantId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DeleteDatabasesRequest response) {
-            super(response);
-            this.databaseNames = response.databaseNames;
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
-            this.tenantId = response.tenantId;
+        private Builder(DeleteDatabasesRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.databaseNames = request.databaseNames;
+            this.instanceId = request.instanceId;
+            this.tenantId = request.tenantId;
         } 
+
+        /**
+         * 地域ID。
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * 数据库名称列表。 其为Json格式的数组，数组中每个对象都为数据库名称的字符串。
@@ -112,15 +121,6 @@ public class DeleteDatabasesRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * 地域ID。
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

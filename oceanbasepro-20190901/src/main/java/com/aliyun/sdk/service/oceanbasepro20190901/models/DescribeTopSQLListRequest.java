@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeTopSQLListRequest</p>
  */
 public class DescribeTopSQLListRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Body
     @NameInMap("DbName")
     private String dbName;
@@ -36,11 +41,6 @@ public class DescribeTopSQLListRequest extends Request {
     @Body
     @NameInMap("PageSize")
     private Integer pageSize;
-
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
 
     @Body
     @NameInMap("SQLId")
@@ -82,13 +82,13 @@ public class DescribeTopSQLListRequest extends Request {
 
     private DescribeTopSQLListRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.dbName = builder.dbName;
         this.endTime = builder.endTime;
         this.filterCondition = builder.filterCondition;
         this.nodeIp = builder.nodeIp;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
         this.SQLId = builder.SQLId;
         this.searchKeyWord = builder.searchKeyWord;
         this.searchParameter = builder.searchParameter;
@@ -111,6 +111,13 @@ public class DescribeTopSQLListRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -153,13 +160,6 @@ public class DescribeTopSQLListRequest extends Request {
      */
     public Integer getPageSize() {
         return this.pageSize;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -226,13 +226,13 @@ public class DescribeTopSQLListRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeTopSQLListRequest, Builder> {
+        private String regionId; 
         private String dbName; 
         private String endTime; 
         private java.util.Map < String, ? > filterCondition; 
         private String nodeIp; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private String regionId; 
         private String SQLId; 
         private String searchKeyWord; 
         private String searchParameter; 
@@ -247,25 +247,34 @@ public class DescribeTopSQLListRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeTopSQLListRequest response) {
-            super(response);
-            this.dbName = response.dbName;
-            this.endTime = response.endTime;
-            this.filterCondition = response.filterCondition;
-            this.nodeIp = response.nodeIp;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.SQLId = response.SQLId;
-            this.searchKeyWord = response.searchKeyWord;
-            this.searchParameter = response.searchParameter;
-            this.searchRule = response.searchRule;
-            this.searchValue = response.searchValue;
-            this.sortColumn = response.sortColumn;
-            this.sortOrder = response.sortOrder;
-            this.startTime = response.startTime;
-            this.tenantId = response.tenantId;
+        private Builder(DescribeTopSQLListRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.dbName = request.dbName;
+            this.endTime = request.endTime;
+            this.filterCondition = request.filterCondition;
+            this.nodeIp = request.nodeIp;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.SQLId = request.SQLId;
+            this.searchKeyWord = request.searchKeyWord;
+            this.searchParameter = request.searchParameter;
+            this.searchRule = request.searchRule;
+            this.searchValue = request.searchValue;
+            this.sortColumn = request.sortColumn;
+            this.sortOrder = request.sortOrder;
+            this.startTime = request.startTime;
+            this.tenantId = request.tenantId;
         } 
+
+        /**
+         * 地域ID
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * 数据库名称
@@ -289,7 +298,8 @@ public class DescribeTopSQLListRequest extends Request {
          * 过滤条件
          */
         public Builder filterCondition(java.util.Map < String, ? > filterCondition) {
-            this.putBodyParameter("FilterCondition", filterCondition);
+            String filterConditionShrink = shrink(filterCondition, "FilterCondition", "json");
+            this.putBodyParameter("FilterCondition", filterConditionShrink);
             this.filterCondition = filterCondition;
             return this;
         }
@@ -318,15 +328,6 @@ public class DescribeTopSQLListRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
             this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * 地域ID
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

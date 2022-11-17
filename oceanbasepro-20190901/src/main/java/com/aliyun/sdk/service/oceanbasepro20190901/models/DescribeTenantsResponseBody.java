@@ -92,6 +92,12 @@ public class DescribeTenantsResponseBody extends TeaModel {
     } 
 
     public static class Tenants extends TeaModel {
+        @NameInMap("Charset")
+        private String charset;
+
+        @NameInMap("Collation")
+        private String collation;
+
         @NameInMap("Cpu")
         private Integer cpu;
 
@@ -141,6 +147,8 @@ public class DescribeTenantsResponseBody extends TeaModel {
         private String vpcId;
 
         private Tenants(Builder builder) {
+            this.charset = builder.charset;
+            this.collation = builder.collation;
             this.cpu = builder.cpu;
             this.createTime = builder.createTime;
             this.deployMode = builder.deployMode;
@@ -165,6 +173,20 @@ public class DescribeTenantsResponseBody extends TeaModel {
 
         public static Tenants create() {
             return builder().build();
+        }
+
+        /**
+         * @return charset
+         */
+        public String getCharset() {
+            return this.charset;
+        }
+
+        /**
+         * @return collation
+         */
+        public String getCollation() {
+            return this.collation;
         }
 
         /**
@@ -280,6 +302,8 @@ public class DescribeTenantsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String charset; 
+            private String collation; 
             private Integer cpu; 
             private String createTime; 
             private String deployMode; 
@@ -296,6 +320,22 @@ public class DescribeTenantsResponseBody extends TeaModel {
             private Integer unitNum; 
             private Double usedDiskSize; 
             private String vpcId; 
+
+            /**
+             * 字符集
+             */
+            public Builder charset(String charset) {
+                this.charset = charset;
+                return this;
+            }
+
+            /**
+             * 字符序
+             */
+            public Builder collation(String collation) {
+                this.collation = collation;
+                return this;
+            }
 
             /**
              * 租户总的CPU核数，单位：Core。

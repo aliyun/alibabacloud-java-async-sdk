@@ -13,7 +13,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateInstanceResponseBody extends TeaModel {
     @NameInMap("Data")
-    private java.util.List < Data> data;
+    private Data data;
 
     @NameInMap("RequestId")
     private String requestId;
@@ -34,7 +34,7 @@ public class CreateInstanceResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public Data getData() {
         return this.data;
     }
 
@@ -46,13 +46,13 @@ public class CreateInstanceResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private Data data; 
         private String requestId; 
 
         /**
-         * Data.
+         * 返回数据
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(Data data) {
             this.data = data;
             return this;
         }
@@ -81,14 +81,10 @@ public class CreateInstanceResponseBody extends TeaModel {
         @NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("TradePrice")
-        private Float tradePrice;
-
         private Data(Builder builder) {
             this.instanceId = builder.instanceId;
             this.orderId = builder.orderId;
             this.resourceGroupId = builder.resourceGroupId;
-            this.tradePrice = builder.tradePrice;
         }
 
         public static Builder builder() {
@@ -120,18 +116,10 @@ public class CreateInstanceResponseBody extends TeaModel {
             return this.resourceGroupId;
         }
 
-        /**
-         * @return tradePrice
-         */
-        public Float getTradePrice() {
-            return this.tradePrice;
-        }
-
         public static final class Builder {
             private String instanceId; 
             private String orderId; 
             private String resourceGroupId; 
-            private Float tradePrice; 
 
             /**
              * 实例ID
@@ -154,14 +142,6 @@ public class CreateInstanceResponseBody extends TeaModel {
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
-                return this;
-            }
-
-            /**
-             * 订单成交价
-             */
-            public Builder tradePrice(Float tradePrice) {
-                this.tradePrice = tradePrice;
                 return this;
             }
 

@@ -12,9 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateTenantUserRequest</p>
  */
 public class CreateTenantUserRequest extends Request {
-    @Body
-    @NameInMap("ClientToken")
-    private String clientToken;
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
 
     @Body
     @NameInMap("Description")
@@ -24,10 +24,6 @@ public class CreateTenantUserRequest extends Request {
     @NameInMap("InstanceId")
     @Validation(required = true)
     private String instanceId;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Body
     @NameInMap("Roles")
@@ -55,10 +51,9 @@ public class CreateTenantUserRequest extends Request {
 
     private CreateTenantUserRequest(Builder builder) {
         super(builder);
-        this.clientToken = builder.clientToken;
+        this.regionId = builder.regionId;
         this.description = builder.description;
         this.instanceId = builder.instanceId;
-        this.regionId = builder.regionId;
         this.roles = builder.roles;
         this.tenantId = builder.tenantId;
         this.userName = builder.userName;
@@ -80,10 +75,10 @@ public class CreateTenantUserRequest extends Request {
     }
 
     /**
-     * @return clientToken
+     * @return regionId
      */
-    public String getClientToken() {
-        return this.clientToken;
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -98,13 +93,6 @@ public class CreateTenantUserRequest extends Request {
      */
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -143,10 +131,9 @@ public class CreateTenantUserRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateTenantUserRequest, Builder> {
-        private String clientToken; 
+        private String regionId; 
         private String description; 
         private String instanceId; 
-        private String regionId; 
         private String roles; 
         private String tenantId; 
         private String userName; 
@@ -157,25 +144,24 @@ public class CreateTenantUserRequest extends Request {
             super();
         } 
 
-        private Builder(CreateTenantUserRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.description = response.description;
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
-            this.roles = response.roles;
-            this.tenantId = response.tenantId;
-            this.userName = response.userName;
-            this.userPassword = response.userPassword;
-            this.userType = response.userType;
+        private Builder(CreateTenantUserRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.description = request.description;
+            this.instanceId = request.instanceId;
+            this.roles = request.roles;
+            this.tenantId = request.tenantId;
+            this.userName = request.userName;
+            this.userPassword = request.userPassword;
+            this.userType = request.userType;
         } 
 
         /**
-         * ClientToken.
+         * 地域ID。
          */
-        public Builder clientToken(String clientToken) {
-            this.putBodyParameter("ClientToken", clientToken);
-            this.clientToken = clientToken;
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 
@@ -194,15 +180,6 @@ public class CreateTenantUserRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * 地域ID。
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyDatabaseUserRolesRequest</p>
  */
 public class ModifyDatabaseUserRolesRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Body
     @NameInMap("DatabaseName")
     @Validation(required = true)
@@ -20,10 +24,6 @@ public class ModifyDatabaseUserRolesRequest extends Request {
     @Body
     @NameInMap("InstanceId")
     private String instanceId;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Body
     @NameInMap("TenantId")
@@ -37,9 +37,9 @@ public class ModifyDatabaseUserRolesRequest extends Request {
 
     private ModifyDatabaseUserRolesRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.databaseName = builder.databaseName;
         this.instanceId = builder.instanceId;
-        this.regionId = builder.regionId;
         this.tenantId = builder.tenantId;
         this.users = builder.users;
     }
@@ -58,6 +58,13 @@ public class ModifyDatabaseUserRolesRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return databaseName
      */
     public String getDatabaseName() {
@@ -69,13 +76,6 @@ public class ModifyDatabaseUserRolesRequest extends Request {
      */
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -93,9 +93,9 @@ public class ModifyDatabaseUserRolesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyDatabaseUserRolesRequest, Builder> {
+        private String regionId; 
         private String databaseName; 
         private String instanceId; 
-        private String regionId; 
         private String tenantId; 
         private String users; 
 
@@ -103,14 +103,23 @@ public class ModifyDatabaseUserRolesRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyDatabaseUserRolesRequest response) {
-            super(response);
-            this.databaseName = response.databaseName;
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
-            this.tenantId = response.tenantId;
-            this.users = response.users;
+        private Builder(ModifyDatabaseUserRolesRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.databaseName = request.databaseName;
+            this.instanceId = request.instanceId;
+            this.tenantId = request.tenantId;
+            this.users = request.users;
         } 
+
+        /**
+         * 地域ID。
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * 数据库名称。 不能使用某些预留关键字，如 test、mysql。
@@ -127,15 +136,6 @@ public class ModifyDatabaseUserRolesRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * 地域ID。
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

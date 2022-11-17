@@ -48,9 +48,9 @@ public class DescribeTenantUserRolesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeTenantUserRolesRequest response) {
-            super(response);
-            this.regionId = response.regionId;
+        private Builder(DescribeTenantUserRolesRequest request) {
+            super(request);
+            this.regionId = request.regionId;
         } 
 
         /**

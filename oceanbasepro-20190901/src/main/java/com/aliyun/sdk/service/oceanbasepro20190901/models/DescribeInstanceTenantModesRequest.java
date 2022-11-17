@@ -12,20 +12,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceTenantModesRequest</p>
  */
 public class DescribeInstanceTenantModesRequest extends Request {
-    @Body
-    @NameInMap("InstanceId")
-    @Validation(required = true)
-    private String instanceId;
-
     @Host
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
 
+    @Body
+    @NameInMap("InstanceId")
+    @Validation(required = true)
+    private String instanceId;
+
     private DescribeInstanceTenantModesRequest(Builder builder) {
         super(builder);
-        this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
+        this.instanceId = builder.instanceId;
     }
 
     public static Builder builder() {
@@ -42,41 +42,32 @@ public class DescribeInstanceTenantModesRequest extends Request {
     }
 
     /**
-     * @return instanceId
-     */
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
     }
 
+    /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
     public static final class Builder extends Request.Builder<DescribeInstanceTenantModesRequest, Builder> {
-        private String instanceId; 
         private String regionId; 
+        private String instanceId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeInstanceTenantModesRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
+        private Builder(DescribeInstanceTenantModesRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.instanceId = request.instanceId;
         } 
-
-        /**
-         * Oceanbase集群ID。
-         */
-        public Builder instanceId(String instanceId) {
-            this.putBodyParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
 
         /**
          * 地域ID。
@@ -84,6 +75,15 @@ public class DescribeInstanceTenantModesRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * Oceanbase集群ID。
+         */
+        public Builder instanceId(String instanceId) {
+            this.putBodyParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
             return this;
         }
 

@@ -12,14 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateTenantRequest</p>
  */
 public class CreateTenantRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Body
     @NameInMap("Charset")
     @Validation(required = true)
     private String charset;
-
-    @Body
-    @NameInMap("ClientToken")
-    private String clientToken;
 
     @Body
     @NameInMap("Cpu")
@@ -42,12 +43,8 @@ public class CreateTenantRequest extends Request {
 
     @Body
     @NameInMap("PrimaryZone")
-    private String primaryZone;
-
-    @Host
-    @NameInMap("RegionId")
     @Validation(required = true)
-    private String regionId;
+    private String primaryZone;
 
     @Body
     @NameInMap("TenantMode")
@@ -70,22 +67,23 @@ public class CreateTenantRequest extends Request {
 
     @Body
     @NameInMap("UserVSwitchId")
+    @Validation(required = true)
     private String userVSwitchId;
 
     @Body
     @NameInMap("UserVpcId")
+    @Validation(required = true)
     private String userVpcId;
 
     private CreateTenantRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.charset = builder.charset;
-        this.clientToken = builder.clientToken;
         this.cpu = builder.cpu;
         this.description = builder.description;
         this.instanceId = builder.instanceId;
         this.memory = builder.memory;
         this.primaryZone = builder.primaryZone;
-        this.regionId = builder.regionId;
         this.tenantMode = builder.tenantMode;
         this.tenantName = builder.tenantName;
         this.timeZone = builder.timeZone;
@@ -108,17 +106,17 @@ public class CreateTenantRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return charset
      */
     public String getCharset() {
         return this.charset;
-    }
-
-    /**
-     * @return clientToken
-     */
-    public String getClientToken() {
-        return this.clientToken;
     }
 
     /**
@@ -154,13 +152,6 @@ public class CreateTenantRequest extends Request {
      */
     public String getPrimaryZone() {
         return this.primaryZone;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -206,14 +197,13 @@ public class CreateTenantRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateTenantRequest, Builder> {
+        private String regionId; 
         private String charset; 
-        private String clientToken; 
         private Integer cpu; 
         private String description; 
         private String instanceId; 
         private Integer memory; 
         private String primaryZone; 
-        private String regionId; 
         private String tenantMode; 
         private String tenantName; 
         private String timeZone; 
@@ -225,23 +215,31 @@ public class CreateTenantRequest extends Request {
             super();
         } 
 
-        private Builder(CreateTenantRequest response) {
-            super(response);
-            this.charset = response.charset;
-            this.clientToken = response.clientToken;
-            this.cpu = response.cpu;
-            this.description = response.description;
-            this.instanceId = response.instanceId;
-            this.memory = response.memory;
-            this.primaryZone = response.primaryZone;
-            this.regionId = response.regionId;
-            this.tenantMode = response.tenantMode;
-            this.tenantName = response.tenantName;
-            this.timeZone = response.timeZone;
-            this.unitNum = response.unitNum;
-            this.userVSwitchId = response.userVSwitchId;
-            this.userVpcId = response.userVpcId;
+        private Builder(CreateTenantRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.charset = request.charset;
+            this.cpu = request.cpu;
+            this.description = request.description;
+            this.instanceId = request.instanceId;
+            this.memory = request.memory;
+            this.primaryZone = request.primaryZone;
+            this.tenantMode = request.tenantMode;
+            this.tenantName = request.tenantName;
+            this.timeZone = request.timeZone;
+            this.unitNum = request.unitNum;
+            this.userVSwitchId = request.userVSwitchId;
+            this.userVpcId = request.userVpcId;
         } 
+
+        /**
+         * 地域ID。
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * 字符集。 详细参见：DescribeCharset。
@@ -249,15 +247,6 @@ public class CreateTenantRequest extends Request {
         public Builder charset(String charset) {
             this.putBodyParameter("Charset", charset);
             this.charset = charset;
-            return this;
-        }
-
-        /**
-         * ClientToken.
-         */
-        public Builder clientToken(String clientToken) {
-            this.putBodyParameter("ClientToken", clientToken);
-            this.clientToken = clientToken;
             return this;
         }
 
@@ -271,7 +260,7 @@ public class CreateTenantRequest extends Request {
         }
 
         /**
-         * 数据库描述信息。
+         * 租户描述信息。
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -303,15 +292,6 @@ public class CreateTenantRequest extends Request {
         public Builder primaryZone(String primaryZone) {
             this.putBodyParameter("PrimaryZone", primaryZone);
             this.primaryZone = primaryZone;
-            return this;
-        }
-
-        /**
-         * 地域ID。
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

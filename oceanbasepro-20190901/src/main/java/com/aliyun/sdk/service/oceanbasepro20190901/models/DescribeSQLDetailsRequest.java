@@ -77,11 +77,11 @@ public class DescribeSQLDetailsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeSQLDetailsRequest response) {
-            super(response);
-            this.regionId = response.regionId;
-            this.SQLId = response.SQLId;
-            this.tenantId = response.tenantId;
+        private Builder(DescribeSQLDetailsRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.SQLId = request.SQLId;
+            this.tenantId = request.tenantId;
         } 
 
         /**

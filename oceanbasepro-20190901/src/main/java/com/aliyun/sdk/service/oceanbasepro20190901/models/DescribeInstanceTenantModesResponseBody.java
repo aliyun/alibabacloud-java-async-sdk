@@ -50,7 +50,7 @@ public class DescribeInstanceTenantModesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 租户模式列表。
+         * 租户模式列表。Oracle，Mysql
          */
         public Builder instanceModes(java.util.List < String > instanceModes) {
             this.instanceModes = instanceModes;

@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyTenantResourceRequest</p>
  */
 public class ModifyTenantResourceRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Body
     @NameInMap("Cpu")
     @Validation(required = true)
@@ -27,11 +32,6 @@ public class ModifyTenantResourceRequest extends Request {
     @Validation(required = true)
     private Integer memory;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Body
     @NameInMap("TenantId")
     @Validation(required = true)
@@ -39,10 +39,10 @@ public class ModifyTenantResourceRequest extends Request {
 
     private ModifyTenantResourceRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.cpu = builder.cpu;
         this.instanceId = builder.instanceId;
         this.memory = builder.memory;
-        this.regionId = builder.regionId;
         this.tenantId = builder.tenantId;
     }
 
@@ -57,6 +57,13 @@ public class ModifyTenantResourceRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -81,13 +88,6 @@ public class ModifyTenantResourceRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return tenantId
      */
     public String getTenantId() {
@@ -95,24 +95,33 @@ public class ModifyTenantResourceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyTenantResourceRequest, Builder> {
+        private String regionId; 
         private Integer cpu; 
         private String instanceId; 
         private Integer memory; 
-        private String regionId; 
         private String tenantId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ModifyTenantResourceRequest response) {
-            super(response);
-            this.cpu = response.cpu;
-            this.instanceId = response.instanceId;
-            this.memory = response.memory;
-            this.regionId = response.regionId;
-            this.tenantId = response.tenantId;
+        private Builder(ModifyTenantResourceRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.cpu = request.cpu;
+            this.instanceId = request.instanceId;
+            this.memory = request.memory;
+            this.tenantId = request.tenantId;
         } 
+
+        /**
+         * 地域ID。
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * Cpu.
@@ -138,15 +147,6 @@ public class ModifyTenantResourceRequest extends Request {
         public Builder memory(Integer memory) {
             this.putBodyParameter("Memory", memory);
             this.memory = memory;
-            return this;
-        }
-
-        /**
-         * 地域ID。
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

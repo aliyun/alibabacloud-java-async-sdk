@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyTenantUserStatusRequest</p>
  */
 public class ModifyTenantUserStatusRequest extends Request {
-    @Body
-    @NameInMap("InstanceId")
-    @Validation(required = true)
-    private String instanceId;
-
     @Host
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
+
+    @Body
+    @NameInMap("InstanceId")
+    @Validation(required = true)
+    private String instanceId;
 
     @Body
     @NameInMap("TenantId")
@@ -39,8 +39,8 @@ public class ModifyTenantUserStatusRequest extends Request {
 
     private ModifyTenantUserStatusRequest(Builder builder) {
         super(builder);
-        this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
+        this.instanceId = builder.instanceId;
         this.tenantId = builder.tenantId;
         this.userName = builder.userName;
         this.userStatus = builder.userStatus;
@@ -60,17 +60,17 @@ public class ModifyTenantUserStatusRequest extends Request {
     }
 
     /**
-     * @return instanceId
-     */
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     /**
@@ -95,8 +95,8 @@ public class ModifyTenantUserStatusRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyTenantUserStatusRequest, Builder> {
-        private String instanceId; 
         private String regionId; 
+        private String instanceId; 
         private String tenantId; 
         private String userName; 
         private String userStatus; 
@@ -105,23 +105,14 @@ public class ModifyTenantUserStatusRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyTenantUserStatusRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
-            this.tenantId = response.tenantId;
-            this.userName = response.userName;
-            this.userStatus = response.userStatus;
+        private Builder(ModifyTenantUserStatusRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.instanceId = request.instanceId;
+            this.tenantId = request.tenantId;
+            this.userName = request.userName;
+            this.userStatus = request.userStatus;
         } 
-
-        /**
-         * Oceanbase集群ID。
-         */
-        public Builder instanceId(String instanceId) {
-            this.putBodyParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
 
         /**
          * 地域ID。
@@ -129,6 +120,15 @@ public class ModifyTenantUserStatusRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * Oceanbase集群ID。
+         */
+        public Builder instanceId(String instanceId) {
+            this.putBodyParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
             return this;
         }
 

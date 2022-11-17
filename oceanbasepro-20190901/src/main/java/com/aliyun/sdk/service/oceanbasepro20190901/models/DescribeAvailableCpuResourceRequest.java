@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAvailableCpuResourceRequest</p>
  */
 public class DescribeAvailableCpuResourceRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Body
     @NameInMap("InstanceId")
     @Validation(required = true)
@@ -21,20 +26,15 @@ public class DescribeAvailableCpuResourceRequest extends Request {
     @NameInMap("ModifyType")
     private String modifyType;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Body
     @NameInMap("TenantId")
     private String tenantId;
 
     private DescribeAvailableCpuResourceRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
         this.modifyType = builder.modifyType;
-        this.regionId = builder.regionId;
         this.tenantId = builder.tenantId;
     }
 
@@ -52,6 +52,13 @@ public class DescribeAvailableCpuResourceRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -66,13 +73,6 @@ public class DescribeAvailableCpuResourceRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return tenantId
      */
     public String getTenantId() {
@@ -80,22 +80,31 @@ public class DescribeAvailableCpuResourceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeAvailableCpuResourceRequest, Builder> {
+        private String regionId; 
         private String instanceId; 
         private String modifyType; 
-        private String regionId; 
         private String tenantId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeAvailableCpuResourceRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.modifyType = response.modifyType;
-            this.regionId = response.regionId;
-            this.tenantId = response.tenantId;
+        private Builder(DescribeAvailableCpuResourceRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.instanceId = request.instanceId;
+            this.modifyType = request.modifyType;
+            this.tenantId = request.tenantId;
         } 
+
+        /**
+         * 地域ID。
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * Oceanbase集群ID。
@@ -112,15 +121,6 @@ public class DescribeAvailableCpuResourceRequest extends Request {
         public Builder modifyType(String modifyType) {
             this.putBodyParameter("ModifyType", modifyType);
             this.modifyType = modifyType;
-            return this;
-        }
-
-        /**
-         * 地域ID。
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

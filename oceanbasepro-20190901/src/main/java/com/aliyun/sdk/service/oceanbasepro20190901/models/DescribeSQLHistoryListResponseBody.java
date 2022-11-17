@@ -646,7 +646,7 @@ public class DescribeSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * EndTimeUTCString.
+             * 结束时间（零时区）
              */
             public Builder endTimeUTCString(String endTimeUTCString) {
                 this.endTimeUTCString = endTimeUTCString;
@@ -899,7 +899,7 @@ public class DescribeSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * List.
+             * 列表
              */
             public Builder list(java.util.List < List> list) {
                 this.list = list;

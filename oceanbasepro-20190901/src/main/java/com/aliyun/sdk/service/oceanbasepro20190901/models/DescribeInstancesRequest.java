@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstancesRequest</p>
  */
 public class DescribeInstancesRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Body
     @NameInMap("InstanceId")
     private String instanceId;
@@ -28,10 +32,6 @@ public class DescribeInstancesRequest extends Request {
     @NameInMap("PageSize")
     private Integer pageSize;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Body
     @NameInMap("ResourceGroupId")
     private String resourceGroupId;
@@ -42,11 +42,11 @@ public class DescribeInstancesRequest extends Request {
 
     private DescribeInstancesRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
         this.instanceName = builder.instanceName;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.searchKey = builder.searchKey;
     }
@@ -62,6 +62,13 @@ public class DescribeInstancesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -93,13 +100,6 @@ public class DescribeInstancesRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return resourceGroupId
      */
     public String getResourceGroupId() {
@@ -114,11 +114,11 @@ public class DescribeInstancesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeInstancesRequest, Builder> {
+        private String regionId; 
         private String instanceId; 
         private String instanceName; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private String regionId; 
         private String resourceGroupId; 
         private String searchKey; 
 
@@ -126,16 +126,25 @@ public class DescribeInstancesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeInstancesRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.instanceName = response.instanceName;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.searchKey = response.searchKey;
+        private Builder(DescribeInstancesRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.instanceId = request.instanceId;
+            this.instanceName = request.instanceName;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.resourceGroupId = request.resourceGroupId;
+            this.searchKey = request.searchKey;
         } 
+
+        /**
+         * 地域ID。
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * Oceanbase集群ID。
@@ -170,15 +179,6 @@ public class DescribeInstancesRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
             this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * 地域ID。
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

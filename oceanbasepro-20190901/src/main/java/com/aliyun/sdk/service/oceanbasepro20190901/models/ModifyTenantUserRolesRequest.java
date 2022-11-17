@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyTenantUserRolesRequest</p>
  */
 public class ModifyTenantUserRolesRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Body
     @NameInMap("InstanceId")
     @Validation(required = true)
@@ -20,10 +24,6 @@ public class ModifyTenantUserRolesRequest extends Request {
     @Body
     @NameInMap("ModifyType")
     private String modifyType;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Body
     @NameInMap("TenantId")
@@ -42,9 +42,9 @@ public class ModifyTenantUserRolesRequest extends Request {
 
     private ModifyTenantUserRolesRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
         this.modifyType = builder.modifyType;
-        this.regionId = builder.regionId;
         this.tenantId = builder.tenantId;
         this.userName = builder.userName;
         this.userRole = builder.userRole;
@@ -64,6 +64,13 @@ public class ModifyTenantUserRolesRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -75,13 +82,6 @@ public class ModifyTenantUserRolesRequest extends Request {
      */
     public String getModifyType() {
         return this.modifyType;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -106,9 +106,9 @@ public class ModifyTenantUserRolesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyTenantUserRolesRequest, Builder> {
+        private String regionId; 
         private String instanceId; 
         private String modifyType; 
-        private String regionId; 
         private String tenantId; 
         private String userName; 
         private String userRole; 
@@ -117,15 +117,24 @@ public class ModifyTenantUserRolesRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyTenantUserRolesRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.modifyType = response.modifyType;
-            this.regionId = response.regionId;
-            this.tenantId = response.tenantId;
-            this.userName = response.userName;
-            this.userRole = response.userRole;
+        private Builder(ModifyTenantUserRolesRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.instanceId = request.instanceId;
+            this.modifyType = request.modifyType;
+            this.tenantId = request.tenantId;
+            this.userName = request.userName;
+            this.userRole = request.userRole;
         } 
+
+        /**
+         * 地域ID。
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * Oceanbase集群ID。
@@ -142,15 +151,6 @@ public class ModifyTenantUserRolesRequest extends Request {
         public Builder modifyType(String modifyType) {
             this.putBodyParameter("ModifyType", modifyType);
             this.modifyType = modifyType;
-            return this;
-        }
-
-        /**
-         * 地域ID。
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

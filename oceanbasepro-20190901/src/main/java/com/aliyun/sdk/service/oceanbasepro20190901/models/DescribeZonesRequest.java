@@ -12,14 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeZonesRequest</p>
  */
 public class DescribeZonesRequest extends Request {
-    @Body
-    @NameInMap("DeployType")
-    private String deployType;
-
     @Host
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
+
+    @Body
+    @NameInMap("DeployType")
+    private String deployType;
 
     @Body
     @NameInMap("Series")
@@ -27,8 +27,8 @@ public class DescribeZonesRequest extends Request {
 
     private DescribeZonesRequest(Builder builder) {
         super(builder);
-        this.deployType = builder.deployType;
         this.regionId = builder.regionId;
+        this.deployType = builder.deployType;
         this.series = builder.series;
     }
 
@@ -46,17 +46,17 @@ public class DescribeZonesRequest extends Request {
     }
 
     /**
-     * @return deployType
-     */
-    public String getDeployType() {
-        return this.deployType;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return deployType
+     */
+    public String getDeployType() {
+        return this.deployType;
     }
 
     /**
@@ -67,29 +67,20 @@ public class DescribeZonesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeZonesRequest, Builder> {
-        private String deployType; 
         private String regionId; 
+        private String deployType; 
         private String series; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeZonesRequest response) {
-            super(response);
-            this.deployType = response.deployType;
-            this.regionId = response.regionId;
-            this.series = response.series;
+        private Builder(DescribeZonesRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.deployType = request.deployType;
+            this.series = request.series;
         } 
-
-        /**
-         * 集群的部署类型。- multiple：多机房 - single：单机房 - dual：双机房
-         */
-        public Builder deployType(String deployType) {
-            this.putBodyParameter("DeployType", deployType);
-            this.deployType = deployType;
-            return this;
-        }
 
         /**
          * 地域ID
@@ -97,6 +88,15 @@ public class DescribeZonesRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * 集群的部署类型。- multiple：多机房 - single：单机房 - dual：双机房
+         */
+        public Builder deployType(String deployType) {
+            this.putBodyParameter("DeployType", deployType);
+            this.deployType = deployType;
             return this;
         }
 

@@ -942,7 +942,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * vpcId
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

@@ -48,9 +48,9 @@ public class DescribeTimeZonesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeTimeZonesRequest response) {
-            super(response);
-            this.regionId = response.regionId;
+        private Builder(DescribeTimeZonesRequest request) {
+            super(request);
+            this.regionId = request.regionId;
         } 
 
         /**

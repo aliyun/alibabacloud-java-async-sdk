@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeParametersHistoryRequest</p>
  */
 public class DescribeParametersHistoryRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Body
     @NameInMap("Dimension")
     @Validation(required = true)
@@ -41,10 +45,6 @@ public class DescribeParametersHistoryRequest extends Request {
     @Validation(required = true, maximum = 999999, minimum = 1)
     private Integer pageSize;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Body
     @NameInMap("StartTime")
     @Validation(required = true)
@@ -52,13 +52,13 @@ public class DescribeParametersHistoryRequest extends Request {
 
     private DescribeParametersHistoryRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.dimension = builder.dimension;
         this.dimensionValue = builder.dimensionValue;
         this.endTime = builder.endTime;
         this.instanceId = builder.instanceId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
         this.startTime = builder.startTime;
     }
 
@@ -73,6 +73,13 @@ public class DescribeParametersHistoryRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -118,13 +125,6 @@ public class DescribeParametersHistoryRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -132,30 +132,39 @@ public class DescribeParametersHistoryRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeParametersHistoryRequest, Builder> {
+        private String regionId; 
         private String dimension; 
         private String dimensionValue; 
         private String endTime; 
         private String instanceId; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private String regionId; 
         private String startTime; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeParametersHistoryRequest response) {
-            super(response);
-            this.dimension = response.dimension;
-            this.dimensionValue = response.dimensionValue;
-            this.endTime = response.endTime;
-            this.instanceId = response.instanceId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.startTime = response.startTime;
+        private Builder(DescribeParametersHistoryRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.dimension = request.dimension;
+            this.dimensionValue = request.dimensionValue;
+            this.endTime = request.endTime;
+            this.instanceId = request.instanceId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.startTime = request.startTime;
         } 
+
+        /**
+         * 地域ID。
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * 参数类型。 当前支持集群（CLUSTER)和租户（TENANT）
@@ -208,15 +217,6 @@ public class DescribeParametersHistoryRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
             this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * 地域ID。
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

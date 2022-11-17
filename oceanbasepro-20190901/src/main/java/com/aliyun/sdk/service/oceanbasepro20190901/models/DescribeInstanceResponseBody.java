@@ -153,6 +153,15 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
     }
     public static class DiskSize extends TeaModel {
+        @NameInMap("DataUsedSize")
+        private Double dataUsedSize;
+
+        @NameInMap("MaxDiskUsedObServer")
+        private java.util.List < String > maxDiskUsedObServer;
+
+        @NameInMap("MaxDiskUsedPercent")
+        private Double maxDiskUsedPercent;
+
         @NameInMap("TotalDiskSize")
         private Long totalDiskSize;
 
@@ -163,6 +172,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
         private Long usedDiskSize;
 
         private DiskSize(Builder builder) {
+            this.dataUsedSize = builder.dataUsedSize;
+            this.maxDiskUsedObServer = builder.maxDiskUsedObServer;
+            this.maxDiskUsedPercent = builder.maxDiskUsedPercent;
             this.totalDiskSize = builder.totalDiskSize;
             this.unitDiskSize = builder.unitDiskSize;
             this.usedDiskSize = builder.usedDiskSize;
@@ -174,6 +186,27 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
         public static DiskSize create() {
             return builder().build();
+        }
+
+        /**
+         * @return dataUsedSize
+         */
+        public Double getDataUsedSize() {
+            return this.dataUsedSize;
+        }
+
+        /**
+         * @return maxDiskUsedObServer
+         */
+        public java.util.List < String > getMaxDiskUsedObServer() {
+            return this.maxDiskUsedObServer;
+        }
+
+        /**
+         * @return maxDiskUsedPercent
+         */
+        public Double getMaxDiskUsedPercent() {
+            return this.maxDiskUsedPercent;
         }
 
         /**
@@ -198,9 +231,36 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Double dataUsedSize; 
+            private java.util.List < String > maxDiskUsedObServer; 
+            private Double maxDiskUsedPercent; 
             private Long totalDiskSize; 
             private Long unitDiskSize; 
             private Long usedDiskSize; 
+
+            /**
+             * DataUsedSize.
+             */
+            public Builder dataUsedSize(Double dataUsedSize) {
+                this.dataUsedSize = dataUsedSize;
+                return this;
+            }
+
+            /**
+             * MaxDiskUsedObServer.
+             */
+            public Builder maxDiskUsedObServer(java.util.List < String > maxDiskUsedObServer) {
+                this.maxDiskUsedObServer = maxDiskUsedObServer;
+                return this;
+            }
+
+            /**
+             * MaxDiskUsedPercent.
+             */
+            public Builder maxDiskUsedPercent(Double maxDiskUsedPercent) {
+                this.maxDiskUsedPercent = maxDiskUsedPercent;
+                return this;
+            }
 
             /**
              * 集群总存储空间，单位：GB
@@ -228,6 +288,67 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
             public DiskSize build() {
                 return new DiskSize(this);
+            } 
+
+        } 
+
+    }
+    public static class LogDiskSize extends TeaModel {
+        @NameInMap("TotalDiskSize")
+        private Long totalDiskSize;
+
+        @NameInMap("UnitDiskSize")
+        private Long unitDiskSize;
+
+        private LogDiskSize(Builder builder) {
+            this.totalDiskSize = builder.totalDiskSize;
+            this.unitDiskSize = builder.unitDiskSize;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static LogDiskSize create() {
+            return builder().build();
+        }
+
+        /**
+         * @return totalDiskSize
+         */
+        public Long getTotalDiskSize() {
+            return this.totalDiskSize;
+        }
+
+        /**
+         * @return unitDiskSize
+         */
+        public Long getUnitDiskSize() {
+            return this.unitDiskSize;
+        }
+
+        public static final class Builder {
+            private Long totalDiskSize; 
+            private Long unitDiskSize; 
+
+            /**
+             * 集群总日志盘空间，单位GB。
+             */
+            public Builder totalDiskSize(Long totalDiskSize) {
+                this.totalDiskSize = totalDiskSize;
+                return this;
+            }
+
+            /**
+             * 集群每个副本的日志存储空间，单位：GB
+             */
+            public Builder unitDiskSize(Long unitDiskSize) {
+                this.unitDiskSize = unitDiskSize;
+                return this;
+            }
+
+            public LogDiskSize build() {
+                return new LogDiskSize(this);
             } 
 
         } 
@@ -321,6 +442,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
         @NameInMap("DiskSize")
         private DiskSize diskSize;
 
+        @NameInMap("LogDiskSize")
+        private LogDiskSize logDiskSize;
+
         @NameInMap("Memory")
         private Memory memory;
 
@@ -330,6 +454,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         private Resource(Builder builder) {
             this.cpu = builder.cpu;
             this.diskSize = builder.diskSize;
+            this.logDiskSize = builder.logDiskSize;
             this.memory = builder.memory;
             this.unitCount = builder.unitCount;
         }
@@ -357,6 +482,13 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return logDiskSize
+         */
+        public LogDiskSize getLogDiskSize() {
+            return this.logDiskSize;
+        }
+
+        /**
          * @return memory
          */
         public Memory getMemory() {
@@ -373,6 +505,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         public static final class Builder {
             private Cpu cpu; 
             private DiskSize diskSize; 
+            private LogDiskSize logDiskSize; 
             private Memory memory; 
             private Long unitCount; 
 
@@ -389,6 +522,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
              */
             public Builder diskSize(DiskSize diskSize) {
                 this.diskSize = diskSize;
+                return this;
+            }
+
+            /**
+             * 集群的日志盘资源信息
+             */
+            public Builder logDiskSize(LogDiskSize logDiskSize) {
+                this.logDiskSize = logDiskSize;
                 return this;
             }
 
@@ -440,6 +581,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
         @NameInMap("DiskType")
         private String diskType;
 
+        @NameInMap("EnableUpgradeLogDisk")
+        private Boolean enableUpgradeLogDisk;
+
         @NameInMap("ExpireTime")
         private String expireTime;
 
@@ -454,6 +598,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
         @NameInMap("IsLatestObVersion")
         private Boolean isLatestObVersion;
+
+        @NameInMap("IsTrustEcs")
+        private Boolean isTrustEcs;
 
         @NameInMap("MaintainTime")
         private String maintainTime;
@@ -485,11 +632,13 @@ public class DescribeInstanceResponseBody extends TeaModel {
             this.deployMode = builder.deployMode;
             this.deployType = builder.deployType;
             this.diskType = builder.diskType;
+            this.enableUpgradeLogDisk = builder.enableUpgradeLogDisk;
             this.expireTime = builder.expireTime;
             this.instanceClass = builder.instanceClass;
             this.instanceId = builder.instanceId;
             this.instanceName = builder.instanceName;
             this.isLatestObVersion = builder.isLatestObVersion;
+            this.isTrustEcs = builder.isTrustEcs;
             this.maintainTime = builder.maintainTime;
             this.obRpmVersion = builder.obRpmVersion;
             this.payType = builder.payType;
@@ -564,6 +713,13 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return enableUpgradeLogDisk
+         */
+        public Boolean getEnableUpgradeLogDisk() {
+            return this.enableUpgradeLogDisk;
+        }
+
+        /**
          * @return expireTime
          */
         public String getExpireTime() {
@@ -596,6 +752,13 @@ public class DescribeInstanceResponseBody extends TeaModel {
          */
         public Boolean getIsLatestObVersion() {
             return this.isLatestObVersion;
+        }
+
+        /**
+         * @return isTrustEcs
+         */
+        public Boolean getIsTrustEcs() {
+            return this.isTrustEcs;
         }
 
         /**
@@ -656,11 +819,13 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private String deployMode; 
             private String deployType; 
             private String diskType; 
+            private Boolean enableUpgradeLogDisk; 
             private String expireTime; 
             private String instanceClass; 
             private String instanceId; 
             private String instanceName; 
             private Boolean isLatestObVersion; 
+            private Boolean isTrustEcs; 
             private String maintainTime; 
             private String obRpmVersion; 
             private String payType; 
@@ -734,6 +899,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
+             * 是否允许升级日志盘规格。
+             */
+            public Builder enableUpgradeLogDisk(Boolean enableUpgradeLogDisk) {
+                this.enableUpgradeLogDisk = enableUpgradeLogDisk;
+                return this;
+            }
+
+            /**
              * 集群过期时间（UTC格式）。
              */
             public Builder expireTime(String expireTime) {
@@ -770,6 +943,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
              */
             public Builder isLatestObVersion(Boolean isLatestObVersion) {
                 this.isLatestObVersion = isLatestObVersion;
+                return this;
+            }
+
+            /**
+             * 是否使用可信ecs
+             */
+            public Builder isTrustEcs(Boolean isTrustEcs) {
+                this.isTrustEcs = isTrustEcs;
                 return this;
             }
 

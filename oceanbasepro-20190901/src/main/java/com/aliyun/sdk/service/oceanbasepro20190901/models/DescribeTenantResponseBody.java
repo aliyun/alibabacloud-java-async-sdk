@@ -718,8 +718,14 @@ public class DescribeTenantResponseBody extends TeaModel {
 
     }
     public static class Tenant extends TeaModel {
+        @NameInMap("Charset")
+        private String charset;
+
         @NameInMap("ClogServiceStatus")
         private String clogServiceStatus;
+
+        @NameInMap("Collation")
+        private String collation;
 
         @NameInMap("CreateTime")
         private String createTime;
@@ -739,8 +745,14 @@ public class DescribeTenantResponseBody extends TeaModel {
         @NameInMap("EnableInternetAddressService")
         private Boolean enableInternetAddressService;
 
+        @NameInMap("MasterIntranetAddressZone")
+        private String masterIntranetAddressZone;
+
         @NameInMap("PrimaryZone")
         private String primaryZone;
+
+        @NameInMap("PrimaryZoneDeployType")
+        private String primaryZoneDeployType;
 
         @NameInMap("Status")
         private String status;
@@ -767,14 +779,18 @@ public class DescribeTenantResponseBody extends TeaModel {
         private String vpcId;
 
         private Tenant(Builder builder) {
+            this.charset = builder.charset;
             this.clogServiceStatus = builder.clogServiceStatus;
+            this.collation = builder.collation;
             this.createTime = builder.createTime;
             this.deployMode = builder.deployMode;
             this.deployType = builder.deployType;
             this.description = builder.description;
             this.enableClogService = builder.enableClogService;
             this.enableInternetAddressService = builder.enableInternetAddressService;
+            this.masterIntranetAddressZone = builder.masterIntranetAddressZone;
             this.primaryZone = builder.primaryZone;
+            this.primaryZoneDeployType = builder.primaryZoneDeployType;
             this.status = builder.status;
             this.tenantConnections = builder.tenantConnections;
             this.tenantId = builder.tenantId;
@@ -794,10 +810,24 @@ public class DescribeTenantResponseBody extends TeaModel {
         }
 
         /**
+         * @return charset
+         */
+        public String getCharset() {
+            return this.charset;
+        }
+
+        /**
          * @return clogServiceStatus
          */
         public String getClogServiceStatus() {
             return this.clogServiceStatus;
+        }
+
+        /**
+         * @return collation
+         */
+        public String getCollation() {
+            return this.collation;
         }
 
         /**
@@ -843,10 +873,24 @@ public class DescribeTenantResponseBody extends TeaModel {
         }
 
         /**
+         * @return masterIntranetAddressZone
+         */
+        public String getMasterIntranetAddressZone() {
+            return this.masterIntranetAddressZone;
+        }
+
+        /**
          * @return primaryZone
          */
         public String getPrimaryZone() {
             return this.primaryZone;
+        }
+
+        /**
+         * @return primaryZoneDeployType
+         */
+        public String getPrimaryZoneDeployType() {
+            return this.primaryZoneDeployType;
         }
 
         /**
@@ -906,14 +950,18 @@ public class DescribeTenantResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String charset; 
             private String clogServiceStatus; 
+            private String collation; 
             private String createTime; 
             private String deployMode; 
             private String deployType; 
             private String description; 
             private Boolean enableClogService; 
             private Boolean enableInternetAddressService; 
+            private String masterIntranetAddressZone; 
             private String primaryZone; 
+            private String primaryZoneDeployType; 
             private String status; 
             private java.util.List < TenantConnections> tenantConnections; 
             private String tenantId; 
@@ -924,10 +972,26 @@ public class DescribeTenantResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
+             * 字符集
+             */
+            public Builder charset(String charset) {
+                this.charset = charset;
+                return this;
+            }
+
+            /**
              * Clog服务开启状态。 CLOSED: 关闭 ONLINE：服务中
              */
             public Builder clogServiceStatus(String clogServiceStatus) {
                 this.clogServiceStatus = clogServiceStatus;
+                return this;
+            }
+
+            /**
+             * 字符序
+             */
+            public Builder collation(String collation) {
+                this.collation = collation;
                 return this;
             }
 
@@ -980,10 +1044,26 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
+             * 租户主地址可用区
+             */
+            public Builder masterIntranetAddressZone(String masterIntranetAddressZone) {
+                this.masterIntranetAddressZone = masterIntranetAddressZone;
+                return this;
+            }
+
+            /**
              * 租户的主可用区。
              */
             public Builder primaryZone(String primaryZone) {
                 this.primaryZone = primaryZone;
+                return this;
+            }
+
+            /**
+             * 租户主可用区部署模式
+             */
+            public Builder primaryZoneDeployType(String primaryZoneDeployType) {
+                this.primaryZoneDeployType = primaryZoneDeployType;
                 return this;
             }
 

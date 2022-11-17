@@ -93,7 +93,7 @@ public class DescribeAnomalySQLListResponseBody extends TeaModel {
 
     public static class AnomalySQLList extends TeaModel {
         @NameInMap("CpuTime")
-        private Long cpuTime;
+        private Float cpuTime;
 
         @NameInMap("DbName")
         private String dbName;
@@ -111,7 +111,7 @@ public class DescribeAnomalySQLListResponseBody extends TeaModel {
         private Long key;
 
         @NameInMap("RequestTime")
-        private Long requestTime;
+        private Float requestTime;
 
         @NameInMap("RequestTimeUTCString")
         private String requestTimeUTCString;
@@ -154,7 +154,7 @@ public class DescribeAnomalySQLListResponseBody extends TeaModel {
         /**
          * @return cpuTime
          */
-        public Long getCpuTime() {
+        public Float getCpuTime() {
             return this.cpuTime;
         }
 
@@ -196,7 +196,7 @@ public class DescribeAnomalySQLListResponseBody extends TeaModel {
         /**
          * @return requestTime
          */
-        public Long getRequestTime() {
+        public Float getRequestTime() {
             return this.requestTime;
         }
 
@@ -236,13 +236,13 @@ public class DescribeAnomalySQLListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private Long cpuTime; 
+            private Float cpuTime; 
             private String dbName; 
             private String diagnosis; 
             private String diagnosisRule; 
             private Long executions; 
             private Long key; 
-            private Long requestTime; 
+            private Float requestTime; 
             private String requestTimeUTCString; 
             private String SQLId; 
             private String SQLText; 
@@ -250,9 +250,9 @@ public class DescribeAnomalySQLListResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * 平均CPU时间
+             * 平均CPU时间（ms）
              */
-            public Builder cpuTime(Long cpuTime) {
+            public Builder cpuTime(Float cpuTime) {
                 this.cpuTime = cpuTime;
                 return this;
             }
@@ -300,7 +300,7 @@ public class DescribeAnomalySQLListResponseBody extends TeaModel {
             /**
              * 请求时间
              */
-            public Builder requestTime(Long requestTime) {
+            public Builder requestTime(Float requestTime) {
                 this.requestTime = requestTime;
                 return this;
             }

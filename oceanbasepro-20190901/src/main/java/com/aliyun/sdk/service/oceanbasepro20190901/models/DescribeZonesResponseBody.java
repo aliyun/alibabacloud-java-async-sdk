@@ -78,9 +78,6 @@ public class DescribeZonesResponseBody extends TeaModel {
         @NameInMap("Series")
         private String series;
 
-        @NameInMap("StockStatus")
-        private String stockStatus;
-
         @NameInMap("ZoneId")
         private String zoneId;
 
@@ -90,7 +87,6 @@ public class DescribeZonesResponseBody extends TeaModel {
         private Zones(Builder builder) {
             this.deployType = builder.deployType;
             this.series = builder.series;
-            this.stockStatus = builder.stockStatus;
             this.zoneId = builder.zoneId;
             this.zoneName = builder.zoneName;
         }
@@ -118,13 +114,6 @@ public class DescribeZonesResponseBody extends TeaModel {
         }
 
         /**
-         * @return stockStatus
-         */
-        public String getStockStatus() {
-            return this.stockStatus;
-        }
-
-        /**
          * @return zoneId
          */
         public String getZoneId() {
@@ -141,7 +130,6 @@ public class DescribeZonesResponseBody extends TeaModel {
         public static final class Builder {
             private String deployType; 
             private String series; 
-            private String stockStatus; 
             private String zoneId; 
             private String zoneName; 
 
@@ -158,14 +146,6 @@ public class DescribeZonesResponseBody extends TeaModel {
              */
             public Builder series(String series) {
                 this.series = series;
-                return this;
-            }
-
-            /**
-             * 在各可用区的库存状态。其取值为：  WithStock：库存充足。 ClosedWithStock：库存供应保障能力低，建议选用WithStock状态的产品规格。 WithoutStock：库存售罄，将会补充资源，建议选用WithStock状态的产品规格
-             */
-            public Builder stockStatus(String stockStatus) {
-                this.stockStatus = stockStatus;
                 return this;
             }
 

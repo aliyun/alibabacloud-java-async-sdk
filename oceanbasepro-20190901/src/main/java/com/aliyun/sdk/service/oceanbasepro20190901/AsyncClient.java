@@ -22,6 +22,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateInstanceResponse> createInstance(CreateInstanceRequest request);
 
+    CompletableFuture<CreateOmsMysqlDataSourceResponse> createOmsMysqlDataSource(CreateOmsMysqlDataSourceRequest request);
+
+    CompletableFuture<CreateOmsOpenAPIProjectResponse> createOmsOpenAPIProject(CreateOmsOpenAPIProjectRequest request);
+
     CompletableFuture<CreateSecurityIpGroupResponse> createSecurityIpGroup(CreateSecurityIpGroupRequest request);
 
     CompletableFuture<CreateTenantResponse> createTenant(CreateTenantRequest request);
@@ -31,6 +35,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateTenantUserResponse> createTenantUser(CreateTenantUserRequest request);
 
     CompletableFuture<DeleteDatabasesResponse> deleteDatabases(DeleteDatabasesRequest request);
+
+    CompletableFuture<DeleteInstancesResponse> deleteInstances(DeleteInstancesRequest request);
+
+    CompletableFuture<DeleteOmsOpenAPIProjectResponse> deleteOmsOpenAPIProject(DeleteOmsOpenAPIProjectRequest request);
 
     CompletableFuture<DeleteSecurityIpGroupResponse> deleteSecurityIpGroup(DeleteSecurityIpGroupRequest request);
 
@@ -59,6 +67,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeInstancesResponse> describeInstances(DescribeInstancesRequest request);
 
     CompletableFuture<DescribeNodeMetricsResponse> describeNodeMetrics(DescribeNodeMetricsRequest request);
+
+    CompletableFuture<DescribeOmsOpenAPIProjectResponse> describeOmsOpenAPIProject(DescribeOmsOpenAPIProjectRequest request);
+
+    CompletableFuture<DescribeOmsOpenAPIProjectStepsResponse> describeOmsOpenAPIProjectSteps(DescribeOmsOpenAPIProjectStepsRequest request);
 
     CompletableFuture<DescribeOutlineBindingResponse> describeOutlineBinding(DescribeOutlineBindingRequest request);
 
@@ -102,6 +114,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ModifyDatabaseUserRolesResponse> modifyDatabaseUserRoles(ModifyDatabaseUserRolesRequest request);
 
+    CompletableFuture<ModifyInstanceNameResponse> modifyInstanceName(ModifyInstanceNameRequest request);
+
     CompletableFuture<ModifyParametersResponse> modifyParameters(ModifyParametersRequest request);
 
     CompletableFuture<ModifySecurityIpsResponse> modifySecurityIps(ModifySecurityIpsRequest request);
@@ -117,5 +131,19 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyTenantUserRolesResponse> modifyTenantUserRoles(ModifyTenantUserRolesRequest request);
 
     CompletableFuture<ModifyTenantUserStatusResponse> modifyTenantUserStatus(ModifyTenantUserStatusRequest request);
+
+    CompletableFuture<ReleaseOmsOpenAPIProjectResponse> releaseOmsOpenAPIProject(ReleaseOmsOpenAPIProjectRequest request);
+
+    CompletableFuture<ResetOmsOpenAPIProjectResponse> resetOmsOpenAPIProject(ResetOmsOpenAPIProjectRequest request);
+
+    CompletableFuture<ResumeOmsOpenAPIProjectResponse> resumeOmsOpenAPIProject(ResumeOmsOpenAPIProjectRequest request);
+
+    CompletableFuture<SearchOmsOpenAPIMonitorMetricResponse> searchOmsOpenAPIMonitorMetric(SearchOmsOpenAPIMonitorMetricRequest request);
+
+    CompletableFuture<SearchOmsOpenAPIProjectsResponse> searchOmsOpenAPIProjects(SearchOmsOpenAPIProjectsRequest request);
+
+    CompletableFuture<StartOmsOpenAPIProjectResponse> startOmsOpenAPIProject(StartOmsOpenAPIProjectRequest request);
+
+    CompletableFuture<StopOmsOpenAPIProjectResponse> stopOmsOpenAPIProject(StopOmsOpenAPIProjectRequest request);
 
 }

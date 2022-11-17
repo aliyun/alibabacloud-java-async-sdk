@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAvailableMemResourceRequest</p>
  */
 public class DescribeAvailableMemResourceRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Body
     @NameInMap("CpuNum")
     @Validation(required = true)
@@ -21,11 +26,6 @@ public class DescribeAvailableMemResourceRequest extends Request {
     @NameInMap("InstanceId")
     @Validation(required = true)
     private String instanceId;
-
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
 
     @Body
     @NameInMap("TenantId")
@@ -38,9 +38,9 @@ public class DescribeAvailableMemResourceRequest extends Request {
 
     private DescribeAvailableMemResourceRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.cpuNum = builder.cpuNum;
         this.instanceId = builder.instanceId;
-        this.regionId = builder.regionId;
         this.tenantId = builder.tenantId;
         this.unitNum = builder.unitNum;
     }
@@ -59,6 +59,13 @@ public class DescribeAvailableMemResourceRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return cpuNum
      */
     public Long getCpuNum() {
@@ -70,13 +77,6 @@ public class DescribeAvailableMemResourceRequest extends Request {
      */
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -94,9 +94,9 @@ public class DescribeAvailableMemResourceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeAvailableMemResourceRequest, Builder> {
+        private String regionId; 
         private Long cpuNum; 
         private String instanceId; 
-        private String regionId; 
         private String tenantId; 
         private Long unitNum; 
 
@@ -104,14 +104,23 @@ public class DescribeAvailableMemResourceRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeAvailableMemResourceRequest response) {
-            super(response);
-            this.cpuNum = response.cpuNum;
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
-            this.tenantId = response.tenantId;
-            this.unitNum = response.unitNum;
+        private Builder(DescribeAvailableMemResourceRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.cpuNum = request.cpuNum;
+            this.instanceId = request.instanceId;
+            this.tenantId = request.tenantId;
+            this.unitNum = request.unitNum;
         } 
+
+        /**
+         * 地域ID。
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * CpuNum.
@@ -128,15 +137,6 @@ public class DescribeAvailableMemResourceRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * 地域ID。
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeTenantsRequest</p>
  */
 public class DescribeTenantsRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Body
     @NameInMap("InstanceId")
     @Validation(required = true)
@@ -24,10 +28,6 @@ public class DescribeTenantsRequest extends Request {
     @Body
     @NameInMap("PageSize")
     private Integer pageSize;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Body
     @NameInMap("SearchKey")
@@ -43,10 +43,10 @@ public class DescribeTenantsRequest extends Request {
 
     private DescribeTenantsRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
         this.searchKey = builder.searchKey;
         this.tenantId = builder.tenantId;
         this.tenantName = builder.tenantName;
@@ -63,6 +63,13 @@ public class DescribeTenantsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -87,13 +94,6 @@ public class DescribeTenantsRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return searchKey
      */
     public String getSearchKey() {
@@ -115,10 +115,10 @@ public class DescribeTenantsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeTenantsRequest, Builder> {
+        private String regionId; 
         private String instanceId; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private String regionId; 
         private String searchKey; 
         private String tenantId; 
         private String tenantName; 
@@ -127,16 +127,25 @@ public class DescribeTenantsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeTenantsRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.searchKey = response.searchKey;
-            this.tenantId = response.tenantId;
-            this.tenantName = response.tenantName;
+        private Builder(DescribeTenantsRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.instanceId = request.instanceId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.searchKey = request.searchKey;
+            this.tenantId = request.tenantId;
+            this.tenantName = request.tenantName;
         } 
+
+        /**
+         * 地域ID。
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * Oceanbase集群ID。
@@ -162,15 +171,6 @@ public class DescribeTenantsRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
             this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * 地域ID。
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

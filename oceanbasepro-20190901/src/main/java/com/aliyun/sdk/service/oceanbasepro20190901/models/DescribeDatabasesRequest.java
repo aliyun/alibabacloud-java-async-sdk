@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDatabasesRequest</p>
  */
 public class DescribeDatabasesRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Body
     @NameInMap("DatabaseName")
     private String databaseName;
@@ -23,10 +27,6 @@ public class DescribeDatabasesRequest extends Request {
     @Body
     @NameInMap("PageSize")
     private Integer pageSize;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Body
     @NameInMap("SearchKey")
@@ -43,10 +43,10 @@ public class DescribeDatabasesRequest extends Request {
 
     private DescribeDatabasesRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.databaseName = builder.databaseName;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
         this.searchKey = builder.searchKey;
         this.tenantId = builder.tenantId;
         this.withTables = builder.withTables;
@@ -63,6 +63,13 @@ public class DescribeDatabasesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -87,13 +94,6 @@ public class DescribeDatabasesRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return searchKey
      */
     public String getSearchKey() {
@@ -115,10 +115,10 @@ public class DescribeDatabasesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeDatabasesRequest, Builder> {
+        private String regionId; 
         private String databaseName; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private String regionId; 
         private String searchKey; 
         private String tenantId; 
         private Boolean withTables; 
@@ -127,16 +127,25 @@ public class DescribeDatabasesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDatabasesRequest response) {
-            super(response);
-            this.databaseName = response.databaseName;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.searchKey = response.searchKey;
-            this.tenantId = response.tenantId;
-            this.withTables = response.withTables;
+        private Builder(DescribeDatabasesRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.databaseName = request.databaseName;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.searchKey = request.searchKey;
+            this.tenantId = request.tenantId;
+            this.withTables = request.withTables;
         } 
+
+        /**
+         * 地域ID。
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * 数据库名称。 不能使用某些预留关键字，如 test、mysql。
@@ -162,15 +171,6 @@ public class DescribeDatabasesRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
             this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * 地域ID。
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

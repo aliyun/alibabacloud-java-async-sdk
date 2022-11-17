@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteTenantsRequest</p>
  */
 public class DeleteTenantsRequest extends Request {
-    @Body
-    @NameInMap("InstanceId")
-    @Validation(required = true)
-    private String instanceId;
-
     @Host
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
+
+    @Body
+    @NameInMap("InstanceId")
+    @Validation(required = true)
+    private String instanceId;
 
     @Body
     @NameInMap("TenantIds")
@@ -29,8 +29,8 @@ public class DeleteTenantsRequest extends Request {
 
     private DeleteTenantsRequest(Builder builder) {
         super(builder);
-        this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
+        this.instanceId = builder.instanceId;
         this.tenantIds = builder.tenantIds;
     }
 
@@ -48,17 +48,17 @@ public class DeleteTenantsRequest extends Request {
     }
 
     /**
-     * @return instanceId
-     */
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     /**
@@ -69,29 +69,20 @@ public class DeleteTenantsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteTenantsRequest, Builder> {
-        private String instanceId; 
         private String regionId; 
+        private String instanceId; 
         private String tenantIds; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DeleteTenantsRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
-            this.tenantIds = response.tenantIds;
+        private Builder(DeleteTenantsRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.instanceId = request.instanceId;
+            this.tenantIds = request.tenantIds;
         } 
-
-        /**
-         * Oceanbase集群ID。
-         */
-        public Builder instanceId(String instanceId) {
-            this.putBodyParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
 
         /**
          * 地域ID。
@@ -99,6 +90,15 @@ public class DeleteTenantsRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * Oceanbase集群ID。
+         */
+        public Builder instanceId(String instanceId) {
+            this.putBodyParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
             return this;
         }
 

@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyParametersRequest</p>
  */
 public class ModifyParametersRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Body
     @NameInMap("Dimension")
     @Validation(required = true)
@@ -31,17 +35,13 @@ public class ModifyParametersRequest extends Request {
     @Validation(required = true)
     private String parameters;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private ModifyParametersRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.dimension = builder.dimension;
         this.dimensionValue = builder.dimensionValue;
         this.instanceId = builder.instanceId;
         this.parameters = builder.parameters;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -55,6 +55,13 @@ public class ModifyParametersRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -85,32 +92,34 @@ public class ModifyParametersRequest extends Request {
         return this.parameters;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<ModifyParametersRequest, Builder> {
+        private String regionId; 
         private String dimension; 
         private String dimensionValue; 
         private String instanceId; 
         private String parameters; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ModifyParametersRequest response) {
-            super(response);
-            this.dimension = response.dimension;
-            this.dimensionValue = response.dimensionValue;
-            this.instanceId = response.instanceId;
-            this.parameters = response.parameters;
-            this.regionId = response.regionId;
+        private Builder(ModifyParametersRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.dimension = request.dimension;
+            this.dimensionValue = request.dimensionValue;
+            this.instanceId = request.instanceId;
+            this.parameters = request.parameters;
         } 
+
+        /**
+         * 地域ID。
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * 参数类型。 当前支持集群（CLUSTER)和租户（TENANT）
@@ -145,15 +154,6 @@ public class ModifyParametersRequest extends Request {
         public Builder parameters(String parameters) {
             this.putBodyParameter("Parameters", parameters);
             this.parameters = parameters;
-            return this;
-        }
-
-        /**
-         * 地域ID。
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

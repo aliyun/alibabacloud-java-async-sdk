@@ -12,9 +12,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateDatabaseRequest</p>
  */
 public class CreateDatabaseRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Body
     @NameInMap("ClientToken")
     private String clientToken;
+
+    @Body
+    @NameInMap("Collation")
+    private String collation;
 
     @Body
     @NameInMap("DatabaseName")
@@ -34,10 +42,6 @@ public class CreateDatabaseRequest extends Request {
     @NameInMap("InstanceId")
     private String instanceId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Body
     @NameInMap("TenantId")
     @Validation(required = true)
@@ -45,12 +49,13 @@ public class CreateDatabaseRequest extends Request {
 
     private CreateDatabaseRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.clientToken = builder.clientToken;
+        this.collation = builder.collation;
         this.databaseName = builder.databaseName;
         this.description = builder.description;
         this.encoding = builder.encoding;
         this.instanceId = builder.instanceId;
-        this.regionId = builder.regionId;
         this.tenantId = builder.tenantId;
     }
 
@@ -68,10 +73,24 @@ public class CreateDatabaseRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return clientToken
      */
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    /**
+     * @return collation
+     */
+    public String getCollation() {
+        return this.collation;
     }
 
     /**
@@ -103,13 +122,6 @@ public class CreateDatabaseRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return tenantId
      */
     public String getTenantId() {
@@ -117,28 +129,39 @@ public class CreateDatabaseRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateDatabaseRequest, Builder> {
+        private String regionId; 
         private String clientToken; 
+        private String collation; 
         private String databaseName; 
         private String description; 
         private String encoding; 
         private String instanceId; 
-        private String regionId; 
         private String tenantId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateDatabaseRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.databaseName = response.databaseName;
-            this.description = response.description;
-            this.encoding = response.encoding;
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
-            this.tenantId = response.tenantId;
+        private Builder(CreateDatabaseRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.clientToken = request.clientToken;
+            this.collation = request.collation;
+            this.databaseName = request.databaseName;
+            this.description = request.description;
+            this.encoding = request.encoding;
+            this.instanceId = request.instanceId;
+            this.tenantId = request.tenantId;
         } 
+
+        /**
+         * 地域ID。
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * 保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。
@@ -146,6 +169,15 @@ public class CreateDatabaseRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * 字符序
+         */
+        public Builder collation(String collation) {
+            this.putBodyParameter("Collation", collation);
+            this.collation = collation;
             return this;
         }
 
@@ -182,15 +214,6 @@ public class CreateDatabaseRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * 地域ID。
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

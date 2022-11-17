@@ -12,9 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeTenantUsersRequest</p>
  */
 public class DescribeTenantUsersRequest extends Request {
-    @Body
-    @NameInMap("AddressType")
-    private String addressType;
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
 
     @Body
     @NameInMap("PageNumber")
@@ -23,11 +24,6 @@ public class DescribeTenantUsersRequest extends Request {
     @Body
     @NameInMap("PageSize")
     private Integer pageSize;
-
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
 
     @Body
     @NameInMap("SearchKey")
@@ -44,10 +40,9 @@ public class DescribeTenantUsersRequest extends Request {
 
     private DescribeTenantUsersRequest(Builder builder) {
         super(builder);
-        this.addressType = builder.addressType;
+        this.regionId = builder.regionId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
         this.searchKey = builder.searchKey;
         this.tenantId = builder.tenantId;
         this.userName = builder.userName;
@@ -67,10 +62,10 @@ public class DescribeTenantUsersRequest extends Request {
     }
 
     /**
-     * @return addressType
+     * @return regionId
      */
-    public String getAddressType() {
-        return this.addressType;
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -85,13 +80,6 @@ public class DescribeTenantUsersRequest extends Request {
      */
     public Integer getPageSize() {
         return this.pageSize;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -116,10 +104,9 @@ public class DescribeTenantUsersRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeTenantUsersRequest, Builder> {
-        private String addressType; 
+        private String regionId; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private String regionId; 
         private String searchKey; 
         private String tenantId; 
         private String userName; 
@@ -128,23 +115,22 @@ public class DescribeTenantUsersRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeTenantUsersRequest response) {
-            super(response);
-            this.addressType = response.addressType;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.searchKey = response.searchKey;
-            this.tenantId = response.tenantId;
-            this.userName = response.userName;
+        private Builder(DescribeTenantUsersRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.searchKey = request.searchKey;
+            this.tenantId = request.tenantId;
+            this.userName = request.userName;
         } 
 
         /**
-         * AddressType.
+         * 地域ID。
          */
-        public Builder addressType(String addressType) {
-            this.putBodyParameter("AddressType", addressType);
-            this.addressType = addressType;
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 
@@ -163,15 +149,6 @@ public class DescribeTenantUsersRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
             this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * 地域ID。
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

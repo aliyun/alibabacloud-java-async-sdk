@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeOutlineBindingRequest</p>
  */
 public class DescribeOutlineBindingRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Body
     @NameInMap("DatabaseName")
     @Validation(required = true)
@@ -24,11 +29,6 @@ public class DescribeOutlineBindingRequest extends Request {
     @Body
     @NameInMap("IsConcurrentLimit")
     private Boolean isConcurrentLimit;
-
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
 
     @Body
     @NameInMap("SQLId")
@@ -47,10 +47,10 @@ public class DescribeOutlineBindingRequest extends Request {
 
     private DescribeOutlineBindingRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.databaseName = builder.databaseName;
         this.instanceId = builder.instanceId;
         this.isConcurrentLimit = builder.isConcurrentLimit;
-        this.regionId = builder.regionId;
         this.SQLId = builder.SQLId;
         this.tableName = builder.tableName;
         this.tenantId = builder.tenantId;
@@ -67,6 +67,13 @@ public class DescribeOutlineBindingRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -91,13 +98,6 @@ public class DescribeOutlineBindingRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return SQLId
      */
     public String getSQLId() {
@@ -119,10 +119,10 @@ public class DescribeOutlineBindingRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeOutlineBindingRequest, Builder> {
+        private String regionId; 
         private String databaseName; 
         private String instanceId; 
         private Boolean isConcurrentLimit; 
-        private String regionId; 
         private String SQLId; 
         private String tableName; 
         private String tenantId; 
@@ -131,16 +131,25 @@ public class DescribeOutlineBindingRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeOutlineBindingRequest response) {
-            super(response);
-            this.databaseName = response.databaseName;
-            this.instanceId = response.instanceId;
-            this.isConcurrentLimit = response.isConcurrentLimit;
-            this.regionId = response.regionId;
-            this.SQLId = response.SQLId;
-            this.tableName = response.tableName;
-            this.tenantId = response.tenantId;
+        private Builder(DescribeOutlineBindingRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.databaseName = request.databaseName;
+            this.instanceId = request.instanceId;
+            this.isConcurrentLimit = request.isConcurrentLimit;
+            this.SQLId = request.SQLId;
+            this.tableName = request.tableName;
+            this.tenantId = request.tenantId;
         } 
+
+        /**
+         * 地域ID
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * 数据库名称
@@ -166,15 +175,6 @@ public class DescribeOutlineBindingRequest extends Request {
         public Builder isConcurrentLimit(Boolean isConcurrentLimit) {
             this.putBodyParameter("IsConcurrentLimit", isConcurrentLimit);
             this.isConcurrentLimit = isConcurrentLimit;
-            return this;
-        }
-
-        /**
-         * 地域ID
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

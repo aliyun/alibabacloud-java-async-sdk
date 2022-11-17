@@ -12,14 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifySecurityIpsRequest</p>
  */
 public class ModifySecurityIpsRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Body
     @NameInMap("InstanceId")
     @Validation(required = true)
     private String instanceId;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Body
     @NameInMap("SecurityIpGroupName")
@@ -31,8 +31,8 @@ public class ModifySecurityIpsRequest extends Request {
 
     private ModifySecurityIpsRequest(Builder builder) {
         super(builder);
-        this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
+        this.instanceId = builder.instanceId;
         this.securityIpGroupName = builder.securityIpGroupName;
         this.securityIps = builder.securityIps;
     }
@@ -51,17 +51,17 @@ public class ModifySecurityIpsRequest extends Request {
     }
 
     /**
-     * @return instanceId
-     */
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     /**
@@ -79,8 +79,8 @@ public class ModifySecurityIpsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifySecurityIpsRequest, Builder> {
-        private String instanceId; 
         private String regionId; 
+        private String instanceId; 
         private String securityIpGroupName; 
         private String securityIps; 
 
@@ -88,22 +88,13 @@ public class ModifySecurityIpsRequest extends Request {
             super();
         } 
 
-        private Builder(ModifySecurityIpsRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
-            this.securityIpGroupName = response.securityIpGroupName;
-            this.securityIps = response.securityIps;
+        private Builder(ModifySecurityIpsRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.instanceId = request.instanceId;
+            this.securityIpGroupName = request.securityIpGroupName;
+            this.securityIps = request.securityIps;
         } 
-
-        /**
-         * Oceanbase集群ID。
-         */
-        public Builder instanceId(String instanceId) {
-            this.putBodyParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
 
         /**
          * 地域ID。
@@ -111,6 +102,15 @@ public class ModifySecurityIpsRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * Oceanbase集群ID。
+         */
+        public Builder instanceId(String instanceId) {
+            this.putBodyParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
             return this;
         }
 

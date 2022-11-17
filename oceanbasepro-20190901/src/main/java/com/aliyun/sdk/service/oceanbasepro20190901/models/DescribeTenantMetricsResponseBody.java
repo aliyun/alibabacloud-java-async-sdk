@@ -78,7 +78,7 @@ public class DescribeTenantMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * 总数量
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

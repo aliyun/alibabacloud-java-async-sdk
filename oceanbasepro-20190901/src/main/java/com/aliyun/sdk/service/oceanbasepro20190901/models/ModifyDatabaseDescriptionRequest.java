@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyDatabaseDescriptionRequest</p>
  */
 public class ModifyDatabaseDescriptionRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Body
     @NameInMap("DatabaseName")
     @Validation(required = true)
@@ -27,10 +31,6 @@ public class ModifyDatabaseDescriptionRequest extends Request {
     @Validation(required = true)
     private String instanceId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Body
     @NameInMap("TenantId")
     @Validation(required = true)
@@ -38,10 +38,10 @@ public class ModifyDatabaseDescriptionRequest extends Request {
 
     private ModifyDatabaseDescriptionRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.databaseName = builder.databaseName;
         this.description = builder.description;
         this.instanceId = builder.instanceId;
-        this.regionId = builder.regionId;
         this.tenantId = builder.tenantId;
     }
 
@@ -56,6 +56,13 @@ public class ModifyDatabaseDescriptionRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -80,13 +87,6 @@ public class ModifyDatabaseDescriptionRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return tenantId
      */
     public String getTenantId() {
@@ -94,24 +94,33 @@ public class ModifyDatabaseDescriptionRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyDatabaseDescriptionRequest, Builder> {
+        private String regionId; 
         private String databaseName; 
         private String description; 
         private String instanceId; 
-        private String regionId; 
         private String tenantId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ModifyDatabaseDescriptionRequest response) {
-            super(response);
-            this.databaseName = response.databaseName;
-            this.description = response.description;
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
-            this.tenantId = response.tenantId;
+        private Builder(ModifyDatabaseDescriptionRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.databaseName = request.databaseName;
+            this.description = request.description;
+            this.instanceId = request.instanceId;
+            this.tenantId = request.tenantId;
         } 
+
+        /**
+         * 地域ID。
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * 数据库名称。 不能使用某些预留关键字，如 test、mysql。
@@ -137,15 +146,6 @@ public class ModifyDatabaseDescriptionRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * 地域ID。
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

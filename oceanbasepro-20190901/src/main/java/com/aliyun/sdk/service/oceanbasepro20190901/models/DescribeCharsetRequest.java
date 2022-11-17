@@ -62,10 +62,10 @@ public class DescribeCharsetRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeCharsetRequest response) {
-            super(response);
-            this.regionId = response.regionId;
-            this.tenantMode = response.tenantMode;
+        private Builder(DescribeCharsetRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.tenantMode = request.tenantMode;
         } 
 
         /**

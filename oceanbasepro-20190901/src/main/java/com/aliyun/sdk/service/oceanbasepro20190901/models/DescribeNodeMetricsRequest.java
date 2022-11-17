@@ -12,14 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeNodeMetricsRequest</p>
  */
 public class DescribeNodeMetricsRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Body
     @NameInMap("EndTime")
     @Validation(required = true)
     private String endTime;
-
-    @Body
-    @NameInMap("FuzzyName")
-    private Boolean fuzzyName;
 
     @Body
     @NameInMap("InstanceId")
@@ -47,10 +47,6 @@ public class DescribeNodeMetricsRequest extends Request {
     @NameInMap("PageSize")
     private Integer pageSize;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Body
     @NameInMap("StartTime")
     @Validation(required = true)
@@ -62,15 +58,14 @@ public class DescribeNodeMetricsRequest extends Request {
 
     private DescribeNodeMetricsRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.endTime = builder.endTime;
-        this.fuzzyName = builder.fuzzyName;
         this.instanceId = builder.instanceId;
         this.metrics = builder.metrics;
         this.nodeIdList = builder.nodeIdList;
         this.nodeName = builder.nodeName;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
         this.startTime = builder.startTime;
         this.tenantId = builder.tenantId;
     }
@@ -89,17 +84,17 @@ public class DescribeNodeMetricsRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return endTime
      */
     public String getEndTime() {
         return this.endTime;
-    }
-
-    /**
-     * @return fuzzyName
-     */
-    public Boolean getFuzzyName() {
-        return this.fuzzyName;
     }
 
     /**
@@ -145,13 +140,6 @@ public class DescribeNodeMetricsRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -166,15 +154,14 @@ public class DescribeNodeMetricsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeNodeMetricsRequest, Builder> {
+        private String regionId; 
         private String endTime; 
-        private Boolean fuzzyName; 
         private String instanceId; 
         private String metrics; 
         private String nodeIdList; 
         private String nodeName; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private String regionId; 
         private String startTime; 
         private String tenantId; 
 
@@ -182,36 +169,35 @@ public class DescribeNodeMetricsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeNodeMetricsRequest response) {
-            super(response);
-            this.endTime = response.endTime;
-            this.fuzzyName = response.fuzzyName;
-            this.instanceId = response.instanceId;
-            this.metrics = response.metrics;
-            this.nodeIdList = response.nodeIdList;
-            this.nodeName = response.nodeName;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.startTime = response.startTime;
-            this.tenantId = response.tenantId;
+        private Builder(DescribeNodeMetricsRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.endTime = request.endTime;
+            this.instanceId = request.instanceId;
+            this.metrics = request.metrics;
+            this.nodeIdList = request.nodeIdList;
+            this.nodeName = request.nodeName;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.startTime = request.startTime;
+            this.tenantId = request.tenantId;
         } 
 
         /**
-         * 参数历史查看的结束时间。
+         * 地域ID。
          */
-        public Builder endTime(String endTime) {
-            this.putBodyParameter("EndTime", endTime);
-            this.endTime = endTime;
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 
         /**
-         * FuzzyName.
+         * 监控数据的结束时间。该时间只支持UTC时间，格式为：YYYY-MM-DDThh:mm:ssZ。
          */
-        public Builder fuzzyName(Boolean fuzzyName) {
-            this.putBodyParameter("FuzzyName", fuzzyName);
-            this.fuzzyName = fuzzyName;
+        public Builder endTime(String endTime) {
+            this.putBodyParameter("EndTime", endTime);
+            this.endTime = endTime;
             return this;
         }
 
@@ -225,7 +211,7 @@ public class DescribeNodeMetricsRequest extends Request {
         }
 
         /**
-         * 监控指标
+         * 监控指标项。当前可支持的指标及说明可参考：https://help.aliyun.com/document_detail/212099.html。
          */
         public Builder metrics(String metrics) {
             this.putBodyParameter("Metrics", metrics);
@@ -270,16 +256,7 @@ public class DescribeNodeMetricsRequest extends Request {
         }
 
         /**
-         * 地域ID。
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * 参数历史查看的起始时间。
+         * 监控数据的起始时间。该时间只支持UTC时间，格式为：YYYY-MM-DDThh:mm:ssZ。
          */
         public Builder startTime(String startTime) {
             this.putBodyParameter("StartTime", startTime);

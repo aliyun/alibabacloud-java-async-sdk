@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSQLHistoryListRequest</p>
  */
 public class DescribeSQLHistoryListRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Body
     @NameInMap("EndTime")
     @Validation(required = true)
@@ -24,11 +29,6 @@ public class DescribeSQLHistoryListRequest extends Request {
     @Body
     @NameInMap("PageSize")
     private Integer pageSize;
-
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
 
     @Body
     @NameInMap("SQLId")
@@ -47,10 +47,10 @@ public class DescribeSQLHistoryListRequest extends Request {
 
     private DescribeSQLHistoryListRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.endTime = builder.endTime;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
         this.SQLId = builder.SQLId;
         this.startTime = builder.startTime;
         this.tenantId = builder.tenantId;
@@ -67,6 +67,13 @@ public class DescribeSQLHistoryListRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -91,13 +98,6 @@ public class DescribeSQLHistoryListRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return SQLId
      */
     public String getSQLId() {
@@ -119,10 +119,10 @@ public class DescribeSQLHistoryListRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeSQLHistoryListRequest, Builder> {
+        private String regionId; 
         private String endTime; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private String regionId; 
         private String SQLId; 
         private String startTime; 
         private String tenantId; 
@@ -131,16 +131,25 @@ public class DescribeSQLHistoryListRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeSQLHistoryListRequest response) {
-            super(response);
-            this.endTime = response.endTime;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.SQLId = response.SQLId;
-            this.startTime = response.startTime;
-            this.tenantId = response.tenantId;
+        private Builder(DescribeSQLHistoryListRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.endTime = request.endTime;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.SQLId = request.SQLId;
+            this.startTime = request.startTime;
+            this.tenantId = request.tenantId;
         } 
+
+        /**
+         * 地域ID
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * 参数历史查看的结束时间。
@@ -152,7 +161,7 @@ public class DescribeSQLHistoryListRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * 页码
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -161,20 +170,11 @@ public class DescribeSQLHistoryListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * 每页数量
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
             this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * 地域ID
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 
