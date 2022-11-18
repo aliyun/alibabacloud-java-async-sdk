@@ -27,8 +27,14 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
     @NameInMap("IsLatestVersion")
     private Boolean isLatestVersion;
 
+    @NameInMap("IsNewSSLMode")
+    private String isNewSSLMode;
+
     @NameInMap("IsRedisCompatibleVersion")
-    private Boolean isRedisCompatibleVersion;
+    private String isRedisCompatibleVersion;
+
+    @NameInMap("IsSSLEnable")
+    private String isSSLEnable;
 
     @NameInMap("MajorVersion")
     private String majorVersion;
@@ -51,7 +57,9 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
         this.enableUpgradeMinorVersion = builder.enableUpgradeMinorVersion;
         this.engine = builder.engine;
         this.isLatestVersion = builder.isLatestVersion;
+        this.isNewSSLMode = builder.isNewSSLMode;
         this.isRedisCompatibleVersion = builder.isRedisCompatibleVersion;
+        this.isSSLEnable = builder.isSSLEnable;
         this.majorVersion = builder.majorVersion;
         this.minorVersion = builder.minorVersion;
         this.proxyMinorVersion = builder.proxyMinorVersion;
@@ -103,10 +111,24 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
     }
 
     /**
+     * @return isNewSSLMode
+     */
+    public String getIsNewSSLMode() {
+        return this.isNewSSLMode;
+    }
+
+    /**
      * @return isRedisCompatibleVersion
      */
-    public Boolean getIsRedisCompatibleVersion() {
+    public String getIsRedisCompatibleVersion() {
         return this.isRedisCompatibleVersion;
+    }
+
+    /**
+     * @return isSSLEnable
+     */
+    public String getIsSSLEnable() {
+        return this.isSSLEnable;
     }
 
     /**
@@ -150,7 +172,9 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
         private Boolean enableUpgradeMinorVersion; 
         private String engine; 
         private Boolean isLatestVersion; 
-        private Boolean isRedisCompatibleVersion; 
+        private String isNewSSLMode; 
+        private String isRedisCompatibleVersion; 
+        private String isSSLEnable; 
         private String majorVersion; 
         private String minorVersion; 
         private String proxyMinorVersion; 
@@ -198,10 +222,26 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
         }
 
         /**
+         * IsNewSSLMode.
+         */
+        public Builder isNewSSLMode(String isNewSSLMode) {
+            this.isNewSSLMode = isNewSSLMode;
+            return this;
+        }
+
+        /**
          * IsRedisCompatibleVersion.
          */
-        public Builder isRedisCompatibleVersion(Boolean isRedisCompatibleVersion) {
+        public Builder isRedisCompatibleVersion(String isRedisCompatibleVersion) {
             this.isRedisCompatibleVersion = isRedisCompatibleVersion;
+            return this;
+        }
+
+        /**
+         * IsSSLEnable.
+         */
+        public Builder isSSLEnable(String isSSLEnable) {
+            this.isSSLEnable = isSSLEnable;
             return this;
         }
 
