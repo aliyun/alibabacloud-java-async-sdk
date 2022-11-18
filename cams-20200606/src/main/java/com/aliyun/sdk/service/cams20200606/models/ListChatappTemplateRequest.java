@@ -17,7 +17,12 @@ public class ListChatappTemplateRequest extends Request {
     private String auditStatus;
 
     @Query
+    @NameInMap("CustSpaceId")
+    private String custSpaceId;
+
+    @Query
     @NameInMap("CustWabaId")
+    @Deprecated
     private String custWabaId;
 
     @Query
@@ -39,6 +44,7 @@ public class ListChatappTemplateRequest extends Request {
     private ListChatappTemplateRequest(Builder builder) {
         super(builder);
         this.auditStatus = builder.auditStatus;
+        this.custSpaceId = builder.custSpaceId;
         this.custWabaId = builder.custWabaId;
         this.isvCode = builder.isvCode;
         this.language = builder.language;
@@ -64,6 +70,13 @@ public class ListChatappTemplateRequest extends Request {
      */
     public String getAuditStatus() {
         return this.auditStatus;
+    }
+
+    /**
+     * @return custSpaceId
+     */
+    public String getCustSpaceId() {
+        return this.custSpaceId;
     }
 
     /**
@@ -103,6 +116,7 @@ public class ListChatappTemplateRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListChatappTemplateRequest, Builder> {
         private String auditStatus; 
+        private String custSpaceId; 
         private String custWabaId; 
         private String isvCode; 
         private String language; 
@@ -116,6 +130,7 @@ public class ListChatappTemplateRequest extends Request {
         private Builder(ListChatappTemplateRequest request) {
             super(request);
             this.auditStatus = request.auditStatus;
+            this.custSpaceId = request.custSpaceId;
             this.custWabaId = request.custWabaId;
             this.isvCode = request.isvCode;
             this.language = request.language;
@@ -133,7 +148,16 @@ public class ListChatappTemplateRequest extends Request {
         }
 
         /**
-         * ISV客户WabaId
+         * ISV子客户的SpaceId
+         */
+        public Builder custSpaceId(String custSpaceId) {
+            this.putQueryParameter("CustSpaceId", custSpaceId);
+            this.custSpaceId = custSpaceId;
+            return this;
+        }
+
+        /**
+         * ISV客户WabaId, 后续会被弃用，请使用CustSpaceId
          */
         public Builder custWabaId(String custWabaId) {
             this.putQueryParameter("CustWabaId", custWabaId);

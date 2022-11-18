@@ -18,6 +18,10 @@ public class BeeBotChatRequest extends Request {
     private String chatBotInstanceId;
 
     @Body
+    @NameInMap("CustSpaceId")
+    private String custSpaceId;
+
+    @Body
     @NameInMap("IntentName")
     private String intentName;
 
@@ -57,6 +61,7 @@ public class BeeBotChatRequest extends Request {
     private BeeBotChatRequest(Builder builder) {
         super(builder);
         this.chatBotInstanceId = builder.chatBotInstanceId;
+        this.custSpaceId = builder.custSpaceId;
         this.intentName = builder.intentName;
         this.isvCode = builder.isvCode;
         this.knowledgeId = builder.knowledgeId;
@@ -86,6 +91,13 @@ public class BeeBotChatRequest extends Request {
      */
     public String getChatBotInstanceId() {
         return this.chatBotInstanceId;
+    }
+
+    /**
+     * @return custSpaceId
+     */
+    public String getCustSpaceId() {
+        return this.custSpaceId;
     }
 
     /**
@@ -153,6 +165,7 @@ public class BeeBotChatRequest extends Request {
 
     public static final class Builder extends Request.Builder<BeeBotChatRequest, Builder> {
         private String chatBotInstanceId; 
+        private String custSpaceId; 
         private String intentName; 
         private String isvCode; 
         private String knowledgeId; 
@@ -170,6 +183,7 @@ public class BeeBotChatRequest extends Request {
         private Builder(BeeBotChatRequest request) {
             super(request);
             this.chatBotInstanceId = request.chatBotInstanceId;
+            this.custSpaceId = request.custSpaceId;
             this.intentName = request.intentName;
             this.isvCode = request.isvCode;
             this.knowledgeId = request.knowledgeId;
@@ -187,6 +201,15 @@ public class BeeBotChatRequest extends Request {
         public Builder chatBotInstanceId(String chatBotInstanceId) {
             this.putBodyParameter("ChatBotInstanceId", chatBotInstanceId);
             this.chatBotInstanceId = chatBotInstanceId;
+            return this;
+        }
+
+        /**
+         * ISV子客户的SpaceId
+         */
+        public Builder custSpaceId(String custSpaceId) {
+            this.putBodyParameter("CustSpaceId", custSpaceId);
+            this.custSpaceId = custSpaceId;
             return this;
         }
 

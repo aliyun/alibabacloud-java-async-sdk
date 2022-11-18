@@ -22,8 +22,13 @@ public class CreateChatappTemplateRequest extends Request {
     @Validation(required = true)
     private java.util.List < Components> components;
 
+    @Query
+    @NameInMap("CustSpaceId")
+    private String custSpaceId;
+
     @Body
     @NameInMap("CustWabaId")
+    @Deprecated
     private String custWabaId;
 
     @Body
@@ -53,6 +58,7 @@ public class CreateChatappTemplateRequest extends Request {
         super(builder);
         this.category = builder.category;
         this.components = builder.components;
+        this.custSpaceId = builder.custSpaceId;
         this.custWabaId = builder.custWabaId;
         this.example = builder.example;
         this.isvCode = builder.isvCode;
@@ -86,6 +92,13 @@ public class CreateChatappTemplateRequest extends Request {
      */
     public java.util.List < Components> getComponents() {
         return this.components;
+    }
+
+    /**
+     * @return custSpaceId
+     */
+    public String getCustSpaceId() {
+        return this.custSpaceId;
     }
 
     /**
@@ -133,6 +146,7 @@ public class CreateChatappTemplateRequest extends Request {
     public static final class Builder extends Request.Builder<CreateChatappTemplateRequest, Builder> {
         private String category; 
         private java.util.List < Components> components; 
+        private String custSpaceId; 
         private String custWabaId; 
         private java.util.Map < String, String > example; 
         private String isvCode; 
@@ -148,6 +162,7 @@ public class CreateChatappTemplateRequest extends Request {
             super(request);
             this.category = request.category;
             this.components = request.components;
+            this.custSpaceId = request.custSpaceId;
             this.custWabaId = request.custWabaId;
             this.example = request.example;
             this.isvCode = request.isvCode;
@@ -176,7 +191,16 @@ public class CreateChatappTemplateRequest extends Request {
         }
 
         /**
-         * ISV客户WabaId
+         * ISV子客户的SpaceId
+         */
+        public Builder custSpaceId(String custSpaceId) {
+            this.putQueryParameter("CustSpaceId", custSpaceId);
+            this.custSpaceId = custSpaceId;
+            return this;
+        }
+
+        /**
+         * ISV客户WabaId, 后续会被弃用，请使用CustSpaceId
          */
         public Builder custWabaId(String custWabaId) {
             this.putBodyParameter("CustWabaId", custWabaId);

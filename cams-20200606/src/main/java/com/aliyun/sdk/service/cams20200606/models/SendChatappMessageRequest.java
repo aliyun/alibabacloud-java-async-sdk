@@ -22,7 +22,12 @@ public class SendChatappMessageRequest extends Request {
     private String content;
 
     @Body
+    @NameInMap("CustSpaceId")
+    private String custSpaceId;
+
+    @Body
     @NameInMap("CustWabaId")
+    @Deprecated
     private String custWabaId;
 
     @Body
@@ -76,6 +81,7 @@ public class SendChatappMessageRequest extends Request {
         super(builder);
         this.channelType = builder.channelType;
         this.content = builder.content;
+        this.custSpaceId = builder.custSpaceId;
         this.custWabaId = builder.custWabaId;
         this.fallBackContent = builder.fallBackContent;
         this.fallBackId = builder.fallBackId;
@@ -115,6 +121,13 @@ public class SendChatappMessageRequest extends Request {
      */
     public String getContent() {
         return this.content;
+    }
+
+    /**
+     * @return custSpaceId
+     */
+    public String getCustSpaceId() {
+        return this.custSpaceId;
     }
 
     /**
@@ -204,6 +217,7 @@ public class SendChatappMessageRequest extends Request {
     public static final class Builder extends Request.Builder<SendChatappMessageRequest, Builder> {
         private String channelType; 
         private String content; 
+        private String custSpaceId; 
         private String custWabaId; 
         private String fallBackContent; 
         private String fallBackId; 
@@ -225,6 +239,7 @@ public class SendChatappMessageRequest extends Request {
             super(request);
             this.channelType = request.channelType;
             this.content = request.content;
+            this.custSpaceId = request.custSpaceId;
             this.custWabaId = request.custWabaId;
             this.fallBackContent = request.fallBackContent;
             this.fallBackId = request.fallBackId;
@@ -254,6 +269,15 @@ public class SendChatappMessageRequest extends Request {
         public Builder content(String content) {
             this.putQueryParameter("Content", content);
             this.content = content;
+            return this;
+        }
+
+        /**
+         * ISV子客户的SpaceId
+         */
+        public Builder custSpaceId(String custSpaceId) {
+            this.putBodyParameter("CustSpaceId", custSpaceId);
+            this.custSpaceId = custSpaceId;
             return this;
         }
 

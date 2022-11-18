@@ -18,7 +18,12 @@ public class SendChatappMassMessageRequest extends Request {
     private String channelType;
 
     @Body
+    @NameInMap("CustSpaceId")
+    private String custSpaceId;
+
+    @Body
     @NameInMap("CustWabaId")
+    @Deprecated
     private String custWabaId;
 
     @Body
@@ -60,6 +65,7 @@ public class SendChatappMassMessageRequest extends Request {
     private SendChatappMassMessageRequest(Builder builder) {
         super(builder);
         this.channelType = builder.channelType;
+        this.custSpaceId = builder.custSpaceId;
         this.custWabaId = builder.custWabaId;
         this.fallBackContent = builder.fallBackContent;
         this.fallBackId = builder.fallBackId;
@@ -89,6 +95,13 @@ public class SendChatappMassMessageRequest extends Request {
      */
     public String getChannelType() {
         return this.channelType;
+    }
+
+    /**
+     * @return custSpaceId
+     */
+    public String getCustSpaceId() {
+        return this.custSpaceId;
     }
 
     /**
@@ -156,6 +169,7 @@ public class SendChatappMassMessageRequest extends Request {
 
     public static final class Builder extends Request.Builder<SendChatappMassMessageRequest, Builder> {
         private String channelType; 
+        private String custSpaceId; 
         private String custWabaId; 
         private String fallBackContent; 
         private String fallBackId; 
@@ -173,6 +187,7 @@ public class SendChatappMassMessageRequest extends Request {
         private Builder(SendChatappMassMessageRequest request) {
             super(request);
             this.channelType = request.channelType;
+            this.custSpaceId = request.custSpaceId;
             this.custWabaId = request.custWabaId;
             this.fallBackContent = request.fallBackContent;
             this.fallBackId = request.fallBackId;
@@ -190,6 +205,15 @@ public class SendChatappMassMessageRequest extends Request {
         public Builder channelType(String channelType) {
             this.putBodyParameter("ChannelType", channelType);
             this.channelType = channelType;
+            return this;
+        }
+
+        /**
+         * ISV子客户的SpaceId
+         */
+        public Builder custSpaceId(String custSpaceId) {
+            this.putBodyParameter("CustSpaceId", custSpaceId);
+            this.custSpaceId = custSpaceId;
             return this;
         }
 
