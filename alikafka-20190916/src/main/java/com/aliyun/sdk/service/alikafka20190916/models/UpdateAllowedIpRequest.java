@@ -23,6 +23,10 @@ public class UpdateAllowedIpRequest extends Request {
     private String allowedListType;
 
     @Query
+    @NameInMap("Description")
+    private String description;
+
+    @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
     private String instanceId;
@@ -46,6 +50,7 @@ public class UpdateAllowedIpRequest extends Request {
         super(builder);
         this.allowedListIp = builder.allowedListIp;
         this.allowedListType = builder.allowedListType;
+        this.description = builder.description;
         this.instanceId = builder.instanceId;
         this.portRange = builder.portRange;
         this.regionId = builder.regionId;
@@ -80,6 +85,13 @@ public class UpdateAllowedIpRequest extends Request {
     }
 
     /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -110,6 +122,7 @@ public class UpdateAllowedIpRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateAllowedIpRequest, Builder> {
         private String allowedListIp; 
         private String allowedListType; 
+        private String description; 
         private String instanceId; 
         private String portRange; 
         private String regionId; 
@@ -123,6 +136,7 @@ public class UpdateAllowedIpRequest extends Request {
             super(request);
             this.allowedListIp = request.allowedListIp;
             this.allowedListType = request.allowedListType;
+            this.description = request.description;
             this.instanceId = request.instanceId;
             this.portRange = request.portRange;
             this.regionId = request.regionId;
@@ -144,6 +158,15 @@ public class UpdateAllowedIpRequest extends Request {
         public Builder allowedListType(String allowedListType) {
             this.putQueryParameter("AllowedListType", allowedListType);
             this.allowedListType = allowedListType;
+            return this;
+        }
+
+        /**
+         * Description.
+         */
+        public Builder description(String description) {
+            this.putQueryParameter("Description", description);
+            this.description = description;
             return this;
         }
 

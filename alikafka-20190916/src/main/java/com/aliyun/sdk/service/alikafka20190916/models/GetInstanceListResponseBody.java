@@ -344,6 +344,9 @@ public class GetInstanceListResponseBody extends TeaModel {
         @NameInMap("SslEndPoint")
         private String sslEndPoint;
 
+        @NameInMap("StandardZoneId")
+        private String standardZoneId;
+
         @NameInMap("Tags")
         private Tags tags;
 
@@ -395,6 +398,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             this.specType = builder.specType;
             this.sslDomainEndpoint = builder.sslDomainEndpoint;
             this.sslEndPoint = builder.sslEndPoint;
+            this.standardZoneId = builder.standardZoneId;
             this.tags = builder.tags;
             this.topicNumLimit = builder.topicNumLimit;
             this.upgradeServiceDetailInfo = builder.upgradeServiceDetailInfo;
@@ -576,6 +580,13 @@ public class GetInstanceListResponseBody extends TeaModel {
         }
 
         /**
+         * @return standardZoneId
+         */
+        public String getStandardZoneId() {
+            return this.standardZoneId;
+        }
+
+        /**
          * @return tags
          */
         public Tags getTags() {
@@ -662,6 +673,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             private String specType; 
             private String sslDomainEndpoint; 
             private String sslEndPoint; 
+            private String standardZoneId; 
             private Tags tags; 
             private Integer topicNumLimit; 
             private UpgradeServiceDetailInfo upgradeServiceDetailInfo; 
@@ -853,6 +865,14 @@ public class GetInstanceListResponseBody extends TeaModel {
              */
             public Builder sslEndPoint(String sslEndPoint) {
                 this.sslEndPoint = sslEndPoint;
+                return this;
+            }
+
+            /**
+             * StandardZoneId.
+             */
+            public Builder standardZoneId(String standardZoneId) {
+                this.standardZoneId = standardZoneId;
                 return this;
             }
 

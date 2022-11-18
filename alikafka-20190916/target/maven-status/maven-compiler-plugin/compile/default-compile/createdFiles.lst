@@ -2,7 +2,6 @@ com/aliyun/sdk/service/alikafka20190916/models/ModifyTopicRemarkResponse.class
 com/aliyun/sdk/service/alikafka20190916/models/ModifyPartitionNumRequest.class
 com/aliyun/sdk/service/alikafka20190916/models/CreateTopicResponse.class
 com/aliyun/sdk/service/alikafka20190916/models/GetTopicStatusResponseBody$TopicStatus$Builder.class
-com/aliyun/sdk/service/alikafka20190916/models/DescribeNodeStatusResponseBody$Builder.class
 com/aliyun/sdk/service/alikafka20190916/models/DeleteConsumerGroupResponse$Builder.class
 com/aliyun/sdk/service/alikafka20190916/models/ReleaseInstanceRequest$Builder.class
 com/aliyun/sdk/service/alikafka20190916/models/ChangeResourceGroupResponse.class
@@ -21,7 +20,6 @@ com/aliyun/sdk/service/alikafka20190916/models/UpgradeInstanceVersionRequest$1.c
 com/aliyun/sdk/service/alikafka20190916/models/GetAllInstanceIdListResponse.class
 com/aliyun/sdk/service/alikafka20190916/models/GetConsumerListResponseBody$Tags$Builder.class
 com/aliyun/sdk/service/alikafka20190916/models/TagResourcesResponse$BuilderImpl.class
-com/aliyun/sdk/service/alikafka20190916/models/DescribeNodeStatusResponse$BuilderImpl.class
 com/aliyun/sdk/service/alikafka20190916/models/UpdateInstanceConfigResponse$Builder.class
 com/aliyun/sdk/service/alikafka20190916/models/GetConsumerListResponseBody$Builder.class
 com/aliyun/sdk/service/alikafka20190916/models/TagResourcesRequest$1.class
@@ -36,8 +34,8 @@ com/aliyun/sdk/service/alikafka20190916/AsyncClient.class
 com/aliyun/sdk/service/alikafka20190916/models/TagResourcesResponseBody$Builder.class
 com/aliyun/sdk/service/alikafka20190916/models/ListTagResourcesResponse$BuilderImpl.class
 com/aliyun/sdk/service/alikafka20190916/models/CreatePrePayOrderResponse$Builder.class
+com/aliyun/sdk/service/alikafka20190916/models/GetQuotaTipRequest.class
 com/aliyun/sdk/service/alikafka20190916/models/UpgradePostPayOrderRequest$1.class
-com/aliyun/sdk/service/alikafka20190916/models/DescribeNodeStatusResponse$1.class
 com/aliyun/sdk/service/alikafka20190916/models/CreatePrePayOrderResponse.class
 com/aliyun/sdk/service/alikafka20190916/models/DescribeAclsResponseBody$1.class
 com/aliyun/sdk/service/alikafka20190916/models/ChangeResourceGroupResponseBody$Builder.class
@@ -73,9 +71,10 @@ com/aliyun/sdk/service/alikafka20190916/models/UpdateAllowedIpRequest$Builder.cl
 com/aliyun/sdk/service/alikafka20190916/models/ReleaseInstanceResponseBody$1.class
 com/aliyun/sdk/service/alikafka20190916/models/CreateConsumerGroupResponse$Builder.class
 com/aliyun/sdk/service/alikafka20190916/models/DeleteTopicRequest$1.class
-com/aliyun/sdk/service/alikafka20190916/models/DescribeNodeStatusResponse$Builder.class
 com/aliyun/sdk/service/alikafka20190916/models/ListTagResourcesResponse.class
 com/aliyun/sdk/service/alikafka20190916/models/CreateConsumerGroupResponse$BuilderImpl.class
+com/aliyun/sdk/service/alikafka20190916/models/CreateConsumerGroupRequest$Tag$Builder.class
+com/aliyun/sdk/service/alikafka20190916/models/GetQuotaTipResponseBody$QuotaData.class
 com/aliyun/sdk/service/alikafka20190916/models/GetAllowedIpListRequest$1.class
 com/aliyun/sdk/service/alikafka20190916/models/StartInstanceResponseBody.class
 com/aliyun/sdk/service/alikafka20190916/models/GetTopicListResponseBody$TagVO.class
@@ -119,8 +118,8 @@ com/aliyun/sdk/service/alikafka20190916/models/UntagResourcesResponseBody$Builde
 com/aliyun/sdk/service/alikafka20190916/models/UpgradePostPayOrderResponse$1.class
 com/aliyun/sdk/service/alikafka20190916/models/CreateConsumerGroupResponseBody.class
 com/aliyun/sdk/service/alikafka20190916/models/GetTopicListResponseBody$Builder.class
-com/aliyun/sdk/service/alikafka20190916/models/DescribeNodeStatusRequest$1.class
 com/aliyun/sdk/service/alikafka20190916/models/ReleaseInstanceResponse$1.class
+com/aliyun/sdk/service/alikafka20190916/models/GetQuotaTipResponse$1.class
 com/aliyun/sdk/service/alikafka20190916/models/ModifyPartitionNumResponse$1.class
 com/aliyun/sdk/service/alikafka20190916/models/GetInstanceListResponseBody$InstanceVO$Builder.class
 com/aliyun/sdk/service/alikafka20190916/models/DescribeSaslUsersResponseBody$SaslUserList$Builder.class
@@ -129,11 +128,13 @@ com/aliyun/sdk/service/alikafka20190916/models/GetInstanceListRequest.class
 com/aliyun/sdk/service/alikafka20190916/models/GetAllowedIpListResponse$Builder.class
 com/aliyun/sdk/service/alikafka20190916/models/ModifyPartitionNumRequest$1.class
 com/aliyun/sdk/service/alikafka20190916/models/DeleteSaslUserRequest$Builder.class
+com/aliyun/sdk/service/alikafka20190916/models/CreateTopicRequest$Tag$Builder.class
 com/aliyun/sdk/service/alikafka20190916/models/UpdateAllowedIpRequest.class
 com/aliyun/sdk/service/alikafka20190916/models/CreateConsumerGroupResponse.class
 com/aliyun/sdk/service/alikafka20190916/models/UpdateInstanceConfigResponseBody.class
 com/aliyun/sdk/service/alikafka20190916/models/ReleaseInstanceRequest.class
 com/aliyun/sdk/service/alikafka20190916/models/StartInstanceResponse$1.class
+com/aliyun/sdk/service/alikafka20190916/models/GetQuotaTipResponse$BuilderImpl.class
 com/aliyun/sdk/service/alikafka20190916/models/UpdateInstanceConfigRequest$Builder.class
 com/aliyun/sdk/service/alikafka20190916/models/DescribeAclsResponseBody$KafkaAclVO.class
 com/aliyun/sdk/service/alikafka20190916/models/GetTopicStatusResponse.class
@@ -144,6 +145,7 @@ com/aliyun/sdk/service/alikafka20190916/models/GetConsumerProgressResponseBody$C
 com/aliyun/sdk/service/alikafka20190916/models/UpgradePrePayOrderRequest$Builder.class
 com/aliyun/sdk/service/alikafka20190916/models/UpgradePrePayOrderResponse$1.class
 com/aliyun/sdk/service/alikafka20190916/models/UpdateAllowedIpResponseBody$Builder.class
+com/aliyun/sdk/service/alikafka20190916/models/GetQuotaTipResponseBody$1.class
 com/aliyun/sdk/service/alikafka20190916/models/DeleteConsumerGroupResponseBody$1.class
 com/aliyun/sdk/service/alikafka20190916/models/CreateAclResponse$Builder.class
 com/aliyun/sdk/service/alikafka20190916/models/GetAllInstanceIdListRequest$1.class
@@ -151,13 +153,15 @@ com/aliyun/sdk/service/alikafka20190916/models/DescribeAclsResponseBody$Builder.
 com/aliyun/sdk/service/alikafka20190916/models/ModifyTopicRemarkResponse$BuilderImpl.class
 com/aliyun/sdk/service/alikafka20190916/models/GetTopicListResponseBody$Tags$Builder.class
 com/aliyun/sdk/service/alikafka20190916/models/CreatePostPayOrderResponse$1.class
-com/aliyun/sdk/service/alikafka20190916/models/DescribeNodeStatusRequest$Builder.class
+com/aliyun/sdk/service/alikafka20190916/models/GetQuotaTipResponseBody$Builder.class
+com/aliyun/sdk/service/alikafka20190916/models/CreatePrePayOrderRequest$Tag$Builder.class
 com/aliyun/sdk/service/alikafka20190916/models/DescribeSaslUsersResponse.class
 com/aliyun/sdk/service/alikafka20190916/models/ConvertPostPayOrderRequest$Builder.class
 com/aliyun/sdk/service/alikafka20190916/models/CreateConsumerGroupRequest$1.class
 com/aliyun/sdk/service/alikafka20190916/models/GetConsumerProgressResponseBody$TopicListOffsetList.class
 com/aliyun/sdk/service/alikafka20190916/models/GetInstanceListResponseBody.class
 com/aliyun/sdk/service/alikafka20190916/models/GetTopicStatusResponse$Builder.class
+com/aliyun/sdk/service/alikafka20190916/models/CreatePostPayOrderRequest$Tag$Builder.class
 com/aliyun/sdk/service/alikafka20190916/models/DeleteInstanceResponse$1.class
 com/aliyun/sdk/service/alikafka20190916/models/CreateTopicResponseBody$Builder.class
 com/aliyun/sdk/service/alikafka20190916/models/ModifyTopicRemarkResponse$Builder.class
@@ -165,7 +169,6 @@ com/aliyun/sdk/service/alikafka20190916/models/GetConsumerProgressResponseBody$1
 com/aliyun/sdk/service/alikafka20190916/models/UpdateAllowedIpRequest$1.class
 com/aliyun/sdk/service/alikafka20190916/models/StartInstanceRequest$Builder.class
 com/aliyun/sdk/service/alikafka20190916/models/ConvertPostPayOrderResponseBody$1.class
-com/aliyun/sdk/service/alikafka20190916/models/DescribeNodeStatusResponseBody$1.class
 com/aliyun/sdk/service/alikafka20190916/models/GetConsumerProgressResponseBody$ConsumerProgressTopicList.class
 com/aliyun/sdk/service/alikafka20190916/models/GetInstanceListResponse$BuilderImpl.class
 com/aliyun/sdk/service/alikafka20190916/models/UntagResourcesResponseBody.class
@@ -211,13 +214,14 @@ com/aliyun/sdk/service/alikafka20190916/models/DescribeAclsRequest.class
 com/aliyun/sdk/service/alikafka20190916/models/DescribeAclsResponse$1.class
 com/aliyun/sdk/service/alikafka20190916/models/GetConsumerProgressRequest$Builder.class
 com/aliyun/sdk/service/alikafka20190916/models/UpgradeInstanceVersionResponse$1.class
-com/aliyun/sdk/service/alikafka20190916/models/DescribeNodeStatusResponse.class
+com/aliyun/sdk/service/alikafka20190916/models/GetQuotaTipResponseBody.class
 com/aliyun/sdk/service/alikafka20190916/models/DescribeSaslUsersResponseBody$SaslUserList.class
 com/aliyun/sdk/service/alikafka20190916/models/GetConsumerListResponse$1.class
 com/aliyun/sdk/service/alikafka20190916/models/GetTopicListRequest$Builder.class
 com/aliyun/sdk/service/alikafka20190916/models/UpdateAllowedIpResponse$1.class
 com/aliyun/sdk/service/alikafka20190916/models/DeleteInstanceResponse$Builder.class
 com/aliyun/sdk/service/alikafka20190916/models/ListTagResourcesResponse$1.class
+com/aliyun/sdk/service/alikafka20190916/models/GetQuotaTipRequest$Builder.class
 com/aliyun/sdk/service/alikafka20190916/models/ModifyPartitionNumResponseBody$Builder.class
 com/aliyun/sdk/service/alikafka20190916/models/DeleteSaslUserResponseBody$Builder.class
 com/aliyun/sdk/service/alikafka20190916/models/ModifyTopicRemarkResponse$1.class
@@ -248,7 +252,6 @@ com/aliyun/sdk/service/alikafka20190916/models/UntagResourcesResponse$1.class
 com/aliyun/sdk/service/alikafka20190916/models/GetAllowedIpListResponseBody$InternetList$Builder.class
 com/aliyun/sdk/service/alikafka20190916/models/GetTopicListResponseBody$TopicList.class
 com/aliyun/sdk/service/alikafka20190916/models/CreateTopicRequest.class
-com/aliyun/sdk/service/alikafka20190916/models/DescribeNodeStatusRequest.class
 com/aliyun/sdk/service/alikafka20190916/models/CreatePrePayOrderResponseBody$Builder.class
 com/aliyun/sdk/service/alikafka20190916/models/GetInstanceListResponseBody$TagVO.class
 com/aliyun/sdk/service/alikafka20190916/models/GetAllInstanceIdListResponseBody$1.class
@@ -267,11 +270,13 @@ com/aliyun/sdk/service/alikafka20190916/models/UpgradePostPayOrderResponse.class
 com/aliyun/sdk/service/alikafka20190916/models/UntagResourcesResponseBody$1.class
 com/aliyun/sdk/service/alikafka20190916/models/CreatePostPayOrderResponseBody.class
 com/aliyun/sdk/service/alikafka20190916/models/ModifyPartitionNumResponseBody$1.class
+com/aliyun/sdk/service/alikafka20190916/models/GetQuotaTipRequest$1.class
 com/aliyun/sdk/service/alikafka20190916/models/UpgradeInstanceVersionResponseBody$1.class
 com/aliyun/sdk/service/alikafka20190916/models/ModifyTopicRemarkResponseBody$1.class
 com/aliyun/sdk/service/alikafka20190916/models/GetAllInstanceIdListResponse$BuilderImpl.class
 com/aliyun/sdk/service/alikafka20190916/models/ReleaseInstanceResponseBody.class
 com/aliyun/sdk/service/alikafka20190916/models/CreateSaslUserRequest.class
+com/aliyun/sdk/service/alikafka20190916/models/CreateConsumerGroupRequest$Tag.class
 com/aliyun/sdk/service/alikafka20190916/models/CreatePrePayOrderRequest.class
 com/aliyun/sdk/service/alikafka20190916/models/GetAllowedIpListResponseBody$Builder.class
 com/aliyun/sdk/service/alikafka20190916/models/CreateTopicRequest$1.class
@@ -279,6 +284,7 @@ com/aliyun/sdk/service/alikafka20190916/models/UpdateInstanceConfigRequest.class
 com/aliyun/sdk/service/alikafka20190916/models/DeleteSaslUserResponseBody$1.class
 com/aliyun/sdk/service/alikafka20190916/models/UpdateAllowedIpResponse$Builder.class
 com/aliyun/sdk/service/alikafka20190916/models/DeleteAclResponse$Builder.class
+com/aliyun/sdk/service/alikafka20190916/models/CreatePrePayOrderRequest$Tag.class
 com/aliyun/sdk/service/alikafka20190916/models/StartInstanceResponseBody$Builder.class
 com/aliyun/sdk/service/alikafka20190916/models/StartInstanceResponse.class
 com/aliyun/sdk/service/alikafka20190916/models/GetAllowedIpListRequest.class
@@ -286,6 +292,7 @@ com/aliyun/sdk/service/alikafka20190916/models/DescribeAclsResponseBody.class
 com/aliyun/sdk/service/alikafka20190916/models/CreateTopicResponse$BuilderImpl.class
 com/aliyun/sdk/service/alikafka20190916/models/GetInstanceListResponseBody$TagVO$Builder.class
 com/aliyun/sdk/service/alikafka20190916/models/ModifyTopicRemarkRequest$1.class
+com/aliyun/sdk/service/alikafka20190916/models/GetQuotaTipResponseBody$QuotaData$Builder.class
 com/aliyun/sdk/service/alikafka20190916/models/DescribeSaslUsersResponseBody$SaslUserVO.class
 com/aliyun/sdk/service/alikafka20190916/models/UpgradePrePayOrderRequest$1.class
 com/aliyun/sdk/service/alikafka20190916/models/ConvertPostPayOrderResponse.class
@@ -327,15 +334,14 @@ com/aliyun/sdk/service/alikafka20190916/models/GetAllowedIpListResponseBody$Allo
 com/aliyun/sdk/service/alikafka20190916/models/DeleteTopicResponse$Builder.class
 com/aliyun/sdk/service/alikafka20190916/models/GetConsumerProgressRequest.class
 com/aliyun/sdk/service/alikafka20190916/models/GetConsumerProgressResponse$1.class
-com/aliyun/sdk/service/alikafka20190916/models/DescribeNodeStatusResponseBody$StatusList$Builder.class
 com/aliyun/sdk/service/alikafka20190916/models/TagResourcesRequest$Tag$Builder.class
 com/aliyun/sdk/service/alikafka20190916/models/UpdateInstanceConfigResponse$1.class
 com/aliyun/sdk/service/alikafka20190916/models/GetTopicListResponseBody.class
 com/aliyun/sdk/service/alikafka20190916/models/ModifyTopicRemarkRequest.class
 com/aliyun/sdk/service/alikafka20190916/models/DescribeAclsResponseBody$KafkaAclVO$Builder.class
+com/aliyun/sdk/service/alikafka20190916/models/CreateTopicRequest$Tag.class
 com/aliyun/sdk/service/alikafka20190916/models/DescribeAclsResponse$BuilderImpl.class
 com/aliyun/sdk/service/alikafka20190916/models/GetInstanceListResponse.class
-com/aliyun/sdk/service/alikafka20190916/models/DescribeNodeStatusResponseBody$StatusList.class
 com/aliyun/sdk/service/alikafka20190916/models/GetTopicListResponseBody$1.class
 com/aliyun/sdk/service/alikafka20190916/models/UpgradeInstanceVersionResponse.class
 com/aliyun/sdk/service/alikafka20190916/models/GetTopicListResponseBody$Tags.class
@@ -354,6 +360,7 @@ com/aliyun/sdk/service/alikafka20190916/models/GetInstanceListResponse$1.class
 com/aliyun/sdk/service/alikafka20190916/models/CreateTopicResponse$Builder.class
 com/aliyun/sdk/service/alikafka20190916/models/GetTopicStatusResponseBody$OffsetTable.class
 com/aliyun/sdk/service/alikafka20190916/models/GetTopicListRequest$1.class
+com/aliyun/sdk/service/alikafka20190916/models/GetQuotaTipResponse.class
 com/aliyun/sdk/service/alikafka20190916/models/CreateConsumerGroupResponse$1.class
 com/aliyun/sdk/service/alikafka20190916/models/DeleteConsumerGroupRequest$1.class
 com/aliyun/sdk/service/alikafka20190916/models/ModifyTopicRemarkRequest$Builder.class
@@ -381,6 +388,7 @@ com/aliyun/sdk/service/alikafka20190916/models/ModifyInstanceNameRequest.class
 com/aliyun/sdk/service/alikafka20190916/DefaultAsyncClientBuilder.class
 com/aliyun/sdk/service/alikafka20190916/models/DeleteInstanceRequest$Builder.class
 com/aliyun/sdk/service/alikafka20190916/models/GetInstanceListResponseBody$UpgradeServiceDetailInfo.class
+com/aliyun/sdk/service/alikafka20190916/models/CreatePostPayOrderRequest$Tag.class
 com/aliyun/sdk/service/alikafka20190916/models/GetConsumerListResponseBody$ConsumerList$Builder.class
 com/aliyun/sdk/service/alikafka20190916/models/CreateAclResponseBody$Builder.class
 com/aliyun/sdk/service/alikafka20190916/models/CreateTopicResponseBody$1.class
@@ -394,6 +402,7 @@ com/aliyun/sdk/service/alikafka20190916/models/GetConsumerListRequest$Builder.cl
 com/aliyun/sdk/service/alikafka20190916/models/GetTopicListResponseBody$TopicVO.class
 com/aliyun/sdk/service/alikafka20190916/models/GetTopicStatusResponseBody$TopicStatusOffsetTable.class
 com/aliyun/sdk/service/alikafka20190916/models/ConvertPostPayOrderResponse$1.class
+com/aliyun/sdk/service/alikafka20190916/models/GetQuotaTipResponse$Builder.class
 com/aliyun/sdk/service/alikafka20190916/models/ConvertPostPayOrderRequest$1.class
 com/aliyun/sdk/service/alikafka20190916/models/ChangeResourceGroupResponseBody$1.class
 com/aliyun/sdk/service/alikafka20190916/DefaultAsyncClient.class
@@ -427,5 +436,4 @@ com/aliyun/sdk/service/alikafka20190916/models/ConvertPostPayOrderResponse$Build
 com/aliyun/sdk/service/alikafka20190916/models/GetTopicListResponseBody$TopicVO$Builder.class
 com/aliyun/sdk/service/alikafka20190916/models/ReleaseInstanceResponse.class
 com/aliyun/sdk/service/alikafka20190916/models/GetInstanceListRequest$Builder.class
-com/aliyun/sdk/service/alikafka20190916/models/DescribeNodeStatusResponseBody.class
 com/aliyun/sdk/service/alikafka20190916/models/DeleteAclResponse$BuilderImpl.class

@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeNodeStatusRequest} extends {@link RequestModel}
+ * {@link GetQuotaTipRequest} extends {@link RequestModel}
  *
- * <p>DescribeNodeStatusRequest</p>
+ * <p>GetQuotaTipRequest</p>
  */
-public class DescribeNodeStatusRequest extends Request {
+public class GetQuotaTipRequest extends Request {
     @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
@@ -22,7 +22,7 @@ public class DescribeNodeStatusRequest extends Request {
     @Validation(required = true)
     private String regionId;
 
-    private DescribeNodeStatusRequest(Builder builder) {
+    private GetQuotaTipRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
@@ -32,7 +32,7 @@ public class DescribeNodeStatusRequest extends Request {
         return new Builder();
     }
 
-    public static DescribeNodeStatusRequest create() {
+    public static GetQuotaTipRequest create() {
         return builder().build();
     }
 
@@ -55,7 +55,7 @@ public class DescribeNodeStatusRequest extends Request {
         return this.regionId;
     }
 
-    public static final class Builder extends Request.Builder<DescribeNodeStatusRequest, Builder> {
+    public static final class Builder extends Request.Builder<GetQuotaTipRequest, Builder> {
         private String instanceId; 
         private String regionId; 
 
@@ -63,7 +63,7 @@ public class DescribeNodeStatusRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeNodeStatusRequest request) {
+        private Builder(GetQuotaTipRequest request) {
             super(request);
             this.instanceId = request.instanceId;
             this.regionId = request.regionId;
@@ -88,8 +88,8 @@ public class DescribeNodeStatusRequest extends Request {
         }
 
         @Override
-        public DescribeNodeStatusRequest build() {
-            return new DescribeNodeStatusRequest(this);
+        public GetQuotaTipRequest build() {
+            return new GetQuotaTipRequest(this);
         } 
 
     } 

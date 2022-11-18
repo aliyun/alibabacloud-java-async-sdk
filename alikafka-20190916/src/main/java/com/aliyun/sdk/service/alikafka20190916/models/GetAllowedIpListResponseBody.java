@@ -132,6 +132,9 @@ public class GetAllowedIpListResponseBody extends TeaModel {
     } 
 
     public static class InternetList extends TeaModel {
+        @NameInMap("AllowedIpGroup")
+        private java.util.Map < String, String > allowedIpGroup;
+
         @NameInMap("AllowedIpList")
         private java.util.List < String > allowedIpList;
 
@@ -139,6 +142,7 @@ public class GetAllowedIpListResponseBody extends TeaModel {
         private String portRange;
 
         private InternetList(Builder builder) {
+            this.allowedIpGroup = builder.allowedIpGroup;
             this.allowedIpList = builder.allowedIpList;
             this.portRange = builder.portRange;
         }
@@ -149,6 +153,13 @@ public class GetAllowedIpListResponseBody extends TeaModel {
 
         public static InternetList create() {
             return builder().build();
+        }
+
+        /**
+         * @return allowedIpGroup
+         */
+        public java.util.Map < String, String > getAllowedIpGroup() {
+            return this.allowedIpGroup;
         }
 
         /**
@@ -166,8 +177,17 @@ public class GetAllowedIpListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.Map < String, String > allowedIpGroup; 
             private java.util.List < String > allowedIpList; 
             private String portRange; 
+
+            /**
+             * AllowedIpGroup.
+             */
+            public Builder allowedIpGroup(java.util.Map < String, String > allowedIpGroup) {
+                this.allowedIpGroup = allowedIpGroup;
+                return this;
+            }
 
             /**
              * AllowedIpList.
@@ -193,6 +213,9 @@ public class GetAllowedIpListResponseBody extends TeaModel {
 
     }
     public static class VpcList extends TeaModel {
+        @NameInMap("AllowedIpGroup")
+        private java.util.Map < String, String > allowedIpGroup;
+
         @NameInMap("AllowedIpList")
         private java.util.List < String > allowedIpList;
 
@@ -200,6 +223,7 @@ public class GetAllowedIpListResponseBody extends TeaModel {
         private String portRange;
 
         private VpcList(Builder builder) {
+            this.allowedIpGroup = builder.allowedIpGroup;
             this.allowedIpList = builder.allowedIpList;
             this.portRange = builder.portRange;
         }
@@ -210,6 +234,13 @@ public class GetAllowedIpListResponseBody extends TeaModel {
 
         public static VpcList create() {
             return builder().build();
+        }
+
+        /**
+         * @return allowedIpGroup
+         */
+        public java.util.Map < String, String > getAllowedIpGroup() {
+            return this.allowedIpGroup;
         }
 
         /**
@@ -227,8 +258,17 @@ public class GetAllowedIpListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.Map < String, String > allowedIpGroup; 
             private java.util.List < String > allowedIpList; 
             private String portRange; 
+
+            /**
+             * AllowedIpGroup.
+             */
+            public Builder allowedIpGroup(java.util.Map < String, String > allowedIpGroup) {
+                this.allowedIpGroup = allowedIpGroup;
+                return this;
+            }
 
             /**
              * AllowedIpList.

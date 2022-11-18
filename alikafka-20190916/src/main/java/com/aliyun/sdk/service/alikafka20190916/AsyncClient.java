@@ -46,8 +46,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeAclsResponse> describeAcls(DescribeAclsRequest request);
 
-    CompletableFuture<DescribeNodeStatusResponse> describeNodeStatus(DescribeNodeStatusRequest request);
-
     CompletableFuture<DescribeSaslUsersResponse> describeSaslUsers(DescribeSaslUsersRequest request);
 
     CompletableFuture<GetAllInstanceIdListResponse> getAllInstanceIdList(GetAllInstanceIdListRequest request);
@@ -59,6 +57,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetConsumerProgressResponse> getConsumerProgress(GetConsumerProgressRequest request);
 
     CompletableFuture<GetInstanceListResponse> getInstanceList(GetInstanceListRequest request);
+
+    CompletableFuture<GetQuotaTipResponse> getQuotaTip(GetQuotaTipRequest request);
 
     CompletableFuture<GetTopicListResponse> getTopicList(GetTopicListRequest request);
 

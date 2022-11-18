@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeNodeStatusResponse} extends {@link TeaModel}
+ * {@link GetQuotaTipResponse} extends {@link TeaModel}
  *
- * <p>DescribeNodeStatusResponse</p>
+ * <p>GetQuotaTipResponse</p>
  */
-public class DescribeNodeStatusResponse extends Response {
+public class GetQuotaTipResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private DescribeNodeStatusResponseBody body;
+    private GetQuotaTipResponseBody body;
 
-    private DescribeNodeStatusResponse(BuilderImpl builder) {
+    private GetQuotaTipResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static DescribeNodeStatusResponse create() {
+    public static GetQuotaTipResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class DescribeNodeStatusResponse extends Response {
     /**
      * @return body
      */
-    public DescribeNodeStatusResponseBody getBody() {
+    public GetQuotaTipResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DescribeNodeStatusResponse, Builder> {
+    public interface Builder extends Response.Builder<GetQuotaTipResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(DescribeNodeStatusResponseBody body);
+        Builder body(GetQuotaTipResponseBody body);
 
         @Override
-        DescribeNodeStatusResponse build();
+        GetQuotaTipResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DescribeNodeStatusResponse, Builder>
+            extends Response.BuilderImpl<GetQuotaTipResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private DescribeNodeStatusResponseBody body; 
+        private GetQuotaTipResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DescribeNodeStatusResponse response) {
+        private BuilderImpl(GetQuotaTipResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class DescribeNodeStatusResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DescribeNodeStatusResponseBody body) {
+        public Builder body(GetQuotaTipResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DescribeNodeStatusResponse build() {
-            return new DescribeNodeStatusResponse(this);
+        public GetQuotaTipResponse build() {
+            return new GetQuotaTipResponse(this);
         } 
 
     } 

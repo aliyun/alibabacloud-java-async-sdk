@@ -31,12 +31,17 @@ public class CreateConsumerGroupRequest extends Request {
     @NameInMap("Remark")
     private String remark;
 
+    @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
     private CreateConsumerGroupRequest(Builder builder) {
         super(builder);
         this.consumerId = builder.consumerId;
         this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
         this.remark = builder.remark;
+        this.tag = builder.tag;
     }
 
     public static Builder builder() {
@@ -80,11 +85,19 @@ public class CreateConsumerGroupRequest extends Request {
         return this.remark;
     }
 
+    /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
     public static final class Builder extends Request.Builder<CreateConsumerGroupRequest, Builder> {
         private String consumerId; 
         private String instanceId; 
         private String regionId; 
         private String remark; 
+        private java.util.List < Tag> tag; 
 
         private Builder() {
             super();
@@ -96,6 +109,7 @@ public class CreateConsumerGroupRequest extends Request {
             this.instanceId = request.instanceId;
             this.regionId = request.regionId;
             this.remark = request.remark;
+            this.tag = request.tag;
         } 
 
         /**
@@ -134,6 +148,15 @@ public class CreateConsumerGroupRequest extends Request {
             return this;
         }
 
+        /**
+         * Tag.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
         @Override
         public CreateConsumerGroupRequest build() {
             return new CreateConsumerGroupRequest(this);
@@ -141,4 +164,66 @@ public class CreateConsumerGroupRequest extends Request {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        @Validation(required = true)
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }
