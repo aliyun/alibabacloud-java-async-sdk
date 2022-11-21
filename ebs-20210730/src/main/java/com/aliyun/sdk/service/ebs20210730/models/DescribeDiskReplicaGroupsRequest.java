@@ -25,6 +25,14 @@ public class DescribeDiskReplicaGroupsRequest extends Request {
     private String nextToken;
 
     @Query
+    @NameInMap("PageNumber")
+    private Integer pageNumber;
+
+    @Query
+    @NameInMap("PageSize")
+    private Integer pageSize;
+
+    @Query
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
@@ -38,6 +46,8 @@ public class DescribeDiskReplicaGroupsRequest extends Request {
         this.groupIds = builder.groupIds;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
+        this.pageNumber = builder.pageNumber;
+        this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
         this.site = builder.site;
     }
@@ -77,6 +87,20 @@ public class DescribeDiskReplicaGroupsRequest extends Request {
     }
 
     /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -94,6 +118,8 @@ public class DescribeDiskReplicaGroupsRequest extends Request {
         private String groupIds; 
         private Long maxResults; 
         private String nextToken; 
+        private Integer pageNumber; 
+        private Integer pageSize; 
         private String regionId; 
         private String site; 
 
@@ -106,6 +132,8 @@ public class DescribeDiskReplicaGroupsRequest extends Request {
             this.groupIds = request.groupIds;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
             this.regionId = request.regionId;
             this.site = request.site;
         } 
@@ -129,11 +157,29 @@ public class DescribeDiskReplicaGroupsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * 查询凭证（Token）。取值为上一次调用该接口返回的NextToken参数值，初次调用接口时无需设置该参数。如果设置了NextToken，则请求参数PageSize和PageNumber将失效，且返回数据中的TotalCount无效。
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
             this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * 分页查询时的页码。
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.putQueryParameter("PageNumber", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * 分页查询时设置的每页行数。
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
             return this;
         }
 
