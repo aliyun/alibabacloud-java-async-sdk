@@ -120,6 +120,7 @@ com/aliyun/sdk/service/ehpc20180412/models/CreateJobFileResponseBody$Builder.cla
 com/aliyun/sdk/service/ehpc20180412/models/ListJobTemplatesResponseBody$Templates$Builder.class
 com/aliyun/sdk/service/ehpc20180412/models/GetPostScriptsResponse$BuilderImpl.class
 com/aliyun/sdk/service/ehpc20180412/models/DescribeGWSClusterPolicyResponse.class
+com/aliyun/sdk/service/ehpc20180412/models/GetJobLogResponseBody$1.class
 com/aliyun/sdk/service/ehpc20180412/models/ListSecurityGroupsRequest$1.class
 com/aliyun/sdk/service/ehpc20180412/models/StopClusterResponseBody$1.class
 com/aliyun/sdk/service/ehpc20180412/models/ListInvocationResultsResponseBody.class
@@ -468,6 +469,7 @@ com/aliyun/sdk/service/ehpc20180412/models/StopClusterResponse.class
 com/aliyun/sdk/service/ehpc20180412/models/GetVisualServiceStatusResponseBody$Builder.class
 com/aliyun/sdk/service/ehpc20180412/models/SetGWSInstanceNameResponse$1.class
 com/aliyun/sdk/service/ehpc20180412/models/GetIfEcsTypeSupportHtConfigRequest.class
+com/aliyun/sdk/service/ehpc20180412/models/GetJobLogResponse$1.class
 com/aliyun/sdk/service/ehpc20180412/models/AddLocalNodesResponseBody$InstanceIds.class
 com/aliyun/sdk/service/ehpc20180412/models/ListCustomImagesResponseBody$BaseOsTag$Builder.class
 com/aliyun/sdk/service/ehpc20180412/models/ListNodesByQueueRequest$1.class
@@ -609,6 +611,7 @@ com/aliyun/sdk/service/ehpc20180412/models/CreateJobTemplateResponseBody.class
 com/aliyun/sdk/service/ehpc20180412/models/ListJobsResponseBody$Resources$Builder.class
 com/aliyun/sdk/service/ehpc20180412/models/ModifyUserPasswordsRequest$1.class
 com/aliyun/sdk/service/ehpc20180412/models/GetAccountingReportResponseBody$1.class
+com/aliyun/sdk/service/ehpc20180412/models/GetJobLogRequest.class
 com/aliyun/sdk/service/ehpc20180412/models/DescribeClusterRequest$1.class
 com/aliyun/sdk/service/ehpc20180412/models/CreateHybridClusterRequest$Nodes$Builder.class
 com/aliyun/sdk/service/ehpc20180412/models/ListSecurityGroupsRequest$Builder.class
@@ -804,6 +807,7 @@ com/aliyun/sdk/service/ehpc20180412/models/GetAccountingReportRequest$1.class
 com/aliyun/sdk/service/ehpc20180412/models/DescribeImageResponseBody$ImageInfo$Builder.class
 com/aliyun/sdk/service/ehpc20180412/models/TagResourcesResponseBody$1.class
 com/aliyun/sdk/service/ehpc20180412/models/DeleteLocalImageResponse$BuilderImpl.class
+com/aliyun/sdk/service/ehpc20180412/models/GetJobLogRequest$1.class
 com/aliyun/sdk/service/ehpc20180412/models/ListJobTemplatesResponseBody$JobTemplates.class
 com/aliyun/sdk/service/ehpc20180412/models/SetGWSInstanceNameResponse$Builder.class
 com/aliyun/sdk/service/ehpc20180412/models/CreateHybridClusterRequest$Builder.class
@@ -928,6 +932,7 @@ com/aliyun/sdk/service/ehpc20180412/models/DescribeEstackImageResponseBody$Image
 com/aliyun/sdk/service/ehpc20180412/models/UnTagResourcesResponseBody.class
 com/aliyun/sdk/service/ehpc20180412/models/InspectImageResponseBody$ImageStatus.class
 com/aliyun/sdk/service/ehpc20180412/models/EditJobTemplateResponse.class
+com/aliyun/sdk/service/ehpc20180412/models/GetJobLogResponse.class
 com/aliyun/sdk/service/ehpc20180412/models/DescribeContainerAppResponse.class
 com/aliyun/sdk/service/ehpc20180412/models/ListCurrentClientVersionResponseBody$1.class
 com/aliyun/sdk/service/ehpc20180412/models/ListNodesNoPagingRequest$Builder.class
@@ -956,6 +961,7 @@ com/aliyun/sdk/service/ehpc20180412/models/DeleteClusterResponse$BuilderImpl.cla
 com/aliyun/sdk/service/ehpc20180412/models/GetClusterVolumesRequest.class
 com/aliyun/sdk/service/ehpc20180412/models/ListUsersAsyncResponseBody.class
 com/aliyun/sdk/service/ehpc20180412/models/GetAutoScaleConfigResponseBody$DataDisks$Builder.class
+com/aliyun/sdk/service/ehpc20180412/models/GetJobLogResponse$BuilderImpl.class
 com/aliyun/sdk/service/ehpc20180412/models/ListJobsResponseBody$Resources.class
 com/aliyun/sdk/service/ehpc20180412/models/DescribeImageResponse$1.class
 com/aliyun/sdk/service/ehpc20180412/models/ModifyUserPasswordsResponseBody.class
@@ -974,6 +980,7 @@ com/aliyun/sdk/service/ehpc20180412/models/ModifyImageGatewayConfigRequest.class
 com/aliyun/sdk/service/ehpc20180412/models/GetAutoScaleConfigResponse$Builder.class
 com/aliyun/sdk/service/ehpc20180412/models/DeleteImageResponse$Builder.class
 com/aliyun/sdk/service/ehpc20180412/models/ListClusterLogsResponseBody$LogInfo.class
+com/aliyun/sdk/service/ehpc20180412/models/GetJobLogRequest$Builder.class
 com/aliyun/sdk/service/ehpc20180412/models/StartGWSInstanceResponseBody$Builder.class
 com/aliyun/sdk/service/ehpc20180412/models/StartVisualServiceResponseBody$1.class
 com/aliyun/sdk/service/ehpc20180412/models/ListJobsResponseBody$Builder.class
@@ -1041,6 +1048,7 @@ com/aliyun/sdk/service/ehpc20180412/models/ListCpfsFileSystemsResponse$BuilderIm
 com/aliyun/sdk/service/ehpc20180412/models/DeleteQueueResponseBody$1.class
 com/aliyun/sdk/service/ehpc20180412/models/ListCloudMetricProfilingsResponseBody$Profilings$Builder.class
 com/aliyun/sdk/service/ehpc20180412/models/RerunJobsResponse$BuilderImpl.class
+com/aliyun/sdk/service/ehpc20180412/models/GetJobLogResponseBody.class
 com/aliyun/sdk/service/ehpc20180412/models/ListClusterLogsResponseBody.class
 com/aliyun/sdk/service/ehpc20180412/models/ListJobsWithFiltersResponse$Builder.class
 com/aliyun/sdk/service/ehpc20180412/models/ListNodesResponseBody$Nodes$Builder.class
@@ -1558,6 +1566,7 @@ com/aliyun/sdk/service/ehpc20180412/models/DescribeJobResponseBody$Message$Build
 com/aliyun/sdk/service/ehpc20180412/models/ListSoftwaresRequest.class
 com/aliyun/sdk/service/ehpc20180412/models/InitializeEHPCRequest$Builder.class
 com/aliyun/sdk/service/ehpc20180412/models/DeleteUsersResponse$BuilderImpl.class
+com/aliyun/sdk/service/ehpc20180412/models/GetJobLogResponse$Builder.class
 com/aliyun/sdk/service/ehpc20180412/models/StartClusterResponse$BuilderImpl.class
 com/aliyun/sdk/service/ehpc20180412/models/DescribeImageGatewayConfigResponseBody$LocationInfo$Builder.class
 com/aliyun/sdk/service/ehpc20180412/models/DescribeGWSClustersRequest.class
@@ -1667,6 +1676,7 @@ com/aliyun/sdk/service/ehpc20180412/models/ListCustomImagesResponseBody$Images$B
 com/aliyun/sdk/service/ehpc20180412/models/ListImagesResponseBody$OsTags.class
 com/aliyun/sdk/service/ehpc20180412/models/ListContainerAppsResponseBody.class
 com/aliyun/sdk/service/ehpc20180412/models/SetGWSInstanceUserResponseBody$1.class
+com/aliyun/sdk/service/ehpc20180412/models/GetJobLogResponseBody$Builder.class
 com/aliyun/sdk/service/ehpc20180412/models/DeleteGWSClusterRequest$Builder.class
 com/aliyun/sdk/service/ehpc20180412/models/AddNodesResponseBody$InstanceIds$Builder.class
 com/aliyun/sdk/service/ehpc20180412/models/SyncUsersResponse.class

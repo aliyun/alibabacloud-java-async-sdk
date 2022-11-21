@@ -120,6 +120,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetIfEcsTypeSupportHtConfigResponse> getIfEcsTypeSupportHtConfig(GetIfEcsTypeSupportHtConfigRequest request);
 
+    CompletableFuture<GetJobLogResponse> getJobLog(GetJobLogRequest request);
+
     CompletableFuture<GetPostScriptsResponse> getPostScripts(GetPostScriptsRequest request);
 
     CompletableFuture<GetSchedulerInfoResponse> getSchedulerInfo(GetSchedulerInfoRequest request);
