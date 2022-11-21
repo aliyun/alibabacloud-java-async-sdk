@@ -18,13 +18,8 @@ public class AddWebhookRequest extends Request {
     private Long repositoryId;
 
     @Query
-    @NameInMap("AccessToken")
+    @NameInMap("accessToken")
     private String accessToken;
-
-    @Query
-    @NameInMap("OrganizationId")
-    @Validation(required = true)
-    private String organizationId;
 
     @Body
     @NameInMap("description")
@@ -59,11 +54,15 @@ public class AddWebhookRequest extends Request {
     @Validation(required = true)
     private String url;
 
+    @Query
+    @NameInMap("organizationId")
+    @Validation(required = true)
+    private String organizationId;
+
     private AddWebhookRequest(Builder builder) {
         super(builder);
         this.repositoryId = builder.repositoryId;
         this.accessToken = builder.accessToken;
-        this.organizationId = builder.organizationId;
         this.description = builder.description;
         this.enableSslVerification = builder.enableSslVerification;
         this.mergeRequestsEvents = builder.mergeRequestsEvents;
@@ -72,6 +71,7 @@ public class AddWebhookRequest extends Request {
         this.secretToken = builder.secretToken;
         this.tagPushEvents = builder.tagPushEvents;
         this.url = builder.url;
+        this.organizationId = builder.organizationId;
     }
 
     public static Builder builder() {
@@ -99,13 +99,6 @@ public class AddWebhookRequest extends Request {
      */
     public String getAccessToken() {
         return this.accessToken;
-    }
-
-    /**
-     * @return organizationId
-     */
-    public String getOrganizationId() {
-        return this.organizationId;
     }
 
     /**
@@ -164,10 +157,16 @@ public class AddWebhookRequest extends Request {
         return this.url;
     }
 
+    /**
+     * @return organizationId
+     */
+    public String getOrganizationId() {
+        return this.organizationId;
+    }
+
     public static final class Builder extends Request.Builder<AddWebhookRequest, Builder> {
         private Long repositoryId; 
         private String accessToken; 
-        private String organizationId; 
         private String description; 
         private Boolean enableSslVerification; 
         private Boolean mergeRequestsEvents; 
@@ -176,6 +175,7 @@ public class AddWebhookRequest extends Request {
         private String secretToken; 
         private Boolean tagPushEvents; 
         private String url; 
+        private String organizationId; 
 
         private Builder() {
             super();
@@ -185,7 +185,6 @@ public class AddWebhookRequest extends Request {
             super(request);
             this.repositoryId = request.repositoryId;
             this.accessToken = request.accessToken;
-            this.organizationId = request.organizationId;
             this.description = request.description;
             this.enableSslVerification = request.enableSslVerification;
             this.mergeRequestsEvents = request.mergeRequestsEvents;
@@ -194,6 +193,7 @@ public class AddWebhookRequest extends Request {
             this.secretToken = request.secretToken;
             this.tagPushEvents = request.tagPushEvents;
             this.url = request.url;
+            this.organizationId = request.organizationId;
         } 
 
         /**
@@ -206,20 +206,11 @@ public class AddWebhookRequest extends Request {
         }
 
         /**
-         * AccessToken.
+         * accessToken.
          */
         public Builder accessToken(String accessToken) {
-            this.putQueryParameter("AccessToken", accessToken);
+            this.putQueryParameter("accessToken", accessToken);
             this.accessToken = accessToken;
-            return this;
-        }
-
-        /**
-         * OrganizationId.
-         */
-        public Builder organizationId(String organizationId) {
-            this.putQueryParameter("OrganizationId", organizationId);
-            this.organizationId = organizationId;
             return this;
         }
 
@@ -292,6 +283,15 @@ public class AddWebhookRequest extends Request {
         public Builder url(String url) {
             this.putBodyParameter("url", url);
             this.url = url;
+            return this;
+        }
+
+        /**
+         * organizationId.
+         */
+        public Builder organizationId(String organizationId) {
+            this.putQueryParameter("organizationId", organizationId);
+            this.organizationId = organizationId;
             return this;
         }
 

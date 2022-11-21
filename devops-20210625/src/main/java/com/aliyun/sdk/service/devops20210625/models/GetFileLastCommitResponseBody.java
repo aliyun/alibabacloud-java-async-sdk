@@ -12,19 +12,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetFileLastCommitResponseBody</p>
  */
 public class GetFileLastCommitResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @NameInMap("errorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @NameInMap("result")
     private Result result;
 
-    @NameInMap("Success")
+    @NameInMap("success")
     private Boolean success;
 
     private GetFileLastCommitResponseBody(Builder builder) {
@@ -193,43 +193,43 @@ public class GetFileLastCommitResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("AuthorDate")
+        @NameInMap("authorDate")
         private String authorDate;
 
-        @NameInMap("AuthorEmail")
+        @NameInMap("authorEmail")
         private String authorEmail;
 
-        @NameInMap("AuthorName")
+        @NameInMap("authorName")
         private String authorName;
 
-        @NameInMap("CommittedDate")
+        @NameInMap("committedDate")
         private String committedDate;
 
-        @NameInMap("CommitterEmail")
+        @NameInMap("committerEmail")
         private String committerEmail;
 
-        @NameInMap("CommitterName")
+        @NameInMap("committerName")
         private String committerName;
 
-        @NameInMap("CreatedAt")
+        @NameInMap("createdAt")
         private String createdAt;
 
-        @NameInMap("Id")
+        @NameInMap("id")
         private String id;
 
-        @NameInMap("Message")
+        @NameInMap("message")
         private String message;
 
-        @NameInMap("ParentIds")
+        @NameInMap("parentIds")
         private java.util.List < String > parentIds;
 
-        @NameInMap("ShortId")
+        @NameInMap("shortId")
         private String shortId;
 
-        @NameInMap("Signature")
+        @NameInMap("signature")
         private Signature signature;
 
-        @NameInMap("Title")
+        @NameInMap("title")
         private String title;
 
         private Result(Builder builder) {

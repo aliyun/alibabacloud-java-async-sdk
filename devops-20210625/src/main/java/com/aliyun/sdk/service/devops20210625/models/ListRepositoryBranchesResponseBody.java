@@ -28,7 +28,7 @@ public class ListRepositoryBranchesResponseBody extends TeaModel {
     private Boolean success;
 
     @NameInMap("total")
-    private String total;
+    private Long total;
 
     private ListRepositoryBranchesResponseBody(Builder builder) {
         this.errorCode = builder.errorCode;
@@ -85,7 +85,7 @@ public class ListRepositoryBranchesResponseBody extends TeaModel {
     /**
      * @return total
      */
-    public String getTotal() {
+    public Long getTotal() {
         return this.total;
     }
 
@@ -95,7 +95,7 @@ public class ListRepositoryBranchesResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List < Result> result; 
         private Boolean success; 
-        private String total; 
+        private Long total; 
 
         /**
          * errorCode.
@@ -140,7 +140,7 @@ public class ListRepositoryBranchesResponseBody extends TeaModel {
         /**
          * total.
          */
-        public Builder total(String total) {
+        public Builder total(Long total) {
             this.total = total;
             return this;
         }

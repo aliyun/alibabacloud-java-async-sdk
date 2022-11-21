@@ -37,7 +37,6 @@ public class CreateWorkitemRequest extends Request {
 
     @Body
     @NameInMap("fieldValueList")
-    @Validation(required = true)
     private java.util.List < FieldValueList> fieldValueList;
 
     @Body
@@ -425,11 +424,9 @@ public class CreateWorkitemRequest extends Request {
 
     public static class FieldValueList extends TeaModel {
         @NameInMap("fieldIdentifier")
-        @Validation(required = true)
         private String fieldIdentifier;
 
         @NameInMap("value")
-        @Validation(required = true)
         private String value;
 
         @NameInMap("workitemIdentifier")

@@ -12,19 +12,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetCodeupOrganizationResponseBody</p>
  */
 public class GetCodeupOrganizationResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @NameInMap("errorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @NameInMap("result")
     private Result result;
 
-    @NameInMap("Success")
+    @NameInMap("success")
     private Boolean success;
 
     private GetCodeupOrganizationResponseBody(Builder builder) {
@@ -86,7 +86,7 @@ public class GetCodeupOrganizationResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * ErrorCode.
+         * errorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class GetCodeupOrganizationResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * errorMessage.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class GetCodeupOrganizationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class GetCodeupOrganizationResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * result.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -118,7 +118,7 @@ public class GetCodeupOrganizationResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -132,25 +132,25 @@ public class GetCodeupOrganizationResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("CreatedAt")
+        @NameInMap("createdAt")
         private String createdAt;
 
-        @NameInMap("Id")
+        @NameInMap("id")
         private Long id;
 
-        @NameInMap("NamespaceId")
+        @NameInMap("namespaceId")
         private Long namespaceId;
 
-        @NameInMap("OrganizationId")
+        @NameInMap("organizationId")
         private String organizationId;
 
-        @NameInMap("Path")
+        @NameInMap("path")
         private String path;
 
-        @NameInMap("UpdatedAt")
+        @NameInMap("updatedAt")
         private String updatedAt;
 
-        @NameInMap("UserRole")
+        @NameInMap("userRole")
         private String userRole;
 
         private Result(Builder builder) {
@@ -230,7 +230,7 @@ public class GetCodeupOrganizationResponseBody extends TeaModel {
             private String userRole; 
 
             /**
-             * CreatedAt.
+             * createdAt.
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -238,7 +238,7 @@ public class GetCodeupOrganizationResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * id.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -246,7 +246,7 @@ public class GetCodeupOrganizationResponseBody extends TeaModel {
             }
 
             /**
-             * NamespaceId.
+             * namespaceId.
              */
             public Builder namespaceId(Long namespaceId) {
                 this.namespaceId = namespaceId;
@@ -254,7 +254,7 @@ public class GetCodeupOrganizationResponseBody extends TeaModel {
             }
 
             /**
-             * OrganizationId.
+             * organizationId.
              */
             public Builder organizationId(String organizationId) {
                 this.organizationId = organizationId;
@@ -262,7 +262,7 @@ public class GetCodeupOrganizationResponseBody extends TeaModel {
             }
 
             /**
-             * Path.
+             * path.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -270,7 +270,7 @@ public class GetCodeupOrganizationResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedAt.
+             * updatedAt.
              */
             public Builder updatedAt(String updatedAt) {
                 this.updatedAt = updatedAt;
@@ -278,7 +278,7 @@ public class GetCodeupOrganizationResponseBody extends TeaModel {
             }
 
             /**
-             * UserRole.
+             * userRole.
              */
             public Builder userRole(String userRole) {
                 this.userRole = userRole;

@@ -12,19 +12,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddRepositoryMemberResponseBody</p>
  */
 public class AddRepositoryMemberResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @NameInMap("errorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @NameInMap("result")
     private java.util.List < Result> result;
 
-    @NameInMap("Success")
+    @NameInMap("success")
     private Boolean success;
 
     private AddRepositoryMemberResponseBody(Builder builder) {
@@ -132,22 +132,22 @@ public class AddRepositoryMemberResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("AccessLevel")
+        @NameInMap("accessLevel")
         private Integer accessLevel;
 
-        @NameInMap("AvatarUrl")
+        @NameInMap("avatarUrl")
         private String avatarUrl;
 
-        @NameInMap("Email")
+        @NameInMap("email")
         private String email;
 
-        @NameInMap("ExternUserId")
+        @NameInMap("externUserId")
         private String externUserId;
 
-        @NameInMap("Id")
+        @NameInMap("id")
         private Long id;
 
-        @NameInMap("State")
+        @NameInMap("state")
         private String state;
 
         private Result(Builder builder) {

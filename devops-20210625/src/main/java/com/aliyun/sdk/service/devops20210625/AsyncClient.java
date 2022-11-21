@@ -34,9 +34,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateOAuthTokenResponse> createOAuthToken(CreateOAuthTokenRequest request);
 
+    CompletableFuture<CreatePipelineResponse> createPipeline(CreatePipelineRequest request);
+
     CompletableFuture<CreatePipelineGroupResponse> createPipelineGroup(CreatePipelineGroupRequest request);
 
     CompletableFuture<CreateProjectResponse> createProject(CreateProjectRequest request);
+
+    CompletableFuture<CreateProtectdBranchResponse> createProtectdBranch(CreateProtectdBranchRequest request);
 
     CompletableFuture<CreateRepositoryResponse> createRepository(CreateRepositoryRequest request);
 
@@ -77,6 +81,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteProtectedBranchResponse> deleteProtectedBranch(DeleteProtectedBranchRequest request);
 
     CompletableFuture<DeleteRepositoryResponse> deleteRepository(DeleteRepositoryRequest request);
+
+    CompletableFuture<DeleteRepositoryWebhookResponse> deleteRepositoryWebhook(DeleteRepositoryWebhookRequest request);
 
     CompletableFuture<DeleteResourceMemberResponse> deleteResourceMember(DeleteResourceMemberRequest request);
 
@@ -121,6 +127,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetProjectMemberResponse> getProjectMember(GetProjectMemberRequest request);
 
     CompletableFuture<GetRepositoryResponse> getRepository(GetRepositoryRequest request);
+
+    CompletableFuture<GetRepositoryCommitResponse> getRepositoryCommit(GetRepositoryCommitRequest request);
 
     CompletableFuture<GetSprintInfoResponse> getSprintInfo(GetSprintInfoRequest request);
 
@@ -177,6 +185,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListRepositoryBranchesResponse> listRepositoryBranches(ListRepositoryBranchesRequest request);
 
     CompletableFuture<ListRepositoryCommitDiffResponse> listRepositoryCommitDiff(ListRepositoryCommitDiffRequest request);
+
+    CompletableFuture<ListRepositoryCommitsResponse> listRepositoryCommits(ListRepositoryCommitsRequest request);
 
     CompletableFuture<ListRepositoryMemberWithInheritedResponse> listRepositoryMemberWithInherited(ListRepositoryMemberWithInheritedRequest request);
 
@@ -241,6 +251,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateFlowTagGroupResponse> updateFlowTagGroup(UpdateFlowTagGroupRequest request);
 
     CompletableFuture<UpdateHostGroupResponse> updateHostGroup(UpdateHostGroupRequest request);
+
+    CompletableFuture<UpdatePipelineResponse> updatePipeline(UpdatePipelineRequest request);
 
     CompletableFuture<UpdatePipelineBaseInfoResponse> updatePipelineBaseInfo(UpdatePipelineBaseInfoRequest request);
 

@@ -33,7 +33,7 @@ public class UpdateProtectedBranchesRequest extends Request {
 
     @Body
     @NameInMap("allowMergeUserIds")
-    private java.util.List < Long > allowMergeUserIds;
+    private java.util.List < String > allowMergeUserIds;
 
     @Body
     @NameInMap("allowPushRoles")
@@ -41,7 +41,7 @@ public class UpdateProtectedBranchesRequest extends Request {
 
     @Body
     @NameInMap("allowPushUserIds")
-    private java.util.List < Long > allowPushUserIds;
+    private java.util.List < String > allowPushUserIds;
 
     @Body
     @NameInMap("branch")
@@ -118,7 +118,7 @@ public class UpdateProtectedBranchesRequest extends Request {
     /**
      * @return allowMergeUserIds
      */
-    public java.util.List < Long > getAllowMergeUserIds() {
+    public java.util.List < String > getAllowMergeUserIds() {
         return this.allowMergeUserIds;
     }
 
@@ -132,7 +132,7 @@ public class UpdateProtectedBranchesRequest extends Request {
     /**
      * @return allowPushUserIds
      */
-    public java.util.List < Long > getAllowPushUserIds() {
+    public java.util.List < String > getAllowPushUserIds() {
         return this.allowPushUserIds;
     }
 
@@ -169,9 +169,9 @@ public class UpdateProtectedBranchesRequest extends Request {
         private Long id; 
         private String accessToken; 
         private java.util.List < Integer > allowMergeRoles; 
-        private java.util.List < Long > allowMergeUserIds; 
+        private java.util.List < String > allowMergeUserIds; 
         private java.util.List < Integer > allowPushRoles; 
-        private java.util.List < Long > allowPushUserIds; 
+        private java.util.List < String > allowPushUserIds; 
         private String branch; 
         private MergeRequestSetting mergeRequestSetting; 
         private TestSettingDTO testSettingDTO; 
@@ -236,7 +236,7 @@ public class UpdateProtectedBranchesRequest extends Request {
         /**
          * allowMergeUserIds.
          */
-        public Builder allowMergeUserIds(java.util.List < Long > allowMergeUserIds) {
+        public Builder allowMergeUserIds(java.util.List < String > allowMergeUserIds) {
             this.putBodyParameter("allowMergeUserIds", allowMergeUserIds);
             this.allowMergeUserIds = allowMergeUserIds;
             return this;
@@ -254,7 +254,7 @@ public class UpdateProtectedBranchesRequest extends Request {
         /**
          * allowPushUserIds.
          */
-        public Builder allowPushUserIds(java.util.List < Long > allowPushUserIds) {
+        public Builder allowPushUserIds(java.util.List < String > allowPushUserIds) {
             this.putBodyParameter("allowPushUserIds", allowPushUserIds);
             this.allowPushUserIds = allowPushUserIds;
             return this;
@@ -308,7 +308,7 @@ public class UpdateProtectedBranchesRequest extends Request {
         private java.util.List < Integer > allowMergeRequestRoles;
 
         @NameInMap("defaultAssignees")
-        private java.util.List < Integer > defaultAssignees;
+        private java.util.List < String > defaultAssignees;
 
         @NameInMap("isAllowSelfApproval")
         private Boolean isAllowSelfApproval;
@@ -361,7 +361,7 @@ public class UpdateProtectedBranchesRequest extends Request {
         /**
          * @return defaultAssignees
          */
-        public java.util.List < Integer > getDefaultAssignees() {
+        public java.util.List < String > getDefaultAssignees() {
             return this.defaultAssignees;
         }
 
@@ -416,7 +416,7 @@ public class UpdateProtectedBranchesRequest extends Request {
 
         public static final class Builder {
             private java.util.List < Integer > allowMergeRequestRoles; 
-            private java.util.List < Integer > defaultAssignees; 
+            private java.util.List < String > defaultAssignees; 
             private Boolean isAllowSelfApproval; 
             private Boolean isRequireDiscussionProcessed; 
             private Boolean isRequired; 
@@ -436,7 +436,7 @@ public class UpdateProtectedBranchesRequest extends Request {
             /**
              * defaultAssignees.
              */
-            public Builder defaultAssignees(java.util.List < Integer > defaultAssignees) {
+            public Builder defaultAssignees(java.util.List < String > defaultAssignees) {
                 this.defaultAssignees = defaultAssignees;
                 return this;
             }

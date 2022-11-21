@@ -18,9 +18,9 @@ public class UpdateRepositoryMemberRequest extends Request {
     private Long repositoryId;
 
     @Path
-    @NameInMap("userId")
+    @NameInMap("aliyunPk")
     @Validation(required = true)
-    private Long userId;
+    private String aliyunPk;
 
     @Query
     @NameInMap("accessToken")
@@ -48,12 +48,13 @@ public class UpdateRepositoryMemberRequest extends Request {
 
     @Query
     @NameInMap("organizationId")
+    @Validation(required = true)
     private String organizationId;
 
     private UpdateRepositoryMemberRequest(Builder builder) {
         super(builder);
         this.repositoryId = builder.repositoryId;
-        this.userId = builder.userId;
+        this.aliyunPk = builder.aliyunPk;
         this.accessToken = builder.accessToken;
         this.accessLevel = builder.accessLevel;
         this.expireAt = builder.expireAt;
@@ -84,10 +85,10 @@ public class UpdateRepositoryMemberRequest extends Request {
     }
 
     /**
-     * @return userId
+     * @return aliyunPk
      */
-    public Long getUserId() {
-        return this.userId;
+    public String getAliyunPk() {
+        return this.aliyunPk;
     }
 
     /**
@@ -141,7 +142,7 @@ public class UpdateRepositoryMemberRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateRepositoryMemberRequest, Builder> {
         private Long repositoryId; 
-        private Long userId; 
+        private String aliyunPk; 
         private String accessToken; 
         private Integer accessLevel; 
         private String expireAt; 
@@ -157,7 +158,7 @@ public class UpdateRepositoryMemberRequest extends Request {
         private Builder(UpdateRepositoryMemberRequest request) {
             super(request);
             this.repositoryId = request.repositoryId;
-            this.userId = request.userId;
+            this.aliyunPk = request.aliyunPk;
             this.accessToken = request.accessToken;
             this.accessLevel = request.accessLevel;
             this.expireAt = request.expireAt;
@@ -177,11 +178,11 @@ public class UpdateRepositoryMemberRequest extends Request {
         }
 
         /**
-         * userId.
+         * aliyunPk.
          */
-        public Builder userId(Long userId) {
-            this.putPathParameter("userId", userId);
-            this.userId = userId;
+        public Builder aliyunPk(String aliyunPk) {
+            this.putPathParameter("aliyunPk", aliyunPk);
+            this.aliyunPk = aliyunPk;
             return this;
         }
 

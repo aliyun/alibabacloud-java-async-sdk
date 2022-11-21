@@ -18,7 +18,7 @@ public class GetCodeupOrganizationRequest extends Request {
     private String identity;
 
     @Query
-    @NameInMap("AccessToken")
+    @NameInMap("accessToken")
     private String accessToken;
 
     private GetCodeupOrganizationRequest(Builder builder) {
@@ -78,10 +78,10 @@ public class GetCodeupOrganizationRequest extends Request {
         }
 
         /**
-         * AccessToken.
+         * accessToken.
          */
         public Builder accessToken(String accessToken) {
-            this.putQueryParameter("AccessToken", accessToken);
+            this.putQueryParameter("accessToken", accessToken);
             this.accessToken = accessToken;
             return this;
         }

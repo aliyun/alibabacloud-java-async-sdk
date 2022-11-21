@@ -32,6 +32,7 @@ public class ListRepositoryCommitDiffRequest extends Request {
 
     @Query
     @NameInMap("organizationId")
+    @Validation(required = true)
     private String organizationId;
 
     private ListRepositoryCommitDiffRequest(Builder builder) {

@@ -22,9 +22,9 @@ public class GetFileLastCommitRequest extends Request {
     private String accessToken;
 
     @Query
-    @NameInMap("filepath")
+    @NameInMap("filePath")
     @Validation(required = true)
-    private String filepath;
+    private String filePath;
 
     @Query
     @NameInMap("organizationId")
@@ -44,7 +44,7 @@ public class GetFileLastCommitRequest extends Request {
         super(builder);
         this.repositoryId = builder.repositoryId;
         this.accessToken = builder.accessToken;
-        this.filepath = builder.filepath;
+        this.filePath = builder.filePath;
         this.organizationId = builder.organizationId;
         this.sha = builder.sha;
         this.showSignature = builder.showSignature;
@@ -78,10 +78,10 @@ public class GetFileLastCommitRequest extends Request {
     }
 
     /**
-     * @return filepath
+     * @return filePath
      */
-    public String getFilepath() {
-        return this.filepath;
+    public String getFilePath() {
+        return this.filePath;
     }
 
     /**
@@ -108,7 +108,7 @@ public class GetFileLastCommitRequest extends Request {
     public static final class Builder extends Request.Builder<GetFileLastCommitRequest, Builder> {
         private Long repositoryId; 
         private String accessToken; 
-        private String filepath; 
+        private String filePath; 
         private String organizationId; 
         private String sha; 
         private Boolean showSignature; 
@@ -121,7 +121,7 @@ public class GetFileLastCommitRequest extends Request {
             super(request);
             this.repositoryId = request.repositoryId;
             this.accessToken = request.accessToken;
-            this.filepath = request.filepath;
+            this.filePath = request.filePath;
             this.organizationId = request.organizationId;
             this.sha = request.sha;
             this.showSignature = request.showSignature;
@@ -148,9 +148,9 @@ public class GetFileLastCommitRequest extends Request {
         /**
          * 文件路径
          */
-        public Builder filepath(String filepath) {
-            this.putQueryParameter("filepath", filepath);
-            this.filepath = filepath;
+        public Builder filePath(String filePath) {
+            this.putQueryParameter("filePath", filePath);
+            this.filePath = filePath;
             return this;
         }
 

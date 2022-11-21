@@ -18,7 +18,7 @@ public class AddRepositoryMemberRequest extends Request {
     private Long repositoryId;
 
     @Query
-    @NameInMap("AccessToken")
+    @NameInMap("accessToken")
     private String accessToken;
 
     @Body
@@ -126,7 +126,7 @@ public class AddRepositoryMemberRequest extends Request {
          * Codeup访问令牌，使用AK/SK方式访问可以不用填AccessToken
          */
         public Builder accessToken(String accessToken) {
-            this.putQueryParameter("AccessToken", accessToken);
+            this.putQueryParameter("accessToken", accessToken);
             this.accessToken = accessToken;
             return this;
         }
