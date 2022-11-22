@@ -132,6 +132,168 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         } 
 
     }
+    public static class DBClusterNode extends TeaModel {
+        @NameInMap("ClassCode")
+        private String classCode;
+
+        @NameInMap("NodeId")
+        private String nodeId;
+
+        @NameInMap("NodeRegionId")
+        private String nodeRegionId;
+
+        @NameInMap("NodeRole")
+        private String nodeRole;
+
+        @NameInMap("NodeZoneId")
+        private String nodeZoneId;
+
+        private DBClusterNode(Builder builder) {
+            this.classCode = builder.classCode;
+            this.nodeId = builder.nodeId;
+            this.nodeRegionId = builder.nodeRegionId;
+            this.nodeRole = builder.nodeRole;
+            this.nodeZoneId = builder.nodeZoneId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DBClusterNode create() {
+            return builder().build();
+        }
+
+        /**
+         * @return classCode
+         */
+        public String getClassCode() {
+            return this.classCode;
+        }
+
+        /**
+         * @return nodeId
+         */
+        public String getNodeId() {
+            return this.nodeId;
+        }
+
+        /**
+         * @return nodeRegionId
+         */
+        public String getNodeRegionId() {
+            return this.nodeRegionId;
+        }
+
+        /**
+         * @return nodeRole
+         */
+        public String getNodeRole() {
+            return this.nodeRole;
+        }
+
+        /**
+         * @return nodeZoneId
+         */
+        public String getNodeZoneId() {
+            return this.nodeZoneId;
+        }
+
+        public static final class Builder {
+            private String classCode; 
+            private String nodeId; 
+            private String nodeRegionId; 
+            private String nodeRole; 
+            private String nodeZoneId; 
+
+            /**
+             * ClassCode.
+             */
+            public Builder classCode(String classCode) {
+                this.classCode = classCode;
+                return this;
+            }
+
+            /**
+             * NodeId.
+             */
+            public Builder nodeId(String nodeId) {
+                this.nodeId = nodeId;
+                return this;
+            }
+
+            /**
+             * NodeRegionId.
+             */
+            public Builder nodeRegionId(String nodeRegionId) {
+                this.nodeRegionId = nodeRegionId;
+                return this;
+            }
+
+            /**
+             * NodeRole.
+             */
+            public Builder nodeRole(String nodeRole) {
+                this.nodeRole = nodeRole;
+                return this;
+            }
+
+            /**
+             * NodeZoneId.
+             */
+            public Builder nodeZoneId(String nodeZoneId) {
+                this.nodeZoneId = nodeZoneId;
+                return this;
+            }
+
+            public DBClusterNode build() {
+                return new DBClusterNode(this);
+            } 
+
+        } 
+
+    }
+    public static class DBClusterNodes extends TeaModel {
+        @NameInMap("DBClusterNode")
+        private java.util.List < DBClusterNode> DBClusterNode;
+
+        private DBClusterNodes(Builder builder) {
+            this.DBClusterNode = builder.DBClusterNode;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DBClusterNodes create() {
+            return builder().build();
+        }
+
+        /**
+         * @return DBClusterNode
+         */
+        public java.util.List < DBClusterNode> getDBClusterNode() {
+            return this.DBClusterNode;
+        }
+
+        public static final class Builder {
+            private java.util.List < DBClusterNode> DBClusterNode; 
+
+            /**
+             * DBClusterNode.
+             */
+            public Builder DBClusterNode(java.util.List < DBClusterNode> DBClusterNode) {
+                this.DBClusterNode = DBClusterNode;
+                return this;
+            }
+
+            public DBClusterNodes build() {
+                return new DBClusterNodes(this);
+            } 
+
+        } 
+
+    }
     public static class DBInstanceIds extends TeaModel {
         @NameInMap("DBInstanceId")
         private java.util.List < String > DBInstanceId;
@@ -516,6 +678,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("CurrentKernelVersion")
         private String currentKernelVersion;
 
+        @NameInMap("DBClusterNodes")
+        private DBClusterNodes DBClusterNodes;
+
         @NameInMap("DBInstanceCPU")
         private String DBInstanceCPU;
 
@@ -691,6 +856,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.consoleVersion = builder.consoleVersion;
             this.creationTime = builder.creationTime;
             this.currentKernelVersion = builder.currentKernelVersion;
+            this.DBClusterNodes = builder.DBClusterNodes;
             this.DBInstanceCPU = builder.DBInstanceCPU;
             this.DBInstanceClass = builder.DBInstanceClass;
             this.DBInstanceClassType = builder.DBInstanceClassType;
@@ -837,6 +1003,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          */
         public String getCurrentKernelVersion() {
             return this.currentKernelVersion;
+        }
+
+        /**
+         * @return DBClusterNodes
+         */
+        public DBClusterNodes getDBClusterNodes() {
+            return this.DBClusterNodes;
         }
 
         /**
@@ -1230,6 +1403,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String consoleVersion; 
             private String creationTime; 
             private String currentKernelVersion; 
+            private DBClusterNodes DBClusterNodes; 
             private String DBInstanceCPU; 
             private String DBInstanceClass; 
             private String DBInstanceClassType; 
@@ -1378,6 +1552,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              */
             public Builder currentKernelVersion(String currentKernelVersion) {
                 this.currentKernelVersion = currentKernelVersion;
+                return this;
+            }
+
+            /**
+             * DBClusterNodes.
+             */
+            public Builder DBClusterNodes(DBClusterNodes DBClusterNodes) {
+                this.DBClusterNodes = DBClusterNodes;
                 return this;
             }
 

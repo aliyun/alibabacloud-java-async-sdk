@@ -30,6 +30,10 @@ public class ModifyDBInstanceTDERequest extends Request {
     private String encryptionKey;
 
     @Query
+    @NameInMap("IsRotate")
+    private Boolean isRotate;
+
+    @Query
     @NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -68,6 +72,7 @@ public class ModifyDBInstanceTDERequest extends Request {
         this.DBInstanceId = builder.DBInstanceId;
         this.DBName = builder.DBName;
         this.encryptionKey = builder.encryptionKey;
+        this.isRotate = builder.isRotate;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.passWord = builder.passWord;
@@ -117,6 +122,13 @@ public class ModifyDBInstanceTDERequest extends Request {
      */
     public String getEncryptionKey() {
         return this.encryptionKey;
+    }
+
+    /**
+     * @return isRotate
+     */
+    public Boolean getIsRotate() {
+        return this.isRotate;
     }
 
     /**
@@ -180,6 +192,7 @@ public class ModifyDBInstanceTDERequest extends Request {
         private String DBInstanceId; 
         private String DBName; 
         private String encryptionKey; 
+        private Boolean isRotate; 
         private String ownerAccount; 
         private Long ownerId; 
         private String passWord; 
@@ -199,6 +212,7 @@ public class ModifyDBInstanceTDERequest extends Request {
             this.DBInstanceId = request.DBInstanceId;
             this.DBName = request.DBName;
             this.encryptionKey = request.encryptionKey;
+            this.isRotate = request.isRotate;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.passWord = request.passWord;
@@ -242,6 +256,15 @@ public class ModifyDBInstanceTDERequest extends Request {
         public Builder encryptionKey(String encryptionKey) {
             this.putQueryParameter("EncryptionKey", encryptionKey);
             this.encryptionKey = encryptionKey;
+            return this;
+        }
+
+        /**
+         * IsRotate.
+         */
+        public Builder isRotate(Boolean isRotate) {
+            this.putQueryParameter("IsRotate", isRotate);
+            this.isRotate = isRotate;
             return this;
         }
 

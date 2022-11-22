@@ -27,10 +27,12 @@ public class SwitchDBInstanceVpcRequest extends Request {
 
     @Query
     @NameInMap("VPCId")
+    @Validation(required = true)
     private String VPCId;
 
     @Query
     @NameInMap("VSwitchId")
+    @Validation(required = true)
     private String vSwitchId;
 
     private SwitchDBInstanceVpcRequest(Builder builder) {

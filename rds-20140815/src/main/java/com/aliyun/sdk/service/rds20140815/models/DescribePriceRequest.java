@@ -39,6 +39,10 @@ public class DescribePriceRequest extends Request {
     private String DBInstanceStorageType;
 
     @Query
+    @NameInMap("DBNode")
+    private java.util.List < DBNode> DBNode;
+
+    @Query
     @NameInMap("Engine")
     @Validation(required = true)
     private String engine;
@@ -106,6 +110,7 @@ public class DescribePriceRequest extends Request {
         this.DBInstanceId = builder.DBInstanceId;
         this.DBInstanceStorage = builder.DBInstanceStorage;
         this.DBInstanceStorageType = builder.DBInstanceStorageType;
+        this.DBNode = builder.DBNode;
         this.engine = builder.engine;
         this.engineVersion = builder.engineVersion;
         this.instanceUsedType = builder.instanceUsedType;
@@ -175,6 +180,13 @@ public class DescribePriceRequest extends Request {
      */
     public String getDBInstanceStorageType() {
         return this.DBInstanceStorageType;
+    }
+
+    /**
+     * @return DBNode
+     */
+    public java.util.List < DBNode> getDBNode() {
+        return this.DBNode;
     }
 
     /**
@@ -282,6 +294,7 @@ public class DescribePriceRequest extends Request {
         private String DBInstanceId; 
         private Integer DBInstanceStorage; 
         private String DBInstanceStorageType; 
+        private java.util.List < DBNode> DBNode; 
         private String engine; 
         private String engineVersion; 
         private Integer instanceUsedType; 
@@ -309,6 +322,7 @@ public class DescribePriceRequest extends Request {
             this.DBInstanceId = request.DBInstanceId;
             this.DBInstanceStorage = request.DBInstanceStorage;
             this.DBInstanceStorageType = request.DBInstanceStorageType;
+            this.DBNode = request.DBNode;
             this.engine = request.engine;
             this.engineVersion = request.engineVersion;
             this.instanceUsedType = request.instanceUsedType;
@@ -376,6 +390,16 @@ public class DescribePriceRequest extends Request {
         public Builder DBInstanceStorageType(String DBInstanceStorageType) {
             this.putQueryParameter("DBInstanceStorageType", DBInstanceStorageType);
             this.DBInstanceStorageType = DBInstanceStorageType;
+            return this;
+        }
+
+        /**
+         * DBNode.
+         */
+        public Builder DBNode(java.util.List < DBNode> DBNode) {
+            String DBNodeShrink = shrink(DBNode, "DBNode", "json");
+            this.putQueryParameter("DBNode", DBNodeShrink);
+            this.DBNode = DBNode;
             return this;
         }
 
@@ -512,4 +536,65 @@ public class DescribePriceRequest extends Request {
 
     } 
 
+    public static class DBNode extends TeaModel {
+        @NameInMap("ClassCode")
+        private String classCode;
+
+        @NameInMap("ZoneId")
+        private String zoneId;
+
+        private DBNode(Builder builder) {
+            this.classCode = builder.classCode;
+            this.zoneId = builder.zoneId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DBNode create() {
+            return builder().build();
+        }
+
+        /**
+         * @return classCode
+         */
+        public String getClassCode() {
+            return this.classCode;
+        }
+
+        /**
+         * @return zoneId
+         */
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
+        public static final class Builder {
+            private String classCode; 
+            private String zoneId; 
+
+            /**
+             * ClassCode.
+             */
+            public Builder classCode(String classCode) {
+                this.classCode = classCode;
+                return this;
+            }
+
+            /**
+             * ZoneId.
+             */
+            public Builder zoneId(String zoneId) {
+                this.zoneId = zoneId;
+                return this;
+            }
+
+            public DBNode build() {
+                return new DBNode(this);
+            } 
+
+        } 
+
+    }
 }

@@ -36,8 +36,11 @@ com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceSSLResponseBody$1.cl
 com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceNetInfoForChannelResponseBody$DBInstanceWeights$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DescribeModifyPGHbaConfigLogResponseBody$BeforeHbaItemsHbaItem.class
 com/aliyun/sdk/service/rds20140815/models/ModifyHADiagnoseConfigResponseBody.class
+com/aliyun/sdk/service/rds20140815/models/ModifyDBInstanceEndpointAddressRequest$Builder.class
+com/aliyun/sdk/service/rds20140815/models/CreateDBInstanceEndpointAddressResponse$1.class
 com/aliyun/sdk/service/rds20140815/models/TagResourcesResponseBody$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DescribeParameterGroupResponseBody$ParameterDetail.class
+com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceEndpointsResponseBody$AddressItem$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DescribeInstanceAutoRenewalAttributeResponseBody.class
 com/aliyun/sdk/service/rds20140815/models/DescribeSecretsResponseBody.class
 com/aliyun/sdk/service/rds20140815/models/ModifyCollationTimeZoneResponse.class
@@ -77,6 +80,7 @@ com/aliyun/sdk/service/rds20140815/models/SwitchDBInstanceVpcRequest$1.class
 com/aliyun/sdk/service/rds20140815/models/QueryNotifyRequest.class
 com/aliyun/sdk/service/rds20140815/models/DeleteDBInstanceResponseBody$1.class
 com/aliyun/sdk/service/rds20140815/models/ModifyDBInstanceMaintainTimeRequest$Builder.class
+com/aliyun/sdk/service/rds20140815/models/ModifyDBInstanceEndpointRequest$1.class
 com/aliyun/sdk/service/rds20140815/models/ListTagResourcesResponseBody$TagResources.class
 com/aliyun/sdk/service/rds20140815/models/DescribePriceRequest$1.class
 com/aliyun/sdk/service/rds20140815/models/CreateGADInstanceRequest$1.class
@@ -94,6 +98,7 @@ com/aliyun/sdk/service/rds20140815/models/TagResourcesRequest.class
 com/aliyun/sdk/service/rds20140815/models/UpgradeDBInstanceKernelVersionRequest$1.class
 com/aliyun/sdk/service/rds20140815/models/DescribeBackupsResponseBody$BackupDownloadLinkByDB.class
 com/aliyun/sdk/service/rds20140815/models/DescribeParameterTemplatesResponseBody.class
+com/aliyun/sdk/service/rds20140815/models/ModifyDBInstanceEndpointResponse$BuilderImpl.class
 com/aliyun/sdk/service/rds20140815/models/DescribeBackupDatabaseResponseBody.class
 com/aliyun/sdk/service/rds20140815/models/DescribeMigrateTasksResponseBody$MigrateTask$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DescribeTagsResponseBody$Items.class
@@ -125,6 +130,7 @@ com/aliyun/sdk/service/rds20140815/models/ModifyDBInstanceMonitorResponse.class
 com/aliyun/sdk/service/rds20140815/models/ModifyHADiagnoseConfigResponseBody$1.class
 com/aliyun/sdk/service/rds20140815/models/ModifyDBInstanceMonitorResponseBody$1.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceMonitorResponseBody$Builder.class
+com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceEndpointsResponseBody$AddressItems.class
 com/aliyun/sdk/service/rds20140815/models/ImportDatabaseBetweenInstancesRequest$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceNetInfoForChannelResponseBody$Builder.class
 com/aliyun/sdk/service/rds20140815/models/ListTagResourcesRequest$Tag$Builder.class
@@ -153,6 +159,7 @@ com/aliyun/sdk/service/rds20140815/models/DescribeADInfoRequest.class
 com/aliyun/sdk/service/rds20140815/models/RenewInstanceResponse.class
 com/aliyun/sdk/service/rds20140815/models/ActivateMigrationTargetInstanceResponseBody.class
 com/aliyun/sdk/service/rds20140815/models/CreateDBInstanceResponse$Builder.class
+com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceEndpointsResponseBody$NodeItem$Builder.class
 com/aliyun/sdk/service/rds20140815/models/CancelImportResponseBody$1.class
 com/aliyun/sdk/service/rds20140815/models/CreateBackupResponseBody.class
 com/aliyun/sdk/service/rds20140815/models/DeleteParameterGroupResponse$BuilderImpl.class
@@ -173,6 +180,7 @@ com/aliyun/sdk/service/rds20140815/models/CalculateDBInstanceWeightResponse$1.cl
 com/aliyun/sdk/service/rds20140815/models/DescribeSlowLogRecordsRequest$1.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceEncryptionKeyRequest.class
 com/aliyun/sdk/service/rds20140815/models/DescribeCrossBackupMetaListResponse$Builder.class
+com/aliyun/sdk/service/rds20140815/models/DeleteDBInstanceEndpointResponse$1.class
 com/aliyun/sdk/service/rds20140815/models/ModifyDBInstanceHAConfigResponse.class
 com/aliyun/sdk/service/rds20140815/models/ListClassesResponse.class
 com/aliyun/sdk/service/rds20140815/models/ModifyDBInstanceMaintainTimeResponseBody$Builder.class
@@ -185,6 +193,7 @@ com/aliyun/sdk/service/rds20140815/models/DescribeEventsResponseBody$EventItemsE
 com/aliyun/sdk/service/rds20140815/models/DescribeDBInstancesByExpireTimeRequest$1.class
 com/aliyun/sdk/service/rds20140815/models/DescribeRegionsRequest$Builder.class
 com/aliyun/sdk/service/rds20140815/models/ModifyHASwitchConfigResponseBody$1.class
+com/aliyun/sdk/service/rds20140815/models/CreateDBInstanceEndpointResponseBody.class
 com/aliyun/sdk/service/rds20140815/models/DeleteGadInstanceResponseBody$1.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceMetricsResponse$Builder.class
 com/aliyun/sdk/service/rds20140815/models/ModifyDBInstanceConnectionModeRequest$1.class
@@ -195,6 +204,7 @@ com/aliyun/sdk/service/rds20140815/models/DescribeSQLLogRecordsResponseBody$1.cl
 com/aliyun/sdk/service/rds20140815/models/DescribeParameterGroupResponseBody$ParameterDetail$Builder.class
 com/aliyun/sdk/service/rds20140815/models/CreateMigrateTaskResponseBody$1.class
 com/aliyun/sdk/service/rds20140815/models/RequestServiceOfCloudDBARequest$Builder.class
+com/aliyun/sdk/service/rds20140815/models/CreateDBInstanceEndpointAddressResponseBody$1.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceAttributeResponse$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceTDERequest$1.class
 com/aliyun/sdk/service/rds20140815/models/ListTagResourcesRequest.class
@@ -216,10 +226,12 @@ com/aliyun/sdk/service/rds20140815/models/MigrateDBInstanceResponseBody$1.class
 com/aliyun/sdk/service/rds20140815/models/CreateGadInstanceMemberResponse$1.class
 com/aliyun/sdk/service/rds20140815/models/ReleaseReadWriteSplittingConnectionResponse$BuilderImpl.class
 com/aliyun/sdk/service/rds20140815/models/ModifyDBInstanceProxyConfigurationResponse$Builder.class
+com/aliyun/sdk/service/rds20140815/models/CreateDBInstanceEndpointResponseBody$Data.class
 com/aliyun/sdk/service/rds20140815/models/DescribeUpgradeMajorVersionPrecheckTaskResponse$BuilderImpl.class
 com/aliyun/sdk/service/rds20140815/models/ModifySecurityGroupConfigurationResponseBody$Builder.class
 com/aliyun/sdk/service/rds20140815/models/ModifyParameterResponseBody.class
 com/aliyun/sdk/service/rds20140815/models/ListUserBackupFilesResponseBody$Records$Builder.class
+com/aliyun/sdk/service/rds20140815/models/CreateDBInstanceEndpointResponse$BuilderImpl.class
 com/aliyun/sdk/service/rds20140815/models/CloneParameterGroupResponseBody$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DescribeBackupPolicyRequest.class
 com/aliyun/sdk/service/rds20140815/models/DescribeActionEventPolicyResponse$BuilderImpl.class
@@ -260,6 +272,7 @@ com/aliyun/sdk/service/rds20140815/models/GetDBInstanceTopologyResponse.class
 com/aliyun/sdk/service/rds20140815/models/ModifyDBInstanceNetworkTypeRequest.class
 com/aliyun/sdk/service/rds20140815/models/StartDBInstanceResponseBody.class
 com/aliyun/sdk/service/rds20140815/models/DescribeBackupsResponse$1.class
+com/aliyun/sdk/service/rds20140815/models/DeleteDBInstanceEndpointAddressResponse$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DescribePGHbaConfigResponseBody$RunningHbaItems$Builder.class
 com/aliyun/sdk/service/rds20140815/models/ModifyActionEventPolicyResponseBody$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DescribeBackupTasksResponseBody$Items.class
@@ -269,7 +282,9 @@ com/aliyun/sdk/service/rds20140815/models/DescribeSlowLogRecordsResponseBody.cla
 com/aliyun/sdk/service/rds20140815/models/DescribeDedicatedHostsResponseBody$1.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceSSLResponseBody$Builder.class
 com/aliyun/sdk/service/rds20140815/models/ModifySecurityIpsResponseBody.class
+com/aliyun/sdk/service/rds20140815/models/DeleteDBInstanceEndpointAddressRequest.class
 com/aliyun/sdk/service/rds20140815/models/ModifyADInfoRequest$1.class
+com/aliyun/sdk/service/rds20140815/models/DeleteDBInstanceEndpointAddressResponse$BuilderImpl.class
 com/aliyun/sdk/service/rds20140815/models/SwitchDBInstanceNetTypeResponse$Builder.class
 com/aliyun/sdk/service/rds20140815/models/ModifyDbProxyInstanceSslResponseBody$Builder.class
 com/aliyun/sdk/service/rds20140815/models/CheckAccountNameAvailableResponseBody$Builder.class
@@ -385,6 +400,7 @@ com/aliyun/sdk/service/rds20140815/models/CreateGadInstanceMemberRequest$UnitNod
 com/aliyun/sdk/service/rds20140815/models/GrantAccountPrivilegeRequest$1.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceByTagsResponseBody$Tags.class
 com/aliyun/sdk/service/rds20140815/models/DeleteBackupFileRequest.class
+com/aliyun/sdk/service/rds20140815/models/DescribePriceRequest$DBNode.class
 com/aliyun/sdk/service/rds20140815/models/ResetAccountResponse$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DescribeBackupTasksResponse$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DeleteAccountRequest.class
@@ -414,6 +430,7 @@ com/aliyun/sdk/service/rds20140815/models/DescribeSecurityGroupConfigurationResp
 com/aliyun/sdk/service/rds20140815/models/ModifyDBInstanceNetworkTypeResponse$BuilderImpl.class
 com/aliyun/sdk/service/rds20140815/models/DescribeUpgradeMajorVersionPrecheckTaskRequest$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DescribeSecretsResponseBody$1.class
+com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceEndpointsRequest$Builder.class
 com/aliyun/sdk/service/rds20140815/models/ImportUserBackupFileRequest$1.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDBMiniEngineVersionsResponseBody$1.class
 com/aliyun/sdk/service/rds20140815/models/AllocateReadWriteSplittingConnectionResponse$1.class
@@ -426,9 +443,11 @@ com/aliyun/sdk/service/rds20140815/models/CancelImportResponse$1.class
 com/aliyun/sdk/service/rds20140815/models/MigrateSecurityIPModeResponse$1.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDetachedBackupsResponse$1.class
 com/aliyun/sdk/service/rds20140815/models/CreateDdrInstanceResponse$Builder.class
+com/aliyun/sdk/service/rds20140815/models/CreateDBInstanceEndpointAddressResponseBody$Builder.class
 com/aliyun/sdk/service/rds20140815/models/CreateTempDBInstanceRequest$1.class
 com/aliyun/sdk/service/rds20140815/models/ModifyDBInstanceConnectionStringRequest.class
 com/aliyun/sdk/service/rds20140815/models/ModifyDBInstancePayTypeRequest$1.class
+com/aliyun/sdk/service/rds20140815/models/CreateDBInstanceEndpointResponse$1.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDedicatedHostGroupsResponseBody$ZoneIDList.class
 com/aliyun/sdk/service/rds20140815/models/UpgradeDBInstanceMajorVersionPrecheckResponseBody$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DescribeGadInstancesResponseBody$Builder.class
@@ -454,12 +473,14 @@ com/aliyun/sdk/service/rds20140815/models/DescribeBackupTasksResponseBody$Backup
 com/aliyun/sdk/service/rds20140815/models/DescribeDedicatedHostGroupsResponseBody$DedicatedHostGroupsDedicatedHostGroups.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceNetInfoForChannelResponseBody$1.class
 com/aliyun/sdk/service/rds20140815/models/ModifyDBInstanceProxyConfigurationResponseBody.class
+com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceEndpointsResponseBody$Builder.class
 com/aliyun/sdk/service/rds20140815/models/ReleaseInstanceConnectionResponseBody.class
 com/aliyun/sdk/service/rds20140815/models/ModifyAccountDescriptionResponseBody$Builder.class
 com/aliyun/sdk/service/rds20140815/models/RecoveryDBInstanceRequest$Builder.class
 com/aliyun/sdk/service/rds20140815/models/ReleaseInstanceConnectionResponseBody$Builder.class
 com/aliyun/sdk/service/rds20140815/models/CreateDatabaseRequest.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDedicatedHostGroupsResponse$1.class
+com/aliyun/sdk/service/rds20140815/models/DeleteDBInstanceEndpointResponseBody$1.class
 com/aliyun/sdk/service/rds20140815/models/RestoreDdrTableResponseBody$1.class
 com/aliyun/sdk/service/rds20140815/models/DescribeRenewalPriceResponseBody$PriceInfo.class
 com/aliyun/sdk/service/rds20140815/models/ListClassesResponse$1.class
@@ -491,12 +512,14 @@ com/aliyun/sdk/service/rds20140815/models/ListTagResourcesResponse$1.class
 com/aliyun/sdk/service/rds20140815/models/ListUserBackupFilesResponseBody$Records.class
 com/aliyun/sdk/service/rds20140815/models/ModifyDBInstanceDeletionProtectionRequest.class
 com/aliyun/sdk/service/rds20140815/models/ModifyDBInstanceDescriptionRequest$Builder.class
+com/aliyun/sdk/service/rds20140815/models/ModifyDBInstanceEndpointResponse$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DescribeSecurityGroupConfigurationResponseBody$Items$Builder.class
 com/aliyun/sdk/service/rds20140815/models/ResetAccountResponse.class
 com/aliyun/sdk/service/rds20140815/models/RestoreTableResponse$BuilderImpl.class
 com/aliyun/sdk/service/rds20140815/models/ModifyDBInstanceDelayedReplicationTimeResponse$BuilderImpl.class
 com/aliyun/sdk/service/rds20140815/models/CheckDBNameAvailableResponseBody$1.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceNetInfoResponseBody$SecurityIPGroup.class
+com/aliyun/sdk/service/rds20140815/models/CreateDBInstanceEndpointAddressRequest$1.class
 com/aliyun/sdk/service/rds20140815/models/ModifyDasInstanceConfigResponseBody.class
 com/aliyun/sdk/service/rds20140815/models/CheckCloudResourceAuthorizedResponse$BuilderImpl.class
 com/aliyun/sdk/service/rds20140815/models/CheckInstanceExistRequest$1.class
@@ -518,6 +541,7 @@ com/aliyun/sdk/service/rds20140815/models/RevokeOperatorPermissionRequest$Builde
 com/aliyun/sdk/service/rds20140815/models/DescribeOssDownloadsRequest.class
 com/aliyun/sdk/service/rds20140815/models/ModifyParameterResponse$Builder.class
 com/aliyun/sdk/service/rds20140815/models/ModifyDBDescriptionResponseBody$1.class
+com/aliyun/sdk/service/rds20140815/models/CreateDBInstanceEndpointRequest$NodeItems$Builder.class
 com/aliyun/sdk/service/rds20140815/models/RequestServiceOfCloudDBAResponseBody$1.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceTDEResponseBody$1.class
 com/aliyun/sdk/service/rds20140815/models/CreateAccountRequest.class
@@ -587,6 +611,7 @@ com/aliyun/sdk/service/rds20140815/models/DescribeParameterGroupsResponse$Builde
 com/aliyun/sdk/service/rds20140815/models/DescribeBackupsResponseBody$Items.class
 com/aliyun/sdk/service/rds20140815/models/ModifyDBDescriptionResponse$Builder.class
 com/aliyun/sdk/service/rds20140815/models/ModifyDBInstanceConnectionStringResponse$1.class
+com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceEndpointsResponseBody$NodeItem.class
 com/aliyun/sdk/service/rds20140815/models/DeleteParameterGroupRequest.class
 com/aliyun/sdk/service/rds20140815/models/ModifyDBInstanceDeletionProtectionResponseBody.class
 com/aliyun/sdk/service/rds20140815/models/DescribeADInfoResponseBody$1.class
@@ -614,6 +639,7 @@ com/aliyun/sdk/service/rds20140815/models/DescribeDBProxyEndpointResponse$Builde
 com/aliyun/sdk/service/rds20140815/models/DescribeBackupTasksRequest.class
 com/aliyun/sdk/service/rds20140815/models/UpgradeDBInstanceKernelVersionResponse$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceByTagsRequest$Builder.class
+com/aliyun/sdk/service/rds20140815/models/DeleteDBInstanceEndpointRequest.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceSSLRequest$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DescribeSQLLogReportListResponse$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DescribeRegionsResponseBody$Builder.class
@@ -662,8 +688,10 @@ com/aliyun/sdk/service/rds20140815/models/DescribePGHbaConfigRequest.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDBInstancesForCloneResponseBody$DBInstance$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DescribeSQLLogRecordsResponseBody$Builder.class
 com/aliyun/sdk/service/rds20140815/models/GetDBInstanceTopologyResponseBody$Data$Builder.class
+com/aliyun/sdk/service/rds20140815/models/DeleteDBInstanceEndpointRequest$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DescribeRegionInfosResponse.class
 com/aliyun/sdk/service/rds20140815/models/DescribeModifyPGHbaConfigLogResponseBody$HbaLogItems.class
+com/aliyun/sdk/service/rds20140815/models/DeleteDBInstanceEndpointResponseBody.class
 com/aliyun/sdk/service/rds20140815/models/DescribeResourceUsageResponseBody.class
 com/aliyun/sdk/service/rds20140815/models/ModifyActionEventPolicyRequest.class
 com/aliyun/sdk/service/rds20140815/models/ModifyDBInstancePayTypeResponse$1.class
@@ -727,6 +755,7 @@ com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceByTagsResponseBody$I
 com/aliyun/sdk/service/rds20140815/models/DescribeInstanceKeywordsRequest$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DescribeAvailableRecoveryTimeResponseBody.class
 com/aliyun/sdk/service/rds20140815/models/UpgradeDBProxyInstanceKernelVersionResponseBody$Builder.class
+com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceEndpointsResponseBody.class
 com/aliyun/sdk/service/rds20140815/models/DescribeMigrateTasksResponseBody$MigrateTask.class
 com/aliyun/sdk/service/rds20140815/models/DescribeSecretsResponse$1.class
 com/aliyun/sdk/service/rds20140815/models/DescribeInstanceAutoRenewalAttributeResponse$1.class
@@ -836,6 +865,7 @@ com/aliyun/sdk/service/rds20140815/models/DeleteDBInstanceRequest$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DescribeCrossRegionBackupsResponseBody.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceAttributeResponse$1.class
 com/aliyun/sdk/service/rds20140815/models/DescribeRdsResourceSettingsRequest$Builder.class
+com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceEndpointsRequest.class
 com/aliyun/sdk/service/rds20140815/models/DescribeSQLCollectorRetentionRequest$Builder.class
 com/aliyun/sdk/service/rds20140815/models/ImportUserBackupFileResponse$Builder.class
 com/aliyun/sdk/service/rds20140815/models/ModifyDBProxyInstanceResponseBody.class
@@ -901,6 +931,7 @@ com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceAttributeResponseBod
 com/aliyun/sdk/service/rds20140815/models/DescribeInstanceAutoRenewalAttributeResponse$BuilderImpl.class
 com/aliyun/sdk/service/rds20140815/models/DeleteBackupFileResponseBody$Builder.class
 com/aliyun/sdk/service/rds20140815/models/AllocateInstancePublicConnectionResponse$1.class
+com/aliyun/sdk/service/rds20140815/models/ModifyDBInstanceEndpointResponseBody$Data.class
 com/aliyun/sdk/service/rds20140815/models/RemoveTagsFromResourceResponse$1.class
 com/aliyun/sdk/service/rds20140815/models/DescribeActionEventPolicyResponseBody$1.class
 com/aliyun/sdk/service/rds20140815/models/CheckAccountNameAvailableResponseBody$1.class
@@ -908,6 +939,7 @@ com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceIpHostnameResponseBo
 com/aliyun/sdk/service/rds20140815/models/CreateReadOnlyDBInstanceRequest$1.class
 com/aliyun/sdk/service/rds20140815/models/DeleteUserBackupFileResponse$BuilderImpl.class
 com/aliyun/sdk/service/rds20140815/models/RestoreDdrTableResponse.class
+com/aliyun/sdk/service/rds20140815/models/CreateDBInstanceEndpointAddressResponseBody$Data.class
 com/aliyun/sdk/service/rds20140815/models/DescribeOssDownloadsResponseBody$OssDownload$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DescribeParameterTemplatesResponse.class
 com/aliyun/sdk/service/rds20140815/models/DescribePriceResponse.class
@@ -929,6 +961,8 @@ com/aliyun/sdk/service/rds20140815/models/ModifyActionEventPolicyRequest$Builder
 com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceIPArrayListResponseBody$Builder.class
 com/aliyun/sdk/service/rds20140815/models/TransformDBInstancePayTypeResponse$BuilderImpl.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDBProxyPerformanceResponse$Builder.class
+com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceEndpointsResponse$Builder.class
+com/aliyun/sdk/service/rds20140815/models/ModifyDBInstanceEndpointRequest$NodeItems$Builder.class
 com/aliyun/sdk/service/rds20140815/models/CheckAccountNameAvailableResponse$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DescribeParameterGroupResponseBody$ParamDetail.class
 com/aliyun/sdk/service/rds20140815/models/UpgradeDBInstanceMajorVersionPrecheckResponseBody.class
@@ -963,6 +997,7 @@ com/aliyun/sdk/service/rds20140815/models/ListTagResourcesRequest$Tag.class
 com/aliyun/sdk/service/rds20140815/models/CreateOnlineDatabaseTaskResponseBody$1.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceIpHostnameRequest.class
 com/aliyun/sdk/service/rds20140815/models/DeleteDBProxyEndpointAddressRequest.class
+com/aliyun/sdk/service/rds20140815/models/ModifyDBInstanceEndpointAddressResponseBody$Data.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDetachedBackupsResponse$BuilderImpl.class
 com/aliyun/sdk/service/rds20140815/models/CloneParameterGroupResponse$BuilderImpl.class
 com/aliyun/sdk/service/rds20140815/models/GetDbProxyInstanceSslRequest.class
@@ -996,6 +1031,7 @@ com/aliyun/sdk/service/rds20140815/models/CreateParameterGroupResponseBody$Build
 com/aliyun/sdk/service/rds20140815/models/SwitchDBInstanceNetTypeRequest$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceByTagsRequest$1.class
 com/aliyun/sdk/service/rds20140815/models/ModifyDBInstanceConnectionStringResponse$Builder.class
+com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceAttributeResponseBody$DBClusterNode.class
 com/aliyun/sdk/service/rds20140815/models/ListUserBackupFilesRequest$Builder.class
 com/aliyun/sdk/service/rds20140815/models/ModifyDBInstanceMonitorRequest$1.class
 com/aliyun/sdk/service/rds20140815/models/ModifyDBInstanceDelayedReplicationTimeResponse$Builder.class
@@ -1015,6 +1051,7 @@ com/aliyun/sdk/service/rds20140815/models/ModifySQLCollectorPolicyResponse$Build
 com/aliyun/sdk/service/rds20140815/models/DescribeTasksRequest$1.class
 com/aliyun/sdk/service/rds20140815/models/CreateGADInstanceRequest$UnitNode$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DescribeParameterGroupResponseBody$1.class
+com/aliyun/sdk/service/rds20140815/models/ModifyDBInstanceEndpointAddressResponse$BuilderImpl.class
 com/aliyun/sdk/service/rds20140815/models/ModifyDBInstanceNetworkExpireTimeResponse$Builder.class
 com/aliyun/sdk/service/rds20140815/models/ModifyPGHbaConfigResponseBody$Builder.class
 com/aliyun/sdk/service/rds20140815/models/ModifyPGHbaConfigResponse$Builder.class
@@ -1062,6 +1099,7 @@ com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceHAConfigResponseBody
 com/aliyun/sdk/service/rds20140815/models/RemoveTagsFromResourceRequest$Tag$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DescribeRenewalPriceResponse.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDBMiniEngineVersionsResponseBody$MinorVersionItems.class
+com/aliyun/sdk/service/rds20140815/models/DeleteDBInstanceEndpointAddressResponse$1.class
 com/aliyun/sdk/service/rds20140815/models/ReceiveDBInstanceResponse$Builder.class
 com/aliyun/sdk/service/rds20140815/models/RequestServiceOfCloudDBAResponse.class
 com/aliyun/sdk/service/rds20140815/models/UpgradeDBInstanceMajorVersionRequest$1.class
@@ -1099,6 +1137,7 @@ com/aliyun/sdk/service/rds20140815/models/DescribeRenewalPriceResponseBody$Activ
 com/aliyun/sdk/service/rds20140815/models/DescribeModifyPGHbaConfigLogRequest$Builder.class
 com/aliyun/sdk/service/rds20140815/models/ModifyDTCSecurityIpHostsForSQLServerResponse$1.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceHAConfigResponseBody$Builder.class
+com/aliyun/sdk/service/rds20140815/models/CreateDBInstanceEndpointRequest$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DescribeGadInstancesResponseBody$GadInstances$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DetachGadInstanceMemberRequest.class
 com/aliyun/sdk/service/rds20140815/models/DescribeCloudMigrationPrecheckResultRequest$Builder.class
@@ -1121,6 +1160,7 @@ com/aliyun/sdk/service/rds20140815/models/ResetAccountResponse$1.class
 com/aliyun/sdk/service/rds20140815/models/RevokeAccountPrivilegeResponseBody$1.class
 com/aliyun/sdk/service/rds20140815/models/DescribeAccountsResponseBody$Accounts.class
 com/aliyun/sdk/service/rds20140815/models/DescribeSQLLogFilesResponseBody$LogFile$Builder.class
+com/aliyun/sdk/service/rds20140815/models/ModifyDBInstanceEndpointAddressRequest$1.class
 com/aliyun/sdk/service/rds20140815/models/DescribeSlowLogsResponse$Builder.class
 com/aliyun/sdk/service/rds20140815/models/MigrateSecurityIPModeResponseBody.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDBInstancesForCloneRequest$Builder.class
@@ -1132,6 +1172,7 @@ com/aliyun/sdk/service/rds20140815/models/ImportUserBackupFileResponseBody$1.cla
 com/aliyun/sdk/service/rds20140815/models/DescribeAvailableRecoveryTimeResponseBody$Builder.class
 com/aliyun/sdk/service/rds20140815/models/ModifyDBInstancePayTypeResponseBody$1.class
 com/aliyun/sdk/service/rds20140815/models/DescribeParametersRequest.class
+com/aliyun/sdk/service/rds20140815/models/CreateDBInstanceEndpointAddressResponse$BuilderImpl.class
 com/aliyun/sdk/service/rds20140815/models/DescribeCrossRegionLogBackupFilesResponse$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DescribeCloudMigrationResultResponseBody$1.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceProxyConfigurationResponse$BuilderImpl.class
@@ -1143,6 +1184,7 @@ com/aliyun/sdk/service/rds20140815/models/DescribeMetaListResponse$BuilderImpl.c
 com/aliyun/sdk/service/rds20140815/models/DescribeHADiagnoseConfigRequest$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DescribeRegionInfosResponse$1.class
 com/aliyun/sdk/service/rds20140815/models/DescribeAvailableZonesRequest$Builder.class
+com/aliyun/sdk/service/rds20140815/models/ModifyDBInstanceEndpointAddressResponse.class
 com/aliyun/sdk/service/rds20140815/models/DescribeUpgradeMajorVersionPrecheckTaskRequest$1.class
 com/aliyun/sdk/service/rds20140815/models/ModifyResourceGroupRequest$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DescribeSQLCollectorRetentionResponse$1.class
@@ -1164,6 +1206,7 @@ com/aliyun/sdk/service/rds20140815/models/ImportDatabaseBetweenInstancesResponse
 com/aliyun/sdk/service/rds20140815/models/ModifyHASwitchConfigResponseBody.class
 com/aliyun/sdk/service/rds20140815/models/CopyDatabaseResponse.class
 com/aliyun/sdk/service/rds20140815/models/StopDBInstanceRequest.class
+com/aliyun/sdk/service/rds20140815/models/DeleteDBInstanceEndpointAddressResponseBody.class
 com/aliyun/sdk/service/rds20140815/models/ModifyDBInstanceAutoUpgradeMinorVersionResponse$Builder.class
 com/aliyun/sdk/service/rds20140815/models/ReleaseReadWriteSplittingConnectionResponse$1.class
 com/aliyun/sdk/service/rds20140815/models/DescribeRenewalPriceResponseBody$ActivityInfo$Builder.class
@@ -1203,8 +1246,10 @@ com/aliyun/sdk/service/rds20140815/models/CreateDatabaseResponse$BuilderImpl.cla
 com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceNetInfoForChannelResponseBody.class
 com/aliyun/sdk/service/rds20140815/models/DeleteSecretResponseBody$1.class
 com/aliyun/sdk/service/rds20140815/models/DescribePGHbaConfigResponseBody$HbaItem.class
+com/aliyun/sdk/service/rds20140815/models/CreateDBInstanceEndpointRequest$NodeItems.class
 com/aliyun/sdk/service/rds20140815/models/DescribeHASwitchConfigResponse.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceNetInfoResponseBody$DBInstanceWeight$Builder.class
+com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceEndpointsRequest$1.class
 com/aliyun/sdk/service/rds20140815/models/ModifyAccountDescriptionRequest.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceProxyConfigurationRequest.class
 com/aliyun/sdk/service/rds20140815/models/TransformDBInstancePayTypeResponseBody$1.class
@@ -1213,6 +1258,7 @@ com/aliyun/sdk/service/rds20140815/models/DescribeReadDBInstanceDelayResponseBod
 com/aliyun/sdk/service/rds20140815/models/RestoreDdrTableResponseBody$Builder.class
 com/aliyun/sdk/service/rds20140815/models/ModifyDBProxyEndpointAddressResponse.class
 com/aliyun/sdk/service/rds20140815/models/ModifyDBInstanceTDERequest$Builder.class
+com/aliyun/sdk/service/rds20140815/models/CreateDBInstanceEndpointAddressResponseBody.class
 com/aliyun/sdk/service/rds20140815/models/ModifyInstanceCrossBackupPolicyResponseBody$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DescribeMigrateTasksResponse.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDBInstancePromoteActivityResponseBody$Builder.class
@@ -1374,6 +1420,7 @@ com/aliyun/sdk/service/rds20140815/models/ModifyParameterGroupResponse$1.class
 com/aliyun/sdk/service/rds20140815/models/DescribePGHbaConfigResponse$Builder.class
 com/aliyun/sdk/service/rds20140815/models/ReleaseInstancePublicConnectionRequest$1.class
 com/aliyun/sdk/service/rds20140815/models/DescribeSQLLogReportListResponseBody$Items$Builder.class
+com/aliyun/sdk/service/rds20140815/models/CreateDBInstanceEndpointResponse$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceHAConfigRequest.class
 com/aliyun/sdk/service/rds20140815/models/CreateBackupRequest$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DescribeSQLLogRecordsResponseBody$SQLRecord$Builder.class
@@ -1388,6 +1435,7 @@ com/aliyun/sdk/service/rds20140815/models/DescribeParameterGroupResponse.class
 com/aliyun/sdk/service/rds20140815/models/ModifyInstanceAutoRenewalAttributeRequest.class
 com/aliyun/sdk/service/rds20140815/models/ModifyBackupPolicyResponseBody$1.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceNetInfoForChannelResponseBody$DBInstanceWeights.class
+com/aliyun/sdk/service/rds20140815/models/ModifyDBInstanceEndpointResponseBody$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DescribeParameterGroupsResponse$BuilderImpl.class
 com/aliyun/sdk/service/rds20140815/models/DeleteGadInstanceResponse$Builder.class
 com/aliyun/sdk/service/rds20140815/models/ModifyBackupPolicyResponse.class
@@ -1407,6 +1455,7 @@ com/aliyun/sdk/service/rds20140815/models/ListTagResourcesRequest$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DescribeCloudMigrationResultRequest$Builder.class
 com/aliyun/sdk/service/rds20140815/models/StartDBInstanceResponse.class
 com/aliyun/sdk/service/rds20140815/models/DescribeCollationTimeZonesResponse$BuilderImpl.class
+com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceEndpointsResponseBody$NodeItems.class
 com/aliyun/sdk/service/rds20140815/models/DescibeImportsFromDatabaseRequest$1.class
 com/aliyun/sdk/service/rds20140815/models/UpgradeDBInstanceEngineVersionResponse$1.class
 com/aliyun/sdk/service/rds20140815/models/RemoveTagsFromResourceResponseBody$1.class
@@ -1446,12 +1495,15 @@ com/aliyun/sdk/service/rds20140815/models/UpgradeDBProxyInstanceKernelVersionRes
 com/aliyun/sdk/service/rds20140815/models/DescribeReadDBInstanceDelayResponseBody$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceDetailResponse$1.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDBInstancesForCloneRequest.class
+com/aliyun/sdk/service/rds20140815/models/CreateDBInstanceEndpointRequest.class
 com/aliyun/sdk/service/rds20140815/models/ListClassesResponse$BuilderImpl.class
 com/aliyun/sdk/service/rds20140815/models/ModifyReadWriteSplittingConnectionRequest.class
 com/aliyun/sdk/service/rds20140815/models/CreateAccountResponseBody.class
 com/aliyun/sdk/service/rds20140815/models/CreateGADInstanceResponseBody.class
+com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceEndpointsResponseBody$DBInstanceEndpoint$Builder.class
 com/aliyun/sdk/service/rds20140815/models/MigrateConnectionToOtherZoneRequest$1.class
 com/aliyun/sdk/service/rds20140815/models/LockAccountRequest.class
+com/aliyun/sdk/service/rds20140815/models/ModifyDBInstanceEndpointAddressResponseBody$1.class
 com/aliyun/sdk/service/rds20140815/models/ListClassesRequest.class
 com/aliyun/sdk/service/rds20140815/models/DescribeAccountsResponseBody$DatabasePrivilege$Builder.class
 com/aliyun/sdk/service/rds20140815/models/ModifyDBInstanceMetricsResponseBody.class
@@ -1487,6 +1539,7 @@ com/aliyun/sdk/service/rds20140815/models/DescribeSecretsResponseBody$Builder.cl
 com/aliyun/sdk/service/rds20140815/models/DescribeSQLLogReportListResponse.class
 com/aliyun/sdk/service/rds20140815/models/DescribeSlowLogRecordsResponseBody$SQLSlowRecord$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DetachGadInstanceMemberResponseBody$1.class
+com/aliyun/sdk/service/rds20140815/models/DeleteDBInstanceEndpointResponse.class
 com/aliyun/sdk/service/rds20140815/models/ModifySecurityGroupConfigurationRequest.class
 com/aliyun/sdk/service/rds20140815/models/GetDBInstanceTopologyResponseBody.class
 com/aliyun/sdk/service/rds20140815/models/DescribeUpgradeMajorVersionTasksResponse$BuilderImpl.class
@@ -1502,6 +1555,7 @@ com/aliyun/sdk/service/rds20140815/models/ModifyBackupPolicyResponseBody.class
 com/aliyun/sdk/service/rds20140815/models/CopyDatabaseBetweenInstancesResponseBody$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceNetInfoResponseBody$DBInstanceNetInfos.class
 com/aliyun/sdk/service/rds20140815/models/DescribeSecurityGroupConfigurationRequest.class
+com/aliyun/sdk/service/rds20140815/models/ModifyDBInstanceEndpointResponse.class
 com/aliyun/sdk/service/rds20140815/models/DeleteDBInstanceResponse.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDBInstancePromoteActivityResponseBody.class
 com/aliyun/sdk/service/rds20140815/models/DescribeRegionInfosRequest$1.class
@@ -1525,6 +1579,7 @@ com/aliyun/sdk/service/rds20140815/models/DescribeOssDownloadsResponseBody.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDBInstancePerformanceResponseBody$1.class
 com/aliyun/sdk/service/rds20140815/models/ModifyPGHbaConfigResponseBody.class
 com/aliyun/sdk/service/rds20140815/models/UnlockAccountResponse$BuilderImpl.class
+com/aliyun/sdk/service/rds20140815/models/DeleteDBInstanceEndpointResponseBody$Data$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DescribeBackupsResponseBody$Items$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceMetricsRequest.class
 com/aliyun/sdk/service/rds20140815/models/ListUserBackupFilesResponse.class
@@ -1537,6 +1592,7 @@ com/aliyun/sdk/service/rds20140815/models/SwitchDBInstanceNetTypeResponse.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDTCSecurityIpHostsForSQLServerResponse$1.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceAttributeResponseBody$ReadOnlyDBInstanceId.class
 com/aliyun/sdk/service/rds20140815/models/DescribeOssDownloadsResponseBody$Items$Builder.class
+com/aliyun/sdk/service/rds20140815/models/ModifyDBInstanceEndpointAddressResponseBody$Data$Builder.class
 com/aliyun/sdk/service/rds20140815/models/CreateBackupResponseBody$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceAttributeResponse$BuilderImpl.class
 com/aliyun/sdk/service/rds20140815/models/DescribeCharacterSetNameResponseBody.class
@@ -1579,6 +1635,7 @@ com/aliyun/sdk/service/rds20140815/models/DescribeDatabasesResponseBody$Database
 com/aliyun/sdk/service/rds20140815/models/CreateSecretResponse$BuilderImpl.class
 com/aliyun/sdk/service/rds20140815/models/ModifyDBInstanceConnectionModeResponseBody.class
 com/aliyun/sdk/service/rds20140815/models/ModifyDTCSecurityIpHostsForSQLServerResponseBody$1.class
+com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceEndpointsResponseBody$AddressItem.class
 com/aliyun/sdk/service/rds20140815/models/UnlockAccountRequest$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DescribeBackupTasksResponse$BuilderImpl.class
 com/aliyun/sdk/service/rds20140815/models/SwitchDBInstanceNetTypeRequest$1.class
@@ -1631,6 +1688,7 @@ com/aliyun/sdk/service/rds20140815/models/DescribeErrorLogsResponseBody.class
 com/aliyun/sdk/service/rds20140815/models/TagResourcesRequest$Tag.class
 com/aliyun/sdk/service/rds20140815/models/MigrateToOtherZoneResponseBody$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DescribeParametersResponseBody$Builder.class
+com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceEndpointsResponseBody$AddressItems$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DeleteBackupRequest$1.class
 com/aliyun/sdk/service/rds20140815/models/ModifyCollationTimeZoneResponse$Builder.class
 com/aliyun/sdk/service/rds20140815/models/RenewInstanceResponse$1.class
@@ -1655,6 +1713,8 @@ com/aliyun/sdk/service/rds20140815/models/DescribePriceResponseBody$Coupon.class
 com/aliyun/sdk/service/rds20140815/models/ModifyDasInstanceConfigResponseBody$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DescribeModifyPGHbaConfigLogResponseBody$HbaItem.class
 com/aliyun/sdk/service/rds20140815/models/DescribeAvailableClassesResponseBody$DBInstanceStorageRange.class
+com/aliyun/sdk/service/rds20140815/models/CreateDBInstanceEndpointAddressResponse$Builder.class
+com/aliyun/sdk/service/rds20140815/models/DeleteDBInstanceEndpointResponse$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDBInstancePerformanceResponseBody.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceIPArrayListResponse$Builder.class
 com/aliyun/sdk/service/rds20140815/models/ModifyReadonlyInstanceDelayReplicationTimeResponse$Builder.class
@@ -1676,6 +1736,7 @@ com/aliyun/sdk/service/rds20140815/models/CheckAccountNameAvailableResponse$1.cl
 com/aliyun/sdk/service/rds20140815/models/DescribeParameterGroupsResponseBody$1.class
 com/aliyun/sdk/service/rds20140815/models/DescribeOssDownloadsResponse$BuilderImpl.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceAttributeResponseBody$DBInstanceIds.class
+com/aliyun/sdk/service/rds20140815/models/DeleteDBInstanceEndpointResponse$BuilderImpl.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceIPArrayListRequest$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DescribeMetaListRequest.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceAttributeResponseBody$DBInstanceIds$Builder.class
@@ -1699,6 +1760,7 @@ com/aliyun/sdk/service/rds20140815/models/StopDBInstanceResponse$BuilderImpl.cla
 com/aliyun/sdk/service/rds20140815/models/ImportDatabaseBetweenInstancesResponse$BuilderImpl.class
 com/aliyun/sdk/service/rds20140815/models/ReleaseReadWriteSplittingConnectionResponseBody$1.class
 com/aliyun/sdk/service/rds20140815/models/AllocateInstancePublicConnectionRequest$Builder.class
+com/aliyun/sdk/service/rds20140815/models/DeleteDBInstanceEndpointAddressResponseBody$Data.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDBInstancesByExpireTimeResponse$BuilderImpl.class
 com/aliyun/sdk/service/rds20140815/models/DescribeVSwitchesResponseBody.class
 com/aliyun/sdk/service/rds20140815/models/RestoreTableRequest$1.class
@@ -1757,11 +1819,13 @@ com/aliyun/sdk/service/rds20140815/models/DescribeSecurityGroupConfigurationResp
 com/aliyun/sdk/service/rds20140815/models/DescribeParameterGroupsResponseBody$ParameterGroups$Builder.class
 com/aliyun/sdk/service/rds20140815/models/AddTagsToResourceResponse$BuilderImpl.class
 com/aliyun/sdk/service/rds20140815/models/UpgradeDBInstanceKernelVersionResponse$1.class
+com/aliyun/sdk/service/rds20140815/models/ModifyDBInstanceEndpointResponseBody$1.class
 com/aliyun/sdk/service/rds20140815/models/ModifyDBDescriptionResponseBody.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDedicatedHostsResponseBody$Builder.class
 com/aliyun/sdk/service/rds20140815/models/UpgradeDBInstanceEngineVersionRequest$Builder.class
 com/aliyun/sdk/service/rds20140815/models/RecoveryDBInstanceResponseBody$1.class
 com/aliyun/sdk/service/rds20140815/models/DescribePGHbaConfigResponseBody$DefaultHbaItems$Builder.class
+com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceEndpointsResponseBody$Data.class
 com/aliyun/sdk/service/rds20140815/models/ResetAccountRequest$1.class
 com/aliyun/sdk/service/rds20140815/models/RestoreTableRequest$Builder.class
 com/aliyun/sdk/service/rds20140815/models/ModifyDBInstanceNetworkExpireTimeRequest$Builder.class
@@ -1851,6 +1915,7 @@ com/aliyun/sdk/service/rds20140815/models/ModifyDBInstanceSpecResponse$1.class
 com/aliyun/sdk/service/rds20140815/models/DescribeCrossRegionLogBackupFilesResponseBody$Items$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceNetInfoForChannelResponseBody$DBInstanceWeight$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DeleteSecretResponseBody.class
+com/aliyun/sdk/service/rds20140815/models/ModifyDBInstanceEndpointAddressResponseBody$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DeleteDBInstanceResponseBody.class
 com/aliyun/sdk/service/rds20140815/models/DescribeHASwitchConfigResponseBody$1.class
 com/aliyun/sdk/service/rds20140815/models/DescribeSQLCollectorPolicyRequest.class
@@ -1931,9 +1996,11 @@ com/aliyun/sdk/service/rds20140815/models/DescribeMetaListRequest$Builder.class
 com/aliyun/sdk/service/rds20140815/models/SwitchDBInstanceHAResponse$BuilderImpl.class
 com/aliyun/sdk/service/rds20140815/models/CheckServiceLinkedRoleResponse.class
 com/aliyun/sdk/service/rds20140815/models/DescribeBackupsResponseBody$BackupDownloadLinkByDB$Builder.class
+com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceEndpointsResponseBody$DBInstanceEndpoints.class
 com/aliyun/sdk/service/rds20140815/models/ActivateMigrationTargetInstanceResponse$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDBProxyEndpointResponseBody.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDBInstancePerformanceResponseBody$Values.class
+com/aliyun/sdk/service/rds20140815/models/ModifyDBInstanceEndpointAddressRequest.class
 com/aliyun/sdk/service/rds20140815/models/RevokeOperatorPermissionResponseBody$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DescribeReadDBInstanceDelayResponseBody$ReadonlyInstanceDelay$Builder.class
 com/aliyun/sdk/service/rds20140815/models/ModifyActionEventPolicyResponse.class
@@ -1967,6 +2034,7 @@ com/aliyun/sdk/service/rds20140815/models/DescribeDBProxyResponseBody.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDBProxyPerformanceResponseBody$PerformanceKey$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDBProxyRequest.class
 com/aliyun/sdk/service/rds20140815/models/DescribeResourceUsageRequest.class
+com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceEndpointsResponse.class
 com/aliyun/sdk/service/rds20140815/models/DeleteGadInstanceResponse$1.class
 com/aliyun/sdk/service/rds20140815/models/CreateDBInstanceRequest$Builder.class
 com/aliyun/sdk/service/rds20140815/models/ModifySecurityGroupConfigurationResponseBody$EcsSecurityGroupRelation.class
@@ -1979,11 +2047,15 @@ com/aliyun/sdk/service/rds20140815/models/DescribeDBInstancesByPerformanceRespon
 com/aliyun/sdk/service/rds20140815/models/MigrateToOtherZoneResponseBody.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceNetInfoForChannelResponse.class
 com/aliyun/sdk/service/rds20140815/models/DescribeSecurityGroupConfigurationResponse$1.class
+com/aliyun/sdk/service/rds20140815/models/DeleteDBInstanceEndpointAddressResponseBody$Builder.class
+com/aliyun/sdk/service/rds20140815/models/CreateDBInstanceEndpointResponse.class
 com/aliyun/sdk/service/rds20140815/models/ModifyDBInstanceConnectionStringRequest$1.class
+com/aliyun/sdk/service/rds20140815/models/CreateDBInstanceEndpointResponseBody$1.class
 com/aliyun/sdk/service/rds20140815/models/CreateGADInstanceRequest$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DescribeBackupsResponseBody$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDBInstancePerformanceRequest.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDBProxyPerformanceResponse$1.class
+com/aliyun/sdk/service/rds20140815/models/CreateDBInstanceEndpointAddressResponseBody$Data$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DescribeBackupsResponseBody$Backup.class
 com/aliyun/sdk/service/rds20140815/models/DescribeMigrateTasksResponse$1.class
 com/aliyun/sdk/service/rds20140815/models/DescribeInstanceCrossBackupPolicyResponse$Builder.class
@@ -1991,6 +2063,7 @@ com/aliyun/sdk/service/rds20140815/models/CancelImportRequest$1.class
 com/aliyun/sdk/service/rds20140815/models/DestroyDBInstanceRequest$Builder.class
 com/aliyun/sdk/service/rds20140815/models/CloneDBInstanceResponse$1.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceEncryptionKeyResponseBody$Builder.class
+com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceEndpointsResponseBody$1.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDBProxyResponseBody$1.class
 com/aliyun/sdk/service/rds20140815/models/UpgradeDBInstanceEngineVersionResponse$BuilderImpl.class
 com/aliyun/sdk/service/rds20140815/models/ModifyDBInstanceDescriptionResponseBody$1.class
@@ -2018,6 +2091,7 @@ com/aliyun/sdk/service/rds20140815/models/DescribeBackupPolicyResponse$1.class
 com/aliyun/sdk/service/rds20140815/models/ModifyDBInstanceConnectionStringRequest$Builder.class
 com/aliyun/sdk/service/rds20140815/models/ListUserBackupFilesResponseBody.class
 com/aliyun/sdk/service/rds20140815/models/ReleaseInstanceConnectionRequest$1.class
+com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceEndpointsResponseBody$DBInstanceEndpoint.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceAttributeResponseBody$ReadOnlyDBInstanceIds$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DeleteSecretRequest.class
 com/aliyun/sdk/service/rds20140815/models/ModifyADInfoResponseBody$1.class
@@ -2025,6 +2099,7 @@ com/aliyun/sdk/service/rds20140815/models/DeleteUserBackupFileRequest$1.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDiagnosticReportListResponse$BuilderImpl.class
 com/aliyun/sdk/service/rds20140815/models/CalculateDBInstanceWeightResponseBody$DBInstanceWeight.class
 com/aliyun/sdk/service/rds20140815/models/DescribeCollationTimeZonesResponse.class
+com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceEndpointsResponseBody$NodeItems$Builder.class
 com/aliyun/sdk/service/rds20140815/models/ModifyHADiagnoseConfigResponse.class
 com/aliyun/sdk/service/rds20140815/models/ModifyCollationTimeZoneResponseBody$Builder.class
 com/aliyun/sdk/service/rds20140815/models/CreateTempDBInstanceResponse$BuilderImpl.class
@@ -2043,6 +2118,7 @@ com/aliyun/sdk/service/rds20140815/models/ModifyDBProxyEndpointRequest.class
 com/aliyun/sdk/service/rds20140815/models/LockAccountResponseBody$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DescribeCloudMigrationPrecheckResultResponseBody$Builder.class
 com/aliyun/sdk/service/rds20140815/models/TerminateMigrateTaskResponse$1.class
+com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceEndpointsResponseBody$DBInstanceEndpoints$Builder.class
 com/aliyun/sdk/service/rds20140815/models/ReleaseReadWriteSplittingConnectionResponseBody$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDBMiniEngineVersionsResponse$BuilderImpl.class
 com/aliyun/sdk/service/rds20140815/models/CloneParameterGroupRequest$Builder.class
@@ -2083,6 +2159,7 @@ com/aliyun/sdk/service/rds20140815/models/DetachGadInstanceMemberResponse.class
 com/aliyun/sdk/service/rds20140815/models/GetDBInstanceTopologyResponse$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DescibeImportsFromDatabaseResponseBody$1.class
 com/aliyun/sdk/service/rds20140815/models/ModifyDasInstanceConfigRequest.class
+com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceAttributeResponseBody$DBClusterNodes.class
 com/aliyun/sdk/service/rds20140815/models/DeleteADSettingResponse$BuilderImpl.class
 com/aliyun/sdk/service/rds20140815/models/CopyDatabaseBetweenInstancesRequest$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DescribeBackupsResponseBody$BackupBackupDownloadLinkByDB.class
@@ -2103,6 +2180,7 @@ com/aliyun/sdk/service/rds20140815/models/ModifySecurityGroupConfigurationRespon
 com/aliyun/sdk/service/rds20140815/models/ListClassesResponseBody$1.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceAttributeResponseBody$ReadOnlyDBInstanceIds.class
 com/aliyun/sdk/service/rds20140815/models/ListUserBackupFilesRequest$1.class
+com/aliyun/sdk/service/rds20140815/models/ModifyDBInstanceEndpointRequest$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DescribeTagsResponseBody$Builder.class
 com/aliyun/sdk/service/rds20140815/models/ListTagResourcesResponseBody$1.class
 com/aliyun/sdk/service/rds20140815/models/UntagResourcesResponseBody$Builder.class
@@ -2120,6 +2198,7 @@ com/aliyun/sdk/service/rds20140815/models/CreateDiagnosticReportResponseBody.cla
 com/aliyun/sdk/service/rds20140815/models/DescribeDBInstancesByPerformanceRequest.class
 com/aliyun/sdk/service/rds20140815/models/ModifyBackupPolicyRequest$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDBInstancePromoteActivityRequest$1.class
+com/aliyun/sdk/service/rds20140815/models/DeleteDBInstanceEndpointAddressResponseBody$1.class
 com/aliyun/sdk/service/rds20140815/models/ModifyDbProxyInstanceSslRequest$1.class
 com/aliyun/sdk/service/rds20140815/models/ModifySecurityGroupConfigurationResponse$Builder.class
 com/aliyun/sdk/service/rds20140815/models/ModifyDBInstanceMonitorResponseBody.class
@@ -2158,6 +2237,7 @@ com/aliyun/sdk/service/rds20140815/models/DescribeBackupsRequest$1.class
 com/aliyun/sdk/service/rds20140815/models/CreateDiagnosticReportResponse$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDBInstancePromoteActivityResponse$BuilderImpl.class
 com/aliyun/sdk/service/rds20140815/models/MigrateToOtherZoneResponse$1.class
+com/aliyun/sdk/service/rds20140815/models/ModifyDBInstanceEndpointResponseBody$Data$Builder.class
 com/aliyun/sdk/service/rds20140815/models/CloneDBInstanceRequest$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DescribeParameterTemplatesResponseBody$1.class
 com/aliyun/sdk/service/rds20140815/models/RestartDBInstanceResponse$1.class
@@ -2181,6 +2261,7 @@ com/aliyun/sdk/service/rds20140815/models/ResetAccountRequest$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DescribePGHbaConfigResponseBody$RunningHbaItems.class
 com/aliyun/sdk/service/rds20140815/models/CreateDdrInstanceRequest.class
 com/aliyun/sdk/service/rds20140815/models/DescribeCrossRegionLogBackupFilesResponseBody.class
+com/aliyun/sdk/service/rds20140815/models/CreateDBInstanceEndpointAddressRequest$Builder.class
 com/aliyun/sdk/service/rds20140815/models/PurgeDBInstanceLogResponse$1.class
 com/aliyun/sdk/service/rds20140815/models/DestroyDBInstanceResponse.class
 com/aliyun/sdk/service/rds20140815/models/ListTagResourcesResponseBody$TagResources$Builder.class
@@ -2222,6 +2303,7 @@ com/aliyun/sdk/service/rds20140815/models/DescribeModifyParameterLogResponseBody
 com/aliyun/sdk/service/rds20140815/models/CheckServiceLinkedRoleRequest$1.class
 com/aliyun/sdk/service/rds20140815/models/ModifyDBInstancePayTypeResponseBody.class
 com/aliyun/sdk/service/rds20140815/models/CheckServiceLinkedRoleResponseBody$Builder.class
+com/aliyun/sdk/service/rds20140815/models/DeleteDBInstanceEndpointAddressRequest$1.class
 com/aliyun/sdk/service/rds20140815/models/DescribeCrossRegionBackupDBInstanceResponseBody$Items$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DescribeModifyPGHbaConfigLogResponseBody.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDBInstancesResponseBody$ReadOnlyDBInstanceIds$Builder.class
@@ -2233,6 +2315,7 @@ com/aliyun/sdk/service/rds20140815/models/DescribePriceRequest.class
 com/aliyun/sdk/service/rds20140815/models/DeleteBackupFileRequest$Builder.class
 com/aliyun/sdk/service/rds20140815/models/ModifyAccountDescriptionResponse.class
 com/aliyun/sdk/service/rds20140815/models/UpgradeDBInstanceMajorVersionPrecheckResponse.class
+com/aliyun/sdk/service/rds20140815/models/DescribePriceRequest$DBNode$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DescribeCharacterSetNameResponseBody$1.class
 com/aliyun/sdk/service/rds20140815/models/DescribeParameterGroupResponse$1.class
 com/aliyun/sdk/service/rds20140815/models/ModifySecurityGroupConfigurationResponseBody$1.class
@@ -2292,6 +2375,7 @@ com/aliyun/sdk/service/rds20140815/models/CreateParameterGroupRequest$1.class
 com/aliyun/sdk/service/rds20140815/models/DescribePriceResponse$BuilderImpl.class
 com/aliyun/sdk/service/rds20140815/models/RequestServiceOfCloudDBAResponse$BuilderImpl.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDetachedBackupsRequest$Builder.class
+com/aliyun/sdk/service/rds20140815/models/ModifyDBInstanceEndpointAddressResponse$1.class
 com/aliyun/sdk/service/rds20140815/models/DescribeTasksResponse.class
 com/aliyun/sdk/service/rds20140815/models/RebuildDBInstanceResponse$1.class
 com/aliyun/sdk/service/rds20140815/models/TransformDBInstancePayTypeRequest$Builder.class
@@ -2313,6 +2397,7 @@ com/aliyun/sdk/service/rds20140815/models/ReceiveDBInstanceResponse$BuilderImpl.
 com/aliyun/sdk/service/rds20140815/models/DescribeRdsResourceSettingsResponseBody.class
 com/aliyun/sdk/service/rds20140815/models/DeleteADSettingResponse$Builder.class
 com/aliyun/sdk/service/rds20140815/models/UnlockAccountResponseBody.class
+com/aliyun/sdk/service/rds20140815/models/DeleteDBInstanceEndpointAddressRequest$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DescribeAnalyticdbByPrimaryDBInstanceResponseBody.class
 com/aliyun/sdk/service/rds20140815/models/CreateGADInstanceRequest$UnitNode.class
 com/aliyun/sdk/service/rds20140815/models/UpgradeDBProxyInstanceKernelVersionResponseBody$1.class
@@ -2321,6 +2406,7 @@ com/aliyun/sdk/service/rds20140815/models/DescribeDBInstancesForCloneResponse.cl
 com/aliyun/sdk/service/rds20140815/models/DeleteGadInstanceRequest.class
 com/aliyun/sdk/service/rds20140815/models/DescribeAccountsResponseBody$DBInstanceAccount.class
 com/aliyun/sdk/service/rds20140815/models/DescribeInstanceKeywordsRequest$1.class
+com/aliyun/sdk/service/rds20140815/models/CreateDBInstanceEndpointAddressResponse.class
 com/aliyun/sdk/service/rds20140815/models/DescribeOssDownloadsResponse.class
 com/aliyun/sdk/service/rds20140815/models/DeleteDBProxyEndpointAddressResponse.class
 com/aliyun/sdk/service/rds20140815/models/MigrateToOtherZoneResponseBody$1.class
@@ -2349,6 +2435,8 @@ com/aliyun/sdk/service/rds20140815/models/DescribeInstanceAutoRenewalAttributeRe
 com/aliyun/sdk/service/rds20140815/models/ModifyDTCSecurityIpHostsForSQLServerResponse$Builder.class
 com/aliyun/sdk/service/rds20140815/models/ModifyDBInstanceDeletionProtectionResponse$1.class
 com/aliyun/sdk/service/rds20140815/models/ModifyDasInstanceConfigResponse.class
+com/aliyun/sdk/service/rds20140815/models/CreateDBInstanceEndpointRequest$1.class
+com/aliyun/sdk/service/rds20140815/models/DeleteDBInstanceEndpointResponseBody$Data.class
 com/aliyun/sdk/service/rds20140815/models/DeleteDBInstanceResponse$BuilderImpl.class
 com/aliyun/sdk/service/rds20140815/models/SwitchDBInstanceNetTypeResponseBody.class
 com/aliyun/sdk/service/rds20140815/models/CreateCloudMigrationPrecheckTaskResponse.class
@@ -2380,11 +2468,13 @@ com/aliyun/sdk/service/rds20140815/models/CreateDBProxyEndpointAddressRequest.cl
 com/aliyun/sdk/service/rds20140815/models/DescribeDetachedBackupsResponseBody$Items$Builder.class
 com/aliyun/sdk/service/rds20140815/models/StopDBInstanceRequest$1.class
 com/aliyun/sdk/service/rds20140815/models/ResetAccountResponseBody$Builder.class
+com/aliyun/sdk/service/rds20140815/models/ModifyDBInstanceEndpointRequest$NodeItems.class
 com/aliyun/sdk/service/rds20140815/models/DescribeInstanceAutoRenewalAttributeResponseBody$Items.class
 com/aliyun/sdk/service/rds20140815/models/DescribeBackupsResponseBody$1.class
 com/aliyun/sdk/service/rds20140815/models/DescribeParameterGroupsResponseBody$ParameterGroup$Builder.class
 com/aliyun/sdk/service/rds20140815/models/CreateCloudMigrationPrecheckTaskResponse$BuilderImpl.class
 com/aliyun/sdk/service/rds20140815/models/DescribeParametersResponse$1.class
+com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceEndpointsResponse$BuilderImpl.class
 com/aliyun/sdk/service/rds20140815/models/CreateOnlineDatabaseTaskResponse$Builder.class
 com/aliyun/sdk/service/rds20140815/models/ModifyDBInstanceProxyConfigurationResponse$1.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceAttributeResponseBody$ReadOnlyDBInstanceId$Builder.class
@@ -2420,6 +2510,7 @@ com/aliyun/sdk/service/rds20140815/models/DescribePGHbaConfigResponseBody.class
 com/aliyun/sdk/service/rds20140815/models/ModifyDBProxyResponse$1.class
 com/aliyun/sdk/service/rds20140815/models/CreateTempDBInstanceResponseBody$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceTDEResponseBody$Builder.class
+com/aliyun/sdk/service/rds20140815/models/CreateDBInstanceEndpointResponseBody$Builder.class
 com/aliyun/sdk/service/rds20140815/models/ResetAccountPasswordResponseBody$1.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceNetInfoResponseBody$DBInstanceWeights.class
 com/aliyun/sdk/service/rds20140815/models/CheckAccountNameAvailableResponse$BuilderImpl.class
@@ -2435,6 +2526,7 @@ com/aliyun/sdk/service/rds20140815/models/DescribeDiagnosticReportListResponseBo
 com/aliyun/sdk/service/rds20140815/models/DescribeDatabasesResponse.class
 com/aliyun/sdk/service/rds20140815/models/ModifyInstanceAutoRenewalAttributeResponseBody$1.class
 com/aliyun/sdk/service/rds20140815/models/DeleteAccountResponse$1.class
+com/aliyun/sdk/service/rds20140815/models/ModifyDBInstanceEndpointRequest.class
 com/aliyun/sdk/service/rds20140815/models/GetDbProxyInstanceSslResponseBody$DbProxyCertListItems$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceTDERequest.class
 com/aliyun/sdk/service/rds20140815/models/CreateParameterGroupResponseBody$1.class
@@ -2447,12 +2539,14 @@ com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceAttributeResponse.cl
 com/aliyun/sdk/service/rds20140815/models/DescribeSlowLogRecordsResponseBody$Items.class
 com/aliyun/sdk/service/rds20140815/models/MigrateSecurityIPModeResponseBody$1.class
 com/aliyun/sdk/service/rds20140815/models/CheckCloudResourceAuthorizedResponseBody.class
+com/aliyun/sdk/service/rds20140815/models/ModifyDBInstanceEndpointAddressResponse$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DescribeModifyPGHbaConfigLogResponse.class
 com/aliyun/sdk/service/rds20140815/models/SwitchDBInstanceHAResponse.class
 com/aliyun/sdk/service/rds20140815/models/DescribeRegionInfosResponseBody$RDSRegion$Builder.class
 com/aliyun/sdk/service/rds20140815/models/ModifyDBInstanceMonitorRequest.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceHAConfigRequest$1.class
 com/aliyun/sdk/service/rds20140815/models/CreateCloudMigrationPrecheckTaskResponse$1.class
+com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceEndpointsResponseBody$Data$Builder.class
 com/aliyun/sdk/service/rds20140815/AsyncClient.class
 com/aliyun/sdk/service/rds20140815/models/DescribeReadDBInstanceDelayResponseBody$ReadDelayTimes.class
 com/aliyun/sdk/service/rds20140815/models/UpgradeDBInstanceKernelVersionResponse$BuilderImpl.class
@@ -2466,6 +2560,7 @@ com/aliyun/sdk/service/rds20140815/models/CreateDiagnosticReportRequest.class
 com/aliyun/sdk/service/rds20140815/models/DescribeSlowLogsRequest$1.class
 com/aliyun/sdk/service/rds20140815/models/MigrateDBInstanceRequest.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceDetailRequest$Builder.class
+com/aliyun/sdk/service/rds20140815/models/DeleteDBInstanceEndpointResponseBody$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DescribeParameterGroupResponseBody$ParameterGroup.class
 com/aliyun/sdk/service/rds20140815/models/DescribeOssDownloadsResponseBody$1.class
 com/aliyun/sdk/service/rds20140815/models/CopyDatabaseRequest.class
@@ -2474,11 +2569,13 @@ com/aliyun/sdk/service/rds20140815/models/ModifyParameterResponseBody$Builder.cl
 com/aliyun/sdk/service/rds20140815/models/ModifyDBProxyEndpointResponseBody$1.class
 com/aliyun/sdk/service/rds20140815/models/DescribeInstanceKeywordsResponseBody$Words$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceIPArrayListResponseBody$Items$Builder.class
+com/aliyun/sdk/service/rds20140815/models/ModifyDBInstanceEndpointResponseBody.class
 com/aliyun/sdk/service/rds20140815/models/ModifyCollationTimeZoneRequest.class
 com/aliyun/sdk/service/rds20140815/models/DescribeBackupTasksResponseBody$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceByTagsResponseBody$1.class
 com/aliyun/sdk/service/rds20140815/models/DescribeVSwitchesResponseBody$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DescribeAvailableZonesResponseBody$Builder.class
+com/aliyun/sdk/service/rds20140815/models/DeleteDBInstanceEndpointRequest$1.class
 com/aliyun/sdk/service/rds20140815/models/ModifyDBProxyRequest$Builder.class
 com/aliyun/sdk/service/rds20140815/models/UpgradeDBInstanceEngineVersionRequest.class
 com/aliyun/sdk/service/rds20140815/models/ModifySecurityGroupConfigurationRequest$1.class
@@ -2566,6 +2663,7 @@ com/aliyun/sdk/service/rds20140815/models/DescribeErrorLogsResponseBody$Items$Bu
 com/aliyun/sdk/service/rds20140815/models/UpgradeDBInstanceMajorVersionResponseBody$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DescribeTasksResponseBody$TaskProgressInfo.class
 com/aliyun/sdk/service/rds20140815/models/ModifyDBProxyInstanceResponse$1.class
+com/aliyun/sdk/service/rds20140815/models/DeleteDBInstanceEndpointAddressResponse.class
 com/aliyun/sdk/service/rds20140815/models/DescribeMigrateTaskByIdResponseBody.class
 com/aliyun/sdk/service/rds20140815/models/DescribeAvailableClassesResponse$1.class
 com/aliyun/sdk/service/rds20140815/models/DescribeSecurityGroupConfigurationRequest$1.class
@@ -2575,6 +2673,8 @@ com/aliyun/sdk/service/rds20140815/models/MigrateDBInstanceResponseBody.class
 com/aliyun/sdk/service/rds20140815/models/ModifyDBInstanceDescriptionRequest.class
 com/aliyun/sdk/service/rds20140815/models/UpgradeDBInstanceMajorVersionPrecheckResponse$BuilderImpl.class
 com/aliyun/sdk/service/rds20140815/models/DeleteAccountResponse.class
+com/aliyun/sdk/service/rds20140815/models/ModifyDBInstanceEndpointAddressResponseBody.class
+com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceAttributeResponseBody$DBClusterNode$Builder.class
 com/aliyun/sdk/service/rds20140815/models/CloneDBInstanceResponseBody.class
 com/aliyun/sdk/service/rds20140815/models/ModifyDBInstanceNetworkExpireTimeResponseBody.class
 com/aliyun/sdk/service/rds20140815/models/UpgradeDBInstanceMajorVersionRequest.class
@@ -2677,6 +2777,7 @@ com/aliyun/sdk/service/rds20140815/models/DescribeCollationTimeZonesRequest$1.cl
 com/aliyun/sdk/service/rds20140815/models/ModifySecurityIpsResponse$1.class
 com/aliyun/sdk/service/rds20140815/models/RestartDBInstanceRequest.class
 com/aliyun/sdk/service/rds20140815/models/GrantAccountPrivilegeResponseBody$Builder.class
+com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceAttributeResponseBody$DBClusterNodes$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDetachedBackupsResponse.class
 com/aliyun/sdk/service/rds20140815/models/DeleteADSettingResponseBody.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDBProxyPerformanceResponseBody.class
@@ -2693,6 +2794,7 @@ com/aliyun/sdk/service/rds20140815/models/DescribeDBProxyEndpointResponseBody$En
 com/aliyun/sdk/service/rds20140815/models/DescribeHASwitchConfigResponse$BuilderImpl.class
 com/aliyun/sdk/service/rds20140815/models/UntagResourcesRequest$Builder.class
 com/aliyun/sdk/service/rds20140815/models/CloneParameterGroupResponseBody.class
+com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceEndpointsResponse$1.class
 com/aliyun/sdk/service/rds20140815/models/CreateParameterGroupResponse$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceDetailResponseBody$1.class
 com/aliyun/sdk/service/rds20140815/models/DescribeSQLCollectorPolicyResponseBody.class
@@ -2726,6 +2828,7 @@ com/aliyun/sdk/service/rds20140815/models/DeleteUserBackupFileResponse$1.class
 com/aliyun/sdk/service/rds20140815/models/DescribeResourceUsageResponseBody$1.class
 com/aliyun/sdk/service/rds20140815/models/ModifyParameterResponseBody$1.class
 com/aliyun/sdk/service/rds20140815/models/DescribeMigrateTaskByIdRequest$Builder.class
+com/aliyun/sdk/service/rds20140815/models/ModifyDBInstanceEndpointResponse$1.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDBInstancesAsCsvRequest$1.class
 com/aliyun/sdk/service/rds20140815/models/DescribeCollationTimeZonesResponse$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DeleteAccountRequest$Builder.class
@@ -2769,6 +2872,7 @@ com/aliyun/sdk/service/rds20140815/models/CreateDBProxyEndpointAddressResponseBo
 com/aliyun/sdk/service/rds20140815/models/CheckDBNameAvailableResponseBody$Builder.class
 com/aliyun/sdk/service/rds20140815/models/ReleaseInstanceConnectionResponse$BuilderImpl.class
 com/aliyun/sdk/service/rds20140815/models/DescribeReadDBInstanceDelayResponseBody$ItemsItems$Builder.class
+com/aliyun/sdk/service/rds20140815/models/DeleteDBInstanceEndpointAddressResponseBody$Data$Builder.class
 com/aliyun/sdk/service/rds20140815/models/ModifyActionEventPolicyResponse$Builder.class
 com/aliyun/sdk/service/rds20140815/models/ModifyDBInstanceSSLResponse.class
 com/aliyun/sdk/service/rds20140815/models/DescribeVSwitchesRequest$1.class
@@ -2816,6 +2920,7 @@ com/aliyun/sdk/service/rds20140815/models/StartDBInstanceResponseBody$Builder.cl
 com/aliyun/sdk/service/rds20140815/models/DescribeEventsResponse$Builder.class
 com/aliyun/sdk/service/rds20140815/models/RestartDBInstanceRequest$1.class
 com/aliyun/sdk/service/rds20140815/models/DescribeHASwitchConfigResponseBody.class
+com/aliyun/sdk/service/rds20140815/models/CreateDBInstanceEndpointResponseBody$Data$Builder.class
 com/aliyun/sdk/service/rds20140815/models/CreateOnlineDatabaseTaskResponseBody.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceMetricsResponseBody$Builder.class
 com/aliyun/sdk/service/rds20140815/models/DescribeAccountsResponse.class
@@ -2826,6 +2931,7 @@ com/aliyun/sdk/service/rds20140815/models/ModifySecurityIpsResponse.class
 com/aliyun/sdk/service/rds20140815/models/DescribeCrossRegionLogBackupFilesResponseBody$Item.class
 com/aliyun/sdk/service/rds20140815/models/DescribeDBInstanceMonitorRequest$1.class
 com/aliyun/sdk/service/rds20140815/models/DescribeBackupPolicyResponse.class
+com/aliyun/sdk/service/rds20140815/models/CreateDBInstanceEndpointAddressRequest.class
 com/aliyun/sdk/service/rds20140815/models/CreateAccountResponse$1.class
 com/aliyun/sdk/service/rds20140815/models/DescribeCrossRegionBackupsRequest$Builder.class
 com/aliyun/sdk/service/rds20140815/models/AddTagsToResourceResponse$Builder.class
