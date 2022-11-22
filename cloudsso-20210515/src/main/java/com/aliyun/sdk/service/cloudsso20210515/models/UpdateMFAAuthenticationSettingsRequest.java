@@ -20,10 +20,15 @@ public class UpdateMFAAuthenticationSettingsRequest extends Request {
     @NameInMap("MFAAuthenticationSettings")
     private String MFAAuthenticationSettings;
 
+    @Query
+    @NameInMap("OperationForRiskLogin")
+    private String operationForRiskLogin;
+
     private UpdateMFAAuthenticationSettingsRequest(Builder builder) {
         super(builder);
         this.directoryId = builder.directoryId;
         this.MFAAuthenticationSettings = builder.MFAAuthenticationSettings;
+        this.operationForRiskLogin = builder.operationForRiskLogin;
     }
 
     public static Builder builder() {
@@ -53,9 +58,17 @@ public class UpdateMFAAuthenticationSettingsRequest extends Request {
         return this.MFAAuthenticationSettings;
     }
 
+    /**
+     * @return operationForRiskLogin
+     */
+    public String getOperationForRiskLogin() {
+        return this.operationForRiskLogin;
+    }
+
     public static final class Builder extends Request.Builder<UpdateMFAAuthenticationSettingsRequest, Builder> {
         private String directoryId; 
         private String MFAAuthenticationSettings; 
+        private String operationForRiskLogin; 
 
         private Builder() {
             super();
@@ -65,6 +78,7 @@ public class UpdateMFAAuthenticationSettingsRequest extends Request {
             super(request);
             this.directoryId = request.directoryId;
             this.MFAAuthenticationSettings = request.MFAAuthenticationSettings;
+            this.operationForRiskLogin = request.operationForRiskLogin;
         } 
 
         /**
@@ -82,6 +96,15 @@ public class UpdateMFAAuthenticationSettingsRequest extends Request {
         public Builder MFAAuthenticationSettings(String MFAAuthenticationSettings) {
             this.putQueryParameter("MFAAuthenticationSettings", MFAAuthenticationSettings);
             this.MFAAuthenticationSettings = MFAAuthenticationSettings;
+            return this;
+        }
+
+        /**
+         * OperationForRiskLogin.
+         */
+        public Builder operationForRiskLogin(String operationForRiskLogin) {
+            this.putQueryParameter("OperationForRiskLogin", operationForRiskLogin);
+            this.operationForRiskLogin = operationForRiskLogin;
             return this;
         }
 
