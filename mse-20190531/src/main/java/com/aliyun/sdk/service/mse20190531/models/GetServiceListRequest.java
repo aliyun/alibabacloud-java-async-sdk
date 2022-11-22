@@ -18,6 +18,7 @@ public class GetServiceListRequest extends Request {
 
     @Query
     @NameInMap("AppId")
+    @Validation(required = true)
     private String appId;
 
     @Query
