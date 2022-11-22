@@ -192,6 +192,67 @@ public class ListStackGroupsResponseBody extends TeaModel {
         } 
 
     }
+    public static class Tags extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
     public static class StackGroups extends TeaModel {
         @NameInMap("AutoDeployment")
         private AutoDeployment autoDeployment;
@@ -220,6 +281,9 @@ public class ListStackGroupsResponseBody extends TeaModel {
         @NameInMap("Status")
         private String status;
 
+        @NameInMap("Tags")
+        private java.util.List < Tags> tags;
+
         private StackGroups(Builder builder) {
             this.autoDeployment = builder.autoDeployment;
             this.description = builder.description;
@@ -230,6 +294,7 @@ public class ListStackGroupsResponseBody extends TeaModel {
             this.stackGroupId = builder.stackGroupId;
             this.stackGroupName = builder.stackGroupName;
             this.status = builder.status;
+            this.tags = builder.tags;
         }
 
         public static Builder builder() {
@@ -303,6 +368,13 @@ public class ListStackGroupsResponseBody extends TeaModel {
             return this.status;
         }
 
+        /**
+         * @return tags
+         */
+        public java.util.List < Tags> getTags() {
+            return this.tags;
+        }
+
         public static final class Builder {
             private AutoDeployment autoDeployment; 
             private String description; 
@@ -313,6 +385,7 @@ public class ListStackGroupsResponseBody extends TeaModel {
             private String stackGroupId; 
             private String stackGroupName; 
             private String status; 
+            private java.util.List < Tags> tags; 
 
             /**
              * AutoDeployment.
@@ -383,6 +456,14 @@ public class ListStackGroupsResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List < Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 

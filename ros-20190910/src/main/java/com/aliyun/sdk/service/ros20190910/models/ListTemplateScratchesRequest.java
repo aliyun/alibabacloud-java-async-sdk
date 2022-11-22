@@ -30,6 +30,10 @@ public class ListTemplateScratchesRequest extends Request {
     private String status;
 
     @Query
+    @NameInMap("Tags")
+    private java.util.List < Tags> tags;
+
+    @Query
     @NameInMap("TemplateScratchId")
     private String templateScratchId;
 
@@ -43,6 +47,7 @@ public class ListTemplateScratchesRequest extends Request {
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
         this.status = builder.status;
+        this.tags = builder.tags;
         this.templateScratchId = builder.templateScratchId;
         this.templateScratchType = builder.templateScratchType;
     }
@@ -89,6 +94,13 @@ public class ListTemplateScratchesRequest extends Request {
     }
 
     /**
+     * @return tags
+     */
+    public java.util.List < Tags> getTags() {
+        return this.tags;
+    }
+
+    /**
      * @return templateScratchId
      */
     public String getTemplateScratchId() {
@@ -107,6 +119,7 @@ public class ListTemplateScratchesRequest extends Request {
         private Integer pageSize; 
         private String regionId; 
         private String status; 
+        private java.util.List < Tags> tags; 
         private String templateScratchId; 
         private String templateScratchType; 
 
@@ -120,6 +133,7 @@ public class ListTemplateScratchesRequest extends Request {
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
             this.status = request.status;
+            this.tags = request.tags;
             this.templateScratchId = request.templateScratchId;
             this.templateScratchType = request.templateScratchType;
         } 
@@ -161,6 +175,15 @@ public class ListTemplateScratchesRequest extends Request {
         }
 
         /**
+         * Tags.
+         */
+        public Builder tags(java.util.List < Tags> tags) {
+            this.putQueryParameter("Tags", tags);
+            this.tags = tags;
+            return this;
+        }
+
+        /**
          * TemplateScratchId.
          */
         public Builder templateScratchId(String templateScratchId) {
@@ -185,4 +208,66 @@ public class ListTemplateScratchesRequest extends Request {
 
     } 
 
+    public static class Tags extends TeaModel {
+        @NameInMap("Key")
+        @Validation(required = true)
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
 }

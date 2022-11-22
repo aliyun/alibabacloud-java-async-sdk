@@ -375,6 +375,67 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
         } 
 
     }
+    public static class Tags extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
     public static class TemplateScratches extends TeaModel {
         @NameInMap("CreateTime")
         private String createTime;
@@ -406,6 +467,9 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
         @NameInMap("StatusReason")
         private String statusReason;
 
+        @NameInMap("Tags")
+        private java.util.List < Tags> tags;
+
         @NameInMap("TemplateScratchId")
         private String templateScratchId;
 
@@ -426,6 +490,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
             this.sourceTag = builder.sourceTag;
             this.status = builder.status;
             this.statusReason = builder.statusReason;
+            this.tags = builder.tags;
             this.templateScratchId = builder.templateScratchId;
             this.templateScratchType = builder.templateScratchType;
             this.updateTime = builder.updateTime;
@@ -510,6 +575,13 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
         }
 
         /**
+         * @return tags
+         */
+        public java.util.List < Tags> getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return templateScratchId
          */
         public String getTemplateScratchId() {
@@ -541,6 +613,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
             private SourceTag sourceTag; 
             private String status; 
             private String statusReason; 
+            private java.util.List < Tags> tags; 
             private String templateScratchId; 
             private String templateScratchType; 
             private String updateTime; 
@@ -622,6 +695,14 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
              */
             public Builder statusReason(String statusReason) {
                 this.statusReason = statusReason;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List < Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 

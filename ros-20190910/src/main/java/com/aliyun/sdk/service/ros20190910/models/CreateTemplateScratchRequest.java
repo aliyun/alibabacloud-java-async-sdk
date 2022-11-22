@@ -50,6 +50,10 @@ public class CreateTemplateScratchRequest extends Request {
     private SourceTag sourceTag;
 
     @Query
+    @NameInMap("Tags")
+    private java.util.List < Tags> tags;
+
+    @Query
     @NameInMap("TemplateScratchType")
     @Validation(required = true)
     private String templateScratchType;
@@ -65,6 +69,7 @@ public class CreateTemplateScratchRequest extends Request {
         this.sourceResourceGroup = builder.sourceResourceGroup;
         this.sourceResources = builder.sourceResources;
         this.sourceTag = builder.sourceTag;
+        this.tags = builder.tags;
         this.templateScratchType = builder.templateScratchType;
     }
 
@@ -145,6 +150,13 @@ public class CreateTemplateScratchRequest extends Request {
     }
 
     /**
+     * @return tags
+     */
+    public java.util.List < Tags> getTags() {
+        return this.tags;
+    }
+
+    /**
      * @return templateScratchType
      */
     public String getTemplateScratchType() {
@@ -161,6 +173,7 @@ public class CreateTemplateScratchRequest extends Request {
         private SourceResourceGroup sourceResourceGroup; 
         private java.util.List < SourceResources> sourceResources; 
         private SourceTag sourceTag; 
+        private java.util.List < Tags> tags; 
         private String templateScratchType; 
 
         private Builder() {
@@ -178,6 +191,7 @@ public class CreateTemplateScratchRequest extends Request {
             this.sourceResourceGroup = request.sourceResourceGroup;
             this.sourceResources = request.sourceResources;
             this.sourceTag = request.sourceTag;
+            this.tags = request.tags;
             this.templateScratchType = request.templateScratchType;
         } 
 
@@ -263,6 +277,15 @@ public class CreateTemplateScratchRequest extends Request {
             String sourceTagShrink = shrink(sourceTag, "SourceTag", "json");
             this.putQueryParameter("SourceTag", sourceTagShrink);
             this.sourceTag = sourceTag;
+            return this;
+        }
+
+        /**
+         * Tags.
+         */
+        public Builder tags(java.util.List < Tags> tags) {
+            this.putQueryParameter("Tags", tags);
+            this.tags = tags;
             return this;
         }
 
@@ -527,6 +550,68 @@ public class CreateTemplateScratchRequest extends Request {
 
             public SourceTag build() {
                 return new SourceTag(this);
+            } 
+
+        } 
+
+    }
+    public static class Tags extends TeaModel {
+        @NameInMap("Key")
+        @Validation(required = true)
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
             } 
 
         } 

@@ -33,6 +33,10 @@ public class ListStackGroupsRequest extends Request {
     @NameInMap("Status")
     private String status;
 
+    @Query
+    @NameInMap("Tags")
+    private java.util.List < Tags> tags;
+
     private ListStackGroupsRequest(Builder builder) {
         super(builder);
         this.pageNumber = builder.pageNumber;
@@ -40,6 +44,7 @@ public class ListStackGroupsRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.status = builder.status;
+        this.tags = builder.tags;
     }
 
     public static Builder builder() {
@@ -90,12 +95,20 @@ public class ListStackGroupsRequest extends Request {
         return this.status;
     }
 
+    /**
+     * @return tags
+     */
+    public java.util.List < Tags> getTags() {
+        return this.tags;
+    }
+
     public static final class Builder extends Request.Builder<ListStackGroupsRequest, Builder> {
         private Long pageNumber; 
         private Long pageSize; 
         private String regionId; 
         private String resourceGroupId; 
         private String status; 
+        private java.util.List < Tags> tags; 
 
         private Builder() {
             super();
@@ -108,6 +121,7 @@ public class ListStackGroupsRequest extends Request {
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
             this.status = request.status;
+            this.tags = request.tags;
         } 
 
         /**
@@ -155,6 +169,15 @@ public class ListStackGroupsRequest extends Request {
             return this;
         }
 
+        /**
+         * Tags.
+         */
+        public Builder tags(java.util.List < Tags> tags) {
+            this.putQueryParameter("Tags", tags);
+            this.tags = tags;
+            return this;
+        }
+
         @Override
         public ListStackGroupsRequest build() {
             return new ListStackGroupsRequest(this);
@@ -162,4 +185,66 @@ public class ListStackGroupsRequest extends Request {
 
     } 
 
+    public static class Tags extends TeaModel {
+        @NameInMap("Key")
+        @Validation(required = true)
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
 }
