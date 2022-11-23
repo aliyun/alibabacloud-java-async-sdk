@@ -25,6 +25,10 @@ public class GetTemplateParameterConstraintsRequest extends Request {
     private java.util.List < String > parametersKeyFilter;
 
     @Query
+    @NameInMap("ParametersOrder")
+    private java.util.List < String > parametersOrder;
+
+    @Query
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
@@ -50,6 +54,7 @@ public class GetTemplateParameterConstraintsRequest extends Request {
         this.clientToken = builder.clientToken;
         this.parameters = builder.parameters;
         this.parametersKeyFilter = builder.parametersKeyFilter;
+        this.parametersOrder = builder.parametersOrder;
         this.regionId = builder.regionId;
         this.templateBody = builder.templateBody;
         this.templateId = builder.templateId;
@@ -92,6 +97,13 @@ public class GetTemplateParameterConstraintsRequest extends Request {
     }
 
     /**
+     * @return parametersOrder
+     */
+    public java.util.List < String > getParametersOrder() {
+        return this.parametersOrder;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -130,6 +142,7 @@ public class GetTemplateParameterConstraintsRequest extends Request {
         private String clientToken; 
         private java.util.List < Parameters> parameters; 
         private java.util.List < String > parametersKeyFilter; 
+        private java.util.List < String > parametersOrder; 
         private String regionId; 
         private String templateBody; 
         private String templateId; 
@@ -145,6 +158,7 @@ public class GetTemplateParameterConstraintsRequest extends Request {
             this.clientToken = request.clientToken;
             this.parameters = request.parameters;
             this.parametersKeyFilter = request.parametersKeyFilter;
+            this.parametersOrder = request.parametersOrder;
             this.regionId = request.regionId;
             this.templateBody = request.templateBody;
             this.templateId = request.templateId;
@@ -177,6 +191,16 @@ public class GetTemplateParameterConstraintsRequest extends Request {
             String parametersKeyFilterShrink = shrink(parametersKeyFilter, "ParametersKeyFilter", "json");
             this.putQueryParameter("ParametersKeyFilter", parametersKeyFilterShrink);
             this.parametersKeyFilter = parametersKeyFilter;
+            return this;
+        }
+
+        /**
+         * ParametersOrder.
+         */
+        public Builder parametersOrder(java.util.List < String > parametersOrder) {
+            String parametersOrderShrink = shrink(parametersOrder, "ParametersOrder", "json");
+            this.putQueryParameter("ParametersOrder", parametersOrderShrink);
+            this.parametersOrder = parametersOrder;
             return this;
         }
 

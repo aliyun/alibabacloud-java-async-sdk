@@ -155,11 +155,15 @@ public class ValidateTemplateResponseBody extends TeaModel {
         @NameInMap("Description")
         private String description;
 
+        @NameInMap("Label")
+        private String label;
+
         @NameInMap("OutputKey")
         private String outputKey;
 
         private Outputs(Builder builder) {
             this.description = builder.description;
+            this.label = builder.label;
             this.outputKey = builder.outputKey;
         }
 
@@ -179,6 +183,13 @@ public class ValidateTemplateResponseBody extends TeaModel {
         }
 
         /**
+         * @return label
+         */
+        public String getLabel() {
+            return this.label;
+        }
+
+        /**
          * @return outputKey
          */
         public String getOutputKey() {
@@ -187,6 +198,7 @@ public class ValidateTemplateResponseBody extends TeaModel {
 
         public static final class Builder {
             private String description; 
+            private String label; 
             private String outputKey; 
 
             /**
@@ -194,6 +206,14 @@ public class ValidateTemplateResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * Label.
+             */
+            public Builder label(String label) {
+                this.label = label;
                 return this;
             }
 
