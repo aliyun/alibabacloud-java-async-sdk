@@ -138,6 +138,9 @@ public class ListStandardGroupsResponseBody extends TeaModel {
         @NameInMap("Description")
         private String description;
 
+        @NameInMap("GroupId")
+        private Long groupId;
+
         @NameInMap("GroupMode")
         private String groupMode;
 
@@ -150,6 +153,7 @@ public class ListStandardGroupsResponseBody extends TeaModel {
         private StandardGroupList(Builder builder) {
             this.dbType = builder.dbType;
             this.description = builder.description;
+            this.groupId = builder.groupId;
             this.groupMode = builder.groupMode;
             this.groupName = builder.groupName;
             this.lastMenderId = builder.lastMenderId;
@@ -178,6 +182,13 @@ public class ListStandardGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return groupId
+         */
+        public Long getGroupId() {
+            return this.groupId;
+        }
+
+        /**
          * @return groupMode
          */
         public String getGroupMode() {
@@ -201,6 +212,7 @@ public class ListStandardGroupsResponseBody extends TeaModel {
         public static final class Builder {
             private String dbType; 
             private String description; 
+            private Long groupId; 
             private String groupMode; 
             private String groupName; 
             private Long lastMenderId; 
@@ -218,6 +230,14 @@ public class ListStandardGroupsResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * GroupId.
+             */
+            public Builder groupId(Long groupId) {
+                this.groupId = groupId;
                 return this;
             }
 

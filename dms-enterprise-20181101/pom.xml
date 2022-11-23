@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>alibabacloud-dms_enterprise20181101</artifactId>
-  <version>1.40.1</version>
+  <version>1.41.0</version>
   <packaging>jar</packaging>
   <name>alibabacloud-dms_enterprise20181101</name>
   <description>Alibaba Cloud dms-enterprise (20181101) Async SDK for Java
