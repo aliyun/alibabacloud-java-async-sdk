@@ -226,6 +226,9 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
         @NameInMap("RemarkedUuidList")
         private java.util.List < String > remarkedUuidList;
 
+        @NameInMap("ServerType")
+        private String serverType;
+
         @NameInMap("ServiceErrorCount")
         private Integer serviceErrorCount;
 
@@ -253,6 +256,7 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             this.policyRegionId = builder.policyRegionId;
             this.policyVersion = builder.policyVersion;
             this.remarkedUuidList = builder.remarkedUuidList;
+            this.serverType = builder.serverType;
             this.serviceErrorCount = builder.serviceErrorCount;
             this.serviceErrorUuidList = builder.serviceErrorUuidList;
             this.status = builder.status;
@@ -346,6 +350,13 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
         }
 
         /**
+         * @return serverType
+         */
+        public String getServerType() {
+            return this.serverType;
+        }
+
+        /**
          * @return serviceErrorCount
          */
         public Integer getServiceErrorCount() {
@@ -392,6 +403,7 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             private String policyRegionId; 
             private String policyVersion; 
             private java.util.List < String > remarkedUuidList; 
+            private String serverType; 
             private Integer serviceErrorCount; 
             private java.util.List < String > serviceErrorUuidList; 
             private String status; 
@@ -483,6 +495,14 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
              */
             public Builder remarkedUuidList(java.util.List < String > remarkedUuidList) {
                 this.remarkedUuidList = remarkedUuidList;
+                return this;
+            }
+
+            /**
+             * ServerType.
+             */
+            public Builder serverType(String serverType) {
+                this.serverType = serverType;
                 return this;
             }
 

@@ -24,8 +24,12 @@ public class ModifyStrategyRequest extends Request {
 
     @Query
     @NameInMap("CycleStartTime")
-    @Validation(required = true)
     private String cycleStartTime;
+
+    @Query
+    @NameInMap("EndTime")
+    @Validation(required = true)
+    private String endTime;
 
     @Query
     @NameInMap("Id")
@@ -50,16 +54,29 @@ public class ModifyStrategyRequest extends Request {
     @NameInMap("SourceIp")
     private String sourceIp;
 
+    @Query
+    @NameInMap("StartTime")
+    @Validation(required = true)
+    private String startTime;
+
+    @Query
+    @NameInMap("TargetType")
+    @Validation(required = true)
+    private String targetType;
+
     private ModifyStrategyRequest(Builder builder) {
         super(builder);
         this.customType = builder.customType;
         this.cycleDays = builder.cycleDays;
         this.cycleStartTime = builder.cycleStartTime;
+        this.endTime = builder.endTime;
         this.id = builder.id;
         this.name = builder.name;
         this.riskCustomParams = builder.riskCustomParams;
         this.riskSubTypeName = builder.riskSubTypeName;
         this.sourceIp = builder.sourceIp;
+        this.startTime = builder.startTime;
+        this.targetType = builder.targetType;
     }
 
     public static Builder builder() {
@@ -97,6 +114,13 @@ public class ModifyStrategyRequest extends Request {
     }
 
     /**
+     * @return endTime
+     */
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    /**
      * @return id
      */
     public String getId() {
@@ -131,15 +155,32 @@ public class ModifyStrategyRequest extends Request {
         return this.sourceIp;
     }
 
+    /**
+     * @return startTime
+     */
+    public String getStartTime() {
+        return this.startTime;
+    }
+
+    /**
+     * @return targetType
+     */
+    public String getTargetType() {
+        return this.targetType;
+    }
+
     public static final class Builder extends Request.Builder<ModifyStrategyRequest, Builder> {
         private String customType; 
         private String cycleDays; 
         private String cycleStartTime; 
+        private String endTime; 
         private String id; 
         private String name; 
         private String riskCustomParams; 
         private String riskSubTypeName; 
         private String sourceIp; 
+        private String startTime; 
+        private String targetType; 
 
         private Builder() {
             super();
@@ -150,11 +191,14 @@ public class ModifyStrategyRequest extends Request {
             this.customType = request.customType;
             this.cycleDays = request.cycleDays;
             this.cycleStartTime = request.cycleStartTime;
+            this.endTime = request.endTime;
             this.id = request.id;
             this.name = request.name;
             this.riskCustomParams = request.riskCustomParams;
             this.riskSubTypeName = request.riskSubTypeName;
             this.sourceIp = request.sourceIp;
+            this.startTime = request.startTime;
+            this.targetType = request.targetType;
         } 
 
         /**
@@ -181,6 +225,15 @@ public class ModifyStrategyRequest extends Request {
         public Builder cycleStartTime(String cycleStartTime) {
             this.putQueryParameter("CycleStartTime", cycleStartTime);
             this.cycleStartTime = cycleStartTime;
+            return this;
+        }
+
+        /**
+         * EndTime.
+         */
+        public Builder endTime(String endTime) {
+            this.putQueryParameter("EndTime", endTime);
+            this.endTime = endTime;
             return this;
         }
 
@@ -226,6 +279,24 @@ public class ModifyStrategyRequest extends Request {
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
             this.sourceIp = sourceIp;
+            return this;
+        }
+
+        /**
+         * StartTime.
+         */
+        public Builder startTime(String startTime) {
+            this.putQueryParameter("StartTime", startTime);
+            this.startTime = startTime;
+            return this;
+        }
+
+        /**
+         * TargetType.
+         */
+        public Builder targetType(String targetType) {
+            this.putQueryParameter("TargetType", targetType);
+            this.targetType = targetType;
             return this;
         }
 

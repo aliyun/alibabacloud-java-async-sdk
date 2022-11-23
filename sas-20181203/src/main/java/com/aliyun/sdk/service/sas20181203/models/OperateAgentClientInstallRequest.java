@@ -17,12 +17,17 @@ public class OperateAgentClientInstallRequest extends Request {
     private String instanceIds;
 
     @Query
+    @NameInMap("Lang")
+    private String lang;
+
+    @Query
     @NameInMap("Uuids")
     private String uuids;
 
     private OperateAgentClientInstallRequest(Builder builder) {
         super(builder);
         this.instanceIds = builder.instanceIds;
+        this.lang = builder.lang;
         this.uuids = builder.uuids;
     }
 
@@ -47,6 +52,13 @@ public class OperateAgentClientInstallRequest extends Request {
     }
 
     /**
+     * @return lang
+     */
+    public String getLang() {
+        return this.lang;
+    }
+
+    /**
      * @return uuids
      */
     public String getUuids() {
@@ -55,6 +67,7 @@ public class OperateAgentClientInstallRequest extends Request {
 
     public static final class Builder extends Request.Builder<OperateAgentClientInstallRequest, Builder> {
         private String instanceIds; 
+        private String lang; 
         private String uuids; 
 
         private Builder() {
@@ -64,6 +77,7 @@ public class OperateAgentClientInstallRequest extends Request {
         private Builder(OperateAgentClientInstallRequest request) {
             super(request);
             this.instanceIds = request.instanceIds;
+            this.lang = request.lang;
             this.uuids = request.uuids;
         } 
 
@@ -73,6 +87,15 @@ public class OperateAgentClientInstallRequest extends Request {
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
             this.instanceIds = instanceIds;
+            return this;
+        }
+
+        /**
+         * Lang.
+         */
+        public Builder lang(String lang) {
+            this.putQueryParameter("Lang", lang);
+            this.lang = lang;
             return this;
         }
 

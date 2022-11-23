@@ -677,11 +677,17 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
 
     }
     public static class Strategy extends TeaModel {
+        @NameInMap("CustomType")
+        private String customType;
+
         @NameInMap("CycleDays")
         private Integer cycleDays;
 
         @NameInMap("CycleStartTime")
         private Integer cycleStartTime;
+
+        @NameInMap("EndTime")
+        private String endTime;
 
         @NameInMap("Id")
         private Integer id;
@@ -692,15 +698,25 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
         @NameInMap("RiskTypeWhiteListQueryResultList")
         private java.util.List < RiskTypeWhiteListQueryResultList> riskTypeWhiteListQueryResultList;
 
+        @NameInMap("StartTime")
+        private String startTime;
+
+        @NameInMap("TargetType")
+        private String targetType;
+
         @NameInMap("Type")
         private Integer type;
 
         private Strategy(Builder builder) {
+            this.customType = builder.customType;
             this.cycleDays = builder.cycleDays;
             this.cycleStartTime = builder.cycleStartTime;
+            this.endTime = builder.endTime;
             this.id = builder.id;
             this.name = builder.name;
             this.riskTypeWhiteListQueryResultList = builder.riskTypeWhiteListQueryResultList;
+            this.startTime = builder.startTime;
+            this.targetType = builder.targetType;
             this.type = builder.type;
         }
 
@@ -710,6 +726,13 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
 
         public static Strategy create() {
             return builder().build();
+        }
+
+        /**
+         * @return customType
+         */
+        public String getCustomType() {
+            return this.customType;
         }
 
         /**
@@ -724,6 +747,13 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
          */
         public Integer getCycleStartTime() {
             return this.cycleStartTime;
+        }
+
+        /**
+         * @return endTime
+         */
+        public String getEndTime() {
+            return this.endTime;
         }
 
         /**
@@ -748,6 +778,20 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return startTime
+         */
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        /**
+         * @return targetType
+         */
+        public String getTargetType() {
+            return this.targetType;
+        }
+
+        /**
          * @return type
          */
         public Integer getType() {
@@ -755,12 +799,24 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String customType; 
             private Integer cycleDays; 
             private Integer cycleStartTime; 
+            private String endTime; 
             private Integer id; 
             private String name; 
             private java.util.List < RiskTypeWhiteListQueryResultList> riskTypeWhiteListQueryResultList; 
+            private String startTime; 
+            private String targetType; 
             private Integer type; 
+
+            /**
+             * CustomType.
+             */
+            public Builder customType(String customType) {
+                this.customType = customType;
+                return this;
+            }
 
             /**
              * CycleDays.
@@ -775,6 +831,14 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
              */
             public Builder cycleStartTime(Integer cycleStartTime) {
                 this.cycleStartTime = cycleStartTime;
+                return this;
+            }
+
+            /**
+             * EndTime.
+             */
+            public Builder endTime(String endTime) {
+                this.endTime = endTime;
                 return this;
             }
 
@@ -799,6 +863,22 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
              */
             public Builder riskTypeWhiteListQueryResultList(java.util.List < RiskTypeWhiteListQueryResultList> riskTypeWhiteListQueryResultList) {
                 this.riskTypeWhiteListQueryResultList = riskTypeWhiteListQueryResultList;
+                return this;
+            }
+
+            /**
+             * StartTime.
+             */
+            public Builder startTime(String startTime) {
+                this.startTime = startTime;
+                return this;
+            }
+
+            /**
+             * TargetType.
+             */
+            public Builder targetType(String targetType) {
+                this.targetType = targetType;
                 return this;
             }
 

@@ -22,6 +22,7 @@ public class CreateHoneypotNodeRequest extends Request {
 
     @Query
     @NameInMap("NodeName")
+    @Validation(required = true)
     private String nodeName;
 
     @Query

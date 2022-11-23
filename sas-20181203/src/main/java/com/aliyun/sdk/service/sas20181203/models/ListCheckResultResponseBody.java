@@ -260,6 +260,9 @@ public class ListCheckResultResponseBody extends TeaModel {
         @NameInMap("TaskId")
         private String taskId;
 
+        @NameInMap("TrialPermission")
+        private Boolean trialPermission;
+
         @NameInMap("Vendor")
         private String vendor;
 
@@ -276,6 +279,7 @@ public class ListCheckResultResponseBody extends TeaModel {
             this.riskLevel = builder.riskLevel;
             this.status = builder.status;
             this.taskId = builder.taskId;
+            this.trialPermission = builder.trialPermission;
             this.vendor = builder.vendor;
             this.vendorShowName = builder.vendorShowName;
         }
@@ -352,6 +356,13 @@ public class ListCheckResultResponseBody extends TeaModel {
         }
 
         /**
+         * @return trialPermission
+         */
+        public Boolean getTrialPermission() {
+            return this.trialPermission;
+        }
+
+        /**
          * @return vendor
          */
         public String getVendor() {
@@ -375,6 +386,7 @@ public class ListCheckResultResponseBody extends TeaModel {
             private String riskLevel; 
             private String status; 
             private String taskId; 
+            private Boolean trialPermission; 
             private String vendor; 
             private String vendorShowName; 
 
@@ -447,6 +459,14 @@ public class ListCheckResultResponseBody extends TeaModel {
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
+                return this;
+            }
+
+            /**
+             * TrialPermission.
+             */
+            public Builder trialPermission(Boolean trialPermission) {
+                this.trialPermission = trialPermission;
                 return this;
             }
 

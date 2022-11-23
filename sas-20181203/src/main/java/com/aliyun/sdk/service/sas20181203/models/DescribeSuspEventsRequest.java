@@ -93,6 +93,14 @@ public class DescribeSuspEventsRequest extends Request {
     private String remark;
 
     @Query
+    @NameInMap("SortColumn")
+    private String sortColumn;
+
+    @Query
+    @NameInMap("SortType")
+    private String sortType;
+
+    @Query
     @NameInMap("Source")
     private String source;
 
@@ -150,6 +158,8 @@ public class DescribeSuspEventsRequest extends Request {
         this.pageSize = builder.pageSize;
         this.parentEventTypes = builder.parentEventTypes;
         this.remark = builder.remark;
+        this.sortColumn = builder.sortColumn;
+        this.sortType = builder.sortType;
         this.source = builder.source;
         this.sourceIp = builder.sourceIp;
         this.status = builder.status;
@@ -315,6 +325,20 @@ public class DescribeSuspEventsRequest extends Request {
     }
 
     /**
+     * @return sortColumn
+     */
+    public String getSortColumn() {
+        return this.sortColumn;
+    }
+
+    /**
+     * @return sortType
+     */
+    public String getSortType() {
+        return this.sortType;
+    }
+
+    /**
      * @return source
      */
     public String getSource() {
@@ -398,6 +422,8 @@ public class DescribeSuspEventsRequest extends Request {
         private String pageSize; 
         private String parentEventTypes; 
         private String remark; 
+        private String sortColumn; 
+        private String sortType; 
         private String source; 
         private String sourceIp; 
         private String status; 
@@ -434,6 +460,8 @@ public class DescribeSuspEventsRequest extends Request {
             this.pageSize = request.pageSize;
             this.parentEventTypes = request.parentEventTypes;
             this.remark = request.remark;
+            this.sortColumn = request.sortColumn;
+            this.sortType = request.sortType;
             this.source = request.source;
             this.sourceIp = request.sourceIp;
             this.status = request.status;
@@ -622,6 +650,24 @@ public class DescribeSuspEventsRequest extends Request {
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
             this.remark = remark;
+            return this;
+        }
+
+        /**
+         * 排序字段
+         */
+        public Builder sortColumn(String sortColumn) {
+            this.putQueryParameter("SortColumn", sortColumn);
+            this.sortColumn = sortColumn;
+            return this;
+        }
+
+        /**
+         * 排序方式
+         */
+        public Builder sortType(String sortType) {
+            this.putQueryParameter("SortType", sortType);
+            this.sortType = sortType;
             return this;
         }
 

@@ -78,6 +78,9 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
         @NameInMap("ClientStatus")
         private String clientStatus;
 
+        @NameInMap("ClientVersion")
+        private String clientVersion;
+
         @NameInMap("InstanceId")
         private String instanceId;
 
@@ -87,6 +90,7 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
         private Clients(Builder builder) {
             this.clientId = builder.clientId;
             this.clientStatus = builder.clientStatus;
+            this.clientVersion = builder.clientVersion;
             this.instanceId = builder.instanceId;
             this.uuid = builder.uuid;
         }
@@ -114,6 +118,13 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
         }
 
         /**
+         * @return clientVersion
+         */
+        public String getClientVersion() {
+            return this.clientVersion;
+        }
+
+        /**
          * @return instanceId
          */
         public String getInstanceId() {
@@ -130,6 +141,7 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
         public static final class Builder {
             private String clientId; 
             private String clientStatus; 
+            private String clientVersion; 
             private String instanceId; 
             private String uuid; 
 
@@ -146,6 +158,14 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
              */
             public Builder clientStatus(String clientStatus) {
                 this.clientStatus = clientStatus;
+                return this;
+            }
+
+            /**
+             * ClientVersion.
+             */
+            public Builder clientVersion(String clientVersion) {
+                this.clientVersion = clientVersion;
                 return this;
             }
 

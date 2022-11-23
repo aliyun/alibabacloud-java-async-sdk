@@ -168,6 +168,9 @@ public class DescribeStrategyResponseBody extends TeaModel {
         @NameInMap("EcsCount")
         private Integer ecsCount;
 
+        @NameInMap("EndTime")
+        private String endTime;
+
         @NameInMap("ExecStatus")
         private Integer execStatus;
 
@@ -186,6 +189,9 @@ public class DescribeStrategyResponseBody extends TeaModel {
         @NameInMap("RiskCount")
         private Integer riskCount;
 
+        @NameInMap("StartTime")
+        private String startTime;
+
         @NameInMap("Type")
         private Integer type;
 
@@ -195,12 +201,14 @@ public class DescribeStrategyResponseBody extends TeaModel {
             this.cycleDays = builder.cycleDays;
             this.cycleStartTime = builder.cycleStartTime;
             this.ecsCount = builder.ecsCount;
+            this.endTime = builder.endTime;
             this.execStatus = builder.execStatus;
             this.id = builder.id;
             this.name = builder.name;
             this.passRate = builder.passRate;
             this.processRate = builder.processRate;
             this.riskCount = builder.riskCount;
+            this.startTime = builder.startTime;
             this.type = builder.type;
         }
 
@@ -248,6 +256,13 @@ public class DescribeStrategyResponseBody extends TeaModel {
         }
 
         /**
+         * @return endTime
+         */
+        public String getEndTime() {
+            return this.endTime;
+        }
+
+        /**
          * @return execStatus
          */
         public Integer getExecStatus() {
@@ -290,6 +305,13 @@ public class DescribeStrategyResponseBody extends TeaModel {
         }
 
         /**
+         * @return startTime
+         */
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        /**
          * @return type
          */
         public Integer getType() {
@@ -302,12 +324,14 @@ public class DescribeStrategyResponseBody extends TeaModel {
             private Integer cycleDays; 
             private Integer cycleStartTime; 
             private Integer ecsCount; 
+            private String endTime; 
             private Integer execStatus; 
             private Integer id; 
             private String name; 
             private Integer passRate; 
             private Integer processRate; 
             private Integer riskCount; 
+            private String startTime; 
             private Integer type; 
 
             /**
@@ -347,6 +371,14 @@ public class DescribeStrategyResponseBody extends TeaModel {
              */
             public Builder ecsCount(Integer ecsCount) {
                 this.ecsCount = ecsCount;
+                return this;
+            }
+
+            /**
+             * EndTime.
+             */
+            public Builder endTime(String endTime) {
+                this.endTime = endTime;
                 return this;
             }
 
@@ -395,6 +427,14 @@ public class DescribeStrategyResponseBody extends TeaModel {
              */
             public Builder riskCount(Integer riskCount) {
                 this.riskCount = riskCount;
+                return this;
+            }
+
+            /**
+             * StartTime.
+             */
+            public Builder startTime(String startTime) {
+                this.startTime = startTime;
                 return this;
             }
 

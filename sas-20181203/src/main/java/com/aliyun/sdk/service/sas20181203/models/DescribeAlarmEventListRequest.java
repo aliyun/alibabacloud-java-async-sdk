@@ -72,6 +72,14 @@ public class DescribeAlarmEventListRequest extends Request {
     private String remark;
 
     @Query
+    @NameInMap("SortColumn")
+    private String sortColumn;
+
+    @Query
+    @NameInMap("SortType")
+    private String sortType;
+
+    @Query
     @NameInMap("SourceIp")
     private String sourceIp;
 
@@ -111,6 +119,8 @@ public class DescribeAlarmEventListRequest extends Request {
         this.operateTimeStart = builder.operateTimeStart;
         this.pageSize = builder.pageSize;
         this.remark = builder.remark;
+        this.sortColumn = builder.sortColumn;
+        this.sortType = builder.sortType;
         this.sourceIp = builder.sourceIp;
         this.tacticId = builder.tacticId;
         this.timeEnd = builder.timeEnd;
@@ -231,6 +241,20 @@ public class DescribeAlarmEventListRequest extends Request {
     }
 
     /**
+     * @return sortColumn
+     */
+    public String getSortColumn() {
+        return this.sortColumn;
+    }
+
+    /**
+     * @return sortType
+     */
+    public String getSortType() {
+        return this.sortType;
+    }
+
+    /**
      * @return sourceIp
      */
     public String getSourceIp() {
@@ -287,6 +311,8 @@ public class DescribeAlarmEventListRequest extends Request {
         private String operateTimeStart; 
         private String pageSize; 
         private String remark; 
+        private String sortColumn; 
+        private String sortType; 
         private String sourceIp; 
         private String tacticId; 
         private String timeEnd; 
@@ -314,6 +340,8 @@ public class DescribeAlarmEventListRequest extends Request {
             this.operateTimeStart = request.operateTimeStart;
             this.pageSize = request.pageSize;
             this.remark = request.remark;
+            this.sortColumn = request.sortColumn;
+            this.sortType = request.sortType;
             this.sourceIp = request.sourceIp;
             this.tacticId = request.tacticId;
             this.timeEnd = request.timeEnd;
@@ -445,6 +473,24 @@ public class DescribeAlarmEventListRequest extends Request {
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
             this.remark = remark;
+            return this;
+        }
+
+        /**
+         * SortColumn.
+         */
+        public Builder sortColumn(String sortColumn) {
+            this.putQueryParameter("SortColumn", sortColumn);
+            this.sortColumn = sortColumn;
+            return this;
+        }
+
+        /**
+         * SortType.
+         */
+        public Builder sortType(String sortType) {
+            this.putQueryParameter("SortType", sortType);
+            this.sortType = sortType;
             return this;
         }
 

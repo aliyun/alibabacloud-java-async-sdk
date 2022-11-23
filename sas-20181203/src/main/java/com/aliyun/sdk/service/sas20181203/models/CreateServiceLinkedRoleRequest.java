@@ -12,8 +12,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateServiceLinkedRoleRequest</p>
  */
 public class CreateServiceLinkedRoleRequest extends Request {
+    @Query
+    @NameInMap("ServiceLinkedRole")
+    private String serviceLinkedRole;
+
     private CreateServiceLinkedRoleRequest(Builder builder) {
         super(builder);
+        this.serviceLinkedRole = builder.serviceLinkedRole;
     }
 
     public static Builder builder() {
@@ -29,7 +34,15 @@ public class CreateServiceLinkedRoleRequest extends Request {
         return new Builder(this);
     }
 
+    /**
+     * @return serviceLinkedRole
+     */
+    public String getServiceLinkedRole() {
+        return this.serviceLinkedRole;
+    }
+
     public static final class Builder extends Request.Builder<CreateServiceLinkedRoleRequest, Builder> {
+        private String serviceLinkedRole; 
 
         private Builder() {
             super();
@@ -37,7 +50,17 @@ public class CreateServiceLinkedRoleRequest extends Request {
 
         private Builder(CreateServiceLinkedRoleRequest request) {
             super(request);
+            this.serviceLinkedRole = request.serviceLinkedRole;
         } 
+
+        /**
+         * ServiceLinkedRole.
+         */
+        public Builder serviceLinkedRole(String serviceLinkedRole) {
+            this.putQueryParameter("ServiceLinkedRole", serviceLinkedRole);
+            this.serviceLinkedRole = serviceLinkedRole;
+            return this;
+        }
 
         @Override
         public CreateServiceLinkedRoleRequest build() {
