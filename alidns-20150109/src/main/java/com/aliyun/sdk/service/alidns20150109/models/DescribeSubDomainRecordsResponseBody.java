@@ -150,6 +150,9 @@ public class DescribeSubDomainRecordsResponseBody extends TeaModel {
         @NameInMap("RecordId")
         private String recordId;
 
+        @NameInMap("Remark")
+        private String remark;
+
         @NameInMap("Status")
         private String status;
 
@@ -172,6 +175,7 @@ public class DescribeSubDomainRecordsResponseBody extends TeaModel {
             this.priority = builder.priority;
             this.rr = builder.rr;
             this.recordId = builder.recordId;
+            this.remark = builder.remark;
             this.status = builder.status;
             this.TTL = builder.TTL;
             this.type = builder.type;
@@ -230,6 +234,13 @@ public class DescribeSubDomainRecordsResponseBody extends TeaModel {
         }
 
         /**
+         * @return remark
+         */
+        public String getRemark() {
+            return this.remark;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -271,6 +282,7 @@ public class DescribeSubDomainRecordsResponseBody extends TeaModel {
             private Long priority; 
             private String rr; 
             private String recordId; 
+            private String remark; 
             private String status; 
             private Long TTL; 
             private String type; 
@@ -322,6 +334,14 @@ public class DescribeSubDomainRecordsResponseBody extends TeaModel {
              */
             public Builder recordId(String recordId) {
                 this.recordId = recordId;
+                return this;
+            }
+
+            /**
+             * Remark.
+             */
+            public Builder remark(String remark) {
+                this.remark = remark;
                 return this;
             }
 
