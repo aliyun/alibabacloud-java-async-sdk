@@ -72,6 +72,9 @@ public class DescribeContactGroupsResponseBody extends TeaModel {
     } 
 
     public static class Contacts extends TeaModel {
+        @NameInMap("ArmsContactId")
+        private Long armsContactId;
+
         @NameInMap("ContactId")
         private Float contactId;
 
@@ -85,6 +88,7 @@ public class DescribeContactGroupsResponseBody extends TeaModel {
         private String phone;
 
         private Contacts(Builder builder) {
+            this.armsContactId = builder.armsContactId;
             this.contactId = builder.contactId;
             this.contactName = builder.contactName;
             this.email = builder.email;
@@ -97,6 +101,13 @@ public class DescribeContactGroupsResponseBody extends TeaModel {
 
         public static Contacts create() {
             return builder().build();
+        }
+
+        /**
+         * @return armsContactId
+         */
+        public Long getArmsContactId() {
+            return this.armsContactId;
         }
 
         /**
@@ -128,10 +139,19 @@ public class DescribeContactGroupsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Long armsContactId; 
             private Float contactId; 
             private String contactName; 
             private String email; 
             private String phone; 
+
+            /**
+             * ArmsContactId.
+             */
+            public Builder armsContactId(Long armsContactId) {
+                this.armsContactId = armsContactId;
+                return this;
+            }
 
             /**
              * 联系人ID
@@ -173,6 +193,9 @@ public class DescribeContactGroupsResponseBody extends TeaModel {
 
     }
     public static class AlertContactGroups extends TeaModel {
+        @NameInMap("ArmsContactGroupId")
+        private Long armsContactGroupId;
+
         @NameInMap("ContactGroupId")
         private Float contactGroupId;
 
@@ -183,6 +206,7 @@ public class DescribeContactGroupsResponseBody extends TeaModel {
         private java.util.List < Contacts> contacts;
 
         private AlertContactGroups(Builder builder) {
+            this.armsContactGroupId = builder.armsContactGroupId;
             this.contactGroupId = builder.contactGroupId;
             this.contactGroupName = builder.contactGroupName;
             this.contacts = builder.contacts;
@@ -194,6 +218,13 @@ public class DescribeContactGroupsResponseBody extends TeaModel {
 
         public static AlertContactGroups create() {
             return builder().build();
+        }
+
+        /**
+         * @return armsContactGroupId
+         */
+        public Long getArmsContactGroupId() {
+            return this.armsContactGroupId;
         }
 
         /**
@@ -218,9 +249,18 @@ public class DescribeContactGroupsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Long armsContactGroupId; 
             private Float contactGroupId; 
             private String contactGroupName; 
             private java.util.List < Contacts> contacts; 
+
+            /**
+             * ArmsContactGroupId.
+             */
+            public Builder armsContactGroupId(Long armsContactGroupId) {
+                this.armsContactGroupId = armsContactGroupId;
+                return this;
+            }
 
             /**
              * 告警联系人组ID

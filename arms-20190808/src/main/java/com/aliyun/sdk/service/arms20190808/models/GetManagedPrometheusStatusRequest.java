@@ -24,11 +24,16 @@ public class GetManagedPrometheusStatusRequest extends Request {
     @NameInMap("RegionId")
     private String regionId;
 
+    @Query
+    @NameInMap("VpcId")
+    private String vpcId;
+
     private GetManagedPrometheusStatusRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
         this.clusterType = builder.clusterType;
         this.regionId = builder.regionId;
+        this.vpcId = builder.vpcId;
     }
 
     public static Builder builder() {
@@ -65,10 +70,18 @@ public class GetManagedPrometheusStatusRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return vpcId
+     */
+    public String getVpcId() {
+        return this.vpcId;
+    }
+
     public static final class Builder extends Request.Builder<GetManagedPrometheusStatusRequest, Builder> {
         private String clusterId; 
         private String clusterType; 
         private String regionId; 
+        private String vpcId; 
 
         private Builder() {
             super();
@@ -79,10 +92,11 @@ public class GetManagedPrometheusStatusRequest extends Request {
             this.clusterId = request.clusterId;
             this.clusterType = request.clusterType;
             this.regionId = request.regionId;
+            this.vpcId = request.vpcId;
         } 
 
         /**
-         * ClusterId.
+         * ClusterType为“ask”时，必填。
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -91,7 +105,7 @@ public class GetManagedPrometheusStatusRequest extends Request {
         }
 
         /**
-         * ClusterType.
+         * 可选值：ask、ecs
          */
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("ClusterType", clusterType);
@@ -105,6 +119,15 @@ public class GetManagedPrometheusStatusRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ClusterType为“ecs”时，必填。
+         */
+        public Builder vpcId(String vpcId) {
+            this.putQueryParameter("VpcId", vpcId);
+            this.vpcId = vpcId;
             return this;
         }
 

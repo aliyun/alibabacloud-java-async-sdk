@@ -15,12 +15,14 @@ com/aliyun/sdk/service/arms20190808/models/AppendInstancesToPrometheusGlobalView
 com/aliyun/sdk/service/arms20190808/models/DeleteIMRobotRequest$1.class
 com/aliyun/sdk/service/arms20190808/models/CreateOrUpdateIMRobotRequest$1.class
 com/aliyun/sdk/service/arms20190808/models/UninstallManagedPrometheusRequest$1.class
+com/aliyun/sdk/service/arms20190808/models/GetRetcodeDataByQueryResponseBody.class
 com/aliyun/sdk/service/arms20190808/models/GetPrometheusApiTokenResponseBody$Builder.class
 com/aliyun/sdk/service/arms20190808/models/DescribeDispatchRuleResponseBody$DispatchRule$Builder.class
 com/aliyun/sdk/service/arms20190808/models/GetSyntheticTaskListRequest$Builder.class
 com/aliyun/sdk/service/arms20190808/models/RemoveSourcesFromPrometheusGlobalViewResponse$1.class
 com/aliyun/sdk/service/arms20190808/models/GetOnCallSchedulesDetailResponseBody$RenderedLayerEntries$Builder.class
 com/aliyun/sdk/service/arms20190808/models/SearchTraceAppByPageRequest.class
+com/aliyun/sdk/service/arms20190808/models/GetRetcodeLogstoreResponseBody$Data.class
 com/aliyun/sdk/service/arms20190808/models/CreateOrUpdateNotificationPolicyResponse$BuilderImpl.class
 com/aliyun/sdk/service/arms20190808/models/GetOnCallSchedulesDetailResponseBody$RenderedSubstitudeEntries.class
 com/aliyun/sdk/service/arms20190808/models/ListAlertsRequest.class
@@ -72,6 +74,7 @@ com/aliyun/sdk/service/arms20190808/models/DeleteContactResponseBody$1.class
 com/aliyun/sdk/service/arms20190808/models/GetMultipleTraceResponseBody$LogEventList$Builder.class
 com/aliyun/sdk/service/arms20190808/models/UpdateIntegrationResponseBody$Builder.class
 com/aliyun/sdk/service/arms20190808/models/ApplyScenarioRequest$1.class
+com/aliyun/sdk/service/arms20190808/models/GetSyntheticTaskDetailResponseBody$MonitorList.class
 com/aliyun/sdk/service/arms20190808/models/DeleteIMRobotRequest.class
 com/aliyun/sdk/service/arms20190808/models/GetTraceAppResponseBody$TraceApp.class
 com/aliyun/sdk/service/arms20190808/models/ListActivatedAlertsResponseBody$Page.class
@@ -137,6 +140,7 @@ com/aliyun/sdk/service/arms20190808/models/DeleteAlertRuleResponseBody.class
 com/aliyun/sdk/service/arms20190808/models/CreateOrUpdateEventBridgeIntegrationResponseBody$1.class
 com/aliyun/sdk/service/arms20190808/models/InstallManagedPrometheusResponseBody$1.class
 com/aliyun/sdk/service/arms20190808/models/ListEventBridgeIntegrationsResponseBody$PageBean.class
+com/aliyun/sdk/service/arms20190808/models/GetRetcodeLogstoreResponse$Builder.class
 com/aliyun/sdk/service/arms20190808/models/ListDashboardsByNameRequest$1.class
 com/aliyun/sdk/service/arms20190808/models/DeleteCmsExporterRequest$1.class
 com/aliyun/sdk/service/arms20190808/models/ListSilencePoliciesResponseBody$MatchingConditions$Builder.class
@@ -177,7 +181,9 @@ com/aliyun/sdk/service/arms20190808/models/ListEventBridgeIntegrationsResponseBo
 com/aliyun/sdk/service/arms20190808/models/GetTraceRequest.class
 com/aliyun/sdk/service/arms20190808/models/GetPrometheusApiTokenResponse$Builder.class
 com/aliyun/sdk/service/arms20190808/models/CreateOrUpdateAlertRuleResponse.class
+com/aliyun/sdk/service/arms20190808/models/ListTraceAppsResponseBody$Tags$Builder.class
 com/aliyun/sdk/service/arms20190808/models/ImportAppAlertRulesResponse$BuilderImpl.class
+com/aliyun/sdk/service/arms20190808/models/GetRetcodeLogstoreResponseBody$Builder.class
 com/aliyun/sdk/service/arms20190808/models/GetSyntheticTaskListResponseBody$List$Builder.class
 com/aliyun/sdk/service/arms20190808/models/ListEventBridgeIntegrationsRequest$1.class
 com/aliyun/sdk/service/arms20190808/models/DeleteAlertContactGroupResponseBody$Builder.class
@@ -218,6 +224,7 @@ com/aliyun/sdk/service/arms20190808/models/CreateOrUpdateAlertRuleResponseBody$B
 com/aliyun/sdk/service/arms20190808/models/CreateSyntheticTaskRequest$RequestContent.class
 com/aliyun/sdk/service/arms20190808/models/CreateSyntheticTaskRequest$UrlEncoding$Builder.class
 com/aliyun/sdk/service/arms20190808/models/GetStackResponseBody$StackInfo.class
+com/aliyun/sdk/service/arms20190808/models/GetRetcodeDataByQueryRequest$Builder.class
 com/aliyun/sdk/service/arms20190808/models/ListPrometheusAlertRulesResponseBody$Labels$Builder.class
 com/aliyun/sdk/service/arms20190808/models/ListPrometheusInstancesResponse.class
 com/aliyun/sdk/service/arms20190808/models/SearchTraceAppByPageResponseBody$TraceApps$Builder.class
@@ -408,6 +415,7 @@ com/aliyun/sdk/service/arms20190808/models/CreateOrUpdateAlertRuleResponseBody$A
 com/aliyun/sdk/service/arms20190808/models/GetOnCallSchedulesDetailResponseBody$SimpleContact.class
 com/aliyun/sdk/service/arms20190808/models/UpdateAlertContactResponse.class
 com/aliyun/sdk/service/arms20190808/models/SearchEventsResponseBody$1.class
+com/aliyun/sdk/service/arms20190808/models/GetRetcodeLogstoreResponse.class
 com/aliyun/sdk/service/arms20190808/models/TurnOnSecondSwitchResponseBody.class
 com/aliyun/sdk/service/arms20190808/models/InstallCmsExporterRequest$1.class
 com/aliyun/sdk/service/arms20190808/models/SetRetcodeShareStatusResponse$1.class
@@ -475,6 +483,7 @@ com/aliyun/sdk/service/arms20190808/models/ListPrometheusAlertRulesResponse$1.cl
 com/aliyun/sdk/service/arms20190808/models/DeleteIntegrationsRequest$1.class
 com/aliyun/sdk/service/arms20190808/models/UninstallPromClusterResponse$1.class
 com/aliyun/sdk/service/arms20190808/models/TurnOnSecondSwitchRequest$1.class
+com/aliyun/sdk/service/arms20190808/models/GetRetcodeLogstoreRequest$Builder.class
 com/aliyun/sdk/service/arms20190808/models/AddGrafanaResponse$1.class
 com/aliyun/sdk/service/arms20190808/models/ListDispatchRuleRequest.class
 com/aliyun/sdk/service/arms20190808/models/ManageRecordingRuleRequest$Builder.class
@@ -496,7 +505,6 @@ com/aliyun/sdk/service/arms20190808/models/StopAlertResponse$1.class
 com/aliyun/sdk/service/arms20190808/models/ListSilencePoliciesRequest.class
 com/aliyun/sdk/service/arms20190808/models/GetTraceResponseBody$Spans.class
 com/aliyun/sdk/service/arms20190808/models/GetRetcodeShareUrlRequest$1.class
-com/aliyun/sdk/service/arms20190808/models/GetSyntheticTaskDetailResponseBody$MinotorList.class
 com/aliyun/sdk/service/arms20190808/models/ListIntegrationResponse$BuilderImpl.class
 com/aliyun/sdk/service/arms20190808/models/DeleteContactGroupResponseBody$Builder.class
 com/aliyun/sdk/service/arms20190808/models/CreateIntegrationResponseBody$Integration$Builder.class
@@ -514,6 +522,7 @@ com/aliyun/sdk/service/arms20190808/models/AppendInstancesToPrometheusGlobalView
 com/aliyun/sdk/service/arms20190808/models/ListIntegrationResponseBody$1.class
 com/aliyun/sdk/service/arms20190808/models/SearchTraceAppByPageResponse$Builder.class
 com/aliyun/sdk/service/arms20190808/models/UpdateAlertContactRequest.class
+com/aliyun/sdk/service/arms20190808/models/GetSyntheticTaskDetailResponseBody$CommonParam.class
 com/aliyun/sdk/service/arms20190808/models/UpdateDispatchRuleResponseBody$Builder.class
 com/aliyun/sdk/service/arms20190808/models/ListDashboardsByNameResponse.class
 com/aliyun/sdk/service/arms20190808/models/DeleteAlertRulesResponse$1.class
@@ -563,6 +572,7 @@ com/aliyun/sdk/service/arms20190808/models/ListEscalationPoliciesResponseBody$Bu
 com/aliyun/sdk/service/arms20190808/models/SyncRecordingRulesRequest$1.class
 com/aliyun/sdk/service/arms20190808/models/CreateOrUpdateSilencePolicyResponseBody$SilencePolicy.class
 com/aliyun/sdk/service/arms20190808/models/DeleteDispatchRuleResponse$Builder.class
+com/aliyun/sdk/service/arms20190808/models/GetSyntheticTaskDetailResponseBody$MonitorList$Builder.class
 com/aliyun/sdk/service/arms20190808/models/DescribeDispatchRuleResponse$Builder.class
 com/aliyun/sdk/service/arms20190808/models/GetSourceMapInfoResponseBody$SourceMapList.class
 com/aliyun/sdk/service/arms20190808/models/AddAliClusterIdsToPrometheusGlobalViewResponseBody$Data$Builder.class
@@ -641,6 +651,7 @@ com/aliyun/sdk/service/arms20190808/models/DeletePrometheusGlobalViewResponse$Bu
 com/aliyun/sdk/service/arms20190808/AsyncClient.class
 com/aliyun/sdk/service/arms20190808/models/QueryReleaseMetricResponseBody$1.class
 com/aliyun/sdk/service/arms20190808/models/DescribeWebhookContactsResponse.class
+com/aliyun/sdk/service/arms20190808/models/ListTraceAppsResponseBody$Tags.class
 com/aliyun/sdk/service/arms20190808/models/ListPrometheusAlertRulesResponseBody.class
 com/aliyun/sdk/service/arms20190808/models/ListPrometheusAlertTemplatesResponseBody$1.class
 com/aliyun/sdk/service/arms20190808/models/ListIntegrationResponseBody$PageInfo$Builder.class
@@ -691,6 +702,7 @@ com/aliyun/sdk/service/arms20190808/models/OpenXtraceDefaultSLRResponseBody$1.cl
 com/aliyun/sdk/service/arms20190808/models/CreateOrUpdateIMRobotResponseBody$1.class
 com/aliyun/sdk/service/arms20190808/models/DescribeDispatchRuleResponse.class
 com/aliyun/sdk/service/arms20190808/models/DeleteIntegrationsRequest$Builder.class
+com/aliyun/sdk/service/arms20190808/models/GetRetcodeLogstoreResponseBody$1.class
 com/aliyun/sdk/service/arms20190808/models/AddPrometheusGlobalViewResponseBody$Builder.class
 com/aliyun/sdk/service/arms20190808/models/CreateOrUpdateContactResponseBody$1.class
 com/aliyun/sdk/service/arms20190808/models/SearchRetcodeAppByPageResponse$1.class
@@ -730,6 +742,7 @@ com/aliyun/sdk/service/arms20190808/models/GetSyntheticTaskListResponseBody$Buil
 com/aliyun/sdk/service/arms20190808/models/ListDashboardsResponseBody$Builder.class
 com/aliyun/sdk/service/arms20190808/models/UpdateAlertContactResponseBody$1.class
 com/aliyun/sdk/service/arms20190808/models/DeleteCmsExporterResponseBody$Builder.class
+com/aliyun/sdk/service/arms20190808/models/GetRetcodeLogstoreResponseBody$RetcodeSLSConfig$Builder.class
 com/aliyun/sdk/service/arms20190808/models/CreateOrUpdateNotificationPolicyRequest$1.class
 com/aliyun/sdk/service/arms20190808/models/DelAuthTokenRequest$1.class
 com/aliyun/sdk/service/arms20190808/models/QueryMetricByPageRequest$Filters.class
@@ -765,6 +778,7 @@ com/aliyun/sdk/service/arms20190808/models/GetTraceResponse$Builder.class
 com/aliyun/sdk/service/arms20190808/models/SearchAlertRulesResponseBody$Builder.class
 com/aliyun/sdk/service/arms20190808/models/CreateOrUpdateNotificationPolicyResponseBody$1.class
 com/aliyun/sdk/service/arms20190808/models/SearchAlertContactResponse$BuilderImpl.class
+com/aliyun/sdk/service/arms20190808/models/GetSyntheticTaskDetailResponseBody$CommonParam$Builder.class
 com/aliyun/sdk/service/arms20190808/models/UninstallManagedPrometheusResponse$BuilderImpl.class
 com/aliyun/sdk/service/arms20190808/models/DescribeContactsResponseBody.class
 com/aliyun/sdk/service/arms20190808/models/CreateSyntheticTaskRequest$Navigation.class
@@ -917,6 +931,7 @@ com/aliyun/sdk/service/arms20190808/models/ListNotificationPoliciesResponseBody$
 com/aliyun/sdk/service/arms20190808/models/ListTraceAppsResponseBody$1.class
 com/aliyun/sdk/service/arms20190808/models/SearchAlertContactResponseBody$1.class
 com/aliyun/sdk/service/arms20190808/models/DescribeContactGroupsResponse$Builder.class
+com/aliyun/sdk/service/arms20190808/models/GetRetcodeDataByQueryResponseBody$Builder.class
 com/aliyun/sdk/service/arms20190808/models/UpdateIntegrationRequest$Builder.class
 com/aliyun/sdk/service/arms20190808/models/GetSourceMapInfoResponseBody$Builder.class
 com/aliyun/sdk/service/arms20190808/models/DeleteContactGroupResponse$BuilderImpl.class
@@ -980,6 +995,7 @@ com/aliyun/sdk/service/arms20190808/models/UpdateWebhookResponse.class
 com/aliyun/sdk/service/arms20190808/models/SearchAlertContactResponseBody$PageBean.class
 com/aliyun/sdk/service/arms20190808/models/GetSyntheticTaskMonitorsResponseBody$Builder.class
 com/aliyun/sdk/service/arms20190808/models/SearchTracesRequest.class
+com/aliyun/sdk/service/arms20190808/models/GetRetcodeLogstoreResponse$1.class
 com/aliyun/sdk/service/arms20190808/models/GetAlertRulesRequest.class
 com/aliyun/sdk/service/arms20190808/models/ListSilencePoliciesResponseBody$PageBean$Builder.class
 com/aliyun/sdk/service/arms20190808/models/ListRetcodeAppsRequest$Builder.class
@@ -1099,6 +1115,7 @@ com/aliyun/sdk/service/arms20190808/models/CreatePrometheusAlertRuleResponseBody
 com/aliyun/sdk/service/arms20190808/models/CreateOrUpdateEventBridgeIntegrationResponse$Builder.class
 com/aliyun/sdk/service/arms20190808/models/GetAlertRulesResponse$1.class
 com/aliyun/sdk/service/arms20190808/models/DescribeContactsResponse.class
+com/aliyun/sdk/service/arms20190808/models/GetRetcodeLogstoreResponseBody$RetcodeSLSConfig.class
 com/aliyun/sdk/service/arms20190808/models/ListPrometheusAlertTemplatesRequest.class
 com/aliyun/sdk/service/arms20190808/models/SearchTracesByPageRequest$Tags.class
 com/aliyun/sdk/service/arms20190808/models/UpdateDispatchRuleResponse$BuilderImpl.class
@@ -1312,6 +1329,7 @@ com/aliyun/sdk/service/arms20190808/models/DeleteSyntheticTaskResponseBody$Build
 com/aliyun/sdk/service/arms20190808/models/QueryPromInstallStatusResponse$BuilderImpl.class
 com/aliyun/sdk/service/arms20190808/models/DescribePrometheusAlertRuleResponse$Builder.class
 com/aliyun/sdk/service/arms20190808/models/ListSilencePoliciesResponseBody$SilencePolicies$Builder.class
+com/aliyun/sdk/service/arms20190808/models/GetRetcodeDataByQueryRequest$1.class
 com/aliyun/sdk/service/arms20190808/models/DescribeDispatchRuleRequest.class
 com/aliyun/sdk/service/arms20190808/models/SearchTracesRequest$Builder.class
 com/aliyun/sdk/service/arms20190808/models/ListCmsInstancesResponseBody$Builder.class
@@ -1346,6 +1364,7 @@ com/aliyun/sdk/service/arms20190808/models/GetAlertRulesResponseBody$DimFilters$
 com/aliyun/sdk/service/arms20190808/models/DescribeContactsRequest.class
 com/aliyun/sdk/service/arms20190808/models/GetSyntheticTaskMonitorsResponseBody$Data.class
 com/aliyun/sdk/service/arms20190808/models/OpenArmsDefaultSLRRequest.class
+com/aliyun/sdk/service/arms20190808/models/GetRetcodeLogstoreRequest.class
 com/aliyun/sdk/service/arms20190808/models/DescribePrometheusAlertRuleResponseBody$Builder.class
 com/aliyun/sdk/service/arms20190808/models/SendTTSVerifyLinkResponse$Builder.class
 com/aliyun/sdk/service/arms20190808/models/ListPrometheusAlertRulesRequest.class
@@ -1388,6 +1407,7 @@ com/aliyun/sdk/service/arms20190808/models/SearchTracesResponseBody$TraceInfos.c
 com/aliyun/sdk/service/arms20190808/models/DeleteCmsExporterResponse$Builder.class
 com/aliyun/sdk/service/arms20190808/models/GetStackRequest.class
 com/aliyun/sdk/service/arms20190808/models/ListNotificationPoliciesResponseBody$NotificationPolicies.class
+com/aliyun/sdk/service/arms20190808/models/GetRetcodeDataByQueryResponse$BuilderImpl.class
 com/aliyun/sdk/service/arms20190808/models/StartAlertResponse.class
 com/aliyun/sdk/service/arms20190808/models/SearchAlertRulesRequest.class
 com/aliyun/sdk/service/arms20190808/models/CreateOrUpdateAlertRuleRequest$1.class
@@ -1426,7 +1446,9 @@ com/aliyun/sdk/service/arms20190808/models/ListPrometheusInstancesResponse$Build
 com/aliyun/sdk/service/arms20190808/models/SearchTraceAppByNameResponseBody$Builder.class
 com/aliyun/sdk/service/arms20190808/models/ListNotificationPoliciesRequest$1.class
 com/aliyun/sdk/service/arms20190808/models/CreateOrUpdateNotificationPolicyResponseBody.class
+com/aliyun/sdk/service/arms20190808/models/GetRetcodeLogstoreResponseBody.class
 com/aliyun/sdk/service/arms20190808/models/DeleteSyntheticTaskResponse.class
+com/aliyun/sdk/service/arms20190808/models/GetRetcodeLogstoreRequest$1.class
 com/aliyun/sdk/service/arms20190808/models/QueryPromInstallStatusResponseBody$Data.class
 com/aliyun/sdk/service/arms20190808/models/DeleteIntegrationRequest$1.class
 com/aliyun/sdk/service/arms20190808/models/ListAlertEventsRequest$Builder.class
@@ -1437,6 +1459,7 @@ com/aliyun/sdk/service/arms20190808/models/GetRecordingRuleRequest.class
 com/aliyun/sdk/service/arms20190808/models/GetTraceAppResponse$1.class
 com/aliyun/sdk/service/arms20190808/models/DeleteAlertContactGroupResponse$BuilderImpl.class
 com/aliyun/sdk/service/arms20190808/models/GetPrometheusGlobalViewResponse$Builder.class
+com/aliyun/sdk/service/arms20190808/models/GetRetcodeDataByQueryResponseBody$1.class
 com/aliyun/sdk/service/arms20190808/models/GetMultipleTraceResponseBody$TagEntryList$Builder.class
 com/aliyun/sdk/service/arms20190808/models/SearchRetcodeAppByPageRequest.class
 com/aliyun/sdk/service/arms20190808/models/UpdateAlertContactGroupRequest.class
@@ -1453,6 +1476,7 @@ com/aliyun/sdk/service/arms20190808/models/GetMultipleTraceResponseBody$MultiCal
 com/aliyun/sdk/service/arms20190808/models/CreateSyntheticTaskRequest$RequestContentHeader.class
 com/aliyun/sdk/service/arms20190808/models/SearchAlertHistoriesResponseBody$AlarmHistories$Builder.class
 com/aliyun/sdk/service/arms20190808/models/ListDispatchRuleRequest$1.class
+com/aliyun/sdk/service/arms20190808/models/GetRetcodeLogstoreResponse$BuilderImpl.class
 com/aliyun/sdk/service/arms20190808/models/ListDashboardsResponseBody$I18nChild$Builder.class
 com/aliyun/sdk/service/arms20190808/models/SearchAlertContactGroupResponseBody$Contacts$Builder.class
 com/aliyun/sdk/service/arms20190808/models/CreateOrUpdateContactResponse.class
@@ -1476,6 +1500,7 @@ com/aliyun/sdk/service/arms20190808/models/AddRecordingRuleResponseBody$1.class
 com/aliyun/sdk/service/arms20190808/models/GetOnCallSchedulesDetailResponse$BuilderImpl.class
 com/aliyun/sdk/service/arms20190808/models/DelAuthTokenResponseBody$Builder.class
 com/aliyun/sdk/service/arms20190808/models/ListInsightsEventsResponseBody.class
+com/aliyun/sdk/service/arms20190808/models/GetRetcodeDataByQueryResponse$Builder.class
 com/aliyun/sdk/service/arms20190808/models/CreateOrUpdateNotificationPolicyResponse$1.class
 com/aliyun/sdk/service/arms20190808/models/TurnOnSecondSwitchResponse.class
 com/aliyun/sdk/service/arms20190808/models/GetMultipleTraceResponseBody$Spans.class
@@ -1526,6 +1551,7 @@ com/aliyun/sdk/service/arms20190808/models/UpdateAlertContactGroupResponse$1.cla
 com/aliyun/sdk/service/arms20190808/models/AppendInstancesToPrometheusGlobalViewRequest$1.class
 com/aliyun/sdk/service/arms20190808/models/StartAlertResponse$Builder.class
 com/aliyun/sdk/service/arms20190808/models/SetRetcodeShareStatusResponse$BuilderImpl.class
+com/aliyun/sdk/service/arms20190808/models/GetRetcodeDataByQueryResponse.class
 com/aliyun/sdk/service/arms20190808/models/GetSyntheticTaskDetailResponseBody$TaskDetail$Builder.class
 com/aliyun/sdk/service/arms20190808/models/GetAuthTokenRequest$1.class
 com/aliyun/sdk/service/arms20190808/models/RemoveSourcesFromPrometheusGlobalViewResponseBody$Data$Builder.class
@@ -1640,10 +1666,10 @@ com/aliyun/sdk/service/arms20190808/models/UpdateAlertRuleRequest$Builder.class
 com/aliyun/sdk/service/arms20190808/models/ListInsightsEventsRequest$Builder.class
 com/aliyun/sdk/service/arms20190808/models/ListRetcodeAppsResponseBody.class
 com/aliyun/sdk/service/arms20190808/models/InstallManagedPrometheusResponse.class
-com/aliyun/sdk/service/arms20190808/models/GetSyntheticTaskDetailResponseBody$MinotorList$Builder.class
 com/aliyun/sdk/service/arms20190808/models/ListTraceAppsResponse$Builder.class
 com/aliyun/sdk/service/arms20190808/models/CreateOrUpdateWebhookContactResponse.class
 com/aliyun/sdk/service/arms20190808/models/DeleteGrafanaResourceRequest$1.class
+com/aliyun/sdk/service/arms20190808/models/GetRetcodeDataByQueryRequest.class
 com/aliyun/sdk/service/arms20190808/models/ListRetcodeAppsResponse$BuilderImpl.class
 com/aliyun/sdk/service/arms20190808/models/DeleteContactResponseBody$Builder.class
 com/aliyun/sdk/service/arms20190808/models/DescribeDispatchRuleResponseBody$DispatchRule.class
@@ -1661,6 +1687,7 @@ com/aliyun/sdk/service/arms20190808/models/DeleteContactGroupResponse.class
 com/aliyun/sdk/service/arms20190808/models/DeletePrometheusGlobalViewRequest.class
 com/aliyun/sdk/service/arms20190808/models/SearchEventsResponseBody$PageBean.class
 com/aliyun/sdk/service/arms20190808/models/RemoveSourcesFromPrometheusGlobalViewResponseBody.class
+com/aliyun/sdk/service/arms20190808/models/GetSyntheticTaskDetailResponseBody$AlertList$Builder.class
 com/aliyun/sdk/service/arms20190808/models/ListPrometheusAlertTemplatesResponse.class
 com/aliyun/sdk/service/arms20190808/models/ListPrometheusInstancesResponse$1.class
 com/aliyun/sdk/service/arms20190808/models/RemoveAliClusterIdsFromPrometheusGlobalViewResponseBody$Builder.class
@@ -1682,6 +1709,7 @@ com/aliyun/sdk/service/arms20190808/models/SendTTSVerifyLinkRequest$Builder.clas
 com/aliyun/sdk/service/arms20190808/models/UpdateIntegrationRequest$1.class
 com/aliyun/sdk/service/arms20190808/models/SearchAlertHistoriesResponseBody$1.class
 com/aliyun/sdk/service/arms20190808/models/UpdatePrometheusAlertRuleResponseBody.class
+com/aliyun/sdk/service/arms20190808/models/GetSyntheticTaskDetailResponseBody$AlertList.class
 com/aliyun/sdk/service/arms20190808/models/CreateWebhookResponse$BuilderImpl.class
 com/aliyun/sdk/service/arms20190808/models/DescribeWebhookContactsResponseBody$Webhook.class
 com/aliyun/sdk/service/arms20190808/models/DescribeContactsRequest$1.class
@@ -1791,6 +1819,7 @@ com/aliyun/sdk/service/arms20190808/models/ManageGetRecordingRuleResponse.class
 com/aliyun/sdk/service/arms20190808/models/CreateSyntheticTaskRequest$MonitorList$Builder.class
 com/aliyun/sdk/service/arms20190808/models/ListTraceAppsResponseBody$TraceApps.class
 com/aliyun/sdk/service/arms20190808/models/DeleteSourceMapRequest$Builder.class
+com/aliyun/sdk/service/arms20190808/models/GetRetcodeDataByQueryResponse$1.class
 com/aliyun/sdk/service/arms20190808/models/DescribePrometheusAlertRuleRequest.class
 com/aliyun/sdk/service/arms20190808/models/DescribeDispatchRuleResponseBody$LabelMatchExpressionGrid.class
 com/aliyun/sdk/service/arms20190808/models/DeleteScenarioResponseBody$1.class
@@ -1822,6 +1851,7 @@ com/aliyun/sdk/service/arms20190808/models/GetTraceAppResponse$BuilderImpl.class
 com/aliyun/sdk/service/arms20190808/models/RemoveSourcesFromPrometheusGlobalViewResponseBody$Builder.class
 com/aliyun/sdk/service/arms20190808/models/ListIntegrationResponse$1.class
 com/aliyun/sdk/service/arms20190808/models/RemoveAliClusterIdsFromPrometheusGlobalViewRequest.class
+com/aliyun/sdk/service/arms20190808/models/GetRetcodeLogstoreResponseBody$Data$Builder.class
 com/aliyun/sdk/service/arms20190808/models/ListOnCallSchedulesRequest.class
 com/aliyun/sdk/service/arms20190808/models/DeleteCmsExporterRequest.class
 com/aliyun/sdk/service/arms20190808/models/CreateOrUpdateIMRobotResponse$1.class

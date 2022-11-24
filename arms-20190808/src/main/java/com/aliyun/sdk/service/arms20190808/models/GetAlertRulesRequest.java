@@ -39,6 +39,10 @@ public class GetAlertRulesRequest extends Request {
     private Long page;
 
     @Query
+    @NameInMap("ProductCode")
+    private String productCode;
+
+    @Query
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
@@ -56,6 +60,7 @@ public class GetAlertRulesRequest extends Request {
         this.alertType = builder.alertType;
         this.clusterId = builder.clusterId;
         this.page = builder.page;
+        this.productCode = builder.productCode;
         this.regionId = builder.regionId;
         this.size = builder.size;
     }
@@ -116,6 +121,13 @@ public class GetAlertRulesRequest extends Request {
     }
 
     /**
+     * @return productCode
+     */
+    public String getProductCode() {
+        return this.productCode;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -136,6 +148,7 @@ public class GetAlertRulesRequest extends Request {
         private String alertType; 
         private String clusterId; 
         private Long page; 
+        private String productCode; 
         private String regionId; 
         private Long size; 
 
@@ -151,6 +164,7 @@ public class GetAlertRulesRequest extends Request {
             this.alertType = request.alertType;
             this.clusterId = request.clusterId;
             this.page = request.page;
+            this.productCode = request.productCode;
             this.regionId = request.regionId;
             this.size = request.size;
         } 
@@ -206,6 +220,15 @@ public class GetAlertRulesRequest extends Request {
         public Builder page(Long page) {
             this.putQueryParameter("Page", page);
             this.page = page;
+            return this;
+        }
+
+        /**
+         * ProductCode.
+         */
+        public Builder productCode(String productCode) {
+            this.putQueryParameter("ProductCode", productCode);
+            this.productCode = productCode;
             return this;
         }
 

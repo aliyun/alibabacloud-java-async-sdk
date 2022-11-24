@@ -160,6 +160,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetRecordingRuleResponse> getRecordingRule(GetRecordingRuleRequest request);
 
+    CompletableFuture<GetRetcodeDataByQueryResponse> getRetcodeDataByQuery(GetRetcodeDataByQueryRequest request);
+
+    CompletableFuture<GetRetcodeLogstoreResponse> getRetcodeLogstore(GetRetcodeLogstoreRequest request);
+
     CompletableFuture<GetRetcodeShareUrlResponse> getRetcodeShareUrl(GetRetcodeShareUrlRequest request);
 
     CompletableFuture<GetSourceMapInfoResponse> getSourceMapInfo(GetSourceMapInfoRequest request);

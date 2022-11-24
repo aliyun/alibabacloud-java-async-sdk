@@ -25,6 +25,10 @@ public class CreateOrUpdateIMRobotRequest extends Request {
     private String dailyNocTime;
 
     @Body
+    @NameInMap("DingSignKey")
+    private String dingSignKey;
+
+    @Body
     @NameInMap("EnableOutgoing")
     private Boolean enableOutgoing;
 
@@ -55,6 +59,7 @@ public class CreateOrUpdateIMRobotRequest extends Request {
         this.cardTemplate = builder.cardTemplate;
         this.dailyNoc = builder.dailyNoc;
         this.dailyNocTime = builder.dailyNocTime;
+        this.dingSignKey = builder.dingSignKey;
         this.enableOutgoing = builder.enableOutgoing;
         this.robotAddress = builder.robotAddress;
         this.robotId = builder.robotId;
@@ -95,6 +100,13 @@ public class CreateOrUpdateIMRobotRequest extends Request {
      */
     public String getDailyNocTime() {
         return this.dailyNocTime;
+    }
+
+    /**
+     * @return dingSignKey
+     */
+    public String getDingSignKey() {
+        return this.dingSignKey;
     }
 
     /**
@@ -143,6 +155,7 @@ public class CreateOrUpdateIMRobotRequest extends Request {
         private String cardTemplate; 
         private Boolean dailyNoc; 
         private String dailyNocTime; 
+        private String dingSignKey; 
         private Boolean enableOutgoing; 
         private String robotAddress; 
         private Long robotId; 
@@ -159,6 +172,7 @@ public class CreateOrUpdateIMRobotRequest extends Request {
             this.cardTemplate = request.cardTemplate;
             this.dailyNoc = request.dailyNoc;
             this.dailyNocTime = request.dailyNocTime;
+            this.dingSignKey = request.dingSignKey;
             this.enableOutgoing = request.enableOutgoing;
             this.robotAddress = request.robotAddress;
             this.robotId = request.robotId;
@@ -191,6 +205,15 @@ public class CreateOrUpdateIMRobotRequest extends Request {
         public Builder dailyNocTime(String dailyNocTime) {
             this.putBodyParameter("DailyNocTime", dailyNocTime);
             this.dailyNocTime = dailyNocTime;
+            return this;
+        }
+
+        /**
+         * DingSignKey.
+         */
+        public Builder dingSignKey(String dingSignKey) {
+            this.putBodyParameter("DingSignKey", dingSignKey);
+            this.dingSignKey = dingSignKey;
             return this;
         }
 

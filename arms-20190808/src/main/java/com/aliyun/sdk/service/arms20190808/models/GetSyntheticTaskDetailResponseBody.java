@@ -71,6 +71,268 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
 
     } 
 
+    public static class AlertList extends TeaModel {
+        @NameInMap("GeneralAlert")
+        private String generalAlert;
+
+        @NameInMap("IsCritical")
+        private String isCritical;
+
+        @NameInMap("Name")
+        private String name;
+
+        @NameInMap("SeriousAlert")
+        private String seriousAlert;
+
+        @NameInMap("Symbols")
+        private String symbols;
+
+        private AlertList(Builder builder) {
+            this.generalAlert = builder.generalAlert;
+            this.isCritical = builder.isCritical;
+            this.name = builder.name;
+            this.seriousAlert = builder.seriousAlert;
+            this.symbols = builder.symbols;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AlertList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return generalAlert
+         */
+        public String getGeneralAlert() {
+            return this.generalAlert;
+        }
+
+        /**
+         * @return isCritical
+         */
+        public String getIsCritical() {
+            return this.isCritical;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return seriousAlert
+         */
+        public String getSeriousAlert() {
+            return this.seriousAlert;
+        }
+
+        /**
+         * @return symbols
+         */
+        public String getSymbols() {
+            return this.symbols;
+        }
+
+        public static final class Builder {
+            private String generalAlert; 
+            private String isCritical; 
+            private String name; 
+            private String seriousAlert; 
+            private String symbols; 
+
+            /**
+             * GeneralAlert.
+             */
+            public Builder generalAlert(String generalAlert) {
+                this.generalAlert = generalAlert;
+                return this;
+            }
+
+            /**
+             * IsCritical.
+             */
+            public Builder isCritical(String isCritical) {
+                this.isCritical = isCritical;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * SeriousAlert.
+             */
+            public Builder seriousAlert(String seriousAlert) {
+                this.seriousAlert = seriousAlert;
+                return this;
+            }
+
+            /**
+             * Symbols.
+             */
+            public Builder symbols(String symbols) {
+                this.symbols = symbols;
+                return this;
+            }
+
+            public AlertList build() {
+                return new AlertList(this);
+            } 
+
+        } 
+
+    }
+    public static class CommonParam extends TeaModel {
+        @NameInMap("AlarmFlag")
+        private Long alarmFlag;
+
+        @NameInMap("AlertList")
+        private java.util.List < AlertList> alertList;
+
+        @NameInMap("AlertNotifierId")
+        private String alertNotifierId;
+
+        @NameInMap("AlertPolicyId")
+        private String alertPolicyId;
+
+        @NameInMap("MonitorSamples")
+        private String monitorSamples;
+
+        @NameInMap("StartExecutionTime")
+        private String startExecutionTime;
+
+        private CommonParam(Builder builder) {
+            this.alarmFlag = builder.alarmFlag;
+            this.alertList = builder.alertList;
+            this.alertNotifierId = builder.alertNotifierId;
+            this.alertPolicyId = builder.alertPolicyId;
+            this.monitorSamples = builder.monitorSamples;
+            this.startExecutionTime = builder.startExecutionTime;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CommonParam create() {
+            return builder().build();
+        }
+
+        /**
+         * @return alarmFlag
+         */
+        public Long getAlarmFlag() {
+            return this.alarmFlag;
+        }
+
+        /**
+         * @return alertList
+         */
+        public java.util.List < AlertList> getAlertList() {
+            return this.alertList;
+        }
+
+        /**
+         * @return alertNotifierId
+         */
+        public String getAlertNotifierId() {
+            return this.alertNotifierId;
+        }
+
+        /**
+         * @return alertPolicyId
+         */
+        public String getAlertPolicyId() {
+            return this.alertPolicyId;
+        }
+
+        /**
+         * @return monitorSamples
+         */
+        public String getMonitorSamples() {
+            return this.monitorSamples;
+        }
+
+        /**
+         * @return startExecutionTime
+         */
+        public String getStartExecutionTime() {
+            return this.startExecutionTime;
+        }
+
+        public static final class Builder {
+            private Long alarmFlag; 
+            private java.util.List < AlertList> alertList; 
+            private String alertNotifierId; 
+            private String alertPolicyId; 
+            private String monitorSamples; 
+            private String startExecutionTime; 
+
+            /**
+             * AlarmFlag.
+             */
+            public Builder alarmFlag(Long alarmFlag) {
+                this.alarmFlag = alarmFlag;
+                return this;
+            }
+
+            /**
+             * AlertList.
+             */
+            public Builder alertList(java.util.List < AlertList> alertList) {
+                this.alertList = alertList;
+                return this;
+            }
+
+            /**
+             * AlertNotifierId.
+             */
+            public Builder alertNotifierId(String alertNotifierId) {
+                this.alertNotifierId = alertNotifierId;
+                return this;
+            }
+
+            /**
+             * AlertPolicyId.
+             */
+            public Builder alertPolicyId(String alertPolicyId) {
+                this.alertPolicyId = alertPolicyId;
+                return this;
+            }
+
+            /**
+             * MonitorSamples.
+             */
+            public Builder monitorSamples(String monitorSamples) {
+                this.monitorSamples = monitorSamples;
+                return this;
+            }
+
+            /**
+             * StartExecutionTime.
+             */
+            public Builder startExecutionTime(String startExecutionTime) {
+                this.startExecutionTime = startExecutionTime;
+                return this;
+            }
+
+            public CommonParam build() {
+                return new CommonParam(this);
+            } 
+
+        } 
+
+    }
     public static class Download extends TeaModel {
         @NameInMap("ConnectionTimeout")
         private Long connectionTimeout;
@@ -493,7 +755,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         } 
 
     }
-    public static class MinotorList extends TeaModel {
+    public static class MonitorList extends TeaModel {
         @NameInMap("CityCode")
         private Long cityCode;
 
@@ -506,7 +768,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         @NameInMap("SendCount")
         private Long sendCount;
 
-        private MinotorList(Builder builder) {
+        private MonitorList(Builder builder) {
             this.cityCode = builder.cityCode;
             this.monitorType = builder.monitorType;
             this.netServiceId = builder.netServiceId;
@@ -517,7 +779,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static MinotorList create() {
+        public static MonitorList create() {
             return builder().build();
         }
 
@@ -587,8 +849,8 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
                 return this;
             }
 
-            public MinotorList build() {
-                return new MinotorList(this);
+            public MonitorList build() {
+                return new MonitorList(this);
             } 
 
         } 
@@ -1191,6 +1453,9 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         @NameInMap("NetDnsSwitch")
         private Long netDnsSwitch;
 
+        @NameInMap("NetDnsTimeout")
+        private String netDnsTimeout;
+
         @NameInMap("NetIcmpActive")
         private Long netIcmpActive;
 
@@ -1230,6 +1495,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             this.netDnsQueryMethod = builder.netDnsQueryMethod;
             this.netDnsServer = builder.netDnsServer;
             this.netDnsSwitch = builder.netDnsSwitch;
+            this.netDnsTimeout = builder.netDnsTimeout;
             this.netIcmpActive = builder.netIcmpActive;
             this.netIcmpDataCut = builder.netIcmpDataCut;
             this.netIcmpInterval = builder.netIcmpInterval;
@@ -1284,6 +1550,13 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
          */
         public Long getNetDnsSwitch() {
             return this.netDnsSwitch;
+        }
+
+        /**
+         * @return netDnsTimeout
+         */
+        public String getNetDnsTimeout() {
+            return this.netDnsTimeout;
         }
 
         /**
@@ -1369,6 +1642,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             private String netDnsQueryMethod; 
             private Long netDnsServer; 
             private Long netDnsSwitch; 
+            private String netDnsTimeout; 
             private Long netIcmpActive; 
             private Long netIcmpDataCut; 
             private Long netIcmpInterval; 
@@ -1418,6 +1692,14 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
              */
             public Builder netDnsSwitch(Long netDnsSwitch) {
                 this.netDnsSwitch = netDnsSwitch;
+                return this;
+            }
+
+            /**
+             * NetDnsTimeout.
+             */
+            public Builder netDnsTimeout(String netDnsTimeout) {
+                this.netDnsTimeout = netDnsTimeout;
                 return this;
             }
 
@@ -2103,6 +2385,9 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
 
     }
     public static class TaskDetail extends TeaModel {
+        @NameInMap("CommonParam")
+        private CommonParam commonParam;
+
         @NameInMap("Download")
         private Download download;
 
@@ -2118,8 +2403,11 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         @NameInMap("IpType")
         private Long ipType;
 
-        @NameInMap("MinotorList")
-        private java.util.List < MinotorList> minotorList;
+        @NameInMap("MonitorList")
+        private java.util.List < MonitorList> monitorList;
+
+        @NameInMap("MonitorListString")
+        private String monitorListString;
 
         @NameInMap("Nav")
         private Nav nav;
@@ -2143,12 +2431,14 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         private String url;
 
         private TaskDetail(Builder builder) {
+            this.commonParam = builder.commonParam;
             this.download = builder.download;
             this.extendInterval = builder.extendInterval;
             this.intervalTime = builder.intervalTime;
             this.intervalType = builder.intervalType;
             this.ipType = builder.ipType;
-            this.minotorList = builder.minotorList;
+            this.monitorList = builder.monitorList;
+            this.monitorListString = builder.monitorListString;
             this.nav = builder.nav;
             this.net = builder.net;
             this.protocol = builder.protocol;
@@ -2164,6 +2454,13 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
 
         public static TaskDetail create() {
             return builder().build();
+        }
+
+        /**
+         * @return commonParam
+         */
+        public CommonParam getCommonParam() {
+            return this.commonParam;
         }
 
         /**
@@ -2202,10 +2499,17 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         }
 
         /**
-         * @return minotorList
+         * @return monitorList
          */
-        public java.util.List < MinotorList> getMinotorList() {
-            return this.minotorList;
+        public java.util.List < MonitorList> getMonitorList() {
+            return this.monitorList;
+        }
+
+        /**
+         * @return monitorListString
+         */
+        public String getMonitorListString() {
+            return this.monitorListString;
         }
 
         /**
@@ -2258,12 +2562,14 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private CommonParam commonParam; 
             private Download download; 
             private ExtendInterval extendInterval; 
             private Long intervalTime; 
             private Long intervalType; 
             private Long ipType; 
-            private java.util.List < MinotorList> minotorList; 
+            private java.util.List < MonitorList> monitorList; 
+            private String monitorListString; 
             private Nav nav; 
             private Net net; 
             private Protocol protocol; 
@@ -2271,6 +2577,14 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             private String taskName; 
             private Long taskType; 
             private String url; 
+
+            /**
+             * CommonParam.
+             */
+            public Builder commonParam(CommonParam commonParam) {
+                this.commonParam = commonParam;
+                return this;
+            }
 
             /**
              * Download.
@@ -2313,10 +2627,18 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * MinotorList.
+             * MonitorList.
              */
-            public Builder minotorList(java.util.List < MinotorList> minotorList) {
-                this.minotorList = minotorList;
+            public Builder monitorList(java.util.List < MonitorList> monitorList) {
+                this.monitorList = monitorList;
+                return this;
+            }
+
+            /**
+             * MonitorListString.
+             */
+            public Builder monitorListString(String monitorListString) {
+                this.monitorListString = monitorListString;
                 return this;
             }
 

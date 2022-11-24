@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeWebhookContactsRequest extends Request {
     @Query
+    @NameInMap("ContactIds")
+    private String contactIds;
+
+    @Query
     @NameInMap("Page")
     @Validation(required = true)
     private Long page;
@@ -28,6 +32,7 @@ public class DescribeWebhookContactsRequest extends Request {
 
     private DescribeWebhookContactsRequest(Builder builder) {
         super(builder);
+        this.contactIds = builder.contactIds;
         this.page = builder.page;
         this.size = builder.size;
         this.webhookName = builder.webhookName;
@@ -44,6 +49,13 @@ public class DescribeWebhookContactsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return contactIds
+     */
+    public String getContactIds() {
+        return this.contactIds;
     }
 
     /**
@@ -68,6 +80,7 @@ public class DescribeWebhookContactsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeWebhookContactsRequest, Builder> {
+        private String contactIds; 
         private Long page; 
         private Long size; 
         private String webhookName; 
@@ -78,10 +91,20 @@ public class DescribeWebhookContactsRequest extends Request {
 
         private Builder(DescribeWebhookContactsRequest request) {
             super(request);
+            this.contactIds = request.contactIds;
             this.page = request.page;
             this.size = request.size;
             this.webhookName = request.webhookName;
         } 
+
+        /**
+         * ContactIds.
+         */
+        public Builder contactIds(String contactIds) {
+            this.putQueryParameter("ContactIds", contactIds);
+            this.contactIds = contactIds;
+            return this;
+        }
 
         /**
          * Page.

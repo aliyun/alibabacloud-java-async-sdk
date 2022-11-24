@@ -81,6 +81,9 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         private Long createTime;
 
+        @NameInMap("NickName")
+        private String nickName;
+
         @NameInMap("Pid")
         private String pid;
 
@@ -103,6 +106,7 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
             this.appId = builder.appId;
             this.appName = builder.appName;
             this.createTime = builder.createTime;
+            this.nickName = builder.nickName;
             this.pid = builder.pid;
             this.regionId = builder.regionId;
             this.retcodeAppType = builder.retcodeAppType;
@@ -138,6 +142,13 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
          */
         public Long getCreateTime() {
             return this.createTime;
+        }
+
+        /**
+         * @return nickName
+         */
+        public String getNickName() {
+            return this.nickName;
         }
 
         /**
@@ -186,6 +197,7 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
             private Long appId; 
             private String appName; 
             private Long createTime; 
+            private String nickName; 
             private String pid; 
             private String regionId; 
             private String retcodeAppType; 
@@ -214,6 +226,14 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * NickName.
+             */
+            public Builder nickName(String nickName) {
+                this.nickName = nickName;
                 return this;
             }
 

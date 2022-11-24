@@ -131,6 +131,67 @@ public class ListTraceAppsResponseBody extends TeaModel {
 
     } 
 
+    public static class Tags extends TeaModel {
+        @NameInMap("TagKey")
+        private String tagKey;
+
+        @NameInMap("TagValue")
+        private String tagValue;
+
+        private Tags(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            /**
+             * TagKey.
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * TagValue.
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
     public static class TraceApps extends TeaModel {
         @NameInMap("AppId")
         private Long appId;
@@ -153,6 +214,9 @@ public class ListTraceAppsResponseBody extends TeaModel {
         @NameInMap("Show")
         private Boolean show;
 
+        @NameInMap("Tags")
+        private java.util.List < Tags> tags;
+
         @NameInMap("Type")
         private String type;
 
@@ -170,6 +234,7 @@ public class ListTraceAppsResponseBody extends TeaModel {
             this.pid = builder.pid;
             this.regionId = builder.regionId;
             this.show = builder.show;
+            this.tags = builder.tags;
             this.type = builder.type;
             this.updateTime = builder.updateTime;
             this.userId = builder.userId;
@@ -233,6 +298,13 @@ public class ListTraceAppsResponseBody extends TeaModel {
         }
 
         /**
+         * @return tags
+         */
+        public java.util.List < Tags> getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
@@ -261,6 +333,7 @@ public class ListTraceAppsResponseBody extends TeaModel {
             private String pid; 
             private String regionId; 
             private Boolean show; 
+            private java.util.List < Tags> tags; 
             private String type; 
             private Long updateTime; 
             private String userId; 
@@ -318,6 +391,14 @@ public class ListTraceAppsResponseBody extends TeaModel {
              */
             public Builder show(Boolean show) {
                 this.show = show;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List < Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 

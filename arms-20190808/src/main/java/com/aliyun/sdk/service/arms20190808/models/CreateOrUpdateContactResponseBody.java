@@ -78,6 +78,9 @@ public class CreateOrUpdateContactResponseBody extends TeaModel {
         @NameInMap("ContactName")
         private String contactName;
 
+        @NameInMap("DingRobotUrl")
+        private String dingRobotUrl;
+
         @NameInMap("Email")
         private String email;
 
@@ -90,13 +93,18 @@ public class CreateOrUpdateContactResponseBody extends TeaModel {
         @NameInMap("ReissueSendNotice")
         private Long reissueSendNotice;
 
+        @NameInMap("isEmailVerify")
+        private Boolean isEmailVerify;
+
         private AlertContact(Builder builder) {
             this.contactId = builder.contactId;
             this.contactName = builder.contactName;
+            this.dingRobotUrl = builder.dingRobotUrl;
             this.email = builder.email;
             this.isVerify = builder.isVerify;
             this.phone = builder.phone;
             this.reissueSendNotice = builder.reissueSendNotice;
+            this.isEmailVerify = builder.isEmailVerify;
         }
 
         public static Builder builder() {
@@ -119,6 +127,13 @@ public class CreateOrUpdateContactResponseBody extends TeaModel {
          */
         public String getContactName() {
             return this.contactName;
+        }
+
+        /**
+         * @return dingRobotUrl
+         */
+        public String getDingRobotUrl() {
+            return this.dingRobotUrl;
         }
 
         /**
@@ -149,13 +164,22 @@ public class CreateOrUpdateContactResponseBody extends TeaModel {
             return this.reissueSendNotice;
         }
 
+        /**
+         * @return isEmailVerify
+         */
+        public Boolean getIsEmailVerify() {
+            return this.isEmailVerify;
+        }
+
         public static final class Builder {
             private Float contactId; 
             private String contactName; 
+            private String dingRobotUrl; 
             private String email; 
             private Boolean isVerify; 
             private String phone; 
             private Long reissueSendNotice; 
+            private Boolean isEmailVerify; 
 
             /**
              * 告警联系人ID
@@ -170,6 +194,14 @@ public class CreateOrUpdateContactResponseBody extends TeaModel {
              */
             public Builder contactName(String contactName) {
                 this.contactName = contactName;
+                return this;
+            }
+
+            /**
+             * DingRobotUrl.
+             */
+            public Builder dingRobotUrl(String dingRobotUrl) {
+                this.dingRobotUrl = dingRobotUrl;
                 return this;
             }
 
@@ -202,6 +234,14 @@ public class CreateOrUpdateContactResponseBody extends TeaModel {
              */
             public Builder reissueSendNotice(Long reissueSendNotice) {
                 this.reissueSendNotice = reissueSendNotice;
+                return this;
+            }
+
+            /**
+             * isEmailVerify.
+             */
+            public Builder isEmailVerify(Boolean isEmailVerify) {
+                this.isEmailVerify = isEmailVerify;
                 return this;
             }
 

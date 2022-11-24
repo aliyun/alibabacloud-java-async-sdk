@@ -21,9 +21,17 @@ public class CreateOrUpdateContactRequest extends Request {
     @Validation(required = true)
     private String contactName;
 
+    @Query
+    @NameInMap("DingRobotUrl")
+    private String dingRobotUrl;
+
     @Body
     @NameInMap("Email")
     private String email;
+
+    @Body
+    @NameInMap("IsEmailVerify")
+    private Boolean isEmailVerify;
 
     @Body
     @NameInMap("Phone")
@@ -37,7 +45,9 @@ public class CreateOrUpdateContactRequest extends Request {
         super(builder);
         this.contactId = builder.contactId;
         this.contactName = builder.contactName;
+        this.dingRobotUrl = builder.dingRobotUrl;
         this.email = builder.email;
+        this.isEmailVerify = builder.isEmailVerify;
         this.phone = builder.phone;
         this.reissueSendNotice = builder.reissueSendNotice;
     }
@@ -70,10 +80,24 @@ public class CreateOrUpdateContactRequest extends Request {
     }
 
     /**
+     * @return dingRobotUrl
+     */
+    public String getDingRobotUrl() {
+        return this.dingRobotUrl;
+    }
+
+    /**
      * @return email
      */
     public String getEmail() {
         return this.email;
+    }
+
+    /**
+     * @return isEmailVerify
+     */
+    public Boolean getIsEmailVerify() {
+        return this.isEmailVerify;
     }
 
     /**
@@ -93,7 +117,9 @@ public class CreateOrUpdateContactRequest extends Request {
     public static final class Builder extends Request.Builder<CreateOrUpdateContactRequest, Builder> {
         private Long contactId; 
         private String contactName; 
+        private String dingRobotUrl; 
         private String email; 
+        private Boolean isEmailVerify; 
         private String phone; 
         private Long reissueSendNotice; 
 
@@ -105,7 +131,9 @@ public class CreateOrUpdateContactRequest extends Request {
             super(request);
             this.contactId = request.contactId;
             this.contactName = request.contactName;
+            this.dingRobotUrl = request.dingRobotUrl;
             this.email = request.email;
+            this.isEmailVerify = request.isEmailVerify;
             this.phone = request.phone;
             this.reissueSendNotice = request.reissueSendNotice;
         } 
@@ -129,11 +157,29 @@ public class CreateOrUpdateContactRequest extends Request {
         }
 
         /**
+         * DingRobotUrl.
+         */
+        public Builder dingRobotUrl(String dingRobotUrl) {
+            this.putQueryParameter("DingRobotUrl", dingRobotUrl);
+            this.dingRobotUrl = dingRobotUrl;
+            return this;
+        }
+
+        /**
          * 告警联系人邮箱
          */
         public Builder email(String email) {
             this.putBodyParameter("Email", email);
             this.email = email;
+            return this;
+        }
+
+        /**
+         * IsEmailVerify.
+         */
+        public Builder isEmailVerify(Boolean isEmailVerify) {
+            this.putBodyParameter("IsEmailVerify", isEmailVerify);
+            this.isEmailVerify = isEmailVerify;
             return this;
         }
 

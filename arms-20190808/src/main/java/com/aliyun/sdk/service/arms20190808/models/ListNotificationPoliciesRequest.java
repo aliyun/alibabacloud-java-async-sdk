@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListNotificationPoliciesRequest extends Request {
     @Query
+    @NameInMap("Ids")
+    private String ids;
+
+    @Query
     @NameInMap("IsDetail")
     private Boolean isDetail;
 
@@ -36,6 +40,7 @@ public class ListNotificationPoliciesRequest extends Request {
 
     private ListNotificationPoliciesRequest(Builder builder) {
         super(builder);
+        this.ids = builder.ids;
         this.isDetail = builder.isDetail;
         this.name = builder.name;
         this.page = builder.page;
@@ -54,6 +59,13 @@ public class ListNotificationPoliciesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return ids
+     */
+    public String getIds() {
+        return this.ids;
     }
 
     /**
@@ -92,6 +104,7 @@ public class ListNotificationPoliciesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListNotificationPoliciesRequest, Builder> {
+        private String ids; 
         private Boolean isDetail; 
         private String name; 
         private Long page; 
@@ -104,12 +117,22 @@ public class ListNotificationPoliciesRequest extends Request {
 
         private Builder(ListNotificationPoliciesRequest request) {
             super(request);
+            this.ids = request.ids;
             this.isDetail = request.isDetail;
             this.name = request.name;
             this.page = request.page;
             this.regionId = request.regionId;
             this.size = request.size;
         } 
+
+        /**
+         * Ids.
+         */
+        public Builder ids(String ids) {
+            this.putQueryParameter("Ids", ids);
+            this.ids = ids;
+            return this;
+        }
 
         /**
          * 是否查询详情信息

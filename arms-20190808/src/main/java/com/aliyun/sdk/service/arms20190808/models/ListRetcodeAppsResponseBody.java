@@ -78,6 +78,9 @@ public class ListRetcodeAppsResponseBody extends TeaModel {
         @NameInMap("AppName")
         private String appName;
 
+        @NameInMap("NickName")
+        private String nickName;
+
         @NameInMap("Pid")
         private String pid;
 
@@ -87,6 +90,7 @@ public class ListRetcodeAppsResponseBody extends TeaModel {
         private RetcodeApps(Builder builder) {
             this.appId = builder.appId;
             this.appName = builder.appName;
+            this.nickName = builder.nickName;
             this.pid = builder.pid;
             this.retcodeAppType = builder.retcodeAppType;
         }
@@ -114,6 +118,13 @@ public class ListRetcodeAppsResponseBody extends TeaModel {
         }
 
         /**
+         * @return nickName
+         */
+        public String getNickName() {
+            return this.nickName;
+        }
+
+        /**
          * @return pid
          */
         public String getPid() {
@@ -130,6 +141,7 @@ public class ListRetcodeAppsResponseBody extends TeaModel {
         public static final class Builder {
             private Long appId; 
             private String appName; 
+            private String nickName; 
             private String pid; 
             private String retcodeAppType; 
 
@@ -146,6 +158,14 @@ public class ListRetcodeAppsResponseBody extends TeaModel {
              */
             public Builder appName(String appName) {
                 this.appName = appName;
+                return this;
+            }
+
+            /**
+             * NickName.
+             */
+            public Builder nickName(String nickName) {
+                this.nickName = nickName;
                 return this;
             }
 

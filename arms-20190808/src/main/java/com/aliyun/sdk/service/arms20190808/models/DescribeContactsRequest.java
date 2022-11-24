@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeContactsRequest extends Request {
     @Query
+    @NameInMap("ContactIds")
+    private String contactIds;
+
+    @Query
     @NameInMap("ContactName")
     private String contactName;
 
@@ -34,13 +38,19 @@ public class DescribeContactsRequest extends Request {
     @Validation(required = true)
     private Long size;
 
+    @Query
+    @NameInMap("Verbose")
+    private String verbose;
+
     private DescribeContactsRequest(Builder builder) {
         super(builder);
+        this.contactIds = builder.contactIds;
         this.contactName = builder.contactName;
         this.email = builder.email;
         this.page = builder.page;
         this.phone = builder.phone;
         this.size = builder.size;
+        this.verbose = builder.verbose;
     }
 
     public static Builder builder() {
@@ -54,6 +64,13 @@ public class DescribeContactsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return contactIds
+     */
+    public String getContactIds() {
+        return this.contactIds;
     }
 
     /**
@@ -91,12 +108,21 @@ public class DescribeContactsRequest extends Request {
         return this.size;
     }
 
+    /**
+     * @return verbose
+     */
+    public String getVerbose() {
+        return this.verbose;
+    }
+
     public static final class Builder extends Request.Builder<DescribeContactsRequest, Builder> {
+        private String contactIds; 
         private String contactName; 
         private String email; 
         private Long page; 
         private String phone; 
         private Long size; 
+        private String verbose; 
 
         private Builder() {
             super();
@@ -104,12 +130,23 @@ public class DescribeContactsRequest extends Request {
 
         private Builder(DescribeContactsRequest request) {
             super(request);
+            this.contactIds = request.contactIds;
             this.contactName = request.contactName;
             this.email = request.email;
             this.page = request.page;
             this.phone = request.phone;
             this.size = request.size;
+            this.verbose = request.verbose;
         } 
+
+        /**
+         * ContactIds.
+         */
+        public Builder contactIds(String contactIds) {
+            this.putQueryParameter("ContactIds", contactIds);
+            this.contactIds = contactIds;
+            return this;
+        }
 
         /**
          * 告警联系人名称
@@ -153,6 +190,15 @@ public class DescribeContactsRequest extends Request {
         public Builder size(Long size) {
             this.putQueryParameter("Size", size);
             this.size = size;
+            return this;
+        }
+
+        /**
+         * Verbose.
+         */
+        public Builder verbose(String verbose) {
+            this.putQueryParameter("Verbose", verbose);
+            this.verbose = verbose;
             return this;
         }
 

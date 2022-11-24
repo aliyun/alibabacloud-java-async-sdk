@@ -191,6 +191,9 @@ public class ListAlertEventsResponseBody extends TeaModel {
         @NameInMap("GeneratorURL")
         private String generatorURL;
 
+        @NameInMap("HandlerName")
+        private String handlerName;
+
         @NameInMap("IntegrationName")
         private String integrationName;
 
@@ -219,6 +222,7 @@ public class ListAlertEventsResponseBody extends TeaModel {
             this.description = builder.description;
             this.endTime = builder.endTime;
             this.generatorURL = builder.generatorURL;
+            this.handlerName = builder.handlerName;
             this.integrationName = builder.integrationName;
             this.integrationType = builder.integrationType;
             this.labels = builder.labels;
@@ -279,6 +283,13 @@ public class ListAlertEventsResponseBody extends TeaModel {
         }
 
         /**
+         * @return handlerName
+         */
+        public String getHandlerName() {
+            return this.handlerName;
+        }
+
+        /**
          * @return integrationName
          */
         public String getIntegrationName() {
@@ -334,6 +345,7 @@ public class ListAlertEventsResponseBody extends TeaModel {
             private String description; 
             private String endTime; 
             private String generatorURL; 
+            private String handlerName; 
             private String integrationName; 
             private String integrationType; 
             private String labels; 
@@ -387,6 +399,14 @@ public class ListAlertEventsResponseBody extends TeaModel {
              */
             public Builder generatorURL(String generatorURL) {
                 this.generatorURL = generatorURL;
+                return this;
+            }
+
+            /**
+             * HandlerName.
+             */
+            public Builder handlerName(String handlerName) {
+                this.handlerName = handlerName;
                 return this;
             }
 

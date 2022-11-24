@@ -72,6 +72,9 @@ public class DescribeContactsResponseBody extends TeaModel {
     } 
 
     public static class AlertContacts extends TeaModel {
+        @NameInMap("ArmsContactId")
+        private Long armsContactId;
+
         @NameInMap("ContactId")
         private Float contactId;
 
@@ -80,6 +83,9 @@ public class DescribeContactsResponseBody extends TeaModel {
 
         @NameInMap("Email")
         private String email;
+
+        @NameInMap("IsEmailVerify")
+        private Boolean isEmailVerify;
 
         @NameInMap("IsVerify")
         private Boolean isVerify;
@@ -91,9 +97,11 @@ public class DescribeContactsResponseBody extends TeaModel {
         private Long reissueSendNotice;
 
         private AlertContacts(Builder builder) {
+            this.armsContactId = builder.armsContactId;
             this.contactId = builder.contactId;
             this.contactName = builder.contactName;
             this.email = builder.email;
+            this.isEmailVerify = builder.isEmailVerify;
             this.isVerify = builder.isVerify;
             this.phone = builder.phone;
             this.reissueSendNotice = builder.reissueSendNotice;
@@ -105,6 +113,13 @@ public class DescribeContactsResponseBody extends TeaModel {
 
         public static AlertContacts create() {
             return builder().build();
+        }
+
+        /**
+         * @return armsContactId
+         */
+        public Long getArmsContactId() {
+            return this.armsContactId;
         }
 
         /**
@@ -129,6 +144,13 @@ public class DescribeContactsResponseBody extends TeaModel {
         }
 
         /**
+         * @return isEmailVerify
+         */
+        public Boolean getIsEmailVerify() {
+            return this.isEmailVerify;
+        }
+
+        /**
          * @return isVerify
          */
         public Boolean getIsVerify() {
@@ -150,12 +172,22 @@ public class DescribeContactsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Long armsContactId; 
             private Float contactId; 
             private String contactName; 
             private String email; 
+            private Boolean isEmailVerify; 
             private Boolean isVerify; 
             private String phone; 
             private Long reissueSendNotice; 
+
+            /**
+             * ArmsContactId.
+             */
+            public Builder armsContactId(Long armsContactId) {
+                this.armsContactId = armsContactId;
+                return this;
+            }
 
             /**
              * 告警联系人ID
@@ -178,6 +210,14 @@ public class DescribeContactsResponseBody extends TeaModel {
              */
             public Builder email(String email) {
                 this.email = email;
+                return this;
+            }
+
+            /**
+             * IsEmailVerify.
+             */
+            public Builder isEmailVerify(Boolean isEmailVerify) {
+                this.isEmailVerify = isEmailVerify;
                 return this;
             }
 

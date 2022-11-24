@@ -18,6 +18,10 @@ public class DescribeIMRobotsRequest extends Request {
     private Long page;
 
     @Query
+    @NameInMap("RobotIds")
+    private String robotIds;
+
+    @Query
     @NameInMap("RobotName")
     private String robotName;
 
@@ -29,6 +33,7 @@ public class DescribeIMRobotsRequest extends Request {
     private DescribeIMRobotsRequest(Builder builder) {
         super(builder);
         this.page = builder.page;
+        this.robotIds = builder.robotIds;
         this.robotName = builder.robotName;
         this.size = builder.size;
     }
@@ -54,6 +59,13 @@ public class DescribeIMRobotsRequest extends Request {
     }
 
     /**
+     * @return robotIds
+     */
+    public String getRobotIds() {
+        return this.robotIds;
+    }
+
+    /**
      * @return robotName
      */
     public String getRobotName() {
@@ -69,6 +81,7 @@ public class DescribeIMRobotsRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeIMRobotsRequest, Builder> {
         private Long page; 
+        private String robotIds; 
         private String robotName; 
         private Long size; 
 
@@ -79,6 +92,7 @@ public class DescribeIMRobotsRequest extends Request {
         private Builder(DescribeIMRobotsRequest request) {
             super(request);
             this.page = request.page;
+            this.robotIds = request.robotIds;
             this.robotName = request.robotName;
             this.size = request.size;
         } 
@@ -89,6 +103,15 @@ public class DescribeIMRobotsRequest extends Request {
         public Builder page(Long page) {
             this.putQueryParameter("Page", page);
             this.page = page;
+            return this;
+        }
+
+        /**
+         * RobotIds.
+         */
+        public Builder robotIds(String robotIds) {
+            this.putQueryParameter("RobotIds", robotIds);
+            this.robotIds = robotIds;
             return this;
         }
 

@@ -17,8 +17,16 @@ public class InstallManagedPrometheusRequest extends Request {
     private String clusterId;
 
     @Query
+    @NameInMap("ClusterName")
+    private String clusterName;
+
+    @Query
     @NameInMap("ClusterType")
     private String clusterType;
+
+    @Query
+    @NameInMap("GrafanaInstanceId")
+    private String grafanaInstanceId;
 
     @Query
     @NameInMap("KubeConfig")
@@ -43,7 +51,9 @@ public class InstallManagedPrometheusRequest extends Request {
     private InstallManagedPrometheusRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
+        this.clusterName = builder.clusterName;
         this.clusterType = builder.clusterType;
+        this.grafanaInstanceId = builder.grafanaInstanceId;
         this.kubeConfig = builder.kubeConfig;
         this.regionId = builder.regionId;
         this.securityGroupId = builder.securityGroupId;
@@ -72,10 +82,24 @@ public class InstallManagedPrometheusRequest extends Request {
     }
 
     /**
+     * @return clusterName
+     */
+    public String getClusterName() {
+        return this.clusterName;
+    }
+
+    /**
      * @return clusterType
      */
     public String getClusterType() {
         return this.clusterType;
+    }
+
+    /**
+     * @return grafanaInstanceId
+     */
+    public String getGrafanaInstanceId() {
+        return this.grafanaInstanceId;
     }
 
     /**
@@ -115,7 +139,9 @@ public class InstallManagedPrometheusRequest extends Request {
 
     public static final class Builder extends Request.Builder<InstallManagedPrometheusRequest, Builder> {
         private String clusterId; 
+        private String clusterName; 
         private String clusterType; 
+        private String grafanaInstanceId; 
         private String kubeConfig; 
         private String regionId; 
         private String securityGroupId; 
@@ -129,7 +155,9 @@ public class InstallManagedPrometheusRequest extends Request {
         private Builder(InstallManagedPrometheusRequest request) {
             super(request);
             this.clusterId = request.clusterId;
+            this.clusterName = request.clusterName;
             this.clusterType = request.clusterType;
+            this.grafanaInstanceId = request.grafanaInstanceId;
             this.kubeConfig = request.kubeConfig;
             this.regionId = request.regionId;
             this.securityGroupId = request.securityGroupId;
@@ -147,11 +175,29 @@ public class InstallManagedPrometheusRequest extends Request {
         }
 
         /**
-         * ClusterType.
+         * 仅ClusterType为“ecs”时生效：ecs实例的名称
+         */
+        public Builder clusterName(String clusterName) {
+            this.putQueryParameter("ClusterName", clusterName);
+            this.clusterName = clusterName;
+            return this;
+        }
+
+        /**
+         * 可选值：ask、ecs
          */
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("ClusterType", clusterType);
             this.clusterType = clusterType;
+            return this;
+        }
+
+        /**
+         * 绑定托管版Grafana工作区Id。为空或“free”时，表示绑定到“共享版Grafana”。
+         */
+        public Builder grafanaInstanceId(String grafanaInstanceId) {
+            this.putQueryParameter("GrafanaInstanceId", grafanaInstanceId);
+            this.grafanaInstanceId = grafanaInstanceId;
             return this;
         }
 

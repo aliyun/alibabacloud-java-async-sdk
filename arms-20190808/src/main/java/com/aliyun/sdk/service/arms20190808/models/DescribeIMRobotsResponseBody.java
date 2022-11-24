@@ -78,6 +78,9 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
         @NameInMap("DailyNocTime")
         private String dailyNocTime;
 
+        @NameInMap("DingSignKey")
+        private String dingSignKey;
+
         @NameInMap("RobotAddr")
         private String robotAddr;
 
@@ -93,6 +96,7 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
         private AlertIMRobots(Builder builder) {
             this.dailyNoc = builder.dailyNoc;
             this.dailyNocTime = builder.dailyNocTime;
+            this.dingSignKey = builder.dingSignKey;
             this.robotAddr = builder.robotAddr;
             this.robotId = builder.robotId;
             this.robotName = builder.robotName;
@@ -119,6 +123,13 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
          */
         public String getDailyNocTime() {
             return this.dailyNocTime;
+        }
+
+        /**
+         * @return dingSignKey
+         */
+        public String getDingSignKey() {
+            return this.dingSignKey;
         }
 
         /**
@@ -152,6 +163,7 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean dailyNoc; 
             private String dailyNocTime; 
+            private String dingSignKey; 
             private String robotAddr; 
             private Float robotId; 
             private String robotName; 
@@ -170,6 +182,14 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
              */
             public Builder dailyNocTime(String dailyNocTime) {
                 this.dailyNocTime = dailyNocTime;
+                return this;
+            }
+
+            /**
+             * DingSignKey.
+             */
+            public Builder dingSignKey(String dingSignKey) {
+                this.dingSignKey = dingSignKey;
                 return this;
             }
 

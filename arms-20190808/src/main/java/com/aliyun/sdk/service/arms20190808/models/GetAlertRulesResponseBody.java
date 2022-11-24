@@ -997,7 +997,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * 告警规则ID
+             * AlertId.
              */
             public Builder alertId(Float alertId) {
                 this.alertId = alertId;

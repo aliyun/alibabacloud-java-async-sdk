@@ -96,7 +96,7 @@ public class UninstallManagedPrometheusRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * ClusterType为“ask”时，必填。
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -105,7 +105,7 @@ public class UninstallManagedPrometheusRequest extends Request {
         }
 
         /**
-         * ClusterType.
+         * 可选值：ask、ecs
          */
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("ClusterType", clusterType);

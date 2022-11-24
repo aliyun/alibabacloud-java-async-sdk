@@ -17,6 +17,10 @@ public class DescribeContactGroupsRequest extends Request {
     private String contactGroupName;
 
     @Query
+    @NameInMap("GroupIds")
+    private String groupIds;
+
+    @Query
     @NameInMap("IsDetail")
     private Boolean isDetail;
 
@@ -33,6 +37,7 @@ public class DescribeContactGroupsRequest extends Request {
     private DescribeContactGroupsRequest(Builder builder) {
         super(builder);
         this.contactGroupName = builder.contactGroupName;
+        this.groupIds = builder.groupIds;
         this.isDetail = builder.isDetail;
         this.page = builder.page;
         this.size = builder.size;
@@ -59,6 +64,13 @@ public class DescribeContactGroupsRequest extends Request {
     }
 
     /**
+     * @return groupIds
+     */
+    public String getGroupIds() {
+        return this.groupIds;
+    }
+
+    /**
      * @return isDetail
      */
     public Boolean getIsDetail() {
@@ -81,6 +93,7 @@ public class DescribeContactGroupsRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeContactGroupsRequest, Builder> {
         private String contactGroupName; 
+        private String groupIds; 
         private Boolean isDetail; 
         private Long page; 
         private Long size; 
@@ -92,6 +105,7 @@ public class DescribeContactGroupsRequest extends Request {
         private Builder(DescribeContactGroupsRequest request) {
             super(request);
             this.contactGroupName = request.contactGroupName;
+            this.groupIds = request.groupIds;
             this.isDetail = request.isDetail;
             this.page = request.page;
             this.size = request.size;
@@ -103,6 +117,15 @@ public class DescribeContactGroupsRequest extends Request {
         public Builder contactGroupName(String contactGroupName) {
             this.putQueryParameter("ContactGroupName", contactGroupName);
             this.contactGroupName = contactGroupName;
+            return this;
+        }
+
+        /**
+         * GroupIds.
+         */
+        public Builder groupIds(String groupIds) {
+            this.putQueryParameter("GroupIds", groupIds);
+            this.groupIds = groupIds;
             return this;
         }
 
