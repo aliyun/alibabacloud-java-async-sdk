@@ -162,4 +162,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<RecognizeWaybillResponse> recognizeWaybill(RecognizeWaybillRequest request);
 
+    CompletableFuture<VerifyBusinessLicenseResponse> verifyBusinessLicense(VerifyBusinessLicenseRequest request);
+
+    CompletableFuture<VerifyVATInvoiceResponse> verifyVATInvoice(VerifyVATInvoiceRequest request);
+
 }

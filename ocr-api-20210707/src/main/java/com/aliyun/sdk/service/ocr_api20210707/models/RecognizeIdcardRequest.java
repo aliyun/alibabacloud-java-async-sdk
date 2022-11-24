@@ -17,6 +17,10 @@ public class RecognizeIdcardRequest extends Request {
     private Boolean outputFigure;
 
     @Query
+    @NameInMap("OutputQualityInfo")
+    private Boolean outputQualityInfo;
+
+    @Query
     @NameInMap("Url")
     private String url;
 
@@ -27,6 +31,7 @@ public class RecognizeIdcardRequest extends Request {
     private RecognizeIdcardRequest(Builder builder) {
         super(builder);
         this.outputFigure = builder.outputFigure;
+        this.outputQualityInfo = builder.outputQualityInfo;
         this.url = builder.url;
         this.body = builder.body;
     }
@@ -52,6 +57,13 @@ public class RecognizeIdcardRequest extends Request {
     }
 
     /**
+     * @return outputQualityInfo
+     */
+    public Boolean getOutputQualityInfo() {
+        return this.outputQualityInfo;
+    }
+
+    /**
      * @return url
      */
     public String getUrl() {
@@ -67,6 +79,7 @@ public class RecognizeIdcardRequest extends Request {
 
     public static final class Builder extends Request.Builder<RecognizeIdcardRequest, Builder> {
         private Boolean outputFigure; 
+        private Boolean outputQualityInfo; 
         private String url; 
         private java.io.InputStream body; 
 
@@ -77,6 +90,7 @@ public class RecognizeIdcardRequest extends Request {
         private Builder(RecognizeIdcardRequest request) {
             super(request);
             this.outputFigure = request.outputFigure;
+            this.outputQualityInfo = request.outputQualityInfo;
             this.url = request.url;
             this.body = request.body;
         } 
@@ -87,6 +101,15 @@ public class RecognizeIdcardRequest extends Request {
         public Builder outputFigure(Boolean outputFigure) {
             this.putQueryParameter("OutputFigure", outputFigure);
             this.outputFigure = outputFigure;
+            return this;
+        }
+
+        /**
+         * 是否需要输出身份证质量检测信息
+         */
+        public Builder outputQualityInfo(Boolean outputQualityInfo) {
+            this.putQueryParameter("OutputQualityInfo", outputQualityInfo);
+            this.outputQualityInfo = outputQualityInfo;
             return this;
         }
 
