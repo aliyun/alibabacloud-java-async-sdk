@@ -16,6 +16,7 @@ com/aliyun/sdk/service/cs20151215/models/ModifyClusterConfigurationRequest$Confi
 com/aliyun/sdk/service/cs20151215/models/DeletePolicyInstanceResponse$1.class
 com/aliyun/sdk/service/cs20151215/models/CancelClusterUpgradeResponse$BuilderImpl.class
 com/aliyun/sdk/service/cs20151215/models/EdgeClusterAddEdgeMachineRequest$Builder.class
+com/aliyun/sdk/service/cs20151215/models/UpgradeClusterNodepoolRequest$1.class
 com/aliyun/sdk/service/cs20151215/models/ModifyClusterConfigurationRequest$Configs.class
 com/aliyun/sdk/service/cs20151215/models/ResumeComponentUpgradeResponse$1.class
 com/aliyun/sdk/service/cs20151215/models/DescribePolicyGovernanceInClusterResponse$Builder.class
@@ -111,6 +112,7 @@ com/aliyun/sdk/service/cs20151215/models/TagResourcesResponse$BuilderImpl.class
 com/aliyun/sdk/service/cs20151215/models/DescribeClusterUserKubeconfigRequest$Builder.class
 com/aliyun/sdk/service/cs20151215/models/CreateClusterNodePoolRequest$1.class
 com/aliyun/sdk/service/cs20151215/models/DescribeClusterLogsResponse$DescribeClusterLogsResponseBody.class
+com/aliyun/sdk/service/cs20151215/models/UpgradeClusterNodepoolResponse$1.class
 com/aliyun/sdk/service/cs20151215/models/UpdateContactGroupForAlertRequest.class
 com/aliyun/sdk/service/cs20151215/models/DescribeClusterNodesResponseBody$Page.class
 com/aliyun/sdk/service/cs20151215/models/DescribeClusterEventsResponse$Builder.class
@@ -162,6 +164,7 @@ com/aliyun/sdk/service/cs20151215/models/PauseComponentUpgradeRequest.class
 com/aliyun/sdk/service/cs20151215/models/DescribeKubernetesVersionMetadataResponse$DescribeKubernetesVersionMetadataResponseBody.class
 com/aliyun/sdk/service/cs20151215/models/EdgeClusterAddEdgeMachineResponse$Builder.class
 com/aliyun/sdk/service/cs20151215/models/Tag.class
+com/aliyun/sdk/service/cs20151215/models/DescribeUserQuotaResponseBody$EdgeImprovedNodepoolQuota.class
 com/aliyun/sdk/service/cs20151215/models/EdgeClusterAddEdgeMachineResponseBody$1.class
 com/aliyun/sdk/service/cs20151215/models/DescirbeWorkflowRequest$Builder.class
 com/aliyun/sdk/service/cs20151215/models/DescribeEdgeMachineModelsResponseBody$1.class
@@ -294,6 +297,7 @@ com/aliyun/sdk/service/cs20151215/models/DeployPolicyInstanceResponse$BuilderImp
 com/aliyun/sdk/service/cs20151215/models/CreateClusterResponse$BuilderImpl.class
 com/aliyun/sdk/service/cs20151215/models/DescribeClusterNodePoolDetailRequest$Builder.class
 com/aliyun/sdk/service/cs20151215/models/DescribePolicyDetailsResponseBody$1.class
+com/aliyun/sdk/service/cs20151215/models/UpgradeClusterNodepoolResponse$BuilderImpl.class
 com/aliyun/sdk/service/cs20151215/models/DescribePolicyGovernanceInClusterResponseBody$TotalViolations$Builder.class
 com/aliyun/sdk/service/cs20151215/models/DescribePolicyInstancesStatusRequest.class
 com/aliyun/sdk/service/cs20151215/models/CreateTemplateResponse$BuilderImpl.class
@@ -317,6 +321,7 @@ com/aliyun/sdk/service/cs20151215/models/DescribeClusterV2UserKubeconfigRequest.
 com/aliyun/sdk/service/cs20151215/models/CreateClusterNodePoolRequest$Builder.class
 com/aliyun/sdk/service/cs20151215/models/DescribeClusterResourcesResponse$Builder.class
 com/aliyun/sdk/service/cs20151215/models/GrantPermissionsRequest$Builder.class
+com/aliyun/sdk/service/cs20151215/models/UpgradeClusterNodepoolRequest$Builder.class
 com/aliyun/sdk/service/cs20151215/models/CreateEdgeMachineResponse$BuilderImpl.class
 com/aliyun/sdk/service/cs20151215/models/DescribeClusterUserKubeconfigResponseBody.class
 com/aliyun/sdk/service/cs20151215/models/DescribeAddonsResponse$Builder.class
@@ -413,6 +418,7 @@ com/aliyun/sdk/service/cs20151215/models/DescribeTaskInfoResponse$BuilderImpl.cl
 com/aliyun/sdk/service/cs20151215/models/DescribePolicyInstancesResponse$Builder.class
 com/aliyun/sdk/service/cs20151215/models/DescribePolicyInstancesResponse$DescribePolicyInstancesResponseBody$Builder.class
 com/aliyun/sdk/service/cs20151215/models/UntagResourcesResponse$Builder.class
+com/aliyun/sdk/service/cs20151215/models/UpgradeClusterNodepoolResponse$Builder.class
 com/aliyun/sdk/service/cs20151215/models/ModifyClusterNodePoolRequest$SpotPriceLimit$Builder.class
 com/aliyun/sdk/service/cs20151215/models/ModifyClusterRequest$1.class
 com/aliyun/sdk/service/cs20151215/models/CancelTaskResponse$Builder.class
@@ -512,6 +518,7 @@ com/aliyun/sdk/service/cs20151215/models/CreateClusterNodePoolRequest$NodepoolIn
 com/aliyun/sdk/service/cs20151215/models/UpdateContactGroupForAlertRequest$Builder.class
 com/aliyun/sdk/service/cs20151215/models/DescribeEdgeMachineTunnelConfigDetailResponse$BuilderImpl.class
 com/aliyun/sdk/service/cs20151215/models/ResumeTaskResponse.class
+com/aliyun/sdk/service/cs20151215/models/UpgradeClusterNodepoolResponseBody$1.class
 com/aliyun/sdk/service/cs20151215/models/ModifyNodePoolNodeConfigRequest$KubeletConfig.class
 com/aliyun/sdk/service/cs20151215/models/AttachInstancesResponseBody$1.class
 com/aliyun/sdk/service/cs20151215/models/DescribeNodePoolVulsResponseBody$VulList.class
@@ -692,6 +699,7 @@ com/aliyun/sdk/service/cs20151215/models/DescribePolicyGovernanceInClusterRespon
 com/aliyun/sdk/service/cs20151215/models/PauseClusterUpgradeResponse$BuilderImpl.class
 com/aliyun/sdk/service/cs20151215/models/DescribeTaskInfoResponseBody$Events.class
 com/aliyun/sdk/service/cs20151215/models/DescribePolicyGovernanceInClusterResponseBody$Deny.class
+com/aliyun/sdk/service/cs20151215/models/UpgradeClusterNodepoolResponse.class
 com/aliyun/sdk/service/cs20151215/models/DescribeClusterNodePoolsResponseBody$UpgradeConfig$Builder.class
 com/aliyun/sdk/service/cs20151215/models/DeleteClusterRequest.class
 com/aliyun/sdk/service/cs20151215/models/DescribeTemplateAttributeResponse$1.class
@@ -755,6 +763,7 @@ com/aliyun/sdk/service/cs20151215/models/DescribeEdgeMachineActiveProcessRespons
 com/aliyun/sdk/service/cs20151215/models/CreateKubernetesTriggerRequest$Builder.class
 com/aliyun/sdk/service/cs20151215/models/DescribePolicyGovernanceInClusterResponseBody$Violations$Builder.class
 com/aliyun/sdk/service/cs20151215/models/StandardComponentsValue$Builder.class
+com/aliyun/sdk/service/cs20151215/models/UpgradeClusterNodepoolRequest.class
 com/aliyun/sdk/service/cs20151215/models/OpenAckServiceResponse$BuilderImpl.class
 com/aliyun/sdk/service/cs20151215/models/DeleteAlertContactGroupRequest.class
 com/aliyun/sdk/service/cs20151215/models/DescribeClusterEventsResponseBody$Events.class
@@ -852,6 +861,7 @@ com/aliyun/sdk/service/cs20151215/models/DescribeClusterEventsRequest.class
 com/aliyun/sdk/service/cs20151215/models/DescribeClusterNodePoolsResponseBody$1.class
 com/aliyun/sdk/service/cs20151215/models/DescribeEdgeMachineTunnelConfigDetailResponseBody$Builder.class
 com/aliyun/sdk/service/cs20151215/models/InstallClusterAddonsRequest$InstallClusterAddonsRequestBody.class
+com/aliyun/sdk/service/cs20151215/models/UpgradeClusterNodepoolResponseBody$Builder.class
 com/aliyun/sdk/service/cs20151215/models/CancelWorkflowRequest$1.class
 com/aliyun/sdk/service/cs20151215/models/ModifyNodePoolNodeConfigRequest$KubeletConfig$Builder.class
 com/aliyun/sdk/service/cs20151215/models/DescribePolicyGovernanceInClusterRequest.class
@@ -896,6 +906,7 @@ com/aliyun/sdk/service/cs20151215/models/ModifyClusterRequest.class
 com/aliyun/sdk/service/cs20151215/models/AttachInstancesResponseBody$List.class
 com/aliyun/sdk/service/cs20151215/models/ListTagResourcesResponseBody$TagResource$Builder.class
 com/aliyun/sdk/service/cs20151215/models/InstallClusterAddonsRequest$Builder.class
+com/aliyun/sdk/service/cs20151215/models/UpgradeClusterNodepoolResponseBody.class
 com/aliyun/sdk/service/cs20151215/models/StandardComponentsValue$1.class
 com/aliyun/sdk/service/cs20151215/models/DescribeClusterResourcesResponse$DescribeClusterResourcesResponseBody$Builder.class
 com/aliyun/sdk/service/cs20151215/models/ResumeUpgradeClusterResponse$Builder.class
@@ -961,6 +972,7 @@ com/aliyun/sdk/service/cs20151215/models/DescribePolicyDetailsResponseBody$Build
 com/aliyun/sdk/service/cs20151215/models/ListTagResourcesResponse.class
 com/aliyun/sdk/service/cs20151215/models/DescirbeWorkflowResponse.class
 com/aliyun/sdk/service/cs20151215/models/DescribeClustersResponse.class
+com/aliyun/sdk/service/cs20151215/models/DescribeUserQuotaResponseBody$EdgeImprovedNodepoolQuota$Builder.class
 com/aliyun/sdk/service/cs20151215/models/DescribeUserPermissionResponse$BuilderImpl.class
 com/aliyun/sdk/service/cs20151215/models/CreateClusterRequest.class
 com/aliyun/sdk/service/cs20151215/models/ScaleClusterRequest$Taints.class

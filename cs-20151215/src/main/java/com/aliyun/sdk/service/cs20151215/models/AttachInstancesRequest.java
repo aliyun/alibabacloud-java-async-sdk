@@ -44,7 +44,6 @@ public class AttachInstancesRequest extends Request {
 
     @Body
     @NameInMap("key_pair")
-    @Validation(required = true)
     private String keyPair;
 
     @Body
@@ -53,7 +52,6 @@ public class AttachInstancesRequest extends Request {
 
     @Body
     @NameInMap("password")
-    @Validation(required = true)
     private String password;
 
     @Body

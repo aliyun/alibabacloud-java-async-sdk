@@ -218,4 +218,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<UpgradeClusterAddonsResponse> upgradeClusterAddons(UpgradeClusterAddonsRequest request);
 
+    CompletableFuture<UpgradeClusterNodepoolResponse> upgradeClusterNodepool(UpgradeClusterNodepoolRequest request);
+
 }

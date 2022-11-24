@@ -24,6 +24,9 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
     @NameInMap("cluster_quota")
     private Long clusterQuota;
 
+    @NameInMap("edge_improved_nodepool_quota")
+    private EdgeImprovedNodepoolQuota edgeImprovedNodepoolQuota;
+
     @NameInMap("node_quota")
     private Long nodeQuota;
 
@@ -32,6 +35,7 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
         this.askClusterQuota = builder.askClusterQuota;
         this.clusterNodepoolQuota = builder.clusterNodepoolQuota;
         this.clusterQuota = builder.clusterQuota;
+        this.edgeImprovedNodepoolQuota = builder.edgeImprovedNodepoolQuota;
         this.nodeQuota = builder.nodeQuota;
     }
 
@@ -72,6 +76,13 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
     }
 
     /**
+     * @return edgeImprovedNodepoolQuota
+     */
+    public EdgeImprovedNodepoolQuota getEdgeImprovedNodepoolQuota() {
+        return this.edgeImprovedNodepoolQuota;
+    }
+
+    /**
      * @return nodeQuota
      */
     public Long getNodeQuota() {
@@ -83,6 +94,7 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
         private Long askClusterQuota; 
         private Long clusterNodepoolQuota; 
         private Long clusterQuota; 
+        private EdgeImprovedNodepoolQuota edgeImprovedNodepoolQuota; 
         private Long nodeQuota; 
 
         /**
@@ -118,6 +130,14 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
         }
 
         /**
+         * 边缘增强型节点池quota
+         */
+        public Builder edgeImprovedNodepoolQuota(EdgeImprovedNodepoolQuota edgeImprovedNodepoolQuota) {
+            this.edgeImprovedNodepoolQuota = edgeImprovedNodepoolQuota;
+            return this;
+        }
+
+        /**
          * 单集群的节点配额。
          */
         public Builder nodeQuota(Long nodeQuota) {
@@ -131,4 +151,85 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
 
     } 
 
+    public static class EdgeImprovedNodepoolQuota extends TeaModel {
+        @NameInMap("bandwidth")
+        private Integer bandwidth;
+
+        @NameInMap("count")
+        private Integer count;
+
+        @NameInMap("period")
+        private Integer period;
+
+        private EdgeImprovedNodepoolQuota(Builder builder) {
+            this.bandwidth = builder.bandwidth;
+            this.count = builder.count;
+            this.period = builder.period;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static EdgeImprovedNodepoolQuota create() {
+            return builder().build();
+        }
+
+        /**
+         * @return bandwidth
+         */
+        public Integer getBandwidth() {
+            return this.bandwidth;
+        }
+
+        /**
+         * @return count
+         */
+        public Integer getCount() {
+            return this.count;
+        }
+
+        /**
+         * @return period
+         */
+        public Integer getPeriod() {
+            return this.period;
+        }
+
+        public static final class Builder {
+            private Integer bandwidth; 
+            private Integer count; 
+            private Integer period; 
+
+            /**
+             * 每个边缘增强型节点池允许的最大带宽，单位Mbps
+             */
+            public Builder bandwidth(Integer bandwidth) {
+                this.bandwidth = bandwidth;
+                return this;
+            }
+
+            /**
+             * 每个账号下允许创建的边缘增强型节点池数量。
+             */
+            public Builder count(Integer count) {
+                this.count = count;
+                return this;
+            }
+
+            /**
+             * 每个边缘增强型节点池最大购买时长，单位月。由于边缘增强型节点池为按量付费，用户暂时无需关注该字段。
+             */
+            public Builder period(Integer period) {
+                this.period = period;
+                return this;
+            }
+
+            public EdgeImprovedNodepoolQuota build() {
+                return new EdgeImprovedNodepoolQuota(this);
+            } 
+
+        } 
+
+    }
 }

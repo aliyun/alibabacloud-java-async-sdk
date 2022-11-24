@@ -47,7 +47,6 @@ public class CreateClusterRequest extends Request {
 
     @Body
     @NameInMap("container_cidr")
-    @Validation(required = true)
     private String containerCidr;
 
     @Body

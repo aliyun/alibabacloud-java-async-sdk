@@ -123,6 +123,9 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
         @NameInMap("image_category")
         private String imageCategory;
 
+        @NameInMap("architecture")
+        private String architecture;
+
         private Images(Builder builder) {
             this.imageId = builder.imageId;
             this.imageName = builder.imageName;
@@ -131,6 +134,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             this.imageType = builder.imageType;
             this.osType = builder.osType;
             this.imageCategory = builder.imageCategory;
+            this.architecture = builder.architecture;
         }
 
         public static Builder builder() {
@@ -190,6 +194,13 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             return this.imageCategory;
         }
 
+        /**
+         * @return architecture
+         */
+        public String getArchitecture() {
+            return this.architecture;
+        }
+
         public static final class Builder {
             private String imageId; 
             private String imageName; 
@@ -198,6 +209,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             private String imageType; 
             private String osType; 
             private String imageCategory; 
+            private String architecture; 
 
             /**
              * 镜像ID。	
@@ -252,6 +264,14 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
              */
             public Builder imageCategory(String imageCategory) {
                 this.imageCategory = imageCategory;
+                return this;
+            }
+
+            /**
+             * 镜像架构
+             */
+            public Builder architecture(String architecture) {
+                this.architecture = architecture;
                 return this;
             }
 
