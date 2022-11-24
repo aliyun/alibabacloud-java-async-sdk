@@ -78,9 +78,6 @@ public class CreateOrUpdateContactResponseBody extends TeaModel {
         @NameInMap("ContactName")
         private String contactName;
 
-        @NameInMap("DingRobotUrl")
-        private String dingRobotUrl;
-
         @NameInMap("Email")
         private String email;
 
@@ -99,7 +96,6 @@ public class CreateOrUpdateContactResponseBody extends TeaModel {
         private AlertContact(Builder builder) {
             this.contactId = builder.contactId;
             this.contactName = builder.contactName;
-            this.dingRobotUrl = builder.dingRobotUrl;
             this.email = builder.email;
             this.isVerify = builder.isVerify;
             this.phone = builder.phone;
@@ -127,13 +123,6 @@ public class CreateOrUpdateContactResponseBody extends TeaModel {
          */
         public String getContactName() {
             return this.contactName;
-        }
-
-        /**
-         * @return dingRobotUrl
-         */
-        public String getDingRobotUrl() {
-            return this.dingRobotUrl;
         }
 
         /**
@@ -174,7 +163,6 @@ public class CreateOrUpdateContactResponseBody extends TeaModel {
         public static final class Builder {
             private Float contactId; 
             private String contactName; 
-            private String dingRobotUrl; 
             private String email; 
             private Boolean isVerify; 
             private String phone; 
@@ -194,14 +182,6 @@ public class CreateOrUpdateContactResponseBody extends TeaModel {
              */
             public Builder contactName(String contactName) {
                 this.contactName = contactName;
-                return this;
-            }
-
-            /**
-             * DingRobotUrl.
-             */
-            public Builder dingRobotUrl(String dingRobotUrl) {
-                this.dingRobotUrl = dingRobotUrl;
                 return this;
             }
 

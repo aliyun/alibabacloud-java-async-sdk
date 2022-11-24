@@ -21,10 +21,6 @@ public class CreateOrUpdateContactRequest extends Request {
     @Validation(required = true)
     private String contactName;
 
-    @Query
-    @NameInMap("DingRobotUrl")
-    private String dingRobotUrl;
-
     @Body
     @NameInMap("Email")
     private String email;
@@ -45,7 +41,6 @@ public class CreateOrUpdateContactRequest extends Request {
         super(builder);
         this.contactId = builder.contactId;
         this.contactName = builder.contactName;
-        this.dingRobotUrl = builder.dingRobotUrl;
         this.email = builder.email;
         this.isEmailVerify = builder.isEmailVerify;
         this.phone = builder.phone;
@@ -80,13 +75,6 @@ public class CreateOrUpdateContactRequest extends Request {
     }
 
     /**
-     * @return dingRobotUrl
-     */
-    public String getDingRobotUrl() {
-        return this.dingRobotUrl;
-    }
-
-    /**
      * @return email
      */
     public String getEmail() {
@@ -117,7 +105,6 @@ public class CreateOrUpdateContactRequest extends Request {
     public static final class Builder extends Request.Builder<CreateOrUpdateContactRequest, Builder> {
         private Long contactId; 
         private String contactName; 
-        private String dingRobotUrl; 
         private String email; 
         private Boolean isEmailVerify; 
         private String phone; 
@@ -131,7 +118,6 @@ public class CreateOrUpdateContactRequest extends Request {
             super(request);
             this.contactId = request.contactId;
             this.contactName = request.contactName;
-            this.dingRobotUrl = request.dingRobotUrl;
             this.email = request.email;
             this.isEmailVerify = request.isEmailVerify;
             this.phone = request.phone;
@@ -153,15 +139,6 @@ public class CreateOrUpdateContactRequest extends Request {
         public Builder contactName(String contactName) {
             this.putBodyParameter("ContactName", contactName);
             this.contactName = contactName;
-            return this;
-        }
-
-        /**
-         * DingRobotUrl.
-         */
-        public Builder dingRobotUrl(String dingRobotUrl) {
-            this.putQueryParameter("DingRobotUrl", dingRobotUrl);
-            this.dingRobotUrl = dingRobotUrl;
             return this;
         }
 
