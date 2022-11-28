@@ -38,7 +38,7 @@ public class CreateUserResponseBody extends TeaModel {
         private String userId; 
 
         /**
-         * 账户ID
+         * 账户ID。
          */
         public Builder userId(String userId) {
             this.userId = userId;

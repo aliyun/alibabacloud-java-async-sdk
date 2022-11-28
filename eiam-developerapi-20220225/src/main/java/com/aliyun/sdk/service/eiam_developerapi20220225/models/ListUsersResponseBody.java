@@ -96,6 +96,9 @@ public class ListUsersResponseBody extends TeaModel {
         @NameInMap("lockExpireTime")
         private Long lockExpireTime;
 
+        @NameInMap("passwordSet")
+        private Boolean passwordSet;
+
         @NameInMap("phoneNumber")
         private String phoneNumber;
 
@@ -138,6 +141,7 @@ public class ListUsersResponseBody extends TeaModel {
             this.emailVerified = builder.emailVerified;
             this.instanceId = builder.instanceId;
             this.lockExpireTime = builder.lockExpireTime;
+            this.passwordSet = builder.passwordSet;
             this.phoneNumber = builder.phoneNumber;
             this.phoneNumberVerified = builder.phoneNumberVerified;
             this.phoneRegion = builder.phoneRegion;
@@ -213,6 +217,13 @@ public class ListUsersResponseBody extends TeaModel {
          */
         public Long getLockExpireTime() {
             return this.lockExpireTime;
+        }
+
+        /**
+         * @return passwordSet
+         */
+        public Boolean getPasswordSet() {
+            return this.passwordSet;
         }
 
         /**
@@ -301,6 +312,7 @@ public class ListUsersResponseBody extends TeaModel {
             private Boolean emailVerified; 
             private String instanceId; 
             private Long lockExpireTime; 
+            private Boolean passwordSet; 
             private String phoneNumber; 
             private Boolean phoneNumberVerified; 
             private String phoneRegion; 
@@ -374,6 +386,14 @@ public class ListUsersResponseBody extends TeaModel {
              */
             public Builder lockExpireTime(Long lockExpireTime) {
                 this.lockExpireTime = lockExpireTime;
+                return this;
+            }
+
+            /**
+             * 密码是否已设置
+             */
+            public Builder passwordSet(Boolean passwordSet) {
+                this.passwordSet = passwordSet;
                 return this;
             }
 

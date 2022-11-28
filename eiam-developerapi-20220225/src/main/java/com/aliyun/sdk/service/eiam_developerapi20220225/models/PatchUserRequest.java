@@ -37,6 +37,10 @@ public class PatchUserRequest extends Request {
     private String authorization;
 
     @Body
+    @NameInMap("customFields")
+    private java.util.List < CustomFields> customFields;
+
+    @Body
     @NameInMap("displayName")
     private String displayName;
 
@@ -71,6 +75,7 @@ public class PatchUserRequest extends Request {
         this.applicationId = builder.applicationId;
         this.userId = builder.userId;
         this.authorization = builder.authorization;
+        this.customFields = builder.customFields;
         this.displayName = builder.displayName;
         this.email = builder.email;
         this.emailVerified = builder.emailVerified;
@@ -129,6 +134,13 @@ public class PatchUserRequest extends Request {
     }
 
     /**
+     * @return customFields
+     */
+    public java.util.List < CustomFields> getCustomFields() {
+        return this.customFields;
+    }
+
+    /**
      * @return displayName
      */
     public String getDisplayName() {
@@ -183,6 +195,7 @@ public class PatchUserRequest extends Request {
         private String applicationId; 
         private String userId; 
         private String authorization; 
+        private java.util.List < CustomFields> customFields; 
         private String displayName; 
         private String email; 
         private Boolean emailVerified; 
@@ -202,6 +215,7 @@ public class PatchUserRequest extends Request {
             this.applicationId = request.applicationId;
             this.userId = request.userId;
             this.authorization = request.authorization;
+            this.customFields = request.customFields;
             this.displayName = request.displayName;
             this.email = request.email;
             this.emailVerified = request.emailVerified;
@@ -221,7 +235,7 @@ public class PatchUserRequest extends Request {
         }
 
         /**
-         * 实例ID
+         * 实例ID。
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -230,7 +244,7 @@ public class PatchUserRequest extends Request {
         }
 
         /**
-         * 应用ID
+         * 应用ID。
          */
         public Builder applicationId(String applicationId) {
             this.putPathParameter("applicationId", applicationId);
@@ -248,11 +262,23 @@ public class PatchUserRequest extends Request {
         }
 
         /**
-         * 认证信息，格式:Bearer access_token
+         * 认证信息。
+         * <p>
+         * 格式:Bearer ${access_token}。
+         * 示例：Bearer ATxxxx。
          */
         public Builder authorization(String authorization) {
             this.putHeaderParameter("Authorization", authorization);
             this.authorization = authorization;
+            return this;
+        }
+
+        /**
+         * 扩展字段列表
+         */
+        public Builder customFields(java.util.List < CustomFields> customFields) {
+            this.putBodyParameter("customFields", customFields);
+            this.customFields = customFields;
             return this;
         }
 
@@ -326,4 +352,85 @@ public class PatchUserRequest extends Request {
 
     } 
 
+    public static class CustomFields extends TeaModel {
+        @NameInMap("fieldName")
+        private String fieldName;
+
+        @NameInMap("fieldValue")
+        private String fieldValue;
+
+        @NameInMap("operator")
+        private String operator;
+
+        private CustomFields(Builder builder) {
+            this.fieldName = builder.fieldName;
+            this.fieldValue = builder.fieldValue;
+            this.operator = builder.operator;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CustomFields create() {
+            return builder().build();
+        }
+
+        /**
+         * @return fieldName
+         */
+        public String getFieldName() {
+            return this.fieldName;
+        }
+
+        /**
+         * @return fieldValue
+         */
+        public String getFieldValue() {
+            return this.fieldValue;
+        }
+
+        /**
+         * @return operator
+         */
+        public String getOperator() {
+            return this.operator;
+        }
+
+        public static final class Builder {
+            private String fieldName; 
+            private String fieldValue; 
+            private String operator; 
+
+            /**
+             * 扩展字段标识
+             */
+            public Builder fieldName(String fieldName) {
+                this.fieldName = fieldName;
+                return this;
+            }
+
+            /**
+             * 扩展字段值
+             */
+            public Builder fieldValue(String fieldValue) {
+                this.fieldValue = fieldValue;
+                return this;
+            }
+
+            /**
+             * operator.
+             */
+            public Builder operator(String operator) {
+                this.operator = operator;
+                return this;
+            }
+
+            public CustomFields build() {
+                return new CustomFields(this);
+            } 
+
+        } 
+
+    }
 }

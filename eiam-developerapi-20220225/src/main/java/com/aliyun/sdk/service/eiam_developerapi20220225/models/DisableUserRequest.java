@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eiam.dev.models.*;
 
 /**
- * {@link ListUsersRequest} extends {@link RequestModel}
+ * {@link DisableUserRequest} extends {@link RequestModel}
  *
- * <p>ListUsersRequest</p>
+ * <p>DisableUserRequest</p>
  */
-public class ListUsersRequest extends Request {
+public class DisableUserRequest extends Request {
     @Host
     @NameInMap("regionId")
     private String regionId;
@@ -26,39 +26,30 @@ public class ListUsersRequest extends Request {
     @Validation(required = true)
     private String applicationId;
 
+    @Path
+    @NameInMap("userId")
+    @Validation(required = true)
+    private String userId;
+
     @Header
     @NameInMap("Authorization")
     @Validation(required = true)
     private String authorization;
 
-    @Query
-    @NameInMap("organizationalUnitId")
-    private String organizationalUnitId;
-
-    @Query
-    @NameInMap("pageNumber")
-    private Integer pageNumber;
-
-    @Query
-    @NameInMap("pageSize")
-    private Integer pageSize;
-
-    private ListUsersRequest(Builder builder) {
+    private DisableUserRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
         this.applicationId = builder.applicationId;
+        this.userId = builder.userId;
         this.authorization = builder.authorization;
-        this.organizationalUnitId = builder.organizationalUnitId;
-        this.pageNumber = builder.pageNumber;
-        this.pageSize = builder.pageSize;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ListUsersRequest create() {
+    public static DisableUserRequest create() {
         return builder().build();
     }
 
@@ -89,55 +80,37 @@ public class ListUsersRequest extends Request {
     }
 
     /**
+     * @return userId
+     */
+    public String getUserId() {
+        return this.userId;
+    }
+
+    /**
      * @return authorization
      */
     public String getAuthorization() {
         return this.authorization;
     }
 
-    /**
-     * @return organizationalUnitId
-     */
-    public String getOrganizationalUnitId() {
-        return this.organizationalUnitId;
-    }
-
-    /**
-     * @return pageNumber
-     */
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    /**
-     * @return pageSize
-     */
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public static final class Builder extends Request.Builder<ListUsersRequest, Builder> {
+    public static final class Builder extends Request.Builder<DisableUserRequest, Builder> {
         private String regionId; 
         private String instanceId; 
         private String applicationId; 
+        private String userId; 
         private String authorization; 
-        private String organizationalUnitId; 
-        private Integer pageNumber; 
-        private Integer pageSize; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListUsersRequest request) {
+        private Builder(DisableUserRequest request) {
             super(request);
             this.regionId = request.regionId;
             this.instanceId = request.instanceId;
             this.applicationId = request.applicationId;
+            this.userId = request.userId;
             this.authorization = request.authorization;
-            this.organizationalUnitId = request.organizationalUnitId;
-            this.pageNumber = request.pageNumber;
-            this.pageSize = request.pageSize;
         } 
 
         /**
@@ -168,6 +141,15 @@ public class ListUsersRequest extends Request {
         }
 
         /**
+         * 账户ID
+         */
+        public Builder userId(String userId) {
+            this.putPathParameter("userId", userId);
+            this.userId = userId;
+            return this;
+        }
+
+        /**
          * 认证信息。
          * <p>
          * 格式:Bearer ${access_token}。
@@ -179,36 +161,9 @@ public class ListUsersRequest extends Request {
             return this;
         }
 
-        /**
-         * 机构ID
-         */
-        public Builder organizationalUnitId(String organizationalUnitId) {
-            this.putQueryParameter("organizationalUnitId", organizationalUnitId);
-            this.organizationalUnitId = organizationalUnitId;
-            return this;
-        }
-
-        /**
-         * 页码，默认1
-         */
-        public Builder pageNumber(Integer pageNumber) {
-            this.putQueryParameter("pageNumber", pageNumber);
-            this.pageNumber = pageNumber;
-            return this;
-        }
-
-        /**
-         * 单页大小，默认20
-         */
-        public Builder pageSize(Integer pageSize) {
-            this.putQueryParameter("pageSize", pageSize);
-            this.pageSize = pageSize;
-            return this;
-        }
-
         @Override
-        public ListUsersRequest build() {
-            return new ListUsersRequest(this);
+        public DisableUserRequest build() {
+            return new DisableUserRequest(this);
         } 
 
     } 

@@ -26,6 +26,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteUserResponse> deleteUser(DeleteUserRequest request);
 
+    CompletableFuture<DisableUserResponse> disableUser(DisableUserRequest request);
+
+    CompletableFuture<EnableUserResponse> enableUser(EnableUserRequest request);
+
     CompletableFuture<GenerateDeviceCodeResponse> generateDeviceCode(GenerateDeviceCodeRequest request);
 
     CompletableFuture<GenerateTokenResponse> generateToken(GenerateTokenRequest request);

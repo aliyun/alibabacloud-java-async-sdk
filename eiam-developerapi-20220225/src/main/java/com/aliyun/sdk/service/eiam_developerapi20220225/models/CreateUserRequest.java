@@ -32,6 +32,10 @@ public class CreateUserRequest extends Request {
     private String authorization;
 
     @Body
+    @NameInMap("customFields")
+    private java.util.List < CustomFields> customFields;
+
+    @Body
     @NameInMap("description")
     private String description;
 
@@ -52,6 +56,10 @@ public class CreateUserRequest extends Request {
     private String password;
 
     @Body
+    @NameInMap("passwordInitializationConfig")
+    private PasswordInitializationConfig passwordInitializationConfig;
+
+    @Body
     @NameInMap("phoneNumber")
     private String phoneNumber;
 
@@ -70,7 +78,6 @@ public class CreateUserRequest extends Request {
 
     @Body
     @NameInMap("userExternalId")
-    @Validation(maxLength = 64)
     private String userExternalId;
 
     @Body
@@ -84,11 +91,13 @@ public class CreateUserRequest extends Request {
         this.instanceId = builder.instanceId;
         this.applicationId = builder.applicationId;
         this.authorization = builder.authorization;
+        this.customFields = builder.customFields;
         this.description = builder.description;
         this.displayName = builder.displayName;
         this.email = builder.email;
         this.emailVerified = builder.emailVerified;
         this.password = builder.password;
+        this.passwordInitializationConfig = builder.passwordInitializationConfig;
         this.phoneNumber = builder.phoneNumber;
         this.phoneNumberVerified = builder.phoneNumberVerified;
         this.phoneRegion = builder.phoneRegion;
@@ -139,6 +148,13 @@ public class CreateUserRequest extends Request {
     }
 
     /**
+     * @return customFields
+     */
+    public java.util.List < CustomFields> getCustomFields() {
+        return this.customFields;
+    }
+
+    /**
      * @return description
      */
     public String getDescription() {
@@ -171,6 +187,13 @@ public class CreateUserRequest extends Request {
      */
     public String getPassword() {
         return this.password;
+    }
+
+    /**
+     * @return passwordInitializationConfig
+     */
+    public PasswordInitializationConfig getPasswordInitializationConfig() {
+        return this.passwordInitializationConfig;
     }
 
     /**
@@ -220,11 +243,13 @@ public class CreateUserRequest extends Request {
         private String instanceId; 
         private String applicationId; 
         private String authorization; 
+        private java.util.List < CustomFields> customFields; 
         private String description; 
         private String displayName; 
         private String email; 
         private Boolean emailVerified; 
         private String password; 
+        private PasswordInitializationConfig passwordInitializationConfig; 
         private String phoneNumber; 
         private Boolean phoneNumberVerified; 
         private String phoneRegion; 
@@ -242,11 +267,13 @@ public class CreateUserRequest extends Request {
             this.instanceId = request.instanceId;
             this.applicationId = request.applicationId;
             this.authorization = request.authorization;
+            this.customFields = request.customFields;
             this.description = request.description;
             this.displayName = request.displayName;
             this.email = request.email;
             this.emailVerified = request.emailVerified;
             this.password = request.password;
+            this.passwordInitializationConfig = request.passwordInitializationConfig;
             this.phoneNumber = request.phoneNumber;
             this.phoneNumberVerified = request.phoneNumberVerified;
             this.phoneRegion = request.phoneRegion;
@@ -265,7 +292,7 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * 实例ID
+         * 实例ID。
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -274,7 +301,7 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * 应用ID
+         * 应用ID。
          */
         public Builder applicationId(String applicationId) {
             this.putPathParameter("applicationId", applicationId);
@@ -283,11 +310,23 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * 认证信息，格式:Bearer access_token
+         * 认证信息。
+         * <p>
+         * 格式:Bearer ${access_token}。
+         * 示例：Bearer ATxxxx。
          */
         public Builder authorization(String authorization) {
             this.putHeaderParameter("Authorization", authorization);
             this.authorization = authorization;
+            return this;
+        }
+
+        /**
+         * 扩展字段列表
+         */
+        public Builder customFields(java.util.List < CustomFields> customFields) {
+            this.putBodyParameter("customFields", customFields);
+            this.customFields = customFields;
             return this;
         }
 
@@ -301,7 +340,7 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * 账户展示名
+         * 账户展示名。
          */
         public Builder displayName(String displayName) {
             this.putBodyParameter("displayName", displayName);
@@ -333,6 +372,15 @@ public class CreateUserRequest extends Request {
         public Builder password(String password) {
             this.putBodyParameter("password", password);
             this.password = password;
+            return this;
+        }
+
+        /**
+         * 密码初始化配置
+         */
+        public Builder passwordInitializationConfig(PasswordInitializationConfig passwordInitializationConfig) {
+            this.putBodyParameter("passwordInitializationConfig", passwordInitializationConfig);
+            this.passwordInitializationConfig = passwordInitializationConfig;
             return this;
         }
 
@@ -382,7 +430,7 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * 账户名
+         * 账户名称。
          */
         public Builder username(String username) {
             this.putBodyParameter("username", username);
@@ -397,4 +445,166 @@ public class CreateUserRequest extends Request {
 
     } 
 
+    public static class CustomFields extends TeaModel {
+        @NameInMap("fieldName")
+        private String fieldName;
+
+        @NameInMap("fieldValue")
+        private String fieldValue;
+
+        private CustomFields(Builder builder) {
+            this.fieldName = builder.fieldName;
+            this.fieldValue = builder.fieldValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CustomFields create() {
+            return builder().build();
+        }
+
+        /**
+         * @return fieldName
+         */
+        public String getFieldName() {
+            return this.fieldName;
+        }
+
+        /**
+         * @return fieldValue
+         */
+        public String getFieldValue() {
+            return this.fieldValue;
+        }
+
+        public static final class Builder {
+            private String fieldName; 
+            private String fieldValue; 
+
+            /**
+             * 扩展字段标识
+             */
+            public Builder fieldName(String fieldName) {
+                this.fieldName = fieldName;
+                return this;
+            }
+
+            /**
+             * 扩展字段值
+             */
+            public Builder fieldValue(String fieldValue) {
+                this.fieldValue = fieldValue;
+                return this;
+            }
+
+            public CustomFields build() {
+                return new CustomFields(this);
+            } 
+
+        } 
+
+    }
+    public static class PasswordInitializationConfig extends TeaModel {
+        @NameInMap("passwordForcedUpdateStatus")
+        private String passwordForcedUpdateStatus;
+
+        @NameInMap("passwordInitializationPolicyPriority")
+        private String passwordInitializationPolicyPriority;
+
+        @NameInMap("passwordInitializationType")
+        private String passwordInitializationType;
+
+        @NameInMap("userNotificationChannels")
+        private java.util.List < String > userNotificationChannels;
+
+        private PasswordInitializationConfig(Builder builder) {
+            this.passwordForcedUpdateStatus = builder.passwordForcedUpdateStatus;
+            this.passwordInitializationPolicyPriority = builder.passwordInitializationPolicyPriority;
+            this.passwordInitializationType = builder.passwordInitializationType;
+            this.userNotificationChannels = builder.userNotificationChannels;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PasswordInitializationConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return passwordForcedUpdateStatus
+         */
+        public String getPasswordForcedUpdateStatus() {
+            return this.passwordForcedUpdateStatus;
+        }
+
+        /**
+         * @return passwordInitializationPolicyPriority
+         */
+        public String getPasswordInitializationPolicyPriority() {
+            return this.passwordInitializationPolicyPriority;
+        }
+
+        /**
+         * @return passwordInitializationType
+         */
+        public String getPasswordInitializationType() {
+            return this.passwordInitializationType;
+        }
+
+        /**
+         * @return userNotificationChannels
+         */
+        public java.util.List < String > getUserNotificationChannels() {
+            return this.userNotificationChannels;
+        }
+
+        public static final class Builder {
+            private String passwordForcedUpdateStatus; 
+            private String passwordInitializationPolicyPriority; 
+            private String passwordInitializationType; 
+            private java.util.List < String > userNotificationChannels; 
+
+            /**
+             * 强制修改密码状态,默认不启用。枚举取值:enabled(开启)、disabled(禁用)
+             */
+            public Builder passwordForcedUpdateStatus(String passwordForcedUpdateStatus) {
+                this.passwordForcedUpdateStatus = passwordForcedUpdateStatus;
+                return this;
+            }
+
+            /**
+             * 密码初始化策略优先级，不传不生效。枚举取值:global(全局优先)、custom(自定义优先)
+             */
+            public Builder passwordInitializationPolicyPriority(String passwordInitializationPolicyPriority) {
+                this.passwordInitializationPolicyPriority = passwordInitializationPolicyPriority;
+                return this;
+            }
+
+            /**
+             * 密码初始化方式。枚举取值:random(随机)
+             */
+            public Builder passwordInitializationType(String passwordInitializationType) {
+                this.passwordInitializationType = passwordInitializationType;
+                return this;
+            }
+
+            /**
+             * 密码通知渠道。枚举取值:email(邮件)、sms(短信)
+             */
+            public Builder userNotificationChannels(java.util.List < String > userNotificationChannels) {
+                this.userNotificationChannels = userNotificationChannels;
+                return this;
+            }
+
+            public PasswordInitializationConfig build() {
+                return new PasswordInitializationConfig(this);
+            } 
+
+        } 
+
+    }
 }
