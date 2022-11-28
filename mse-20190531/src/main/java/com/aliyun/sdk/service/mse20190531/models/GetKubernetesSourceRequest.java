@@ -18,12 +18,18 @@ public class GetKubernetesSourceRequest extends Request {
 
     @Query
     @NameInMap("GatewayUniqueId")
+    @Validation(required = true)
     private String gatewayUniqueId;
+
+    @Query
+    @NameInMap("VpcId")
+    private String vpcId;
 
     private GetKubernetesSourceRequest(Builder builder) {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
         this.gatewayUniqueId = builder.gatewayUniqueId;
+        this.vpcId = builder.vpcId;
     }
 
     public static Builder builder() {
@@ -53,9 +59,17 @@ public class GetKubernetesSourceRequest extends Request {
         return this.gatewayUniqueId;
     }
 
+    /**
+     * @return vpcId
+     */
+    public String getVpcId() {
+        return this.vpcId;
+    }
+
     public static final class Builder extends Request.Builder<GetKubernetesSourceRequest, Builder> {
         private String acceptLanguage; 
         private String gatewayUniqueId; 
+        private String vpcId; 
 
         private Builder() {
             super();
@@ -65,6 +79,7 @@ public class GetKubernetesSourceRequest extends Request {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
             this.gatewayUniqueId = request.gatewayUniqueId;
+            this.vpcId = request.vpcId;
         } 
 
         /**
@@ -82,6 +97,15 @@ public class GetKubernetesSourceRequest extends Request {
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
             this.gatewayUniqueId = gatewayUniqueId;
+            return this;
+        }
+
+        /**
+         * VpcId.
+         */
+        public Builder vpcId(String vpcId) {
+            this.putQueryParameter("VpcId", vpcId);
+            this.vpcId = vpcId;
             return this;
         }
 

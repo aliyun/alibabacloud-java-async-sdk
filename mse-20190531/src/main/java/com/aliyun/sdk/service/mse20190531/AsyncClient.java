@@ -210,6 +210,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
 
+    CompletableFuture<ListZkTrackResponse> listZkTrack(ListZkTrackRequest request);
+
     CompletableFuture<ListZnodeChildrenResponse> listZnodeChildren(ListZnodeChildrenRequest request);
 
     CompletableFuture<ModifyGovernanceKubernetesClusterResponse> modifyGovernanceKubernetesCluster(ModifyGovernanceKubernetesClusterRequest request);
