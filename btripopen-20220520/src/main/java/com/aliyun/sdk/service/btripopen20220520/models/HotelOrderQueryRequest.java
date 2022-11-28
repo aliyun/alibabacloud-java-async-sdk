@@ -1,0 +1,97 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.btripopen20220520.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link HotelOrderQueryRequest} extends {@link RequestModel}
+ *
+ * <p>HotelOrderQueryRequest</p>
+ */
+public class HotelOrderQueryRequest extends Request {
+    @Query
+    @NameInMap("order_id")
+    @Validation(required = true)
+    private Long orderId;
+
+    @Header
+    @NameInMap("x-acs-btrip-so-corp-token")
+    @Validation(required = true)
+    private String xAcsBtripSoCorpToken;
+
+    private HotelOrderQueryRequest(Builder builder) {
+        super(builder);
+        this.orderId = builder.orderId;
+        this.xAcsBtripSoCorpToken = builder.xAcsBtripSoCorpToken;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static HotelOrderQueryRequest create() {
+        return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return orderId
+     */
+    public Long getOrderId() {
+        return this.orderId;
+    }
+
+    /**
+     * @return xAcsBtripSoCorpToken
+     */
+    public String getXAcsBtripSoCorpToken() {
+        return this.xAcsBtripSoCorpToken;
+    }
+
+    public static final class Builder extends Request.Builder<HotelOrderQueryRequest, Builder> {
+        private Long orderId; 
+        private String xAcsBtripSoCorpToken; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(HotelOrderQueryRequest request) {
+            super(request);
+            this.orderId = request.orderId;
+            this.xAcsBtripSoCorpToken = request.xAcsBtripSoCorpToken;
+        } 
+
+        /**
+         * order_id.
+         */
+        public Builder orderId(Long orderId) {
+            this.putQueryParameter("order_id", orderId);
+            this.orderId = orderId;
+            return this;
+        }
+
+        /**
+         * x-acs-btrip-so-corp-token.
+         */
+        public Builder xAcsBtripSoCorpToken(String xAcsBtripSoCorpToken) {
+            this.putHeaderParameter("x-acs-btrip-so-corp-token", xAcsBtripSoCorpToken);
+            this.xAcsBtripSoCorpToken = xAcsBtripSoCorpToken;
+            return this;
+        }
+
+        @Override
+        public HotelOrderQueryRequest build() {
+            return new HotelOrderQueryRequest(this);
+        } 
+
+    } 
+
+}
