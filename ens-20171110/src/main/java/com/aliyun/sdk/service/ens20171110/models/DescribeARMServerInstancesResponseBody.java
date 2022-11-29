@@ -12,15 +12,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeARMServerInstancesResponseBody</p>
  */
 public class DescribeARMServerInstancesResponseBody extends TeaModel {
+    @NameInMap("PageNumber")
+    private Integer pageNumber;
+
+    @NameInMap("PageSize")
+    private Integer pageSize;
+
     @NameInMap("RequestId")
     private String requestId;
 
     @NameInMap("Servers")
     private java.util.List < Servers> servers;
 
+    @NameInMap("TotalCount")
+    private Integer totalCount;
+
     private DescribeARMServerInstancesResponseBody(Builder builder) {
+        this.pageNumber = builder.pageNumber;
+        this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
         this.servers = builder.servers;
+        this.totalCount = builder.totalCount;
     }
 
     public static Builder builder() {
@@ -29,6 +41,20 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
 
     public static DescribeARMServerInstancesResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     /**
@@ -45,9 +71,35 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
         return this.servers;
     }
 
+    /**
+     * @return totalCount
+     */
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public static final class Builder {
+        private Integer pageNumber; 
+        private Integer pageSize; 
         private String requestId; 
         private java.util.List < Servers> servers; 
+        private Integer totalCount; 
+
+        /**
+         * PageNumber.
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * PageSize.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
 
         /**
          * Id of the request
@@ -62,6 +114,14 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
          */
         public Builder servers(java.util.List < Servers> servers) {
             this.servers = servers;
+            return this;
+        }
+
+        /**
+         * TotalCount.
+         */
+        public Builder totalCount(Integer totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
 

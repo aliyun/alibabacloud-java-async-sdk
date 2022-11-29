@@ -193,6 +193,7 @@ com/aliyun/sdk/service/ens20171110/models/DescribeMeasurementDataResponseBody$Me
 com/aliyun/sdk/service/ens20171110/models/SetLoadBalancerTCPListenerAttributeResponseBody$1.class
 com/aliyun/sdk/service/ens20171110/models/DescribeDataDownloadURLResponseBody$ServerList$Builder.class
 com/aliyun/sdk/service/ens20171110/models/ModifyLoadBalancerAttributeResponse$1.class
+com/aliyun/sdk/service/ens20171110/models/CreateInstanceActiveOpsTaskResponse$1.class
 com/aliyun/sdk/service/ens20171110/models/DescribeApplicationRequest$Builder.class
 com/aliyun/sdk/service/ens20171110/models/DeleteForwardEntryRequest$1.class
 com/aliyun/sdk/service/ens20171110/models/DescribeAICImagesResponse$Builder.class
@@ -489,6 +490,7 @@ com/aliyun/sdk/service/ens20171110/models/ResetDeviceInstanceRequest.class
 com/aliyun/sdk/service/ens20171110/models/DescribeNetworkInterfacesResponse.class
 com/aliyun/sdk/service/ens20171110/models/ReleasePostPaidInstanceRequest.class
 com/aliyun/sdk/service/ens20171110/models/CreateNatGatewayResponse$BuilderImpl.class
+com/aliyun/sdk/service/ens20171110/models/CreateInstanceActiveOpsTaskResponseBody.class
 com/aliyun/sdk/service/ens20171110/models/DescribeEpnInstanceAttributeResponseBody$ConfVersions.class
 com/aliyun/sdk/service/ens20171110/models/ReleasePrePaidInstanceResponse$Builder.class
 com/aliyun/sdk/service/ens20171110/models/GetOssStorageAndAccByBucketsRequest.class
@@ -502,6 +504,7 @@ com/aliyun/sdk/service/ens20171110/models/ModifyForwardEntryResponse.class
 com/aliyun/sdk/service/ens20171110/models/DescribeDataPushResultResponse$1.class
 com/aliyun/sdk/service/ens20171110/models/CreateInstanceRequest$Builder.class
 com/aliyun/sdk/service/ens20171110/models/CreateLoadBalancerTCPListenerResponse.class
+com/aliyun/sdk/service/ens20171110/models/InstanceActiveOpsGroup.class
 com/aliyun/sdk/service/ens20171110/models/DescribeLoadBalancerAttributeResponse$Builder.class
 com/aliyun/sdk/service/ens20171110/models/StartEpnInstanceResponseBody.class
 com/aliyun/sdk/service/ens20171110/models/DescribeImageInfosResponseBody$Images$Builder.class
@@ -754,7 +757,9 @@ com/aliyun/sdk/service/ens20171110/models/DescribeBandWithdChargeTypeResponse.cl
 com/aliyun/sdk/service/ens20171110/models/StopLoadBalancerListenerResponse$BuilderImpl.class
 com/aliyun/sdk/service/ens20171110/models/DescribeARMServerInstancesRequest.class
 com/aliyun/sdk/service/ens20171110/models/CreateSecurityGroupResponseBody$1.class
+com/aliyun/sdk/service/ens20171110/models/InstanceActiveOpsTask.class
 com/aliyun/sdk/service/ens20171110/models/AuthorizeSecurityGroupEgressResponse$BuilderImpl.class
+com/aliyun/sdk/service/ens20171110/models/CreateInstanceActiveOpsTaskResponse.class
 com/aliyun/sdk/service/ens20171110/models/DescribeDataDistResultRequest.class
 com/aliyun/sdk/service/ens20171110/models/DescribeAvailableResourceInfoResponse$Builder.class
 com/aliyun/sdk/service/ens20171110/models/DeleteNatGatewayResponseBody$1.class
@@ -984,6 +989,7 @@ com/aliyun/sdk/service/ens20171110/models/StopEpnInstanceResponseBody$1.class
 com/aliyun/sdk/service/ens20171110/models/DescribeLoadBalancerSpecResponseBody$LoadBalancerSpecs$Builder.class
 com/aliyun/sdk/service/ens20171110/models/CreateMountTargetResponse$BuilderImpl.class
 com/aliyun/sdk/service/ens20171110/models/DeleteImageRequest$Builder.class
+com/aliyun/sdk/service/ens20171110/models/InstanceActiveOpsTask$Builder.class
 com/aliyun/sdk/service/ens20171110/models/StartEpnInstanceResponse$1.class
 com/aliyun/sdk/service/ens20171110/models/ReleaseARMServerInstanceResponseBody$Builder.class
 com/aliyun/sdk/service/ens20171110/models/RemoveVSwitchesFromEpnInstanceRequest$Builder.class
@@ -1262,6 +1268,7 @@ com/aliyun/sdk/service/ens20171110/models/CreateLoadBalancerResponse$Builder.cla
 com/aliyun/sdk/service/ens20171110/models/RemoveVSwitchesFromEpnInstanceResponseBody$Builder.class
 com/aliyun/sdk/service/ens20171110/models/DescribeInstanceAutoRenewAttributeResponseBody$InstanceRenewAttributes$Builder.class
 com/aliyun/sdk/service/ens20171110/models/DeleteImageResponse$BuilderImpl.class
+com/aliyun/sdk/service/ens20171110/models/CreateInstanceActiveOpsTaskRequest$Builder.class
 com/aliyun/sdk/service/ens20171110/models/DeleteNetworkAclEntryRequest$1.class
 com/aliyun/sdk/service/ens20171110/models/DeleteEpnInstanceRequest$Builder.class
 com/aliyun/sdk/service/ens20171110/models/ModifyLoadBalancerAttributeRequest$Builder.class
@@ -1328,6 +1335,7 @@ com/aliyun/sdk/service/ens20171110/models/DescribeDataPushResultResponseBody$Sta
 com/aliyun/sdk/service/ens20171110/models/DescribeEnsRegionsResponseBody.class
 com/aliyun/sdk/service/ens20171110/models/GetDeviceInternetPortResponseBody$NetworkInfo.class
 com/aliyun/sdk/service/ens20171110/models/CreateDiskResponse.class
+com/aliyun/sdk/service/ens20171110/models/InstanceActiveOpsGroup$Builder.class
 com/aliyun/sdk/service/ens20171110/models/RemovePublicIpsFromEpnInstanceResponse$BuilderImpl.class
 com/aliyun/sdk/service/ens20171110/models/PreCreateEnsServiceResponse$Builder.class
 com/aliyun/sdk/service/ens20171110/models/CreateKeyPairResponseBody.class
@@ -1344,12 +1352,14 @@ com/aliyun/sdk/service/ens20171110/models/DescribeDataDownloadURLRequest$Builder
 com/aliyun/sdk/service/ens20171110/models/DescribeEnsNetSaleDistrictResponseBody$Builder.class
 com/aliyun/sdk/service/ens20171110/models/DescribeEnsRegionsResponseBody$EnsRegions$Builder.class
 com/aliyun/sdk/service/ens20171110/models/DescribeARMServerInstancesResponseBody$NetworkAttributes$Builder.class
+com/aliyun/sdk/service/ens20171110/models/CreateInstanceActiveOpsTaskResponseBody$1.class
 com/aliyun/sdk/service/ens20171110/models/DescribePriceResponseBody$1.class
 com/aliyun/sdk/service/ens20171110/models/DescribeImagesResponseBody$Image$Builder.class
 com/aliyun/sdk/service/ens20171110/models/ModifyLoadBalancerAttributeResponse.class
 com/aliyun/sdk/service/ens20171110/models/DistApplicationDataResponse$BuilderImpl.class
 com/aliyun/sdk/service/ens20171110/models/ModifyEnsEipAddressAttributeResponse$BuilderImpl.class
 com/aliyun/sdk/service/ens20171110/models/DescribeAICImagesResponseBody$Builder.class
+com/aliyun/sdk/service/ens20171110/models/CreateInstanceActiveOpsTaskRequest.class
 com/aliyun/sdk/service/ens20171110/models/UnassignPrivateIpAddressesResponse$Builder.class
 com/aliyun/sdk/service/ens20171110/models/StopEpnInstanceResponse.class
 com/aliyun/sdk/service/ens20171110/models/AddBackendServersResponseBody$1.class
@@ -1405,6 +1415,7 @@ com/aliyun/sdk/service/ens20171110/models/CreateEnsRouteEntryRequest$Builder.cla
 com/aliyun/sdk/service/ens20171110/models/DescribeDataDistResultResponseBody$StatusStat$Builder.class
 com/aliyun/sdk/service/ens20171110/models/DeleteEpnInstanceResponseBody.class
 com/aliyun/sdk/service/ens20171110/models/DescribeImageInfosResponse$BuilderImpl.class
+com/aliyun/sdk/service/ens20171110/models/CreateInstanceActiveOpsTaskRequest$1.class
 com/aliyun/sdk/service/ens20171110/models/DescribeReservedResourceResponseBody$Images.class
 com/aliyun/sdk/service/ens20171110/models/RebootAICInstanceResponseBody$Builder.class
 com/aliyun/sdk/service/ens20171110/models/DescribeEnsRegionIdIpv6InfoRequest$1.class
@@ -1569,6 +1580,7 @@ com/aliyun/sdk/service/ens20171110/models/DescribeNetworkInterfacesResponseBody$
 com/aliyun/sdk/service/ens20171110/models/ExportBillDetailDataResponseBody$1.class
 com/aliyun/sdk/service/ens20171110/models/DescribeNetworkAttributeResponse$BuilderImpl.class
 com/aliyun/sdk/service/ens20171110/models/RollbackApplicationResponse.class
+com/aliyun/sdk/service/ens20171110/models/CreateInstanceActiveOpsTaskResponseBody$Builder.class
 com/aliyun/sdk/service/ens20171110/models/PreCreateEnsServiceResponse.class
 com/aliyun/sdk/service/ens20171110/models/RunServiceScheduleResponseBody$CommandResult$Builder.class
 com/aliyun/sdk/service/ens20171110/models/DescribeCreatePrePaidInstanceResultResponse.class
@@ -1833,6 +1845,7 @@ com/aliyun/sdk/service/ens20171110/models/CreateNetworkResponse$BuilderImpl.clas
 com/aliyun/sdk/service/ens20171110/models/DescribeUserBandWidthDataResponseBody$MonitorData$Builder.class
 com/aliyun/sdk/service/ens20171110/models/ModifyImageAttributeResponseBody$Builder.class
 com/aliyun/sdk/service/ens20171110/models/DescribeNatGatewaysResponseBody$Builder.class
+com/aliyun/sdk/service/ens20171110/models/CreateInstanceActiveOpsTaskResponse$Builder.class
 com/aliyun/sdk/service/ens20171110/models/DescribeInstanceMonitorDataResponse$BuilderImpl.class
 com/aliyun/sdk/service/ens20171110/models/DescribeAvailableResourceInfoResponseBody$EnsRegionIds.class
 com/aliyun/sdk/service/ens20171110/models/AccosicateNetworkAclResponse$Builder.class
@@ -2150,6 +2163,7 @@ com/aliyun/sdk/service/ens20171110/models/RemovePublicIpsFromEpnInstanceResponse
 com/aliyun/sdk/service/ens20171110/models/DescribeServcieScheduleResponseBody$ContainerStatuses$Builder.class
 com/aliyun/sdk/service/ens20171110/models/RebootARMServerInstanceResponse$BuilderImpl.class
 com/aliyun/sdk/service/ens20171110/models/DescribeNetworkAttributeResponse$Builder.class
+com/aliyun/sdk/service/ens20171110/models/InstanceActiveOpsTask$1.class
 com/aliyun/sdk/service/ens20171110/models/CreateNetworkAclEntryResponseBody.class
 com/aliyun/sdk/service/ens20171110/models/CreateClassicNetworkResponse$BuilderImpl.class
 com/aliyun/sdk/service/ens20171110/models/DescribeInstanceTypesRequest$1.class
@@ -2295,6 +2309,7 @@ com/aliyun/sdk/service/ens20171110/models/CreateNetworkRequest.class
 com/aliyun/sdk/service/ens20171110/models/DescribeNatGatewaysResponseBody.class
 com/aliyun/sdk/service/ens20171110/models/RunInstancesResponse$Builder.class
 com/aliyun/sdk/service/ens20171110/models/DeleteNetworkResponse$Builder.class
+com/aliyun/sdk/service/ens20171110/models/InstanceActiveOpsGroup$1.class
 com/aliyun/sdk/service/ens20171110/models/CreateKeyPairRequest$Builder.class
 com/aliyun/sdk/service/ens20171110/models/CreateLoadBalancerTCPListenerRequest$1.class
 com/aliyun/sdk/service/ens20171110/models/CreateNatGatewayRequest$Builder.class
@@ -2348,6 +2363,7 @@ com/aliyun/sdk/service/ens20171110/models/ResetAICInstanceRequest$1.class
 com/aliyun/sdk/service/ens20171110/models/DescribeSecurityGroupsRequest$1.class
 com/aliyun/sdk/service/ens20171110/models/DescribeElbAvailableResourceInfoResponseBody$Builder.class
 com/aliyun/sdk/service/ens20171110/models/DeleteMountTargetResponse$BuilderImpl.class
+com/aliyun/sdk/service/ens20171110/models/CreateInstanceActiveOpsTaskResponse$BuilderImpl.class
 com/aliyun/sdk/service/ens20171110/models/ModifySecurityGroupAttributeResponseBody$1.class
 com/aliyun/sdk/service/ens20171110/models/DescribeVSwitchesResponseBody$VSwitch$Builder.class
 com/aliyun/sdk/service/ens20171110/models/DescribeEpnMeasurementDataRequest$Builder.class
