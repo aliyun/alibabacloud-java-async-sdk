@@ -18,12 +18,17 @@ public class CreateAccessControlListRequest extends Request {
     private String aclName;
 
     @Query
+    @NameInMap("AddressIPVersion")
+    private String addressIPVersion;
+
+    @Query
     @NameInMap("SecurityToken")
     private String securityToken;
 
     private CreateAccessControlListRequest(Builder builder) {
         super(builder);
         this.aclName = builder.aclName;
+        this.addressIPVersion = builder.addressIPVersion;
         this.securityToken = builder.securityToken;
     }
 
@@ -48,6 +53,13 @@ public class CreateAccessControlListRequest extends Request {
     }
 
     /**
+     * @return addressIPVersion
+     */
+    public String getAddressIPVersion() {
+        return this.addressIPVersion;
+    }
+
+    /**
      * @return securityToken
      */
     public String getSecurityToken() {
@@ -56,6 +68,7 @@ public class CreateAccessControlListRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateAccessControlListRequest, Builder> {
         private String aclName; 
+        private String addressIPVersion; 
         private String securityToken; 
 
         private Builder() {
@@ -65,6 +78,7 @@ public class CreateAccessControlListRequest extends Request {
         private Builder(CreateAccessControlListRequest request) {
             super(request);
             this.aclName = request.aclName;
+            this.addressIPVersion = request.addressIPVersion;
             this.securityToken = request.securityToken;
         } 
 
@@ -74,6 +88,15 @@ public class CreateAccessControlListRequest extends Request {
         public Builder aclName(String aclName) {
             this.putQueryParameter("AclName", aclName);
             this.aclName = aclName;
+            return this;
+        }
+
+        /**
+         * AddressIPVersion.
+         */
+        public Builder addressIPVersion(String addressIPVersion) {
+            this.putQueryParameter("AddressIPVersion", addressIPVersion);
+            this.addressIPVersion = addressIPVersion;
             return this;
         }
 

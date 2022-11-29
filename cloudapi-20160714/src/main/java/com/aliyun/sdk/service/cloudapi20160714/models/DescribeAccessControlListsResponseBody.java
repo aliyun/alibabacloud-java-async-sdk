@@ -138,9 +138,13 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
         @NameInMap("AclName")
         private String aclName;
 
+        @NameInMap("AddressIPVersion")
+        private String addressIPVersion;
+
         private Acl(Builder builder) {
             this.aclId = builder.aclId;
             this.aclName = builder.aclName;
+            this.addressIPVersion = builder.addressIPVersion;
         }
 
         public static Builder builder() {
@@ -165,9 +169,17 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
             return this.aclName;
         }
 
+        /**
+         * @return addressIPVersion
+         */
+        public String getAddressIPVersion() {
+            return this.addressIPVersion;
+        }
+
         public static final class Builder {
             private String aclId; 
             private String aclName; 
+            private String addressIPVersion; 
 
             /**
              * AclId.
@@ -182,6 +194,14 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
              */
             public Builder aclName(String aclName) {
                 this.aclName = aclName;
+                return this;
+            }
+
+            /**
+             * AddressIPVersion.
+             */
+            public Builder addressIPVersion(String addressIPVersion) {
+                this.addressIPVersion = addressIPVersion;
                 return this;
             }
 

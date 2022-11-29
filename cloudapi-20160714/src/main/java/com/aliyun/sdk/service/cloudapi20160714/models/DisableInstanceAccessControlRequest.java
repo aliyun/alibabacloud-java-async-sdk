@@ -18,6 +18,10 @@ public class DisableInstanceAccessControlRequest extends Request {
     private String aclId;
 
     @Query
+    @NameInMap("AddressIPVersion")
+    private String addressIPVersion;
+
+    @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
     private String instanceId;
@@ -29,6 +33,7 @@ public class DisableInstanceAccessControlRequest extends Request {
     private DisableInstanceAccessControlRequest(Builder builder) {
         super(builder);
         this.aclId = builder.aclId;
+        this.addressIPVersion = builder.addressIPVersion;
         this.instanceId = builder.instanceId;
         this.securityToken = builder.securityToken;
     }
@@ -54,6 +59,13 @@ public class DisableInstanceAccessControlRequest extends Request {
     }
 
     /**
+     * @return addressIPVersion
+     */
+    public String getAddressIPVersion() {
+        return this.addressIPVersion;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -69,6 +81,7 @@ public class DisableInstanceAccessControlRequest extends Request {
 
     public static final class Builder extends Request.Builder<DisableInstanceAccessControlRequest, Builder> {
         private String aclId; 
+        private String addressIPVersion; 
         private String instanceId; 
         private String securityToken; 
 
@@ -79,6 +92,7 @@ public class DisableInstanceAccessControlRequest extends Request {
         private Builder(DisableInstanceAccessControlRequest request) {
             super(request);
             this.aclId = request.aclId;
+            this.addressIPVersion = request.addressIPVersion;
             this.instanceId = request.instanceId;
             this.securityToken = request.securityToken;
         } 
@@ -89,6 +103,15 @@ public class DisableInstanceAccessControlRequest extends Request {
         public Builder aclId(String aclId) {
             this.putQueryParameter("AclId", aclId);
             this.aclId = aclId;
+            return this;
+        }
+
+        /**
+         * AddressIPVersion.
+         */
+        public Builder addressIPVersion(String addressIPVersion) {
+            this.putQueryParameter("AddressIPVersion", addressIPVersion);
+            this.addressIPVersion = addressIPVersion;
             return this;
         }
 

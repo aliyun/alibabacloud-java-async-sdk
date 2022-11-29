@@ -17,6 +17,10 @@ public class DescribeAccessControlListsRequest extends Request {
     private String aclName;
 
     @Query
+    @NameInMap("AddressIPVersion")
+    private String addressIPVersion;
+
+    @Query
     @NameInMap("PageNumber")
     private Integer pageNumber;
 
@@ -31,6 +35,7 @@ public class DescribeAccessControlListsRequest extends Request {
     private DescribeAccessControlListsRequest(Builder builder) {
         super(builder);
         this.aclName = builder.aclName;
+        this.addressIPVersion = builder.addressIPVersion;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.securityToken = builder.securityToken;
@@ -57,6 +62,13 @@ public class DescribeAccessControlListsRequest extends Request {
     }
 
     /**
+     * @return addressIPVersion
+     */
+    public String getAddressIPVersion() {
+        return this.addressIPVersion;
+    }
+
+    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -79,6 +91,7 @@ public class DescribeAccessControlListsRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeAccessControlListsRequest, Builder> {
         private String aclName; 
+        private String addressIPVersion; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String securityToken; 
@@ -90,6 +103,7 @@ public class DescribeAccessControlListsRequest extends Request {
         private Builder(DescribeAccessControlListsRequest request) {
             super(request);
             this.aclName = request.aclName;
+            this.addressIPVersion = request.addressIPVersion;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.securityToken = request.securityToken;
@@ -101,6 +115,15 @@ public class DescribeAccessControlListsRequest extends Request {
         public Builder aclName(String aclName) {
             this.putQueryParameter("AclName", aclName);
             this.aclName = aclName;
+            return this;
+        }
+
+        /**
+         * AddressIPVersion.
+         */
+        public Builder addressIPVersion(String addressIPVersion) {
+            this.putQueryParameter("AddressIPVersion", addressIPVersion);
+            this.addressIPVersion = addressIPVersion;
             return this;
         }
 

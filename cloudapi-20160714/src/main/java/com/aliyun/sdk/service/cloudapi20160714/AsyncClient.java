@@ -204,6 +204,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeModelsResponse> describeModels(DescribeModelsRequest request);
 
+    CompletableFuture<DescribePluginApisResponse> describePluginApis(DescribePluginApisRequest request);
+
     CompletableFuture<DescribePluginSchemasResponse> describePluginSchemas(DescribePluginSchemasRequest request);
 
     CompletableFuture<DescribePluginTemplatesResponse> describePluginTemplates(DescribePluginTemplatesRequest request);

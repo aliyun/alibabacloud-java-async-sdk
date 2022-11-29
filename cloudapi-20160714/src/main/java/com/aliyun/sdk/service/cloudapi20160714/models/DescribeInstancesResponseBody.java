@@ -261,6 +261,18 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("HttpsPolicies")
         private String httpsPolicies;
 
+        @NameInMap("IPV6AclId")
+        private String IPV6AclId;
+
+        @NameInMap("IPV6AclName")
+        private String IPV6AclName;
+
+        @NameInMap("IPV6AclStatus")
+        private String IPV6AclStatus;
+
+        @NameInMap("IPV6AclType")
+        private String IPV6AclType;
+
         @NameInMap("InstanceChargeType")
         private String instanceChargeType;
 
@@ -334,6 +346,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             this.egressIpv6Enable = builder.egressIpv6Enable;
             this.expiredTime = builder.expiredTime;
             this.httpsPolicies = builder.httpsPolicies;
+            this.IPV6AclId = builder.IPV6AclId;
+            this.IPV6AclName = builder.IPV6AclName;
+            this.IPV6AclStatus = builder.IPV6AclStatus;
+            this.IPV6AclType = builder.IPV6AclType;
             this.instanceChargeType = builder.instanceChargeType;
             this.instanceId = builder.instanceId;
             this.instanceName = builder.instanceName;
@@ -426,6 +442,34 @@ public class DescribeInstancesResponseBody extends TeaModel {
          */
         public String getHttpsPolicies() {
             return this.httpsPolicies;
+        }
+
+        /**
+         * @return IPV6AclId
+         */
+        public String getIPV6AclId() {
+            return this.IPV6AclId;
+        }
+
+        /**
+         * @return IPV6AclName
+         */
+        public String getIPV6AclName() {
+            return this.IPV6AclName;
+        }
+
+        /**
+         * @return IPV6AclStatus
+         */
+        public String getIPV6AclStatus() {
+            return this.IPV6AclStatus;
+        }
+
+        /**
+         * @return IPV6AclType
+         */
+        public String getIPV6AclType() {
+            return this.IPV6AclType;
         }
 
         /**
@@ -585,6 +629,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private Boolean egressIpv6Enable; 
             private String expiredTime; 
             private String httpsPolicies; 
+            private String IPV6AclId; 
+            private String IPV6AclName; 
+            private String IPV6AclStatus; 
+            private String IPV6AclType; 
             private String instanceChargeType; 
             private String instanceId; 
             private String instanceName; 
@@ -676,6 +724,38 @@ public class DescribeInstancesResponseBody extends TeaModel {
              */
             public Builder httpsPolicies(String httpsPolicies) {
                 this.httpsPolicies = httpsPolicies;
+                return this;
+            }
+
+            /**
+             * IPV6AclId.
+             */
+            public Builder IPV6AclId(String IPV6AclId) {
+                this.IPV6AclId = IPV6AclId;
+                return this;
+            }
+
+            /**
+             * IPV6AclName.
+             */
+            public Builder IPV6AclName(String IPV6AclName) {
+                this.IPV6AclName = IPV6AclName;
+                return this;
+            }
+
+            /**
+             * IPV6AclStatus.
+             */
+            public Builder IPV6AclStatus(String IPV6AclStatus) {
+                this.IPV6AclStatus = IPV6AclStatus;
+                return this;
+            }
+
+            /**
+             * IPV6AclType.
+             */
+            public Builder IPV6AclType(String IPV6AclType) {
+                this.IPV6AclType = IPV6AclType;
                 return this;
             }
 
