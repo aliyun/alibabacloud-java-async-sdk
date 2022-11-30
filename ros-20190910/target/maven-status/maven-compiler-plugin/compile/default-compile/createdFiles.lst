@@ -241,6 +241,7 @@ com/aliyun/sdk/service/ros20190910/models/UpdateStackRequest.class
 com/aliyun/sdk/service/ros20190910/models/UpdateStackGroupRequest$Builder.class
 com/aliyun/sdk/service/ros20190910/models/ListStackGroupsRequest$Builder.class
 com/aliyun/sdk/service/ros20190910/models/UpdateTemplateScratchResponse$BuilderImpl.class
+com/aliyun/sdk/service/ros20190910/models/ContinueCreateStackResponseBody$DryRunResult.class
 com/aliyun/sdk/service/ros20190910/models/ListStackGroupsResponse$1.class
 com/aliyun/sdk/service/ros20190910/models/DeleteStackInstancesResponse$1.class
 com/aliyun/sdk/service/ros20190910/models/ListTemplatesResponse$1.class
@@ -855,6 +856,7 @@ com/aliyun/sdk/service/ros20190910/models/ListStackInstancesRequest$Builder.clas
 com/aliyun/sdk/service/ros20190910/models/GetStackPolicyResponse.class
 com/aliyun/sdk/service/ros20190910/models/GetTemplateEstimateCostRequest$Parameters$Builder.class
 com/aliyun/sdk/service/ros20190910/models/CreateStackGroupResponse$1.class
+com/aliyun/sdk/service/ros20190910/models/ContinueCreateStackResponseBody$DryRunResult$Builder.class
 com/aliyun/sdk/service/ros20190910/models/GetTemplateScratchResponseBody$Builder.class
 com/aliyun/sdk/service/ros20190910/models/CreateTemplateScratchRequest$SourceResourceGroup$Builder.class
 com/aliyun/sdk/service/ros20190910/models/ListTagResourcesResponse.class
