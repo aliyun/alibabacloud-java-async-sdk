@@ -1,6 +1,7 @@
 com/aliyun/sdk/service/eas20210701/models/DeleteServiceMirrorResponseBody.class
 com/aliyun/sdk/service/eas20210701/models/StopServiceResponse$BuilderImpl.class
 com/aliyun/sdk/service/eas20210701/models/DescribeResourceRequest$1.class
+com/aliyun/sdk/service/eas20210701/models/UpdateServiceSafetyLockResponseBody.class
 com/aliyun/sdk/service/eas20210701/models/DeleteResourceLogResponseBody$1.class
 com/aliyun/sdk/service/eas20210701/models/CreateServiceMirrorResponse$1.class
 com/aliyun/sdk/service/eas20210701/models/DescribeServiceEventResponseBody$Builder.class
@@ -18,6 +19,7 @@ com/aliyun/sdk/service/eas20210701/models/UpdateResourceRequest$1.class
 com/aliyun/sdk/service/eas20210701/models/UpdateServiceCronScalerResponseBody.class
 com/aliyun/sdk/service/eas20210701/models/UpdateServiceAutoScalerRequest$ScaleStrategies$Builder.class
 com/aliyun/sdk/service/eas20210701/models/DescribeBenchmarkTaskReportResponse$Builder.class
+com/aliyun/sdk/service/eas20210701/models/UpdateServiceSafetyLockRequest$Builder.class
 com/aliyun/sdk/service/eas20210701/models/ListServicesResponse.class
 com/aliyun/sdk/service/eas20210701/models/CreateResourceResponse$Builder.class
 com/aliyun/sdk/service/eas20210701/models/ListResourcesResponse.class
@@ -35,6 +37,7 @@ com/aliyun/sdk/service/eas20210701/models/CreateServiceAutoScalerRequest$Builder
 com/aliyun/sdk/service/eas20210701/models/UpdateServiceAutoScalerResponseBody.class
 com/aliyun/sdk/service/eas20210701/models/StopServiceRequest$Builder.class
 com/aliyun/sdk/service/eas20210701/models/ListBenchmarkTaskResponseBody$Builder.class
+com/aliyun/sdk/service/eas20210701/models/UpdateResourceInstanceRequest$1.class
 com/aliyun/sdk/service/eas20210701/models/DeleteResourceResponseBody$Builder.class
 com/aliyun/sdk/service/eas20210701/models/ReleaseServiceResponseBody.class
 com/aliyun/sdk/service/eas20210701/models/DeleteResourceResponseBody$1.class
@@ -56,6 +59,7 @@ com/aliyun/sdk/service/eas20210701/models/ListServiceInstancesRequest.class
 com/aliyun/sdk/service/eas20210701/models/DeleteServiceInstancesResponse$Builder.class
 com/aliyun/sdk/service/eas20210701/models/ListBenchmarkTaskRequest$1.class
 com/aliyun/sdk/service/eas20210701/models/ListServicesRequest$1.class
+com/aliyun/sdk/service/eas20210701/models/UpdateResourceInstanceResponseBody$Builder.class
 com/aliyun/sdk/service/eas20210701/models/DescribeServiceAutoScalerResponseBody$ScaleStrategies.class
 com/aliyun/sdk/service/eas20210701/models/UpdateResourceDLinkResponseBody.class
 com/aliyun/sdk/service/eas20210701/models/DeleteServiceMirrorResponse$1.class
@@ -64,10 +68,12 @@ com/aliyun/sdk/service/eas20210701/models/DeleteServiceCronScalerResponse.class
 com/aliyun/sdk/service/eas20210701/models/DescribeBenchmarkTaskRequest.class
 com/aliyun/sdk/service/eas20210701/models/StartBenchmarkTaskResponse.class
 com/aliyun/sdk/service/eas20210701/models/DeleteResourceInstancesRequest.class
+com/aliyun/sdk/service/eas20210701/models/UpdateResourceInstanceRequest.class
 com/aliyun/sdk/service/eas20210701/models/DeleteResourceLogRequest.class
 com/aliyun/sdk/service/eas20210701/models/StartBenchmarkTaskResponse$BuilderImpl.class
 com/aliyun/sdk/service/eas20210701/models/ListServiceVersionsResponseBody$Versions$Builder.class
 com/aliyun/sdk/service/eas20210701/models/ListResourceServicesRequest$Builder.class
+com/aliyun/sdk/service/eas20210701/models/UpdateServiceSafetyLockResponseBody$1.class
 com/aliyun/sdk/service/eas20210701/models/CreateServiceCronScalerResponseBody$Builder.class
 com/aliyun/sdk/service/eas20210701/models/UpdateServiceResponse$BuilderImpl.class
 com/aliyun/sdk/service/eas20210701/models/DeleteServiceCronScalerRequest$1.class
@@ -108,6 +114,7 @@ com/aliyun/sdk/service/eas20210701/models/DescribeServiceLogResponse.class
 com/aliyun/sdk/service/eas20210701/models/ListResourceInstanceWorkerRequest$1.class
 com/aliyun/sdk/service/eas20210701/models/UpdateBenchmarkTaskRequest$Builder.class
 com/aliyun/sdk/service/eas20210701/models/CreateServiceMirrorResponseBody.class
+com/aliyun/sdk/service/eas20210701/models/UpdateResourceInstanceRequest$Builder.class
 com/aliyun/sdk/service/eas20210701/models/DeleteServiceCronScalerRequest$Builder.class
 com/aliyun/sdk/service/eas20210701/models/DescribeServiceEventResponse$BuilderImpl.class
 com/aliyun/sdk/service/eas20210701/models/UpdateServiceCronScalerRequest$ScaleJobs.class
@@ -188,6 +195,7 @@ com/aliyun/sdk/service/eas20210701/models/DeleteServiceCronScalerResponse$Builde
 com/aliyun/sdk/service/eas20210701/models/DeleteResourceRequest$Builder.class
 com/aliyun/sdk/service/eas20210701/models/ListResourcesRequest.class
 com/aliyun/sdk/service/eas20210701/models/DeleteServiceInstancesResponseBody.class
+com/aliyun/sdk/service/eas20210701/models/UpdateServiceSafetyLockRequest$1.class
 com/aliyun/sdk/service/eas20210701/models/CreateResourceResponseBody.class
 com/aliyun/sdk/service/eas20210701/models/CreateResourceResponseBody$Builder.class
 com/aliyun/sdk/service/eas20210701/models/CreateResourceInstancesResponseBody$1.class
@@ -195,6 +203,7 @@ com/aliyun/sdk/service/eas20210701/models/Group.class
 com/aliyun/sdk/service/eas20210701/models/DeleteResourceDLinkRequest$Builder.class
 com/aliyun/sdk/service/eas20210701/models/ResourceInstance.class
 com/aliyun/sdk/service/eas20210701/models/StartBenchmarkTaskResponse$1.class
+com/aliyun/sdk/service/eas20210701/models/UpdateServiceSafetyLockResponse$Builder.class
 com/aliyun/sdk/service/eas20210701/models/CreateBenchmarkTaskRequest$1.class
 com/aliyun/sdk/service/eas20210701/models/StartBenchmarkTaskRequest$Builder.class
 com/aliyun/sdk/service/eas20210701/models/ListGroupsResponse$Builder.class
@@ -281,6 +290,7 @@ com/aliyun/sdk/service/eas20210701/models/DeleteResourceDLinkRequest.class
 com/aliyun/sdk/service/eas20210701/models/ReleaseServiceResponseBody$Builder.class
 com/aliyun/sdk/service/eas20210701/models/DescribeServiceEventResponseBody$Events.class
 com/aliyun/sdk/service/eas20210701/models/DeleteServiceResponse.class
+com/aliyun/sdk/service/eas20210701/models/UpdateServiceSafetyLockResponse$1.class
 com/aliyun/sdk/service/eas20210701/models/DescribeServiceLogRequest$1.class
 com/aliyun/sdk/service/eas20210701/models/StopBenchmarkTaskRequest$1.class
 com/aliyun/sdk/service/eas20210701/models/ListGroupsResponse$BuilderImpl.class
@@ -296,6 +306,7 @@ com/aliyun/sdk/service/eas20210701/models/ListGroupsResponseBody$Builder.class
 com/aliyun/sdk/service/eas20210701/models/CreateBenchmarkTaskResponse.class
 com/aliyun/sdk/service/eas20210701/models/UpdateServiceCronScalerResponse$Builder.class
 com/aliyun/sdk/service/eas20210701/models/ListBenchmarkTaskResponseBody$Tasks.class
+com/aliyun/sdk/service/eas20210701/models/UpdateResourceInstanceResponse.class
 com/aliyun/sdk/service/eas20210701/models/DescribeBenchmarkTaskReportResponseBody.class
 com/aliyun/sdk/service/eas20210701/models/ListServicesRequest.class
 com/aliyun/sdk/service/eas20210701/models/ListServicesResponseBody$1.class
@@ -353,6 +364,7 @@ com/aliyun/sdk/service/eas20210701/models/ListServiceVersionsResponse.class
 com/aliyun/sdk/service/eas20210701/models/DeleteResourceRequest$1.class
 com/aliyun/sdk/service/eas20210701/models/StopBenchmarkTaskResponse$Builder.class
 com/aliyun/sdk/service/eas20210701/models/StartServiceResponse.class
+com/aliyun/sdk/service/eas20210701/models/UpdateResourceInstanceResponseBody.class
 com/aliyun/sdk/service/eas20210701/models/Group$Builder.class
 com/aliyun/sdk/service/eas20210701/models/UpdateResourceResponse$1.class
 com/aliyun/sdk/service/eas20210701/models/DeleteServiceAutoScalerResponse$1.class
@@ -371,6 +383,7 @@ com/aliyun/sdk/service/eas20210701/models/DescribeServiceCronScalerRequest$1.cla
 com/aliyun/sdk/service/eas20210701/models/DescribeBenchmarkTaskReportResponse$1.class
 com/aliyun/sdk/service/eas20210701/models/DeleteServiceAutoScalerResponse$BuilderImpl.class
 com/aliyun/sdk/service/eas20210701/models/DescribeBenchmarkTaskReportRequest$1.class
+com/aliyun/sdk/service/eas20210701/models/UpdateResourceInstanceResponse$Builder.class
 com/aliyun/sdk/service/eas20210701/models/DescribeBenchmarkTaskResponseBody$Builder.class
 com/aliyun/sdk/service/eas20210701/models/DeleteResourceLogResponse.class
 com/aliyun/sdk/service/eas20210701/models/CreateServiceMirrorResponseBody$1.class
@@ -455,6 +468,8 @@ com/aliyun/sdk/service/eas20210701/models/UpdateResourceResponse$BuilderImpl.cla
 com/aliyun/sdk/service/eas20210701/models/ListServiceVersionsResponse$BuilderImpl.class
 com/aliyun/sdk/service/eas20210701/models/DeleteBenchmarkTaskResponseBody$Builder.class
 com/aliyun/sdk/service/eas20210701/models/DeleteServiceRequest$1.class
+com/aliyun/sdk/service/eas20210701/models/UpdateServiceSafetyLockResponseBody$Builder.class
+com/aliyun/sdk/service/eas20210701/models/UpdateServiceSafetyLockResponse.class
 com/aliyun/sdk/service/eas20210701/models/DeleteResourceDLinkResponseBody$Builder.class
 com/aliyun/sdk/service/eas20210701/models/UpdateServiceMirrorRequest.class
 com/aliyun/sdk/service/eas20210701/models/StartServiceResponse$BuilderImpl.class
@@ -467,10 +482,13 @@ com/aliyun/sdk/service/eas20210701/models/CreateServiceResponseBody$Builder.clas
 com/aliyun/sdk/service/eas20210701/models/DescribeBenchmarkTaskReportRequest.class
 com/aliyun/sdk/service/eas20210701/models/DescribeBenchmarkTaskReportRequest$Builder.class
 com/aliyun/sdk/service/eas20210701/models/ReleaseServiceRequest.class
+com/aliyun/sdk/service/eas20210701/models/UpdateResourceInstanceResponseBody$1.class
 com/aliyun/sdk/service/eas20210701/models/StopBenchmarkTaskRequest$Builder.class
 com/aliyun/sdk/service/eas20210701/models/CreateServiceCronScalerRequest$ScaleJobs$Builder.class
+com/aliyun/sdk/service/eas20210701/models/UpdateServiceSafetyLockResponse$BuilderImpl.class
 com/aliyun/sdk/service/eas20210701/models/CreateServiceCronScalerResponse$Builder.class
 com/aliyun/sdk/service/eas20210701/models/ListResourceInstanceWorkerResponseBody$1.class
+com/aliyun/sdk/service/eas20210701/models/UpdateServiceSafetyLockRequest.class
 com/aliyun/sdk/service/eas20210701/models/ReleaseServiceResponse$1.class
 com/aliyun/sdk/service/eas20210701/models/UpdateServiceAutoScalerResponseBody$Builder.class
 com/aliyun/sdk/service/eas20210701/models/CreateServiceRequest.class
@@ -484,6 +502,7 @@ com/aliyun/sdk/service/eas20210701/models/StartBenchmarkTaskResponse$Builder.cla
 com/aliyun/sdk/service/eas20210701/models/ListResourcesResponseBody.class
 com/aliyun/sdk/service/eas20210701/models/StopServiceRequest.class
 com/aliyun/sdk/service/eas20210701/models/UpdateServiceCronScalerResponse$1.class
+com/aliyun/sdk/service/eas20210701/models/UpdateResourceInstanceResponse$BuilderImpl.class
 com/aliyun/sdk/service/eas20210701/models/DescribeResourceLogResponseBody$1.class
 com/aliyun/sdk/service/eas20210701/models/StopServiceResponse.class
 com/aliyun/sdk/service/eas20210701/models/CreateResourceLogResponse.class
@@ -497,6 +516,7 @@ com/aliyun/sdk/service/eas20210701/models/ReleaseServiceResponse.class
 com/aliyun/sdk/service/eas20210701/models/DescribeServiceAutoScalerResponseBody.class
 com/aliyun/sdk/service/eas20210701/models/ListGroupsRequest$1.class
 com/aliyun/sdk/service/eas20210701/models/StopServiceRequest$1.class
+com/aliyun/sdk/service/eas20210701/models/UpdateResourceInstanceResponse$1.class
 com/aliyun/sdk/service/eas20210701/models/DeleteResourceResponseBody.class
 com/aliyun/sdk/service/eas20210701/models/DeleteServiceAutoScalerResponseBody$Builder.class
 com/aliyun/sdk/service/eas20210701/models/DescribeServiceEventResponseBody$Events$Builder.class

@@ -84,6 +84,9 @@ public class Service extends TeaModel {
     @NameInMap("RunningInstance")
     private Integer runningInstance;
 
+    @NameInMap("SafetyLock")
+    private String safetyLock;
+
     @NameInMap("ServiceConfig")
     private String serviceConfig;
 
@@ -139,6 +142,7 @@ public class Service extends TeaModel {
         this.role = builder.role;
         this.roleAttrs = builder.roleAttrs;
         this.runningInstance = builder.runningInstance;
+        this.safetyLock = builder.safetyLock;
         this.serviceConfig = builder.serviceConfig;
         this.serviceGroup = builder.serviceGroup;
         this.serviceId = builder.serviceId;
@@ -328,6 +332,13 @@ public class Service extends TeaModel {
     }
 
     /**
+     * @return safetyLock
+     */
+    public String getSafetyLock() {
+        return this.safetyLock;
+    }
+
+    /**
      * @return serviceConfig
      */
     public String getServiceConfig() {
@@ -422,6 +433,7 @@ public class Service extends TeaModel {
         private String role; 
         private String roleAttrs; 
         private Integer runningInstance; 
+        private String safetyLock; 
         private String serviceConfig; 
         private String serviceGroup; 
         private String serviceId; 
@@ -622,6 +634,14 @@ public class Service extends TeaModel {
          */
         public Builder runningInstance(Integer runningInstance) {
             this.runningInstance = runningInstance;
+            return this;
+        }
+
+        /**
+         * 服务安全锁
+         */
+        public Builder safetyLock(String safetyLock) {
+            this.safetyLock = safetyLock;
             return this;
         }
 

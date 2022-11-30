@@ -27,6 +27,14 @@ public class ListResourceInstancesRequest extends Request {
     private String chargeType;
 
     @Query
+    @NameInMap("InstanceId")
+    private String instanceId;
+
+    @Query
+    @NameInMap("InstanceName")
+    private String instanceName;
+
+    @Query
     @NameInMap("PageNumber")
     private Integer pageNumber;
 
@@ -39,6 +47,8 @@ public class ListResourceInstancesRequest extends Request {
         this.clusterId = builder.clusterId;
         this.resourceId = builder.resourceId;
         this.chargeType = builder.chargeType;
+        this.instanceId = builder.instanceId;
+        this.instanceName = builder.instanceName;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
     }
@@ -78,6 +88,20 @@ public class ListResourceInstancesRequest extends Request {
     }
 
     /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    /**
+     * @return instanceName
+     */
+    public String getInstanceName() {
+        return this.instanceName;
+    }
+
+    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -95,6 +119,8 @@ public class ListResourceInstancesRequest extends Request {
         private String clusterId; 
         private String resourceId; 
         private String chargeType; 
+        private String instanceId; 
+        private String instanceName; 
         private Integer pageNumber; 
         private Integer pageSize; 
 
@@ -107,6 +133,8 @@ public class ListResourceInstancesRequest extends Request {
             this.clusterId = request.clusterId;
             this.resourceId = request.resourceId;
             this.chargeType = request.chargeType;
+            this.instanceId = request.instanceId;
+            this.instanceName = request.instanceName;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
         } 
@@ -138,6 +166,24 @@ public class ListResourceInstancesRequest extends Request {
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
             this.chargeType = chargeType;
+            return this;
+        }
+
+        /**
+         * InstanceId.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * InstanceName.
+         */
+        public Builder instanceName(String instanceName) {
+            this.putQueryParameter("InstanceName", instanceName);
+            this.instanceName = instanceName;
             return this;
         }
 

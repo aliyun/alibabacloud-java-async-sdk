@@ -20,10 +20,20 @@ public class ListResourcesRequest extends Request {
     @NameInMap("PageSize")
     private Integer pageSize;
 
+    @Query
+    @NameInMap("ResourceId")
+    private String resourceId;
+
+    @Query
+    @NameInMap("ResourceName")
+    private String resourceName;
+
     private ListResourcesRequest(Builder builder) {
         super(builder);
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.resourceId = builder.resourceId;
+        this.resourceName = builder.resourceName;
     }
 
     public static Builder builder() {
@@ -53,9 +63,25 @@ public class ListResourcesRequest extends Request {
         return this.pageSize;
     }
 
+    /**
+     * @return resourceId
+     */
+    public String getResourceId() {
+        return this.resourceId;
+    }
+
+    /**
+     * @return resourceName
+     */
+    public String getResourceName() {
+        return this.resourceName;
+    }
+
     public static final class Builder extends Request.Builder<ListResourcesRequest, Builder> {
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String resourceId; 
+        private String resourceName; 
 
         private Builder() {
             super();
@@ -65,6 +91,8 @@ public class ListResourcesRequest extends Request {
             super(request);
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.resourceId = request.resourceId;
+            this.resourceName = request.resourceName;
         } 
 
         /**
@@ -82,6 +110,24 @@ public class ListResourcesRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * ResourceId.
+         */
+        public Builder resourceId(String resourceId) {
+            this.putQueryParameter("ResourceId", resourceId);
+            this.resourceId = resourceId;
+            return this;
+        }
+
+        /**
+         * ResourceName.
+         */
+        public Builder resourceName(String resourceName) {
+            this.putQueryParameter("ResourceName", resourceName);
+            this.resourceName = resourceName;
             return this;
         }
 

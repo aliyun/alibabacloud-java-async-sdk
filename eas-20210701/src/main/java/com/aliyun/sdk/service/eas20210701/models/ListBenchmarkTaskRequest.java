@@ -13,8 +13,8 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListBenchmarkTaskRequest extends Request {
     @Query
-    @NameInMap("Fileter")
-    private String fileter;
+    @NameInMap("Filter")
+    private String filter;
 
     @Query
     @NameInMap("PageNumber")
@@ -30,7 +30,7 @@ public class ListBenchmarkTaskRequest extends Request {
 
     private ListBenchmarkTaskRequest(Builder builder) {
         super(builder);
-        this.fileter = builder.fileter;
+        this.filter = builder.filter;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.serviceName = builder.serviceName;
@@ -50,10 +50,10 @@ public class ListBenchmarkTaskRequest extends Request {
     }
 
     /**
-     * @return fileter
+     * @return filter
      */
-    public String getFileter() {
-        return this.fileter;
+    public String getFilter() {
+        return this.filter;
     }
 
     /**
@@ -78,7 +78,7 @@ public class ListBenchmarkTaskRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListBenchmarkTaskRequest, Builder> {
-        private String fileter; 
+        private String filter; 
         private String pageNumber; 
         private String pageSize; 
         private String serviceName; 
@@ -89,18 +89,18 @@ public class ListBenchmarkTaskRequest extends Request {
 
         private Builder(ListBenchmarkTaskRequest request) {
             super(request);
-            this.fileter = request.fileter;
+            this.filter = request.filter;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.serviceName = request.serviceName;
         } 
 
         /**
-         * Fileter.
+         * Filter.
          */
-        public Builder fileter(String fileter) {
-            this.putQueryParameter("Fileter", fileter);
-            this.fileter = fileter;
+        public Builder filter(String filter) {
+            this.putQueryParameter("Filter", filter);
+            this.filter = filter;
             return this;
         }
 
