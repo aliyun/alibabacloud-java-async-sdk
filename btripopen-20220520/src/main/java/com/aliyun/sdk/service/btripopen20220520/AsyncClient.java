@@ -70,6 +70,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<EntitySetResponse> entitySet(EntitySetRequest request);
 
+    CompletableFuture<EstimatedPriceQueryResponse> estimatedPriceQuery(EstimatedPriceQueryRequest request);
+
     CompletableFuture<ExceedApplySyncResponse> exceedApplySync(ExceedApplySyncRequest request);
 
     CompletableFuture<FlightBillSettlementQueryResponse> flightBillSettlementQuery(FlightBillSettlementQueryRequest request);
