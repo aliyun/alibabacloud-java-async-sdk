@@ -87,6 +87,7 @@ com/aliyun/sdk/service/btripopen20220520/models/HotelOrderListQueryResponseBody$
 com/aliyun/sdk/service/btripopen20220520/AsyncClient.class
 com/aliyun/sdk/service/btripopen20220520/models/TrainOrderQueryResponseBody$TicketInfoList.class
 com/aliyun/sdk/service/btripopen20220520/models/IsvUserSaveRequest$UserList$Builder.class
+com/aliyun/sdk/service/btripopen20220520/models/AllBaseCityInfoQueryResponse$1.class
 com/aliyun/sdk/service/btripopen20220520/models/CarApplyQueryResponseBody$ApplyList$Builder.class
 com/aliyun/sdk/service/btripopen20220520/models/ApplyAddRequest$TravelerStandard.class
 com/aliyun/sdk/service/btripopen20220520/models/InvoiceAddRequest$1.class
@@ -149,6 +150,7 @@ com/aliyun/sdk/service/btripopen20220520/models/CostCenterQueryResponseBody.clas
 com/aliyun/sdk/service/btripopen20220520/models/ApplyQueryResponseBody$ItinerarySetList$Builder.class
 com/aliyun/sdk/service/btripopen20220520/models/FlightOrderQueryResponseBody$OrderBaseInfo$Builder.class
 com/aliyun/sdk/service/btripopen20220520/models/ApplyModifyRequest$ItineraryList$Builder.class
+com/aliyun/sdk/service/btripopen20220520/models/AllBaseCityInfoQueryResponseBody$AllCityBaseInfoList.class
 com/aliyun/sdk/service/btripopen20220520/models/AirportSearchResponseBody$Cities.class
 com/aliyun/sdk/service/btripopen20220520/models/AccessTokenResponse.class
 com/aliyun/sdk/service/btripopen20220520/models/MonthBillGetResponseBody$Module.class
@@ -187,6 +189,7 @@ com/aliyun/sdk/service/btripopen20220520/models/InvoiceModifyResponse$BuilderImp
 com/aliyun/sdk/service/btripopen20220520/models/CarApplyQueryResponseBody$ItineraryList.class
 com/aliyun/sdk/service/btripopen20220520/models/FlightOrderListQueryResponseBody$Builder.class
 com/aliyun/sdk/service/btripopen20220520/models/HotelOrderListQueryResponse$Builder.class
+com/aliyun/sdk/service/btripopen20220520/models/AllBaseCityInfoQueryResponse$Builder.class
 com/aliyun/sdk/service/btripopen20220520/models/CostCenterModifyRequest$1.class
 com/aliyun/sdk/service/btripopen20220520/models/CitySearchResponseBody$1.class
 com/aliyun/sdk/service/btripopen20220520/models/TrainExceedApplyQueryResponseBody$ApplyIntentionInfoDO$Builder.class
@@ -224,6 +227,7 @@ com/aliyun/sdk/service/btripopen20220520/models/CarOrderListQueryResponseBody$Us
 com/aliyun/sdk/service/btripopen20220520/models/InvoiceRuleSaveResponseBody$Module.class
 com/aliyun/sdk/service/btripopen20220520/models/TrainBillSettlementQueryResponse$Builder.class
 com/aliyun/sdk/service/btripopen20220520/models/AddressGetResponse$1.class
+com/aliyun/sdk/service/btripopen20220520/models/AllBaseCityInfoQueryResponseBody$AllCityBaseInfoList$Builder.class
 com/aliyun/sdk/service/btripopen20220520/models/CorpTokenResponse$Builder.class
 com/aliyun/sdk/service/btripopen20220520/models/FlightOrderQueryResponseBody$FlightTicketInfoList.class
 com/aliyun/sdk/service/btripopen20220520/models/CarApplyAddResponse.class
@@ -264,6 +268,7 @@ com/aliyun/sdk/service/btripopen20220520/models/TrainBillSettlementQueryResponse
 com/aliyun/sdk/service/btripopen20220520/models/TrainOrderListQueryResponse$Builder.class
 com/aliyun/sdk/service/btripopen20220520/models/IsvUserSaveRequest$Builder.class
 com/aliyun/sdk/service/btripopen20220520/models/FlightBillSettlementQueryResponseBody$Module$Builder.class
+com/aliyun/sdk/service/btripopen20220520/models/AllBaseCityInfoQueryResponseBody$Builder.class
 com/aliyun/sdk/service/btripopen20220520/models/ApplyAddResponseBody$Builder.class
 com/aliyun/sdk/service/btripopen20220520/models/DepartmentSaveRequest$DepartList.class
 com/aliyun/sdk/service/btripopen20220520/models/CommonApplySyncRequest$Builder.class
@@ -325,6 +330,7 @@ com/aliyun/sdk/service/btripopen20220520/models/TrainOrderListQueryResponse.clas
 com/aliyun/sdk/service/btripopen20220520/models/ApplyQueryResponseBody$Module$Builder.class
 com/aliyun/sdk/service/btripopen20220520/models/UserQueryRequest$1.class
 com/aliyun/sdk/service/btripopen20220520/models/HotelBillSettlementQueryResponseBody$Module.class
+com/aliyun/sdk/service/btripopen20220520/models/AllBaseCityInfoQueryRequest$1.class
 com/aliyun/sdk/service/btripopen20220520/models/AirportSearchRequest$1.class
 com/aliyun/sdk/service/btripopen20220520/models/CarBillSettlementQueryRequest.class
 com/aliyun/sdk/service/btripopen20220520/models/TrainStationSearchRequest$1.class
@@ -422,6 +428,7 @@ com/aliyun/sdk/service/btripopen20220520/models/FlightBillSettlementQueryRequest
 com/aliyun/sdk/service/btripopen20220520/models/HotelOrderListQueryResponseBody$CostCenter$Builder.class
 com/aliyun/sdk/service/btripopen20220520/models/EntitySetResponse.class
 com/aliyun/sdk/service/btripopen20220520/models/ApplyModifyRequest$TravelerStandardHotelCitys.class
+com/aliyun/sdk/service/btripopen20220520/models/AllBaseCityInfoQueryResponse.class
 com/aliyun/sdk/service/btripopen20220520/models/CarOrderListQueryResponse$Builder.class
 com/aliyun/sdk/service/btripopen20220520/models/InvoiceAddResponse$Builder.class
 com/aliyun/sdk/service/btripopen20220520/models/ApplyListQueryResponse.class
@@ -465,6 +472,7 @@ com/aliyun/sdk/service/btripopen20220520/models/FlightOrderListQueryResponseBody
 com/aliyun/sdk/service/btripopen20220520/models/EstimatedPriceQueryResponseBody$TrafficFee.class
 com/aliyun/sdk/service/btripopen20220520/models/TrainOrderListQueryResponseBody$UserAffiliateList$Builder.class
 com/aliyun/sdk/service/btripopen20220520/models/TrainStationSearchResponseBody$Cities.class
+com/aliyun/sdk/service/btripopen20220520/models/AllBaseCityInfoQueryResponseBody$1.class
 com/aliyun/sdk/service/btripopen20220520/models/FlightOrderQueryResponseBody$PassengerInfoList.class
 com/aliyun/sdk/service/btripopen20220520/models/MonthBillGetResponseBody$Module$Builder.class
 com/aliyun/sdk/service/btripopen20220520/models/TrainOrderQueryResponseBody$InvoiceInfo.class
@@ -500,6 +508,7 @@ com/aliyun/sdk/service/btripopen20220520/models/TrainOrderQueryResponseBody$Pass
 com/aliyun/sdk/service/btripopen20220520/models/CarApplyModifyResponseBody$Builder.class
 com/aliyun/sdk/service/btripopen20220520/models/CostCenterDeleteResponse$1.class
 com/aliyun/sdk/service/btripopen20220520/models/CommonApplyQueryRequest$Builder.class
+com/aliyun/sdk/service/btripopen20220520/models/AllBaseCityInfoQueryResponseBody.class
 com/aliyun/sdk/service/btripopen20220520/models/CarOrderListQueryResponseBody$Builder.class
 com/aliyun/sdk/service/btripopen20220520/models/TrainOrderQueryResponseBody$1.class
 com/aliyun/sdk/service/btripopen20220520/models/ApplyModifyResponseBody$Module.class
@@ -588,6 +597,7 @@ com/aliyun/sdk/service/btripopen20220520/models/ApplyListQueryResponseBody.class
 com/aliyun/sdk/service/btripopen20220520/models/CostCenterModifyResponse$Builder.class
 com/aliyun/sdk/service/btripopen20220520/models/HotelExceedApplyQueryResponse$BuilderImpl.class
 com/aliyun/sdk/service/btripopen20220520/models/ApplyAddResponseBody$Module$Builder.class
+com/aliyun/sdk/service/btripopen20220520/models/AllBaseCityInfoQueryResponseBody$Module.class
 com/aliyun/sdk/service/btripopen20220520/models/TrainStationSearchResponseBody$Module.class
 com/aliyun/sdk/service/btripopen20220520/models/FlightOrderListQueryRequest$1.class
 com/aliyun/sdk/service/btripopen20220520/models/HotelOrderListQueryResponseBody$Module.class
@@ -662,6 +672,7 @@ com/aliyun/sdk/service/btripopen20220520/models/InvoiceModifyResponse$1.class
 com/aliyun/sdk/service/btripopen20220520/models/TrainBillSettlementQueryResponse$BuilderImpl.class
 com/aliyun/sdk/service/btripopen20220520/models/ProjectDeleteResponse$BuilderImpl.class
 com/aliyun/sdk/service/btripopen20220520/models/ApplyListQueryRequest.class
+com/aliyun/sdk/service/btripopen20220520/models/AllBaseCityInfoQueryRequest.class
 com/aliyun/sdk/service/btripopen20220520/models/TrainExceedApplyQueryResponse.class
 com/aliyun/sdk/service/btripopen20220520/models/EstimatedPriceQueryResponseBody$1.class
 com/aliyun/sdk/service/btripopen20220520/models/AddressGetResponseBody.class
@@ -753,6 +764,7 @@ com/aliyun/sdk/service/btripopen20220520/models/EntitySetResponseBody$Builder.cl
 com/aliyun/sdk/service/btripopen20220520/models/TrainStationSearchResponseBody$Module$Builder.class
 com/aliyun/sdk/service/btripopen20220520/models/CorpTokenResponseBody.class
 com/aliyun/sdk/service/btripopen20220520/models/ApplyListQueryResponseBody$Builder.class
+com/aliyun/sdk/service/btripopen20220520/models/AllBaseCityInfoQueryResponseBody$Module$Builder.class
 com/aliyun/sdk/service/btripopen20220520/models/CarApplyAddResponse$BuilderImpl.class
 com/aliyun/sdk/service/btripopen20220520/models/ApplyApproveResponse$BuilderImpl.class
 com/aliyun/sdk/service/btripopen20220520/models/AddressGetRequest$1.class
@@ -767,6 +779,7 @@ com/aliyun/sdk/service/btripopen20220520/models/AccessTokenRequest$1.class
 com/aliyun/sdk/service/btripopen20220520/models/CarOrderQueryResponseBody$InvoiceInfo.class
 com/aliyun/sdk/service/btripopen20220520/models/CorpTokenResponseBody$Module.class
 com/aliyun/sdk/service/btripopen20220520/models/ProjectModifyResponse$BuilderImpl.class
+com/aliyun/sdk/service/btripopen20220520/models/AllBaseCityInfoQueryRequest$Builder.class
 com/aliyun/sdk/service/btripopen20220520/models/IeFlightBillSettlementQueryResponse$1.class
 com/aliyun/sdk/service/btripopen20220520/models/HotelBillSettlementQueryResponse$BuilderImpl.class
 com/aliyun/sdk/service/btripopen20220520/models/AirportSearchResponse$1.class
@@ -815,5 +828,6 @@ com/aliyun/sdk/service/btripopen20220520/models/CarApplyQueryResponseBody$Approv
 com/aliyun/sdk/service/btripopen20220520/models/IeFlightBillSettlementQueryResponseBody$Builder.class
 com/aliyun/sdk/service/btripopen20220520/models/TrainOrderQueryResponseBody$TrainInfo.class
 com/aliyun/sdk/service/btripopen20220520/models/FlightBillSettlementQueryResponse$Builder.class
+com/aliyun/sdk/service/btripopen20220520/models/AllBaseCityInfoQueryResponse$BuilderImpl.class
 com/aliyun/sdk/service/btripopen20220520/models/FlightOrderListQueryRequest$Builder.class
 com/aliyun/sdk/service/btripopen20220520/models/TrainBillSettlementQueryResponseBody$Module$Builder.class

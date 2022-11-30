@@ -24,6 +24,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AirportSearchResponse> airportSearch(AirportSearchRequest request);
 
+    CompletableFuture<AllBaseCityInfoQueryResponse> allBaseCityInfoQuery(AllBaseCityInfoQueryRequest request);
+
     CompletableFuture<ApplyAddResponse> applyAdd(ApplyAddRequest request);
 
     CompletableFuture<ApplyApproveResponse> applyApprove(ApplyApproveRequest request);
