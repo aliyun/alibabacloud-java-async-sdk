@@ -40,6 +40,14 @@ public class CreateMyBaseRequest extends Request {
     private String engine;
 
     @Query
+    @NameInMap("ImageId")
+    private String imageId;
+
+    @Query
+    @NameInMap("KeyPairName")
+    private String keyPairName;
+
+    @Query
     @NameInMap("OsPassword")
     private String osPassword;
 
@@ -48,12 +56,17 @@ public class CreateMyBaseRequest extends Request {
     private Long ownerId;
 
     @Query
+    @NameInMap("PasswordInherit")
+    private String passwordInherit;
+
+    @Query
     @NameInMap("PayType")
     @Validation(required = true)
     private String payType;
 
     @Query
     @NameInMap("Period")
+    @Validation(required = true)
     private String period;
 
     @Query
@@ -101,8 +114,11 @@ public class CreateMyBaseRequest extends Request {
         this.dedicatedHostGroupId = builder.dedicatedHostGroupId;
         this.ECSClassList = builder.ECSClassList;
         this.engine = builder.engine;
+        this.imageId = builder.imageId;
+        this.keyPairName = builder.keyPairName;
         this.osPassword = builder.osPassword;
         this.ownerId = builder.ownerId;
+        this.passwordInherit = builder.passwordInherit;
         this.payType = builder.payType;
         this.period = builder.period;
         this.periodType = builder.periodType;
@@ -171,6 +187,20 @@ public class CreateMyBaseRequest extends Request {
     }
 
     /**
+     * @return imageId
+     */
+    public String getImageId() {
+        return this.imageId;
+    }
+
+    /**
+     * @return keyPairName
+     */
+    public String getKeyPairName() {
+        return this.keyPairName;
+    }
+
+    /**
      * @return osPassword
      */
     public String getOsPassword() {
@@ -182,6 +212,13 @@ public class CreateMyBaseRequest extends Request {
      */
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    /**
+     * @return passwordInherit
+     */
+    public String getPasswordInherit() {
+        return this.passwordInherit;
     }
 
     /**
@@ -261,8 +298,11 @@ public class CreateMyBaseRequest extends Request {
         private String dedicatedHostGroupId; 
         private java.util.List < ECSClassList> ECSClassList; 
         private String engine; 
+        private String imageId; 
+        private String keyPairName; 
         private String osPassword; 
         private Long ownerId; 
+        private String passwordInherit; 
         private String payType; 
         private String period; 
         private String periodType; 
@@ -286,8 +326,11 @@ public class CreateMyBaseRequest extends Request {
             this.dedicatedHostGroupId = request.dedicatedHostGroupId;
             this.ECSClassList = request.ECSClassList;
             this.engine = request.engine;
+            this.imageId = request.imageId;
+            this.keyPairName = request.keyPairName;
             this.osPassword = request.osPassword;
             this.ownerId = request.ownerId;
+            this.passwordInherit = request.passwordInherit;
             this.payType = request.payType;
             this.period = request.period;
             this.periodType = request.periodType;
@@ -356,6 +399,24 @@ public class CreateMyBaseRequest extends Request {
         }
 
         /**
+         * 镜像ID
+         */
+        public Builder imageId(String imageId) {
+            this.putQueryParameter("ImageId", imageId);
+            this.imageId = imageId;
+            return this;
+        }
+
+        /**
+         * KeyPairName.
+         */
+        public Builder keyPairName(String keyPairName) {
+            this.putQueryParameter("KeyPairName", keyPairName);
+            this.keyPairName = keyPairName;
+            return this;
+        }
+
+        /**
          * OsPassword.
          */
         public Builder osPassword(String osPassword) {
@@ -370,6 +431,15 @@ public class CreateMyBaseRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * PasswordInherit.
+         */
+        public Builder passwordInherit(String passwordInherit) {
+            this.putQueryParameter("PasswordInherit", passwordInherit);
+            this.passwordInherit = passwordInherit;
             return this;
         }
 
@@ -471,6 +541,18 @@ public class CreateMyBaseRequest extends Request {
     } 
 
     public static class ECSClassList extends TeaModel {
+        @NameInMap("dataDiskPerformanceLevel")
+        private String dataDiskPerformanceLevel;
+
+        @NameInMap("diskCapacity")
+        private Integer diskCapacity;
+
+        @NameInMap("diskCount")
+        private Integer diskCount;
+
+        @NameInMap("diskType")
+        private String diskType;
+
         @NameInMap("instanceType")
         @Validation(required = true)
         private String instanceType;
@@ -487,11 +569,19 @@ public class CreateMyBaseRequest extends Request {
         @Validation(required = true)
         private String sysDiskType;
 
+        @NameInMap("systemDiskPerformanceLevel")
+        private String systemDiskPerformanceLevel;
+
         private ECSClassList(Builder builder) {
+            this.dataDiskPerformanceLevel = builder.dataDiskPerformanceLevel;
+            this.diskCapacity = builder.diskCapacity;
+            this.diskCount = builder.diskCount;
+            this.diskType = builder.diskType;
             this.instanceType = builder.instanceType;
             this.nodeCount = builder.nodeCount;
             this.sysDiskCapacity = builder.sysDiskCapacity;
             this.sysDiskType = builder.sysDiskType;
+            this.systemDiskPerformanceLevel = builder.systemDiskPerformanceLevel;
         }
 
         public static Builder builder() {
@@ -500,6 +590,34 @@ public class CreateMyBaseRequest extends Request {
 
         public static ECSClassList create() {
             return builder().build();
+        }
+
+        /**
+         * @return dataDiskPerformanceLevel
+         */
+        public String getDataDiskPerformanceLevel() {
+            return this.dataDiskPerformanceLevel;
+        }
+
+        /**
+         * @return diskCapacity
+         */
+        public Integer getDiskCapacity() {
+            return this.diskCapacity;
+        }
+
+        /**
+         * @return diskCount
+         */
+        public Integer getDiskCount() {
+            return this.diskCount;
+        }
+
+        /**
+         * @return diskType
+         */
+        public String getDiskType() {
+            return this.diskType;
         }
 
         /**
@@ -530,11 +648,55 @@ public class CreateMyBaseRequest extends Request {
             return this.sysDiskType;
         }
 
+        /**
+         * @return systemDiskPerformanceLevel
+         */
+        public String getSystemDiskPerformanceLevel() {
+            return this.systemDiskPerformanceLevel;
+        }
+
         public static final class Builder {
+            private String dataDiskPerformanceLevel; 
+            private Integer diskCapacity; 
+            private Integer diskCount; 
+            private String diskType; 
             private String instanceType; 
             private Integer nodeCount; 
             private Integer sysDiskCapacity; 
             private String sysDiskType; 
+            private String systemDiskPerformanceLevel; 
+
+            /**
+             * dataDiskPerformanceLevel.
+             */
+            public Builder dataDiskPerformanceLevel(String dataDiskPerformanceLevel) {
+                this.dataDiskPerformanceLevel = dataDiskPerformanceLevel;
+                return this;
+            }
+
+            /**
+             * diskCapacity.
+             */
+            public Builder diskCapacity(Integer diskCapacity) {
+                this.diskCapacity = diskCapacity;
+                return this;
+            }
+
+            /**
+             * diskCount.
+             */
+            public Builder diskCount(Integer diskCount) {
+                this.diskCount = diskCount;
+                return this;
+            }
+
+            /**
+             * diskType.
+             */
+            public Builder diskType(String diskType) {
+                this.diskType = diskType;
+                return this;
+            }
 
             /**
              * instanceType.
@@ -565,6 +727,14 @@ public class CreateMyBaseRequest extends Request {
              */
             public Builder sysDiskType(String sysDiskType) {
                 this.sysDiskType = sysDiskType;
+                return this;
+            }
+
+            /**
+             * systemDiskPerformanceLevel.
+             */
+            public Builder systemDiskPerformanceLevel(String systemDiskPerformanceLevel) {
+                this.systemDiskPerformanceLevel = systemDiskPerformanceLevel;
                 return this;
             }
 

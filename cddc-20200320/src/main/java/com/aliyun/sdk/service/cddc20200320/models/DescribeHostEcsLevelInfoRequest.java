@@ -13,10 +13,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeHostEcsLevelInfoRequest extends Request {
     @Query
-    @NameInMap("CommodityCode")
-    private String commodityCode;
-
-    @Query
     @NameInMap("DbType")
     @Validation(required = true)
     private String dbType;
@@ -28,10 +24,6 @@ public class DescribeHostEcsLevelInfoRequest extends Request {
     @Query
     @NameInMap("OwnerId")
     private Long ownerId;
-
-    @Query
-    @NameInMap("PayType")
-    private String payType;
 
     @Query
     @NameInMap("RegionId")
@@ -58,11 +50,9 @@ public class DescribeHostEcsLevelInfoRequest extends Request {
 
     private DescribeHostEcsLevelInfoRequest(Builder builder) {
         super(builder);
-        this.commodityCode = builder.commodityCode;
         this.dbType = builder.dbType;
         this.imageCategory = builder.imageCategory;
         this.ownerId = builder.ownerId;
-        this.payType = builder.payType;
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
@@ -84,13 +74,6 @@ public class DescribeHostEcsLevelInfoRequest extends Request {
     }
 
     /**
-     * @return commodityCode
-     */
-    public String getCommodityCode() {
-        return this.commodityCode;
-    }
-
-    /**
      * @return dbType
      */
     public String getDbType() {
@@ -109,13 +92,6 @@ public class DescribeHostEcsLevelInfoRequest extends Request {
      */
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    /**
-     * @return payType
-     */
-    public String getPayType() {
-        return this.payType;
     }
 
     /**
@@ -154,11 +130,9 @@ public class DescribeHostEcsLevelInfoRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeHostEcsLevelInfoRequest, Builder> {
-        private String commodityCode; 
         private String dbType; 
         private String imageCategory; 
         private Long ownerId; 
-        private String payType; 
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
@@ -171,26 +145,15 @@ public class DescribeHostEcsLevelInfoRequest extends Request {
 
         private Builder(DescribeHostEcsLevelInfoRequest request) {
             super(request);
-            this.commodityCode = request.commodityCode;
             this.dbType = request.dbType;
             this.imageCategory = request.imageCategory;
             this.ownerId = request.ownerId;
-            this.payType = request.payType;
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.storageType = request.storageType;
             this.zoneId = request.zoneId;
         } 
-
-        /**
-         * CommodityCode.
-         */
-        public Builder commodityCode(String commodityCode) {
-            this.putQueryParameter("CommodityCode", commodityCode);
-            this.commodityCode = commodityCode;
-            return this;
-        }
 
         /**
          * DbType.
@@ -216,15 +179,6 @@ public class DescribeHostEcsLevelInfoRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * PayType.
-         */
-        public Builder payType(String payType) {
-            this.putQueryParameter("PayType", payType);
-            this.payType = payType;
             return this;
         }
 
