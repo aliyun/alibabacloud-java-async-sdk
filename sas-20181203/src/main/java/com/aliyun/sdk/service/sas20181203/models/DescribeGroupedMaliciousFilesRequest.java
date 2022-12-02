@@ -46,6 +46,10 @@ public class DescribeGroupedMaliciousFilesRequest extends Request {
     private String levels;
 
     @Query
+    @NameInMap("MaliciousMd5")
+    private String maliciousMd5;
+
+    @Query
     @NameInMap("PageSize")
     @Validation(required = true)
     private String pageSize;
@@ -84,6 +88,7 @@ public class DescribeGroupedMaliciousFilesRequest extends Request {
         this.imageTag = builder.imageTag;
         this.lang = builder.lang;
         this.levels = builder.levels;
+        this.maliciousMd5 = builder.maliciousMd5;
         this.pageSize = builder.pageSize;
         this.repoId = builder.repoId;
         this.repoInstanceId = builder.repoInstanceId;
@@ -163,6 +168,13 @@ public class DescribeGroupedMaliciousFilesRequest extends Request {
     }
 
     /**
+     * @return maliciousMd5
+     */
+    public String getMaliciousMd5() {
+        return this.maliciousMd5;
+    }
+
+    /**
      * @return pageSize
      */
     public String getPageSize() {
@@ -220,6 +232,7 @@ public class DescribeGroupedMaliciousFilesRequest extends Request {
         private String imageTag; 
         private String lang; 
         private String levels; 
+        private String maliciousMd5; 
         private String pageSize; 
         private String repoId; 
         private String repoInstanceId; 
@@ -242,6 +255,7 @@ public class DescribeGroupedMaliciousFilesRequest extends Request {
             this.imageTag = request.imageTag;
             this.lang = request.lang;
             this.levels = request.levels;
+            this.maliciousMd5 = request.maliciousMd5;
             this.pageSize = request.pageSize;
             this.repoId = request.repoId;
             this.repoInstanceId = request.repoInstanceId;
@@ -320,6 +334,15 @@ public class DescribeGroupedMaliciousFilesRequest extends Request {
         public Builder levels(String levels) {
             this.putQueryParameter("Levels", levels);
             this.levels = levels;
+            return this;
+        }
+
+        /**
+         * MaliciousMd5.
+         */
+        public Builder maliciousMd5(String maliciousMd5) {
+            this.putQueryParameter("MaliciousMd5", maliciousMd5);
+            this.maliciousMd5 = maliciousMd5;
             return this;
         }
 

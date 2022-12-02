@@ -14,6 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListCheckInstanceResultRequest extends Request {
     @Query
     @NameInMap("CheckId")
+    @Validation(required = true)
     private Long checkId;
 
     @Query

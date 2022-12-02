@@ -181,6 +181,9 @@ public class ListHoneypotResponseBody extends TeaModel {
         @NameInMap("HoneypotImageDisplayName")
         private String honeypotImageDisplayName;
 
+        @NameInMap("HoneypotImageId")
+        private String honeypotImageId;
+
         @NameInMap("HoneypotImageName")
         private String honeypotImageName;
 
@@ -200,6 +203,7 @@ public class ListHoneypotResponseBody extends TeaModel {
             this.controlNodeName = builder.controlNodeName;
             this.honeypotId = builder.honeypotId;
             this.honeypotImageDisplayName = builder.honeypotImageDisplayName;
+            this.honeypotImageId = builder.honeypotImageId;
             this.honeypotImageName = builder.honeypotImageName;
             this.honeypotName = builder.honeypotName;
             this.nodeId = builder.nodeId;
@@ -234,6 +238,13 @@ public class ListHoneypotResponseBody extends TeaModel {
          */
         public String getHoneypotImageDisplayName() {
             return this.honeypotImageDisplayName;
+        }
+
+        /**
+         * @return honeypotImageId
+         */
+        public String getHoneypotImageId() {
+            return this.honeypotImageId;
         }
 
         /**
@@ -275,6 +286,7 @@ public class ListHoneypotResponseBody extends TeaModel {
             private String controlNodeName; 
             private String honeypotId; 
             private String honeypotImageDisplayName; 
+            private String honeypotImageId; 
             private String honeypotImageName; 
             private String honeypotName; 
             private String nodeId; 
@@ -302,6 +314,14 @@ public class ListHoneypotResponseBody extends TeaModel {
              */
             public Builder honeypotImageDisplayName(String honeypotImageDisplayName) {
                 this.honeypotImageDisplayName = honeypotImageDisplayName;
+                return this;
+            }
+
+            /**
+             * HoneypotImageId.
+             */
+            public Builder honeypotImageId(String honeypotImageId) {
+                this.honeypotImageId = honeypotImageId;
                 return this;
             }
 

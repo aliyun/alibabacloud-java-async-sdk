@@ -15,6 +15,9 @@ public class CreateHoneypotProbeResponseBody extends TeaModel {
     @NameInMap("Code")
     private String code;
 
+    @NameInMap("HoneypotProbe")
+    private HoneypotProbe honeypotProbe;
+
     @NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
@@ -29,6 +32,7 @@ public class CreateHoneypotProbeResponseBody extends TeaModel {
 
     private CreateHoneypotProbeResponseBody(Builder builder) {
         this.code = builder.code;
+        this.honeypotProbe = builder.honeypotProbe;
         this.httpStatusCode = builder.httpStatusCode;
         this.message = builder.message;
         this.requestId = builder.requestId;
@@ -48,6 +52,13 @@ public class CreateHoneypotProbeResponseBody extends TeaModel {
      */
     public String getCode() {
         return this.code;
+    }
+
+    /**
+     * @return honeypotProbe
+     */
+    public HoneypotProbe getHoneypotProbe() {
+        return this.honeypotProbe;
     }
 
     /**
@@ -80,6 +91,7 @@ public class CreateHoneypotProbeResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
+        private HoneypotProbe honeypotProbe; 
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
@@ -90,6 +102,14 @@ public class CreateHoneypotProbeResponseBody extends TeaModel {
          */
         public Builder code(String code) {
             this.code = code;
+            return this;
+        }
+
+        /**
+         * HoneypotProbe.
+         */
+        public Builder honeypotProbe(HoneypotProbe honeypotProbe) {
+            this.honeypotProbe = honeypotProbe;
             return this;
         }
 
@@ -131,4 +151,45 @@ public class CreateHoneypotProbeResponseBody extends TeaModel {
 
     } 
 
+    public static class HoneypotProbe extends TeaModel {
+        @NameInMap("ProbeId")
+        private String probeId;
+
+        private HoneypotProbe(Builder builder) {
+            this.probeId = builder.probeId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static HoneypotProbe create() {
+            return builder().build();
+        }
+
+        /**
+         * @return probeId
+         */
+        public String getProbeId() {
+            return this.probeId;
+        }
+
+        public static final class Builder {
+            private String probeId; 
+
+            /**
+             * ProbeId.
+             */
+            public Builder probeId(String probeId) {
+                this.probeId = probeId;
+                return this;
+            }
+
+            public HoneypotProbe build() {
+                return new HoneypotProbe(this);
+            } 
+
+        } 
+
+    }
 }

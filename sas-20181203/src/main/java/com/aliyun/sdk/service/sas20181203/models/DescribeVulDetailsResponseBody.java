@@ -177,6 +177,15 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
         @NameInMap("CvssVector")
         private String cvssVector;
 
+        @NameInMap("InstanceName")
+        private String instanceName;
+
+        @NameInMap("InternetIp")
+        private String internetIp;
+
+        @NameInMap("IntranetIp")
+        private String intranetIp;
+
         @NameInMap("Poc")
         private String poc;
 
@@ -201,6 +210,12 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
         @NameInMap("Summary")
         private String summary;
 
+        @NameInMap("TargetId")
+        private String targetId;
+
+        @NameInMap("TargetName")
+        private String targetName;
+
         @NameInMap("Title")
         private String title;
 
@@ -219,6 +234,9 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             this.cveId = builder.cveId;
             this.cvssScore = builder.cvssScore;
             this.cvssVector = builder.cvssVector;
+            this.instanceName = builder.instanceName;
+            this.internetIp = builder.internetIp;
+            this.intranetIp = builder.intranetIp;
             this.poc = builder.poc;
             this.pocCreateTime = builder.pocCreateTime;
             this.pocDisclosureTime = builder.pocDisclosureTime;
@@ -227,6 +245,8 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             this.releaseTime = builder.releaseTime;
             this.solution = builder.solution;
             this.summary = builder.summary;
+            this.targetId = builder.targetId;
+            this.targetName = builder.targetName;
             this.title = builder.title;
             this.vendor = builder.vendor;
             this.vulLevel = builder.vulLevel;
@@ -297,6 +317,27 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
         }
 
         /**
+         * @return instanceName
+         */
+        public String getInstanceName() {
+            return this.instanceName;
+        }
+
+        /**
+         * @return internetIp
+         */
+        public String getInternetIp() {
+            return this.internetIp;
+        }
+
+        /**
+         * @return intranetIp
+         */
+        public String getIntranetIp() {
+            return this.intranetIp;
+        }
+
+        /**
          * @return poc
          */
         public String getPoc() {
@@ -353,6 +394,20 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
         }
 
         /**
+         * @return targetId
+         */
+        public String getTargetId() {
+            return this.targetId;
+        }
+
+        /**
+         * @return targetName
+         */
+        public String getTargetName() {
+            return this.targetName;
+        }
+
+        /**
          * @return title
          */
         public String getTitle() {
@@ -382,6 +437,9 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             private String cveId; 
             private String cvssScore; 
             private String cvssVector; 
+            private String instanceName; 
+            private String internetIp; 
+            private String intranetIp; 
             private String poc; 
             private Long pocCreateTime; 
             private Long pocDisclosureTime; 
@@ -390,6 +448,8 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             private Long releaseTime; 
             private String solution; 
             private String summary; 
+            private String targetId; 
+            private String targetName; 
             private String title; 
             private String vendor; 
             private String vulLevel; 
@@ -459,6 +519,30 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             }
 
             /**
+             * InstanceName.
+             */
+            public Builder instanceName(String instanceName) {
+                this.instanceName = instanceName;
+                return this;
+            }
+
+            /**
+             * InternetIp.
+             */
+            public Builder internetIp(String internetIp) {
+                this.internetIp = internetIp;
+                return this;
+            }
+
+            /**
+             * IntranetIp.
+             */
+            public Builder intranetIp(String intranetIp) {
+                this.intranetIp = intranetIp;
+                return this;
+            }
+
+            /**
              * Poc.
              */
             public Builder poc(String poc) {
@@ -519,6 +603,22 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
              */
             public Builder summary(String summary) {
                 this.summary = summary;
+                return this;
+            }
+
+            /**
+             * TargetId.
+             */
+            public Builder targetId(String targetId) {
+                this.targetId = targetId;
+                return this;
+            }
+
+            /**
+             * TargetName.
+             */
+            public Builder targetName(String targetName) {
+                this.targetName = targetName;
                 return this;
             }
 

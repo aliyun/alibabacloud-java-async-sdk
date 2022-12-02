@@ -23,6 +23,7 @@ public class DescribeStrategyTargetRequest extends Request {
 
     @Query
     @NameInMap("Type")
+    @Validation(required = true)
     private String type;
 
     private DescribeStrategyTargetRequest(Builder builder) {

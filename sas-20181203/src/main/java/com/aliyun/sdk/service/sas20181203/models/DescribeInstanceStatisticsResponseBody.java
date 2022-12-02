@@ -75,6 +75,21 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
         @NameInMap("Account")
         private Integer account;
 
+        @NameInMap("AgentlessAll")
+        private Integer agentlessAll;
+
+        @NameInMap("AgentlessBaseline")
+        private Integer agentlessBaseline;
+
+        @NameInMap("AgentlessMalicious")
+        private Integer agentlessMalicious;
+
+        @NameInMap("AgentlessVulCve")
+        private Integer agentlessVulCve;
+
+        @NameInMap("AgentlessVulSca")
+        private Integer agentlessVulSca;
+
         @NameInMap("AppNum")
         private Integer appNum;
 
@@ -113,6 +128,11 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
 
         private Data(Builder builder) {
             this.account = builder.account;
+            this.agentlessAll = builder.agentlessAll;
+            this.agentlessBaseline = builder.agentlessBaseline;
+            this.agentlessMalicious = builder.agentlessMalicious;
+            this.agentlessVulCve = builder.agentlessVulCve;
+            this.agentlessVulSca = builder.agentlessVulSca;
             this.appNum = builder.appNum;
             this.cmsNum = builder.cmsNum;
             this.cveNum = builder.cveNum;
@@ -140,6 +160,41 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
          */
         public Integer getAccount() {
             return this.account;
+        }
+
+        /**
+         * @return agentlessAll
+         */
+        public Integer getAgentlessAll() {
+            return this.agentlessAll;
+        }
+
+        /**
+         * @return agentlessBaseline
+         */
+        public Integer getAgentlessBaseline() {
+            return this.agentlessBaseline;
+        }
+
+        /**
+         * @return agentlessMalicious
+         */
+        public Integer getAgentlessMalicious() {
+            return this.agentlessMalicious;
+        }
+
+        /**
+         * @return agentlessVulCve
+         */
+        public Integer getAgentlessVulCve() {
+            return this.agentlessVulCve;
+        }
+
+        /**
+         * @return agentlessVulSca
+         */
+        public Integer getAgentlessVulSca() {
+            return this.agentlessVulSca;
         }
 
         /**
@@ -228,6 +283,11 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer account; 
+            private Integer agentlessAll; 
+            private Integer agentlessBaseline; 
+            private Integer agentlessMalicious; 
+            private Integer agentlessVulCve; 
+            private Integer agentlessVulSca; 
             private Integer appNum; 
             private Integer cmsNum; 
             private Integer cveNum; 
@@ -246,6 +306,46 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
              */
             public Builder account(Integer account) {
                 this.account = account;
+                return this;
+            }
+
+            /**
+             * AgentlessAll.
+             */
+            public Builder agentlessAll(Integer agentlessAll) {
+                this.agentlessAll = agentlessAll;
+                return this;
+            }
+
+            /**
+             * AgentlessBaseline.
+             */
+            public Builder agentlessBaseline(Integer agentlessBaseline) {
+                this.agentlessBaseline = agentlessBaseline;
+                return this;
+            }
+
+            /**
+             * AgentlessMalicious.
+             */
+            public Builder agentlessMalicious(Integer agentlessMalicious) {
+                this.agentlessMalicious = agentlessMalicious;
+                return this;
+            }
+
+            /**
+             * AgentlessVulCve.
+             */
+            public Builder agentlessVulCve(Integer agentlessVulCve) {
+                this.agentlessVulCve = agentlessVulCve;
+                return this;
+            }
+
+            /**
+             * AgentlessVulSca.
+             */
+            public Builder agentlessVulSca(Integer agentlessVulSca) {
+                this.agentlessVulSca = agentlessVulSca;
                 return this;
             }
 

@@ -125,6 +125,18 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         private String instanceId;
 
+        @NameInMap("InstanceName")
+        private String instanceName;
+
+        @NameInMap("InternetIp")
+        private String internetIp;
+
+        @NameInMap("IntranetIp")
+        private String intranetIp;
+
+        @NameInMap("LastScanTime")
+        private Long lastScanTime;
+
         @NameInMap("LowRiskImage")
         private Integer lowRiskImage;
 
@@ -161,6 +173,15 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
         @NameInMap("Tag")
         private String tag;
 
+        @NameInMap("TargetId")
+        private String targetId;
+
+        @NameInMap("TargetName")
+        private String targetName;
+
+        @NameInMap("TargetType")
+        private String targetType;
+
         @NameInMap("TotalItemCount")
         private Integer totalItemCount;
 
@@ -179,6 +200,10 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             this.imageSize = builder.imageSize;
             this.imageUpdate = builder.imageUpdate;
             this.instanceId = builder.instanceId;
+            this.instanceName = builder.instanceName;
+            this.internetIp = builder.internetIp;
+            this.intranetIp = builder.intranetIp;
+            this.lastScanTime = builder.lastScanTime;
             this.lowRiskImage = builder.lowRiskImage;
             this.middleRiskImage = builder.middleRiskImage;
             this.namespace = builder.namespace;
@@ -191,6 +216,9 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             this.repoType = builder.repoType;
             this.riskStatus = builder.riskStatus;
             this.tag = builder.tag;
+            this.targetId = builder.targetId;
+            this.targetName = builder.targetName;
+            this.targetType = builder.targetType;
             this.totalItemCount = builder.totalItemCount;
             this.uuid = builder.uuid;
         }
@@ -281,6 +309,34 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
         }
 
         /**
+         * @return instanceName
+         */
+        public String getInstanceName() {
+            return this.instanceName;
+        }
+
+        /**
+         * @return internetIp
+         */
+        public String getInternetIp() {
+            return this.internetIp;
+        }
+
+        /**
+         * @return intranetIp
+         */
+        public String getIntranetIp() {
+            return this.intranetIp;
+        }
+
+        /**
+         * @return lastScanTime
+         */
+        public Long getLastScanTime() {
+            return this.lastScanTime;
+        }
+
+        /**
          * @return lowRiskImage
          */
         public Integer getLowRiskImage() {
@@ -365,6 +421,27 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
         }
 
         /**
+         * @return targetId
+         */
+        public String getTargetId() {
+            return this.targetId;
+        }
+
+        /**
+         * @return targetName
+         */
+        public String getTargetName() {
+            return this.targetName;
+        }
+
+        /**
+         * @return targetType
+         */
+        public String getTargetType() {
+            return this.targetType;
+        }
+
+        /**
          * @return totalItemCount
          */
         public Integer getTotalItemCount() {
@@ -390,6 +467,10 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             private Integer imageSize; 
             private Long imageUpdate; 
             private String instanceId; 
+            private String instanceName; 
+            private String internetIp; 
+            private String intranetIp; 
+            private Long lastScanTime; 
             private Integer lowRiskImage; 
             private Integer middleRiskImage; 
             private String namespace; 
@@ -402,6 +483,9 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             private String repoType; 
             private String riskStatus; 
             private String tag; 
+            private String targetId; 
+            private String targetName; 
+            private String targetType; 
             private Integer totalItemCount; 
             private String uuid; 
 
@@ -490,6 +574,38 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * InstanceName.
+             */
+            public Builder instanceName(String instanceName) {
+                this.instanceName = instanceName;
+                return this;
+            }
+
+            /**
+             * InternetIp.
+             */
+            public Builder internetIp(String internetIp) {
+                this.internetIp = internetIp;
+                return this;
+            }
+
+            /**
+             * IntranetIp.
+             */
+            public Builder intranetIp(String intranetIp) {
+                this.intranetIp = intranetIp;
+                return this;
+            }
+
+            /**
+             * LastScanTime.
+             */
+            public Builder lastScanTime(Long lastScanTime) {
+                this.lastScanTime = lastScanTime;
                 return this;
             }
 
@@ -586,6 +702,30 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
              */
             public Builder tag(String tag) {
                 this.tag = tag;
+                return this;
+            }
+
+            /**
+             * TargetId.
+             */
+            public Builder targetId(String targetId) {
+                this.targetId = targetId;
+                return this;
+            }
+
+            /**
+             * TargetName.
+             */
+            public Builder targetName(String targetName) {
+                this.targetName = targetName;
+                return this;
+            }
+
+            /**
+             * TargetType.
+             */
+            public Builder targetType(String targetType) {
+                this.targetType = targetType;
                 return this;
             }
 

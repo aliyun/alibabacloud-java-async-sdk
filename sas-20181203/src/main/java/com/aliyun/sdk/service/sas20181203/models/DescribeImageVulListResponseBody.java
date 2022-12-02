@@ -424,11 +424,23 @@ public class DescribeImageVulListResponseBody extends TeaModel {
         @NameInMap("ImageDigest")
         private String imageDigest;
 
+        @NameInMap("InstanceName")
+        private String instanceName;
+
+        @NameInMap("InternetIp")
+        private String internetIp;
+
+        @NameInMap("IntranetIp")
+        private String intranetIp;
+
         @NameInMap("LastTs")
         private Long lastTs;
 
         @NameInMap("Layers")
         private java.util.List < String > layers;
+
+        @NameInMap("MaliciousSource")
+        private String maliciousSource;
 
         @NameInMap("ModifyTs")
         private Long modifyTs;
@@ -457,11 +469,23 @@ public class DescribeImageVulListResponseBody extends TeaModel {
         @NameInMap("RepoNamespace")
         private String repoNamespace;
 
+        @NameInMap("ScanTime")
+        private Long scanTime;
+
         @NameInMap("Status")
         private Integer status;
 
         @NameInMap("Tag")
         private String tag;
+
+        @NameInMap("TargetId")
+        private String targetId;
+
+        @NameInMap("TargetName")
+        private String targetName;
+
+        @NameInMap("TargetType")
+        private String targetType;
 
         @NameInMap("Type")
         private String type;
@@ -480,8 +504,12 @@ public class DescribeImageVulListResponseBody extends TeaModel {
             this.firstTs = builder.firstTs;
             this.image = builder.image;
             this.imageDigest = builder.imageDigest;
+            this.instanceName = builder.instanceName;
+            this.internetIp = builder.internetIp;
+            this.intranetIp = builder.intranetIp;
             this.lastTs = builder.lastTs;
             this.layers = builder.layers;
+            this.maliciousSource = builder.maliciousSource;
             this.modifyTs = builder.modifyTs;
             this.name = builder.name;
             this.namespace = builder.namespace;
@@ -491,8 +519,12 @@ public class DescribeImageVulListResponseBody extends TeaModel {
             this.related = builder.related;
             this.repoName = builder.repoName;
             this.repoNamespace = builder.repoNamespace;
+            this.scanTime = builder.scanTime;
             this.status = builder.status;
             this.tag = builder.tag;
+            this.targetId = builder.targetId;
+            this.targetName = builder.targetName;
+            this.targetType = builder.targetType;
             this.type = builder.type;
             this.uuid = builder.uuid;
         }
@@ -576,6 +608,27 @@ public class DescribeImageVulListResponseBody extends TeaModel {
         }
 
         /**
+         * @return instanceName
+         */
+        public String getInstanceName() {
+            return this.instanceName;
+        }
+
+        /**
+         * @return internetIp
+         */
+        public String getInternetIp() {
+            return this.internetIp;
+        }
+
+        /**
+         * @return intranetIp
+         */
+        public String getIntranetIp() {
+            return this.intranetIp;
+        }
+
+        /**
          * @return lastTs
          */
         public Long getLastTs() {
@@ -587,6 +640,13 @@ public class DescribeImageVulListResponseBody extends TeaModel {
          */
         public java.util.List < String > getLayers() {
             return this.layers;
+        }
+
+        /**
+         * @return maliciousSource
+         */
+        public String getMaliciousSource() {
+            return this.maliciousSource;
         }
 
         /**
@@ -653,6 +713,13 @@ public class DescribeImageVulListResponseBody extends TeaModel {
         }
 
         /**
+         * @return scanTime
+         */
+        public Long getScanTime() {
+            return this.scanTime;
+        }
+
+        /**
          * @return status
          */
         public Integer getStatus() {
@@ -664,6 +731,27 @@ public class DescribeImageVulListResponseBody extends TeaModel {
          */
         public String getTag() {
             return this.tag;
+        }
+
+        /**
+         * @return targetId
+         */
+        public String getTargetId() {
+            return this.targetId;
+        }
+
+        /**
+         * @return targetName
+         */
+        public String getTargetName() {
+            return this.targetName;
+        }
+
+        /**
+         * @return targetType
+         */
+        public String getTargetType() {
+            return this.targetType;
         }
 
         /**
@@ -691,8 +779,12 @@ public class DescribeImageVulListResponseBody extends TeaModel {
             private Long firstTs; 
             private String image; 
             private String imageDigest; 
+            private String instanceName; 
+            private String internetIp; 
+            private String intranetIp; 
             private Long lastTs; 
             private java.util.List < String > layers; 
+            private String maliciousSource; 
             private Long modifyTs; 
             private String name; 
             private String namespace; 
@@ -702,8 +794,12 @@ public class DescribeImageVulListResponseBody extends TeaModel {
             private String related; 
             private String repoName; 
             private String repoNamespace; 
+            private Long scanTime; 
             private Integer status; 
             private String tag; 
+            private String targetId; 
+            private String targetName; 
+            private String targetType; 
             private String type; 
             private String uuid; 
 
@@ -788,6 +884,30 @@ public class DescribeImageVulListResponseBody extends TeaModel {
             }
 
             /**
+             * InstanceName.
+             */
+            public Builder instanceName(String instanceName) {
+                this.instanceName = instanceName;
+                return this;
+            }
+
+            /**
+             * InternetIp.
+             */
+            public Builder internetIp(String internetIp) {
+                this.internetIp = internetIp;
+                return this;
+            }
+
+            /**
+             * IntranetIp.
+             */
+            public Builder intranetIp(String intranetIp) {
+                this.intranetIp = intranetIp;
+                return this;
+            }
+
+            /**
              * LastTs.
              */
             public Builder lastTs(Long lastTs) {
@@ -800,6 +920,14 @@ public class DescribeImageVulListResponseBody extends TeaModel {
              */
             public Builder layers(java.util.List < String > layers) {
                 this.layers = layers;
+                return this;
+            }
+
+            /**
+             * MaliciousSource.
+             */
+            public Builder maliciousSource(String maliciousSource) {
+                this.maliciousSource = maliciousSource;
                 return this;
             }
 
@@ -876,6 +1004,14 @@ public class DescribeImageVulListResponseBody extends TeaModel {
             }
 
             /**
+             * ScanTime.
+             */
+            public Builder scanTime(Long scanTime) {
+                this.scanTime = scanTime;
+                return this;
+            }
+
+            /**
              * Status.
              */
             public Builder status(Integer status) {
@@ -888,6 +1024,30 @@ public class DescribeImageVulListResponseBody extends TeaModel {
              */
             public Builder tag(String tag) {
                 this.tag = tag;
+                return this;
+            }
+
+            /**
+             * TargetId.
+             */
+            public Builder targetId(String targetId) {
+                this.targetId = targetId;
+                return this;
+            }
+
+            /**
+             * TargetName.
+             */
+            public Builder targetName(String targetName) {
+                this.targetName = targetName;
+                return this;
+            }
+
+            /**
+             * TargetType.
+             */
+            public Builder targetType(String targetType) {
+                this.targetType = targetType;
                 return this;
             }
 

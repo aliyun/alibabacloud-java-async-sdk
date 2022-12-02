@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeVulWhitelistResponseBody</p>
  */
 public class DescribeVulWhitelistResponseBody extends TeaModel {
+    @NameInMap("Count")
+    private Integer count;
+
     @NameInMap("CurrentPage")
     private Integer currentPage;
 
@@ -28,6 +31,7 @@ public class DescribeVulWhitelistResponseBody extends TeaModel {
     private java.util.List < VulWhitelists> vulWhitelists;
 
     private DescribeVulWhitelistResponseBody(Builder builder) {
+        this.count = builder.count;
         this.currentPage = builder.currentPage;
         this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
@@ -41,6 +45,13 @@ public class DescribeVulWhitelistResponseBody extends TeaModel {
 
     public static DescribeVulWhitelistResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return count
+     */
+    public Integer getCount() {
+        return this.count;
     }
 
     /**
@@ -79,11 +90,20 @@ public class DescribeVulWhitelistResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private Integer count; 
         private Integer currentPage; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
         private java.util.List < VulWhitelists> vulWhitelists; 
+
+        /**
+         * Count.
+         */
+        public Builder count(Integer count) {
+            this.count = count;
+            return this;
+        }
 
         /**
          * CurrentPage.
@@ -150,6 +170,9 @@ public class DescribeVulWhitelistResponseBody extends TeaModel {
         @NameInMap("Type")
         private String type;
 
+        @NameInMap("Whitelist")
+        private String whitelist;
+
         private VulWhitelists(Builder builder) {
             this.aliasName = builder.aliasName;
             this.id = builder.id;
@@ -157,6 +180,7 @@ public class DescribeVulWhitelistResponseBody extends TeaModel {
             this.reason = builder.reason;
             this.targetInfo = builder.targetInfo;
             this.type = builder.type;
+            this.whitelist = builder.whitelist;
         }
 
         public static Builder builder() {
@@ -209,6 +233,13 @@ public class DescribeVulWhitelistResponseBody extends TeaModel {
             return this.type;
         }
 
+        /**
+         * @return whitelist
+         */
+        public String getWhitelist() {
+            return this.whitelist;
+        }
+
         public static final class Builder {
             private String aliasName; 
             private String id; 
@@ -216,6 +247,7 @@ public class DescribeVulWhitelistResponseBody extends TeaModel {
             private String reason; 
             private String targetInfo; 
             private String type; 
+            private String whitelist; 
 
             /**
              * AliasName.
@@ -262,6 +294,14 @@ public class DescribeVulWhitelistResponseBody extends TeaModel {
              */
             public Builder type(String type) {
                 this.type = type;
+                return this;
+            }
+
+            /**
+             * Whitelist.
+             */
+            public Builder whitelist(String whitelist) {
+                this.whitelist = whitelist;
                 return this;
             }
 

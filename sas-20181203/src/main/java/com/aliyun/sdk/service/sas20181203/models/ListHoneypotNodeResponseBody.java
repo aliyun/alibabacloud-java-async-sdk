@@ -211,6 +211,9 @@ public class ListHoneypotNodeResponseBody extends TeaModel {
         @NameInMap("TotalStatus")
         private Integer totalStatus;
 
+        @NameInMap("UpgradeAvailable")
+        private Boolean upgradeAvailable;
+
         private HoneypotNodeList(Builder builder) {
             this.allowHoneypotAccessInternet = builder.allowHoneypotAccessInternet;
             this.createTime = builder.createTime;
@@ -225,6 +228,7 @@ public class ListHoneypotNodeResponseBody extends TeaModel {
             this.probeUsedCount = builder.probeUsedCount;
             this.securityGroupProbeIpList = builder.securityGroupProbeIpList;
             this.totalStatus = builder.totalStatus;
+            this.upgradeAvailable = builder.upgradeAvailable;
         }
 
         public static Builder builder() {
@@ -326,6 +330,13 @@ public class ListHoneypotNodeResponseBody extends TeaModel {
             return this.totalStatus;
         }
 
+        /**
+         * @return upgradeAvailable
+         */
+        public Boolean getUpgradeAvailable() {
+            return this.upgradeAvailable;
+        }
+
         public static final class Builder {
             private Boolean allowHoneypotAccessInternet; 
             private String createTime; 
@@ -340,6 +351,7 @@ public class ListHoneypotNodeResponseBody extends TeaModel {
             private Integer probeUsedCount; 
             private java.util.List < String > securityGroupProbeIpList; 
             private Integer totalStatus; 
+            private Boolean upgradeAvailable; 
 
             /**
              * AllowHoneypotAccessInternet.
@@ -442,6 +454,14 @@ public class ListHoneypotNodeResponseBody extends TeaModel {
              */
             public Builder totalStatus(Integer totalStatus) {
                 this.totalStatus = totalStatus;
+                return this;
+            }
+
+            /**
+             * UpgradeAvailable.
+             */
+            public Builder upgradeAvailable(Boolean upgradeAvailable) {
+                this.upgradeAvailable = upgradeAvailable;
                 return this;
             }
 

@@ -122,6 +122,15 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
         @NameInMap("ImageUuid")
         private String imageUuid;
 
+        @NameInMap("InstanceName")
+        private String instanceName;
+
+        @NameInMap("InternetIp")
+        private String internetIp;
+
+        @NameInMap("IntranetIp")
+        private String intranetIp;
+
         @NameInMap("LatestScanTimestamp")
         private Long latestScanTimestamp;
 
@@ -161,6 +170,18 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
         @NameInMap("Tag")
         private String tag;
 
+        @NameInMap("TargetId")
+        private String targetId;
+
+        @NameInMap("TargetName")
+        private String targetName;
+
+        @NameInMap("TargetType")
+        private String targetType;
+
+        @NameInMap("Uuid")
+        private String uuid;
+
         private AffectedMaliciousFileImagesResponse(Builder builder) {
             this.clusterId = builder.clusterId;
             this.clusterName = builder.clusterName;
@@ -172,6 +193,9 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             this.highLight = builder.highLight;
             this.image = builder.image;
             this.imageUuid = builder.imageUuid;
+            this.instanceName = builder.instanceName;
+            this.internetIp = builder.internetIp;
+            this.intranetIp = builder.intranetIp;
             this.latestScanTimestamp = builder.latestScanTimestamp;
             this.latestVerifyTimestamp = builder.latestVerifyTimestamp;
             this.layer = builder.layer;
@@ -185,6 +209,10 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             this.repoRegionId = builder.repoRegionId;
             this.status = builder.status;
             this.tag = builder.tag;
+            this.targetId = builder.targetId;
+            this.targetName = builder.targetName;
+            this.targetType = builder.targetType;
+            this.uuid = builder.uuid;
         }
 
         public static Builder builder() {
@@ -263,6 +291,27 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
          */
         public String getImageUuid() {
             return this.imageUuid;
+        }
+
+        /**
+         * @return instanceName
+         */
+        public String getInstanceName() {
+            return this.instanceName;
+        }
+
+        /**
+         * @return internetIp
+         */
+        public String getInternetIp() {
+            return this.internetIp;
+        }
+
+        /**
+         * @return intranetIp
+         */
+        public String getIntranetIp() {
+            return this.intranetIp;
         }
 
         /**
@@ -356,6 +405,34 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             return this.tag;
         }
 
+        /**
+         * @return targetId
+         */
+        public String getTargetId() {
+            return this.targetId;
+        }
+
+        /**
+         * @return targetName
+         */
+        public String getTargetName() {
+            return this.targetName;
+        }
+
+        /**
+         * @return targetType
+         */
+        public String getTargetType() {
+            return this.targetType;
+        }
+
+        /**
+         * @return uuid
+         */
+        public String getUuid() {
+            return this.uuid;
+        }
+
         public static final class Builder {
             private String clusterId; 
             private String clusterName; 
@@ -367,6 +444,9 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             private String highLight; 
             private String image; 
             private String imageUuid; 
+            private String instanceName; 
+            private String internetIp; 
+            private String intranetIp; 
             private Long latestScanTimestamp; 
             private Long latestVerifyTimestamp; 
             private String layer; 
@@ -380,6 +460,10 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             private String repoRegionId; 
             private Integer status; 
             private String tag; 
+            private String targetId; 
+            private String targetName; 
+            private String targetType; 
+            private String uuid; 
 
             /**
              * ClusterId.
@@ -458,6 +542,30 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
              */
             public Builder imageUuid(String imageUuid) {
                 this.imageUuid = imageUuid;
+                return this;
+            }
+
+            /**
+             * InstanceName.
+             */
+            public Builder instanceName(String instanceName) {
+                this.instanceName = instanceName;
+                return this;
+            }
+
+            /**
+             * InternetIp.
+             */
+            public Builder internetIp(String internetIp) {
+                this.internetIp = internetIp;
+                return this;
+            }
+
+            /**
+             * IntranetIp.
+             */
+            public Builder intranetIp(String intranetIp) {
+                this.intranetIp = intranetIp;
                 return this;
             }
 
@@ -562,6 +670,38 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
              */
             public Builder tag(String tag) {
                 this.tag = tag;
+                return this;
+            }
+
+            /**
+             * TargetId.
+             */
+            public Builder targetId(String targetId) {
+                this.targetId = targetId;
+                return this;
+            }
+
+            /**
+             * TargetName.
+             */
+            public Builder targetName(String targetName) {
+                this.targetName = targetName;
+                return this;
+            }
+
+            /**
+             * TargetType.
+             */
+            public Builder targetType(String targetType) {
+                this.targetType = targetType;
+                return this;
+            }
+
+            /**
+             * Uuid.
+             */
+            public Builder uuid(String uuid) {
+                this.uuid = uuid;
                 return this;
             }
 

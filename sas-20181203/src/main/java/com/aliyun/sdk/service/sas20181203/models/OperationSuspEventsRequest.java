@@ -18,6 +18,7 @@ public class OperationSuspEventsRequest extends Request {
 
     @Query
     @NameInMap("Operation")
+    @Validation(required = true)
     private String operation;
 
     @Query
@@ -30,6 +31,7 @@ public class OperationSuspEventsRequest extends Request {
 
     @Query
     @NameInMap("SuspiciousEventIds")
+    @Validation(required = true)
     private String suspiciousEventIds;
 
     @Query

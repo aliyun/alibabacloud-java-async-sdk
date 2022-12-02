@@ -15,8 +15,12 @@ public class ModifyCreateVulWhitelistResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("VulWhitelistList")
+    private java.util.List < VulWhitelistList> vulWhitelistList;
+
     private ModifyCreateVulWhitelistResponseBody(Builder builder) {
         this.requestId = builder.requestId;
+        this.vulWhitelistList = builder.vulWhitelistList;
     }
 
     public static Builder builder() {
@@ -34,8 +38,16 @@ public class ModifyCreateVulWhitelistResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return vulWhitelistList
+     */
+    public java.util.List < VulWhitelistList> getVulWhitelistList() {
+        return this.vulWhitelistList;
+    }
+
     public static final class Builder {
         private String requestId; 
+        private java.util.List < VulWhitelistList> vulWhitelistList; 
 
         /**
          * RequestId.
@@ -45,10 +57,59 @@ public class ModifyCreateVulWhitelistResponseBody extends TeaModel {
             return this;
         }
 
+        /**
+         * VulWhitelistList.
+         */
+        public Builder vulWhitelistList(java.util.List < VulWhitelistList> vulWhitelistList) {
+            this.vulWhitelistList = vulWhitelistList;
+            return this;
+        }
+
         public ModifyCreateVulWhitelistResponseBody build() {
             return new ModifyCreateVulWhitelistResponseBody(this);
         } 
 
     } 
 
+    public static class VulWhitelistList extends TeaModel {
+        @NameInMap("Id")
+        private Long id;
+
+        private VulWhitelistList(Builder builder) {
+            this.id = builder.id;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VulWhitelistList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return id
+         */
+        public Long getId() {
+            return this.id;
+        }
+
+        public static final class Builder {
+            private Long id; 
+
+            /**
+             * Id.
+             */
+            public Builder id(Long id) {
+                this.id = id;
+                return this;
+            }
+
+            public VulWhitelistList build() {
+                return new VulWhitelistList(this);
+            } 
+
+        } 
+
+    }
 }

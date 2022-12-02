@@ -27,6 +27,7 @@ public class DescribeSuspEventDetailRequest extends Request {
 
     @Query
     @NameInMap("SuspiciousEventId")
+    @Validation(required = true)
     private Integer suspiciousEventId;
 
     private DescribeSuspEventDetailRequest(Builder builder) {
