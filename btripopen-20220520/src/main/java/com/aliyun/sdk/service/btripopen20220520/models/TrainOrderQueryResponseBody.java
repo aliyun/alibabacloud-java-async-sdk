@@ -635,6 +635,12 @@ public class TrainOrderQueryResponseBody extends TeaModel {
         @NameInMap("depart_name")
         private String departName;
 
+        @NameInMap("exceed_apply_id")
+        private String exceedApplyId;
+
+        @NameInMap("exceed_third_part_apply_id")
+        private String exceedThirdPartApplyId;
+
         @NameInMap("gmt_create")
         private String gmtCreate;
 
@@ -673,6 +679,8 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             this.corpName = builder.corpName;
             this.departId = builder.departId;
             this.departName = builder.departName;
+            this.exceedApplyId = builder.exceedApplyId;
+            this.exceedThirdPartApplyId = builder.exceedThirdPartApplyId;
             this.gmtCreate = builder.gmtCreate;
             this.gmtModify = builder.gmtModify;
             this.itineraryId = builder.itineraryId;
@@ -740,6 +748,20 @@ public class TrainOrderQueryResponseBody extends TeaModel {
          */
         public String getDepartName() {
             return this.departName;
+        }
+
+        /**
+         * @return exceedApplyId
+         */
+        public String getExceedApplyId() {
+            return this.exceedApplyId;
+        }
+
+        /**
+         * @return exceedThirdPartApplyId
+         */
+        public String getExceedThirdPartApplyId() {
+            return this.exceedThirdPartApplyId;
         }
 
         /**
@@ -820,6 +842,8 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             private String corpName; 
             private String departId; 
             private String departName; 
+            private String exceedApplyId; 
+            private String exceedThirdPartApplyId; 
             private String gmtCreate; 
             private String gmtModify; 
             private String itineraryId; 
@@ -884,6 +908,22 @@ public class TrainOrderQueryResponseBody extends TeaModel {
              */
             public Builder departName(String departName) {
                 this.departName = departName;
+                return this;
+            }
+
+            /**
+             * exceed_apply_id.
+             */
+            public Builder exceedApplyId(String exceedApplyId) {
+                this.exceedApplyId = exceedApplyId;
+                return this;
+            }
+
+            /**
+             * exceed_third_part_apply_id.
+             */
+            public Builder exceedThirdPartApplyId(String exceedThirdPartApplyId) {
+                this.exceedThirdPartApplyId = exceedThirdPartApplyId;
                 return this;
             }
 

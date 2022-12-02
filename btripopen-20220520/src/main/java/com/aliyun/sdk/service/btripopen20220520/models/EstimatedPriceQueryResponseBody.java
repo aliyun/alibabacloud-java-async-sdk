@@ -516,7 +516,7 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
     }
     public static class BtripRoutes extends TeaModel {
         @NameInMap("arr_date")
-        private String arrDate;
+        private Long arrDate;
 
         @NameInMap("btrip_type")
         private Integer btripType;
@@ -525,7 +525,7 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
         private Cheapest cheapest;
 
         @NameInMap("dep_date")
-        private String depDate;
+        private Long depDate;
 
         @NameInMap("dest_city")
         private String destCity;
@@ -573,7 +573,7 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
         /**
          * @return arrDate
          */
-        public String getArrDate() {
+        public Long getArrDate() {
             return this.arrDate;
         }
 
@@ -594,7 +594,7 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
         /**
          * @return depDate
          */
-        public String getDepDate() {
+        public Long getDepDate() {
             return this.depDate;
         }
 
@@ -648,10 +648,10 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private String arrDate; 
+            private Long arrDate; 
             private Integer btripType; 
             private Cheapest cheapest; 
-            private String depDate; 
+            private Long depDate; 
             private String destCity; 
             private String errMsg; 
             private String itineraryId; 
@@ -663,7 +663,7 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
             /**
              * arr_date.
              */
-            public Builder arrDate(String arrDate) {
+            public Builder arrDate(Long arrDate) {
                 this.arrDate = arrDate;
                 return this;
             }
@@ -687,7 +687,7 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
             /**
              * dep_date.
              */
-            public Builder depDate(String depDate) {
+            public Builder depDate(Long depDate) {
                 this.depDate = depDate;
                 return this;
             }

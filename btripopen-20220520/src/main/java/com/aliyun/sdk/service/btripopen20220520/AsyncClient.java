@@ -114,6 +114,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ProjectModifyResponse> projectModify(ProjectModifyRequest request);
 
+    CompletableFuture<SyncSingleUserResponse> syncSingleUser(SyncSingleUserRequest request);
+
     CompletableFuture<TrainBillSettlementQueryResponse> trainBillSettlementQuery(TrainBillSettlementQueryRequest request);
 
     CompletableFuture<TrainExceedApplyQueryResponse> trainExceedApplyQuery(TrainExceedApplyQueryRequest request);
