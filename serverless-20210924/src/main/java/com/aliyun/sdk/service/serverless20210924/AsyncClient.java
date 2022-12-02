@@ -80,7 +80,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<PutEnvironmentResponse> putEnvironment(PutEnvironmentRequest request);
 
+    CompletableFuture<PutPipelineStatusResponse> putPipelineStatus(PutPipelineStatusRequest request);
+
+    CompletableFuture<PutPipelineTemplateResponse> putPipelineTemplate(PutPipelineTemplateRequest request);
+
     CompletableFuture<PutServiceResponse> putService(PutServiceRequest request);
+
+    CompletableFuture<PutTaskStatusResponse> putTaskStatus(PutTaskStatusRequest request);
+
+    CompletableFuture<PutTaskTemplateResponse> putTaskTemplate(PutTaskTemplateRequest request);
 
     CompletableFuture<PutTemplateResponse> putTemplate(PutTemplateRequest request);
 
