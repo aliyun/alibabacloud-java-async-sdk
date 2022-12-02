@@ -131,6 +131,47 @@ public class GetLogicDatabaseResponseBody extends TeaModel {
 
     } 
 
+    public static class DatabaseIds extends TeaModel {
+        @NameInMap("DatabaseIds")
+        private java.util.List < Long > databaseIds;
+
+        private DatabaseIds(Builder builder) {
+            this.databaseIds = builder.databaseIds;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DatabaseIds create() {
+            return builder().build();
+        }
+
+        /**
+         * @return databaseIds
+         */
+        public java.util.List < Long > getDatabaseIds() {
+            return this.databaseIds;
+        }
+
+        public static final class Builder {
+            private java.util.List < Long > databaseIds; 
+
+            /**
+             * DatabaseIds.
+             */
+            public Builder databaseIds(java.util.List < Long > databaseIds) {
+                this.databaseIds = databaseIds;
+                return this;
+            }
+
+            public DatabaseIds build() {
+                return new DatabaseIds(this);
+            } 
+
+        } 
+
+    }
     public static class OwnerIdList extends TeaModel {
         @NameInMap("OwnerIds")
         private java.util.List < String > ownerIds;
@@ -220,6 +261,9 @@ public class GetLogicDatabaseResponseBody extends TeaModel {
         @NameInMap("DatabaseId")
         private String databaseId;
 
+        @NameInMap("DatabaseIds")
+        private DatabaseIds databaseIds;
+
         @NameInMap("DbType")
         private String dbType;
 
@@ -244,6 +288,7 @@ public class GetLogicDatabaseResponseBody extends TeaModel {
         private LogicDatabase(Builder builder) {
             this.alias = builder.alias;
             this.databaseId = builder.databaseId;
+            this.databaseIds = builder.databaseIds;
             this.dbType = builder.dbType;
             this.envType = builder.envType;
             this.logic = builder.logic;
@@ -273,6 +318,13 @@ public class GetLogicDatabaseResponseBody extends TeaModel {
          */
         public String getDatabaseId() {
             return this.databaseId;
+        }
+
+        /**
+         * @return databaseIds
+         */
+        public DatabaseIds getDatabaseIds() {
+            return this.databaseIds;
         }
 
         /**
@@ -327,6 +379,7 @@ public class GetLogicDatabaseResponseBody extends TeaModel {
         public static final class Builder {
             private String alias; 
             private String databaseId; 
+            private DatabaseIds databaseIds; 
             private String dbType; 
             private String envType; 
             private Boolean logic; 
@@ -348,6 +401,14 @@ public class GetLogicDatabaseResponseBody extends TeaModel {
              */
             public Builder databaseId(String databaseId) {
                 this.databaseId = databaseId;
+                return this;
+            }
+
+            /**
+             * DatabaseIds.
+             */
+            public Builder databaseIds(DatabaseIds databaseIds) {
+                this.databaseIds = databaseIds;
                 return this;
             }
 

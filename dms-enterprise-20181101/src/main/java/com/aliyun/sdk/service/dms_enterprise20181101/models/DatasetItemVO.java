@@ -21,6 +21,9 @@ public class DatasetItemVO extends TeaModel {
     @NameInMap("DatasetType")
     private Integer datasetType;
 
+    @NameInMap("Digest")
+    private String digest;
+
     @NameInMap("FileSystem")
     private String fileSystem;
 
@@ -58,6 +61,7 @@ public class DatasetItemVO extends TeaModel {
         this.asyncTaskList = builder.asyncTaskList;
         this.datasetStatus = builder.datasetStatus;
         this.datasetType = builder.datasetType;
+        this.digest = builder.digest;
         this.fileSystem = builder.fileSystem;
         this.id = builder.id;
         this.keyName = builder.keyName;
@@ -98,6 +102,13 @@ public class DatasetItemVO extends TeaModel {
      */
     public Integer getDatasetType() {
         return this.datasetType;
+    }
+
+    /**
+     * @return digest
+     */
+    public String getDigest() {
+        return this.digest;
     }
 
     /**
@@ -181,6 +192,7 @@ public class DatasetItemVO extends TeaModel {
         private java.util.List < AsyncTaskVO > asyncTaskList; 
         private Integer datasetStatus; 
         private Integer datasetType; 
+        private String digest; 
         private String fileSystem; 
         private String id; 
         private String keyName; 
@@ -214,6 +226,14 @@ public class DatasetItemVO extends TeaModel {
          */
         public Builder datasetType(Integer datasetType) {
             this.datasetType = datasetType;
+            return this;
+        }
+
+        /**
+         * 摘要信息
+         */
+        public Builder digest(String digest) {
+            this.digest = digest;
             return this;
         }
 

@@ -181,6 +181,7 @@ com/aliyun/sdk/service/dms_enterprise20181101/models/CreateStructSyncOrderRespon
 com/aliyun/sdk/service/dms_enterprise20181101/models/ListDataCorrectPreCheckSQLResponseBody$Builder.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/ListProxySQLExecAuditLogResponse$1.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/CreateLakeHouseSpaceResponseBody$Builder.class
+com/aliyun/sdk/service/dms_enterprise20181101/models/GetOnlineDDLProgressResponseBody$OnlineDDLTaskDetail.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/ListSensitiveColumnsDetailResponse.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/GetRuleNumLimitOfSLARequest$1.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/ListSensitiveColumnsDetailResponse$Builder.class
@@ -317,6 +318,7 @@ com/aliyun/sdk/service/dms_enterprise20181101/models/ListTablesResponseBody$Tabl
 com/aliyun/sdk/service/dms_enterprise20181101/models/UpdateTaskFlowOwnerRequest.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/RetryDataCorrectPreCheckRequest$1.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/ListInstanceLoginAuditLogResponseBody$InstanceLoginAuditLogList.class
+com/aliyun/sdk/service/dms_enterprise20181101/models/ListLogicDatabasesResponseBody$DatabaseIds$Builder.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/ListTaskFlowConstantsResponseBody$DagConstants$Builder.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/ListLhTaskFlowAndScenarioResponse$1.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/ModifyDesensitizationStrategyResponse$BuilderImpl.class
@@ -383,6 +385,7 @@ com/aliyun/sdk/service/dms_enterprise20181101/models/ListTaskFlowsByPageRequest.
 com/aliyun/sdk/service/dms_enterprise20181101/models/CreateTaskRequest$1.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/EditLogicDatabaseResponse$1.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/CloseOrderResponse.class
+com/aliyun/sdk/service/dms_enterprise20181101/models/GetOnlineDDLProgressResponseBody$OnlineDDLTaskDetail$Builder.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/ListClassificationTemplatesResponse$Builder.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/UpdateTaskFlowNameAndDescRequest$1.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/ListSensitiveDataAuditLogResponse$Builder.class
@@ -436,6 +439,7 @@ com/aliyun/sdk/service/dms_enterprise20181101/models/SearchDatabaseResponseBody$
 com/aliyun/sdk/service/dms_enterprise20181101/models/GetTableTopologyRequest$Builder.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/CreateDataImportOrderResponseBody.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/ListInstanceUserPermissionsResponseBody.class
+com/aliyun/sdk/service/dms_enterprise20181101/models/GetOnlineDDLProgressResponseBody$Builder.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/ListProxiesRequest.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/ListLogicDatabasesRequest$1.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/GetMetaTableDetailInfoResponseBody.class
@@ -450,6 +454,7 @@ com/aliyun/sdk/service/dms_enterprise20181101/models/MoveTaskFlowToScenarioRespo
 com/aliyun/sdk/service/dms_enterprise20181101/models/GetDataCorrectOrderDetailRequest$1.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/GetApprovalDetailResponseBody$AuditUserIdList$Builder.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/ListSensitiveColumnsRequest$1.class
+com/aliyun/sdk/service/dms_enterprise20181101/models/GetOnlineDDLProgressResponseBody.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/ExecuteScriptResponseBody$Results$Builder.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/GetTaskResponseBody$1.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/DeleteScenarioResponse$BuilderImpl.class
@@ -676,6 +681,7 @@ com/aliyun/sdk/service/dms_enterprise20181101/models/ListInstancesResponseBody$I
 com/aliyun/sdk/service/dms_enterprise20181101/models/UpdateScenarioResponseBody.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/GetLhSpaceByNameResponseBody$Builder.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/UpdateTaskFlowRelationsRequest.class
+com/aliyun/sdk/service/dms_enterprise20181101/models/GetOnlineDDLProgressResponse$BuilderImpl.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/GetPhysicalDatabaseResponseBody$Database.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/GetStructSyncOrderDetailResponseBody$SourceVersionInfo.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/GetDataCronClearConfigResponseBody$DataCronClearConfig$Builder.class
@@ -836,6 +842,7 @@ com/aliyun/sdk/service/dms_enterprise20181101/models/GetIntervalLimitOfSLARespon
 com/aliyun/sdk/service/dms_enterprise20181101/models/ExecuteStructSyncResponseBody.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/ListDefaultSLARulesRequest$Builder.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/ListLogicDatabasesResponse$Builder.class
+com/aliyun/sdk/service/dms_enterprise20181101/models/GetLogicDatabaseResponseBody$DatabaseIds.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/GetSQLReviewOptimizeDetailResponseBody$OptimizeDetail.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/CreateFreeLockCorrectOrderResponse$BuilderImpl.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/ListDatabaseUserPermssionsResponse$BuilderImpl.class
@@ -981,6 +988,7 @@ com/aliyun/sdk/service/dms_enterprise20181101/models/GetDBTaskSQLJobLogResponseB
 com/aliyun/sdk/service/dms_enterprise20181101/models/ListDAGVersionsResponse$Builder.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/GetSQLReviewOptimizeDetailResponseBody$QualityResult$Builder.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/CreateStandardGroupResponse.class
+com/aliyun/sdk/service/dms_enterprise20181101/models/GetOnlineDDLProgressRequest.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/ListWorkFlowTemplatesResponse$1.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/DeleteProxyAccessResponse$BuilderImpl.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/ListDatabaseUserPermssionsResponseBody$UserPermission$Builder.class
@@ -1051,6 +1059,7 @@ com/aliyun/sdk/service/dms_enterprise20181101/models/AddTaskFlowEdgesResponseBod
 com/aliyun/sdk/service/dms_enterprise20181101/models/GetSQLReviewOptimizeDetailResponseBody$Results$Builder.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/AddLhMembersRequest$Builder.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/GetInstanceRequest$1.class
+com/aliyun/sdk/service/dms_enterprise20181101/models/GetOnlineDDLProgressResponse.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/GetMetaTableColumnResponseBody$Builder.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/ResumeTaskFlowInstanceResponseBody$Builder.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/ListLhTaskFlowAndScenarioResponseBody$ScenarioDAG.class
@@ -1400,6 +1409,7 @@ com/aliyun/sdk/service/dms_enterprise20181101/models/DeleteTaskFlowEdgesByCondit
 com/aliyun/sdk/service/dms_enterprise20181101/models/ListScenariosRequest.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/SubmitOrderApprovalResponseBody$1.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/CreateProxyAccessResponseBody$1.class
+com/aliyun/sdk/service/dms_enterprise20181101/models/GetOnlineDDLProgressResponseBody$1.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/GetSQLReviewOptimizeDetailResponseBody$1.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/AddTaskFlowEdgesResponse.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/ProjectDetailsLiteVO.class
@@ -1424,6 +1434,7 @@ com/aliyun/sdk/service/dms_enterprise20181101/models/GetTaskInstanceRelationRequ
 com/aliyun/sdk/service/dms_enterprise20181101/models/CreateDataImportOrderResponse$1.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/ListDataCorrectPreCheckSQLResponseBody$1.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/SearchDatabaseResponseBody$OwnerIdList$Builder.class
+com/aliyun/sdk/service/dms_enterprise20181101/models/GetOnlineDDLProgressResponse$Builder.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/ListTasksInTaskFlowResponse.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/DeleteProxyAccessResponse$Builder.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/ListDataCorrectPreCheckDBResponse$BuilderImpl.class
@@ -1553,6 +1564,7 @@ com/aliyun/sdk/service/dms_enterprise20181101/models/ListSQLReviewOriginSQLRespo
 com/aliyun/sdk/service/dms_enterprise20181101/models/GetUserResponseBody$1.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/GrantUserPermissionResponseBody$1.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/GetDBTopologyResponseBody.class
+com/aliyun/sdk/service/dms_enterprise20181101/models/GetOnlineDDLProgressRequest$1.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/UpdateTaskConfigResponse.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/ListDataCorrectPreCheckSQLResponseBody$PreCheckSQLList.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/UpdateTaskFlowCooperatorsResponse.class
@@ -1683,6 +1695,7 @@ com/aliyun/sdk/service/dms_enterprise20181101/models/ListUserPermissionsResponse
 com/aliyun/sdk/service/dms_enterprise20181101/models/GetDataCorrectRollbackFileResponse$BuilderImpl.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/ListUserPermissionsResponseBody$PermDetail$Builder.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/AddTaskFlowEdgesRequest.class
+com/aliyun/sdk/service/dms_enterprise20181101/models/GetOnlineDDLProgressResponse$1.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/ListTaskFlowEdgesByConditionResponseBody$Edge$Builder.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/ListUserPermissionsRequest$Builder.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/RegisterUserResponseBody$1.class
@@ -1842,6 +1855,7 @@ com/aliyun/sdk/service/dms_enterprise20181101/models/GetOwnerApplyOrderDetailRes
 com/aliyun/sdk/service/dms_enterprise20181101/models/GetLhSpaceByNameResponse$Builder.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/GetMetaTableDetailInfoResponse.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/SetOwnersResponseBody$1.class
+com/aliyun/sdk/service/dms_enterprise20181101/models/GetLogicDatabaseResponseBody$DatabaseIds$Builder.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/ListDataCorrectPreCheckSQLResponseBody$PreCheckSQLList$Builder.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/GetTaskInstanceRelationResponse$1.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/UpdateTaskConfigResponse$BuilderImpl.class
@@ -1900,6 +1914,7 @@ com/aliyun/sdk/service/dms_enterprise20181101/models/GetTaskResponse$1.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/GetDataCorrectOrderDetailResponseBody$Database.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/ListLhTaskFlowAndScenarioResponseBody$DagList$Builder.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/ApproveOrderResponse$BuilderImpl.class
+com/aliyun/sdk/service/dms_enterprise20181101/models/ListLogicDatabasesResponseBody$DatabaseIds.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/CreateScenarioResponseBody.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/ListWorkFlowNodesResponseBody$1.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/OfflineTaskFlowRequest$Builder.class
@@ -2216,6 +2231,7 @@ com/aliyun/sdk/service/dms_enterprise20181101/models/ListTaskFlowConstantsRespon
 com/aliyun/sdk/service/dms_enterprise20181101/models/ReDeployLhDagVersionResponse$Builder.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/ListUsersResponse$BuilderImpl.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/AddDesensitizationRuleResponseBody.class
+com/aliyun/sdk/service/dms_enterprise20181101/models/GetOnlineDDLProgressRequest$Builder.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/CreateFreeLockCorrectOrderResponseBody.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/ListDDLPublishRecordsResponseBody$PublishTaskInfoList$Builder.class
 com/aliyun/sdk/service/dms_enterprise20181101/models/ListDatabasesResponseBody$OwnerIdList$Builder.class

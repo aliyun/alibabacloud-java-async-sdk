@@ -150,6 +150,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetMetaTableDetailInfoResponse> getMetaTableDetailInfo(GetMetaTableDetailInfoRequest request);
 
+    CompletableFuture<GetOnlineDDLProgressResponse> getOnlineDDLProgress(GetOnlineDDLProgressRequest request);
+
     CompletableFuture<GetOpLogResponse> getOpLog(GetOpLogRequest request);
 
     CompletableFuture<GetOrderAttachmentFileResponse> getOrderAttachmentFile(GetOrderAttachmentFileRequest request);

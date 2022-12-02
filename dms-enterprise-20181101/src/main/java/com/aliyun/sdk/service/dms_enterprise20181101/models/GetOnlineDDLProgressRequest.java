@@ -7,29 +7,29 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetStructSyncOrderDetailRequest} extends {@link RequestModel}
+ * {@link GetOnlineDDLProgressRequest} extends {@link RequestModel}
  *
- * <p>GetStructSyncOrderDetailRequest</p>
+ * <p>GetOnlineDDLProgressRequest</p>
  */
-public class GetStructSyncOrderDetailRequest extends Request {
+public class GetOnlineDDLProgressRequest extends Request {
     @Host
     @NameInMap("RegionId")
     private String regionId;
 
     @Query
-    @NameInMap("OrderId")
-    @Validation(required = true, minimum = 1)
-    private Long orderId;
+    @NameInMap("JobDetailId")
+    @Validation(required = true)
+    private Long jobDetailId;
 
     @Query
     @NameInMap("Tid")
     @Validation(minimum = 1)
     private Long tid;
 
-    private GetStructSyncOrderDetailRequest(Builder builder) {
+    private GetOnlineDDLProgressRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
-        this.orderId = builder.orderId;
+        this.jobDetailId = builder.jobDetailId;
         this.tid = builder.tid;
     }
 
@@ -37,7 +37,7 @@ public class GetStructSyncOrderDetailRequest extends Request {
         return new Builder();
     }
 
-    public static GetStructSyncOrderDetailRequest create() {
+    public static GetOnlineDDLProgressRequest create() {
         return builder().build();
     }
 
@@ -54,10 +54,10 @@ public class GetStructSyncOrderDetailRequest extends Request {
     }
 
     /**
-     * @return orderId
+     * @return jobDetailId
      */
-    public Long getOrderId() {
-        return this.orderId;
+    public Long getJobDetailId() {
+        return this.jobDetailId;
     }
 
     /**
@@ -67,19 +67,19 @@ public class GetStructSyncOrderDetailRequest extends Request {
         return this.tid;
     }
 
-    public static final class Builder extends Request.Builder<GetStructSyncOrderDetailRequest, Builder> {
+    public static final class Builder extends Request.Builder<GetOnlineDDLProgressRequest, Builder> {
         private String regionId; 
-        private Long orderId; 
+        private Long jobDetailId; 
         private Long tid; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetStructSyncOrderDetailRequest request) {
+        private Builder(GetOnlineDDLProgressRequest request) {
             super(request);
             this.regionId = request.regionId;
-            this.orderId = request.orderId;
+            this.jobDetailId = request.jobDetailId;
             this.tid = request.tid;
         } 
 
@@ -93,11 +93,11 @@ public class GetStructSyncOrderDetailRequest extends Request {
         }
 
         /**
-         * OrderId.
+         * JobDetailId.
          */
-        public Builder orderId(Long orderId) {
-            this.putQueryParameter("OrderId", orderId);
-            this.orderId = orderId;
+        public Builder jobDetailId(Long jobDetailId) {
+            this.putQueryParameter("JobDetailId", jobDetailId);
+            this.jobDetailId = jobDetailId;
             return this;
         }
 
@@ -111,8 +111,8 @@ public class GetStructSyncOrderDetailRequest extends Request {
         }
 
         @Override
-        public GetStructSyncOrderDetailRequest build() {
-            return new GetStructSyncOrderDetailRequest(this);
+        public GetOnlineDDLProgressRequest build() {
+            return new GetOnlineDDLProgressRequest(this);
         } 
 
     } 
