@@ -435,11 +435,11 @@ public class UpdateBaselineRequest extends Request {
     }
     public static class AlertSettings extends TeaModel {
         @NameInMap("AlertInterval")
-        @Validation(required = true)
+        @Validation(maximum = 1440, minimum = 5)
         private Integer alertInterval;
 
         @NameInMap("AlertMaximum")
-        @Validation(required = true)
+        @Validation(maximum = 288, minimum = 1)
         private Integer alertMaximum;
 
         @NameInMap("AlertMethods")

@@ -43,10 +43,6 @@ public class ListBaselinesRequest extends Request {
     private String priority;
 
     @Body
-    @NameInMap("ProjectEnv")
-    private String projectEnv;
-
-    @Body
     @NameInMap("ProjectId")
     @Validation(required = true)
     private Long projectId;
@@ -64,7 +60,6 @@ public class ListBaselinesRequest extends Request {
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.priority = builder.priority;
-        this.projectEnv = builder.projectEnv;
         this.projectId = builder.projectId;
         this.searchText = builder.searchText;
     }
@@ -132,13 +127,6 @@ public class ListBaselinesRequest extends Request {
     }
 
     /**
-     * @return projectEnv
-     */
-    public String getProjectEnv() {
-        return this.projectEnv;
-    }
-
-    /**
      * @return projectId
      */
     public Long getProjectId() {
@@ -160,7 +148,6 @@ public class ListBaselinesRequest extends Request {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String priority; 
-        private String projectEnv; 
         private Long projectId; 
         private String searchText; 
 
@@ -177,7 +164,6 @@ public class ListBaselinesRequest extends Request {
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.priority = request.priority;
-            this.projectEnv = request.projectEnv;
             this.projectId = request.projectId;
             this.searchText = request.searchText;
         } 
@@ -242,15 +228,6 @@ public class ListBaselinesRequest extends Request {
         public Builder priority(String priority) {
             this.putBodyParameter("Priority", priority);
             this.priority = priority;
-            return this;
-        }
-
-        /**
-         * ProjectEnv.
-         */
-        public Builder projectEnv(String projectEnv) {
-            this.putBodyParameter("ProjectEnv", projectEnv);
-            this.projectEnv = projectEnv;
             return this;
         }
 
