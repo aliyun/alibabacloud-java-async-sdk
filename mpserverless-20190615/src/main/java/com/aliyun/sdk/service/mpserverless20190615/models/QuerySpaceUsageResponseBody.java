@@ -15,9 +15,6 @@ public class QuerySpaceUsageResponseBody extends TeaModel {
     @NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("GmtCreate")
-    private String gmtCreate;
-
     @NameInMap("RequestId")
     private String requestId;
 
@@ -32,7 +29,6 @@ public class QuerySpaceUsageResponseBody extends TeaModel {
 
     private QuerySpaceUsageResponseBody(Builder builder) {
         this.endTime = builder.endTime;
-        this.gmtCreate = builder.gmtCreate;
         this.requestId = builder.requestId;
         this.spaceId = builder.spaceId;
         this.spaceUsageDataList = builder.spaceUsageDataList;
@@ -52,13 +48,6 @@ public class QuerySpaceUsageResponseBody extends TeaModel {
      */
     public String getEndTime() {
         return this.endTime;
-    }
-
-    /**
-     * @return gmtCreate
-     */
-    public String getGmtCreate() {
-        return this.gmtCreate;
     }
 
     /**
@@ -91,7 +80,6 @@ public class QuerySpaceUsageResponseBody extends TeaModel {
 
     public static final class Builder {
         private String endTime; 
-        private String gmtCreate; 
         private String requestId; 
         private String spaceId; 
         private java.util.List < SpaceUsageDataList> spaceUsageDataList; 
@@ -102,14 +90,6 @@ public class QuerySpaceUsageResponseBody extends TeaModel {
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
-            return this;
-        }
-
-        /**
-         * GmtCreate.
-         */
-        public Builder gmtCreate(String gmtCreate) {
-            this.gmtCreate = gmtCreate;
             return this;
         }
 
