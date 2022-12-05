@@ -21,6 +21,10 @@ public class DescribeDomainUsageDataRequest extends Request {
     private String area;
 
     @Query
+    @NameInMap("DataProtocol")
+    private String dataProtocol;
+
+    @Query
     @NameInMap("DomainName")
     private String domainName;
 
@@ -55,6 +59,7 @@ public class DescribeDomainUsageDataRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.area = builder.area;
+        this.dataProtocol = builder.dataProtocol;
         this.domainName = builder.domainName;
         this.endTime = builder.endTime;
         this.field = builder.field;
@@ -89,6 +94,13 @@ public class DescribeDomainUsageDataRequest extends Request {
      */
     public String getArea() {
         return this.area;
+    }
+
+    /**
+     * @return dataProtocol
+     */
+    public String getDataProtocol() {
+        return this.dataProtocol;
     }
 
     /**
@@ -143,6 +155,7 @@ public class DescribeDomainUsageDataRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeDomainUsageDataRequest, Builder> {
         private String regionId; 
         private String area; 
+        private String dataProtocol; 
         private String domainName; 
         private String endTime; 
         private String field; 
@@ -159,6 +172,7 @@ public class DescribeDomainUsageDataRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.area = request.area;
+            this.dataProtocol = request.dataProtocol;
             this.domainName = request.domainName;
             this.endTime = request.endTime;
             this.field = request.field;
@@ -183,6 +197,15 @@ public class DescribeDomainUsageDataRequest extends Request {
         public Builder area(String area) {
             this.putQueryParameter("Area", area);
             this.area = area;
+            return this;
+        }
+
+        /**
+         * DataProtocol.
+         */
+        public Builder dataProtocol(String dataProtocol) {
+            this.putQueryParameter("DataProtocol", dataProtocol);
+            this.dataProtocol = dataProtocol;
             return this;
         }
 

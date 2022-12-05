@@ -12,9 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListMessageRequest</p>
  */
 public class ListMessageRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
+    @Body
+    @NameInMap("AppId")
+    @Validation(required = true)
+    private String appId;
 
     @Body
     @NameInMap("GroupId")
@@ -41,7 +42,7 @@ public class ListMessageRequest extends Request {
 
     private ListMessageRequest(Builder builder) {
         super(builder);
-        this.regionId = builder.regionId;
+        this.appId = builder.appId;
         this.groupId = builder.groupId;
         this.pageNum = builder.pageNum;
         this.pageSize = builder.pageSize;
@@ -63,10 +64,10 @@ public class ListMessageRequest extends Request {
     }
 
     /**
-     * @return regionId
+     * @return appId
      */
-    public String getRegionId() {
-        return this.regionId;
+    public String getAppId() {
+        return this.appId;
     }
 
     /**
@@ -105,7 +106,7 @@ public class ListMessageRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListMessageRequest, Builder> {
-        private String regionId; 
+        private String appId; 
         private String groupId; 
         private Integer pageNum; 
         private Integer pageSize; 
@@ -118,7 +119,7 @@ public class ListMessageRequest extends Request {
 
         private Builder(ListMessageRequest request) {
             super(request);
-            this.regionId = request.regionId;
+            this.appId = request.appId;
             this.groupId = request.groupId;
             this.pageNum = request.pageNum;
             this.pageSize = request.pageSize;
@@ -127,11 +128,11 @@ public class ListMessageRequest extends Request {
         } 
 
         /**
-         * cn-shanghai
+         * AppId.
          */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
+        public Builder appId(String appId) {
+            this.putBodyParameter("AppId", appId);
+            this.appId = appId;
             return this;
         }
 

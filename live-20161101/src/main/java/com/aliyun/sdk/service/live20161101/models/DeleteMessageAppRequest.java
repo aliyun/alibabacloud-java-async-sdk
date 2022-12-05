@@ -12,10 +12,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteMessageAppRequest</p>
  */
 public class DeleteMessageAppRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Body
     @NameInMap("AppId")
     @Validation(required = true)
@@ -23,7 +19,6 @@ public class DeleteMessageAppRequest extends Request {
 
     private DeleteMessageAppRequest(Builder builder) {
         super(builder);
-        this.regionId = builder.regionId;
         this.appId = builder.appId;
     }
 
@@ -41,13 +36,6 @@ public class DeleteMessageAppRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return appId
      */
     public String getAppId() {
@@ -55,7 +43,6 @@ public class DeleteMessageAppRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteMessageAppRequest, Builder> {
-        private String regionId; 
         private String appId; 
 
         private Builder() {
@@ -64,18 +51,8 @@ public class DeleteMessageAppRequest extends Request {
 
         private Builder(DeleteMessageAppRequest request) {
             super(request);
-            this.regionId = request.regionId;
             this.appId = request.appId;
         } 
-
-        /**
-         * cn-shanghai
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
 
         /**
          * AppId.

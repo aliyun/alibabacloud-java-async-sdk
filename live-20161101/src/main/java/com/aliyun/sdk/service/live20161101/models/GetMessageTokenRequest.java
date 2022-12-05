@@ -12,10 +12,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetMessageTokenRequest</p>
  */
 public class GetMessageTokenRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Body
     @NameInMap("AppId")
     @Validation(required = true)
@@ -38,7 +34,6 @@ public class GetMessageTokenRequest extends Request {
 
     private GetMessageTokenRequest(Builder builder) {
         super(builder);
-        this.regionId = builder.regionId;
         this.appId = builder.appId;
         this.deviceId = builder.deviceId;
         this.deviceType = builder.deviceType;
@@ -56,13 +51,6 @@ public class GetMessageTokenRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -94,7 +82,6 @@ public class GetMessageTokenRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetMessageTokenRequest, Builder> {
-        private String regionId; 
         private String appId; 
         private String deviceId; 
         private String deviceType; 
@@ -106,21 +93,11 @@ public class GetMessageTokenRequest extends Request {
 
         private Builder(GetMessageTokenRequest request) {
             super(request);
-            this.regionId = request.regionId;
             this.appId = request.appId;
             this.deviceId = request.deviceId;
             this.deviceType = request.deviceType;
             this.userId = request.userId;
         } 
-
-        /**
-         * cn-shanghai
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
 
         /**
          * 应用ID

@@ -24,14 +24,14 @@ public class DescribeDomainUsageDataResponseBody extends TeaModel {
     @NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("Field")
-    private String field;
-
     @NameInMap("RequestId")
     private String requestId;
 
     @NameInMap("StartTime")
     private String startTime;
+
+    @NameInMap("Type")
+    private String type;
 
     @NameInMap("UsageDataPerInterval")
     private UsageDataPerInterval usageDataPerInterval;
@@ -41,9 +41,9 @@ public class DescribeDomainUsageDataResponseBody extends TeaModel {
         this.dataInterval = builder.dataInterval;
         this.domainName = builder.domainName;
         this.endTime = builder.endTime;
-        this.field = builder.field;
         this.requestId = builder.requestId;
         this.startTime = builder.startTime;
+        this.type = builder.type;
         this.usageDataPerInterval = builder.usageDataPerInterval;
     }
 
@@ -84,13 +84,6 @@ public class DescribeDomainUsageDataResponseBody extends TeaModel {
     }
 
     /**
-     * @return field
-     */
-    public String getField() {
-        return this.field;
-    }
-
-    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -105,6 +98,13 @@ public class DescribeDomainUsageDataResponseBody extends TeaModel {
     }
 
     /**
+     * @return type
+     */
+    public String getType() {
+        return this.type;
+    }
+
+    /**
      * @return usageDataPerInterval
      */
     public UsageDataPerInterval getUsageDataPerInterval() {
@@ -116,9 +116,9 @@ public class DescribeDomainUsageDataResponseBody extends TeaModel {
         private String dataInterval; 
         private String domainName; 
         private String endTime; 
-        private String field; 
         private String requestId; 
         private String startTime; 
+        private String type; 
         private UsageDataPerInterval usageDataPerInterval; 
 
         /**
@@ -154,14 +154,6 @@ public class DescribeDomainUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * Field.
-         */
-        public Builder field(String field) {
-            this.field = field;
-            return this;
-        }
-
-        /**
          * RequestId.
          */
         public Builder requestId(String requestId) {
@@ -174,6 +166,14 @@ public class DescribeDomainUsageDataResponseBody extends TeaModel {
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
+            return this;
+        }
+
+        /**
+         * Type.
+         */
+        public Builder type(String type) {
+            this.type = type;
             return this;
         }
 

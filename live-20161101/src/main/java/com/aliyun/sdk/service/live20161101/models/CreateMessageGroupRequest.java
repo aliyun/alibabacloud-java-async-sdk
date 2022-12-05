@@ -12,10 +12,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateMessageGroupRequest</p>
  */
 public class CreateMessageGroupRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Body
     @NameInMap("AppId")
     @Validation(required = true)
@@ -32,7 +28,6 @@ public class CreateMessageGroupRequest extends Request {
 
     private CreateMessageGroupRequest(Builder builder) {
         super(builder);
-        this.regionId = builder.regionId;
         this.appId = builder.appId;
         this.creatorId = builder.creatorId;
         this.extension = builder.extension;
@@ -49,13 +44,6 @@ public class CreateMessageGroupRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -80,7 +68,6 @@ public class CreateMessageGroupRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateMessageGroupRequest, Builder> {
-        private String regionId; 
         private String appId; 
         private String creatorId; 
         private java.util.Map < String, String > extension; 
@@ -91,20 +78,10 @@ public class CreateMessageGroupRequest extends Request {
 
         private Builder(CreateMessageGroupRequest request) {
             super(request);
-            this.regionId = request.regionId;
             this.appId = request.appId;
             this.creatorId = request.creatorId;
             this.extension = request.extension;
         } 
-
-        /**
-         * cn-shanghai
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
 
         /**
          * AppId.

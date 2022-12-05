@@ -12,10 +12,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>LeaveMessageGroupRequest</p>
  */
 public class LeaveMessageGroupRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Body
     @NameInMap("AppId")
     @Validation(required = true)
@@ -41,7 +37,6 @@ public class LeaveMessageGroupRequest extends Request {
 
     private LeaveMessageGroupRequest(Builder builder) {
         super(builder);
-        this.regionId = builder.regionId;
         this.appId = builder.appId;
         this.broadCastStatistics = builder.broadCastStatistics;
         this.broadCastType = builder.broadCastType;
@@ -60,13 +55,6 @@ public class LeaveMessageGroupRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -105,7 +93,6 @@ public class LeaveMessageGroupRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<LeaveMessageGroupRequest, Builder> {
-        private String regionId; 
         private String appId; 
         private Boolean broadCastStatistics; 
         private Integer broadCastType; 
@@ -118,22 +105,12 @@ public class LeaveMessageGroupRequest extends Request {
 
         private Builder(LeaveMessageGroupRequest request) {
             super(request);
-            this.regionId = request.regionId;
             this.appId = request.appId;
             this.broadCastStatistics = request.broadCastStatistics;
             this.broadCastType = request.broadCastType;
             this.groupId = request.groupId;
             this.userId = request.userId;
         } 
-
-        /**
-         * cn-shanghai
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
 
         /**
          * AppId.

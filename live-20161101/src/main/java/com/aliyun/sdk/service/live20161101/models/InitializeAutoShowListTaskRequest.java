@@ -41,7 +41,6 @@ public class InitializeAutoShowListTaskRequest extends Request {
 
     @Query
     @NameInMap("ResourceIds")
-    @Validation(required = true)
     private String resourceIds;
 
     @Query

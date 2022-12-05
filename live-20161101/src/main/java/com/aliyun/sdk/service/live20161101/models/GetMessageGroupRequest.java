@@ -12,10 +12,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetMessageGroupRequest</p>
  */
 public class GetMessageGroupRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Body
     @NameInMap("AppId")
     @Validation(required = true)
@@ -28,7 +24,6 @@ public class GetMessageGroupRequest extends Request {
 
     private GetMessageGroupRequest(Builder builder) {
         super(builder);
-        this.regionId = builder.regionId;
         this.appId = builder.appId;
         this.groupId = builder.groupId;
     }
@@ -47,13 +42,6 @@ public class GetMessageGroupRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return appId
      */
     public String getAppId() {
@@ -68,7 +56,6 @@ public class GetMessageGroupRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetMessageGroupRequest, Builder> {
-        private String regionId; 
         private String appId; 
         private String groupId; 
 
@@ -78,19 +65,9 @@ public class GetMessageGroupRequest extends Request {
 
         private Builder(GetMessageGroupRequest request) {
             super(request);
-            this.regionId = request.regionId;
             this.appId = request.appId;
             this.groupId = request.groupId;
         } 
-
-        /**
-         * cn-shanghai
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
 
         /**
          * AppId.

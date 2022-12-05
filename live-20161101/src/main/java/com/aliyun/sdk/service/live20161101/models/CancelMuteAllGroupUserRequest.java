@@ -12,10 +12,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CancelMuteAllGroupUserRequest</p>
  */
 public class CancelMuteAllGroupUserRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Body
     @NameInMap("AppId")
     @Validation(required = true)
@@ -32,7 +28,6 @@ public class CancelMuteAllGroupUserRequest extends Request {
 
     private CancelMuteAllGroupUserRequest(Builder builder) {
         super(builder);
-        this.regionId = builder.regionId;
         this.appId = builder.appId;
         this.groupId = builder.groupId;
         this.operatorUserId = builder.operatorUserId;
@@ -49,13 +44,6 @@ public class CancelMuteAllGroupUserRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -80,7 +68,6 @@ public class CancelMuteAllGroupUserRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CancelMuteAllGroupUserRequest, Builder> {
-        private String regionId; 
         private String appId; 
         private String groupId; 
         private String operatorUserId; 
@@ -91,20 +78,10 @@ public class CancelMuteAllGroupUserRequest extends Request {
 
         private Builder(CancelMuteAllGroupUserRequest request) {
             super(request);
-            this.regionId = request.regionId;
             this.appId = request.appId;
             this.groupId = request.groupId;
             this.operatorUserId = request.operatorUserId;
         } 
-
-        /**
-         * cn-shanghai
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
 
         /**
          * AppId.

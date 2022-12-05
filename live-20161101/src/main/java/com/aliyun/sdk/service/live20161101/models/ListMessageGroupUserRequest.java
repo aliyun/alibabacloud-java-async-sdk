@@ -12,10 +12,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListMessageGroupUserRequest</p>
  */
 public class ListMessageGroupUserRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Body
     @NameInMap("AppId")
     @Validation(required = true)
@@ -38,19 +34,13 @@ public class ListMessageGroupUserRequest extends Request {
     @NameInMap("SortType")
     private Integer sortType;
 
-    @Body
-    @NameInMap("Type")
-    private Integer type;
-
     private ListMessageGroupUserRequest(Builder builder) {
         super(builder);
-        this.regionId = builder.regionId;
         this.appId = builder.appId;
         this.groupId = builder.groupId;
         this.pageNum = builder.pageNum;
         this.pageSize = builder.pageSize;
         this.sortType = builder.sortType;
-        this.type = builder.type;
     }
 
     public static Builder builder() {
@@ -64,13 +54,6 @@ public class ListMessageGroupUserRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -108,21 +91,12 @@ public class ListMessageGroupUserRequest extends Request {
         return this.sortType;
     }
 
-    /**
-     * @return type
-     */
-    public Integer getType() {
-        return this.type;
-    }
-
     public static final class Builder extends Request.Builder<ListMessageGroupUserRequest, Builder> {
-        private String regionId; 
         private String appId; 
         private String groupId; 
         private Integer pageNum; 
         private Integer pageSize; 
         private Integer sortType; 
-        private Integer type; 
 
         private Builder() {
             super();
@@ -130,23 +104,12 @@ public class ListMessageGroupUserRequest extends Request {
 
         private Builder(ListMessageGroupUserRequest request) {
             super(request);
-            this.regionId = request.regionId;
             this.appId = request.appId;
             this.groupId = request.groupId;
             this.pageNum = request.pageNum;
             this.pageSize = request.pageSize;
             this.sortType = request.sortType;
-            this.type = request.type;
         } 
-
-        /**
-         * cn-shanghai
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
 
         /**
          * AppId.
@@ -190,15 +153,6 @@ public class ListMessageGroupUserRequest extends Request {
         public Builder sortType(Integer sortType) {
             this.putBodyParameter("SortType", sortType);
             this.sortType = sortType;
-            return this;
-        }
-
-        /**
-         * Type.
-         */
-        public Builder type(Integer type) {
-            this.putBodyParameter("Type", type);
-            this.type = type;
             return this;
         }
 
