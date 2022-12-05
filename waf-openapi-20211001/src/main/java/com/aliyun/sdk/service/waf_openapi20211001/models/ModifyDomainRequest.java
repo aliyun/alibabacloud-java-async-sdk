@@ -223,7 +223,6 @@ public class ModifyDomainRequest extends Request {
         private Boolean iPv6Enabled;
 
         @NameInMap("ProtectionResource")
-        @Validation(required = true)
         private String protectionResource;
 
         @NameInMap("TLSVersion")
@@ -556,7 +555,6 @@ public class ModifyDomainRequest extends Request {
     }
     public static class Redirect extends TeaModel {
         @NameInMap("Backends")
-        @Validation(required = true)
         private java.util.List < String > backends;
 
         @NameInMap("ConnectTimeout")
@@ -565,6 +563,17 @@ public class ModifyDomainRequest extends Request {
 
         @NameInMap("FocusHttpBackend")
         private Boolean focusHttpBackend;
+
+        @NameInMap("Keepalive")
+        private Boolean keepalive;
+
+        @NameInMap("KeepaliveRequests")
+        @Validation(maximum = 1000, minimum = 60)
+        private Integer keepaliveRequests;
+
+        @NameInMap("KeepaliveTimeout")
+        @Validation(maximum = 60, minimum = 1)
+        private Integer keepaliveTimeout;
 
         @NameInMap("Loadbalance")
         @Validation(required = true)
@@ -575,6 +584,9 @@ public class ModifyDomainRequest extends Request {
 
         @NameInMap("RequestHeaders")
         private java.util.List < RequestHeaders> requestHeaders;
+
+        @NameInMap("Retry")
+        private Boolean retry;
 
         @NameInMap("SniEnabled")
         private Boolean sniEnabled;
@@ -589,9 +601,13 @@ public class ModifyDomainRequest extends Request {
             this.backends = builder.backends;
             this.connectTimeout = builder.connectTimeout;
             this.focusHttpBackend = builder.focusHttpBackend;
+            this.keepalive = builder.keepalive;
+            this.keepaliveRequests = builder.keepaliveRequests;
+            this.keepaliveTimeout = builder.keepaliveTimeout;
             this.loadbalance = builder.loadbalance;
             this.readTimeout = builder.readTimeout;
             this.requestHeaders = builder.requestHeaders;
+            this.retry = builder.retry;
             this.sniEnabled = builder.sniEnabled;
             this.sniHost = builder.sniHost;
             this.writeTimeout = builder.writeTimeout;
@@ -627,6 +643,27 @@ public class ModifyDomainRequest extends Request {
         }
 
         /**
+         * @return keepalive
+         */
+        public Boolean getKeepalive() {
+            return this.keepalive;
+        }
+
+        /**
+         * @return keepaliveRequests
+         */
+        public Integer getKeepaliveRequests() {
+            return this.keepaliveRequests;
+        }
+
+        /**
+         * @return keepaliveTimeout
+         */
+        public Integer getKeepaliveTimeout() {
+            return this.keepaliveTimeout;
+        }
+
+        /**
          * @return loadbalance
          */
         public String getLoadbalance() {
@@ -645,6 +682,13 @@ public class ModifyDomainRequest extends Request {
          */
         public java.util.List < RequestHeaders> getRequestHeaders() {
             return this.requestHeaders;
+        }
+
+        /**
+         * @return retry
+         */
+        public Boolean getRetry() {
+            return this.retry;
         }
 
         /**
@@ -672,9 +716,13 @@ public class ModifyDomainRequest extends Request {
             private java.util.List < String > backends; 
             private Integer connectTimeout; 
             private Boolean focusHttpBackend; 
+            private Boolean keepalive; 
+            private Integer keepaliveRequests; 
+            private Integer keepaliveTimeout; 
             private String loadbalance; 
             private Integer readTimeout; 
             private java.util.List < RequestHeaders> requestHeaders; 
+            private Boolean retry; 
             private Boolean sniEnabled; 
             private String sniHost; 
             private Integer writeTimeout; 
@@ -704,6 +752,30 @@ public class ModifyDomainRequest extends Request {
             }
 
             /**
+             * Keepalive.
+             */
+            public Builder keepalive(Boolean keepalive) {
+                this.keepalive = keepalive;
+                return this;
+            }
+
+            /**
+             * KeepaliveRequests.
+             */
+            public Builder keepaliveRequests(Integer keepaliveRequests) {
+                this.keepaliveRequests = keepaliveRequests;
+                return this;
+            }
+
+            /**
+             * KeepaliveTimeout.
+             */
+            public Builder keepaliveTimeout(Integer keepaliveTimeout) {
+                this.keepaliveTimeout = keepaliveTimeout;
+                return this;
+            }
+
+            /**
              * Loadbalance.
              */
             public Builder loadbalance(String loadbalance) {
@@ -724,6 +796,14 @@ public class ModifyDomainRequest extends Request {
              */
             public Builder requestHeaders(java.util.List < RequestHeaders> requestHeaders) {
                 this.requestHeaders = requestHeaders;
+                return this;
+            }
+
+            /**
+             * Retry.
+             */
+            public Builder retry(Boolean retry) {
+                this.retry = retry;
                 return this;
             }
 

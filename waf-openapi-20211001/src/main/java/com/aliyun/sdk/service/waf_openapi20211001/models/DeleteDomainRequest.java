@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DeleteDomainRequest extends Request {
     @Query
+    @NameInMap("AccessType")
+    private String accessType;
+
+    @Query
     @NameInMap("Domain")
     @Validation(required = true)
     private String domain;
@@ -29,6 +33,7 @@ public class DeleteDomainRequest extends Request {
 
     private DeleteDomainRequest(Builder builder) {
         super(builder);
+        this.accessType = builder.accessType;
         this.domain = builder.domain;
         this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
@@ -45,6 +50,13 @@ public class DeleteDomainRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return accessType
+     */
+    public String getAccessType() {
+        return this.accessType;
     }
 
     /**
@@ -69,6 +81,7 @@ public class DeleteDomainRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteDomainRequest, Builder> {
+        private String accessType; 
         private String domain; 
         private String instanceId; 
         private String regionId; 
@@ -79,10 +92,20 @@ public class DeleteDomainRequest extends Request {
 
         private Builder(DeleteDomainRequest request) {
             super(request);
+            this.accessType = request.accessType;
             this.domain = request.domain;
             this.instanceId = request.instanceId;
             this.regionId = request.regionId;
         } 
+
+        /**
+         * AccessType.
+         */
+        public Builder accessType(String accessType) {
+            this.putQueryParameter("AccessType", accessType);
+            this.accessType = accessType;
+            return this;
+        }
 
         /**
          * Domain.

@@ -223,7 +223,6 @@ public class CreateDomainRequest extends Request {
         private Boolean iPv6Enabled;
 
         @NameInMap("ProtectionResource")
-        @Validation(required = true)
         private String protectionResource;
 
         @NameInMap("TLSVersion")
@@ -556,8 +555,10 @@ public class CreateDomainRequest extends Request {
     }
     public static class Redirect extends TeaModel {
         @NameInMap("Backends")
-        @Validation(required = true)
         private java.util.List < String > backends;
+
+        @NameInMap("CnameEnabled")
+        private Boolean cnameEnabled;
 
         @NameInMap("ConnectTimeout")
         @Validation(maximum = 120, minimum = 5)
@@ -565,6 +566,17 @@ public class CreateDomainRequest extends Request {
 
         @NameInMap("FocusHttpBackend")
         private Boolean focusHttpBackend;
+
+        @NameInMap("Keepalive")
+        private Boolean keepalive;
+
+        @NameInMap("KeepaliveRequests")
+        @Validation(maximum = 1000, minimum = 60)
+        private Integer keepaliveRequests;
+
+        @NameInMap("KeepaliveTimeout")
+        @Validation(maximum = 60, minimum = 1)
+        private Integer keepaliveTimeout;
 
         @NameInMap("Loadbalance")
         @Validation(required = true)
@@ -575,6 +587,12 @@ public class CreateDomainRequest extends Request {
 
         @NameInMap("RequestHeaders")
         private java.util.List < RequestHeaders> requestHeaders;
+
+        @NameInMap("Retry")
+        private Boolean retry;
+
+        @NameInMap("RoutingRules")
+        private String routingRules;
 
         @NameInMap("SniEnabled")
         private Boolean sniEnabled;
@@ -587,11 +605,17 @@ public class CreateDomainRequest extends Request {
 
         private Redirect(Builder builder) {
             this.backends = builder.backends;
+            this.cnameEnabled = builder.cnameEnabled;
             this.connectTimeout = builder.connectTimeout;
             this.focusHttpBackend = builder.focusHttpBackend;
+            this.keepalive = builder.keepalive;
+            this.keepaliveRequests = builder.keepaliveRequests;
+            this.keepaliveTimeout = builder.keepaliveTimeout;
             this.loadbalance = builder.loadbalance;
             this.readTimeout = builder.readTimeout;
             this.requestHeaders = builder.requestHeaders;
+            this.retry = builder.retry;
+            this.routingRules = builder.routingRules;
             this.sniEnabled = builder.sniEnabled;
             this.sniHost = builder.sniHost;
             this.writeTimeout = builder.writeTimeout;
@@ -613,6 +637,13 @@ public class CreateDomainRequest extends Request {
         }
 
         /**
+         * @return cnameEnabled
+         */
+        public Boolean getCnameEnabled() {
+            return this.cnameEnabled;
+        }
+
+        /**
          * @return connectTimeout
          */
         public Integer getConnectTimeout() {
@@ -624,6 +655,27 @@ public class CreateDomainRequest extends Request {
          */
         public Boolean getFocusHttpBackend() {
             return this.focusHttpBackend;
+        }
+
+        /**
+         * @return keepalive
+         */
+        public Boolean getKeepalive() {
+            return this.keepalive;
+        }
+
+        /**
+         * @return keepaliveRequests
+         */
+        public Integer getKeepaliveRequests() {
+            return this.keepaliveRequests;
+        }
+
+        /**
+         * @return keepaliveTimeout
+         */
+        public Integer getKeepaliveTimeout() {
+            return this.keepaliveTimeout;
         }
 
         /**
@@ -645,6 +697,20 @@ public class CreateDomainRequest extends Request {
          */
         public java.util.List < RequestHeaders> getRequestHeaders() {
             return this.requestHeaders;
+        }
+
+        /**
+         * @return retry
+         */
+        public Boolean getRetry() {
+            return this.retry;
+        }
+
+        /**
+         * @return routingRules
+         */
+        public String getRoutingRules() {
+            return this.routingRules;
         }
 
         /**
@@ -670,11 +736,17 @@ public class CreateDomainRequest extends Request {
 
         public static final class Builder {
             private java.util.List < String > backends; 
+            private Boolean cnameEnabled; 
             private Integer connectTimeout; 
             private Boolean focusHttpBackend; 
+            private Boolean keepalive; 
+            private Integer keepaliveRequests; 
+            private Integer keepaliveTimeout; 
             private String loadbalance; 
             private Integer readTimeout; 
             private java.util.List < RequestHeaders> requestHeaders; 
+            private Boolean retry; 
+            private String routingRules; 
             private Boolean sniEnabled; 
             private String sniHost; 
             private Integer writeTimeout; 
@@ -684,6 +756,14 @@ public class CreateDomainRequest extends Request {
              */
             public Builder backends(java.util.List < String > backends) {
                 this.backends = backends;
+                return this;
+            }
+
+            /**
+             * CnameEnabled.
+             */
+            public Builder cnameEnabled(Boolean cnameEnabled) {
+                this.cnameEnabled = cnameEnabled;
                 return this;
             }
 
@@ -700,6 +780,30 @@ public class CreateDomainRequest extends Request {
              */
             public Builder focusHttpBackend(Boolean focusHttpBackend) {
                 this.focusHttpBackend = focusHttpBackend;
+                return this;
+            }
+
+            /**
+             * Keepalive.
+             */
+            public Builder keepalive(Boolean keepalive) {
+                this.keepalive = keepalive;
+                return this;
+            }
+
+            /**
+             * KeepaliveRequests.
+             */
+            public Builder keepaliveRequests(Integer keepaliveRequests) {
+                this.keepaliveRequests = keepaliveRequests;
+                return this;
+            }
+
+            /**
+             * KeepaliveTimeout.
+             */
+            public Builder keepaliveTimeout(Integer keepaliveTimeout) {
+                this.keepaliveTimeout = keepaliveTimeout;
                 return this;
             }
 
@@ -724,6 +828,22 @@ public class CreateDomainRequest extends Request {
              */
             public Builder requestHeaders(java.util.List < RequestHeaders> requestHeaders) {
                 this.requestHeaders = requestHeaders;
+                return this;
+            }
+
+            /**
+             * Retry.
+             */
+            public Builder retry(Boolean retry) {
+                this.retry = retry;
+                return this;
+            }
+
+            /**
+             * RoutingRules.
+             */
+            public Builder routingRules(String routingRules) {
+                this.routingRules = routingRules;
                 return this;
             }
 
