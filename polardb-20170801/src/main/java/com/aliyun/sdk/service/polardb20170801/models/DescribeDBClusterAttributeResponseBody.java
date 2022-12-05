@@ -932,6 +932,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @Validation(required = true)
         private String sccMode;
 
+        @NameInMap("ServerWeight")
+        private String serverWeight;
+
         @NameInMap("ZoneId")
         private String zoneId;
 
@@ -949,6 +952,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             this.maxConnections = builder.maxConnections;
             this.maxIOPS = builder.maxIOPS;
             this.sccMode = builder.sccMode;
+            this.serverWeight = builder.serverWeight;
             this.zoneId = builder.zoneId;
         }
 
@@ -1052,6 +1056,13 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return serverWeight
+         */
+        public String getServerWeight() {
+            return this.serverWeight;
+        }
+
+        /**
          * @return zoneId
          */
         public String getZoneId() {
@@ -1072,6 +1083,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             private Integer maxConnections; 
             private Integer maxIOPS; 
             private String sccMode; 
+            private String serverWeight; 
             private String zoneId; 
 
             /**
@@ -1175,6 +1187,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
              */
             public Builder sccMode(String sccMode) {
                 this.sccMode = sccMode;
+                return this;
+            }
+
+            /**
+             * ServerWeight.
+             */
+            public Builder serverWeight(String serverWeight) {
+                this.serverWeight = serverWeight;
                 return this;
             }
 

@@ -48,6 +48,9 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
     @NameInMap("SourceRDSDBInstanceId")
     private String sourceRDSDBInstanceId;
 
+    @NameInMap("SrcDbType")
+    private String srcDbType;
+
     @NameInMap("Topologies")
     private String topologies;
 
@@ -64,6 +67,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
         this.rdsReadWriteMode = builder.rdsReadWriteMode;
         this.requestId = builder.requestId;
         this.sourceRDSDBInstanceId = builder.sourceRDSDBInstanceId;
+        this.srcDbType = builder.srcDbType;
         this.topologies = builder.topologies;
     }
 
@@ -160,6 +164,13 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
     }
 
     /**
+     * @return srcDbType
+     */
+    public String getSrcDbType() {
+        return this.srcDbType;
+    }
+
+    /**
      * @return topologies
      */
     public String getTopologies() {
@@ -179,6 +190,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
         private String rdsReadWriteMode; 
         private String requestId; 
         private String sourceRDSDBInstanceId; 
+        private String srcDbType; 
         private String topologies; 
 
         /**
@@ -274,6 +286,14 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
          */
         public Builder sourceRDSDBInstanceId(String sourceRDSDBInstanceId) {
             this.sourceRDSDBInstanceId = sourceRDSDBInstanceId;
+            return this;
+        }
+
+        /**
+         * SrcDbType.
+         */
+        public Builder srcDbType(String srcDbType) {
+            this.srcDbType = srcDbType;
             return this;
         }
 

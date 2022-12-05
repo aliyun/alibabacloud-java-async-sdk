@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDBClustersRequest extends Request {
     @Query
+    @NameInMap("ConnectionString")
+    private String connectionString;
+
+    @Query
     @NameInMap("DBClusterDescription")
     private String DBClusterDescription;
 
@@ -31,6 +35,10 @@ public class DescribeDBClustersRequest extends Request {
     @Query
     @NameInMap("DBType")
     private String DBType;
+
+    @Query
+    @NameInMap("DBVersion")
+    private String DBVersion;
 
     @Query
     @NameInMap("Expired")
@@ -87,11 +95,13 @@ public class DescribeDBClustersRequest extends Request {
 
     private DescribeDBClustersRequest(Builder builder) {
         super(builder);
+        this.connectionString = builder.connectionString;
         this.DBClusterDescription = builder.DBClusterDescription;
         this.DBClusterIds = builder.DBClusterIds;
         this.DBClusterStatus = builder.DBClusterStatus;
         this.DBNodeIds = builder.DBNodeIds;
         this.DBType = builder.DBType;
+        this.DBVersion = builder.DBVersion;
         this.expired = builder.expired;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -118,6 +128,13 @@ public class DescribeDBClustersRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return connectionString
+     */
+    public String getConnectionString() {
+        return this.connectionString;
     }
 
     /**
@@ -153,6 +170,13 @@ public class DescribeDBClustersRequest extends Request {
      */
     public String getDBType() {
         return this.DBType;
+    }
+
+    /**
+     * @return DBVersion
+     */
+    public String getDBVersion() {
+        return this.DBVersion;
     }
 
     /**
@@ -247,11 +271,13 @@ public class DescribeDBClustersRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeDBClustersRequest, Builder> {
+        private String connectionString; 
         private String DBClusterDescription; 
         private String DBClusterIds; 
         private String DBClusterStatus; 
         private String DBNodeIds; 
         private String DBType; 
+        private String DBVersion; 
         private Boolean expired; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -272,11 +298,13 @@ public class DescribeDBClustersRequest extends Request {
 
         private Builder(DescribeDBClustersRequest request) {
             super(request);
+            this.connectionString = request.connectionString;
             this.DBClusterDescription = request.DBClusterDescription;
             this.DBClusterIds = request.DBClusterIds;
             this.DBClusterStatus = request.DBClusterStatus;
             this.DBNodeIds = request.DBNodeIds;
             this.DBType = request.DBType;
+            this.DBVersion = request.DBVersion;
             this.expired = request.expired;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -291,6 +319,15 @@ public class DescribeDBClustersRequest extends Request {
             this.resourceOwnerId = request.resourceOwnerId;
             this.tag = request.tag;
         } 
+
+        /**
+         * ConnectionString.
+         */
+        public Builder connectionString(String connectionString) {
+            this.putQueryParameter("ConnectionString", connectionString);
+            this.connectionString = connectionString;
+            return this;
+        }
 
         /**
          * DBClusterDescription.
@@ -334,6 +371,15 @@ public class DescribeDBClustersRequest extends Request {
         public Builder DBType(String DBType) {
             this.putQueryParameter("DBType", DBType);
             this.DBType = DBType;
+            return this;
+        }
+
+        /**
+         * DBVersion.
+         */
+        public Builder DBVersion(String DBVersion) {
+            this.putQueryParameter("DBVersion", DBVersion);
+            this.DBVersion = DBVersion;
             return this;
         }
 

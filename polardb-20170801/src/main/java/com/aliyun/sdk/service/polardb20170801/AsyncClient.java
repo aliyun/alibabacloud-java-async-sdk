@@ -46,6 +46,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateGlobalDatabaseNetworkResponse> createGlobalDatabaseNetwork(CreateGlobalDatabaseNetworkRequest request);
 
+    CompletableFuture<CreateGlobalSecurityIPGroupResponse> createGlobalSecurityIPGroup(CreateGlobalSecurityIPGroupRequest request);
+
     CompletableFuture<CreateParameterGroupResponse> createParameterGroup(CreateParameterGroupRequest request);
 
     CompletableFuture<CreateStoragePlanResponse> createStoragePlan(CreateStoragePlanRequest request);
@@ -67,6 +69,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteDatabaseResponse> deleteDatabase(DeleteDatabaseRequest request);
 
     CompletableFuture<DeleteGlobalDatabaseNetworkResponse> deleteGlobalDatabaseNetwork(DeleteGlobalDatabaseNetworkRequest request);
+
+    CompletableFuture<DeleteGlobalSecurityIPGroupResponse> deleteGlobalSecurityIPGroup(DeleteGlobalSecurityIPGroupRequest request);
 
     CompletableFuture<DeleteMaskingRulesResponse> deleteMaskingRules(DeleteMaskingRulesRequest request);
 
@@ -110,6 +114,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeDBClusterSSLResponse> describeDBClusterSSL(DescribeDBClusterSSLRequest request);
 
+    CompletableFuture<DescribeDBClusterServerlessConfResponse> describeDBClusterServerlessConf(DescribeDBClusterServerlessConfRequest request);
+
     CompletableFuture<DescribeDBClusterTDEResponse> describeDBClusterTDE(DescribeDBClusterTDERequest request);
 
     CompletableFuture<DescribeDBClusterVersionResponse> describeDBClusterVersion(DescribeDBClusterVersionRequest request);
@@ -135,6 +141,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeGlobalDatabaseNetworkResponse> describeGlobalDatabaseNetwork(DescribeGlobalDatabaseNetworkRequest request);
 
     CompletableFuture<DescribeGlobalDatabaseNetworksResponse> describeGlobalDatabaseNetworks(DescribeGlobalDatabaseNetworksRequest request);
+
+    CompletableFuture<DescribeGlobalSecurityIPGroupResponse> describeGlobalSecurityIPGroup(DescribeGlobalSecurityIPGroupRequest request);
+
+    CompletableFuture<DescribeGlobalSecurityIPGroupRelationResponse> describeGlobalSecurityIPGroupRelation(DescribeGlobalSecurityIPGroupRelationRequest request);
 
     CompletableFuture<DescribeLogBackupPolicyResponse> describeLogBackupPolicy(DescribeLogBackupPolicyRequest request);
 
@@ -210,6 +220,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ModifyDBClusterSSLResponse> modifyDBClusterSSL(ModifyDBClusterSSLRequest request);
 
+    CompletableFuture<ModifyDBClusterServerlessConfResponse> modifyDBClusterServerlessConf(ModifyDBClusterServerlessConfRequest request);
+
     CompletableFuture<ModifyDBClusterTDEResponse> modifyDBClusterTDE(ModifyDBClusterTDERequest request);
 
     CompletableFuture<ModifyDBDescriptionResponse> modifyDBDescription(ModifyDBDescriptionRequest request);
@@ -223,6 +235,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyDBNodesParametersResponse> modifyDBNodesParameters(ModifyDBNodesParametersRequest request);
 
     CompletableFuture<ModifyGlobalDatabaseNetworkResponse> modifyGlobalDatabaseNetwork(ModifyGlobalDatabaseNetworkRequest request);
+
+    CompletableFuture<ModifyGlobalSecurityIPGroupResponse> modifyGlobalSecurityIPGroup(ModifyGlobalSecurityIPGroupRequest request);
+
+    CompletableFuture<ModifyGlobalSecurityIPGroupNameResponse> modifyGlobalSecurityIPGroupName(ModifyGlobalSecurityIPGroupNameRequest request);
+
+    CompletableFuture<ModifyGlobalSecurityIPGroupRelationResponse> modifyGlobalSecurityIPGroupRelation(ModifyGlobalSecurityIPGroupRelationRequest request);
 
     CompletableFuture<ModifyLogBackupPolicyResponse> modifyLogBackupPolicy(ModifyLogBackupPolicyRequest request);
 

@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateDBClusterRequest extends Request {
     @Query
+    @NameInMap("AllowShutDown")
+    private String allowShutDown;
+
+    @Query
     @NameInMap("AutoRenew")
     private Boolean autoRenew;
 
@@ -114,12 +118,36 @@ public class CreateDBClusterRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
+    @NameInMap("ScaleMax")
+    private String scaleMax;
+
+    @Query
+    @NameInMap("ScaleMin")
+    private String scaleMin;
+
+    @Query
+    @NameInMap("ScaleRoNumMax")
+    private String scaleRoNumMax;
+
+    @Query
+    @NameInMap("ScaleRoNumMin")
+    private String scaleRoNumMin;
+
+    @Query
     @NameInMap("SecurityIPList")
     private String securityIPList;
 
     @Query
+    @NameInMap("ServerlessType")
+    private String serverlessType;
+
+    @Query
     @NameInMap("SourceResourceId")
     private String sourceResourceId;
+
+    @Query
+    @NameInMap("StorageType")
+    private String storageType;
 
     @Query
     @NameInMap("TDEStatus")
@@ -147,6 +175,7 @@ public class CreateDBClusterRequest extends Request {
 
     private CreateDBClusterRequest(Builder builder) {
         super(builder);
+        this.allowShutDown = builder.allowShutDown;
         this.autoRenew = builder.autoRenew;
         this.backupRetentionPolicyOnClusterDeletion = builder.backupRetentionPolicyOnClusterDeletion;
         this.clientToken = builder.clientToken;
@@ -171,8 +200,14 @@ public class CreateDBClusterRequest extends Request {
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.scaleMax = builder.scaleMax;
+        this.scaleMin = builder.scaleMin;
+        this.scaleRoNumMax = builder.scaleRoNumMax;
+        this.scaleRoNumMin = builder.scaleRoNumMin;
         this.securityIPList = builder.securityIPList;
+        this.serverlessType = builder.serverlessType;
         this.sourceResourceId = builder.sourceResourceId;
+        this.storageType = builder.storageType;
         this.TDEStatus = builder.TDEStatus;
         this.tag = builder.tag;
         this.usedTime = builder.usedTime;
@@ -192,6 +227,13 @@ public class CreateDBClusterRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return allowShutDown
+     */
+    public String getAllowShutDown() {
+        return this.allowShutDown;
     }
 
     /**
@@ -363,6 +405,34 @@ public class CreateDBClusterRequest extends Request {
     }
 
     /**
+     * @return scaleMax
+     */
+    public String getScaleMax() {
+        return this.scaleMax;
+    }
+
+    /**
+     * @return scaleMin
+     */
+    public String getScaleMin() {
+        return this.scaleMin;
+    }
+
+    /**
+     * @return scaleRoNumMax
+     */
+    public String getScaleRoNumMax() {
+        return this.scaleRoNumMax;
+    }
+
+    /**
+     * @return scaleRoNumMin
+     */
+    public String getScaleRoNumMin() {
+        return this.scaleRoNumMin;
+    }
+
+    /**
      * @return securityIPList
      */
     public String getSecurityIPList() {
@@ -370,10 +440,24 @@ public class CreateDBClusterRequest extends Request {
     }
 
     /**
+     * @return serverlessType
+     */
+    public String getServerlessType() {
+        return this.serverlessType;
+    }
+
+    /**
      * @return sourceResourceId
      */
     public String getSourceResourceId() {
         return this.sourceResourceId;
+    }
+
+    /**
+     * @return storageType
+     */
+    public String getStorageType() {
+        return this.storageType;
     }
 
     /**
@@ -419,6 +503,7 @@ public class CreateDBClusterRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateDBClusterRequest, Builder> {
+        private String allowShutDown; 
         private Boolean autoRenew; 
         private String backupRetentionPolicyOnClusterDeletion; 
         private String clientToken; 
@@ -443,8 +528,14 @@ public class CreateDBClusterRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String scaleMax; 
+        private String scaleMin; 
+        private String scaleRoNumMax; 
+        private String scaleRoNumMin; 
         private String securityIPList; 
+        private String serverlessType; 
         private String sourceResourceId; 
+        private String storageType; 
         private Boolean TDEStatus; 
         private java.util.List < Tag> tag; 
         private String usedTime; 
@@ -458,6 +549,7 @@ public class CreateDBClusterRequest extends Request {
 
         private Builder(CreateDBClusterRequest request) {
             super(request);
+            this.allowShutDown = request.allowShutDown;
             this.autoRenew = request.autoRenew;
             this.backupRetentionPolicyOnClusterDeletion = request.backupRetentionPolicyOnClusterDeletion;
             this.clientToken = request.clientToken;
@@ -482,8 +574,14 @@ public class CreateDBClusterRequest extends Request {
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.scaleMax = request.scaleMax;
+            this.scaleMin = request.scaleMin;
+            this.scaleRoNumMax = request.scaleRoNumMax;
+            this.scaleRoNumMin = request.scaleRoNumMin;
             this.securityIPList = request.securityIPList;
+            this.serverlessType = request.serverlessType;
             this.sourceResourceId = request.sourceResourceId;
+            this.storageType = request.storageType;
             this.TDEStatus = request.TDEStatus;
             this.tag = request.tag;
             this.usedTime = request.usedTime;
@@ -491,6 +589,15 @@ public class CreateDBClusterRequest extends Request {
             this.vSwitchId = request.vSwitchId;
             this.zoneId = request.zoneId;
         } 
+
+        /**
+         * AllowShutDown.
+         */
+        public Builder allowShutDown(String allowShutDown) {
+            this.putQueryParameter("AllowShutDown", allowShutDown);
+            this.allowShutDown = allowShutDown;
+            return this;
+        }
 
         /**
          * AutoRenew.
@@ -709,6 +816,42 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
+         * ScaleMax.
+         */
+        public Builder scaleMax(String scaleMax) {
+            this.putQueryParameter("ScaleMax", scaleMax);
+            this.scaleMax = scaleMax;
+            return this;
+        }
+
+        /**
+         * ScaleMin.
+         */
+        public Builder scaleMin(String scaleMin) {
+            this.putQueryParameter("ScaleMin", scaleMin);
+            this.scaleMin = scaleMin;
+            return this;
+        }
+
+        /**
+         * ScaleRoNumMax.
+         */
+        public Builder scaleRoNumMax(String scaleRoNumMax) {
+            this.putQueryParameter("ScaleRoNumMax", scaleRoNumMax);
+            this.scaleRoNumMax = scaleRoNumMax;
+            return this;
+        }
+
+        /**
+         * ScaleRoNumMin.
+         */
+        public Builder scaleRoNumMin(String scaleRoNumMin) {
+            this.putQueryParameter("ScaleRoNumMin", scaleRoNumMin);
+            this.scaleRoNumMin = scaleRoNumMin;
+            return this;
+        }
+
+        /**
          * SecurityIPList.
          */
         public Builder securityIPList(String securityIPList) {
@@ -718,11 +861,29 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
+         * ServerlessType.
+         */
+        public Builder serverlessType(String serverlessType) {
+            this.putQueryParameter("ServerlessType", serverlessType);
+            this.serverlessType = serverlessType;
+            return this;
+        }
+
+        /**
          * SourceResourceId.
          */
         public Builder sourceResourceId(String sourceResourceId) {
             this.putQueryParameter("SourceResourceId", sourceResourceId);
             this.sourceResourceId = sourceResourceId;
+            return this;
+        }
+
+        /**
+         * 存储类型
+         */
+        public Builder storageType(String storageType) {
+            this.putQueryParameter("StorageType", storageType);
+            this.storageType = storageType;
             return this;
         }
 

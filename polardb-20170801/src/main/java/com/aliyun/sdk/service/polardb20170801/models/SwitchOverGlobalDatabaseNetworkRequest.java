@@ -14,8 +14,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class SwitchOverGlobalDatabaseNetworkRequest extends Request {
     @Query
     @NameInMap("DBClusterId")
-    @Validation(required = true)
     private String DBClusterId;
+
+    @Query
+    @NameInMap("Forced")
+    private Boolean forced;
 
     @Query
     @NameInMap("GDNId")
@@ -53,6 +56,7 @@ public class SwitchOverGlobalDatabaseNetworkRequest extends Request {
     private SwitchOverGlobalDatabaseNetworkRequest(Builder builder) {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
+        this.forced = builder.forced;
         this.GDNId = builder.GDNId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -81,6 +85,13 @@ public class SwitchOverGlobalDatabaseNetworkRequest extends Request {
      */
     public String getDBClusterId() {
         return this.DBClusterId;
+    }
+
+    /**
+     * @return forced
+     */
+    public Boolean getForced() {
+        return this.forced;
     }
 
     /**
@@ -141,6 +152,7 @@ public class SwitchOverGlobalDatabaseNetworkRequest extends Request {
 
     public static final class Builder extends Request.Builder<SwitchOverGlobalDatabaseNetworkRequest, Builder> {
         private String DBClusterId; 
+        private Boolean forced; 
         private String GDNId; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -157,6 +169,7 @@ public class SwitchOverGlobalDatabaseNetworkRequest extends Request {
         private Builder(SwitchOverGlobalDatabaseNetworkRequest request) {
             super(request);
             this.DBClusterId = request.DBClusterId;
+            this.forced = request.forced;
             this.GDNId = request.GDNId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -173,6 +186,15 @@ public class SwitchOverGlobalDatabaseNetworkRequest extends Request {
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
             this.DBClusterId = DBClusterId;
+            return this;
+        }
+
+        /**
+         * Forced.
+         */
+        public Builder forced(Boolean forced) {
+            this.putQueryParameter("Forced", forced);
+            this.forced = forced;
             return this;
         }
 
