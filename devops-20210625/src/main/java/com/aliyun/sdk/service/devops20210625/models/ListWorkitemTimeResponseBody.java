@@ -153,7 +153,7 @@ public class ListWorkitemTimeResponseBody extends TeaModel {
 
     public static class WorkitemTime extends TeaModel {
         @NameInMap("actualTime")
-        private Long actualTime;
+        private Float actualTime;
 
         @NameInMap("description")
         private String description;
@@ -206,7 +206,7 @@ public class ListWorkitemTimeResponseBody extends TeaModel {
         /**
          * @return actualTime
          */
-        public Long getActualTime() {
+        public Float getActualTime() {
             return this.actualTime;
         }
 
@@ -274,7 +274,7 @@ public class ListWorkitemTimeResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private Long actualTime; 
+            private Float actualTime; 
             private String description; 
             private Long gmtCreate; 
             private Long gmtEnd; 
@@ -286,9 +286,9 @@ public class ListWorkitemTimeResponseBody extends TeaModel {
             private String workitemIdentifier; 
 
             /**
-             * 实际工时，小时为单位
+             * actualTime.
              */
-            public Builder actualTime(Long actualTime) {
+            public Builder actualTime(Float actualTime) {
                 this.actualTime = actualTime;
                 return this;
             }

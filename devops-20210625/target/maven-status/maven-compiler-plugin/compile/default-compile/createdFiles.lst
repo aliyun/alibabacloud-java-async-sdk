@@ -15,14 +15,12 @@ com/aliyun/sdk/service/devops20210625/models/ListPipelineRunsResponse$Builder.cl
 com/aliyun/sdk/service/devops20210625/models/ListRepositoryBranchesResponseBody$1.class
 com/aliyun/sdk/service/devops20210625/models/GetCodeupOrganizationResponse$Builder.class
 com/aliyun/sdk/service/devops20210625/models/ListVariableGroupsResponse$BuilderImpl.class
-com/aliyun/sdk/service/devops20210625/models/CreatePipelineRequest$TriggerInfo$Builder.class
 com/aliyun/sdk/service/devops20210625/models/ListWorkItemWorkFlowStatusRequest.class
 com/aliyun/sdk/service/devops20210625/models/CreateRepositoryResponseBody$1.class
 com/aliyun/sdk/service/devops20210625/models/ListProjectTemplatesResponseBody$1.class
 com/aliyun/sdk/service/devops20210625/models/AddWebhookResponseBody$1.class
 com/aliyun/sdk/service/devops20210625/models/ListHostGroupsResponse.class
 com/aliyun/sdk/service/devops20210625/models/DeleteBranchResponse.class
-com/aliyun/sdk/service/devops20210625/models/CreatePipelineResponse$BuilderImpl.class
 com/aliyun/sdk/service/devops20210625/models/CreatePipelineGroupResponse$Builder.class
 com/aliyun/sdk/service/devops20210625/models/DeleteRepositoryWebhookResponseBody$Result.class
 com/aliyun/sdk/service/devops20210625/models/DeleteFlowTagGroupResponse$Builder.class
@@ -42,7 +40,6 @@ com/aliyun/sdk/service/devops20210625/models/GetPipelineRequest$1.class
 com/aliyun/sdk/service/devops20210625/models/ListWorkitemTimeResponseBody.class
 com/aliyun/sdk/service/devops20210625/models/GetWorkitemRelationsResponse.class
 com/aliyun/sdk/service/devops20210625/models/GetWorkItemInfoResponseBody$CustomFields.class
-com/aliyun/sdk/service/devops20210625/models/CreatePipelineRequest$Settings.class
 com/aliyun/sdk/service/devops20210625/models/ListPipelineJobHistorysResponse$BuilderImpl.class
 com/aliyun/sdk/service/devops20210625/models/DeleteResourceMemberResponse$1.class
 com/aliyun/sdk/service/devops20210625/models/GetWorkitemCommentListRequest.class
@@ -77,7 +74,6 @@ com/aliyun/sdk/service/devops20210625/models/LogPipelineJobRunResponse$Builder.c
 com/aliyun/sdk/service/devops20210625/models/DeleteWorkitemAllCommentResponseBody$Builder.class
 com/aliyun/sdk/service/devops20210625/models/DeleteResourceMemberRequest.class
 com/aliyun/sdk/service/devops20210625/models/UpdateProtectedBranchesRequest$MergeRequestSetting$Builder.class
-com/aliyun/sdk/service/devops20210625/models/UpdatePipelineRequest$TriggerInfo.class
 com/aliyun/sdk/service/devops20210625/models/CreateWorkitemCommentResponseBody$User.class
 com/aliyun/sdk/service/devops20210625/models/GetWorkspaceResponseBody$1.class
 com/aliyun/sdk/service/devops20210625/models/CreateWorkitemEstimateRequest$Builder.class
@@ -100,7 +96,6 @@ com/aliyun/sdk/service/devops20210625/models/GetCodeupOrganizationResponseBody$R
 com/aliyun/sdk/service/devops20210625/models/DeleteFlowTagGroupRequest$1.class
 com/aliyun/sdk/service/devops20210625/models/ReleaseWorkspaceRequest$Builder.class
 com/aliyun/sdk/service/devops20210625/models/DeleteFlowTagGroupResponseBody$Builder.class
-com/aliyun/sdk/service/devops20210625/models/UpdatePipelineRequest$Scheduled$Builder.class
 com/aliyun/sdk/service/devops20210625/models/UpdateProtectedBranchesResponseBody$MergeRequestSetting$Builder.class
 com/aliyun/sdk/service/devops20210625/models/ResumeVMDeployOrderResponseBody$1.class
 com/aliyun/sdk/service/devops20210625/models/CreateRepositoryRequest$1.class
@@ -188,7 +183,6 @@ com/aliyun/sdk/service/devops20210625/models/DeleteVariableGroupResponseBody.cla
 com/aliyun/sdk/service/devops20210625/models/GetPipelineGroupRequest.class
 com/aliyun/sdk/service/devops20210625/models/ListPipelinesResponseBody$Pipelines.class
 com/aliyun/sdk/service/devops20210625/models/CreateSshKeyResponseBody$Builder.class
-com/aliyun/sdk/service/devops20210625/models/CreatePipelineRequest$BasicInfo$Builder.class
 com/aliyun/sdk/service/devops20210625/models/DeleteFlowTagResponseBody$1.class
 com/aliyun/sdk/service/devops20210625/models/ListWorkItemAllFieldsResponse.class
 com/aliyun/sdk/service/devops20210625/models/AddRepositoryMemberRequest.class
@@ -215,7 +209,6 @@ com/aliyun/sdk/service/devops20210625/models/GetWorkItemInfoResponseBody$ValueLi
 com/aliyun/sdk/service/devops20210625/models/UpdateRepositoryResponseBody$1.class
 com/aliyun/sdk/service/devops20210625/models/StopPipelineRunResponse.class
 com/aliyun/sdk/service/devops20210625/models/ListPipelineGroupPipelinesResponse$BuilderImpl.class
-com/aliyun/sdk/service/devops20210625/models/UpdatePipelineRequest$Builder.class
 com/aliyun/sdk/service/devops20210625/models/ListProtectedBranchesResponseBody$AllowPushUsers.class
 com/aliyun/sdk/service/devops20210625/models/ListWorkItemAllFieldsResponseBody.class
 com/aliyun/sdk/service/devops20210625/models/AddRepositoryMemberResponseBody.class
@@ -274,7 +267,6 @@ com/aliyun/sdk/service/devops20210625/models/CreateWorkitemRequest$FieldValueLis
 com/aliyun/sdk/service/devops20210625/models/ListProjectTemplatesRequest$1.class
 com/aliyun/sdk/service/devops20210625/models/GetWorkspaceRequest.class
 com/aliyun/sdk/service/devops20210625/models/ListProjectsResponse$BuilderImpl.class
-com/aliyun/sdk/service/devops20210625/models/UpdatePipelineResponseBody$1.class
 com/aliyun/sdk/service/devops20210625/models/UpdateRepositoryMemberRequest$Builder.class
 com/aliyun/sdk/service/devops20210625/models/UpdateHostGroupResponseBody.class
 com/aliyun/sdk/service/devops20210625/models/ListVariableGroupsResponseBody$Variables$Builder.class
@@ -292,7 +284,6 @@ com/aliyun/sdk/service/devops20210625/models/DeleteWorkitemCommentRequest.class
 com/aliyun/sdk/service/devops20210625/models/ListProtectedBranchesResponseBody$1.class
 com/aliyun/sdk/service/devops20210625/models/ListPipelineJobsRequest$1.class
 com/aliyun/sdk/service/devops20210625/models/ListProjectWorkitemTypesResponse$Builder.class
-com/aliyun/sdk/service/devops20210625/models/UpdatePipelineRequest$TriggerInfo$Builder.class
 com/aliyun/sdk/service/devops20210625/models/PassPipelineValidateResponseBody.class
 com/aliyun/sdk/service/devops20210625/models/ListPipelinesRequest$Builder.class
 com/aliyun/sdk/service/devops20210625/models/CreatePipelineGroupRequest$1.class
@@ -368,7 +359,6 @@ com/aliyun/sdk/service/devops20210625/models/ListRepositoryBranchesResponse$Buil
 com/aliyun/sdk/service/devops20210625/models/ListProtectedBranchesResponseBody$CheckTaskQualityConfig.class
 com/aliyun/sdk/service/devops20210625/models/ListProjectWorkitemTypesResponseBody$WorkitemTypes.class
 com/aliyun/sdk/service/devops20210625/models/CreateBranchResponseBody$1.class
-com/aliyun/sdk/service/devops20210625/models/CreatePipelineResponse$1.class
 com/aliyun/sdk/service/devops20210625/models/ListWorkspacesResponseBody.class
 com/aliyun/sdk/service/devops20210625/models/GetWorkItemWorkFlowInfoResponseBody$Statuses.class
 com/aliyun/sdk/service/devops20210625/models/DeleteProtectedBranchRequest$Builder.class
@@ -478,7 +468,6 @@ com/aliyun/sdk/service/devops20210625/models/CreateOAuthTokenResponseBody.class
 com/aliyun/sdk/service/devops20210625/models/ListResourceMembersResponseBody$ResourceMembers.class
 com/aliyun/sdk/service/devops20210625/models/UpdateFlowTagGroupResponse$BuilderImpl.class
 com/aliyun/sdk/service/devops20210625/models/CreateProtectdBranchResponseBody$CodeGuidelinesDetection.class
-com/aliyun/sdk/service/devops20210625/models/CreatePipelineResponseBody$Builder.class
 com/aliyun/sdk/service/devops20210625/models/DeleteProtectedBranchResponse$Builder.class
 com/aliyun/sdk/service/devops20210625/models/UpdateHostGroupRequest$1.class
 com/aliyun/sdk/service/devops20210625/models/ListFlowTagGroupsResponse$Builder.class
@@ -507,7 +496,6 @@ com/aliyun/sdk/service/devops20210625/models/ListProjectMembersResponse$BuilderI
 com/aliyun/sdk/service/devops20210625/models/GetPipelineScanReportUrlRequest.class
 com/aliyun/sdk/service/devops20210625/models/UpdateFlowTagResponseBody.class
 com/aliyun/sdk/service/devops20210625/models/ListRepositoryCommitDiffResponseBody$Result$Builder.class
-com/aliyun/sdk/service/devops20210625/models/UpdatePipelineResponseBody$Builder.class
 com/aliyun/sdk/service/devops20210625/models/CreatePipelineGroupResponseBody$PipelineGroup.class
 com/aliyun/sdk/service/devops20210625/models/GetProjectMemberResponseBody.class
 com/aliyun/sdk/service/devops20210625/models/ListHostGroupsResponseBody$HostGroups.class
@@ -549,7 +537,6 @@ com/aliyun/sdk/service/devops20210625/models/ListResourceMembersResponse.class
 com/aliyun/sdk/service/devops20210625/models/ListRepositoriesResponseBody.class
 com/aliyun/sdk/service/devops20210625/models/GetFileLastCommitResponse$1.class
 com/aliyun/sdk/service/devops20210625/models/SkipVMDeployMachineResponse.class
-com/aliyun/sdk/service/devops20210625/models/CreatePipelineRequest$1.class
 com/aliyun/sdk/service/devops20210625/models/RefusePipelineValidateResponseBody$Builder.class
 com/aliyun/sdk/service/devops20210625/models/GetProjectInfoResponse$BuilderImpl.class
 com/aliyun/sdk/service/devops20210625/models/ListRepositoryBranchesResponseBody$Commit.class
@@ -579,7 +566,6 @@ com/aliyun/sdk/service/devops20210625/models/StartPipelineRunResponseBody$1.clas
 com/aliyun/sdk/service/devops20210625/models/GetSprintInfoResponseBody$1.class
 com/aliyun/sdk/service/devops20210625/models/ListRepositoryCommitsResponseBody$Author.class
 com/aliyun/sdk/service/devops20210625/models/CreateHostGroupResponseBody$Builder.class
-com/aliyun/sdk/service/devops20210625/models/UpdatePipelineRequest$Caches$Builder.class
 com/aliyun/sdk/service/devops20210625/models/DeleteFlowTagGroupResponse.class
 com/aliyun/sdk/service/devops20210625/models/DeleteProjectRequest$1.class
 com/aliyun/sdk/service/devops20210625/models/GetSprintInfoRequest$Builder.class
@@ -603,7 +589,6 @@ com/aliyun/sdk/service/devops20210625/models/GetOrganizationMemberResponseBody$1
 com/aliyun/sdk/service/devops20210625/models/GetCustomFieldOptionResponseBody$Builder.class
 com/aliyun/sdk/service/devops20210625/models/GetWorkItemWorkFlowInfoResponseBody$Workflow$Builder.class
 com/aliyun/sdk/service/devops20210625/models/GetCodeupOrganizationResponseBody.class
-com/aliyun/sdk/service/devops20210625/models/UpdatePipelineRequest$Caches.class
 com/aliyun/sdk/service/devops20210625/models/ListWorkItemWorkFlowStatusResponseBody$Statuses.class
 com/aliyun/sdk/service/devops20210625/models/ListWorkItemWorkFlowStatusRequest$Builder.class
 com/aliyun/sdk/service/devops20210625/models/UpdateProtectedBranchesRequest$SensitiveInfoDetection.class
@@ -634,7 +619,6 @@ com/aliyun/sdk/service/devops20210625/models/CreateProtectdBranchRequest$CheckTa
 com/aliyun/sdk/service/devops20210625/models/DeleteRepositoryWebhookRequest$Builder.class
 com/aliyun/sdk/service/devops20210625/models/DeleteFileResponse$1.class
 com/aliyun/sdk/service/devops20210625/models/ListProjectMembersResponseBody$OrganizationUserInfo.class
-com/aliyun/sdk/service/devops20210625/models/UpdatePipelineRequest$BasicInfo.class
 com/aliyun/sdk/service/devops20210625/models/DeleteProtectedBranchResponse.class
 com/aliyun/sdk/service/devops20210625/models/ListWorkitemsResponse.class
 com/aliyun/sdk/service/devops20210625/models/CreateSprintRequest$1.class
@@ -721,7 +705,6 @@ com/aliyun/sdk/service/devops20210625/models/ListRepositoriesRequest$1.class
 com/aliyun/sdk/service/devops20210625/models/ListFlowTagGroupsResponseBody$FlowTagGroups.class
 com/aliyun/sdk/service/devops20210625/models/ListRepositoryCommitsResponseBody$Signature.class
 com/aliyun/sdk/service/devops20210625/models/GetWorkItemInfoResponseBody$Workitem$Builder.class
-com/aliyun/sdk/service/devops20210625/models/CreatePipelineRequest$Settings$Builder.class
 com/aliyun/sdk/service/devops20210625/models/ListRepositoryCommitsResponse$Builder.class
 com/aliyun/sdk/service/devops20210625/models/GetFileBlobsResponseBody$1.class
 com/aliyun/sdk/service/devops20210625/models/ListServiceConnectionsResponseBody$Builder.class
@@ -788,7 +771,6 @@ com/aliyun/sdk/service/devops20210625/models/CreateFlowTagGroupResponse$Builder.
 com/aliyun/sdk/service/devops20210625/models/LogPipelineJobRunResponseBody$Builder.class
 com/aliyun/sdk/service/devops20210625/models/CreateProtectdBranchRequest$CheckItems$Builder.class
 com/aliyun/sdk/service/devops20210625/models/ResumeVMDeployOrderResponse.class
-com/aliyun/sdk/service/devops20210625/models/CreatePipelineResponse.class
 com/aliyun/sdk/service/devops20210625/models/GetWorkItemWorkFlowInfoResponseBody.class
 com/aliyun/sdk/service/devops20210625/models/CreateWorkitemEstimateResponse$1.class
 com/aliyun/sdk/service/devops20210625/models/ResumeVMDeployOrderRequest.class
@@ -810,7 +792,6 @@ com/aliyun/sdk/service/devops20210625/models/ListFlowTagGroupsResponseBody$FlowT
 com/aliyun/sdk/service/devops20210625/models/SkipVMDeployMachineResponseBody$Builder.class
 com/aliyun/sdk/service/devops20210625/models/GetFlowTagGroupResponseBody$Builder.class
 com/aliyun/sdk/service/devops20210625/models/GetVMDeployOrderResponse$1.class
-com/aliyun/sdk/service/devops20210625/models/UpdatePipelineResponseBody.class
 com/aliyun/sdk/service/devops20210625/models/CreateHostGroupResponse$Builder.class
 com/aliyun/sdk/service/devops20210625/models/ListRepositoryCommitDiffResponseBody$1.class
 com/aliyun/sdk/service/devops20210625/models/GetOrganizationMemberResponseBody.class
@@ -893,8 +874,6 @@ com/aliyun/sdk/service/devops20210625/models/UpdateProjectMemberResponseBody$Mem
 com/aliyun/sdk/service/devops20210625/models/UpdateProjectMemberResponseBody$Builder.class
 com/aliyun/sdk/service/devops20210625/models/UpdateWorkItemResponseBody$Workitem$Builder.class
 com/aliyun/sdk/service/devops20210625/models/UpdateRepositoryMemberResponseBody.class
-com/aliyun/sdk/service/devops20210625/models/UpdatePipelineResponse$BuilderImpl.class
-com/aliyun/sdk/service/devops20210625/models/CreatePipelineRequest$Scheduled$Builder.class
 com/aliyun/sdk/service/devops20210625/models/UpdateFileResponse$1.class
 com/aliyun/sdk/service/devops20210625/models/GetPipelineGroupResponse$Builder.class
 com/aliyun/sdk/service/devops20210625/models/GetBranchInfoRequest$1.class
@@ -934,9 +913,7 @@ com/aliyun/sdk/service/devops20210625/models/FrozenWorkspaceRequest.class
 com/aliyun/sdk/service/devops20210625/models/GetCodeupOrganizationResponse$BuilderImpl.class
 com/aliyun/sdk/service/devops20210625/models/GetPipelineArtifactUrlRequest.class
 com/aliyun/sdk/service/devops20210625/models/ListPipelineJobHistorysResponse.class
-com/aliyun/sdk/service/devops20210625/models/CreatePipelineResponse$Builder.class
 com/aliyun/sdk/service/devops20210625/models/GetWorkItemWorkFlowInfoResponse$Builder.class
-com/aliyun/sdk/service/devops20210625/models/UpdatePipelineRequest.class
 com/aliyun/sdk/service/devops20210625/models/ListRepositoryCommitsResponse$BuilderImpl.class
 com/aliyun/sdk/service/devops20210625/models/ListWorkItemAllFieldsRequest$1.class
 com/aliyun/sdk/service/devops20210625/models/JoinPipelineGroupResponse$Builder.class
@@ -1001,7 +978,6 @@ com/aliyun/sdk/service/devops20210625/models/ListWorkitemTimeResponse$Builder.cl
 com/aliyun/sdk/service/devops20210625/models/DeleteFileRequest$Builder.class
 com/aliyun/sdk/service/devops20210625/models/ListProjectWorkitemTypesResponse$BuilderImpl.class
 com/aliyun/sdk/service/devops20210625/models/StopVMDeployOrderResponse$1.class
-com/aliyun/sdk/service/devops20210625/models/UpdatePipelineRequest$BasicInfo$Builder.class
 com/aliyun/sdk/service/devops20210625/models/DeleteBranchResponse$1.class
 com/aliyun/sdk/service/devops20210625/models/ListProjectWorkitemTypesResponse.class
 com/aliyun/sdk/service/devops20210625/models/GetWorkItemWorkFlowInfoResponse$1.class
@@ -1025,7 +1001,6 @@ com/aliyun/sdk/service/devops20210625/models/CreateHostGroupResponse.class
 com/aliyun/sdk/service/devops20210625/models/DeleteWorkitemCommentResponse$Builder.class
 com/aliyun/sdk/service/devops20210625/models/GetSprintInfoResponseBody.class
 com/aliyun/sdk/service/devops20210625/models/DeletePipelineResponseBody$1.class
-com/aliyun/sdk/service/devops20210625/models/CreatePipelineRequest$TriggerInfo.class
 com/aliyun/sdk/service/devops20210625/models/GetWorkitemRelationsRequest$1.class
 com/aliyun/sdk/service/devops20210625/models/UpdateProtectedBranchesRequest$CheckItems.class
 com/aliyun/sdk/service/devops20210625/models/JoinPipelineGroupResponseBody$1.class
@@ -1042,7 +1017,6 @@ com/aliyun/sdk/service/devops20210625/models/ListProjectsResponseBody$Projects.c
 com/aliyun/sdk/service/devops20210625/models/CreateProjectRequest$Builder.class
 com/aliyun/sdk/service/devops20210625/models/GetPipelineRunResponse$BuilderImpl.class
 com/aliyun/sdk/service/devops20210625/models/GetProjectInfoResponseBody$Project.class
-com/aliyun/sdk/service/devops20210625/models/UpdatePipelineResponse$Builder.class
 com/aliyun/sdk/service/devops20210625/models/GetVariableGroupResponseBody$Builder.class
 com/aliyun/sdk/service/devops20210625/models/StopPipelineRunResponse$Builder.class
 com/aliyun/sdk/service/devops20210625/models/StopPipelineJobRunResponse$Builder.class
@@ -1097,7 +1071,6 @@ com/aliyun/sdk/service/devops20210625/models/CreateWorkitemRequest$Builder.class
 com/aliyun/sdk/service/devops20210625/models/UpdateProtectedBranchesRequest$CheckTaskQualityConfig.class
 com/aliyun/sdk/service/devops20210625/models/UpdateRepositoryRequest$Builder.class
 com/aliyun/sdk/service/devops20210625/models/CreateSprintResponse$1.class
-com/aliyun/sdk/service/devops20210625/models/UpdatePipelineRequest$1.class
 com/aliyun/sdk/service/devops20210625/models/StopPipelineJobRunRequest.class
 com/aliyun/sdk/service/devops20210625/models/RetryVMDeployMachineResponse$Builder.class
 com/aliyun/sdk/service/devops20210625/models/ListResourceMembersRequest$Builder.class
@@ -1134,7 +1107,6 @@ com/aliyun/sdk/service/devops20210625/models/CreateProtectdBranchRequest$CodeGui
 com/aliyun/sdk/service/devops20210625/models/UpdateRepositoryRequest.class
 com/aliyun/sdk/service/devops20210625/models/DeleteVariableGroupResponseBody$1.class
 com/aliyun/sdk/service/devops20210625/models/DeleteFileRequest$1.class
-com/aliyun/sdk/service/devops20210625/models/UpdatePipelineResponse.class
 com/aliyun/sdk/service/devops20210625/models/CreateOAuthTokenResponseBody$Builder.class
 com/aliyun/sdk/service/devops20210625/models/RetryPipelineJobRunRequest$1.class
 com/aliyun/sdk/service/devops20210625/models/GetFlowTagGroupResponseBody$FlowTagList$Builder.class
@@ -1159,7 +1131,6 @@ com/aliyun/sdk/service/devops20210625/models/UpdateProtectedBranchesResponseBody
 com/aliyun/sdk/service/devops20210625/models/ListProjectTemplatesResponseBody.class
 com/aliyun/sdk/service/devops20210625/models/JoinPipelineGroupResponseBody.class
 com/aliyun/sdk/service/devops20210625/models/GetSprintInfoResponse$1.class
-com/aliyun/sdk/service/devops20210625/models/CreatePipelineRequest$GlobalParams$Builder.class
 com/aliyun/sdk/service/devops20210625/models/ListRepositoryBranchesResponse$1.class
 com/aliyun/sdk/service/devops20210625/models/DeleteVariableGroupResponseBody$Builder.class
 com/aliyun/sdk/service/devops20210625/models/DeleteRepositoryRequest.class
@@ -1180,7 +1151,6 @@ com/aliyun/sdk/service/devops20210625/models/GetSprintInfoRequest.class
 com/aliyun/sdk/service/devops20210625/models/LogVMDeployMachineResponseBody$1.class
 com/aliyun/sdk/service/devops20210625/models/RetryVMDeployMachineResponse.class
 com/aliyun/sdk/service/devops20210625/models/GetProjectInfoResponse.class
-com/aliyun/sdk/service/devops20210625/models/CreatePipelineRequest$BasicInfo.class
 com/aliyun/sdk/service/devops20210625/models/UpdateProtectedBranchesRequest$CheckTaskQualityConfig$Builder.class
 com/aliyun/sdk/service/devops20210625/models/ListSprintsResponse.class
 com/aliyun/sdk/service/devops20210625/models/GetPipelineGroupResponseBody$Builder.class
@@ -1205,7 +1175,6 @@ com/aliyun/sdk/service/devops20210625/models/ListFlowTagGroupsRequest.class
 com/aliyun/sdk/service/devops20210625/models/GetRepositoryResponseBody$Namespace.class
 com/aliyun/sdk/service/devops20210625/models/ListSprintsResponseBody$1.class
 com/aliyun/sdk/service/devops20210625/models/ListWorkspacesRequest.class
-com/aliyun/sdk/service/devops20210625/models/CreatePipelineRequest$Builder.class
 com/aliyun/sdk/service/devops20210625/models/ListWorkitemsResponse$1.class
 com/aliyun/sdk/service/devops20210625/models/ListRepositoryWebhookResponseBody.class
 com/aliyun/sdk/service/devops20210625/models/DeletePipelineGroupResponseBody$1.class
@@ -1291,7 +1260,6 @@ com/aliyun/sdk/service/devops20210625/models/GetWorkitemTimeTypeListResponseBody
 com/aliyun/sdk/service/devops20210625/models/ListWorkspacesResponse$Builder.class
 com/aliyun/sdk/service/devops20210625/models/GetOrganizationMemberRequest$1.class
 com/aliyun/sdk/service/devops20210625/models/GetProjectMemberResponseBody$Builder.class
-com/aliyun/sdk/service/devops20210625/models/CreatePipelineRequest$Caches.class
 com/aliyun/sdk/service/devops20210625/models/GetWorkItemActivityResponse$1.class
 com/aliyun/sdk/service/devops20210625/models/ListResourceMembersResponseBody$Builder.class
 com/aliyun/sdk/service/devops20210625/models/ListProtectedBranchesResponse$1.class
@@ -1372,12 +1340,9 @@ com/aliyun/sdk/service/devops20210625/models/CreateSshKeyResponse.class
 com/aliyun/sdk/service/devops20210625/models/UpdateRepositoryRequest$ProjectCloneDownloadRoleList$Builder.class
 com/aliyun/sdk/service/devops20210625/models/CreateWorkitemRecordResponse$Builder.class
 com/aliyun/sdk/service/devops20210625/models/ListServiceConnectionsResponseBody.class
-com/aliyun/sdk/service/devops20210625/models/CreatePipelineRequest.class
 com/aliyun/sdk/service/devops20210625/models/FrozenWorkspaceRequest$Builder.class
 com/aliyun/sdk/service/devops20210625/models/GetProjectMemberResponseBody$Result.class
-com/aliyun/sdk/service/devops20210625/models/CreatePipelineResponseBody.class
 com/aliyun/sdk/service/devops20210625/models/ListRepositoriesRequest$Builder.class
-com/aliyun/sdk/service/devops20210625/models/CreatePipelineRequest$Scheduled.class
 com/aliyun/sdk/service/devops20210625/models/ListServiceConnectionsResponseBody$1.class
 com/aliyun/sdk/service/devops20210625/models/DeleteVariableGroupRequest.class
 com/aliyun/sdk/service/devops20210625/models/GetRepositoryCommitResponse$Builder.class
@@ -1455,7 +1420,6 @@ com/aliyun/sdk/service/devops20210625/models/TriggerRepositoryMirrorSyncResponse
 com/aliyun/sdk/service/devops20210625/models/CreateBranchResponse$Builder.class
 com/aliyun/sdk/service/devops20210625/models/GetPipelineResponseBody$Pipeline$Builder.class
 com/aliyun/sdk/service/devops20210625/models/CreateWorkitemCommentRequest$1.class
-com/aliyun/sdk/service/devops20210625/models/UpdatePipelineResponse$1.class
 com/aliyun/sdk/service/devops20210625/models/StopPipelineJobRunResponse$1.class
 com/aliyun/sdk/service/devops20210625/models/ListServiceConnectionsResponseBody$ServiceConnections$Builder.class
 com/aliyun/sdk/service/devops20210625/models/ListPipelineGroupsRequest$Builder.class
@@ -1496,7 +1460,6 @@ com/aliyun/sdk/service/devops20210625/models/CreateWorkspaceResponseBody$Builder
 com/aliyun/sdk/service/devops20210625/models/CreateProtectdBranchResponseBody$TestSettingDTO$Builder.class
 com/aliyun/sdk/service/devops20210625/models/UpdatePipelineGroupResponse.class
 com/aliyun/sdk/service/devops20210625/models/UpdatePipelineGroupResponse$1.class
-com/aliyun/sdk/service/devops20210625/models/UpdatePipelineRequest$Settings.class
 com/aliyun/sdk/service/devops20210625/models/DeletePipelineResponse$1.class
 com/aliyun/sdk/service/devops20210625/models/ListWorkspacesResponseBody$1.class
 com/aliyun/sdk/service/devops20210625/models/ListWorkItemAllFieldsResponseBody$1.class
@@ -1514,7 +1477,6 @@ com/aliyun/sdk/service/devops20210625/models/CreateSprintResponseBody$Sprint.cla
 com/aliyun/sdk/service/devops20210625/models/CreateProtectdBranchResponseBody$SensitiveInfoDetection$Builder.class
 com/aliyun/sdk/service/devops20210625/models/GetBranchInfoResponseBody$Builder.class
 com/aliyun/sdk/service/devops20210625/models/CreateProtectdBranchRequest.class
-com/aliyun/sdk/service/devops20210625/models/UpdatePipelineRequest$Settings$Builder.class
 com/aliyun/sdk/service/devops20210625/models/UpdateVariableGroupRequest.class
 com/aliyun/sdk/service/devops20210625/models/CreateSshKeyResponse$Builder.class
 com/aliyun/sdk/service/devops20210625/models/ListServiceConnectionsResponseBody$ServiceConnections.class
@@ -1533,7 +1495,6 @@ com/aliyun/sdk/service/devops20210625/models/FrozenWorkspaceResponse$BuilderImpl
 com/aliyun/sdk/service/devops20210625/models/ListPipelineJobsResponseBody$1.class
 com/aliyun/sdk/service/devops20210625/models/ResetSshKeyResponse$BuilderImpl.class
 com/aliyun/sdk/service/devops20210625/models/CreateProtectdBranchResponseBody$CheckConfig$Builder.class
-com/aliyun/sdk/service/devops20210625/models/UpdatePipelineRequest$GlobalParams.class
 com/aliyun/sdk/service/devops20210625/models/GetWorkItemActivityResponse$Builder.class
 com/aliyun/sdk/service/devops20210625/models/UpdateWorkItemRequest$1.class
 com/aliyun/sdk/service/devops20210625/models/ListResourceMembersResponseBody.class
@@ -1606,7 +1567,6 @@ com/aliyun/sdk/service/devops20210625/models/GetProjectMemberResponseBody$1.clas
 com/aliyun/sdk/service/devops20210625/models/GetBranchInfoResponseBody$Signature$Builder.class
 com/aliyun/sdk/service/devops20210625/models/StopPipelineRunRequest$1.class
 com/aliyun/sdk/service/devops20210625/models/UpdateRepositoryResponseBody$Namespace$Builder.class
-com/aliyun/sdk/service/devops20210625/models/CreatePipelineRequest$Caches$Builder.class
 com/aliyun/sdk/service/devops20210625/models/UpdateVariableGroupResponseBody.class
 com/aliyun/sdk/service/devops20210625/models/ListPipelineRunsResponseBody.class
 com/aliyun/sdk/service/devops20210625/models/ListRepositoryBranchesResponse$Builder.class
@@ -1632,7 +1592,6 @@ com/aliyun/sdk/service/devops20210625/models/StopPipelineRunResponseBody$Builder
 com/aliyun/sdk/service/devops20210625/models/ListPipelineJobHistorysResponse$1.class
 com/aliyun/sdk/service/devops20210625/models/GetCustomFieldOptionResponse.class
 com/aliyun/sdk/service/devops20210625/models/ListFlowTagGroupsResponseBody.class
-com/aliyun/sdk/service/devops20210625/models/UpdatePipelineRequest$GlobalParams$Builder.class
 com/aliyun/sdk/service/devops20210625/models/UpdatePipelineBaseInfoResponseBody$1.class
 com/aliyun/sdk/service/devops20210625/models/DeleteProtectedBranchResponseBody$Result.class
 com/aliyun/sdk/service/devops20210625/models/CreateWorkitemEstimateResponse.class
@@ -1655,17 +1614,14 @@ com/aliyun/sdk/service/devops20210625/models/ResumeVMDeployOrderResponse$Builder
 com/aliyun/sdk/service/devops20210625/models/AddWebhookResponseBody$Result$Builder.class
 com/aliyun/sdk/service/devops20210625/models/ListWorkItemAllFieldsResponse$1.class
 com/aliyun/sdk/service/devops20210625/models/GetPipelineRunResponse$1.class
-com/aliyun/sdk/service/devops20210625/models/UpdatePipelineRequest$Scheduled.class
 com/aliyun/sdk/service/devops20210625/models/UpdateVariableGroupResponse.class
 com/aliyun/sdk/service/devops20210625/models/CreateProtectdBranchResponseBody$MergeRequestSetting$Builder.class
 com/aliyun/sdk/service/devops20210625/models/CreateWorkitemCommentResponseBody$Comment.class
-com/aliyun/sdk/service/devops20210625/models/CreatePipelineResponseBody$1.class
 com/aliyun/sdk/service/devops20210625/models/GetWorkitemCommentListRequest$Builder.class
 com/aliyun/sdk/service/devops20210625/models/SkipPipelineJobRunResponse$Builder.class
 com/aliyun/sdk/service/devops20210625/models/DeleteProjectResponse$1.class
 com/aliyun/sdk/service/devops20210625/models/ResumeVMDeployOrderRequest$1.class
 com/aliyun/sdk/service/devops20210625/models/GetPipelineResponse.class
-com/aliyun/sdk/service/devops20210625/models/CreatePipelineRequest$GlobalParams.class
 com/aliyun/sdk/service/devops20210625/models/ListProjectsResponseBody$Projects$Builder.class
 com/aliyun/sdk/service/devops20210625/models/DeleteFileResponseBody$1.class
 com/aliyun/sdk/service/devops20210625/models/GetSprintInfoResponse.class
