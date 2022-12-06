@@ -29,6 +29,10 @@ public class QueryConfigRequest extends Request {
     private String instanceId;
 
     @Query
+    @NameInMap("NeedRunningConf")
+    private Boolean needRunningConf;
+
+    @Query
     @NameInMap("RequestPars")
     private String requestPars;
 
@@ -38,6 +42,7 @@ public class QueryConfigRequest extends Request {
         this.clusterId = builder.clusterId;
         this.configType = builder.configType;
         this.instanceId = builder.instanceId;
+        this.needRunningConf = builder.needRunningConf;
         this.requestPars = builder.requestPars;
     }
 
@@ -83,6 +88,13 @@ public class QueryConfigRequest extends Request {
     }
 
     /**
+     * @return needRunningConf
+     */
+    public Boolean getNeedRunningConf() {
+        return this.needRunningConf;
+    }
+
+    /**
      * @return requestPars
      */
     public String getRequestPars() {
@@ -94,6 +106,7 @@ public class QueryConfigRequest extends Request {
         private String clusterId; 
         private String configType; 
         private String instanceId; 
+        private Boolean needRunningConf; 
         private String requestPars; 
 
         private Builder() {
@@ -106,6 +119,7 @@ public class QueryConfigRequest extends Request {
             this.clusterId = request.clusterId;
             this.configType = request.configType;
             this.instanceId = request.instanceId;
+            this.needRunningConf = request.needRunningConf;
             this.requestPars = request.requestPars;
         } 
 
@@ -142,6 +156,15 @@ public class QueryConfigRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * NeedRunningConf.
+         */
+        public Builder needRunningConf(Boolean needRunningConf) {
+            this.putQueryParameter("NeedRunningConf", needRunningConf);
+            this.needRunningConf = needRunningConf;
             return this;
         }
 

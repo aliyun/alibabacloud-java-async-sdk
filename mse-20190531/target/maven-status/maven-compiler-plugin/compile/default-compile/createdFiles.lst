@@ -1375,6 +1375,7 @@ com/aliyun/sdk/service/mse20190531/models/ListGatewayServiceResponse.class
 com/aliyun/sdk/service/mse20190531/models/UpdateGatewayRouteRetryResponseBody$1.class
 com/aliyun/sdk/service/mse20190531/models/DeleteNacosServiceResponse$BuilderImpl.class
 com/aliyun/sdk/service/mse20190531/models/GetAppMessageQueueRouteResponseBody$1.class
+com/aliyun/sdk/service/mse20190531/models/QueryConfigResponseBody$NacosRunningEnv.class
 com/aliyun/sdk/service/mse20190531/models/ImportNacosConfigRequest$1.class
 com/aliyun/sdk/service/mse20190531/models/ListInstanceCountResponse$1.class
 com/aliyun/sdk/service/mse20190531/models/GetGatewayServiceDetailResponseBody$Labels$Builder.class
@@ -1910,6 +1911,7 @@ com/aliyun/sdk/service/mse20190531/models/GetGatewayResponseBody$LogConfigDetail
 com/aliyun/sdk/service/mse20190531/models/AddGatewayDomainResponse$BuilderImpl.class
 com/aliyun/sdk/service/mse20190531/models/ListClusterConnectionTypesResponse$BuilderImpl.class
 com/aliyun/sdk/service/mse20190531/models/GetImportFileUrlRequest$1.class
+com/aliyun/sdk/service/mse20190531/models/QueryConfigResponseBody$NacosRunningEnv$Builder.class
 com/aliyun/sdk/service/mse20190531/models/UpdateGatewayRouteResponse.class
 com/aliyun/sdk/service/mse20190531/models/AddBlackWhiteListRequest.class
 com/aliyun/sdk/service/mse20190531/models/ListSecurityGroupResponse$Builder.class

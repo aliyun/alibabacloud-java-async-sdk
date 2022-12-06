@@ -151,6 +151,47 @@ public class QueryConfigResponseBody extends TeaModel {
 
     } 
 
+    public static class NacosRunningEnv extends TeaModel {
+        @NameInMap("emptyProtect")
+        private Boolean emptyProtect;
+
+        private NacosRunningEnv(Builder builder) {
+            this.emptyProtect = builder.emptyProtect;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NacosRunningEnv create() {
+            return builder().build();
+        }
+
+        /**
+         * @return emptyProtect
+         */
+        public Boolean getEmptyProtect() {
+            return this.emptyProtect;
+        }
+
+        public static final class Builder {
+            private Boolean emptyProtect; 
+
+            /**
+             * emptyProtect.
+             */
+            public Builder emptyProtect(Boolean emptyProtect) {
+                this.emptyProtect = emptyProtect;
+                return this;
+            }
+
+            public NacosRunningEnv build() {
+                return new NacosRunningEnv(this);
+            } 
+
+        } 
+
+    }
     public static class Data extends TeaModel {
         @NameInMap("AutopurgePurgeInterval")
         private String autopurgePurgeInterval;
@@ -166,6 +207,9 @@ public class QueryConfigResponseBody extends TeaModel {
 
         @NameInMap("ConfigAuthSupported")
         private Boolean configAuthSupported;
+
+        @NameInMap("ConfigContentLimit")
+        private Long configContentLimit;
 
         @NameInMap("ConfigSecretEnabled")
         private Boolean configSecretEnabled;
@@ -196,6 +240,9 @@ public class QueryConfigResponseBody extends TeaModel {
 
         @NameInMap("MinSessionTimeout")
         private String minSessionTimeout;
+
+        @NameInMap("NacosRunningEnv")
+        private NacosRunningEnv nacosRunningEnv;
 
         @NameInMap("NamingAuthEnabled")
         private Boolean namingAuthEnabled;
@@ -233,6 +280,7 @@ public class QueryConfigResponseBody extends TeaModel {
             this.clusterName = builder.clusterName;
             this.configAuthEnabled = builder.configAuthEnabled;
             this.configAuthSupported = builder.configAuthSupported;
+            this.configContentLimit = builder.configContentLimit;
             this.configSecretEnabled = builder.configSecretEnabled;
             this.configSecretSupported = builder.configSecretSupported;
             this.initLimit = builder.initLimit;
@@ -243,6 +291,7 @@ public class QueryConfigResponseBody extends TeaModel {
             this.maxClientCnxns = builder.maxClientCnxns;
             this.maxSessionTimeout = builder.maxSessionTimeout;
             this.minSessionTimeout = builder.minSessionTimeout;
+            this.nacosRunningEnv = builder.nacosRunningEnv;
             this.namingAuthEnabled = builder.namingAuthEnabled;
             this.namingAuthSupported = builder.namingAuthSupported;
             this.namingCreateServiceSupported = builder.namingCreateServiceSupported;
@@ -296,6 +345,13 @@ public class QueryConfigResponseBody extends TeaModel {
          */
         public Boolean getConfigAuthSupported() {
             return this.configAuthSupported;
+        }
+
+        /**
+         * @return configContentLimit
+         */
+        public Long getConfigContentLimit() {
+            return this.configContentLimit;
         }
 
         /**
@@ -366,6 +422,13 @@ public class QueryConfigResponseBody extends TeaModel {
          */
         public String getMinSessionTimeout() {
             return this.minSessionTimeout;
+        }
+
+        /**
+         * @return nacosRunningEnv
+         */
+        public NacosRunningEnv getNacosRunningEnv() {
+            return this.nacosRunningEnv;
         }
 
         /**
@@ -444,6 +507,7 @@ public class QueryConfigResponseBody extends TeaModel {
             private String clusterName; 
             private Boolean configAuthEnabled; 
             private Boolean configAuthSupported; 
+            private Long configContentLimit; 
             private Boolean configSecretEnabled; 
             private Boolean configSecretSupported; 
             private String initLimit; 
@@ -454,6 +518,7 @@ public class QueryConfigResponseBody extends TeaModel {
             private String maxClientCnxns; 
             private String maxSessionTimeout; 
             private String minSessionTimeout; 
+            private NacosRunningEnv nacosRunningEnv; 
             private Boolean namingAuthEnabled; 
             private Boolean namingAuthSupported; 
             private Boolean namingCreateServiceSupported; 
@@ -502,6 +567,14 @@ public class QueryConfigResponseBody extends TeaModel {
              */
             public Builder configAuthSupported(Boolean configAuthSupported) {
                 this.configAuthSupported = configAuthSupported;
+                return this;
+            }
+
+            /**
+             * ConfigContentLimit.
+             */
+            public Builder configContentLimit(Long configContentLimit) {
+                this.configContentLimit = configContentLimit;
                 return this;
             }
 
@@ -582,6 +655,14 @@ public class QueryConfigResponseBody extends TeaModel {
              */
             public Builder minSessionTimeout(String minSessionTimeout) {
                 this.minSessionTimeout = minSessionTimeout;
+                return this;
+            }
+
+            /**
+             * NacosRunningEnv.
+             */
+            public Builder nacosRunningEnv(NacosRunningEnv nacosRunningEnv) {
+                this.nacosRunningEnv = nacosRunningEnv;
                 return this;
             }
 
