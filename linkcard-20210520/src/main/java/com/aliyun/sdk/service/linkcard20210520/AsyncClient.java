@@ -18,11 +18,19 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
+    CompletableFuture<AddCardToDirectionalGroupResponse> addCardToDirectionalGroup(AddCardToDirectionalGroupRequest request);
+
+    CompletableFuture<AddDirectionalAddressResponse> addDirectionalAddress(AddDirectionalAddressRequest request);
+
     CompletableFuture<AddDirectionalCardResponse> addDirectionalCard(AddDirectionalCardRequest request);
 
     CompletableFuture<AddDirectionalGroupResponse> addDirectionalGroup(AddDirectionalGroupRequest request);
 
     CompletableFuture<BatchAddDirectionalAddressResponse> batchAddDirectionalAddress(BatchAddDirectionalAddressRequest request);
+
+    CompletableFuture<DeleteDirectionalAddressResponse> deleteDirectionalAddress(DeleteDirectionalAddressRequest request);
+
+    CompletableFuture<DeleteDirectionalGroupResponse> deleteDirectionalGroup(DeleteDirectionalGroupRequest request);
 
     CompletableFuture<ForceActivationResponse> forceActivation(ForceActivationRequest request);
 
