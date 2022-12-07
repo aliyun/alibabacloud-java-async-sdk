@@ -250,7 +250,7 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 预估总价
+             * 预估总价, 单位为分
              */
             public Builder total(Long total) {
                 this.total = total;
@@ -515,20 +515,20 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
 
     }
     public static class BtripRoutes extends TeaModel {
+        @NameInMap("arr_city")
+        private String arrCity;
+
         @NameInMap("arr_date")
         private Long arrDate;
-
-        @NameInMap("btrip_type")
-        private Integer btripType;
 
         @NameInMap("cheapest")
         private Cheapest cheapest;
 
+        @NameInMap("dep_city")
+        private String depCity;
+
         @NameInMap("dep_date")
         private Long depDate;
-
-        @NameInMap("dest_city")
-        private String destCity;
 
         @NameInMap("err_msg")
         private String errMsg;
@@ -536,29 +536,21 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
         @NameInMap("itinerary_id")
         private String itineraryId;
 
-        @NameInMap("itinerary_index")
-        private Integer itineraryIndex;
-
         @NameInMap("most_expensive")
         private MostExpensive mostExpensive;
-
-        @NameInMap("org_city")
-        private String orgCity;
 
         @NameInMap("success")
         private Boolean success;
 
         private BtripRoutes(Builder builder) {
+            this.arrCity = builder.arrCity;
             this.arrDate = builder.arrDate;
-            this.btripType = builder.btripType;
             this.cheapest = builder.cheapest;
+            this.depCity = builder.depCity;
             this.depDate = builder.depDate;
-            this.destCity = builder.destCity;
             this.errMsg = builder.errMsg;
             this.itineraryId = builder.itineraryId;
-            this.itineraryIndex = builder.itineraryIndex;
             this.mostExpensive = builder.mostExpensive;
-            this.orgCity = builder.orgCity;
             this.success = builder.success;
         }
 
@@ -571,17 +563,17 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return arrCity
+         */
+        public String getArrCity() {
+            return this.arrCity;
+        }
+
+        /**
          * @return arrDate
          */
         public Long getArrDate() {
             return this.arrDate;
-        }
-
-        /**
-         * @return btripType
-         */
-        public Integer getBtripType() {
-            return this.btripType;
         }
 
         /**
@@ -592,17 +584,17 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return depCity
+         */
+        public String getDepCity() {
+            return this.depCity;
+        }
+
+        /**
          * @return depDate
          */
         public Long getDepDate() {
             return this.depDate;
-        }
-
-        /**
-         * @return destCity
-         */
-        public String getDestCity() {
-            return this.destCity;
         }
 
         /**
@@ -620,24 +612,10 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
         }
 
         /**
-         * @return itineraryIndex
-         */
-        public Integer getItineraryIndex() {
-            return this.itineraryIndex;
-        }
-
-        /**
          * @return mostExpensive
          */
         public MostExpensive getMostExpensive() {
             return this.mostExpensive;
-        }
-
-        /**
-         * @return orgCity
-         */
-        public String getOrgCity() {
-            return this.orgCity;
         }
 
         /**
@@ -648,31 +626,29 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String arrCity; 
             private Long arrDate; 
-            private Integer btripType; 
             private Cheapest cheapest; 
+            private String depCity; 
             private Long depDate; 
-            private String destCity; 
             private String errMsg; 
             private String itineraryId; 
-            private Integer itineraryIndex; 
             private MostExpensive mostExpensive; 
-            private String orgCity; 
             private Boolean success; 
+
+            /**
+             * arr_city.
+             */
+            public Builder arrCity(String arrCity) {
+                this.arrCity = arrCity;
+                return this;
+            }
 
             /**
              * arr_date.
              */
             public Builder arrDate(Long arrDate) {
                 this.arrDate = arrDate;
-                return this;
-            }
-
-            /**
-             * btrip_type.
-             */
-            public Builder btripType(Integer btripType) {
-                this.btripType = btripType;
                 return this;
             }
 
@@ -685,18 +661,18 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
             }
 
             /**
-             * dep_date.
+             * dep_city.
              */
-            public Builder depDate(Long depDate) {
-                this.depDate = depDate;
+            public Builder depCity(String depCity) {
+                this.depCity = depCity;
                 return this;
             }
 
             /**
-             * dest_city.
+             * dep_date.
              */
-            public Builder destCity(String destCity) {
-                this.destCity = destCity;
+            public Builder depDate(Long depDate) {
+                this.depDate = depDate;
                 return this;
             }
 
@@ -717,26 +693,10 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
             }
 
             /**
-             * itinerary_index.
-             */
-            public Builder itineraryIndex(Integer itineraryIndex) {
-                this.itineraryIndex = itineraryIndex;
-                return this;
-            }
-
-            /**
              * most_expensive.
              */
             public Builder mostExpensive(MostExpensive mostExpensive) {
                 this.mostExpensive = mostExpensive;
-                return this;
-            }
-
-            /**
-             * org_city.
-             */
-            public Builder orgCity(String orgCity) {
-                this.orgCity = orgCity;
                 return this;
             }
 
