@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class RerunJobsRequest extends Request {
     @Query
+    @NameInMap("Async")
+    private Boolean async;
+
+    @Query
     @NameInMap("ClusterId")
     @Validation(required = true)
     private String clusterId;
@@ -24,6 +28,7 @@ public class RerunJobsRequest extends Request {
 
     private RerunJobsRequest(Builder builder) {
         super(builder);
+        this.async = builder.async;
         this.clusterId = builder.clusterId;
         this.jobs = builder.jobs;
     }
@@ -42,6 +47,13 @@ public class RerunJobsRequest extends Request {
     }
 
     /**
+     * @return async
+     */
+    public Boolean getAsync() {
+        return this.async;
+    }
+
+    /**
      * @return clusterId
      */
     public String getClusterId() {
@@ -56,6 +68,7 @@ public class RerunJobsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<RerunJobsRequest, Builder> {
+        private Boolean async; 
         private String clusterId; 
         private String jobs; 
 
@@ -65,9 +78,19 @@ public class RerunJobsRequest extends Request {
 
         private Builder(RerunJobsRequest request) {
             super(request);
+            this.async = request.async;
             this.clusterId = request.clusterId;
             this.jobs = request.jobs;
         } 
+
+        /**
+         * Async.
+         */
+        public Builder async(Boolean async) {
+            this.putQueryParameter("Async", async);
+            this.async = async;
+            return this;
+        }
 
         /**
          * ClusterId.

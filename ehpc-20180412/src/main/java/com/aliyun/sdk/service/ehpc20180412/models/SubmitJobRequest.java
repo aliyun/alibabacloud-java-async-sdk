@@ -17,6 +17,10 @@ public class SubmitJobRequest extends Request {
     private String arrayRequest;
 
     @Query
+    @NameInMap("Async")
+    private Boolean async;
+
+    @Query
     @NameInMap("ClockTime")
     private String clockTime;
 
@@ -33,6 +37,10 @@ public class SubmitJobRequest extends Request {
     @Query
     @NameInMap("ContainerId")
     private String containerId;
+
+    @Query
+    @NameInMap("Cpu")
+    private Integer cpu;
 
     @Query
     @NameInMap("Gpu")
@@ -110,10 +118,12 @@ public class SubmitJobRequest extends Request {
     private SubmitJobRequest(Builder builder) {
         super(builder);
         this.arrayRequest = builder.arrayRequest;
+        this.async = builder.async;
         this.clockTime = builder.clockTime;
         this.clusterId = builder.clusterId;
         this.commandLine = builder.commandLine;
         this.containerId = builder.containerId;
+        this.cpu = builder.cpu;
         this.gpu = builder.gpu;
         this.inputFileUrl = builder.inputFileUrl;
         this.jobQueue = builder.jobQueue;
@@ -155,6 +165,13 @@ public class SubmitJobRequest extends Request {
     }
 
     /**
+     * @return async
+     */
+    public Boolean getAsync() {
+        return this.async;
+    }
+
+    /**
      * @return clockTime
      */
     public String getClockTime() {
@@ -180,6 +197,13 @@ public class SubmitJobRequest extends Request {
      */
     public String getContainerId() {
         return this.containerId;
+    }
+
+    /**
+     * @return cpu
+     */
+    public Integer getCpu() {
+        return this.cpu;
     }
 
     /**
@@ -310,10 +334,12 @@ public class SubmitJobRequest extends Request {
 
     public static final class Builder extends Request.Builder<SubmitJobRequest, Builder> {
         private String arrayRequest; 
+        private Boolean async; 
         private String clockTime; 
         private String clusterId; 
         private String commandLine; 
         private String containerId; 
+        private Integer cpu; 
         private Integer gpu; 
         private String inputFileUrl; 
         private String jobQueue; 
@@ -340,10 +366,12 @@ public class SubmitJobRequest extends Request {
         private Builder(SubmitJobRequest request) {
             super(request);
             this.arrayRequest = request.arrayRequest;
+            this.async = request.async;
             this.clockTime = request.clockTime;
             this.clusterId = request.clusterId;
             this.commandLine = request.commandLine;
             this.containerId = request.containerId;
+            this.cpu = request.cpu;
             this.gpu = request.gpu;
             this.inputFileUrl = request.inputFileUrl;
             this.jobQueue = request.jobQueue;
@@ -370,6 +398,15 @@ public class SubmitJobRequest extends Request {
         public Builder arrayRequest(String arrayRequest) {
             this.putQueryParameter("ArrayRequest", arrayRequest);
             this.arrayRequest = arrayRequest;
+            return this;
+        }
+
+        /**
+         * Async.
+         */
+        public Builder async(Boolean async) {
+            this.putQueryParameter("Async", async);
+            this.async = async;
             return this;
         }
 
@@ -406,6 +443,15 @@ public class SubmitJobRequest extends Request {
         public Builder containerId(String containerId) {
             this.putQueryParameter("ContainerId", containerId);
             this.containerId = containerId;
+            return this;
+        }
+
+        /**
+         * Cpu.
+         */
+        public Builder cpu(Integer cpu) {
+            this.putQueryParameter("Cpu", cpu);
+            this.cpu = cpu;
             return this;
         }
 

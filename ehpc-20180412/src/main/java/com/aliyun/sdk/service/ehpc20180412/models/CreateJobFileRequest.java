@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateJobFileRequest extends Request {
     @Query
+    @NameInMap("Async")
+    private Boolean async;
+
+    @Query
     @NameInMap("ClusterId")
     @Validation(required = true)
     private String clusterId;
@@ -38,6 +42,7 @@ public class CreateJobFileRequest extends Request {
 
     private CreateJobFileRequest(Builder builder) {
         super(builder);
+        this.async = builder.async;
         this.clusterId = builder.clusterId;
         this.content = builder.content;
         this.runasUser = builder.runasUser;
@@ -56,6 +61,13 @@ public class CreateJobFileRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return async
+     */
+    public Boolean getAsync() {
+        return this.async;
     }
 
     /**
@@ -94,6 +106,7 @@ public class CreateJobFileRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateJobFileRequest, Builder> {
+        private Boolean async; 
         private String clusterId; 
         private String content; 
         private String runasUser; 
@@ -106,12 +119,22 @@ public class CreateJobFileRequest extends Request {
 
         private Builder(CreateJobFileRequest request) {
             super(request);
+            this.async = request.async;
             this.clusterId = request.clusterId;
             this.content = request.content;
             this.runasUser = request.runasUser;
             this.runasUserPassword = request.runasUserPassword;
             this.targetFile = request.targetFile;
         } 
+
+        /**
+         * Async.
+         */
+        public Builder async(Boolean async) {
+            this.putQueryParameter("Async", async);
+            this.async = async;
+            return this;
+        }
 
         /**
          * ClusterId.
