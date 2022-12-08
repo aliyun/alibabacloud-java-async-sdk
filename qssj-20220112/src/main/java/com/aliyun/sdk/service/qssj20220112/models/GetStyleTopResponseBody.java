@@ -132,6 +132,12 @@ public class GetStyleTopResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
+        @NameInMap("AttributeContent")
+        private String attributeContent;
+
+        @NameInMap("BrandName")
+        private String brandName;
+
         @NameInMap("BuyerTags")
         private String buyerTags;
 
@@ -147,6 +153,9 @@ public class GetStyleTopResponseBody extends TeaModel {
         @NameInMap("Material")
         private String material;
 
+        @NameInMap("Price")
+        private Double price;
+
         @NameInMap("ProductLink")
         private String productLink;
 
@@ -156,6 +165,9 @@ public class GetStyleTopResponseBody extends TeaModel {
         @NameInMap("SearchVolume")
         private Double searchVolume;
 
+        @NameInMap("ShopName")
+        private String shopName;
+
         @NameInMap("Style")
         private String style;
 
@@ -163,14 +175,18 @@ public class GetStyleTopResponseBody extends TeaModel {
         private String title;
 
         private Data(Builder builder) {
+            this.attributeContent = builder.attributeContent;
+            this.brandName = builder.brandName;
             this.buyerTags = builder.buyerTags;
             this.cateName = builder.cateName;
             this.color = builder.color;
             this.images = builder.images;
             this.material = builder.material;
+            this.price = builder.price;
             this.productLink = builder.productLink;
             this.salesVolume = builder.salesVolume;
             this.searchVolume = builder.searchVolume;
+            this.shopName = builder.shopName;
             this.style = builder.style;
             this.title = builder.title;
         }
@@ -181,6 +197,20 @@ public class GetStyleTopResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return attributeContent
+         */
+        public String getAttributeContent() {
+            return this.attributeContent;
+        }
+
+        /**
+         * @return brandName
+         */
+        public String getBrandName() {
+            return this.brandName;
         }
 
         /**
@@ -219,6 +249,13 @@ public class GetStyleTopResponseBody extends TeaModel {
         }
 
         /**
+         * @return price
+         */
+        public Double getPrice() {
+            return this.price;
+        }
+
+        /**
          * @return productLink
          */
         public String getProductLink() {
@@ -240,6 +277,13 @@ public class GetStyleTopResponseBody extends TeaModel {
         }
 
         /**
+         * @return shopName
+         */
+        public String getShopName() {
+            return this.shopName;
+        }
+
+        /**
          * @return style
          */
         public String getStyle() {
@@ -254,16 +298,36 @@ public class GetStyleTopResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String attributeContent; 
+            private String brandName; 
             private String buyerTags; 
             private String cateName; 
             private String color; 
             private java.util.List < String > images; 
             private String material; 
+            private Double price; 
             private String productLink; 
             private Double salesVolume; 
             private Double searchVolume; 
+            private String shopName; 
             private String style; 
             private String title; 
+
+            /**
+             * AttributeContent.
+             */
+            public Builder attributeContent(String attributeContent) {
+                this.attributeContent = attributeContent;
+                return this;
+            }
+
+            /**
+             * BrandName.
+             */
+            public Builder brandName(String brandName) {
+                this.brandName = brandName;
+                return this;
+            }
 
             /**
              * BuyerTags.
@@ -306,6 +370,14 @@ public class GetStyleTopResponseBody extends TeaModel {
             }
 
             /**
+             * Price.
+             */
+            public Builder price(Double price) {
+                this.price = price;
+                return this;
+            }
+
+            /**
              * ProductLink.
              */
             public Builder productLink(String productLink) {
@@ -326,6 +398,14 @@ public class GetStyleTopResponseBody extends TeaModel {
              */
             public Builder searchVolume(Double searchVolume) {
                 this.searchVolume = searchVolume;
+                return this;
+            }
+
+            /**
+             * ShopName.
+             */
+            public Builder shopName(String shopName) {
+                this.shopName = shopName;
                 return this;
             }
 
