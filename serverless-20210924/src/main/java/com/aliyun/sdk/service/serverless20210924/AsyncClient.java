@@ -18,6 +18,8 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
+    CompletableFuture<CancelTaskResponse> cancelTask(CancelTaskRequest request);
+
     CompletableFuture<CreateApplicationResponse> createApplication(CreateApplicationRequest request);
 
     CompletableFuture<CreatePipelineResponse> createPipeline(CreatePipelineRequest request);

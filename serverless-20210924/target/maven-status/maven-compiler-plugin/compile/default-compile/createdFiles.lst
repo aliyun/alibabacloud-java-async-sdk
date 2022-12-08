@@ -65,9 +65,12 @@ com/aliyun/sdk/service/serverless20210924/models/Status.class
 com/aliyun/sdk/service/serverless20210924/models/GetTaskResponse.class
 com/aliyun/sdk/service/serverless20210924/models/PipelineTemplate$1.class
 com/aliyun/sdk/service/serverless20210924/models/GetServiceRequest$Builder.class
+com/aliyun/sdk/service/serverless20210924/models/CancelTaskResponse$1.class
 com/aliyun/sdk/service/serverless20210924/models/ListEnvironmentRevisionsRequest$1.class
 com/aliyun/sdk/service/serverless20210924/models/CreateTaskTemplateResponse$BuilderImpl.class
+com/aliyun/sdk/service/serverless20210924/models/CancelTaskResponse$BuilderImpl.class
 com/aliyun/sdk/service/serverless20210924/models/GetServiceRequest$1.class
+com/aliyun/sdk/service/serverless20210924/models/CancelTaskResponse.class
 com/aliyun/sdk/service/serverless20210924/models/DeleteApplicationRequest.class
 com/aliyun/sdk/service/serverless20210924/models/CreatePipelineRequest$Builder.class
 com/aliyun/sdk/service/serverless20210924/models/PutPipelineTemplateResponse.class
@@ -117,6 +120,7 @@ com/aliyun/sdk/service/serverless20210924/models/TaskExec.class
 com/aliyun/sdk/service/serverless20210924/models/ListServiceRevisionsRequest$1.class
 com/aliyun/sdk/service/serverless20210924/models/Environment.class
 com/aliyun/sdk/service/serverless20210924/models/PutPipelineTemplateRequest$Builder.class
+com/aliyun/sdk/service/serverless20210924/models/CancelTaskRequest.class
 com/aliyun/sdk/service/serverless20210924/models/CreateApplicationResponse$BuilderImpl.class
 com/aliyun/sdk/service/serverless20210924/models/CreateTaskResponse$Builder.class
 com/aliyun/sdk/service/serverless20210924/models/TaskWorker.class
@@ -164,6 +168,7 @@ com/aliyun/sdk/service/serverless20210924/models/DeletePipelineTemplateRequest.c
 com/aliyun/sdk/service/serverless20210924/models/TemplateSpec.class
 com/aliyun/sdk/service/serverless20210924/models/CreateReleaseResponse$1.class
 com/aliyun/sdk/service/serverless20210924/models/PutServiceRequest.class
+com/aliyun/sdk/service/serverless20210924/models/CancelTaskRequest$1.class
 com/aliyun/sdk/service/serverless20210924/models/GetPipelineResponse$BuilderImpl.class
 com/aliyun/sdk/service/serverless20210924/models/DeletePipelineTemplateResponseBody$1.class
 com/aliyun/sdk/service/serverless20210924/models/StartTaskResponse.class
@@ -256,6 +261,7 @@ com/aliyun/sdk/service/serverless20210924/models/ListPipelinesResponse$1.class
 com/aliyun/sdk/service/serverless20210924/models/GetReleaseRequest.class
 com/aliyun/sdk/service/serverless20210924/models/DeleteTaskTemplateRequest.class
 com/aliyun/sdk/service/serverless20210924/models/GetApplicationResponse.class
+com/aliyun/sdk/service/serverless20210924/models/CancelTaskResponse$Builder.class
 com/aliyun/sdk/service/serverless20210924/models/GetTemplateResponse.class
 com/aliyun/sdk/service/serverless20210924/models/DeleteApplicationResponse$1.class
 com/aliyun/sdk/service/serverless20210924/models/ListEnvironmentsRequest$Builder.class
@@ -368,6 +374,7 @@ com/aliyun/sdk/service/serverless20210924/models/ServiceStatus$1.class
 com/aliyun/sdk/service/serverless20210924/models/Condition.class
 com/aliyun/sdk/service/serverless20210924/models/Template.class
 com/aliyun/sdk/service/serverless20210924/models/PutTaskTemplateResponse$Builder.class
+com/aliyun/sdk/service/serverless20210924/models/CancelTaskRequest$Builder.class
 com/aliyun/sdk/service/serverless20210924/models/PutTemplateResponse.class
 com/aliyun/sdk/service/serverless20210924/models/ListPipelinesRequest.class
 com/aliyun/sdk/service/serverless20210924/models/DeleteTemplateResponse.class
