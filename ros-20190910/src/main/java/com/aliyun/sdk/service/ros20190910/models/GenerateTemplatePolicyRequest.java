@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GenerateTemplatePolicyRequest extends Request {
     @Query
+    @NameInMap("OperationTypes")
+    private java.util.List < String > operationTypes;
+
+    @Query
     @NameInMap("TemplateBody")
     private String templateBody;
 
@@ -30,6 +34,7 @@ public class GenerateTemplatePolicyRequest extends Request {
 
     private GenerateTemplatePolicyRequest(Builder builder) {
         super(builder);
+        this.operationTypes = builder.operationTypes;
         this.templateBody = builder.templateBody;
         this.templateId = builder.templateId;
         this.templateURL = builder.templateURL;
@@ -47,6 +52,13 @@ public class GenerateTemplatePolicyRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return operationTypes
+     */
+    public java.util.List < String > getOperationTypes() {
+        return this.operationTypes;
     }
 
     /**
@@ -78,6 +90,7 @@ public class GenerateTemplatePolicyRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GenerateTemplatePolicyRequest, Builder> {
+        private java.util.List < String > operationTypes; 
         private String templateBody; 
         private String templateId; 
         private String templateURL; 
@@ -89,11 +102,21 @@ public class GenerateTemplatePolicyRequest extends Request {
 
         private Builder(GenerateTemplatePolicyRequest request) {
             super(request);
+            this.operationTypes = request.operationTypes;
             this.templateBody = request.templateBody;
             this.templateId = request.templateId;
             this.templateURL = request.templateURL;
             this.templateVersion = request.templateVersion;
         } 
+
+        /**
+         * OperationTypes.
+         */
+        public Builder operationTypes(java.util.List < String > operationTypes) {
+            this.putQueryParameter("OperationTypes", operationTypes);
+            this.operationTypes = operationTypes;
+            return this;
+        }
 
         /**
          * TemplateBody.
