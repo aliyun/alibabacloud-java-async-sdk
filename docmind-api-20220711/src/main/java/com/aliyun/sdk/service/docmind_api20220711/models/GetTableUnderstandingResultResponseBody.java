@@ -19,7 +19,7 @@ public class GetTableUnderstandingResultResponseBody extends TeaModel {
     private Boolean completed;
 
     @NameInMap("Data")
-    private Object data;
+    private java.util.Map < String, ? > data;
 
     @NameInMap("Message")
     private String message;
@@ -64,7 +64,7 @@ public class GetTableUnderstandingResultResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public Object getData() {
+    public java.util.Map < String, ? > getData() {
         return this.data;
     }
 
@@ -92,7 +92,7 @@ public class GetTableUnderstandingResultResponseBody extends TeaModel {
     public static final class Builder {
         private String code; 
         private Boolean completed; 
-        private Object data; 
+        private java.util.Map < String, ? > data; 
         private String message; 
         private String requestId; 
         private String status; 
@@ -118,7 +118,7 @@ public class GetTableUnderstandingResultResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(Object data) {
+        public Builder data(java.util.Map < String, ? > data) {
             this.data = data;
             return this;
         }

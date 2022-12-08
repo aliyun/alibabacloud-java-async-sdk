@@ -29,8 +29,65 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler = new TeaAsyncHandler(configuration);
         this.product = "docmind-api";
         this.version = "2022-07-11";
-        this.endpointRule = "";
-        this.endpointMap = new java.util.HashMap<>();
+        this.endpointRule = "regional";
+        this.endpointMap = CommonUtil.buildMap(
+            new TeaPair("ap-northeast-1", "docmind-api.aliyuncs.com"),
+            new TeaPair("ap-northeast-2-pop", "docmind-api.aliyuncs.com"),
+            new TeaPair("ap-south-1", "docmind-api.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "docmind-api.aliyuncs.com"),
+            new TeaPair("ap-southeast-2", "docmind-api.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "docmind-api.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "docmind-api.aliyuncs.com"),
+            new TeaPair("cn-beijing", "docmind-api.aliyuncs.com"),
+            new TeaPair("cn-beijing-finance-1", "docmind-api.aliyuncs.com"),
+            new TeaPair("cn-beijing-finance-pop", "docmind-api.aliyuncs.com"),
+            new TeaPair("cn-beijing-gov-1", "docmind-api.aliyuncs.com"),
+            new TeaPair("cn-beijing-nu16-b01", "docmind-api.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "docmind-api.aliyuncs.com"),
+            new TeaPair("cn-edge-1", "docmind-api.aliyuncs.com"),
+            new TeaPair("cn-fujian", "docmind-api.aliyuncs.com"),
+            new TeaPair("cn-haidian-cm12-c01", "docmind-api.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-bj-b01", "docmind-api.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-finance", "docmind-api.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-internal-prod-1", "docmind-api.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-internal-test-1", "docmind-api.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-internal-test-2", "docmind-api.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-internal-test-3", "docmind-api.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-test-306", "docmind-api.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "docmind-api.aliyuncs.com"),
+            new TeaPair("cn-hongkong-finance-pop", "docmind-api.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "docmind-api.aliyuncs.com"),
+            new TeaPair("cn-huhehaote-nebula-1", "docmind-api.aliyuncs.com"),
+            new TeaPair("cn-north-2-gov-1", "docmind-api.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "docmind-api.aliyuncs.com"),
+            new TeaPair("cn-qingdao-nebula", "docmind-api.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "docmind-api.aliyuncs.com"),
+            new TeaPair("cn-shanghai-et15-b01", "docmind-api.aliyuncs.com"),
+            new TeaPair("cn-shanghai-et2-b01", "docmind-api.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "docmind-api.aliyuncs.com"),
+            new TeaPair("cn-shanghai-inner", "docmind-api.aliyuncs.com"),
+            new TeaPair("cn-shanghai-internal-test-1", "docmind-api.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "docmind-api.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-finance-1", "docmind-api.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-inner", "docmind-api.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-st4-d01", "docmind-api.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-su18-b01", "docmind-api.aliyuncs.com"),
+            new TeaPair("cn-wuhan", "docmind-api.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "docmind-api.aliyuncs.com"),
+            new TeaPair("cn-yushanfang", "docmind-api.aliyuncs.com"),
+            new TeaPair("cn-zhangbei", "docmind-api.aliyuncs.com"),
+            new TeaPair("cn-zhangbei-na61-b01", "docmind-api.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "docmind-api.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou-na62-a01", "docmind-api.aliyuncs.com"),
+            new TeaPair("cn-zhengzhou-nebula-1", "docmind-api.aliyuncs.com"),
+            new TeaPair("eu-central-1", "docmind-api.aliyuncs.com"),
+            new TeaPair("eu-west-1", "docmind-api.aliyuncs.com"),
+            new TeaPair("eu-west-1-oxs", "docmind-api.aliyuncs.com"),
+            new TeaPair("me-east-1", "docmind-api.aliyuncs.com"),
+            new TeaPair("rus-west-1-pop", "docmind-api.aliyuncs.com"),
+            new TeaPair("us-east-1", "docmind-api.aliyuncs.com"),
+            new TeaPair("us-west-1", "docmind-api.aliyuncs.com")
+        );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
 
