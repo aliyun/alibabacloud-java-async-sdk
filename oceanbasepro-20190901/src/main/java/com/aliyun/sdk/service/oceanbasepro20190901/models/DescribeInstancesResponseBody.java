@@ -478,6 +478,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("InstanceName")
         private String instanceName;
 
+        @NameInMap("InstanceType")
+        private String instanceType;
+
         @NameInMap("MaintainTime")
         private String maintainTime;
 
@@ -526,6 +529,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             this.instanceClass = builder.instanceClass;
             this.instanceId = builder.instanceId;
             this.instanceName = builder.instanceName;
+            this.instanceType = builder.instanceType;
             this.maintainTime = builder.maintainTime;
             this.mem = builder.mem;
             this.payType = builder.payType;
@@ -646,6 +650,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return instanceType
+         */
+        public String getInstanceType() {
+            return this.instanceType;
+        }
+
+        /**
          * @return maintainTime
          */
         public String getMaintainTime() {
@@ -737,6 +748,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String instanceClass; 
             private String instanceId; 
             private String instanceName; 
+            private String instanceType; 
             private String maintainTime; 
             private Long mem; 
             private String payType; 
@@ -858,6 +870,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
+                return this;
+            }
+
+            /**
+             * InstanceType.
+             */
+            public Builder instanceType(String instanceType) {
+                this.instanceType = instanceType;
                 return this;
             }
 

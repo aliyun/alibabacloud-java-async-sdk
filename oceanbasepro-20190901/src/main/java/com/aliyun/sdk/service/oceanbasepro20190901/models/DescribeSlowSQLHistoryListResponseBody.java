@@ -126,8 +126,8 @@ public class DescribeSlowSQLHistoryListResponseBody extends TeaModel {
         @NameInMap("FailTimes")
         private Double failTimes;
 
-        @NameInMap("GetplanTime")
-        private Double getplanTime;
+        @NameInMap("GetPlanTime")
+        private Double getPlanTime;
 
         @NameInMap("IOWaitTime")
         private Double IOWaitTime;
@@ -147,8 +147,8 @@ public class DescribeSlowSQLHistoryListResponseBody extends TeaModel {
         @NameInMap("MissPlans")
         private Double missPlans;
 
-        @NameInMap("NetwaitTime")
-        private Double netwaitTime;
+        @NameInMap("NetWaitTime")
+        private Double netWaitTime;
 
         @NameInMap("NodeIp")
         private String nodeIp;
@@ -211,14 +211,14 @@ public class DescribeSlowSQLHistoryListResponseBody extends TeaModel {
             this.executeTime = builder.executeTime;
             this.executions = builder.executions;
             this.failTimes = builder.failTimes;
-            this.getplanTime = builder.getplanTime;
+            this.getPlanTime = builder.getPlanTime;
             this.IOWaitTime = builder.IOWaitTime;
             this.logicalRead = builder.logicalRead;
             this.maxCpuTime = builder.maxCpuTime;
             this.maxElapsedTime = builder.maxElapsedTime;
             this.memstoreReadRowCount = builder.memstoreReadRowCount;
             this.missPlans = builder.missPlans;
-            this.netwaitTime = builder.netwaitTime;
+            this.netWaitTime = builder.netWaitTime;
             this.nodeIp = builder.nodeIp;
             this.queueTime = builder.queueTime;
             this.RPCCount = builder.RPCCount;
@@ -370,10 +370,10 @@ public class DescribeSlowSQLHistoryListResponseBody extends TeaModel {
         }
 
         /**
-         * @return getplanTime
+         * @return getPlanTime
          */
-        public Double getGetplanTime() {
-            return this.getplanTime;
+        public Double getGetPlanTime() {
+            return this.getPlanTime;
         }
 
         /**
@@ -419,10 +419,10 @@ public class DescribeSlowSQLHistoryListResponseBody extends TeaModel {
         }
 
         /**
-         * @return netwaitTime
+         * @return netWaitTime
          */
-        public Double getNetwaitTime() {
-            return this.netwaitTime;
+        public Double getNetWaitTime() {
+            return this.netWaitTime;
         }
 
         /**
@@ -542,14 +542,14 @@ public class DescribeSlowSQLHistoryListResponseBody extends TeaModel {
             private Double executeTime; 
             private Double executions; 
             private Double failTimes; 
-            private Double getplanTime; 
+            private Double getPlanTime; 
             private Double IOWaitTime; 
             private Double logicalRead; 
             private Double maxCpuTime; 
             private Double maxElapsedTime; 
             private Double memstoreReadRowCount; 
             private Double missPlans; 
-            private Double netwaitTime; 
+            private Double netWaitTime; 
             private String nodeIp; 
             private Double queueTime; 
             private Double RPCCount; 
@@ -710,10 +710,10 @@ public class DescribeSlowSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * GetplanTime.
+             * GetPlanTime.
              */
-            public Builder getplanTime(Double getplanTime) {
-                this.getplanTime = getplanTime;
+            public Builder getPlanTime(Double getPlanTime) {
+                this.getPlanTime = getPlanTime;
                 return this;
             }
 
@@ -766,10 +766,10 @@ public class DescribeSlowSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * NetwaitTime.
+             * NetWaitTime.
              */
-            public Builder netwaitTime(Double netwaitTime) {
-                this.netwaitTime = netwaitTime;
+            public Builder netWaitTime(Double netWaitTime) {
+                this.netWaitTime = netWaitTime;
                 return this;
             }
 

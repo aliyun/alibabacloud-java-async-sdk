@@ -72,6 +72,9 @@ public class DescribeTenantResponseBody extends TeaModel {
     } 
 
     public static class TenantConnections extends TeaModel {
+        @NameInMap("AddressType")
+        private String addressType;
+
         @NameInMap("ConnectionRole")
         private String connectionRole;
 
@@ -102,6 +105,9 @@ public class DescribeTenantResponseBody extends TeaModel {
         @NameInMap("IntranetPort")
         private Integer intranetPort;
 
+        @NameInMap("TransactionSplit")
+        private Boolean transactionSplit;
+
         @NameInMap("VSwitchId")
         private String vSwitchId;
 
@@ -109,6 +115,7 @@ public class DescribeTenantResponseBody extends TeaModel {
         private String vpcId;
 
         private TenantConnections(Builder builder) {
+            this.addressType = builder.addressType;
             this.connectionRole = builder.connectionRole;
             this.connectionZones = builder.connectionZones;
             this.internetAddress = builder.internetAddress;
@@ -119,6 +126,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             this.intranetAddressSlaveZoneId = builder.intranetAddressSlaveZoneId;
             this.intranetAddressStatus = builder.intranetAddressStatus;
             this.intranetPort = builder.intranetPort;
+            this.transactionSplit = builder.transactionSplit;
             this.vSwitchId = builder.vSwitchId;
             this.vpcId = builder.vpcId;
         }
@@ -129,6 +137,13 @@ public class DescribeTenantResponseBody extends TeaModel {
 
         public static TenantConnections create() {
             return builder().build();
+        }
+
+        /**
+         * @return addressType
+         */
+        public String getAddressType() {
+            return this.addressType;
         }
 
         /**
@@ -202,6 +217,13 @@ public class DescribeTenantResponseBody extends TeaModel {
         }
 
         /**
+         * @return transactionSplit
+         */
+        public Boolean getTransactionSplit() {
+            return this.transactionSplit;
+        }
+
+        /**
          * @return vSwitchId
          */
         public String getVSwitchId() {
@@ -216,6 +238,7 @@ public class DescribeTenantResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String addressType; 
             private String connectionRole; 
             private java.util.List < String > connectionZones; 
             private String internetAddress; 
@@ -226,8 +249,17 @@ public class DescribeTenantResponseBody extends TeaModel {
             private String intranetAddressSlaveZoneId; 
             private String intranetAddressStatus; 
             private Integer intranetPort; 
+            private Boolean transactionSplit; 
             private String vSwitchId; 
             private String vpcId; 
+
+            /**
+             * 地址类型
+             */
+            public Builder addressType(String addressType) {
+                this.addressType = addressType;
+                return this;
+            }
 
             /**
              * 连接地址的服务模式。 ReadWrite：可读可写，提供强一致读写服务 ReadOnly：只读，保证数据最终一致性 Clog：事务日志服务
@@ -306,6 +338,14 @@ public class DescribeTenantResponseBody extends TeaModel {
              */
             public Builder intranetPort(Integer intranetPort) {
                 this.intranetPort = intranetPort;
+                return this;
+            }
+
+            /**
+             * 是否开启事务拆分
+             */
+            public Builder transactionSplit(Boolean transactionSplit) {
+                this.transactionSplit = transactionSplit;
                 return this;
             }
 
@@ -718,6 +758,9 @@ public class DescribeTenantResponseBody extends TeaModel {
 
     }
     public static class Tenant extends TeaModel {
+        @NameInMap("AvailableZones")
+        private java.util.List < String > availableZones;
+
         @NameInMap("Charset")
         private String charset;
 
@@ -739,20 +782,35 @@ public class DescribeTenantResponseBody extends TeaModel {
         @NameInMap("Description")
         private String description;
 
+        @NameInMap("DiskType")
+        private String diskType;
+
         @NameInMap("EnableClogService")
         private Boolean enableClogService;
 
         @NameInMap("EnableInternetAddressService")
         private Boolean enableInternetAddressService;
 
+        @NameInMap("EnableReadWriteSplit")
+        private Boolean enableReadWriteSplit;
+
+        @NameInMap("InstanceType")
+        private String instanceType;
+
         @NameInMap("MasterIntranetAddressZone")
         private String masterIntranetAddressZone;
+
+        @NameInMap("PayType")
+        private String payType;
 
         @NameInMap("PrimaryZone")
         private String primaryZone;
 
         @NameInMap("PrimaryZoneDeployType")
         private String primaryZoneDeployType;
+
+        @NameInMap("Series")
+        private String series;
 
         @NameInMap("Status")
         private String status;
@@ -779,6 +837,7 @@ public class DescribeTenantResponseBody extends TeaModel {
         private String vpcId;
 
         private Tenant(Builder builder) {
+            this.availableZones = builder.availableZones;
             this.charset = builder.charset;
             this.clogServiceStatus = builder.clogServiceStatus;
             this.collation = builder.collation;
@@ -786,11 +845,16 @@ public class DescribeTenantResponseBody extends TeaModel {
             this.deployMode = builder.deployMode;
             this.deployType = builder.deployType;
             this.description = builder.description;
+            this.diskType = builder.diskType;
             this.enableClogService = builder.enableClogService;
             this.enableInternetAddressService = builder.enableInternetAddressService;
+            this.enableReadWriteSplit = builder.enableReadWriteSplit;
+            this.instanceType = builder.instanceType;
             this.masterIntranetAddressZone = builder.masterIntranetAddressZone;
+            this.payType = builder.payType;
             this.primaryZone = builder.primaryZone;
             this.primaryZoneDeployType = builder.primaryZoneDeployType;
+            this.series = builder.series;
             this.status = builder.status;
             this.tenantConnections = builder.tenantConnections;
             this.tenantId = builder.tenantId;
@@ -807,6 +871,13 @@ public class DescribeTenantResponseBody extends TeaModel {
 
         public static Tenant create() {
             return builder().build();
+        }
+
+        /**
+         * @return availableZones
+         */
+        public java.util.List < String > getAvailableZones() {
+            return this.availableZones;
         }
 
         /**
@@ -859,6 +930,13 @@ public class DescribeTenantResponseBody extends TeaModel {
         }
 
         /**
+         * @return diskType
+         */
+        public String getDiskType() {
+            return this.diskType;
+        }
+
+        /**
          * @return enableClogService
          */
         public Boolean getEnableClogService() {
@@ -873,10 +951,31 @@ public class DescribeTenantResponseBody extends TeaModel {
         }
 
         /**
+         * @return enableReadWriteSplit
+         */
+        public Boolean getEnableReadWriteSplit() {
+            return this.enableReadWriteSplit;
+        }
+
+        /**
+         * @return instanceType
+         */
+        public String getInstanceType() {
+            return this.instanceType;
+        }
+
+        /**
          * @return masterIntranetAddressZone
          */
         public String getMasterIntranetAddressZone() {
             return this.masterIntranetAddressZone;
+        }
+
+        /**
+         * @return payType
+         */
+        public String getPayType() {
+            return this.payType;
         }
 
         /**
@@ -891,6 +990,13 @@ public class DescribeTenantResponseBody extends TeaModel {
          */
         public String getPrimaryZoneDeployType() {
             return this.primaryZoneDeployType;
+        }
+
+        /**
+         * @return series
+         */
+        public String getSeries() {
+            return this.series;
         }
 
         /**
@@ -950,6 +1056,7 @@ public class DescribeTenantResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List < String > availableZones; 
             private String charset; 
             private String clogServiceStatus; 
             private String collation; 
@@ -957,11 +1064,16 @@ public class DescribeTenantResponseBody extends TeaModel {
             private String deployMode; 
             private String deployType; 
             private String description; 
+            private String diskType; 
             private Boolean enableClogService; 
             private Boolean enableInternetAddressService; 
+            private Boolean enableReadWriteSplit; 
+            private String instanceType; 
             private String masterIntranetAddressZone; 
+            private String payType; 
             private String primaryZone; 
             private String primaryZoneDeployType; 
+            private String series; 
             private String status; 
             private java.util.List < TenantConnections> tenantConnections; 
             private String tenantId; 
@@ -970,6 +1082,14 @@ public class DescribeTenantResponseBody extends TeaModel {
             private TenantResource tenantResource; 
             private java.util.List < TenantZones> tenantZones; 
             private String vpcId; 
+
+            /**
+             * 可用区
+             */
+            public Builder availableZones(java.util.List < String > availableZones) {
+                this.availableZones = availableZones;
+                return this;
+            }
 
             /**
              * 字符集
@@ -996,7 +1116,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * 租户的创建时间。
+             * 创建时间
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -1028,6 +1148,14 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
+             * 磁盘类型
+             */
+            public Builder diskType(String diskType) {
+                this.diskType = diskType;
+                return this;
+            }
+
+            /**
              * 是否可使用Clog服务，如需开启，请工单联系。
              */
             public Builder enableClogService(Boolean enableClogService) {
@@ -1044,10 +1172,34 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
+             * 是否允许开启读写分离地址
+             */
+            public Builder enableReadWriteSplit(Boolean enableReadWriteSplit) {
+                this.enableReadWriteSplit = enableReadWriteSplit;
+                return this;
+            }
+
+            /**
+             * 实例类型
+             */
+            public Builder instanceType(String instanceType) {
+                this.instanceType = instanceType;
+                return this;
+            }
+
+            /**
              * 租户主地址可用区
              */
             public Builder masterIntranetAddressZone(String masterIntranetAddressZone) {
                 this.masterIntranetAddressZone = masterIntranetAddressZone;
+                return this;
+            }
+
+            /**
+             * 付费类型
+             */
+            public Builder payType(String payType) {
+                this.payType = payType;
                 return this;
             }
 
@@ -1064,6 +1216,14 @@ public class DescribeTenantResponseBody extends TeaModel {
              */
             public Builder primaryZoneDeployType(String primaryZoneDeployType) {
                 this.primaryZoneDeployType = primaryZoneDeployType;
+                return this;
+            }
+
+            /**
+             * 实例系列
+             */
+            public Builder series(String series) {
+                this.series = series;
                 return this;
             }
 

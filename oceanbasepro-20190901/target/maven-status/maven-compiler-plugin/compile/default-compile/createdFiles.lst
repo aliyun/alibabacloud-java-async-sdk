@@ -17,6 +17,7 @@ com/aliyun/sdk/service/oceanbasepro20190901/models/DeleteSecurityIpGroupRequest$
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeSecurityIpGroupsResponseBody$Builder.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/CreateTenantReadOnlyConnectionRequest$Builder.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeInstanceTopologyResponse$Builder.class
+com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeInstanceTagsResponseBody.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeSQLHistoryListResponseBody$List.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/ReleaseOmsOpenAPIProjectRequest.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeInstanceTenantModesResponseBody$1.class
@@ -24,6 +25,7 @@ com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeInstanceTopologyRespo
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeInstancesResponseBody.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/CreateDatabaseResponse$1.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeInstanceResponse$Builder.class
+com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeTenantTagsRequest$Builder.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/CreateOmsOpenAPIProjectRequest$Builder.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/CreateSecurityIpGroupResponseBody$1.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/SearchOmsOpenAPIMonitorMetricResponseBody$Builder.class
@@ -71,9 +73,11 @@ com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeZonesResponse$Builder
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeInstancesResponseBody$1.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeSlowSQLHistoryListResponse$Builder.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeOmsOpenAPIProjectStepsResponseBody$ExtraInfo.class
+com/aliyun/sdk/service/oceanbasepro20190901/models/ModifyInstanceTagsRequest$1.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeAnomalySQLListResponseBody$AnomalySQLList$Builder.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeOmsOpenAPIProjectResponseBody$IncrSyncStepTransferConfig.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DeleteDatabasesResponse$BuilderImpl.class
+com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeInstanceTagsResponse$BuilderImpl.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeTenantUserRolesResponseBody.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeZonesResponseBody$Zones.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/SearchOmsOpenAPIProjectsRequest$Builder.class
@@ -90,6 +94,7 @@ com/aliyun/sdk/service/oceanbasepro20190901/models/CreateInstanceResponseBody$1.
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeOmsOpenAPIProjectResponseBody$StepInfo.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeTenantResponseBody$Cpu$Builder.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeTenantsResponseBody$1.class
+com/aliyun/sdk/service/oceanbasepro20190901/models/ModifyTenantTagsResponseBody.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/ResumeOmsOpenAPIProjectResponse$1.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/CreateDatabaseResponse$BuilderImpl.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/CreateSecurityIpGroupRequest$Builder.class
@@ -131,6 +136,7 @@ com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeTenantUserRolesReques
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeInstanceTopologyResponseBody.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/ModifyDatabaseUserRolesResponseBody.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/ModifyDatabaseUserRolesRequest.class
+com/aliyun/sdk/service/oceanbasepro20190901/models/ModifyInstanceTagsRequest$Builder.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/CreateOmsOpenAPIProjectRequest$TransferStepConfig.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/CreateOmsOpenAPIProjectRequest$IncrSyncStepTransferConfig.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeInstanceTopologyResponseBody$TenantZones$Builder.class
@@ -143,6 +149,7 @@ com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeSecurityIpGroupsRespo
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeAnomalySQLListResponseBody$AnomalySQLList.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeInstanceTopologyResponseBody$InstanceTopology$Builder.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeInstanceTopologyResponse$1.class
+com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeTenantTagsResponse$BuilderImpl.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeAvailableCpuResourceRequest$1.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeInstancesResponse$BuilderImpl.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/SearchOmsOpenAPIProjectsRequest.class
@@ -160,6 +167,7 @@ com/aliyun/sdk/service/oceanbasepro20190901/models/DeleteOmsOpenAPIProjectReques
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeParametersHistoryResponseBody$Builder.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/CreateTenantUserRequest$1.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeSQLDetailsRequest$Builder.class
+com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeTenantTagsRequest$1.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/CreateInstanceResponseBody.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/CreateOmsMysqlDataSourceResponseBody$Builder.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeParametersResponseBody.class
@@ -178,17 +186,20 @@ com/aliyun/sdk/service/oceanbasepro20190901/models/CreateOmsOpenAPIProjectRespon
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeNodeMetricsResponseBody.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeTimeZonesRequest.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeSlowSQLHistoryListResponseBody$1.class
+com/aliyun/sdk/service/oceanbasepro20190901/models/ModifyTenantTagsRequest.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeInstanceTopologyResponseBody$Units.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DeleteTenantsResponseBody$1.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeTenantZonesReadRequest$1.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/ModifyTenantPrimaryZoneResponse$1.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/ModifyTenantUserRolesRequest$Builder.class
+com/aliyun/sdk/service/oceanbasepro20190901/models/ModifyTenantTagsResponse$BuilderImpl.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeInstanceRequest$1.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeInstanceTenantModesResponse$BuilderImpl.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeCharsetRequest$Builder.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeSQLPlansResponseBody$SQLPlans.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/ModifyTenantUserDescriptionRequest.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeTenantResponseBody$DiskSize.class
+com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeTenantTagsResponseBody$TagResources$Builder.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/StopOmsOpenAPIProjectResponseBody$ErrorDetail.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/ResumeOmsOpenAPIProjectResponse$BuilderImpl.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeOmsOpenAPIProjectResponseBody$Steps.class
@@ -234,6 +245,7 @@ com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeOmsOpenAPIProjectResp
 com/aliyun/sdk/service/oceanbasepro20190901/models/ModifyDatabaseUserRolesRequest$Builder.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/ModifyDatabaseDescriptionResponseBody$1.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeTenantMetricsResponseBody$1.class
+com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeTenantTagsResponseBody.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeInstancesRequest$1.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeOmsOpenAPIProjectStepsResponseBody$ConnectorFullProgressOverview$Builder.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeAvailableMemResourceResponse.class
@@ -324,6 +336,7 @@ com/aliyun/sdk/service/oceanbasepro20190901/models/ModifyTenantUserDescriptionRe
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeInstanceTopologyResponse$BuilderImpl.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeZonesResponseBody$Zones$Builder.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/StopOmsOpenAPIProjectRequest$Builder.class
+com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeInstanceTagsResponseBody$TagResources.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/ModifyDatabaseDescriptionResponseBody.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/ReleaseOmsOpenAPIProjectResponseBody.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeTenantUsersResponseBody.class
@@ -335,6 +348,7 @@ com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeParametersHistoryResp
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeOmsOpenAPIProjectStepsResponseBody$ConnectorFullProgressOverview.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeSQLPlansResponse$1.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/ModifyTenantResourceRequest.class
+com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeTenantTagsRequest.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeInstancesRequest.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/ModifyInstanceNameResponseBody$Builder.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeOmsOpenAPIProjectResponseBody$Data.class
@@ -352,6 +366,7 @@ com/aliyun/sdk/service/oceanbasepro20190901/models/StopOmsOpenAPIProjectResponse
 com/aliyun/sdk/service/oceanbasepro20190901/models/CreateOmsOpenAPIProjectResponse$Builder.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeOmsOpenAPIProjectStepsResponseBody$Builder.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeSlowSQLHistoryListResponseBody$List.class
+com/aliyun/sdk/service/oceanbasepro20190901/models/ModifyTenantTagsResponseBody$1.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeTenantZonesReadResponse.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/ModifyParametersResponse$Builder.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/ReleaseOmsOpenAPIProjectRequest$1.class
@@ -384,14 +399,17 @@ com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeParametersHistoryRequ
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeTenantUserRolesRequest$1.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/SearchOmsOpenAPIMonitorMetricResponseBody$ErrorDetail$Builder.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeOmsOpenAPIProjectResponseBody$AdbTableSchema.class
+com/aliyun/sdk/service/oceanbasepro20190901/models/ModifyTenantTagsResponseBody$Builder.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/SearchOmsOpenAPIProjectsResponseBody$Databases$Builder.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeInstancesResponseBody$Instances.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeTenantsResponseBody$Builder.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/CreateOmsOpenAPIProjectRequest$Databases$Builder.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeTenantRequest$1.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeInstanceResponse$1.class
+com/aliyun/sdk/service/oceanbasepro20190901/models/ModifyTenantTagsRequest$Builder.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/CreateInstanceResponseBody$Data.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DeleteInstancesResponseBody$Builder.class
+com/aliyun/sdk/service/oceanbasepro20190901/models/ModifyInstanceTagsResponse.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/CreateOmsOpenAPIProjectRequest$TransferMapping$Builder.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeAnomalySQLListResponseBody$1.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/ReleaseOmsOpenAPIProjectResponse$Builder.class
@@ -426,6 +444,7 @@ com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeSQLPlansResponseBody$
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeInstanceTopologyResponseBody$Cpu$Builder.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeRecommendIndexResponseBody$1.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeSQLDetailsResponseBody$Builder.class
+com/aliyun/sdk/service/oceanbasepro20190901/models/ModifyTenantTagsResponse$Builder.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/ModifyDatabaseDescriptionRequest$1.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeOmsOpenAPIProjectResponseBody$SourceConfig.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/StartOmsOpenAPIProjectRequest$1.class
@@ -449,6 +468,8 @@ com/aliyun/sdk/service/oceanbasepro20190901/models/CreateSecurityIpGroupResponse
 com/aliyun/sdk/service/oceanbasepro20190901/models/StopOmsOpenAPIProjectResponseBody$Builder.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/SearchOmsOpenAPIProjectsResponseBody$TransferStepConfig$Builder.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeAnomalySQLListResponse.class
+com/aliyun/sdk/service/oceanbasepro20190901/models/ModifyInstanceTagsRequest.class
+com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeTenantTagsResponseBody$TagResources.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/ModifyInstanceNameResponse$Builder.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeInstanceCreatableZoneResponse$Builder.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeParametersResponseBody$Parameters$Builder.class
@@ -460,6 +481,7 @@ com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeInstanceTopologyRespo
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeTenantResponse$Builder.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/CreateSecurityIpGroupResponse$Builder.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/CreateTenantUserResponse$Builder.class
+com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeInstanceTagsResponseBody$TagResources$Builder.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/ModifyTenantUserPasswordResponse$BuilderImpl.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/SearchOmsOpenAPIProjectsResponseBody$TransferStepConfig.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeOmsOpenAPIProjectResponseBody$ConnectorFullProgressOverview$Builder.class
@@ -492,8 +514,10 @@ com/aliyun/sdk/service/oceanbasepro20190901/models/ReleaseOmsOpenAPIProjectRespo
 com/aliyun/sdk/service/oceanbasepro20190901/models/SearchOmsOpenAPIProjectsResponse$BuilderImpl.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeSlowSQLHistoryListResponseBody$SlowSQLHistoryList.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/ResetOmsOpenAPIProjectRequest$1.class
+com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeInstanceTagsRequest$Builder.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/ResumeOmsOpenAPIProjectResponseBody$ErrorDetail.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeTimeZonesRequest$Builder.class
+com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeInstanceTagsResponseBody$1.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeOutlineBindingResponseBody$Builder.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/ResumeOmsOpenAPIProjectResponseBody$1.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeSlowSQLHistoryListRequest.class
@@ -549,6 +573,7 @@ com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeSlowSQLListResponseBo
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeOmsOpenAPIProjectResponseBody$TransferMapping.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/CreateOmsMysqlDataSourceRequest.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/ModifySecurityIpsResponseBody$Builder.class
+com/aliyun/sdk/service/oceanbasepro20190901/models/ModifyInstanceTagsResponse$Builder.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeSlowSQLListRequest$Builder.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeTenantResponseBody$DiskSize$Builder.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeInstancesResponseBody$Cpu.class
@@ -556,6 +581,7 @@ com/aliyun/sdk/service/oceanbasepro20190901/models/ModifyParametersRequest$1.cla
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeRecommendIndexResponse$1.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeInstanceCreatableZoneRequest.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeTimeZonesResponse$BuilderImpl.class
+com/aliyun/sdk/service/oceanbasepro20190901/models/ModifyTenantTagsResponse$1.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/ModifySecurityIpsRequest.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DeleteSecurityIpGroupRequest$1.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/CreateOmsOpenAPIProjectRequest$Tables.class
@@ -594,6 +620,8 @@ com/aliyun/sdk/service/oceanbasepro20190901/models/DeleteDatabasesRequest$1.clas
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeInstancesResponse$Builder.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/CreateInstanceResponse$1.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/CreateInstanceRequest$Builder.class
+com/aliyun/sdk/service/oceanbasepro20190901/models/ModifyInstanceTagsResponseBody$Builder.class
+com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeInstanceTagsRequest$1.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/ModifyTenantUserStatusRequest$1.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/CreateOmsOpenAPIProjectRequest$TransferStepConfig$Builder.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeTopSQLListResponse$BuilderImpl.class
@@ -617,6 +645,8 @@ com/aliyun/sdk/service/oceanbasepro20190901/models/CreateTenantUserRequest.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeInstanceCreatableZoneResponseBody$1.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeTimeZonesResponseBody$List.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/ModifySecurityIpsResponseBody$1.class
+com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeInstanceTagsResponseBody$Builder.class
+com/aliyun/sdk/service/oceanbasepro20190901/models/ModifyInstanceTagsResponse$1.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DeleteDatabasesResponseBody$Builder.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/ModifyDatabaseUserRolesResponse$BuilderImpl.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/SearchOmsOpenAPIProjectsResponseBody$IncrSyncStepTransferConfig$Builder.class
@@ -630,6 +660,7 @@ com/aliyun/sdk/service/oceanbasepro20190901/models/CreateTenantRequest.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/CreateOmsOpenAPIProjectResponse$1.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/CreateInstanceRequest$1.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeAnomalySQLListResponse$BuilderImpl.class
+com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeInstanceTagsRequest.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeTenantsResponse$1.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/ModifyTenantPrimaryZoneResponse.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeParametersHistoryResponse$BuilderImpl.class
@@ -642,6 +673,7 @@ com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeInstanceTopologyRespo
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeDatabasesResponseBody$Tables$Builder.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeInstanceTopologyResponseBody$Zones.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeZonesResponse.class
+com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeTenantTagsResponseBody$Builder.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeInstanceTopologyResponseBody$Nodes$Builder.class
 com/aliyun/sdk/service/oceanbasepro20190901/DefaultAsyncClient.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/SearchOmsOpenAPIProjectsResponseBody$ErrorDetails.class
@@ -683,6 +715,7 @@ com/aliyun/sdk/service/oceanbasepro20190901/models/SearchOmsOpenAPIProjectsRespo
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeTenantMetricsResponseBody.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/ModifyDatabaseUserRolesResponseBody$Users.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/ModifyTenantUserRolesResponseBody$TenantUser.class
+com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeInstanceTagsResponse$Builder.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/CreateTenantResponse$Builder.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/ModifyDatabaseDescriptionResponse$BuilderImpl.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeSlowSQLListResponse$Builder.class
@@ -695,6 +728,7 @@ com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeRecommendIndexRespons
 com/aliyun/sdk/service/oceanbasepro20190901/models/CreateTenantResponse$BuilderImpl.class
 com/aliyun/sdk/service/oceanbasepro20190901/AsyncClient.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeSQLDetailsResponseBody.class
+com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeInstanceTagsResponse.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeOmsOpenAPIProjectResponseBody$Builder.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/CreateOmsOpenAPIProjectRequest$DestConfig.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeTimeZonesResponse$1.class
@@ -702,6 +736,7 @@ com/aliyun/sdk/service/oceanbasepro20190901/models/ModifyInstanceNameResponse.cl
 com/aliyun/sdk/service/oceanbasepro20190901/models/CreateInstanceResponse.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeInstanceTopologyResponseBody$Zones$Builder.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeParametersHistoryResponseBody$Parameters$Builder.class
+com/aliyun/sdk/service/oceanbasepro20190901/models/ModifyTenantTagsResponse.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/StartOmsOpenAPIProjectResponseBody.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeTimeZonesResponseBody$TimeZones$Builder.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeSlowSQLHistoryListResponseBody$Builder.class
@@ -737,8 +772,10 @@ com/aliyun/sdk/service/oceanbasepro20190901/models/ModifySecurityIpsResponseBody
 com/aliyun/sdk/service/oceanbasepro20190901/models/CreateTenantResponseBody.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/ResumeOmsOpenAPIProjectResponseBody$Builder.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeOutlineBindingRequest.class
+com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeInstanceTagsResponse$1.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DeleteTenantUsersResponseBody.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DeleteTenantUsersResponse$1.class
+com/aliyun/sdk/service/oceanbasepro20190901/models/ModifyInstanceTagsResponseBody.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeOmsOpenAPIProjectResponseBody$Data$Builder.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/ModifyParametersResponse$1.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/CreateOmsOpenAPIProjectResponse.class
@@ -759,6 +796,7 @@ com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeTenantResponseBody$1.
 com/aliyun/sdk/service/oceanbasepro20190901/models/CreateTenantResponse$1.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeParametersResponse$1.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeDatabasesResponseBody$Tables.class
+com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeTenantTagsResponse$Builder.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/StopOmsOpenAPIProjectResponse$BuilderImpl.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/ModifyDatabaseDescriptionResponse$Builder.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeTenantMetricsRequest$1.class
@@ -776,6 +814,7 @@ com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeTimeZonesRequest$1.cl
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeInstanceTopologyRequest$Builder.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/CreateOmsOpenAPIProjectRequest$TransferMapping.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeSQLDetailsResponse$BuilderImpl.class
+com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeTenantTagsResponseBody$1.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/ModifyTenantUserStatusResponse$BuilderImpl.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/CreateOmsOpenAPIProjectRequest$SourceConfig$Builder.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/CreateSecurityIpGroupResponseBody$Builder.class
@@ -793,6 +832,7 @@ com/aliyun/sdk/service/oceanbasepro20190901/models/ModifyTenantPrimaryZoneReques
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeOmsOpenAPIProjectResponseBody$SourceConfig$Builder.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/CreateTenantUserResponseBody$TenantUser.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeRecommendIndexResponseBody$RecommendIndex$Builder.class
+com/aliyun/sdk/service/oceanbasepro20190901/models/ModifyTenantTagsRequest$1.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DeleteSecurityIpGroupResponse.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeParametersHistoryResponse.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/SearchOmsOpenAPIProjectsResponseBody$Data$Builder.class
@@ -817,11 +857,13 @@ com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeInstanceResponse$Buil
 com/aliyun/sdk/service/oceanbasepro20190901/models/CreateSecurityIpGroupResponseBody$SecurityIpGroup.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeInstanceResponseBody$Resource$Builder.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeOmsOpenAPIProjectResponseBody$ConnectorFullProgressOverview.class
+com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeTenantTagsResponse$1.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeNodeMetricsRequest.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeParametersResponse$Builder.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeSecurityIpGroupsRequest$Builder.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/ModifyDatabaseUserRolesResponse$Builder.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/ModifySecurityIpsResponse.class
+com/aliyun/sdk/service/oceanbasepro20190901/models/ModifyInstanceTagsResponse$BuilderImpl.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeDatabasesRequest$1.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DeleteOmsOpenAPIProjectRequest$Builder.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/CreateSecurityIpGroupResponseBody$SecurityIpGroup$Builder.class
@@ -844,7 +886,9 @@ com/aliyun/sdk/service/oceanbasepro20190901/models/CreateDatabaseResponse$Builde
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeRecommendIndexResponse$Builder.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/SearchOmsOpenAPIMonitorMetricResponseBody$Data.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeInstanceTopologyResponseBody$NodeResource$Builder.class
+com/aliyun/sdk/service/oceanbasepro20190901/models/ModifyInstanceTagsResponseBody$1.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DeleteInstancesResponse$Builder.class
+com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeTenantTagsResponse.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DescribeInstanceResponseBody$Memory.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/ModifyParametersResponseBody.class
 com/aliyun/sdk/service/oceanbasepro20190901/models/DeleteSecurityIpGroupRequest.class
