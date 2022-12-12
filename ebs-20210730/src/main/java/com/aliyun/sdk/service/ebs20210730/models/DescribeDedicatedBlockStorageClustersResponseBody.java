@@ -18,13 +18,25 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
     @NameInMap("NextToken")
     private String nextToken;
 
+    @NameInMap("PageNumber")
+    private Integer pageNumber;
+
+    @NameInMap("PageSize")
+    private Integer pageSize;
+
     @NameInMap("RequestId")
     private String requestId;
+
+    @NameInMap("TotalCount")
+    private Long totalCount;
 
     private DescribeDedicatedBlockStorageClustersResponseBody(Builder builder) {
         this.dedicatedBlockStorageClusters = builder.dedicatedBlockStorageClusters;
         this.nextToken = builder.nextToken;
+        this.pageNumber = builder.pageNumber;
+        this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
+        this.totalCount = builder.totalCount;
     }
 
     public static Builder builder() {
@@ -50,16 +62,40 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
     }
 
     /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
         return this.requestId;
     }
 
+    /**
+     * @return totalCount
+     */
+    public Long getTotalCount() {
+        return this.totalCount;
+    }
+
     public static final class Builder {
         private java.util.List < DedicatedBlockStorageClusters> dedicatedBlockStorageClusters; 
         private String nextToken; 
+        private Integer pageNumber; 
+        private Integer pageSize; 
         private String requestId; 
+        private Long totalCount; 
 
         /**
          * 由一个或多个集群组成的数组
@@ -78,10 +114,34 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
         }
 
         /**
+         * PageNumber.
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * PageSize.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
          * RrequestId
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * TotalCount.
+         */
+        public Builder totalCount(Long totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
 
@@ -192,6 +252,67 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
         } 
 
     }
+    public static class Tags extends TeaModel {
+        @NameInMap("TagKey")
+        private String tagKey;
+
+        @NameInMap("TagValue")
+        private String tagValue;
+
+        private Tags(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            /**
+             * 异步复制对的标签键
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * 异步复制对的标签值
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
     public static class DedicatedBlockStorageClusters extends TeaModel {
         @NameInMap("Category")
         private String category;
@@ -220,11 +341,17 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
         @NameInMap("RegionId")
         private String regionId;
 
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
         @NameInMap("Status")
         private String status;
 
         @NameInMap("SupportedCategory")
         private String supportedCategory;
+
+        @NameInMap("Tags")
+        private java.util.List < Tags> tags;
 
         @NameInMap("Type")
         private String type;
@@ -242,8 +369,10 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
             this.expiredTime = builder.expiredTime;
             this.performanceLevel = builder.performanceLevel;
             this.regionId = builder.regionId;
+            this.resourceGroupId = builder.resourceGroupId;
             this.status = builder.status;
             this.supportedCategory = builder.supportedCategory;
+            this.tags = builder.tags;
             this.type = builder.type;
             this.zoneId = builder.zoneId;
         }
@@ -320,6 +449,13 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -331,6 +467,13 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
          */
         public String getSupportedCategory() {
             return this.supportedCategory;
+        }
+
+        /**
+         * @return tags
+         */
+        public java.util.List < Tags> getTags() {
+            return this.tags;
         }
 
         /**
@@ -357,8 +500,10 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
             private String expiredTime; 
             private String performanceLevel; 
             private String regionId; 
+            private String resourceGroupId; 
             private String status; 
             private String supportedCategory; 
+            private java.util.List < Tags> tags; 
             private String type; 
             private String zoneId; 
 
@@ -441,6 +586,14 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
             }
 
             /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
              * 专属块存储集群的状态。可能值：
              * <p>
              * Preparing：待交付
@@ -458,6 +611,14 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
              */
             public Builder supportedCategory(String supportedCategory) {
                 this.supportedCategory = supportedCategory;
+                return this;
+            }
+
+            /**
+             * 异步复制对的标签
+             */
+            public Builder tags(java.util.List < Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 

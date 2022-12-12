@@ -75,11 +75,15 @@ public class DescribeRegionsResponseBody extends TeaModel {
         @NameInMap("LocalName")
         private String localName;
 
+        @NameInMap("ResourceTypes")
+        private java.util.List < String > resourceTypes;
+
         @NameInMap("ZoneId")
         private String zoneId;
 
         private Zones(Builder builder) {
             this.localName = builder.localName;
+            this.resourceTypes = builder.resourceTypes;
             this.zoneId = builder.zoneId;
         }
 
@@ -99,6 +103,13 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceTypes
+         */
+        public java.util.List < String > getResourceTypes() {
+            return this.resourceTypes;
+        }
+
+        /**
          * @return zoneId
          */
         public String getZoneId() {
@@ -107,6 +118,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String localName; 
+            private java.util.List < String > resourceTypes; 
             private String zoneId; 
 
             /**
@@ -114,6 +126,14 @@ public class DescribeRegionsResponseBody extends TeaModel {
              */
             public Builder localName(String localName) {
                 this.localName = localName;
+                return this;
+            }
+
+            /**
+             * ResourceTypes.
+             */
+            public Builder resourceTypes(java.util.List < String > resourceTypes) {
+                this.resourceTypes = resourceTypes;
                 return this;
             }
 

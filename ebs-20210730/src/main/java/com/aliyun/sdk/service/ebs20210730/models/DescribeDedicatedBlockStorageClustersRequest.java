@@ -36,14 +36,30 @@ public class DescribeDedicatedBlockStorageClustersRequest extends Request {
     @NameInMap("NextToken")
     private String nextToken;
 
+    @Query
+    @NameInMap("PageNumber")
+    private Integer pageNumber;
+
+    @Query
+    @NameInMap("PageSize")
+    private Integer pageSize;
+
     @Body
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
 
+    @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
     @Body
     @NameInMap("Status")
     private java.util.List < String > status;
+
+    @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
 
     private DescribeDedicatedBlockStorageClustersRequest(Builder builder) {
         super(builder);
@@ -53,8 +69,12 @@ public class DescribeDedicatedBlockStorageClustersRequest extends Request {
         this.dedicatedBlockStorageClusterId = builder.dedicatedBlockStorageClusterId;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
+        this.pageNumber = builder.pageNumber;
+        this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.status = builder.status;
+        this.tag = builder.tag;
     }
 
     public static Builder builder() {
@@ -113,10 +133,31 @@ public class DescribeDedicatedBlockStorageClustersRequest extends Request {
     }
 
     /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     /**
@@ -126,6 +167,13 @@ public class DescribeDedicatedBlockStorageClustersRequest extends Request {
         return this.status;
     }
 
+    /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
     public static final class Builder extends Request.Builder<DescribeDedicatedBlockStorageClustersRequest, Builder> {
         private String azoneId; 
         private String category; 
@@ -133,8 +181,12 @@ public class DescribeDedicatedBlockStorageClustersRequest extends Request {
         private java.util.List < String > dedicatedBlockStorageClusterId; 
         private Integer maxResults; 
         private String nextToken; 
+        private Integer pageNumber; 
+        private Integer pageSize; 
         private String regionId; 
+        private String resourceGroupId; 
         private java.util.List < String > status; 
+        private java.util.List < Tag> tag; 
 
         private Builder() {
             super();
@@ -148,8 +200,12 @@ public class DescribeDedicatedBlockStorageClustersRequest extends Request {
             this.dedicatedBlockStorageClusterId = request.dedicatedBlockStorageClusterId;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.status = request.status;
+            this.tag = request.tag;
         } 
 
         /**
@@ -211,6 +267,24 @@ public class DescribeDedicatedBlockStorageClustersRequest extends Request {
         }
 
         /**
+         * PageNumber.
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.putQueryParameter("PageNumber", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * PageSize.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
          * 专属块存储集群所在的地域ID。您可以调用DescribeRegions
          * <p>
          * 查看最新的阿里云地域列表。
@@ -218,6 +292,15 @@ public class DescribeDedicatedBlockStorageClustersRequest extends Request {
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 
@@ -236,6 +319,15 @@ public class DescribeDedicatedBlockStorageClustersRequest extends Request {
             return this;
         }
 
+        /**
+         * 标签列表，最多包含20个子项
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
         @Override
         public DescribeDedicatedBlockStorageClustersRequest build() {
             return new DescribeDedicatedBlockStorageClustersRequest(this);
@@ -243,4 +335,65 @@ public class DescribeDedicatedBlockStorageClustersRequest extends Request {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * 异步复制对的标签键
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * 异步复制对的标签值
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }
