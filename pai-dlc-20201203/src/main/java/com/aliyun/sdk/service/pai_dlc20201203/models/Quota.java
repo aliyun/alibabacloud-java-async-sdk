@@ -18,11 +18,8 @@ public class Quota extends TeaModel {
     @NameInMap("ClusterName")
     private String clusterName;
 
-    @NameInMap("EnableTideResource")
-    private Boolean enableTideResource;
-
-    @NameInMap("IsExclusiveQuota")
-    private Boolean isExclusiveQuota;
+    @NameInMap("QuotaConfig")
+    private QuotaConfig quotaConfig;
 
     @NameInMap("QuotaId")
     private String quotaId;
@@ -32,9 +29,6 @@ public class Quota extends TeaModel {
 
     @NameInMap("QuotaType")
     private String quotaType;
-
-    @NameInMap("ResourceLevel")
-    private String resourceLevel;
 
     @NameInMap("TotalQuota")
     private QuotaDetail totalQuota;
@@ -51,12 +45,10 @@ public class Quota extends TeaModel {
     private Quota(Builder builder) {
         this.clusterId = builder.clusterId;
         this.clusterName = builder.clusterName;
-        this.enableTideResource = builder.enableTideResource;
-        this.isExclusiveQuota = builder.isExclusiveQuota;
+        this.quotaConfig = builder.quotaConfig;
         this.quotaId = builder.quotaId;
         this.quotaName = builder.quotaName;
         this.quotaType = builder.quotaType;
-        this.resourceLevel = builder.resourceLevel;
         this.totalQuota = builder.totalQuota;
         this.totalTideQuota = builder.totalTideQuota;
         this.usedQuota = builder.usedQuota;
@@ -86,17 +78,10 @@ public class Quota extends TeaModel {
     }
 
     /**
-     * @return enableTideResource
+     * @return quotaConfig
      */
-    public Boolean getEnableTideResource() {
-        return this.enableTideResource;
-    }
-
-    /**
-     * @return isExclusiveQuota
-     */
-    public Boolean getIsExclusiveQuota() {
-        return this.isExclusiveQuota;
+    public QuotaConfig getQuotaConfig() {
+        return this.quotaConfig;
     }
 
     /**
@@ -118,13 +103,6 @@ public class Quota extends TeaModel {
      */
     public String getQuotaType() {
         return this.quotaType;
-    }
-
-    /**
-     * @return resourceLevel
-     */
-    public String getResourceLevel() {
-        return this.resourceLevel;
     }
 
     /**
@@ -158,12 +136,10 @@ public class Quota extends TeaModel {
     public static final class Builder {
         private String clusterId; 
         private String clusterName; 
-        private Boolean enableTideResource; 
-        private Boolean isExclusiveQuota; 
+        private QuotaConfig quotaConfig; 
         private String quotaId; 
         private String quotaName; 
         private String quotaType; 
-        private String resourceLevel; 
         private QuotaDetail totalQuota; 
         private QuotaDetail totalTideQuota; 
         private QuotaDetail usedQuota; 
@@ -186,18 +162,10 @@ public class Quota extends TeaModel {
         }
 
         /**
-         * 是否允许使用潮汐资源
+         * 资源配额设置
          */
-        public Builder enableTideResource(Boolean enableTideResource) {
-            this.enableTideResource = enableTideResource;
-            return this;
-        }
-
-        /**
-         * 是否是独占Quota组
-         */
-        public Builder isExclusiveQuota(Boolean isExclusiveQuota) {
-            this.isExclusiveQuota = isExclusiveQuota;
+        public Builder quotaConfig(QuotaConfig quotaConfig) {
+            this.quotaConfig = quotaConfig;
             return this;
         }
 
@@ -222,14 +190,6 @@ public class Quota extends TeaModel {
          */
         public Builder quotaType(String quotaType) {
             this.quotaType = quotaType;
-            return this;
-        }
-
-        /**
-         * 资源组允许使用的潮汐资源级别
-         */
-        public Builder resourceLevel(String resourceLevel) {
-            this.resourceLevel = resourceLevel;
             return this;
         }
 

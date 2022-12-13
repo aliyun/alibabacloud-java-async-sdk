@@ -21,6 +21,9 @@ public class JobSettings extends TeaModel {
     @NameInMap("EnableErrorMonitoringInAIMaster")
     private Boolean enableErrorMonitoringInAIMaster;
 
+    @NameInMap("EnableOssAppend")
+    private Boolean enableOssAppend;
+
     @NameInMap("EnableRDMA")
     private Boolean enableRDMA;
 
@@ -40,6 +43,7 @@ public class JobSettings extends TeaModel {
         this.businessUserId = builder.businessUserId;
         this.caller = builder.caller;
         this.enableErrorMonitoringInAIMaster = builder.enableErrorMonitoringInAIMaster;
+        this.enableOssAppend = builder.enableOssAppend;
         this.enableRDMA = builder.enableRDMA;
         this.enableTideResource = builder.enableTideResource;
         this.errorMonitoringArgs = builder.errorMonitoringArgs;
@@ -74,6 +78,13 @@ public class JobSettings extends TeaModel {
      */
     public Boolean getEnableErrorMonitoringInAIMaster() {
         return this.enableErrorMonitoringInAIMaster;
+    }
+
+    /**
+     * @return enableOssAppend
+     */
+    public Boolean getEnableOssAppend() {
+        return this.enableOssAppend;
     }
 
     /**
@@ -115,6 +126,7 @@ public class JobSettings extends TeaModel {
         private String businessUserId; 
         private String caller; 
         private Boolean enableErrorMonitoringInAIMaster; 
+        private Boolean enableOssAppend; 
         private Boolean enableRDMA; 
         private Boolean enableTideResource; 
         private String errorMonitoringArgs; 
@@ -142,6 +154,14 @@ public class JobSettings extends TeaModel {
          */
         public Builder enableErrorMonitoringInAIMaster(Boolean enableErrorMonitoringInAIMaster) {
             this.enableErrorMonitoringInAIMaster = enableErrorMonitoringInAIMaster;
+            return this;
+        }
+
+        /**
+         * 运行oss追加写
+         */
+        public Builder enableOssAppend(Boolean enableOssAppend) {
+            this.enableOssAppend = enableOssAppend;
             return this;
         }
 

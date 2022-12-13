@@ -34,6 +34,10 @@ public class ListJobsRequest extends Request {
     private Boolean fromAllWorkspaces;
 
     @Query
+    @NameInMap("JobId")
+    private String jobId;
+
+    @Query
     @NameInMap("JobType")
     @Validation(maxLength = 32)
     private String jobType;
@@ -92,6 +96,7 @@ public class ListJobsRequest extends Request {
         this.displayName = builder.displayName;
         this.endTime = builder.endTime;
         this.fromAllWorkspaces = builder.fromAllWorkspaces;
+        this.jobId = builder.jobId;
         this.jobType = builder.jobType;
         this.order = builder.order;
         this.pageNumber = builder.pageNumber;
@@ -152,6 +157,13 @@ public class ListJobsRequest extends Request {
      */
     public Boolean getFromAllWorkspaces() {
         return this.fromAllWorkspaces;
+    }
+
+    /**
+     * @return jobId
+     */
+    public String getJobId() {
+        return this.jobId;
     }
 
     /**
@@ -244,6 +256,7 @@ public class ListJobsRequest extends Request {
         private String displayName; 
         private String endTime; 
         private Boolean fromAllWorkspaces; 
+        private String jobId; 
         private String jobType; 
         private String order; 
         private Integer pageNumber; 
@@ -268,6 +281,7 @@ public class ListJobsRequest extends Request {
             this.displayName = request.displayName;
             this.endTime = request.endTime;
             this.fromAllWorkspaces = request.fromAllWorkspaces;
+            this.jobId = request.jobId;
             this.jobType = request.jobType;
             this.order = request.order;
             this.pageNumber = request.pageNumber;
@@ -324,6 +338,15 @@ public class ListJobsRequest extends Request {
         public Builder fromAllWorkspaces(Boolean fromAllWorkspaces) {
             this.putQueryParameter("FromAllWorkspaces", fromAllWorkspaces);
             this.fromAllWorkspaces = fromAllWorkspaces;
+            return this;
+        }
+
+        /**
+         * JobId.
+         */
+        public Builder jobId(String jobId) {
+            this.putQueryParameter("JobId", jobId);
+            this.jobId = jobId;
             return this;
         }
 

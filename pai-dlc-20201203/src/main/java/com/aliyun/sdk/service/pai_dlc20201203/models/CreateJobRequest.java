@@ -68,6 +68,10 @@ public class CreateJobRequest extends Request {
     private JobSettings settings;
 
     @Body
+    @NameInMap("SuccessPolicy")
+    private String successPolicy;
+
+    @Body
     @NameInMap("ThirdpartyLibDir")
     private String thirdpartyLibDir;
 
@@ -103,6 +107,7 @@ public class CreateJobRequest extends Request {
         this.priority = builder.priority;
         this.resourceId = builder.resourceId;
         this.settings = builder.settings;
+        this.successPolicy = builder.successPolicy;
         this.thirdpartyLibDir = builder.thirdpartyLibDir;
         this.thirdpartyLibs = builder.thirdpartyLibs;
         this.userCommand = builder.userCommand;
@@ -215,6 +220,13 @@ public class CreateJobRequest extends Request {
     }
 
     /**
+     * @return successPolicy
+     */
+    public String getSuccessPolicy() {
+        return this.successPolicy;
+    }
+
+    /**
      * @return thirdpartyLibDir
      */
     public String getThirdpartyLibDir() {
@@ -263,6 +275,7 @@ public class CreateJobRequest extends Request {
         private Integer priority; 
         private String resourceId; 
         private JobSettings settings; 
+        private String successPolicy; 
         private String thirdpartyLibDir; 
         private java.util.List < String > thirdpartyLibs; 
         private String userCommand; 
@@ -288,6 +301,7 @@ public class CreateJobRequest extends Request {
             this.priority = request.priority;
             this.resourceId = request.resourceId;
             this.settings = request.settings;
+            this.successPolicy = request.successPolicy;
             this.thirdpartyLibDir = request.thirdpartyLibDir;
             this.thirdpartyLibs = request.thirdpartyLibs;
             this.userCommand = request.userCommand;
@@ -409,6 +423,15 @@ public class CreateJobRequest extends Request {
         public Builder settings(JobSettings settings) {
             this.putBodyParameter("Settings", settings);
             this.settings = settings;
+            return this;
+        }
+
+        /**
+         * SuccessPolicy.
+         */
+        public Builder successPolicy(String successPolicy) {
+            this.putBodyParameter("SuccessPolicy", successPolicy);
+            this.successPolicy = successPolicy;
             return this;
         }
 
