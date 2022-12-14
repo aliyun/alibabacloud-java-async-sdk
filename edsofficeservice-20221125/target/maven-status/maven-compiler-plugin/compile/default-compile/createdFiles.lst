@@ -1,0 +1,13 @@
+com/aliyun/sdk/service/edsofficeservice20221125/models/CreateDesktopPoolResponseBody$1.class
+com/aliyun/sdk/service/edsofficeservice20221125/models/CreateDesktopPoolResponse$1.class
+com/aliyun/sdk/service/edsofficeservice20221125/DefaultAsyncClient.class
+com/aliyun/sdk/service/edsofficeservice20221125/models/CreateDesktopPoolRequest$1.class
+com/aliyun/sdk/service/edsofficeservice20221125/models/CreateDesktopPoolRequest.class
+com/aliyun/sdk/service/edsofficeservice20221125/models/CreateDesktopPoolResponseBody.class
+com/aliyun/sdk/service/edsofficeservice20221125/models/CreateDesktopPoolRequest$Builder.class
+com/aliyun/sdk/service/edsofficeservice20221125/AsyncClient.class
+com/aliyun/sdk/service/edsofficeservice20221125/models/CreateDesktopPoolResponse.class
+com/aliyun/sdk/service/edsofficeservice20221125/models/CreateDesktopPoolResponse$Builder.class
+com/aliyun/sdk/service/edsofficeservice20221125/models/CreateDesktopPoolResponse$BuilderImpl.class
+com/aliyun/sdk/service/edsofficeservice20221125/models/CreateDesktopPoolResponseBody$Builder.class
+com/aliyun/sdk/service/edsofficeservice20221125/DefaultAsyncClientBuilder.class
