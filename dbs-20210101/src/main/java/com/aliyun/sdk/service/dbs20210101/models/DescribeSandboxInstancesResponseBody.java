@@ -110,7 +110,7 @@ public class DescribeSandboxInstancesResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * Code.
+         * The error code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +118,20 @@ public class DescribeSandboxInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The response parameters.
+         * <p>
+         * 
+         * *   **connectionString**: the connection string of the sandbox instance, in the format of IP address:Port number. This parameter indicates the endpoint of the sandbox instance if the value of the SandboxType parameter is **Sandbox**. This parameter indicates the Network File System (NFS) mount address if the value of the SandboxType parameter is **NFS**.
+         * *   **restoreSeconds**: the time required to create the sandbox instance. Unit: seconds.
+         * *   **restoreTime**: the point in time to which the sandbox instance is restored. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.
+         * *   **instanceId**: the ID of the sandbox instance.
+         * *   **backupSetId**: the ID of the backup set.
+         * *   **createTime**: the point in time when the sandbox instance was created. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.
+         * *   **backupPlanId**: the ID of the backup schedule.
+         * *   **vpcId**: the ID of the virtual private cloud (VPC).
+         * *   **vpcSwitchId**: the ID of the VSwitch.
+         * *   **sandboxSpecification**: the specifications of the sandbox instance.
+         * *   **status**: the status of the sandbox instance. Valid values: **running**, **check_pass**, and **stop**.
          */
         public Builder data(String data) {
             this.data = data;
@@ -126,7 +139,7 @@ public class DescribeSandboxInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * The error code.
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -134,7 +147,7 @@ public class DescribeSandboxInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * The error message.
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -142,7 +155,7 @@ public class DescribeSandboxInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -150,7 +163,7 @@ public class DescribeSandboxInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +171,7 @@ public class DescribeSandboxInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(String success) {
             this.success = success;

@@ -70,7 +70,10 @@ public class DeleteSandboxInstanceRequest extends Request {
         } 
 
         /**
-         * BackupPlanId.
+         * The ID of the backup schedule. You can call the [DescribeBackupPlanList](~~437215~~) operation to obtain the ID of the backup schedule.
+         * <p>
+         * 
+         * >  If your instance is an ApsaraDB RDS for MySQL instance, you can configure [automatic access to the instance](~~193091~~) to automatically add the instance to DBS and obtain the ID of the backup schedule.
          */
         public Builder backupPlanId(String backupPlanId) {
             this.putQueryParameter("BackupPlanId", backupPlanId);
@@ -79,7 +82,7 @@ public class DeleteSandboxInstanceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the sandbox instance. You can call the [DescribeSandboxInstances](~~437257~~) operation to obtain the ID of the sandbox instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

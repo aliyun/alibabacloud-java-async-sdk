@@ -110,7 +110,7 @@ public class DescribeSandboxRecoveryTimeResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * Code.
+         * The error code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +118,7 @@ public class DescribeSandboxRecoveryTimeResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The response parameters.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -126,7 +126,7 @@ public class DescribeSandboxRecoveryTimeResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * The error code.
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -134,7 +134,7 @@ public class DescribeSandboxRecoveryTimeResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * The error message.
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -142,7 +142,7 @@ public class DescribeSandboxRecoveryTimeResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -150,7 +150,7 @@ public class DescribeSandboxRecoveryTimeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,7 @@ public class DescribeSandboxRecoveryTimeResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(String success) {
             this.success = success;
@@ -222,7 +222,7 @@ public class DescribeSandboxRecoveryTimeResponseBody extends TeaModel {
             private String recoveryEndTime; 
 
             /**
-             * BackupPlanId.
+             * The backup schedule of the sandbox instance.
              */
             public Builder backupPlanId(String backupPlanId) {
                 this.backupPlanId = backupPlanId;
@@ -230,7 +230,7 @@ public class DescribeSandboxRecoveryTimeResponseBody extends TeaModel {
             }
 
             /**
-             * RecoveryBeginTime.
+             * The beginning of the time range during which the sandbox instance can be restored. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder recoveryBeginTime(String recoveryBeginTime) {
                 this.recoveryBeginTime = recoveryBeginTime;
@@ -238,7 +238,7 @@ public class DescribeSandboxRecoveryTimeResponseBody extends TeaModel {
             }
 
             /**
-             * RecoveryEndTime.
+             * The end of the time range during which the sandbox instance can be restored. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder recoveryEndTime(String recoveryEndTime) {
                 this.recoveryEndTime = recoveryEndTime;

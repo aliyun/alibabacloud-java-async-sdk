@@ -97,7 +97,10 @@ public class DescribeSandboxInstancesRequest extends Request {
         } 
 
         /**
-         * BackupPlanId.
+         * The ID of the backup schedule. You can call the [DescribeBackupPlanList](~~437215~~) operation to obtain the ID of the backup schedule.
+         * <p>
+         * 
+         * >  If your instance is an ApsaraDB RDS for MySQL instance, you can configure [automatic access to the instance](~~193091~~) to automatically add the instance to DBS and obtain the ID of the backup schedule.
          */
         public Builder backupPlanId(String backupPlanId) {
             this.putQueryParameter("BackupPlanId", backupPlanId);
@@ -106,7 +109,7 @@ public class DescribeSandboxInstancesRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the sandbox instance. You can call the [CreateSandboxInstance](~~437252~~) parameter to obtain the ID of the sandbox instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -115,7 +118,7 @@ public class DescribeSandboxInstancesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. The value must be an integer that is greater than 0. Default value: 1.
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -124,7 +127,12 @@ public class DescribeSandboxInstancesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Valid values:
+         * <p>
+         * 
+         * *   30 (default value)
+         * *   50
+         * *   100
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);

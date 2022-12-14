@@ -110,7 +110,7 @@ public class CreateSandboxInstanceResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * Code.
+         * The error code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +118,7 @@ public class CreateSandboxInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The response parameters.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -126,7 +126,7 @@ public class CreateSandboxInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * The error code.
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -134,7 +134,7 @@ public class CreateSandboxInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * The error message.
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -142,7 +142,7 @@ public class CreateSandboxInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -150,7 +150,7 @@ public class CreateSandboxInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,7 @@ public class CreateSandboxInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(String success) {
             this.success = success;
@@ -210,7 +210,7 @@ public class CreateSandboxInstanceResponseBody extends TeaModel {
             private String instanceId; 
 
             /**
-             * BackupPlanId.
+             * The ID of the backup schedule.
              */
             public Builder backupPlanId(String backupPlanId) {
                 this.backupPlanId = backupPlanId;
@@ -218,7 +218,7 @@ public class CreateSandboxInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the sandbox instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;

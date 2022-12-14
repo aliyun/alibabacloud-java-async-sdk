@@ -181,7 +181,10 @@ public class CreateSandboxInstanceRequest extends Request {
         } 
 
         /**
-         * BackupPlanId.
+         * The ID of the backup schedule. You can call the [DescribeBackupPlanList](~~437215~~) operation to obtain the ID of the backup schedule.
+         * <p>
+         * 
+         * >  If your instance is an ApsaraDB RDS for MySQL instance, you can configure [automatic access to the instance](~~193091~~) to automatically add the instance to DBS and obtain the ID of the backup schedule.
          */
         public Builder backupPlanId(String backupPlanId) {
             this.putQueryParameter("BackupPlanId", backupPlanId);
@@ -190,7 +193,10 @@ public class CreateSandboxInstanceRequest extends Request {
         }
 
         /**
-         * BackupSetId.
+         * The ID of the backup set to be restored, which is the point in time when a snapshot was created. You can call the [DescribeSandboxBackupSets](~~437256~~) operation to obtain the ID.
+         * <p>
+         * 
+         * >  You need to specify only one of the **BackupSetId** and **RestoreTime** parameters.
          */
         public Builder backupSetId(String backupSetId) {
             this.putQueryParameter("BackupSetId", backupSetId);
@@ -199,7 +205,7 @@ public class CreateSandboxInstanceRequest extends Request {
         }
 
         /**
-         * RestoreTime.
+         * The point in time of the sandbox instance to be restored. You can call the [DescribeSandboxRecoveryTime](~~437258~~) operation to view the recoverable time range. Specify the time in the format of *yyyy-MM-ddTHH:mm:ssZ*. The time must be in UTC.
          */
         public Builder restoreTime(String restoreTime) {
             this.putQueryParameter("RestoreTime", restoreTime);
@@ -208,7 +214,7 @@ public class CreateSandboxInstanceRequest extends Request {
         }
 
         /**
-         * SandboxInstanceName.
+         * The name of the sandbox instance.
          */
         public Builder sandboxInstanceName(String sandboxInstanceName) {
             this.putQueryParameter("SandboxInstanceName", sandboxInstanceName);
@@ -217,7 +223,7 @@ public class CreateSandboxInstanceRequest extends Request {
         }
 
         /**
-         * SandboxPassword.
+         * The password of the privileged account created in the sandbox instance.
          */
         public Builder sandboxPassword(String sandboxPassword) {
             this.putQueryParameter("SandboxPassword", sandboxPassword);
@@ -226,7 +232,19 @@ public class CreateSandboxInstanceRequest extends Request {
         }
 
         /**
-         * SandboxSpecification.
+         * The specifications of the sandbox instance. Valid values:
+         * <p>
+         * 
+         * *   **MYSQL\_1C\_1M_SD**: 1 CPU core and 1 GB of memory.
+         * *   **MYSQL\_1C\_2M_SD**: 1 CPU core and 2 GB of memory.
+         * *   **MYSQL\_2C\_4M_SD**: 2 CPU cores and 4 GB of memory.
+         * *   **MYSQL\_2C\_8M_SD**: 2 CPU cores and 8 GB of memory.
+         * *   **MYSQL\_4C\_8M_SD**: 4 CPU cores and 8 GB of memory.
+         * *   **MYSQL\_4C\_16M_SD**: 4 CPU cores and 16 GB of memory.
+         * *   **MYSQL\_8C\_16M_SD**: 8 CPU cores and 16 GB of memory.
+         * *   **MYSQL\_8C\_32M_SD**: 8 CPU cores and 32 GB of memory.
+         * 
+         * >  Different specifications have little impact on the recovery speed. High-specification instances provide better performance after restoration. For more information, see [Sandbox instance fees](~~201466~~).
          */
         public Builder sandboxSpecification(String sandboxSpecification) {
             this.putQueryParameter("SandboxSpecification", sandboxSpecification);
@@ -235,7 +253,7 @@ public class CreateSandboxInstanceRequest extends Request {
         }
 
         /**
-         * SandboxType.
+         * The type of the sandbox instance. You can call this operation only to create an instance of the **Sandbox** type. After the sandbox instance is created, the MySQL endpoint of the instance is provided.
          */
         public Builder sandboxType(String sandboxType) {
             this.putQueryParameter("SandboxType", sandboxType);
@@ -244,7 +262,14 @@ public class CreateSandboxInstanceRequest extends Request {
         }
 
         /**
-         * SandboxUser.
+         * The privileged account created in the sandbox instance.
+         * <p>
+         * 
+         * *   After you specify this parameter, the system creates a privileged account in the sandbox instance. The account has the permissions on all databases in the instance.
+         * 
+         * The account of the source database is retained in the sandbox instance.
+         * 
+         * *   If you do not specify this parameter, the database account is the same as that of the source database.
          */
         public Builder sandboxUser(String sandboxUser) {
             this.putQueryParameter("SandboxUser", sandboxUser);
@@ -253,7 +278,10 @@ public class CreateSandboxInstanceRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * The ID of the virtual private cloud (VPC) that is used to connect to the sandbox instance. If you want to connect to the sandbox instance by using Elastic Compute Service (ECS) instances, you must set this parameter to the VPC in which the ECS instances reside.
+         * <p>
+         * 
+         * >  You can set this parameter if you want to use it in a recovery drill scenario.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -262,7 +290,7 @@ public class CreateSandboxInstanceRequest extends Request {
         }
 
         /**
-         * VpcSwitchId.
+         * The ID of the VSwitch that is used to connect to the sandbox instance.
          */
         public Builder vpcSwitchId(String vpcSwitchId) {
             this.putQueryParameter("VpcSwitchId", vpcSwitchId);

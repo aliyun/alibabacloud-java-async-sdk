@@ -110,7 +110,7 @@ public class DeleteSandboxInstanceResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * Code.
+         * The error code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +118,7 @@ public class DeleteSandboxInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The response parameters.
          */
         public Builder data(String data) {
             this.data = data;
@@ -126,7 +126,7 @@ public class DeleteSandboxInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * The error code.
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -134,7 +134,7 @@ public class DeleteSandboxInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * The error message.
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -142,7 +142,7 @@ public class DeleteSandboxInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -150,7 +150,7 @@ public class DeleteSandboxInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,7 @@ public class DeleteSandboxInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(String success) {
             this.success = success;

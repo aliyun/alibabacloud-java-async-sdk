@@ -110,7 +110,7 @@ public class DescribeSandboxBackupSetsResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * Code.
+         * The error code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +118,13 @@ public class DescribeSandboxBackupSetsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The response parameters.
+         * <p>
+         * 
+         * *   **backupSetTime**: the point in time when the snapshot was created. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.
+         * *   **backupSetId**: the ID of the backup set.
+         * *   **backupSetType**: the type of the snapshot. A value of **Full** indicates that the snapshot is a full backup snapshot. A value of **Inc** indicates that the snapshot is an incremental backup snapshot.
+         * *   **backupPlanId**: the ID of the backup schedule.
          */
         public Builder data(String data) {
             this.data = data;
@@ -126,7 +132,7 @@ public class DescribeSandboxBackupSetsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * The error code.
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -134,7 +140,7 @@ public class DescribeSandboxBackupSetsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * The error message.
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -142,7 +148,7 @@ public class DescribeSandboxBackupSetsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -150,7 +156,7 @@ public class DescribeSandboxBackupSetsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +164,7 @@ public class DescribeSandboxBackupSetsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(String success) {
             this.success = success;
