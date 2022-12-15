@@ -114,7 +114,7 @@ public class HotelOrderQueryResponseBody extends TeaModel {
         }
 
         /**
-         * module.
+         * module。
          */
         public Builder module(Module module) {
             this.module = module;

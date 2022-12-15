@@ -158,7 +158,7 @@ public class EntitySetResponseBody extends TeaModel {
         }
 
         /**
-         * traceId.
+         * traceId
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;

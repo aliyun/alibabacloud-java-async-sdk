@@ -945,6 +945,9 @@ public class ApplyAddRequest extends Request {
         @NameInMap("hotel_citys")
         private java.util.List < HotelCitys> hotelCitys;
 
+        @NameInMap("premium_economy_discount")
+        private Integer premiumEconomyDiscount;
+
         @NameInMap("reserve_type")
         private Integer reserveType;
 
@@ -957,6 +960,7 @@ public class ApplyAddRequest extends Request {
             this.firstDiscount = builder.firstDiscount;
             this.flightCabins = builder.flightCabins;
             this.hotelCitys = builder.hotelCitys;
+            this.premiumEconomyDiscount = builder.premiumEconomyDiscount;
             this.reserveType = builder.reserveType;
             this.trainSeats = builder.trainSeats;
         }
@@ -1005,6 +1009,13 @@ public class ApplyAddRequest extends Request {
         }
 
         /**
+         * @return premiumEconomyDiscount
+         */
+        public Integer getPremiumEconomyDiscount() {
+            return this.premiumEconomyDiscount;
+        }
+
+        /**
          * @return reserveType
          */
         public Integer getReserveType() {
@@ -1024,6 +1035,7 @@ public class ApplyAddRequest extends Request {
             private Integer firstDiscount; 
             private String flightCabins; 
             private java.util.List < HotelCitys> hotelCitys; 
+            private Integer premiumEconomyDiscount; 
             private Integer reserveType; 
             private String trainSeats; 
 
@@ -1052,7 +1064,7 @@ public class ApplyAddRequest extends Request {
             }
 
             /**
-             * flight_cabins.
+             * 国内机票舱等，多值逗号分隔。F：头等舱，C：商务舱，Y：经济舱，P：超级经济舱
              */
             public Builder flightCabins(String flightCabins) {
                 this.flightCabins = flightCabins;
@@ -1064,6 +1076,14 @@ public class ApplyAddRequest extends Request {
              */
             public Builder hotelCitys(java.util.List < HotelCitys> hotelCitys) {
                 this.hotelCitys = hotelCitys;
+                return this;
+            }
+
+            /**
+             * premium_economy_discount.
+             */
+            public Builder premiumEconomyDiscount(Integer premiumEconomyDiscount) {
+                this.premiumEconomyDiscount = premiumEconomyDiscount;
                 return this;
             }
 
@@ -1948,6 +1968,9 @@ public class ApplyAddRequest extends Request {
         @NameInMap("hotel_citys")
         private java.util.List < TravelerStandardHotelCitys> hotelCitys;
 
+        @NameInMap("premium_economy_discount")
+        private Integer premiumEconomyDiscount;
+
         @NameInMap("reserve_type")
         private Integer reserveType;
 
@@ -1963,6 +1986,7 @@ public class ApplyAddRequest extends Request {
             this.firstDiscount = builder.firstDiscount;
             this.flightCabins = builder.flightCabins;
             this.hotelCitys = builder.hotelCitys;
+            this.premiumEconomyDiscount = builder.premiumEconomyDiscount;
             this.reserveType = builder.reserveType;
             this.trainSeats = builder.trainSeats;
             this.userId = builder.userId;
@@ -2012,6 +2036,13 @@ public class ApplyAddRequest extends Request {
         }
 
         /**
+         * @return premiumEconomyDiscount
+         */
+        public Integer getPremiumEconomyDiscount() {
+            return this.premiumEconomyDiscount;
+        }
+
+        /**
          * @return reserveType
          */
         public Integer getReserveType() {
@@ -2038,6 +2069,7 @@ public class ApplyAddRequest extends Request {
             private Integer firstDiscount; 
             private String flightCabins; 
             private java.util.List < TravelerStandardHotelCitys> hotelCitys; 
+            private Integer premiumEconomyDiscount; 
             private Integer reserveType; 
             private String trainSeats; 
             private String userId; 
@@ -2067,7 +2099,7 @@ public class ApplyAddRequest extends Request {
             }
 
             /**
-             * flight_cabins.
+             * 国内机票舱等，多值逗号分隔。F：头等舱，C：商务舱，Y：经济舱，P：超级经济舱
              */
             public Builder flightCabins(String flightCabins) {
                 this.flightCabins = flightCabins;
@@ -2079,6 +2111,14 @@ public class ApplyAddRequest extends Request {
              */
             public Builder hotelCitys(java.util.List < TravelerStandardHotelCitys> hotelCitys) {
                 this.hotelCitys = hotelCitys;
+                return this;
+            }
+
+            /**
+             * premium_economy_discount.
+             */
+            public Builder premiumEconomyDiscount(Integer premiumEconomyDiscount) {
+                this.premiumEconomyDiscount = premiumEconomyDiscount;
                 return this;
             }
 

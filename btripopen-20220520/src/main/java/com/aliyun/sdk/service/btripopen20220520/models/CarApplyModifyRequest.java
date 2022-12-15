@@ -146,7 +146,7 @@ public class CarApplyModifyRequest extends Request {
         }
 
         /**
-         * 0申请 1同意 2拒绝 3转交 4取消 5 修改已同意 6 撤销已同意 7 修改审批中 8 已同意(修改被拒绝)  9 撤销审批中n10 已同意(撤销被拒绝) 11 已同意(修改被取消) 12 已同意(撤销被取消)
+         * 0申请 1同意 2拒绝 3转交 4取消 5 修改已同意 6 撤销已同意 7 修改审批中 8 已同意(修改被拒绝)  9 撤销审批中\n10 已同意(撤销被拒绝) 11 已同意(修改被取消) 12 已同意(撤销被取消)
          */
         public Builder status(Integer status) {
             this.putBodyParameter("status", status);

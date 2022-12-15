@@ -138,7 +138,7 @@ public class InvoiceSearchResponseBody extends TeaModel {
         }
 
         /**
-         * traceId.
+         * traceId
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -202,7 +202,7 @@ public class InvoiceSearchResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * id.
+             * ID
              */
             public Builder id(Long id) {
                 this.id = id;

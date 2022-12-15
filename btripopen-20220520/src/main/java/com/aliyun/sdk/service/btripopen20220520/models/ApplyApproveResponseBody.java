@@ -114,7 +114,7 @@ public class ApplyApproveResponseBody extends TeaModel {
         }
 
         /**
-         * module.
+         * module。
          */
         public Builder module(String module) {
             this.module = module;

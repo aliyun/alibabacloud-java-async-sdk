@@ -409,6 +409,9 @@ public class ApplyQueryResponseBody extends TeaModel {
         @NameInMap("hotel_citys")
         private java.util.List < HotelCitys> hotelCitys;
 
+        @NameInMap("premium_economy_discount")
+        private Integer premiumEconomyDiscount;
+
         @NameInMap("reserve_type")
         private Integer reserveType;
 
@@ -424,6 +427,7 @@ public class ApplyQueryResponseBody extends TeaModel {
             this.firstDiscount = builder.firstDiscount;
             this.flightCabins = builder.flightCabins;
             this.hotelCitys = builder.hotelCitys;
+            this.premiumEconomyDiscount = builder.premiumEconomyDiscount;
             this.reserveType = builder.reserveType;
             this.trainSeats = builder.trainSeats;
             this.userName = builder.userName;
@@ -473,6 +477,13 @@ public class ApplyQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return premiumEconomyDiscount
+         */
+        public Integer getPremiumEconomyDiscount() {
+            return this.premiumEconomyDiscount;
+        }
+
+        /**
          * @return reserveType
          */
         public Integer getReserveType() {
@@ -499,6 +510,7 @@ public class ApplyQueryResponseBody extends TeaModel {
             private Integer firstDiscount; 
             private String flightCabins; 
             private java.util.List < HotelCitys> hotelCitys; 
+            private Integer premiumEconomyDiscount; 
             private Integer reserveType; 
             private String trainSeats; 
             private String userName; 
@@ -540,6 +552,14 @@ public class ApplyQueryResponseBody extends TeaModel {
              */
             public Builder hotelCitys(java.util.List < HotelCitys> hotelCitys) {
                 this.hotelCitys = hotelCitys;
+                return this;
+            }
+
+            /**
+             * premium_economy_discount.
+             */
+            public Builder premiumEconomyDiscount(Integer premiumEconomyDiscount) {
+                this.premiumEconomyDiscount = premiumEconomyDiscount;
                 return this;
             }
 
@@ -1234,6 +1254,9 @@ public class ApplyQueryResponseBody extends TeaModel {
         @NameInMap("hotel_citys")
         private java.util.List < TravelerListHotelCitys> hotelCitys;
 
+        @NameInMap("premium_economy_discount")
+        private Integer premiumEconomyDiscount;
+
         @NameInMap("reserve_type")
         private Integer reserveType;
 
@@ -1252,6 +1275,7 @@ public class ApplyQueryResponseBody extends TeaModel {
             this.firstDiscount = builder.firstDiscount;
             this.flightCabins = builder.flightCabins;
             this.hotelCitys = builder.hotelCitys;
+            this.premiumEconomyDiscount = builder.premiumEconomyDiscount;
             this.reserveType = builder.reserveType;
             this.trainSeats = builder.trainSeats;
             this.userId = builder.userId;
@@ -1302,6 +1326,13 @@ public class ApplyQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return premiumEconomyDiscount
+         */
+        public Integer getPremiumEconomyDiscount() {
+            return this.premiumEconomyDiscount;
+        }
+
+        /**
          * @return reserveType
          */
         public Integer getReserveType() {
@@ -1335,6 +1366,7 @@ public class ApplyQueryResponseBody extends TeaModel {
             private Integer firstDiscount; 
             private String flightCabins; 
             private java.util.List < TravelerListHotelCitys> hotelCitys; 
+            private Integer premiumEconomyDiscount; 
             private Integer reserveType; 
             private String trainSeats; 
             private String userId; 
@@ -1377,6 +1409,14 @@ public class ApplyQueryResponseBody extends TeaModel {
              */
             public Builder hotelCitys(java.util.List < TravelerListHotelCitys> hotelCitys) {
                 this.hotelCitys = hotelCitys;
+                return this;
+            }
+
+            /**
+             * premium_economy_discount.
+             */
+            public Builder premiumEconomyDiscount(Integer premiumEconomyDiscount) {
+                this.premiumEconomyDiscount = premiumEconomyDiscount;
                 return this;
             }
 

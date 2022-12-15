@@ -118,7 +118,7 @@ public class InvoiceDeleteResponseBody extends TeaModel {
         }
 
         /**
-         * traceId.
+         * traceId
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;

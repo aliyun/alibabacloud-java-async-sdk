@@ -738,8 +738,6 @@ public class ApplyListQueryResponseBody extends TeaModel {
 
             /**
              * 离抵城市code，多个城市用中文“，”隔开
-             * <p>
-             * 
              */
             public Builder cityCodeSet(String cityCodeSet) {
                 this.cityCodeSet = cityCodeSet;

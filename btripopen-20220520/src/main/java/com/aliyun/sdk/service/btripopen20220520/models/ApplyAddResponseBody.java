@@ -114,7 +114,7 @@ public class ApplyAddResponseBody extends TeaModel {
         }
 
         /**
-         * module.
+         * module。
          */
         public Builder module(Module module) {
             this.module = module;

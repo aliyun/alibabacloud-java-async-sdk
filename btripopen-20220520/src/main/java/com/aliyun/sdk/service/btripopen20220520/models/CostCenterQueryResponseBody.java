@@ -158,7 +158,7 @@ public class CostCenterQueryResponseBody extends TeaModel {
         }
 
         /**
-         * traceId.
+         * traceId
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -455,7 +455,7 @@ public class CostCenterQueryResponseBody extends TeaModel {
             }
 
             /**
-             * rule_code.
+             * rule code
              */
             public Builder ruleCode(Long ruleCode) {
                 this.ruleCode = ruleCode;

@@ -114,7 +114,7 @@ public class CitySearchResponseBody extends TeaModel {
         }
 
         /**
-         * ����ֵ������˷��أ�û�н�������쳣�����ؿ�
+         * module
          */
         public Builder module(Module module) {
             this.module = module;

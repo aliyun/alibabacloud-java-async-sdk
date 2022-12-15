@@ -158,7 +158,7 @@ public class EntityDeleteResponseBody extends TeaModel {
         }
 
         /**
-         * traceId.
+         * traceId
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;

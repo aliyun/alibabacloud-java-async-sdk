@@ -138,7 +138,7 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
         }
 
         /**
-         * traceId.
+         * traceId
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -653,7 +653,7 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
             }
 
             /**
-             * cheapest.
+             * cheapest
              */
             public Builder cheapest(Cheapest cheapest) {
                 this.cheapest = cheapest;

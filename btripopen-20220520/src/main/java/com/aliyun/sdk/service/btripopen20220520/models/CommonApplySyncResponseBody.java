@@ -114,7 +114,7 @@ public class CommonApplySyncResponseBody extends TeaModel {
         }
 
         /**
-         * module.
+         * module。
          */
         public Builder module(Boolean module) {
             this.module = module;
