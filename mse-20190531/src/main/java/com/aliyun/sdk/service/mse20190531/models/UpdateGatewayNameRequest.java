@@ -82,7 +82,11 @@ public class UpdateGatewayNameRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * - zh: Chinese
+         * - en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -91,7 +95,7 @@ public class UpdateGatewayNameRequest extends Request {
         }
 
         /**
-         * GatewayUniqueId.
+         * The unique ID of the gateway.
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -100,7 +104,7 @@ public class UpdateGatewayNameRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the gateway.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

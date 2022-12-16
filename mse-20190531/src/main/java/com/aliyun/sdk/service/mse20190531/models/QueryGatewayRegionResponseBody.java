@@ -98,7 +98,7 @@ public class QueryGatewayRegionResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The request is processed successfully.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +106,10 @@ public class QueryGatewayRegionResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * - `true`: The request is successful. 
+         * - `false`: The request fails.
          */
         public Builder data(java.util.List < String > data) {
             this.data = data;
@@ -114,7 +117,7 @@ public class QueryGatewayRegionResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The ID of the request.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +125,7 @@ public class QueryGatewayRegionResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The HTTP status code returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +133,7 @@ public class QueryGatewayRegionResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The data structure.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +141,7 @@ public class QueryGatewayRegionResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * The status code returned.
          */
         public Builder success(Boolean success) {
             this.success = success;

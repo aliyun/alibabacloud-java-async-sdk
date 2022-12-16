@@ -110,7 +110,11 @@ public class UpdateGatewayRouteHeaderOpRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * - zh: Chinese
+         * - en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -119,7 +123,7 @@ public class UpdateGatewayRouteHeaderOpRequest extends Request {
         }
 
         /**
-         * GatewayId.
+         * The ID of the gateway.
          */
         public Builder gatewayId(Long gatewayId) {
             this.putQueryParameter("GatewayId", gatewayId);
@@ -128,7 +132,7 @@ public class UpdateGatewayRouteHeaderOpRequest extends Request {
         }
 
         /**
-         * GatewayUniqueId.
+         * The unique ID of the gateway.
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -137,7 +141,7 @@ public class UpdateGatewayRouteHeaderOpRequest extends Request {
         }
 
         /**
-         * HeaderOpJSON.
+         * The information about the header configuration policy.
          */
         public Builder headerOpJSON(String headerOpJSON) {
             this.putQueryParameter("HeaderOpJSON", headerOpJSON);
@@ -146,7 +150,7 @@ public class UpdateGatewayRouteHeaderOpRequest extends Request {
         }
 
         /**
-         * Id.
+         * The ID of the route.
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);

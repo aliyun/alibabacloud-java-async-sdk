@@ -82,7 +82,11 @@ public class DeleteSecurityGroupRuleRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * - zh: Chinese
+         * - en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -91,7 +95,7 @@ public class DeleteSecurityGroupRuleRequest extends Request {
         }
 
         /**
-         * GatewayUniqueId.
+         * The unique ID of the gateway.
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -100,7 +104,7 @@ public class DeleteSecurityGroupRuleRequest extends Request {
         }
 
         /**
-         * Id.
+         * The ID of the security group rule.
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);

@@ -166,7 +166,11 @@ public class AddGatewayDomainRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -175,7 +179,7 @@ public class AddGatewayDomainRequest extends Request {
         }
 
         /**
-         * CertIdentifier.
+         * The ID of the certificate.
          */
         public Builder certIdentifier(String certIdentifier) {
             this.putQueryParameter("CertIdentifier", certIdentifier);
@@ -184,7 +188,7 @@ public class AddGatewayDomainRequest extends Request {
         }
 
         /**
-         * GatewayUniqueId.
+         * The unique ID of the gateway.
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -193,7 +197,12 @@ public class AddGatewayDomainRequest extends Request {
         }
 
         /**
-         * Http2.
+         * Specifies whether to enable `HTTP/2`.
+         * <p>
+         * 
+         * *   `open`: enables `HTTP/2`
+         * *   `close`: disables `HTTP/2`
+         * *   `globalConfig`: uses global configurations
          */
         public Builder http2(String http2) {
             this.putQueryParameter("Http2", http2);
@@ -202,7 +211,7 @@ public class AddGatewayDomainRequest extends Request {
         }
 
         /**
-         * MustHttps.
+         * Specifies whether to enable HTTPS.
          */
         public Builder mustHttps(Boolean mustHttps) {
             this.putQueryParameter("MustHttps", mustHttps);
@@ -211,7 +220,7 @@ public class AddGatewayDomainRequest extends Request {
         }
 
         /**
-         * Name.
+         * The domain name.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -220,7 +229,7 @@ public class AddGatewayDomainRequest extends Request {
         }
 
         /**
-         * Protocol.
+         * The type of the protocol.
          */
         public Builder protocol(String protocol) {
             this.putQueryParameter("Protocol", protocol);
@@ -229,7 +238,7 @@ public class AddGatewayDomainRequest extends Request {
         }
 
         /**
-         * TlsMax.
+         * The maximum version of Transport Layer Security (TLS).
          */
         public Builder tlsMax(String tlsMax) {
             this.putQueryParameter("TlsMax", tlsMax);
@@ -238,7 +247,7 @@ public class AddGatewayDomainRequest extends Request {
         }
 
         /**
-         * TlsMin.
+         * The minimum version of TLS.
          */
         public Builder tlsMin(String tlsMin) {
             this.putQueryParameter("TlsMin", tlsMin);

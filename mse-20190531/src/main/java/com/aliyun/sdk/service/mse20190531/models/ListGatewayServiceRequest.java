@@ -124,7 +124,11 @@ public class ListGatewayServiceRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -133,7 +137,7 @@ public class ListGatewayServiceRequest extends Request {
         }
 
         /**
-         * DescSort.
+         * Specifies whether to enable sorting.
          */
         public Builder descSort(Boolean descSort) {
             this.putQueryParameter("DescSort", descSort);
@@ -142,7 +146,7 @@ public class ListGatewayServiceRequest extends Request {
         }
 
         /**
-         * FilterParams.
+         * The parameters that specify filter conditions, which are in the format of {"key1":"value1"}.
          */
         public Builder filterParams(FilterParams filterParams) {
             String filterParamsShrink = shrink(filterParams, "FilterParams", "json");
@@ -152,7 +156,7 @@ public class ListGatewayServiceRequest extends Request {
         }
 
         /**
-         * OrderItem.
+         * The item based on which entries are sorted.
          */
         public Builder orderItem(String orderItem) {
             this.putQueryParameter("OrderItem", orderItem);
@@ -161,7 +165,7 @@ public class ListGatewayServiceRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -170,7 +174,7 @@ public class ListGatewayServiceRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -272,7 +276,7 @@ public class ListGatewayServiceRequest extends Request {
             private String sourceType; 
 
             /**
-             * GatewayUniqueId.
+             * The unique ID of the gateway.
              */
             public Builder gatewayUniqueId(String gatewayUniqueId) {
                 this.gatewayUniqueId = gatewayUniqueId;
@@ -280,7 +284,7 @@ public class ListGatewayServiceRequest extends Request {
             }
 
             /**
-             * GroupName.
+             * The group.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -288,7 +292,7 @@ public class ListGatewayServiceRequest extends Request {
             }
 
             /**
-             * Name.
+             * The name of the service.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -296,7 +300,7 @@ public class ListGatewayServiceRequest extends Request {
             }
 
             /**
-             * Namespace.
+             * The namespace.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -304,7 +308,14 @@ public class ListGatewayServiceRequest extends Request {
             }
 
             /**
-             * ServiceProtocol.
+             * The protocol of the service.
+             * <p>
+             * 
+             * *   HTTP
+             * *   HTTPS
+             * *   HTTP2
+             * *   GRPC
+             * *   DUBBO
              */
             public Builder serviceProtocol(String serviceProtocol) {
                 this.serviceProtocol = serviceProtocol;
@@ -312,7 +323,7 @@ public class ListGatewayServiceRequest extends Request {
             }
 
             /**
-             * SourceType.
+             * The type of the service source.
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;

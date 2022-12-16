@@ -122,7 +122,7 @@ public class ListClusterConnectionTypesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code returned.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -130,7 +130,7 @@ public class ListClusterConnectionTypesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The details of the data.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -138,7 +138,10 @@ public class ListClusterConnectionTypesResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * The dynamic part in the error message. This parameter is used to replace the **%s** variable in the **Message** parameter. 
+         * <p>
+         * 
+         * > If the specified **InstanceId** parameter is invalid, **The Value of Input Parameter %s is not valid** is returned for **Message** and **InstanceId** is returned for **DynamicMessage**.
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -146,7 +149,7 @@ public class ListClusterConnectionTypesResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code returned if the request fails.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -154,7 +157,7 @@ public class ListClusterConnectionTypesResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -162,7 +165,7 @@ public class ListClusterConnectionTypesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -170,7 +173,7 @@ public class ListClusterConnectionTypesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -178,7 +181,10 @@ public class ListClusterConnectionTypesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * - `true`: The request is successful. 
+         * - `false`: The request fails.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -218,7 +224,7 @@ public class ListClusterConnectionTypesResponseBody extends TeaModel {
             private String showName; 
 
             /**
-             * ShowName.
+             * The connection type.
              */
             public Builder showName(String showName) {
                 this.showName = showName;

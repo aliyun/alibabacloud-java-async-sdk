@@ -110,7 +110,11 @@ public class UpdateGatewayRouteHTTPRewriteRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * - zh: Chinese
+         * - en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -119,7 +123,7 @@ public class UpdateGatewayRouteHTTPRewriteRequest extends Request {
         }
 
         /**
-         * GatewayId.
+         * The ID of the gateway.
          */
         public Builder gatewayId(Long gatewayId) {
             this.putQueryParameter("GatewayId", gatewayId);
@@ -128,7 +132,7 @@ public class UpdateGatewayRouteHTTPRewriteRequest extends Request {
         }
 
         /**
-         * GatewayUniqueId.
+         * The unique ID of the gateway.
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -137,7 +141,7 @@ public class UpdateGatewayRouteHTTPRewriteRequest extends Request {
         }
 
         /**
-         * HttpRewriteJSON.
+         * The information about the rewrite policy. The JSON format is supported.
          */
         public Builder httpRewriteJSON(String httpRewriteJSON) {
             this.putQueryParameter("HttpRewriteJSON", httpRewriteJSON);
@@ -146,7 +150,7 @@ public class UpdateGatewayRouteHTTPRewriteRequest extends Request {
         }
 
         /**
-         * Id.
+         * The ID of the route.
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);

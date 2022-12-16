@@ -84,7 +84,11 @@ public class GetGovernanceKubernetesClusterRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * - zh: Chinese
+         * - en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -93,7 +97,7 @@ public class GetGovernanceKubernetesClusterRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * The ID of the cluster.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -102,7 +106,7 @@ public class GetGovernanceKubernetesClusterRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region in which the cluster resides.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

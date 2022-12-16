@@ -194,7 +194,11 @@ public class UpdateBlackWhiteListRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * - zh: Chinese
+         * - en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -203,7 +207,7 @@ public class UpdateBlackWhiteListRequest extends Request {
         }
 
         /**
-         * Content.
+         * The content of the blacklist.
          */
         public Builder content(String content) {
             this.putQueryParameter("Content", content);
@@ -212,7 +216,7 @@ public class UpdateBlackWhiteListRequest extends Request {
         }
 
         /**
-         * GatewayUniqueId.
+         * The unique ID of the gateway.
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -221,7 +225,7 @@ public class UpdateBlackWhiteListRequest extends Request {
         }
 
         /**
-         * Id.
+         * The ID of the blacklist.
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -230,7 +234,7 @@ public class UpdateBlackWhiteListRequest extends Request {
         }
 
         /**
-         * IsWhite.
+         * Specifies whether to modify the whitelist.
          */
         public Builder isWhite(Boolean isWhite) {
             this.putQueryParameter("IsWhite", isWhite);
@@ -266,7 +270,7 @@ public class UpdateBlackWhiteListRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of the resource.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -275,7 +279,7 @@ public class UpdateBlackWhiteListRequest extends Request {
         }
 
         /**
-         * Status.
+         * Specifies whether to enable the blacklist or whitelist.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -284,7 +288,7 @@ public class UpdateBlackWhiteListRequest extends Request {
         }
 
         /**
-         * Type.
+         * The type of the blacklist or whitelist.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

@@ -98,7 +98,7 @@ public class CreateMseServiceApplicationResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * Code.
+         * The status code returned.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class CreateMseServiceApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data structure.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class CreateMseServiceApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class CreateMseServiceApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +130,7 @@ public class CreateMseServiceApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,11 @@ public class CreateMseServiceApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(String success) {
             this.success = success;
@@ -310,7 +314,7 @@ public class CreateMseServiceApplicationResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * AppId.
+             * The ID of the application.
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -318,7 +322,7 @@ public class CreateMseServiceApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * The name of the application.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -326,7 +330,7 @@ public class CreateMseServiceApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The creation time.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -334,7 +338,7 @@ public class CreateMseServiceApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * ExtraInfo.
+             * The additional information.
              */
             public Builder extraInfo(String extraInfo) {
                 this.extraInfo = extraInfo;
@@ -342,7 +346,7 @@ public class CreateMseServiceApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * Language.
+             * The programming language of the application.
              */
             public Builder language(String language) {
                 this.language = language;
@@ -350,7 +354,7 @@ public class CreateMseServiceApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * LicenseKey.
+             * The license key in use.
              */
             public Builder licenseKey(String licenseKey) {
                 this.licenseKey = licenseKey;
@@ -358,7 +362,7 @@ public class CreateMseServiceApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -366,7 +370,7 @@ public class CreateMseServiceApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * The type of the service source.
              */
             public Builder source(String source) {
                 this.source = source;
@@ -374,7 +378,7 @@ public class CreateMseServiceApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -382,7 +386,7 @@ public class CreateMseServiceApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The time of the last modification.
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -390,7 +394,7 @@ public class CreateMseServiceApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * The ID of the user.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -398,7 +402,7 @@ public class CreateMseServiceApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * The version information.
              */
             public Builder version(String version) {
                 this.version = version;

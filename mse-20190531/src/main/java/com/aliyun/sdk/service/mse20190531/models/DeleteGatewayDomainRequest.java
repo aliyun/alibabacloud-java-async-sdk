@@ -91,7 +91,7 @@ public class DeleteGatewayDomainRequest extends Request {
         }
 
         /**
-         * GatewayUniqueId.
+         * The unique ID of the gateway.
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -100,7 +100,7 @@ public class DeleteGatewayDomainRequest extends Request {
         }
 
         /**
-         * Id.
+         * The ID of the domain name.
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);

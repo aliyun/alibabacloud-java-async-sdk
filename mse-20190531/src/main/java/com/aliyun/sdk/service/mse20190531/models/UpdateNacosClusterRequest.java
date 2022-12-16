@@ -170,7 +170,11 @@ public class UpdateNacosClusterRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -179,7 +183,7 @@ public class UpdateNacosClusterRequest extends Request {
         }
 
         /**
-         * 健康检查端口
+         * The port used for health checks.
          */
         public Builder checkPort(Integer checkPort) {
             this.putQueryParameter("CheckPort", checkPort);
@@ -188,7 +192,7 @@ public class UpdateNacosClusterRequest extends Request {
         }
 
         /**
-         * Nacos集群名
+         * The name of the Nacos cluster.
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("ClusterName", clusterName);
@@ -197,7 +201,7 @@ public class UpdateNacosClusterRequest extends Request {
         }
 
         /**
-         * 分组名
+         * The name of the group.
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -206,7 +210,7 @@ public class UpdateNacosClusterRequest extends Request {
         }
 
         /**
-         * 健康检查类型
+         * The type of the health check.
          */
         public Builder healthChecker(String healthChecker) {
             this.putQueryParameter("HealthChecker", healthChecker);
@@ -215,7 +219,7 @@ public class UpdateNacosClusterRequest extends Request {
         }
 
         /**
-         * 实例id
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -224,7 +228,7 @@ public class UpdateNacosClusterRequest extends Request {
         }
 
         /**
-         * 命名空间id
+         * The ID of the namespace.
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
@@ -233,7 +237,7 @@ public class UpdateNacosClusterRequest extends Request {
         }
 
         /**
-         * 服务名
+         * The name of the service.
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);
@@ -242,7 +246,7 @@ public class UpdateNacosClusterRequest extends Request {
         }
 
         /**
-         * 是否使用实例端口进行健康检查
+         * Specifies whether to use the port of the instance for a health check.
          */
         public Builder useInstancePortForCheck(Boolean useInstancePortForCheck) {
             this.putQueryParameter("UseInstancePortForCheck", useInstancePortForCheck);

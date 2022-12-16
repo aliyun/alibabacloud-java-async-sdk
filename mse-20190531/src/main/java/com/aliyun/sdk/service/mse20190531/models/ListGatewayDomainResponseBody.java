@@ -98,7 +98,7 @@ public class ListGatewayDomainResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code returned.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class ListGatewayDomainResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The details of the data.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class ListGatewayDomainResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class ListGatewayDomainResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message returned if the request fails.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +130,7 @@ public class ListGatewayDomainResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,10 @@ public class ListGatewayDomainResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * - `true`: The request is successful. 
+         * - `false`: The request fails.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -387,7 +390,7 @@ public class ListGatewayDomainResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * CertBeforeDate.
+             * The expiration time of the certificate.
              */
             public Builder certBeforeDate(String certBeforeDate) {
                 this.certBeforeDate = certBeforeDate;
@@ -395,7 +398,7 @@ public class ListGatewayDomainResponseBody extends TeaModel {
             }
 
             /**
-             * CertIdentifier.
+             * The ID of the certificate.
              */
             public Builder certIdentifier(String certIdentifier) {
                 this.certIdentifier = certIdentifier;
@@ -411,7 +414,7 @@ public class ListGatewayDomainResponseBody extends TeaModel {
             }
 
             /**
-             * GatewayId.
+             * The ID of the gateway.
              */
             public Builder gatewayId(Long gatewayId) {
                 this.gatewayId = gatewayId;
@@ -419,7 +422,7 @@ public class ListGatewayDomainResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The time when the domain name was associated.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -427,7 +430,7 @@ public class ListGatewayDomainResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The time when the domain name was last modified.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -435,7 +438,11 @@ public class ListGatewayDomainResponseBody extends TeaModel {
             }
 
             /**
-             * Http2.
+             * Specifies whether to enable `Http2`.
+             * <p>
+             * - `open`: enables `Http2`.
+             * - `close`: disables `Http2`.
+             * - `globalConfig`: uses global configurations.
              */
             public Builder http2(String http2) {
                 this.http2 = http2;
@@ -443,7 +450,7 @@ public class ListGatewayDomainResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * ID
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -451,7 +458,7 @@ public class ListGatewayDomainResponseBody extends TeaModel {
             }
 
             /**
-             * MustHttps.
+             * Indicates whether HTTPS is forcibly used.
              */
             public Builder mustHttps(Boolean mustHttps) {
                 this.mustHttps = mustHttps;
@@ -459,7 +466,7 @@ public class ListGatewayDomainResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The domain name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -467,7 +474,7 @@ public class ListGatewayDomainResponseBody extends TeaModel {
             }
 
             /**
-             * Protocol.
+             * The type of the protocol.
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -483,7 +490,7 @@ public class ListGatewayDomainResponseBody extends TeaModel {
             }
 
             /**
-             * TlsMax.
+             * The maximum version of Transport Layer Security (TLS).
              */
             public Builder tlsMax(String tlsMax) {
                 this.tlsMax = tlsMax;
@@ -491,7 +498,7 @@ public class ListGatewayDomainResponseBody extends TeaModel {
             }
 
             /**
-             * TlsMin.
+             * The minimum version of TLS.
              */
             public Builder tlsMin(String tlsMin) {
                 this.tlsMin = tlsMin;

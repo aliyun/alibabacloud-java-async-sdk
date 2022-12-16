@@ -348,7 +348,11 @@ public class UpdateConfigRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -357,7 +361,7 @@ public class UpdateConfigRequest extends Request {
         }
 
         /**
-         * AutopurgePurgeInterval.
+         * A reserved parameter.
          */
         public Builder autopurgePurgeInterval(String autopurgePurgeInterval) {
             this.putQueryParameter("AutopurgePurgeInterval", autopurgePurgeInterval);
@@ -366,7 +370,7 @@ public class UpdateConfigRequest extends Request {
         }
 
         /**
-         * AutopurgeSnapRetainCount.
+         * A reserved parameter.
          */
         public Builder autopurgeSnapRetainCount(String autopurgeSnapRetainCount) {
             this.putQueryParameter("AutopurgeSnapRetainCount", autopurgeSnapRetainCount);
@@ -375,7 +379,7 @@ public class UpdateConfigRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * The ID of the instance.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -384,7 +388,13 @@ public class UpdateConfigRequest extends Request {
         }
 
         /**
-         * ConfigAuthEnabled.
+         * Specifies whether to enable RAM authentication for a configuration center. This parameter is valid for Nacos instances. Valid values:
+         * <p>
+         * 
+         * *   `true`: yes
+         * *   `false`: no
+         * 
+         * > Before you set this parameter, you must call the QueryConfig operation to obtain the ConfigAuthSupported parameter value to check whether the instance supports this feature.
          */
         public Builder configAuthEnabled(Boolean configAuthEnabled) {
             this.putQueryParameter("ConfigAuthEnabled", configAuthEnabled);
@@ -393,7 +403,13 @@ public class UpdateConfigRequest extends Request {
         }
 
         /**
-         * ConfigSecretEnabled.
+         * Specifies whether to enable configuration encryption for a configuration center. This parameter is valid for Nacos instances. Valid values:
+         * <p>
+         * 
+         * *   `true`: yes
+         * *   `false`: no
+         * 
+         * > Before you set this parameter, you must call the QueryConfig operation to obtain the ConfigSecretSupported parameter value to check whether the instance supports this feature.
          */
         public Builder configSecretEnabled(Boolean configSecretEnabled) {
             this.putQueryParameter("ConfigSecretEnabled", configSecretEnabled);
@@ -402,7 +418,7 @@ public class UpdateConfigRequest extends Request {
         }
 
         /**
-         * ConfigType.
+         * The format of the configuration. Supported formats include TEXT, JSON, XML, and HTML.
          */
         public Builder configType(String configType) {
             this.putQueryParameter("ConfigType", configType);
@@ -411,7 +427,7 @@ public class UpdateConfigRequest extends Request {
         }
 
         /**
-         * InitLimit.
+         * The maximum connection duration of the instance. This parameter is valid for ZooKeeper instances. Unit: seconds.
          */
         public Builder initLimit(String initLimit) {
             this.putQueryParameter("InitLimit", initLimit);
@@ -420,7 +436,7 @@ public class UpdateConfigRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -429,7 +445,7 @@ public class UpdateConfigRequest extends Request {
         }
 
         /**
-         * JuteMaxbuffer.
+         * The maximum amount of data on each node. This parameter is valid for ZooKeeper instances. The default maximum data amount on each node is 1 megabyte. Unit: bytes.
          */
         public Builder juteMaxbuffer(String juteMaxbuffer) {
             this.putQueryParameter("JuteMaxbuffer", juteMaxbuffer);
@@ -438,7 +454,13 @@ public class UpdateConfigRequest extends Request {
         }
 
         /**
-         * MCPEnabled.
+         * Specifies whether to enable Mesh Configuration Protocol (MCP). This parameter is valid for Nacos instances. Valid values:
+         * <p>
+         * 
+         * *   `true`: yes
+         * *   `false`: no
+         * 
+         * > Before you set this parameter, you must call the QueryConfig operation to obtain the MCPSupported parameter value to check whether the instance supports this feature.
          */
         public Builder MCPEnabled(Boolean MCPEnabled) {
             this.putQueryParameter("MCPEnabled", MCPEnabled);
@@ -447,7 +469,9 @@ public class UpdateConfigRequest extends Request {
         }
 
         /**
-         * MaxClientCnxns.
+         * The number of connections between a client and a server. This parameter is valid for ZooKeeper instances.\
+         * <p>
+         * If this parameter is set to 0, no limits are imposed on the number of connections.
          */
         public Builder maxClientCnxns(String maxClientCnxns) {
             this.putQueryParameter("MaxClientCnxns", maxClientCnxns);
@@ -456,7 +480,7 @@ public class UpdateConfigRequest extends Request {
         }
 
         /**
-         * 最大超时时间
+         * The maximum timeout period. This parameter is valid for ZooKeeper instances. Unit: seconds.
          */
         public Builder maxSessionTimeout(String maxSessionTimeout) {
             this.putQueryParameter("MaxSessionTimeout", maxSessionTimeout);
@@ -465,7 +489,7 @@ public class UpdateConfigRequest extends Request {
         }
 
         /**
-         * 最小超时时间
+         * The minimum timeout period. This parameter is valid for ZooKeeper instances. Unit: seconds.
          */
         public Builder minSessionTimeout(String minSessionTimeout) {
             this.putQueryParameter("MinSessionTimeout", minSessionTimeout);
@@ -474,7 +498,13 @@ public class UpdateConfigRequest extends Request {
         }
 
         /**
-         * NamingAuthEnabled.
+         * Specifies whether to enable RAM authentication for a registry. This parameter is valid for Nacos instances. Valid values:
+         * <p>
+         * 
+         * *   `true`: yes
+         * *   `false`: no
+         * 
+         * > Before you set this parameter, you must call the QueryConfig operation to obtain the NamingAuthSupported parameter value to check whether the instance supports this feature.
          */
         public Builder namingAuthEnabled(Boolean namingAuthEnabled) {
             this.putQueryParameter("NamingAuthEnabled", namingAuthEnabled);
@@ -483,7 +513,11 @@ public class UpdateConfigRequest extends Request {
         }
 
         /**
-         * OpenSuperAcl.
+         * Specifies whether to enable super permissions. This parameter is valid for ZooKeeper instances. Valid values:
+         * <p>
+         * 
+         * *   `true`: yes
+         * *   `false`: no
          */
         public Builder openSuperAcl(String openSuperAcl) {
             this.putBodyParameter("OpenSuperAcl", openSuperAcl);
@@ -492,7 +526,10 @@ public class UpdateConfigRequest extends Request {
         }
 
         /**
-         * PassWord.
+         * The password that corresponds to the username.
+         * <p>
+         * 
+         * > You must specify this parameter if OpenSuperAcl is set to true.
          */
         public Builder passWord(String passWord) {
             this.putQueryParameter("PassWord", passWord);
@@ -501,7 +538,7 @@ public class UpdateConfigRequest extends Request {
         }
 
         /**
-         * RequestPars.
+         * The extended request parameter in the JSON format.
          */
         public Builder requestPars(String requestPars) {
             this.putQueryParameter("RequestPars", requestPars);
@@ -510,7 +547,7 @@ public class UpdateConfigRequest extends Request {
         }
 
         /**
-         * SnapshotCount.
+         * The frequency for generating snapshots. This parameter is valid for ZooKeeper instances.
          */
         public Builder snapshotCount(String snapshotCount) {
             this.putQueryParameter("SnapshotCount", snapshotCount);
@@ -519,7 +556,7 @@ public class UpdateConfigRequest extends Request {
         }
 
         /**
-         * SyncLimit.
+         * The connection timeout period of the instance. This parameter is valid for ZooKeeper instances. Unit: seconds.
          */
         public Builder syncLimit(String syncLimit) {
             this.putQueryParameter("SyncLimit", syncLimit);
@@ -528,7 +565,7 @@ public class UpdateConfigRequest extends Request {
         }
 
         /**
-         * TickTime.
+         * The time unit. This parameter is valid for ZooKeeper instances. Default value: 2000. Unit: milliseconds.
          */
         public Builder tickTime(String tickTime) {
             this.putQueryParameter("TickTime", tickTime);
@@ -537,7 +574,10 @@ public class UpdateConfigRequest extends Request {
         }
 
         /**
-         * UserName.
+         * The name of the user.
+         * <p>
+         * 
+         * > You must specify this parameter if OpenSuperAcl is set to true.
          */
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);

@@ -112,7 +112,11 @@ public class ImportNacosConfigRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * - zh: Chinese
+         * - en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -121,7 +125,7 @@ public class ImportNacosConfigRequest extends Request {
         }
 
         /**
-         * FileUrl.
+         * The download URL of the configuration file.
          */
         public Builder fileUrl(String fileUrl) {
             this.putQueryParameter("FileUrl", fileUrl);
@@ -130,7 +134,7 @@ public class ImportNacosConfigRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -139,7 +143,7 @@ public class ImportNacosConfigRequest extends Request {
         }
 
         /**
-         * NamespaceId.
+         * The ID of the namespace.
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
@@ -148,7 +152,7 @@ public class ImportNacosConfigRequest extends Request {
         }
 
         /**
-         * Policy.
+         * The policy used to handle write conflicts.
          */
         public Builder policy(String policy) {
             this.putQueryParameter("Policy", policy);

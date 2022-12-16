@@ -133,7 +133,7 @@ public class AddAuthResourceRequest extends Request {
         }
 
         /**
-         * AuthId.
+         * The ID of the authorization record.
          */
         public Builder authId(Long authId) {
             this.putQueryParameter("AuthId", authId);
@@ -142,7 +142,7 @@ public class AddAuthResourceRequest extends Request {
         }
 
         /**
-         * DomainId.
+         * The ID of the domain name.
          */
         public Builder domainId(Long domainId) {
             this.putQueryParameter("DomainId", domainId);
@@ -151,7 +151,7 @@ public class AddAuthResourceRequest extends Request {
         }
 
         /**
-         * GatewayUniqueId.
+         * The unique ID of the gateway.
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -169,7 +169,7 @@ public class AddAuthResourceRequest extends Request {
         }
 
         /**
-         * Path.
+         * The path.
          */
         public Builder path(String path) {
             this.putQueryParameter("Path", path);

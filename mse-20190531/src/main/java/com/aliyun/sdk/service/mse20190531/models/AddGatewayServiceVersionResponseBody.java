@@ -98,7 +98,7 @@ public class AddGatewayServiceVersionResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code returned. The value 200 indicates that the request is successfully processed.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class AddGatewayServiceVersionResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The ID of the created gateway.
          */
         public Builder data(Long data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class AddGatewayServiceVersionResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class AddGatewayServiceVersionResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message returned if the request failed.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +130,7 @@ public class AddGatewayServiceVersionResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,11 @@ public class AddGatewayServiceVersionResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -98,7 +98,7 @@ public class GetApplicationListResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code returned.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class GetApplicationListResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data structure.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class GetApplicationListResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class GetApplicationListResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +130,7 @@ public class GetApplicationListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,11 @@ public class GetApplicationListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -286,7 +290,7 @@ public class GetApplicationListResponseBody extends TeaModel {
             private String userId; 
 
             /**
-             * AppId.
+             * The ID of the application.
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -294,7 +298,7 @@ public class GetApplicationListResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * The name of the application.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -302,7 +306,7 @@ public class GetApplicationListResponseBody extends TeaModel {
             }
 
             /**
-             * ExtraInfo.
+             * The additional information.
              */
             public Builder extraInfo(String extraInfo) {
                 this.extraInfo = extraInfo;
@@ -310,7 +314,7 @@ public class GetApplicationListResponseBody extends TeaModel {
             }
 
             /**
-             * InstancesNumber.
+             * The number of instances.
              */
             public Builder instancesNumber(Integer instancesNumber) {
                 this.instancesNumber = instancesNumber;
@@ -318,7 +322,7 @@ public class GetApplicationListResponseBody extends TeaModel {
             }
 
             /**
-             * Language.
+             * The programming language of the application.
              */
             public Builder language(String language) {
                 this.language = language;
@@ -326,7 +330,7 @@ public class GetApplicationListResponseBody extends TeaModel {
             }
 
             /**
-             * LicenseKey.
+             * The license key in use.
              */
             public Builder licenseKey(String licenseKey) {
                 this.licenseKey = licenseKey;
@@ -334,7 +338,7 @@ public class GetApplicationListResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -342,7 +346,7 @@ public class GetApplicationListResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * The source of the application.
              */
             public Builder source(String source) {
                 this.source = source;
@@ -350,7 +354,7 @@ public class GetApplicationListResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status.
              */
             public Builder status(Long status) {
                 this.status = status;
@@ -358,7 +362,7 @@ public class GetApplicationListResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * The ID of the user.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -435,7 +439,7 @@ public class GetApplicationListResponseBody extends TeaModel {
             private Integer totalSize; 
 
             /**
-             * PageNumber.
+             * The page number of the returned page.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -443,7 +447,7 @@ public class GetApplicationListResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -451,7 +455,7 @@ public class GetApplicationListResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * The returned information.
              */
             public Builder result(java.util.List < Result> result) {
                 this.result = result;
@@ -459,7 +463,7 @@ public class GetApplicationListResponseBody extends TeaModel {
             }
 
             /**
-             * TotalSize.
+             * The total number of entries returned.
              */
             public Builder totalSize(Integer totalSize) {
                 this.totalSize = totalSize;

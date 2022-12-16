@@ -98,7 +98,7 @@ public class GetOverviewResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * Code.
+         * The status code returned.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class GetOverviewResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The details of the data.
          */
         public Builder data(String data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class GetOverviewResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class GetOverviewResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +130,7 @@ public class GetOverviewResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,11 @@ public class GetOverviewResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * 
+         * - `true`: The request is successful. 
+         * - `false`: The request fails.
          */
         public Builder success(String success) {
             this.success = success;

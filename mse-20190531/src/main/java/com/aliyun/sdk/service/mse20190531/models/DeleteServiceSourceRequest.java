@@ -91,7 +91,7 @@ public class DeleteServiceSourceRequest extends Request {
         }
 
         /**
-         * GatewayUniqueId.
+         * The unique ID of the gateway.
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -100,7 +100,7 @@ public class DeleteServiceSourceRequest extends Request {
         }
 
         /**
-         * SourceId.
+         * The ID of the service source.
          */
         public Builder sourceId(Long sourceId) {
             this.putQueryParameter("SourceId", sourceId);

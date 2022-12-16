@@ -86,7 +86,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The details of the data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -94,7 +94,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code returned if the request fails.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -102,7 +102,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,10 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * - `true`: The request is successful. 
+         * - `false`: The request fails.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -230,7 +233,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             private Boolean useIPPort4Check; 
 
             /**
-             * DefaultCheckPort.
+             * The default port used for a health check.
              */
             public Builder defaultCheckPort(Integer defaultCheckPort) {
                 this.defaultCheckPort = defaultCheckPort;
@@ -238,7 +241,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultPort.
+             * The default port.
              */
             public Builder defaultPort(Integer defaultPort) {
                 this.defaultPort = defaultPort;
@@ -246,7 +249,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * HealthCheckerType.
+             * The type of health check.
              */
             public Builder healthCheckerType(String healthCheckerType) {
                 this.healthCheckerType = healthCheckerType;
@@ -254,7 +257,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Metadata.
+             * The metadata.
              */
             public Builder metadata(java.util.Map < String, ? > metadata) {
                 this.metadata = metadata;
@@ -262,7 +265,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the cluster.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -270,7 +273,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceName.
+             * The name of the service.
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -278,7 +281,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * UseIPPort4Check.
+             * Indicates whether the IP address is used for a health check.
              */
             public Builder useIPPort4Check(Boolean useIPPort4Check) {
                 this.useIPPort4Check = useIPPort4Check;
@@ -391,7 +394,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             private String selectorType; 
 
             /**
-             * Clusters.
+             * The information about clusters.
              */
             public Builder clusters(java.util.List < Clusters> clusters) {
                 this.clusters = clusters;
@@ -399,7 +402,10 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Ephemeral.
+             * Indicates whether the service is marked as a temporary node. Valid values:
+             * <p>
+             * - `true` 
+             * - `false`
              */
             public Builder ephemeral(Boolean ephemeral) {
                 this.ephemeral = ephemeral;
@@ -407,7 +413,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * The name of the contact group.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -415,7 +421,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Metadata.
+             * The metadata.
              */
             public Builder metadata(java.util.Map < String, ? > metadata) {
                 this.metadata = metadata;
@@ -423,7 +429,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the service.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -431,7 +437,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * ProtectThreshold.
+             * The protection threshold.
              */
             public Builder protectThreshold(Float protectThreshold) {
                 this.protectThreshold = protectThreshold;
@@ -439,7 +445,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * SelectorType.
+             * The election mode.
              */
             public Builder selectorType(String selectorType) {
                 this.selectorType = selectorType;

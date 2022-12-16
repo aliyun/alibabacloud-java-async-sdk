@@ -134,7 +134,7 @@ public class ListAnsServicesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Data.
+         * The details of the data.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -142,7 +142,7 @@ public class ListAnsServicesResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -150,7 +150,7 @@ public class ListAnsServicesResponseBody extends TeaModel {
         }
 
         /**
-         * HttpCode.
+         * The HTTP status code.
          */
         public Builder httpCode(String httpCode) {
             this.httpCode = httpCode;
@@ -158,7 +158,7 @@ public class ListAnsServicesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -166,7 +166,7 @@ public class ListAnsServicesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -174,7 +174,7 @@ public class ListAnsServicesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -182,7 +182,7 @@ public class ListAnsServicesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -190,7 +190,11 @@ public class ListAnsServicesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -198,7 +202,7 @@ public class ListAnsServicesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of returned instances.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -286,7 +290,7 @@ public class ListAnsServicesResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * ClusterCount.
+             * The total number of clusters.
              */
             public Builder clusterCount(Integer clusterCount) {
                 this.clusterCount = clusterCount;
@@ -294,7 +298,7 @@ public class ListAnsServicesResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * The name of the contact group.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -302,7 +306,7 @@ public class ListAnsServicesResponseBody extends TeaModel {
             }
 
             /**
-             * HealthyInstanceCount.
+             * The total number of instances with healthy heartbeats.
              */
             public Builder healthyInstanceCount(Integer healthyInstanceCount) {
                 this.healthyInstanceCount = healthyInstanceCount;
@@ -310,7 +314,7 @@ public class ListAnsServicesResponseBody extends TeaModel {
             }
 
             /**
-             * IpCount.
+             * The total number of instances that are used for the current service.
              */
             public Builder ipCount(Integer ipCount) {
                 this.ipCount = ipCount;
@@ -318,7 +322,7 @@ public class ListAnsServicesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the service.
              */
             public Builder name(String name) {
                 this.name = name;

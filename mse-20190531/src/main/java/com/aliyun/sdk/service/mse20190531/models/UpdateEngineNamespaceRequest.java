@@ -140,7 +140,11 @@ public class UpdateEngineNamespaceRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * - zh: Chinese
+         * - en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -149,7 +153,7 @@ public class UpdateEngineNamespaceRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * The ID of the cluster.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -158,7 +162,7 @@ public class UpdateEngineNamespaceRequest extends Request {
         }
 
         /**
-         * Desc.
+         * The description of the cluster.
          */
         public Builder desc(String desc) {
             this.putQueryParameter("Desc", desc);
@@ -167,7 +171,7 @@ public class UpdateEngineNamespaceRequest extends Request {
         }
 
         /**
-         * Id.
+         * The ID of the namespace.
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);
@@ -176,7 +180,7 @@ public class UpdateEngineNamespaceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -185,7 +189,7 @@ public class UpdateEngineNamespaceRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the cluster.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -194,7 +198,7 @@ public class UpdateEngineNamespaceRequest extends Request {
         }
 
         /**
-         * ServiceCount.
+         * The number of active services.
          */
         public Builder serviceCount(Integer serviceCount) {
             this.putQueryParameter("ServiceCount", serviceCount);

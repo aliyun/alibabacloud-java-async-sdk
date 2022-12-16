@@ -124,7 +124,11 @@ public class QueryConfigRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -133,7 +137,7 @@ public class QueryConfigRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * The ID of the cluster.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -142,7 +146,7 @@ public class QueryConfigRequest extends Request {
         }
 
         /**
-         * ConfigType.
+         * The format of the configuration. Supported formats include TEXT, JSON, XML, and HTML.
          */
         public Builder configType(String configType) {
             this.putQueryParameter("ConfigType", configType);
@@ -151,7 +155,7 @@ public class QueryConfigRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -169,7 +173,7 @@ public class QueryConfigRequest extends Request {
         }
 
         /**
-         * RequestPars.
+         * The extended request parameter in the JSON format.
          */
         public Builder requestPars(String requestPars) {
             this.putQueryParameter("RequestPars", requestPars);

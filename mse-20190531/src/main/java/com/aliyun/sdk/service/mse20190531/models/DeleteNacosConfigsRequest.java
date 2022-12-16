@@ -99,7 +99,11 @@ public class DeleteNacosConfigsRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * - zh: Chinese
+         * - en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -108,7 +112,7 @@ public class DeleteNacosConfigsRequest extends Request {
         }
 
         /**
-         * Ids.
+         * The IDs of configurations.
          */
         public Builder ids(String ids) {
             this.putQueryParameter("Ids", ids);
@@ -117,7 +121,7 @@ public class DeleteNacosConfigsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -126,7 +130,7 @@ public class DeleteNacosConfigsRequest extends Request {
         }
 
         /**
-         * NamespaceId.
+         * The ID of the namespace.
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);

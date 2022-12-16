@@ -155,7 +155,11 @@ public class ListClustersRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -164,7 +168,7 @@ public class ListClustersRequest extends Request {
         }
 
         /**
-         * ClusterAliasName.
+         * The alias of the instance. Fuzzy match is supported.
          */
         public Builder clusterAliasName(String clusterAliasName) {
             this.putQueryParameter("ClusterAliasName", clusterAliasName);
@@ -173,7 +177,7 @@ public class ListClustersRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * The number of the page to return.
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -182,7 +186,7 @@ public class ListClustersRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -191,7 +195,7 @@ public class ListClustersRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region in which the instance resides. The region is supported by MSE.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -200,7 +204,7 @@ public class ListClustersRequest extends Request {
         }
 
         /**
-         * RequestPars.
+         * The extended request parameter in the JSON format.
          */
         public Builder requestPars(String requestPars) {
             this.putQueryParameter("RequestPars", requestPars);
@@ -209,7 +213,7 @@ public class ListClustersRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group. For more information about resource groups, see the topic "View basic information of a resource group."
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -218,7 +222,7 @@ public class ListClustersRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The list of tags. A maximum number of 20 tags are supported.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -272,7 +276,7 @@ public class ListClustersRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of a tag.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -280,7 +284,7 @@ public class ListClustersRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of a tag.
              */
             public Builder value(String value) {
                 this.value = value;

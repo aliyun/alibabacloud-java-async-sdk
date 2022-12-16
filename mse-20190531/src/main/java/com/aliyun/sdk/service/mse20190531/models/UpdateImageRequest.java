@@ -93,7 +93,7 @@ public class UpdateImageRequest extends Request {
         }
 
         /**
-         * 目标集群的id
+         * The ID of the cluster.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -102,7 +102,7 @@ public class UpdateImageRequest extends Request {
         }
 
         /**
-         * 想修改的镜像版本code
+         * The destination version of the image.
          */
         public Builder versionCode(String versionCode) {
             this.putQueryParameter("VersionCode", versionCode);

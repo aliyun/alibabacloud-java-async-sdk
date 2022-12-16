@@ -311,7 +311,11 @@ public class CreateClusterRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -320,7 +324,21 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * ClusterSpecification.
+         * The engine specifications. Valid values:
+         * <p>
+         * 
+         * \[Professional Edition]
+         * 
+         * *   `MSE_SC_2_4_60_c`: 2 CPU cores and 4 GB of memory
+         * *   `MSE_SC_1_2_60_c`: 1 CPU core and 2 GB of memory
+         * *   `MSE_SC_4_8_60_c`: 4 CPU cores and 8 GB of memory
+         * *   `MSE_SC_8_16_60_c`: 8 CPU cores and 16 GB of memory
+         * *   `MSE_SC_16_32_60_c`: 16 CPU cores and 32 GB of memory
+         * 
+         * \[Developer Edition]
+         * 
+         * *   `MSE_SC_1_2_60_c`: 1 CPU core and 2 GB of memory
+         * *   `MSE_SC_2_4_60_c`: 2 CPU cores and 4 GB of memory
          */
         public Builder clusterSpecification(String clusterSpecification) {
             this.putQueryParameter("ClusterSpecification", clusterSpecification);
@@ -329,7 +347,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * ClusterType.
+         * The type of the instance. Valid values: ZooKeeper and Nacos-Ans.
          */
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("ClusterType", clusterType);
@@ -338,7 +356,18 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * ClusterVersion.
+         * The engine version of the instance. Valid values:
+         * <p>
+         * 
+         * \[Professional Edition]
+         * 
+         * *   `NACOS_2_0_0`: Nacos 2.0.0
+         * *   `ZooKeeper_3_8_0`: ZooKeeper 3.8.0
+         * 
+         * \[Developer Edition]
+         * 
+         * *   `NACOS_2_0_0`: Nacos 2.0.0
+         * *   `ZooKeeper_3_8_0`: ZooKeeper 3.8.0
          */
         public Builder clusterVersion(String clusterVersion) {
             this.putQueryParameter("ClusterVersion", clusterVersion);
@@ -347,7 +376,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * ConnectionType.
+         * The network connection type. Valid values:
+         * <p>
+         * 
+         * *   slb
+         * *   eni
          */
         public Builder connectionType(String connectionType) {
             this.putQueryParameter("ConnectionType", connectionType);
@@ -356,7 +389,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * DiskType.
+         * The disk type. Valid values:
+         * <p>
+         * 
+         * *   alicloud-disk-ssd
+         * *   alicloud-disk-essd-pl1
          */
         public Builder diskType(String diskType) {
             this.putQueryParameter("DiskType", diskType);
@@ -365,7 +402,16 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * InstanceCount.
+         * The number of nodes in the instance. Valid values: 1 to 9.
+         * <p>
+         * 
+         * \[Professional Edition]
+         * 
+         * *   The number of nodes in an instance is greater than or equal to 3 and must be an odd number.
+         * 
+         * \[Developer Edition]
+         * 
+         * *   Only one node can be deployed for an instance.
          */
         public Builder instanceCount(Integer instanceCount) {
             this.putQueryParameter("InstanceCount", instanceCount);
@@ -374,7 +420,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 实例名称
+         * The name of the instance.
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -383,7 +429,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 用于区分基础/专业版本
+         * Set this parameter unless otherwise specified. Valid values:
+         * <p>
+         * 
+         * *   `mse_pro`: Professional Edition
+         * *   `mse_dev`: Developer Edition
          */
         public Builder mseVersion(String mseVersion) {
             this.putQueryParameter("MseVersion", mseVersion);
@@ -392,7 +442,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * NetType.
+         * The network type of the instance. Valid values:
+         * <p>
+         * 
+         * *   `privatenet`: VPC
+         * *   `pubnet`: Internet
          */
         public Builder netType(String netType) {
             this.putQueryParameter("NetType", netType);
@@ -401,7 +455,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * PrivateSlbSpecification.
+         * The specifications of the internal-facing SLB instance. Valid values:
+         * <p>
+         * 
+         * *   `slb.s1.small`
+         * *   `slb.s3.medium`
          */
         public Builder privateSlbSpecification(String privateSlbSpecification) {
             this.putQueryParameter("PrivateSlbSpecification", privateSlbSpecification);
@@ -410,7 +468,9 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * PubNetworkFlow.
+         * The public bandwidth. Unit: Mbit/s.\
+         * <p>
+         * Valid values: 0 to 5000. The value 0 indicates no access to the Internet.
          */
         public Builder pubNetworkFlow(String pubNetworkFlow) {
             this.putQueryParameter("PubNetworkFlow", pubNetworkFlow);
@@ -419,7 +479,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * PubSlbSpecification.
+         * The specifications of the Internet-facing Server Load Balancer (SLB) instance. Valid values:
+         * <p>
+         * 
+         * *   `slb.s1.small`
+         * *   `slb.s3.medium`
          */
         public Builder pubSlbSpecification(String pubSlbSpecification) {
             this.putQueryParameter("PubSlbSpecification", pubSlbSpecification);
@@ -428,7 +492,14 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * Region.
+         * The region where the MSE instance resides. Examples:
+         * <p>
+         * 
+         * *   `cn-hangzhou`: China (Hangzhou)
+         * *   `cn-beijing`: China (Beijing)
+         * *   `cn-shanghai`: China (Shanghai)
+         * *   `cn-zhangjiakou`: China (Zhangjiakou)
+         * *   `cn-shenzhen`: China (Shenzhen)
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -437,7 +508,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * RequestPars.
+         * The extended request parameter in the JSON format.
          */
         public Builder requestPars(String requestPars) {
             this.putQueryParameter("RequestPars", requestPars);
@@ -446,7 +517,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group. For more information about resource groups, see the topic "View basic information of a resource group."
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -455,7 +526,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 标签列表，最多包含20个子项
+         * The list of the tags that you want to add.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -464,7 +535,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * The ID of the vSwitch.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -473,7 +544,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * VPC ID.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -527,7 +598,7 @@ public class CreateClusterRequest extends Request {
             private String value; 
 
             /**
-             * 标签键
+             * The key of a tag.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -535,7 +606,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * 标签值
+             * The value of a tag.
              */
             public Builder value(String value) {
                 this.value = value;

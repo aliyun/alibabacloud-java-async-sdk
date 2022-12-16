@@ -134,7 +134,7 @@ public class ListAnsInstancesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Data.
+         * The details of the data.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -142,7 +142,7 @@ public class ListAnsInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -150,7 +150,7 @@ public class ListAnsInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * HttpCode.
+         * The HTTP status code.
          */
         public Builder httpCode(String httpCode) {
             this.httpCode = httpCode;
@@ -158,7 +158,7 @@ public class ListAnsInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -166,7 +166,7 @@ public class ListAnsInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -174,7 +174,7 @@ public class ListAnsInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -182,7 +182,7 @@ public class ListAnsInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -190,7 +190,11 @@ public class ListAnsInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -198,7 +202,7 @@ public class ListAnsInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of returned instances.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -466,7 +470,7 @@ public class ListAnsInstancesResponseBody extends TeaModel {
             private Integer weight; 
 
             /**
-             * App.
+             * The name of the application.
              */
             public Builder app(String app) {
                 this.app = app;
@@ -474,7 +478,7 @@ public class ListAnsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterName.
+             * The name of the cluster.
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -482,7 +486,7 @@ public class ListAnsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * DatumKey.
+             * The reference key.
              */
             public Builder datumKey(String datumKey) {
                 this.datumKey = datumKey;
@@ -490,7 +494,7 @@ public class ListAnsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultKey.
+             * The default key.
              */
             public Builder defaultKey(String defaultKey) {
                 this.defaultKey = defaultKey;
@@ -498,7 +502,11 @@ public class ListAnsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Enabled.
+             * The effective status of the instance. Valid values:
+             * <p>
+             * 
+             * *   `true`: The instance takes effect.
+             * *   `false`: The instance does not take effect.
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -506,7 +514,11 @@ public class ListAnsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Ephemeral.
+             * Indicates whether the service is marked as a temporary node. Valid values:
+             * <p>
+             * 
+             * *   `true`: yes
+             * *   `false`: no
              */
             public Builder ephemeral(Boolean ephemeral) {
                 this.ephemeral = ephemeral;
@@ -514,7 +526,7 @@ public class ListAnsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * FailCount.
+             * The number of failed checks.
              */
             public Builder failCount(Integer failCount) {
                 this.failCount = failCount;
@@ -522,7 +534,11 @@ public class ListAnsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Healthy.
+             * The health status of the instance. Valid values:
+             * <p>
+             * 
+             * *   `true`: The instance is healthy.
+             * *   `false`: The instance is unhealthy.
              */
             public Builder healthy(Boolean healthy) {
                 this.healthy = healthy;
@@ -530,7 +546,7 @@ public class ListAnsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceHeartBeatInterval.
+             * The heartbeat interval of the instance. Unit: seconds.
              */
             public Builder instanceHeartBeatInterval(Integer instanceHeartBeatInterval) {
                 this.instanceHeartBeatInterval = instanceHeartBeatInterval;
@@ -538,7 +554,7 @@ public class ListAnsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceHeartBeatTimeOut.
+             * The timeout period of the instance heartbeat.
              */
             public Builder instanceHeartBeatTimeOut(Integer instanceHeartBeatTimeOut) {
                 this.instanceHeartBeatTimeOut = instanceHeartBeatTimeOut;
@@ -546,7 +562,7 @@ public class ListAnsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -554,7 +570,7 @@ public class ListAnsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Ip.
+             * The public IP address.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -562,7 +578,7 @@ public class ListAnsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * IpDeleteTimeout.
+             * The timeout period for removing an IP address.
              */
             public Builder ipDeleteTimeout(Integer ipDeleteTimeout) {
                 this.ipDeleteTimeout = ipDeleteTimeout;
@@ -570,7 +586,7 @@ public class ListAnsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * LastBeat.
+             * The time when the instance heartbeat was last checked.
              */
             public Builder lastBeat(Long lastBeat) {
                 this.lastBeat = lastBeat;
@@ -578,7 +594,11 @@ public class ListAnsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Marked.
+             * Indicates whether the instance was marked. Valid values:
+             * <p>
+             * 
+             * *   `true`: The instance marking was successful.
+             * *   `false`: The instance marking failed.
              */
             public Builder marked(Boolean marked) {
                 this.marked = marked;
@@ -586,7 +606,7 @@ public class ListAnsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Metadata.
+             * The metadata.
              */
             public Builder metadata(java.util.Map < String, ? > metadata) {
                 this.metadata = metadata;
@@ -594,7 +614,7 @@ public class ListAnsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * OkCount.
+             * The number of successful checks.
              */
             public Builder okCount(Integer okCount) {
                 this.okCount = okCount;
@@ -602,7 +622,7 @@ public class ListAnsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The port number.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -610,7 +630,7 @@ public class ListAnsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceName.
+             * The name of the service.
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -618,7 +638,7 @@ public class ListAnsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Weight.
+             * The weight.
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;

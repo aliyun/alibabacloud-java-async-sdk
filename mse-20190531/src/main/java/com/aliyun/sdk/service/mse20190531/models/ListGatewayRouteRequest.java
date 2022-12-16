@@ -124,7 +124,11 @@ public class ListGatewayRouteRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -133,7 +137,7 @@ public class ListGatewayRouteRequest extends Request {
         }
 
         /**
-         * DescSort.
+         * Specifies whether to enable sorting.
          */
         public Builder descSort(Boolean descSort) {
             this.putQueryParameter("DescSort", descSort);
@@ -142,7 +146,7 @@ public class ListGatewayRouteRequest extends Request {
         }
 
         /**
-         * FilterParams.
+         * The parameters that specify filter conditions, which are in the format of {"key1":"value1"}.
          */
         public Builder filterParams(FilterParams filterParams) {
             String filterParamsShrink = shrink(filterParams, "FilterParams", "json");
@@ -152,7 +156,7 @@ public class ListGatewayRouteRequest extends Request {
         }
 
         /**
-         * OrderItem.
+         * The item based on which entries are sorted.
          */
         public Builder orderItem(String orderItem) {
             this.putQueryParameter("OrderItem", orderItem);
@@ -161,7 +165,7 @@ public class ListGatewayRouteRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -170,7 +174,7 @@ public class ListGatewayRouteRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -297,7 +301,7 @@ public class ListGatewayRouteRequest extends Request {
             private Integer status; 
 
             /**
-             * DefaultServiceId.
+             * The default service ID.
              */
             public Builder defaultServiceId(Long defaultServiceId) {
                 this.defaultServiceId = defaultServiceId;
@@ -305,7 +309,7 @@ public class ListGatewayRouteRequest extends Request {
             }
 
             /**
-             * DomainId.
+             * The domain ID.
              */
             public Builder domainId(Long domainId) {
                 this.domainId = domainId;
@@ -313,7 +317,7 @@ public class ListGatewayRouteRequest extends Request {
             }
 
             /**
-             * DomainName.
+             * The associated domain name.
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -321,7 +325,7 @@ public class ListGatewayRouteRequest extends Request {
             }
 
             /**
-             * GatewayId.
+             * The ID of the gateway.
              */
             public Builder gatewayId(Long gatewayId) {
                 this.gatewayId = gatewayId;
@@ -329,7 +333,7 @@ public class ListGatewayRouteRequest extends Request {
             }
 
             /**
-             * GatewayUniqueId.
+             * The unique ID of the gateway.
              */
             public Builder gatewayUniqueId(String gatewayUniqueId) {
                 this.gatewayUniqueId = gatewayUniqueId;
@@ -337,7 +341,7 @@ public class ListGatewayRouteRequest extends Request {
             }
 
             /**
-             * Name.
+             * The name of the gateway.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -345,7 +349,7 @@ public class ListGatewayRouteRequest extends Request {
             }
 
             /**
-             * RouteOrder.
+             * The order.
              */
             public Builder routeOrder(Integer routeOrder) {
                 this.routeOrder = routeOrder;
@@ -353,7 +357,7 @@ public class ListGatewayRouteRequest extends Request {
             }
 
             /**
-             * Status.
+             * The status.
              */
             public Builder status(Integer status) {
                 this.status = status;

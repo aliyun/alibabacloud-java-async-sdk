@@ -127,7 +127,11 @@ public class DeleteNacosConfigRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -136,7 +140,11 @@ public class DeleteNacosConfigRequest extends Request {
         }
 
         /**
-         * Beta.
+         * Specifies whether to perform a beta release. Valid values:
+         * <p>
+         * 
+         * *   `true`: yes
+         * *   `false`: no
          */
         public Builder beta(Boolean beta) {
             this.putQueryParameter("Beta", beta);
@@ -145,7 +153,7 @@ public class DeleteNacosConfigRequest extends Request {
         }
 
         /**
-         * DataId.
+         * The ID of the configuration.
          */
         public Builder dataId(String dataId) {
             this.putQueryParameter("DataId", dataId);
@@ -154,7 +162,7 @@ public class DeleteNacosConfigRequest extends Request {
         }
 
         /**
-         * Group.
+         * The type of the group.
          */
         public Builder group(String group) {
             this.putQueryParameter("Group", group);
@@ -163,7 +171,7 @@ public class DeleteNacosConfigRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -172,7 +180,7 @@ public class DeleteNacosConfigRequest extends Request {
         }
 
         /**
-         * NamespaceId.
+         * The ID of the namespace.
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);

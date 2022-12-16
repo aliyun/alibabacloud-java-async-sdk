@@ -134,7 +134,7 @@ public class GetPluginsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * code仅仅用来和success同步
+         * Code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -142,7 +142,7 @@ public class GetPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The returned data.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -150,7 +150,7 @@ public class GetPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * 动态错误信息中的占位符
+         * The dynamic part in the error message.
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -158,7 +158,7 @@ public class GetPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * The dynamic error message.
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -166,7 +166,7 @@ public class GetPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -174,7 +174,7 @@ public class GetPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -182,7 +182,7 @@ public class GetPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -190,7 +190,7 @@ public class GetPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -198,7 +198,7 @@ public class GetPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -221,8 +221,17 @@ public class GetPluginsResponseBody extends TeaModel {
         @NameInMap("Id")
         private Long id;
 
+        @NameInMap("MaxVersion")
+        private String maxVersion;
+
+        @NameInMap("Mode")
+        private Integer mode;
+
         @NameInMap("Name")
         private String name;
+
+        @NameInMap("NewVersionPublishingFlag")
+        private Boolean newVersionPublishingFlag;
 
         @NameInMap("Phase")
         private Integer phase;
@@ -255,7 +264,10 @@ public class GetPluginsResponseBody extends TeaModel {
             this.category = builder.category;
             this.configCheck = builder.configCheck;
             this.id = builder.id;
+            this.maxVersion = builder.maxVersion;
+            this.mode = builder.mode;
             this.name = builder.name;
+            this.newVersionPublishingFlag = builder.newVersionPublishingFlag;
             this.phase = builder.phase;
             this.primaryUser = builder.primaryUser;
             this.priority = builder.priority;
@@ -297,10 +309,31 @@ public class GetPluginsResponseBody extends TeaModel {
         }
 
         /**
+         * @return maxVersion
+         */
+        public String getMaxVersion() {
+            return this.maxVersion;
+        }
+
+        /**
+         * @return mode
+         */
+        public Integer getMode() {
+            return this.mode;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
             return this.name;
+        }
+
+        /**
+         * @return newVersionPublishingFlag
+         */
+        public Boolean getNewVersionPublishingFlag() {
+            return this.newVersionPublishingFlag;
         }
 
         /**
@@ -370,7 +403,10 @@ public class GetPluginsResponseBody extends TeaModel {
             private Integer category; 
             private String configCheck; 
             private Long id; 
+            private String maxVersion; 
+            private Integer mode; 
             private String name; 
+            private Boolean newVersionPublishingFlag; 
             private Integer phase; 
             private String primaryUser; 
             private Integer priority; 
@@ -382,7 +418,20 @@ public class GetPluginsResponseBody extends TeaModel {
             private Integer wasmLang; 
 
             /**
-             * Category.
+             * The directory of the plug-in.
+             * <p>
+             * 
+             * 0: user-defined
+             * 
+             * 1: permission authentication
+             * 
+             * 2: security protection
+             * 
+             * 3: transmission protocol
+             * 
+             * 4: traffic control
+             * 
+             * 5: traffic observation
              */
             public Builder category(Integer category) {
                 this.category = category;
@@ -390,7 +439,7 @@ public class GetPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * ConfigCheck.
+             * The information about the configuration check.
              */
             public Builder configCheck(String configCheck) {
                 this.configCheck = configCheck;
@@ -398,7 +447,7 @@ public class GetPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the plug-in.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -406,7 +455,23 @@ public class GetPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * MaxVersion.
+             */
+            public Builder maxVersion(String maxVersion) {
+                this.maxVersion = maxVersion;
+                return this;
+            }
+
+            /**
+             * Mode.
+             */
+            public Builder mode(Integer mode) {
+                this.mode = mode;
+                return this;
+            }
+
+            /**
+             * The name of the plug-in.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -414,7 +479,21 @@ public class GetPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * Phase.
+             * NewVersionPublishingFlag.
+             */
+            public Builder newVersionPublishingFlag(Boolean newVersionPublishingFlag) {
+                this.newVersionPublishingFlag = newVersionPublishingFlag;
+                return this;
+            }
+
+            /**
+             * The plug-in execution stage.
+             * <p>
+             * 
+             * *   0: default stage
+             * *   1: authorization stage
+             * *   2: authentication stage
+             * *   3: statistics stage
              */
             public Builder phase(Integer phase) {
                 this.phase = phase;
@@ -422,7 +501,7 @@ public class GetPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * PrimaryUser.
+             * The ID of the creator.
              */
             public Builder primaryUser(String primaryUser) {
                 this.primaryUser = primaryUser;
@@ -430,7 +509,7 @@ public class GetPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * The plug-in execution priority. A larger value indicates a higher priority.
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -438,7 +517,7 @@ public class GetPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * PublishState.
+             * The publish status.
              */
             public Builder publishState(Integer publishState) {
                 this.publishState = publishState;
@@ -446,7 +525,11 @@ public class GetPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * Indicates whether the plug-in is enabled.
+             * <p>
+             * 
+             * *   0: disabled
+             * *   1: enabled
              */
             public Builder status(String status) {
                 this.status = status;
@@ -454,7 +537,7 @@ public class GetPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * Summary.
+             * The summary of the plug-in.
              */
             public Builder summary(String summary) {
                 this.summary = summary;
@@ -462,7 +545,7 @@ public class GetPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * The version of the plug-in.
              */
             public Builder version(String version) {
                 this.version = version;
@@ -470,7 +553,7 @@ public class GetPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * WasmFile.
+             * The Object Storage Service (OSS) of the WebAssembly plug-in.
              */
             public Builder wasmFile(String wasmFile) {
                 this.wasmFile = wasmFile;
@@ -478,7 +561,14 @@ public class GetPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * WasmLang.
+             * The WebAssembly language.
+             * <p>
+             * 
+             * *   0: C++
+             * *   1: TinyGo
+             * *   2: Rust
+             * *   3: AssemblyScript
+             * *   4: Zig
              */
             public Builder wasmLang(Integer wasmLang) {
                 this.wasmLang = wasmLang;

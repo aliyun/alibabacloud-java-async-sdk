@@ -84,7 +84,11 @@ public class ListAppBySwimmingLaneGroupTagRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * - zh: Chinese
+         * - en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -93,7 +97,7 @@ public class ListAppBySwimmingLaneGroupTagRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * The ID of the lane group.
          */
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -102,7 +106,7 @@ public class ListAppBySwimmingLaneGroupTagRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tag of the lane group.
          */
         public Builder tag(String tag) {
             this.putQueryParameter("Tag", tag);

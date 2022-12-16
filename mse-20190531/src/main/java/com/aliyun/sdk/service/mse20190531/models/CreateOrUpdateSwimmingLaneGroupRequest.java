@@ -265,7 +265,10 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * zh: Chinese en: English Default value: zh
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -274,7 +277,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * 应用集合。以 "," 分割应用 id
+         * The IDs of applications. Separate application IDs with commas (,).
          */
         public Builder appIds(String appIds) {
             this.putQueryParameter("AppIds", appIds);
@@ -283,7 +286,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * 是否开启数据库灰度
+         * Specifies whether to enable database canary release.
          */
         public Builder dbGrayEnable(Boolean dbGrayEnable) {
             this.putQueryParameter("DbGrayEnable", dbGrayEnable);
@@ -292,7 +295,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * 是否开启。
+         * Specifies whether to enable a lane group.
          */
         public Builder enable(Boolean enable) {
             this.putQueryParameter("Enable", enable);
@@ -301,7 +304,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * 入口应用。格式 "来源系统:id"，比如 EDAS:UUID 或者 CSB:UUID
+         * The ingress application.
          */
         public Builder entryApp(String entryApp) {
             this.putQueryParameter("EntryApp", entryApp);
@@ -310,7 +313,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * 创建时间
+         * The creation time.
          */
         public Builder gmtCreate(String gmtCreate) {
             this.putQueryParameter("GmtCreate", gmtCreate);
@@ -319,7 +322,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * 更新时间
+         * The update time.
          */
         public Builder gmtModified(String gmtModified) {
             this.putQueryParameter("GmtModified", gmtModified);
@@ -328,7 +331,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * 主键ID。由SP生成(数据库自增主键)。
+         * The ID of the primary key. The primary key is auto-increment.
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -337,7 +340,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * mse licenseKey
+         * The license key in use.
          */
         public Builder licenseKey(String licenseKey) {
             this.putQueryParameter("LicenseKey", licenseKey);
@@ -346,7 +349,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * 消息灰度过滤侧
+         * The side for message filtering when the canary release for messaging feature is enabled.
          */
         public Builder messageQueueFilterSide(String messageQueueFilterSide) {
             this.putQueryParameter("MessageQueueFilterSide", messageQueueFilterSide);
@@ -355,7 +358,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * 是否开启消息灰度
+         * Specifies whether to enable canary release for messaging.
          */
         public Builder messageQueueGrayEnable(Boolean messageQueueGrayEnable) {
             this.putQueryParameter("MessageQueueGrayEnable", messageQueueGrayEnable);
@@ -364,7 +367,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * 名称
+         * The name.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -373,7 +376,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * region
+         * Region.
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -382,7 +385,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * 来源。可选值为: EDAS。
+         * The service source. Set the value to edasmsc.
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -391,7 +394,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * 0 未生效
+         * The status of the lane group. The value 0 indicates that the lane group is disabled. The value 1 indicates that the lane group is enabled.
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);
@@ -400,7 +403,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * 阿里云账号。格式为数字，比如1362469756373809。
+         * The Alibaba Cloud account. The value is a number, such as 136246\*\*\*\*\*\*809. You can leave this parameter empty.
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

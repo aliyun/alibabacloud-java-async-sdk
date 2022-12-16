@@ -98,7 +98,7 @@ public class UpdateClusterSpecResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The response code returned.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class UpdateClusterSpecResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(String data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class UpdateClusterSpecResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class UpdateClusterSpecResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +130,7 @@ public class UpdateClusterSpecResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * ID of the Request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,11 @@ public class UpdateClusterSpecResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the call was successful. Valid values:
+         * <p>
+         * 
+         * *   `true`: The call was successful.
+         * *   `false`: The call failed.
          */
         public Builder success(Boolean success) {
             this.success = success;

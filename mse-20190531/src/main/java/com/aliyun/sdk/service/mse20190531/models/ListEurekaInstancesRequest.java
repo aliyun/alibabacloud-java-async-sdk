@@ -127,7 +127,11 @@ public class ListEurekaInstancesRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * - zh: Chinese
+         * - en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -136,7 +140,7 @@ public class ListEurekaInstancesRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * The ID of the cluster.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -145,7 +149,7 @@ public class ListEurekaInstancesRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * The number of the page to return.
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -154,7 +158,7 @@ public class ListEurekaInstancesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -163,7 +167,7 @@ public class ListEurekaInstancesRequest extends Request {
         }
 
         /**
-         * RequestPars.
+         * The extended request parameters in the JSON format.
          */
         public Builder requestPars(String requestPars) {
             this.putQueryParameter("RequestPars", requestPars);
@@ -172,7 +176,7 @@ public class ListEurekaInstancesRequest extends Request {
         }
 
         /**
-         * ServiceName.
+         * The name of the service.
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);

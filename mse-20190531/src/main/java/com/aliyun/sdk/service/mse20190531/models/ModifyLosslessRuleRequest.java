@@ -216,7 +216,11 @@ public class ModifyLosslessRuleRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -225,7 +229,7 @@ public class ModifyLosslessRuleRequest extends Request {
         }
 
         /**
-         * K8s生命周期与微服务生命周期对齐
+         * Specifies whether to align the lifecycle of the application in the Kubernetes cluster with that of the microservice.
          */
         public Builder aligned(Boolean aligned) {
             this.putQueryParameter("Aligned", aligned);
@@ -234,7 +238,7 @@ public class ModifyLosslessRuleRequest extends Request {
         }
 
         /**
-         * 应用id
+         * The ID of the application.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -243,7 +247,7 @@ public class ModifyLosslessRuleRequest extends Request {
         }
 
         /**
-         * AppName.
+         * The name of the application.
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -252,7 +256,7 @@ public class ModifyLosslessRuleRequest extends Request {
         }
 
         /**
-         * 延迟注册时间
+         * The registration latency.
          */
         public Builder delayTime(Long delayTime) {
             this.putQueryParameter("DelayTime", delayTime);
@@ -261,7 +265,11 @@ public class ModifyLosslessRuleRequest extends Request {
         }
 
         /**
-         * Enable.
+         * Specifies whether to enable the alert rule. Valid values:
+         * <p>
+         * 
+         * *   `true`: enables the rule.
+         * *   `false`: disables the rule.
          */
         public Builder enable(Boolean enable) {
             this.putQueryParameter("Enable", enable);
@@ -270,7 +278,7 @@ public class ModifyLosslessRuleRequest extends Request {
         }
 
         /**
-         * 预热曲线斜率
+         * The slope of the prefetching curve.
          */
         public Builder funcType(Long funcType) {
             this.putQueryParameter("FuncType", funcType);
@@ -279,7 +287,7 @@ public class ModifyLosslessRuleRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -288,7 +296,7 @@ public class ModifyLosslessRuleRequest extends Request {
         }
 
         /**
-         * 是否关联服务预热
+         * Specifies whether to associate readiness probe with service prefetching.
          */
         public Builder related(Boolean related) {
             this.putQueryParameter("Related", related);
@@ -297,7 +305,7 @@ public class ModifyLosslessRuleRequest extends Request {
         }
 
         /**
-         * ShutdownWaitSeconds.
+         * The cooldown duration. Unit: seconds.
          */
         public Builder shutdownWaitSeconds(Integer shutdownWaitSeconds) {
             this.putQueryParameter("ShutdownWaitSeconds", shutdownWaitSeconds);
@@ -306,7 +314,7 @@ public class ModifyLosslessRuleRequest extends Request {
         }
 
         /**
-         * Source.
+         * The service source. Valid values:
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -315,7 +323,7 @@ public class ModifyLosslessRuleRequest extends Request {
         }
 
         /**
-         * 预热时长
+         * The prefetching duration.
          */
         public Builder warmupTime(Long warmupTime) {
             this.putQueryParameter("WarmupTime", warmupTime);

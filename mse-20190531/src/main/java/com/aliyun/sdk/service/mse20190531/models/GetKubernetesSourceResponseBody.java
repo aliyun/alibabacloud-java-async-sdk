@@ -98,7 +98,7 @@ public class GetKubernetesSourceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code returned.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class GetKubernetesSourceResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data structure.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class GetKubernetesSourceResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class GetKubernetesSourceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +130,7 @@ public class GetKubernetesSourceResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,11 @@ public class GetKubernetesSourceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * 
+         * - `true`: The request is successful. 
+         * - `false`: The request fails.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -190,7 +194,7 @@ public class GetKubernetesSourceResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * Cluster.
+             * The ID of the ACK cluster.
              */
             public Builder cluster(String cluster) {
                 this.cluster = cluster;
@@ -198,7 +202,7 @@ public class GetKubernetesSourceResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the ACK cluster.
              */
             public Builder name(String name) {
                 this.name = name;

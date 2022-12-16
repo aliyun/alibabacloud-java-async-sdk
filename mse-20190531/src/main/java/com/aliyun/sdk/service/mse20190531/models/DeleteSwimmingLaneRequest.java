@@ -69,7 +69,11 @@ public class DeleteSwimmingLaneRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * - zh: Chinese
+         * - en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -78,7 +82,7 @@ public class DeleteSwimmingLaneRequest extends Request {
         }
 
         /**
-         * LaneId.
+         * The ID of the lane.
          */
         public Builder laneId(Long laneId) {
             this.putQueryParameter("LaneId", laneId);

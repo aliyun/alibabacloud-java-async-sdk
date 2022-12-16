@@ -134,7 +134,7 @@ public class ListListenersByIpResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * ErrorCode.
+         * The error code returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -142,7 +142,7 @@ public class ListListenersByIpResponseBody extends TeaModel {
         }
 
         /**
-         * HttpCode.
+         * The HTTP status code returned.
          */
         public Builder httpCode(String httpCode) {
             this.httpCode = httpCode;
@@ -150,7 +150,7 @@ public class ListListenersByIpResponseBody extends TeaModel {
         }
 
         /**
-         * Listeners.
+         * The information about listeners.
          */
         public Builder listeners(java.util.List < Listeners> listeners) {
             this.listeners = listeners;
@@ -158,7 +158,7 @@ public class ListListenersByIpResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -166,7 +166,7 @@ public class ListListenersByIpResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -174,7 +174,7 @@ public class ListListenersByIpResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -182,7 +182,7 @@ public class ListListenersByIpResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -190,7 +190,11 @@ public class ListListenersByIpResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -198,7 +202,7 @@ public class ListListenersByIpResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of instances.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -262,7 +266,7 @@ public class ListListenersByIpResponseBody extends TeaModel {
             private String md5; 
 
             /**
-             * DataId.
+             * The ID of the data.
              */
             public Builder dataId(String dataId) {
                 this.dataId = dataId;
@@ -270,7 +274,7 @@ public class ListListenersByIpResponseBody extends TeaModel {
             }
 
             /**
-             * Group.
+             * The group.
              */
             public Builder group(String group) {
                 this.group = group;
@@ -278,7 +282,7 @@ public class ListListenersByIpResponseBody extends TeaModel {
             }
 
             /**
-             * Md5.
+             * The verification string.
              */
             public Builder md5(String md5) {
                 this.md5 = md5;

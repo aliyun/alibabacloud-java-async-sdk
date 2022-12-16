@@ -154,7 +154,11 @@ public class CreateApplicationRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * - zh: Chinese
+         * - en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -163,7 +167,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * AppName.
+         * The name of the application.
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -172,7 +176,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * ExtraInfo.
+         * The additional information.
          */
         public Builder extraInfo(String extraInfo) {
             this.putQueryParameter("ExtraInfo", extraInfo);
@@ -181,7 +185,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * Language.
+         * The programming language of the application.
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -190,7 +194,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * Region.
+         * The region to which the application belongs.
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -199,7 +203,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * SentinelEnable.
+         * Specifies whether to enable the Sentinel-compatible mode.
          */
         public Builder sentinelEnable(String sentinelEnable) {
             this.putQueryParameter("SentinelEnable", sentinelEnable);
@@ -208,7 +212,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * Source.
+         * The service where the application is deployed. A value of ACK indicates Container Service for Kubernetes.
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -217,7 +221,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * SwitchEnable.
+         * Specifies whether to enable switching.
          */
         public Builder switchEnable(String switchEnable) {
             this.putQueryParameter("SwitchEnable", switchEnable);

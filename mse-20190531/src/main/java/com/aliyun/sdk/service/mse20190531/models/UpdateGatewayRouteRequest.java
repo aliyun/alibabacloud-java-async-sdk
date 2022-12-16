@@ -250,7 +250,11 @@ public class UpdateGatewayRouteRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * - zh: Chinese
+         * - en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -259,7 +263,7 @@ public class UpdateGatewayRouteRequest extends Request {
         }
 
         /**
-         * DestinationType.
+         * The type of the destination service.
          */
         public Builder destinationType(String destinationType) {
             this.putQueryParameter("DestinationType", destinationType);
@@ -268,7 +272,7 @@ public class UpdateGatewayRouteRequest extends Request {
         }
 
         /**
-         * DirectResponseJSON.
+         * The information about service mocking.
          */
         public Builder directResponseJSON(DirectResponseJSON directResponseJSON) {
             String directResponseJSONShrink = shrink(directResponseJSON, "DirectResponseJSON", "json");
@@ -278,7 +282,7 @@ public class UpdateGatewayRouteRequest extends Request {
         }
 
         /**
-         * DomainIdListJSON.
+         * The IDs of domain names with which the route is associated.
          */
         public Builder domainIdListJSON(String domainIdListJSON) {
             this.putQueryParameter("DomainIdListJSON", domainIdListJSON);
@@ -315,7 +319,7 @@ public class UpdateGatewayRouteRequest extends Request {
         }
 
         /**
-         * GatewayId.
+         * The ID of the gateway.
          */
         public Builder gatewayId(Long gatewayId) {
             this.putQueryParameter("GatewayId", gatewayId);
@@ -324,7 +328,7 @@ public class UpdateGatewayRouteRequest extends Request {
         }
 
         /**
-         * GatewayUniqueId.
+         * The unique ID of the gateway.
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -333,7 +337,7 @@ public class UpdateGatewayRouteRequest extends Request {
         }
 
         /**
-         * Id.
+         * The ID of the route.
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -342,7 +346,7 @@ public class UpdateGatewayRouteRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the route.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -351,7 +355,7 @@ public class UpdateGatewayRouteRequest extends Request {
         }
 
         /**
-         * Predicates.
+         * The matching rules of the route.
          */
         public Builder predicates(Predicates predicates) {
             String predicatesShrink = shrink(predicates, "Predicates", "json");
@@ -361,7 +365,7 @@ public class UpdateGatewayRouteRequest extends Request {
         }
 
         /**
-         * RedirectJSON.
+         * The configuration of the redirect action.
          */
         public Builder redirectJSON(RedirectJSON redirectJSON) {
             String redirectJSONShrink = shrink(redirectJSON, "RedirectJSON", "json");
@@ -371,7 +375,7 @@ public class UpdateGatewayRouteRequest extends Request {
         }
 
         /**
-         * RouteOrder.
+         * The sequence number of the route.
          */
         public Builder routeOrder(Integer routeOrder) {
             this.putQueryParameter("RouteOrder", routeOrder);
@@ -380,7 +384,7 @@ public class UpdateGatewayRouteRequest extends Request {
         }
 
         /**
-         * Services.
+         * The information about services.
          */
         public Builder services(java.util.List < Services> services) {
             String servicesShrink = shrink(services, "Services", "json");
@@ -435,7 +439,7 @@ public class UpdateGatewayRouteRequest extends Request {
             private Long code; 
 
             /**
-             * Body.
+             * The return value for service mocking.
              */
             public Builder body(String body) {
                 this.body = body;
@@ -443,7 +447,7 @@ public class UpdateGatewayRouteRequest extends Request {
             }
 
             /**
-             * Code.
+             * The status code returned for service mocking.
              */
             public Builder code(Long code) {
                 this.code = code;
@@ -596,7 +600,7 @@ public class UpdateGatewayRouteRequest extends Request {
             }
 
             /**
-             * Name.
+             * The name of the route.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -709,7 +713,7 @@ public class UpdateGatewayRouteRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of the request header.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -717,7 +721,7 @@ public class UpdateGatewayRouteRequest extends Request {
             }
 
             /**
-             * Type.
+             * The matching mode.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -725,7 +729,7 @@ public class UpdateGatewayRouteRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the request header.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -790,7 +794,7 @@ public class UpdateGatewayRouteRequest extends Request {
             private String type; 
 
             /**
-             * IgnoreCase.
+             * Specifies whether to perform case-insensitive matches.
              */
             public Builder ignoreCase(Boolean ignoreCase) {
                 this.ignoreCase = ignoreCase;
@@ -798,7 +802,7 @@ public class UpdateGatewayRouteRequest extends Request {
             }
 
             /**
-             * Path.
+             * The path.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -806,7 +810,7 @@ public class UpdateGatewayRouteRequest extends Request {
             }
 
             /**
-             * Type.
+             * The matching mode.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -871,7 +875,7 @@ public class UpdateGatewayRouteRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The name of the parameter.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -879,7 +883,7 @@ public class UpdateGatewayRouteRequest extends Request {
             }
 
             /**
-             * Type.
+             * The matching mode.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -887,7 +891,7 @@ public class UpdateGatewayRouteRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the parameter.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -964,7 +968,7 @@ public class UpdateGatewayRouteRequest extends Request {
             private java.util.List < QueryPredicates> queryPredicates; 
 
             /**
-             * HeaderPredicates.
+             * The information about header matching.
              */
             public Builder headerPredicates(java.util.List < HeaderPredicates> headerPredicates) {
                 this.headerPredicates = headerPredicates;
@@ -972,7 +976,7 @@ public class UpdateGatewayRouteRequest extends Request {
             }
 
             /**
-             * MethodPredicates.
+             * The information about method matching.
              */
             public Builder methodPredicates(java.util.List < String > methodPredicates) {
                 this.methodPredicates = methodPredicates;
@@ -980,7 +984,7 @@ public class UpdateGatewayRouteRequest extends Request {
             }
 
             /**
-             * PathPredicates.
+             * The information about path matching.
              */
             public Builder pathPredicates(PathPredicates pathPredicates) {
                 this.pathPredicates = pathPredicates;
@@ -988,7 +992,7 @@ public class UpdateGatewayRouteRequest extends Request {
             }
 
             /**
-             * QueryPredicates.
+             * The information about URL parameter matching.
              */
             public Builder queryPredicates(java.util.List < QueryPredicates> queryPredicates) {
                 this.queryPredicates = queryPredicates;
@@ -1053,7 +1057,7 @@ public class UpdateGatewayRouteRequest extends Request {
             private String path; 
 
             /**
-             * Code.
+             * The status code returned.
              */
             public Builder code(Integer code) {
                 this.code = code;
@@ -1061,7 +1065,7 @@ public class UpdateGatewayRouteRequest extends Request {
             }
 
             /**
-             * Host.
+             * The hostname to be redirected to.
              */
             public Builder host(String host) {
                 this.host = host;
@@ -1069,7 +1073,7 @@ public class UpdateGatewayRouteRequest extends Request {
             }
 
             /**
-             * Path.
+             * The path to be redirected to.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -1549,7 +1553,7 @@ public class UpdateGatewayRouteRequest extends Request {
             }
 
             /**
-             * GroupName.
+             * The name of the group to which the service belongs.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -1565,7 +1569,7 @@ public class UpdateGatewayRouteRequest extends Request {
             }
 
             /**
-             * Name.
+             * The name of the service.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1573,7 +1577,7 @@ public class UpdateGatewayRouteRequest extends Request {
             }
 
             /**
-             * Namespace.
+             * The namespace in which the service resides.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -1581,7 +1585,7 @@ public class UpdateGatewayRouteRequest extends Request {
             }
 
             /**
-             * Percent.
+             * The weight in the form of a percentage value.
              */
             public Builder percent(Integer percent) {
                 this.percent = percent;
@@ -1589,7 +1593,7 @@ public class UpdateGatewayRouteRequest extends Request {
             }
 
             /**
-             * ServiceId.
+             * The ID of the service.
              */
             public Builder serviceId(Long serviceId) {
                 this.serviceId = serviceId;
@@ -1605,7 +1609,7 @@ public class UpdateGatewayRouteRequest extends Request {
             }
 
             /**
-             * SourceType.
+             * The source type of the service.
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -1613,7 +1617,7 @@ public class UpdateGatewayRouteRequest extends Request {
             }
 
             /**
-             * Version.
+             * The version of the service.
              */
             public Builder version(String version) {
                 this.version = version;

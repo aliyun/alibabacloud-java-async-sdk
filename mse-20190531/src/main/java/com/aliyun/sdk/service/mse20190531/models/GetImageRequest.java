@@ -78,7 +78,7 @@ public class GetImageRequest extends Request {
         }
 
         /**
-         * 集群版本
+         * The version of the cluster.
          */
         public Builder versionCode(String versionCode) {
             this.putQueryParameter("VersionCode", versionCode);

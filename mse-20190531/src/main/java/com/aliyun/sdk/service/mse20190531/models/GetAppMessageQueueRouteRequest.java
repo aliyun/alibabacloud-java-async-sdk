@@ -84,7 +84,11 @@ public class GetAppMessageQueueRouteRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -93,7 +97,7 @@ public class GetAppMessageQueueRouteRequest extends Request {
         }
 
         /**
-         * AppId.
+         * The ID of the application.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -102,7 +106,14 @@ public class GetAppMessageQueueRouteRequest extends Request {
         }
 
         /**
-         * Region.
+         * The region where the cluster resides. Examples:
+         * <p>
+         * 
+         * *   `cn-hangzhou`: China (Hangzhou)
+         * *   `cn-beijing`: China (Beijing)
+         * *   `cn-shanghai`: China (Shanghai)
+         * *   `cn-zhangjiakou`: China (Zhangjiakou)
+         * *   `cn-shenzhen`: China (Shenzhen)
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);

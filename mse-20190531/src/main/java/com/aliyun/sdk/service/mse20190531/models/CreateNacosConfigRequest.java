@@ -197,7 +197,11 @@ public class CreateNacosConfigRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * - zh: Chinese
+         * - en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -206,7 +210,7 @@ public class CreateNacosConfigRequest extends Request {
         }
 
         /**
-         * AppName.
+         * The name of the application.
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -215,7 +219,7 @@ public class CreateNacosConfigRequest extends Request {
         }
 
         /**
-         * BetaIps.
+         * The list of IP addresses where the beta release of the configuration is performed.
          */
         public Builder betaIps(String betaIps) {
             this.putQueryParameter("BetaIps", betaIps);
@@ -224,7 +228,7 @@ public class CreateNacosConfigRequest extends Request {
         }
 
         /**
-         * Content.
+         * The content of the configuration.
          */
         public Builder content(String content) {
             this.putQueryParameter("Content", content);
@@ -233,7 +237,7 @@ public class CreateNacosConfigRequest extends Request {
         }
 
         /**
-         * DataId.
+         * The data ID.
          */
         public Builder dataId(String dataId) {
             this.putQueryParameter("DataId", dataId);
@@ -242,7 +246,7 @@ public class CreateNacosConfigRequest extends Request {
         }
 
         /**
-         * Desc.
+         * The description of the configuration.
          */
         public Builder desc(String desc) {
             this.putQueryParameter("Desc", desc);
@@ -251,7 +255,7 @@ public class CreateNacosConfigRequest extends Request {
         }
 
         /**
-         * Group.
+         * The ID of the group.
          */
         public Builder group(String group) {
             this.putQueryParameter("Group", group);
@@ -260,7 +264,7 @@ public class CreateNacosConfigRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -269,7 +273,7 @@ public class CreateNacosConfigRequest extends Request {
         }
 
         /**
-         * NamespaceId.
+         * The ID of the namespace.
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
@@ -278,7 +282,7 @@ public class CreateNacosConfigRequest extends Request {
         }
 
         /**
-         * Tags.
+         * The tag of the configuration.
          */
         public Builder tags(String tags) {
             this.putQueryParameter("Tags", tags);
@@ -287,7 +291,7 @@ public class CreateNacosConfigRequest extends Request {
         }
 
         /**
-         * Type.
+         * The format of the configuration. Supported formats include TEXT, JSON, and XML.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

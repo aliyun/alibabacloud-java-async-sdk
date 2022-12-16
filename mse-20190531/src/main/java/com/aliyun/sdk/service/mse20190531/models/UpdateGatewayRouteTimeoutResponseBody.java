@@ -98,7 +98,7 @@ public class UpdateGatewayRouteTimeoutResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code returned.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class UpdateGatewayRouteTimeoutResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The details of the data.
          */
         public Builder data(Long data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class UpdateGatewayRouteTimeoutResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class UpdateGatewayRouteTimeoutResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +138,7 @@ public class UpdateGatewayRouteTimeoutResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful. A value of true indicates that the request is successful. A value of false indicates that the request fails.
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -98,7 +98,7 @@ public class DeleteGatewayDomainResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The error message returned if the request fails.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +106,10 @@ public class DeleteGatewayDomainResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * - `true`: The request is successful. 
+         * - `false`: The request fails.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +117,7 @@ public class DeleteGatewayDomainResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The ID of the request.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +125,7 @@ public class DeleteGatewayDomainResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The HTTP status code returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +133,7 @@ public class DeleteGatewayDomainResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The data structure.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +141,7 @@ public class DeleteGatewayDomainResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * The status code returned.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -274,7 +277,7 @@ public class DeleteGatewayDomainResponseBody extends TeaModel {
             private String protocol; 
 
             /**
-             * CertIdentifier.
+             * Indicates whether HTTP probing is allowed.
              */
             public Builder certIdentifier(String certIdentifier) {
                 this.certIdentifier = certIdentifier;
@@ -282,7 +285,7 @@ public class DeleteGatewayDomainResponseBody extends TeaModel {
             }
 
             /**
-             * GatewayId.
+             * The unique ID of the gateway.
              */
             public Builder gatewayId(Long gatewayId) {
                 this.gatewayId = gatewayId;
@@ -290,7 +293,7 @@ public class DeleteGatewayDomainResponseBody extends TeaModel {
             }
 
             /**
-             * GatewayUniqueId.
+             * The name of the gateway.
              */
             public Builder gatewayUniqueId(String gatewayUniqueId) {
                 this.gatewayUniqueId = gatewayUniqueId;
@@ -298,7 +301,7 @@ public class DeleteGatewayDomainResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The ID of the certificate.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -306,7 +309,7 @@ public class DeleteGatewayDomainResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The time when the domain name was added.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -314,7 +317,7 @@ public class DeleteGatewayDomainResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The returned data.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -322,7 +325,7 @@ public class DeleteGatewayDomainResponseBody extends TeaModel {
             }
 
             /**
-             * MustHttps.
+             * The protocol used by the gateway.
              */
             public Builder mustHttps(Boolean mustHttps) {
                 this.mustHttps = mustHttps;
@@ -330,7 +333,7 @@ public class DeleteGatewayDomainResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The ID of the domain name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -338,7 +341,7 @@ public class DeleteGatewayDomainResponseBody extends TeaModel {
             }
 
             /**
-             * Protocol.
+             * The ID of the gateway.
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;

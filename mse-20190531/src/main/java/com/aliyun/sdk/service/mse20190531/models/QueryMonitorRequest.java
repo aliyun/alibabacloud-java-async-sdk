@@ -141,7 +141,11 @@ public class QueryMonitorRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -150,7 +154,7 @@ public class QueryMonitorRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The timestamp when the monitoring ends.
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -159,7 +163,7 @@ public class QueryMonitorRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -168,7 +172,35 @@ public class QueryMonitorRequest extends Request {
         }
 
         /**
-         * MonitorType.
+         * The metric type. The following metrics are supported:
+         * <p>
+         * 
+         * \[Basic system metrics]
+         * 
+         * *   cpuUsage
+         * *   memoryUsage
+         * *   diskUsage
+         * *   gcCount
+         * *   gcTime
+         * 
+         * \[Nacos registry]
+         * 
+         * *   serviceCount
+         * *   writeCostTime
+         * *   readCostTime
+         * *   regCenterTps
+         * *   regCenterQps
+         * 
+         * \[Nacos configuration center]
+         * 
+         * *   publish
+         * *   getConfig
+         * 
+         * \[Zookeeper]
+         * 
+         * *   zk_TpsCount
+         * *   zk_QpsCount
+         * *   zookeeper_AvgRequestLatency
          */
         public Builder monitorType(String monitorType) {
             this.putQueryParameter("MonitorType", monitorType);
@@ -177,7 +209,7 @@ public class QueryMonitorRequest extends Request {
         }
 
         /**
-         * RequestPars.
+         * The extended request parameters in the JSON format.
          */
         public Builder requestPars(String requestPars) {
             this.putQueryParameter("RequestPars", requestPars);
@@ -186,7 +218,7 @@ public class QueryMonitorRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The timestamp when the monitoring starts.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -195,7 +227,7 @@ public class QueryMonitorRequest extends Request {
         }
 
         /**
-         * Step.
+         * The interval between data points. Unit: seconds.
          */
         public Builder step(Long step) {
             this.putQueryParameter("Step", step);

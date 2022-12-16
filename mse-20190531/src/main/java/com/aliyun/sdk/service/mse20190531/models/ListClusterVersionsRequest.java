@@ -82,7 +82,11 @@ public class ListClusterVersionsRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * - zh: Chinese
+         * - en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -91,7 +95,7 @@ public class ListClusterVersionsRequest extends Request {
         }
 
         /**
-         * ClusterType.
+         * The type of the cluster. Valid values: ZooKeeper, Nacos-Ans, and Eureka.
          */
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("ClusterType", clusterType);

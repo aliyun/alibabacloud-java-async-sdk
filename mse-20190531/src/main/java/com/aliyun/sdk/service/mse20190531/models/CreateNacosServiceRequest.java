@@ -153,7 +153,11 @@ public class CreateNacosServiceRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -162,7 +166,7 @@ public class CreateNacosServiceRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * The ID of the cluster. This operation contains both the InstanceId and ClusterId parameters. You must configure either InstanceId or ClusterId.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -171,7 +175,11 @@ public class CreateNacosServiceRequest extends Request {
         }
 
         /**
-         * Ephemeral.
+         * Specifies whether the instance is a temporary node. Valid values:
+         * <p>
+         * 
+         * *   `true`: yes
+         * *   `false`: no
          */
         public Builder ephemeral(Boolean ephemeral) {
             this.putQueryParameter("Ephemeral", ephemeral);
@@ -180,7 +188,7 @@ public class CreateNacosServiceRequest extends Request {
         }
 
         /**
-         * GroupName.
+         * The name of the group.
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -189,7 +197,10 @@ public class CreateNacosServiceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
+         * <p>
+         * 
+         * > This operation contains both the InstanceId and ClusterId parameters. You must configure either InstanceId or ClusterId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -198,7 +209,7 @@ public class CreateNacosServiceRequest extends Request {
         }
 
         /**
-         * NamespaceId.
+         * The ID of the namespace.
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
@@ -207,7 +218,7 @@ public class CreateNacosServiceRequest extends Request {
         }
 
         /**
-         * ProtectThreshold.
+         * The protection threshold.
          */
         public Builder protectThreshold(String protectThreshold) {
             this.putQueryParameter("ProtectThreshold", protectThreshold);
@@ -216,7 +227,7 @@ public class CreateNacosServiceRequest extends Request {
         }
 
         /**
-         * ServiceName.
+         * The name of the service.
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);

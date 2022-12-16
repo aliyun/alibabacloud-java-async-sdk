@@ -283,7 +283,11 @@ public class AddGatewayRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -292,7 +296,7 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * 是否开启硬件加速
+         * Specifies whether to enable hardware acceleration.
          */
         public Builder enableHardwareAcceleration(Boolean enableHardwareAcceleration) {
             this.putQueryParameter("EnableHardwareAcceleration", enableHardwareAcceleration);
@@ -301,7 +305,7 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * 是否开启SLS日志投递
+         * Specifies whether to enable Log Service.
          */
         public Builder enableSls(Boolean enableSls) {
             this.putQueryParameter("EnableSls", enableSls);
@@ -310,7 +314,7 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * 是否开启xtrace
+         * Specifies whether to enable Tracing Analysis.
          */
         public Builder enableXtrace(Boolean enableXtrace) {
             this.putQueryParameter("EnableXtrace", enableXtrace);
@@ -319,7 +323,7 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * 是否企业安全组类型
+         * Specifies whether to use an advanced security group.
          */
         public Builder enterpriseSecurityGroup(Boolean enterpriseSecurityGroup) {
             this.putQueryParameter("EnterpriseSecurityGroup", enterpriseSecurityGroup);
@@ -328,7 +332,15 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * 外网SLB规格
+         * The specifications of the Internet-facing SLB instance.
+         * <p>
+         * 
+         * *   slb.s1.small
+         * *   slb.s2.small
+         * *   slb.s2.medium
+         * *   slb.s3.small
+         * *   slb.s3.medium
+         * *   slb.s3.large
          */
         public Builder internetSlbSpec(String internetSlbSpec) {
             this.putQueryParameter("InternetSlbSpec", internetSlbSpec);
@@ -337,7 +349,7 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * 网关名称
+         * The name of the gateway.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -346,7 +358,7 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * 地域
+         * The ID of the region.
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -355,7 +367,7 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * 节点数量
+         * The number of nodes.
          */
         public Builder replica(Integer replica) {
             this.putQueryParameter("Replica", replica);
@@ -364,7 +376,7 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -373,7 +385,15 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * 内网SLB规格
+         * The specifications of the internal-facing Server Load Balancer (SLB) instance.
+         * <p>
+         * 
+         * *   slb.s1.small
+         * *   slb.s2.small
+         * *   slb.s2.medium
+         * *   slb.s3.small
+         * *   slb.s3.medium
+         * *   slb.s3.large
          */
         public Builder slbSpec(String slbSpec) {
             this.putQueryParameter("SlbSpec", slbSpec);
@@ -382,7 +402,13 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * 节点规格
+         * The node specifications.
+         * <p>
+         * 
+         * *   MSE_GTW\_16\_32\_200\_c(16C32G)
+         * *   MSE_GTW\_2\_4\_200\_c(2C4G)
+         * *   MSE_GTW\_4\_8\_200\_c(4C8G)
+         * *   MSE_GTW\_8\_16\_200\_c(8C16G)
          */
         public Builder spec(String spec) {
             this.putQueryParameter("Spec", spec);
@@ -391,7 +417,7 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * 标签列表，最多包含20个子项
+         * The tag of the gateway.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -400,7 +426,7 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * 主交换机ID
+         * The ID of the primary vSwitch.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -409,7 +435,7 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * 备交换机ID
+         * The ID of the secondary vSwitch.
          */
         public Builder vSwitchId2(String vSwitchId2) {
             this.putQueryParameter("VSwitchId2", vSwitchId2);
@@ -418,7 +444,7 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * 专有网络ID
+         * The ID of the virtual private cloud (VPC).
          */
         public Builder vpc(String vpc) {
             this.putQueryParameter("Vpc", vpc);
@@ -427,7 +453,7 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * xtrace采样率，取值[0,100]
+         * The sample rate of Tracing Analysis. Valid values: \[1,100].
          */
         public Builder xtraceRatio(String xtraceRatio) {
             this.putQueryParameter("XtraceRatio", xtraceRatio);
@@ -481,7 +507,7 @@ public class AddGatewayRequest extends Request {
             private String value; 
 
             /**
-             * 标签键
+             * The key of the tag.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -489,7 +515,7 @@ public class AddGatewayRequest extends Request {
             }
 
             /**
-             * 标签值
+             * The value of the tag.
              */
             public Builder value(String value) {
                 this.value = value;

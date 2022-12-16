@@ -225,7 +225,7 @@ public class CreateNacosInstanceRequest extends Request {
         }
 
         /**
-         * Nacos集群名
+         * The name of the Nacos cluster.
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("ClusterName", clusterName);
@@ -234,7 +234,7 @@ public class CreateNacosInstanceRequest extends Request {
         }
 
         /**
-         * 服务禁用标志
+         * Specifies whether to enable the service for the instance.
          */
         public Builder enabled(Boolean enabled) {
             this.putQueryParameter("Enabled", enabled);
@@ -243,7 +243,7 @@ public class CreateNacosInstanceRequest extends Request {
         }
 
         /**
-         * 临时节点标志
+         * Specifies whether to mark the instance as a temporary node.
          */
         public Builder ephemeral(Boolean ephemeral) {
             this.putQueryParameter("Ephemeral", ephemeral);
@@ -252,7 +252,7 @@ public class CreateNacosInstanceRequest extends Request {
         }
 
         /**
-         * 分组名
+         * The name of the group.
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -261,7 +261,7 @@ public class CreateNacosInstanceRequest extends Request {
         }
 
         /**
-         * 实例id
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -270,7 +270,7 @@ public class CreateNacosInstanceRequest extends Request {
         }
 
         /**
-         * Nacos实例ip
+         * The IP address of the Nacos instance.
          */
         public Builder ip(String ip) {
             this.putQueryParameter("Ip", ip);
@@ -279,7 +279,7 @@ public class CreateNacosInstanceRequest extends Request {
         }
 
         /**
-         * 节点元数据
+         * The node metadata of the instance.
          */
         public Builder metadata(String metadata) {
             this.putBodyParameter("Metadata", metadata);
@@ -288,7 +288,7 @@ public class CreateNacosInstanceRequest extends Request {
         }
 
         /**
-         * 命名空间id
+         * The ID of the namespace.
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
@@ -297,7 +297,7 @@ public class CreateNacosInstanceRequest extends Request {
         }
 
         /**
-         * Nacos实例端口
+         * The port of the Nacos instance.
          */
         public Builder port(Integer port) {
             this.putQueryParameter("Port", port);
@@ -306,7 +306,7 @@ public class CreateNacosInstanceRequest extends Request {
         }
 
         /**
-         * 服务名
+         * The name of the service.
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);
@@ -315,7 +315,7 @@ public class CreateNacosInstanceRequest extends Request {
         }
 
         /**
-         * 权重
+         * The weight of the instance.
          */
         public Builder weight(String weight) {
             this.putQueryParameter("Weight", weight);

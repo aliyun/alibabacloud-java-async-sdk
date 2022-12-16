@@ -394,7 +394,7 @@ public class ListZkTrackResponseBody extends TeaModel {
             private Boolean watch; 
 
             /**
-             * Acl.
+             * ACL。
              */
             public Builder acl(String acl) {
                 this.acl = acl;
@@ -483,7 +483,7 @@ public class ListZkTrackResponseBody extends TeaModel {
             }
 
             /**
-             * SessionId.
+             * SessionId。
              */
             public Builder sessionId(String sessionId) {
                 this.sessionId = sessionId;
@@ -507,7 +507,7 @@ public class ListZkTrackResponseBody extends TeaModel {
             }
 
             /**
-             * Ttl.
+             * TTL。
              */
             public Builder ttl(Long ttl) {
                 this.ttl = ttl;

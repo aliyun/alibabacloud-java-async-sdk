@@ -105,7 +105,7 @@ public class DeleteGatewayServiceVersionRequest extends Request {
         }
 
         /**
-         * GatewayUniqueId.
+         * The unique ID of the gateway.
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -114,7 +114,7 @@ public class DeleteGatewayServiceVersionRequest extends Request {
         }
 
         /**
-         * ServiceId.
+         * The ID of the service.
          */
         public Builder serviceId(Long serviceId) {
             this.putQueryParameter("ServiceId", serviceId);
@@ -123,7 +123,7 @@ public class DeleteGatewayServiceVersionRequest extends Request {
         }
 
         /**
-         * ServiceVersion.
+         * The version of the service.
          */
         public Builder serviceVersion(String serviceVersion) {
             this.putQueryParameter("ServiceVersion", serviceVersion);

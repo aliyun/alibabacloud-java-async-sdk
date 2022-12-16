@@ -91,7 +91,7 @@ public class DeleteGatewayRequest extends Request {
         }
 
         /**
-         * DeleteSlb.
+         * Specifies whether to delete the Server Load Balancer (SLB) instance purchased for the gateway.
          */
         public Builder deleteSlb(Boolean deleteSlb) {
             this.putQueryParameter("DeleteSlb", deleteSlb);
@@ -100,7 +100,7 @@ public class DeleteGatewayRequest extends Request {
         }
 
         /**
-         * GatewayUniqueId.
+         * The unique ID of the gateway.
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);

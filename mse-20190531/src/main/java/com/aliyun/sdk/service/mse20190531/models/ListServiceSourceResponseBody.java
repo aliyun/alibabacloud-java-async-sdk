@@ -98,7 +98,10 @@ public class ListServiceSourceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * - `true`: The request is successful. 
+         * - `false`: The request fails.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +109,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data structure.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -114,7 +117,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The error message returned if the request fails.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +125,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The status code returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +133,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The HTTP status code returned.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +141,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * The returned results.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -214,7 +217,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
             private String watchNamespace; 
 
             /**
-             * EnableIngress.
+             * Alibaba Cloud provides SDKs for multiple programming languages to help you integrate Alibaba Cloud products and services by using APIs. We recommend that you use an SDK to call API operations. This frees you from manual signature verification.
              */
             public Builder enableIngress(Boolean enableIngress) {
                 this.enableIngress = enableIngress;
@@ -230,7 +233,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
             }
 
             /**
-             * IngressClass.
+             * ingress class
              */
             public Builder ingressClass(String ingressClass) {
                 this.ingressClass = ingressClass;
@@ -238,7 +241,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
             }
 
             /**
-             * WatchNamespace.
+             * Alibaba Cloud CLI allows you to search for API operations, call and debug API operations online, and dynamically generate executable sample code for SDKs.
              */
             public Builder watchNamespace(String watchNamespace) {
                 this.watchNamespace = watchNamespace;
@@ -435,7 +438,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Address.
+             * The type of the service source.
              */
             public Builder address(String address) {
                 this.address = address;
@@ -443,7 +446,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
             }
 
             /**
-             * BindingWithGateway.
+             * The ID of the gateway.
              */
             public Builder bindingWithGateway(Integer bindingWithGateway) {
                 this.bindingWithGateway = bindingWithGateway;
@@ -451,7 +454,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
             }
 
             /**
-             * GatewayId.
+             * The time when the service source was added.
              */
             public Builder gatewayId(Long gatewayId) {
                 this.gatewayId = gatewayId;
@@ -467,7 +470,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The time when the service source was last modified.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -475,7 +478,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The unique ID of the service source.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -491,7 +494,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The name of the service source.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -499,7 +502,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
             }
 
             /**
-             * IngressOptions.
+             * Programming language
              */
             public Builder ingressOptions(IngressOptions ingressOptions) {
                 this.ingressOptions = ingressOptions;
@@ -507,7 +510,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The ID of the Container Service for Kubernetes (ACK) cluster, or the endpoint of the Microservices Engine (MSE) Nacos registry.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -523,7 +526,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * Indicates whether the service source is associated with the gateway.
              */
             public Builder source(String source) {
                 this.source = source;
@@ -531,7 +534,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
             }
 
             /**
-             * SourceUniqueId.
+             * Query service sources
              */
             public Builder sourceUniqueId(String sourceUniqueId) {
                 this.sourceUniqueId = sourceUniqueId;
@@ -539,7 +542,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The source of the service source.
              */
             public Builder type(String type) {
                 this.type = type;

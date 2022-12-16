@@ -98,7 +98,11 @@ public class DeleteZnodeRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * - zh: Chinese
+         * - en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -107,7 +111,7 @@ public class DeleteZnodeRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * The ID of the cluster.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -116,7 +120,7 @@ public class DeleteZnodeRequest extends Request {
         }
 
         /**
-         * Path.
+         * The path of the node.
          */
         public Builder path(String path) {
             this.putQueryParameter("Path", path);
@@ -125,7 +129,7 @@ public class DeleteZnodeRequest extends Request {
         }
 
         /**
-         * RequestPars.
+         * The extended request parameters in the JSON format.
          */
         public Builder requestPars(String requestPars) {
             this.putQueryParameter("RequestPars", requestPars);

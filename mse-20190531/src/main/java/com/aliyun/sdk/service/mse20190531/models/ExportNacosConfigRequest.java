@@ -139,7 +139,11 @@ public class ExportNacosConfigRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * - zh: Chinese
+         * - en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -148,7 +152,7 @@ public class ExportNacosConfigRequest extends Request {
         }
 
         /**
-         * AppName.
+         * The name of the application.
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -157,7 +161,7 @@ public class ExportNacosConfigRequest extends Request {
         }
 
         /**
-         * DataId.
+         * The data ID.
          */
         public Builder dataId(String dataId) {
             this.putQueryParameter("DataId", dataId);
@@ -166,7 +170,7 @@ public class ExportNacosConfigRequest extends Request {
         }
 
         /**
-         * Group.
+         * The name of the group.
          */
         public Builder group(String group) {
             this.putQueryParameter("Group", group);
@@ -175,7 +179,7 @@ public class ExportNacosConfigRequest extends Request {
         }
 
         /**
-         * Ids.
+         * The IDs of configurations.
          */
         public Builder ids(String ids) {
             this.putQueryParameter("Ids", ids);
@@ -184,7 +188,7 @@ public class ExportNacosConfigRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -193,7 +197,7 @@ public class ExportNacosConfigRequest extends Request {
         }
 
         /**
-         * NamespaceId.
+         * The ID of the namespace.
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);

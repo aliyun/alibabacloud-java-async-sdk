@@ -98,7 +98,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * 后端状态码
+         * The status code returned.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * HttpCode
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * Message
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +130,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
         }
 
         /**
-         * 是否成功
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -238,7 +238,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
             private String region; 
 
             /**
-             * Kubernetes集群Id
+             * The ID of the cluster.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -246,7 +246,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Kubernetes集群名
+             * The name of the cluster.
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -254,7 +254,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Kubernetes集群版本
+             * The version of the cluster.
              */
             public Builder k8sVersion(String k8sVersion) {
                 this.k8sVersion = k8sVersion;
@@ -262,7 +262,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Kubernetes集群命名空间信息（json格式）
+             * The information of the namespace.
              */
             public Builder namespaceInfos(String namespaceInfos) {
                 this.namespaceInfos = namespaceInfos;
@@ -270,7 +270,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
             }
 
             /**
-             * pilot启动时间
+             * The time when the ack-one-pilot component was started.
              */
             public Builder pilotStartTime(String pilotStartTime) {
                 this.pilotStartTime = pilotStartTime;
@@ -278,7 +278,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Kubernetes集群所在的地域
+             * Region
              */
             public Builder region(String region) {
                 this.region = region;
@@ -355,7 +355,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
             private Integer totalSize; 
 
             /**
-             * 当前页码
+             * The page number of the returned page.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -363,7 +363,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
             }
 
             /**
-             * 页大小
+             * The number of entries returned per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -379,7 +379,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
             }
 
             /**
-             * 页码总数
+             * The number of clusters.
              */
             public Builder totalSize(Integer totalSize) {
                 this.totalSize = totalSize;

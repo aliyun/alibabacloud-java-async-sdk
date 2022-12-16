@@ -96,7 +96,11 @@ public class UpdateGatewayRouteWafStatusRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -105,7 +109,7 @@ public class UpdateGatewayRouteWafStatusRequest extends Request {
         }
 
         /**
-         * EnableWaf.
+         * Specifies whether to enable Web Application Firewall (WAF).
          */
         public Builder enableWaf(Boolean enableWaf) {
             this.putQueryParameter("EnableWaf", enableWaf);
@@ -114,7 +118,7 @@ public class UpdateGatewayRouteWafStatusRequest extends Request {
         }
 
         /**
-         * GatewayUniqueId.
+         * The unique ID of the gateway.
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -123,7 +127,7 @@ public class UpdateGatewayRouteWafStatusRequest extends Request {
         }
 
         /**
-         * RouteId.
+         * The ID of the route entry.
          */
         public Builder routeId(Long routeId) {
             this.putQueryParameter("RouteId", routeId);

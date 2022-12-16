@@ -82,7 +82,11 @@ public class QueryClusterSpecificationRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -91,7 +95,11 @@ public class QueryClusterSpecificationRequest extends Request {
         }
 
         /**
-         * 网络连接类型
+         * The network type. Valid values:
+         * <p>
+         * 
+         * *   slb
+         * *   eni
          */
         public Builder connectType(String connectType) {
             this.putQueryParameter("ConnectType", connectType);
@@ -100,7 +108,11 @@ public class QueryClusterSpecificationRequest extends Request {
         }
 
         /**
-         * MseVersion.
+         * The edition of the Microservices Engine (MSE) instance that you want to purchase.
+         * <p>
+         * 
+         * *   mse_pro: Professional Edition
+         * *   mse_dev: Developer Edition
          */
         public Builder mseVersion(String mseVersion) {
             this.putQueryParameter("MseVersion", mseVersion);

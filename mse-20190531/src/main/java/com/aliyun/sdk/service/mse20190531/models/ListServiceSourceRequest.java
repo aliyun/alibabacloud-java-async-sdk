@@ -68,7 +68,7 @@ public class ListServiceSourceRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The data structure.
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -77,7 +77,7 @@ public class ListServiceSourceRequest extends Request {
         }
 
         /**
-         * GatewayUniqueId.
+         * The unique ID of the gateway.
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);

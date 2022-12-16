@@ -111,7 +111,10 @@ public class GetPluginsRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * zh: Chinese en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -120,7 +123,15 @@ public class GetPluginsRequest extends Request {
         }
 
         /**
-         * Category.
+         * The plug-in directory.
+         * <p>
+         * 
+         * *   0: user-defined
+         * *   1: permission authentication
+         * *   2: security protection
+         * *   3: transmission protocol
+         * *   4: traffic control
+         * *   5: traffic observation
          */
         public Builder category(Integer category) {
             this.putQueryParameter("Category", category);
@@ -129,7 +140,7 @@ public class GetPluginsRequest extends Request {
         }
 
         /**
-         * EnableOnly.
+         * Specifies whether to enable the plug-in.
          */
         public Builder enableOnly(Boolean enableOnly) {
             this.putQueryParameter("EnableOnly", enableOnly);
@@ -138,7 +149,7 @@ public class GetPluginsRequest extends Request {
         }
 
         /**
-         * GatewayUniqueId.
+         * The ID of the gateway.
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -147,7 +158,7 @@ public class GetPluginsRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the plug-in.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

@@ -182,7 +182,11 @@ public class ListAnsServicesRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -191,7 +195,10 @@ public class ListAnsServicesRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * The ID of the cluster.
+         * <p>
+         * 
+         * > This operation contains both the InstanceId and ClusterId parameters. You must specify one of them.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -200,7 +207,7 @@ public class ListAnsServicesRequest extends Request {
         }
 
         /**
-         * GroupName.
+         * The name of the contact group.
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -209,7 +216,7 @@ public class ListAnsServicesRequest extends Request {
         }
 
         /**
-         * HasIpCount.
+         * Specifies whether to query the number of instances that are used for the service.
          */
         public Builder hasIpCount(String hasIpCount) {
             this.putQueryParameter("HasIpCount", hasIpCount);
@@ -218,7 +225,10 @@ public class ListAnsServicesRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
+         * <p>
+         * 
+         * > This operation contains both the InstanceId and ClusterId parameters. You must specify one of them.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -227,7 +237,7 @@ public class ListAnsServicesRequest extends Request {
         }
 
         /**
-         * NamespaceId.
+         * The ID of the namespace.
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
@@ -236,7 +246,7 @@ public class ListAnsServicesRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * The number of the page to return.
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -245,7 +255,7 @@ public class ListAnsServicesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -254,7 +264,7 @@ public class ListAnsServicesRequest extends Request {
         }
 
         /**
-         * RequestPars.
+         * The extended request parameter in the JSON format.
          */
         public Builder requestPars(String requestPars) {
             this.putQueryParameter("RequestPars", requestPars);
@@ -263,7 +273,7 @@ public class ListAnsServicesRequest extends Request {
         }
 
         /**
-         * ServiceName.
+         * The name of the service.
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);

@@ -110,7 +110,11 @@ public class ListInstanceCountRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -119,7 +123,7 @@ public class ListInstanceCountRequest extends Request {
         }
 
         /**
-         * ClusterType.
+         * The type of the instance. Valid values: ZooKeeper and Nacos-Ans.
          */
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("ClusterType", clusterType);
@@ -128,7 +132,11 @@ public class ListInstanceCountRequest extends Request {
         }
 
         /**
-         * MseVersion.
+         * The edition type of the instance. Valid values:
+         * <p>
+         * 
+         * *   `mse_dev`: Developer Edition
+         * *   `mse_pro`: Professional Edition
          */
         public Builder mseVersion(String mseVersion) {
             this.putQueryParameter("MseVersion", mseVersion);
@@ -137,7 +145,14 @@ public class ListInstanceCountRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the instance resides. Examples:
+         * <p>
+         * 
+         * *   cn-hangzhou: China (Hangzhou)
+         * *   cn-beijing: China (Beijing)
+         * *   cn-shanghai: China (Shanghai)
+         * *   cn-zhangjiakou: China (Zhangjiakou)
+         * *   cn-shenzhen: China (Shenzhen)
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -146,7 +161,7 @@ public class ListInstanceCountRequest extends Request {
         }
 
         /**
-         * RequestPars.
+         * The extended request parameters in the JSON format.
          */
         public Builder requestPars(String requestPars) {
             this.putQueryParameter("RequestPars", requestPars);

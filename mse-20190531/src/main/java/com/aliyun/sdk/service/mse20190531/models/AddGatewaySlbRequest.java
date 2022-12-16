@@ -168,7 +168,11 @@ public class AddGatewaySlbRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -177,7 +181,7 @@ public class AddGatewaySlbRequest extends Request {
         }
 
         /**
-         * GatewayUniqueId.
+         * The unique ID of the gateway.
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -186,7 +190,7 @@ public class AddGatewaySlbRequest extends Request {
         }
 
         /**
-         * HttpPort.
+         * The HTTP port number (virtual service group).
          */
         public Builder httpPort(Integer httpPort) {
             this.putQueryParameter("HttpPort", httpPort);
@@ -195,7 +199,7 @@ public class AddGatewaySlbRequest extends Request {
         }
 
         /**
-         * HttpsPort.
+         * The HTTPS port number (virtual service group).
          */
         public Builder httpsPort(Integer httpsPort) {
             this.putQueryParameter("HttpsPort", httpsPort);
@@ -204,7 +208,7 @@ public class AddGatewaySlbRequest extends Request {
         }
 
         /**
-         * HttpsVServerGroupId.
+         * The ID of the HTTPS virtual service group.
          */
         public Builder httpsVServerGroupId(String httpsVServerGroupId) {
             this.putQueryParameter("HttpsVServerGroupId", httpsVServerGroupId);
@@ -213,7 +217,7 @@ public class AddGatewaySlbRequest extends Request {
         }
 
         /**
-         * ServiceWeight.
+         * The service weight.
          */
         public Builder serviceWeight(Integer serviceWeight) {
             this.putQueryParameter("ServiceWeight", serviceWeight);
@@ -222,7 +226,7 @@ public class AddGatewaySlbRequest extends Request {
         }
 
         /**
-         * SlbId.
+         * SLB ID.
          */
         public Builder slbId(String slbId) {
             this.putQueryParameter("SlbId", slbId);
@@ -231,7 +235,7 @@ public class AddGatewaySlbRequest extends Request {
         }
 
         /**
-         * Type.
+         * The type.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -240,7 +244,7 @@ public class AddGatewaySlbRequest extends Request {
         }
 
         /**
-         * VServerGroupId.
+         * The ID of the HTTP virtual service group.
          */
         public Builder vServerGroupId(String vServerGroupId) {
             this.putQueryParameter("VServerGroupId", vServerGroupId);

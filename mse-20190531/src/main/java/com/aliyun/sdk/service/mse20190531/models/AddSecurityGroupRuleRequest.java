@@ -113,7 +113,11 @@ public class AddSecurityGroupRuleRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * - zh: Chinese
+         * - en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -122,7 +126,7 @@ public class AddSecurityGroupRuleRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the rule.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -131,7 +135,7 @@ public class AddSecurityGroupRuleRequest extends Request {
         }
 
         /**
-         * 网关ID
+         * The ID of the gateway.
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -140,7 +144,7 @@ public class AddSecurityGroupRuleRequest extends Request {
         }
 
         /**
-         * 端口范围
+         * The port range.
          */
         public Builder portRange(String portRange) {
             this.putQueryParameter("PortRange", portRange);
@@ -149,7 +153,7 @@ public class AddSecurityGroupRuleRequest extends Request {
         }
 
         /**
-         * 安全组ID
+         * The ID of the security group.
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);

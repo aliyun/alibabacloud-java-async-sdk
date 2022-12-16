@@ -98,7 +98,7 @@ public class DeleteAuthResourceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code returned.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class DeleteAuthResourceResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class DeleteAuthResourceResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class DeleteAuthResourceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +130,7 @@ public class DeleteAuthResourceResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,11 @@ public class DeleteAuthResourceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -286,7 +290,7 @@ public class DeleteAuthResourceResponseBody extends TeaModel {
             private String path; 
 
             /**
-             * AuthId.
+             * The ID of the authorization record.
              */
             public Builder authId(Long authId) {
                 this.authId = authId;
@@ -294,7 +298,7 @@ public class DeleteAuthResourceResponseBody extends TeaModel {
             }
 
             /**
-             * DomainId.
+             * The ID of the domain name.
              */
             public Builder domainId(Long domainId) {
                 this.domainId = domainId;
@@ -302,7 +306,7 @@ public class DeleteAuthResourceResponseBody extends TeaModel {
             }
 
             /**
-             * DomainName.
+             * The domain name.
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -310,7 +314,7 @@ public class DeleteAuthResourceResponseBody extends TeaModel {
             }
 
             /**
-             * GatewayId.
+             * The ID of the gateway.
              */
             public Builder gatewayId(Long gatewayId) {
                 this.gatewayId = gatewayId;
@@ -318,7 +322,7 @@ public class DeleteAuthResourceResponseBody extends TeaModel {
             }
 
             /**
-             * GatewayUniqueId.
+             * The unique ID of the gateway.
              */
             public Builder gatewayUniqueId(String gatewayUniqueId) {
                 this.gatewayUniqueId = gatewayUniqueId;
@@ -326,7 +330,7 @@ public class DeleteAuthResourceResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The creation time.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -334,7 +338,7 @@ public class DeleteAuthResourceResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The modification time.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -342,7 +346,7 @@ public class DeleteAuthResourceResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the primary key.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -350,7 +354,7 @@ public class DeleteAuthResourceResponseBody extends TeaModel {
             }
 
             /**
-             * IsWhite.
+             * Indicates whether the whitelist mode is enabled.
              */
             public Builder isWhite(Boolean isWhite) {
                 this.isWhite = isWhite;
@@ -358,7 +362,7 @@ public class DeleteAuthResourceResponseBody extends TeaModel {
             }
 
             /**
-             * Path.
+             * The path.
              */
             public Builder path(String path) {
                 this.path = path;

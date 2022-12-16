@@ -127,7 +127,11 @@ public class CloneNacosConfigRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * - zh: Chinese
+         * - en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -136,7 +140,7 @@ public class CloneNacosConfigRequest extends Request {
         }
 
         /**
-         * Ids.
+         * The IDs of configurations.
          */
         public Builder ids(String ids) {
             this.putQueryParameter("Ids", ids);
@@ -145,7 +149,7 @@ public class CloneNacosConfigRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -154,7 +158,7 @@ public class CloneNacosConfigRequest extends Request {
         }
 
         /**
-         * OriginNamespaceId.
+         * The ID of the source namespace.
          */
         public Builder originNamespaceId(String originNamespaceId) {
             this.putQueryParameter("OriginNamespaceId", originNamespaceId);
@@ -163,7 +167,7 @@ public class CloneNacosConfigRequest extends Request {
         }
 
         /**
-         * Policy.
+         * The policy used to handle write conflicts.
          */
         public Builder policy(String policy) {
             this.putQueryParameter("Policy", policy);
@@ -172,7 +176,7 @@ public class CloneNacosConfigRequest extends Request {
         }
 
         /**
-         * TargetNamespaceId.
+         * The ID of the destination namespace.
          */
         public Builder targetNamespaceId(String targetNamespaceId) {
             this.putQueryParameter("TargetNamespaceId", targetNamespaceId);

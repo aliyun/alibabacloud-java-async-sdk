@@ -98,7 +98,7 @@ public class DeleteNacosServiceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * 响应码
+         * The response code returned.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class DeleteNacosServiceResponseBody extends TeaModel {
         }
 
         /**
-         * 删除服务的结果
+         * The deletion result.
          */
         public Builder data(String data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class DeleteNacosServiceResponseBody extends TeaModel {
         }
 
         /**
-         * http状态码
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class DeleteNacosServiceResponseBody extends TeaModel {
         }
 
         /**
-         * 响应信息
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +130,7 @@ public class DeleteNacosServiceResponseBody extends TeaModel {
         }
 
         /**
-         * 请求id
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,11 @@ public class DeleteNacosServiceResponseBody extends TeaModel {
         }
 
         /**
-         * 成功标志
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;

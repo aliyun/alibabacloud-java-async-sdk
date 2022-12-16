@@ -146,7 +146,7 @@ public class ListNacosConfigsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Code.
+         * The status code returned.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -154,7 +154,7 @@ public class ListNacosConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * Configurations.
+         * The information about configurations.
          */
         public Builder configurations(java.util.List < Configurations> configurations) {
             this.configurations = configurations;
@@ -162,7 +162,7 @@ public class ListNacosConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code returned if the request fails.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -170,7 +170,7 @@ public class ListNacosConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpCode.
+         * The HTTP status code returned.
          */
         public Builder httpCode(String httpCode) {
             this.httpCode = httpCode;
@@ -178,7 +178,7 @@ public class ListNacosConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -186,7 +186,7 @@ public class ListNacosConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -194,7 +194,7 @@ public class ListNacosConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -202,7 +202,7 @@ public class ListNacosConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -210,7 +210,10 @@ public class ListNacosConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * - `true`: The request is successful. 
+         * - `false`: The request fails.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -218,7 +221,7 @@ public class ListNacosConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -294,7 +297,7 @@ public class ListNacosConfigsResponseBody extends TeaModel {
             private String id; 
 
             /**
-             * AppName.
+             * The name of the application.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -302,7 +305,7 @@ public class ListNacosConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * DataId.
+             * The ID of the configuration.
              */
             public Builder dataId(String dataId) {
                 this.dataId = dataId;
@@ -310,7 +313,7 @@ public class ListNacosConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Group.
+             * The ID of the group.
              */
             public Builder group(String group) {
                 this.group = group;
@@ -318,7 +321,7 @@ public class ListNacosConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the application.
              */
             public Builder id(String id) {
                 this.id = id;

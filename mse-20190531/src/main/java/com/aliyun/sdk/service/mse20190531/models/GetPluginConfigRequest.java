@@ -84,7 +84,10 @@ public class GetPluginConfigRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * zh: Chinese en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -93,7 +96,7 @@ public class GetPluginConfigRequest extends Request {
         }
 
         /**
-         * GatewayUniqueId.
+         * The unique ID of the gateway.
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -102,7 +105,7 @@ public class GetPluginConfigRequest extends Request {
         }
 
         /**
-         * PluginId.
+         * The ID of the gateway plug-in.
          */
         public Builder pluginId(Long pluginId) {
             this.putQueryParameter("PluginId", pluginId);

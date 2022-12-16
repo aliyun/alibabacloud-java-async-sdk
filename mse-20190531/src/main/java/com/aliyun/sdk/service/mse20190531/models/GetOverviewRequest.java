@@ -82,7 +82,11 @@ public class GetOverviewRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * - zh: Chinese
+         * - en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -91,7 +95,7 @@ public class GetOverviewRequest extends Request {
         }
 
         /**
-         * Period.
+         * The subscription period of the instance. Unit: months. Valid values: 1, 2, 3, 6, and 12.
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -100,7 +104,7 @@ public class GetOverviewRequest extends Request {
         }
 
         /**
-         * Region.
+         * The ID of the region.
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);

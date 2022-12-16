@@ -119,7 +119,7 @@ public class RestartClusterRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * The ID of the cluster.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -128,7 +128,7 @@ public class RestartClusterRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -137,7 +137,11 @@ public class RestartClusterRequest extends Request {
         }
 
         /**
-         * PodNameList.
+         * The name of the pod. You can specify the names of multiple pods at a time. Separate multiple pod names with commas (,).
+         * <p>
+         * Example: mse-a8aba010-1629719288255-reg-center-0-1,mse-a8aba010-1629719288255-reg-center-0-2.
+         * 
+         * The specified pods must belong to the current cluster and be associated with the specified instance. Otherwise, a restart exception occurs.
          */
         public Builder podNameList(String podNameList) {
             this.putQueryParameter("PodNameList", podNameList);
@@ -146,7 +150,7 @@ public class RestartClusterRequest extends Request {
         }
 
         /**
-         * RequestPars.
+         * The extended request parameters in the JSON format.
          */
         public Builder requestPars(String requestPars) {
             this.putQueryParameter("RequestPars", requestPars);

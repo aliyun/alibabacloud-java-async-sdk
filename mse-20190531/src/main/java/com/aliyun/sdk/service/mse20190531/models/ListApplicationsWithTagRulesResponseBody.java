@@ -98,7 +98,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code returned.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The details of the data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,11 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned. Valid values: 
+         * <p>
+         * 
+         * - If the request is successful, a success message is returned. 
+         * - If the request fails, an error message is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +134,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +142,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful. Valid values: -[unk]true[unk]: The request is successful. -[unk]false[unk]: The request fails.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -298,7 +302,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             private String tag; 
 
             /**
-             * CarryData.
+             * Indicates whether pass-through is enabled.
              */
             public Builder carryData(Boolean carryData) {
                 this.carryData = carryData;
@@ -306,7 +310,11 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Enable.
+             * Indicates whether the routing rule is enabled. Valid values:
+             * <p>
+             * 
+             * - `true`: enabled 
+             * - `false`: disabled
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -314,7 +322,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The time when the routing rule was last modified.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -322,7 +330,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the routing rule.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -330,7 +338,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceNum.
+             * The number of instances.
              */
             public Builder instanceNum(Integer instanceNum) {
                 this.instanceNum = instanceNum;
@@ -338,7 +346,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the routing rule.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -346,7 +354,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Rate.
+             * The rate.
              */
             public Builder rate(Integer rate) {
                 this.rate = rate;
@@ -354,7 +362,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Remove.
+             * Indicates whether the routing rule is deleted.
              */
             public Builder remove(Boolean remove) {
                 this.remove = remove;
@@ -362,7 +370,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Rules.
+             * The details of the routing rule.
              */
             public Builder rules(String rules) {
                 this.rules = rules;
@@ -370,7 +378,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the routing rule.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -378,7 +386,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Tag.
+             * The tag of the routing rule.
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -455,7 +463,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             private Long routeStatus; 
 
             /**
-             * AppId.
+             * The ID of the application.
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -463,7 +471,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * The name of the application.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -471,7 +479,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RouteRules.
+             * The information about routing rules.
              */
             public Builder routeRules(java.util.List < RouteRules> routeRules) {
                 this.routeRules = routeRules;
@@ -479,7 +487,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RouteStatus.
+             * The status of the route. Valid values: -0: disabled. -1: enabled.
              */
             public Builder routeStatus(Long routeStatus) {
                 this.routeStatus = routeStatus;
@@ -556,7 +564,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             private Integer totalSize; 
 
             /**
-             * PageNumber.
+             * The page number of the returned page.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -564,7 +572,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -572,7 +580,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * The data structure.
              */
             public Builder result(java.util.List < Result> result) {
                 this.result = result;
@@ -580,7 +588,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalSize.
+             * The total number of entries returned.
              */
             public Builder totalSize(Integer totalSize) {
                 this.totalSize = totalSize;

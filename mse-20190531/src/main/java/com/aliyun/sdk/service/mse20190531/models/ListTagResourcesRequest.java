@@ -126,7 +126,11 @@ public class ListTagResourcesRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -135,7 +139,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * 下一个查询开始Token
+         * The token that is required for the next query.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -144,7 +148,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * 地域
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -153,7 +157,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * 资源ID,最多 50个子项
+         * The resource IDs. You can specify a maximum of 50 resource IDs.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -162,7 +166,11 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * 资源类型
+         * The type of the resources. Valid values:
+         * <p>
+         * 
+         * *   CLUSTER: MSE instance
+         * *   GATEWAY: cloud-native gateway
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -171,7 +179,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * 标签列表，最多包含20个子项
+         * The list of tags. You can specify a maximum of 20 tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -225,7 +233,7 @@ public class ListTagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * 标签键
+             * The key of a tag.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -233,7 +241,7 @@ public class ListTagResourcesRequest extends Request {
             }
 
             /**
-             * 标签值
+             * The value of a tag.
              */
             public Builder value(String value) {
                 this.value = value;

@@ -239,7 +239,7 @@ public class ListZkTrackRequest extends Request {
         }
 
         /**
-         * RequestPars.
+         * RequestPars。
          */
         public Builder requestPars(String requestPars) {
             this.putQueryParameter("RequestPars", requestPars);
@@ -257,7 +257,7 @@ public class ListZkTrackRequest extends Request {
         }
 
         /**
-         * SessionId.
+         * SessionId。
          */
         public Builder sessionId(String sessionId) {
             this.putQueryParameter("SessionId", sessionId);

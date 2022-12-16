@@ -168,7 +168,11 @@ public class CreateMseServiceApplicationRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -177,7 +181,7 @@ public class CreateMseServiceApplicationRequest extends Request {
         }
 
         /**
-         * AppName.
+         * The name of the application.
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -186,7 +190,7 @@ public class CreateMseServiceApplicationRequest extends Request {
         }
 
         /**
-         * ExtraInfo.
+         * The additional information.
          */
         public Builder extraInfo(String extraInfo) {
             this.putQueryParameter("ExtraInfo", extraInfo);
@@ -195,7 +199,7 @@ public class CreateMseServiceApplicationRequest extends Request {
         }
 
         /**
-         * Language.
+         * The programming language of the application.
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -204,7 +208,11 @@ public class CreateMseServiceApplicationRequest extends Request {
         }
 
         /**
-         * MseVersion.
+         * The edition of the MSE instance that you want to purchase.
+         * <p>
+         * 
+         * *   mse_pro: Professional Edition
+         * *   mse_dev: Developer Edition
          */
         public Builder mseVersion(String mseVersion) {
             this.putQueryParameter("MseVersion", mseVersion);
@@ -213,7 +221,14 @@ public class CreateMseServiceApplicationRequest extends Request {
         }
 
         /**
-         * Region.
+         * The ID of the region where the Microservices Engine (MSE) instance resides. Examples:
+         * <p>
+         * 
+         * *   cn-hangzhou: China (Hangzhou)
+         * *   cn-beijing: China (Beijing)
+         * *   cn-shanghai: China (Shanghai)
+         * *   cn-zhangjiakou: China (Zhangjiakou)
+         * *   cn-shenzhen: China (Shenzhen)
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -222,7 +237,7 @@ public class CreateMseServiceApplicationRequest extends Request {
         }
 
         /**
-         * SentinelEnable.
+         * Specifies whether to enable the Sentinel-compatible mode.
          */
         public Builder sentinelEnable(String sentinelEnable) {
             this.putQueryParameter("SentinelEnable", sentinelEnable);
@@ -231,7 +246,7 @@ public class CreateMseServiceApplicationRequest extends Request {
         }
 
         /**
-         * Source.
+         * The service source.
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -240,7 +255,7 @@ public class CreateMseServiceApplicationRequest extends Request {
         }
 
         /**
-         * SwitchEnable.
+         * Specifies whether to enable switching.
          */
         public Builder switchEnable(String switchEnable) {
             this.putQueryParameter("SwitchEnable", switchEnable);

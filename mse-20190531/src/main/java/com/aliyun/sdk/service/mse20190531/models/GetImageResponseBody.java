@@ -98,7 +98,7 @@ public class GetImageResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The details of the data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -106,7 +106,7 @@ public class GetImageResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code returned if the request fails.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +114,7 @@ public class GetImageResponseBody extends TeaModel {
         }
 
         /**
-         * HttpCode.
+         * The HTTP status code returned.
          */
         public Builder httpCode(String httpCode) {
             this.httpCode = httpCode;
@@ -122,7 +122,7 @@ public class GetImageResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +130,7 @@ public class GetImageResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,10 @@ public class GetImageResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * - `true`: The request is successful. 
+         * - `false`: The request fails.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -214,7 +217,7 @@ public class GetImageResponseBody extends TeaModel {
             private String maxVersionFullShowName; 
 
             /**
-             * 当前集群镜像版本的4位全名
+             * The full name of the current cluster image version. The full name is in the X.X.X.X format.
              */
             public Builder currentVersionFullShowName(String currentVersionFullShowName) {
                 this.currentVersionFullShowName = currentVersionFullShowName;
@@ -222,7 +225,7 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * 可升级的最大版本变更日志url
+             * The URL of change logs for the latest version that can be updated to.
              */
             public Builder maxVersionChangelogUrl(String maxVersionChangelogUrl) {
                 this.maxVersionChangelogUrl = maxVersionChangelogUrl;
@@ -230,7 +233,7 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * 可升级的增量版本Code
+             * The code of the latest version that can be updated to.
              */
             public Builder maxVersionCode(String maxVersionCode) {
                 this.maxVersionCode = maxVersionCode;
@@ -238,7 +241,7 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * 可升级的增量版本全名
+             * The full name of the latest version that can be updated to.
              */
             public Builder maxVersionFullShowName(String maxVersionFullShowName) {
                 this.maxVersionFullShowName = maxVersionFullShowName;

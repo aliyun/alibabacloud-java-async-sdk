@@ -125,7 +125,7 @@ public class GetServiceListRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language of the response.
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -134,7 +134,7 @@ public class GetServiceListRequest extends Request {
         }
 
         /**
-         * AppId.
+         * The ID of the application.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -143,7 +143,7 @@ public class GetServiceListRequest extends Request {
         }
 
         /**
-         * Ip.
+         * The IP address.
          */
         public Builder ip(String ip) {
             this.putQueryParameter("Ip", ip);
@@ -152,7 +152,7 @@ public class GetServiceListRequest extends Request {
         }
 
         /**
-         * Region.
+         * The ID of the region.
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -161,7 +161,7 @@ public class GetServiceListRequest extends Request {
         }
 
         /**
-         * ServiceName.
+         * The name of the service.
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);
@@ -170,7 +170,7 @@ public class GetServiceListRequest extends Request {
         }
 
         /**
-         * ServiceType.
+         * The type of the framework.
          */
         public Builder serviceType(String serviceType) {
             this.putQueryParameter("ServiceType", serviceType);

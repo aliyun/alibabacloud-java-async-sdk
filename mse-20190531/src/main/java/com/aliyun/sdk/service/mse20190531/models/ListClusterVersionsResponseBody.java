@@ -122,7 +122,7 @@ public class ListClusterVersionsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code returned.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -130,7 +130,7 @@ public class ListClusterVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The details of the data.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -138,7 +138,7 @@ public class ListClusterVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * The dynamic part in the error message.
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -146,7 +146,7 @@ public class ListClusterVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code returned if the request fails.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -154,7 +154,7 @@ public class ListClusterVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -162,7 +162,7 @@ public class ListClusterVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -170,7 +170,7 @@ public class ListClusterVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -178,7 +178,10 @@ public class ListClusterVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * - `true`: The request is successful. 
+         * - `false`: The request fails.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -242,7 +245,7 @@ public class ListClusterVersionsResponseBody extends TeaModel {
             private String showName; 
 
             /**
-             * ClusterType.
+             * The type of the cluster.
              */
             public Builder clusterType(String clusterType) {
                 this.clusterType = clusterType;
@@ -250,7 +253,7 @@ public class ListClusterVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * Code.
+             * The code of the cluster type.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -258,7 +261,7 @@ public class ListClusterVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * ShowName.
+             * The display name of the cluster type.
              */
             public Builder showName(String showName) {
                 this.showName = showName;

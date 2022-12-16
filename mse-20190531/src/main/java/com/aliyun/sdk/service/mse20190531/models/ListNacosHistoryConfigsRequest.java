@@ -169,7 +169,11 @@ public class ListNacosHistoryConfigsRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * - zh: Chinese
+         * - en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -178,7 +182,7 @@ public class ListNacosHistoryConfigsRequest extends Request {
         }
 
         /**
-         * DataId.
+         * The ID of the configuration.
          */
         public Builder dataId(String dataId) {
             this.putQueryParameter("DataId", dataId);
@@ -187,7 +191,7 @@ public class ListNacosHistoryConfigsRequest extends Request {
         }
 
         /**
-         * Group.
+         * The name of the group.
          */
         public Builder group(String group) {
             this.putQueryParameter("Group", group);
@@ -196,7 +200,7 @@ public class ListNacosHistoryConfigsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -205,7 +209,7 @@ public class ListNacosHistoryConfigsRequest extends Request {
         }
 
         /**
-         * NamespaceId.
+         * The ID of the namespace.
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
@@ -214,7 +218,7 @@ public class ListNacosHistoryConfigsRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * The number of the page to return.
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -223,7 +227,7 @@ public class ListNacosHistoryConfigsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -232,7 +236,7 @@ public class ListNacosHistoryConfigsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region in which the cluster resides.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -241,7 +245,7 @@ public class ListNacosHistoryConfigsRequest extends Request {
         }
 
         /**
-         * RequestPars.
+         * The extended request parameters in the JSON format.
          */
         public Builder requestPars(String requestPars) {
             this.putQueryParameter("RequestPars", requestPars);

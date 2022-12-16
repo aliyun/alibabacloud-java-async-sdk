@@ -113,7 +113,11 @@ public class UpdateClusterSpecRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -122,7 +126,7 @@ public class UpdateClusterSpecRequest extends Request {
         }
 
         /**
-         * 网关名称
+         * The ID of the cluster.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -131,7 +135,7 @@ public class UpdateClusterSpecRequest extends Request {
         }
 
         /**
-         * ClusterSpecification.
+         * The specifications of the engine.
          */
         public Builder clusterSpecification(String clusterSpecification) {
             this.putQueryParameter("ClusterSpecification", clusterSpecification);
@@ -140,7 +144,7 @@ public class UpdateClusterSpecRequest extends Request {
         }
 
         /**
-         * 节点数量
+         * The number of nodes.
          */
         public Builder instanceCount(Integer instanceCount) {
             this.putQueryParameter("InstanceCount", instanceCount);
@@ -149,7 +153,7 @@ public class UpdateClusterSpecRequest extends Request {
         }
 
         /**
-         * 节点规格
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

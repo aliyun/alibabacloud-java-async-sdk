@@ -182,7 +182,10 @@ public class UpdatePluginConfigRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * zh: Chinese en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -191,7 +194,7 @@ public class UpdatePluginConfigRequest extends Request {
         }
 
         /**
-         * Config.
+         * The plug-in configuration.
          */
         public Builder config(String config) {
             this.putQueryParameter("Config", config);
@@ -200,7 +203,12 @@ public class UpdatePluginConfigRequest extends Request {
         }
 
         /**
-         * ConfigLevel.
+         * The application scope of the plug-in.
+         * <p>
+         * 
+         * *   0: global
+         * *   1: domain names
+         * *   2: routes
          */
         public Builder configLevel(Integer configLevel) {
             this.putQueryParameter("ConfigLevel", configLevel);
@@ -209,7 +217,7 @@ public class UpdatePluginConfigRequest extends Request {
         }
 
         /**
-         * Enable.
+         * Specifies whether to enable the plug-in.
          */
         public Builder enable(Boolean enable) {
             this.putQueryParameter("Enable", enable);
@@ -218,7 +226,7 @@ public class UpdatePluginConfigRequest extends Request {
         }
 
         /**
-         * GatewayId.
+         * The ID of the gateway.
          */
         public Builder gatewayId(Long gatewayId) {
             this.putQueryParameter("GatewayId", gatewayId);
@@ -227,7 +235,7 @@ public class UpdatePluginConfigRequest extends Request {
         }
 
         /**
-         * GatewayUniqueId.
+         * The unique ID of the gateway.
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -236,7 +244,7 @@ public class UpdatePluginConfigRequest extends Request {
         }
 
         /**
-         * GmtCreate.
+         * The creation time.
          */
         public Builder gmtCreate(String gmtCreate) {
             this.putQueryParameter("GmtCreate", gmtCreate);
@@ -245,7 +253,7 @@ public class UpdatePluginConfigRequest extends Request {
         }
 
         /**
-         * GmtModified.
+         * The update time.
          */
         public Builder gmtModified(String gmtModified) {
             this.putQueryParameter("GmtModified", gmtModified);
@@ -254,7 +262,7 @@ public class UpdatePluginConfigRequest extends Request {
         }
 
         /**
-         * Id.
+         * The ID of the plug-in configuration.
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -263,7 +271,7 @@ public class UpdatePluginConfigRequest extends Request {
         }
 
         /**
-         * PluginId.
+         * The ID of the gateway plug-in.
          */
         public Builder pluginId(Long pluginId) {
             this.putQueryParameter("PluginId", pluginId);

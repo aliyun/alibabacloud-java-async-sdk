@@ -98,7 +98,7 @@ public class CreateClusterResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * ErrorCode.
+         * The error code returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -106,7 +106,7 @@ public class CreateClusterResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -114,7 +114,7 @@ public class CreateClusterResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -122,7 +122,7 @@ public class CreateClusterResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * The ID of the order.
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -130,7 +130,7 @@ public class CreateClusterResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,11 @@ public class CreateClusterResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;

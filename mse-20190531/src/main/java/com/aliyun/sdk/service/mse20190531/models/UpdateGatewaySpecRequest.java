@@ -99,7 +99,11 @@ public class UpdateGatewaySpecRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -108,7 +112,7 @@ public class UpdateGatewaySpecRequest extends Request {
         }
 
         /**
-         * 网关名称
+         * The ID of the gateway.
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -117,7 +121,7 @@ public class UpdateGatewaySpecRequest extends Request {
         }
 
         /**
-         * 节点数量
+         * The number of nodes.
          */
         public Builder replica(Integer replica) {
             this.putQueryParameter("Replica", replica);
@@ -126,7 +130,7 @@ public class UpdateGatewaySpecRequest extends Request {
         }
 
         /**
-         * 节点规格
+         * The node specifications.
          */
         public Builder spec(String spec) {
             this.putQueryParameter("Spec", spec);

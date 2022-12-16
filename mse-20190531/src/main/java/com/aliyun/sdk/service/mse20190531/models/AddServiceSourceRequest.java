@@ -166,7 +166,12 @@ public class AddServiceSourceRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language in which the returned information is displayed. Valid values:
+         * <p>
+         * 
+         * - zh-CN: Chinese. This is the default value.
+         * - en-US: English.
+         * - ja: Japanese.
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -175,7 +180,7 @@ public class AddServiceSourceRequest extends Request {
         }
 
         /**
-         * Address.
+         * The address of the service.
          */
         public Builder address(String address) {
             this.putQueryParameter("Address", address);
@@ -184,7 +189,7 @@ public class AddServiceSourceRequest extends Request {
         }
 
         /**
-         * GatewayUniqueId.
+         * The unique ID of the gateway.
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -203,7 +208,7 @@ public class AddServiceSourceRequest extends Request {
         }
 
         /**
-         * IngressOptionsRequest.
+         * The Ingress configuration.
          */
         public Builder ingressOptionsRequest(IngressOptionsRequest ingressOptionsRequest) {
             String ingressOptionsRequestShrink = shrink(ingressOptionsRequest, "IngressOptionsRequest", "json");
@@ -213,7 +218,7 @@ public class AddServiceSourceRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the service.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -222,7 +227,7 @@ public class AddServiceSourceRequest extends Request {
         }
 
         /**
-         * PathList.
+         * Service root path array.
          */
         public Builder pathList(java.util.List < String > pathList) {
             String pathListShrink = shrink(pathList, "PathList", "json");
@@ -232,7 +237,7 @@ public class AddServiceSourceRequest extends Request {
         }
 
         /**
-         * Source.
+         * The type of the service source.
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -241,7 +246,7 @@ public class AddServiceSourceRequest extends Request {
         }
 
         /**
-         * Type.
+         * The service type.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -319,7 +324,7 @@ public class AddServiceSourceRequest extends Request {
             private String watchNamespace; 
 
             /**
-             * EnableIngress.
+             * Specifies whether to enable Ingress.
              */
             public Builder enableIngress(Boolean enableIngress) {
                 this.enableIngress = enableIngress;
@@ -327,7 +332,7 @@ public class AddServiceSourceRequest extends Request {
             }
 
             /**
-             * EnableStatus.
+             * Update the Ingress Status.
              */
             public Builder enableStatus(Boolean enableStatus) {
                 this.enableStatus = enableStatus;
@@ -335,7 +340,7 @@ public class AddServiceSourceRequest extends Request {
             }
 
             /**
-             * IngressClass.
+             * Specifies whether to monitor Ingress classes.
              */
             public Builder ingressClass(String ingressClass) {
                 this.ingressClass = ingressClass;
@@ -343,7 +348,7 @@ public class AddServiceSourceRequest extends Request {
             }
 
             /**
-             * WatchNamespace.
+             * The namespace that you want to monitor.
              */
             public Builder watchNamespace(String watchNamespace) {
                 this.watchNamespace = watchNamespace;

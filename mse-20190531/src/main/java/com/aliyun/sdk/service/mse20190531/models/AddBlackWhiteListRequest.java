@@ -189,7 +189,7 @@ public class AddBlackWhiteListRequest extends Request {
         }
 
         /**
-         * Content.
+         * The content of the blacklist.
          */
         public Builder content(String content) {
             this.putQueryParameter("Content", content);
@@ -198,7 +198,7 @@ public class AddBlackWhiteListRequest extends Request {
         }
 
         /**
-         * GatewayUniqueId.
+         * The unique ID of the gateway.
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -207,7 +207,7 @@ public class AddBlackWhiteListRequest extends Request {
         }
 
         /**
-         * IsWhite.
+         * Specifies whether to enable the whitelist mode for authorization.
          */
         public Builder isWhite(Boolean isWhite) {
             this.putQueryParameter("IsWhite", isWhite);
@@ -243,7 +243,7 @@ public class AddBlackWhiteListRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The resource type to which the blacklist or whitelist applies.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -252,7 +252,7 @@ public class AddBlackWhiteListRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the blacklist.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -261,7 +261,7 @@ public class AddBlackWhiteListRequest extends Request {
         }
 
         /**
-         * Type.
+         * The type of object in the blacklist or whitelist.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

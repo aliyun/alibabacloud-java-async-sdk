@@ -282,7 +282,7 @@ public class GetApplicationListWithMetircsResponseBody extends TeaModel {
             }
 
             /**
-             * Rt.
+             * Rt。
              */
             public Builder rt(Double rt) {
                 this.rt = rt;
@@ -435,7 +435,7 @@ public class GetApplicationListWithMetircsResponseBody extends TeaModel {
             }
 
             /**
-             * Qps.
+             * QPS。
              */
             public Builder qps(Double qps) {
                 this.qps = qps;
@@ -443,7 +443,7 @@ public class GetApplicationListWithMetircsResponseBody extends TeaModel {
             }
 
             /**
-             * Rt.
+             * Rt。
              */
             public Builder rt(Double rt) {
                 this.rt = rt;

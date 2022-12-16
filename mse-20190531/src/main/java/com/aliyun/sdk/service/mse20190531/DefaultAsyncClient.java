@@ -221,6 +221,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > The current API operation is not provided in Nacos SDK. For information about Nacos SDK, see the [official Nacos documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      *
+     */
     @Override
     public CompletableFuture<CloneNacosConfigResponse> cloneNacosConfig(CloneNacosConfigRequest request) {
         try {
@@ -249,6 +253,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Before you call this API operation, you must make sure that you fully understand the billing method and pricing of MSE.
+      *
+     */
     @Override
     public CompletableFuture<CreateClusterResponse> createCluster(CreateClusterRequest request) {
         try {
@@ -291,6 +299,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > The current API operation is not provided in Nacos SDK. For information about Nacos SDK, see the [official Nacos documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      *
+     */
     @Override
     public CompletableFuture<CreateNacosConfigResponse> createNacosConfig(CreateNacosConfigRequest request) {
         try {
@@ -305,6 +317,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Programming language
+      *
+     */
     @Override
     public CompletableFuture<CreateNacosInstanceResponse> createNacosInstance(CreateNacosInstanceRequest request) {
         try {
@@ -319,6 +335,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > The operation is not provided in Nacos SDKs. For more information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      *
+     */
     @Override
     public CompletableFuture<CreateNacosServiceResponse> createNacosService(CreateNacosServiceRequest request) {
         try {
@@ -501,6 +521,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      *
+     */
     @Override
     public CompletableFuture<DeleteNacosConfigResponse> deleteNacosConfig(DeleteNacosConfigRequest request) {
         try {
@@ -515,6 +539,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > The current API operation is not provided in Nacos SDK. For information about Nacos SDK, see the [official Nacos documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      *
+     */
     @Override
     public CompletableFuture<DeleteNacosConfigsResponse> deleteNacosConfigs(DeleteNacosConfigsRequest request) {
         try {
@@ -529,6 +557,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > The operation is not provided in Nacos SDKs. For more information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      *
+     */
     @Override
     public CompletableFuture<DeleteNacosInstanceResponse> deleteNacosInstance(DeleteNacosInstanceRequest request) {
         try {
@@ -543,6 +575,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > The operation is not provided in Nacos SDKs. For more information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      *
+     */
     @Override
     public CompletableFuture<DeleteNacosServiceResponse> deleteNacosService(DeleteNacosServiceRequest request) {
         try {
@@ -627,6 +663,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > The current API operation is not provided in Nacos SDK. For information about Nacos SDK, see the [official Nacos documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      *
+     */
     @Override
     public CompletableFuture<ExportNacosConfigResponse> exportNacosConfig(ExportNacosConfigRequest request) {
         try {
@@ -809,6 +849,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > The current API operation is not provided in Nacos SDK. For information about Nacos SDK, see the [official Nacos documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      *
+     */
     @Override
     public CompletableFuture<GetImportFileUrlResponse> getImportFileUrl(GetImportFileUrlRequest request) {
         try {
@@ -865,6 +909,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > The current API operation is not provided in Nacos SDK. For information about Nacos SDK, see the [official Nacos documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      *
+     */
     @Override
     public CompletableFuture<GetNacosConfigResponse> getNacosConfig(GetNacosConfigRequest request) {
         try {
@@ -879,6 +927,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > The current API operation is not provided in Nacos SDK. For information about Nacos SDK, see the [official Nacos documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      *
+     */
     @Override
     public CompletableFuture<GetNacosHistoryConfigResponse> getNacosHistoryConfig(GetNacosHistoryConfigRequest request) {
         try {
@@ -978,6 +1030,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
+    public CompletableFuture<GetZookeeperDataImportUrlResponse> getZookeeperDataImportUrl(GetZookeeperDataImportUrlRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetZookeeperDataImportUrl").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetZookeeperDataImportUrlResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetZookeeperDataImportUrlResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+      * > The current API operation is not provided in Nacos SDK. For information about Nacos SDK, see the [official Nacos documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      *
+     */
+    @Override
     public CompletableFuture<ImportNacosConfigResponse> importNacosConfig(ImportNacosConfigRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -1006,6 +1076,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
+    public CompletableFuture<ImportZookeeperDataResponse> importZookeeperData(ImportZookeeperDataRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ImportZookeeperData").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ImportZookeeperDataResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ImportZookeeperDataResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      *
+     */
+    @Override
     public CompletableFuture<ListAnsInstancesResponse> listAnsInstances(ListAnsInstancesRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -1019,6 +1107,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > The current API operation is not provided in Nacos SDK. For information about Nacos SDK, see the [official Nacos documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      *
+     */
     @Override
     public CompletableFuture<ListAnsServiceClustersResponse> listAnsServiceClusters(ListAnsServiceClustersRequest request) {
         try {
@@ -1033,6 +1125,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > The operation is not provided in Nacos SDKs. For more information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      *
+     */
     @Override
     public CompletableFuture<ListAnsServicesResponse> listAnsServices(ListAnsServicesRequest request) {
         try {
@@ -1084,6 +1180,20 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListClusterConnectionTypesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<ListClusterHealthCheckTaskResponse> listClusterHealthCheckTask(ListClusterHealthCheckTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListClusterHealthCheckTask").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListClusterHealthCheckTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListClusterHealthCheckTaskResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1257,6 +1367,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      *
+     */
     @Override
     public CompletableFuture<ListListenersByConfigResponse> listListenersByConfig(ListListenersByConfigRequest request) {
         try {
@@ -1271,6 +1385,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      *
+     */
     @Override
     public CompletableFuture<ListListenersByIpResponse> listListenersByIp(ListListenersByIpRequest request) {
         try {
@@ -1285,6 +1403,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > The current API operation is not provided in Nacos SDK. For information about Nacos SDK, see the [official Nacos documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      *
+     */
     @Override
     public CompletableFuture<ListNacosConfigsResponse> listNacosConfigs(ListNacosConfigsRequest request) {
         try {
@@ -1299,6 +1421,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > The current API operation is not provided in Nacos SDK. For information about Nacos SDK, see the [official Nacos documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      *
+     */
     @Override
     public CompletableFuture<ListNacosHistoryConfigsResponse> listNacosHistoryConfigs(ListNacosHistoryConfigsRequest request) {
         try {
@@ -1775,6 +1901,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You can call this API operation to update the number of nodes or specifications of a pay-as-you-go MSE instance. You are charged for node addition or specifications upgrades of the instance. For more information about billing, see [Billing overview](~~139842~~)
+      *
+     */
     @Override
     public CompletableFuture<UpdateClusterSpecResponse> updateClusterSpec(UpdateClusterSpecRequest request) {
         try {
@@ -1985,6 +2115,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You can call this operation to update the number or specifications of nodes in a pay-as-you-go cloud-native gateway. You are charged when you add nodes or upgrade node specifications. For more information, see \\[Pricing] (`~~250950~~`).
+      *
+     * @tags gateway
+     */
     @Override
     public CompletableFuture<UpdateGatewaySpecResponse> updateGatewaySpec(UpdateGatewaySpecRequest request) {
         try {
@@ -2041,6 +2176,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > The current API operation is not provided in Nacos SDK. For information about Nacos SDK, see the [official Nacos documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      *
+     */
     @Override
     public CompletableFuture<UpdateNacosConfigResponse> updateNacosConfig(UpdateNacosConfigRequest request) {
         try {
@@ -2055,6 +2194,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      *
+     */
     @Override
     public CompletableFuture<UpdateNacosInstanceResponse> updateNacosInstance(UpdateNacosInstanceRequest request) {
         try {
@@ -2069,6 +2212,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > The operation is not provided in Nacos SDKs. For more information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      *
+     */
     @Override
     public CompletableFuture<UpdateNacosServiceResponse> updateNacosService(UpdateNacosServiceRequest request) {
         try {

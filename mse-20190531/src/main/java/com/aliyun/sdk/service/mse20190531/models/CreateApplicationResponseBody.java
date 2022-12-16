@@ -98,7 +98,7 @@ public class CreateApplicationResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * Code.
+         * The status code returned.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class CreateApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The details of the data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class CreateApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class CreateApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +130,7 @@ public class CreateApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,11 @@ public class CreateApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * 
+         * - `true`: The request is successful. 
+         * - `false`: The request fails.
          */
         public Builder success(String success) {
             this.success = success;
@@ -298,7 +302,7 @@ public class CreateApplicationResponseBody extends TeaModel {
             private String userId; 
 
             /**
-             * AppId.
+             * The ID of the application.
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -306,7 +310,7 @@ public class CreateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * The name of the application.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -314,7 +318,7 @@ public class CreateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the application was created.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -322,7 +326,7 @@ public class CreateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * ExtraInfo.
+             * The additional information.
              */
             public Builder extraInfo(String extraInfo) {
                 this.extraInfo = extraInfo;
@@ -330,7 +334,7 @@ public class CreateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * Language.
+             * The programming language of the application.
              */
             public Builder language(String language) {
                 this.language = language;
@@ -338,7 +342,7 @@ public class CreateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * LicenseKey.
+             * The license key in use.
              */
             public Builder licenseKey(String licenseKey) {
                 this.licenseKey = licenseKey;
@@ -346,7 +350,7 @@ public class CreateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the region.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -354,7 +358,11 @@ public class CreateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * The service where the application is deployed. Valid values: 
+             * <p>
+             * 
+             * - ACK: Container Service for Kubernetes 
+             * - Normal: another service
              */
             public Builder source(String source) {
                 this.source = source;
@@ -362,7 +370,7 @@ public class CreateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the application. A value of 1 indicates that the application is in a normal state.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -370,7 +378,7 @@ public class CreateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The time when the application was last modified.
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -378,7 +386,7 @@ public class CreateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * The ID of the Alibaba Cloud account.
              */
             public Builder userId(String userId) {
                 this.userId = userId;

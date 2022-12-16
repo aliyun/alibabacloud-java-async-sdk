@@ -96,7 +96,11 @@ public class CreateZnodeRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * - zh: Chinese
+         * - en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -105,7 +109,7 @@ public class CreateZnodeRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * The ID of the cluster.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -114,7 +118,7 @@ public class CreateZnodeRequest extends Request {
         }
 
         /**
-         * Data.
+         * The data of the node.
          */
         public Builder data(String data) {
             this.putQueryParameter("Data", data);
@@ -123,7 +127,7 @@ public class CreateZnodeRequest extends Request {
         }
 
         /**
-         * Path.
+         * The path of the node.
          */
         public Builder path(String path) {
             this.putQueryParameter("Path", path);
