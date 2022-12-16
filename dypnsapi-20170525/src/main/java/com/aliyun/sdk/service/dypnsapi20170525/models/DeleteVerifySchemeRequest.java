@@ -101,13 +101,13 @@ public class DeleteVerifySchemeRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteVerifySchemeRequest response) {
-            super(response);
-            this.customerId = response.customerId;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.schemeCode = response.schemeCode;
+        private Builder(DeleteVerifySchemeRequest request) {
+            super(request);
+            this.customerId = request.customerId;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.schemeCode = request.schemeCode;
         } 
 
         /**

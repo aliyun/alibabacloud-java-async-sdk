@@ -32,6 +32,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetMobileResponse> getMobile(GetMobileRequest request);
 
+    CompletableFuture<GetPhoneWithTokenResponse> getPhoneWithToken(GetPhoneWithTokenRequest request);
+
     CompletableFuture<GetSmsAuthTokensResponse> getSmsAuthTokens(GetSmsAuthTokensRequest request);
 
     CompletableFuture<QueryGateVerifyBillingPublicResponse> queryGateVerifyBillingPublic(QueryGateVerifyBillingPublicRequest request);

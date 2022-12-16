@@ -102,13 +102,13 @@ public class VerifyPhoneWithTokenRequest extends Request {
             super();
         } 
 
-        private Builder(VerifyPhoneWithTokenRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.phoneNumber = response.phoneNumber;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.spToken = response.spToken;
+        private Builder(VerifyPhoneWithTokenRequest request) {
+            super(request);
+            this.ownerId = request.ownerId;
+            this.phoneNumber = request.phoneNumber;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.spToken = request.spToken;
         } 
 
         /**

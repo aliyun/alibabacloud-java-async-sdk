@@ -115,14 +115,14 @@ public class VerifyMobileRequest extends Request {
             super();
         } 
 
-        private Builder(VerifyMobileRequest response) {
-            super(response);
-            this.accessCode = response.accessCode;
-            this.outId = response.outId;
-            this.ownerId = response.ownerId;
-            this.phoneNumber = response.phoneNumber;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(VerifyMobileRequest request) {
+            super(request);
+            this.accessCode = request.accessCode;
+            this.outId = request.outId;
+            this.ownerId = request.ownerId;
+            this.phoneNumber = request.phoneNumber;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

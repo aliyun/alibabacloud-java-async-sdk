@@ -88,12 +88,12 @@ public class GetCertifyResultRequest extends Request {
             super();
         } 
 
-        private Builder(GetCertifyResultRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.token = response.token;
+        private Builder(GetCertifyResultRequest request) {
+            super(request);
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.token = request.token;
         } 
 
         /**

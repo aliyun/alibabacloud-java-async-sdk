@@ -102,13 +102,13 @@ public class GetAuthTokenRequest extends Request {
             super();
         } 
 
-        private Builder(GetAuthTokenRequest response) {
-            super(response);
-            this.origin = response.origin;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.url = response.url;
+        private Builder(GetAuthTokenRequest request) {
+            super(request);
+            this.origin = request.origin;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.url = request.url;
         } 
 
         /**

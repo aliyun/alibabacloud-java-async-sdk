@@ -129,15 +129,15 @@ public class QueryGateVerifyStatisticPublicRequest extends Request {
             super();
         } 
 
-        private Builder(QueryGateVerifyStatisticPublicRequest response) {
-            super(response);
-            this.authenticationType = response.authenticationType;
-            this.endDate = response.endDate;
-            this.osType = response.osType;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.sceneCode = response.sceneCode;
-            this.startDate = response.startDate;
+        private Builder(QueryGateVerifyStatisticPublicRequest request) {
+            super(request);
+            this.authenticationType = request.authenticationType;
+            this.endDate = request.endDate;
+            this.osType = request.osType;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.sceneCode = request.sceneCode;
+            this.startDate = request.startDate;
         } 
 
         /**

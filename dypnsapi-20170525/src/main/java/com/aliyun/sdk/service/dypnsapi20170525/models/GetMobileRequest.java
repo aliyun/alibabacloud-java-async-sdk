@@ -101,13 +101,13 @@ public class GetMobileRequest extends Request {
             super();
         } 
 
-        private Builder(GetMobileRequest response) {
-            super(response);
-            this.accessToken = response.accessToken;
-            this.outId = response.outId;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(GetMobileRequest request) {
+            super(request);
+            this.accessToken = request.accessToken;
+            this.outId = request.outId;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

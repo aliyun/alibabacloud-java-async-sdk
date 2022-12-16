@@ -115,14 +115,14 @@ public class GetAuthorizationUrlRequest extends Request {
             super();
         } 
 
-        private Builder(GetAuthorizationUrlRequest response) {
-            super(response);
-            this.endDate = response.endDate;
-            this.ownerId = response.ownerId;
-            this.phoneNo = response.phoneNo;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.schemeId = response.schemeId;
+        private Builder(GetAuthorizationUrlRequest request) {
+            super(request);
+            this.endDate = request.endDate;
+            this.ownerId = request.ownerId;
+            this.phoneNo = request.phoneNo;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.schemeId = request.schemeId;
         } 
 
         /**

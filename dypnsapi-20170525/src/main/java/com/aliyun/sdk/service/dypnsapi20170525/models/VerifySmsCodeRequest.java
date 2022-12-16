@@ -77,11 +77,11 @@ public class VerifySmsCodeRequest extends Request {
             super();
         } 
 
-        private Builder(VerifySmsCodeRequest response) {
-            super(response);
-            this.phoneNumber = response.phoneNumber;
-            this.smsCode = response.smsCode;
-            this.smsToken = response.smsToken;
+        private Builder(VerifySmsCodeRequest request) {
+            super(request);
+            this.phoneNumber = request.phoneNumber;
+            this.smsCode = request.smsCode;
+            this.smsToken = request.smsToken;
         } 
 
         /**

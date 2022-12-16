@@ -1,0 +1,104 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.dypnsapi20170525.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link GetPhoneWithTokenResponse} extends {@link TeaModel}
+ *
+ * <p>GetPhoneWithTokenResponse</p>
+ */
+public class GetPhoneWithTokenResponse extends Response {
+    @NameInMap("headers")
+    @Validation(required = true)
+    private java.util.Map < String, String > headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    private GetPhoneWithTokenResponseBody body;
+
+    private GetPhoneWithTokenResponse(BuilderImpl builder) {
+        super(builder);
+        this.headers = builder.headers;
+        this.body = builder.body;
+    }
+
+    public static GetPhoneWithTokenResponse create() {
+        return new BuilderImpl().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new BuilderImpl(this);
+    }
+
+    /**
+     * @return headers
+     */
+    public java.util.Map < String, String > getHeaders() {
+        return this.headers;
+    }
+
+    /**
+     * @return body
+     */
+    public GetPhoneWithTokenResponseBody getBody() {
+        return this.body;
+    }
+
+    public interface Builder extends Response.Builder<GetPhoneWithTokenResponse, Builder> {
+
+        Builder headers(java.util.Map < String, String > headers);
+
+        Builder body(GetPhoneWithTokenResponseBody body);
+
+        @Override
+        GetPhoneWithTokenResponse build();
+
+    } 
+
+    private static final class BuilderImpl
+            extends Response.BuilderImpl<GetPhoneWithTokenResponse, Builder>
+            implements Builder {
+        private java.util.Map < String, String > headers; 
+        private GetPhoneWithTokenResponseBody body; 
+
+        private BuilderImpl() {
+            super();
+        } 
+
+        private BuilderImpl(GetPhoneWithTokenResponse response) {
+            super(response);
+            this.headers = response.headers;
+            this.body = response.body;
+        } 
+
+        /**
+         * headers.
+         */
+        @Override
+        public Builder headers(java.util.Map < String, String > headers) {
+            this.headers = headers;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        @Override
+        public Builder body(GetPhoneWithTokenResponseBody body) {
+            this.body = body;
+            return this;
+        }
+
+        @Override
+        public GetPhoneWithTokenResponse build() {
+            return new GetPhoneWithTokenResponse(this);
+        } 
+
+    } 
+
+}

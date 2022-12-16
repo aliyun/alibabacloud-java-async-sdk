@@ -89,12 +89,12 @@ public class QueryGateVerifyBillingPublicRequest extends Request {
             super();
         } 
 
-        private Builder(QueryGateVerifyBillingPublicRequest response) {
-            super(response);
-            this.authenticationType = response.authenticationType;
-            this.month = response.month;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
+        private Builder(QueryGateVerifyBillingPublicRequest request) {
+            super(request);
+            this.authenticationType = request.authenticationType;
+            this.month = request.month;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
         } 
 
         /**

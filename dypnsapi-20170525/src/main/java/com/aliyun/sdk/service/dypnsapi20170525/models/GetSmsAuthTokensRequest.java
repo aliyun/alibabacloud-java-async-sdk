@@ -182,19 +182,19 @@ public class GetSmsAuthTokensRequest extends Request {
             super();
         } 
 
-        private Builder(GetSmsAuthTokensRequest response) {
-            super(response);
-            this.bundleId = response.bundleId;
-            this.expire = response.expire;
-            this.osType = response.osType;
-            this.ownerId = response.ownerId;
-            this.packageName = response.packageName;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.sceneCode = response.sceneCode;
-            this.signName = response.signName;
-            this.smsCodeExpire = response.smsCodeExpire;
-            this.smsTemplateCode = response.smsTemplateCode;
+        private Builder(GetSmsAuthTokensRequest request) {
+            super(request);
+            this.bundleId = request.bundleId;
+            this.expire = request.expire;
+            this.osType = request.osType;
+            this.ownerId = request.ownerId;
+            this.packageName = request.packageName;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sceneCode = request.sceneCode;
+            this.signName = request.signName;
+            this.smsCodeExpire = request.smsCodeExpire;
+            this.smsTemplateCode = request.smsTemplateCode;
         } 
 
         /**

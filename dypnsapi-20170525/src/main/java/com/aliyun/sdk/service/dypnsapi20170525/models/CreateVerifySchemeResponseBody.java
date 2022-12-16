@@ -18,17 +18,25 @@ public class CreateVerifySchemeResponseBody extends TeaModel {
     @NameInMap("GateVerifySchemeDTO")
     private GateVerifySchemeDTO gateVerifySchemeDTO;
 
+    @NameInMap("HttpStatusCode")
+    private Long httpStatusCode;
+
     @NameInMap("Message")
     private String message;
 
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("Success")
+    private Boolean success;
+
     private CreateVerifySchemeResponseBody(Builder builder) {
         this.code = builder.code;
         this.gateVerifySchemeDTO = builder.gateVerifySchemeDTO;
+        this.httpStatusCode = builder.httpStatusCode;
         this.message = builder.message;
         this.requestId = builder.requestId;
+        this.success = builder.success;
     }
 
     public static Builder builder() {
@@ -54,6 +62,13 @@ public class CreateVerifySchemeResponseBody extends TeaModel {
     }
 
     /**
+     * @return httpStatusCode
+     */
+    public Long getHttpStatusCode() {
+        return this.httpStatusCode;
+    }
+
+    /**
      * @return message
      */
     public String getMessage() {
@@ -67,11 +82,20 @@ public class CreateVerifySchemeResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return success
+     */
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public static final class Builder {
         private String code; 
         private GateVerifySchemeDTO gateVerifySchemeDTO; 
+        private Long httpStatusCode; 
         private String message; 
         private String requestId; 
+        private Boolean success; 
 
         /**
          * Code.
@@ -90,6 +114,14 @@ public class CreateVerifySchemeResponseBody extends TeaModel {
         }
 
         /**
+         * HttpStatusCode.
+         */
+        public Builder httpStatusCode(Long httpStatusCode) {
+            this.httpStatusCode = httpStatusCode;
+            return this;
+        }
+
+        /**
          * Message.
          */
         public Builder message(String message) {
@@ -102,6 +134,14 @@ public class CreateVerifySchemeResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * Success.
+         */
+        public Builder success(Boolean success) {
+            this.success = success;
             return this;
         }
 
