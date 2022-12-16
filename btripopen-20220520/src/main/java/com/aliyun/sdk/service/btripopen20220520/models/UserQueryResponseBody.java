@@ -155,6 +155,9 @@ public class UserQueryResponseBody extends TeaModel {
         @NameInMap("employee_nick")
         private String employeeNick;
 
+        @NameInMap("leave_status")
+        private Integer leaveStatus;
+
         @NameInMap("third_part_employee_id")
         private String thirdPartEmployeeId;
 
@@ -163,6 +166,7 @@ public class UserQueryResponseBody extends TeaModel {
 
         private Items(Builder builder) {
             this.employeeNick = builder.employeeNick;
+            this.leaveStatus = builder.leaveStatus;
             this.thirdPartEmployeeId = builder.thirdPartEmployeeId;
             this.thirdPartJobNo = builder.thirdPartJobNo;
         }
@@ -183,6 +187,13 @@ public class UserQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return leaveStatus
+         */
+        public Integer getLeaveStatus() {
+            return this.leaveStatus;
+        }
+
+        /**
          * @return thirdPartEmployeeId
          */
         public String getThirdPartEmployeeId() {
@@ -198,6 +209,7 @@ public class UserQueryResponseBody extends TeaModel {
 
         public static final class Builder {
             private String employeeNick; 
+            private Integer leaveStatus; 
             private String thirdPartEmployeeId; 
             private String thirdPartJobNo; 
 
@@ -206,6 +218,14 @@ public class UserQueryResponseBody extends TeaModel {
              */
             public Builder employeeNick(String employeeNick) {
                 this.employeeNick = employeeNick;
+                return this;
+            }
+
+            /**
+             * leave_status.
+             */
+            public Builder leaveStatus(Integer leaveStatus) {
+                this.leaveStatus = leaveStatus;
                 return this;
             }
 
