@@ -121,6 +121,7 @@ com/aliyun/sdk/service/dataworks_public20200518/models/ListNodeIOResponseBody.cl
 com/aliyun/sdk/service/dataworks_public20200518/models/GetMetaColumnLineageResponseBody$DataEntityList.class
 com/aliyun/sdk/service/dataworks_public20200518/models/ListTableLevelRequest$Builder.class
 com/aliyun/sdk/service/dataworks_public20200518/models/ListNodesByBaselineResponseBody.class
+com/aliyun/sdk/service/dataworks_public20200518/models/Collection$1.class
 com/aliyun/sdk/service/dataworks_public20200518/models/ListDataServiceGroupsResponse$BuilderImpl.class
 com/aliyun/sdk/service/dataworks_public20200518/models/ListRefDISyncTasksResponseBody$Builder.class
 com/aliyun/sdk/service/dataworks_public20200518/models/ListDataServiceApiAuthoritiesResponseBody$AuthorizationRecords.class
@@ -416,6 +417,7 @@ com/aliyun/sdk/service/dataworks_public20200518/models/CreateDagTestResponse$Bui
 com/aliyun/sdk/service/dataworks_public20200518/models/DeleteRemindResponse$BuilderImpl.class
 com/aliyun/sdk/service/dataworks_public20200518/models/ListTableLevelResponse.class
 com/aliyun/sdk/service/dataworks_public20200518/models/ListAlertMessagesResponseBody$Topics.class
+com/aliyun/sdk/service/dataworks_public20200518/models/Collection.class
 com/aliyun/sdk/service/dataworks_public20200518/models/ListCalcEnginesResponse.class
 com/aliyun/sdk/service/dataworks_public20200518/models/UpdateQualityFollowerResponseBody$Builder.class
 com/aliyun/sdk/service/dataworks_public20200518/models/CreateDataSourceResponse$BuilderImpl.class
@@ -1554,6 +1556,7 @@ com/aliyun/sdk/service/dataworks_public20200518/models/GetTopicResponseBody$Data
 com/aliyun/sdk/service/dataworks_public20200518/models/CreateTableRequest$Columns$Builder.class
 com/aliyun/sdk/service/dataworks_public20200518/models/GetMetaDBInfoResponseBody$Builder.class
 com/aliyun/sdk/service/dataworks_public20200518/models/CreateUdfFileResponse$Builder.class
+com/aliyun/sdk/service/dataworks_public20200518/models/Entity$Builder.class
 com/aliyun/sdk/service/dataworks_public20200518/models/ListPermissionApplyOrdersResponse$BuilderImpl.class
 com/aliyun/sdk/service/dataworks_public20200518/models/ListBaselinesResponseBody$Baselines.class
 com/aliyun/sdk/service/dataworks_public20200518/models/GetNodeCodeResponse$Builder.class
@@ -1615,6 +1618,7 @@ com/aliyun/sdk/service/dataworks_public20200518/models/GetNodeChildrenRequest$1.
 com/aliyun/sdk/service/dataworks_public20200518/models/CreateDataServiceApiResponse$Builder.class
 com/aliyun/sdk/service/dataworks_public20200518/models/ListDataServiceApisRequest$Builder.class
 com/aliyun/sdk/service/dataworks_public20200518/models/StartDISyncInstanceRequest.class
+com/aliyun/sdk/service/dataworks_public20200518/models/Entity$1.class
 com/aliyun/sdk/service/dataworks_public20200518/models/ListDataServiceApisResponseBody$WizardResponseParameters$Builder.class
 com/aliyun/sdk/service/dataworks_public20200518/models/CreateDISyncTaskResponseBody$Data$Builder.class
 com/aliyun/sdk/service/dataworks_public20200518/models/GetBaselineStatusResponseBody$BlockInstance$Builder.class
@@ -1997,6 +2001,7 @@ com/aliyun/sdk/service/dataworks_public20200518/models/EstablishRelationTableToB
 com/aliyun/sdk/service/dataworks_public20200518/models/GetIDEEventDetailResponse.class
 com/aliyun/sdk/service/dataworks_public20200518/models/ListInstanceAmountResponse$Builder.class
 com/aliyun/sdk/service/dataworks_public20200518/models/AddToMetaCategoryRequest$1.class
+com/aliyun/sdk/service/dataworks_public20200518/models/Collection$Builder.class
 com/aliyun/sdk/service/dataworks_public20200518/models/ListQualityResultsByRuleResponseBody$RuleChecks.class
 com/aliyun/sdk/service/dataworks_public20200518/models/ListDataServicePublishedApisResponseBody$ScriptDetails.class
 com/aliyun/sdk/service/dataworks_public20200518/models/GetDataServicePublishedApiResponseBody$Builder.class
@@ -2444,6 +2449,7 @@ com/aliyun/sdk/service/dataworks_public20200518/models/UpdateNodeRunModeResponse
 com/aliyun/sdk/service/dataworks_public20200518/models/CheckMetaTableRequest$1.class
 com/aliyun/sdk/service/dataworks_public20200518/models/AddProjectMemberToRoleResponse.class
 com/aliyun/sdk/service/dataworks_public20200518/models/ListQualityResultsByRuleRequest$Builder.class
+com/aliyun/sdk/service/dataworks_public20200518/models/Entity.class
 com/aliyun/sdk/service/dataworks_public20200518/models/CreatePermissionApplyOrderRequest.class
 com/aliyun/sdk/service/dataworks_public20200518/models/GetProjectResponseBody.class
 com/aliyun/sdk/service/dataworks_public20200518/models/ListMigrationsResponse$BuilderImpl.class

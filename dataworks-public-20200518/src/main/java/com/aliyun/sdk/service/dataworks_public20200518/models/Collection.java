@@ -1,0 +1,214 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.dataworks_public20200518.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link Collection} extends {@link TeaModel}
+ *
+ * <p>Collection</p>
+ */
+public class Collection extends TeaModel {
+    @NameInMap("CollectionType")
+    private String collectionType;
+
+    @NameInMap("Comment")
+    private String comment;
+
+    @NameInMap("CreateTime")
+    private Long createTime;
+
+    @NameInMap("Level")
+    private Integer level;
+
+    @NameInMap("Name")
+    private String name;
+
+    @NameInMap("OwnerId")
+    private String ownerId;
+
+    @NameInMap("OwnerName")
+    private String ownerName;
+
+    @NameInMap("QualifiedName")
+    private String qualifiedName;
+
+    @NameInMap("UpdateTime")
+    private Long updateTime;
+
+    private Collection(Builder builder) {
+        this.collectionType = builder.collectionType;
+        this.comment = builder.comment;
+        this.createTime = builder.createTime;
+        this.level = builder.level;
+        this.name = builder.name;
+        this.ownerId = builder.ownerId;
+        this.ownerName = builder.ownerName;
+        this.qualifiedName = builder.qualifiedName;
+        this.updateTime = builder.updateTime;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static Collection create() {
+        return builder().build();
+    }
+
+    /**
+     * @return collectionType
+     */
+    public String getCollectionType() {
+        return this.collectionType;
+    }
+
+    /**
+     * @return comment
+     */
+    public String getComment() {
+        return this.comment;
+    }
+
+    /**
+     * @return createTime
+     */
+    public Long getCreateTime() {
+        return this.createTime;
+    }
+
+    /**
+     * @return level
+     */
+    public Integer getLevel() {
+        return this.level;
+    }
+
+    /**
+     * @return name
+     */
+    public String getName() {
+        return this.name;
+    }
+
+    /**
+     * @return ownerId
+     */
+    public String getOwnerId() {
+        return this.ownerId;
+    }
+
+    /**
+     * @return ownerName
+     */
+    public String getOwnerName() {
+        return this.ownerName;
+    }
+
+    /**
+     * @return qualifiedName
+     */
+    public String getQualifiedName() {
+        return this.qualifiedName;
+    }
+
+    /**
+     * @return updateTime
+     */
+    public Long getUpdateTime() {
+        return this.updateTime;
+    }
+
+    public static final class Builder {
+        private String collectionType; 
+        private String comment; 
+        private Long createTime; 
+        private Integer level; 
+        private String name; 
+        private String ownerId; 
+        private String ownerName; 
+        private String qualifiedName; 
+        private Long updateTime; 
+
+        /**
+         * Collection Type
+         */
+        public Builder collectionType(String collectionType) {
+            this.collectionType = collectionType;
+            return this;
+        }
+
+        /**
+         * The comment of the collection
+         */
+        public Builder comment(String comment) {
+            this.comment = comment;
+            return this;
+        }
+
+        /**
+         * The create timestamp of the collection
+         */
+        public Builder createTime(Long createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+
+        /**
+         * The level of the collection
+         */
+        public Builder level(Integer level) {
+            this.level = level;
+            return this;
+        }
+
+        /**
+         * The name of the collection
+         */
+        public Builder name(String name) {
+            this.name = name;
+            return this;
+        }
+
+        /**
+         * The ownerId of the collection
+         */
+        public Builder ownerId(String ownerId) {
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * The name of the collection owner
+         */
+        public Builder ownerName(String ownerName) {
+            this.ownerName = ownerName;
+            return this;
+        }
+
+        /**
+         * Unique identifier of identity
+         */
+        public Builder qualifiedName(String qualifiedName) {
+            this.qualifiedName = qualifiedName;
+            return this;
+        }
+
+        /**
+         * The update timestamp of the collection
+         */
+        public Builder updateTime(Long updateTime) {
+            this.updateTime = updateTime;
+            return this;
+        }
+
+        public Collection build() {
+            return new Collection(this);
+        } 
+
+    } 
+
+}

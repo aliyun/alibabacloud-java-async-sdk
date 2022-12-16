@@ -346,7 +346,7 @@ public class GetDagResponseBody extends TeaModel {
             }
 
             /**
-             * DagId.
+             * DagId。
              */
             public Builder dagId(Long dagId) {
                 this.dagId = dagId;
@@ -362,7 +362,7 @@ public class GetDagResponseBody extends TeaModel {
             }
 
             /**
-             * Gmtdate.
+             * Gmtdate。
              */
             public Builder gmtdate(Long gmtdate) {
                 this.gmtdate = gmtdate;

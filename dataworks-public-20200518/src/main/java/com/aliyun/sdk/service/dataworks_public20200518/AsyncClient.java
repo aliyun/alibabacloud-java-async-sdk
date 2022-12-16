@@ -38,12 +38,24 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateBusinessResponse> createBusiness(CreateBusinessRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<CreateConnectionResponse> createConnection(CreateConnectionRequest request);
 
     CompletableFuture<CreateDISyncTaskResponse> createDISyncTask(CreateDISyncTaskRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<CreateDagComplementResponse> createDagComplement(CreateDagComplementRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<CreateDagTestResponse> createDagTest(CreateDagTestRequest request);
 
     CompletableFuture<CreateDataServiceApiResponse> createDataServiceApi(CreateDataServiceApiRequest request);
@@ -62,6 +74,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateFolderResponse> createFolder(CreateFolderRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<CreateManualDagResponse> createManualDag(CreateManualDagRequest request);
 
     CompletableFuture<CreateMetaCategoryResponse> createMetaCategory(CreateMetaCategoryRequest request);
@@ -92,6 +108,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteBusinessResponse> deleteBusiness(DeleteBusinessRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<DeleteConnectionResponse> deleteConnection(DeleteConnectionRequest request);
 
     CompletableFuture<DeleteDISyncTaskResponse> deleteDISyncTask(DeleteDISyncTaskRequest request);
@@ -190,18 +210,38 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetInstanceResponse> getInstance(GetInstanceRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<GetInstanceConsumeTimeRankResponse> getInstanceConsumeTimeRank(GetInstanceConsumeTimeRankRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<GetInstanceCountTrendResponse> getInstanceCountTrend(GetInstanceCountTrendRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<GetInstanceErrorRankResponse> getInstanceErrorRank(GetInstanceErrorRankRequest request);
 
     CompletableFuture<GetInstanceLogResponse> getInstanceLog(GetInstanceLogRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<GetInstanceStatusCountResponse> getInstanceStatusCount(GetInstanceStatusCountRequest request);
 
     CompletableFuture<GetInstanceStatusStatisticResponse> getInstanceStatusStatistic(GetInstanceStatusStatisticRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<GetManualDagInstancesResponse> getManualDagInstances(GetManualDagInstancesRequest request);
 
     CompletableFuture<GetMetaCategoryResponse> getMetaCategory(GetMetaCategoryRequest request);
@@ -212,6 +252,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetMetaDBTableListResponse> getMetaDBTableList(GetMetaDBTableListRequest request);
 
+    /**
+      * ****
+      *
+     */
     CompletableFuture<GetMetaTableBasicInfoResponse> getMetaTableBasicInfo(GetMetaTableBasicInfoRequest request);
 
     CompletableFuture<GetMetaTableChangeLogResponse> getMetaTableChangeLog(GetMetaTableChangeLogRequest request);
@@ -242,10 +286,18 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetNodeCodeResponse> getNodeCode(GetNodeCodeRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<GetNodeOnBaselineResponse> getNodeOnBaseline(GetNodeOnBaselineRequest request);
 
     CompletableFuture<GetNodeParentsResponse> getNodeParents(GetNodeParentsRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<GetNodeTypeListInfoResponse> getNodeTypeListInfo(GetNodeTypeListInfoRequest request);
 
     CompletableFuture<GetOpRiskDataResponse> getOpRiskData(GetOpRiskDataRequest request);
@@ -258,6 +310,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetProjectResponse> getProject(GetProjectRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<GetProjectDetailResponse> getProjectDetail(GetProjectDetailRequest request);
 
     CompletableFuture<GetQualityEntityResponse> getQualityEntity(GetQualityEntityRequest request);
@@ -270,8 +326,16 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetSensitiveDataResponse> getSensitiveData(GetSensitiveDataRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<GetSuccessInstanceTrendResponse> getSuccessInstanceTrend(GetSuccessInstanceTrendRequest request);
 
+    /**
+      * ****
+      *
+     */
     CompletableFuture<GetTopicResponse> getTopic(GetTopicRequest request);
 
     CompletableFuture<GetTopicInfluenceResponse> getTopicInfluence(GetTopicInfluenceRequest request);
@@ -290,6 +354,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListCalcEnginesResponse> listCalcEngines(ListCalcEnginesRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<ListConnectionsResponse> listConnections(ListConnectionsRequest request);
 
     CompletableFuture<ListDIProjectConfigResponse> listDIProjectConfig(ListDIProjectConfigRequest request);
@@ -342,6 +410,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListMigrationsResponse> listMigrations(ListMigrationsRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<ListNodeIOResponse> listNodeIO(ListNodeIORequest request);
 
     CompletableFuture<ListNodeInputOrOutputResponse> listNodeInputOrOutput(ListNodeInputOrOutputRequest request);
@@ -354,6 +426,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListPermissionApplyOrdersResponse> listPermissionApplyOrders(ListPermissionApplyOrdersRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<ListProgramTypeCountResponse> listProgramTypeCount(ListProgramTypeCountRequest request);
 
     CompletableFuture<ListProjectIdsResponse> listProjectIds(ListProjectIdsRequest request);
@@ -364,6 +440,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListProjectsResponse> listProjects(ListProjectsRequest request);
 
+    /**
+      * ****
+      *
+     */
     CompletableFuture<ListQualityResultsByEntityResponse> listQualityResultsByEntity(ListQualityResultsByEntityRequest request);
 
     CompletableFuture<ListQualityResultsByRuleResponse> listQualityResultsByRule(ListQualityResultsByRuleRequest request);
@@ -418,8 +498,16 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<SearchMetaTablesResponse> searchMetaTables(SearchMetaTablesRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<SearchNodesByOutputResponse> searchNodesByOutput(SearchNodesByOutputRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<SetDataSourceShareResponse> setDataSourceShare(SetDataSourceShareRequest request);
 
     CompletableFuture<SetSuccessInstanceResponse> setSuccessInstance(SetSuccessInstanceRequest request);
@@ -450,6 +538,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<UpdateBusinessResponse> updateBusiness(UpdateBusinessRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<UpdateConnectionResponse> updateConnection(UpdateConnectionRequest request);
 
     CompletableFuture<UpdateDIProjectConfigResponse> updateDIProjectConfig(UpdateDIProjectConfigRequest request);

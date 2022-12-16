@@ -40,6 +40,10 @@ public class GetMetaTableOutputRequest extends Request {
     @Validation(required = true)
     private String tableGuid;
 
+    @Query
+    @NameInMap("TaskId")
+    private String taskId;
+
     private GetMetaTableOutputRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -48,6 +52,7 @@ public class GetMetaTableOutputRequest extends Request {
         this.pageSize = builder.pageSize;
         this.startDate = builder.startDate;
         this.tableGuid = builder.tableGuid;
+        this.taskId = builder.taskId;
     }
 
     public static Builder builder() {
@@ -105,6 +110,13 @@ public class GetMetaTableOutputRequest extends Request {
         return this.tableGuid;
     }
 
+    /**
+     * @return taskId
+     */
+    public String getTaskId() {
+        return this.taskId;
+    }
+
     public static final class Builder extends Request.Builder<GetMetaTableOutputRequest, Builder> {
         private String regionId; 
         private String endDate; 
@@ -112,6 +124,7 @@ public class GetMetaTableOutputRequest extends Request {
         private Integer pageSize; 
         private String startDate; 
         private String tableGuid; 
+        private String taskId; 
 
         private Builder() {
             super();
@@ -125,6 +138,7 @@ public class GetMetaTableOutputRequest extends Request {
             this.pageSize = request.pageSize;
             this.startDate = request.startDate;
             this.tableGuid = request.tableGuid;
+            this.taskId = request.taskId;
         } 
 
         /**
@@ -178,6 +192,15 @@ public class GetMetaTableOutputRequest extends Request {
         public Builder tableGuid(String tableGuid) {
             this.putQueryParameter("TableGuid", tableGuid);
             this.tableGuid = tableGuid;
+            return this;
+        }
+
+        /**
+         * TaskId.
+         */
+        public Builder taskId(String taskId) {
+            this.putQueryParameter("TaskId", taskId);
+            this.taskId = taskId;
             return this;
         }
 

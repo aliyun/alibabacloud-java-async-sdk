@@ -37,10 +37,6 @@ public class ListResourceGroupsRequest extends Request {
     @NameInMap("Tags")
     private java.util.List < Tags> tags;
 
-    @Query
-    @NameInMap("TypeNames")
-    private String typeNames;
-
     private ListResourceGroupsRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -49,7 +45,6 @@ public class ListResourceGroupsRequest extends Request {
         this.resourceGroupType = builder.resourceGroupType;
         this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
         this.tags = builder.tags;
-        this.typeNames = builder.typeNames;
     }
 
     public static Builder builder() {
@@ -107,13 +102,6 @@ public class ListResourceGroupsRequest extends Request {
         return this.tags;
     }
 
-    /**
-     * @return typeNames
-     */
-    public String getTypeNames() {
-        return this.typeNames;
-    }
-
     public static final class Builder extends Request.Builder<ListResourceGroupsRequest, Builder> {
         private String regionId; 
         private String bizExtKey; 
@@ -121,7 +109,6 @@ public class ListResourceGroupsRequest extends Request {
         private Integer resourceGroupType; 
         private String resourceManagerResourceGroupId; 
         private java.util.List < Tags> tags; 
-        private String typeNames; 
 
         private Builder() {
             super();
@@ -135,7 +122,6 @@ public class ListResourceGroupsRequest extends Request {
             this.resourceGroupType = request.resourceGroupType;
             this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
             this.tags = request.tags;
-            this.typeNames = request.typeNames;
         } 
 
         /**
@@ -190,15 +176,6 @@ public class ListResourceGroupsRequest extends Request {
             String tagsShrink = shrink(tags, "Tags", "json");
             this.putQueryParameter("Tags", tagsShrink);
             this.tags = tags;
-            return this;
-        }
-
-        /**
-         * TypeNames.
-         */
-        public Builder typeNames(String typeNames) {
-            this.putQueryParameter("TypeNames", typeNames);
-            this.typeNames = typeNames;
             return this;
         }
 
