@@ -46,6 +46,14 @@ public class ModifyLosslessRuleRequest extends Request {
     private Long funcType;
 
     @Query
+    @NameInMap("LossLessDetail")
+    private Boolean lossLessDetail;
+
+    @Query
+    @NameInMap("Notice")
+    private Boolean notice;
+
+    @Query
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
@@ -77,6 +85,8 @@ public class ModifyLosslessRuleRequest extends Request {
         this.delayTime = builder.delayTime;
         this.enable = builder.enable;
         this.funcType = builder.funcType;
+        this.lossLessDetail = builder.lossLessDetail;
+        this.notice = builder.notice;
         this.regionId = builder.regionId;
         this.related = builder.related;
         this.shutdownWaitSeconds = builder.shutdownWaitSeconds;
@@ -147,6 +157,20 @@ public class ModifyLosslessRuleRequest extends Request {
     }
 
     /**
+     * @return lossLessDetail
+     */
+    public Boolean getLossLessDetail() {
+        return this.lossLessDetail;
+    }
+
+    /**
+     * @return notice
+     */
+    public Boolean getNotice() {
+        return this.notice;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -189,6 +213,8 @@ public class ModifyLosslessRuleRequest extends Request {
         private Long delayTime; 
         private Boolean enable; 
         private Long funcType; 
+        private Boolean lossLessDetail; 
+        private Boolean notice; 
         private String regionId; 
         private Boolean related; 
         private Integer shutdownWaitSeconds; 
@@ -208,6 +234,8 @@ public class ModifyLosslessRuleRequest extends Request {
             this.delayTime = request.delayTime;
             this.enable = request.enable;
             this.funcType = request.funcType;
+            this.lossLessDetail = request.lossLessDetail;
+            this.notice = request.notice;
             this.regionId = request.regionId;
             this.related = request.related;
             this.shutdownWaitSeconds = request.shutdownWaitSeconds;
@@ -283,6 +311,24 @@ public class ModifyLosslessRuleRequest extends Request {
         public Builder funcType(Long funcType) {
             this.putQueryParameter("FuncType", funcType);
             this.funcType = funcType;
+            return this;
+        }
+
+        /**
+         * LossLessDetail.
+         */
+        public Builder lossLessDetail(Boolean lossLessDetail) {
+            this.putQueryParameter("LossLessDetail", lossLessDetail);
+            this.lossLessDetail = lossLessDetail;
+            return this;
+        }
+
+        /**
+         * Notice.
+         */
+        public Builder notice(Boolean notice) {
+            this.putQueryParameter("Notice", notice);
+            this.notice = notice;
             return this;
         }
 
