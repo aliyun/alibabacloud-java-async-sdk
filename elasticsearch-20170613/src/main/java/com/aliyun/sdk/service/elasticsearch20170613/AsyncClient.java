@@ -324,6 +324,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<UpdateApmResponse> updateApm(UpdateApmRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<UpdateBlackIpsResponse> updateBlackIps(UpdateBlackIpsRequest request);
 
     CompletableFuture<UpdateCollectorResponse> updateCollector(UpdateCollectorRequest request);

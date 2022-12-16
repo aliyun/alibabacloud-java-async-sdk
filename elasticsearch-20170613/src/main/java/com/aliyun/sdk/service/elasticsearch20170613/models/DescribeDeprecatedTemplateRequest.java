@@ -14,10 +14,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DescribeDeprecatedTemplateRequest extends Request {
     @Path
     @NameInMap("InstanceId")
+    @Validation(required = true)
     private String instanceId;
 
     @Path
     @NameInMap("name")
+    @Validation(required = true)
     private String name;
 
     private DescribeDeprecatedTemplateRequest(Builder builder) {

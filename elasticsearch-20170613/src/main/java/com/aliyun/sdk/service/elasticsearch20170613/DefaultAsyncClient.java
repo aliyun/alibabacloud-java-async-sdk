@@ -2181,6 +2181,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * @deprecated
+      *
+     */
     @Override
     public CompletableFuture<UpdateBlackIpsResponse> updateBlackIps(UpdateBlackIpsRequest request) {
         try {

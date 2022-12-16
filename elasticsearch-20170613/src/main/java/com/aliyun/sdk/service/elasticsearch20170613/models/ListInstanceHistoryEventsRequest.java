@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListInstanceHistoryEventsRequest</p>
  */
 public class ListInstanceHistoryEventsRequest extends Request {
+    @Body
+    @NameInMap("body")
+    private java.util.List < ListInstanceHistoryEventsRequestBody> body;
+
     @Query
     @NameInMap("eventCreateEndTime")
     private String eventCreateEndTime;
@@ -66,6 +70,7 @@ public class ListInstanceHistoryEventsRequest extends Request {
 
     private ListInstanceHistoryEventsRequest(Builder builder) {
         super(builder);
+        this.body = builder.body;
         this.eventCreateEndTime = builder.eventCreateEndTime;
         this.eventCreateStartTime = builder.eventCreateStartTime;
         this.eventCycleStatus = builder.eventCycleStatus;
@@ -92,6 +97,13 @@ public class ListInstanceHistoryEventsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return body
+     */
+    public java.util.List < ListInstanceHistoryEventsRequestBody> getBody() {
+        return this.body;
     }
 
     /**
@@ -186,6 +198,7 @@ public class ListInstanceHistoryEventsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListInstanceHistoryEventsRequest, Builder> {
+        private java.util.List < ListInstanceHistoryEventsRequestBody> body; 
         private String eventCreateEndTime; 
         private String eventCreateStartTime; 
         private java.util.List < String > eventCycleStatus; 
@@ -206,6 +219,7 @@ public class ListInstanceHistoryEventsRequest extends Request {
 
         private Builder(ListInstanceHistoryEventsRequest request) {
             super(request);
+            this.body = request.body;
             this.eventCreateEndTime = request.eventCreateEndTime;
             this.eventCreateStartTime = request.eventCreateStartTime;
             this.eventCycleStatus = request.eventCycleStatus;
@@ -220,6 +234,15 @@ public class ListInstanceHistoryEventsRequest extends Request {
             this.page = request.page;
             this.size = request.size;
         } 
+
+        /**
+         * body.
+         */
+        public Builder body(java.util.List < ListInstanceHistoryEventsRequestBody> body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
+            return this;
+        }
 
         /**
          * eventCreateEndTime.
@@ -348,4 +371,65 @@ public class ListInstanceHistoryEventsRequest extends Request {
 
     } 
 
+    public static class ListInstanceHistoryEventsRequestBody extends TeaModel {
+        @NameInMap("desc")
+        private Boolean desc;
+
+        @NameInMap("sortField")
+        private String sortField;
+
+        private ListInstanceHistoryEventsRequestBody(Builder builder) {
+            this.desc = builder.desc;
+            this.sortField = builder.sortField;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ListInstanceHistoryEventsRequestBody create() {
+            return builder().build();
+        }
+
+        /**
+         * @return desc
+         */
+        public Boolean getDesc() {
+            return this.desc;
+        }
+
+        /**
+         * @return sortField
+         */
+        public String getSortField() {
+            return this.sortField;
+        }
+
+        public static final class Builder {
+            private Boolean desc; 
+            private String sortField; 
+
+            /**
+             * 是否倒序。true，倒序；false，顺序。
+             */
+            public Builder desc(Boolean desc) {
+                this.desc = desc;
+                return this;
+            }
+
+            /**
+             * 排序字段
+             */
+            public Builder sortField(String sortField) {
+                this.sortField = sortField;
+                return this;
+            }
+
+            public ListInstanceHistoryEventsRequestBody build() {
+                return new ListInstanceHistoryEventsRequestBody(this);
+            } 
+
+        } 
+
+    }
 }

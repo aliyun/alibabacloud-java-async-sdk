@@ -19,14 +19,17 @@ public class TriggerNetworkRequest extends Request {
 
     @Body
     @NameInMap("actionType")
+    @Validation(required = true)
     private String actionType;
 
     @Body
     @NameInMap("networkType")
+    @Validation(required = true)
     private String networkType;
 
     @Body
     @NameInMap("nodeType")
+    @Validation(required = true)
     private String nodeType;
 
     @Query

@@ -21,10 +21,6 @@ public class ListLogstashRequest extends Request {
     private String instanceId;
 
     @Query
-    @NameInMap("ownerId")
-    private String ownerId;
-
-    @Query
     @NameInMap("page")
     private Integer page;
 
@@ -48,7 +44,6 @@ public class ListLogstashRequest extends Request {
         super(builder);
         this.description = builder.description;
         this.instanceId = builder.instanceId;
-        this.ownerId = builder.ownerId;
         this.page = builder.page;
         this.resourceGroupId = builder.resourceGroupId;
         this.size = builder.size;
@@ -81,13 +76,6 @@ public class ListLogstashRequest extends Request {
      */
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    /**
-     * @return ownerId
-     */
-    public String getOwnerId() {
-        return this.ownerId;
     }
 
     /**
@@ -128,7 +116,6 @@ public class ListLogstashRequest extends Request {
     public static final class Builder extends Request.Builder<ListLogstashRequest, Builder> {
         private String description; 
         private String instanceId; 
-        private String ownerId; 
         private Integer page; 
         private String resourceGroupId; 
         private Integer size; 
@@ -143,7 +130,6 @@ public class ListLogstashRequest extends Request {
             super(request);
             this.description = request.description;
             this.instanceId = request.instanceId;
-            this.ownerId = request.ownerId;
             this.page = request.page;
             this.resourceGroupId = request.resourceGroupId;
             this.size = request.size;
@@ -166,15 +152,6 @@ public class ListLogstashRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("instanceId", instanceId);
             this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * ownerId.
-         */
-        public Builder ownerId(String ownerId) {
-            this.putQueryParameter("ownerId", ownerId);
-            this.ownerId = ownerId;
             return this;
         }
 

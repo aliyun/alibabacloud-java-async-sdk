@@ -18,14 +18,17 @@ public class CreateLogstashRequest extends Request {
 
     @Body
     @NameInMap("networkConfig")
+    @Validation(required = true)
     private NetworkConfig networkConfig;
 
     @Body
     @NameInMap("nodeAmount")
+    @Validation(required = true)
     private Integer nodeAmount;
 
     @Body
     @NameInMap("nodeSpec")
+    @Validation(required = true)
     private NodeSpec nodeSpec;
 
     @Body
@@ -38,6 +41,7 @@ public class CreateLogstashRequest extends Request {
 
     @Body
     @NameInMap("version")
+    @Validation(required = true)
     private String version;
 
     @Query
@@ -235,12 +239,15 @@ public class CreateLogstashRequest extends Request {
         private String type;
 
         @NameInMap("vpcId")
+        @Validation(required = true)
         private String vpcId;
 
         @NameInMap("vsArea")
+        @Validation(required = true)
         private String vsArea;
 
         @NameInMap("vswitchId")
+        @Validation(required = true)
         private String vswitchId;
 
         private NetworkConfig(Builder builder) {
@@ -339,6 +346,7 @@ public class CreateLogstashRequest extends Request {
         private String diskType;
 
         @NameInMap("spec")
+        @Validation(required = true)
         private String spec;
 
         private NodeSpec(Builder builder) {

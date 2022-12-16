@@ -22,10 +22,12 @@ public class CreateInstanceRequest extends Request {
 
     @Body
     @NameInMap("esAdminPassword")
+    @Validation(required = true)
     private String esAdminPassword;
 
     @Body
     @NameInMap("esVersion")
+    @Validation(required = true)
     private String esVersion;
 
     @Body
@@ -42,10 +44,12 @@ public class CreateInstanceRequest extends Request {
 
     @Body
     @NameInMap("networkConfig")
+    @Validation(required = true)
     private NetworkConfig networkConfig;
 
     @Body
     @NameInMap("nodeAmount")
+    @Validation(required = true)
     private Integer nodeAmount;
 
     @Body

@@ -200,8 +200,6 @@ public class RestartLogstashRequest extends Request {
 
         /**
          * 重启类型
-         * <p>
-         * 
          */
         public Builder restartType(String restartType) {
             this.putBodyParameter("restartType", restartType);

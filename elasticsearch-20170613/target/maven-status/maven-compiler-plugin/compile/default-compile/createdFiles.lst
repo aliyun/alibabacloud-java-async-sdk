@@ -802,6 +802,7 @@ com/aliyun/sdk/service/elasticsearch20170613/models/CapacityPlanRequest.class
 com/aliyun/sdk/service/elasticsearch20170613/models/UpdateHotIkDictsResponseBody$Result$Builder.class
 com/aliyun/sdk/service/elasticsearch20170613/models/ListTagResourcesResponse$1.class
 com/aliyun/sdk/service/elasticsearch20170613/models/DescribePipelineResponse$BuilderImpl.class
+com/aliyun/sdk/service/elasticsearch20170613/models/CreateDataTasksRequest$SinkCluster$Builder.class
 com/aliyun/sdk/service/elasticsearch20170613/models/UpdateSynonymsDictsResponse$BuilderImpl.class
 com/aliyun/sdk/service/elasticsearch20170613/models/CapacityPlanResponseBody$1.class
 com/aliyun/sdk/service/elasticsearch20170613/models/UpdateApmRequest.class
@@ -815,6 +816,7 @@ com/aliyun/sdk/service/elasticsearch20170613/models/ListDataTasksRequest$Builder
 com/aliyun/sdk/service/elasticsearch20170613/models/StartApmRequest.class
 com/aliyun/sdk/service/elasticsearch20170613/models/CreateComponentIndexRequest$1.class
 com/aliyun/sdk/service/elasticsearch20170613/models/ListComponentIndicesResponseBody$Headers$Builder.class
+com/aliyun/sdk/service/elasticsearch20170613/models/ListInstanceHistoryEventsRequest$ListInstanceHistoryEventsRequestBody.class
 com/aliyun/sdk/service/elasticsearch20170613/models/DescribeLogstashResponse$BuilderImpl.class
 com/aliyun/sdk/service/elasticsearch20170613/models/ListIndexTemplatesRequest.class
 com/aliyun/sdk/service/elasticsearch20170613/models/ListLogstashRequest.class
@@ -874,6 +876,7 @@ com/aliyun/sdk/service/elasticsearch20170613/models/ListCollectorsResponseBody$C
 com/aliyun/sdk/service/elasticsearch20170613/models/WhiteIpGroup$Builder.class
 com/aliyun/sdk/service/elasticsearch20170613/models/UpdateApmResponseBody.class
 com/aliyun/sdk/service/elasticsearch20170613/models/InstallAckOperatorResponseBody$Builder.class
+com/aliyun/sdk/service/elasticsearch20170613/models/CreateDataTasksRequest$CreateDataTasksRequestBody.class
 com/aliyun/sdk/service/elasticsearch20170613/models/DescribeInstanceResponseBody$WhiteIpGroupList$Builder.class
 com/aliyun/sdk/service/elasticsearch20170613/models/DeletePipelinesRequest.class
 com/aliyun/sdk/service/elasticsearch20170613/models/ValidateTransferableNodesResponse.class
@@ -1609,6 +1612,7 @@ com/aliyun/sdk/service/elasticsearch20170613/models/CreateSnapshotRequest.class
 com/aliyun/sdk/service/elasticsearch20170613/models/InterruptElasticsearchTaskResponse$Builder.class
 com/aliyun/sdk/service/elasticsearch20170613/models/TransferNodeResponseBody.class
 com/aliyun/sdk/service/elasticsearch20170613/models/UpdateAliwsDictRequest$1.class
+com/aliyun/sdk/service/elasticsearch20170613/models/CreateDataTasksRequest$SinkCluster.class
 com/aliyun/sdk/service/elasticsearch20170613/models/GetEmonGrafanaDashboardsResponseBody$1.class
 com/aliyun/sdk/service/elasticsearch20170613/models/ListComponentIndicesResponseBody$Headers.class
 com/aliyun/sdk/service/elasticsearch20170613/models/ListSnapshotReposByInstanceIdResponseBody$Result$Builder.class
@@ -1795,6 +1799,7 @@ com/aliyun/sdk/service/elasticsearch20170613/models/CreateIndexTemplateRequest$B
 com/aliyun/sdk/service/elasticsearch20170613/models/DescribeLogstashResponseBody$ZoneInfos.class
 com/aliyun/sdk/service/elasticsearch20170613/models/DeleteConnectedClusterResponse.class
 com/aliyun/sdk/service/elasticsearch20170613/models/ListLogstashRequest$Builder.class
+com/aliyun/sdk/service/elasticsearch20170613/models/CreateDataTasksRequest$CreateDataTasksRequestBody$Builder.class
 com/aliyun/sdk/service/elasticsearch20170613/models/ListDeprecatedTemplatesResponse$1.class
 com/aliyun/sdk/service/elasticsearch20170613/models/ListDataTasksResponseBody$Result$Builder.class
 com/aliyun/sdk/service/elasticsearch20170613/models/RenewLogstashResponseBody.class
@@ -1858,7 +1863,9 @@ com/aliyun/sdk/service/elasticsearch20170613/models/CapacityPlanRequest$1.class
 com/aliyun/sdk/service/elasticsearch20170613/models/CreateDataStreamRequest$1.class
 com/aliyun/sdk/service/elasticsearch20170613/models/ListAckClustersResponse$Builder.class
 com/aliyun/sdk/service/elasticsearch20170613/models/ListAckNamespacesRequest$Builder.class
+com/aliyun/sdk/service/elasticsearch20170613/models/CreateDataTasksRequest$SourceCluster$Builder.class
 com/aliyun/sdk/service/elasticsearch20170613/models/CancelLogstashDeletionResponse$BuilderImpl.class
+com/aliyun/sdk/service/elasticsearch20170613/models/CreateDataTasksRequest$MigrateConfig$Builder.class
 com/aliyun/sdk/service/elasticsearch20170613/models/UpdateCollectorNameResponse$BuilderImpl.class
 com/aliyun/sdk/service/elasticsearch20170613/models/AddConnectableClusterRequest$Builder.class
 com/aliyun/sdk/service/elasticsearch20170613/models/UpdateAliwsDictResponse$Builder.class
@@ -1901,6 +1908,7 @@ com/aliyun/sdk/service/elasticsearch20170613/models/ListLogstashResponse$1.class
 com/aliyun/sdk/service/elasticsearch20170613/models/DescribeApmResponseBody$Builder.class
 com/aliyun/sdk/service/elasticsearch20170613/models/UpdatePipelineManagementConfigResponse$Builder.class
 com/aliyun/sdk/service/elasticsearch20170613/models/ListAllNodeResponseBody$Result$Builder.class
+com/aliyun/sdk/service/elasticsearch20170613/models/CreateDataTasksRequest$SourceCluster.class
 com/aliyun/sdk/service/elasticsearch20170613/models/ListNodesResponseBody$Result.class
 com/aliyun/sdk/service/elasticsearch20170613/models/ListEcsInstancesResponseBody$Headers.class
 com/aliyun/sdk/service/elasticsearch20170613/models/DescribeApmResponseBody$1.class
@@ -2184,6 +2192,7 @@ com/aliyun/sdk/service/elasticsearch20170613/models/DescribeAckOperatorRequest.c
 com/aliyun/sdk/service/elasticsearch20170613/models/GetSuggestShrinkableNodesRequest.class
 com/aliyun/sdk/service/elasticsearch20170613/models/ListShardRecoveriesResponse.class
 com/aliyun/sdk/service/elasticsearch20170613/models/DescribeLogstashResponseBody$EndpointList$Builder.class
+com/aliyun/sdk/service/elasticsearch20170613/models/CreateDataTasksRequest$MigrateConfig.class
 com/aliyun/sdk/service/elasticsearch20170613/models/ClientNodeConfiguration$1.class
 com/aliyun/sdk/service/elasticsearch20170613/models/CreatePipelinesResponse$BuilderImpl.class
 com/aliyun/sdk/service/elasticsearch20170613/models/DescribeKibanaSettingsResponseBody.class
@@ -2259,6 +2268,7 @@ com/aliyun/sdk/service/elasticsearch20170613/models/UpdateCollectorNameResponseB
 com/aliyun/sdk/service/elasticsearch20170613/models/UpdateComponentIndexRequest$Template.class
 com/aliyun/sdk/service/elasticsearch20170613/models/MigrateToOtherZoneResponse$1.class
 com/aliyun/sdk/service/elasticsearch20170613/models/DescribeInstanceResponseBody$IkHotDicts.class
+com/aliyun/sdk/service/elasticsearch20170613/models/ListInstanceHistoryEventsRequest$ListInstanceHistoryEventsRequestBody$Builder.class
 com/aliyun/sdk/service/elasticsearch20170613/models/ListApmResponseBody$Result$Builder.class
 com/aliyun/sdk/service/elasticsearch20170613/models/ListDiagnoseReportResponse$1.class
 com/aliyun/sdk/service/elasticsearch20170613/models/DeleteLogstashRequest$Builder.class
