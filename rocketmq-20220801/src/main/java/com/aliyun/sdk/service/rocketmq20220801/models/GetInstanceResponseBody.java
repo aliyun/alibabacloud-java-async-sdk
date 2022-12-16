@@ -232,6 +232,47 @@ public class GetInstanceResponseBody extends TeaModel {
         } 
 
     }
+    public static class AclInfo extends TeaModel {
+        @NameInMap("aclType")
+        private String aclType;
+
+        private AclInfo(Builder builder) {
+            this.aclType = builder.aclType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AclInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return aclType
+         */
+        public String getAclType() {
+            return this.aclType;
+        }
+
+        public static final class Builder {
+            private String aclType; 
+
+            /**
+             * 访问控制类型
+             */
+            public Builder aclType(String aclType) {
+                this.aclType = aclType;
+                return this;
+            }
+
+            public AclInfo build() {
+                return new AclInfo(this);
+            } 
+
+        } 
+
+    }
     public static class ExtConfig extends TeaModel {
         @NameInMap("aclType")
         private String aclType;
@@ -601,7 +642,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * IP白名单列表
+             * 公网IP白名单，建议使用公网信息中的白名单字段
              */
             public Builder ipWhitelist(String ipWhitelist) {
                 this.ipWhitelist = ipWhitelist;
@@ -610,6 +651,107 @@ public class GetInstanceResponseBody extends TeaModel {
 
             public Endpoints build() {
                 return new Endpoints(this);
+            } 
+
+        } 
+
+    }
+    public static class InternetInfo extends TeaModel {
+        @NameInMap("flowOutBandwidth")
+        private Integer flowOutBandwidth;
+
+        @NameInMap("flowOutType")
+        private String flowOutType;
+
+        @NameInMap("internetSpec")
+        private String internetSpec;
+
+        @NameInMap("ipWhitelist")
+        private java.util.List < String > ipWhitelist;
+
+        private InternetInfo(Builder builder) {
+            this.flowOutBandwidth = builder.flowOutBandwidth;
+            this.flowOutType = builder.flowOutType;
+            this.internetSpec = builder.internetSpec;
+            this.ipWhitelist = builder.ipWhitelist;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static InternetInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return flowOutBandwidth
+         */
+        public Integer getFlowOutBandwidth() {
+            return this.flowOutBandwidth;
+        }
+
+        /**
+         * @return flowOutType
+         */
+        public String getFlowOutType() {
+            return this.flowOutType;
+        }
+
+        /**
+         * @return internetSpec
+         */
+        public String getInternetSpec() {
+            return this.internetSpec;
+        }
+
+        /**
+         * @return ipWhitelist
+         */
+        public java.util.List < String > getIpWhitelist() {
+            return this.ipWhitelist;
+        }
+
+        public static final class Builder {
+            private Integer flowOutBandwidth; 
+            private String flowOutType; 
+            private String internetSpec; 
+            private java.util.List < String > ipWhitelist; 
+
+            /**
+             * 公网带宽规格
+             */
+            public Builder flowOutBandwidth(Integer flowOutBandwidth) {
+                this.flowOutBandwidth = flowOutBandwidth;
+                return this;
+            }
+
+            /**
+             * 公网计费类型
+             */
+            public Builder flowOutType(String flowOutType) {
+                this.flowOutType = flowOutType;
+                return this;
+            }
+
+            /**
+             * 是否开通公网
+             */
+            public Builder internetSpec(String internetSpec) {
+                this.internetSpec = internetSpec;
+                return this;
+            }
+
+            /**
+             * 公网IP白名单列表
+             */
+            public Builder ipWhitelist(java.util.List < String > ipWhitelist) {
+                this.ipWhitelist = ipWhitelist;
+                return this;
+            }
+
+            public InternetInfo build() {
+                return new InternetInfo(this);
             } 
 
         } 
@@ -680,11 +822,15 @@ public class GetInstanceResponseBody extends TeaModel {
         @NameInMap("endpoints")
         private java.util.List < Endpoints> endpoints;
 
+        @NameInMap("internetInfo")
+        private InternetInfo internetInfo;
+
         @NameInMap("vpcInfo")
         private VpcInfo vpcInfo;
 
         private NetworkInfo(Builder builder) {
             this.endpoints = builder.endpoints;
+            this.internetInfo = builder.internetInfo;
             this.vpcInfo = builder.vpcInfo;
         }
 
@@ -704,6 +850,13 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return internetInfo
+         */
+        public InternetInfo getInternetInfo() {
+            return this.internetInfo;
+        }
+
+        /**
          * @return vpcInfo
          */
         public VpcInfo getVpcInfo() {
@@ -712,6 +865,7 @@ public class GetInstanceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List < Endpoints> endpoints; 
+            private InternetInfo internetInfo; 
             private VpcInfo vpcInfo; 
 
             /**
@@ -719,6 +873,14 @@ public class GetInstanceResponseBody extends TeaModel {
              */
             public Builder endpoints(java.util.List < Endpoints> endpoints) {
                 this.endpoints = endpoints;
+                return this;
+            }
+
+            /**
+             * 公网信息
+             */
+            public Builder internetInfo(InternetInfo internetInfo) {
+                this.internetInfo = internetInfo;
                 return this;
             }
 
@@ -737,9 +899,133 @@ public class GetInstanceResponseBody extends TeaModel {
         } 
 
     }
+    public static class ProductInfo extends TeaModel {
+        @NameInMap("autoScaling")
+        private Boolean autoScaling;
+
+        @NameInMap("messageRetentionTime")
+        private Integer messageRetentionTime;
+
+        @NameInMap("msgProcessSpec")
+        private String msgProcessSpec;
+
+        @NameInMap("sendReceiveRatio")
+        private Float sendReceiveRatio;
+
+        @NameInMap("supportAutoScaling")
+        private Boolean supportAutoScaling;
+
+        private ProductInfo(Builder builder) {
+            this.autoScaling = builder.autoScaling;
+            this.messageRetentionTime = builder.messageRetentionTime;
+            this.msgProcessSpec = builder.msgProcessSpec;
+            this.sendReceiveRatio = builder.sendReceiveRatio;
+            this.supportAutoScaling = builder.supportAutoScaling;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ProductInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return autoScaling
+         */
+        public Boolean getAutoScaling() {
+            return this.autoScaling;
+        }
+
+        /**
+         * @return messageRetentionTime
+         */
+        public Integer getMessageRetentionTime() {
+            return this.messageRetentionTime;
+        }
+
+        /**
+         * @return msgProcessSpec
+         */
+        public String getMsgProcessSpec() {
+            return this.msgProcessSpec;
+        }
+
+        /**
+         * @return sendReceiveRatio
+         */
+        public Float getSendReceiveRatio() {
+            return this.sendReceiveRatio;
+        }
+
+        /**
+         * @return supportAutoScaling
+         */
+        public Boolean getSupportAutoScaling() {
+            return this.supportAutoScaling;
+        }
+
+        public static final class Builder {
+            private Boolean autoScaling; 
+            private Integer messageRetentionTime; 
+            private String msgProcessSpec; 
+            private Float sendReceiveRatio; 
+            private Boolean supportAutoScaling; 
+
+            /**
+             * 是否开启弹性伸缩
+             */
+            public Builder autoScaling(Boolean autoScaling) {
+                this.autoScaling = autoScaling;
+                return this;
+            }
+
+            /**
+             * 消息保留时长
+             */
+            public Builder messageRetentionTime(Integer messageRetentionTime) {
+                this.messageRetentionTime = messageRetentionTime;
+                return this;
+            }
+
+            /**
+             * 消息收发规格
+             */
+            public Builder msgProcessSpec(String msgProcessSpec) {
+                this.msgProcessSpec = msgProcessSpec;
+                return this;
+            }
+
+            /**
+             * 消息收发比例
+             */
+            public Builder sendReceiveRatio(Float sendReceiveRatio) {
+                this.sendReceiveRatio = sendReceiveRatio;
+                return this;
+            }
+
+            /**
+             * 是否支持弹性伸缩
+             */
+            public Builder supportAutoScaling(Boolean supportAutoScaling) {
+                this.supportAutoScaling = supportAutoScaling;
+                return this;
+            }
+
+            public ProductInfo build() {
+                return new ProductInfo(this);
+            } 
+
+        } 
+
+    }
     public static class Data extends TeaModel {
         @NameInMap("accountInfo")
         private AccountInfo accountInfo;
+
+        @NameInMap("aclInfo")
+        private AclInfo aclInfo;
 
         @NameInMap("bid")
         private String bid;
@@ -756,9 +1042,6 @@ public class GetInstanceResponseBody extends TeaModel {
         @NameInMap("extConfig")
         private ExtConfig extConfig;
 
-        @NameInMap("groupCount")
-        private Long groupCount;
-
         @NameInMap("instanceId")
         private String instanceId;
 
@@ -774,6 +1057,9 @@ public class GetInstanceResponseBody extends TeaModel {
         @NameInMap("paymentType")
         private String paymentType;
 
+        @NameInMap("productInfo")
+        private ProductInfo productInfo;
+
         @NameInMap("regionId")
         private String regionId;
 
@@ -782,6 +1068,9 @@ public class GetInstanceResponseBody extends TeaModel {
 
         @NameInMap("remark")
         private String remark;
+
+        @NameInMap("resourceGroupId")
+        private String resourceGroupId;
 
         @NameInMap("seriesCode")
         private String seriesCode;
@@ -798,9 +1087,6 @@ public class GetInstanceResponseBody extends TeaModel {
         @NameInMap("subSeriesCode")
         private String subSeriesCode;
 
-        @NameInMap("topicCount")
-        private Long topicCount;
-
         @NameInMap("updateTime")
         private String updateTime;
 
@@ -809,26 +1095,27 @@ public class GetInstanceResponseBody extends TeaModel {
 
         private Data(Builder builder) {
             this.accountInfo = builder.accountInfo;
+            this.aclInfo = builder.aclInfo;
             this.bid = builder.bid;
             this.commodityCode = builder.commodityCode;
             this.createTime = builder.createTime;
             this.expireTime = builder.expireTime;
             this.extConfig = builder.extConfig;
-            this.groupCount = builder.groupCount;
             this.instanceId = builder.instanceId;
             this.instanceName = builder.instanceName;
             this.instanceQuotas = builder.instanceQuotas;
             this.networkInfo = builder.networkInfo;
             this.paymentType = builder.paymentType;
+            this.productInfo = builder.productInfo;
             this.regionId = builder.regionId;
             this.releaseTime = builder.releaseTime;
             this.remark = builder.remark;
+            this.resourceGroupId = builder.resourceGroupId;
             this.seriesCode = builder.seriesCode;
             this.serviceCode = builder.serviceCode;
             this.startTime = builder.startTime;
             this.status = builder.status;
             this.subSeriesCode = builder.subSeriesCode;
-            this.topicCount = builder.topicCount;
             this.updateTime = builder.updateTime;
             this.userId = builder.userId;
         }
@@ -846,6 +1133,13 @@ public class GetInstanceResponseBody extends TeaModel {
          */
         public AccountInfo getAccountInfo() {
             return this.accountInfo;
+        }
+
+        /**
+         * @return aclInfo
+         */
+        public AclInfo getAclInfo() {
+            return this.aclInfo;
         }
 
         /**
@@ -884,13 +1178,6 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * @return groupCount
-         */
-        public Long getGroupCount() {
-            return this.groupCount;
-        }
-
-        /**
          * @return instanceId
          */
         public String getInstanceId() {
@@ -926,6 +1213,13 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return productInfo
+         */
+        public ProductInfo getProductInfo() {
+            return this.productInfo;
+        }
+
+        /**
          * @return regionId
          */
         public String getRegionId() {
@@ -944,6 +1238,13 @@ public class GetInstanceResponseBody extends TeaModel {
          */
         public String getRemark() {
             return this.remark;
+        }
+
+        /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         /**
@@ -982,13 +1283,6 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * @return topicCount
-         */
-        public Long getTopicCount() {
-            return this.topicCount;
-        }
-
-        /**
          * @return updateTime
          */
         public String getUpdateTime() {
@@ -1004,26 +1298,27 @@ public class GetInstanceResponseBody extends TeaModel {
 
         public static final class Builder {
             private AccountInfo accountInfo; 
+            private AclInfo aclInfo; 
             private String bid; 
             private String commodityCode; 
             private String createTime; 
             private String expireTime; 
             private ExtConfig extConfig; 
-            private Long groupCount; 
             private String instanceId; 
             private String instanceName; 
             private java.util.List < InstanceQuotas> instanceQuotas; 
             private NetworkInfo networkInfo; 
             private String paymentType; 
+            private ProductInfo productInfo; 
             private String regionId; 
             private String releaseTime; 
             private String remark; 
+            private String resourceGroupId; 
             private String seriesCode; 
             private String serviceCode; 
             private String startTime; 
             private String status; 
             private String subSeriesCode; 
-            private Long topicCount; 
             private String updateTime; 
             private String userId; 
 
@@ -1032,6 +1327,14 @@ public class GetInstanceResponseBody extends TeaModel {
              */
             public Builder accountInfo(AccountInfo accountInfo) {
                 this.accountInfo = accountInfo;
+                return this;
+            }
+
+            /**
+             * 访问控制信息
+             */
+            public Builder aclInfo(AclInfo aclInfo) {
+                this.aclInfo = aclInfo;
                 return this;
             }
 
@@ -1068,18 +1371,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 扩展配置
+             * 扩展配置，不再推荐使用，建议使用产品信息、网络信息中的字段替换
              */
             public Builder extConfig(ExtConfig extConfig) {
                 this.extConfig = extConfig;
-                return this;
-            }
-
-            /**
-             * groupCount.
-             */
-            public Builder groupCount(Long groupCount) {
-                this.groupCount = groupCount;
                 return this;
             }
 
@@ -1124,6 +1419,14 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
+             * 产品信息
+             */
+            public Builder productInfo(ProductInfo productInfo) {
+                this.productInfo = productInfo;
+                return this;
+            }
+
+            /**
              * 区域ID
              */
             public Builder regionId(String regionId) {
@@ -1144,6 +1447,14 @@ public class GetInstanceResponseBody extends TeaModel {
              */
             public Builder remark(String remark) {
                 this.remark = remark;
+                return this;
+            }
+
+            /**
+             * 资源组ID
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 
@@ -1184,14 +1495,6 @@ public class GetInstanceResponseBody extends TeaModel {
              */
             public Builder subSeriesCode(String subSeriesCode) {
                 this.subSeriesCode = subSeriesCode;
-                return this;
-            }
-
-            /**
-             * topicCount.
-             */
-            public Builder topicCount(Long topicCount) {
-                this.topicCount = topicCount;
                 return this;
             }
 

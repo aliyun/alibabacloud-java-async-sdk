@@ -24,10 +24,12 @@ public class CreateConsumerGroupRequest extends Request {
 
     @Body
     @NameInMap("consumeRetryPolicy")
+    @Validation(required = true)
     private ConsumeRetryPolicy consumeRetryPolicy;
 
     @Body
     @NameInMap("deliveryOrderType")
+    @Validation(required = true)
     private String deliveryOrderType;
 
     @Body
@@ -168,6 +170,7 @@ public class CreateConsumerGroupRequest extends Request {
         private Integer maxRetryTimes;
 
         @NameInMap("retryPolicy")
+        @Validation(required = true)
         private String retryPolicy;
 
         private ConsumeRetryPolicy(Builder builder) {

@@ -20,6 +20,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateConsumerGroupResponse> createConsumerGroup(CreateConsumerGroupRequest request);
 
+    CompletableFuture<CreateInstanceResponse> createInstance(CreateInstanceRequest request);
+
     CompletableFuture<CreateTopicResponse> createTopic(CreateTopicRequest request);
 
     CompletableFuture<DeleteConsumerGroupResponse> deleteConsumerGroup(DeleteConsumerGroupRequest request);

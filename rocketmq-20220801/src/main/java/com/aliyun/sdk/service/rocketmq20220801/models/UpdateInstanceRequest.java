@@ -18,10 +18,6 @@ public class UpdateInstanceRequest extends Request {
     private String instanceId;
 
     @Body
-    @NameInMap("extConfig")
-    private ExtConfig extConfig;
-
-    @Body
     @NameInMap("instanceName")
     private String instanceName;
 
@@ -30,15 +26,19 @@ public class UpdateInstanceRequest extends Request {
     private NetworkInfo networkInfo;
 
     @Body
+    @NameInMap("productInfo")
+    private ProductInfo productInfo;
+
+    @Body
     @NameInMap("remark")
     private String remark;
 
     private UpdateInstanceRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
-        this.extConfig = builder.extConfig;
         this.instanceName = builder.instanceName;
         this.networkInfo = builder.networkInfo;
+        this.productInfo = builder.productInfo;
         this.remark = builder.remark;
     }
 
@@ -63,13 +63,6 @@ public class UpdateInstanceRequest extends Request {
     }
 
     /**
-     * @return extConfig
-     */
-    public ExtConfig getExtConfig() {
-        return this.extConfig;
-    }
-
-    /**
      * @return instanceName
      */
     public String getInstanceName() {
@@ -84,6 +77,13 @@ public class UpdateInstanceRequest extends Request {
     }
 
     /**
+     * @return productInfo
+     */
+    public ProductInfo getProductInfo() {
+        return this.productInfo;
+    }
+
+    /**
      * @return remark
      */
     public String getRemark() {
@@ -92,9 +92,9 @@ public class UpdateInstanceRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateInstanceRequest, Builder> {
         private String instanceId; 
-        private ExtConfig extConfig; 
         private String instanceName; 
         private NetworkInfo networkInfo; 
+        private ProductInfo productInfo; 
         private String remark; 
 
         private Builder() {
@@ -104,9 +104,9 @@ public class UpdateInstanceRequest extends Request {
         private Builder(UpdateInstanceRequest request) {
             super(request);
             this.instanceId = request.instanceId;
-            this.extConfig = request.extConfig;
             this.instanceName = request.instanceName;
             this.networkInfo = request.networkInfo;
+            this.productInfo = request.productInfo;
             this.remark = request.remark;
         } 
 
@@ -116,15 +116,6 @@ public class UpdateInstanceRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
             this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * 扩展配置
-         */
-        public Builder extConfig(ExtConfig extConfig) {
-            this.putBodyParameter("extConfig", extConfig);
-            this.extConfig = extConfig;
             return this;
         }
 
@@ -147,6 +138,15 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
+         * 扩展配置
+         */
+        public Builder productInfo(ProductInfo productInfo) {
+            this.putBodyParameter("productInfo", productInfo);
+            this.productInfo = productInfo;
+            return this;
+        }
+
+        /**
          * 实例备注
          */
         public Builder remark(String remark) {
@@ -162,7 +162,89 @@ public class UpdateInstanceRequest extends Request {
 
     } 
 
-    public static class ExtConfig extends TeaModel {
+    public static class InternetInfo extends TeaModel {
+        @NameInMap("ipWhitelist")
+        private java.util.List < String > ipWhitelist;
+
+        private InternetInfo(Builder builder) {
+            this.ipWhitelist = builder.ipWhitelist;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static InternetInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return ipWhitelist
+         */
+        public java.util.List < String > getIpWhitelist() {
+            return this.ipWhitelist;
+        }
+
+        public static final class Builder {
+            private java.util.List < String > ipWhitelist; 
+
+            /**
+             * 公网IP白名单列表
+             */
+            public Builder ipWhitelist(java.util.List < String > ipWhitelist) {
+                this.ipWhitelist = ipWhitelist;
+                return this;
+            }
+
+            public InternetInfo build() {
+                return new InternetInfo(this);
+            } 
+
+        } 
+
+    }
+    public static class NetworkInfo extends TeaModel {
+        @NameInMap("internetInfo")
+        private InternetInfo internetInfo;
+
+        private NetworkInfo(Builder builder) {
+            this.internetInfo = builder.internetInfo;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NetworkInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return internetInfo
+         */
+        public InternetInfo getInternetInfo() {
+            return this.internetInfo;
+        }
+
+        public static final class Builder {
+            private InternetInfo internetInfo; 
+
+            /**
+             * 公网信息
+             */
+            public Builder internetInfo(InternetInfo internetInfo) {
+                this.internetInfo = internetInfo;
+                return this;
+            }
+
+            public NetworkInfo build() {
+                return new NetworkInfo(this);
+            } 
+
+        } 
+
+    }
+    public static class ProductInfo extends TeaModel {
         @NameInMap("autoScaling")
         private Boolean autoScaling;
 
@@ -172,7 +254,7 @@ public class UpdateInstanceRequest extends Request {
         @NameInMap("sendReceiveRatio")
         private Float sendReceiveRatio;
 
-        private ExtConfig(Builder builder) {
+        private ProductInfo(Builder builder) {
             this.autoScaling = builder.autoScaling;
             this.messageRetentionTime = builder.messageRetentionTime;
             this.sendReceiveRatio = builder.sendReceiveRatio;
@@ -182,7 +264,7 @@ public class UpdateInstanceRequest extends Request {
             return new Builder();
         }
 
-        public static ExtConfig create() {
+        public static ProductInfo create() {
             return builder().build();
         }
 
@@ -236,110 +318,8 @@ public class UpdateInstanceRequest extends Request {
                 return this;
             }
 
-            public ExtConfig build() {
-                return new ExtConfig(this);
-            } 
-
-        } 
-
-    }
-    public static class Endpoints extends TeaModel {
-        @NameInMap("endpointType")
-        private String endpointType;
-
-        @NameInMap("ipWhitelist")
-        private String ipWhitelist;
-
-        private Endpoints(Builder builder) {
-            this.endpointType = builder.endpointType;
-            this.ipWhitelist = builder.ipWhitelist;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static Endpoints create() {
-            return builder().build();
-        }
-
-        /**
-         * @return endpointType
-         */
-        public String getEndpointType() {
-            return this.endpointType;
-        }
-
-        /**
-         * @return ipWhitelist
-         */
-        public String getIpWhitelist() {
-            return this.ipWhitelist;
-        }
-
-        public static final class Builder {
-            private String endpointType; 
-            private String ipWhitelist; 
-
-            /**
-             * 接入点类型
-             */
-            public Builder endpointType(String endpointType) {
-                this.endpointType = endpointType;
-                return this;
-            }
-
-            /**
-             * IP白名单
-             */
-            public Builder ipWhitelist(String ipWhitelist) {
-                this.ipWhitelist = ipWhitelist;
-                return this;
-            }
-
-            public Endpoints build() {
-                return new Endpoints(this);
-            } 
-
-        } 
-
-    }
-    public static class NetworkInfo extends TeaModel {
-        @NameInMap("endpoints")
-        private java.util.List < Endpoints> endpoints;
-
-        private NetworkInfo(Builder builder) {
-            this.endpoints = builder.endpoints;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static NetworkInfo create() {
-            return builder().build();
-        }
-
-        /**
-         * @return endpoints
-         */
-        public java.util.List < Endpoints> getEndpoints() {
-            return this.endpoints;
-        }
-
-        public static final class Builder {
-            private java.util.List < Endpoints> endpoints; 
-
-            /**
-             * 接入点列表
-             */
-            public Builder endpoints(java.util.List < Endpoints> endpoints) {
-                this.endpoints = endpoints;
-                return this;
-            }
-
-            public NetworkInfo build() {
-                return new NetworkInfo(this);
+            public ProductInfo build() {
+                return new ProductInfo(this);
             } 
 
         } 
