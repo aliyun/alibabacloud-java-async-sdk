@@ -127,7 +127,7 @@ public class ModifyRiskSingleResultStatusRequest extends Request {
         } 
 
         /**
-         * Ids.
+         * The IDs of the affected assets.
          */
         public Builder ids(java.util.List < String > ids) {
             this.putQueryParameter("Ids", ids);
@@ -136,7 +136,11 @@ public class ModifyRiskSingleResultStatusRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -154,7 +158,7 @@ public class ModifyRiskSingleResultStatusRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * The source IP address of the request.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -163,7 +167,11 @@ public class ModifyRiskSingleResultStatusRequest extends Request {
         }
 
         /**
-         * Status.
+         * The method to handle the risk item. Valid values:
+         * <p>
+         * 
+         * *   **ignored**: ignores the risk item.
+         * *   **failed**: cancels the ignore operation on the risk item.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -172,7 +180,7 @@ public class ModifyRiskSingleResultStatusRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * The ID of the check task to which the affected asset belongs.
          */
         public Builder taskId(Long taskId) {
             this.putQueryParameter("TaskId", taskId);

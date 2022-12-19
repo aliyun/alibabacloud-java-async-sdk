@@ -86,7 +86,7 @@ public class DescribeModuleConfigResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Count.
+         * The number of configurations for the module.
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -94,7 +94,7 @@ public class DescribeModuleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -102,7 +102,7 @@ public class DescribeModuleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * ModuleConfigList.
+         * An array that consists of the configurations.
          */
         public Builder moduleConfigList(java.util.List < ModuleConfigList> moduleConfigList) {
             this.moduleConfigList = moduleConfigList;
@@ -110,7 +110,7 @@ public class DescribeModuleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class DescribeModuleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the call is successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false**: no
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -218,7 +222,7 @@ public class DescribeModuleConfigResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * GroupId.
+             * The ID of the server group to which the server belongs.
              */
             public Builder groupId(Integer groupId) {
                 this.groupId = groupId;
@@ -226,7 +230,7 @@ public class DescribeModuleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the server.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -234,7 +238,7 @@ public class DescribeModuleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * The name of the server.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -242,7 +246,7 @@ public class DescribeModuleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Ip.
+             * The IP address of the server.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -250,7 +254,7 @@ public class DescribeModuleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * The region in which the server resides.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -258,7 +262,7 @@ public class DescribeModuleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Uuid.
+             * The UUID of the server.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -323,7 +327,7 @@ public class DescribeModuleConfigResponseBody extends TeaModel {
             private String moduleName; 
 
             /**
-             * ConfigName.
+             * The name of the configuration.
              */
             public Builder configName(String configName) {
                 this.configName = configName;
@@ -331,7 +335,7 @@ public class DescribeModuleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Items.
+             * The configuration items.
              */
             public Builder items(java.util.List < Items> items) {
                 this.items = items;
@@ -339,7 +343,7 @@ public class DescribeModuleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ModuleName.
+             * The name of the module.
              */
             public Builder moduleName(String moduleName) {
                 this.moduleName = moduleName;

@@ -96,7 +96,7 @@ public class ModifyClearLogstoreStorageRequest extends Request {
         } 
 
         /**
-         * From.
+         * The ID of the request source. Set the value to **sas**.
          */
         public Builder from(String from) {
             this.putQueryParameter("From", from);
@@ -105,7 +105,11 @@ public class ModifyClearLogstoreStorageRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -114,7 +118,7 @@ public class ModifyClearLogstoreStorageRequest extends Request {
         }
 
         /**
-         * UserLogStore.
+         * The name of the Logstore that stores logs.
          */
         public Builder userLogStore(String userLogStore) {
             this.putQueryParameter("UserLogStore", userLogStore);
@@ -123,7 +127,7 @@ public class ModifyClearLogstoreStorageRequest extends Request {
         }
 
         /**
-         * UserProject.
+         * The name of the project.
          */
         public Builder userProject(String userProject) {
             this.putQueryParameter("UserProject", userProject);

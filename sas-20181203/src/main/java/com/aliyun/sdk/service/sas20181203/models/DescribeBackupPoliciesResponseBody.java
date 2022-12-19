@@ -62,7 +62,7 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PageInfo.
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -70,7 +70,7 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * Policies.
+         * An array that consists of the anti-ransomware policies returned.
          */
         public Builder policies(java.util.List < Policies> policies) {
             this.policies = policies;
@@ -78,7 +78,7 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +154,7 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Count.
+             * The number of entries returned on the current page.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -162,7 +162,7 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentPage.
+             * The page number of the returned page.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -170,7 +170,7 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page. Default value: 10.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -178,7 +178,7 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of anti-ransomware policies returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -411,7 +411,7 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             private java.util.List < String > uuidList; 
 
             /**
-             * ClientErrorCount.
+             * The number of the servers on which the anti-ransomware agent is in an abnormal state.
              */
             public Builder clientErrorCount(Integer clientErrorCount) {
                 this.clientErrorCount = clientErrorCount;
@@ -419,7 +419,7 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * ClientErrorUuidList.
+             * The UUIDs of the servers on which the anti-ransomware agent is in an **abnormal** state.
              */
             public Builder clientErrorUuidList(java.util.List < String > clientErrorUuidList) {
                 this.clientErrorUuidList = clientErrorUuidList;
@@ -427,7 +427,11 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * ClientStatus.
+             * The status of the anti-ransomware agent. Valid values:
+             * <p>
+             * 
+             * *   **running**: normal
+             * *   **exception**: abnormal
              */
             public Builder clientStatus(String clientStatus) {
                 this.clientStatus = clientStatus;
@@ -435,7 +439,7 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * HealthClientCount.
+             * The number of the servers on which the anti-ransomware agent is in a normal state.
              */
             public Builder healthClientCount(Integer healthClientCount) {
                 this.healthClientCount = healthClientCount;
@@ -443,7 +447,7 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * HealthClientUuidList.
+             * The UUIDs of the servers on which the anti-ransomware agent is in a **normal** state.
              */
             public Builder healthClientUuidList(java.util.List < String > healthClientUuidList) {
                 this.healthClientUuidList = healthClientUuidList;
@@ -451,7 +455,7 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the anti-ransomware policy.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -459,7 +463,7 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the anti-ransomware policy.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -467,7 +471,37 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * Policy.
+             * The configurations of the anti-ransomware policy. The value of this parameter is in the JSON format and contains the following fields:
+             * <p>
+             * 
+             * *   **IsDefault**: the type of the anti-ransomware policy. Valid values:
+             * 
+             *     *   **1**: recommended policy
+             *     *   **0**: custom policy
+             * 
+             * *   **Include**: the format of the files that are protected. If the value of this field is \[], all formats of files are protected.
+             * 
+             * *   **Source**: the directory that is protected. If the value of this field is \[], all directories are protected.
+             * 
+             * *   **ExcludeSystemPath**: indicates whether a specified directory is excluded from the anti-ransomware policy. If the value of this field is **true**, the directory is excluded. If this field is left empty, no directories are excluded.
+             * 
+             * *   **Exclude**: the directory that is excluded from the anti-ransomware policy. If no directory is specified, the value of this field is \[].
+             * 
+             * *   **Schedule**: the start time and interval of a data backup task. A start time that begins during off-peak hours but does not start on the hour is recommended. Examples:
+             * 
+             *     *   If the value of this field is I|1583216092|P21D, the data backup task starts from 2020-03-03 14:14:52, and the task is run at an interval of three weeks.
+             *     *   If the value of this field is I|1583216092|PT24H, the data backup task starts from 2020-03-03 14:14:52, and the task is run at an interval of 24 hours.
+             * 
+             * *   **Retention**: the period during which backup data is retained. Unit: days. If the value of this field is 7, backup data is retained for a week. If the value of this field is 365, backup data is retained for a year. If the value of this field is -1, backup data is permanently retained.
+             * 
+             * *   **SpeedLimiter**: the limit on the network bandwidth for data backup tasks. If the value of this field is 0:24:30720, the maximum bandwidth for a data backup task is 30 MB/s from 00:00 to 24:00.
+             * 
+             * *   **UseVss**: indicates whether the VSS feature is enabled. The feature is available only for Windows servers. Valid values:
+             * 
+             *     *   **true**: yes
+             *     *   **false**: no
+             * 
+             * >  The VSS feature is available only if you create the anti-ransomware policy for Windows servers. After you enable the feature, the number of backup failures due to running processes is significantly reduced. We recommend that you enable the VSS feature. After you enable the feature, the data of disks that are in the exFAT and FAT32 formats cannot be backed up.
              */
             public Builder policy(String policy) {
                 this.policy = policy;
@@ -475,7 +509,7 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyRegionId.
+             * The ID of the region that you specified for data backup when you installed the anti-ransomware agent for the server not deployed on Alibaba Cloud.
              */
             public Builder policyRegionId(String policyRegionId) {
                 this.policyRegionId = policyRegionId;
@@ -483,7 +517,11 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyVersion.
+             * The version of the anti-ransomware policy. Valid values:
+             * <p>
+             * 
+             * *   1.0.0
+             * *   2.0.0
              */
             public Builder policyVersion(String policyVersion) {
                 this.policyVersion = policyVersion;
@@ -491,7 +529,7 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * RemarkedUuidList.
+             * The UUIDs that are returned based on the value of the MachineRemark request parameter.
              */
             public Builder remarkedUuidList(java.util.List < String > remarkedUuidList) {
                 this.remarkedUuidList = remarkedUuidList;
@@ -499,7 +537,12 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * ServerType.
+             * The type of the server. Valid values:
+             * <p>
+             * 
+             * *   **OUT_CLOUD**: server not deployed on Alibaba Cloud
+             * *   **ALIYUN**: Elastic Compute Service (ECS) instance
+             * *   **TRIPARTITE**: simple application server
              */
             public Builder serverType(String serverType) {
                 this.serverType = serverType;
@@ -507,7 +550,7 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceErrorCount.
+             * The number of servers on which data backup is exceptional.
              */
             public Builder serviceErrorCount(Integer serviceErrorCount) {
                 this.serviceErrorCount = serviceErrorCount;
@@ -515,7 +558,7 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceErrorUuidList.
+             * The UUIDs of the servers on which data backup is exceptional.
              */
             public Builder serviceErrorUuidList(java.util.List < String > serviceErrorUuidList) {
                 this.serviceErrorUuidList = serviceErrorUuidList;
@@ -523,7 +566,12 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the anti-ransomware policy. Valid values:
+             * <p>
+             * 
+             * *   **enabled**: The anti-ransomware policy is manually enabled.
+             * *   **disabled**: The anti-ransomware policy is manually disabled. After an anti-ransomware policy is disabled, the data backup task that is running based on the policy stops.
+             * *   **closed**: The anti-ransomware policy automatically stops because the anti-ransomware capacity is insufficient.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -531,7 +579,13 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * UpgradeStatus.
+             * The upgrade status of the anti-ransomware policy. Valid values:
+             * <p>
+             * 
+             * *   **NotUpgraded**
+             * *   **Upgrading**
+             * *   **UpgradeFailed**
+             * *   **UpgradeSuccess**
              */
             public Builder upgradeStatus(String upgradeStatus) {
                 this.upgradeStatus = upgradeStatus;
@@ -539,7 +593,7 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * UuidList.
+             * The UUIDs of the servers to which the anti-ransomware policy is applied.
              */
             public Builder uuidList(java.util.List < String > uuidList) {
                 this.uuidList = uuidList;

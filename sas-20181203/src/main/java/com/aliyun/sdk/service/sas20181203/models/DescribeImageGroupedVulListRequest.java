@@ -348,7 +348,7 @@ public class DescribeImageGroupedVulListRequest extends Request {
         } 
 
         /**
-         * AliasName.
+         * The alias of the vulnerability.
          */
         public Builder aliasName(String aliasName) {
             this.putQueryParameter("AliasName", aliasName);
@@ -357,7 +357,10 @@ public class DescribeImageGroupedVulListRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * The ID of the container cluster.
+         * <p>
+         * 
+         * >  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of container clusters.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -366,7 +369,7 @@ public class DescribeImageGroupedVulListRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -375,7 +378,7 @@ public class DescribeImageGroupedVulListRequest extends Request {
         }
 
         /**
-         * CveId.
+         * The Common Vulnerabilities and Exposures (CVE) ID of the vulnerability.
          */
         public Builder cveId(String cveId) {
             this.putQueryParameter("CveId", cveId);
@@ -384,7 +387,7 @@ public class DescribeImageGroupedVulListRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * The ID of the asset group.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -393,7 +396,7 @@ public class DescribeImageGroupedVulListRequest extends Request {
         }
 
         /**
-         * ImageDigest.
+         * The SHA-256 value of the image digest.
          */
         public Builder imageDigest(String imageDigest) {
             this.putQueryParameter("ImageDigest", imageDigest);
@@ -402,7 +405,7 @@ public class DescribeImageGroupedVulListRequest extends Request {
         }
 
         /**
-         * ImageLayer.
+         * The layer of the image.
          */
         public Builder imageLayer(String imageLayer) {
             this.putQueryParameter("ImageLayer", imageLayer);
@@ -411,7 +414,7 @@ public class DescribeImageGroupedVulListRequest extends Request {
         }
 
         /**
-         * ImageTag.
+         * The tag that is added to the image.
          */
         public Builder imageTag(String imageTag) {
             this.putQueryParameter("ImageTag", imageTag);
@@ -420,7 +423,11 @@ public class DescribeImageGroupedVulListRequest extends Request {
         }
 
         /**
-         * IsLatest.
+         * Specifies whether to query the vulnerabilities in the latest images. If you do not specify this parameter, the vulnerabilities in all images are queried. Valid values:
+         * <p>
+         * 
+         * *   **0**: no
+         * *   **1**: yes
          */
         public Builder isLatest(Integer isLatest) {
             this.putQueryParameter("IsLatest", isLatest);
@@ -429,7 +436,11 @@ public class DescribeImageGroupedVulListRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -438,7 +449,7 @@ public class DescribeImageGroupedVulListRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the vulnerability.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -447,7 +458,12 @@ public class DescribeImageGroupedVulListRequest extends Request {
         }
 
         /**
-         * Necessity.
+         * The priority to fix the vulnerability. Valid values:
+         * <p>
+         * 
+         * *   **asap**: high. You must fix the vulnerability at the earliest opportunity.
+         * *   **later**: medium. You can fix the vulnerability based on your business requirements.
+         * *   **nntf**: low. You can ignore the vulnerability.
          */
         public Builder necessity(String necessity) {
             this.putQueryParameter("Necessity", necessity);
@@ -456,7 +472,7 @@ public class DescribeImageGroupedVulListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: **20**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -465,7 +481,7 @@ public class DescribeImageGroupedVulListRequest extends Request {
         }
 
         /**
-         * PatchId.
+         * The ID of the patch that is used to fix the vulnerability.
          */
         public Builder patchId(Long patchId) {
             this.putQueryParameter("PatchId", patchId);
@@ -474,7 +490,7 @@ public class DescribeImageGroupedVulListRequest extends Request {
         }
 
         /**
-         * RepoId.
+         * The ID of the image repository.
          */
         public Builder repoId(String repoId) {
             this.putQueryParameter("RepoId", repoId);
@@ -483,7 +499,7 @@ public class DescribeImageGroupedVulListRequest extends Request {
         }
 
         /**
-         * RepoInstanceId.
+         * The instance ID of the image repository.
          */
         public Builder repoInstanceId(String repoInstanceId) {
             this.putQueryParameter("RepoInstanceId", repoInstanceId);
@@ -492,7 +508,7 @@ public class DescribeImageGroupedVulListRequest extends Request {
         }
 
         /**
-         * RepoName.
+         * The name of the image repository.
          */
         public Builder repoName(String repoName) {
             this.putQueryParameter("RepoName", repoName);
@@ -501,7 +517,7 @@ public class DescribeImageGroupedVulListRequest extends Request {
         }
 
         /**
-         * RepoNamespace.
+         * The namespace to which the image repository belongs.
          */
         public Builder repoNamespace(String repoNamespace) {
             this.putQueryParameter("RepoNamespace", repoNamespace);
@@ -510,7 +526,7 @@ public class DescribeImageGroupedVulListRequest extends Request {
         }
 
         /**
-         * RepoRegionId.
+         * The region ID of the image repository.
          */
         public Builder repoRegionId(String repoRegionId) {
             this.putQueryParameter("RepoRegionId", repoRegionId);
@@ -519,7 +535,7 @@ public class DescribeImageGroupedVulListRequest extends Request {
         }
 
         /**
-         * ScanRange.
+         * The types of the assets that you want to scan.
          */
         public Builder scanRange(java.util.List < String > scanRange) {
             this.putQueryParameter("ScanRange", scanRange);
@@ -528,7 +544,11 @@ public class DescribeImageGroupedVulListRequest extends Request {
         }
 
         /**
-         * Type.
+         * The type of the vulnerability that you want to query. Valid values:
+         * <p>
+         * 
+         * *   **cve**: image system vulnerability
+         * *   **sca**: image application vulnerability
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -537,7 +557,7 @@ public class DescribeImageGroupedVulListRequest extends Request {
         }
 
         /**
-         * Uuids.
+         * The UUIDs of the assets. Separate multiple UUIDs with commas (,).
          */
         public Builder uuids(String uuids) {
             this.putQueryParameter("Uuids", uuids);

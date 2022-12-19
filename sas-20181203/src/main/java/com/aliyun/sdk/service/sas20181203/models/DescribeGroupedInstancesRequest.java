@@ -41,6 +41,10 @@ public class DescribeGroupedInstancesRequest extends Request {
     @NameInMap("PageSize")
     private Integer pageSize;
 
+    @Query
+    @NameInMap("Vendor")
+    private Integer vendor;
+
     private DescribeGroupedInstancesRequest(Builder builder) {
         super(builder);
         this.currentPage = builder.currentPage;
@@ -50,6 +54,7 @@ public class DescribeGroupedInstancesRequest extends Request {
         this.machineTypes = builder.machineTypes;
         this.noPage = builder.noPage;
         this.pageSize = builder.pageSize;
+        this.vendor = builder.vendor;
     }
 
     public static Builder builder() {
@@ -114,6 +119,13 @@ public class DescribeGroupedInstancesRequest extends Request {
         return this.pageSize;
     }
 
+    /**
+     * @return vendor
+     */
+    public Integer getVendor() {
+        return this.vendor;
+    }
+
     public static final class Builder extends Request.Builder<DescribeGroupedInstancesRequest, Builder> {
         private Integer currentPage; 
         private String fieldValue; 
@@ -122,6 +134,7 @@ public class DescribeGroupedInstancesRequest extends Request {
         private String machineTypes; 
         private Boolean noPage; 
         private Integer pageSize; 
+        private Integer vendor; 
 
         private Builder() {
             super();
@@ -136,10 +149,11 @@ public class DescribeGroupedInstancesRequest extends Request {
             this.machineTypes = request.machineTypes;
             this.noPage = request.noPage;
             this.pageSize = request.pageSize;
+            this.vendor = request.vendor;
         } 
 
         /**
-         * CurrentPage.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -148,7 +162,7 @@ public class DescribeGroupedInstancesRequest extends Request {
         }
 
         /**
-         * FieldValue.
+         * The name of the group to which the assets belong. Fuzzy search is supported.
          */
         public Builder fieldValue(String fieldValue) {
             this.putQueryParameter("FieldValue", fieldValue);
@@ -157,7 +171,12 @@ public class DescribeGroupedInstancesRequest extends Request {
         }
 
         /**
-         * GroupField.
+         * The filter condition that you want to use to query the assets. Valid values:
+         * <p>
+         * 
+         * *   **groupId**: the group to which the assets belong
+         * *   **regionId**: the region in which the assets reside
+         * *   **vpcInstanceId**: the virtual private cloud (VPC) in which the assets reside
          */
         public Builder groupField(String groupField) {
             this.putQueryParameter("GroupField", groupField);
@@ -166,7 +185,11 @@ public class DescribeGroupedInstancesRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -175,7 +198,7 @@ public class DescribeGroupedInstancesRequest extends Request {
         }
 
         /**
-         * MachineTypes.
+         * The type of the assets that you want to query. Set the value to **ecs**, which indicates Elastic Compute Service (ECS) instances.
          */
         public Builder machineTypes(String machineTypes) {
             this.putQueryParameter("MachineTypes", machineTypes);
@@ -184,7 +207,11 @@ public class DescribeGroupedInstancesRequest extends Request {
         }
 
         /**
-         * NoPage.
+         * Specifies whether to enable paged query. Default value: **true**. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false**: no
          */
         public Builder noPage(Boolean noPage) {
             this.putQueryParameter("NoPage", noPage);
@@ -193,11 +220,27 @@ public class DescribeGroupedInstancesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: **20**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * The source of the server. Valid values:
+         * <p>
+         * 
+         * *   **0**: an asset provided by Alibaba Cloud.
+         * *   **1**: a third-party cloud server
+         * *   **2**: a server in a data center
+         * *   **3**, **4**, **5**, and **7**: other cloud asset
+         * *   **8**: a lightweight asset
+         */
+        public Builder vendor(Integer vendor) {
+            this.putQueryParameter("Vendor", vendor);
+            this.vendor = vendor;
             return this;
         }
 

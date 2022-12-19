@@ -242,7 +242,11 @@ public class DescribeSuspEventDetailResponseBody extends TeaModel {
         private String uuid; 
 
         /**
-         * CanBeDealOnLine.
+         * Indicates whether the online processing of exceptions is supported, such as blocking an exception, adding an exception to the whitelist, and ignoring an exception. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false**: no
          */
         public Builder canBeDealOnLine(Boolean canBeDealOnLine) {
             this.canBeDealOnLine = canBeDealOnLine;
@@ -250,7 +254,7 @@ public class DescribeSuspEventDetailResponseBody extends TeaModel {
         }
 
         /**
-         * DataSource.
+         * The data source of the exception.
          */
         public Builder dataSource(String dataSource) {
             this.dataSource = dataSource;
@@ -258,7 +262,7 @@ public class DescribeSuspEventDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Details.
+         * The details about the exception.
          */
         public Builder details(java.util.List < Details> details) {
             this.details = details;
@@ -266,7 +270,7 @@ public class DescribeSuspEventDetailResponseBody extends TeaModel {
         }
 
         /**
-         * EventDesc.
+         * The description of the exception.
          */
         public Builder eventDesc(String eventDesc) {
             this.eventDesc = eventDesc;
@@ -274,7 +278,7 @@ public class DescribeSuspEventDetailResponseBody extends TeaModel {
         }
 
         /**
-         * EventName.
+         * The name of the exception.
          */
         public Builder eventName(String eventName) {
             this.eventName = eventName;
@@ -282,7 +286,16 @@ public class DescribeSuspEventDetailResponseBody extends TeaModel {
         }
 
         /**
-         * EventStatus.
+         * The status of the exception. Valid values:
+         * <p>
+         * 
+         * *   **1**: pending handling
+         * *   **2**: ignored
+         * *   **4**: confirmed
+         * *   **8**: marked as a false positive
+         * *   **16**: handling
+         * *   **32**: handled
+         * *   **64**: expired
          */
         public Builder eventStatus(String eventStatus) {
             this.eventStatus = eventStatus;
@@ -290,7 +303,7 @@ public class DescribeSuspEventDetailResponseBody extends TeaModel {
         }
 
         /**
-         * EventTypeDesc.
+         * The type of the exception.
          */
         public Builder eventTypeDesc(String eventTypeDesc) {
             this.eventTypeDesc = eventTypeDesc;
@@ -298,7 +311,7 @@ public class DescribeSuspEventDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Id.
+         * The ID of the exception.
          */
         public Builder id(Integer id) {
             this.id = id;
@@ -306,7 +319,7 @@ public class DescribeSuspEventDetailResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceName.
+         * The name of the server on which the exception was detected.
          */
         public Builder instanceName(String instanceName) {
             this.instanceName = instanceName;
@@ -314,7 +327,7 @@ public class DescribeSuspEventDetailResponseBody extends TeaModel {
         }
 
         /**
-         * InternetIp.
+         * The public IP address of the server on which the exception was detected.
          */
         public Builder internetIp(String internetIp) {
             this.internetIp = internetIp;
@@ -322,7 +335,7 @@ public class DescribeSuspEventDetailResponseBody extends TeaModel {
         }
 
         /**
-         * IntranetIp.
+         * The private IP address of the server on which the exception was detected.
          */
         public Builder intranetIp(String intranetIp) {
             this.intranetIp = intranetIp;
@@ -330,7 +343,7 @@ public class DescribeSuspEventDetailResponseBody extends TeaModel {
         }
 
         /**
-         * LastTime.
+         * The time when the exception was last detected.
          */
         public Builder lastTime(String lastTime) {
             this.lastTime = lastTime;
@@ -338,7 +351,12 @@ public class DescribeSuspEventDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Level.
+         * The severity of the exception. Valid values:
+         * <p>
+         * 
+         * *   **serious**
+         * *   **suspicious**
+         * *   **remind**
          */
         public Builder level(String level) {
             this.level = level;
@@ -346,7 +364,7 @@ public class DescribeSuspEventDetailResponseBody extends TeaModel {
         }
 
         /**
-         * OperateErrorCode.
+         * The code that indicates the handling result of the exception.
          */
         public Builder operateErrorCode(String operateErrorCode) {
             this.operateErrorCode = operateErrorCode;
@@ -354,7 +372,7 @@ public class DescribeSuspEventDetailResponseBody extends TeaModel {
         }
 
         /**
-         * OperateMsg.
+         * The message that indicates the handling result of the exception.
          */
         public Builder operateMsg(String operateMsg) {
             this.operateMsg = operateMsg;
@@ -362,7 +380,7 @@ public class DescribeSuspEventDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -370,7 +388,12 @@ public class DescribeSuspEventDetailResponseBody extends TeaModel {
         }
 
         /**
-         * SaleVersion.
+         * The edition of Security Center in which the exception can be detected. Valid values:
+         * <p>
+         * 
+         * *   **0**: Basic edition
+         * *   **1**: Advanced edition
+         * *   **2**: Enterprise edition
          */
         public Builder saleVersion(String saleVersion) {
             this.saleVersion = saleVersion;
@@ -378,7 +401,7 @@ public class DescribeSuspEventDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Uuid.
+         * The UUID of the server on which the exception was detected.
          */
         public Builder uuid(String uuid) {
             this.uuid = uuid;
@@ -442,7 +465,7 @@ public class DescribeSuspEventDetailResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * NameDisplay.
+             * The display name of the alert event.
              */
             public Builder nameDisplay(String nameDisplay) {
                 this.nameDisplay = nameDisplay;
@@ -450,7 +473,13 @@ public class DescribeSuspEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The format in which the details about the exception are displayed.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   **text**
+             * *   **html**
              */
             public Builder type(String type) {
                 this.type = type;
@@ -458,7 +487,7 @@ public class DescribeSuspEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The attribute information about the exception. For example, if the exception is associated with an alert that is triggered by an unusual logon, the information can include the time when the logon is initiated and the location from which the logon is initiated. If the exception is associated with an alert that is triggered by a webshell file, the information can include the path of the trojan file and the type of the trojan.
              */
             public Builder value(String value) {
                 this.value = value;

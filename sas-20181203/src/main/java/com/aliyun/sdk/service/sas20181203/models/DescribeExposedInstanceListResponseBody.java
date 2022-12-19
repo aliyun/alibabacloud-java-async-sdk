@@ -62,7 +62,7 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ExposedInstances.
+         * An array that consists of the details about the exposed asset.
          */
         public Builder exposedInstances(java.util.List < ExposedInstances> exposedInstances) {
             this.exposedInstances = exposedInstances;
@@ -70,7 +70,7 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
         }
 
         /**
-         * PageInfo.
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -78,7 +78,7 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -322,7 +322,7 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * AsapVulCount.
+             * The number of high-severity vulnerabilities that are exposed on the Internet and can be exploited by attackers.
              */
             public Builder asapVulCount(Integer asapVulCount) {
                 this.asapVulCount = asapVulCount;
@@ -330,7 +330,7 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * ExploitHealthCount.
+             * The total number of servers that are exposed on the Internet.
              */
             public Builder exploitHealthCount(Integer exploitHealthCount) {
                 this.exploitHealthCount = exploitHealthCount;
@@ -338,7 +338,7 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * ExposureComponent.
+             * The server component that is exposed on the Internet.
              */
             public Builder exposureComponent(String exposureComponent) {
                 this.exposureComponent = exposureComponent;
@@ -346,7 +346,7 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * ExposureIp.
+             * The public IP address that is exposed on the Internet.
              */
             public Builder exposureIp(String exposureIp) {
                 this.exposureIp = exposureIp;
@@ -354,7 +354,7 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * ExposurePort.
+             * The port that is exposed on the Internet.
              */
             public Builder exposurePort(String exposurePort) {
                 this.exposurePort = exposurePort;
@@ -362,7 +362,13 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * ExposureType.
+             * The resource from which the asset is exposed. Valid values:
+             * <p>
+             * 
+             * *   **INTERNET_IP**: the public IP address of an ECS instance
+             * *   **SLB**: the public IP address of a Server Load Balancer (SLB) instance
+             * *   **EIP**: an elastic IP address (EIP)
+             * *   **DNAT**: the NAT gateway that connects to the Internet by using the DNAT feature
              */
             public Builder exposureType(String exposureType) {
                 this.exposureType = exposureType;
@@ -370,7 +376,13 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * ExposureTypeId.
+             * The ID of the instance to which the resource belongs. The valid values of this parameter vary based on the ExposureType parameter.
+             * <p>
+             * 
+             * *   If the value of the ExposureType parameter is **INTERNET_IP**, this parameter is empty.
+             * *   If the value of the ExposureType parameter is **SLB**, the value of this parameter is the ID of the SLB instance.
+             * *   If the value of the ExposureType parameter is **EIP**, the value of this parameter is the ID of the EIP.
+             * *   If the value of the ExposureType parameter is **DNAT**, the value of this parameter is the ID of the NAT gateway.
              */
             public Builder exposureTypeId(String exposureTypeId) {
                 this.exposureTypeId = exposureTypeId;
@@ -378,7 +390,7 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * The ID of the server group.
              */
             public Builder groupId(Long groupId) {
                 this.groupId = groupId;
@@ -386,7 +398,7 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * The name of the server group.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -394,7 +406,7 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the server.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -402,7 +414,7 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * The name of the server.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -410,7 +422,7 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * InternetIp.
+             * The public IP address of the server.
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -418,7 +430,7 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * IntranetIp.
+             * The private IP address of the server.
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -426,7 +438,7 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * LaterVulCount.
+             * The number of medium-severity vulnerabilities that are exposed on the Internet and can be exploited by attackers.
              */
             public Builder laterVulCount(Integer laterVulCount) {
                 this.laterVulCount = laterVulCount;
@@ -434,7 +446,7 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * NntfVulCount.
+             * The number of low-severity vulnerabilities that are exposed on the Internet and can be exploited by attackers.
              */
             public Builder nntfVulCount(Integer nntfVulCount) {
                 this.nntfVulCount = nntfVulCount;
@@ -442,7 +454,10 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the region where the server resides.
+             * <p>
+             * 
+             * >  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -450,7 +465,7 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * TotalVulCount.
+             * The total number of vulnerabilities that are exposed on the Internet and can be exploited by attackers.
              */
             public Builder totalVulCount(Integer totalVulCount) {
                 this.totalVulCount = totalVulCount;
@@ -458,7 +473,7 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * Uuid.
+             * The UUID of the server.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -535,7 +550,7 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Count.
+             * The number of entries returned on the current page.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -543,7 +558,7 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentPage.
+             * The page number of the returned page.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -551,7 +566,7 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -559,7 +574,7 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries about the servers that are exposed on the Internet.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

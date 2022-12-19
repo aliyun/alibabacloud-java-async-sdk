@@ -84,7 +84,7 @@ public class DescribeStrategyTargetRequest extends Request {
         } 
 
         /**
-         * Config.
+         * The ID of the baseline check policy.
          */
         public Builder config(String config) {
             this.putQueryParameter("Config", config);
@@ -93,7 +93,7 @@ public class DescribeStrategyTargetRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * The source IP address of the request.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -102,7 +102,7 @@ public class DescribeStrategyTargetRequest extends Request {
         }
 
         /**
-         * Type.
+         * The type of the policy. Set the value to hc_strategy, which indicates baseline check policies.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

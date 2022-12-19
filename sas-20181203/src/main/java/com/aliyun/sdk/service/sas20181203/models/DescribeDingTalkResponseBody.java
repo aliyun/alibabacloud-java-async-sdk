@@ -62,7 +62,7 @@ public class DescribeDingTalkResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ActionList.
+         * An array that consists of details of notifications.
          */
         public Builder actionList(java.util.List < ActionList> actionList) {
             this.actionList = actionList;
@@ -70,7 +70,7 @@ public class DescribeDingTalkResponseBody extends TeaModel {
         }
 
         /**
-         * PageInfo.
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -78,7 +78,7 @@ public class DescribeDingTalkResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -238,7 +238,7 @@ public class DescribeDingTalkResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * ActionName.
+             * The name of the notification.
              */
             public Builder actionName(String actionName) {
                 this.actionName = actionName;
@@ -246,7 +246,7 @@ public class DescribeDingTalkResponseBody extends TeaModel {
             }
 
             /**
-             * AliUid.
+             * The UID of the user.
              */
             public Builder aliUid(Long aliUid) {
                 this.aliUid = aliUid;
@@ -254,7 +254,7 @@ public class DescribeDingTalkResponseBody extends TeaModel {
             }
 
             /**
-             * ConfigList.
+             * The list of notification settings.
              */
             public Builder configList(String configList) {
                 this.configList = configList;
@@ -262,7 +262,11 @@ public class DescribeDingTalkResponseBody extends TeaModel {
             }
 
             /**
-             * DingTalkLang.
+             * The language of the content within notifications. Valid values:
+             * <p>
+             * 
+             * *   **zh**: Chinese
+             * *   **en**: English
              */
             public Builder dingTalkLang(String dingTalkLang) {
                 this.dingTalkLang = dingTalkLang;
@@ -270,7 +274,7 @@ public class DescribeDingTalkResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The creation time. unit:millisecond.
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -278,7 +282,7 @@ public class DescribeDingTalkResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The modification time.
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -286,7 +290,7 @@ public class DescribeDingTalkResponseBody extends TeaModel {
             }
 
             /**
-             * GroupIdList.
+             * The group IDs.
              */
             public Builder groupIdList(String groupIdList) {
                 this.groupIdList = groupIdList;
@@ -294,7 +298,7 @@ public class DescribeDingTalkResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the notification.
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -302,7 +306,7 @@ public class DescribeDingTalkResponseBody extends TeaModel {
             }
 
             /**
-             * IntervalTime.
+             * The interval at which the notifications are sent.unit:minute.
              */
             public Builder intervalTime(Integer intervalTime) {
                 this.intervalTime = intervalTime;
@@ -310,7 +314,11 @@ public class DescribeDingTalkResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the notification. Valid values:
+             * <p>
+             * 
+             * *   **0**: disabled
+             * *   **1**: enabled
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -318,7 +326,7 @@ public class DescribeDingTalkResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * The parameters of the notification.
              */
             public Builder url(String url) {
                 this.url = url;
@@ -383,7 +391,7 @@ public class DescribeDingTalkResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * CurrentPage.
+             * The page number of the returned page.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -391,7 +399,7 @@ public class DescribeDingTalkResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -399,7 +407,7 @@ public class DescribeDingTalkResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of messages.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

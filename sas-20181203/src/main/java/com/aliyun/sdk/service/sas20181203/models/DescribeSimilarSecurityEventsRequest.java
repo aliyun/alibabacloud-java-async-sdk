@@ -125,7 +125,7 @@ public class DescribeSimilarSecurityEventsRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -134,7 +134,11 @@ public class DescribeSimilarSecurityEventsRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -143,7 +147,7 @@ public class DescribeSimilarSecurityEventsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: **20**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -161,7 +165,7 @@ public class DescribeSimilarSecurityEventsRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * The source IP address of the request.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -170,7 +174,7 @@ public class DescribeSimilarSecurityEventsRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * The ID of the task. You can call the [CreateSimilarSecurityEventsQueryTask](~~CreateSimilarSecurityEventsQueryTask~~) operation to query the IDs of tasks.
          */
         public Builder taskId(Long taskId) {
             this.putQueryParameter("TaskId", taskId);

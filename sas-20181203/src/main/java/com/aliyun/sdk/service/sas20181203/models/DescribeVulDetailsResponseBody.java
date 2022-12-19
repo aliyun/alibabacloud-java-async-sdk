@@ -50,7 +50,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Cves.
+         * An array that consists of the details about the vulnerability.
          */
         public Builder cves(java.util.List < Cves> cves) {
             this.cves = cves;
@@ -58,7 +58,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             private String description; 
 
             /**
-             * Classify.
+             * The type of the vulnerability.
              */
             public Builder classify(String classify) {
                 this.classify = classify;
@@ -130,7 +130,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * DemoVideoUrl.
+             * The URL of the demo video for the vulnerability.
              */
             public Builder demoVideoUrl(String demoVideoUrl) {
                 this.demoVideoUrl = demoVideoUrl;
@@ -138,7 +138,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the vulnerability type.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -455,7 +455,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             private String vulLevel; 
 
             /**
-             * Classify.
+             * The type of the vulnerability.
              */
             public Builder classify(String classify) {
                 this.classify = classify;
@@ -463,7 +463,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Classifys.
+             * An array that consists of vulnerability types.
              */
             public Builder classifys(java.util.List < Classifys> classifys) {
                 this.classifys = classifys;
@@ -471,7 +471,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * CnvdId.
+             * The China National Vulnerability Database (CNVD) ID.
              */
             public Builder cnvdId(String cnvdId) {
                 this.cnvdId = cnvdId;
@@ -479,7 +479,12 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Complexity.
+             * The difficulty level of exploiting the vulnerability. Valid values:
+             * <p>
+             * 
+             * *   **LOW**
+             * *   **MEDIUM**
+             * *   **HIGH**
              */
             public Builder complexity(String complexity) {
                 this.complexity = complexity;
@@ -487,7 +492,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Content.
+             * The CVE content.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -495,7 +500,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * CveId.
+             * The Common Vulnerabilities and Exposures (CVE) ID.
              */
             public Builder cveId(String cveId) {
                 this.cveId = cveId;
@@ -503,7 +508,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * CvssScore.
+             * The Common Vulnerability Scoring System (CVSS) score of the vulnerability in the Alibaba Cloud vulnerability library.
              */
             public Builder cvssScore(String cvssScore) {
                 this.cvssScore = cvssScore;
@@ -511,7 +516,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * CvssVector.
+             * The vector that is used to calculate the CVSS score.
              */
             public Builder cvssVector(String cvssVector) {
                 this.cvssVector = cvssVector;
@@ -543,7 +548,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Poc.
+             * The POC content.
              */
             public Builder poc(String poc) {
                 this.poc = poc;
@@ -551,7 +556,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * PocCreateTime.
+             * The timestamp when the proof of concept (POC) was created. Unit: milliseconds.
              */
             public Builder pocCreateTime(Long pocCreateTime) {
                 this.pocCreateTime = pocCreateTime;
@@ -559,7 +564,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * PocDisclosureTime.
+             * The timestamp when the POC was disclosed. Unit: milliseconds.
              */
             public Builder pocDisclosureTime(Long pocDisclosureTime) {
                 this.pocDisclosureTime = pocDisclosureTime;
@@ -567,7 +572,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Product.
+             * The service that is affected by the vulnerability.
              */
             public Builder product(String product) {
                 this.product = product;
@@ -575,7 +580,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Reference.
+             * The reference of the vulnerability in the Alibaba Cloud vulnerability library. The value is a URL.
              */
             public Builder reference(String reference) {
                 this.reference = reference;
@@ -583,7 +588,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * ReleaseTime.
+             * The disclosure time that is displayed for the vulnerability in the Alibaba Cloud vulnerability library. The value is a UNIX timestamp. Unit: milliseconds.
              */
             public Builder releaseTime(Long releaseTime) {
                 this.releaseTime = releaseTime;
@@ -591,7 +596,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Solution.
+             * The fixing suggestions of the vulnerability.
              */
             public Builder solution(String solution) {
                 this.solution = solution;
@@ -599,7 +604,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Summary.
+             * The introduction to the vulnerability.
              */
             public Builder summary(String summary) {
                 this.summary = summary;
@@ -623,7 +628,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * The title of the vulnerability announcement.
              */
             public Builder title(String title) {
                 this.title = title;
@@ -631,7 +636,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Vendor.
+             * The vendor that disclosed the vulnerability.
              */
             public Builder vendor(String vendor) {
                 this.vendor = vendor;
@@ -639,7 +644,13 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * VulLevel.
+             * The severity of the vulnerability. Valid values:
+             * <p>
+             * 
+             * *   **serious**
+             * *   **high**
+             * *   **medium**
+             * *   **low**
              */
             public Builder vulLevel(String vulLevel) {
                 this.vulLevel = vulLevel;

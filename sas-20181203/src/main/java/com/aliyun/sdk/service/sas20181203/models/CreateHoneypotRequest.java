@@ -114,7 +114,10 @@ public class CreateHoneypotRequest extends Request {
         } 
 
         /**
-         * 蜜罐镜像ID
+         * The ID of the image that is used for the honeypot.
+         * <p>
+         * 
+         * >  You can call the [ListAvailableHoneypot](~~ListAvailableHoneypot~~) operation to obtain the IDs of images from the **HoneypotImageId** response parameter.
          */
         public Builder honeypotImageId(String honeypotImageId) {
             this.putQueryParameter("HoneypotImageId", honeypotImageId);
@@ -123,7 +126,10 @@ public class CreateHoneypotRequest extends Request {
         }
 
         /**
-         * 蜜罐镜像名称
+         * The name of the image that is used for the honeypot.
+         * <p>
+         * 
+         * >  You can call the [ListAvailableHoneypot](~~ListAvailableHoneypot~~) operation to obtain the names of images from the **HoneypotImageName** response parameter.
          */
         public Builder honeypotImageName(String honeypotImageName) {
             this.putQueryParameter("HoneypotImageName", honeypotImageName);
@@ -132,7 +138,7 @@ public class CreateHoneypotRequest extends Request {
         }
 
         /**
-         * 蜜罐自定义名称
+         * The custom name of the honeypot.
          */
         public Builder honeypotName(String honeypotName) {
             this.putQueryParameter("HoneypotName", honeypotName);
@@ -141,7 +147,28 @@ public class CreateHoneypotRequest extends Request {
         }
 
         /**
-         * Meta.
+         * The custom configuration of the honeypot in the JSON format. The value contains the following fields:
+         * <p>
+         * 
+         * *   **trojan_git**: Git-specific Defense. Valid values:
+         * 
+         *     *   **zip**: Git Source Code Package
+         *     *   **web**: Git Directory Leak
+         *     *   **close**: Disabled
+         * 
+         * *   **trojan\_git_addr**: Git Trojan Address.
+         * 
+         * *   **trojan_git.zip**: Git Trojan.
+         * 
+         * *   **burp**: Burp-specific Defense. Valid values:
+         * 
+         *     *   **open**: Enabled
+         *     *   **close**: Disabled
+         * 
+         * *   **portrait_option**: Source Tracing Configuration. Valid values:
+         * 
+         *     *   **false**: Disable
+         *     *   **true**: Enable
          */
         public Builder meta(String meta) {
             this.putQueryParameter("Meta", meta);
@@ -150,7 +177,10 @@ public class CreateHoneypotRequest extends Request {
         }
 
         /**
-         * 蜜罐管理节点唯一id
+         * The ID of the management node to which you want to deploy the honeypot.
+         * <p>
+         * 
+         * >  You can call the [ListHoneypotNode](~~ListHoneypotNode~~) operation to obtain the IDs of management nodes.
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);

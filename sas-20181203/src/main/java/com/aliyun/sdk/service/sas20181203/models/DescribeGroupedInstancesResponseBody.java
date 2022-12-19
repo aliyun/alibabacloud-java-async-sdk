@@ -62,7 +62,7 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Instances.
+         * An array that consists of the information about the assets.
          */
         public Builder instances(java.util.List < Instances> instances) {
             this.instances = instances;
@@ -70,7 +70,7 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageInfo.
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -78,7 +78,7 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -178,7 +178,7 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
             private String unProtectedInstanceCount; 
 
             /**
-             * AsapVulInstanceCount.
+             * The number of assets on which high-risk vulnerabilities are detected.
              */
             public Builder asapVulInstanceCount(Long asapVulInstanceCount) {
                 this.asapVulInstanceCount = asapVulInstanceCount;
@@ -186,7 +186,7 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * FieldAliasName.
+             * The name of the server group.
              */
             public Builder fieldAliasName(String fieldAliasName) {
                 this.fieldAliasName = fieldAliasName;
@@ -194,7 +194,11 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * GroupFlag.
+             * The type of the server group. Valid values:
+             * <p>
+             * 
+             * *   **0**: the default group
+             * *   **1**: other group
              */
             public Builder groupFlag(Integer groupFlag) {
                 this.groupFlag = groupFlag;
@@ -202,7 +206,10 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceCount.
+             * The total number of assets that belong to the specified type.
+             * <p>
+             * 
+             * >  If the **MachineTypes** request parameter is not specified, the value of the InstanceCount parameter is the total number of your assets.
              */
             public Builder instanceCount(String instanceCount) {
                 this.instanceCount = instanceCount;
@@ -210,7 +217,7 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RiskInstanceCount.
+             * The number of assets that are at risk.
              */
             public Builder riskInstanceCount(String riskInstanceCount) {
                 this.riskInstanceCount = riskInstanceCount;
@@ -218,7 +225,7 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * UnProtectedInstanceCount.
+             * The number of assets that are not protected by Security Center.
              */
             public Builder unProtectedInstanceCount(String unProtectedInstanceCount) {
                 this.unProtectedInstanceCount = unProtectedInstanceCount;
@@ -295,7 +302,7 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Count.
+             * The number of entries returned on the current page.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -303,7 +310,7 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentPage.
+             * The page number of the returned page.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -311,7 +318,7 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page. Default value: **20**.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -319,7 +326,7 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

@@ -86,7 +86,7 @@ public class InstallCloudMonitorResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The error code returned if the request fails.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class InstallCloudMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -102,7 +102,7 @@ public class InstallCloudMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class InstallCloudMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class InstallCloudMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false**: no
          */
         public Builder success(Boolean success) {
             this.success = success;

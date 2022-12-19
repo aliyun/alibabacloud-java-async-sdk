@@ -62,7 +62,7 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PageInfo.
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -70,7 +70,7 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Propertys.
+         * The details of the scheduled tasks.
          */
         public Builder propertys(java.util.List < Propertys> propertys) {
             this.propertys = propertys;
@@ -78,7 +78,7 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +154,7 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Count.
+             * The number of entries returned on the current page.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -162,7 +162,7 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentPage.
+             * The page number of the returned page.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -170,7 +170,7 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page. Default value: **10**.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -178,7 +178,7 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -351,7 +351,7 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * Cmd.
+             * The command that is used to run the scheduled task.
              */
             public Builder cmd(String cmd) {
                 this.cmd = cmd;
@@ -359,7 +359,7 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTimestamp.
+             * The timestamp of the last fingerprint collection. Unit: milliseconds.
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -367,7 +367,7 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the server.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -375,7 +375,7 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * The name of the server.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -383,7 +383,7 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
             }
 
             /**
-             * InternetIp.
+             * The public IP address of the server.
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -391,7 +391,7 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
             }
 
             /**
-             * IntranetIp.
+             * The private IP address of the server.
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -399,7 +399,7 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Ip.
+             * The IP addresses of the server.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -407,7 +407,7 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Md5.
+             * The MD5 hash value of the path to the scheduled task.
              */
             public Builder md5(String md5) {
                 this.md5 = md5;
@@ -415,7 +415,7 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Period.
+             * The interval at which the scheduled task is performed.
              */
             public Builder period(String period) {
                 this.period = period;
@@ -423,7 +423,7 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * The path to the scheduled task.
              */
             public Builder source(String source) {
                 this.source = source;
@@ -431,7 +431,7 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
             }
 
             /**
-             * User.
+             * The username of the account that runs the scheduled task.
              */
             public Builder user(String user) {
                 this.user = user;
@@ -439,7 +439,7 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Uuid.
+             * The UUID of the server.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

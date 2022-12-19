@@ -69,7 +69,10 @@ public class GetSuspiciousStatisticsRequest extends Request {
         } 
 
         /**
-         * GroupIdList.
+         * The ID of the asset group. Separate multiple IDs with commas (,).
+         * <p>
+         * 
+         * >  You can call the [DescribeAllGroups](~~DescribeAllGroups~~) operation to query the IDs of asset groups.
          */
         public Builder groupIdList(String groupIdList) {
             this.putQueryParameter("GroupIdList", groupIdList);
@@ -78,7 +81,7 @@ public class GetSuspiciousStatisticsRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * The source IP address of the request.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

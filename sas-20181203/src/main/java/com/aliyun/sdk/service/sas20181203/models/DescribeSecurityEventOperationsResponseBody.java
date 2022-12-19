@@ -50,7 +50,7 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
         private java.util.List < SecurityEventOperationsResponse> securityEventOperationsResponse; 
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
         }
 
         /**
-         * SecurityEventOperationsResponse.
+         * An array consisting of the operations that you can perform to handle the alert event.
          */
         public Builder securityEventOperationsResponse(java.util.List < SecurityEventOperationsResponse> securityEventOperationsResponse) {
             this.securityEventOperationsResponse = securityEventOperationsResponse;
@@ -158,7 +158,7 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * FiledAliasName.
+             * The alias of the field that is used in the whitelist rule.
              */
             public Builder filedAliasName(String filedAliasName) {
                 this.filedAliasName = filedAliasName;
@@ -166,7 +166,7 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * FiledName.
+             * The field that is used in the whitelist rule.
              */
             public Builder filedName(String filedName) {
                 this.filedName = filedName;
@@ -174,7 +174,14 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * MarkMisType.
+             * The operation that is used in the whitelist rule. Valid values:
+             * <p>
+             * 
+             * *   **contains**: contains
+             * *   **notContains**: does not contain
+             * *   **regex**: regular expression
+             * *   **strEqual**: equals
+             * *   **strNotEqual**: does not equal
              */
             public Builder markMisType(String markMisType) {
                 this.markMisType = markMisType;
@@ -182,7 +189,7 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * MarkMisValue.
+             * The value of the field that is used in the whitelist rule.
              */
             public Builder markMisValue(String markMisValue) {
                 this.markMisValue = markMisValue;
@@ -190,7 +197,7 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * SupportedMisType.
+             * An array consisting of the operations that are supported by the method to add the alert event to the whitelist.
              */
             public Builder supportedMisType(java.util.List < String > supportedMisType) {
                 this.supportedMisType = supportedMisType;
@@ -198,7 +205,7 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * 资产uuid
+             * The UUID of the server on which the alert event is detected.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -275,7 +282,7 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
             private java.util.List < String > supportedMisType; 
 
             /**
-             * FiledAliasName.
+             * The alias of the field that can be used in the whitelist rule.
              */
             public Builder filedAliasName(String filedAliasName) {
                 this.filedAliasName = filedAliasName;
@@ -283,7 +290,7 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * FiledName.
+             * The field that can be used in the whitelist rule.
              */
             public Builder filedName(String filedName) {
                 this.filedName = filedName;
@@ -291,7 +298,7 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * MarkMisValue.
+             * The value of the field that can be used in the whitelist rule.
              */
             public Builder markMisValue(String markMisValue) {
                 this.markMisValue = markMisValue;
@@ -299,7 +306,7 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * SupportedMisType.
+             * An array consisting of the operations that are supported by the method to add the alert event to the whitelist.
              */
             public Builder supportedMisType(java.util.List < String > supportedMisType) {
                 this.supportedMisType = supportedMisType;
@@ -388,7 +395,7 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
             private Boolean userCanOperate; 
 
             /**
-             * MarkField.
+             * An array consisting of the configuration information that is used when the value of the OperationCode parameter is **advance\_mark\_mis_info**.
              */
             public Builder markField(java.util.List < MarkField> markField) {
                 this.markField = markField;
@@ -396,7 +403,7 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * MarkFieldsSource.
+             * An array consisting of the configuration items that can be used when the value of the OperationCode parameter is advance_mark_mis_info.
              */
             public Builder markFieldsSource(java.util.List < MarkFieldsSource> markFieldsSource) {
                 this.markFieldsSource = markFieldsSource;
@@ -404,7 +411,19 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * OperationCode.
+             * The operation that you can perform to handle the alert. Valid values:
+             * <p>
+             * 
+             * *   **block_ip**: blocks the source IP address.
+             * *   **advance\_mark\_mis_info**: adds the alert to the whitelist.
+             * *   **ignore**: ignores the alert.
+             * *   **manual_handled**: marks the alert as manually handled.
+             * *   **kill_process**: terminates the malicious process.
+             * *   **cleanup**: performs in-depth virus detection and removal.
+             * *   **kill\_and_quara**: terminates the malicious process and quarantines the source file.
+             * *   **disable\_malicious_defense**: stops the container on which the alerting files or processes exist.
+             * *   **client\_problem_check**: performs troubleshooting.
+             * *   **quara**: quarantines the source file of the malicious process.
              */
             public Builder operationCode(String operationCode) {
                 this.operationCode = operationCode;
@@ -412,7 +431,10 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * OperationParams.
+             * The configuration of the operation that you can perform to handle the alert event.
+             * <p>
+             * 
+             * >  If the value of the OperationCode parameter is `kill_and_quara` or `block_ip`, the OperationParams parameter is required. If the value of the OperationCode parameter is a different value, the OperationParams parameter can be left empty.
              */
             public Builder operationParams(String operationParams) {
                 this.operationParams = operationParams;
@@ -420,7 +442,11 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * UserCanOperate.
+             * Indicates whether you can handle the alert event in the current edition of Security Center. Valid values:
+             * <p>
+             * 
+             * *   **true**: yes
+             * *   **false**: no
              */
             public Builder userCanOperate(Boolean userCanOperate) {
                 this.userCanOperate = userCanOperate;

@@ -114,7 +114,7 @@ public class DescribeBackupFilesRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder currentPage(String currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -123,7 +123,7 @@ public class DescribeBackupFilesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: **10**.
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -132,7 +132,7 @@ public class DescribeBackupFilesRequest extends Request {
         }
 
         /**
-         * Path.
+         * The path to the backup file.
          */
         public Builder path(String path) {
             this.putQueryParameter("Path", path);
@@ -141,7 +141,7 @@ public class DescribeBackupFilesRequest extends Request {
         }
 
         /**
-         * SnapshotHash.
+         * The hash value of the backup file.
          */
         public Builder snapshotHash(String snapshotHash) {
             this.putQueryParameter("SnapshotHash", snapshotHash);
@@ -150,7 +150,7 @@ public class DescribeBackupFilesRequest extends Request {
         }
 
         /**
-         * Uuid.
+         * The UUID of the server to which an anti-ransomware policy is applied.
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

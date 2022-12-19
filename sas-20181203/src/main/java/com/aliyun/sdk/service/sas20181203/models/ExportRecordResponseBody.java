@@ -62,7 +62,7 @@ public class ExportRecordResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * FileName.
+         * The name of the exported file.
          */
         public Builder fileName(String fileName) {
             this.fileName = fileName;
@@ -70,7 +70,7 @@ public class ExportRecordResponseBody extends TeaModel {
         }
 
         /**
-         * Id.
+         * The ID of the exported file.
          */
         public Builder id(Long id) {
             this.id = id;
@@ -78,7 +78,7 @@ public class ExportRecordResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

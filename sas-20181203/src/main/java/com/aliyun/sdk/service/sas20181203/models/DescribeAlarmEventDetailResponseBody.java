@@ -50,7 +50,7 @@ public class DescribeAlarmEventDetailResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The details about the alert event.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class DescribeAlarmEventDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class DescribeAlarmEventDetailResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Name.
+             * The name of the field that displays tracing information.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -130,7 +130,11 @@ public class DescribeAlarmEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the field that displays tracing information. Valid values:
+             * <p>
+             * 
+             * *   **text**
+             * *   **html**
              */
             public Builder type(String type) {
                 this.type = type;
@@ -138,7 +142,7 @@ public class DescribeAlarmEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the field that displays tracing information.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -191,7 +195,7 @@ public class DescribeAlarmEventDetailResponseBody extends TeaModel {
             private java.util.List < Value> value; 
 
             /**
-             * Key.
+             * The key that is used to trace the alert event.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -199,7 +203,7 @@ public class DescribeAlarmEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * An array consisting of the value that is used to trace the alert event.
              */
             public Builder value(java.util.List < Value> value) {
                 this.value = value;
@@ -552,7 +556,7 @@ public class DescribeAlarmEventDetailResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * AlarmEventAliasName.
+             * The name of the alert event.
              */
             public Builder alarmEventAliasName(String alarmEventAliasName) {
                 this.alarmEventAliasName = alarmEventAliasName;
@@ -560,7 +564,7 @@ public class DescribeAlarmEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * AlarmEventDesc.
+             * The description of the alert event.
              */
             public Builder alarmEventDesc(String alarmEventDesc) {
                 this.alarmEventDesc = alarmEventDesc;
@@ -568,7 +572,10 @@ public class DescribeAlarmEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * AlarmUniqueInfo.
+             * The unique ID of the alert event.
+             * <p>
+             * 
+             * >  To query the details about an alert event, you must specify the unique ID of the alert event. You can call the [DescribeAlarmEventList](~~DescribeAlarmEventList~~) operation to query the unique IDs of alert events.
              */
             public Builder alarmUniqueInfo(String alarmUniqueInfo) {
                 this.alarmUniqueInfo = alarmUniqueInfo;
@@ -576,7 +583,7 @@ public class DescribeAlarmEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * The name of the container application.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -584,7 +591,11 @@ public class DescribeAlarmEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CanBeDealOnLine.
+             * Indicates whether the online handling of the alert event is supported. Valid values:
+             * <p>
+             * 
+             * *   **true**: yes
+             * *   **false**: no
              */
             public Builder canBeDealOnLine(Boolean canBeDealOnLine) {
                 this.canBeDealOnLine = canBeDealOnLine;
@@ -592,7 +603,11 @@ public class DescribeAlarmEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CanCancelFault.
+             * Indicates whether you can cancel marking the alert event as a false positive. Valid values:
+             * <p>
+             * 
+             * *   **true**: yes
+             * *   **false**: no
              */
             public Builder canCancelFault(Boolean canCancelFault) {
                 this.canCancelFault = canCancelFault;
@@ -600,7 +615,7 @@ public class DescribeAlarmEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CauseDetails.
+             * An array consisting of the cause of the alert event, which can be used to trace the alert event.
              */
             public Builder causeDetails(java.util.List < CauseDetails> causeDetails) {
                 this.causeDetails = causeDetails;
@@ -608,7 +623,7 @@ public class DescribeAlarmEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ContainHwMode.
+             * Indicates whether the Safeguard Mode For Major Activities mode is enabled.
              */
             public Builder containHwMode(Boolean containHwMode) {
                 this.containHwMode = containHwMode;
@@ -616,7 +631,7 @@ public class DescribeAlarmEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ContainerId.
+             * The ID of the container application.
              */
             public Builder containerId(String containerId) {
                 this.containerId = containerId;
@@ -624,7 +639,7 @@ public class DescribeAlarmEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ContainerImageId.
+             * The ID of the image to which the container belongs.
              */
             public Builder containerImageId(String containerImageId) {
                 this.containerImageId = containerImageId;
@@ -632,7 +647,7 @@ public class DescribeAlarmEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ContainerImageName.
+             * The name of the image to which the container belongs.
              */
             public Builder containerImageName(String containerImageName) {
                 this.containerImageName = containerImageName;
@@ -640,7 +655,7 @@ public class DescribeAlarmEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DataSource.
+             * The data source of the alert event.
              */
             public Builder dataSource(String dataSource) {
                 this.dataSource = dataSource;
@@ -648,7 +663,7 @@ public class DescribeAlarmEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * The timestamp when the alert event ends. Unit: milliseconds.
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -656,7 +671,7 @@ public class DescribeAlarmEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * The name of the instance.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -664,7 +679,7 @@ public class DescribeAlarmEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * InternetIp.
+             * The public IP address of the associated instance.
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -672,7 +687,7 @@ public class DescribeAlarmEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * IntranetIp.
+             * The private IP address of the associated instance.
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -680,7 +695,7 @@ public class DescribeAlarmEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * K8sClusterId.
+             * The ID of the Kubernetes cluster.
              */
             public Builder k8sClusterId(String k8sClusterId) {
                 this.k8sClusterId = k8sClusterId;
@@ -688,7 +703,7 @@ public class DescribeAlarmEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * K8sClusterName.
+             * The name of the Kubernetes cluster.
              */
             public Builder k8sClusterName(String k8sClusterName) {
                 this.k8sClusterName = k8sClusterName;
@@ -696,7 +711,7 @@ public class DescribeAlarmEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * K8sNamespace.
+             * The namespace of the Kubernetes cluster.
              */
             public Builder k8sNamespace(String k8sNamespace) {
                 this.k8sNamespace = k8sNamespace;
@@ -704,7 +719,7 @@ public class DescribeAlarmEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * K8sNodeId.
+             * The ID of the Kubernetes cluster node.
              */
             public Builder k8sNodeId(String k8sNodeId) {
                 this.k8sNodeId = k8sNodeId;
@@ -712,7 +727,7 @@ public class DescribeAlarmEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * K8sNodeName.
+             * The name of the Kubernetes cluster node.
              */
             public Builder k8sNodeName(String k8sNodeName) {
                 this.k8sNodeName = k8sNodeName;
@@ -720,7 +735,7 @@ public class DescribeAlarmEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * K8sPodName.
+             * The name of the Kubernetes pod.
              */
             public Builder k8sPodName(String k8sPodName) {
                 this.k8sPodName = k8sPodName;
@@ -728,7 +743,12 @@ public class DescribeAlarmEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Level.
+             * The severity of the alert event. Valid values:
+             * <p>
+             * 
+             * *   **serious**
+             * *   **suspicious**
+             * *   **remind**
              */
             public Builder level(String level) {
                 this.level = level;
@@ -736,7 +756,7 @@ public class DescribeAlarmEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Solution.
+             * The solution to the alert event.
              */
             public Builder solution(String solution) {
                 this.solution = solution;
@@ -744,7 +764,7 @@ public class DescribeAlarmEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The timestamp when the alert event starts. Unit: milliseconds.
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -752,7 +772,32 @@ public class DescribeAlarmEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The alert type of the alert event. Valid values:
+             * <p>
+             * 
+             * *   Suspicious process
+             * *   Webshell
+             * *   Unusual logon
+             * *   Exception
+             * *   Sensitive file tampering
+             * *   Malicious process (cloud threat detection)
+             * *   Suspicious network connection
+             * *   Other
+             * *   Abnormal account
+             * *   Application intrusion event
+             * *   Cloud threat detection
+             * *   Precise defense
+             * *   Application whitelist
+             * *   Persistent webshell
+             * *   Web application threat detection
+             * *   Malicious script
+             * *   Threat intelligence
+             * *   Malicious network activity
+             * *   Cluster exception
+             * *   Webshell (on-premises threat detection)
+             * *   Vulnerability exploitation
+             * *   Malicious process (on-premises threat detection)
+             * *   Trusted exception
              */
             public Builder type(String type) {
                 this.type = type;
@@ -760,7 +805,7 @@ public class DescribeAlarmEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Uuid.
+             * The instance UUID of the asset.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

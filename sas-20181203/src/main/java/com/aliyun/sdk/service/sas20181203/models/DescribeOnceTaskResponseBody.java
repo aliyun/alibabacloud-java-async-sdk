@@ -62,7 +62,7 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
         private java.util.List < TaskManageResponseList> taskManageResponseList; 
 
         /**
-         * PageInfo.
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -70,7 +70,7 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TaskManageResponseList.
+         * An array that consists of the tasks.
          */
         public Builder taskManageResponseList(java.util.List < TaskManageResponseList> taskManageResponseList) {
             this.taskManageResponseList = taskManageResponseList;
@@ -154,7 +154,7 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Count.
+             * The number of entries returned on the current page.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -162,7 +162,7 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentPage.
+             * The page number of the returned page.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -170,7 +170,7 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page. Default value: **20**.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -178,7 +178,7 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -196,8 +196,17 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
         @NameInMap("DetailData")
         private String detailData;
 
+        @NameInMap("FailCount")
+        private Integer failCount;
+
         @NameInMap("Progress")
         private String progress;
+
+        @NameInMap("ResultInfo")
+        private String resultInfo;
+
+        @NameInMap("SuccessCount")
+        private Integer successCount;
 
         @NameInMap("TaskEndTime")
         private Long taskEndTime;
@@ -222,7 +231,10 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
 
         private TaskManageResponseList(Builder builder) {
             this.detailData = builder.detailData;
+            this.failCount = builder.failCount;
             this.progress = builder.progress;
+            this.resultInfo = builder.resultInfo;
+            this.successCount = builder.successCount;
             this.taskEndTime = builder.taskEndTime;
             this.taskId = builder.taskId;
             this.taskName = builder.taskName;
@@ -248,10 +260,31 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
         }
 
         /**
+         * @return failCount
+         */
+        public Integer getFailCount() {
+            return this.failCount;
+        }
+
+        /**
          * @return progress
          */
         public String getProgress() {
             return this.progress;
+        }
+
+        /**
+         * @return resultInfo
+         */
+        public String getResultInfo() {
+            return this.resultInfo;
+        }
+
+        /**
+         * @return successCount
+         */
+        public Integer getSuccessCount() {
+            return this.successCount;
         }
 
         /**
@@ -305,7 +338,10 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
 
         public static final class Builder {
             private String detailData; 
+            private Integer failCount; 
             private String progress; 
+            private String resultInfo; 
+            private Integer successCount; 
             private Long taskEndTime; 
             private String taskId; 
             private String taskName; 
@@ -315,7 +351,21 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
             private String taskType; 
 
             /**
-             * DetailData.
+             * The execution details of the task. The value of this parameter is in the JSON format.
+             * <p>
+             * 
+             * *   **causeCode**: the returned code for the cause
+             * *   **causeMsg**: the returned information for the cause
+             * *   **resCode**: the returned code of troubleshooting
+             * *   **resMsg**: the returned information about troubleshooting
+             * *   **problemType**: the type of the issue
+             * *   **dispatchType**: the task delivery method
+             * *   **uuid**: the UUID of the server
+             * *   **instanceId**: the instance ID of the server
+             * *   **internetIp**: the public IP address of the server
+             * *   **intranetIp**: the private IP address of the server
+             * *   **instanceName**: the instance name of the server
+             * *   **url**: the download link of the troubleshooting log
              */
             public Builder detailData(String detailData) {
                 this.detailData = detailData;
@@ -323,7 +373,15 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Progress.
+             * FailCount.
+             */
+            public Builder failCount(Integer failCount) {
+                this.failCount = failCount;
+                return this;
+            }
+
+            /**
+             * The progress of the task. Unit: %.
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -331,7 +389,23 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskEndTime.
+             * ResultInfo.
+             */
+            public Builder resultInfo(String resultInfo) {
+                this.resultInfo = resultInfo;
+                return this;
+            }
+
+            /**
+             * SuccessCount.
+             */
+            public Builder successCount(Integer successCount) {
+                this.successCount = successCount;
+                return this;
+            }
+
+            /**
+             * The timestamp when the task ends. Unit: milliseconds.
              */
             public Builder taskEndTime(Long taskEndTime) {
                 this.taskEndTime = taskEndTime;
@@ -339,7 +413,7 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * The ID of the task.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -347,7 +421,7 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskName.
+             * The name of the task.
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -355,7 +429,7 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskStartTime.
+             * The timestamp when the task starts. Unit: milliseconds.
              */
             public Builder taskStartTime(Long taskStartTime) {
                 this.taskStartTime = taskStartTime;
@@ -363,7 +437,13 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskStatus.
+             * The status of the task. Valid values:
+             * <p>
+             * 
+             * *   **1**: started
+             * *   **2**: complete
+             * *   **3**: failed
+             * *   **4**: timed out
              */
             public Builder taskStatus(Integer taskStatus) {
                 this.taskStatus = taskStatus;
@@ -371,7 +451,15 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskStatusText.
+             * The text description of the status for the task. Valid values:
+             * <p>
+             * 
+             * *   **INIT**: The task is to be started.
+             * *   **START**: The task is started.
+             * *   **DISPATCH**: The self-check command is issued.
+             * *   **SUCCESS**: The self-check is complete.
+             * *   **FAIL**: The task fails.
+             * *   **TIMEOUT**: The task times out.
              */
             public Builder taskStatusText(String taskStatusText) {
                 this.taskStatusText = taskStatusText;
@@ -379,7 +467,12 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskType.
+             * The type of the task. Valid values:
+             * <p>
+             * 
+             * *   **CLIENT\_PROBLEM_CHECK**: a task of the Security Center agent
+             * *   **CLIENT\_DEV_OPS**: an O&M task of Cloud Assistant
+             * *   **ASSET\_SECURITY_CHECK**: a task of asset information collection
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;

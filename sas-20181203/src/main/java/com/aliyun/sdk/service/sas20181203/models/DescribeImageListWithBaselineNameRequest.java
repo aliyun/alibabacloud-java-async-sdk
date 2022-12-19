@@ -279,7 +279,7 @@ public class DescribeImageListWithBaselineNameRequest extends Request {
         } 
 
         /**
-         * BaselineNameKey.
+         * The name of the image baseline.
          */
         public Builder baselineNameKey(String baselineNameKey) {
             this.putQueryParameter("BaselineNameKey", baselineNameKey);
@@ -288,7 +288,10 @@ public class DescribeImageListWithBaselineNameRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * The ID of the container cluster.
+         * <p>
+         * 
+         * >  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of container clusters.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -297,7 +300,7 @@ public class DescribeImageListWithBaselineNameRequest extends Request {
         }
 
         /**
-         * ClusterName.
+         * The name of the cluster.
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("ClusterName", clusterName);
@@ -306,7 +309,7 @@ public class DescribeImageListWithBaselineNameRequest extends Request {
         }
 
         /**
-         * ContainerId.
+         * The ID of the container.
          */
         public Builder containerId(String containerId) {
             this.putQueryParameter("ContainerId", containerId);
@@ -315,7 +318,7 @@ public class DescribeImageListWithBaselineNameRequest extends Request {
         }
 
         /**
-         * Criteria.
+         * The search condition for the image baseline.
          */
         public Builder criteria(String criteria) {
             this.putQueryParameter("Criteria", criteria);
@@ -324,7 +327,11 @@ public class DescribeImageListWithBaselineNameRequest extends Request {
         }
 
         /**
-         * CriteriaType.
+         * The type of the search condition. Valid values:
+         * <p>
+         * 
+         * *   **BaselineNameAlias**: baseline name
+         * *   **BaselineClassAlias**: baseline category
          */
         public Builder criteriaType(String criteriaType) {
             this.putQueryParameter("CriteriaType", criteriaType);
@@ -333,7 +340,7 @@ public class DescribeImageListWithBaselineNameRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -342,7 +349,7 @@ public class DescribeImageListWithBaselineNameRequest extends Request {
         }
 
         /**
-         * Image.
+         * The name of the image to which the container belongs.
          */
         public Builder image(String image) {
             this.putQueryParameter("Image", image);
@@ -351,7 +358,7 @@ public class DescribeImageListWithBaselineNameRequest extends Request {
         }
 
         /**
-         * ImageDigest.
+         * The SHA-256 value of the image digest.
          */
         public Builder imageDigest(String imageDigest) {
             this.putQueryParameter("ImageDigest", imageDigest);
@@ -360,7 +367,11 @@ public class DescribeImageListWithBaselineNameRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -369,7 +380,7 @@ public class DescribeImageListWithBaselineNameRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The namespace.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -378,7 +389,7 @@ public class DescribeImageListWithBaselineNameRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -387,7 +398,7 @@ public class DescribeImageListWithBaselineNameRequest extends Request {
         }
 
         /**
-         * Pod.
+         * The pod.
          */
         public Builder pod(String pod) {
             this.putQueryParameter("Pod", pod);
@@ -396,7 +407,7 @@ public class DescribeImageListWithBaselineNameRequest extends Request {
         }
 
         /**
-         * RepoInstanceId.
+         * The instance ID of the image repository.
          */
         public Builder repoInstanceId(String repoInstanceId) {
             this.putQueryParameter("RepoInstanceId", repoInstanceId);
@@ -405,7 +416,7 @@ public class DescribeImageListWithBaselineNameRequest extends Request {
         }
 
         /**
-         * RepoName.
+         * The name of the image repository.
          */
         public Builder repoName(String repoName) {
             this.putQueryParameter("RepoName", repoName);
@@ -414,7 +425,7 @@ public class DescribeImageListWithBaselineNameRequest extends Request {
         }
 
         /**
-         * RepoNamespace.
+         * The namespace to which the image repository belongs.
          */
         public Builder repoNamespace(String repoNamespace) {
             this.putQueryParameter("RepoNamespace", repoNamespace);
@@ -423,7 +434,7 @@ public class DescribeImageListWithBaselineNameRequest extends Request {
         }
 
         /**
-         * ScanRange.
+         * The types of the assets that you want to scan.
          */
         public Builder scanRange(java.util.List < String > scanRange) {
             this.putQueryParameter("ScanRange", scanRange);

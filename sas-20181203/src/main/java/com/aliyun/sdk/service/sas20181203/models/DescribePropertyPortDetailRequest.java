@@ -152,7 +152,7 @@ public class DescribePropertyPortDetailRequest extends Request {
         } 
 
         /**
-         * BindIp.
+         * The IP address that is bound to the listening port.
          */
         public Builder bindIp(String bindIp) {
             this.putQueryParameter("BindIp", bindIp);
@@ -161,7 +161,7 @@ public class DescribePropertyPortDetailRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -170,7 +170,7 @@ public class DescribePropertyPortDetailRequest extends Request {
         }
 
         /**
-         * Extend.
+         * Specifies whether fuzzy search by port number is supported. If you want to use fuzzy search, set the parameter to **1**. If you set the parameter to a different value or leave the parameter empty, fuzzy search is not supported.
          */
         public Builder extend(String extend) {
             this.putQueryParameter("Extend", extend);
@@ -179,7 +179,7 @@ public class DescribePropertyPortDetailRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -188,7 +188,7 @@ public class DescribePropertyPortDetailRequest extends Request {
         }
 
         /**
-         * Port.
+         * The listening port of the server.
          */
         public Builder port(String port) {
             this.putQueryParameter("Port", port);
@@ -197,7 +197,7 @@ public class DescribePropertyPortDetailRequest extends Request {
         }
 
         /**
-         * ProcName.
+         * The name of the server process.
          */
         public Builder procName(String procName) {
             this.putQueryParameter("ProcName", procName);
@@ -206,7 +206,7 @@ public class DescribePropertyPortDetailRequest extends Request {
         }
 
         /**
-         * Remark.
+         * The name or IP address of the server.
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -215,7 +215,7 @@ public class DescribePropertyPortDetailRequest extends Request {
         }
 
         /**
-         * Uuid.
+         * The UUID of the server.
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

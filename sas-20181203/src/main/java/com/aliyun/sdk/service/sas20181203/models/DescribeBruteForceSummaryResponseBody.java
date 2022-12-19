@@ -50,7 +50,7 @@ public class DescribeBruteForceSummaryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * BruteForceSummary.
+         * The statistics of IP address blocking policies.
          */
         public Builder bruteForceSummary(BruteForceSummary bruteForceSummary) {
             this.bruteForceSummary = bruteForceSummary;
@@ -58,7 +58,7 @@ public class DescribeBruteForceSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeBruteForceSummaryResponseBody extends TeaModel {
             private Integer effectiveCount; 
 
             /**
-             * AllStrategyCount.
+             * The total number of IP address blocking policies.
              */
             public Builder allStrategyCount(Integer allStrategyCount) {
                 this.allStrategyCount = allStrategyCount;
@@ -118,7 +118,7 @@ public class DescribeBruteForceSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * EffectiveCount.
+             * The number of enabled IP address blocking policies.
              */
             public Builder effectiveCount(Integer effectiveCount) {
                 this.effectiveCount = effectiveCount;

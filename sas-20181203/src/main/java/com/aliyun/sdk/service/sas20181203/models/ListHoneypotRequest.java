@@ -124,7 +124,7 @@ public class ListHoneypotRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * The number of the page to return.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -133,7 +133,7 @@ public class ListHoneypotRequest extends Request {
         }
 
         /**
-         * 蜜罐id检索
+         * The IDs of honeypots.
          */
         public Builder honeypotIds(java.util.List < String > honeypotIds) {
             this.putQueryParameter("HoneypotIds", honeypotIds);
@@ -142,7 +142,7 @@ public class ListHoneypotRequest extends Request {
         }
 
         /**
-         * 蜜罐自定义名称
+         * The name of the honeypot.
          */
         public Builder honeypotName(String honeypotName) {
             this.putQueryParameter("HoneypotName", honeypotName);
@@ -151,7 +151,7 @@ public class ListHoneypotRequest extends Request {
         }
 
         /**
-         * 蜜罐管理节点唯一ID
+         * The ID of the management node to which the honeypot belongs.
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -160,7 +160,7 @@ public class ListHoneypotRequest extends Request {
         }
 
         /**
-         * 蜜罐管理节点名称
+         * The name of the management node to which the honeypot belongs.
          */
         public Builder nodeName(String nodeName) {
             this.putQueryParameter("NodeName", nodeName);
@@ -169,7 +169,7 @@ public class ListHoneypotRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

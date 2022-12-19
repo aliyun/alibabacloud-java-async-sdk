@@ -166,7 +166,7 @@ public class DescribePropertyUserDetailRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -175,7 +175,7 @@ public class DescribePropertyUserDetailRequest extends Request {
         }
 
         /**
-         * Extend.
+         * Specifies whether the fuzzy search by account name is supported. If you want to use fuzzy search, set the parameter to **1**. If you set the parameter to a different value or leave the parameter empty, fuzzy search is not supported.
          */
         public Builder extend(String extend) {
             this.putQueryParameter("Extend", extend);
@@ -184,7 +184,11 @@ public class DescribePropertyUserDetailRequest extends Request {
         }
 
         /**
-         * IsRoot.
+         * Specifies whether the account has root permissions. Valid values:
+         * <p>
+         * 
+         * *   **0**: no
+         * *   **1**: yes
          */
         public Builder isRoot(String isRoot) {
             this.putQueryParameter("IsRoot", isRoot);
@@ -193,7 +197,7 @@ public class DescribePropertyUserDetailRequest extends Request {
         }
 
         /**
-         * LastLoginTimeEnd.
+         * The timestamp of the last logoff from the account. Unit: milliseconds.
          */
         public Builder lastLoginTimeEnd(Long lastLoginTimeEnd) {
             this.putQueryParameter("LastLoginTimeEnd", lastLoginTimeEnd);
@@ -202,7 +206,7 @@ public class DescribePropertyUserDetailRequest extends Request {
         }
 
         /**
-         * LastLoginTimeStart.
+         * The timestamp of the last logon to the account. Unit: milliseconds.
          */
         public Builder lastLoginTimeStart(Long lastLoginTimeStart) {
             this.putQueryParameter("LastLoginTimeStart", lastLoginTimeStart);
@@ -211,7 +215,7 @@ public class DescribePropertyUserDetailRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -220,7 +224,7 @@ public class DescribePropertyUserDetailRequest extends Request {
         }
 
         /**
-         * Remark.
+         * The name or IP address of the server.
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -229,7 +233,7 @@ public class DescribePropertyUserDetailRequest extends Request {
         }
 
         /**
-         * User.
+         * The name of the account to which the server belongs.
          */
         public Builder user(String user) {
             this.putQueryParameter("User", user);
@@ -238,7 +242,7 @@ public class DescribePropertyUserDetailRequest extends Request {
         }
 
         /**
-         * Uuid.
+         * The UUID of the server.
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

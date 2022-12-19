@@ -85,7 +85,7 @@ public class ModifyBackupPolicyStatusRequest extends Request {
         } 
 
         /**
-         * Id.
+         * The ID of the anti-ransomware policy.
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -94,7 +94,7 @@ public class ModifyBackupPolicyStatusRequest extends Request {
         }
 
         /**
-         * PolicyVersion.
+         * The version of the anti-ransomware policy. Set the value to **2.0.0**.
          */
         public Builder policyVersion(String policyVersion) {
             this.putQueryParameter("PolicyVersion", policyVersion);
@@ -103,7 +103,13 @@ public class ModifyBackupPolicyStatusRequest extends Request {
         }
 
         /**
-         * Status.
+         * Specifies whether to enable or disable the anti-ransomware policy. Valid values:
+         * <p>
+         * 
+         * *   **enabled**: enables the anti-ransomware policy. After you enable the anti-ransomware policy, the anti-ransomware feature protects data on your servers. Data on your servers is backed up based on the policy.
+         * *   **disabled**: disables the anti-ransomware policy. After you disable the anti-ransomware policy, the data backup task that is running based on the policy stops.
+         * 
+         * >  When the system runs data backup tasks, your network bandwidth is consumed. We recommend that you enable the anti-ransomware policy during peak-off hours to back up data.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

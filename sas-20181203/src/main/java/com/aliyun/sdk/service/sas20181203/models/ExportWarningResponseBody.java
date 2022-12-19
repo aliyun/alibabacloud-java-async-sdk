@@ -62,7 +62,7 @@ public class ExportWarningResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * FileName.
+         * The name of the file that contains exported baseline check results.
          */
         public Builder fileName(String fileName) {
             this.fileName = fileName;
@@ -70,7 +70,7 @@ public class ExportWarningResponseBody extends TeaModel {
         }
 
         /**
-         * Id.
+         * The ID of the task to export baseline check results.
          */
         public Builder id(Long id) {
             this.id = id;
@@ -78,7 +78,7 @@ public class ExportWarningResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -55,7 +55,10 @@ public class AddVpcHoneyPotRequest extends Request {
         } 
 
         /**
-         * VpcId.
+         * The ID of the virtual private cloud (VPC) in which you want to create a honeypot.
+         * <p>
+         * 
+         * >  You can call the [DescribeVpcList](~~DescribeVpcList~~) operation to obtain the VPC ID. The VPC ID is the value of the InstanceId parameter.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

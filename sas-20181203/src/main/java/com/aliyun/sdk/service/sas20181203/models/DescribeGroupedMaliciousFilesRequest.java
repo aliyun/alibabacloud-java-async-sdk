@@ -266,7 +266,7 @@ public class DescribeGroupedMaliciousFilesRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The cluster ID of the container on which the malicious image sample is detected.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -275,7 +275,7 @@ public class DescribeGroupedMaliciousFilesRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The number of the page to return. Pages start from page **1**. Default value: **1**.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -284,7 +284,10 @@ public class DescribeGroupedMaliciousFilesRequest extends Request {
         }
 
         /**
-         * FuzzyMaliciousName.
+         * The name of the malicious image sample that you want to query.
+         * <p>
+         * 
+         * >  Fuzzy match is supported.
          */
         public Builder fuzzyMaliciousName(String fuzzyMaliciousName) {
             this.putQueryParameter("FuzzyMaliciousName", fuzzyMaliciousName);
@@ -293,7 +296,7 @@ public class DescribeGroupedMaliciousFilesRequest extends Request {
         }
 
         /**
-         * ImageDigest.
+         * The image digest.
          */
         public Builder imageDigest(String imageDigest) {
             this.putQueryParameter("ImageDigest", imageDigest);
@@ -302,7 +305,7 @@ public class DescribeGroupedMaliciousFilesRequest extends Request {
         }
 
         /**
-         * ImageLayer.
+         * The image layer.
          */
         public Builder imageLayer(String imageLayer) {
             this.putQueryParameter("ImageLayer", imageLayer);
@@ -311,7 +314,7 @@ public class DescribeGroupedMaliciousFilesRequest extends Request {
         }
 
         /**
-         * ImageTag.
+         * The image tag.
          */
         public Builder imageTag(String imageTag) {
             this.putQueryParameter("ImageTag", imageTag);
@@ -320,7 +323,11 @@ public class DescribeGroupedMaliciousFilesRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -329,7 +336,12 @@ public class DescribeGroupedMaliciousFilesRequest extends Request {
         }
 
         /**
-         * Levels.
+         * The severity of the malicious image sample that you want to query. You can enter multiple severities. Separate the severities with commas (,). Valid values:
+         * <p>
+         * 
+         * *   **serious**
+         * *   **suspicious**
+         * *   **remind**
          */
         public Builder levels(String levels) {
             this.putQueryParameter("Levels", levels);
@@ -347,7 +359,7 @@ public class DescribeGroupedMaliciousFilesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: **20**.
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -356,7 +368,10 @@ public class DescribeGroupedMaliciousFilesRequest extends Request {
         }
 
         /**
-         * RepoId.
+         * The ID of the image repository.
+         * <p>
+         * 
+         * >  You can call the [ListRepository](~~145293~~) operation to query the IDs of image repositories from the value of the **RepoId** response parameter.
          */
         public Builder repoId(String repoId) {
             this.putQueryParameter("RepoId", repoId);
@@ -365,7 +380,10 @@ public class DescribeGroupedMaliciousFilesRequest extends Request {
         }
 
         /**
-         * RepoInstanceId.
+         * The ID of the container image.
+         * <p>
+         * 
+         * >  You can call the [ListRepository](~~145293~~) operation to query the IDs of container images from the value of the **InstanceId** response parameter.
          */
         public Builder repoInstanceId(String repoInstanceId) {
             this.putQueryParameter("RepoInstanceId", repoInstanceId);
@@ -374,7 +392,10 @@ public class DescribeGroupedMaliciousFilesRequest extends Request {
         }
 
         /**
-         * RepoName.
+         * The name of the image repository.
+         * <p>
+         * 
+         * >  Fuzzy match is supported.
          */
         public Builder repoName(String repoName) {
             this.putQueryParameter("RepoName", repoName);
@@ -383,7 +404,10 @@ public class DescribeGroupedMaliciousFilesRequest extends Request {
         }
 
         /**
-         * RepoNamespace.
+         * The namespace to which the image repository belongs.
+         * <p>
+         * 
+         * >  Fuzzy match is supported.
          */
         public Builder repoNamespace(String repoNamespace) {
             this.putQueryParameter("RepoNamespace", repoNamespace);
@@ -392,7 +416,22 @@ public class DescribeGroupedMaliciousFilesRequest extends Request {
         }
 
         /**
-         * RepoRegionId.
+         * The region ID of the image repository. Valid values:
+         * <p>
+         * 
+         * *   **cn-beijing**: China (Beijing)
+         * *   **cn-zhangjiakou**: China (Zhangjiakou)
+         * *   **cn-hangzhou**: China (Hangzhou)
+         * *   **cn-shanghai**: China (Shanghai)
+         * *   **cn-shenzhen**: China (Shenzhen)
+         * *   **cn-hongkong**: China (Hong Kong)
+         * *   **ap-southeast-1**: Singapore
+         * *   **ap-southeast-5**: Indonesia (Jakarta)
+         * *   **us-east-1**: US (Virginia)
+         * *   **us-west-1**: US (Silicon Valley)
+         * *   **eu-central-1**: Germany (Frankfurt)
+         * *   **eu-west-1**: UK (London)
+         * *   **ap-south-1**: India (Mumbai)
          */
         public Builder repoRegionId(String repoRegionId) {
             this.putQueryParameter("RepoRegionId", repoRegionId);
@@ -401,7 +440,7 @@ public class DescribeGroupedMaliciousFilesRequest extends Request {
         }
 
         /**
-         * ScanRange.
+         * The types of the assets that you want to scan.
          */
         public Builder scanRange(java.util.List < String > scanRange) {
             this.putQueryParameter("ScanRange", scanRange);

@@ -98,7 +98,7 @@ public class DescribeSuspEventDetailRequest extends Request {
         } 
 
         /**
-         * From.
+         * The data source of the exception. Set the value to sas.
          */
         public Builder from(String from) {
             this.putQueryParameter("From", from);
@@ -107,7 +107,11 @@ public class DescribeSuspEventDetailRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -116,7 +120,7 @@ public class DescribeSuspEventDetailRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * The source IP address of the request.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -125,7 +129,7 @@ public class DescribeSuspEventDetailRequest extends Request {
         }
 
         /**
-         * SuspiciousEventId.
+         * The ID of the exception.
          */
         public Builder suspiciousEventId(Integer suspiciousEventId) {
             this.putQueryParameter("SuspiciousEventId", suspiciousEventId);

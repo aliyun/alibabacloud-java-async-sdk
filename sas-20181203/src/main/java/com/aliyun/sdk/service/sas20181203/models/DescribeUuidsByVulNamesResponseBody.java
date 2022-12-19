@@ -50,7 +50,7 @@ public class DescribeUuidsByVulNamesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * MachineInfoStatistics.
+         * An array that consists of the statistics about the assets.
          */
         public Builder machineInfoStatistics(java.util.List < MachineInfoStatistics> machineInfoStatistics) {
             this.machineInfoStatistics = machineInfoStatistics;
@@ -58,7 +58,7 @@ public class DescribeUuidsByVulNamesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,7 @@ public class DescribeUuidsByVulNamesResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * MachineInstanceId.
+             * The ID of the server.
              */
             public Builder machineInstanceId(String machineInstanceId) {
                 this.machineInstanceId = machineInstanceId;
@@ -166,7 +166,7 @@ public class DescribeUuidsByVulNamesResponseBody extends TeaModel {
             }
 
             /**
-             * MachineIp.
+             * The IP address of the server.
              */
             public Builder machineIp(String machineIp) {
                 this.machineIp = machineIp;
@@ -174,7 +174,7 @@ public class DescribeUuidsByVulNamesResponseBody extends TeaModel {
             }
 
             /**
-             * MachineName.
+             * The name of the server.
              */
             public Builder machineName(String machineName) {
                 this.machineName = machineName;
@@ -182,7 +182,7 @@ public class DescribeUuidsByVulNamesResponseBody extends TeaModel {
             }
 
             /**
-             * Os.
+             * The name of the operating system that the server runs.
              */
             public Builder os(String os) {
                 this.os = os;
@@ -190,7 +190,7 @@ public class DescribeUuidsByVulNamesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the region in which the server resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -198,7 +198,7 @@ public class DescribeUuidsByVulNamesResponseBody extends TeaModel {
             }
 
             /**
-             * Uuid.
+             * The UUID of the server.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

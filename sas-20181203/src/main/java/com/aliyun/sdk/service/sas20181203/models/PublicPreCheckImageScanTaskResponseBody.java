@@ -50,7 +50,7 @@ public class PublicPreCheckImageScanTaskResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The data returned if the call is successful.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class PublicPreCheckImageScanTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class PublicPreCheckImageScanTaskResponseBody extends TeaModel {
             private Integer scanImageCount; 
 
             /**
-             * NeedAuthCount.
+             * The number of images to scan in the task.
              */
             public Builder needAuthCount(Integer needAuthCount) {
                 this.needAuthCount = needAuthCount;
@@ -118,7 +118,7 @@ public class PublicPreCheckImageScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ScanImageCount.
+             * The quota for container image scan to be consumed by the task.
              */
             public Builder scanImageCount(Integer scanImageCount) {
                 this.scanImageCount = scanImageCount;

@@ -111,7 +111,7 @@ public class DescribeExposedStatisticsDetailRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * The number of the page to return.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -120,7 +120,10 @@ public class DescribeExposedStatisticsDetailRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.
+         * <p>
+         * 
+         * >  We recommend that you do not leave this parameter empty.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -129,7 +132,13 @@ public class DescribeExposedStatisticsDetailRequest extends Request {
         }
 
         /**
-         * StatisticsType.
+         * The type of the exposed asset. Valid values:
+         * <p>
+         * 
+         * *   **exposureType**: gateway assets
+         * *   **exposurePort**: ports
+         * *   **exposureComponent**: system components
+         * *   **exposureIp**: IP addresses
          */
         public Builder statisticsType(String statisticsType) {
             this.putQueryParameter("StatisticsType", statisticsType);
@@ -138,7 +147,11 @@ public class DescribeExposedStatisticsDetailRequest extends Request {
         }
 
         /**
-         * StatisticsTypeGatewayType.
+         * The type of the gateway asset. This parameter is required when the **StatisticsType** parameter is set to **exposureType**. Valid values:
+         * <p>
+         * 
+         * *   **SLB**: the public IP address of a Server Load Balancer (SLB) instance
+         * *   **DNAT**: the NAT gateway that connects to the Internet by using the DNAT feature
          */
         public Builder statisticsTypeGatewayType(String statisticsTypeGatewayType) {
             this.putQueryParameter("StatisticsTypeGatewayType", statisticsTypeGatewayType);
@@ -147,7 +160,7 @@ public class DescribeExposedStatisticsDetailRequest extends Request {
         }
 
         /**
-         * StatisticsTypeInstanceValue.
+         * The ID of the gateway asset. This parameter is required when the **StatisticsType** parameter is set to **exposureType**.
          */
         public Builder statisticsTypeInstanceValue(String statisticsTypeInstanceValue) {
             this.putQueryParameter("StatisticsTypeInstanceValue", statisticsTypeInstanceValue);

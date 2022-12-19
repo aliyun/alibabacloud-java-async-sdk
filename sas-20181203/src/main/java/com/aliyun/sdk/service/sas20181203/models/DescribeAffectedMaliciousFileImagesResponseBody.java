@@ -62,7 +62,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AffectedMaliciousFileImagesResponse.
+         * An array consisting of the images that have malicious image samples.
          */
         public Builder affectedMaliciousFileImagesResponse(java.util.List < AffectedMaliciousFileImagesResponse> affectedMaliciousFileImagesResponse) {
             this.affectedMaliciousFileImagesResponse = affectedMaliciousFileImagesResponse;
@@ -70,7 +70,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
         }
 
         /**
-         * PageInfo.
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -78,7 +78,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -466,7 +466,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * ClusterId.
+             * The ID of the cluster.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -474,7 +474,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterName.
+             * The name of the cluster.
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -482,7 +482,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             }
 
             /**
-             * ContainerId.
+             * The ID of the container.
              */
             public Builder containerId(String containerId) {
                 this.containerId = containerId;
@@ -490,7 +490,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Digest.
+             * The image digest.
              */
             public Builder digest(String digest) {
                 this.digest = digest;
@@ -498,7 +498,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             }
 
             /**
-             * DownloadUrl.
+             * The URL to download the malicious image sample.
              */
             public Builder downloadUrl(String downloadUrl) {
                 this.downloadUrl = downloadUrl;
@@ -506,7 +506,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             }
 
             /**
-             * FilePath.
+             * The path to the image file.
              */
             public Builder filePath(String filePath) {
                 this.filePath = filePath;
@@ -514,7 +514,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             }
 
             /**
-             * FirstScanTimestamp.
+             * The timestamp of the first scan.
              */
             public Builder firstScanTimestamp(Long firstScanTimestamp) {
                 this.firstScanTimestamp = firstScanTimestamp;
@@ -522,7 +522,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             }
 
             /**
-             * HighLight.
+             * The text that is highlighted.
              */
             public Builder highLight(String highLight) {
                 this.highLight = highLight;
@@ -530,7 +530,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Image.
+             * The name of the image.
              */
             public Builder image(String image) {
                 this.image = image;
@@ -538,7 +538,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageUuid.
+             * The UUID of the image.
              */
             public Builder imageUuid(String imageUuid) {
                 this.imageUuid = imageUuid;
@@ -570,7 +570,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             }
 
             /**
-             * LatestScanTimestamp.
+             * The timestamp of the last scan.
              */
             public Builder latestScanTimestamp(Long latestScanTimestamp) {
                 this.latestScanTimestamp = latestScanTimestamp;
@@ -578,7 +578,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             }
 
             /**
-             * LatestVerifyTimestamp.
+             * The timestamp of the last verification.
              */
             public Builder latestVerifyTimestamp(Long latestVerifyTimestamp) {
                 this.latestVerifyTimestamp = latestVerifyTimestamp;
@@ -586,7 +586,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Layer.
+             * The image layer.
              */
             public Builder layer(String layer) {
                 this.layer = layer;
@@ -594,7 +594,12 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Level.
+             * The severity of the malicious image sample. Valid values:
+             * <p>
+             * 
+             * *   **serious**
+             * *   **suspicious**
+             * *   **remind**
              */
             public Builder level(String level) {
                 this.level = level;
@@ -602,7 +607,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             }
 
             /**
-             * MaliciousMd5.
+             * The MD5 hash value of the malicious image sample.
              */
             public Builder maliciousMd5(String maliciousMd5) {
                 this.maliciousMd5 = maliciousMd5;
@@ -610,7 +615,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Namespace.
+             * The namespace to which the image repository belongs.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -618,7 +623,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Pod.
+             * The pod.
              */
             public Builder pod(String pod) {
                 this.pod = pod;
@@ -626,7 +631,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             }
 
             /**
-             * RepoId.
+             * The ID of the image repository.
              */
             public Builder repoId(String repoId) {
                 this.repoId = repoId;
@@ -634,7 +639,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             }
 
             /**
-             * RepoInstanceId.
+             * The ID of the container image.
              */
             public Builder repoInstanceId(String repoInstanceId) {
                 this.repoInstanceId = repoInstanceId;
@@ -642,7 +647,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             }
 
             /**
-             * RepoName.
+             * The name of the image repository.
              */
             public Builder repoName(String repoName) {
                 this.repoName = repoName;
@@ -650,7 +655,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             }
 
             /**
-             * RepoRegionId.
+             * The region ID of the image repository.
              */
             public Builder repoRegionId(String repoRegionId) {
                 this.repoRegionId = repoRegionId;
@@ -658,7 +663,13 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The handling status of the malicious image sample. Valid values:
+             * <p>
+             * 
+             * *   **0**: unhandled
+             * *   **1**: handled
+             * *   **2**: verifying
+             * *   **3**: added to the whitelist
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -666,7 +677,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Tag.
+             * The tag that is added to the image.
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -775,7 +786,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Count.
+             * The number of images that have malicious image samples returned on the current page.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -783,7 +794,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentPage.
+             * The page number of the returned page. Pages start from page **1**. Default value: **1**.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -791,7 +802,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page. Default value: **20**.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -799,7 +810,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of images that have malicious image samples.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

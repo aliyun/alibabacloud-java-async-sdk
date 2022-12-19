@@ -70,7 +70,7 @@ public class CreateSuspEventNoteRequest extends Request {
         } 
 
         /**
-         * EventId.
+         * The ID of the alert event to which you want to add remarks. You can call the [DescribeSuspEvents](~~251497~~) operation to query the IDs of alert events.
          */
         public Builder eventId(Long eventId) {
             this.putQueryParameter("EventId", eventId);
@@ -79,7 +79,7 @@ public class CreateSuspEventNoteRequest extends Request {
         }
 
         /**
-         * Note.
+         * The remarks that you want to add.
          */
         public Builder note(String note) {
             this.putQueryParameter("Note", note);

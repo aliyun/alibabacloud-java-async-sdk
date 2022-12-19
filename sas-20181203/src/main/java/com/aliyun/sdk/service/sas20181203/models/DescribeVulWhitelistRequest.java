@@ -68,7 +68,7 @@ public class DescribeVulWhitelistRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * The number of the page to return. Pages start from page 1. Default value: 1.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -77,7 +77,7 @@ public class DescribeVulWhitelistRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

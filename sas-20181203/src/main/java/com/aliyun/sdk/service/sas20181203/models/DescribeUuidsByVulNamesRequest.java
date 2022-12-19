@@ -252,7 +252,10 @@ public class DescribeUuidsByVulNamesRequest extends Request {
         } 
 
         /**
-         * Dealed.
+         * Specifies whether the vulnerability is handled. Valid values:
+         * <p>
+         * 
+         * **y**: yes. **n**: no.
          */
         public Builder dealed(String dealed) {
             this.putQueryParameter("Dealed", dealed);
@@ -261,7 +264,7 @@ public class DescribeUuidsByVulNamesRequest extends Request {
         }
 
         /**
-         * FieldName.
+         * The name of the search field that is used to query containers.
          */
         public Builder fieldName(String fieldName) {
             this.putQueryParameter("FieldName", fieldName);
@@ -270,7 +273,7 @@ public class DescribeUuidsByVulNamesRequest extends Request {
         }
 
         /**
-         * FieldValue.
+         * The value of the search field that is used to query containers.
          */
         public Builder fieldValue(String fieldValue) {
             this.putQueryParameter("FieldValue", fieldValue);
@@ -279,7 +282,7 @@ public class DescribeUuidsByVulNamesRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * The ID of the asset group.
          */
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -288,7 +291,11 @@ public class DescribeUuidsByVulNamesRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -297,7 +304,12 @@ public class DescribeUuidsByVulNamesRequest extends Request {
         }
 
         /**
-         * Level.
+         * The severity of the vulnerability. Separate multiple severities with commas (,). Valid values:
+         * <p>
+         * 
+         * *   **high**
+         * *   **medium**
+         * *   **low**
          */
         public Builder level(String level) {
             this.putQueryParameter("Level", level);
@@ -306,7 +318,12 @@ public class DescribeUuidsByVulNamesRequest extends Request {
         }
 
         /**
-         * Necessity.
+         * The priority based on which the vulnerability is fixed. Separate multiple priorities with commas (,). Valid values:
+         * <p>
+         * 
+         * *   **asap**: high
+         * *   **later**: medium
+         * *   **nntf**: low
          */
         public Builder necessity(String necessity) {
             this.putQueryParameter("Necessity", necessity);
@@ -315,7 +332,7 @@ public class DescribeUuidsByVulNamesRequest extends Request {
         }
 
         /**
-         * Remark.
+         * The remarks for the asset affected by the vulnerability. The value can be the private IP address, public IP address, or name of the asset. Fuzzy match is supported.
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -324,7 +341,7 @@ public class DescribeUuidsByVulNamesRequest extends Request {
         }
 
         /**
-         * SearchTags.
+         * The tags that are used to search for the vulnerability.
          */
         public Builder searchTags(String searchTags) {
             this.putQueryParameter("SearchTags", searchTags);
@@ -333,7 +350,12 @@ public class DescribeUuidsByVulNamesRequest extends Request {
         }
 
         /**
-         * StatusList.
+         * The status of the vulnerability. Separate multiple states with commas (,). Valid values:
+         * <p>
+         * 
+         * *   **1**: unfixed
+         * *   **4**: being fixed
+         * *   **7**: fixed
          */
         public Builder statusList(String statusList) {
             this.putQueryParameter("StatusList", statusList);
@@ -342,7 +364,7 @@ public class DescribeUuidsByVulNamesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tag that is added to the vulnerability.
          */
         public Builder tag(String tag) {
             this.putQueryParameter("Tag", tag);
@@ -351,7 +373,11 @@ public class DescribeUuidsByVulNamesRequest extends Request {
         }
 
         /**
-         * TargetType.
+         * The type of the query condition. Valid values:
+         * <p>
+         * 
+         * *   **containerId**: the ID of the container
+         * *   **uuid**: the ID of the asset
          */
         public Builder targetType(String targetType) {
             this.putQueryParameter("TargetType", targetType);
@@ -360,7 +386,15 @@ public class DescribeUuidsByVulNamesRequest extends Request {
         }
 
         /**
-         * Type.
+         * The type of the vulnerability. Valid values:
+         * <p>
+         * 
+         * *   **cve**: Linux software vulnerability
+         * *   **sys**: Windows system vulnerability
+         * *   **cms**: Web-CMS vulnerabilities
+         * *   **app**: application vulnerability
+         * *   **emg**: urgent vulnerabilities
+         * *   **sca**: vulnerabilities that are detected based on software component analysis
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -369,7 +403,7 @@ public class DescribeUuidsByVulNamesRequest extends Request {
         }
 
         /**
-         * VpcInstanceIds.
+         * The ID of the virtual private cloud (VPC) in which the vulnerability is detected. Separate multiple IDs with commas (,).
          */
         public Builder vpcInstanceIds(String vpcInstanceIds) {
             this.putQueryParameter("VpcInstanceIds", vpcInstanceIds);
@@ -378,7 +412,10 @@ public class DescribeUuidsByVulNamesRequest extends Request {
         }
 
         /**
-         * VulNames.
+         * An array that consists of the names of vulnerabilities.
+         * <p>
+         * 
+         * >  You can call the [DescribeGroupedVul](~~DescribeGroupedVul~~) operation to obtain the names of vulnerabilities.
          */
         public Builder vulNames(java.util.List < String > vulNames) {
             this.putQueryParameter("VulNames", vulNames);

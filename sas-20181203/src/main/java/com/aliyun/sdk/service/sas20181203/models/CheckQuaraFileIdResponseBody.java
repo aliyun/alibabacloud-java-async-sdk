@@ -50,7 +50,11 @@ public class CheckQuaraFileIdResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * Indicates whether the ID of the quarantined file is valid. Valid values:
+         * <p>
+         * 
+         * *   **true**: The ID of the quarantined file is valid.
+         * *   **false**: The ID of the quarantined file is invalid.
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -58,7 +62,7 @@ public class CheckQuaraFileIdResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

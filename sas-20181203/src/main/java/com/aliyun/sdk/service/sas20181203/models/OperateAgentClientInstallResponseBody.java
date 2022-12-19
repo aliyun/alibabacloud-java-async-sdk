@@ -50,7 +50,7 @@ public class OperateAgentClientInstallResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AegisCelintInstallResposeList.
+         * An array that consists of the returned results.
          */
         public Builder aegisCelintInstallResposeList(java.util.List < AegisCelintInstallResposeList> aegisCelintInstallResposeList) {
             this.aegisCelintInstallResposeList = aegisCelintInstallResposeList;
@@ -58,7 +58,7 @@ public class OperateAgentClientInstallResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class OperateAgentClientInstallResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * InstanceId.
+             * The ID of the server.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -130,7 +130,7 @@ public class OperateAgentClientInstallResponseBody extends TeaModel {
             }
 
             /**
-             * RecordId.
+             * The ID of the installation task.
              */
             public Builder recordId(Long recordId) {
                 this.recordId = recordId;
@@ -138,7 +138,7 @@ public class OperateAgentClientInstallResponseBody extends TeaModel {
             }
 
             /**
-             * Uuid.
+             * The UUID of the server.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

@@ -98,7 +98,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Count.
+         * The number of entries returned on the current page.
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -106,7 +106,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         }
 
         /**
-         * CurrentPage.
+         * The page number of the returned page.
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -114,7 +114,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +122,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         }
 
         /**
-         * SuspEvents.
+         * An array that consists of the information about the alert event.
          */
         public Builder suspEvents(java.util.List < SuspEvents> suspEvents) {
             this.suspEvents = suspEvents;
@@ -138,7 +138,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of alert events.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -214,7 +214,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             private String valueDisplay; 
 
             /**
-             * NameDisplay.
+             * The display name of the alert event.
              */
             public Builder nameDisplay(String nameDisplay) {
                 this.nameDisplay = nameDisplay;
@@ -222,7 +222,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the alert event.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -230,7 +230,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The path of the alert event.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -238,7 +238,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * ValueDisplay.
+             * The display path of the alert event.
              */
             public Builder valueDisplay(String valueDisplay) {
                 this.valueDisplay = valueDisplay;
@@ -303,7 +303,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             private String noteTime; 
 
             /**
-             * Note.
+             * The remarks.
              */
             public Builder note(String note) {
                 this.note = note;
@@ -311,7 +311,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * NoteId.
+             * The ID of the event record.
              */
             public Builder noteId(Long noteId) {
                 this.noteId = noteId;
@@ -319,7 +319,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * NoteTime.
+             * The time when the event record was created.
              */
             public Builder noteTime(String noteTime) {
                 this.noteTime = noteTime;
@@ -372,7 +372,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             private String tacticId; 
 
             /**
-             * TacticDisplayName.
+             * The tactic name of ATT\&CK.
              */
             public Builder tacticDisplayName(String tacticDisplayName) {
                 this.tacticDisplayName = tacticDisplayName;
@@ -380,7 +380,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * TacticId.
+             * The stage information about ATT\&CK.
              */
             public Builder tacticId(String tacticId) {
                 this.tacticId = tacticId;
@@ -1021,7 +1021,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             private String clusterId; 
 
             /**
-             * Advanced.
+             * Indicates whether the alert was analyzed offline.
              */
             public Builder advanced(Boolean advanced) {
                 this.advanced = advanced;
@@ -1029,7 +1029,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * AlarmEventName.
+             * The name of the alert event.
              */
             public Builder alarmEventName(String alarmEventName) {
                 this.alarmEventName = alarmEventName;
@@ -1037,7 +1037,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * AlarmEventNameDisplay.
+             * The description of the alert event to which the alert event is associated.
              */
             public Builder alarmEventNameDisplay(String alarmEventNameDisplay) {
                 this.alarmEventNameDisplay = alarmEventNameDisplay;
@@ -1045,7 +1045,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * AlarmEventType.
+             * The type of the alert event.
              */
             public Builder alarmEventType(String alarmEventType) {
                 this.alarmEventType = alarmEventType;
@@ -1053,7 +1053,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * AlarmEventTypeDisplay.
+             * The type of the alert event.
              */
             public Builder alarmEventTypeDisplay(String alarmEventTypeDisplay) {
                 this.alarmEventTypeDisplay = alarmEventTypeDisplay;
@@ -1061,7 +1061,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * AlarmUniqueInfo.
+             * The ID of the alert event.
              */
             public Builder alarmUniqueInfo(String alarmUniqueInfo) {
                 this.alarmUniqueInfo = alarmUniqueInfo;
@@ -1069,7 +1069,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * The name of the application to which the alert event belongs.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -1077,7 +1077,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * AutoBreaking.
+             * Indicates whether the exception is automatically blocked.
              */
             public Builder autoBreaking(Boolean autoBreaking) {
                 this.autoBreaking = autoBreaking;
@@ -1085,7 +1085,11 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * CanBeDealOnLine.
+             * Indicates whether the online handling of the alert event is supported, such as quarantining the source file of the malicious process. Valid values:
+             * <p>
+             * 
+             * *   **true**: yes
+             * *   **false**: no
              */
             public Builder canBeDealOnLine(Boolean canBeDealOnLine) {
                 this.canBeDealOnLine = canBeDealOnLine;
@@ -1093,7 +1097,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * CanCancelFault.
+             * Indicates whether you can cancel marking the alert event as a false positive.
              */
             public Builder canCancelFault(Boolean canCancelFault) {
                 this.canCancelFault = canCancelFault;
@@ -1101,7 +1105,11 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * ContainHwMode.
+             * Indicates whether the Safeguard Mode For Major Activities mode is enabled for the server. Valid values:
+             * <p>
+             * 
+             * *   **true**: yes
+             * *   **false**: no
              */
             public Builder containHwMode(Boolean containHwMode) {
                 this.containHwMode = containHwMode;
@@ -1109,7 +1117,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * ContainerId.
+             * The ID of the container.
              */
             public Builder containerId(String containerId) {
                 this.containerId = containerId;
@@ -1117,7 +1125,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * ContainerImageId.
+             * The ID of the image to which the container belongs.
              */
             public Builder containerImageId(String containerImageId) {
                 this.containerImageId = containerImageId;
@@ -1125,7 +1133,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * ContainerImageName.
+             * The name of the container image.
              */
             public Builder containerImageName(String containerImageName) {
                 this.containerImageName = containerImageName;
@@ -1133,7 +1141,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * DataSource.
+             * The source of data. This parameter can be ignored.
              */
             public Builder dataSource(String dataSource) {
                 this.dataSource = dataSource;
@@ -1141,7 +1149,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Desc.
+             * The impact of the alert event.
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -1149,7 +1157,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Details.
+             * The details of the alert event.
              */
             public Builder details(java.util.List < Details> details) {
                 this.details = details;
@@ -1157,7 +1165,11 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * DisplaySandboxResult.
+             * Indicates whether the exception can be detected by cloud sandbox. Valid values:
+             * <p>
+             * 
+             * *   **true**: yes
+             * *   **false**: no
              */
             public Builder displaySandboxResult(Boolean displaySandboxResult) {
                 this.displaySandboxResult = displaySandboxResult;
@@ -1165,7 +1177,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * EventNotes.
+             * An array that consists of the remarks on the exception.
              */
             public Builder eventNotes(java.util.List < EventNotes> eventNotes) {
                 this.eventNotes = eventNotes;
@@ -1173,7 +1185,16 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * EventStatus.
+             * The status of the alert event. Valid values:
+             * <p>
+             * 
+             * *   **1**: pending handling
+             * *   **2**: ignored
+             * *   **4**: confirmed
+             * *   **8**: marked as a false positive
+             * *   **16**: being handled
+             * *   **32**: handled
+             * *   **64**: expired
              */
             public Builder eventStatus(Integer eventStatus) {
                 this.eventStatus = eventStatus;
@@ -1181,7 +1202,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * EventSubType.
+             * The name of the alert event.
              */
             public Builder eventSubType(String eventSubType) {
                 this.eventSubType = eventSubType;
@@ -1189,7 +1210,11 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * HasTraceInfo.
+             * Indicates whether the alert event has trace information. Valid values:
+             * <p>
+             * 
+             * *   **true**: yes
+             * *   **false**: no
              */
             public Builder hasTraceInfo(Boolean hasTraceInfo) {
                 this.hasTraceInfo = hasTraceInfo;
@@ -1197,7 +1222,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the alert event.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -1205,7 +1230,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the affected asset.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -1213,7 +1238,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * The name of the associated instance.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -1221,7 +1246,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * InternetIp.
+             * The public IP address of the associated instance.
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -1229,7 +1254,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * IntranetIp.
+             * The private IP address of the associated instance.
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -1237,7 +1262,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * K8sClusterId.
+             * The ID of the Kubernetes cluster.
              */
             public Builder k8sClusterId(String k8sClusterId) {
                 this.k8sClusterId = k8sClusterId;
@@ -1245,7 +1270,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * K8sClusterName.
+             * The name of the Kubernetes cluster.
              */
             public Builder k8sClusterName(String k8sClusterName) {
                 this.k8sClusterName = k8sClusterName;
@@ -1253,7 +1278,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * K8sNamespace.
+             * The namespace of the Kubernetes cluster.
              */
             public Builder k8sNamespace(String k8sNamespace) {
                 this.k8sNamespace = k8sNamespace;
@@ -1261,7 +1286,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * K8sNodeId.
+             * The ID of the Kubernetes cluster node.
              */
             public Builder k8sNodeId(String k8sNodeId) {
                 this.k8sNodeId = k8sNodeId;
@@ -1269,7 +1294,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * K8sNodeName.
+             * The name of the Kubernetes cluster node.
              */
             public Builder k8sNodeName(String k8sNodeName) {
                 this.k8sNodeName = k8sNodeName;
@@ -1277,7 +1302,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * K8sPodName.
+             * The name of the Kubernetes pod.
              */
             public Builder k8sPodName(String k8sPodName) {
                 this.k8sPodName = k8sPodName;
@@ -1285,7 +1310,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * LastTime.
+             * The time when the alert event was last generated.
              */
             public Builder lastTime(String lastTime) {
                 this.lastTime = lastTime;
@@ -1293,7 +1318,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * LastTimeStamp.
+             * The timestamp when the exception was last detected. Unit: milliseconds.
              */
             public Builder lastTimeStamp(Long lastTimeStamp) {
                 this.lastTimeStamp = lastTimeStamp;
@@ -1301,7 +1326,12 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Level.
+             * The severity of the alert event. Valid values:
+             * <p>
+             * 
+             * *   **serious**
+             * *   **suspicious**
+             * *   **remind**
              */
             public Builder level(String level) {
                 this.level = level;
@@ -1309,7 +1339,11 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * MaliciousRuleStatus.
+             * The status of the malicious behavior defense rule. Valid values:
+             * <p>
+             * 
+             * *   **open**: enabled
+             * *   **close**: disabled
              */
             public Builder maliciousRuleStatus(String maliciousRuleStatus) {
                 this.maliciousRuleStatus = maliciousRuleStatus;
@@ -1317,7 +1351,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * MarkMisRules.
+             * The advanced whitelist rule.
              */
             public Builder markMisRules(String markMisRules) {
                 this.markMisRules = markMisRules;
@@ -1325,7 +1359,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The complete name of the alert event.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1333,7 +1367,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * OccurrenceTime.
+             * The time when the alert event was first detected.
              */
             public Builder occurrenceTime(String occurrenceTime) {
                 this.occurrenceTime = occurrenceTime;
@@ -1341,7 +1375,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * OccurrenceTimeStamp.
+             * The timestamp when the exception was first detected. Unit: milliseconds.
              */
             public Builder occurrenceTimeStamp(Long occurrenceTimeStamp) {
                 this.occurrenceTimeStamp = occurrenceTimeStamp;
@@ -1349,7 +1383,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * OperateErrorCode.
+             * The handling result code of the alert event.
              */
             public Builder operateErrorCode(String operateErrorCode) {
                 this.operateErrorCode = operateErrorCode;
@@ -1357,7 +1391,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * OperateMsg.
+             * The description of the handing result of the alert event.
              */
             public Builder operateMsg(String operateMsg) {
                 this.operateMsg = operateMsg;
@@ -1365,7 +1399,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * OperateTime.
+             * The handling timestamp of the alert event. Unit: milliseconds.
              */
             public Builder operateTime(Long operateTime) {
                 this.operateTime = operateTime;
@@ -1373,7 +1407,11 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * SaleVersion.
+             * The edition of Security Center in which the exception can be detected. Valid values:
+             * <p>
+             * 
+             * *   **0**: Basic edition
+             * *   **1**: Enterprise edition
              */
             public Builder saleVersion(String saleVersion) {
                 this.saleVersion = saleVersion;
@@ -1381,7 +1419,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityEventIds.
+             * The IDs of the associated alert events.
              */
             public Builder securityEventIds(String securityEventIds) {
                 this.securityEventIds = securityEventIds;
@@ -1389,7 +1427,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Stages.
+             * The stage at which the attack is detected.
              */
             public Builder stages(String stages) {
                 this.stages = stages;
@@ -1397,7 +1435,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * 攻击阶段展示名
+             * The display name of the attack stage.
              */
             public Builder tacticItems(java.util.List < TacticItems> tacticItems) {
                 this.tacticItems = tacticItems;
@@ -1405,7 +1443,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * UniqueInfo.
+             * The unique key of the alert.
              */
             public Builder uniqueInfo(String uniqueInfo) {
                 this.uniqueInfo = uniqueInfo;
@@ -1413,7 +1451,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Uuid.
+             * The ID of the associated instance.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -1421,7 +1459,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * clusterId.
+             * The ID of the cluster.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;

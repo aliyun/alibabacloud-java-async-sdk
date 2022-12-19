@@ -112,7 +112,7 @@ public class DescribeAccesskeyLeakListRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -121,7 +121,11 @@ public class DescribeAccesskeyLeakListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.\
+         * <p>
+         * Maximum value: 100. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.
+         * 
+         * > : We recommend that you do not leave this parameter empty.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -130,7 +134,7 @@ public class DescribeAccesskeyLeakListRequest extends Request {
         }
 
         /**
-         * Query.
+         * The AccessKey ID that you want to query. Only exact match is supported.
          */
         public Builder query(String query) {
             this.putQueryParameter("Query", query);
@@ -139,7 +143,7 @@ public class DescribeAccesskeyLeakListRequest extends Request {
         }
 
         /**
-         * StartTs.
+         * The beginning of the time range to query. You can query all AccessKey pair leaks that are detected later than this time point. The value of this parameter is a UNIX timestamp. Unit: milliseconds.
          */
         public Builder startTs(Long startTs) {
             this.putQueryParameter("StartTs", startTs);
@@ -148,7 +152,11 @@ public class DescribeAccesskeyLeakListRequest extends Request {
         }
 
         /**
-         * Status.
+         * Specifies whether an AccessKey pair leak is handled. Valid values:
+         * <p>
+         * 
+         * *   **pending**: unhandled
+         * *   **dealed**: handled
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

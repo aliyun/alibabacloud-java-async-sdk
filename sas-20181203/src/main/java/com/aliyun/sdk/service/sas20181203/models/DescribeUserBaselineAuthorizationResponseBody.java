@@ -50,7 +50,7 @@ public class DescribeUserBaselineAuthorizationResponseBody extends TeaModel {
         private UserBaselineAuthorization userBaselineAuthorization; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeUserBaselineAuthorizationResponseBody extends TeaModel {
         }
 
         /**
-         * UserBaselineAuthorization.
+         * The information about whether Security Center is authorized to run configuration checks on cloud services.
          */
         public Builder userBaselineAuthorization(UserBaselineAuthorization userBaselineAuthorization) {
             this.userBaselineAuthorization = userBaselineAuthorization;
@@ -98,7 +98,11 @@ public class DescribeUserBaselineAuthorizationResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * Status.
+             * Indicates whether Security Center is authorized to run configuration checks on cloud services.
+             * <p>
+             * 
+             * *   **0**: no. Security Center is not authorized to run configuration checks on cloud services.
+             * *   **1**: yes. Security Center is authorized to run configuration checks on cloud services.
              */
             public Builder status(Integer status) {
                 this.status = status;

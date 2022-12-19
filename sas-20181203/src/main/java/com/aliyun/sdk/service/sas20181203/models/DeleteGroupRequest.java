@@ -69,7 +69,10 @@ public class DeleteGroupRequest extends Request {
         } 
 
         /**
-         * GroupId.
+         * The ID of the server group that you want to delete.
+         * <p>
+         * 
+         * >  To delete a server group, you must provide the ID of the server group. You can call the [DescribeAllGroups](~~DescribeAllGroups~~) operation to query the ID.
          */
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -78,7 +81,7 @@ public class DeleteGroupRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * The source IP address of the request.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

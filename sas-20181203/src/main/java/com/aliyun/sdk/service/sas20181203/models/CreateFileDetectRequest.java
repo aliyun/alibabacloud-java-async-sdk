@@ -99,7 +99,7 @@ public class CreateFileDetectRequest extends Request {
         } 
 
         /**
-         * HashKey.
+         * The identifier of the file. Only MD5 hash values are supported.
          */
         public Builder hashKey(String hashKey) {
             this.putQueryParameter("HashKey", hashKey);
@@ -108,7 +108,7 @@ public class CreateFileDetectRequest extends Request {
         }
 
         /**
-         * OssKey.
+         * The key of the file that is stored in the Object Storage Service (OSS) bucket. You can call the [CreateFileDetectUploadUrl](~~CreateFileDetectUploadUrl~~) operation to query the keys of files.
          */
         public Builder ossKey(String ossKey) {
             this.putQueryParameter("OssKey", ossKey);
@@ -117,7 +117,7 @@ public class CreateFileDetectRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * The source IP address of the request.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -126,7 +126,15 @@ public class CreateFileDetectRequest extends Request {
         }
 
         /**
-         * Type.
+         * The type of the file. Valid values:
+         * <p>
+         * 
+         * *   **0**: unknown files
+         * *   **1**: binary files
+         * *   **2**: webshell files
+         * *   **4**: script files
+         * 
+         * >  If you do not know the type of the file, set this parameter to 0.
          */
         public Builder type(Integer type) {
             this.putQueryParameter("Type", type);

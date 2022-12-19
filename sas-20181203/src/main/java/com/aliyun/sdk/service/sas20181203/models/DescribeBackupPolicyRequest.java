@@ -55,7 +55,10 @@ public class DescribeBackupPolicyRequest extends Request {
         } 
 
         /**
-         * Id.
+         * The ID of the anti-ransomware policy.
+         * <p>
+         * 
+         * >  You can call the [DescribeBackupPolicies](~~DescribeBackupPolicies~~) operation to query the IDs of anti-ransomware policies.
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);

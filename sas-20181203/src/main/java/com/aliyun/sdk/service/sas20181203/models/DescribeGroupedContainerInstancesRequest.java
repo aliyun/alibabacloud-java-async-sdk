@@ -125,7 +125,10 @@ public class DescribeGroupedContainerInstancesRequest extends Request {
         } 
 
         /**
-         * Criteria.
+         * The search conditions for assets. Specify the value in the JSON format. Separate multiple search conditions with commas (,). Example: `[{"name":"riskStatus","value":"YES"},{"name":"riskLevel","value":"2"}]`.
+         * <p>
+         * 
+         * >  Supported search conditions include the instance ID, instance name, virtual private cloud (VPC) ID, region, and public IP address. You can call the [DescribeCriteria](~~DescribeCriteria~~) operation to query the supported search conditions.
          */
         public Builder criteria(String criteria) {
             this.putQueryParameter("Criteria", criteria);
@@ -134,7 +137,7 @@ public class DescribeGroupedContainerInstancesRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -143,7 +146,15 @@ public class DescribeGroupedContainerInstancesRequest extends Request {
         }
 
         /**
-         * FieldValue.
+         * The keyword that you want to use to query containers. You must specify this parameter based on the value of the GroupField parameter.
+         * <p>
+         * 
+         * *   If the **GroupField** parameter is set to **pod**, set this parameter to the name of the pod that you want to query.
+         * *   If the **GroupField** parameter is set to **appName**, set this parameter to the name of the application that you want to query.
+         * *   If the **GroupField** parameter is set to **namespace**, set this parameter to the namespace that you want to query.
+         * *   If the **GroupField** parameter is set to **clusterId**, set this parameter to the ID of the cluster that you want to query.
+         * 
+         * >  Fuzzy match is supported.
          */
         public Builder fieldValue(String fieldValue) {
             this.putQueryParameter("FieldValue", fieldValue);
@@ -152,7 +163,13 @@ public class DescribeGroupedContainerInstancesRequest extends Request {
         }
 
         /**
-         * GroupField.
+         * The group type that you want to use to query containers. Valid values:
+         * <p>
+         * 
+         * *   **pod**
+         * *   **appName**
+         * *   **namespace**
+         * *   **clusterId**
          */
         public Builder groupField(String groupField) {
             this.putQueryParameter("GroupField", groupField);
@@ -161,7 +178,11 @@ public class DescribeGroupedContainerInstancesRequest extends Request {
         }
 
         /**
-         * LogicalExp.
+         * The logical relationship that you want to use to evaluate multiple search conditions. Valid values:
+         * <p>
+         * 
+         * *   **OR**: Search conditions are evaluated by using a logical **OR**.
+         * *   **AND**: Search conditions are evaluated by using a logical **AND**.
          */
         public Builder logicalExp(String logicalExp) {
             this.putQueryParameter("LogicalExp", logicalExp);
@@ -170,7 +191,10 @@ public class DescribeGroupedContainerInstancesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: **20**.
+         * <p>
+         * 
+         * >  We recommend that you do not leave this parameter empty.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

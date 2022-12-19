@@ -50,7 +50,7 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * GroupedFields.
+         * The information about servers that are returned.
          */
         public Builder groupedFields(GroupedFields groupedFields) {
             this.groupedFields = groupedFields;
@@ -58,7 +58,7 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -105,6 +105,9 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         @NameInMap("NewInstanceCount")
         private Integer newInstanceCount;
 
+        @NameInMap("NoRiskInstanceCount")
+        private Integer noRiskInstanceCount;
+
         @NameInMap("NotRunningStatusCount")
         private Integer notRunningStatusCount;
 
@@ -129,6 +132,9 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         @NameInMap("TestAssetCount")
         private Integer testAssetCount;
 
+        @NameInMap("UnKnowStatusInstanceCount")
+        private Integer unKnowStatusInstanceCount;
+
         @NameInMap("UnprotectedInstanceCount")
         private Integer unprotectedInstanceCount;
 
@@ -147,6 +153,7 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             this.instanceCount = builder.instanceCount;
             this.instanceSyncTaskCount = builder.instanceSyncTaskCount;
             this.newInstanceCount = builder.newInstanceCount;
+            this.noRiskInstanceCount = builder.noRiskInstanceCount;
             this.notRunningStatusCount = builder.notRunningStatusCount;
             this.offlineInstanceCount = builder.offlineInstanceCount;
             this.outMachineInstanceCount = builder.outMachineInstanceCount;
@@ -155,6 +162,7 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             this.riskInstanceCount = builder.riskInstanceCount;
             this.tencentInstanceCount = builder.tencentInstanceCount;
             this.testAssetCount = builder.testAssetCount;
+            this.unKnowStatusInstanceCount = builder.unKnowStatusInstanceCount;
             this.unprotectedInstanceCount = builder.unprotectedInstanceCount;
             this.vpcCount = builder.vpcCount;
         }
@@ -245,6 +253,13 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         }
 
         /**
+         * @return noRiskInstanceCount
+         */
+        public Integer getNoRiskInstanceCount() {
+            return this.noRiskInstanceCount;
+        }
+
+        /**
          * @return notRunningStatusCount
          */
         public Integer getNotRunningStatusCount() {
@@ -301,6 +316,13 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         }
 
         /**
+         * @return unKnowStatusInstanceCount
+         */
+        public Integer getUnKnowStatusInstanceCount() {
+            return this.unKnowStatusInstanceCount;
+        }
+
+        /**
          * @return unprotectedInstanceCount
          */
         public Integer getUnprotectedInstanceCount() {
@@ -326,6 +348,7 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             private Integer instanceCount; 
             private Integer instanceSyncTaskCount; 
             private Integer newInstanceCount; 
+            private Integer noRiskInstanceCount; 
             private Integer notRunningStatusCount; 
             private Integer offlineInstanceCount; 
             private Integer outMachineInstanceCount; 
@@ -334,11 +357,12 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             private Integer riskInstanceCount; 
             private Integer tencentInstanceCount; 
             private Integer testAssetCount; 
+            private Integer unKnowStatusInstanceCount; 
             private Integer unprotectedInstanceCount; 
             private Integer vpcCount; 
 
             /**
-             * AliYunInstanceCount.
+             * The number of assets that are deployed on Alibaba Cloud.
              */
             public Builder aliYunInstanceCount(Integer aliYunInstanceCount) {
                 this.aliYunInstanceCount = aliYunInstanceCount;
@@ -346,7 +370,7 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * AwsInstanceCount.
+             * The number of servers.
              */
             public Builder awsInstanceCount(Integer awsInstanceCount) {
                 this.awsInstanceCount = awsInstanceCount;
@@ -354,7 +378,7 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * ExposedInstanceCount.
+             * The number of exposed servers.
              */
             public Builder exposedInstanceCount(Integer exposedInstanceCount) {
                 this.exposedInstanceCount = exposedInstanceCount;
@@ -362,7 +386,7 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * GeneralAssetCount.
+             * The number of assets whose importance is common.
              */
             public Builder generalAssetCount(Integer generalAssetCount) {
                 this.generalAssetCount = generalAssetCount;
@@ -370,7 +394,7 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * GroupCount.
+             * The number of server groups.
              */
             public Builder groupCount(Integer groupCount) {
                 this.groupCount = groupCount;
@@ -378,7 +402,7 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * HuaweiInstanceCount.
+             * The number of instances that are provisioned by third-party providers.
              */
             public Builder huaweiInstanceCount(Integer huaweiInstanceCount) {
                 this.huaweiInstanceCount = huaweiInstanceCount;
@@ -386,7 +410,7 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * IdcInstanceCount.
+             * The number of assets that can be protected by Security Center.
              */
             public Builder idcInstanceCount(Integer idcInstanceCount) {
                 this.idcInstanceCount = idcInstanceCount;
@@ -394,7 +418,7 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * ImportantAssetCount.
+             * The number of assets whose importance is important.
              */
             public Builder importantAssetCount(Integer importantAssetCount) {
                 this.importantAssetCount = importantAssetCount;
@@ -402,7 +426,7 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceCount.
+             * The total number of assets of the specified type. If no asset types are specified, this parameter indicates the total number of all servers and Alibaba Cloud services within your account.
              */
             public Builder instanceCount(Integer instanceCount) {
                 this.instanceCount = instanceCount;
@@ -410,7 +434,7 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceSyncTaskCount.
+             * The total number of tasks for the specified type of assets. If no asset types are specified, this parameter indicates the total number of all servers and Alibaba Cloud services within your account.
              */
             public Builder instanceSyncTaskCount(Integer instanceSyncTaskCount) {
                 this.instanceSyncTaskCount = instanceSyncTaskCount;
@@ -418,7 +442,7 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * NewInstanceCount.
+             * The number of newly added servers.
              */
             public Builder newInstanceCount(Integer newInstanceCount) {
                 this.newInstanceCount = newInstanceCount;
@@ -426,7 +450,15 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * NotRunningStatusCount.
+             * The number of assets that do not pose risks.
+             */
+            public Builder noRiskInstanceCount(Integer noRiskInstanceCount) {
+                this.noRiskInstanceCount = noRiskInstanceCount;
+                return this;
+            }
+
+            /**
+             * The number of servers that are shut down.
              */
             public Builder notRunningStatusCount(Integer notRunningStatusCount) {
                 this.notRunningStatusCount = notRunningStatusCount;
@@ -434,7 +466,7 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * OfflineInstanceCount.
+             * The number of servers whose Security Center agent status is Offline.
              */
             public Builder offlineInstanceCount(Integer offlineInstanceCount) {
                 this.offlineInstanceCount = offlineInstanceCount;
@@ -442,7 +474,7 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * OutMachineInstanceCount.
+             * The number of servers outside the cloud.
              */
             public Builder outMachineInstanceCount(Integer outMachineInstanceCount) {
                 this.outMachineInstanceCount = outMachineInstanceCount;
@@ -450,7 +482,7 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * PauseInstanceCount.
+             * The number of servers for which the Security Center agent suspends protection.
              */
             public Builder pauseInstanceCount(Integer pauseInstanceCount) {
                 this.pauseInstanceCount = pauseInstanceCount;
@@ -458,7 +490,7 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionCount.
+             * The number of regions to which the servers belong.
              */
             public Builder regionCount(Integer regionCount) {
                 this.regionCount = regionCount;
@@ -466,7 +498,7 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * RiskInstanceCount.
+             * The number of assets that are at risk.
              */
             public Builder riskInstanceCount(Integer riskInstanceCount) {
                 this.riskInstanceCount = riskInstanceCount;
@@ -474,7 +506,7 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * TencentInstanceCount.
+             * The total number of cloud services that are protected by Security Center.
              */
             public Builder tencentInstanceCount(Integer tencentInstanceCount) {
                 this.tencentInstanceCount = tencentInstanceCount;
@@ -482,7 +514,7 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * TestAssetCount.
+             * The number of assets whose importance is test.
              */
             public Builder testAssetCount(Integer testAssetCount) {
                 this.testAssetCount = testAssetCount;
@@ -490,7 +522,15 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * UnprotectedInstanceCount.
+             * The number of assets whose statuses are unknown.
+             */
+            public Builder unKnowStatusInstanceCount(Integer unKnowStatusInstanceCount) {
+                this.unKnowStatusInstanceCount = unKnowStatusInstanceCount;
+                return this;
+            }
+
+            /**
+             * The number of unprotected assets.
              */
             public Builder unprotectedInstanceCount(Integer unprotectedInstanceCount) {
                 this.unprotectedInstanceCount = unprotectedInstanceCount;
@@ -498,7 +538,7 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * VpcCount.
+             * The number of virtual private clouds (VPCs).
              */
             public Builder vpcCount(Integer vpcCount) {
                 this.vpcCount = vpcCount;

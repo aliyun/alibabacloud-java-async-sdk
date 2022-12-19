@@ -70,7 +70,7 @@ public class PauseClientRequest extends Request {
         } 
 
         /**
-         * Uuids.
+         * The list of servers for which you want to enable or disable the Security Center agent.
          */
         public Builder uuids(String uuids) {
             this.putQueryParameter("Uuids", uuids);
@@ -79,7 +79,10 @@ public class PauseClientRequest extends Request {
         }
 
         /**
-         * Value.
+         * The status of the Security Center agent. Valid values:
+         * <p>
+         * - **0**: disabled
+         * - **1**: enabled
          */
         public Builder value(String value) {
             this.putQueryParameter("Value", value);

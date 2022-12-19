@@ -84,7 +84,7 @@ public class GetFileDetectResultRequest extends Request {
         } 
 
         /**
-         * HashKeyList.
+         * An array that consists of the identifiers of files. Only MD5 hash values are supported.
          */
         public Builder hashKeyList(java.util.List < String > hashKeyList) {
             this.putQueryParameter("HashKeyList", hashKeyList);
@@ -93,7 +93,7 @@ public class GetFileDetectResultRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * The source IP address of the request.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -102,7 +102,15 @@ public class GetFileDetectResultRequest extends Request {
         }
 
         /**
-         * Type.
+         * The type of the file. Valid values:
+         * <p>
+         * 
+         * *   **0**: unknown file
+         * *   **1**: binary file
+         * *   **2**: webshell file
+         * *   **4**: script file
+         * 
+         * >  If you do not know the type of the file, set this parameter to 0.
          */
         public Builder type(Integer type) {
             this.putQueryParameter("Type", type);

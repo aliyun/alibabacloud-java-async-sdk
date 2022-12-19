@@ -50,7 +50,7 @@ public class DescribeSecurityCheckScheduleConfigResponseBody extends TeaModel {
         private RiskCheckJobConfig riskCheckJobConfig; 
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeSecurityCheckScheduleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RiskCheckJobConfig.
+         * The configurations of custom check tasks.
          */
         public Builder riskCheckJobConfig(RiskCheckJobConfig riskCheckJobConfig) {
             this.riskCheckJobConfig = riskCheckJobConfig;
@@ -122,7 +122,16 @@ public class DescribeSecurityCheckScheduleConfigResponseBody extends TeaModel {
             private Integer startTime; 
 
             /**
-             * DaysOfWeek.
+             * The day of the week when the check tasks are performed. Multiple days can be specified. Multiple days are separated by commas (,).
+             * <p>
+             * 
+             * *   **1**: Monday
+             * *   **2**: Tuesday
+             * *   **3**: Wednesday
+             * *   **4**: Thursday
+             * *   **5**: Friday
+             * *   **6**: Saturday
+             * *   **7**: Sunday
              */
             public Builder daysOfWeek(String daysOfWeek) {
                 this.daysOfWeek = daysOfWeek;
@@ -130,7 +139,13 @@ public class DescribeSecurityCheckScheduleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * The time range during which check tasks end. Valid values:
+             * <p>
+             * 
+             * *   **6**: 00:00 to 06:00
+             * *   **12**: 06:00 to 12:00
+             * *   **18**: 12:00 to 18:00
+             * *   **24**: 18:00 to 24:00
              */
             public Builder endTime(Integer endTime) {
                 this.endTime = endTime;
@@ -138,7 +153,13 @@ public class DescribeSecurityCheckScheduleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The time range during which check tasks start. Valid values:
+             * <p>
+             * 
+             * *   **0**: 00:00 to 06:00
+             * *   **6**: 06:00 to 12:00
+             * *   **12**: 12:00 to 18:00
+             * *   **18**: 18:00 to 24:00
              */
             public Builder startTime(Integer startTime) {
                 this.startTime = startTime;

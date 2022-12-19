@@ -50,7 +50,7 @@ public class DescribeSearchConditionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ConditionList.
+         * An array that consists of the filter conditions.
          */
         public Builder conditionList(java.util.List < ConditionList> conditionList) {
             this.conditionList = conditionList;
@@ -58,7 +58,7 @@ public class DescribeSearchConditionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,7 +134,11 @@ public class DescribeSearchConditionResponseBody extends TeaModel {
             private String nameKey; 
 
             /**
-             * ConditionType.
+             * The type of the filter condition. Valid values:
+             * <p>
+             * 
+             * *   **system**: default filter condition
+             * *   **user**: custom filter condition
              */
             public Builder conditionType(String conditionType) {
                 this.conditionType = conditionType;
@@ -142,7 +146,26 @@ public class DescribeSearchConditionResponseBody extends TeaModel {
             }
 
             /**
-             * FilterConditions.
+             * The filter condition. The value of this parameter is in the JSON format and contains the following fields:
+             * <p>
+             * 
+             * *   **filterParams**: the parameters of the filter condition. The value of this field is in the JSON format and contains the following fields:
+             * 
+             *     *   **labelKey**: the key for rendering.
+             * 
+             *     *   **label**: the display name.
+             * 
+             *     *   **value**: the value of the filter condition. The value of this field is in the JSON format and contains the following fields:
+             * 
+             *         *   **name**: the name of the filter item.
+             *         *   **value**: the value of the filter item.
+             * 
+             * *   **LogicalExp**: the logical relationship among the filter conditions. Valid values:
+             * 
+             *     *   **AND**: The filter conditions are evaluated by using a logical **AND**.
+             *     *   **OR**: The filter conditions are evaluated by using a logical **OR**.
+             * 
+             * >  If the value of **ConditionType** is **system**, **labelKey** is returned. The labelKey field is used only for internationalization rendering.
              */
             public Builder filterConditions(String filterConditions) {
                 this.filterConditions = filterConditions;
@@ -150,7 +173,7 @@ public class DescribeSearchConditionResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the filter condition.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -158,7 +181,7 @@ public class DescribeSearchConditionResponseBody extends TeaModel {
             }
 
             /**
-             * NameKey.
+             * The key of the filter condition name.
              */
             public Builder nameKey(String nameKey) {
                 this.nameKey = nameKey;

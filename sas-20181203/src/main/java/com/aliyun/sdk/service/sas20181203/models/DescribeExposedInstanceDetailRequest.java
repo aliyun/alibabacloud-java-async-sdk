@@ -55,7 +55,10 @@ public class DescribeExposedInstanceDetailRequest extends Request {
         } 
 
         /**
-         * Uuid.
+         * The UUID of the server that is exposed on the Internet.
+         * <p>
+         * 
+         * >  You can call the [DescribeExposedInstanceList](~~DescribeExposedInstanceList~~) operation to query the UUIDs of servers.
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

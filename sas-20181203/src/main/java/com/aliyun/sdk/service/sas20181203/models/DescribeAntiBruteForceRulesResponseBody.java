@@ -62,7 +62,7 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
         private java.util.List < Rules> rules; 
 
         /**
-         * PageInfo.
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -70,7 +70,7 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Rules.
+         * An array that consists of the defense rules returned.
          */
         public Builder rules(java.util.List < Rules> rules) {
             this.rules = rules;
@@ -154,7 +154,7 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Count.
+             * The number of entries returned on the current page.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -162,7 +162,7 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentPage.
+             * The page number of the returned page.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -170,7 +170,7 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -178,7 +178,7 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -315,7 +315,13 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
             private java.util.List < String > uuidList; 
 
             /**
-             * DefaultRule.
+             * Indicates whether the defense rule is the default rule. Valid values:
+             * <p>
+             * 
+             * *   **true**: yes
+             * *   **false**: no
+             * 
+             * >  The default rule takes effect on all servers that are not protected by defense rules against brute-force attacks.
              */
             public Builder defaultRule(Boolean defaultRule) {
                 this.defaultRule = defaultRule;
@@ -323,7 +329,7 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
             }
 
             /**
-             * EnableSmartRule.
+             * This parameter is deprecated.
              */
             public Builder enableSmartRule(Boolean enableSmartRule) {
                 this.enableSmartRule = enableSmartRule;
@@ -331,7 +337,7 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
             }
 
             /**
-             * FailCount.
+             * The threshold of logon failures that you specify.
              */
             public Builder failCount(Integer failCount) {
                 this.failCount = failCount;
@@ -339,7 +345,7 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
             }
 
             /**
-             * ForbiddenTime.
+             * The period of time during which logons from an account are not allowed. Unit: minutes.
              */
             public Builder forbiddenTime(Integer forbiddenTime) {
                 this.forbiddenTime = forbiddenTime;
@@ -347,7 +353,7 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the defense rule.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -355,7 +361,7 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
             }
 
             /**
-             * MachineCount.
+             * The number of servers to which the defense rule is applied.
              */
             public Builder machineCount(Integer machineCount) {
                 this.machineCount = machineCount;
@@ -363,7 +369,7 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the defense rule.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -371,7 +377,7 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Span.
+             * The period of time during which logon failures from an account are measured. Unit: minutes. If **Span** is set to 10, the defense rule takes effect when the logon failures measured within 10 minutes reaches the specified threshold. The IP address of attackers cannot be used to log on to the server in the specified period of time.
              */
             public Builder span(Integer span) {
                 this.span = span;
@@ -379,7 +385,7 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
             }
 
             /**
-             * UuidList.
+             * An array consisting of the UUIDs of servers to which the defense rule is applied.
              */
             public Builder uuidList(java.util.List < String > uuidList) {
                 this.uuidList = uuidList;

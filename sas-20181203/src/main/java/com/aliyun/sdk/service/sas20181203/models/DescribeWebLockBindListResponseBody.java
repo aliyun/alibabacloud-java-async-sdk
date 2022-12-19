@@ -86,7 +86,7 @@ public class DescribeWebLockBindListResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * BindList.
+         * The information about the servers that have web tamper proofing enabled.
          */
         public Builder bindList(java.util.List < BindList> bindList) {
             this.bindList = bindList;
@@ -94,7 +94,7 @@ public class DescribeWebLockBindListResponseBody extends TeaModel {
         }
 
         /**
-         * CurrentPage.
+         * The page number of the returned page. Pages start from page 1. Default value: 1.
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -102,7 +102,7 @@ public class DescribeWebLockBindListResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page. Default value: 20.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeWebLockBindListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeWebLockBindListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of servers that have web tamper proofing enabled.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -302,7 +302,7 @@ public class DescribeWebLockBindListResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * AuditCount.
+             * The number of alerts.
              */
             public Builder auditCount(String auditCount) {
                 this.auditCount = auditCount;
@@ -310,7 +310,7 @@ public class DescribeWebLockBindListResponseBody extends TeaModel {
             }
 
             /**
-             * BlockCount.
+             * The number of blocked tampering events.
              */
             public Builder blockCount(String blockCount) {
                 this.blockCount = blockCount;
@@ -318,7 +318,7 @@ public class DescribeWebLockBindListResponseBody extends TeaModel {
             }
 
             /**
-             * DirCount.
+             * The number of protected directories.
              */
             public Builder dirCount(String dirCount) {
                 this.dirCount = dirCount;
@@ -326,7 +326,7 @@ public class DescribeWebLockBindListResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * The name of the server.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -334,7 +334,7 @@ public class DescribeWebLockBindListResponseBody extends TeaModel {
             }
 
             /**
-             * InternetIp.
+             * The public IP address of the server.
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -342,7 +342,7 @@ public class DescribeWebLockBindListResponseBody extends TeaModel {
             }
 
             /**
-             * IntranetIp.
+             * The private IP address of the server.
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -350,7 +350,7 @@ public class DescribeWebLockBindListResponseBody extends TeaModel {
             }
 
             /**
-             * Os.
+             * The operating system that the server runs.
              */
             public Builder os(String os) {
                 this.os = os;
@@ -358,7 +358,7 @@ public class DescribeWebLockBindListResponseBody extends TeaModel {
             }
 
             /**
-             * Percent.
+             * The starting progress percentage of web tamper proofing. Valid values: 0 to 100.
              */
             public Builder percent(Integer percent) {
                 this.percent = percent;
@@ -366,7 +366,11 @@ public class DescribeWebLockBindListResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceCode.
+             * The error code for web tamper proofing. Valid values:
+             * <p>
+             * 
+             * *   **2001**: The Security Center agent is offline.
+             * *   **9999**: The connection timed out.
              */
             public Builder serviceCode(String serviceCode) {
                 this.serviceCode = serviceCode;
@@ -374,7 +378,11 @@ public class DescribeWebLockBindListResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceDetail.
+             * The error message for web tamper proofing. Valid values:
+             * <p>
+             * 
+             * *   **client offline**: The Security Center agent is offline.
+             * *   **timeout**: The connection timed out.
              */
             public Builder serviceDetail(String serviceDetail) {
                 this.serviceDetail = serviceDetail;
@@ -382,7 +390,14 @@ public class DescribeWebLockBindListResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceStatus.
+             * The status of web tamper proofing on the server. Valid values:
+             * <p>
+             * 
+             * *   **stop**: Web tamper proofing is disabled.
+             * *   **initializing**: Web tamper proofing is being enabled.
+             * *   **exception**: Web tamper proofing is not running as expected.
+             * *   **running**: Web tamper proofing is running.
+             * *   **closing**: Web tamper proofing is being disabled.
              */
             public Builder serviceStatus(String serviceStatus) {
                 this.serviceStatus = serviceStatus;
@@ -390,7 +405,11 @@ public class DescribeWebLockBindListResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The protection status of the server. Valid values:
+             * <p>
+             * 
+             * *   **on**: protected
+             * *   **off**: unprotected
              */
             public Builder status(String status) {
                 this.status = status;
@@ -398,7 +417,7 @@ public class DescribeWebLockBindListResponseBody extends TeaModel {
             }
 
             /**
-             * Uuid.
+             * The UUID of the server.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

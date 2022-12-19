@@ -134,7 +134,7 @@ public class DescribeVulExportInfoResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * CurrentCount.
+         * The number of exported entries.
          */
         public Builder currentCount(Integer currentCount) {
             this.currentCount = currentCount;
@@ -142,7 +142,12 @@ public class DescribeVulExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * ExportStatus.
+         * The status of the export task. Valid values:
+         * <p>
+         * 
+         * - **init**: The task is being initialized.
+         * - **exporting**: The task is in progress.
+         * - **success**: The task is complete.
          */
         public Builder exportStatus(String exportStatus) {
             this.exportStatus = exportStatus;
@@ -150,7 +155,7 @@ public class DescribeVulExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * FileName.
+         * The name of the exported Excel file.
          */
         public Builder fileName(String fileName) {
             this.fileName = fileName;
@@ -158,7 +163,7 @@ public class DescribeVulExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Id.
+         * The ID of the vulnerability export task.
          */
         public Builder id(Long id) {
             this.id = id;
@@ -166,7 +171,7 @@ public class DescribeVulExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Link.
+         * The URL at which you can download the exported Excel file.
          */
         public Builder link(String link) {
             this.link = link;
@@ -174,7 +179,7 @@ public class DescribeVulExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message that shows the task result. The value is fixed as **success*, which indicates that the export task is completed.
          */
         public Builder message(String message) {
             this.message = message;
@@ -182,7 +187,7 @@ public class DescribeVulExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Progress.
+         * The progress percentage of the asset export task.
          */
         public Builder progress(Integer progress) {
             this.progress = progress;
@@ -190,7 +195,7 @@ public class DescribeVulExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -198,7 +203,7 @@ public class DescribeVulExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries in the Excel file.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

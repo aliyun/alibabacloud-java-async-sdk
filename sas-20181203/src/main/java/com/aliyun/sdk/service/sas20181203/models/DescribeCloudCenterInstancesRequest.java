@@ -166,7 +166,10 @@ public class DescribeCloudCenterInstancesRequest extends Request {
         } 
 
         /**
-         * Criteria.
+         * The search conditions that are used to filter assets. The value of this parameter is in the JSON format and is case-sensitive.
+         * <p>
+         * 
+         * >  A search condition can be an instance ID, instance name, VPC ID, region, or public IP address. You can call the [DescribeCriteria](~~DescribeCriteria~~) operation to query the supported search conditions.
          */
         public Builder criteria(String criteria) {
             this.putQueryParameter("Criteria", criteria);
@@ -175,7 +178,7 @@ public class DescribeCloudCenterInstancesRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -184,7 +187,12 @@ public class DescribeCloudCenterInstancesRequest extends Request {
         }
 
         /**
-         * Importance.
+         * The importance of the asset. Valid values:
+         * <p>
+         * 
+         * *   **2**: an important asset
+         * *   **1**: a common asset
+         * *   **0**: a test asset
          */
         public Builder importance(Integer importance) {
             this.putQueryParameter("Importance", importance);
@@ -193,7 +201,11 @@ public class DescribeCloudCenterInstancesRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -202,7 +214,11 @@ public class DescribeCloudCenterInstancesRequest extends Request {
         }
 
         /**
-         * LogicalExp.
+         * The logical relationship among multiple search conditions. Valid values:
+         * <p>
+         * 
+         * *   **OR**: The search conditions are evaluated by using a logical **OR**.
+         * *   **AND**: The search conditions are evaluated by using a logical **AND**.
          */
         public Builder logicalExp(String logicalExp) {
             this.putQueryParameter("LogicalExp", logicalExp);
@@ -211,7 +227,11 @@ public class DescribeCloudCenterInstancesRequest extends Request {
         }
 
         /**
-         * MachineTypes.
+         * The type of the assets that you want to query. Valid values:
+         * <p>
+         * 
+         * *   **ecs**: servers
+         * *   **cloud_product**: Alibaba Cloud services
          */
         public Builder machineTypes(String machineTypes) {
             this.putQueryParameter("MachineTypes", machineTypes);
@@ -220,7 +240,11 @@ public class DescribeCloudCenterInstancesRequest extends Request {
         }
 
         /**
-         * NoGroupTrace.
+         * Specifies whether to internationalize the name of the default group. Default value: **false** . Valid values:
+         * <p>
+         * 
+         * *   **true**: The system returns the Chinese name of the default group for the GroupTrace response parameter.************
+         * *   **false**: The system returns default for the GroupTrace response parameter.
          */
         public Builder noGroupTrace(Boolean noGroupTrace) {
             this.putQueryParameter("NoGroupTrace", noGroupTrace);
@@ -229,7 +253,7 @@ public class DescribeCloudCenterInstancesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: **20**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -238,7 +262,7 @@ public class DescribeCloudCenterInstancesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region in which the asset resides.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

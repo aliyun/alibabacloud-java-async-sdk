@@ -125,7 +125,7 @@ public class DescribeRiskCheckItemResultRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * The number of the page to return.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -134,7 +134,10 @@ public class DescribeRiskCheckItemResultRequest extends Request {
         }
 
         /**
-         * ItemId.
+         * The ID of the check item.
+         * <p>
+         * 
+         * >  For more information about the IDs and details of the check items that can be used in configuration assessment, see [DescribeRiskCheckResult](~~DescribeRiskCheckResult~~).
          */
         public Builder itemId(Long itemId) {
             this.putQueryParameter("ItemId", itemId);
@@ -143,7 +146,11 @@ public class DescribeRiskCheckItemResultRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -152,7 +159,10 @@ public class DescribeRiskCheckItemResultRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.
+         * <p>
+         * 
+         * >  We recommend that you do not leave this parameter empty.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -170,7 +180,7 @@ public class DescribeRiskCheckItemResultRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * The source IP address of the request.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

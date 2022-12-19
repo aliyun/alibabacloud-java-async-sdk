@@ -50,7 +50,7 @@ public class DescribeRiskCheckItemResultResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PageContentResource.
+         * The pagination information.
          */
         public Builder pageContentResource(PageContentResource pageContentResource) {
             this.pageContentResource = pageContentResource;
@@ -58,7 +58,7 @@ public class DescribeRiskCheckItemResultResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,7 @@ public class DescribeRiskCheckItemResultResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * ContentResource.
+             * The data of the affected assets on each page in a dynamic table.
              */
             public Builder contentResource(java.util.Map < String, ? > contentResource) {
                 this.contentResource = contentResource;
@@ -166,7 +166,7 @@ public class DescribeRiskCheckItemResultResponseBody extends TeaModel {
             }
 
             /**
-             * Count.
+             * The number of entries returned on the current page.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -174,7 +174,7 @@ public class DescribeRiskCheckItemResultResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentPage.
+             * The page number of the returned page.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -182,7 +182,7 @@ public class DescribeRiskCheckItemResultResponseBody extends TeaModel {
             }
 
             /**
-             * PageCount.
+             * The total number of pages returned.
              */
             public Builder pageCount(Integer pageCount) {
                 this.pageCount = pageCount;
@@ -190,7 +190,7 @@ public class DescribeRiskCheckItemResultResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned on each page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -198,7 +198,7 @@ public class DescribeRiskCheckItemResultResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

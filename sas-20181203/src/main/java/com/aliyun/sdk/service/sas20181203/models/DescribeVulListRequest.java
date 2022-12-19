@@ -223,7 +223,7 @@ public class DescribeVulListRequest extends Request {
         } 
 
         /**
-         * AliasName.
+         * The name of the vulnerability.
          */
         public Builder aliasName(String aliasName) {
             this.putQueryParameter("AliasName", aliasName);
@@ -232,7 +232,10 @@ public class DescribeVulListRequest extends Request {
         }
 
         /**
-         * AttachTypes.
+         * The additional type of the vulnerability. You can specify this parameter when you query application vulnerabilities. Set the value to **sca**. If you set **Type** to **app**, you must specify this parameter.
+         * <p>
+         * 
+         * >  If you set this parameter to **sca**, application vulnerabilities and the vulnerabilities that are detected based on software component analysis are queried. If you do not specify this parameter, only application vulnerabilities are queried.
          */
         public Builder attachTypes(String attachTypes) {
             this.putQueryParameter("AttachTypes", attachTypes);
@@ -241,7 +244,7 @@ public class DescribeVulListRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -250,7 +253,11 @@ public class DescribeVulListRequest extends Request {
         }
 
         /**
-         * Dealed.
+         * Specifies whether the vulnerability is fixed. Valid values:
+         * <p>
+         * 
+         * *   **y**: yes
+         * *   **n**: no
          */
         public Builder dealed(String dealed) {
             this.putQueryParameter("Dealed", dealed);
@@ -259,7 +266,10 @@ public class DescribeVulListRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * The ID of the asset group.
+         * <p>
+         * 
+         * >  You can call the [DescribeAllGroups](~~DescribeAllGroups~~) operation to query the IDs of asset groups.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -268,7 +278,11 @@ public class DescribeVulListRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -277,7 +291,7 @@ public class DescribeVulListRequest extends Request {
         }
 
         /**
-         * Name.
+         * The alias of the vulnerability.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -286,7 +300,12 @@ public class DescribeVulListRequest extends Request {
         }
 
         /**
-         * Necessity.
+         * The priority to fix the vulnerability. Separate multiple priorities with commas (,). Valid values:
+         * <p>
+         * 
+         * *   **asap**: high
+         * *   **later**: medium
+         * *   **nntf**: low
          */
         public Builder necessity(String necessity) {
             this.putQueryParameter("Necessity", necessity);
@@ -295,7 +314,7 @@ public class DescribeVulListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -304,7 +323,7 @@ public class DescribeVulListRequest extends Request {
         }
 
         /**
-         * Remark.
+         * The remarks for the asset affected by the vulnerability. The value can be the private IP address, public IP address, or name of the asset.
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -313,7 +332,15 @@ public class DescribeVulListRequest extends Request {
         }
 
         /**
-         * Type.
+         * The type of the vulnerabilities. Valid values:
+         * <p>
+         * 
+         * *   **cve**: Linux software vulnerability
+         * *   **sys**: Windows system vulnerability
+         * *   **cms**: Web-CMS vulnerability
+         * *   **app**: application vulnerability that is detected by using web scanner
+         * *   **emg**: urgent vulnerability
+         * *   **sca**: application vulnerability that is detected by using software component analysis
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -322,7 +349,7 @@ public class DescribeVulListRequest extends Request {
         }
 
         /**
-         * Uuids.
+         * The UUIDs of the servers on which you want to query the vulnerabilities. Separate multiple UUIDs with commas (,).
          */
         public Builder uuids(String uuids) {
             this.putQueryParameter("Uuids", uuids);
@@ -331,7 +358,7 @@ public class DescribeVulListRequest extends Request {
         }
 
         /**
-         * VpcInstanceIds.
+         * The IDs of the virtual private clouds (VPCs) in which the vulnerability is detected. Separate multiple IDs with commas (,).
          */
         public Builder vpcInstanceIds(String vpcInstanceIds) {
             this.putQueryParameter("VpcInstanceIds", vpcInstanceIds);

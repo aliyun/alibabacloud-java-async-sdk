@@ -110,7 +110,7 @@ public class ListHoneypotNodeResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +118,7 @@ public class ListHoneypotNodeResponseBody extends TeaModel {
         }
 
         /**
-         * HoneypotNodeList.
+         * An array that consists of the information about the management nodes.
          */
         public Builder honeypotNodeList(java.util.List < HoneypotNodeList> honeypotNodeList) {
             this.honeypotNodeList = honeypotNodeList;
@@ -126,7 +126,7 @@ public class ListHoneypotNodeResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -134,7 +134,7 @@ public class ListHoneypotNodeResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,7 +142,7 @@ public class ListHoneypotNodeResponseBody extends TeaModel {
         }
 
         /**
-         * PageInfo.
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -150,7 +150,7 @@ public class ListHoneypotNodeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,11 @@ public class ListHoneypotNodeResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -354,7 +358,11 @@ public class ListHoneypotNodeResponseBody extends TeaModel {
             private Boolean upgradeAvailable; 
 
             /**
-             * AllowHoneypotAccessInternet.
+             * Indicates whether the honeypot is allowed to access the Internet.
+             * <p>
+             * 
+             * *   **true**: The honeypot is allowed to access the Internet.
+             * *   **false**: The honeypot is not allowed to access the Internet.
              */
             public Builder allowHoneypotAccessInternet(Boolean allowHoneypotAccessInternet) {
                 this.allowHoneypotAccessInternet = allowHoneypotAccessInternet;
@@ -362,7 +370,7 @@ public class ListHoneypotNodeResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the management node was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -370,7 +378,11 @@ public class ListHoneypotNodeResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultNode.
+             * The type of the management node. Default value: **false**. Valid values:
+             * <p>
+             * 
+             * *   **false**: non-default type
+             * *   **true**: default type
              */
             public Builder defaultNode(Boolean defaultNode) {
                 this.defaultNode = defaultNode;
@@ -378,7 +390,7 @@ public class ListHoneypotNodeResponseBody extends TeaModel {
             }
 
             /**
-             * 实例id
+             * The ID of the Elastic Compute Service (ECS) instance.
              */
             public Builder ecsInstanceId(String ecsInstanceId) {
                 this.ecsInstanceId = ecsInstanceId;
@@ -386,7 +398,7 @@ public class ListHoneypotNodeResponseBody extends TeaModel {
             }
 
             /**
-             * 蜜罐上限数量
+             * The maximum number of honeypots that can be deployed on the management node.
              */
             public Builder honeypotTotalCount(Integer honeypotTotalCount) {
                 this.honeypotTotalCount = honeypotTotalCount;
@@ -394,7 +406,7 @@ public class ListHoneypotNodeResponseBody extends TeaModel {
             }
 
             /**
-             * 蜜罐使用数量
+             * The number of honeypots that are deployed on the management node.
              */
             public Builder honeypotUsedCount(Integer honeypotUsedCount) {
                 this.honeypotUsedCount = honeypotUsedCount;
@@ -402,7 +414,7 @@ public class ListHoneypotNodeResponseBody extends TeaModel {
             }
 
             /**
-             * 节点id
+             * The ID of the management node.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -410,7 +422,7 @@ public class ListHoneypotNodeResponseBody extends TeaModel {
             }
 
             /**
-             * NodeIp.
+             * The IP address of the management node.
              */
             public Builder nodeIp(String nodeIp) {
                 this.nodeIp = nodeIp;
@@ -418,7 +430,7 @@ public class ListHoneypotNodeResponseBody extends TeaModel {
             }
 
             /**
-             * 节点名称
+             * The name of the management node.
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -426,7 +438,7 @@ public class ListHoneypotNodeResponseBody extends TeaModel {
             }
 
             /**
-             * 探针上限数目
+             * The maximum number of probes that can be used.
              */
             public Builder probeTotalCount(Integer probeTotalCount) {
                 this.probeTotalCount = probeTotalCount;
@@ -434,7 +446,7 @@ public class ListHoneypotNodeResponseBody extends TeaModel {
             }
 
             /**
-             * 探针使用数量
+             * The number of probes that are used.
              */
             public Builder probeUsedCount(Integer probeUsedCount) {
                 this.probeUsedCount = probeUsedCount;
@@ -442,7 +454,7 @@ public class ListHoneypotNodeResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroupProbeIpList.
+             * An array that consists of the allowed CIDR blocks.
              */
             public Builder securityGroupProbeIpList(java.util.List < String > securityGroupProbeIpList) {
                 this.securityGroupProbeIpList = securityGroupProbeIpList;
@@ -450,7 +462,11 @@ public class ListHoneypotNodeResponseBody extends TeaModel {
             }
 
             /**
-             * 管理节点状态
+             * The status of the management node. Valid values:
+             * <p>
+             * 
+             * *   **1**: normal
+             * *   **2**: abnormal
              */
             public Builder totalStatus(Integer totalStatus) {
                 this.totalStatus = totalStatus;
@@ -535,7 +551,7 @@ public class ListHoneypotNodeResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Count.
+             * The number of entries returned on the current page.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -543,7 +559,7 @@ public class ListHoneypotNodeResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentPage.
+             * The page number of the returned page.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -551,7 +567,7 @@ public class ListHoneypotNodeResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -559,7 +575,7 @@ public class ListHoneypotNodeResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

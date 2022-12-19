@@ -98,7 +98,7 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code returned. The status code **200** indicates that the request is successful. Other status codes indicate that the request fails. You can identify the cause of the failure based on the status code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
         }
 
         /**
-         * List.
+         * An array that consists of the whitelist rules.
          */
         public Builder list(java.util.List < List> list) {
             this.list = list;
@@ -114,7 +114,7 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
         }
 
         /**
-         * Message.
+         * The error message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -122,7 +122,7 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
         }
 
         /**
-         * PageInfo.
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -130,7 +130,7 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,11 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false**: no
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -298,7 +302,7 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
             private String uuids; 
 
             /**
-             * 用户统一编号
+             * The ID of the user.
              */
             public Builder aliUid(Long aliUid) {
                 this.aliUid = aliUid;
@@ -306,7 +310,11 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
             }
 
             /**
-             * 处置方式
+             * The handling method. Valid values:
+             * <p>
+             * 
+             * *   **auto\_add_white**: Automatically Added to Whitelist
+             * *   **defense\_not_notification**: Defense Without Notification
              */
             public Builder disposalWay(String disposalWay) {
                 this.disposalWay = disposalWay;
@@ -314,7 +322,7 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
             }
 
             /**
-             * 告警事件名称（子类型）
+             * The name of the alert event. The value indicates a subtype.
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -322,7 +330,7 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
             }
 
             /**
-             * 告警事件名称（子类型）
+             * The name of the alert event. The value indicates a type.
              */
             public Builder eventNameOriginal(String eventNameOriginal) {
                 this.eventNameOriginal = eventNameOriginal;
@@ -330,7 +338,7 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
             }
 
             /**
-             * 告警事件名称（父类型）
+             * The subtype of the alert event.
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -338,7 +346,7 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
             }
 
             /**
-             * 告警事件名称（父类型）
+             * The type of the alert event.
              */
             public Builder eventTypeOriginal(String eventTypeOriginal) {
                 this.eventTypeOriginal = eventTypeOriginal;
@@ -346,7 +354,7 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
             }
 
             /**
-             * 加白字段
+             * The field that is used in the whitelist rule.
              */
             public Builder field(String field) {
                 this.field = field;
@@ -354,7 +362,7 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
             }
 
             /**
-             * 加白值
+             * The value of the field.
              */
             public Builder fieldValue(String fieldValue) {
                 this.fieldValue = fieldValue;
@@ -362,7 +370,7 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
             }
 
             /**
-             * 加白字段别名
+             * The alias of the field.
              */
             public Builder filedAliasName(String filedAliasName) {
                 this.filedAliasName = filedAliasName;
@@ -370,7 +378,14 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
             }
 
             /**
-             * 操作符
+             * The operator. Valid values:
+             * <p>
+             * 
+             * *   **contains**: contains
+             * *   **notContains**: does not contain
+             * *   **strEqual**: equals
+             * *   **strNotEqual**: does not equal
+             * *   **regex**: regular expression
              */
             public Builder operate(String operate) {
                 this.operate = operate;
@@ -378,7 +393,7 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
             }
 
             /**
-             * 资产ids，逗号分割
+             * The UUIDs of assets. Multiple UUIDs are separated by commas (,).
              */
             public Builder uuids(String uuids) {
                 this.uuids = uuids;
@@ -455,7 +470,7 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
             private Integer totalCount; 
 
             /**
-             * Count.
+             * The number of entries returned on the current page.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -463,7 +478,7 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
             }
 
             /**
-             * CurrentPage.
+             * The page number of the returned page.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -471,7 +486,7 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page. Default value: **20**.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -479,7 +494,7 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

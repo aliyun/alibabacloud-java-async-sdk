@@ -50,7 +50,7 @@ public class DescribeAssetSummaryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AssetsSummary.
+         * The statistical information about the assets.
          */
         public Builder assetsSummary(AssetsSummary assetsSummary) {
             this.assetsSummary = assetsSummary;
@@ -58,7 +58,7 @@ public class DescribeAssetSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class DescribeAssetSummaryResponseBody extends TeaModel {
             private Integer totalCoreNum; 
 
             /**
-             * TotalAssetAllRegion.
+             * The total number of protected assets in all regions.
              */
             public Builder totalAssetAllRegion(Integer totalAssetAllRegion) {
                 this.totalAssetAllRegion = totalAssetAllRegion;
@@ -130,7 +130,7 @@ public class DescribeAssetSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCoreAllRegion.
+             * The total number of cores of protected assets in all regions.
              */
             public Builder totalCoreAllRegion(Integer totalCoreAllRegion) {
                 this.totalCoreAllRegion = totalCoreAllRegion;
@@ -138,7 +138,7 @@ public class DescribeAssetSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCoreNum.
+             * The total number of cores of protected assets in the current region.
              */
             public Builder totalCoreNum(Integer totalCoreNum) {
                 this.totalCoreNum = totalCoreNum;

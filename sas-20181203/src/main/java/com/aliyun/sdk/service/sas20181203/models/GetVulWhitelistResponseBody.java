@@ -50,7 +50,7 @@ public class GetVulWhitelistResponseBody extends TeaModel {
         private VulWhitelist vulWhitelist; 
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class GetVulWhitelistResponseBody extends TeaModel {
         }
 
         /**
-         * VulWhitelist.
+         * The information about the whitelist.
          */
         public Builder vulWhitelist(VulWhitelist vulWhitelist) {
             this.vulWhitelist = vulWhitelist;
@@ -170,7 +170,7 @@ public class GetVulWhitelistResponseBody extends TeaModel {
             private String whitelist; 
 
             /**
-             * AliasName.
+             * The alias of the vulnerability.
              */
             public Builder aliasName(String aliasName) {
                 this.aliasName = aliasName;
@@ -178,7 +178,7 @@ public class GetVulWhitelistResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the whitelist.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -186,7 +186,7 @@ public class GetVulWhitelistResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the vulnerability.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -194,7 +194,7 @@ public class GetVulWhitelistResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * The reason why the vulnerability is added to the whitelist.
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -202,7 +202,19 @@ public class GetVulWhitelistResponseBody extends TeaModel {
             }
 
             /**
-             * Target.
+             * The application scope of the rule. The value is a JSON string that contains the following fields:
+             * <p>
+             * 
+             * *   **type**: the type of the assets to which the rule is applied. Valid values:
+             * 
+             *     *   **Uuid**: server
+             *     *   **GroupId**: server group
+             * 
+             * *   **groupIds**: the IDs of server groups.
+             * 
+             * *   **uuids**: the UUIDs of servers.
+             * 
+             * >  If this parameter is empty, the rule is applied to all assets.
              */
             public Builder target(String target) {
                 this.target = target;
@@ -210,7 +222,7 @@ public class GetVulWhitelistResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the vulnerability.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -218,7 +230,20 @@ public class GetVulWhitelistResponseBody extends TeaModel {
             }
 
             /**
-             * Whitelist.
+             * The information about the vulnerability that is added to the whitelist. The value is a JSON string that contains the following fields:
+             * <p>
+             * 
+             * *   **Name**: the name of the vulnerability.
+             * 
+             * *   **Type**: the type of the vulnerability. Valid values:
+             * 
+             *     *   **cve**: Linux software vulnerability
+             *     *   **sys**: Windows system vulnerability
+             *     *   **cms**: Web-CMS vulnerability
+             *     *   **app**: application vulnerability
+             *     *   **emg**: urgent vulnerability
+             * 
+             * *   **AliasName**: the alias of the vulnerability.
              */
             public Builder whitelist(String whitelist) {
                 this.whitelist = whitelist;

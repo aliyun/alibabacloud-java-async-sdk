@@ -50,7 +50,7 @@ public class CreateFileDetectUploadUrlResponseBody extends TeaModel {
         private java.util.List < UploadUrlList> uploadUrlList; 
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class CreateFileDetectUploadUrlResponseBody extends TeaModel {
         }
 
         /**
-         * UploadUrlList.
+         * An array consisting of the parameters that are required to upload a file.
          */
         public Builder uploadUrlList(java.util.List < UploadUrlList> uploadUrlList) {
             this.uploadUrlList = uploadUrlList;
@@ -134,7 +134,7 @@ public class CreateFileDetectUploadUrlResponseBody extends TeaModel {
             private String signature; 
 
             /**
-             * AccessId.
+             * The AccessKey ID that is used to access the OSS bucket.
              */
             public Builder accessId(String accessId) {
                 this.accessId = accessId;
@@ -142,7 +142,7 @@ public class CreateFileDetectUploadUrlResponseBody extends TeaModel {
             }
 
             /**
-             * OssKey.
+             * The key of the file that is used after the file is uploaded to the OSS bucket.
              */
             public Builder ossKey(String ossKey) {
                 this.ossKey = ossKey;
@@ -150,7 +150,7 @@ public class CreateFileDetectUploadUrlResponseBody extends TeaModel {
             }
 
             /**
-             * Policy.
+             * The policy that poses limits on file upload. For example, the policy limits the size of the file.
              */
             public Builder policy(String policy) {
                 this.policy = policy;
@@ -158,7 +158,7 @@ public class CreateFileDetectUploadUrlResponseBody extends TeaModel {
             }
 
             /**
-             * Signature.
+             * The signature that is used to upload the file.
              */
             public Builder signature(String signature) {
                 this.signature = signature;
@@ -283,7 +283,7 @@ public class CreateFileDetectUploadUrlResponseBody extends TeaModel {
             private String publicUrl; 
 
             /**
-             * Code.
+             * The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -291,7 +291,7 @@ public class CreateFileDetectUploadUrlResponseBody extends TeaModel {
             }
 
             /**
-             * Context.
+             * The signature information.
              */
             public Builder context(Context context) {
                 this.context = context;
@@ -299,7 +299,7 @@ public class CreateFileDetectUploadUrlResponseBody extends TeaModel {
             }
 
             /**
-             * Expire.
+             * The timestamp when the values of the parameters expire. Unit: milliseconds.
              */
             public Builder expire(String expire) {
                 this.expire = expire;
@@ -307,7 +307,11 @@ public class CreateFileDetectUploadUrlResponseBody extends TeaModel {
             }
 
             /**
-             * FileExist.
+             * Indicates whether the file exists in the cloud. Valid values:
+             * <p>
+             * 
+             * *   **true**: The file exists in the cloud. You do not need to upload the file.
+             * *   **false**: The file does not exist in the cloud. You must upload the file.
              */
             public Builder fileExist(Boolean fileExist) {
                 this.fileExist = fileExist;
@@ -315,7 +319,7 @@ public class CreateFileDetectUploadUrlResponseBody extends TeaModel {
             }
 
             /**
-             * HashKey.
+             * The identifier of the file.
              */
             public Builder hashKey(String hashKey) {
                 this.hashKey = hashKey;
@@ -323,7 +327,7 @@ public class CreateFileDetectUploadUrlResponseBody extends TeaModel {
             }
 
             /**
-             * InternalUrl.
+             * The internal endpoint of the URL to which the file is uploaded.
              */
             public Builder internalUrl(String internalUrl) {
                 this.internalUrl = internalUrl;
@@ -331,7 +335,7 @@ public class CreateFileDetectUploadUrlResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * The error message returned.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -339,7 +343,7 @@ public class CreateFileDetectUploadUrlResponseBody extends TeaModel {
             }
 
             /**
-             * PublicUrl.
+             * The public endpoint of the URL to which the file is uploaded.
              */
             public Builder publicUrl(String publicUrl) {
                 this.publicUrl = publicUrl;

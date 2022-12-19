@@ -84,7 +84,10 @@ public class ModifyAssetGroupRequest extends Request {
         } 
 
         /**
-         * GroupId.
+         * The ID of the new server group to which the servers belong.
+         * <p>
+         * 
+         * >  You can call the [DescribeAllGroups](~~DescribeAllGroups~~) operation to query the IDs of server groups.
          */
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -93,7 +96,7 @@ public class ModifyAssetGroupRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * The source IP address of the request.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -102,7 +105,10 @@ public class ModifyAssetGroupRequest extends Request {
         }
 
         /**
-         * Uuids.
+         * The UUIDs of the servers for which you want to change the server group. Separate multiple UUIDs with commas (,).
+         * <p>
+         * 
+         * >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
          */
         public Builder uuids(String uuids) {
             this.putQueryParameter("Uuids", uuids);

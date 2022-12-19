@@ -55,7 +55,10 @@ public class DescribeWarningExportInfoRequest extends Request {
         } 
 
         /**
-         * ExportId.
+         * The ID of the export task.
+         * <p>
+         * 
+         * >  You can can call the [ExportWarning](~~ExportWarning~~) operation to query the IDs of export tasks.
          */
         public Builder exportId(Long exportId) {
             this.putQueryParameter("ExportId", exportId);

@@ -82,7 +82,10 @@ public class DescribeInstallCaptchaRequest extends Request {
         } 
 
         /**
-         * Deadline.
+         * The validity period of the installation verification code. If this parameter is not specified, the validity period is 1 hour.
+         * <p>
+         * 
+         * >  The installation verification code is valid only within the validity period. An expired installation verification code cannot be used to install the agent.
          */
         public Builder deadline(String deadline) {
             this.putQueryParameter("Deadline", deadline);
@@ -91,7 +94,11 @@ public class DescribeInstallCaptchaRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -100,7 +107,7 @@ public class DescribeInstallCaptchaRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * The source IP address of the request.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

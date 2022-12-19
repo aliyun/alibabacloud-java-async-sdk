@@ -50,7 +50,7 @@ public class HandleSecurityEventsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * HandleSecurityEventsResponse.
+         * The handling result of the alert events.
          */
         public Builder handleSecurityEventsResponse(HandleSecurityEventsResponse handleSecurityEventsResponse) {
             this.handleSecurityEventsResponse = handleSecurityEventsResponse;
@@ -58,7 +58,7 @@ public class HandleSecurityEventsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class HandleSecurityEventsResponseBody extends TeaModel {
             private Long taskId; 
 
             /**
-             * TaskId.
+             * The ID of the task to handle the alert events.
              */
             public Builder taskId(Long taskId) {
                 this.taskId = taskId;

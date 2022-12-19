@@ -124,7 +124,7 @@ public class DescribeWebLockBindListRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * The number of the page to return. Pages start from page 1. Default value: 1.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -133,7 +133,11 @@ public class DescribeWebLockBindListRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and the response. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -142,7 +146,7 @@ public class DescribeWebLockBindListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: 20.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -151,7 +155,7 @@ public class DescribeWebLockBindListRequest extends Request {
         }
 
         /**
-         * Remark.
+         * The string that allows you to search for servers in fuzzy match mode. You can enter a server name or IP address.
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -160,7 +164,7 @@ public class DescribeWebLockBindListRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * The source IP address of the request.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -169,7 +173,11 @@ public class DescribeWebLockBindListRequest extends Request {
         }
 
         /**
-         * Status.
+         * The protection status of the server that you want to query. Valid values:
+         * <p>
+         * 
+         * *   **on**: protected
+         * *   **off**: unprotected
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

@@ -50,7 +50,7 @@ public class DescribeImageScanAuthCountResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ImageScan.
+         * The details about the quota for container image scan.
          */
         public Builder imageScan(ImageScan imageScan) {
             this.imageScan = imageScan;
@@ -58,7 +58,7 @@ public class DescribeImageScanAuthCountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class DescribeImageScanAuthCountResponseBody extends TeaModel {
             private Long scanCount; 
 
             /**
-             * ImageScanCapacity.
+             * The quota for container image scan.
              */
             public Builder imageScanCapacity(Long imageScanCapacity) {
                 this.imageScanCapacity = imageScanCapacity;
@@ -130,7 +130,7 @@ public class DescribeImageScanAuthCountResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The instance ID of Security Center.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -138,7 +138,7 @@ public class DescribeImageScanAuthCountResponseBody extends TeaModel {
             }
 
             /**
-             * ScanCount.
+             * The consumed quota for container image scan.
              */
             public Builder scanCount(Long scanCount) {
                 this.scanCount = scanCount;

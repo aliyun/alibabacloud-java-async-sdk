@@ -54,7 +54,7 @@ public class DescribeNoticeConfigRequest extends Request {
         } 
 
         /**
-         * SourceIp.
+         * The source IP address of the request.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

@@ -50,7 +50,7 @@ public class DescribeInstallCodesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * InstallCodes.
+         * An array that consists of the information about the installation command.
          */
         public Builder installCodes(java.util.List < InstallCodes> installCodes) {
             this.installCodes = installCodes;
@@ -58,7 +58,7 @@ public class DescribeInstallCodesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +170,7 @@ public class DescribeInstallCodesResponseBody extends TeaModel {
             private String vendorName; 
 
             /**
-             * CaptchaCode.
+             * The installation verification code for you to manually install the Security Center agent.
              */
             public Builder captchaCode(String captchaCode) {
                 this.captchaCode = captchaCode;
@@ -178,7 +178,7 @@ public class DescribeInstallCodesResponseBody extends TeaModel {
             }
 
             /**
-             * ExpiredDate.
+             * The timestamp when the installation command expires. Unit: milliseconds.
              */
             public Builder expiredDate(Long expiredDate) {
                 this.expiredDate = expiredDate;
@@ -186,7 +186,7 @@ public class DescribeInstallCodesResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * The ID of the server group to which the server belongs.
              */
             public Builder groupId(Long groupId) {
                 this.groupId = groupId;
@@ -194,7 +194,7 @@ public class DescribeInstallCodesResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * The name of the server group to which the server belongs.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -202,7 +202,11 @@ public class DescribeInstallCodesResponseBody extends TeaModel {
             }
 
             /**
-             * OnlyImage.
+             * Indicates whether an image is used to install the Security Center agent. Valid values:
+             * <p>
+             * 
+             * *   **true**: An image is used to install the Security Center agent.
+             * *   **false**: An image is not used to install the Security Center agent.
              */
             public Builder onlyImage(Boolean onlyImage) {
                 this.onlyImage = onlyImage;
@@ -210,7 +214,10 @@ public class DescribeInstallCodesResponseBody extends TeaModel {
             }
 
             /**
-             * Os.
+             * The operating system of the server. Valid values:
+             * <p>
+             * *   **linux**: Linux.
+             * *   **windows**: Windows.
              */
             public Builder os(String os) {
                 this.os = os;
@@ -218,7 +225,7 @@ public class DescribeInstallCodesResponseBody extends TeaModel {
             }
 
             /**
-             * VendorName.
+             * The name of the server provider.
              */
             public Builder vendorName(String vendorName) {
                 this.vendorName = vendorName;

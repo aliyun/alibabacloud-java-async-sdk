@@ -134,7 +134,7 @@ public class DescribeExportInfoResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * CurrentCount.
+         * The number of exported entries.
          */
         public Builder currentCount(Integer currentCount) {
             this.currentCount = currentCount;
@@ -142,7 +142,14 @@ public class DescribeExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * ExportStatus.
+         * The status of the export task.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   **init**: The task is being initialized.
+         * *   **exporting**: The task is in progress.
+         * *   **success**: The task is complete.
          */
         public Builder exportStatus(String exportStatus) {
             this.exportStatus = exportStatus;
@@ -150,7 +157,7 @@ public class DescribeExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * FileName.
+         * The name of the exported Excel file.
          */
         public Builder fileName(String fileName) {
             this.fileName = fileName;
@@ -158,7 +165,7 @@ public class DescribeExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Id.
+         * The ID of the export task.
          */
         public Builder id(Long id) {
             this.id = id;
@@ -166,7 +173,7 @@ public class DescribeExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Link.
+         * The URL at which you can download the exported Excel file.
          */
         public Builder link(String link) {
             this.link = link;
@@ -174,7 +181,10 @@ public class DescribeExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message that shows the task result.
+         * <p>
+         * 
+         * The value is fixed as success, which indicates that the export task is complete.
          */
         public Builder message(String message) {
             this.message = message;
@@ -182,7 +192,7 @@ public class DescribeExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Progress.
+         * The progress percentage of the export task.
          */
         public Builder progress(Integer progress) {
             this.progress = progress;
@@ -190,7 +200,7 @@ public class DescribeExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -198,7 +208,7 @@ public class DescribeExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries in the exported Excel file.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

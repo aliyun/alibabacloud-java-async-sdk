@@ -112,7 +112,7 @@ public class DescribeImageFixTaskRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -121,7 +121,7 @@ public class DescribeImageFixTaskRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The timestamp when the task ends. Unit: milliseconds.
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -130,7 +130,7 @@ public class DescribeImageFixTaskRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: **20**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -139,7 +139,7 @@ public class DescribeImageFixTaskRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The timestamp when the task starts. Unit: milliseconds.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -148,7 +148,12 @@ public class DescribeImageFixTaskRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the task. Valid values:
+         * <p>
+         * 
+         * *   **1**: The task is running.
+         * *   **2**: The task is successful.
+         * *   **3**: The task failed.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

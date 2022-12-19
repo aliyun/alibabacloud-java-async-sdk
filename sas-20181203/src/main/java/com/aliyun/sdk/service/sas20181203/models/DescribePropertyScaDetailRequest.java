@@ -320,7 +320,14 @@ public class DescribePropertyScaDetailRequest extends Request {
         } 
 
         /**
-         * Biz.
+         * The type of the asset fingerprint that you want to query. Default value: **sca**. Valid values:
+         * <p>
+         * 
+         * *   **sca**: middleware
+         * *   **sca_database**: database
+         * *   **sca_web**: web service
+         * 
+         * >  If you do not specify this parameter, the default value **sca** is used, which indicates that middleware fingerprints are queried.
          */
         public Builder biz(String biz) {
             this.putQueryParameter("Biz", biz);
@@ -329,7 +336,16 @@ public class DescribePropertyScaDetailRequest extends Request {
         }
 
         /**
-         * BizType.
+         * The type of the middleware, database, or web service that you want to query. Valid values:
+         * <p>
+         * 
+         * *   **system_service**: system service
+         * *   **software_library**: software library
+         * *   **docker_component**: container component
+         * *   **database**: database
+         * *   **web_container**: web container
+         * *   **jar**: JAR package
+         * *   **web_framework**: web framework
          */
         public Builder bizType(String bizType) {
             this.putQueryParameter("BizType", bizType);
@@ -338,7 +354,7 @@ public class DescribePropertyScaDetailRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -347,7 +363,11 @@ public class DescribePropertyScaDetailRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -356,7 +376,10 @@ public class DescribePropertyScaDetailRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the middleware, database, or web service.
+         * <p>
+         * 
+         * >  This parameter is deprecated. You can ignore it.
          */
         public Builder name(Long name) {
             this.putQueryParameter("Name", name);
@@ -365,7 +388,10 @@ public class DescribePropertyScaDetailRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: **10**.
+         * <p>
+         * 
+         * >  We recommend that you do not leave this parameter empty.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -374,7 +400,7 @@ public class DescribePropertyScaDetailRequest extends Request {
         }
 
         /**
-         * Pid.
+         * The PID.
          */
         public Builder pid(String pid) {
             this.putQueryParameter("Pid", pid);
@@ -383,7 +409,7 @@ public class DescribePropertyScaDetailRequest extends Request {
         }
 
         /**
-         * Port.
+         * The port that the process monitors.
          */
         public Builder port(String port) {
             this.putQueryParameter("Port", port);
@@ -392,7 +418,7 @@ public class DescribePropertyScaDetailRequest extends Request {
         }
 
         /**
-         * ProcessStartedEnd.
+         * The timestamp when the process ends. Unit: milliseconds.
          */
         public Builder processStartedEnd(Long processStartedEnd) {
             this.putQueryParameter("ProcessStartedEnd", processStartedEnd);
@@ -401,7 +427,7 @@ public class DescribePropertyScaDetailRequest extends Request {
         }
 
         /**
-         * ProcessStartedStart.
+         * The timestamp when the process starts. Unit: milliseconds.
          */
         public Builder processStartedStart(Long processStartedStart) {
             this.putQueryParameter("ProcessStartedStart", processStartedStart);
@@ -410,7 +436,10 @@ public class DescribePropertyScaDetailRequest extends Request {
         }
 
         /**
-         * Remark.
+         * The search condition, such as a server name or a server IP address.
+         * <p>
+         * 
+         * >  Fuzzy match is supported.
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -419,7 +448,7 @@ public class DescribePropertyScaDetailRequest extends Request {
         }
 
         /**
-         * ScaName.
+         * The name of the asset fingerprint that you want to query.
          */
         public Builder scaName(String scaName) {
             this.putQueryParameter("ScaName", scaName);
@@ -428,7 +457,7 @@ public class DescribePropertyScaDetailRequest extends Request {
         }
 
         /**
-         * ScaNamePattern.
+         * The name of the process.
          */
         public Builder scaNamePattern(String scaNamePattern) {
             this.putQueryParameter("ScaNamePattern", scaNamePattern);
@@ -437,7 +466,7 @@ public class DescribePropertyScaDetailRequest extends Request {
         }
 
         /**
-         * ScaVersion.
+         * The version of the middleware, database, or web service.
          */
         public Builder scaVersion(String scaVersion) {
             this.putQueryParameter("ScaVersion", scaVersion);
@@ -446,7 +475,22 @@ public class DescribePropertyScaDetailRequest extends Request {
         }
 
         /**
-         * SearchInfo.
+         * The search keyword. You must specify this parameter based on the value of the **SearchItem** parameter.
+         * <p>
+         * 
+         * *   If the **SearchItem** parameter is set to **name**, you must enter the name of an asset fingerprint.
+         * 
+         * *   If the **SearchItem** parameter is set to **type**, you must enter the type of an asset fingerprint. Valid values:
+         * 
+         *     *   **system_service**: system service
+         *     *   **software_library**: software library
+         *     *   **docker_component**: container component
+         *     *   **database**: database
+         *     *   **web_container**: web container
+         *     *   **jar**: JAR package
+         *     *   **web_framework**: web framework
+         * 
+         * >  You must specify both the **SearchItem** and **SearchInfo** parameters before you can query the asset fingerprints based on the specified name or type.
          */
         public Builder searchInfo(String searchInfo) {
             this.putQueryParameter("SearchInfo", searchInfo);
@@ -455,7 +499,15 @@ public class DescribePropertyScaDetailRequest extends Request {
         }
 
         /**
-         * SearchInfoSub.
+         * The keyword of the subquery. You must specify this parameter based on the value of the **SearchItemSub** parameter.
+         * <p>
+         * 
+         * *   If the **SearchItemSub** parameter is set to **port**, you must enter a port number.
+         * *   If the **SearchItemSub** parameter is set to **pid**, you must enter a process ID (PID).
+         * *   If the **SearchItemSub** parameter is set to **version**, you must enter the version of a database, middleware, or web service.
+         * *   If the **SearchItemSub** parameter is set to **user**, you must enter a username.
+         * 
+         * >  The subquery is used to search for data of a specified database, middleware, or web service.
          */
         public Builder searchInfoSub(String searchInfoSub) {
             this.putQueryParameter("SearchInfoSub", searchInfoSub);
@@ -464,7 +516,13 @@ public class DescribePropertyScaDetailRequest extends Request {
         }
 
         /**
-         * SearchItem.
+         * The type of the search condition. Valid values:
+         * <p>
+         * 
+         * *   **name**: the name of a database, middleware, or web service
+         * *   **type**: the type of a database, middleware, or web service
+         * 
+         * >  You must specify both the **SearchItem** and **SearchInfo** parameters before you can query the asset fingerprints based on the specified name or type.
          */
         public Builder searchItem(String searchItem) {
             this.putQueryParameter("SearchItem", searchItem);
@@ -473,7 +531,13 @@ public class DescribePropertyScaDetailRequest extends Request {
         }
 
         /**
-         * SearchItemSub.
+         * The type of the subquery. Valid values:
+         * <p>
+         * 
+         * *   **port**
+         * *   **pid**
+         * *   **version**
+         * *   **user**
          */
         public Builder searchItemSub(String searchItemSub) {
             this.putQueryParameter("SearchItemSub", searchItemSub);
@@ -482,7 +546,7 @@ public class DescribePropertyScaDetailRequest extends Request {
         }
 
         /**
-         * User.
+         * The user who runs the process.
          */
         public Builder user(String user) {
             this.putQueryParameter("User", user);
@@ -491,7 +555,7 @@ public class DescribePropertyScaDetailRequest extends Request {
         }
 
         /**
-         * Uuid.
+         * The UUID of the server on which the middleware, database, or web service is run.
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

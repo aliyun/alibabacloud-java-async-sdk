@@ -107,7 +107,10 @@ public class DescribeSecurityEventOperationStatusRequest extends Request {
         }
 
         /**
-         * SecurityEventIds.
+         * The IDs of the alert events.
+         * <p>
+         * 
+         * >  You must specify at least one of the TaskId and SecurityEventIds parameters.
          */
         public Builder securityEventIds(java.util.List < String > securityEventIds) {
             this.putQueryParameter("SecurityEventIds", securityEventIds);
@@ -116,7 +119,7 @@ public class DescribeSecurityEventOperationStatusRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * The source IP address of the request.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -125,7 +128,10 @@ public class DescribeSecurityEventOperationStatusRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * The ID of the task that handles the alert events.
+         * <p>
+         * 
+         * >  You must specify at least one of the TaskId and SecurityEventIds parameters.
          */
         public Builder taskId(Long taskId) {
             this.putQueryParameter("TaskId", taskId);

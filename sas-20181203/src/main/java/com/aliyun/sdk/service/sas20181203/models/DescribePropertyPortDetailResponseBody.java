@@ -62,7 +62,7 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PageInfo.
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -70,7 +70,7 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Propertys.
+         * An array that consists of the fingerprints of the ports.
          */
         public Builder propertys(java.util.List < Propertys> propertys) {
             this.propertys = propertys;
@@ -78,7 +78,7 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +154,7 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Count.
+             * The number of entries returned on the current page.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -162,7 +162,7 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentPage.
+             * The page number of the returned page.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -170,7 +170,7 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page. Default value: **10**.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -178,7 +178,7 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -351,7 +351,7 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * BindIp.
+             * The IP address that is bound to the listening port.
              */
             public Builder bindIp(String bindIp) {
                 this.bindIp = bindIp;
@@ -359,7 +359,7 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTimestamp.
+             * The timestamp of the last fingerprint collection. Unit: milliseconds.
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -367,7 +367,7 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the server.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -375,7 +375,7 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * The name of the server.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -383,7 +383,7 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
             }
 
             /**
-             * InternetIp.
+             * The public IP address of the server.
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -391,7 +391,7 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
             }
 
             /**
-             * IntranetIp.
+             * The private IP address of the server.
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -399,7 +399,7 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Ip.
+             * The IP address of the network interface controller (NIC) that is bound to the listening port.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -407,7 +407,7 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Pid.
+             * The ID of the server process that listens on the port.
              */
             public Builder pid(String pid) {
                 this.pid = pid;
@@ -415,7 +415,7 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The listening port.
              */
             public Builder port(String port) {
                 this.port = port;
@@ -423,7 +423,7 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ProcName.
+             * The name of the server process.
              */
             public Builder procName(String procName) {
                 this.procName = procName;
@@ -431,7 +431,7 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Proto.
+             * The network protocol that is used by the listening port.
              */
             public Builder proto(String proto) {
                 this.proto = proto;
@@ -439,7 +439,7 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Uuid.
+             * The UUID of the server.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

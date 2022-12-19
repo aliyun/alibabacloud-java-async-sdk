@@ -138,7 +138,7 @@ public class ListHoneypotAlarmEventsRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * The number of the page to return.
          */
         public Builder currentPage(Integer currentPage) {
             this.putBodyParameter("CurrentPage", currentPage);
@@ -147,7 +147,12 @@ public class ListHoneypotAlarmEventsRequest extends Request {
         }
 
         /**
-         * y: 已经处理 n: 未处理 a: 所有
+         * The status of the alert events. Valid values:
+         * <p>
+         * 
+         * *   **y**: handled
+         * *   **n**: unhandled
+         * *   **a**: all states
          */
         public Builder dealed(String dealed) {
             this.putBodyParameter("Dealed", dealed);
@@ -156,7 +161,7 @@ public class ListHoneypotAlarmEventsRequest extends Request {
         }
 
         /**
-         * DstIp.
+         * The destination IP address.
          */
         public Builder dstIp(String dstIp) {
             this.putBodyParameter("DstIp", dstIp);
@@ -165,7 +170,7 @@ public class ListHoneypotAlarmEventsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: **100**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -174,7 +179,7 @@ public class ListHoneypotAlarmEventsRequest extends Request {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.putBodyParameter("RequestId", requestId);
@@ -183,7 +188,7 @@ public class ListHoneypotAlarmEventsRequest extends Request {
         }
 
         /**
-         * RiskLevelList.
+         * The risk levels of the alert events.
          */
         public Builder riskLevelList(java.util.List < String > riskLevelList) {
             this.putBodyParameter("RiskLevelList", riskLevelList);
@@ -192,7 +197,7 @@ public class ListHoneypotAlarmEventsRequest extends Request {
         }
 
         /**
-         * SrcIp.
+         * The source IP address.
          */
         public Builder srcIp(String srcIp) {
             this.putBodyParameter("SrcIp", srcIp);

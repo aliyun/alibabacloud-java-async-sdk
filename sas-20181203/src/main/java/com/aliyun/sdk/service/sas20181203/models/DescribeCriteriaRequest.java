@@ -82,7 +82,10 @@ public class DescribeCriteriaRequest extends Request {
         } 
 
         /**
-         * MachineTypes.
+         * The type of the asset. Valid values:
+         * <p>
+         * 
+         * *   **ecs**: Elastic Compute Service (ECS) instance
          */
         public Builder machineTypes(String machineTypes) {
             this.putQueryParameter("MachineTypes", machineTypes);
@@ -91,7 +94,11 @@ public class DescribeCriteriaRequest extends Request {
         }
 
         /**
-         * SupportAutoTag.
+         * Specifies whether the keyword that you specify for fuzzy search can be automatically matched. default **false**, Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false**: no
          */
         public Builder supportAutoTag(Boolean supportAutoTag) {
             this.putQueryParameter("SupportAutoTag", supportAutoTag);
@@ -100,7 +107,7 @@ public class DescribeCriteriaRequest extends Request {
         }
 
         /**
-         * Value.
+         * The keyword that you specify for fuzzy search when you query the asset.
          */
         public Builder value(String value) {
             this.putQueryParameter("Value", value);

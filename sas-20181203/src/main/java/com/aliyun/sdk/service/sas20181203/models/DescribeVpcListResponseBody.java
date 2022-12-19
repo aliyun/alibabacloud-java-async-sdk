@@ -62,7 +62,7 @@ public class DescribeVpcListResponseBody extends TeaModel {
         private java.util.List < VpcList> vpcList; 
 
         /**
-         * Count.
+         * The total number of entries returned.
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -70,7 +70,7 @@ public class DescribeVpcListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeVpcListResponseBody extends TeaModel {
         }
 
         /**
-         * VpcList.
+         * An array that consists of VPCs.
          */
         public Builder vpcList(java.util.List < VpcList> vpcList) {
             this.vpcList = vpcList;
@@ -166,7 +166,7 @@ public class DescribeVpcListResponseBody extends TeaModel {
             private String regionId; 
 
             /**
-             * EcsCount.
+             * The number of ECS instances.
              */
             public Builder ecsCount(Integer ecsCount) {
                 this.ecsCount = ecsCount;
@@ -174,7 +174,7 @@ public class DescribeVpcListResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceDesc.
+             * The information about the VPC.
              */
             public Builder instanceDesc(String instanceDesc) {
                 this.instanceDesc = instanceDesc;
@@ -182,7 +182,7 @@ public class DescribeVpcListResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the ECS instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -190,7 +190,7 @@ public class DescribeVpcListResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * The name of the VPC.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -198,7 +198,7 @@ public class DescribeVpcListResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region in which the ECS instance resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

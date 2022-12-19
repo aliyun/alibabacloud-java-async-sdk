@@ -62,7 +62,7 @@ public class DescribeLogMetaResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * LogMetaList.
+         * An array that consists of the configurations of the log analysis feature.
          */
         public Builder logMetaList(java.util.List < LogMetaList> logMetaList) {
             this.logMetaList = logMetaList;
@@ -70,7 +70,7 @@ public class DescribeLogMetaResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeLogMetaResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -238,7 +238,12 @@ public class DescribeLogMetaResponseBody extends TeaModel {
             private String userRegion; 
 
             /**
-             * Category.
+             * The category of logs. Valid values:
+             * <p>
+             * 
+             * *   **host**: host logs
+             * *   **network**: network logs
+             * *   **security**: security logs
              */
             public Builder category(String category) {
                 this.category = category;
@@ -246,7 +251,10 @@ public class DescribeLogMetaResponseBody extends TeaModel {
             }
 
             /**
-             * HotTtl.
+             * The time period after which logs in hot storage are moved to cold storage. Unit: days.
+             * <p>
+             * 
+             * >  If the value is **-1**, logs that are stored in hot storage are not moved to cold storage.
              */
             public Builder hotTtl(Integer hotTtl) {
                 this.hotTtl = hotTtl;
@@ -254,7 +262,7 @@ public class DescribeLogMetaResponseBody extends TeaModel {
             }
 
             /**
-             * LogDesc.
+             * The name of the log type.
              */
             public Builder logDesc(String logDesc) {
                 this.logDesc = logDesc;
@@ -262,7 +270,7 @@ public class DescribeLogMetaResponseBody extends TeaModel {
             }
 
             /**
-             * LogStore.
+             * The name of the dedicated Logstore in which logs are stored.
              */
             public Builder logStore(String logStore) {
                 this.logStore = logStore;
@@ -270,7 +278,7 @@ public class DescribeLogMetaResponseBody extends TeaModel {
             }
 
             /**
-             * Project.
+             * The name of the project.
              */
             public Builder project(String project) {
                 this.project = project;
@@ -278,7 +286,11 @@ public class DescribeLogMetaResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the log analysis feature. Valid values:
+             * <p>
+             * 
+             * *   **disabled**
+             * *   **enabled**
              */
             public Builder status(String status) {
                 this.status = status;
@@ -286,7 +298,7 @@ public class DescribeLogMetaResponseBody extends TeaModel {
             }
 
             /**
-             * Topic.
+             * The topic of logs that are delivered.
              */
             public Builder topic(String topic) {
                 this.topic = topic;
@@ -294,7 +306,7 @@ public class DescribeLogMetaResponseBody extends TeaModel {
             }
 
             /**
-             * Ttl.
+             * The number of days during which logs can be retained.
              */
             public Builder ttl(Integer ttl) {
                 this.ttl = ttl;
@@ -302,7 +314,7 @@ public class DescribeLogMetaResponseBody extends TeaModel {
             }
 
             /**
-             * UserLogStore.
+             * The name of the dedicated Logstore in which user logs are stored.
              */
             public Builder userLogStore(String userLogStore) {
                 this.userLogStore = userLogStore;
@@ -310,7 +322,7 @@ public class DescribeLogMetaResponseBody extends TeaModel {
             }
 
             /**
-             * UserProject.
+             * The name of the dedicated project in which logs are stored.
              */
             public Builder userProject(String userProject) {
                 this.userProject = userProject;
@@ -318,7 +330,7 @@ public class DescribeLogMetaResponseBody extends TeaModel {
             }
 
             /**
-             * UserRegion.
+             * The ID of the region.
              */
             public Builder userRegion(String userRegion) {
                 this.userRegion = userRegion;

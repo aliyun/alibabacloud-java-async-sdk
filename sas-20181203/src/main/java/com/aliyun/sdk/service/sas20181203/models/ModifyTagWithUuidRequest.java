@@ -97,7 +97,13 @@ public class ModifyTagWithUuidRequest extends Request {
         } 
 
         /**
-         * MachineTypes.
+         * The type of the assets whose tags you want to modify. Valid values:
+         * <p>
+         * 
+         * *   **ecs**: Elastic Compute Service (ECS) instances or servers that are not deployed on Alibaba Cloud.
+         * *   **cloud_product**: Alibaba Cloud service.
+         * 
+         * >  If you do not specify this parameter, the default value **ecs** is used.
          */
         public Builder machineTypes(String machineTypes) {
             this.putQueryParameter("MachineTypes", machineTypes);
@@ -106,7 +112,10 @@ public class ModifyTagWithUuidRequest extends Request {
         }
 
         /**
-         * TagId.
+         * The ID of the tag whose name you want to change.
+         * <p>
+         * 
+         * >  You can call the [DescribeGroupedTags](~~DescribeGroupedTags~~) operation to query the IDs of the tags.
          */
         public Builder tagId(String tagId) {
             this.putQueryParameter("TagId", tagId);
@@ -115,7 +124,10 @@ public class ModifyTagWithUuidRequest extends Request {
         }
 
         /**
-         * TagList.
+         * The tag names that you want to change. Separate multiple tag names with commas (,).
+         * <p>
+         * 
+         * >  You can call the [DescribeGroupedTags](~~DescribeGroupedTags~~) operation to query the names of the tags that are added to assets.
          */
         public Builder tagList(String tagList) {
             this.putQueryParameter("TagList", tagList);
@@ -124,7 +136,10 @@ public class ModifyTagWithUuidRequest extends Request {
         }
 
         /**
-         * UuidList.
+         * The UUIDs of the assets whose tags you want to modify. Separate multiple UUIDs with commas (,).
+         * <p>
+         * 
+         * > You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of assets to which the tags are added. If you do not specify this parameter, the tags that are specified in **TagList** parameter are removed from all assets.
          */
         public Builder uuidList(String uuidList) {
             this.putQueryParameter("UuidList", uuidList);

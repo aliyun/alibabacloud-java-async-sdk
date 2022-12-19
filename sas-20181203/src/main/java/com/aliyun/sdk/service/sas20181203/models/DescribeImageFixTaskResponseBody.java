@@ -62,7 +62,7 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * BuildTasks.
+         * An array that consists of the tasks returned.
          */
         public Builder buildTasks(java.util.List < BuildTasks> buildTasks) {
             this.buildTasks = buildTasks;
@@ -70,7 +70,7 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
         }
 
         /**
-         * PageInfo.
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -78,7 +78,7 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -250,7 +250,7 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
             private String taskType; 
 
             /**
-             * BuildTaskId.
+             * The ID of the task.
              */
             public Builder buildTaskId(String buildTaskId) {
                 this.buildTaskId = buildTaskId;
@@ -258,7 +258,7 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
             }
 
             /**
-             * FinishTime.
+             * The timestamp when the task starts. Unit: milliseconds.
              */
             public Builder finishTime(String finishTime) {
                 this.finishTime = finishTime;
@@ -266,7 +266,7 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
             }
 
             /**
-             * FixTime.
+             * The timestamp when the task ends. Unit: milliseconds.
              */
             public Builder fixTime(String fixTime) {
                 this.fixTime = fixTime;
@@ -274,7 +274,7 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
             }
 
             /**
-             * NewTag.
+             * The version of the image after image risks are fixed.
              */
             public Builder newTag(String newTag) {
                 this.newTag = newTag;
@@ -282,7 +282,7 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
             }
 
             /**
-             * NewUuid.
+             * The UUID of the image after image risks are fixed.
              */
             public Builder newUuid(String newUuid) {
                 this.newUuid = newUuid;
@@ -290,7 +290,7 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
             }
 
             /**
-             * OldTag.
+             * The version of the image.
              */
             public Builder oldTag(String oldTag) {
                 this.oldTag = oldTag;
@@ -298,7 +298,7 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
             }
 
             /**
-             * OldUuid.
+             * The UUID of the image.
              */
             public Builder oldUuid(String oldUuid) {
                 this.oldUuid = oldUuid;
@@ -306,7 +306,7 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region of the image.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -314,7 +314,7 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
             }
 
             /**
-             * RepoName.
+             * The name of the image repository.
              */
             public Builder repoName(String repoName) {
                 this.repoName = repoName;
@@ -322,7 +322,7 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
             }
 
             /**
-             * RepoNamespace.
+             * The namespace of the image.
              */
             public Builder repoNamespace(String repoNamespace) {
                 this.repoNamespace = repoNamespace;
@@ -330,7 +330,12 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the task. Valid values:
+             * <p>
+             * 
+             * *   **1**: The task is running.
+             * *   **2**: The task is successful.
+             * *   **3**: The task failed.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -338,7 +343,7 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskType.
+             * The type of the task. The value is fixed as IMAGE_REPAIR, which indicates a task that fixes image risks.
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;
@@ -415,7 +420,7 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Count.
+             * The number of tasks returned on the current page.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -423,7 +428,7 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentPage.
+             * The page number of the returned page. Default value: **1**.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -431,7 +436,7 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page. Default value: **20**.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -439,7 +444,7 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of tasks returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

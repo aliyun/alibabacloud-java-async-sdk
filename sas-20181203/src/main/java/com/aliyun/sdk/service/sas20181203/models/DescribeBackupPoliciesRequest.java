@@ -112,7 +112,7 @@ public class DescribeBackupPoliciesRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * The number of the page to return. Default value: 1.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -121,7 +121,7 @@ public class DescribeBackupPoliciesRequest extends Request {
         }
 
         /**
-         * MachineRemark.
+         * The information that you want to use to identify the servers protected by the anti-ransomware policy. You can enter the IP address or ID of a server.
          */
         public Builder machineRemark(String machineRemark) {
             this.putQueryParameter("MachineRemark", machineRemark);
@@ -130,7 +130,7 @@ public class DescribeBackupPoliciesRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the anti-ransomware policy that you want to query.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -139,7 +139,7 @@ public class DescribeBackupPoliciesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -148,7 +148,12 @@ public class DescribeBackupPoliciesRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the anti-ransomware policy. Valid values:
+         * <p>
+         * 
+         * *   **enabled**: The anti-ransomware policy is manually enabled.
+         * *   **disabled**: The anti-ransomware policy is manually disabled. After an anti-ransomware policy is disabled, the data backup task that is running based on the policy stops.
+         * *   **closed**: The anti-ransomware policy automatically stops because the anti-ransomware capacity is insufficient.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

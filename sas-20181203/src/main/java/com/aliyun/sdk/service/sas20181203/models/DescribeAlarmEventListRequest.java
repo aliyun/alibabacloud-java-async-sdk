@@ -351,7 +351,10 @@ public class DescribeAlarmEventListRequest extends Request {
         } 
 
         /**
-         * AlarmEventName.
+         * The name of the alert event.
+         * <p>
+         * 
+         * >  You can call the [DescribeNsasSuspEventType](~~DescribeNsasSuspEventType~~) operation to query the names of alert events.
          */
         public Builder alarmEventName(String alarmEventName) {
             this.putQueryParameter("AlarmEventName", alarmEventName);
@@ -360,7 +363,10 @@ public class DescribeAlarmEventListRequest extends Request {
         }
 
         /**
-         * AlarmEventType.
+         * The type of the alert event.
+         * <p>
+         * 
+         * >  You can call the [DescribeNsasSuspEventType](~~DescribeNsasSuspEventType~~) operation to query the types of alert events.
          */
         public Builder alarmEventType(String alarmEventType) {
             this.putQueryParameter("AlarmEventType", alarmEventType);
@@ -369,7 +375,7 @@ public class DescribeAlarmEventListRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The number of the page to return. Pages start from page **1**. Default value: **1**.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -378,7 +384,11 @@ public class DescribeAlarmEventListRequest extends Request {
         }
 
         /**
-         * Dealed.
+         * Specifies whether the alert event is handled. Valid values:
+         * <p>
+         * 
+         * *   **N**: unhandled
+         * *   **Y**: handled
          */
         public Builder dealed(String dealed) {
             this.putQueryParameter("Dealed", dealed);
@@ -387,7 +397,7 @@ public class DescribeAlarmEventListRequest extends Request {
         }
 
         /**
-         * From.
+         * The ID of the request source. Set the value to **sas**, which indicates that the request is sent from Security Center.
          */
         public Builder from(String from) {
             this.putQueryParameter("From", from);
@@ -396,7 +406,7 @@ public class DescribeAlarmEventListRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * The ID of the asset group to which the affected asset belongs.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -405,7 +415,7 @@ public class DescribeAlarmEventListRequest extends Request {
         }
 
         /**
-         * Id.
+         * The ID of the alert event.
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -414,7 +424,11 @@ public class DescribeAlarmEventListRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -423,7 +437,12 @@ public class DescribeAlarmEventListRequest extends Request {
         }
 
         /**
-         * Levels.
+         * The severity of the alert event. Separate multiple severities with commas (,). Valid values:
+         * <p>
+         * 
+         * *   **serious**
+         * *   **suspicious**
+         * *   **remind**
          */
         public Builder levels(String levels) {
             this.putQueryParameter("Levels", levels);
@@ -432,7 +451,7 @@ public class DescribeAlarmEventListRequest extends Request {
         }
 
         /**
-         * OperateErrorCodeList.
+         * An array that consists of the handling result codes of alert events.
          */
         public Builder operateErrorCodeList(java.util.List < String > operateErrorCodeList) {
             this.putQueryParameter("OperateErrorCodeList", operateErrorCodeList);
@@ -441,7 +460,7 @@ public class DescribeAlarmEventListRequest extends Request {
         }
 
         /**
-         * OperateTimeEnd.
+         * The time when the handling operation ends.
          */
         public Builder operateTimeEnd(String operateTimeEnd) {
             this.putQueryParameter("OperateTimeEnd", operateTimeEnd);
@@ -450,7 +469,7 @@ public class DescribeAlarmEventListRequest extends Request {
         }
 
         /**
-         * OperateTimeStart.
+         * The time when the handing operation starts.
          */
         public Builder operateTimeStart(String operateTimeStart) {
             this.putQueryParameter("OperateTimeStart", operateTimeStart);
@@ -459,7 +478,7 @@ public class DescribeAlarmEventListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: **20**.
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -468,7 +487,7 @@ public class DescribeAlarmEventListRequest extends Request {
         }
 
         /**
-         * Remark.
+         * The name of the alert or the information about the asset.
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -477,7 +496,13 @@ public class DescribeAlarmEventListRequest extends Request {
         }
 
         /**
-         * SortColumn.
+         * The custom sorting field. Default value: **operateTime**. Valid values:
+         * <p>
+         * 
+         * *   **lastTime**: the latest occurrence time
+         * *   **operateTime**: the handling time
+         * 
+         * >  This parameter takes effect if you set the **Dealed** parameter to Y.
          */
         public Builder sortColumn(String sortColumn) {
             this.putQueryParameter("SortColumn", sortColumn);
@@ -486,7 +511,13 @@ public class DescribeAlarmEventListRequest extends Request {
         }
 
         /**
-         * SortType.
+         * The custom sorting order. Default value: **desc**. Valid values:
+         * <p>
+         * 
+         * *   **asc**: the ascending order
+         * *   **desc**: the descending order
+         * 
+         * >  This parameter takes effect if you set the **Dealed** parameter to Y.
          */
         public Builder sortType(String sortType) {
             this.putQueryParameter("SortType", sortType);
@@ -495,7 +526,7 @@ public class DescribeAlarmEventListRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * The source IP address of the request.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -504,7 +535,7 @@ public class DescribeAlarmEventListRequest extends Request {
         }
 
         /**
-         * TacticId.
+         * The tactic ID of ATT\&CK.
          */
         public Builder tacticId(String tacticId) {
             this.putQueryParameter("TacticId", tacticId);
@@ -513,7 +544,7 @@ public class DescribeAlarmEventListRequest extends Request {
         }
 
         /**
-         * TimeEnd.
+         * The end time when the alert event was last detected.
          */
         public Builder timeEnd(String timeEnd) {
             this.putQueryParameter("TimeEnd", timeEnd);
@@ -522,7 +553,7 @@ public class DescribeAlarmEventListRequest extends Request {
         }
 
         /**
-         * TimeStart.
+         * The start time when the alert event was last detected.
          */
         public Builder timeStart(String timeStart) {
             this.putQueryParameter("TimeStart", timeStart);
@@ -531,7 +562,7 @@ public class DescribeAlarmEventListRequest extends Request {
         }
 
         /**
-         * UniqueInfo.
+         * The ID of the alert event.
          */
         public Builder uniqueInfo(String uniqueInfo) {
             this.putQueryParameter("UniqueInfo", uniqueInfo);
@@ -540,7 +571,7 @@ public class DescribeAlarmEventListRequest extends Request {
         }
 
         /**
-         * Uuids.
+         * The UUIDs of the assets. Separate multiple UUIDs with commas (,).
          */
         public Builder uuids(String uuids) {
             this.putQueryParameter("Uuids", uuids);

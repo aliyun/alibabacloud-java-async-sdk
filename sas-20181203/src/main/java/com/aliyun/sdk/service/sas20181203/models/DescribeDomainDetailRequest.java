@@ -69,7 +69,10 @@ public class DescribeDomainDetailRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * The domain name or the name of website that you want to query.
+         * <p>
+         * 
+         * >  Fuzzy match is not supported. You must enter a complete domain name or a website.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -78,7 +81,7 @@ public class DescribeDomainDetailRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * The source IP address of the request.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

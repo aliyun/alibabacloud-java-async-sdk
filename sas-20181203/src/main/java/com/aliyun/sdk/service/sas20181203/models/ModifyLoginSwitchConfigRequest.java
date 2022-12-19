@@ -70,7 +70,12 @@ public class ModifyLoginSwitchConfigRequest extends Request {
         } 
 
         /**
-         * Item.
+         * The type of the alert that you want to enable or disable. Valid values:
+         * <p>
+         * 
+         * *   **login\_common_ip**: alerts for unapproved logon IP addresses
+         * *   **login\_common_time**: alerts for unapproved logon time ranges
+         * *   **login\_common_account**: alerts for unapproved logon accounts
          */
         public Builder item(String item) {
             this.putQueryParameter("Item", item);
@@ -79,7 +84,11 @@ public class ModifyLoginSwitchConfigRequest extends Request {
         }
 
         /**
-         * Status.
+         * Specifies whether to enable the logon security settings. Valid values:
+         * <p>
+         * 
+         * *   **0**: disables the logon security settings
+         * *   **1**: enables the logon security settings
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);

@@ -111,7 +111,10 @@ public class InstallCloudMonitorRequest extends Request {
         } 
 
         /**
-         * 非阿里云主机安装云监控插件时所需要的AccessKey
+         * The AccessKey ID that is required to install the CloudMonitor agent. You can call the [DescribeMonitoringAgentAccessKey](~~114948~~) operation to query the AccessKey ID.
+         * <p>
+         * 
+         * >  This parameter is required only when you install the CloudMonitor agent on servers that are not deployed on Alibaba Cloud.
          */
         public Builder agentAccessKey(String agentAccessKey) {
             this.putQueryParameter("AgentAccessKey", agentAccessKey);
@@ -120,7 +123,10 @@ public class InstallCloudMonitorRequest extends Request {
         }
 
         /**
-         * 非阿里云主机安装云监控插件时所需要的AccessSecret
+         * The AccessKey secret that is required to install the CloudMonitor agent. You can call the [DescribeMonitoringAgentAccessKey](~~114948~~) operation to query the AccessKey secret.
+         * <p>
+         * 
+         * >  This parameter is required only when you install the CloudMonitor agent on servers that are not deployed on Alibaba Cloud.
          */
         public Builder agentSecretKey(String agentSecretKey) {
             this.putQueryParameter("AgentSecretKey", agentSecretKey);
@@ -129,7 +135,7 @@ public class InstallCloudMonitorRequest extends Request {
         }
 
         /**
-         * 云监控版本
+         * The version of the CloudMonitor agent that you want to install on the servers. For more information about the latest version of the CloudMonitor agent, see [Overview](~~183431~~).
          */
         public Builder argusVersion(String argusVersion) {
             this.putQueryParameter("ArgusVersion", argusVersion);
@@ -138,7 +144,7 @@ public class InstallCloudMonitorRequest extends Request {
         }
 
         /**
-         * 实例 instanceId
+         * The IDs of the servers on which you want to install the CloudMonitor agent. Separate multiple IDs with commas (,).
          */
         public Builder instanceIdList(java.util.List < String > instanceIdList) {
             this.putQueryParameter("InstanceIdList", instanceIdList);
@@ -147,7 +153,7 @@ public class InstallCloudMonitorRequest extends Request {
         }
 
         /**
-         * uuid 列表
+         * The UUIDs of the servers on which you want to install the CloudMonitor agent. Separate multiple UUIDs with commas (,).
          */
         public Builder uuidList(java.util.List < String > uuidList) {
             this.putQueryParameter("UuidList", uuidList);

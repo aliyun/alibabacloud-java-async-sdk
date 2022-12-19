@@ -152,7 +152,10 @@ public class DescribeImageBaselineCheckSummaryRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the container cluster.
+         * <p>
+         * 
+         * >  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of container clusters.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -161,7 +164,7 @@ public class DescribeImageBaselineCheckSummaryRequest extends Request {
         }
 
         /**
-         * Criteria.
+         * The search condition for the image baseline.
          */
         public Builder criteria(String criteria) {
             this.putQueryParameter("Criteria", criteria);
@@ -170,7 +173,11 @@ public class DescribeImageBaselineCheckSummaryRequest extends Request {
         }
 
         /**
-         * CriteriaType.
+         * The type of the search condition. Valid values:
+         * <p>
+         * 
+         * *   **BaselineNameAlias**: baseline name
+         * *   **BaselineClassAlias**: baseline category
          */
         public Builder criteriaType(String criteriaType) {
             this.putQueryParameter("CriteriaType", criteriaType);
@@ -179,7 +186,7 @@ public class DescribeImageBaselineCheckSummaryRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The number of the page to return. Pages start from page **1**. Default value: **1**.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -188,7 +195,11 @@ public class DescribeImageBaselineCheckSummaryRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -197,7 +208,7 @@ public class DescribeImageBaselineCheckSummaryRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: **20**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -206,7 +217,12 @@ public class DescribeImageBaselineCheckSummaryRequest extends Request {
         }
 
         /**
-         * RiskLevel.
+         * The severity of the image baseline that you want to query. Separate multiple severities with commas (,). Valid values:
+         * <p>
+         * 
+         * *   **high**
+         * *   **medium**
+         * *   **low**
          */
         public Builder riskLevel(String riskLevel) {
             this.putQueryParameter("RiskLevel", riskLevel);
@@ -215,7 +231,7 @@ public class DescribeImageBaselineCheckSummaryRequest extends Request {
         }
 
         /**
-         * ScanRange.
+         * The types of the assets that you want to scan.
          */
         public Builder scanRange(java.util.List < String > scanRange) {
             this.putQueryParameter("ScanRange", scanRange);

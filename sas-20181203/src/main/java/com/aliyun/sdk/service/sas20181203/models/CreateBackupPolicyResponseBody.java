@@ -50,7 +50,7 @@ public class CreateBackupPolicyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * BackupPolicy.
+         * The information about the anti-ransomware policy.
          */
         public Builder backupPolicy(BackupPolicy backupPolicy) {
             this.backupPolicy = backupPolicy;
@@ -58,7 +58,7 @@ public class CreateBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class CreateBackupPolicyResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * Id.
+             * The ID of the anti-ransomware policy.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -118,7 +118,13 @@ public class CreateBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the anti-ransomware policy. Valid values:
+             * <p>
+             * 
+             * *   **enabled**
+             * *   **disabled**
+             * 
+             * >  After you create an anti-ransomware policy, the policy is enabled by default.
              */
             public Builder status(String status) {
                 this.status = status;

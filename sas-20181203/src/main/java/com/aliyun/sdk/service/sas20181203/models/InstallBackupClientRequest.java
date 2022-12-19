@@ -83,7 +83,11 @@ public class InstallBackupClientRequest extends Request {
         } 
 
         /**
-         * PolicyVersion.
+         * The version of the anti-ransomware policy. You can call the [DescribeBackupPolicies](~~DescribeBackupPolicies~~) operation to query the versions of anti-ransomware policies. Valid values:
+         * <p>
+         * 
+         * *   **1.0.0**
+         * *   **2.0.0**
          */
         public Builder policyVersion(String policyVersion) {
             this.putQueryParameter("PolicyVersion", policyVersion);
@@ -92,7 +96,10 @@ public class InstallBackupClientRequest extends Request {
         }
 
         /**
-         * Uuid.
+         * The UUID of the server on which you want to install the anti-ransomware agent.
+         * <p>
+         * 
+         * >  You must specify at least one of the UuidList and Uuid parameters.
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);
@@ -101,7 +108,10 @@ public class InstallBackupClientRequest extends Request {
         }
 
         /**
-         * UuidList.
+         * The UUIDs of servers on which you want to install the anti-ransomware agent.
+         * <p>
+         * 
+         * >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
          */
         public Builder uuidList(java.util.List < String > uuidList) {
             this.putQueryParameter("UuidList", uuidList);

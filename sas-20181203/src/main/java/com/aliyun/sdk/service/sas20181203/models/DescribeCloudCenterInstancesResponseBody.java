@@ -74,7 +74,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Instances.
+         * An array that consists of the details about the assets.
          */
         public Builder instances(java.util.List < Instances> instances) {
             this.instances = instances;
@@ -82,7 +82,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageInfo.
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -90,7 +90,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,11 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -690,7 +694,11 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             private String vulStatus; 
 
             /**
-             * AlarmStatus.
+             * Indicates whether alerts are generated on the asset. Valid values:
+             * <p>
+             * 
+             * *   **YES**
+             * *   **NO**
              */
             public Builder alarmStatus(String alarmStatus) {
                 this.alarmStatus = alarmStatus;
@@ -698,7 +706,17 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * AssetType.
+             * The type of the asset. Valid values:
+             * <p>
+             * 
+             * *   **0**: an ECS instance
+             * *   **1**: a Server Load Balancer (SLB) instance
+             * *   **2**: a NAT gateway
+             * *   **3**: an ApsaraDB RDS instance
+             * *   **4**: an ApsaraDB for MongoDB instance
+             * *   **5**: an ApsaraDB for Redis instance
+             * *   **6**: a container image
+             * *   **7**: a container
              */
             public Builder assetType(String assetType) {
                 this.assetType = assetType;
@@ -706,7 +724,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * AuthModifyTime.
+             * The timestamp when Security Center is authorized to scan the asset.
              */
             public Builder authModifyTime(Long authModifyTime) {
                 this.authModifyTime = authModifyTime;
@@ -714,7 +732,14 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * AuthVersion.
+             * The edition of Security Center that is authorized to protect the asset. Valid values:
+             * <p>
+             * 
+             * *   **1**: Basic edition
+             * *   **6**: Anti-virus edition
+             * *   **5**: Advanced edition
+             * *   **3**: Enterprise edition
+             * *   **7**: Ultimate edition
              */
             public Builder authVersion(Integer authVersion) {
                 this.authVersion = authVersion;
@@ -722,7 +747,15 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * AuthVersionName.
+             * The name of the Security Center edition that is authorized to scan the asset. Valid values:
+             * <p>
+             * 
+             * *   Basic edition
+             * *   Anti-virus edition
+             * *   Advanced edition
+             * *   Enterprise edition
+             * *   Ultimate edition
+             * *   Value-added Plan edition
              */
             public Builder authVersionName(String authVersionName) {
                 this.authVersionName = authVersionName;
@@ -730,7 +763,11 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Bind.
+             * Indicates whether Security Center is authorized to scan the asset. Valid values:
+             * <p>
+             * 
+             * *   **true**: yes
+             * *   **false**: no
              */
             public Builder bind(Boolean bind) {
                 this.bind = bind;
@@ -738,7 +775,12 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ClientStatus.
+             * The status of the Security Center agent installed on the asset. Valid values:
+             * <p>
+             * 
+             * *   **online**: The Security Center agent is **enabled**.
+             * *   **offline**: The Security Center agent is **disabled**.
+             * *   **pause**: The Security Center agent is **suspended**.
              */
             public Builder clientStatus(String clientStatus) {
                 this.clientStatus = clientStatus;
@@ -746,7 +788,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterId.
+             * The ID of the cluster.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -754,7 +796,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterName.
+             * The name of the cluster.
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -762,7 +804,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Cores.
+             * The number of the CPU cores used by the asset.
              */
             public Builder cores(Integer cores) {
                 this.cores = cores;
@@ -770,7 +812,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CpuInfo.
+             * The CPU information about the asset.
              */
             public Builder cpuInfo(String cpuInfo) {
                 this.cpuInfo = cpuInfo;
@@ -778,7 +820,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedTime.
+             * The timestamp when the cluster was created. Unit: milliseconds.
              */
             public Builder createdTime(Long createdTime) {
                 this.createdTime = createdTime;
@@ -786,7 +828,11 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ExposedStatus.
+             * Indicates whether the asset is exposed. Valid values:
+             * <p>
+             * 
+             * *   **0**: no
+             * *   **1**: yes
              */
             public Builder exposedStatus(Integer exposedStatus) {
                 this.exposedStatus = exposedStatus;
@@ -794,7 +840,11 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Flag.
+             * Indicates whether the asset is an Alibaba Cloud asset. Valid values:
+             * <p>
+             * 
+             * *   **0**: yes
+             * *   **1**: no
              */
             public Builder flag(Integer flag) {
                 this.flag = flag;
@@ -802,7 +852,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * The ID of the asset group to which the asset belongs.
              */
             public Builder groupId(Long groupId) {
                 this.groupId = groupId;
@@ -810,7 +860,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * GroupTrace.
+             * The name of the group to which the asset belongs.
              */
             public Builder groupTrace(String groupTrace) {
                 this.groupTrace = groupTrace;
@@ -818,7 +868,11 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * HcStatus.
+             * Indicates whether baseline risks are detected on the asset. Valid values:
+             * <p>
+             * 
+             * *   **YES**
+             * *   **NO**
              */
             public Builder hcStatus(String hcStatus) {
                 this.hcStatus = hcStatus;
@@ -826,7 +880,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * HealthCheckCount.
+             * The number of baseline risks that are detected on the asset.
              */
             public Builder healthCheckCount(Integer healthCheckCount) {
                 this.healthCheckCount = healthCheckCount;
@@ -834,7 +888,12 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Importance.
+             * The importance of the asset. Valid values:
+             * <p>
+             * 
+             * *   **2**: an important asset
+             * *   **1**: a common asset
+             * *   **0**: a test asset
              */
             public Builder importance(Integer importance) {
                 this.importance = importance;
@@ -842,7 +901,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the asset.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -850,7 +909,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * The name of the asset.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -858,7 +917,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InternetIp.
+             * The public IP address of the asset.
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -866,7 +925,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * IntranetIp.
+             * The private IP address of the asset.
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -874,7 +933,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Ip.
+             * The public IP address of the asset.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -882,7 +941,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * IpListString.
+             * The IP addresses of the system.
              */
             public Builder ipListString(String ipListString) {
                 this.ipListString = ipListString;
@@ -890,7 +949,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Kernel.
+             * The version of the kernel.
              */
             public Builder kernel(String kernel) {
                 this.kernel = kernel;
@@ -898,7 +957,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * LastLoginTimestamp.
+             * The timestamp when the Security Center agent was last online. Unit: milliseconds.
              */
             public Builder lastLoginTimestamp(Long lastLoginTimestamp) {
                 this.lastLoginTimestamp = lastLoginTimestamp;
@@ -906,7 +965,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * MacListString.
+             * The MAC address of the system.
              */
             public Builder macListString(String macListString) {
                 this.macListString = macListString;
@@ -914,7 +973,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Mem.
+             * The size of the memory. Unit: MB.
              */
             public Builder mem(Integer mem) {
                 this.mem = mem;
@@ -922,7 +981,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Os.
+             * The operating system of the asset.
              */
             public Builder os(String os) {
                 this.os = os;
@@ -930,7 +989,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * OsName.
+             * The kernel version of the asset.
              */
             public Builder osName(String osName) {
                 this.osName = osName;
@@ -938,7 +997,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PodCount.
+             * The number of pods.
              */
             public Builder podCount(Integer podCount) {
                 this.podCount = podCount;
@@ -946,7 +1005,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * The region ID of the asset.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -954,7 +1013,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the region in which the asset resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -962,7 +1021,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionName.
+             * The name of the region in which the asset resides.
              */
             public Builder regionName(String regionName) {
                 this.regionName = regionName;
@@ -970,7 +1029,49 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RiskCount.
+             * The total number of baseline risks that are detected on the asset. The value of this parameter is in the JSON format and contains the following fields:
+             * <p>
+             * 
+             * *   **account**: the number of accounts that are used to log on from unapproved logon locations and whose passwords are cracked
+             * *   **appNum**: the number of scanners
+             * *   **asapVulCount**: the total number of high-risk vulnerabilities
+             * *   **baselineHigh**: the number of high-risk baseline risks
+             * *   **baselineLow**: the number of low-risk baseline risks
+             * *   **baselineMedium**: the number of medium-risk baseline risks
+             * *   **baselineNum**: the total number of baseline risks
+             * *   **cmsNum**: the number of Web-CMS vulnerabilities
+             * *   **containerAsap**: the number of high-risk vulnerabilities that are detected on containers
+             * *   **containerLater**: the number of medium-risk vulnerabilities that are detected on containers
+             * *   **containerNntf**: the number of low-risk vulnerabilities that are detected on containers
+             * *   **containerRemind**: the number of alerts whose Emergency level is Reminder on containers
+             * *   **containerSerious**: the number of alerts whose Emergency level is Urgent on containers
+             * *   **containerSuspicious**: the number of alerts whose Emergency level is Suspicious on containers
+             * *   **cveNum**: the number of Linux software vulnerabilities
+             * *   **emgNum**: the number of urgent vulnerabilities
+             * *   **health**: the number of baseline alerts that are unhandled
+             * *   **imageBaselineHigh**: the number of high-risk baseline risks that are detected on images
+             * *   **imageBaselineLow**: the number of low-risk baseline risks that are detected on images
+             * *   **imageBaselineMedium**: the number of medium-risk baseline risks that are detected on images
+             * *   **imageBaselineNum**: the total number of baseline risks that are detected on images
+             * *   **imageMaliciousFileRemind**: the number of malicious files that are detected on images and have the Emergency level of Reminder
+             * *   **imageMaliciousFileSerious**: the number of malicious files that are detected on images and have the Emergency level of Urgent
+             * *   **imageMaliciousFileSuspicious**: the number of malicious files that are detected on images and have the Emergency level of Suspicious
+             * *   **imageVulAsap**: the number of high-risk vulnerabilities that are detected on images
+             * *   **imageVulLater**: the number of medium-risk vulnerabilities that are detected on an image
+             * *   **imageVulNntf**: the number of low-risk vulnerabilities that are detected on an image
+             * *   **laterVulCount**: the number of medium-risk vulnerabilities
+             * *   **newSuspicious**: the number of alerts
+             * *   **nntfVulCount**: the number of low-risk vulnerabilities.
+             * *   **remindNum**: the number of alerts whose Emergency level is Reminder
+             * *   **scaNum**: the number of vulnerabilities that are detected based on software component analysis
+             * *   **seriousNum**: the number of alerts whose Emergency level is Urgent
+             * *   **suspNum**: the number of alerts whose Emergency level is Suspicious
+             * *   **suspicious**: the total number of alerts
+             * *   **sysNum**: the number of Windows system vulnerabilities
+             * *   **trojan**: the number of trojans
+             * *   **uuid**: the UUIDs of assets
+             * *   **vul**: the number of vulnerabilities
+             * *   **weakPWNum**: the number of weak passwords
              */
             public Builder riskCount(String riskCount) {
                 this.riskCount = riskCount;
@@ -978,7 +1079,11 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RiskStatus.
+             * Indicates whether risks are detected on the asset. Valid values:
+             * <p>
+             * 
+             * *   **YES**
+             * *   **NO**
              */
             public Builder riskStatus(String riskStatus) {
                 this.riskStatus = riskStatus;
@@ -986,7 +1091,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * SafeEventCount.
+             * The number of alerts that are generated on the asset.
              */
             public Builder safeEventCount(Integer safeEventCount) {
                 this.safeEventCount = safeEventCount;
@@ -994,7 +1099,11 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the asset. Valid values:
+             * <p>
+             * 
+             * *   **Running**: running
+             * *   **notRunning**: stopped
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1002,7 +1111,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Tag.
+             * The name of the asset tag.
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -1010,7 +1119,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * TagId.
+             * The ID of the asset tag.
              */
             public Builder tagId(String tagId) {
                 this.tagId = tagId;
@@ -1018,7 +1127,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Uuid.
+             * The UUID of the asset.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -1026,7 +1135,14 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Vendor.
+             * The type of the asset by source. Valid values:
+             * <p>
+             * 
+             * *   **0**: an asset provided by Alibaba Cloud.
+             * *   **1**: a third-party cloud server
+             * *   **2**: a server in a data center
+             * *   **3**, **4**, **5**, and **7**: other cloud asset
+             * *   **8**: a lightweight asset
              */
             public Builder vendor(Integer vendor) {
                 this.vendor = vendor;
@@ -1034,7 +1150,19 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VendorName.
+             * The name of the service provider (SP) for the asset.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   **ALIYUN**: Alibaba Cloud
+             * *   **OUT**: a third-party service provider
+             * *   **IDC**: a data center
+             * *   **TENCENT**: Tencent Cloud
+             * *   **HUAWEICLOUD**: Huawei Cloud
+             * *   **Microsoft**: Microsoft
+             * *   **AWS**: Amazon Web Services (AWS)
+             * *   **TRIPARTITE**: a lightweight server
              */
             public Builder vendorName(String vendorName) {
                 this.vendorName = vendorName;
@@ -1042,7 +1170,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VpcInstanceId.
+             * The ID of the VPC to which the asset belongs.
              */
             public Builder vpcInstanceId(String vpcInstanceId) {
                 this.vpcInstanceId = vpcInstanceId;
@@ -1050,7 +1178,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VulCount.
+             * The number of vulnerabilities that are detected on the asset.
              */
             public Builder vulCount(Integer vulCount) {
                 this.vulCount = vulCount;
@@ -1058,7 +1186,11 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VulStatus.
+             * Indicates whether vulnerabilities are detected on the asset. Valid values:
+             * <p>
+             * 
+             * *   **YES**
+             * *   **NO**
              */
             public Builder vulStatus(String vulStatus) {
                 this.vulStatus = vulStatus;
@@ -1135,7 +1267,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Count.
+             * The number of entries returned on the current page.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -1143,7 +1275,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentPage.
+             * The page number of the returned page.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -1151,7 +1283,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page. Default value: **20**.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -1159,7 +1291,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

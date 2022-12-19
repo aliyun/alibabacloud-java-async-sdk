@@ -19,7 +19,6 @@ public class DeleteBackupPolicyRequest extends Request {
 
     @Query
     @NameInMap("PolicyVersion")
-    @Validation(required = true)
     private String policyVersion;
 
     private DeleteBackupPolicyRequest(Builder builder) {
@@ -70,7 +69,7 @@ public class DeleteBackupPolicyRequest extends Request {
         } 
 
         /**
-         * Id.
+         * The ID of the anti-ransomware policy that you want to delete.
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -79,7 +78,11 @@ public class DeleteBackupPolicyRequest extends Request {
         }
 
         /**
-         * PolicyVersion.
+         * The version of the anti-ransomware policy that you want to delete. You can call the [DescribeBackupPolicies](~~322795~~) operation to query the versions of anti-ransomware policies. Valid values:
+         * <p>
+         * 
+         * *   **1.0.0**
+         * *   **2.0.0**
          */
         public Builder policyVersion(String policyVersion) {
             this.putQueryParameter("PolicyVersion", policyVersion);

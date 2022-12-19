@@ -124,7 +124,7 @@ public class DescribeRiskListCheckResultRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * The number of the page to return. Pages start from page 1. Default value: 1.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -133,7 +133,10 @@ public class DescribeRiskListCheckResultRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * The instance ID of the cloud service. Separate multiple IDs with commas (,).
+         * <p>
+         * 
+         * >  If you do not specify this parameter, an empty list is returned.
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -142,7 +145,11 @@ public class DescribeRiskListCheckResultRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -151,7 +158,7 @@ public class DescribeRiskListCheckResultRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -169,7 +176,7 @@ public class DescribeRiskListCheckResultRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * The source IP address of the request.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

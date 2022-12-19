@@ -50,7 +50,11 @@ public class ModifyPropertyScheduleConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ModifyResult.
+         * Indicates whether the collection frequency of asset fingerprints is modified. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false**: no
          */
         public Builder modifyResult(Boolean modifyResult) {
             this.modifyResult = modifyResult;
@@ -58,7 +62,7 @@ public class ModifyPropertyScheduleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -168,7 +168,7 @@ public class DescribeCheckWarningsRequest extends Request {
         } 
 
         /**
-         * CheckId.
+         * The ID of the check item.
          */
         public Builder checkId(Long checkId) {
             this.putQueryParameter("CheckId", checkId);
@@ -177,7 +177,17 @@ public class DescribeCheckWarningsRequest extends Request {
         }
 
         /**
-         * CheckType.
+         * The type of the check item. Valid values:
+         * <p>
+         * 
+         * *   **hc.check.type.identity_auth**: identity authentication
+         * *   **hc.check.type.access_control**: access control
+         * *   **hc.check.type.network_service**: network and service
+         * *   **hc.check.type.service_conf**: service configuration
+         * *   **hc.check.type.file_rights**: file permission
+         * *   **hc.check.type.security_audit**: security audit
+         * *   **hc.check.type.attack_defense**: intrusion prevention
+         * *   **hc.check.type.others**: others
          */
         public Builder checkType(String checkType) {
             this.putQueryParameter("CheckType", checkType);
@@ -186,7 +196,7 @@ public class DescribeCheckWarningsRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -195,7 +205,11 @@ public class DescribeCheckWarningsRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -204,7 +218,7 @@ public class DescribeCheckWarningsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: **20**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -213,7 +227,10 @@ public class DescribeCheckWarningsRequest extends Request {
         }
 
         /**
-         * RiskId.
+         * The ID of the risk item.
+         * <p>
+         * 
+         * >  To query specified risk items and the check items of a specified server, you must provide the IDs of the risk items. You can call the [DescribeCheckWarningSummary](~~DescribeCheckWarningSummary~~) operation to query the IDs of risk items.
          */
         public Builder riskId(Long riskId) {
             this.putQueryParameter("RiskId", riskId);
@@ -222,7 +239,14 @@ public class DescribeCheckWarningsRequest extends Request {
         }
 
         /**
-         * RiskStatus.
+         * The status of the check item. Valid values:
+         * <p>
+         * 
+         * *   **1**: failed
+         * *   **2**: verifying
+         * *   **3**: passed
+         * *   **5**: expired
+         * *   **6**: ignored
          */
         public Builder riskStatus(Integer riskStatus) {
             this.putQueryParameter("RiskStatus", riskStatus);
@@ -231,7 +255,7 @@ public class DescribeCheckWarningsRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * The source IP address of the request.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -240,7 +264,10 @@ public class DescribeCheckWarningsRequest extends Request {
         }
 
         /**
-         * Uuid.
+         * The UUID of the server on which the baseline check is performed.
+         * <p>
+         * 
+         * >  To query specified risk items and the check items of a specified server, you must provide the ID of the server on which the baseline check is performed. You can call the [DescribeWarningMachines](~~DescribeWarningMachines~~) operation to query the IDs of servers.
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

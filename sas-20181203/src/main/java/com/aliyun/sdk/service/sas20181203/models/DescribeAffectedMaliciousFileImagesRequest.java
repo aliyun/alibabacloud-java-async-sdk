@@ -322,7 +322,10 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the container cluster.
+         * <p>
+         * 
+         * >  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of container clusters.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -331,7 +334,7 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
         }
 
         /**
-         * ClusterName.
+         * The name of the cluster.
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("ClusterName", clusterName);
@@ -340,7 +343,7 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
         }
 
         /**
-         * ContainerId.
+         * The ID of the container.
          */
         public Builder containerId(String containerId) {
             this.putQueryParameter("ContainerId", containerId);
@@ -349,7 +352,7 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The number of the page to return. Pages start from page **1**. Default value: **1**.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -358,7 +361,7 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
         }
 
         /**
-         * Image.
+         * The name of the container image.
          */
         public Builder image(String image) {
             this.putQueryParameter("Image", image);
@@ -367,7 +370,7 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
         }
 
         /**
-         * ImageDigest.
+         * The image digest.
          */
         public Builder imageDigest(String imageDigest) {
             this.putQueryParameter("ImageDigest", imageDigest);
@@ -376,7 +379,7 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
         }
 
         /**
-         * ImageLayer.
+         * The image layer.
          */
         public Builder imageLayer(String imageLayer) {
             this.putQueryParameter("ImageLayer", imageLayer);
@@ -385,7 +388,7 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
         }
 
         /**
-         * ImageTag.
+         * The tag that is added to the image.
          */
         public Builder imageTag(String imageTag) {
             this.putQueryParameter("ImageTag", imageTag);
@@ -394,7 +397,11 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and the response. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -403,7 +410,7 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
         }
 
         /**
-         * Levels.
+         * The severity of the malicious image sample. Separate multiple severities with commas (,). Valid values: serious suspicious remind
          */
         public Builder levels(String levels) {
             this.putQueryParameter("Levels", levels);
@@ -412,7 +419,10 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
         }
 
         /**
-         * MaliciousMd5.
+         * The MD5 hash value of the malicious image sample.
+         * <p>
+         * 
+         * >  You can call the [DescribeGroupedMaliciousFiles](~~DescribeGroupedMaliciousFiles~~) operation to query the MD5 hash values of malicious image samples.
          */
         public Builder maliciousMd5(String maliciousMd5) {
             this.putQueryParameter("MaliciousMd5", maliciousMd5);
@@ -421,7 +431,7 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The namespace.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -430,7 +440,7 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: **20**.
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -439,7 +449,7 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
         }
 
         /**
-         * Pod.
+         * The pod.
          */
         public Builder pod(String pod) {
             this.putQueryParameter("Pod", pod);
@@ -448,7 +458,10 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
         }
 
         /**
-         * RepoId.
+         * The ID of the image repository.
+         * <p>
+         * 
+         * >  You can call the [ListRepository](~~ListRepository~~) operation to query the IDs of image repositories from the value of the **RepoId** response parameter.
          */
         public Builder repoId(String repoId) {
             this.putQueryParameter("RepoId", repoId);
@@ -457,7 +470,10 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
         }
 
         /**
-         * RepoInstanceId.
+         * The ID of the container image.
+         * <p>
+         * 
+         * >  You can call the [ListRepository](~~ListRepository~~) operation to query the IDs of container images from the value of the **InstanceId** response parameter.
          */
         public Builder repoInstanceId(String repoInstanceId) {
             this.putQueryParameter("RepoInstanceId", repoInstanceId);
@@ -466,7 +482,10 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
         }
 
         /**
-         * RepoName.
+         * The name of the image repository.
+         * <p>
+         * 
+         * >  Fuzzy match is supported.
          */
         public Builder repoName(String repoName) {
             this.putQueryParameter("RepoName", repoName);
@@ -475,7 +494,10 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
         }
 
         /**
-         * RepoNamespace.
+         * The namespace to which the image repository belongs.
+         * <p>
+         * 
+         * >  Fuzzy match is supported.
          */
         public Builder repoNamespace(String repoNamespace) {
             this.putQueryParameter("RepoNamespace", repoNamespace);
@@ -484,7 +506,22 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
         }
 
         /**
-         * RepoRegionId.
+         * The region ID of the image repository. Valid values:
+         * <p>
+         * 
+         * *   **cn-beijing**: China (Beijing)
+         * *   **cn-zhangjiakou**: China (Zhangjiakou)
+         * *   **cn-hangzhou**: China (Hangzhou)
+         * *   **cn-shanghai**: China (Shanghai)
+         * *   **cn-shenzhen**: China (Shenzhen)
+         * *   **cn-hongkong**: China (Hong Kong)
+         * *   **ap-southeast-1**: Singapore
+         * *   **ap-southeast-5**: Indonesia (Jakarta)
+         * *   **us-east-1**: US (Virginia)
+         * *   **us-west-1**: US (Silicon Valley)
+         * *   **eu-central-1**: Germany (Frankfurt)
+         * *   **eu-west-1**: UK (London)
+         * *   **ap-south-1**: India (Mumbai)
          */
         public Builder repoRegionId(String repoRegionId) {
             this.putQueryParameter("RepoRegionId", repoRegionId);
@@ -493,7 +530,7 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
         }
 
         /**
-         * ScanRange.
+         * The types of the assets that you want to scan.
          */
         public Builder scanRange(java.util.List < String > scanRange) {
             this.putQueryParameter("ScanRange", scanRange);

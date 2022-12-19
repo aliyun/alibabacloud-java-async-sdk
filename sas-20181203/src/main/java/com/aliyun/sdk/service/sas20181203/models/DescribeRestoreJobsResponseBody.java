@@ -62,7 +62,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
         private java.util.List < RestoreJobs> restoreJobs; 
 
         /**
-         * PageInfo.
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -70,7 +70,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
         }
 
         /**
-         * RestoreJobs.
+         * An array that consists of the restoration tasks.
          */
         public Builder restoreJobs(java.util.List < RestoreJobs> restoreJobs) {
             this.restoreJobs = restoreJobs;
@@ -154,7 +154,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Count.
+             * The number of restoration tasks returned on the current page.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -162,7 +162,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentPage.
+             * The page number of the returned page.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -170,7 +170,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page. Default value: **10**.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -178,7 +178,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of restoration tasks returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -687,7 +687,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             private String vaultId; 
 
             /**
-             * ActualBytes.
+             * The size of backup data. Unit: bytes.
              */
             public Builder actualBytes(Long actualBytes) {
                 this.actualBytes = actualBytes;
@@ -695,7 +695,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * BytesDone.
+             * The total size of data that is restored. Unit: bytes.
              */
             public Builder bytesDone(Long bytesDone) {
                 this.bytesDone = bytesDone;
@@ -703,7 +703,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * BytesTotal.
+             * The total size of data that you want to restore. Unit: bytes.
              */
             public Builder bytesTotal(Long bytesTotal) {
                 this.bytesTotal = bytesTotal;
@@ -711,7 +711,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ClientId.
+             * The ID of the anti-ransomware agent that is used to restore data.
              */
             public Builder clientId(String clientId) {
                 this.clientId = clientId;
@@ -719,7 +719,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * CompleteTime.
+             * The timestamp when the restoration task is complete. Unit: milliseconds.
              */
             public Builder completeTime(Long completeTime) {
                 this.completeTime = completeTime;
@@ -727,7 +727,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedTime.
+             * The timestamp when the restoration task is created. Unit: milliseconds.
              */
             public Builder createdTime(Long createdTime) {
                 this.createdTime = createdTime;
@@ -735,7 +735,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * The duration of the restoration task. Unit: seconds.
              */
             public Builder duration(Long duration) {
                 this.duration = duration;
@@ -743,7 +743,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorCount.
+             * The number of the restoration tasks on which errors occur.
              */
             public Builder errorCount(Long errorCount) {
                 this.errorCount = errorCount;
@@ -751,7 +751,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorFile.
+             * The name of the CSV file. The CSV file contains the files that fail to be restored.
              */
             public Builder errorFile(String errorFile) {
                 this.errorFile = errorFile;
@@ -759,7 +759,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorFileUrl.
+             * The URL to download the CSV file. The CSV file contains the files that fail to be restored.
              */
             public Builder errorFileUrl(String errorFileUrl) {
                 this.errorFileUrl = errorFileUrl;
@@ -767,7 +767,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorType.
+             * The error code that is returned for the restoration task.
              */
             public Builder errorType(String errorType) {
                 this.errorType = errorType;
@@ -775,7 +775,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Eta.
+             * The timestamp when the in-progress restoration task is expected to be complete. Unit: seconds.
              */
             public Builder eta(Long eta) {
                 this.eta = eta;
@@ -783,7 +783,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Excludes.
+             * The directory excluded from the anti-ransomware policy. The value is the directory that you specify to skip protection when you create the anti-ransomware policy.
              */
             public Builder excludes(String excludes) {
                 this.excludes = excludes;
@@ -791,7 +791,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ExitCode.
+             * The return value of the restoration task.
              */
             public Builder exitCode(String exitCode) {
                 this.exitCode = exitCode;
@@ -799,7 +799,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The time when the restoration task is created.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -807,7 +807,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The time when the restoration task is updated.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -815,7 +815,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Includes.
+             * The included directory based on which the files to restore are located. The value is the directory that you specify for protection when you create the anti-ransomware policy
              */
             public Builder includes(String includes) {
                 this.includes = includes;
@@ -823,7 +823,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the server whose data you want to restore.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -831,7 +831,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * The name of the server whose data you want to restore.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -839,7 +839,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * InternetIp.
+             * The public IP address of the server whose data you want to restore.
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -847,7 +847,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * IntranetIp.
+             * The internal IP address of the server whose data you want to restore.
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -855,7 +855,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ItemsDone.
+             * The number of files that are backed up.
              */
             public Builder itemsDone(Long itemsDone) {
                 this.itemsDone = itemsDone;
@@ -863,7 +863,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ItemsTotal.
+             * The total number of files that you want to restore.
              */
             public Builder itemsTotal(Long itemsTotal) {
                 this.itemsTotal = itemsTotal;
@@ -871,7 +871,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * The error message returned.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -879,7 +879,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Percentage.
+             * The progress of the restoration task in percentage.
              */
             public Builder percentage(Integer percentage) {
                 this.percentage = percentage;
@@ -887,7 +887,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * RequestId.
+             * The ID of the request, which is used to locate and troubleshoot issues.
              */
             public Builder requestId(String requestId) {
                 this.requestId = requestId;
@@ -895,7 +895,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * RestoreId.
+             * The ID of the restoration task.
              */
             public Builder restoreId(String restoreId) {
                 this.restoreId = restoreId;
@@ -903,7 +903,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * RestoreName.
+             * The name of the restoration task.
              */
             public Builder restoreName(String restoreName) {
                 this.restoreName = restoreName;
@@ -911,7 +911,11 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * RestoreType.
+             * The type of the file that is restored. Valid values:
+             * <p>
+             * 
+             * *   **ECS_FILE**: files on Elastic Compute Service (ECS) instances
+             * *   **FILE**: files on servers in data centers
              */
             public Builder restoreType(String restoreType) {
                 this.restoreType = restoreType;
@@ -919,7 +923,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * SnapshotHash.
+             * The hash value of the snapshot that stores backup data when the data is backed up.
              */
             public Builder snapshotHash(String snapshotHash) {
                 this.snapshotHash = snapshotHash;
@@ -927,7 +931,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * SnapshotId.
+             * The hash value ID of the snapshot that stores backup data when the data is backed up.
              */
             public Builder snapshotId(String snapshotId) {
                 this.snapshotId = snapshotId;
@@ -935,7 +939,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * SnapshotVersion.
+             * The version of the backup data.
              */
             public Builder snapshotVersion(String snapshotVersion) {
                 this.snapshotVersion = snapshotVersion;
@@ -943,7 +947,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * The path to the source file that you want to restore.
              */
             public Builder source(String source) {
                 this.source = source;
@@ -951,7 +955,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceClientId.
+             * The ID of the anti-ransomware agent that is used to back up data.
              */
             public Builder sourceClientId(String sourceClientId) {
                 this.sourceClientId = sourceClientId;
@@ -959,7 +963,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Speed.
+             * The speed of data restoration. Unit: byte/s.
              */
             public Builder speed(Long speed) {
                 this.speed = speed;
@@ -967,7 +971,19 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the restoration task. Valid values:
+             * <p>
+             * 
+             * *   **RUNNING**: The task is running.
+             * *   **COMPLETE**: The task is complete.
+             * *   **FAILED**: The task fails.
+             * *   **CANCELING**: The task is being canceled.
+             * *   **CANCELED**: The task is canceled.
+             * *   **PARTIAL_COMPLETE**: The task is partially successful.
+             * *   **CREATED**: The task is created but is not run.
+             * *   **EXPIRED**: The task is not updated.
+             * *   **QUEUED**: The task is waiting to be run.
+             * *   **CLIENT_DELETED**: The task fails because the anti-ransomware agent is uninstalled.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -975,7 +991,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Target.
+             * The folder to which the backup data is restored. After you create the restoration task, the backup data is restored to the specified folder.
              */
             public Builder target(String target) {
                 this.target = target;
@@ -983,7 +999,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedTime.
+             * The timestamp when the restoration task was last updated. Unit: milliseconds.
              */
             public Builder updatedTime(Long updatedTime) {
                 this.updatedTime = updatedTime;
@@ -991,7 +1007,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Uuid.
+             * The UUID of the server whose data you want to restore.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -999,7 +1015,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * VaultId.
+             * The ID of the backup vault in which the backup data is stored.
              */
             public Builder vaultId(String vaultId) {
                 this.vaultId = vaultId;

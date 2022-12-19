@@ -84,7 +84,24 @@ public class DeleteLoginBaseConfigRequest extends Request {
         } 
 
         /**
-         * Config.
+         * The configuration item that you want to delete. The items vary based on the type of logon configurations. Valid values:
+         * <p>
+         * 
+         * *   **login\_common_ip**: approved logon IP addresses
+         * 
+         * Example: {"ip":"10.23.23.23"}.
+         * 
+         * *   **login\_common_time**: approved logon time ranges
+         * 
+         * Example: {"startTime":"06:00:00","endTime":"16:00:00"}.
+         * 
+         * *   **login\_common_account**: approved logon accounts
+         * 
+         * Example: {"account":"test_account\_001"}.
+         * 
+         * *   **login\_common_location**: approved logon locations
+         * 
+         * Example: {"location":"Shanghai"}.
          */
         public Builder config(String config) {
             this.putQueryParameter("Config", config);
@@ -93,7 +110,10 @@ public class DeleteLoginBaseConfigRequest extends Request {
         }
 
         /**
-         * Target.
+         * The UUID of the server whose logon configurations you want to delete.
+         * <p>
+         * 
+         * > You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
          */
         public Builder target(String target) {
             this.putQueryParameter("Target", target);
@@ -102,7 +122,13 @@ public class DeleteLoginBaseConfigRequest extends Request {
         }
 
         /**
-         * Type.
+         * The type of logon configurations to delete. Valid values:
+         * <p>
+         * 
+         * *   **login\_common_ip**: approved logon IP addresses
+         * *   **login\_common_time**: approved logon time ranges
+         * *   **login\_common_account**: approved logon accounts
+         * *   **login\_common_location**: approved logon locations
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

@@ -14,6 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ModifyWebLockDeleteConfigRequest extends Request {
     @Query
     @NameInMap("Id")
+    @Validation(required = true)
     private Integer id;
 
     @Query
@@ -26,6 +27,7 @@ public class ModifyWebLockDeleteConfigRequest extends Request {
 
     @Query
     @NameInMap("Uuid")
+    @Validation(required = true)
     private String uuid;
 
     private ModifyWebLockDeleteConfigRequest(Builder builder) {
@@ -96,7 +98,9 @@ public class ModifyWebLockDeleteConfigRequest extends Request {
         } 
 
         /**
-         * Id.
+         * The ID of the protected directory that you want to delete. 
+         * <p>
+         * > You can call the [DescribeWebLockConfigList](~~DescribeWebLockConfigList~~) operation to query the IDs of protected directories.
          */
         public Builder id(Integer id) {
             this.putQueryParameter("Id", id);
@@ -105,7 +109,11 @@ public class ModifyWebLockDeleteConfigRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -114,7 +122,7 @@ public class ModifyWebLockDeleteConfigRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * The source IP address of the request.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -123,7 +131,9 @@ public class ModifyWebLockDeleteConfigRequest extends Request {
         }
 
         /**
-         * Uuid.
+         * The UUID of the server for which you want to delete the protected directory. 
+         * <p>
+         * > You can call the [DescribeWebLockConfigList](~~DescribeWebLockConfigList~~) operation to query the UUID of servers.
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

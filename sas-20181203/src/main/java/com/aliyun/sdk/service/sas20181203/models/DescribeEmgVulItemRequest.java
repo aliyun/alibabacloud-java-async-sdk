@@ -138,7 +138,11 @@ public class DescribeEmgVulItemRequest extends Request {
         } 
 
         /**
-         * 检测方式
+         * The check method. Valid values:
+         * <p>
+         * 
+         * *   **0**: proof of concept (POC) verification
+         * *   **1**: version comparison
          */
         public Builder checkType(Integer checkType) {
             this.putQueryParameter("CheckType", checkType);
@@ -147,7 +151,7 @@ public class DescribeEmgVulItemRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -156,7 +160,11 @@ public class DescribeEmgVulItemRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -165,7 +173,7 @@ public class DescribeEmgVulItemRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -174,7 +182,12 @@ public class DescribeEmgVulItemRequest extends Request {
         }
 
         /**
-         * RiskStatus.
+         * Specifies whether the vulnerability poses risks.\
+         * <p>
+         * If you do not specify this parameter, all vulnerabilities are queried regardless of whether the vulnerabilities pose risks. Valid values:
+         * 
+         * *   **y**: yes
+         * *   **n**: no
          */
         public Builder riskStatus(String riskStatus) {
             this.putQueryParameter("RiskStatus", riskStatus);
@@ -183,7 +196,12 @@ public class DescribeEmgVulItemRequest extends Request {
         }
 
         /**
-         * ScanType.
+         * The method that is used to detect the vulnerability.\
+         * <p>
+         * If you do not specify this parameter, all vulnerabilities are queried regardless of which method is used. Valid values:
+         * 
+         * *   **python**: The Version method is used. Security Center checks the software versions of your server to check whether disclosed vulnerabilities exist on your server.
+         * *   **scan**: The Network Scan method is used. Security Center analyzes the access traffic to your server over the Internet to check whether vulnerabilities exist on your server.
          */
         public Builder scanType(String scanType) {
             this.putQueryParameter("ScanType", scanType);
@@ -192,7 +210,7 @@ public class DescribeEmgVulItemRequest extends Request {
         }
 
         /**
-         * VulName.
+         * The name of the urgent vulnerability.
          */
         public Builder vulName(String vulName) {
             this.putQueryParameter("VulName", vulName);

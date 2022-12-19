@@ -33,6 +33,10 @@ public class DescribeOnceTaskRequest extends Request {
     private Long startTimeQuery;
 
     @Query
+    @NameInMap("TaskId")
+    private String taskId;
+
+    @Query
     @NameInMap("TaskType")
     private String taskType;
 
@@ -43,6 +47,7 @@ public class DescribeOnceTaskRequest extends Request {
         this.pageSize = builder.pageSize;
         this.rootTaskId = builder.rootTaskId;
         this.startTimeQuery = builder.startTimeQuery;
+        this.taskId = builder.taskId;
         this.taskType = builder.taskType;
     }
 
@@ -95,6 +100,13 @@ public class DescribeOnceTaskRequest extends Request {
     }
 
     /**
+     * @return taskId
+     */
+    public String getTaskId() {
+        return this.taskId;
+    }
+
+    /**
      * @return taskType
      */
     public String getTaskType() {
@@ -107,6 +119,7 @@ public class DescribeOnceTaskRequest extends Request {
         private Integer pageSize; 
         private String rootTaskId; 
         private Long startTimeQuery; 
+        private String taskId; 
         private String taskType; 
 
         private Builder() {
@@ -120,11 +133,12 @@ public class DescribeOnceTaskRequest extends Request {
             this.pageSize = request.pageSize;
             this.rootTaskId = request.rootTaskId;
             this.startTimeQuery = request.startTimeQuery;
+            this.taskId = request.taskId;
             this.taskType = request.taskType;
         } 
 
         /**
-         * CurrentPage.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -133,7 +147,7 @@ public class DescribeOnceTaskRequest extends Request {
         }
 
         /**
-         * EndTimeQuery.
+         * The timestamp when the root task ends. Unit: milliseconds.
          */
         public Builder endTimeQuery(Long endTimeQuery) {
             this.putQueryParameter("EndTimeQuery", endTimeQuery);
@@ -142,7 +156,7 @@ public class DescribeOnceTaskRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: **20**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -151,7 +165,10 @@ public class DescribeOnceTaskRequest extends Request {
         }
 
         /**
-         * RootTaskId.
+         * The ID of the root task.
+         * <p>
+         * 
+         * >  You must specify at least one of the **TaskType** and **RootTaskId** parameters.
          */
         public Builder rootTaskId(String rootTaskId) {
             this.putQueryParameter("RootTaskId", rootTaskId);
@@ -160,7 +177,7 @@ public class DescribeOnceTaskRequest extends Request {
         }
 
         /**
-         * StartTimeQuery.
+         * The timestamp when the root task starts. Unit: milliseconds.
          */
         public Builder startTimeQuery(Long startTimeQuery) {
             this.putQueryParameter("StartTimeQuery", startTimeQuery);
@@ -169,7 +186,23 @@ public class DescribeOnceTaskRequest extends Request {
         }
 
         /**
-         * TaskType.
+         * TaskId.
+         */
+        public Builder taskId(String taskId) {
+            this.putQueryParameter("TaskId", taskId);
+            this.taskId = taskId;
+            return this;
+        }
+
+        /**
+         * The type of the task. Valid values:
+         * <p>
+         * 
+         * *   **CLIENT\_PROBLEM_CHECK**: a task of the Security Center agent
+         * *   **CLIENT\_DEV_OPS**: an O&M task of Cloud Assistant
+         * *   **ASSET\_SECURITY_CHECK**: a task of asset information collection
+         * 
+         * >  You must specify at least one of the **TaskType** and **RootTaskId** parameters.
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

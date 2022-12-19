@@ -54,7 +54,7 @@ public class GetVulWhitelistRequest extends Request {
         } 
 
         /**
-         * VulWhitelistId.
+         * The ID of the whitelist.
          */
         public Builder vulWhitelistId(Long vulWhitelistId) {
             this.putQueryParameter("VulWhitelistId", vulWhitelistId);

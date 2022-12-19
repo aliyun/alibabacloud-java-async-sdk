@@ -50,7 +50,7 @@ public class DescribeSupportRegionResponseBody extends TeaModel {
         private java.util.List < String > supportRegion; 
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeSupportRegionResponseBody extends TeaModel {
         }
 
         /**
-         * SupportRegion.
+         * The regions in which the anti-ransomware feature is supported.
          */
         public Builder supportRegion(java.util.List < String > supportRegion) {
             this.supportRegion = supportRegion;

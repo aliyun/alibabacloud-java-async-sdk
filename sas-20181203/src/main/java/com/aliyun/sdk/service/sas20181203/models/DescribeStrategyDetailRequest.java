@@ -83,7 +83,7 @@ public class DescribeStrategyDetailRequest extends Request {
         } 
 
         /**
-         * Id.
+         * The ID of the baseline check policy.
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);
@@ -92,7 +92,11 @@ public class DescribeStrategyDetailRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -101,7 +105,7 @@ public class DescribeStrategyDetailRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * The source IP address of the request.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

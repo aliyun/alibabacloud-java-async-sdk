@@ -62,7 +62,7 @@ public class DescribeExposedStatisticsDetailResponseBody extends TeaModel {
         private java.util.List < StatisticsDetails> statisticsDetails; 
 
         /**
-         * PageInfo.
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -70,7 +70,7 @@ public class DescribeExposedStatisticsDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeExposedStatisticsDetailResponseBody extends TeaModel {
         }
 
         /**
-         * StatisticsDetails.
+         * An array consisting of the gateway assets, ports, system components, or public IP addresses that are exposed on the Internet and are returned.
          */
         public Builder statisticsDetails(java.util.List < StatisticsDetails> statisticsDetails) {
             this.statisticsDetails = statisticsDetails;
@@ -154,7 +154,7 @@ public class DescribeExposedStatisticsDetailResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Count.
+             * The number of entries returned on the current page.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -162,7 +162,7 @@ public class DescribeExposedStatisticsDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentPage.
+             * The page number of the returned page.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -170,7 +170,7 @@ public class DescribeExposedStatisticsDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -178,7 +178,7 @@ public class DescribeExposedStatisticsDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -303,7 +303,7 @@ public class DescribeExposedStatisticsDetailResponseBody extends TeaModel {
             private String regionId; 
 
             /**
-             * ExposedCount.
+             * The total number of system vulnerabilities that are detected on your server and are exposed on the Internet.
              */
             public Builder exposedCount(Integer exposedCount) {
                 this.exposedCount = exposedCount;
@@ -311,7 +311,7 @@ public class DescribeExposedStatisticsDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ExposureComponent.
+             * The system component that is exposed on the Internet.
              */
             public Builder exposureComponent(String exposureComponent) {
                 this.exposureComponent = exposureComponent;
@@ -319,7 +319,7 @@ public class DescribeExposedStatisticsDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ExposureIp.
+             * The public IP address that is exposed on the Internet.
              */
             public Builder exposureIp(String exposureIp) {
                 this.exposureIp = exposureIp;
@@ -327,7 +327,7 @@ public class DescribeExposedStatisticsDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ExposurePort.
+             * The port that is exposed on the Internet.
              */
             public Builder exposurePort(String exposurePort) {
                 this.exposurePort = exposurePort;
@@ -335,7 +335,13 @@ public class DescribeExposedStatisticsDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ExposureType.
+             * The resource from which the asset is exposed. Valid values:
+             * <p>
+             * 
+             * *   **INTERNET_IP**: the IP address of the Elastic Compute Service (ECS) instance
+             * *   **SLB**: the public IP address of the SLB instance
+             * *   **EIP**: the elastic IP address (EIP)
+             * *   **DNAT**: the NAT gateway that connects to the Internet by using the DNAT feature
              */
             public Builder exposureType(String exposureType) {
                 this.exposureType = exposureType;
@@ -343,7 +349,13 @@ public class DescribeExposedStatisticsDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ExposureTypeId.
+             * The ID of the instance to which the resource belongs. The valid values of this parameter vary based on the value of the ExposureType parameter.
+             * <p>
+             * 
+             * *   If the value of the **ExposureType** parameter is **INTERNET_IP**, the value of this parameter is an empty string.
+             * *   If the value of the **ExposureType** parameter is **SLB**, the value of this parameter is the ID of the Internet-facing SLB instance.
+             * *   If the value of the **ExposureType** parameter is **EIP**, the value of this parameter is the ID of the EIP.
+             * *   If the value of the **ExposureType** parameter is **DNAT**, the value of this parameter is the ID of the NAT gateway.
              */
             public Builder exposureTypeId(String exposureTypeId) {
                 this.exposureTypeId = exposureTypeId;
@@ -351,7 +363,7 @@ public class DescribeExposedStatisticsDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ExposureTypeInstanceName.
+             * The name of the gateway asset that is exposed on the Internet.
              */
             public Builder exposureTypeInstanceName(String exposureTypeInstanceName) {
                 this.exposureTypeInstanceName = exposureTypeInstanceName;
@@ -359,7 +371,7 @@ public class DescribeExposedStatisticsDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID of the asset.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

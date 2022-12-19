@@ -50,7 +50,7 @@ public class DescribeRiskItemTypeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * List.
+         * An array that consists of the types of check items.
          */
         public Builder list(java.util.List < List> list) {
             this.list = list;
@@ -58,7 +58,7 @@ public class DescribeRiskItemTypeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeRiskItemTypeResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * Id.
+             * The ID of the check item.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -118,7 +118,7 @@ public class DescribeRiskItemTypeResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * The name of the check item type. Example: Identity authentication and permissions.
              */
             public Builder title(String title) {
                 this.title = title;

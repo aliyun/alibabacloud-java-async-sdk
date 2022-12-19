@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeAntiBruteForceRulesRequest extends Request {
     @Query
+    @NameInMap("Id")
+    private Long id;
+
+    @Query
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
@@ -22,6 +26,7 @@ public class DescribeAntiBruteForceRulesRequest extends Request {
 
     private DescribeAntiBruteForceRulesRequest(Builder builder) {
         super(builder);
+        this.id = builder.id;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.sourceIp = builder.sourceIp;
     }
@@ -40,6 +45,13 @@ public class DescribeAntiBruteForceRulesRequest extends Request {
     }
 
     /**
+     * @return id
+     */
+    public Long getId() {
+        return this.id;
+    }
+
+    /**
      * @return resourceOwnerId
      */
     public Long getResourceOwnerId() {
@@ -54,6 +66,7 @@ public class DescribeAntiBruteForceRulesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeAntiBruteForceRulesRequest, Builder> {
+        private Long id; 
         private Long resourceOwnerId; 
         private String sourceIp; 
 
@@ -63,9 +76,19 @@ public class DescribeAntiBruteForceRulesRequest extends Request {
 
         private Builder(DescribeAntiBruteForceRulesRequest request) {
             super(request);
+            this.id = request.id;
             this.resourceOwnerId = request.resourceOwnerId;
             this.sourceIp = request.sourceIp;
         } 
+
+        /**
+         * Id.
+         */
+        public Builder id(Long id) {
+            this.putQueryParameter("Id", id);
+            this.id = id;
+            return this;
+        }
 
         /**
          * ResourceOwnerId.
@@ -77,7 +100,7 @@ public class DescribeAntiBruteForceRulesRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * The source IP address of the request.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

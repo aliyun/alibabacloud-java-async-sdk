@@ -62,7 +62,7 @@ public class DescribeInstanceAntiBruteForceRulesResponseBody extends TeaModel {
         private java.util.List < Rules> rules; 
 
         /**
-         * PageInfo.
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -70,7 +70,7 @@ public class DescribeInstanceAntiBruteForceRulesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeInstanceAntiBruteForceRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Rules.
+         * An array consisting of the servers to which the defense rule is applied.
          */
         public Builder rules(java.util.List < Rules> rules) {
             this.rules = rules;
@@ -154,7 +154,7 @@ public class DescribeInstanceAntiBruteForceRulesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Count.
+             * The number of servers to which the defense rule is applied on the current page.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -162,7 +162,7 @@ public class DescribeInstanceAntiBruteForceRulesResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentPage.
+             * The page number of the returned page.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -170,7 +170,7 @@ public class DescribeInstanceAntiBruteForceRulesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -178,7 +178,7 @@ public class DescribeInstanceAntiBruteForceRulesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of servers to which the defense rule is applied.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -243,7 +243,7 @@ public class DescribeInstanceAntiBruteForceRulesResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * Id.
+             * The ID of the defense rule.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -251,7 +251,7 @@ public class DescribeInstanceAntiBruteForceRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the defense rule.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -259,7 +259,7 @@ public class DescribeInstanceAntiBruteForceRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Uuid.
+             * The UUID of the server to which the defense rule is applied.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

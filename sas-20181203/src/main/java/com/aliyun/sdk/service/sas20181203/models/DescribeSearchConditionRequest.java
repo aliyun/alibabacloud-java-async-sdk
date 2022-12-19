@@ -82,7 +82,11 @@ public class DescribeSearchConditionRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * The language of the content within the request and the response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -91,7 +95,7 @@ public class DescribeSearchConditionRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * The source IP address of the request.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -100,7 +104,11 @@ public class DescribeSearchConditionRequest extends Request {
         }
 
         /**
-         * Type.
+         * The type of the asset. Valid values:
+         * <p>
+         * 
+         * *   **ecs**: Elastic Compute Service (ECS) instance
+         * *   **cloud_product**: cloud service except ECS
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

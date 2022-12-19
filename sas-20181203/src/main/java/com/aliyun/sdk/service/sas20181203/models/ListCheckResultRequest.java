@@ -208,7 +208,7 @@ public class ListCheckResultRequest extends Request {
         } 
 
         /**
-         * CheckKey.
+         * The key that you want to use to search for check items in fuzzy match mode.
          */
         public Builder checkKey(String checkKey) {
             this.putQueryParameter("CheckKey", checkKey);
@@ -217,7 +217,7 @@ public class ListCheckResultRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The number of the page to return.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -226,7 +226,7 @@ public class ListCheckResultRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * The instance IDs of the cloud services that you want to query. Separate multiple IDs with commas (,).
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -235,7 +235,31 @@ public class ListCheckResultRequest extends Request {
         }
 
         /**
-         * InstanceTypes.
+         * The asset types of cloud services. Valid values:
+         * <p>
+         * 
+         * *   **ECS**: Elastic Compute Service (ECS)
+         * *   **SLB**: Server Load Balancer (SLB)
+         * *   **RDS**: ApsaraDB RDS
+         * *   **MONGODB**: ApsaraDB for MongoDB (MongoDB)
+         * *   **KVSTORE**: ApsaraDB for Redis (Redis)
+         * *   **ACR**: Container Registry
+         * *   **CSK**: Container Service for Kubernetes (ACK)
+         * *   **VPC**: Virtual Private Cloud (VPC)
+         * *   **ACTIONTRAIL**: ActionTrail
+         * *   **CDN**: Alibaba Cloud CDN (CDN)
+         * *   **CAS**: Certificate Management Service (formerly SSL Certificates Service)
+         * *   **RDC**: Apsara Devops
+         * *   **RAM**: Resource Access Management (RAM)
+         * *   **DDOS**: Anti-DDoS
+         * *   **WAF**: Web Application Firewall (WAF)
+         * *   **OSS**: Object Storage Service (OSS)
+         * *   **POLARDB**: PolarDB
+         * *   **POSTGRESQL**: ApsaraDB RDS for PostgreSQL
+         * *   **MSE**: Microservices Engine (MSE)
+         * *   **NAS**: Apsara File Storage NAS (NAS)
+         * *   **SDDP**: Sensitive Data Discovery and Protection (SDDP)
+         * *   **EIP**: Elastic IP Address (EIP)
          */
         public Builder instanceTypes(java.util.List < String > instanceTypes) {
             this.putQueryParameter("InstanceTypes", instanceTypes);
@@ -244,7 +268,11 @@ public class ListCheckResultRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and the response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -253,7 +281,7 @@ public class ListCheckResultRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -262,7 +290,7 @@ public class ListCheckResultRequest extends Request {
         }
 
         /**
-         * RequirementIds.
+         * The IDs of requirement items.
          */
         public Builder requirementIds(java.util.List < Long > requirementIds) {
             this.putQueryParameter("RequirementIds", requirementIds);
@@ -271,7 +299,12 @@ public class ListCheckResultRequest extends Request {
         }
 
         /**
-         * RiskLevels.
+         * The severities of check items. Separate multiple severities with commas (,). Valid values:
+         * <p>
+         * 
+         * *   **HIGH**
+         * *   **MEDIUM**
+         * *   **LOW**
          */
         public Builder riskLevels(java.util.List < String > riskLevels) {
             this.putQueryParameter("RiskLevels", riskLevels);
@@ -280,7 +313,11 @@ public class ListCheckResultRequest extends Request {
         }
 
         /**
-         * SortTypes.
+         * The types of the conditions based on which check items are sorted. Valid values:
+         * <p>
+         * 
+         * *   **RISK_LEVEL**: risk level
+         * *   **STATUS**: state
          */
         public Builder sortTypes(java.util.List < String > sortTypes) {
             this.putQueryParameter("SortTypes", sortTypes);
@@ -289,7 +326,7 @@ public class ListCheckResultRequest extends Request {
         }
 
         /**
-         * StandardIds.
+         * The IDs of standards.
          */
         public Builder standardIds(java.util.List < Long > standardIds) {
             this.putQueryParameter("StandardIds", standardIds);
@@ -298,7 +335,14 @@ public class ListCheckResultRequest extends Request {
         }
 
         /**
-         * Statuses.
+         * The states of check items. Separate multiple states with commas (,). Valid values:
+         * <p>
+         * 
+         * *   **PASS**
+         * *   **NOT_PASS**
+         * *   **CHECKING**
+         * *   **NOT_CHECK**
+         * *   **WHITELIST**
          */
         public Builder statuses(java.util.List < String > statuses) {
             this.putQueryParameter("Statuses", statuses);
@@ -307,7 +351,10 @@ public class ListCheckResultRequest extends Request {
         }
 
         /**
-         * Vendors.
+         * The cloud service providers. Valid values:
+         * <p>
+         * 
+         * *   **ALIYUN**: Alibaba Cloud
          */
         public Builder vendors(java.util.List < String > vendors) {
             this.putQueryParameter("Vendors", vendors);

@@ -62,7 +62,7 @@ public class DescribePropertyProcItemResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PageInfo.
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -70,7 +70,7 @@ public class DescribePropertyProcItemResponseBody extends TeaModel {
         }
 
         /**
-         * PropertyItems.
+         * An array that consists of the processes returned.
          */
         public Builder propertyItems(java.util.List < PropertyItems> propertyItems) {
             this.propertyItems = propertyItems;
@@ -78,7 +78,7 @@ public class DescribePropertyProcItemResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +154,7 @@ public class DescribePropertyProcItemResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Count.
+             * The number of entries returned on the current page.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -162,7 +162,7 @@ public class DescribePropertyProcItemResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentPage.
+             * The page number of the returned page.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -170,7 +170,7 @@ public class DescribePropertyProcItemResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -178,7 +178,7 @@ public class DescribePropertyProcItemResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -231,7 +231,7 @@ public class DescribePropertyProcItemResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * Count.
+             * The number of servers on which the process runs.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -239,7 +239,7 @@ public class DescribePropertyProcItemResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the process.
              */
             public Builder name(String name) {
                 this.name = name;

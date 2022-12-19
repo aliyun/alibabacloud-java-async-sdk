@@ -55,7 +55,7 @@ public class DescribeExportInfoRequest extends Request {
         } 
 
         /**
-         * ExportId.
+         * The ID of the export task.
          */
         public Builder exportId(Long exportId) {
             this.putQueryParameter("ExportId", exportId);

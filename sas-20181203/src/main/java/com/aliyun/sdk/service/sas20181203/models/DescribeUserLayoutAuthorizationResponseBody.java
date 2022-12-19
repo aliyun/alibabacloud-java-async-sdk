@@ -50,7 +50,10 @@ public class DescribeUserLayoutAuthorizationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Authorized.
+         * The result of the query. Valid values:
+         * <p>
+         * - **true**: The brute-force attacks protection feature has been authorized.
+         * - **false**: The brute-force attacks protection feature is not authorized.
          */
         public Builder authorized(Boolean authorized) {
             this.authorized = authorized;
@@ -58,7 +61,7 @@ public class DescribeUserLayoutAuthorizationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

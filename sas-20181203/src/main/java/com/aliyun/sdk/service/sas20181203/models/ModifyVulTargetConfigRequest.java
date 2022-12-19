@@ -99,7 +99,11 @@ public class ModifyVulTargetConfigRequest extends Request {
         } 
 
         /**
-         * Config.
+         * Specifies whether to enable vulnerability detection. Valid values:
+         * <p>
+         * 
+         * *   **on**: yes
+         * *   **off**: no
          */
         public Builder config(String config) {
             this.putQueryParameter("Config", config);
@@ -108,7 +112,7 @@ public class ModifyVulTargetConfigRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * The source IP address of the request.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -117,7 +121,13 @@ public class ModifyVulTargetConfigRequest extends Request {
         }
 
         /**
-         * Type.
+         * The type of the vulnerability. Valid values:
+         * <p>
+         * 
+         * *   **cve**: Linux software vulnerability
+         * *   **sys**: Windows system vulnerability
+         * *   **cms**: Web-CMS vulnerability
+         * *   **emg**: urgent vulnerability
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -126,7 +136,7 @@ public class ModifyVulTargetConfigRequest extends Request {
         }
 
         /**
-         * Uuid.
+         * The UUID of the server.
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

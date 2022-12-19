@@ -62,7 +62,7 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * HoneypotAlarmEvents.
+         * An array that consists of the alert events.
          */
         public Builder honeypotAlarmEvents(java.util.List < HoneypotAlarmEvents> honeypotAlarmEvents) {
             this.honeypotAlarmEvents = honeypotAlarmEvents;
@@ -70,7 +70,7 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
         }
 
         /**
-         * PageInfo.
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -78,7 +78,7 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +154,7 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
             private String fieldValue; 
 
             /**
-             * FieldExtInfo.
+             * The extended value that corresponds to the field key.
              */
             public Builder fieldExtInfo(String fieldExtInfo) {
                 this.fieldExtInfo = fieldExtInfo;
@@ -162,7 +162,7 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
             }
 
             /**
-             * FieldKey.
+             * The key of the field.
              */
             public Builder fieldKey(String fieldKey) {
                 this.fieldKey = fieldKey;
@@ -170,7 +170,7 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
             }
 
             /**
-             * FieldType.
+             * The type of the field.
              */
             public Builder fieldType(String fieldType) {
                 this.fieldType = fieldType;
@@ -178,7 +178,7 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
             }
 
             /**
-             * FieldValue.
+             * The value of the field key.
              */
             public Builder fieldValue(String fieldValue) {
                 this.fieldValue = fieldValue;
@@ -327,7 +327,7 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
             private String riskLevel; 
 
             /**
-             * AlarmEventId.
+             * The ID of the alert event.
              */
             public Builder alarmEventId(Long alarmEventId) {
                 this.alarmEventId = alarmEventId;
@@ -335,7 +335,7 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
             }
 
             /**
-             * AlarmEventName.
+             * The name of the alert event.
              */
             public Builder alarmEventName(String alarmEventName) {
                 this.alarmEventName = alarmEventName;
@@ -343,7 +343,7 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
             }
 
             /**
-             * AlarmEventType.
+             * The type of the alert event.
              */
             public Builder alarmEventType(String alarmEventType) {
                 this.alarmEventType = alarmEventType;
@@ -351,7 +351,7 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
             }
 
             /**
-             * AlarmUniqueInfo.
+             * The unique identifier of the alert event.
              */
             public Builder alarmUniqueInfo(String alarmUniqueInfo) {
                 this.alarmUniqueInfo = alarmUniqueInfo;
@@ -359,7 +359,7 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
             }
 
             /**
-             * EventCount.
+             * The total number of times that the alert event was generated.
              */
             public Builder eventCount(Integer eventCount) {
                 this.eventCount = eventCount;
@@ -367,7 +367,7 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
             }
 
             /**
-             * FirstTime.
+             * The timestamp when the alert event was first detected.
              */
             public Builder firstTime(Long firstTime) {
                 this.firstTime = firstTime;
@@ -375,7 +375,7 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
             }
 
             /**
-             * LastTime.
+             * The timestamp when the alert event was last detected.
              */
             public Builder lastTime(Long lastTime) {
                 this.lastTime = lastTime;
@@ -383,7 +383,7 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
             }
 
             /**
-             * MergeFieldList.
+             * An array that consists of risk information.
              */
             public Builder mergeFieldList(java.util.List < MergeFieldList> mergeFieldList) {
                 this.mergeFieldList = mergeFieldList;
@@ -391,7 +391,12 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
             }
 
             /**
-             * OperateStatus.
+             * The handling status of the alert event. Valid values:
+             * <p>
+             * 
+             * *   **1**: pending handling
+             * *   **2**: ignored
+             * *   **4**: confirmed
              */
             public Builder operateStatus(Integer operateStatus) {
                 this.operateStatus = operateStatus;
@@ -399,7 +404,12 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevel.
+             * The risk level of the alert event. Valid values:
+             * <p>
+             * 
+             * *   **2**: low
+             * *   **3**: medium
+             * *   **4**: high
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -476,7 +486,7 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Count.
+             * The number of entries returned on the current page.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -484,7 +494,7 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentPage.
+             * The page number of the returned page.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -492,7 +502,7 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page. Default value: 20.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -500,7 +510,7 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

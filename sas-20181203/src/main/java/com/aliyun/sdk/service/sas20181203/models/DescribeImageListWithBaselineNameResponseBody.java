@@ -62,7 +62,7 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ImageInfos.
+         * An array that consists of the images returned.
          */
         public Builder imageInfos(java.util.List < ImageInfos> imageInfos) {
             this.imageInfos = imageInfos;
@@ -70,7 +70,7 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
         }
 
         /**
-         * PageInfo.
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -78,7 +78,7 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -490,7 +490,7 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * ClusterId.
+             * The ID of the cluster.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -498,7 +498,7 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterName.
+             * The name of the cluster.
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -506,7 +506,7 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             }
 
             /**
-             * ContainerId.
+             * The ID of the container.
              */
             public Builder containerId(String containerId) {
                 this.containerId = containerId;
@@ -514,7 +514,7 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             }
 
             /**
-             * Digest.
+             * The SHA-256 value of the image digest.
              */
             public Builder digest(String digest) {
                 this.digest = digest;
@@ -522,7 +522,7 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             }
 
             /**
-             * HighRiskImage.
+             * The number of images on which **high** baseline risks are detected.
              */
             public Builder highRiskImage(Integer highRiskImage) {
                 this.highRiskImage = highRiskImage;
@@ -530,7 +530,7 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             }
 
             /**
-             * Image.
+             * The name of the image.
              */
             public Builder image(String image) {
                 this.image = image;
@@ -538,7 +538,7 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             }
 
             /**
-             * ImageCreate.
+             * The timestamp when the image was created. Unit: milliseconds.
              */
             public Builder imageCreate(Long imageCreate) {
                 this.imageCreate = imageCreate;
@@ -546,7 +546,7 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             }
 
             /**
-             * ImageId.
+             * The ID of the image.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -554,7 +554,7 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             }
 
             /**
-             * ImageSize.
+             * The size of the image.
              */
             public Builder imageSize(Integer imageSize) {
                 this.imageSize = imageSize;
@@ -562,7 +562,7 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             }
 
             /**
-             * ImageUpdate.
+             * The timestamp when the image was updated. Unit: milliseconds.
              */
             public Builder imageUpdate(Long imageUpdate) {
                 this.imageUpdate = imageUpdate;
@@ -570,7 +570,7 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the image instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -610,7 +610,7 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             }
 
             /**
-             * LowRiskImage.
+             * The number of images on which **low** baseline risks are detected.
              */
             public Builder lowRiskImage(Integer lowRiskImage) {
                 this.lowRiskImage = lowRiskImage;
@@ -618,7 +618,7 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             }
 
             /**
-             * MiddleRiskImage.
+             * The number of images on which **medium** baseline risks are detected.
              */
             public Builder middleRiskImage(Integer middleRiskImage) {
                 this.middleRiskImage = middleRiskImage;
@@ -626,7 +626,7 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             }
 
             /**
-             * Namespace.
+             * The namespace.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -634,7 +634,7 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             }
 
             /**
-             * NoRiskImage.
+             * The number of images that do not have baseline risks.
              */
             public Builder noRiskImage(Integer noRiskImage) {
                 this.noRiskImage = noRiskImage;
@@ -642,7 +642,7 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             }
 
             /**
-             * Pod.
+             * The pod.
              */
             public Builder pod(String pod) {
                 this.pod = pod;
@@ -650,7 +650,7 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID of the image instance.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -658,7 +658,7 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             }
 
             /**
-             * RepoId.
+             * The ID of the image repository.
              */
             public Builder repoId(String repoId) {
                 this.repoId = repoId;
@@ -666,7 +666,7 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             }
 
             /**
-             * RepoName.
+             * The name of the image repository.
              */
             public Builder repoName(String repoName) {
                 this.repoName = repoName;
@@ -674,7 +674,7 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             }
 
             /**
-             * RepoNamespace.
+             * The namespace to which the image repository belongs.
              */
             public Builder repoNamespace(String repoNamespace) {
                 this.repoNamespace = repoNamespace;
@@ -682,7 +682,7 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             }
 
             /**
-             * RepoType.
+             * The type of the image repository.
              */
             public Builder repoType(String repoType) {
                 this.repoType = repoType;
@@ -690,7 +690,11 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             }
 
             /**
-             * RiskStatus.
+             * Indicates whether the image is at risk. Valid values:
+             * <p>
+             * 
+             * *   **YES**
+             * *   **NO**
              */
             public Builder riskStatus(String riskStatus) {
                 this.riskStatus = riskStatus;
@@ -698,7 +702,7 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             }
 
             /**
-             * Tag.
+             * The version of the image.
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -730,7 +734,7 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             }
 
             /**
-             * TotalItemCount.
+             * The total number of risk items that are detected on the image by using the baseline.
              */
             public Builder totalItemCount(Integer totalItemCount) {
                 this.totalItemCount = totalItemCount;
@@ -738,7 +742,7 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             }
 
             /**
-             * Uuid.
+             * The UUID of the image.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -815,7 +819,7 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Count.
+             * The number of the images returned on the current page.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -823,7 +827,7 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentPage.
+             * The page number of the returned page. Default value: **1**.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -831,7 +835,7 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page. Default value: **10**.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -839,7 +843,7 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of images on which baseline risks are detected.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

@@ -62,7 +62,7 @@ public class DescribeVulConfigResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class DescribeVulConfigResponseBody extends TeaModel {
         }
 
         /**
-         * TargetConfigs.
+         * An array that consists of the configurations of vulnerability management.
          */
         public Builder targetConfigs(java.util.List < TargetConfigs> targetConfigs) {
             this.targetConfigs = targetConfigs;
@@ -78,7 +78,7 @@ public class DescribeVulConfigResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of configurations.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -142,7 +142,26 @@ public class DescribeVulConfigResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Config.
+             * The configuartion of vulnerability scan.
+             * <p>
+             * 
+             * > 
+             * 
+             * Valid values of this parameter if **cve**, **sys**, **cms**, **app**, **emg**, or **yum** is returned for the Type parameter:
+             * 
+             * *   **on**: enabled
+             * *   **off**: disabled
+             * 
+             * > 
+             * 
+             * Valid values of this parameter if **scanMode** is returned for the Type parameter:
+             * 
+             * *   **real**: displays easily exploitable vulnerability
+             * *   **all**: displays all vulnerabilities
+             * 
+             * > 
+             * 
+             * If **imageVulClean** is returned for the Type parameter, the value of this parameter indicates the vulnerability retention duration.
              */
             public Builder config(String config) {
                 this.config = config;
@@ -150,7 +169,11 @@ public class DescribeVulConfigResponseBody extends TeaModel {
             }
 
             /**
-             * OverAllConfig.
+             * The status of vulnerability management. Valid values:
+             * <p>
+             * 
+             * *   **off**: disabled
+             * *   **on**: enabled
              */
             public Builder overAllConfig(String overAllConfig) {
                 this.overAllConfig = overAllConfig;
@@ -158,7 +181,17 @@ public class DescribeVulConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of configuration. Valid values:
+             * <p>
+             * 
+             * *   **cve**: Linux software vulnerability
+             * *   **sys**: Windows system vulnerability
+             * *   **cms**: Web-CMS vulnerability
+             * *   **app**: application vulnerability that is detected by using web scanner
+             * *   **emg**: urgent vulnerability
+             * *   **scanMode**: displays easily exploitable vulnerability
+             * *   **imageVulClean**: vulnerability retention duration
+             * *   **yum**: preferentially uses YUM or APT sources of Alibaba Cloud to fix vulnerabilities
              */
             public Builder type(String type) {
                 this.type = type;

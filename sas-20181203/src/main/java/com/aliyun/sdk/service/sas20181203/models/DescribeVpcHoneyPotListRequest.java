@@ -124,7 +124,7 @@ public class DescribeVpcHoneyPotListRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * The number of the page to return.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -133,7 +133,11 @@ public class DescribeVpcHoneyPotListRequest extends Request {
         }
 
         /**
-         * HoneyPotExistence.
+         * Specifies whether the cloud honeypot feature is enabled for the VPC. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false**: no
          */
         public Builder honeyPotExistence(Boolean honeyPotExistence) {
             this.putQueryParameter("HoneyPotExistence", honeyPotExistence);
@@ -142,7 +146,10 @@ public class DescribeVpcHoneyPotListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.
+         * <p>
+         * 
+         * >  We recommend that you do not leave this parameter empty.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -151,7 +158,10 @@ public class DescribeVpcHoneyPotListRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * The ID of the VPC on which the honeypot is deployed.
+         * <p>
+         * 
+         * >  You can call the [DescribeVpcList](~~DescribeVpcList~~) operation to query the IDs of VPCs.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -160,7 +170,10 @@ public class DescribeVpcHoneyPotListRequest extends Request {
         }
 
         /**
-         * VpcName.
+         * The name of the VPC.
+         * <p>
+         * 
+         * >  You can call the [DescribeVpcList](~~DescribeVpcList~~) operation to query the names of VPCs.
          */
         public Builder vpcName(String vpcName) {
             this.putQueryParameter("VpcName", vpcName);
@@ -169,7 +182,10 @@ public class DescribeVpcHoneyPotListRequest extends Request {
         }
 
         /**
-         * VpcRegionId.
+         * The region ID of the VPC.
+         * <p>
+         * 
+         * >  You can call the [DescribeVpcList](~~DescribeVpcList~~) operation to query the region IDs of VPCs.
          */
         public Builder vpcRegionId(String vpcRegionId) {
             this.putQueryParameter("VpcRegionId", vpcRegionId);

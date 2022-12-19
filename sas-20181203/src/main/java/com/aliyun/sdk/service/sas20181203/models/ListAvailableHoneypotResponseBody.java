@@ -110,7 +110,7 @@ public class ListAvailableHoneypotResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +118,7 @@ public class ListAvailableHoneypotResponseBody extends TeaModel {
         }
 
         /**
-         * Count.
+         * The number of images that are used for the honeypot.
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -126,7 +126,7 @@ public class ListAvailableHoneypotResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * An array consisting of the information about the images that are used for the honeypot.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -134,7 +134,7 @@ public class ListAvailableHoneypotResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -142,7 +142,7 @@ public class ListAvailableHoneypotResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -150,7 +150,7 @@ public class ListAvailableHoneypotResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,11 @@ public class ListAvailableHoneypotResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -294,7 +298,7 @@ public class ListAvailableHoneypotResponseBody extends TeaModel {
             private String template; 
 
             /**
-             * 蜜罐镜像展示名称
+             * The display name of the image that is used for the honeypot.
              */
             public Builder honeypotImageDisplayName(String honeypotImageDisplayName) {
                 this.honeypotImageDisplayName = honeypotImageDisplayName;
@@ -302,7 +306,7 @@ public class ListAvailableHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * 蜜罐镜像ID
+             * The ID of the image that is used for the honeypot.
              */
             public Builder honeypotImageId(String honeypotImageId) {
                 this.honeypotImageId = honeypotImageId;
@@ -310,7 +314,7 @@ public class ListAvailableHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * 蜜罐镜像名称
+             * The name of the image that is used for the honeypot.
              */
             public Builder honeypotImageName(String honeypotImageName) {
                 this.honeypotImageName = honeypotImageName;
@@ -318,7 +322,7 @@ public class ListAvailableHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * 蜜罐镜像类型
+             * The type of the image that is used for the honeypot.
              */
             public Builder honeypotImageType(String honeypotImageType) {
                 this.honeypotImageType = honeypotImageType;
@@ -326,7 +330,7 @@ public class ListAvailableHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * 蜜罐镜像版本
+             * The version of the image that is used for the honeypot.
              */
             public Builder honeypotImageVersion(String honeypotImageVersion) {
                 this.honeypotImageVersion = honeypotImageVersion;
@@ -334,7 +338,15 @@ public class ListAvailableHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * 蜜罐支持的端口
+             * The port that is supported by the honeypot. The value is in the JSON format. The value contains the following fields:
+             * <p>
+             * 
+             * *   **log_type**: the log type
+             * *   **proto**: the supported protocol
+             * *   **description**: the description
+             * *   **ports**: the supported ports
+             * *   **port_str**: the supported port number of the string type
+             * *   **type**: the type
              */
             public Builder multiports(String multiports) {
                 this.multiports = multiports;
@@ -342,7 +354,7 @@ public class ListAvailableHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * 蜜罐支持的协议
+             * The protocol that is supported by the honeypot.
              */
             public Builder proto(String proto) {
                 this.proto = proto;
@@ -350,7 +362,7 @@ public class ListAvailableHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * 蜜罐服务端口
+             * The service port of the honeypot.
              */
             public Builder servicePort(String servicePort) {
                 this.servicePort = servicePort;
@@ -358,7 +370,7 @@ public class ListAvailableHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * 蜜罐配置参数模板
+             * The configuration template of the honeypot.
              */
             public Builder template(String template) {
                 this.template = template;

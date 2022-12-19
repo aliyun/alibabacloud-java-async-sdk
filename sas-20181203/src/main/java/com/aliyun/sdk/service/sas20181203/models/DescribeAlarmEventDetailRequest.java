@@ -98,7 +98,10 @@ public class DescribeAlarmEventDetailRequest extends Request {
         } 
 
         /**
-         * AlarmUniqueInfo.
+         * The unique ID of the alert event.
+         * <p>
+         * 
+         * >  To query the details of an alert event, you must specify the unique ID of the alert event. You can call the [DescribeAlarmEventList](~~DescribeAlarmEventList~~) operation to query the unique IDs of alert events.
          */
         public Builder alarmUniqueInfo(String alarmUniqueInfo) {
             this.putQueryParameter("AlarmUniqueInfo", alarmUniqueInfo);
@@ -107,7 +110,7 @@ public class DescribeAlarmEventDetailRequest extends Request {
         }
 
         /**
-         * From.
+         * The ID of the request source. Set the value to **sas**.
          */
         public Builder from(String from) {
             this.putQueryParameter("From", from);
@@ -116,7 +119,11 @@ public class DescribeAlarmEventDetailRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -125,7 +132,7 @@ public class DescribeAlarmEventDetailRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * The source IP address of the request.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

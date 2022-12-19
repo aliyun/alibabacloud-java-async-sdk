@@ -86,7 +86,7 @@ public class DescribeGroupedTagsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Count.
+         * This parameter is deprecated.
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -94,7 +94,7 @@ public class DescribeGroupedTagsResponseBody extends TeaModel {
         }
 
         /**
-         * GroupedFileds.
+         * An array that consists of the statistics of the asset tags.
          */
         public Builder groupedFileds(java.util.List < GroupedFileds> groupedFileds) {
             this.groupedFileds = groupedFileds;
@@ -102,7 +102,7 @@ public class DescribeGroupedTagsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code of the request.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -110,7 +110,7 @@ public class DescribeGroupedTagsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class DescribeGroupedTagsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request is successful.
+         * *   **false**: The request fails.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -182,7 +186,7 @@ public class DescribeGroupedTagsResponseBody extends TeaModel {
             private Integer tagId; 
 
             /**
-             * Count.
+             * The number of assets to which the tag is added.
              */
             public Builder count(String count) {
                 this.count = count;
@@ -190,7 +194,7 @@ public class DescribeGroupedTagsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the tag.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -198,7 +202,7 @@ public class DescribeGroupedTagsResponseBody extends TeaModel {
             }
 
             /**
-             * TagId.
+             * The ID of the tag.
              */
             public Builder tagId(Integer tagId) {
                 this.tagId = tagId;

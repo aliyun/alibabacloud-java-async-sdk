@@ -50,7 +50,7 @@ public class DescribeBackupRestoreCountResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * BackupRestoreCount.
+         * The statistics of restoration tasks.
          */
         public Builder backupRestoreCount(BackupRestoreCount backupRestoreCount) {
             this.backupRestoreCount = backupRestoreCount;
@@ -58,7 +58,7 @@ public class DescribeBackupRestoreCountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeBackupRestoreCountResponseBody extends TeaModel {
             private Integer total; 
 
             /**
-             * Recovering.
+             * The number of the restoration tasks that are in the **being restored** state.
              */
             public Builder recovering(Integer recovering) {
                 this.recovering = recovering;
@@ -118,7 +118,7 @@ public class DescribeBackupRestoreCountResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * The total number of the restoration tasks that you create.
              */
             public Builder total(Integer total) {
                 this.total = total;

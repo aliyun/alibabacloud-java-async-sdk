@@ -223,7 +223,10 @@ public class DescribeWarningMachinesRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the container cluster.
+         * <p>
+         * 
+         * >  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of container clusters.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -232,7 +235,16 @@ public class DescribeWarningMachinesRequest extends Request {
         }
 
         /**
-         * ContainerFieldName.
+         * The name of the field that is used to search for the container. Valid values:
+         * <p>
+         * 
+         * *   **CONTAINER_ID**: the ID of the container
+         * *   **IMAGE**: the name of the image
+         * *   **NAMESPACE**: the namespace
+         * *   **NODE_NAME**: the name of the node
+         * *   **POD_IP**: the IP address of the pod
+         * *   **HOST_IP**: the IP address of the host
+         * *   **INSTANCE_ID**: the ID of the instance
          */
         public Builder containerFieldName(String containerFieldName) {
             this.putQueryParameter("ContainerFieldName", containerFieldName);
@@ -241,7 +253,7 @@ public class DescribeWarningMachinesRequest extends Request {
         }
 
         /**
-         * ContainerFieldValue.
+         * The value of the field that is used to search for the container.
          */
         public Builder containerFieldValue(String containerFieldValue) {
             this.putQueryParameter("ContainerFieldValue", containerFieldValue);
@@ -250,7 +262,7 @@ public class DescribeWarningMachinesRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -259,7 +271,11 @@ public class DescribeWarningMachinesRequest extends Request {
         }
 
         /**
-         * HaveRisk.
+         * Specifies whether risks were detected. Valid values:
+         * <p>
+         * 
+         * *   **1**: yes
+         * *   **0**: no
          */
         public Builder haveRisk(Integer haveRisk) {
             this.putQueryParameter("HaveRisk", haveRisk);
@@ -268,7 +284,11 @@ public class DescribeWarningMachinesRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -277,7 +297,7 @@ public class DescribeWarningMachinesRequest extends Request {
         }
 
         /**
-         * MachineName.
+         * The name of the server on which the baseline check is performed.
          */
         public Builder machineName(String machineName) {
             this.putQueryParameter("MachineName", machineName);
@@ -286,7 +306,7 @@ public class DescribeWarningMachinesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -295,7 +315,10 @@ public class DescribeWarningMachinesRequest extends Request {
         }
 
         /**
-         * RiskId.
+         * The ID of the risk item.
+         * <p>
+         * 
+         * >  You can call the [DescribeCheckWarningSummary](~~DescribeCheckWarningSummary~~) operation to query the IDs of risk items.
          */
         public Builder riskId(Long riskId) {
             this.putQueryParameter("RiskId", riskId);
@@ -304,7 +327,7 @@ public class DescribeWarningMachinesRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * The source IP address of the request.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -313,7 +336,7 @@ public class DescribeWarningMachinesRequest extends Request {
         }
 
         /**
-         * StrategyId.
+         * The ID of the baseline check policy.
          */
         public Builder strategyId(Long strategyId) {
             this.putQueryParameter("StrategyId", strategyId);
@@ -322,7 +345,11 @@ public class DescribeWarningMachinesRequest extends Request {
         }
 
         /**
-         * TargetType.
+         * The type of the query condition. Valid values:
+         * <p>
+         * 
+         * *   **containerId**: the ID of the container
+         * *   **uuid**: the UUID of the asset
          */
         public Builder targetType(String targetType) {
             this.putQueryParameter("TargetType", targetType);
@@ -331,7 +358,7 @@ public class DescribeWarningMachinesRequest extends Request {
         }
 
         /**
-         * Uuids.
+         * The UUID of the server on which the baseline check is performed. Separate multiple UUIDs with commas (,).
          */
         public Builder uuids(String uuids) {
             this.putQueryParameter("Uuids", uuids);

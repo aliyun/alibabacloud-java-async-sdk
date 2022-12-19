@@ -50,7 +50,7 @@ public class DescribeContainerStatisticsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The alert statistics of container assets.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class DescribeContainerStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,7 @@ public class DescribeContainerStatisticsResponseBody extends TeaModel {
             private Integer hasRiskNode; 
 
             /**
-             * RemindAlarmCount.
+             * The number of alerts whose risk level is **Reminder**.
              */
             public Builder remindAlarmCount(Integer remindAlarmCount) {
                 this.remindAlarmCount = remindAlarmCount;
@@ -166,7 +166,7 @@ public class DescribeContainerStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * SeriousAlarmCount.
+             * The number of alerts whose risk level is **Urgent**.
              */
             public Builder seriousAlarmCount(Integer seriousAlarmCount) {
                 this.seriousAlarmCount = seriousAlarmCount;
@@ -174,7 +174,7 @@ public class DescribeContainerStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * SuspiciousAlarmCount.
+             * The number of alerts whose risk level is **Suspicious**.
              */
             public Builder suspiciousAlarmCount(Integer suspiciousAlarmCount) {
                 this.suspiciousAlarmCount = suspiciousAlarmCount;
@@ -182,7 +182,7 @@ public class DescribeContainerStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalAlarmCount.
+             * The total number of alerts that are generated in the current container cluster.
              */
             public Builder totalAlarmCount(Integer totalAlarmCount) {
                 this.totalAlarmCount = totalAlarmCount;
@@ -190,7 +190,7 @@ public class DescribeContainerStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalNode.
+             * The total number of nodes in the current container cluster.
              */
             public Builder totalNode(Integer totalNode) {
                 this.totalNode = totalNode;
@@ -198,7 +198,7 @@ public class DescribeContainerStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * hasRiskNode.
+             * The number of nodes on which alerts are generated in the current container cluster.
              */
             public Builder hasRiskNode(Integer hasRiskNode) {
                 this.hasRiskNode = hasRiskNode;

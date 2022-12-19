@@ -194,7 +194,7 @@ public class DescribeGroupedVulRequest extends Request {
         } 
 
         /**
-         * AliasName.
+         * The alias of the vulnerability.
          */
         public Builder aliasName(String aliasName) {
             this.putQueryParameter("AliasName", aliasName);
@@ -203,7 +203,10 @@ public class DescribeGroupedVulRequest extends Request {
         }
 
         /**
-         * AttachTypes.
+         * The type of the vulnerability.
+         * <p>
+         * 
+         * >  This parameter is valid only for application vulnerabilities and vulnerabilities that are detected based on software component analysis.
          */
         public Builder attachTypes(String attachTypes) {
             this.putQueryParameter("AttachTypes", attachTypes);
@@ -212,7 +215,7 @@ public class DescribeGroupedVulRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -221,7 +224,10 @@ public class DescribeGroupedVulRequest extends Request {
         }
 
         /**
-         * Dealed.
+         * Specifies whether the vulnerability is handled. Valid values:
+         * <p>
+         * 
+         * **y**: yes **n**: no
          */
         public Builder dealed(String dealed) {
             this.putQueryParameter("Dealed", dealed);
@@ -230,7 +236,7 @@ public class DescribeGroupedVulRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * The ID of the asset group.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -239,7 +245,11 @@ public class DescribeGroupedVulRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -248,7 +258,12 @@ public class DescribeGroupedVulRequest extends Request {
         }
 
         /**
-         * Necessity.
+         * The priority to fix the vulnerability. Separate multiple priorities with commas (,). Valid values:
+         * <p>
+         * 
+         * *   **asap**: high
+         * *   **later**: medium
+         * *   **nntf**: low
          */
         public Builder necessity(String necessity) {
             this.putQueryParameter("Necessity", necessity);
@@ -257,7 +272,7 @@ public class DescribeGroupedVulRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -266,7 +281,15 @@ public class DescribeGroupedVulRequest extends Request {
         }
 
         /**
-         * SearchTags.
+         * The tag that is used to filter vulnerabilities. Valid values:
+         * <p>
+         * 
+         * *   Restart required
+         * *   Remote exploitation
+         * *   Exploit exists
+         * *   Exploitable
+         * *   Privilege escalation
+         * *   Code execution
          */
         public Builder searchTags(String searchTags) {
             this.putQueryParameter("SearchTags", searchTags);
@@ -275,7 +298,15 @@ public class DescribeGroupedVulRequest extends Request {
         }
 
         /**
-         * Type.
+         * The type of the vulnerability. Valid values:
+         * <p>
+         * 
+         * *   **cve**: Linux software vulnerability
+         * *   **sys**: Windows system vulnerability
+         * *   **cms**: Web-CMS vulnerability
+         * *   **app**: application vulnerability
+         * *   **emg**: urgent vulnerability
+         * *   **sca**: vulnerability that is detected based on software component analysis
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -284,7 +315,7 @@ public class DescribeGroupedVulRequest extends Request {
         }
 
         /**
-         * Uuids.
+         * The UUIDs of the servers. Separate multiple UUIDs with commas (,).
          */
         public Builder uuids(String uuids) {
             this.putQueryParameter("Uuids", uuids);

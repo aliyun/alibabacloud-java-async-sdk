@@ -62,7 +62,7 @@ public class DescribeSecureSuggestionResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class DescribeSecureSuggestionResponseBody extends TeaModel {
         }
 
         /**
-         * Suggestions.
+         * An array that consists of the unhandled security risks.
          */
         public Builder suggestions(java.util.List < Suggestions> suggestions) {
             this.suggestions = suggestions;
@@ -78,7 +78,7 @@ public class DescribeSecureSuggestionResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of unhandled security risks.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -142,7 +142,7 @@ public class DescribeSecureSuggestionResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * Description.
+             * The description of the suggestion.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -150,7 +150,7 @@ public class DescribeSecureSuggestionResponseBody extends TeaModel {
             }
 
             /**
-             * SubType.
+             * The subtype of the unhandled security risk.
              */
             public Builder subType(String subType) {
                 this.subType = subType;
@@ -158,7 +158,7 @@ public class DescribeSecureSuggestionResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * The name of the unhandled risk.
              */
             public Builder title(String title) {
                 this.title = title;
@@ -223,7 +223,7 @@ public class DescribeSecureSuggestionResponseBody extends TeaModel {
             private String suggestType; 
 
             /**
-             * Detail.
+             * An array that consists of the details about the suggestion.
              */
             public Builder detail(java.util.List < Detail> detail) {
                 this.detail = detail;
@@ -231,7 +231,7 @@ public class DescribeSecureSuggestionResponseBody extends TeaModel {
             }
 
             /**
-             * Points.
+             * The penalty point of an item.
              */
             public Builder points(Integer points) {
                 this.points = points;
@@ -239,7 +239,16 @@ public class DescribeSecureSuggestionResponseBody extends TeaModel {
             }
 
             /**
-             * SuggestType.
+             * The type of the unhandled security risk. Valid values:
+             * <p>
+             * 
+             * *   **SS_REINFORCE**: missing configuration of key features, such as the antivirus feature
+             * *   **SS_ALARM**: unhandled alerts
+             * *   **SS_VUL**: unfixed vulnerabilities
+             * *   **SS_HC**: baseline risks
+             * *   **SS_AK**: AccessKey pair leaks
+             * *   **SS_CLOUD_HC**: configuration risks of cloud services
+             * *   **OTHER**: others
              */
             public Builder suggestType(String suggestType) {
                 this.suggestType = suggestType;

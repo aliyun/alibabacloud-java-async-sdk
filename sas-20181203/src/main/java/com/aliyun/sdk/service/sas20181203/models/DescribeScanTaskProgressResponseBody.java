@@ -62,7 +62,7 @@ public class DescribeScanTaskProgressResponseBody extends TeaModel {
         private String targetInfo; 
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,13 @@ public class DescribeScanTaskProgressResponseBody extends TeaModel {
         }
 
         /**
-         * ScanTaskProgress.
+         * The progress of the virus scan task. Valid values:
+         * <p>
+         * 
+         * *   **init**: The task is being initialized.
+         * *   **Processing**: The task is running.
+         * *   **Success**: The task is complete.
+         * *   **Failed**: The task fails.
          */
         public Builder scanTaskProgress(String scanTaskProgress) {
             this.scanTaskProgress = scanTaskProgress;
@@ -78,7 +84,20 @@ public class DescribeScanTaskProgressResponseBody extends TeaModel {
         }
 
         /**
-         * TargetInfo.
+         * The information about the asset on which the virus scan task runs. The value is a string that consists of JSON arrays. Each element in a JSON array is a JSON struct that contains the following fields:
+         * <p>
+         * 
+         * *   **type**: the type of the asset on which the virus scan task runs. Valid values:
+         * 
+         *     *   **groupId**: server group.
+         *     *   **uuid**: server.
+         * 
+         * *   **name**: the name of the server group or server.
+         * 
+         * *   **target**: the asset on which the virus scan task runs. The value of this field varies based on the value of the type field.
+         * 
+         *     *   If the value of **type** is **groupId**, the value of this field is the ID of the server group.
+         *     *   If the value of **type** is **uuid**, the value of this field is the UUID of the server.
          */
         public Builder targetInfo(String targetInfo) {
             this.targetInfo = targetInfo;

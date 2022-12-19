@@ -139,7 +139,14 @@ public class BindAuthToMachineRequest extends Request {
         } 
 
         /**
-         * AuthVersion.
+         * The edition of Security Center. Valid values:
+         * <p>
+         * 
+         * *   **6**: Anti-virus edition
+         * *   **5**: Advanced edition
+         * *   **3**: Enterprise edition
+         * *   **7**: Ultimate edition
+         * *   **10**: Value-added Plan edition
          */
         public Builder authVersion(Integer authVersion) {
             this.putQueryParameter("AuthVersion", authVersion);
@@ -148,7 +155,11 @@ public class BindAuthToMachineRequest extends Request {
         }
 
         /**
-         * AutoBind.
+         * Specifies whether to automatically bind servers to Security Center. Valid values:
+         * <p>
+         * 
+         * *   **0**: no
+         * *   **1**: yes
          */
         public Builder autoBind(Integer autoBind) {
             this.putQueryParameter("AutoBind", autoBind);
@@ -157,7 +168,10 @@ public class BindAuthToMachineRequest extends Request {
         }
 
         /**
-         * Bind.
+         * The UUIDs of the servers that you want to bind to Security Center.
+         * <p>
+         * 
+         * >  You must specify at least one of the **Bind** and **UnBind** parameters.
          */
         public Builder bind(java.util.List < String > bind) {
             this.putQueryParameter("Bind", bind);
@@ -166,7 +180,11 @@ public class BindAuthToMachineRequest extends Request {
         }
 
         /**
-         * BindAll.
+         * Specifies whether to bind all servers to Security Center. Default value: **false**. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false**: no
          */
         public Builder bindAll(Boolean bindAll) {
             this.putQueryParameter("BindAll", bindAll);
@@ -175,7 +193,10 @@ public class BindAuthToMachineRequest extends Request {
         }
 
         /**
-         * Criteria.
+         * The search conditions that are used to filter servers. The value of this parameter is in the JSON format and is case-sensitive.
+         * <p>
+         * 
+         * >  A search condition can be an instance ID, instance name, virtual private cloud (VPC) ID, region, or public IP address. You can call the [DescribeCriteria](~~DescribeCriteria~~) operation to query the supported search conditions.
          */
         public Builder criteria(String criteria) {
             this.putQueryParameter("Criteria", criteria);
@@ -184,7 +205,11 @@ public class BindAuthToMachineRequest extends Request {
         }
 
         /**
-         * LogicalExp.
+         * The logical relationship among multiple search conditions. Valid values:
+         * <p>
+         * 
+         * *   **OR**: Search conditions are evaluated by using a logical **OR**.
+         * *   **AND**: Search conditions are evaluated by using a logical **AND**.
          */
         public Builder logicalExp(String logicalExp) {
             this.putQueryParameter("LogicalExp", logicalExp);
@@ -193,7 +218,10 @@ public class BindAuthToMachineRequest extends Request {
         }
 
         /**
-         * UnBind.
+         * The UUIDs of the servers that you want to unbind from Security Center.
+         * <p>
+         * 
+         * >  You must specify at least one of the **Bind** and **UnBind** parameters.
          */
         public Builder unBind(java.util.List < String > unBind) {
             this.putQueryParameter("UnBind", unBind);

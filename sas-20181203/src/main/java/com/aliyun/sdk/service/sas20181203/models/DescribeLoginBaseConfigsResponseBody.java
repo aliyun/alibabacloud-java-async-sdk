@@ -86,7 +86,7 @@ public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * BaseConfigs.
+         * An array that consists of the information about the configurations.
          */
         public Builder baseConfigs(java.util.List < BaseConfigs> baseConfigs) {
             this.baseConfigs = baseConfigs;
@@ -94,7 +94,7 @@ public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * CurrentPage.
+         * The page number of the returned page.
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -102,7 +102,7 @@ public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page. Default value: **20**.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -170,7 +170,7 @@ public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
             private String targetType; 
 
             /**
-             * Target.
+             * The UUID or group ID of the server.
              */
             public Builder target(String target) {
                 this.target = target;
@@ -178,7 +178,12 @@ public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * TargetType.
+             * The type of the server to which the configuration is applied. Valid values:
+             * <p>
+             * 
+             * *   **uuid**: a server
+             * *   **groupId**: a server group
+             * *   **global**: all servers
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -303,7 +308,7 @@ public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
             private Integer uuidCount; 
 
             /**
-             * Account.
+             * The common logon account.
              */
             public Builder account(String account) {
                 this.account = account;
@@ -311,7 +316,7 @@ public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * The end time of the common logon time range.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -319,7 +324,7 @@ public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Ip.
+             * The common logon IP address.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -327,7 +332,7 @@ public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Location.
+             * The common logon location.
              */
             public Builder location(String location) {
                 this.location = location;
@@ -335,7 +340,7 @@ public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The start time of the common logon time range.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -343,7 +348,7 @@ public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * TargetList.
+             * The details of the servers to which the configuration is applied.
              */
             public Builder targetList(java.util.List < TargetList> targetList) {
                 this.targetList = targetList;
@@ -351,7 +356,7 @@ public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of servers.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -359,7 +364,7 @@ public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * UuidCount.
+             * The number of servers to which the configuration is applied.
              */
             public Builder uuidCount(Integer uuidCount) {
                 this.uuidCount = uuidCount;

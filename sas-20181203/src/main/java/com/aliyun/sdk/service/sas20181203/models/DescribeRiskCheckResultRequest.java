@@ -208,7 +208,7 @@ public class DescribeRiskCheckResultRequest extends Request {
         } 
 
         /**
-         * AssetType.
+         * The type of the cloud service whose configuration assessment result you want to query. For more information about the description of the cloud service specified by this parameter, see the check item table in the "Response parameters" section of this topic.
          */
         public Builder assetType(String assetType) {
             this.putQueryParameter("AssetType", assetType);
@@ -217,7 +217,7 @@ public class DescribeRiskCheckResultRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -226,7 +226,17 @@ public class DescribeRiskCheckResultRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * The type of the check item that you want to query. Valid values:
+         * <p>
+         * 
+         * *   **1**: identity authentication and permissions
+         * *   **2**: network access control
+         * *   **3**: log audit
+         * *   **4**: data security
+         * *   **5**: monitoring and alerting
+         * *   **6**: basic security protection
+         * 
+         * >  If you do not specify this parameter, all types of check items are queried by default.
          */
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -244,7 +254,11 @@ public class DescribeRiskCheckResultRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -253,7 +267,7 @@ public class DescribeRiskCheckResultRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the check item. For more information about the description of the check item name, see the check item table in the "Response parameters" section of this topic.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -262,7 +276,7 @@ public class DescribeRiskCheckResultRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: **20**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -271,7 +285,11 @@ public class DescribeRiskCheckResultRequest extends Request {
         }
 
         /**
-         * QueryFlag.
+         * Specifies whether the check item is supported by the cloud service. Valid values:
+         * <p>
+         * 
+         * *   **enabled**: The check item is supported by the cloud service.
+         * *   **disabled**: The check item is not supported by the cloud service.
          */
         public Builder queryFlag(String queryFlag) {
             this.putQueryParameter("QueryFlag", queryFlag);
@@ -289,7 +307,12 @@ public class DescribeRiskCheckResultRequest extends Request {
         }
 
         /**
-         * RiskLevel.
+         * The risk level of the check item that you want to query. Valid values:
+         * <p>
+         * 
+         * *   **high**
+         * *   **medium**
+         * *   **low**
          */
         public Builder riskLevel(String riskLevel) {
             this.putQueryParameter("RiskLevel", riskLevel);
@@ -298,7 +321,7 @@ public class DescribeRiskCheckResultRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * The source IP address of the request.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -307,7 +330,15 @@ public class DescribeRiskCheckResultRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the check result. Valid values:
+         * <p>
+         * 
+         * *   **pass**
+         * *   **failed**
+         * *   **running**
+         * *   **waiting**
+         * *   **ignored**
+         * *   **falsePositive**
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

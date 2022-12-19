@@ -86,7 +86,7 @@ public class GetSuspiciousStatisticsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * RemindCount.
+         * The number of alerts whose Emergency level is Reminder.
          */
         public Builder remindCount(Integer remindCount) {
             this.remindCount = remindCount;
@@ -94,7 +94,7 @@ public class GetSuspiciousStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -102,7 +102,7 @@ public class GetSuspiciousStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * SeriousCount.
+         * The number of alerts whose Emergency level is Urgent.
          */
         public Builder seriousCount(Integer seriousCount) {
             this.seriousCount = seriousCount;
@@ -110,7 +110,7 @@ public class GetSuspiciousStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * SuspiciousCount.
+         * The number of alerts whose Emergency level is Suspicious.
          */
         public Builder suspiciousCount(Integer suspiciousCount) {
             this.suspiciousCount = suspiciousCount;
@@ -118,7 +118,7 @@ public class GetSuspiciousStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of alerts.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

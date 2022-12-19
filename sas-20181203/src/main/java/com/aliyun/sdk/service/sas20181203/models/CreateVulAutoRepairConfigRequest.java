@@ -84,7 +84,7 @@ public class CreateVulAutoRepairConfigRequest extends Request {
         } 
 
         /**
-         * Reason.
+         * The reason why the vulnerability can be automatically fixed.
          */
         public Builder reason(String reason) {
             this.putQueryParameter("Reason", reason);
@@ -93,7 +93,10 @@ public class CreateVulAutoRepairConfigRequest extends Request {
         }
 
         /**
-         * 漏洞类型
+         * The type of the vulnerability. Valid values: 
+         * <p>
+         * - **cve**: Linux software vulnerability. 
+         * - **sys**: Windows system vulnerability.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -102,7 +105,7 @@ public class CreateVulAutoRepairConfigRequest extends Request {
         }
 
         /**
-         * VulAutoRepairConfigList.
+         * The vulnerabilities that can be automatically fixed.
          */
         public Builder vulAutoRepairConfigList(java.util.List < VulAutoRepairConfigList> vulAutoRepairConfigList) {
             this.putQueryParameter("VulAutoRepairConfigList", vulAutoRepairConfigList);
@@ -158,7 +161,7 @@ public class CreateVulAutoRepairConfigRequest extends Request {
             private String name; 
 
             /**
-             * 漏洞别名
+             * The alias of the vulnerability.
              */
             public Builder aliasName(String aliasName) {
                 this.aliasName = aliasName;
@@ -166,7 +169,7 @@ public class CreateVulAutoRepairConfigRequest extends Request {
             }
 
             /**
-             * 漏洞名称
+             * The name of the vulnerability.
              */
             public Builder name(String name) {
                 this.name = name;

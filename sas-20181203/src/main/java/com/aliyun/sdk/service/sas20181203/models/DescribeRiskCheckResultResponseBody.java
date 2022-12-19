@@ -110,7 +110,7 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Count.
+         * The number of entries returned on the current page.
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -118,7 +118,7 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
         }
 
         /**
-         * CurrentPage.
+         * The page number of the returned page.
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -126,7 +126,7 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
         }
 
         /**
-         * List.
+         * An array that consists of the check items.
          */
         public Builder list(java.util.List < List> list) {
             this.list = list;
@@ -134,7 +134,7 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
         }
 
         /**
-         * PageCount.
+         * The total number of pages returned.
          */
         public Builder pageCount(Integer pageCount) {
             this.pageCount = pageCount;
@@ -142,7 +142,7 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page. Default value: **20**.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -150,7 +150,7 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,7 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -210,7 +210,7 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
             private String resourceName; 
 
             /**
-             * ContentResource.
+             * The details about the check result.
              */
             public Builder contentResource(java.util.Map < String, ? > contentResource) {
                 this.contentResource = contentResource;
@@ -218,7 +218,13 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceName.
+             * The title in the details. Valid values:
+             * <p>
+             * 
+             * *   **bestPractice**: description
+             * *   **influence**: risk
+             * *   **suggestion**: solution
+             * *   **helpResource**: reference
              */
             public Builder resourceName(String resourceName) {
                 this.resourceName = resourceName;
@@ -415,7 +421,7 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * AffectedCount.
+             * The number of affected assets.
              */
             public Builder affectedCount(Integer affectedCount) {
                 this.affectedCount = affectedCount;
@@ -423,7 +429,7 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * CheckTime.
+             * The timestamp when the last check was performed. Unit: milliseconds.
              */
             public Builder checkTime(Long checkTime) {
                 this.checkTime = checkTime;
@@ -431,7 +437,7 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * ItemId.
+             * The ID of the check item. For more information about the description of the check item ID, see the check item table in the "Response parameters" section of this topic.
              */
             public Builder itemId(Long itemId) {
                 this.itemId = itemId;
@@ -439,7 +445,7 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * RemainingTime.
+             * The time when the next check will be performed.
              */
             public Builder remainingTime(Integer remainingTime) {
                 this.remainingTime = remainingTime;
@@ -447,7 +453,11 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * RepairStatus.
+             * Indicates whether the risks that are detected for the check item can be fixed. Valid values:
+             * <p>
+             * 
+             * *   **enabled**: yes
+             * *   **disabled**: no
              */
             public Builder repairStatus(String repairStatus) {
                 this.repairStatus = repairStatus;
@@ -455,7 +465,7 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * RiskAssertType.
+             * The type of the affected assets.
              */
             public Builder riskAssertType(String riskAssertType) {
                 this.riskAssertType = riskAssertType;
@@ -463,7 +473,7 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * RiskItemResources.
+             * An array that consists of the details about the check item.
              */
             public Builder riskItemResources(java.util.List < RiskItemResources> riskItemResources) {
                 this.riskItemResources = riskItemResources;
@@ -471,7 +481,12 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevel.
+             * The risk level of the check item. Valid values:
+             * <p>
+             * 
+             * *   **high**
+             * *   **medium**
+             * *   **low**
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -479,7 +494,7 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * Sort.
+             * The sequence number of the check result. The check items are sorted based on the sequence number.
              */
             public Builder sort(Integer sort) {
                 this.sort = sort;
@@ -487,7 +502,11 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * StartStatus.
+             * Indicates whether the check item is supported by the cloud service. Valid values:
+             * <p>
+             * 
+             * *   **enabled**: The check item is supported by the cloud service.
+             * *   **disable**: The check item is not supported by the cloud service.
              */
             public Builder startStatus(String startStatus) {
                 this.startStatus = startStatus;
@@ -495,7 +514,15 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the check result. Valid values:
+             * <p>
+             * 
+             * *   **pass**
+             * *   **failed**
+             * *   **running**
+             * *   **waiting**
+             * *   **ignored**
+             * *   **falsePositive**
              */
             public Builder status(String status) {
                 this.status = status;
@@ -503,7 +530,7 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * The ID of the check task.
              */
             public Builder taskId(Long taskId) {
                 this.taskId = taskId;
@@ -511,7 +538,7 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * The name of the check item.
              */
             public Builder title(String title) {
                 this.title = title;
@@ -519,7 +546,15 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the check item. Valid values:
+             * <p>
+             * 
+             * *   Identity authentication and permissions
+             * *   Network access control
+             * *   Log audit
+             * *   Data security
+             * *   Monitoring and alerting
+             * *   Basic security protection
              */
             public Builder type(String type) {
                 this.type = type;

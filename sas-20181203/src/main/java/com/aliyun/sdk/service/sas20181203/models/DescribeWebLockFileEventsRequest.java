@@ -138,7 +138,7 @@ public class DescribeWebLockFileEventsRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -147,7 +147,11 @@ public class DescribeWebLockFileEventsRequest extends Request {
         }
 
         /**
-         * Dealed.
+         * Specifies whether the event on web tamper proofing is handled. Valid values:
+         * <p>
+         * 
+         * *   **n**: no
+         * *   **y**: yes
          */
         public Builder dealed(String dealed) {
             this.putQueryParameter("Dealed", dealed);
@@ -156,7 +160,7 @@ public class DescribeWebLockFileEventsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -165,7 +169,7 @@ public class DescribeWebLockFileEventsRequest extends Request {
         }
 
         /**
-         * ProcessName.
+         * The name of the process.
          */
         public Builder processName(String processName) {
             this.putQueryParameter("ProcessName", processName);
@@ -174,7 +178,10 @@ public class DescribeWebLockFileEventsRequest extends Request {
         }
 
         /**
-         * Remark.
+         * The name of the asset.
+         * <p>
+         * 
+         * >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the names of assets.
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -183,7 +190,7 @@ public class DescribeWebLockFileEventsRequest extends Request {
         }
 
         /**
-         * TsBegin.
+         * The beginning of the time range to query. The value is a UNIX timestamp.
          */
         public Builder tsBegin(Long tsBegin) {
             this.putQueryParameter("TsBegin", tsBegin);
@@ -192,7 +199,7 @@ public class DescribeWebLockFileEventsRequest extends Request {
         }
 
         /**
-         * TsEnd.
+         * The end of the time range to query. The value is a UNIX timestamp.
          */
         public Builder tsEnd(Long tsEnd) {
             this.putQueryParameter("TsEnd", tsEnd);

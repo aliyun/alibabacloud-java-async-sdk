@@ -96,7 +96,7 @@ public class ListHoneypotNodeRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * The number of the page to return.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -105,7 +105,7 @@ public class ListHoneypotNodeRequest extends Request {
         }
 
         /**
-         * 管理节点id
+         * The ID of the management node.
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -114,7 +114,7 @@ public class ListHoneypotNodeRequest extends Request {
         }
 
         /**
-         * 管理节点名称
+         * The name of the management node.
          */
         public Builder nodeName(String nodeName) {
             this.putQueryParameter("NodeName", nodeName);
@@ -123,7 +123,7 @@ public class ListHoneypotNodeRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

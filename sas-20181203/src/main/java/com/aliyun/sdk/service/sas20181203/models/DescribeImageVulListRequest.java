@@ -405,7 +405,7 @@ public class DescribeImageVulListRequest extends Request {
         } 
 
         /**
-         * AliasName.
+         * The alias of the vulnerability.
          */
         public Builder aliasName(String aliasName) {
             this.putQueryParameter("AliasName", aliasName);
@@ -414,7 +414,7 @@ public class DescribeImageVulListRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * The ID of the cluster to which the container belongs.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -423,7 +423,7 @@ public class DescribeImageVulListRequest extends Request {
         }
 
         /**
-         * ClusterName.
+         * The name of the cluster.
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("ClusterName", clusterName);
@@ -432,7 +432,7 @@ public class DescribeImageVulListRequest extends Request {
         }
 
         /**
-         * ContainerId.
+         * The ID of the container.
          */
         public Builder containerId(String containerId) {
             this.putQueryParameter("ContainerId", containerId);
@@ -441,7 +441,7 @@ public class DescribeImageVulListRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -450,7 +450,11 @@ public class DescribeImageVulListRequest extends Request {
         }
 
         /**
-         * Dealed.
+         * Specifies whether the vulnerability is handled. Valid values:
+         * <p>
+         * 
+         * *   **y**: yes
+         * *   **n**: no
          */
         public Builder dealed(String dealed) {
             this.putQueryParameter("Dealed", dealed);
@@ -459,7 +463,7 @@ public class DescribeImageVulListRequest extends Request {
         }
 
         /**
-         * Digest.
+         * The digest of the image.
          */
         public Builder digest(String digest) {
             this.putQueryParameter("Digest", digest);
@@ -468,7 +472,7 @@ public class DescribeImageVulListRequest extends Request {
         }
 
         /**
-         * Image.
+         * The name of the image.
          */
         public Builder image(String image) {
             this.putQueryParameter("Image", image);
@@ -477,7 +481,7 @@ public class DescribeImageVulListRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The instance ID of the asset.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -486,7 +490,11 @@ public class DescribeImageVulListRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -495,7 +503,7 @@ public class DescribeImageVulListRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the vulnerability.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -504,7 +512,7 @@ public class DescribeImageVulListRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The namespace.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -513,7 +521,12 @@ public class DescribeImageVulListRequest extends Request {
         }
 
         /**
-         * Necessity.
+         * The priority to fix the vulnerability. Valid values:
+         * <p>
+         * 
+         * *   **asap**: high. You must fix the vulnerability at the earliest opportunity.
+         * *   **later**: medium. You can fix the vulnerability based on your business requirements.
+         * *   **nntf**: low. You can ignore the vulnerability.
          */
         public Builder necessity(String necessity) {
             this.putQueryParameter("Necessity", necessity);
@@ -522,7 +535,7 @@ public class DescribeImageVulListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -531,7 +544,7 @@ public class DescribeImageVulListRequest extends Request {
         }
 
         /**
-         * Pod.
+         * The pod.
          */
         public Builder pod(String pod) {
             this.putQueryParameter("Pod", pod);
@@ -540,7 +553,7 @@ public class DescribeImageVulListRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -549,7 +562,7 @@ public class DescribeImageVulListRequest extends Request {
         }
 
         /**
-         * RepoId.
+         * The ID of the image repository.
          */
         public Builder repoId(String repoId) {
             this.putQueryParameter("RepoId", repoId);
@@ -558,7 +571,7 @@ public class DescribeImageVulListRequest extends Request {
         }
 
         /**
-         * RepoInstanceId.
+         * The instance ID of the image repository.
          */
         public Builder repoInstanceId(String repoInstanceId) {
             this.putQueryParameter("RepoInstanceId", repoInstanceId);
@@ -567,7 +580,7 @@ public class DescribeImageVulListRequest extends Request {
         }
 
         /**
-         * RepoName.
+         * The name of the image repository.
          */
         public Builder repoName(String repoName) {
             this.putQueryParameter("RepoName", repoName);
@@ -576,7 +589,7 @@ public class DescribeImageVulListRequest extends Request {
         }
 
         /**
-         * RepoNamespace.
+         * The namespace to which the image repository belongs.
          */
         public Builder repoNamespace(String repoNamespace) {
             this.putQueryParameter("RepoNamespace", repoNamespace);
@@ -585,7 +598,7 @@ public class DescribeImageVulListRequest extends Request {
         }
 
         /**
-         * RepoRegionId.
+         * The region ID of the image repository.
          */
         public Builder repoRegionId(String repoRegionId) {
             this.putQueryParameter("RepoRegionId", repoRegionId);
@@ -594,7 +607,7 @@ public class DescribeImageVulListRequest extends Request {
         }
 
         /**
-         * ScanRange.
+         * The types of the assets that you want to scan.
          */
         public Builder scanRange(java.util.List < String > scanRange) {
             this.putQueryParameter("ScanRange", scanRange);
@@ -603,7 +616,12 @@ public class DescribeImageVulListRequest extends Request {
         }
 
         /**
-         * StatusList.
+         * The status of the vulnerability. Valid values:
+         * <p>
+         * 
+         * *   **1**: unfixed
+         * *   **4**: being fixed
+         * *   **7**: fixed
          */
         public Builder statusList(String statusList) {
             this.putQueryParameter("StatusList", statusList);
@@ -612,7 +630,7 @@ public class DescribeImageVulListRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tag that is added to the image.
          */
         public Builder tag(String tag) {
             this.putQueryParameter("Tag", tag);
@@ -621,7 +639,7 @@ public class DescribeImageVulListRequest extends Request {
         }
 
         /**
-         * Type.
+         * The type of the vulnerability. Set the value to **CVE**, which indicates image vulnerabilities.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -630,7 +648,7 @@ public class DescribeImageVulListRequest extends Request {
         }
 
         /**
-         * Uuids.
+         * The UUIDs of the assets. Separate multiple UUIDs with commas (,).
          */
         public Builder uuids(String uuids) {
             this.putQueryParameter("Uuids", uuids);

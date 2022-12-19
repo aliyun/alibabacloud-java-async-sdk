@@ -50,7 +50,7 @@ public class GetFileDetectResultResponseBody extends TeaModel {
         private java.util.List < ResultList> resultList; 
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class GetFileDetectResultResponseBody extends TeaModel {
         }
 
         /**
-         * ResultList.
+         * An array that consists of file detection results.
          */
         public Builder resultList(java.util.List < ResultList> resultList) {
             this.resultList = resultList;
@@ -170,7 +170,7 @@ public class GetFileDetectResultResponseBody extends TeaModel {
             private String virusType; 
 
             /**
-             * Code.
+             * The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -178,7 +178,7 @@ public class GetFileDetectResultResponseBody extends TeaModel {
             }
 
             /**
-             * Ext.
+             * The extended information about the file detection result.
              */
             public Builder ext(String ext) {
                 this.ext = ext;
@@ -186,7 +186,7 @@ public class GetFileDetectResultResponseBody extends TeaModel {
             }
 
             /**
-             * HashKey.
+             * The identifier of the file. Only MD5 hash values are supported.
              */
             public Builder hashKey(String hashKey) {
                 this.hashKey = hashKey;
@@ -194,7 +194,7 @@ public class GetFileDetectResultResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * The error message returned.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -202,7 +202,12 @@ public class GetFileDetectResultResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * The file detection result. Valid values:
+             * <p>
+             * 
+             * *   **0**: normal file.
+             * *   **1**: suspicious file.
+             * *   **3**: The detection is in progress.
              */
             public Builder result(Integer result) {
                 this.result = result;
@@ -210,7 +215,10 @@ public class GetFileDetectResultResponseBody extends TeaModel {
             }
 
             /**
-             * Score.
+             * The score of file detection result.
+             * <p>
+             * 
+             * >  A higher score indicates a more suspicious file.
              */
             public Builder score(Integer score) {
                 this.score = score;
@@ -218,7 +226,31 @@ public class GetFileDetectResultResponseBody extends TeaModel {
             }
 
             /**
-             * VirusType.
+             * The type of virus. Valid values:
+             * <p>
+             * 
+             * *   **Trojan**: self-mutating trojan
+             * *   **WebShell**: webshell
+             * *   **Backdoor**: backdoor program
+             * *   **RansomWare**: ransomware
+             * *   **Scanner**: scanner
+             * *   **Stealer**: tool that is used to steal information
+             * *   **Malbaseware**: tainted basic software
+             * *   **Hacktool**: attacker tool
+             * *   **Engtest**: engine test program
+             * *   **Downloader**: trojan downloader
+             * *   **Virus**: infectious virus
+             * *   **Miner**: mining program
+             * *   **Worm**: worm
+             * *   **DDoS**: DDoS trojan
+             * *   **Malware**: malicious program
+             * *   **Backdoor**: reverse shell
+             * *   **RiskWare**: software that has risks
+             * *   **Proxytool**: proxy
+             * *   **Suspicious**: suspicious program
+             * *   **MalScript**: malicious script
+             * *   **Rootkit**: rootkit
+             * *   **Exploit**: exploit
              */
             public Builder virusType(String virusType) {
                 this.virusType = virusType;

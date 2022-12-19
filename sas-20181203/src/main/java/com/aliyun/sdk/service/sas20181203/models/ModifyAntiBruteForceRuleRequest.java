@@ -167,7 +167,11 @@ public class ModifyAntiBruteForceRuleRequest extends Request {
         } 
 
         /**
-         * DefaultRule.
+         * Specifies whether to set the defense rule as the default rule. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false**: no
          */
         public Builder defaultRule(Boolean defaultRule) {
             this.putQueryParameter("DefaultRule", defaultRule);
@@ -176,7 +180,17 @@ public class ModifyAntiBruteForceRuleRequest extends Request {
         }
 
         /**
-         * FailCount.
+         * The threshold of logon failures that you specify. Valid values:
+         * <p>
+         * 
+         * *   **2**
+         * *   **3**
+         * *   **4**
+         * *   **5**
+         * *   **10**
+         * *   **50**
+         * *   **80**
+         * *   **100**
          */
         public Builder failCount(Integer failCount) {
             this.putQueryParameter("FailCount", failCount);
@@ -185,7 +199,19 @@ public class ModifyAntiBruteForceRuleRequest extends Request {
         }
 
         /**
-         * ForbiddenTime.
+         * The period of time during which logons from an account are not allowed. Unit: minutes. Valid values:
+         * <p>
+         * 
+         * *   **5**
+         * *   **15**
+         * *   **30**
+         * *   **60**
+         * *   **120**
+         * *   **360**
+         * *   **720**
+         * *   **1440**
+         * *   **10080**
+         * *   **52560000**: permanent
          */
         public Builder forbiddenTime(Integer forbiddenTime) {
             this.putQueryParameter("ForbiddenTime", forbiddenTime);
@@ -194,7 +220,7 @@ public class ModifyAntiBruteForceRuleRequest extends Request {
         }
 
         /**
-         * Id.
+         * The ID of the defense rule.
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -203,7 +229,7 @@ public class ModifyAntiBruteForceRuleRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the defense rule.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -221,7 +247,7 @@ public class ModifyAntiBruteForceRuleRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * The source IP address of the request.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -230,7 +256,14 @@ public class ModifyAntiBruteForceRuleRequest extends Request {
         }
 
         /**
-         * Span.
+         * The period of time during which logon failures from an account are measured. Unit: minutes. Valid values:
+         * <p>
+         * 
+         * *   **1**
+         * *   **2**
+         * *   **5**
+         * *   **10**
+         * *   **15**
          */
         public Builder span(Integer span) {
             this.putQueryParameter("Span", span);
@@ -239,7 +272,7 @@ public class ModifyAntiBruteForceRuleRequest extends Request {
         }
 
         /**
-         * UuidList.
+         * An array consisting of the UUIDs of the servers to which the defense rule is applied.
          */
         public Builder uuidList(java.util.List < String > uuidList) {
             this.putQueryParameter("UuidList", uuidList);

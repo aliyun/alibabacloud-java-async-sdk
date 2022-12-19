@@ -83,7 +83,10 @@ public class CreateFileDetectUploadUrlRequest extends Request {
         } 
 
         /**
-         * HashKeyContextList.
+         * The hash values of files.
+         * <p>
+         * 
+         * >  You must specify at least one of the **HashKeyList** and **HashKeyContextList** parameters.
          */
         public Builder hashKeyContextList(java.util.List < HashKeyContextList> hashKeyContextList) {
             this.putQueryParameter("HashKeyContextList", hashKeyContextList);
@@ -92,7 +95,10 @@ public class CreateFileDetectUploadUrlRequest extends Request {
         }
 
         /**
-         * HashKeyList.
+         * The identifier of the file. Only MD5 hash values are supported.
+         * <p>
+         * 
+         * >  You must specify at least one of the **HashKeyList** and **HashKeyContextList** parameters.
          */
         public Builder hashKeyList(java.util.List < String > hashKeyList) {
             this.putQueryParameter("HashKeyList", hashKeyList);
@@ -101,7 +107,15 @@ public class CreateFileDetectUploadUrlRequest extends Request {
         }
 
         /**
-         * Type.
+         * The type of the file. Valid values:
+         * <p>
+         * 
+         * *   **0**: unknown files
+         * *   **1**: binary files
+         * *   **2**: webshell files
+         * *   **4**: script files
+         * 
+         * >  If you do not know the type of the file, set this parameter to **0**.
          */
         public Builder type(Integer type) {
             this.putQueryParameter("Type", type);
@@ -155,7 +169,7 @@ public class CreateFileDetectUploadUrlRequest extends Request {
             private String hashKey; 
 
             /**
-             * FileSize.
+             * The size of the file. Unit: bytes.
              */
             public Builder fileSize(Integer fileSize) {
                 this.fileSize = fileSize;
@@ -163,7 +177,7 @@ public class CreateFileDetectUploadUrlRequest extends Request {
             }
 
             /**
-             * HashKey.
+             * The hash value of the file.
              */
             public Builder hashKey(String hashKey) {
                 this.hashKey = hashKey;

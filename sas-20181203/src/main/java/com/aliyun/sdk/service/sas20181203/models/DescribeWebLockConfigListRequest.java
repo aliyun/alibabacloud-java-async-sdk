@@ -83,7 +83,11 @@ public class DescribeWebLockConfigListRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * The language of the content within the request and the response. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -92,7 +96,7 @@ public class DescribeWebLockConfigListRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * The source IP address of the request.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -101,7 +105,7 @@ public class DescribeWebLockConfigListRequest extends Request {
         }
 
         /**
-         * Uuid.
+         * The UUID of the server for which you want to query the configurations.
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

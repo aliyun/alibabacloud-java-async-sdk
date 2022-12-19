@@ -98,7 +98,7 @@ public class CreateHoneypotResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code returned. The status code **200** indicates that the request was is successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class CreateHoneypotResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The information about the honeypot.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class CreateHoneypotResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class CreateHoneypotResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +130,7 @@ public class CreateHoneypotResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,11 @@ public class CreateHoneypotResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -262,7 +266,7 @@ public class CreateHoneypotResponseBody extends TeaModel {
             private java.util.List < String > state; 
 
             /**
-             * 蜜罐管理节点名称
+             * The name of the management node to which the honeypot is deployed.
              */
             public Builder controlNodeName(String controlNodeName) {
                 this.controlNodeName = controlNodeName;
@@ -270,7 +274,7 @@ public class CreateHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * 蜜罐ID
+             * The ID of the honeypot.
              */
             public Builder honeypotId(String honeypotId) {
                 this.honeypotId = honeypotId;
@@ -278,7 +282,7 @@ public class CreateHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * 蜜罐镜像显示名称
+             * The display name of the image that is used for the honeypot.
              */
             public Builder honeypotImageDisplayName(String honeypotImageDisplayName) {
                 this.honeypotImageDisplayName = honeypotImageDisplayName;
@@ -286,7 +290,7 @@ public class CreateHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * 蜜罐镜像名称
+             * The name of the image that is used for the honeypot.
              */
             public Builder honeypotImageName(String honeypotImageName) {
                 this.honeypotImageName = honeypotImageName;
@@ -294,7 +298,7 @@ public class CreateHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * 蜜罐自定义名称
+             * The custom name of the honeypot.
              */
             public Builder honeypotName(String honeypotName) {
                 this.honeypotName = honeypotName;
@@ -302,7 +306,7 @@ public class CreateHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * 管理节点唯一id
+             * The ID of the management node.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -310,7 +314,7 @@ public class CreateHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * 蜜罐自定义参数ID
+             * The ID of the custom configuration for the honeypot.
              */
             public Builder presetId(String presetId) {
                 this.presetId = presetId;
@@ -318,7 +322,7 @@ public class CreateHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * 蜜罐状态
+             * The status of the honeypot.
              */
             public Builder state(java.util.List < String > state) {
                 this.state = state;

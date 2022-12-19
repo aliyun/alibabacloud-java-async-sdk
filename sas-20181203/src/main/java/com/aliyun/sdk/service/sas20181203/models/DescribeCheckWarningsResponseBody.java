@@ -98,7 +98,7 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * CheckWarnings.
+         * An array that consists of the check items.
          */
         public Builder checkWarnings(java.util.List < CheckWarnings> checkWarnings) {
             this.checkWarnings = checkWarnings;
@@ -106,7 +106,7 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
         }
 
         /**
-         * Count.
+         * The number of entries returned on the current page.
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -114,7 +114,7 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
         }
 
         /**
-         * CurrentPage.
+         * The page number of the returned page.
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -122,7 +122,7 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page. Default value: **20**.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +130,7 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -274,7 +274,7 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * CheckId.
+             * The ID of the check item.
              */
             public Builder checkId(Long checkId) {
                 this.checkId = checkId;
@@ -282,7 +282,7 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
             }
 
             /**
-             * CheckWarningId.
+             * The ID of the alert that is triggered by the check item.
              */
             public Builder checkWarningId(Long checkWarningId) {
                 this.checkWarningId = checkWarningId;
@@ -290,7 +290,11 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
             }
 
             /**
-             * FixStatus.
+             * The fixing status of the check item. Valid values:
+             * <p>
+             * 
+             * *   **0**: disabled
+             * *   **1**: enabled
              */
             public Builder fixStatus(Integer fixStatus) {
                 this.fixStatus = fixStatus;
@@ -298,7 +302,7 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
             }
 
             /**
-             * Item.
+             * The name of the check item.
              */
             public Builder item(String item) {
                 this.item = item;
@@ -306,7 +310,12 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
             }
 
             /**
-             * Level.
+             * The risk level of the risk item. Valid values:
+             * <p>
+             * 
+             * *   **high**
+             * *   **medium**
+             * *   **low**
              */
             public Builder level(String level) {
                 this.level = level;
@@ -314,7 +323,7 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * The remarks.
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -322,7 +331,14 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the check item. Valid values:
+             * <p>
+             * 
+             * *   **1**: failed
+             * *   **2**: verifying
+             * *   **3**: passed
+             * *   **5**: expired
+             * *   **6**: ignored
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -330,7 +346,7 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the check item.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -338,7 +354,7 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
             }
 
             /**
-             * Uuid.
+             * The UUID of the server on which the baseline check is performed.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

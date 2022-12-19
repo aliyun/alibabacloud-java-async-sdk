@@ -98,7 +98,7 @@ public class DescribeRestoreJobsRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -107,7 +107,7 @@ public class DescribeRestoreJobsRequest extends Request {
         }
 
         /**
-         * MachineRemark.
+         * The unique identifier of the server on which the restoration task is run. For example, you can use the IP address or the name of the server.
          */
         public Builder machineRemark(String machineRemark) {
             this.putQueryParameter("MachineRemark", machineRemark);
@@ -116,7 +116,7 @@ public class DescribeRestoreJobsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -125,7 +125,19 @@ public class DescribeRestoreJobsRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the restoration task. Valid values:
+         * <p>
+         * 
+         * *   **RUNNING**: The task is running.
+         * *   **COMPLETE**: The task is complete.
+         * *   **FAILED**: The task fails.
+         * *   **CANCELING**: The task is being canceled.
+         * *   **CANCELED**: The task is canceled.
+         * *   **PARTIAL_COMPLETE**: The task is partially successful.
+         * *   **CREATED**: The task is created but is not run.
+         * *   **EXPIRED**: The task is not updated.
+         * *   **QUEUED**: The task is waiting to be run.
+         * *   **CLIENT_DELETED**: The task fails because the anti-ransomware agent is uninstalled.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

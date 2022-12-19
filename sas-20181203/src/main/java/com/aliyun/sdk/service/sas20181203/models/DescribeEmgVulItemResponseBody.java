@@ -86,7 +86,7 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * CurrentPage.
+         * The page number of the returned page. Pages start from page **1**. Default value: **1**.
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -94,7 +94,7 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
         }
 
         /**
-         * GroupedVulItems.
+         * An array that consists of the urgent vulnerabilities returned.
          */
         public Builder groupedVulItems(java.util.List < GroupedVulItems> groupedVulItems) {
             this.groupedVulItems = groupedVulItems;
@@ -102,7 +102,7 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of the urgent vulnerabilities returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -254,7 +254,7 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * AliasName.
+             * The name of the urgent vulnerability.
              */
             public Builder aliasName(String aliasName) {
                 this.aliasName = aliasName;
@@ -262,7 +262,7 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
             }
 
             /**
-             * CheckType.
+             * The check method.
              */
             public Builder checkType(Integer checkType) {
                 this.checkType = checkType;
@@ -270,7 +270,7 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
             }
 
             /**
-             * GmtLastCheck.
+             * The timestamp when the urgent vulnerability was last detected. Unit: milliseconds.
              */
             public Builder gmtLastCheck(Long gmtLastCheck) {
                 this.gmtLastCheck = gmtLastCheck;
@@ -278,7 +278,7 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
             }
 
             /**
-             * GmtPublish.
+             * The timestamp when the vulnerability was disclosed. Unit: milliseconds.
              */
             public Builder gmtPublish(Long gmtPublish) {
                 this.gmtPublish = gmtPublish;
@@ -286,7 +286,7 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the detection rule.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -294,7 +294,7 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
             }
 
             /**
-             * PendingCount.
+             * The number of unhandled urgent vulnerabilities.
              */
             public Builder pendingCount(Integer pendingCount) {
                 this.pendingCount = pendingCount;
@@ -302,7 +302,10 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
             }
 
             /**
-             * Progress.
+             * The progress of the urgent vulnerability detection task. Valid values: 0 to 100.
+             * <p>
+             * 
+             * >  This parameter is returned only when an urgent vulnerability is being detected.
              */
             public Builder progress(Integer progress) {
                 this.progress = progress;
@@ -310,7 +313,12 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The detection status of the urgent vulnerability. Valid values:
+             * <p>
+             * 
+             * *   **10**: The urgent vulnerability is not detected.
+             * *   **20**: The urgent vulnerability is being detected.
+             * *   **30**: The urgent vulnerability detection is complete.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -318,7 +326,11 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The method that is used to detect the urgent vulnerability. Valid values:
+             * <p>
+             * 
+             * *   **python**: The Version method is used. Security Center checks the software versions of your server to check whether disclosed vulnerabilities exist on your server.
+             * *   **scan**: The Network Scan method is used. Security Center analyzes the access traffic to your server over the Internet to check whether vulnerabilities exist on your server.
              */
             public Builder type(String type) {
                 this.type = type;

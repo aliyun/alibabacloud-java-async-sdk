@@ -54,7 +54,7 @@ public class ListAvailableHoneypotRequest extends Request {
         } 
 
         /**
-         * 蜜罐管理节点唯一ID
+         * The ID of the management node to which the honeypot is deployed.
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);

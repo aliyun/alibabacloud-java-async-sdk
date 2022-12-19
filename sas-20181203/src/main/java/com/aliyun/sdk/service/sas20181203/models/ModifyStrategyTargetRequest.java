@@ -99,7 +99,10 @@ public class ModifyStrategyTargetRequest extends Request {
         } 
 
         /**
-         * Config.
+         * The ID of the baseline check policy. The ID is returned after the policy is created. The value of this parameter is in the JSON format and contains the following field:
+         * <p>
+         * 
+         * *   **strategyId**: the ID of the policy
          */
         public Builder config(String config) {
             this.putQueryParameter("Config", config);
@@ -108,7 +111,7 @@ public class ModifyStrategyTargetRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * The source IP address of the request.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -117,7 +120,19 @@ public class ModifyStrategyTargetRequest extends Request {
         }
 
         /**
-         * Target.
+         * The information about the asset group to which the policy is applied. The value of this parameter is in the JSON format and contains the following fields:
+         * <p>
+         * 
+         * *   **TargetType**: the type of the asset to which the policy is applied. Set the value to **groupId**, which indicates that the policy is applied to an asset group.
+         * 
+         * *   **BindUuidCount**: the number of servers to which the policy is applied.
+         * 
+         * *   **Target**: the ID of the asset group.
+         * 
+         * *   **Flag**: the operation that you want to perform on the asset group. Valid values:
+         * 
+         *     *   **del**: removes the asset group from the policy.
+         *     *   **add**: adds the asset group to the policy.
          */
         public Builder target(String target) {
             this.putQueryParameter("Target", target);
@@ -126,7 +141,7 @@ public class ModifyStrategyTargetRequest extends Request {
         }
 
         /**
-         * Type.
+         * The configuration type. Set the value to **hc_strategy**.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

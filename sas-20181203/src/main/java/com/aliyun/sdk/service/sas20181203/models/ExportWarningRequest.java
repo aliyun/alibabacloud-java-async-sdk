@@ -250,7 +250,11 @@ public class ExportWarningRequest extends Request {
         } 
 
         /**
-         * Dealed.
+         * Specifies whether the baseline risks are handled. Valid values:
+         * <p>
+         * 
+         * *   **Y**: yes
+         * *   **N**: no
          */
         public Builder dealed(String dealed) {
             this.putQueryParameter("Dealed", dealed);
@@ -259,7 +263,7 @@ public class ExportWarningRequest extends Request {
         }
 
         /**
-         * ExportType.
+         * The type of the export task. Set the value to **hc_check_warning**, which indicates tasks to export baseline check results.
          */
         public Builder exportType(String exportType) {
             this.putQueryParameter("ExportType", exportType);
@@ -268,7 +272,11 @@ public class ExportWarningRequest extends Request {
         }
 
         /**
-         * IsCleartextPwd.
+         * The export method of the results for the weak password baseline check. Valid values:
+         * <p>
+         * 
+         * *   **0**: exports the check results after it is masked.
+         * *   **1**: exports the check results in plaintext.
          */
         public Builder isCleartextPwd(Integer isCleartextPwd) {
             this.putQueryParameter("IsCleartextPwd", isCleartextPwd);
@@ -277,7 +285,11 @@ public class ExportWarningRequest extends Request {
         }
 
         /**
-         * IsSummaryExport.
+         * Specifies whether the baseline check results are aggregated and exported. Valid values:
+         * <p>
+         * 
+         * *   **0**: no
+         * *   **1**: yes
          */
         public Builder isSummaryExport(Integer isSummaryExport) {
             this.putQueryParameter("IsSummaryExport", isSummaryExport);
@@ -286,7 +298,11 @@ public class ExportWarningRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -295,7 +311,7 @@ public class ExportWarningRequest extends Request {
         }
 
         /**
-         * RiskIds.
+         * The ID of the risk item in the baseline check results. Separate multiple IDs with commas (,).
          */
         public Builder riskIds(String riskIds) {
             this.putQueryParameter("RiskIds", riskIds);
@@ -304,7 +320,12 @@ public class ExportWarningRequest extends Request {
         }
 
         /**
-         * RiskLevels.
+         * The severity of the baseline check item. Separate multiple severities with commas (,). Valid values:
+         * <p>
+         * 
+         * *   **high**
+         * *   **medium**
+         * *   **low**
          */
         public Builder riskLevels(String riskLevels) {
             this.putQueryParameter("RiskLevels", riskLevels);
@@ -313,7 +334,7 @@ public class ExportWarningRequest extends Request {
         }
 
         /**
-         * RiskName.
+         * The name of the baseline.
          */
         public Builder riskName(String riskName) {
             this.putQueryParameter("RiskName", riskName);
@@ -322,7 +343,7 @@ public class ExportWarningRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * The source IP address of the request.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -331,7 +352,11 @@ public class ExportWarningRequest extends Request {
         }
 
         /**
-         * StatusList.
+         * The status of the check item in the baseline check results. Separate multiple statuses with commas (,). Valid values:
+         * <p>
+         * 
+         * *   **3**: passed
+         * *   **1**: failed
          */
         public Builder statusList(String statusList) {
             this.putQueryParameter("StatusList", statusList);
@@ -340,7 +365,7 @@ public class ExportWarningRequest extends Request {
         }
 
         /**
-         * StrategyId.
+         * The ID of the baseline check policy.
          */
         public Builder strategyId(Long strategyId) {
             this.putQueryParameter("StrategyId", strategyId);
@@ -349,7 +374,10 @@ public class ExportWarningRequest extends Request {
         }
 
         /**
-         * SubTypeNames.
+         * The subtypes of the baselines based on which baseline checks are performed. Separate multiple subtypes with commas (,).
+         * <p>
+         * 
+         * >  You must set the value of this parameter to the value of the **TypeName** parameter that is contained in the **SubTypes** parameter. You can call the [DescribeRiskType](~~DescribeRiskType~~) operation to obtain the value of the TypeName parameter.
          */
         public Builder subTypeNames(String subTypeNames) {
             this.putQueryParameter("SubTypeNames", subTypeNames);
@@ -358,7 +386,10 @@ public class ExportWarningRequest extends Request {
         }
 
         /**
-         * TypeName.
+         * The type of the baseline based on which baseline checks are performed.
+         * <p>
+         * 
+         * >  You must set the value of this parameter to the value of the **TypeName** parameter that is returned by calling the [DescribeRiskType](~~DescribeRiskType~~) operation. If both the **TypeName** and **TypeNames** parameters are specified, only the **TypeName** parameter takes effect.
          */
         public Builder typeName(String typeName) {
             this.putQueryParameter("TypeName", typeName);
@@ -367,7 +398,10 @@ public class ExportWarningRequest extends Request {
         }
 
         /**
-         * TypeNames.
+         * The types of the baselines based on which baseline checks are performed. Separate multiple types with commas (,).
+         * <p>
+         * 
+         * >  You must set the value of this parameter to the value of the **TypeName** parameter that is returned by calling the [DescribeRiskType](~~DescribeRiskType~~) operation. If both the **TypeName** and **TypeNames** parameters are specified, only the **TypeName** parameter takes effect.
          */
         public Builder typeNames(String typeNames) {
             this.putQueryParameter("TypeNames", typeNames);
@@ -376,7 +410,7 @@ public class ExportWarningRequest extends Request {
         }
 
         /**
-         * Uuids.
+         * The UUID of the server whose baseline check results you want to export. Separate multiple UUIDs with commas (,).
          */
         public Builder uuids(String uuids) {
             this.putQueryParameter("Uuids", uuids);

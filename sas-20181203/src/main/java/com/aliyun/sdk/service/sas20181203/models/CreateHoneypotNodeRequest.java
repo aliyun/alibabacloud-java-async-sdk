@@ -97,7 +97,11 @@ public class CreateHoneypotNodeRequest extends Request {
         } 
 
         /**
-         * 是否允许蜜罐访问外网
+         * Specifies whether to allow the honeypots to access the Internet. Valid values:
+         * <p>
+         * 
+         * *   **true**: allows the honeypots to access the Internet.
+         * *   **false**: does not allow the honeypots to access the Internet.
          */
         public Builder allowHoneypotAccessInternet(Boolean allowHoneypotAccessInternet) {
             this.putQueryParameter("AllowHoneypotAccessInternet", allowHoneypotAccessInternet);
@@ -106,7 +110,7 @@ public class CreateHoneypotNodeRequest extends Request {
         }
 
         /**
-         * 可用探针数量
+         * The number of probes that you want to allocate for the management node.
          */
         public Builder availableProbeNum(Integer availableProbeNum) {
             this.putQueryParameter("AvailableProbeNum", availableProbeNum);
@@ -115,7 +119,7 @@ public class CreateHoneypotNodeRequest extends Request {
         }
 
         /**
-         * 管理节点名称
+         * The name of the management node.
          */
         public Builder nodeName(String nodeName) {
             this.putQueryParameter("NodeName", nodeName);
@@ -124,7 +128,7 @@ public class CreateHoneypotNodeRequest extends Request {
         }
 
         /**
-         * SecurityGroupProbeIpList.
+         * The CIDR blocks that are allowed to access the management node.
          */
         public Builder securityGroupProbeIpList(java.util.List < String > securityGroupProbeIpList) {
             this.putQueryParameter("SecurityGroupProbeIpList", securityGroupProbeIpList);

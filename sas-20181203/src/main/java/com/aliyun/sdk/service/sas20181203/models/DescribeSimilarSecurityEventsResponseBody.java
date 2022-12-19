@@ -62,7 +62,7 @@ public class DescribeSimilarSecurityEventsResponseBody extends TeaModel {
         private java.util.List < SecurityEventsResponse> securityEventsResponse; 
 
         /**
-         * PageInfo.
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -70,7 +70,7 @@ public class DescribeSimilarSecurityEventsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeSimilarSecurityEventsResponseBody extends TeaModel {
         }
 
         /**
-         * SecurityEventsResponse.
+         * An array consisting of the alert events that are triggered by the same rule or of the same alert type.
          */
         public Builder securityEventsResponse(java.util.List < SecurityEventsResponse> securityEventsResponse) {
             this.securityEventsResponse = securityEventsResponse;
@@ -154,7 +154,7 @@ public class DescribeSimilarSecurityEventsResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Count.
+             * The number of entries returned on the current page.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -162,7 +162,7 @@ public class DescribeSimilarSecurityEventsResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentPage.
+             * The page number of the returned page.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -170,7 +170,7 @@ public class DescribeSimilarSecurityEventsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page. Default value: **20**.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -178,7 +178,7 @@ public class DescribeSimilarSecurityEventsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -279,7 +279,7 @@ public class DescribeSimilarSecurityEventsResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * EventName.
+             * The name of the alert event.
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -287,7 +287,34 @@ public class DescribeSimilarSecurityEventsResponseBody extends TeaModel {
             }
 
             /**
-             * EventType.
+             * The alert type of the alert event. Valid values:
+             * <p>
+             * 
+             * *   Suspicious process
+             * *   Webshell
+             * *   Unusual logon
+             * *   Exception
+             * *   Sensitive file tampering
+             * *   Malicious process (cloud threat detection)
+             * *   Suspicious network connection
+             * *   Other
+             * *   Abnormal account
+             * *   Application intrusion event
+             * *   Cloud threat detection
+             * *   Precise defense
+             * *   Application whitelist
+             * *   Persistent webshell
+             * *   Web application threat detection
+             * *   Malicious script
+             * *   Threat intelligence
+             * *   Malicious network activity
+             * *   Cluster exception
+             * *   Webshell (on-premises threat detection)
+             * *   Vulnerability exploitation
+             * *   Malicious process (on-premises threat detection)
+             * *   Trusted exception
+             * 
+             * For more information about alert types, see [Alerts](~~191144~~).
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -295,7 +322,7 @@ public class DescribeSimilarSecurityEventsResponseBody extends TeaModel {
             }
 
             /**
-             * LastTime.
+             * The timestamp when the alert event was last detected. Unit: milliseconds.
              */
             public Builder lastTime(Long lastTime) {
                 this.lastTime = lastTime;
@@ -303,7 +330,7 @@ public class DescribeSimilarSecurityEventsResponseBody extends TeaModel {
             }
 
             /**
-             * OccurrenceTime.
+             * The timestamp when the alert event was first detected. Unit: milliseconds.
              */
             public Builder occurrenceTime(Long occurrenceTime) {
                 this.occurrenceTime = occurrenceTime;
@@ -311,7 +338,7 @@ public class DescribeSimilarSecurityEventsResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityEventId.
+             * The ID of the alert event.
              */
             public Builder securityEventId(Long securityEventId) {
                 this.securityEventId = securityEventId;
@@ -319,7 +346,7 @@ public class DescribeSimilarSecurityEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Uuid.
+             * The UUID of the server that is affected by the alert event.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

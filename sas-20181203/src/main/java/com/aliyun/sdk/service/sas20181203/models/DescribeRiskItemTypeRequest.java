@@ -82,7 +82,10 @@ public class DescribeRiskItemTypeRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Chinese and English are supported.
+         * <p>
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -100,7 +103,7 @@ public class DescribeRiskItemTypeRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * The source IP address of the request.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

@@ -50,7 +50,11 @@ public class CheckSecurityEventIdResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * Indicates whether the alert events are generated on the server. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false**: no
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -58,7 +62,7 @@ public class CheckSecurityEventIdResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

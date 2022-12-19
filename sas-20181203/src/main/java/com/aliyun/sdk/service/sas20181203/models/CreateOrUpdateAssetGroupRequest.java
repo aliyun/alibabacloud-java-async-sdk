@@ -82,7 +82,10 @@ public class CreateOrUpdateAssetGroupRequest extends Request {
         } 
 
         /**
-         * GroupId.
+         * The ID of the server group for which you want to add to or remove servers.
+         * <p>
+         * 
+         * >  To modify the mapping between an asset and an asset group, you must provide the ID of the asset group. You can call the [DescribeAllGroups](~~DescribeAllGroups~~) to query the IDs of asset groups. If you do not configure this parameter when you call this operation, an asset group is created.
          */
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -91,7 +94,10 @@ public class CreateOrUpdateAssetGroupRequest extends Request {
         }
 
         /**
-         * GroupName.
+         * The name of the server group that you want to create or the server group for which you want to add or remove a server.
+         * <p>
+         * 
+         * >  To modify the mapping between a server and a server group, you must provide the name of the server group. You can call the [DescribeAllGroups](~~DescribeAllGroups~~) operation to query the names of server groups. If you do not configure GroupID when you call this operation, a server group is created. In this case, you must configure GroupName.
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -100,7 +106,10 @@ public class CreateOrUpdateAssetGroupRequest extends Request {
         }
 
         /**
-         * Uuids.
+         * The UUID of the server in the server group that you want to create or the server group for which you want to add or remove servers. Separate multiple UUIDs with commas (,).
+         * <p>
+         * 
+         * >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
          */
         public Builder uuids(String uuids) {
             this.putQueryParameter("Uuids", uuids);

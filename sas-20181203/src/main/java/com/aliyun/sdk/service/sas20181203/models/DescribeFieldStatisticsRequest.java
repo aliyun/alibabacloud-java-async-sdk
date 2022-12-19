@@ -68,7 +68,11 @@ public class DescribeFieldStatisticsRequest extends Request {
         } 
 
         /**
-         * MachineTypes.
+         * The type of the asset to query. If no asset types are specified, all types of assets are returned. Valid values:
+         * <p>
+         * 
+         * *   **ecs**: server
+         * *   **cloud_product**: Alibaba Cloud service
          */
         public Builder machineTypes(String machineTypes) {
             this.putQueryParameter("MachineTypes", machineTypes);
@@ -77,7 +81,7 @@ public class DescribeFieldStatisticsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region in which the asset resides.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

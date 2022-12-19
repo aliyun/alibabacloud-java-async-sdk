@@ -110,7 +110,7 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +118,7 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -126,7 +126,7 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
         }
 
         /**
-         * ImageInfos.
+         * An array that consists of the information about the images.
          */
         public Builder imageInfos(java.util.List < ImageInfos> imageInfos) {
             this.imageInfos = imageInfos;
@@ -134,7 +134,7 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,7 +142,7 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
         }
 
         /**
-         * PageInfo.
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -150,7 +150,7 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,10 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * - **true**: The request was successful.
+         * - **false**: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -306,7 +309,7 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * Digest.
+             * The image digest.
              */
             public Builder digest(String digest) {
                 this.digest = digest;
@@ -314,7 +317,7 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
             }
 
             /**
-             * FirstScanTime.
+             * The UNIX timestamp of when the first scan was performed. Unit: milliseconds.
              */
             public Builder firstScanTime(Long firstScanTime) {
                 this.firstScanTime = firstScanTime;
@@ -322,7 +325,7 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the image instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -330,7 +333,7 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
             }
 
             /**
-             * LastScanTime.
+             * The UNIX timestamp of when the last scan was performed. Unit: milliseconds.
              */
             public Builder lastScanTime(Long lastScanTime) {
                 this.lastScanTime = lastScanTime;
@@ -338,7 +341,7 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID of the image instance.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -346,7 +349,7 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
             }
 
             /**
-             * RepoName.
+             * The name of the image repository.
              */
             public Builder repoName(String repoName) {
                 this.repoName = repoName;
@@ -354,7 +357,7 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
             }
 
             /**
-             * RepoNamespace.
+             * The namespace to which the image repository belongs.
              */
             public Builder repoNamespace(String repoNamespace) {
                 this.repoNamespace = repoNamespace;
@@ -362,7 +365,11 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevel.
+             * The risk level. Valid values:
+             * <p>
+             * - **high**
+             * - **medium**
+             * - **low**
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -370,7 +377,7 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
             }
 
             /**
-             * Tag.
+             * The tag that is added to the image.
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -378,7 +385,7 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
             }
 
             /**
-             * Uuid.
+             * The UUID of the image.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -467,7 +474,7 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Count.
+             * The number of entries returned on the current page.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -475,7 +482,7 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentPage.
+             * The page number of the returned page.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -483,7 +490,7 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
             }
 
             /**
-             * LastRowKey.
+             * The key of the last data entry.
              */
             public Builder lastRowKey(String lastRowKey) {
                 this.lastRowKey = lastRowKey;
@@ -491,7 +498,7 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page. Default value: 20.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -499,7 +506,7 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

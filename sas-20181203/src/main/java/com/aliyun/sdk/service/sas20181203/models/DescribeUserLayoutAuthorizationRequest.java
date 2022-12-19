@@ -82,7 +82,10 @@ public class DescribeUserLayoutAuthorizationRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Valid values:
+         * <p>
+         * - **zh**: Chinese
+         * - **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -91,7 +94,7 @@ public class DescribeUserLayoutAuthorizationRequest extends Request {
         }
 
         /**
-         * ResourceOwnerId.
+         * The ID of the asset owner.
          */
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
@@ -100,7 +103,7 @@ public class DescribeUserLayoutAuthorizationRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * The source IP address of the request.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

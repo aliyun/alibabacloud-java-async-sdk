@@ -50,7 +50,7 @@ public class QueryGroupIdByGroupNameResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * GroupId.
+         * The ID of the asset group.
          */
         public Builder groupId(Long groupId) {
             this.groupId = groupId;
@@ -58,7 +58,7 @@ public class QueryGroupIdByGroupNameResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

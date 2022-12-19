@@ -74,7 +74,7 @@ public class DescribePropertyUsageNewestResponseBody extends TeaModel {
         private String type; 
 
         /**
-         * ItemCount.
+         * The number of accounts.
          */
         public Builder itemCount(Integer itemCount) {
             this.itemCount = itemCount;
@@ -82,7 +82,7 @@ public class DescribePropertyUsageNewestResponseBody extends TeaModel {
         }
 
         /**
-         * NewestStatisticItems.
+         * An array that consists of the accounts.
          */
         public Builder newestStatisticItems(java.util.List < NewestStatisticItems> newestStatisticItems) {
             this.newestStatisticItems = newestStatisticItems;
@@ -90,7 +90,7 @@ public class DescribePropertyUsageNewestResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class DescribePropertyUsageNewestResponseBody extends TeaModel {
         }
 
         /**
-         * Type.
+         * The type of the accounts that are created on the server. The value is fixed as user, which indicates user accounts.
          */
         public Builder type(String type) {
             this.type = type;
@@ -150,7 +150,7 @@ public class DescribePropertyUsageNewestResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * Create.
+             * The time when the account was created.
              */
             public Builder create(Long create) {
                 this.create = create;
@@ -158,7 +158,7 @@ public class DescribePropertyUsageNewestResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The username of the account.
              */
             public Builder name(String name) {
                 this.name = name;

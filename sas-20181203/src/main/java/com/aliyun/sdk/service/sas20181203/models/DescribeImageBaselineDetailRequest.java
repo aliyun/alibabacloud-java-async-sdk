@@ -1,0 +1,118 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.sas20181203.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link DescribeImageBaselineDetailRequest} extends {@link RequestModel}
+ *
+ * <p>DescribeImageBaselineDetailRequest</p>
+ */
+public class DescribeImageBaselineDetailRequest extends Request {
+    @Query
+    @NameInMap("BaselineItemKey")
+    private String baselineItemKey;
+
+    @Query
+    @NameInMap("ImageUuid")
+    private String imageUuid;
+
+    @Query
+    @NameInMap("Lang")
+    private String lang;
+
+    private DescribeImageBaselineDetailRequest(Builder builder) {
+        super(builder);
+        this.baselineItemKey = builder.baselineItemKey;
+        this.imageUuid = builder.imageUuid;
+        this.lang = builder.lang;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static DescribeImageBaselineDetailRequest create() {
+        return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return baselineItemKey
+     */
+    public String getBaselineItemKey() {
+        return this.baselineItemKey;
+    }
+
+    /**
+     * @return imageUuid
+     */
+    public String getImageUuid() {
+        return this.imageUuid;
+    }
+
+    /**
+     * @return lang
+     */
+    public String getLang() {
+        return this.lang;
+    }
+
+    public static final class Builder extends Request.Builder<DescribeImageBaselineDetailRequest, Builder> {
+        private String baselineItemKey; 
+        private String imageUuid; 
+        private String lang; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(DescribeImageBaselineDetailRequest request) {
+            super(request);
+            this.baselineItemKey = request.baselineItemKey;
+            this.imageUuid = request.imageUuid;
+            this.lang = request.lang;
+        } 
+
+        /**
+         * BaselineItemKey.
+         */
+        public Builder baselineItemKey(String baselineItemKey) {
+            this.putQueryParameter("BaselineItemKey", baselineItemKey);
+            this.baselineItemKey = baselineItemKey;
+            return this;
+        }
+
+        /**
+         * ImageUuid.
+         */
+        public Builder imageUuid(String imageUuid) {
+            this.putQueryParameter("ImageUuid", imageUuid);
+            this.imageUuid = imageUuid;
+            return this;
+        }
+
+        /**
+         * Lang.
+         */
+        public Builder lang(String lang) {
+            this.putQueryParameter("Lang", lang);
+            this.lang = lang;
+            return this;
+        }
+
+        @Override
+        public DescribeImageBaselineDetailRequest build() {
+            return new DescribeImageBaselineDetailRequest(this);
+        } 
+
+    } 
+
+}

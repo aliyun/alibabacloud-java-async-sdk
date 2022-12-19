@@ -62,7 +62,11 @@ public class OperationSuspEventsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * AccessCode.
+         * Indicates whether you have access permissions. Valid values:
+         * <p>
+         * 
+         * *   **pass**: yes
+         * *   **no_permission**: no
          */
         public Builder accessCode(String accessCode) {
             this.accessCode = accessCode;
@@ -70,7 +74,7 @@ public class OperationSuspEventsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +82,11 @@ public class OperationSuspEventsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether exceptions are handled. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false**: no
          */
         public Builder success(Boolean success) {
             this.success = success;

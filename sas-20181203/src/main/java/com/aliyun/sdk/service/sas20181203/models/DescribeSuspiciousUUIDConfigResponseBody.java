@@ -62,7 +62,7 @@ public class DescribeSuspiciousUUIDConfigResponseBody extends TeaModel {
         private java.util.List < String > UUIDList; 
 
         /**
-         * Count.
+         * The total number of servers on which proactive defense of the specified type takes effect.
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -70,7 +70,7 @@ public class DescribeSuspiciousUUIDConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeSuspiciousUUIDConfigResponseBody extends TeaModel {
         }
 
         /**
-         * UUIDList.
+         * The UUIDs of servers on which proactive defense of the specified type takes effect.
          */
         public Builder UUIDList(java.util.List < String > UUIDList) {
             this.UUIDList = UUIDList;

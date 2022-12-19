@@ -126,7 +126,11 @@ public class HandleSecurityEventsRequest extends Request {
         } 
 
         /**
-         * MarkBatch.
+         * Specifies whether to add multiple alert events to the whitelist at a time. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false**: no
          */
         public Builder markBatch(String markBatch) {
             this.putQueryParameter("MarkBatch", markBatch);
@@ -135,7 +139,27 @@ public class HandleSecurityEventsRequest extends Request {
         }
 
         /**
-         * MarkMissParam.
+         * The whitelist rule. The value of this parameter is in the JSON format and contains the following fields:
+         * <p>
+         * 
+         * *   **field**: The field based on which alert events are added to the whitelist.
+         * 
+         * *   **operate**: The method that is used to added alert events to the whitelist. Valid values:
+         * 
+         *     *   **notContains**: does not contain
+         *     *   **contains**: contains
+         *     *   **regex**: matches by regular expression
+         *     *   **strEqual**: equals
+         *     *   **strNotEqual**: does not equal
+         * 
+         * *   **fieldValue**: The value of the field based on which alert events are added to the whitelist.
+         * 
+         * *   **uuid**: The application scope of the whitelist rule. Valid values:
+         * 
+         *     *   **part**: the current asset
+         *     *   **ALL**: all assets
+         * 
+         * >  You can call the [DescribeSecurityEventOperations](~~DescribeSecurityEventOperations~~) operation to obtain the fields that you can specify for **field**.
          */
         public Builder markMissParam(String markMissParam) {
             this.putQueryParameter("MarkMissParam", markMissParam);
@@ -144,7 +168,19 @@ public class HandleSecurityEventsRequest extends Request {
         }
 
         /**
-         * OperationCode.
+         * The operation that you want to perform to handle the alert events. Valid values:
+         * <p>
+         * 
+         * *   **block_ip**: blocks the source IP address.
+         * *   **advance\_mark\_mis_info**: adds the alert events to the whitelist.
+         * *   **ignore**: ignores the alert events.
+         * *   **manual_handled**: marks the alert events as manually handled.
+         * *   **kill_process**: terminates the malicious process.
+         * *   **cleanup**: performs in-depth virus detection and removal.
+         * *   **kill\_and_quara**: kills the malicious processes and quarantines the source file.
+         * *   **disable\_malicious_defense**: stops the container on which the alerting files or processes exist.
+         * *   **client\_problem_check**: performs troubleshooting.
+         * *   **quara**: quarantines the source file of the malicious process.
          */
         public Builder operationCode(String operationCode) {
             this.putQueryParameter("OperationCode", operationCode);
@@ -153,7 +189,10 @@ public class HandleSecurityEventsRequest extends Request {
         }
 
         /**
-         * OperationParams.
+         * The configuration of the operation that you want to perform to handle the alert events.
+         * <p>
+         * 
+         * >  If you set OperationCode to `kill_and_quara` or `block_ip`, you must specify OperationParams. If you set OperationCode to other values, you can leave OperationParams empty.
          */
         public Builder operationParams(String operationParams) {
             this.putQueryParameter("OperationParams", operationParams);
@@ -162,7 +201,7 @@ public class HandleSecurityEventsRequest extends Request {
         }
 
         /**
-         * SecurityEventIds.
+         * The IDs of the alert events.
          */
         public Builder securityEventIds(java.util.List < String > securityEventIds) {
             this.putQueryParameter("SecurityEventIds", securityEventIds);
@@ -171,7 +210,7 @@ public class HandleSecurityEventsRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * The source IP address of the request.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

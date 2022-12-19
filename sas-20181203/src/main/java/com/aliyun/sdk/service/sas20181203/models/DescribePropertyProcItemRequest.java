@@ -96,7 +96,7 @@ public class DescribePropertyProcItemRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * The number of the page to return.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -105,7 +105,7 @@ public class DescribePropertyProcItemRequest extends Request {
         }
 
         /**
-         * ForceFlush.
+         * Specifies whether to forcefully refresh the data that you want to query.
          */
         public Builder forceFlush(Boolean forceFlush) {
             this.putQueryParameter("ForceFlush", forceFlush);
@@ -114,7 +114,7 @@ public class DescribePropertyProcItemRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the process.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -123,7 +123,7 @@ public class DescribePropertyProcItemRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

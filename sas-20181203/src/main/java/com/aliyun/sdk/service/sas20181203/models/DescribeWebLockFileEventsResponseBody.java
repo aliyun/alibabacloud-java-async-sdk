@@ -86,7 +86,7 @@ public class DescribeWebLockFileEventsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * CurrentPage.
+         * The page number of the returned page.
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -94,7 +94,7 @@ public class DescribeWebLockFileEventsResponseBody extends TeaModel {
         }
 
         /**
-         * List.
+         * An array that consists of events on web tamper proofing returned.
          */
         public Builder list(java.util.List < List> list) {
             this.list = list;
@@ -102,7 +102,7 @@ public class DescribeWebLockFileEventsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeWebLockFileEventsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeWebLockFileEventsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of events on web tamper proofing returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -350,7 +350,7 @@ public class DescribeWebLockFileEventsResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * Count.
+             * The number of attempts.
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -358,7 +358,7 @@ public class DescribeWebLockFileEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Ds.
+             * The timestamp at which the event on web tamper proofing was first detected.
              */
             public Builder ds(Long ds) {
                 this.ds = ds;
@@ -366,7 +366,7 @@ public class DescribeWebLockFileEventsResponseBody extends TeaModel {
             }
 
             /**
-             * EventName.
+             * The name of the event on web tamper proofing.
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -374,7 +374,19 @@ public class DescribeWebLockFileEventsResponseBody extends TeaModel {
             }
 
             /**
-             * EventStatus.
+             * The status of the event on web tamper proofing. Valid values:
+             * <p>
+             * 
+             * *   **1**: unhandled
+             * *   **2**: ignored
+             * *   **4**: deprecated
+             * *   **8**: marked as false positive
+             * *   **10**: added to the whitelist
+             * *   **16**: being handled
+             * *   **32**: defended
+             * *   **64**: invalid
+             * *   **128**: deleted
+             * *   **512**: automatically handled
              */
             public Builder eventStatus(String eventStatus) {
                 this.eventStatus = eventStatus;
@@ -382,7 +394,11 @@ public class DescribeWebLockFileEventsResponseBody extends TeaModel {
             }
 
             /**
-             * EventType.
+             * The prevention mode. Valid values:
+             * <p>
+             * 
+             * *   **audit**: Interception Mode
+             * *   **web_lock**: Alert Mode
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -390,7 +406,7 @@ public class DescribeWebLockFileEventsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtEvent.
+             * The timestamp at which the event on web tamper proofing was last detected.
              */
             public Builder gmtEvent(Long gmtEvent) {
                 this.gmtEvent = gmtEvent;
@@ -398,7 +414,7 @@ public class DescribeWebLockFileEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the event on web tamper proofing.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -406,7 +422,7 @@ public class DescribeWebLockFileEventsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * The name of the asset.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -414,7 +430,7 @@ public class DescribeWebLockFileEventsResponseBody extends TeaModel {
             }
 
             /**
-             * InternetIp.
+             * The public IP address of the affected asset.
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -422,7 +438,7 @@ public class DescribeWebLockFileEventsResponseBody extends TeaModel {
             }
 
             /**
-             * IntranetIp.
+             * The private IP address of the asset.
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -430,7 +446,7 @@ public class DescribeWebLockFileEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Ip.
+             * The IP address of the asset.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -438,7 +454,7 @@ public class DescribeWebLockFileEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Level.
+             * The severity of the event on web tamper proofing. Valid values: **medium**.
              */
             public Builder level(String level) {
                 this.level = level;
@@ -446,7 +462,7 @@ public class DescribeWebLockFileEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Path.
+             * The file path.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -454,7 +470,7 @@ public class DescribeWebLockFileEventsResponseBody extends TeaModel {
             }
 
             /**
-             * ProcessName.
+             * The name of the process.
              */
             public Builder processName(String processName) {
                 this.processName = processName;
@@ -462,7 +478,7 @@ public class DescribeWebLockFileEventsResponseBody extends TeaModel {
             }
 
             /**
-             * ProcessPath.
+             * The path of the process.
              */
             public Builder processPath(String processPath) {
                 this.processPath = processPath;
@@ -470,7 +486,19 @@ public class DescribeWebLockFileEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the event on web tamper proofing. Valid values:
+             * <p>
+             * 
+             * *   **1**: unhandled
+             * *   **2**: ignored
+             * *   **4**: deprecated
+             * *   **8**: marked as false positive
+             * *   **10**: added to the whitelist
+             * *   **16**: being handled
+             * *   **32**: defended
+             * *   **64**: invalid
+             * *   **128**: deleted
+             * *   **512**: automatically handled
              */
             public Builder status(String status) {
                 this.status = status;
@@ -478,7 +506,7 @@ public class DescribeWebLockFileEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Uuid.
+             * The UUID of the asset.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

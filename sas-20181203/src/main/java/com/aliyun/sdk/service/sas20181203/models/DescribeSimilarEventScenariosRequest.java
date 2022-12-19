@@ -92,7 +92,7 @@ public class DescribeSimilarEventScenariosRequest extends Request {
         }
 
         /**
-         * SecurityEventId.
+         * The ID of the alert to query.
          */
         public Builder securityEventId(Long securityEventId) {
             this.putQueryParameter("SecurityEventId", securityEventId);
@@ -101,7 +101,7 @@ public class DescribeSimilarEventScenariosRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * The source IP address of the request.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

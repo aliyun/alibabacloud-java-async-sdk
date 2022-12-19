@@ -50,7 +50,7 @@ public class DescribeServiceLinkedRoleStatusResponseBody extends TeaModel {
         private RoleStatus roleStatus; 
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeServiceLinkedRoleStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RoleStatus.
+         * The status information about the service-linked role.
          */
         public Builder roleStatus(RoleStatus roleStatus) {
             this.roleStatus = roleStatus;
@@ -98,7 +98,11 @@ public class DescribeServiceLinkedRoleStatusResponseBody extends TeaModel {
             private Boolean status; 
 
             /**
-             * Status.
+             * Indicates whether the service-linked role is created. Valid values:
+             * <p>
+             * 
+             * *   **true**: yes
+             * *   **false**: no
              */
             public Builder status(Boolean status) {
                 this.status = status;
