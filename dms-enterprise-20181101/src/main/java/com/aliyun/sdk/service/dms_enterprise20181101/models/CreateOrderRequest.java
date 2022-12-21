@@ -150,7 +150,7 @@ public class CreateOrderRequest extends Request {
         }
 
         /**
-         * AttachmentKey.
+         * The key of an attachment that is returned after the attachment is uploaded. You can call the [GetUserUploadFileJob](~~206069~~) operation to query the key of the attachment.
          */
         public Builder attachmentKey(String attachmentKey) {
             this.putQueryParameter("AttachmentKey", attachmentKey);
@@ -159,7 +159,7 @@ public class CreateOrderRequest extends Request {
         }
 
         /**
-         * Comment.
+         * The description of the ticket to be created.
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -168,7 +168,7 @@ public class CreateOrderRequest extends Request {
         }
 
         /**
-         * PluginParam.
+         * The ticket creation parameter. The value is a JSON string. The value of this parameter differs based on the type of the ticket. For more information, see the **PluginParam parameter** section in this topic.
          */
         public Builder pluginParam(java.util.Map < String, ? > pluginParam) {
             String pluginParamShrink = shrink(pluginParam, "PluginParam", "json");
@@ -178,7 +178,7 @@ public class CreateOrderRequest extends Request {
         }
 
         /**
-         * PluginType.
+         * The type of the ticket. For more information, see [PluginType parameter](~~429109~~).
          */
         public Builder pluginType(String pluginType) {
             this.putQueryParameter("PluginType", pluginType);
@@ -187,7 +187,7 @@ public class CreateOrderRequest extends Request {
         }
 
         /**
-         * RelatedUserList.
+         * The IDs of the stakeholders that are involved in the ticket. Separate multiple IDs with commas (,).
          */
         public Builder relatedUserList(String relatedUserList) {
             this.putQueryParameter("RelatedUserList", relatedUserList);
@@ -196,7 +196,7 @@ public class CreateOrderRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

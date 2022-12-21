@@ -106,7 +106,11 @@ public class ListColumnsRequest extends Request {
         }
 
         /**
-         * Logic.
+         * Specifies whether the database is a logical database. Valid values:
+         * <p>
+         * 
+         * *   **true**: The database is a logical database.
+         * *   **false**: The database is a physical database.
          */
         public Builder logic(Boolean logic) {
             this.putQueryParameter("Logic", logic);
@@ -115,7 +119,7 @@ public class ListColumnsRequest extends Request {
         }
 
         /**
-         * TableId.
+         * The ID of the table. You can call the [ListTables](~~141878~~) operation to obtain the table ID.
          */
         public Builder tableId(String tableId) {
             this.putQueryParameter("TableId", tableId);
@@ -124,7 +128,7 @@ public class ListColumnsRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to obtain the tenant ID.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

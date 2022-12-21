@@ -175,7 +175,7 @@ public class SearchDatabaseRequest extends Request {
         }
 
         /**
-         * DbType.
+         * The type of the database. For more information about the valid values of this parameter, see [DbType parameter](~~198106~~).
          */
         public Builder dbType(String dbType) {
             this.putQueryParameter("DbType", dbType);
@@ -184,7 +184,7 @@ public class SearchDatabaseRequest extends Request {
         }
 
         /**
-         * EnvType.
+         * The type of the environment to which the database belongs. For more information, see [Change the environment type of an instance](~~163309~~).
          */
         public Builder envType(String envType) {
             this.putQueryParameter("EnvType", envType);
@@ -193,7 +193,7 @@ public class SearchDatabaseRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -202,7 +202,7 @@ public class SearchDatabaseRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -211,7 +211,7 @@ public class SearchDatabaseRequest extends Request {
         }
 
         /**
-         * SearchKey.
+         * The keyword that is used to search for databases.
          */
         public Builder searchKey(String searchKey) {
             this.putQueryParameter("SearchKey", searchKey);
@@ -220,7 +220,13 @@ public class SearchDatabaseRequest extends Request {
         }
 
         /**
-         * SearchRange.
+         * The query range based on permissions. Valid values:
+         * <p>
+         * 
+         * *   **HAS_PERMSSION**: searches for databases on which the current user has permissions.
+         * *   **OWNER**: searches for databases owned by the current user.
+         * *   **MY_FOCUS**: searches for databases that the current user follows.
+         * *   **UNKNOWN**: searches for all databases.
          */
         public Builder searchRange(String searchRange) {
             this.putQueryParameter("SearchRange", searchRange);
@@ -229,7 +235,12 @@ public class SearchDatabaseRequest extends Request {
         }
 
         /**
-         * SearchTarget.
+         * The category of the database. Valid values:
+         * <p>
+         * 
+         * *   **DB**: single database or logical database.
+         * *   **SINGLE_DB**: single database.
+         * *   **LOGIC_DB**: logical database.
          */
         public Builder searchTarget(String searchTarget) {
             this.putQueryParameter("SearchTarget", searchTarget);
@@ -238,7 +249,7 @@ public class SearchDatabaseRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to obtain the tenant ID.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

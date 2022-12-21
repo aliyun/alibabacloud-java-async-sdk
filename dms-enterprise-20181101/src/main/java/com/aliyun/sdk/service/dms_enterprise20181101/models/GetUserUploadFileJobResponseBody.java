@@ -86,7 +86,7 @@ public class GetUserUploadFileJobResponseBody extends TeaModel {
         private UploadFileJobDetail uploadFileJobDetail; 
 
         /**
-         * ErrorCode.
+         * The error code returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class GetUserUploadFileJobResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class GetUserUploadFileJobResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class GetUserUploadFileJobResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -118,7 +118,7 @@ public class GetUserUploadFileJobResponseBody extends TeaModel {
         }
 
         /**
-         * UploadFileJobDetail.
+         * The details of the file upload task.
          */
         public Builder uploadFileJobDetail(UploadFileJobDetail uploadFileJobDetail) {
             this.uploadFileJobDetail = uploadFileJobDetail;
@@ -182,7 +182,7 @@ public class GetUserUploadFileJobResponseBody extends TeaModel {
             private String objectName; 
 
             /**
-             * BucketName.
+             * The name of the OSS bucket.
              */
             public Builder bucketName(String bucketName) {
                 this.bucketName = bucketName;
@@ -190,7 +190,7 @@ public class GetUserUploadFileJobResponseBody extends TeaModel {
             }
 
             /**
-             * Endpoint.
+             * The endpoint of the OSS bucket.
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -198,7 +198,7 @@ public class GetUserUploadFileJobResponseBody extends TeaModel {
             }
 
             /**
-             * ObjectName.
+             * The name of the OSS object.
              */
             public Builder objectName(String objectName) {
                 this.objectName = objectName;
@@ -359,7 +359,7 @@ public class GetUserUploadFileJobResponseBody extends TeaModel {
             private Long uploadedSize; 
 
             /**
-             * AttachmentKey.
+             * The key of the file that is returned after the file is uploaded. You can use this key when you upload the file as an attachment in a ticket.
              */
             public Builder attachmentKey(String attachmentKey) {
                 this.attachmentKey = attachmentKey;
@@ -367,7 +367,7 @@ public class GetUserUploadFileJobResponseBody extends TeaModel {
             }
 
             /**
-             * FileName.
+             * The name of the file.
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -375,7 +375,7 @@ public class GetUserUploadFileJobResponseBody extends TeaModel {
             }
 
             /**
-             * FileSize.
+             * The size of the file. Unit: byte.
              */
             public Builder fileSize(Long fileSize) {
                 this.fileSize = fileSize;
@@ -383,7 +383,13 @@ public class GetUserUploadFileJobResponseBody extends TeaModel {
             }
 
             /**
-             * FileSource.
+             * The purpose of the uploaded file. Valid values:
+             * <p>
+             * 
+             * *   **datacorrect**: The file is uploaded to change data.
+             * *   **order_info_attachment**: The file is uploaded as an attachment in a ticket.
+             * *   **big-file**: The file is uploaded to import multiple data records at a time.
+             * *   **sqlreview**: The file is uploaded for SQL review.
              */
             public Builder fileSource(String fileSource) {
                 this.fileSource = fileSource;
@@ -391,7 +397,7 @@ public class GetUserUploadFileJobResponseBody extends TeaModel {
             }
 
             /**
-             * JobKey.
+             * The key of the file upload task.
              */
             public Builder jobKey(String jobKey) {
                 this.jobKey = jobKey;
@@ -399,7 +405,15 @@ public class GetUserUploadFileJobResponseBody extends TeaModel {
             }
 
             /**
-             * JobStatus.
+             * The status of the file upload task. Valid values:
+             * <p>
+             * 
+             * *   **INIT**: The task was initialized.
+             * *   **PENDING**: The task waited to be run.
+             * *   **BE_SCHEDULED**: The task waited to be scheduled.
+             * *   **FAIL**: The task failed.
+             * *   **SUCCESS**: The task was run as expected.
+             * *   **RUNNING**: The task was being run.
              */
             public Builder jobStatus(String jobStatus) {
                 this.jobStatus = jobStatus;
@@ -407,7 +421,7 @@ public class GetUserUploadFileJobResponseBody extends TeaModel {
             }
 
             /**
-             * JobStatusDesc.
+             * The information about the status of the file upload task.
              */
             public Builder jobStatusDesc(String jobStatusDesc) {
                 this.jobStatusDesc = jobStatusDesc;
@@ -415,7 +429,10 @@ public class GetUserUploadFileJobResponseBody extends TeaModel {
             }
 
             /**
-             * UploadOSSParam.
+             * The information about the Object Storage Service (OSS) bucket from which the file is uploaded.
+             * <p>
+             * 
+             * >  This parameter is returned if the **UploadType** parameter is set to **OSS**.
              */
             public Builder uploadOSSParam(UploadOSSParam uploadOSSParam) {
                 this.uploadOSSParam = uploadOSSParam;
@@ -423,7 +440,11 @@ public class GetUserUploadFileJobResponseBody extends TeaModel {
             }
 
             /**
-             * UploadType.
+             * The method used to upload the file. Valid values:
+             * <p>
+             * 
+             * *   **URL**
+             * *   **OSS**
              */
             public Builder uploadType(String uploadType) {
                 this.uploadType = uploadType;
@@ -431,7 +452,10 @@ public class GetUserUploadFileJobResponseBody extends TeaModel {
             }
 
             /**
-             * UploadURL.
+             * The URL of the file.
+             * <p>
+             * 
+             * >  This parameter is returned if the **UploadType** parameter is set to **URL**.
              */
             public Builder uploadURL(String uploadURL) {
                 this.uploadURL = uploadURL;
@@ -439,7 +463,7 @@ public class GetUserUploadFileJobResponseBody extends TeaModel {
             }
 
             /**
-             * UploadedSize.
+             * The size of the uploaded file. Unit: byte.
              */
             public Builder uploadedSize(Long uploadedSize) {
                 this.uploadedSize = uploadedSize;

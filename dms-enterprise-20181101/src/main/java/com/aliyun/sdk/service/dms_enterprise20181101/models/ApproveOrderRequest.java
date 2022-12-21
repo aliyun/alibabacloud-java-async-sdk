@@ -112,7 +112,7 @@ public class ApproveOrderRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * The ID of the region in which you want to call this operation.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -121,7 +121,12 @@ public class ApproveOrderRequest extends Request {
         }
 
         /**
-         * ApprovalType.
+         * The action that you want to perform on the ticket. Valid values:
+         * <p>
+         * 
+         * *   AGREE: approve
+         * *   CANCEL: cancel
+         * *   REJECT: reject
          */
         public Builder approvalType(String approvalType) {
             this.putQueryParameter("ApprovalType", approvalType);
@@ -130,7 +135,7 @@ public class ApproveOrderRequest extends Request {
         }
 
         /**
-         * Comment.
+         * The description of the ticket.
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -139,7 +144,7 @@ public class ApproveOrderRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to obtain the tenant ID.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -148,7 +153,7 @@ public class ApproveOrderRequest extends Request {
         }
 
         /**
-         * WorkflowInstanceId.
+         * The ID of the approval process. You can call the [GetOrderBaseInfo](~~144642~~) operation to obtain the ID of the approval process.
          */
         public Builder workflowInstanceId(Long workflowInstanceId) {
             this.putQueryParameter("WorkflowInstanceId", workflowInstanceId);

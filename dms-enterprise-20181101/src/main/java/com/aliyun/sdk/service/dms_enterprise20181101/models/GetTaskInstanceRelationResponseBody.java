@@ -86,7 +86,7 @@ public class GetTaskInstanceRelationResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * ErrorCode.
+         * The error code returned if the request fails.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class GetTaskInstanceRelationResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned if the request fails.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class GetTaskInstanceRelationResponseBody extends TeaModel {
         }
 
         /**
-         * NodeList.
+         * The information about the nodes in the execution record of the task flow.
          */
         public Builder nodeList(NodeList nodeList) {
             this.nodeList = nodeList;
@@ -110,7 +110,7 @@ public class GetTaskInstanceRelationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class GetTaskInstanceRelationResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request is successful.
+         * *   **false**: The request fails.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -254,7 +258,7 @@ public class GetTaskInstanceRelationResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * BusinessTime.
+             * The business time of the node.
              */
             public Builder businessTime(String businessTime) {
                 this.businessTime = businessTime;
@@ -262,7 +266,7 @@ public class GetTaskInstanceRelationResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * The time when the execution of the task flow was complete. The time is displayed in the yyyy-MM-DD HH:mm:ss format.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -270,7 +274,7 @@ public class GetTaskInstanceRelationResponseBody extends TeaModel {
             }
 
             /**
-             * ExecuteTime.
+             * The amount of time consumed for running the node. Unit: milliseconds.
              */
             public Builder executeTime(Long executeTime) {
                 this.executeTime = executeTime;
@@ -278,7 +282,7 @@ public class GetTaskInstanceRelationResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the execution record of the task flow.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -286,7 +290,7 @@ public class GetTaskInstanceRelationResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * The description of the task.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -294,7 +298,7 @@ public class GetTaskInstanceRelationResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * The ID of the node.
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;
@@ -302,7 +306,7 @@ public class GetTaskInstanceRelationResponseBody extends TeaModel {
             }
 
             /**
-             * NodeName.
+             * The name of the node.
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -310,7 +314,7 @@ public class GetTaskInstanceRelationResponseBody extends TeaModel {
             }
 
             /**
-             * NodeType.
+             * The type of the node. For more information about the valid values for this parameter, see [NodeType parameter](~~424705~~).
              */
             public Builder nodeType(Integer nodeType) {
                 this.nodeType = nodeType;
@@ -318,7 +322,15 @@ public class GetTaskInstanceRelationResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the node. Valid values:
+             * <p>
+             * 
+             * *   **0**: The node is waiting to be scheduled.
+             * *   **1**: The node is running.
+             * *   **2**: The node is suspended.
+             * *   **3**: The node failed to run.
+             * *   **4**: The node is run.
+             * *   **5**: The node is complete.
              */
             public Builder status(Integer status) {
                 this.status = status;

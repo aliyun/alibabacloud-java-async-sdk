@@ -203,7 +203,7 @@ public class ListOrdersRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -212,7 +212,14 @@ public class ListOrdersRequest extends Request {
         }
 
         /**
-         * OrderResultType.
+         * The scope of the tickets that you want to query. Valid values:
+         * <p>
+         * 
+         * *   **AS_ADMIN**: all tickets.
+         * *   **AS_COMMITTER**: the tickets that are submitted by the current user.
+         * *   **AS_HANDLER**: the tickets to be processed by the current user.
+         * *   **AS_OWNER**: the tickets that are processed by the current user.
+         * *   **AS_Related**: the tickets that are related to the current user.
          */
         public Builder orderResultType(String orderResultType) {
             this.putQueryParameter("OrderResultType", orderResultType);
@@ -221,7 +228,12 @@ public class ListOrdersRequest extends Request {
         }
 
         /**
-         * OrderStatus.
+         * The status of the tickets that you want to query. Valid values:
+         * <p>
+         * 
+         * *   **ALL**: queries the tickets of all statuses.
+         * *   **FINISHED**: queries the tickets that are completed.
+         * *   **RUNNING**: queries the tickets that are being processed.
          */
         public Builder orderStatus(String orderStatus) {
             this.putQueryParameter("OrderStatus", orderStatus);
@@ -230,7 +242,7 @@ public class ListOrdersRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -239,7 +251,7 @@ public class ListOrdersRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -248,7 +260,7 @@ public class ListOrdersRequest extends Request {
         }
 
         /**
-         * PluginType.
+         * The type of the tickets that you want to query. For more information, see [PluginType parameter](~~429109~~).
          */
         public Builder pluginType(String pluginType) {
             this.putQueryParameter("PluginType", pluginType);
@@ -257,7 +269,7 @@ public class ListOrdersRequest extends Request {
         }
 
         /**
-         * SearchContent.
+         * The keyword that is used to query tickets.
          */
         public Builder searchContent(String searchContent) {
             this.putQueryParameter("SearchContent", searchContent);
@@ -266,7 +278,11 @@ public class ListOrdersRequest extends Request {
         }
 
         /**
-         * SearchDateType.
+         * The time condition based on which you want to query tickets. Valid values:
+         * <p>
+         * 
+         * *   **CREATE_TIME**: the time when a ticket was created.
+         * *   **MODIFY_TIME**: the time when a ticket was last modified.
          */
         public Builder searchDateType(String searchDateType) {
             this.putQueryParameter("SearchDateType", searchDateType);
@@ -275,7 +291,7 @@ public class ListOrdersRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -284,7 +300,7 @@ public class ListOrdersRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

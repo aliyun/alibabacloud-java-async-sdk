@@ -86,7 +86,7 @@ public class ListTasksInTaskFlowResponseBody extends TeaModel {
         private Tasks tasks; 
 
         /**
-         * ErrorCode.
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class ListTasksInTaskFlowResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned if the request failed.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class ListTasksInTaskFlowResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request. You can use the ID to locate logs and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,11 @@ public class ListTasksInTaskFlowResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -118,7 +122,7 @@ public class ListTasksInTaskFlowResponseBody extends TeaModel {
         }
 
         /**
-         * Tasks.
+         * The tasks in the task flow.
          */
         public Builder tasks(Tasks tasks) {
             this.tasks = tasks;
@@ -242,7 +246,7 @@ public class ListTasksInTaskFlowResponseBody extends TeaModel {
             private String timeVariables; 
 
             /**
-             * GraphParam.
+             * The position of the node on the Directed Acyclic Graph (DAG).
              */
             public Builder graphParam(String graphParam) {
                 this.graphParam = graphParam;
@@ -250,7 +254,7 @@ public class ListTasksInTaskFlowResponseBody extends TeaModel {
             }
 
             /**
-             * NodeConfig.
+             * The advanced configuration for the node.
              */
             public Builder nodeConfig(String nodeConfig) {
                 this.nodeConfig = nodeConfig;
@@ -258,7 +262,7 @@ public class ListTasksInTaskFlowResponseBody extends TeaModel {
             }
 
             /**
-             * NodeContent.
+             * The configuration for the node.
              */
             public Builder nodeContent(String nodeContent) {
                 this.nodeContent = nodeContent;
@@ -266,7 +270,7 @@ public class ListTasksInTaskFlowResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * The ID of the node.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -274,7 +278,7 @@ public class ListTasksInTaskFlowResponseBody extends TeaModel {
             }
 
             /**
-             * NodeName.
+             * The name of the node.
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -282,7 +286,7 @@ public class ListTasksInTaskFlowResponseBody extends TeaModel {
             }
 
             /**
-             * NodeOutput.
+             * The output variables for the task.
              */
             public Builder nodeOutput(String nodeOutput) {
                 this.nodeOutput = nodeOutput;
@@ -290,7 +294,7 @@ public class ListTasksInTaskFlowResponseBody extends TeaModel {
             }
 
             /**
-             * NodeType.
+             * The type of the node. For more information about the valid values for this parameter, see [NodeType parameter](~~424705~~).
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -298,7 +302,7 @@ public class ListTasksInTaskFlowResponseBody extends TeaModel {
             }
 
             /**
-             * TimeVariables.
+             * The time variables configured for the node.
              */
             public Builder timeVariables(String timeVariables) {
                 this.timeVariables = timeVariables;

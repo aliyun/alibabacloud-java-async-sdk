@@ -99,7 +99,7 @@ public class ListDesensitizationRuleResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * DesensitizationRuleList.
+         * The list of masking rules.
          */
         public Builder desensitizationRuleList(java.util.List < DesensitizationRuleList> desensitizationRuleList) {
             this.desensitizationRuleList = desensitizationRuleList;
@@ -107,7 +107,7 @@ public class ListDesensitizationRuleResponseBody extends TeaModel {
         }
 
         /**
-         * 表示当前调用返回读取到的位置，空代表数据已经读取完毕
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -115,7 +115,7 @@ public class ListDesensitizationRuleResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned if the request failed.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -123,7 +123,7 @@ public class ListDesensitizationRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -131,7 +131,11 @@ public class ListDesensitizationRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true: The request was successful.
+         * *   false: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -139,7 +143,7 @@ public class ListDesensitizationRuleResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount本次请求条件下的数据总量，此参数为可选参数，默认可不返回
+         * The total number of entries returned. By default, this parameter is not returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -287,7 +291,7 @@ public class ListDesensitizationRuleResponseBody extends TeaModel {
             private String ruleType; 
 
             /**
-             * FuncParams.
+             * The parameter.
              */
             public Builder funcParams(String funcParams) {
                 this.funcParams = funcParams;
@@ -295,7 +299,7 @@ public class ListDesensitizationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * FuncSample.
+             * The example.
              */
             public Builder funcSample(String funcSample) {
                 this.funcSample = funcSample;
@@ -303,7 +307,7 @@ public class ListDesensitizationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * FunctionType.
+             * The algorithm type.
              */
             public Builder functionType(String functionType) {
                 this.functionType = functionType;
@@ -311,7 +315,7 @@ public class ListDesensitizationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * LastModifierId.
+             * The ID of the user who last modified the masking rule.
              */
             public Builder lastModifierId(String lastModifierId) {
                 this.lastModifierId = lastModifierId;
@@ -319,7 +323,7 @@ public class ListDesensitizationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * LastModifierName.
+             * The name of the user who last modified the masking rule.
              */
             public Builder lastModifierName(String lastModifierName) {
                 this.lastModifierName = lastModifierName;
@@ -327,7 +331,7 @@ public class ListDesensitizationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ReferenceCount.
+             * The number of times that the masking was used.
              */
             public Builder referenceCount(Integer referenceCount) {
                 this.referenceCount = referenceCount;
@@ -335,7 +339,7 @@ public class ListDesensitizationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * RuleDesc.
+             * The description of the rule.
              */
             public Builder ruleDesc(String ruleDesc) {
                 this.ruleDesc = ruleDesc;
@@ -343,7 +347,7 @@ public class ListDesensitizationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * RuleId.
+             * The ID of the masking rule.
              */
             public Builder ruleId(Integer ruleId) {
                 this.ruleId = ruleId;
@@ -351,7 +355,7 @@ public class ListDesensitizationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * The name of the masking rule.
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -359,7 +363,7 @@ public class ListDesensitizationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * RuleType.
+             * The algorithm used for masking.
              */
             public Builder ruleType(String ruleType) {
                 this.ruleType = ruleType;

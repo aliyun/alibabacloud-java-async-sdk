@@ -107,7 +107,7 @@ public class UpdateTaskContentRequest extends Request {
         }
 
         /**
-         * NodeContent.
+         * The node configurations after modification.
          */
         public Builder nodeContent(String nodeContent) {
             this.putQueryParameter("NodeContent", nodeContent);
@@ -116,7 +116,7 @@ public class UpdateTaskContentRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * The ID of the task node. You can call the [GetTaskInstanceRelation](~~424711~~) operation to query the node ID.
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -125,7 +125,10 @@ public class UpdateTaskContentRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The ID of the tenant.
+         * <p>
+         * 
+         * > To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the ["View information about the current tenant"](~~181330~~) section of the Manage DMS tenants topic.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

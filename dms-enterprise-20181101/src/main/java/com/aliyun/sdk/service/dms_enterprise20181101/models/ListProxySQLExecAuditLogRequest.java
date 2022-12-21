@@ -193,7 +193,7 @@ public class ListProxySQLExecAuditLogRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. The value of this parameter must be a timestamp that follows the UNIX time format.
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -202,7 +202,12 @@ public class ListProxySQLExecAuditLogRequest extends Request {
         }
 
         /**
-         * ExecState.
+         * The execution status of the SQL statement. Valid values:
+         * <p>
+         * 
+         * *   **FAIL**: The execution of the SQL statement fails.
+         * *   **CANCEL**: The execution of the SQL statement is canceled.
+         * *   **SUCCESS**: The SQL statement is executed.
          */
         public Builder execState(String execState) {
             this.putQueryParameter("ExecState", execState);
@@ -211,7 +216,7 @@ public class ListProxySQLExecAuditLogRequest extends Request {
         }
 
         /**
-         * OpUserName.
+         * The alias of the user.
          */
         public Builder opUserName(String opUserName) {
             this.putQueryParameter("OpUserName", opUserName);
@@ -220,7 +225,7 @@ public class ListProxySQLExecAuditLogRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -229,7 +234,7 @@ public class ListProxySQLExecAuditLogRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Maximum values: 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -238,7 +243,15 @@ public class ListProxySQLExecAuditLogRequest extends Request {
         }
 
         /**
-         * SQLType.
+         * The type of SQL statement. Valid values:
+         * <p>
+         * 
+         * *   **SELECT**
+         * *   **INSERT**
+         * *   **DELETE**
+         * *   **CREATE_TABLE**
+         * 
+         * >  You can choose Operation Audit > Secure Access Proxy in the top navigation bar of the DMS console to view more types of SQL statements.
          */
         public Builder SQLType(String SQLType) {
             this.putQueryParameter("SQLType", SQLType);
@@ -247,7 +260,7 @@ public class ListProxySQLExecAuditLogRequest extends Request {
         }
 
         /**
-         * SearchName.
+         * The name of the database instance.
          */
         public Builder searchName(String searchName) {
             this.putQueryParameter("SearchName", searchName);
@@ -256,7 +269,7 @@ public class ListProxySQLExecAuditLogRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. The value of this parameter must be a timestamp that follows the UNIX time format.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -265,7 +278,7 @@ public class ListProxySQLExecAuditLogRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the tenant ID.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

@@ -151,7 +151,7 @@ public class GetOpLogRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. Specify the time in the yyyy-MM-DD HH:mm:ss format.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -160,7 +160,25 @@ public class GetOpLogRequest extends Request {
         }
 
         /**
-         * Module.
+         * The functional module for which you want to query operation logs. If you do not specify this parameter, operation logs for all functional modules are returned. Valid values:
+         * <p>
+         * 
+         * *   **PERMISSION**: permissions
+         * *   **OWNER**: data owner
+         * *   **SQL_CONSOLE**: data query
+         * *   **SQL_CONSOLE_EXPORT**: query result export
+         * *   **DATA_CHANGE**: data change
+         * *   **DATA_EXPORT**: data export
+         * *   **SQL_REVIEW**: SQL review
+         * *   **DT_SYNC**: database and table synchronization
+         * *   **DT_DETAIL**: database and table details
+         * *   **DB_TASK**: task management
+         * *   **INSTANCE_MANAGE**: instance management
+         * *   **USER_MANAGE**: user management
+         * *   **SECURITY_RULE**: security rule
+         * *   **CONFIG_MANAGE**: configuration management
+         * *   **RESOURCE_AUTH**: resource authorization
+         * *   **ACCESS_WHITE_IP**: access IP address allowlist
          */
         public Builder module(String module) {
             this.putQueryParameter("Module", module);
@@ -169,7 +187,7 @@ public class GetOpLogRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Pages start from page 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -178,7 +196,12 @@ public class GetOpLogRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Valid values:
+         * <p>
+         * 
+         * *   30
+         * *   50
+         * *   100
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -187,7 +210,7 @@ public class GetOpLogRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Specify the time in the yyyy-MM-DD HH:mm:ss format.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -196,7 +219,7 @@ public class GetOpLogRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

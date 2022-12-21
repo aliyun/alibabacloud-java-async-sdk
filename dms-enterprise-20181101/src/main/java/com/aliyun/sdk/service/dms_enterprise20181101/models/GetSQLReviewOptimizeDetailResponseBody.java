@@ -86,7 +86,7 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * ErrorCode.
+         * The error code returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
         }
 
         /**
-         * OptimizeDetail.
+         * The details of optimization suggestions for SQL statements.
          */
         public Builder optimizeDetail(OptimizeDetail optimizeDetail) {
             this.optimizeDetail = optimizeDetail;
@@ -110,7 +110,7 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -182,7 +182,7 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * Content.
+             * The content of the SQL script.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -190,7 +190,7 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * OpType.
+             * The purpose of the SQL script. The value is set to AddIndex.
              */
             public Builder opType(String opType) {
                 this.opType = opType;
@@ -198,7 +198,7 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * The name of the table.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -299,7 +299,7 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
             private java.util.List < Scripts> scripts; 
 
             /**
-             * Comments.
+             * The comment that is specified when you create the SQL review rule. For more information, see [SQL review optimization](~~194114~~).
              */
             public Builder comments(String comments) {
                 this.comments = comments;
@@ -307,7 +307,15 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Feedback.
+             * The optimization suggestion for the SQL statement. Valid values:
+             * <p>
+             * 
+             * *   **MUST_IMPROVE**: The SQL statement must be improved.
+             * *   **POTENTIAL_ISSUE**: The SQL statement contains potential issues.
+             * *   **SUGGEST_IMPROVE**: We recommend that you improve the SQL statement.
+             * *   **USEDMSTOOLKIT**: We recommend that you change schemas without locking tables.
+             * *   **USEDMSDML_UNLOCK**: We recommend that you change data without locking tables.
+             * *   **TABLEINDEXSUGGEST**: We recommend that you use SQL statements that use indexes.
              */
             public Builder feedback(String feedback) {
                 this.feedback = feedback;
@@ -315,7 +323,7 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Messages.
+             * The review results.
              */
             public Builder messages(java.util.List < String > messages) {
                 this.messages = messages;
@@ -323,7 +331,7 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * The name of the rule. For more information, see [SQL review optimization](~~194114~~).
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -331,7 +339,11 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RuleType.
+             * The type of the SQL review rule. Valid values:
+             * <p>
+             * 
+             * *   **REVIEW**: a rule that is used to review SQL statements based on standards.
+             * *   **OPTIMIZE**: a rule that is used to provide optimization suggestions.
              */
             public Builder ruleType(String ruleType) {
                 this.ruleType = ruleType;
@@ -339,7 +351,7 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Scripts.
+             * The SQL script for data changes.
              */
             public Builder scripts(java.util.List < Scripts> scripts) {
                 this.scripts = scripts;
@@ -404,7 +416,7 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
             private java.util.List < Results> results; 
 
             /**
-             * ErrorMessage.
+             * The error message returned.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -412,7 +424,11 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * OccurError.
+             * Indicates whether an error occurs. Valid values:
+             * <p>
+             * 
+             * *   **true**: An error occurs.
+             * *   **false**: No error occurs.
              */
             public Builder occurError(Boolean occurError) {
                 this.occurError = occurError;
@@ -420,7 +436,7 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Results.
+             * The review results based on rules.
              */
             public Builder results(java.util.List < Results> results) {
                 this.results = results;
@@ -509,7 +525,7 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
             private String sqlType; 
 
             /**
-             * DbId.
+             * The ID of the database.
              */
             public Builder dbId(Integer dbId) {
                 this.dbId = dbId;
@@ -517,7 +533,7 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance to which the database belongs.
              */
             public Builder instanceId(Integer instanceId) {
                 this.instanceId = instanceId;
@@ -525,7 +541,7 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * QualityResult.
+             * The quality of the SQL statement.
              */
             public Builder qualityResult(QualityResult qualityResult) {
                 this.qualityResult = qualityResult;
@@ -533,7 +549,7 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * QueryKey.
+             * The key that is used to query the details of optimization suggestions.
              */
             public Builder queryKey(String queryKey) {
                 this.queryKey = queryKey;
@@ -541,7 +557,7 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SqlType.
+             * The type of the SQL statement. Valid values: DELETE, UPDATE, and ALTER_TABLE.
              */
             public Builder sqlType(String sqlType) {
                 this.sqlType = sqlType;

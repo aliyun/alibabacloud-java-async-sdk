@@ -108,7 +108,7 @@ public class DeleteLogicTableRouteConfigRequest extends Request {
         }
 
         /**
-         * RouteKey.
+         * The unique key of the routing algorithm. You can call the [ListLogicTableRouteConfig](https://www.alibabacloud.com/help/en/data-management-service/latest/listlogictablerouteconfig) operation to query the unique key.
          */
         public Builder routeKey(String routeKey) {
             this.putQueryParameter("RouteKey", routeKey);
@@ -117,7 +117,7 @@ public class DeleteLogicTableRouteConfigRequest extends Request {
         }
 
         /**
-         * TableId.
+         * The ID of the logical table. You can call the [ListLogicTables](https://www.alibabacloud.com/help/en/data-management-service/latest/listlogictables) operation to query the ID of the logical table.
          */
         public Builder tableId(Long tableId) {
             this.putQueryParameter("TableId", tableId);
@@ -126,7 +126,7 @@ public class DeleteLogicTableRouteConfigRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The ID of the tenant. You can call the [GetUserActiveTenant](https://www.alibabacloud.com/help/en/data-management-service/latest/getuseractivetenant) operation to query the tenant ID.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

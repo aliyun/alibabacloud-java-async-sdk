@@ -78,7 +78,7 @@ public class ListStandardGroupsRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The ID of the tenant.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

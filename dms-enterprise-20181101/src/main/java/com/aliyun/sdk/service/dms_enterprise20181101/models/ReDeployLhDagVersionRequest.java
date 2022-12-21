@@ -107,7 +107,7 @@ public class ReDeployLhDagVersionRequest extends Request {
         }
 
         /**
-         * DagId.
+         * The ID of the task flow. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to obtain the ID of the task flow.
          */
         public Builder dagId(Long dagId) {
             this.putQueryParameter("DagId", dagId);
@@ -116,7 +116,7 @@ public class ReDeployLhDagVersionRequest extends Request {
         }
 
         /**
-         * DagVersion.
+         * The ID of the task flow version. You can call the [ListDAGVersions](~~424682~~) operation to obtain the ID of the task flow version.
          */
         public Builder dagVersion(Long dagVersion) {
             this.putQueryParameter("DagVersion", dagVersion);
@@ -125,7 +125,7 @@ public class ReDeployLhDagVersionRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the ID of the tenant.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

@@ -86,7 +86,7 @@ public class GetStructSyncJobDetailResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * ErrorCode.
+         * The error code that is returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class GetStructSyncJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message that is returned.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class GetStructSyncJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class GetStructSyncJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * StructSyncJobDetail.
+         * The details of the schema synchronization task.
          */
         public Builder structSyncJobDetail(StructSyncJobDetail structSyncJobDetail) {
             this.structSyncJobDetail = structSyncJobDetail;
@@ -118,7 +118,7 @@ public class GetStructSyncJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the call was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -242,7 +242,7 @@ public class GetStructSyncJobDetailResponseBody extends TeaModel {
             private Long tableCount; 
 
             /**
-             * DBTaskGroupId.
+             * The ID of the task queue.
              */
             public Builder DBTaskGroupId(Long DBTaskGroupId) {
                 this.DBTaskGroupId = DBTaskGroupId;
@@ -250,7 +250,7 @@ public class GetStructSyncJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ExecuteCount.
+             * The number of SQL statements that have been executed.
              */
             public Builder executeCount(Long executeCount) {
                 this.executeCount = executeCount;
@@ -258,7 +258,18 @@ public class GetStructSyncJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * JobStatus.
+             * The status of the task. Valid values:
+             * <p>
+             * 
+             * *   **NEW**: The task was created.
+             * *   **COMPARING**: The schemas of tables were being compared.
+             * *   **COMPARE_BREAK**: The schema comparison was interrupted.
+             * *   **COMPARE_FINISH**: The schema comparison was complete.
+             * *   **NOT_SCRIPTS**: The schema comparison was complete. No scripts were available.
+             * *   **SUBMITED_DBTASK**: The task was submitted.
+             * *   **DBTASK_SUCCESS**: The task was complete.
+             * *   **SUBMITED_WORKFLOW**: The ticket was submitted for approval.
+             * *   **WORKFLOW_SUCCESS**: The ticket was approved.
              */
             public Builder jobStatus(String jobStatus) {
                 this.jobStatus = jobStatus;
@@ -266,7 +277,7 @@ public class GetStructSyncJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * The description of the task.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -274,7 +285,12 @@ public class GetStructSyncJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityRule.
+             * The type of security rule. Valid values:
+             * <p>
+             * 
+             * *   **CANNOT_SYNC**: The schema synchronization is not allowed.
+             * *   **WITH_APPROVE**: The schema synchronization can be performed after the ticket is approved. You can call the [SubmitStructSyncOrderApproval](~~206166~~) operation to submit the ticket for approval.
+             * *   **WITHOUT_APPROVE**: The schema synchronization can be performed without approval.
              */
             public Builder securityRule(String securityRule) {
                 this.securityRule = securityRule;
@@ -282,7 +298,7 @@ public class GetStructSyncJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SqlCount.
+             * The total number of SQL statements.
              */
             public Builder sqlCount(Long sqlCount) {
                 this.sqlCount = sqlCount;
@@ -290,7 +306,7 @@ public class GetStructSyncJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TableAnalyzed.
+             * The number of tables that have been analyzed.
              */
             public Builder tableAnalyzed(Long tableAnalyzed) {
                 this.tableAnalyzed = tableAnalyzed;
@@ -298,7 +314,7 @@ public class GetStructSyncJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TableCount.
+             * The total number of tables.
              */
             public Builder tableCount(Long tableCount) {
                 this.tableCount = tableCount;

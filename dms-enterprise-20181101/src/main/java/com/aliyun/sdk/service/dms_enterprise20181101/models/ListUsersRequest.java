@@ -147,7 +147,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -156,7 +156,10 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
+         * <p>
+         * 
+         * >  Valid values: 10, 20, 50, and 100. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -165,7 +168,16 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * Role.
+         * The role that is assigned to the user. Valid values:
+         * <p>
+         * 
+         * *   **USER**: a regular user role.
+         * *   **DBA**: a database administrator (DBA) role.
+         * *   **ADMIN**: a Data Management (DMS) administrator role.
+         * *   **SECURITY_ADMIN**: a security administrator role.
+         * *   **STRUCT_READ_ONLY**: a schema read-only user role.
+         * 
+         * >  To check your role, move the pointer over the profile picture in the upper-right corner of the DMS console.
          */
         public Builder role(String role) {
             this.putQueryParameter("Role", role);
@@ -174,7 +186,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * SearchKey.
+         * The search keyword. Fuzzy match is supported.
          */
         public Builder searchKey(String searchKey) {
             this.putQueryParameter("SearchKey", searchKey);
@@ -183,7 +195,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the ID of the tenant.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -192,7 +204,12 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * UserState.
+         * The status of the user. Valid values:
+         * <p>
+         * 
+         * *   **NORMAL**: The user is normal.
+         * *   **DISABLE**: The user is disabled.
+         * *   **DELETE**: The user is deleted.
          */
         public Builder userState(String userState) {
             this.putQueryParameter("UserState", userState);

@@ -181,7 +181,7 @@ public class CreateLakeHouseSpaceRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the workspace.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -190,7 +190,7 @@ public class CreateLakeHouseSpaceRequest extends Request {
         }
 
         /**
-         * DevDbId.
+         * The ID of the development database. You can call the [ListDatabases](~~141873~~) or [SearchDatabase](~~141876~~) operation to obtain the ID.
          */
         public Builder devDbId(String devDbId) {
             this.putQueryParameter("DevDbId", devDbId);
@@ -199,7 +199,11 @@ public class CreateLakeHouseSpaceRequest extends Request {
         }
 
         /**
-         * DwDbType.
+         * The type of the database. Valid values:
+         * <p>
+         * 
+         * *   **14**: AnalyticDB for MySQL
+         * *   **18**: AnalyticDB for PostgreSQL
          */
         public Builder dwDbType(String dwDbType) {
             this.putQueryParameter("DwDbType", dwDbType);
@@ -208,7 +212,11 @@ public class CreateLakeHouseSpaceRequest extends Request {
         }
 
         /**
-         * Mode.
+         * The mode in which the workspace runs. Valid values:
+         * <p>
+         * 
+         * *   **0**: basic mode. This mode is unavailable.
+         * *   **1**: standard mode.
          */
         public Builder mode(String mode) {
             this.putQueryParameter("Mode", mode);
@@ -217,7 +225,7 @@ public class CreateLakeHouseSpaceRequest extends Request {
         }
 
         /**
-         * ProdDbId.
+         * The ID of the production database. You can call the [ListDatabases](~~141873~~) or [SearchDatabase](~~141876~~) operation to obtain the ID.
          */
         public Builder prodDbId(String prodDbId) {
             this.putQueryParameter("ProdDbId", prodDbId);
@@ -226,7 +234,11 @@ public class CreateLakeHouseSpaceRequest extends Request {
         }
 
         /**
-         * SpaceConfig.
+         * The configuration of the workspace. Valid values:
+         * <p>
+         * 
+         * *   **skipManualRunCheck**: No security rule check is required in the trial run phase.
+         * *   **skipPublishApprove**: No approval is required for publishing and O\&M.
          */
         public Builder spaceConfig(String spaceConfig) {
             this.putQueryParameter("SpaceConfig", spaceConfig);
@@ -235,7 +247,7 @@ public class CreateLakeHouseSpaceRequest extends Request {
         }
 
         /**
-         * SpaceName.
+         * The name of the workspace.
          */
         public Builder spaceName(String spaceName) {
             this.putQueryParameter("SpaceName", spaceName);
@@ -244,7 +256,7 @@ public class CreateLakeHouseSpaceRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

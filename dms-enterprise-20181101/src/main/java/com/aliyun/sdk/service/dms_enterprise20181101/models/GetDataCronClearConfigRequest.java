@@ -93,7 +93,7 @@ public class GetDataCronClearConfigRequest extends Request {
         }
 
         /**
-         * OrderId.
+         * The ID of the ticket. You can call the [ListOrders](~~144643~~) operation to query the ticket ID.
          */
         public Builder orderId(Long orderId) {
             this.putQueryParameter("OrderId", orderId);
@@ -102,7 +102,10 @@ public class GetDataCronClearConfigRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The ID of the tenant.
+         * <p>
+         * 
+         * > : To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

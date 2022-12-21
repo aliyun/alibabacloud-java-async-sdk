@@ -205,7 +205,7 @@ public class ListUserPermissionsRequest extends Request {
         }
 
         /**
-         * DatabaseName.
+         * The name of the database.
          */
         public Builder databaseName(String databaseName) {
             this.putQueryParameter("DatabaseName", databaseName);
@@ -214,7 +214,7 @@ public class ListUserPermissionsRequest extends Request {
         }
 
         /**
-         * DbType.
+         * The type of the database. For more information about the valid values of this parameter, see [DbType parameter](~~198106~~).
          */
         public Builder dbType(String dbType) {
             this.putQueryParameter("DbType", dbType);
@@ -223,7 +223,17 @@ public class ListUserPermissionsRequest extends Request {
         }
 
         /**
-         * EnvType.
+         * The type of the environment to which the database belongs. Valid values:
+         * <p>
+         * 
+         * *   product: production environment
+         * *   dev: development environment
+         * *   pre: staging environment
+         * *   test: test environment
+         * *   sit: SIT environment
+         * *   uat: user acceptance testing (UAT) environment
+         * *   pet: stress testing environment
+         * *   stag: STAG environment
          */
         public Builder envType(String envType) {
             this.putQueryParameter("EnvType", envType);
@@ -232,7 +242,11 @@ public class ListUserPermissionsRequest extends Request {
         }
 
         /**
-         * Logic.
+         * Specifies whether the database is a logical database. Valid values:
+         * <p>
+         * 
+         * *   true: The database is a logical database.
+         * *   false: The database is a physical database.
          */
         public Builder logic(Boolean logic) {
             this.putQueryParameter("Logic", logic);
@@ -241,7 +255,7 @@ public class ListUserPermissionsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -250,7 +264,7 @@ public class ListUserPermissionsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -259,7 +273,13 @@ public class ListUserPermissionsRequest extends Request {
         }
 
         /**
-         * PermType.
+         * The permissions on a specific type of resources that you want to query. Valid values:
+         * <p>
+         * 
+         * *   DATABASE: permissions on databases
+         * *   TABLE: permissions on tables
+         * *   COLUMN: permissions on fields
+         * *   INSTANCE: permissions on instances
          */
         public Builder permType(String permType) {
             this.putQueryParameter("PermType", permType);
@@ -268,7 +288,7 @@ public class ListUserPermissionsRequest extends Request {
         }
 
         /**
-         * SearchKey.
+         * The keyword used in the query. For example, if you want to query permissions on an instance, you can specify the endpoint of the instance, such as rm-bp144d5ky4l4r****.
          */
         public Builder searchKey(String searchKey) {
             this.putQueryParameter("SearchKey", searchKey);
@@ -277,7 +297,10 @@ public class ListUserPermissionsRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The ID of the tenant.
+         * <p>
+         * 
+         * >  To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the "View information about the current tenant" section of the [Manage DMS tenants](~~181330~~) topic.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -286,7 +309,10 @@ public class ListUserPermissionsRequest extends Request {
         }
 
         /**
-         * UserId.
+         * The ID of the user. You can call the [GetUser](~~147098~~) or [ListUsers](~~141938~~) operation to query the ID of the user.
+         * <p>
+         * 
+         * >  The user ID is different from the ID of your Alibaba Cloud account.
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

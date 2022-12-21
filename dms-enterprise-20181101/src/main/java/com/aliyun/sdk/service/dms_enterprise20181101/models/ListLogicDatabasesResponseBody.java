@@ -98,7 +98,7 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * ErrorCode.
+         * The error code that is returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -106,7 +106,7 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message that is returned.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -114,7 +114,7 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
         }
 
         /**
-         * LogicDatabaseList.
+         * The details of logical databases.
          */
         public Builder logicDatabaseList(LogicDatabaseList logicDatabaseList) {
             this.logicDatabaseList = logicDatabaseList;
@@ -122,7 +122,7 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,11 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * 
+         * - **true**: The request is successful.
+         * - **false**: The request fails.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,7 +142,7 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of logical databases.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -409,7 +413,7 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
             private String searchName; 
 
             /**
-             * Alias.
+             * The alias of the logical database.
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -417,7 +421,7 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * DatabaseId.
+             * The ID of the logical database.
              */
             public Builder databaseId(String databaseId) {
                 this.databaseId = databaseId;
@@ -433,7 +437,7 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * DbType.
+             * The type of the logical database. For more information about the valid values of this parameter, see [DbType parameter](https://www.alibabacloud.com/help/en/data-management-service/latest/dbtype-parameter).
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -441,7 +445,17 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * EnvType.
+             * The type of the environment to which the logical database belongs. Valid values:
+             * <p>
+             * 
+             * - **product**: production environment
+             * - **dev**: development environment
+             * - **pre**: staging environment
+             * - **test**: test environment
+             * - **sit**: system integration testing (SIT) environment
+             * - **uat**: user acceptance testing (UAT) environment
+             * - **pet**: stress testing environment
+             * - **stag**: STAG environment
              */
             public Builder envType(String envType) {
                 this.envType = envType;
@@ -449,7 +463,7 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * Logic.
+             * Indicates whether the database is a logical database. The return value is true.
              */
             public Builder logic(Boolean logic) {
                 this.logic = logic;
@@ -457,7 +471,7 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerIdList.
+             * The IDs of the owners of the logical database.
              */
             public Builder ownerIdList(OwnerIdList ownerIdList) {
                 this.ownerIdList = ownerIdList;
@@ -465,7 +479,7 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerNameList.
+             * The names of the owners of the logical database.
              */
             public Builder ownerNameList(OwnerNameList ownerNameList) {
                 this.ownerNameList = ownerNameList;
@@ -473,7 +487,7 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * SchemaName.
+             * The name of the logical database.
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -481,7 +495,7 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * SearchName.
+             * The name that is used to search for the logical database.
              */
             public Builder searchName(String searchName) {
                 this.searchName = searchName;

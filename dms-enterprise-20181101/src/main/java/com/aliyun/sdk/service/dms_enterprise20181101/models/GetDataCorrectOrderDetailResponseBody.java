@@ -86,7 +86,7 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * DataCorrectOrderDetail.
+         * The information about the data change ticket.
          */
         public Builder dataCorrectOrderDetail(DataCorrectOrderDetail dataCorrectOrderDetail) {
             this.dataCorrectOrderDetail = dataCorrectOrderDetail;
@@ -94,7 +94,7 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code returned if the request fails.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -102,7 +102,7 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned if the request fails.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +110,7 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * 
+         * - **true**: The request is successful.
+         * - **false**: The request fails.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -206,7 +210,7 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             private String searchName; 
 
             /**
-             * DbId.
+             * The ID of the database.
              */
             public Builder dbId(Integer dbId) {
                 this.dbId = dbId;
@@ -214,7 +218,7 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DbType.
+             * The engine of the database.
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -222,7 +226,17 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * EnvType.
+             * The type of the environment to which the database belongs. Valid values:
+             * <p>
+             * 
+             * - product: production environment
+             * - dev: development environment
+             * - pre: staging environment
+             * - test: test environment
+             * - sit: system integration testing (SIT) environment
+             * - uat: user acceptance testing (UAT) environment
+             * - pet: stress testing environment
+             * - stag: STAG environment
              */
             public Builder envType(String envType) {
                 this.envType = envType;
@@ -230,7 +244,11 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Logic.
+             * Indicates whether the database is a logical database. Valid values:
+             * <p>
+             * 
+             * - **true**: The database is a logical database.
+             * - **false**: The database is a physical database.
              */
             public Builder logic(Boolean logic) {
                 this.logic = logic;
@@ -238,7 +256,7 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SearchName.
+             * The name that is used to search for the database.
              */
             public Builder searchName(String searchName) {
                 this.searchName = searchName;
@@ -440,7 +458,7 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             private String sqlType; 
 
             /**
-             * ActualAffectRows.
+             * The number of affected rows that is obtained by the precheck.
              */
             public Builder actualAffectRows(Long actualAffectRows) {
                 this.actualAffectRows = actualAffectRows;
@@ -448,7 +466,7 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * AttachmentName.
+             * The name of the attachment that contains the SQL statements used to change data.
              */
             public Builder attachmentName(String attachmentName) {
                 this.attachmentName = attachmentName;
@@ -456,7 +474,7 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Classify.
+             * The category of the reason for the data change.
              */
             public Builder classify(String classify) {
                 this.classify = classify;
@@ -464,7 +482,7 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * EstimateAffectRows.
+             * The estimated number of affected rows.
              */
             public Builder estimateAffectRows(Long estimateAffectRows) {
                 this.estimateAffectRows = estimateAffectRows;
@@ -472,7 +490,7 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ExeSQL.
+             * The executed SQL statements.
              */
             public Builder exeSQL(String exeSQL) {
                 this.exeSQL = exeSQL;
@@ -480,7 +498,11 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * IgnoreAffectRows.
+             * Indicates whether the precheck result is ignored. Valid values:
+             * <p>
+             * 
+             * - **true**: The precheck result is ignored.
+             * - **false**: The precheck result is not ignored.
              */
             public Builder ignoreAffectRows(Boolean ignoreAffectRows) {
                 this.ignoreAffectRows = ignoreAffectRows;
@@ -488,7 +510,7 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * IgnoreAffectRowsReason.
+             * The reason why the precheck result is ignored.
              */
             public Builder ignoreAffectRowsReason(String ignoreAffectRowsReason) {
                 this.ignoreAffectRowsReason = ignoreAffectRowsReason;
@@ -496,7 +518,7 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RbAttachmentName.
+             * The name of the attachment that contains the SQL statements used to roll back the data change.
              */
             public Builder rbAttachmentName(String rbAttachmentName) {
                 this.rbAttachmentName = rbAttachmentName;
@@ -504,7 +526,7 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RbSQL.
+             * The SQL statements used to roll back the data change.
              */
             public Builder rbSQL(String rbSQL) {
                 this.rbSQL = rbSQL;
@@ -512,7 +534,11 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RbSQLType.
+             * The format of the SQL statements used to roll back the data change. Valid values:
+             * <p>
+             * 
+             * - **TEXT**: text
+             * - **ATTACHMENT**: attachment
              */
             public Builder rbSQLType(String rbSQLType) {
                 this.rbSQLType = rbSQLType;
@@ -520,7 +546,11 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SqlType.
+             * The format of the SQL statements used to change data. Valid values:
+             * <p>
+             * 
+             * - **TEXT**: text
+             * - **ATTACHMENT**: attachment
              */
             public Builder sqlType(String sqlType) {
                 this.sqlType = sqlType;
@@ -585,7 +615,13 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             private String userTip; 
 
             /**
-             * CheckStatus.
+             * The status of the precheck. Valid values:
+             * <p>
+             * 
+             * *   **WAITING**: The ticket is pending precheck.
+             * *   **RUNNING**: The ticket is being prechecked.
+             * *   **SUCCESS**: The ticket passes the precheck.
+             * *   **FAIL**: The ticket fails the precheck.
              */
             public Builder checkStatus(String checkStatus) {
                 this.checkStatus = checkStatus;
@@ -593,7 +629,13 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CheckStep.
+             * The check step of the precheck. Valid values:
+             * <p>
+             * 
+             * *   **SQL_PARSE**: The system checks the syntax of the SQL statement.
+             * *   **SQL_TYPE_CHECK**: The system checks the type of the SQL statement.
+             * *   **PERMISSION_CHECK**: The system checks the permissions required for the data change.
+             * *   **ROW_CHECK**: The system checks the number of affected rows.
              */
             public Builder checkStep(String checkStep) {
                 this.checkStep = checkStep;
@@ -601,7 +643,7 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * UserTip.
+             * The message that indicates a check step.
              */
             public Builder userTip(String userTip) {
                 this.userTip = userTip;
@@ -731,7 +773,7 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * DatabaseList.
+             * The information about the database in which data is changed.
              */
             public Builder databaseList(DatabaseList databaseList) {
                 this.databaseList = databaseList;
@@ -739,7 +781,12 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ExecMode.
+             * The execution mode of the ticket after the ticket is approved. Valid values:
+             * <p>
+             * 
+             * - **COMMITOR**: The data change is performed by the user who submits the ticket.
+             * - **AUTO**: The data change is automatically performed after the ticket is approved.
+             * - **LAST_AUDITOR**: The data change is performed by the last approver of the ticket.
              */
             public Builder execMode(String execMode) {
                 this.execMode = execMode;
@@ -747,7 +794,7 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * OrderDetail.
+             * The details of the ticket.
              */
             public Builder orderDetail(OrderDetail orderDetail) {
                 this.orderDetail = orderDetail;
@@ -755,7 +802,7 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PreCheckDetail.
+             * The precheck details of the ticket.
              */
             public Builder preCheckDetail(PreCheckDetail preCheckDetail) {
                 this.preCheckDetail = preCheckDetail;
@@ -763,7 +810,20 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the ticket. Valid values:
+             * <p>
+             * 
+             * - **new**: The ticket is created.
+             * - **precheck**: The ticket is being prechecked.
+             * - **precheck_fail**: The ticket fails the precheck.
+             * - **precheck_success**: The ticket passes the precheck and waits to be submitted for approval.
+             * - **toaudit**: The ticket is being reviewed.
+             * - **Approved**: The ticket is approved.
+             * - **reject**: The ticket is rejected.
+             * - **waiting**: The ticket is submitted and waits to be scheduled.
+             * - **processing**: The ticket is being executed.
+             * - **success**: The ticket is executed.
+             * - **closed**: The ticket is closed.
              */
             public Builder status(String status) {
                 this.status = status;

@@ -86,7 +86,7 @@ public class GetApprovalDetailResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * ApprovalDetail.
+         * The approval details of the ticket.
          */
         public Builder approvalDetail(ApprovalDetail approvalDetail) {
             this.approvalDetail = approvalDetail;
@@ -94,7 +94,7 @@ public class GetApprovalDetailResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code returned if the request fails.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -102,7 +102,7 @@ public class GetApprovalDetailResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned if the request fails.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +110,7 @@ public class GetApprovalDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class GetApprovalDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * - **true**: The request was successful.
+         * - **false**: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -170,7 +174,7 @@ public class GetApprovalDetailResponseBody extends TeaModel {
             private String nickName; 
 
             /**
-             * Id.
+             * The ID of the user.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -178,7 +182,7 @@ public class GetApprovalDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NickName.
+             * The nickname of the user.
              */
             public Builder nickName(String nickName) {
                 this.nickName = nickName;
@@ -402,7 +406,7 @@ public class GetApprovalDetailResponseBody extends TeaModel {
             private String workflowInsCode; 
 
             /**
-             * AuditUserIdList.
+             * The IDs of the approvers.
              */
             public Builder auditUserIdList(AuditUserIdList auditUserIdList) {
                 this.auditUserIdList = auditUserIdList;
@@ -410,7 +414,7 @@ public class GetApprovalDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NodeName.
+             * The name of the approval node.
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -418,7 +422,7 @@ public class GetApprovalDetailResponseBody extends TeaModel {
             }
 
             /**
-             * OperateComment.
+             * The remarks of the approval.
              */
             public Builder operateComment(String operateComment) {
                 this.operateComment = operateComment;
@@ -426,7 +430,7 @@ public class GetApprovalDetailResponseBody extends TeaModel {
             }
 
             /**
-             * OperateTime.
+             * The time when the ticket was submitted.
              */
             public Builder operateTime(String operateTime) {
                 this.operateTime = operateTime;
@@ -434,7 +438,7 @@ public class GetApprovalDetailResponseBody extends TeaModel {
             }
 
             /**
-             * OperatorId.
+             * The ID of the user who submitted the ticket.
              */
             public Builder operatorId(Long operatorId) {
                 this.operatorId = operatorId;
@@ -442,7 +446,13 @@ public class GetApprovalDetailResponseBody extends TeaModel {
             }
 
             /**
-             * WorkflowInsCode.
+             * The approval status of the ticket. Valid values:
+             * <p>
+             * 
+             * *   **AUDITING**: The ticket is being processed.
+             * *   **REJECT**: The ticket was rejected.
+             * *   **CANCEL**: The ticket was revoked.
+             * *   **APPROVED**: The ticket was approved.
              */
             public Builder workflowInsCode(String workflowInsCode) {
                 this.workflowInsCode = workflowInsCode;
@@ -644,7 +654,7 @@ public class GetApprovalDetailResponseBody extends TeaModel {
             private WorkflowNodes workflowNodes; 
 
             /**
-             * AuditId.
+             * The ID of the approval process.
              */
             public Builder auditId(Long auditId) {
                 this.auditId = auditId;
@@ -652,7 +662,7 @@ public class GetApprovalDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the approval process was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -660,7 +670,7 @@ public class GetApprovalDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentHandlers.
+             * The information about the approver.
              */
             public Builder currentHandlers(CurrentHandlers currentHandlers) {
                 this.currentHandlers = currentHandlers;
@@ -668,7 +678,7 @@ public class GetApprovalDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the approval process.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -676,7 +686,7 @@ public class GetApprovalDetailResponseBody extends TeaModel {
             }
 
             /**
-             * OrderId.
+             * The ID of the ticket.
              */
             public Builder orderId(Long orderId) {
                 this.orderId = orderId;
@@ -684,7 +694,17 @@ public class GetApprovalDetailResponseBody extends TeaModel {
             }
 
             /**
-             * OrderType.
+             * The type of the ticket. Valid values:
+             * <p>
+             * 
+             * - **NDDL**: The ticket is used to change the schema design.
+             * - **DATA_TRACK**: The ticket is used to track data.
+             * - **TABLE_SYNC**: The ticket is used to synchronize databases and tables.
+             * - **PERM_APPLY**: The ticket is used to apply for permissions.
+             * - **DATA_EXPORT**: The ticket is used to export data.
+             * - **DATA_CORRECT**: The ticket is used to change data.
+             * - **OWNER_APPLY**: The ticket is used to apply for the owner role of a resource.
+             * - **SENSITIVITY**: The ticket is used to change column sensitivity levels.
              */
             public Builder orderType(String orderType) {
                 this.orderType = orderType;
@@ -692,7 +712,7 @@ public class GetApprovalDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ReasonList.
+             * The reason for the approval.
              */
             public Builder reasonList(ReasonList reasonList) {
                 this.reasonList = reasonList;
@@ -700,7 +720,7 @@ public class GetApprovalDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 工作流模板ID
+             * The ID of the approval template.
              */
             public Builder templateId(Long templateId) {
                 this.templateId = templateId;
@@ -708,7 +728,7 @@ public class GetApprovalDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * The title of the approval process.
              */
             public Builder title(String title) {
                 this.title = title;
@@ -716,7 +736,15 @@ public class GetApprovalDetailResponseBody extends TeaModel {
             }
 
             /**
-             * WorkflowInsCode.
+             * The approval status of the ticket. Valid values:
+             * <p>
+             * 
+             * - **AUDITING**: The ticket is being processed.
+             * - **REJECT**: The ticket was rejected.
+             * - **CANCEL**: The ticket was revoked.
+             * - **APPROVED**: The ticket was approved.
+             * 
+             * >  If an approval process contains multiple approval nodes, this parameter is returned for each approval node.
              */
             public Builder workflowInsCode(String workflowInsCode) {
                 this.workflowInsCode = workflowInsCode;
@@ -724,7 +752,7 @@ public class GetApprovalDetailResponseBody extends TeaModel {
             }
 
             /**
-             * WorkflowNodes.
+             * The details of approval nodes.
              */
             public Builder workflowNodes(WorkflowNodes workflowNodes) {
                 this.workflowNodes = workflowNodes;

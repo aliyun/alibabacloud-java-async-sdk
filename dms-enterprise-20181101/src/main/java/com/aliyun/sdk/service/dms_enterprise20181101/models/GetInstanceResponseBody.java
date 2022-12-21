@@ -86,7 +86,7 @@ public class GetInstanceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * ErrorCode.
+         * The error code that is returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message that is returned.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Instance.
+         * The details of the database instance.
          */
         public Builder instance(Instance instance) {
             this.instance = instance;
@@ -110,7 +110,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * - **true**: The request was successful.
+         * - **false**: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -252,7 +256,12 @@ public class GetInstanceResponseBody extends TeaModel {
             private String groupName; 
 
             /**
-             * GroupMode.
+             * The type of the control mode. Valid values:
+             * <p>
+             * 
+             * *   **COMMON**: Security Collaboration
+             * *   **NONE_CONTROL**: Flexible Management
+             * *   **STABLE**: Stable Change
              */
             public Builder groupMode(String groupMode) {
                 this.groupMode = groupMode;
@@ -260,7 +269,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * The name of the security rule set corresponding to the control mode.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -601,7 +610,7 @@ public class GetInstanceResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * DataLinkName.
+             * The name of the database link for the database instance.
              */
             public Builder dataLinkName(String dataLinkName) {
                 this.dataLinkName = dataLinkName;
@@ -609,7 +618,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * DatabasePassword.
+             * The password that is used to log on to the database.
              */
             public Builder databasePassword(String databasePassword) {
                 this.databasePassword = databasePassword;
@@ -617,7 +626,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * DatabaseUser.
+             * The account that is used to log on to the database instance.
              */
             public Builder databaseUser(String databaseUser) {
                 this.databaseUser = databaseUser;
@@ -625,7 +634,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * DbaId.
+             * The ID of the database administrator (DBA) for the database instance.
              */
             public Builder dbaId(String dbaId) {
                 this.dbaId = dbaId;
@@ -633,7 +642,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * DbaNickName.
+             * The nickname of the DBA for the database instance.
              */
             public Builder dbaNickName(String dbaNickName) {
                 this.dbaNickName = dbaNickName;
@@ -641,7 +650,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * DdlOnline.
+             * Indicates whether the lock-free schema change feature is enabled for the database instance.
              */
             public Builder ddlOnline(Integer ddlOnline) {
                 this.ddlOnline = ddlOnline;
@@ -649,7 +658,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * EcsInstanceId.
+             * The ID of the Elastic Compute Service (ECS) instance on which the database instance is deployed.
              */
             public Builder ecsInstanceId(String ecsInstanceId) {
                 this.ecsInstanceId = ecsInstanceId;
@@ -657,7 +666,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * EcsRegion.
+             * The ID of the region in which the database instance resides.
              */
             public Builder ecsRegion(String ecsRegion) {
                 this.ecsRegion = ecsRegion;
@@ -665,7 +674,17 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * EnvType.
+             * The type of the environment to which the database instance belongs. Valid values:
+             * <p>
+             * 
+             * *   **product**: production environment
+             * *   **dev**: development environment
+             * *   **pre**: staging environment
+             * *   **test**: test environment
+             * *   **sit**: system integration testing (SIT) environment
+             * *   **uat**: user acceptance testing (UAT) environment
+             * *   **pet**: stress testing environment
+             * *   **stag**: STAG environment
              */
             public Builder envType(String envType) {
                 this.envType = envType;
@@ -673,7 +692,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ExportTimeout.
+             * The timeout period for exporting data from the database instance.
              */
             public Builder exportTimeout(Integer exportTimeout) {
                 this.exportTimeout = exportTimeout;
@@ -681,7 +700,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Host.
+             * The host address that is used to connect to the database instance.
              */
             public Builder host(String host) {
                 this.host = host;
@@ -689,7 +708,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceAlias.
+             * The alias of the database instance.
              */
             public Builder instanceAlias(String instanceAlias) {
                 this.instanceAlias = instanceAlias;
@@ -697,7 +716,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the database instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -705,7 +724,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceSource.
+             * The source of the database instance.
              */
             public Builder instanceSource(String instanceSource) {
                 this.instanceSource = instanceSource;
@@ -713,7 +732,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * The type of the database instance.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -721,7 +740,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerIdList.
+             * The IDs of the owners for the database instance.
              */
             public Builder ownerIdList(OwnerIdList ownerIdList) {
                 this.ownerIdList = ownerIdList;
@@ -729,7 +748,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerNameList.
+             * The nicknames of the owners for the database instance.
              */
             public Builder ownerNameList(OwnerNameList ownerNameList) {
                 this.ownerNameList = ownerNameList;
@@ -737,7 +756,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The port number that is used to connect to the database instance.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -745,7 +764,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * QueryTimeout.
+             * The timeout period for querying data in the database instance.
              */
             public Builder queryTimeout(Integer queryTimeout) {
                 this.queryTimeout = queryTimeout;
@@ -753,7 +772,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * SafeRuleId.
+             * The ID of the security rule set for the database instance.
              */
             public Builder safeRuleId(String safeRuleId) {
                 this.safeRuleId = safeRuleId;
@@ -769,7 +788,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Sid.
+             * The SID of the database instance.
              */
             public Builder sid(String sid) {
                 this.sid = sid;
@@ -777,7 +796,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * StandardGroup.
+             * The control mode of the database instance.
              */
             public Builder standardGroup(StandardGroup standardGroup) {
                 this.standardGroup = standardGroup;
@@ -785,7 +804,11 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * The status of the database instance. Valid values:
+             * <p>
+             * 
+             * *   **NORMAL**: normal
+             * *   **DISABLE**: disabled
              */
             public Builder state(String state) {
                 this.state = state;
@@ -793,7 +816,11 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * UseDsql.
+             * Indicates whether the cross-database query feature is enabled for the database instance. Valid values:
+             * <p>
+             * 
+             * *   **0**: disabled
+             * *   **1**: enabled
              */
             public Builder useDsql(Integer useDsql) {
                 this.useDsql = useDsql;
@@ -801,7 +828,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * The ID of the virtual private cloud (VPC) to which the database instance belongs.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

@@ -86,7 +86,7 @@ public class GetDataExportDownloadURLResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * DownloadURLResult.
+         * The details about the download URL of the file that records the export results for the ticket.
          */
         public Builder downloadURLResult(DownloadURLResult downloadURLResult) {
             this.downloadURLResult = downloadURLResult;
@@ -94,7 +94,7 @@ public class GetDataExportDownloadURLResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -102,7 +102,7 @@ public class GetDataExportDownloadURLResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +110,7 @@ public class GetDataExportDownloadURLResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class GetDataExportDownloadURLResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -182,7 +186,11 @@ public class GetDataExportDownloadURLResponseBody extends TeaModel {
             private String URL; 
 
             /**
-             * HasResult.
+             * Indicates whether export results are available for download. Valid values:
+             * <p>
+             * 
+             * *   **true**: Export results are available for download.
+             * *   **false**: No export results are available for download.
              */
             public Builder hasResult(Boolean hasResult) {
                 this.hasResult = hasResult;
@@ -190,7 +198,7 @@ public class GetDataExportDownloadURLResponseBody extends TeaModel {
             }
 
             /**
-             * TipMessage.
+             * The message that indicates an exception.
              */
             public Builder tipMessage(String tipMessage) {
                 this.tipMessage = tipMessage;
@@ -198,7 +206,7 @@ public class GetDataExportDownloadURLResponseBody extends TeaModel {
             }
 
             /**
-             * URL.
+             * The download URL of the file that records the export results for the ticket.
              */
             public Builder URL(String URL) {
                 this.URL = URL;

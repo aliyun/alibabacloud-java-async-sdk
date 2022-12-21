@@ -167,7 +167,10 @@ public class ChangeColumnSecLevelRequest extends Request {
         }
 
         /**
-         * ColumnName.
+         * The name of the field. You can call the [ListSensitiveColumns](~~188103~~) operation to query the name of the field.
+         * <p>
+         * 
+         * >  You can also call the [ListColumns](~~141870~~) operation to query the name of the field.
          */
         public Builder columnName(String columnName) {
             this.putQueryParameter("ColumnName", columnName);
@@ -176,7 +179,10 @@ public class ChangeColumnSecLevelRequest extends Request {
         }
 
         /**
-         * DbId.
+         * The ID of the database. You can call the [SearchDatabase](~~141876~~) operation to query the ID of the database.
+         * <p>
+         * 
+         * >  You can also call the [ListDatabases](~~141873~~) operation to query the ID of a physical database and the [ListLogicDatabases](~~141874~~) operation to query the ID of a logical database.
          */
         public Builder dbId(Long dbId) {
             this.putQueryParameter("DbId", dbId);
@@ -185,7 +191,11 @@ public class ChangeColumnSecLevelRequest extends Request {
         }
 
         /**
-         * IsLogic.
+         * Specifies whether the database is a logical database. Valid values:
+         * <p>
+         * 
+         * *   true: The database is a physical database.
+         * *   false: The database is a logical database.
          */
         public Builder isLogic(Boolean isLogic) {
             this.putQueryParameter("IsLogic", isLogic);
@@ -194,7 +204,12 @@ public class ChangeColumnSecLevelRequest extends Request {
         }
 
         /**
-         * 新的敏感等级
+         * The new sensitivity level of the field that you want to specify. Valid values:
+         * <p>
+         * 
+         * *   INNER: low sensitivity level
+         * *   SENSITIVE: medium sensitivity level
+         * *   CONFIDENTIAL: high sensitivity level
          */
         public Builder newLevel(String newLevel) {
             this.putQueryParameter("NewLevel", newLevel);
@@ -203,7 +218,11 @@ public class ChangeColumnSecLevelRequest extends Request {
         }
 
         /**
-         * SchemaName.
+         * The name of the database. You can call the [ListSensitiveColumns](~~188103~~) operation to query the name of the database.
+         * <p>
+         * 
+         * *   You can also call the [SearchDatabase](~~141876~~) operation to query the name of the database.
+         * *   You can also call the [ListDatabases](~~141873~~) operation to query the name of a physical database and the [ListLogicDatabases](~~141874~~) operation to query the name of a logical database.
          */
         public Builder schemaName(String schemaName) {
             this.putQueryParameter("SchemaName", schemaName);
@@ -212,7 +231,10 @@ public class ChangeColumnSecLevelRequest extends Request {
         }
 
         /**
-         * TableName.
+         * The name of the table. You can call the [ListSensitiveColumns](~~188103~~) operation to query the name of the table.
+         * <p>
+         * 
+         * >  You can also call the [ListTables](~~141878~~) operation to query the name of the table.
          */
         public Builder tableName(String tableName) {
             this.putQueryParameter("TableName", tableName);
@@ -221,7 +243,10 @@ public class ChangeColumnSecLevelRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The ID of the tenant.
+         * <p>
+         * 
+         * >  To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the "View information about the current tenant" section of the [Manage DMS tenants](~~181330~~) topic.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

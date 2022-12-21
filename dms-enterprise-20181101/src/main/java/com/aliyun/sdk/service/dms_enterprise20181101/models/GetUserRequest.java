@@ -105,7 +105,7 @@ public class GetUserRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the ID of the tenant.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -114,7 +114,7 @@ public class GetUserRequest extends Request {
         }
 
         /**
-         * Uid.
+         * The UID of the user. You can view your UID by moving the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console.
          */
         public Builder uid(String uid) {
             this.putQueryParameter("Uid", uid);
@@ -123,7 +123,7 @@ public class GetUserRequest extends Request {
         }
 
         /**
-         * UserId.
+         * The ID of the user. You can call the [ListUsers](~~141938~~) operation to query the ID of the user.
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

@@ -98,7 +98,7 @@ public class ListTaskFlowInstanceResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * DAGInstanceList.
+         * The information about the execution records returned.
          */
         public Builder DAGInstanceList(DAGInstanceList DAGInstanceList) {
             this.DAGInstanceList = DAGInstanceList;
@@ -106,7 +106,7 @@ public class ListTaskFlowInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code returned if the request fails.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +114,7 @@ public class ListTaskFlowInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned if the request fails.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +122,7 @@ public class ListTaskFlowInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,11 @@ public class ListTaskFlowInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request is successful.
+         * *   **false**: The request fails.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,7 +142,7 @@ public class ListTaskFlowInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of execution records returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -298,7 +302,7 @@ public class ListTaskFlowInstanceResponseBody extends TeaModel {
             private Integer triggerType; 
 
             /**
-             * BusinessTime.
+             * The business time of the task flow. The time is displayed in the yyyy-MM-DD HH:mm:ss format.
              */
             public Builder businessTime(String businessTime) {
                 this.businessTime = businessTime;
@@ -306,7 +310,7 @@ public class ListTaskFlowInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * DagId.
+             * The ID of the task flow.
              */
             public Builder dagId(String dagId) {
                 this.dagId = dagId;
@@ -314,7 +318,7 @@ public class ListTaskFlowInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * DagName.
+             * The name of the task flow.
              */
             public Builder dagName(String dagName) {
                 this.dagName = dagName;
@@ -330,7 +334,7 @@ public class ListTaskFlowInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * The time when the execution of the task flow was complete. The time is displayed in the yyyy-MM-DD HH:mm:ss format.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -338,7 +342,7 @@ public class ListTaskFlowInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * HistoryDagId.
+             * The ID of the previously published version of the task flow.
              */
             public Builder historyDagId(Long historyDagId) {
                 this.historyDagId = historyDagId;
@@ -346,7 +350,7 @@ public class ListTaskFlowInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the execution record.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -354,7 +358,7 @@ public class ListTaskFlowInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * The description of the task.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -362,7 +366,7 @@ public class ListTaskFlowInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerName.
+             * The name of the task flow owner.
              */
             public Builder ownerName(String ownerName) {
                 this.ownerName = ownerName;
@@ -370,7 +374,15 @@ public class ListTaskFlowInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the task flow. Valid values:
+             * <p>
+             * 
+             * *   **0**: The task flow is waiting to be scheduled.
+             * *   **1**: The task flow is being executed.
+             * *   **2**: The task flow is paused.
+             * *   **3**: The task flow failed.
+             * *   **4**: The task flow is executed.
+             * *   **5**: The task flow is complete.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -378,7 +390,11 @@ public class ListTaskFlowInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * TriggerType.
+             * The mode in which the task flow is triggered. Valid values:
+             * <p>
+             * 
+             * *   **0**: The task flow is automatically triggered based on periodic scheduling.
+             * *   **1**: The task flow is manually triggered.
              */
             public Builder triggerType(Integer triggerType) {
                 this.triggerType = triggerType;

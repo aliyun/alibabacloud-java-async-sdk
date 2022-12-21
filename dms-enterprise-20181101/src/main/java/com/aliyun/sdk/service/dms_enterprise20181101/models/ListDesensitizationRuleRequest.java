@@ -162,7 +162,7 @@ public class ListDesensitizationRuleRequest extends Request {
         }
 
         /**
-         * FuncType.
+         * The type of the masking algorithm.
          */
         public Builder funcType(String funcType) {
             this.putQueryParameter("FuncType", funcType);
@@ -171,7 +171,7 @@ public class ListDesensitizationRuleRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -180,7 +180,7 @@ public class ListDesensitizationRuleRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. The maximum value is 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -189,7 +189,7 @@ public class ListDesensitizationRuleRequest extends Request {
         }
 
         /**
-         * RuleId.
+         * The ID of the masking rule.
          */
         public Builder ruleId(Integer ruleId) {
             this.putQueryParameter("RuleId", ruleId);
@@ -198,7 +198,7 @@ public class ListDesensitizationRuleRequest extends Request {
         }
 
         /**
-         * RuleName.
+         * The name of the masking rule.
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -207,7 +207,7 @@ public class ListDesensitizationRuleRequest extends Request {
         }
 
         /**
-         * RuleType.
+         * The algorithm used for masking.
          */
         public Builder ruleType(String ruleType) {
             this.putQueryParameter("RuleType", ruleType);
@@ -216,7 +216,10 @@ public class ListDesensitizationRuleRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The ID of the tenant.
+         * <p>
+         * 
+         * >  To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see [View information about the current tenant](~~181330~~).
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

@@ -86,7 +86,7 @@ public class GetLhSpaceByNameResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * ErrorCode.
+         * The error code returned if the request fails.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class GetLhSpaceByNameResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned if the request fails.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class GetLhSpaceByNameResponseBody extends TeaModel {
         }
 
         /**
-         * LakehouseSpace.
+         * The workspace for data warehouse development.
          */
         public Builder lakehouseSpace(LakehouseSpace lakehouseSpace) {
             this.lakehouseSpace = lakehouseSpace;
@@ -110,7 +110,7 @@ public class GetLhSpaceByNameResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class GetLhSpaceByNameResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request is successful.
+         * *   **false**: The request fails.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -278,7 +282,7 @@ public class GetLhSpaceByNameResponseBody extends TeaModel {
             private String tenantId; 
 
             /**
-             * CreatorId.
+             * The ID of the user who creates the workspace.
              */
             public Builder creatorId(String creatorId) {
                 this.creatorId = creatorId;
@@ -286,7 +290,7 @@ public class GetLhSpaceByNameResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the workspace.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -294,7 +298,7 @@ public class GetLhSpaceByNameResponseBody extends TeaModel {
             }
 
             /**
-             * DevDbId.
+             * The ID of the development database.
              */
             public Builder devDbId(Integer devDbId) {
                 this.devDbId = devDbId;
@@ -302,7 +306,11 @@ public class GetLhSpaceByNameResponseBody extends TeaModel {
             }
 
             /**
-             * DwDbType.
+             * The type of the database. Valid values:
+             * <p>
+             * 
+             * *   **14**: AnalyticDB for MySQL
+             * *   **18**: AnalyticDB for PostgreSQL
              */
             public Builder dwDbType(String dwDbType) {
                 this.dwDbType = dwDbType;
@@ -310,7 +318,7 @@ public class GetLhSpaceByNameResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the workspace.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -318,7 +326,11 @@ public class GetLhSpaceByNameResponseBody extends TeaModel {
             }
 
             /**
-             * IsDeleted.
+             * Indicates whether the workspace is deleted. Valid values:
+             * <p>
+             * 
+             * *   **true**: The workspace is deleted.
+             * *   **false**: The workspace is not deleted.
              */
             public Builder isDeleted(Boolean isDeleted) {
                 this.isDeleted = isDeleted;
@@ -326,7 +338,11 @@ public class GetLhSpaceByNameResponseBody extends TeaModel {
             }
 
             /**
-             * Mode.
+             * The mode in which the workspace runs. Valid values:
+             * <p>
+             * 
+             * *   **0**: basic mode
+             * *   **1**: standard mode
              */
             public Builder mode(Integer mode) {
                 this.mode = mode;
@@ -334,7 +350,7 @@ public class GetLhSpaceByNameResponseBody extends TeaModel {
             }
 
             /**
-             * ProdDbId.
+             * The ID of the production database.
              */
             public Builder prodDbId(Integer prodDbId) {
                 this.prodDbId = prodDbId;
@@ -342,7 +358,11 @@ public class GetLhSpaceByNameResponseBody extends TeaModel {
             }
 
             /**
-             * SpaceConfig.
+             * The configuration of the workspace. Valid values:
+             * <p>
+             * 
+             * *   **skipManualRunCheck**: No security rule check is required in the trial run phase.
+             * *   **skipPublishApprove**: No approval is required for publishing and O\&M.
              */
             public Builder spaceConfig(String spaceConfig) {
                 this.spaceConfig = spaceConfig;
@@ -350,7 +370,7 @@ public class GetLhSpaceByNameResponseBody extends TeaModel {
             }
 
             /**
-             * SpaceName.
+             * The name of the workspace.
              */
             public Builder spaceName(String spaceName) {
                 this.spaceName = spaceName;
@@ -358,7 +378,7 @@ public class GetLhSpaceByNameResponseBody extends TeaModel {
             }
 
             /**
-             * TenantId.
+             * The ID of the tenant to which the workspace belongs.
              */
             public Builder tenantId(String tenantId) {
                 this.tenantId = tenantId;

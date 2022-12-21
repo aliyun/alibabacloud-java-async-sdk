@@ -86,7 +86,7 @@ public class GetRuleNumLimitOfSLAResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * ErrorCode.
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class GetRuleNumLimitOfSLAResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned if the request failed.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class GetRuleNumLimitOfSLAResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request. You can use the ID to locate logs and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class GetRuleNumLimitOfSLAResponseBody extends TeaModel {
         }
 
         /**
-         * RuleNumLimit.
+         * The maximum number of SLA rules.
          */
         public Builder ruleNumLimit(Integer ruleNumLimit) {
             this.ruleNumLimit = ruleNumLimit;
@@ -118,7 +118,11 @@ public class GetRuleNumLimitOfSLAResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;

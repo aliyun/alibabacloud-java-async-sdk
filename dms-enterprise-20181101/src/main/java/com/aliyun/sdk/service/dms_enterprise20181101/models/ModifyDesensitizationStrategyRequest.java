@@ -181,7 +181,10 @@ public class ModifyDesensitizationStrategyRequest extends Request {
         }
 
         /**
-         * ColumnName.
+         * The name of the field. You can call the [ListSensitiveColumns](~~188103~~) operation to query the field name.
+         * <p>
+         * 
+         * >  You can also call the [ListColumns](~~141870~~) operation to query the field name.
          */
         public Builder columnName(String columnName) {
             this.putQueryParameter("ColumnName", columnName);
@@ -190,7 +193,7 @@ public class ModifyDesensitizationStrategyRequest extends Request {
         }
 
         /**
-         * DbId.
+         * The ID of the database. You can call the [ListDatabases](~~141873~~) operation to query the ID.
          */
         public Builder dbId(Integer dbId) {
             this.putQueryParameter("DbId", dbId);
@@ -199,7 +202,11 @@ public class ModifyDesensitizationStrategyRequest extends Request {
         }
 
         /**
-         * IsLogic.
+         * Specifies whether the database is a logical database. Valid values:
+         * <p>
+         * 
+         * *   **true:** The database is a physical database.
+         * *   **false:** The database is a logical database.
          */
         public Builder isLogic(Boolean isLogic) {
             this.putQueryParameter("IsLogic", isLogic);
@@ -208,7 +215,11 @@ public class ModifyDesensitizationStrategyRequest extends Request {
         }
 
         /**
-         * IsReset.
+         * Specifies whether to reset the masking rule. Valid values:
+         * <p>
+         * 
+         * *   **true**: resets the masking rule.
+         * *   **false**: does not reset the masking rule. This is the default value.
          */
         public Builder isReset(Boolean isReset) {
             this.putQueryParameter("IsReset", isReset);
@@ -217,7 +228,7 @@ public class ModifyDesensitizationStrategyRequest extends Request {
         }
 
         /**
-         * RuleId.
+         * The ID of the masking rule.
          */
         public Builder ruleId(Integer ruleId) {
             this.putQueryParameter("RuleId", ruleId);
@@ -226,7 +237,12 @@ public class ModifyDesensitizationStrategyRequest extends Request {
         }
 
         /**
-         * SchemaName.
+         * The name of the database. You can call the [ListSensitiveColumns](~~188103~~) operation to query the database name.
+         * <p>
+         * 
+         * > 
+         * *   If the database is a physical database, you can call the [ListDatabases](~~141873~~) or [SearchDatabase](~~141876~~) operation to query the database name.
+         * *   If the database is a logical database, you can call the [ListLogicDatabases](~~141874~~) or [SearchDatabase](~~141876~~) operation to query the database name.
          */
         public Builder schemaName(String schemaName) {
             this.putQueryParameter("SchemaName", schemaName);
@@ -235,7 +251,10 @@ public class ModifyDesensitizationStrategyRequest extends Request {
         }
 
         /**
-         * TableName.
+         * The name of the table. You can call the [ListSensitiveColumns](~~188103~~) operation to query the table name.
+         * <p>
+         * 
+         * >  You can also call the [ListTables](~~141878~~) operation to query the table name.
          */
         public Builder tableName(String tableName) {
             this.putQueryParameter("TableName", tableName);
@@ -244,7 +263,10 @@ public class ModifyDesensitizationStrategyRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The ID of the tenant.
+         * <p>
+         * 
+         * >  To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

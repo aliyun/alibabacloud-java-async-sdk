@@ -148,7 +148,7 @@ public class ListTablesRequest extends Request {
         }
 
         /**
-         * DatabaseId.
+         * The ID of the physical database. You can call the [ListDatabases](~~141873~~) or [SearchDatabase](~~141876~~) operation to obtain the ID of the physical database.
          */
         public Builder databaseId(String databaseId) {
             this.putQueryParameter("DatabaseId", databaseId);
@@ -157,7 +157,7 @@ public class ListTablesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -166,7 +166,7 @@ public class ListTablesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -175,7 +175,11 @@ public class ListTablesRequest extends Request {
         }
 
         /**
-         * ReturnGuid.
+         * Specifies whether to return the GUID of a table. Valid values:
+         * <p>
+         * 
+         * *   **true**: returns the GUID of a table.
+         * *   **false**: does not return the GUID of a table.
          */
         public Builder returnGuid(Boolean returnGuid) {
             this.putQueryParameter("ReturnGuid", returnGuid);
@@ -184,7 +188,7 @@ public class ListTablesRequest extends Request {
         }
 
         /**
-         * SearchName.
+         * The name used to search for tables. Fuzzy search is supported.
          */
         public Builder searchName(String searchName) {
             this.putQueryParameter("SearchName", searchName);
@@ -193,7 +197,7 @@ public class ListTablesRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

@@ -86,7 +86,7 @@ public class ListSensitiveColumnsDetailResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * ErrorCode.
+         * The error code returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class ListSensitiveColumnsDetailResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class ListSensitiveColumnsDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class ListSensitiveColumnsDetailResponseBody extends TeaModel {
         }
 
         /**
-         * SensitiveColumnsDetailList.
+         * The details of the sensitive field.
          */
         public Builder sensitiveColumnsDetailList(SensitiveColumnsDetailList sensitiveColumnsDetailList) {
             this.sensitiveColumnsDetailList = sensitiveColumnsDetailList;
@@ -118,7 +118,11 @@ public class ListSensitiveColumnsDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * - **true**: The request was successful.
+         * - **false**: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -266,7 +270,7 @@ public class ListSensitiveColumnsDetailResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * ColumnDescription.
+             * The description of the field.
              */
             public Builder columnDescription(String columnDescription) {
                 this.columnDescription = columnDescription;
@@ -274,7 +278,7 @@ public class ListSensitiveColumnsDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ColumnName.
+             * The name of the field.
              */
             public Builder columnName(String columnName) {
                 this.columnName = columnName;
@@ -282,7 +286,7 @@ public class ListSensitiveColumnsDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ColumnType.
+             * The data type of the field.
              */
             public Builder columnType(String columnType) {
                 this.columnType = columnType;
@@ -290,7 +294,7 @@ public class ListSensitiveColumnsDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DbId.
+             * The ID of the database.
              */
             public Builder dbId(Long dbId) {
                 this.dbId = dbId;
@@ -298,7 +302,7 @@ public class ListSensitiveColumnsDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DbType.
+             * The type of the database.
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -306,7 +310,7 @@ public class ListSensitiveColumnsDetailResponseBody extends TeaModel {
             }
 
             /**
-             * EnvType.
+             * The type of the environment to which the database belongs.
              */
             public Builder envType(String envType) {
                 this.envType = envType;
@@ -314,7 +318,11 @@ public class ListSensitiveColumnsDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Logic.
+             * Indicates whether the database is a logical database. Valid values:
+             * <p>
+             * 
+             * *   **true**: The database is a logical database.
+             * *   **false**: The database is not a logical database.
              */
             public Builder logic(Boolean logic) {
                 this.logic = logic;
@@ -322,7 +330,7 @@ public class ListSensitiveColumnsDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SchemaName.
+             * The name of the database.
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -330,7 +338,7 @@ public class ListSensitiveColumnsDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SearchName.
+             * The name that is used to search for the database.
              */
             public Builder searchName(String searchName) {
                 this.searchName = searchName;
@@ -338,7 +346,7 @@ public class ListSensitiveColumnsDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * The name of the table.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;

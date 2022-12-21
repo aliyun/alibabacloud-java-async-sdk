@@ -98,7 +98,7 @@ public class ListInstanceLoginAuditLogResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * ErrorCode.
+         * The error code returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -106,7 +106,7 @@ public class ListInstanceLoginAuditLogResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -114,7 +114,7 @@ public class ListInstanceLoginAuditLogResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceLoginAuditLogList.
+         * The logon records of the instance.
          */
         public Builder instanceLoginAuditLogList(InstanceLoginAuditLogList instanceLoginAuditLogList) {
             this.instanceLoginAuditLogList = instanceLoginAuditLogList;
@@ -122,7 +122,7 @@ public class ListInstanceLoginAuditLogResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,11 @@ public class ListInstanceLoginAuditLogResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,7 +142,7 @@ public class ListInstanceLoginAuditLogResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The number of entries returned.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -250,7 +254,7 @@ public class ListInstanceLoginAuditLogResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * DbUser.
+             * The database account that is used to log on to the instance.
              */
             public Builder dbUser(String dbUser) {
                 this.dbUser = dbUser;
@@ -258,7 +262,7 @@ public class ListInstanceLoginAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance.
              */
             public Builder instanceId(Long instanceId) {
                 this.instanceId = instanceId;
@@ -266,7 +270,7 @@ public class ListInstanceLoginAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * The name of the instance.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -274,7 +278,7 @@ public class ListInstanceLoginAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * OpTime.
+             * The time when the user performed an operation on the instance.
              */
             public Builder opTime(String opTime) {
                 this.opTime = opTime;
@@ -282,7 +286,7 @@ public class ListInstanceLoginAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * RequestIp.
+             * The source IP address of the request.
              */
             public Builder requestIp(String requestIp) {
                 this.requestIp = requestIp;
@@ -290,7 +294,7 @@ public class ListInstanceLoginAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * The ID of the user.
              */
             public Builder userId(Long userId) {
                 this.userId = userId;
@@ -298,7 +302,7 @@ public class ListInstanceLoginAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * The alias of the user.
              */
             public Builder userName(String userName) {
                 this.userName = userName;

@@ -86,7 +86,7 @@ public class GetLogicDatabaseResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * ErrorCode.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class GetLogicDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class GetLogicDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * LogicDatabase.
+         * The details about the logical database.
          */
         public Builder logicDatabase(LogicDatabase logicDatabase) {
             this.logicDatabase = logicDatabase;
@@ -110,7 +110,7 @@ public class GetLogicDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class GetLogicDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * 
+         * - true: The request is successful.
+         * - false: The request fails.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -389,7 +393,7 @@ public class GetLogicDatabaseResponseBody extends TeaModel {
             private String searchName; 
 
             /**
-             * Alias.
+             * The alias of the logical database.
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -397,7 +401,7 @@ public class GetLogicDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * DatabaseId.
+             * The ID of the logical database.
              */
             public Builder databaseId(String databaseId) {
                 this.databaseId = databaseId;
@@ -413,7 +417,7 @@ public class GetLogicDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * DbType.
+             * The type of the database. For more information about the valid values of the DbType parameter, see [DbType parameter](https://www.alibabacloud.com/help/en/data-management-service/latest/dbtype-parameter).
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -421,7 +425,17 @@ public class GetLogicDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * EnvType.
+             * The type of the environment to which the database belongs. Valid values:
+             * <p>
+             * 
+             * - product: production environment
+             * - dev: development environment
+             * - pre: staging environment
+             * - test: test environment
+             * - sit: SIT environment
+             * - uat: user acceptance testing (UAT) environment
+             * - pet: stress testing environment
+             * - stag: STAG environment
              */
             public Builder envType(String envType) {
                 this.envType = envType;
@@ -429,7 +443,7 @@ public class GetLogicDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Logic.
+             * Indicates whether the database is a logical database. The return value is true.
              */
             public Builder logic(Boolean logic) {
                 this.logic = logic;
@@ -437,7 +451,7 @@ public class GetLogicDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerIdList.
+             * The IDs of the owners of the logical database.
              */
             public Builder ownerIdList(OwnerIdList ownerIdList) {
                 this.ownerIdList = ownerIdList;
@@ -445,7 +459,7 @@ public class GetLogicDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerNameList.
+             * The names of the owners of the logical database.
              */
             public Builder ownerNameList(OwnerNameList ownerNameList) {
                 this.ownerNameList = ownerNameList;
@@ -453,7 +467,7 @@ public class GetLogicDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * SchemaName.
+             * The name of the logical database.
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -461,7 +475,7 @@ public class GetLogicDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * SearchName.
+             * The name that is used to search for the logical database.
              */
             public Builder searchName(String searchName) {
                 this.searchName = searchName;

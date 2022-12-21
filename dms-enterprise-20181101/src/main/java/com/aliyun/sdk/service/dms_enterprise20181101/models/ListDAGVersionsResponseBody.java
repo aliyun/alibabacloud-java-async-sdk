@@ -98,7 +98,7 @@ public class ListDAGVersionsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * DagVersionList.
+         * The information about the published versions.
          */
         public Builder dagVersionList(DagVersionList dagVersionList) {
             this.dagVersionList = dagVersionList;
@@ -106,7 +106,7 @@ public class ListDAGVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code returned if the request fails.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +114,7 @@ public class ListDAGVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned if the request fails.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +122,7 @@ public class ListDAGVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,11 @@ public class ListDAGVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request is successful.
+         * *   **false**: The request fails.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,7 +142,7 @@ public class ListDAGVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -238,7 +242,7 @@ public class ListDAGVersionsResponseBody extends TeaModel {
             private Long versionId; 
 
             /**
-             * DagName.
+             * The name of the task flow.
              */
             public Builder dagName(String dagName) {
                 this.dagName = dagName;
@@ -246,7 +250,7 @@ public class ListDAGVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * DagOwnerId.
+             * The ID of the task flow owner.
              */
             public Builder dagOwnerId(String dagOwnerId) {
                 this.dagOwnerId = dagOwnerId;
@@ -254,7 +258,7 @@ public class ListDAGVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * DagOwnerNickName.
+             * The name of the task flow owner.
              */
             public Builder dagOwnerNickName(String dagOwnerNickName) {
                 this.dagOwnerNickName = dagOwnerNickName;
@@ -262,7 +266,7 @@ public class ListDAGVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * LastVersionId.
+             * The ID of the previously published version.
              */
             public Builder lastVersionId(Long lastVersionId) {
                 this.lastVersionId = lastVersionId;
@@ -270,7 +274,7 @@ public class ListDAGVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * VersionComments.
+             * The description of the version.
              */
             public Builder versionComments(String versionComments) {
                 this.versionComments = versionComments;
@@ -278,7 +282,7 @@ public class ListDAGVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * VersionId.
+             * The ID of the version.
              */
             public Builder versionId(Long versionId) {
                 this.versionId = versionId;

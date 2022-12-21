@@ -86,7 +86,7 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * ColumnList.
+         * The details about fields in the table.
          */
         public Builder columnList(java.util.List < ColumnList> columnList) {
             this.columnList = columnList;
@@ -94,7 +94,7 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -102,7 +102,7 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +110,7 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -290,7 +294,11 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
             private String securityLevel; 
 
             /**
-             * AutoIncrement.
+             * Indicates whether the field is an auto-increment field. Valid values:
+             * <p>
+             * 
+             * *   **true**: The field is an auto-increment field.
+             * *   **false**: The field is not an auto-increment field.
              */
             public Builder autoIncrement(Boolean autoIncrement) {
                 this.autoIncrement = autoIncrement;
@@ -298,7 +306,7 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
             }
 
             /**
-             * ColumnId.
+             * The ID of the field.
              */
             public Builder columnId(String columnId) {
                 this.columnId = columnId;
@@ -306,7 +314,7 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
             }
 
             /**
-             * ColumnName.
+             * The name of the field.
              */
             public Builder columnName(String columnName) {
                 this.columnName = columnName;
@@ -314,7 +322,10 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
             }
 
             /**
-             * ColumnType.
+             * The data type of the field.
+             * <p>
+             * 
+             * >  The returned data type is not unique. For example, the returned data type can be **bigint** or **int**.
              */
             public Builder columnType(String columnType) {
                 this.columnType = columnType;
@@ -322,7 +333,7 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
             }
 
             /**
-             * DataLength.
+             * The length of the field.
              */
             public Builder dataLength(Long dataLength) {
                 this.dataLength = dataLength;
@@ -330,7 +341,7 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
             }
 
             /**
-             * DataPrecision.
+             * The precision of the field.
              */
             public Builder dataPrecision(Integer dataPrecision) {
                 this.dataPrecision = dataPrecision;
@@ -338,7 +349,7 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
             }
 
             /**
-             * DataScale.
+             * The number of decimal places that the field shows.
              */
             public Builder dataScale(Integer dataScale) {
                 this.dataScale = dataScale;
@@ -346,7 +357,7 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the field.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -354,7 +365,11 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
             }
 
             /**
-             * Nullable.
+             * Indicates whether the field can be empty. Valid values:
+             * <p>
+             * 
+             * *   **true**: The field can be empty.
+             * *   **false**: The field cannot be empty.
              */
             public Builder nullable(Boolean nullable) {
                 this.nullable = nullable;
@@ -362,7 +377,7 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
             }
 
             /**
-             * Position.
+             * The position of the field in the table.
              */
             public Builder position(Integer position) {
                 this.position = position;
@@ -370,7 +385,11 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
             }
 
             /**
-             * PrimaryKey.
+             * Indicates whether the field is the primary key. Valid values:
+             * <p>
+             * 
+             * *   **true**: The field is the primary key.
+             * *   **false**: The field is not the primary key.
              */
             public Builder primaryKey(String primaryKey) {
                 this.primaryKey = primaryKey;
@@ -378,7 +397,14 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityLevel.
+             * The sensitivity level of the field. Valid values:
+             * <p>
+             * 
+             * *   **INNER**: The field is not sensitive.
+             * *   **SENSITIVE**: The field is sensitive.
+             * *   **CONFIDENTIAL**: The field is confidential.
+             * 
+             * >  For more information, see [Sensitivity levels of fields](~~66091~~).
              */
             public Builder securityLevel(String securityLevel) {
                 this.securityLevel = securityLevel;

@@ -98,7 +98,7 @@ public class ListUsersResponseBody extends TeaModel {
         private UserList userList; 
 
         /**
-         * ErrorCode.
+         * The error code returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -106,7 +106,7 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -114,7 +114,7 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,11 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * - **true**: The request was successful.
+         * - **false**: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,7 +134,7 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -138,7 +142,7 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * UserList.
+         * The details of users.
          */
         public Builder userList(UserList userList) {
             this.userList = userList;
@@ -464,7 +468,7 @@ public class ListUsersResponseBody extends TeaModel {
             private String webhook; 
 
             /**
-             * CurExecuteCount.
+             * The number of queries that are performed on the current day.
              */
             public Builder curExecuteCount(Long curExecuteCount) {
                 this.curExecuteCount = curExecuteCount;
@@ -472,7 +476,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * CurResultCount.
+             * The number of rows that are queried on the current day.
              */
             public Builder curResultCount(Long curResultCount) {
                 this.curResultCount = curResultCount;
@@ -480,7 +484,12 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * DingRobot.
+             * The DingTalk chatbot URL that is used to receive notifications.
+             * <p>
+             * 
+             * > 
+             * *   The system returns this parameter if the user has set a DingTalk chatbot URL in the console. To set a DingTalk chatbot URL in the console, move the pointer over the profile picture in the upper-right corner and click the Edit icon next to **Notice**.
+             * *   The system does not return this parameter if the user has not set a DingTalk chatbot URL.
              */
             public Builder dingRobot(String dingRobot) {
                 this.dingRobot = dingRobot;
@@ -488,7 +497,12 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Email.
+             * The email address that is used to receive notifications.
+             * <p>
+             * 
+             * > 
+             * *   The system returns this parameter if the user has set an email address in the console. To set an email address in the console, move the pointer over the profile picture in the upper-right corner and click the Edit icon next to **Notice**.
+             * *   The system does not return this parameter if the user has not set an email address.
              */
             public Builder email(String email) {
                 this.email = email;
@@ -496,7 +510,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * LastLoginTime.
+             * The last time when the user logged on to the console.
              */
             public Builder lastLoginTime(String lastLoginTime) {
                 this.lastLoginTime = lastLoginTime;
@@ -504,7 +518,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * MaxExecuteCount.
+             * The maximum number of queries that can be performed on the current day.
              */
             public Builder maxExecuteCount(Long maxExecuteCount) {
                 this.maxExecuteCount = maxExecuteCount;
@@ -512,7 +526,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * MaxResultCount.
+             * The maximum number of rows that can be queried on the current day.
              */
             public Builder maxResultCount(Long maxResultCount) {
                 this.maxResultCount = maxResultCount;
@@ -520,7 +534,12 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Mobile.
+             * The mobile phone number that is used to receive notifications.
+             * <p>
+             * 
+             * > 
+             * *   The system returns this parameter if the user has set a mobile phone number in the console. To set a mobile phone number in the console, move the pointer over the profile picture in the upper-right corner and click the Edit icon next to **Notice**.
+             * *   The system does not return this parameter if the user has not set a mobile phone number.
              */
             public Builder mobile(String mobile) {
                 this.mobile = mobile;
@@ -528,7 +547,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * NickName.
+             * The nickname of the user.
              */
             public Builder nickName(String nickName) {
                 this.nickName = nickName;
@@ -536,7 +555,14 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * NotificationMode.
+             * The notification method. The system returns one or more values. Valid values:
+             * <p>
+             * 
+             * *   **SMS**: text message.
+             * *   **EMAIL**: email.
+             * *   **DingTalk**: DingTalk.
+             * *   **DINGROBOT**: DingTalk chatbot.
+             * *   **WEBHOOK**: webhook.
              */
             public Builder notificationMode(String notificationMode) {
                 this.notificationMode = notificationMode;
@@ -544,7 +570,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * ParentUid.
+             * The UID of the Alibaba Cloud account of the user.
              */
             public Builder parentUid(String parentUid) {
                 this.parentUid = parentUid;
@@ -552,7 +578,14 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * RoleIdList.
+             * The ID of the role that is assigned to the user. Valid values:
+             * <p>
+             * 
+             * *   **1**: a regular user role.
+             * *   **2**: a DBA role.
+             * *   **3**: a DMS administrator role.
+             * *   **4**: a security administrator role.
+             * *   **6**: a schema read-only user role.
              */
             public Builder roleIdList(RoleIdList roleIdList) {
                 this.roleIdList = roleIdList;
@@ -560,7 +593,14 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * RoleNameList.
+             * The name of the role that is assigned to the user. Valid values:
+             * <p>
+             * 
+             * *   **USER**: a regular user.
+             * *   **DBA**: a DBA.
+             * *   **ADMIN**: a DMS administrator.
+             * *   **SECURITY_ADMIN**: a security administrator.
+             * *   **STRUCT_READ_ONLY**: a schema read-only user.
              */
             public Builder roleNameList(RoleNameList roleNameList) {
                 this.roleNameList = roleNameList;
@@ -568,7 +608,11 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * SignatureMethod.
+             * The signature method that is used to secure connections when a webhook URL is used. Valid values:
+             * <p>
+             * 
+             * *   **NONE**: no signature.
+             * *   **HMAC_SHA1**: HMAC-SHA1.
              */
             public Builder signatureMethod(String signatureMethod) {
                 this.signatureMethod = signatureMethod;
@@ -576,7 +620,12 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * The status of the user. Valid values:
+             * <p>
+             * 
+             * *   **NORMAL**: The user is normal.
+             * *   **DISABLE**: The user is disabled.
+             * *   **DELETE**: The user is deleted.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -584,7 +633,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Uid.
+             * The UID of the user.
              */
             public Builder uid(String uid) {
                 this.uid = uid;
@@ -592,7 +641,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * The ID of the user.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -600,7 +649,12 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Webhook.
+             * The webhook URL that is used to receive notifications.
+             * <p>
+             * 
+             * > 
+             * *   If the user has set a webhook URL, DMS sends notifications to the specified URL.
+             * *   The system does not return this parameter if the user has not set a webhook URL.
              */
             public Builder webhook(String webhook) {
                 this.webhook = webhook;

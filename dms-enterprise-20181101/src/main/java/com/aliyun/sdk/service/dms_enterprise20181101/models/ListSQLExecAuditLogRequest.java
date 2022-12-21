@@ -193,7 +193,10 @@ public class ListSQLExecAuditLogRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query.
+         * <p>
+         * 
+         * >  The end time supports fuzzy match. Specify the time in the YYYY-MM-DD hh:mm:ss format. We recommend that you use the StartTime and EndTime parameters to specify a time range that does not exceed one day. The returned entries can be displayed by page to improve query efficiency.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -202,7 +205,14 @@ public class ListSQLExecAuditLogRequest extends Request {
         }
 
         /**
-         * ExecState.
+         * The execution status of the SQL statement. Valid values:
+         * <p>
+         * 
+         * *   **FAIL**: The SQL statement fails to be executed.
+         * *   **NOEXE**: The SQL statement has not been executed.
+         * *   **RUNNING**: The SQL statement is being executed.
+         * *   **CANCEL**: The execution of the SQL statement is canceled.
+         * *   **SUCCESS**: The SQL statement is executed.
          */
         public Builder execState(String execState) {
             this.putQueryParameter("ExecState", execState);
@@ -211,7 +221,7 @@ public class ListSQLExecAuditLogRequest extends Request {
         }
 
         /**
-         * OpUserName.
+         * The nickname of the user who wrote the SQL statement.
          */
         public Builder opUserName(String opUserName) {
             this.putQueryParameter("OpUserName", opUserName);
@@ -220,7 +230,7 @@ public class ListSQLExecAuditLogRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -229,7 +239,7 @@ public class ListSQLExecAuditLogRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. The value cannot exceed 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -238,7 +248,10 @@ public class ListSQLExecAuditLogRequest extends Request {
         }
 
         /**
-         * SearchName.
+         * The name of the database or instance based on which you want to query SQL statements.
+         * <p>
+         * 
+         * >  If the SQL statements to be queried are at the instance level, you can set this parameter to an instance name. If the SQL statements to be queried are at the database level, you can set this parameter to a database name.
          */
         public Builder searchName(String searchName) {
             this.putQueryParameter("SearchName", searchName);
@@ -247,7 +260,15 @@ public class ListSQLExecAuditLogRequest extends Request {
         }
 
         /**
-         * SqlType.
+         * The type of the SQL statement. Valid values:
+         * <p>
+         * 
+         * *   **SELECT**: the SQL statement that is used to query data.
+         * *   **INSERT**: the SQL statement that is used to insert data.
+         * *   **DELETE**: the SQL statement that is used to delete data.
+         * *   **CREATE_TABLE**: the SQL statement that is used to create tables.
+         * 
+         * >  To view more types of SQL statements, log on to the DMS console and click Security and Specifications. In the left-side navigation pane, click **Operation Audit**. Then, you can view all supported types of SQL statements from the **SQL type** drop-down list.
          */
         public Builder sqlType(String sqlType) {
             this.putQueryParameter("SqlType", sqlType);
@@ -256,7 +277,10 @@ public class ListSQLExecAuditLogRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query.
+         * <p>
+         * 
+         * >  The start time supports fuzzy match. Specify the time in the YYYY-MM-DD hh:mm:ss format.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -265,7 +289,7 @@ public class ListSQLExecAuditLogRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to obtain the tenant ID.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

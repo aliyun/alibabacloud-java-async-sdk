@@ -98,7 +98,7 @@ public class ListSQLExecAuditLogResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * ErrorCode.
+         * The error code returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -106,7 +106,7 @@ public class ListSQLExecAuditLogResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -114,7 +114,7 @@ public class ListSQLExecAuditLogResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class ListSQLExecAuditLogResponseBody extends TeaModel {
         }
 
         /**
-         * SQLExecAuditLogList.
+         * The entries returned.
          */
         public Builder SQLExecAuditLogList(SQLExecAuditLogList SQLExecAuditLogList) {
             this.SQLExecAuditLogList = SQLExecAuditLogList;
@@ -130,7 +130,11 @@ public class ListSQLExecAuditLogResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,7 +142,7 @@ public class ListSQLExecAuditLogResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The number of entries returned.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -334,7 +338,7 @@ public class ListSQLExecAuditLogResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * AffectRows.
+             * The number of rows affected by the SQL statement. For example, if you execute an SQL statement to query data, the number of retrieved rows is returned.
              */
             public Builder affectRows(Long affectRows) {
                 this.affectRows = affectRows;
@@ -342,7 +346,7 @@ public class ListSQLExecAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * DbId.
+             * The ID of the database.
              */
             public Builder dbId(Long dbId) {
                 this.dbId = dbId;
@@ -350,7 +354,7 @@ public class ListSQLExecAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * ElapsedTime.
+             * The amount of time consumed by the execution of the SQL statement. Unit: milliseconds.
              */
             public Builder elapsedTime(Long elapsedTime) {
                 this.elapsedTime = elapsedTime;
@@ -358,7 +362,14 @@ public class ListSQLExecAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * ExecState.
+             * The execution status of the SQL statement. Valid values:
+             * <p>
+             * 
+             * *   **FAIL**: The SQL statement fails to be executed.
+             * *   **NOEXE**: The SQL statement has not been executed.
+             * *   **RUNNING**: The SQL statement is being executed.
+             * *   **CANCEL**: The execution of the SQL statement is canceled.
+             * *   **SUCCESS**: The SQL statement is executed.
              */
             public Builder execState(String execState) {
                 this.execState = execState;
@@ -366,7 +377,7 @@ public class ListSQLExecAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance.
              */
             public Builder instanceId(Long instanceId) {
                 this.instanceId = instanceId;
@@ -374,7 +385,10 @@ public class ListSQLExecAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * The name of the database.
+             * <p>
+             * 
+             * >  If the SQL statement takes effect on an instance, the name of the instance is returned.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -382,7 +396,11 @@ public class ListSQLExecAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * Logic.
+             * Indicates whether the database is a logical database. Valid values:
+             * <p>
+             * 
+             * *   **true**: The database is a logical database.
+             * *   **false**: The database is a physical database.
              */
             public Builder logic(Boolean logic) {
                 this.logic = logic;
@@ -390,7 +408,7 @@ public class ListSQLExecAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * OpTime.
+             * The time when the operation specified by the SQL statement was performed on the instance or database.
              */
             public Builder opTime(String opTime) {
                 this.opTime = opTime;
@@ -398,7 +416,7 @@ public class ListSQLExecAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * Remark.
+             * The comment on the SQL statement.
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -406,7 +424,7 @@ public class ListSQLExecAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * SQL.
+             * The SQL statement that was written.
              */
             public Builder SQL(String SQL) {
                 this.SQL = SQL;
@@ -414,7 +432,15 @@ public class ListSQLExecAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * SQLType.
+             * The type of the SQL statement. Valid values:
+             * <p>
+             * 
+             * *   **SELECT**: the SQL statement that is used to query data.
+             * *   **INSERT**: the SQL statement that is used to insert data.
+             * *   **DELETE**: the SQL statement that is used to delete data.
+             * *   **CREATE_TABLE**: the SQL statement that is used to create tables.
+             * 
+             * >  To view more types of SQL statements, log on to the DMS console and click Security and Specifications. In the left-side navigation pane, click **Operation Audit**. Then, you can view all supported types of SQL statements from the **SQL type** drop-down list.
              */
             public Builder SQLType(String SQLType) {
                 this.SQLType = SQLType;
@@ -422,7 +448,7 @@ public class ListSQLExecAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * SchemaName.
+             * The name of the database.
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -430,7 +456,7 @@ public class ListSQLExecAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * The ID of the user who wrote the SQL statement.
              */
             public Builder userId(Long userId) {
                 this.userId = userId;
@@ -438,7 +464,7 @@ public class ListSQLExecAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * The nickname of the user who wrote the SQL statement.
              */
             public Builder userName(String userName) {
                 this.userName = userName;

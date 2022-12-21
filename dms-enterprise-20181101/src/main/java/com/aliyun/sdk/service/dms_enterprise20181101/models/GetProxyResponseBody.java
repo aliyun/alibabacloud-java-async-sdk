@@ -206,7 +206,7 @@ public class GetProxyResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * CreatorId.
+         * The ID of the user who enabled the secure access proxy feature.
          */
         public Builder creatorId(Long creatorId) {
             this.creatorId = creatorId;
@@ -214,7 +214,7 @@ public class GetProxyResponseBody extends TeaModel {
         }
 
         /**
-         * CreatorName.
+         * The nickname of the user who enabled the secure access proxy feature.
          */
         public Builder creatorName(String creatorName) {
             this.creatorName = creatorName;
@@ -222,7 +222,7 @@ public class GetProxyResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -230,7 +230,7 @@ public class GetProxyResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -238,7 +238,7 @@ public class GetProxyResponseBody extends TeaModel {
         }
 
         /**
-         * HttpsPort.
+         * The port that was used by HTTPS clients to connect to the database instance.
          */
         public Builder httpsPort(Integer httpsPort) {
             this.httpsPort = httpsPort;
@@ -246,7 +246,7 @@ public class GetProxyResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * The ID of the database instance.
          */
         public Builder instanceId(Long instanceId) {
             this.instanceId = instanceId;
@@ -254,7 +254,7 @@ public class GetProxyResponseBody extends TeaModel {
         }
 
         /**
-         * PrivateEnable.
+         * Indicates whether the internal endpoint is enabled. Default value: **true**.
          */
         public Builder privateEnable(Boolean privateEnable) {
             this.privateEnable = privateEnable;
@@ -262,7 +262,7 @@ public class GetProxyResponseBody extends TeaModel {
         }
 
         /**
-         * PrivateHost.
+         * The internal endpoint.
          */
         public Builder privateHost(String privateHost) {
             this.privateHost = privateHost;
@@ -286,7 +286,7 @@ public class GetProxyResponseBody extends TeaModel {
         }
 
         /**
-         * ProxyId.
+         * The ID of the secure access proxy.
          */
         public Builder proxyId(Long proxyId) {
             this.proxyId = proxyId;
@@ -294,7 +294,11 @@ public class GetProxyResponseBody extends TeaModel {
         }
 
         /**
-         * PublicEnable.
+         * Indicates whether the public endpoint is enabled. Valid values:
+         * <p>
+         * 
+         * - **true**: The public endpoint is enabled.
+         * - **false**: The public endpoint is disabled.
          */
         public Builder publicEnable(Boolean publicEnable) {
             this.publicEnable = publicEnable;
@@ -302,7 +306,11 @@ public class GetProxyResponseBody extends TeaModel {
         }
 
         /**
-         * PublicHost.
+         * The public endpoint. A public endpoint is returned no matter whether the public endpoint is enabled or disabled.  
+         * <p>
+         * 
+         * > - If the value of the PublicEnable parameter is **true**, a valid public endpoint that can be resolved by using Alibaba Cloud DNS (DNS) is returned.
+         * - If the value of the PublicEnable parameter is **false**, an invalid public endpoint that cannot be resolved by using DNS is returned.
          */
         public Builder publicHost(String publicHost) {
             this.publicHost = publicHost;
@@ -310,7 +318,7 @@ public class GetProxyResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -318,7 +326,11 @@ public class GetProxyResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * - **true**: The request was successful.
+         * - **false**: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;

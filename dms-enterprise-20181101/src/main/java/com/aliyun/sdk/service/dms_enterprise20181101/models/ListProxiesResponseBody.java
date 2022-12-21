@@ -86,7 +86,7 @@ public class ListProxiesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * ErrorCode.
+         * The error code returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class ListProxiesResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class ListProxiesResponseBody extends TeaModel {
         }
 
         /**
-         * ProxyList.
+         * An array that consists of secure access proxies.
          */
         public Builder proxyList(java.util.List < ProxyList> proxyList) {
             this.proxyList = proxyList;
@@ -110,7 +110,7 @@ public class ListProxiesResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class ListProxiesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * - **true**: The request was successful.
+         * - **false**: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -278,7 +282,7 @@ public class ListProxiesResponseBody extends TeaModel {
             private String publicHost; 
 
             /**
-             * CreatorId.
+             * The ID of the user who enabled the secure access proxy feature.
              */
             public Builder creatorId(Long creatorId) {
                 this.creatorId = creatorId;
@@ -286,7 +290,7 @@ public class ListProxiesResponseBody extends TeaModel {
             }
 
             /**
-             * CreatorName.
+             * The nickname of the user who enabled the secure access proxy feature.
              */
             public Builder creatorName(String creatorName) {
                 this.creatorName = creatorName;
@@ -294,7 +298,7 @@ public class ListProxiesResponseBody extends TeaModel {
             }
 
             /**
-             * HttpsPort.
+             * The port that was used by HTTPS clients to connect to the database instance.
              */
             public Builder httpsPort(Integer httpsPort) {
                 this.httpsPort = httpsPort;
@@ -302,7 +306,7 @@ public class ListProxiesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the database instance.
              */
             public Builder instanceId(Long instanceId) {
                 this.instanceId = instanceId;
@@ -310,7 +314,7 @@ public class ListProxiesResponseBody extends TeaModel {
             }
 
             /**
-             * PrivateEnable.
+             * Indicates whether the internal endpoint is enabled. Default value: **true**.
              */
             public Builder privateEnable(Boolean privateEnable) {
                 this.privateEnable = privateEnable;
@@ -318,7 +322,7 @@ public class ListProxiesResponseBody extends TeaModel {
             }
 
             /**
-             * PrivateHost.
+             * The internal endpoint.
              */
             public Builder privateHost(String privateHost) {
                 this.privateHost = privateHost;
@@ -342,7 +346,7 @@ public class ListProxiesResponseBody extends TeaModel {
             }
 
             /**
-             * ProxyId.
+             * The ID of the secure access proxy.
              */
             public Builder proxyId(Long proxyId) {
                 this.proxyId = proxyId;
@@ -350,7 +354,11 @@ public class ListProxiesResponseBody extends TeaModel {
             }
 
             /**
-             * PublicEnable.
+             * Indicates whether the public endpoint is enabled. Valid values:
+             * <p>
+             * 
+             * - **true**: The public endpoint is enabled.
+             * - **false**: The public endpoint is disabled.
              */
             public Builder publicEnable(Boolean publicEnable) {
                 this.publicEnable = publicEnable;
@@ -358,7 +366,11 @@ public class ListProxiesResponseBody extends TeaModel {
             }
 
             /**
-             * PublicHost.
+             * The public endpoint. A public endpoint is returned no matter whether the public endpoint is enabled or disabled.  
+             * <p>
+             * 
+             * > - If the value of the PublicEnable parameter is **true**, a valid public endpoint that can be resolved by using Alibaba Cloud DNS (DNS) is returned.
+             * - If the value of the PublicEnable parameter is **false**, an invalid public endpoint that cannot be resolved by using DNS is returned.
              */
             public Builder publicHost(String publicHost) {
                 this.publicHost = publicHost;

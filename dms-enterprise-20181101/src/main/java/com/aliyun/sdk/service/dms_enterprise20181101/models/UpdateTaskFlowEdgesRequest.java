@@ -108,7 +108,7 @@ public class UpdateTaskFlowEdgesRequest extends Request {
         }
 
         /**
-         * DagId.
+         * The ID of the task flow. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to query the task flow ID.
          */
         public Builder dagId(Long dagId) {
             this.putQueryParameter("DagId", dagId);
@@ -117,7 +117,7 @@ public class UpdateTaskFlowEdgesRequest extends Request {
         }
 
         /**
-         * Edges.
+         * The list of updated task flow edges.
          */
         public Builder edges(java.util.List < Edges> edges) {
             String edgesShrink = shrink(edges, "Edges", "json");
@@ -127,7 +127,10 @@ public class UpdateTaskFlowEdgesRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The ID of the tenant.
+         * <p>
+         * 
+         * >  To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -196,7 +199,7 @@ public class UpdateTaskFlowEdgesRequest extends Request {
             private Long nodeFrom; 
 
             /**
-             * Id.
+             * The ID of the task flow edge.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -204,7 +207,7 @@ public class UpdateTaskFlowEdgesRequest extends Request {
             }
 
             /**
-             * NodeEnd.
+             * The ID of the end node on the edge.
              */
             public Builder nodeEnd(Long nodeEnd) {
                 this.nodeEnd = nodeEnd;
@@ -212,7 +215,7 @@ public class UpdateTaskFlowEdgesRequest extends Request {
             }
 
             /**
-             * NodeFrom.
+             * The ID of the start node on the edge.
              */
             public Builder nodeFrom(Long nodeFrom) {
                 this.nodeFrom = nodeFrom;

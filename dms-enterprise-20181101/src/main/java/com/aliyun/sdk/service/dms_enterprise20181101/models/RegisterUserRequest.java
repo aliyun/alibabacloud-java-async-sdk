@@ -134,7 +134,7 @@ public class RegisterUserRequest extends Request {
         }
 
         /**
-         * Mobile.
+         * The mobile number of the user.
          */
         public Builder mobile(String mobile) {
             this.putQueryParameter("Mobile", mobile);
@@ -143,7 +143,15 @@ public class RegisterUserRequest extends Request {
         }
 
         /**
-         * RoleNames.
+         * The role that you want to assign to the user. Valid values:
+         * <p>
+         * 
+         * *   **USER**: a regular user role
+         * *   **DBA**: a database administrator (DBA) role
+         * *   **ADMIN**: a DMS administrator role
+         * *   **SECURITY_ADMIN**: a security administrator role
+         * 
+         * >  If you do not specify this parameter, the regular user role is assigned to the user by default. You can assign one or more roles to the user. Separate multiple roles with commas (,).
          */
         public Builder roleNames(String roleNames) {
             this.putQueryParameter("RoleNames", roleNames);
@@ -152,7 +160,10 @@ public class RegisterUserRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The ID of the tenant.
+         * <p>
+         * 
+         * >  To query ID of the tenant, move the pointer over the profile picture in the upper-right corner of the DMS console. For more information, see the "View information about the current tenant" section of the [Manage DMS tenants](~~181330~~) topic.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -161,7 +172,7 @@ public class RegisterUserRequest extends Request {
         }
 
         /**
-         * Uid.
+         * The UID of the Alibaba Cloud account of the user that you want to register.
          */
         public Builder uid(String uid) {
             this.putQueryParameter("Uid", uid);
@@ -170,7 +181,7 @@ public class RegisterUserRequest extends Request {
         }
 
         /**
-         * UserNick.
+         * The nickname of the user.
          */
         public Builder userNick(String userNick) {
             this.putQueryParameter("UserNick", userNick);

@@ -207,7 +207,11 @@ public class RevokeUserPermissionRequest extends Request {
         }
 
         /**
-         * DbId.
+         * The ID of the database. The database can be a physical database or a logical database.
+         * <p>
+         * 
+         * *   To query the ID of a physical database, call the [ListDatabases](~~141873~~) or [SearchDatabase](~~141876~~) operation.
+         * *   To query the ID of a logical database, call the [ListLogicDatabases](~~141874~~) or [SearchDatabase](~~141876~~) operation.
          */
         public Builder dbId(String dbId) {
             this.putQueryParameter("DbId", dbId);
@@ -216,7 +220,14 @@ public class RevokeUserPermissionRequest extends Request {
         }
 
         /**
-         * DsType.
+         * The object type on which the permission you want to revoke from the user. Valid values:
+         * <p>
+         * 
+         * *   **INSTANCE**: database instances
+         * *   **DATABASE**: physical databases
+         * *   **LOGIC_DATABASE**: logical databases
+         * *   **TABLE**: physical tables
+         * *   **LOGIC_TABLE**: logical tables
          */
         public Builder dsType(String dsType) {
             this.putQueryParameter("DsType", dsType);
@@ -225,7 +236,7 @@ public class RevokeUserPermissionRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the database instance. You must specify this parameter when you revoke a permission from the database instance. You can call the [ListInstances](~~141936~~) or [GetInstance](~~141567~~) operation to query the database instance ID.
          */
         public Builder instanceId(Long instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -234,7 +245,15 @@ public class RevokeUserPermissionRequest extends Request {
         }
 
         /**
-         * Logic.
+         * Specifies whether the database is a logical database. Valid values:
+         * <p>
+         * 
+         * *   **true**: The database is a logical database.
+         * *   **false**: The database is a physical database.
+         * 
+         * > 
+         * *   If the database is a logical database, set this parameter to **true**.
+         * *   If the database is a physical database, set this parameter to **false**.
          */
         public Builder logic(Boolean logic) {
             this.putQueryParameter("Logic", logic);
@@ -243,7 +262,12 @@ public class RevokeUserPermissionRequest extends Request {
         }
 
         /**
-         * PermTypes.
+         * The type of the permission. Valid values:
+         * <p>
+         * 
+         * *   **QUERY**: the data query permission
+         * *   **EXPORT**: the data export permission
+         * *   **CORRECT**: the data change permission
          */
         public Builder permTypes(String permTypes) {
             this.putQueryParameter("PermTypes", permTypes);
@@ -252,7 +276,7 @@ public class RevokeUserPermissionRequest extends Request {
         }
 
         /**
-         * TableId.
+         * The ID of the table. You must specify this parameter when you revoke a permission from the table. You can call the [ListTables](~~141878~~) operation to query the table ID.
          */
         public Builder tableId(String tableId) {
             this.putQueryParameter("TableId", tableId);
@@ -261,7 +285,7 @@ public class RevokeUserPermissionRequest extends Request {
         }
 
         /**
-         * TableName.
+         * The name of the table. You can call the [ListTables](~~141878~~) operation to query the table name.
          */
         public Builder tableName(String tableName) {
             this.putQueryParameter("TableName", tableName);
@@ -270,7 +294,7 @@ public class RevokeUserPermissionRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the tenant ID.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -279,7 +303,7 @@ public class RevokeUserPermissionRequest extends Request {
         }
 
         /**
-         * UserAccessId.
+         * The ID of the permission. You can call the [ListUserPermission](~~146957~~) operation to query the permission ID.
          */
         public Builder userAccessId(String userAccessId) {
             this.putQueryParameter("UserAccessId", userAccessId);
@@ -288,7 +312,7 @@ public class RevokeUserPermissionRequest extends Request {
         }
 
         /**
-         * UserId.
+         * The ID of the user. You can call the [ListUsers](~~141938~~) or [GetUser](~~147098~~) operation to query the user ID.
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

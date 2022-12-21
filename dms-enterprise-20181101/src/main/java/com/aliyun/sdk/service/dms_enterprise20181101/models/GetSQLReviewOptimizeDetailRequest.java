@@ -93,7 +93,7 @@ public class GetSQLReviewOptimizeDetailRequest extends Request {
         }
 
         /**
-         * SQLReviewQueryKey.
+         * The key that is used to query the details of optimization suggestions. You can call the [ListSQLReviewOriginSQL](~~257870~~) operation to query the key.
          */
         public Builder SQLReviewQueryKey(String SQLReviewQueryKey) {
             this.putQueryParameter("SQLReviewQueryKey", SQLReviewQueryKey);
@@ -102,7 +102,7 @@ public class GetSQLReviewOptimizeDetailRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to query the ID of the tenant.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

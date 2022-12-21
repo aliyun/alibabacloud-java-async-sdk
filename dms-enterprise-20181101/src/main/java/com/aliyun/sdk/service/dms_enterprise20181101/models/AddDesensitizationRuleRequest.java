@@ -160,7 +160,7 @@ public class AddDesensitizationRuleRequest extends Request {
         }
 
         /**
-         * FunctionType.
+         * The type of the masking algorithm.
          */
         public Builder functionType(String functionType) {
             this.putQueryParameter("FunctionType", functionType);
@@ -169,7 +169,7 @@ public class AddDesensitizationRuleRequest extends Request {
         }
 
         /**
-         * RuleDescription.
+         * The description of the rule.
          */
         public Builder ruleDescription(String ruleDescription) {
             this.putQueryParameter("RuleDescription", ruleDescription);
@@ -178,7 +178,7 @@ public class AddDesensitizationRuleRequest extends Request {
         }
 
         /**
-         * RuleName.
+         * The name of the rule.
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -187,7 +187,7 @@ public class AddDesensitizationRuleRequest extends Request {
         }
 
         /**
-         * RuleType.
+         * The masking algorithm.
          */
         public Builder ruleType(String ruleType) {
             this.putQueryParameter("RuleType", ruleType);
@@ -196,7 +196,10 @@ public class AddDesensitizationRuleRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The ID of the tenant.
+         * <p>
+         * 
+         * >  To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

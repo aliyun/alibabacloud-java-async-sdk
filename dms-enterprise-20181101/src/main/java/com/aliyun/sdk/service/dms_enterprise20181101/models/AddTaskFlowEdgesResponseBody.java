@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddTaskFlowEdgesResponseBody</p>
  */
 public class AddTaskFlowEdgesResponseBody extends TeaModel {
+    @NameInMap("EdgeIds")
+    private EdgeIds edgeIds;
+
     @NameInMap("ErrorCode")
     private String errorCode;
 
@@ -25,6 +28,7 @@ public class AddTaskFlowEdgesResponseBody extends TeaModel {
     private Boolean success;
 
     private AddTaskFlowEdgesResponseBody(Builder builder) {
+        this.edgeIds = builder.edgeIds;
         this.errorCode = builder.errorCode;
         this.errorMessage = builder.errorMessage;
         this.requestId = builder.requestId;
@@ -37,6 +41,13 @@ public class AddTaskFlowEdgesResponseBody extends TeaModel {
 
     public static AddTaskFlowEdgesResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return edgeIds
+     */
+    public EdgeIds getEdgeIds() {
+        return this.edgeIds;
     }
 
     /**
@@ -68,10 +79,19 @@ public class AddTaskFlowEdgesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private EdgeIds edgeIds; 
         private String errorCode; 
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        /**
+         * EdgeIds.
+         */
+        public Builder edgeIds(EdgeIds edgeIds) {
+            this.edgeIds = edgeIds;
+            return this;
+        }
 
         /**
          * ErrorCode.
@@ -111,4 +131,45 @@ public class AddTaskFlowEdgesResponseBody extends TeaModel {
 
     } 
 
+    public static class EdgeIds extends TeaModel {
+        @NameInMap("EdgeId")
+        private java.util.List < Long > edgeId;
+
+        private EdgeIds(Builder builder) {
+            this.edgeId = builder.edgeId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static EdgeIds create() {
+            return builder().build();
+        }
+
+        /**
+         * @return edgeId
+         */
+        public java.util.List < Long > getEdgeId() {
+            return this.edgeId;
+        }
+
+        public static final class Builder {
+            private java.util.List < Long > edgeId; 
+
+            /**
+             * EdgeId.
+             */
+            public Builder edgeId(java.util.List < Long > edgeId) {
+                this.edgeId = edgeId;
+                return this;
+            }
+
+            public EdgeIds build() {
+                return new EdgeIds(this);
+            } 
+
+        } 
+
+    }
 }

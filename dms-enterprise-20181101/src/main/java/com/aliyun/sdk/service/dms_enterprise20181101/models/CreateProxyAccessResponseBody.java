@@ -86,7 +86,7 @@ public class CreateProxyAccessResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * ErrorCode.
+         * The error code returned to the query task.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class CreateProxyAccessResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message that is returned.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class CreateProxyAccessResponseBody extends TeaModel {
         }
 
         /**
-         * ProxyAccessId.
+         * The ID of the security protection authorization. After the security protection agent authorizes the target user, the system automatically generates a security protection authorization ID. The ID is globally unique.
          */
         public Builder proxyAccessId(Long proxyAccessId) {
             this.proxyAccessId = proxyAccessId;
@@ -110,7 +110,7 @@ public class CreateProxyAccessResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class CreateProxyAccessResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the call was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -98,7 +98,7 @@ public class ListTablesResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * ErrorCode.
+         * The error code that is returned if the request fails.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -106,7 +106,7 @@ public class ListTablesResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned if the request fails.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -114,7 +114,7 @@ public class ListTablesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,11 @@ public class ListTablesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * - **true**: The request was successful.
+         * - **false**: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,7 +134,7 @@ public class ListTablesResponseBody extends TeaModel {
         }
 
         /**
-         * TableList.
+         * The details of the tables.
          */
         public Builder tableList(TableList tableList) {
             this.tableList = tableList;
@@ -138,7 +142,7 @@ public class ListTablesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of tables that meet the query conditions.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -404,7 +408,7 @@ public class ListTablesResponseBody extends TeaModel {
             private String tableType; 
 
             /**
-             * DatabaseId.
+             * The ID of the physical database.
              */
             public Builder databaseId(String databaseId) {
                 this.databaseId = databaseId;
@@ -412,7 +416,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the table.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -420,7 +424,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Encoding.
+             * The encoding format of the table.
              */
             public Builder encoding(String encoding) {
                 this.encoding = encoding;
@@ -428,7 +432,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Engine.
+             * The engine of the table.
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -436,7 +440,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * NumRows.
+             * The number of rows in the table. This is a statistical value and does not indicate the actual number of rows.
              */
             public Builder numRows(Long numRows) {
                 this.numRows = numRows;
@@ -444,7 +448,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerIdList.
+             * The IDs of the owners of the table.
              */
             public Builder ownerIdList(OwnerIdList ownerIdList) {
                 this.ownerIdList = ownerIdList;
@@ -452,7 +456,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerNameList.
+             * The nicknames of the owners of the table.
              */
             public Builder ownerNameList(OwnerNameList ownerNameList) {
                 this.ownerNameList = ownerNameList;
@@ -460,7 +464,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * StoreCapacity.
+             * The storage space that is occupied by the table. This is a statistical value and does not indicate the accurate storage space. Unit: MB.
              */
             public Builder storeCapacity(Long storeCapacity) {
                 this.storeCapacity = storeCapacity;
@@ -468,7 +472,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * TableGuid.
+             * The GUID of the table in DMS.
              */
             public Builder tableGuid(String tableGuid) {
                 this.tableGuid = tableGuid;
@@ -476,7 +480,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * TableId.
+             * The ID of the table.
              */
             public Builder tableId(String tableId) {
                 this.tableId = tableId;
@@ -484,7 +488,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * The name of the table.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -492,7 +496,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * TableSchemaName.
+             * The database in which the table resides.
              */
             public Builder tableSchemaName(String tableSchemaName) {
                 this.tableSchemaName = tableSchemaName;
@@ -500,7 +504,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * TableType.
+             * The type of the table. Default value: NORMAL.
              */
             public Builder tableType(String tableType) {
                 this.tableType = tableType;

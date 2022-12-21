@@ -165,7 +165,7 @@ public class ListTaskFlowInstanceRequest extends Request {
         }
 
         /**
-         * DagId.
+         * The ID of the task flow. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to obtain the ID of the task flow.
          */
         public Builder dagId(Long dagId) {
             this.putQueryParameter("DagId", dagId);
@@ -174,7 +174,7 @@ public class ListTaskFlowInstanceRequest extends Request {
         }
 
         /**
-         * PageIndex.
+         * The number of the page to return.
          */
         public Builder pageIndex(Integer pageIndex) {
             this.putQueryParameter("PageIndex", pageIndex);
@@ -183,7 +183,7 @@ public class ListTaskFlowInstanceRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -192,7 +192,7 @@ public class ListTaskFlowInstanceRequest extends Request {
         }
 
         /**
-         * StartTimeBegin.
+         * The beginning of the time range to query the execution records of the task flow. Specify the time in the yyyy-MM-DD format.
          */
         public Builder startTimeBegin(String startTimeBegin) {
             this.putQueryParameter("StartTimeBegin", startTimeBegin);
@@ -201,7 +201,7 @@ public class ListTaskFlowInstanceRequest extends Request {
         }
 
         /**
-         * StartTimeEnd.
+         * The end of the time range to query the execution records of the task flow. Specify the time in the yyyy-MM-DD format.
          */
         public Builder startTimeEnd(String startTimeEnd) {
             this.putQueryParameter("StartTimeEnd", startTimeEnd);
@@ -210,7 +210,7 @@ public class ListTaskFlowInstanceRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -219,7 +219,11 @@ public class ListTaskFlowInstanceRequest extends Request {
         }
 
         /**
-         * TriggerType.
+         * The mode in which the task flow is triggered. Valid values:
+         * <p>
+         * 
+         * *   **0**: The task flow is automatically triggered based on periodic scheduling.
+         * *   **1**: The task flow is manually triggered.
          */
         public Builder triggerType(Integer triggerType) {
             this.putQueryParameter("TriggerType", triggerType);

@@ -86,7 +86,7 @@ public class ListColumnsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * ColumnList.
+         * The information about the columns returned.
          */
         public Builder columnList(ColumnList columnList) {
             this.columnList = columnList;
@@ -94,7 +94,7 @@ public class ListColumnsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -102,7 +102,7 @@ public class ListColumnsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +110,7 @@ public class ListColumnsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class ListColumnsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * - **true**: The request was successful.
+         * - **false**: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -302,7 +306,11 @@ public class ListColumnsResponseBody extends TeaModel {
             private Boolean sensitive; 
 
             /**
-             * AutoIncrement.
+             * Indicates whether the field is an auto-increment field. Valid values:
+             * <p>
+             * 
+             * *   true: The field is an auto-increment field.
+             * *   false: The field is not an auto-increment field.
              */
             public Builder autoIncrement(Boolean autoIncrement) {
                 this.autoIncrement = autoIncrement;
@@ -310,7 +318,7 @@ public class ListColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * ColumnId.
+             * The ID of the field.
              */
             public Builder columnId(String columnId) {
                 this.columnId = columnId;
@@ -318,7 +326,7 @@ public class ListColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * ColumnName.
+             * The name of the field.
              */
             public Builder columnName(String columnName) {
                 this.columnName = columnName;
@@ -326,7 +334,7 @@ public class ListColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * ColumnType.
+             * The data type of the field.
              */
             public Builder columnType(String columnType) {
                 this.columnType = columnType;
@@ -334,7 +342,7 @@ public class ListColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * DataLength.
+             * The length of the field.
              */
             public Builder dataLength(Long dataLength) {
                 this.dataLength = dataLength;
@@ -342,7 +350,7 @@ public class ListColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * DataPrecision.
+             * The number of valid digits for the field.
              */
             public Builder dataPrecision(Integer dataPrecision) {
                 this.dataPrecision = dataPrecision;
@@ -350,7 +358,7 @@ public class ListColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * DataScale.
+             * The number of decimal places for the field.
              */
             public Builder dataScale(Integer dataScale) {
                 this.dataScale = dataScale;
@@ -358,7 +366,7 @@ public class ListColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultValue.
+             * The default value of the field.
              */
             public Builder defaultValue(String defaultValue) {
                 this.defaultValue = defaultValue;
@@ -366,7 +374,7 @@ public class ListColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the field.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -374,7 +382,13 @@ public class ListColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * FunctionType.
+             * The type of the masking algorithm that is used for the field. Valid values:
+             * <p>
+             * 
+             * *   null: No masking algorithm is used.
+             * *   DEFAULT: A full masking algorithm is used.
+             * *   FIX_POS: The fixed position is masked.
+             * *   FIX_CHAR: The fixed characters are replaced.
              */
             public Builder functionType(String functionType) {
                 this.functionType = functionType;
@@ -382,7 +396,11 @@ public class ListColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * Nullable.
+             * Indicates whether the field can be empty. Valid values:
+             * <p>
+             * 
+             * *   **true**: The field can be empty.
+             * *   **false**: The field cannot be empty.
              */
             public Builder nullable(Boolean nullable) {
                 this.nullable = nullable;
@@ -390,7 +408,14 @@ public class ListColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityLevel.
+             * The security level of the field. Valid values:
+             * <p>
+             * 
+             * *   INNER: The field is an internal field but not sensitive.
+             * *   SENSITIVE: The field is a sensitive field.
+             * *   CONFIDENTIAL: The field is a confidential field.
+             * 
+             * >  For more information, see [Adjust the sensitivity level of one or more fields](~~66091~~).
              */
             public Builder securityLevel(String securityLevel) {
                 this.securityLevel = securityLevel;
@@ -398,7 +423,11 @@ public class ListColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * Sensitive.
+             * Indicates whether the field is a sensitive field. Valid values:
+             * <p>
+             * 
+             * *   **true**: The field is a sensitive field.
+             * *   **false**: The field is not a sensitive field.
              */
             public Builder sensitive(Boolean sensitive) {
                 this.sensitive = sensitive;

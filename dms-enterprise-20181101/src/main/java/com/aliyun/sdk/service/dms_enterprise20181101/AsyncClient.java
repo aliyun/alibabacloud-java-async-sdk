@@ -20,6 +20,14 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AddDesensitizationRuleResponse> addDesensitizationRule(AddDesensitizationRuleRequest request);
 
+    /**
+      * You must call this operation as a DMS administrator, a database administrator (DBA), or a workspace administrator.
+      * Usage notes:
+      * *   Before you call this operation to add a user as a task flow developer, make sure that you have added the user as a workspace member.
+      * *   You cannot call this operation to transfer the ownership of a task flow. To transfer the ownership of a task flow, call the [ChangLhDagOwner](~~424761~~) operation.
+      * *   For more information about workspace roles and permissions, see [Manage permissions on a workspace](~~410893~~).
+      *
+     */
     CompletableFuture<AddLhMembersResponse> addLhMembers(AddLhMembersRequest request);
 
     CompletableFuture<AddLogicTableRouteConfigResponse> addLogicTableRouteConfig(AddLogicTableRouteConfigRequest request);
@@ -28,36 +36,93 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ApproveOrderResponse> approveOrder(ApproveOrderRequest request);
 
+    /**
+      * ## Description
+      * During a data backfill, task flows are run in sequence based on their dates. You can specify whether task flows are run in chronological or reverse chronological order. After the data backfill is complete, you can specify a date or date range, and a node range to run task flows.
+      *
+     */
     CompletableFuture<BackFillResponse> backFill(BackFillRequest request);
 
     CompletableFuture<BuyPayAsYouGoOrderResponse> buyPayAsYouGoOrder(BuyPayAsYouGoOrderRequest request);
 
     CompletableFuture<ChangeColumnSecLevelResponse> changeColumnSecLevel(ChangeColumnSecLevelRequest request);
 
+    /**
+      * Usage notes:
+      * *   If you call this operation to transfer the ownership of a published task flow, the ownership transfer does not take effect.
+      * *   You can call the [ReDeployLhDagVersion](~~424712~~) operation to redeploy a published version of a task flow.
+      *
+     */
     CompletableFuture<ChangeLhDagOwnerResponse> changeLhDagOwner(ChangeLhDagOwnerRequest request);
 
     CompletableFuture<CloseOrderResponse> closeOrder(CloseOrderRequest request);
 
+    /**
+      * For more information about the Normal Data Modify feature, see [Change regular data](~~58419~~).
+      *
+     */
     CompletableFuture<CreateDataCorrectOrderResponse> createDataCorrectOrder(CreateDataCorrectOrderRequest request);
 
+    /**
+      * For more information about the historical data cleaning, see [Clear historical data](~~162507~~).
+      * This operation can be used only for MySQL databases.
+      *
+     */
     CompletableFuture<CreateDataCronClearOrderResponse> createDataCronClearOrder(CreateDataCronClearOrderRequest request);
 
+    /**
+      * For more information about the Large Data Import feature, see [Import data](~~161439~~).
+      *
+     */
     CompletableFuture<CreateDataImportOrderResponse> createDataImportOrder(CreateDataImportOrderRequest request);
 
+    /**
+      * For more information about the lock-free change feature, see [Overview](~~207847~~).
+      * This operation can be used only for instances that are managed in Stable Change or Security Collaboration mode. For more information, see [Change data without the need to lock tables](~~96145~~) and [Change schemas without locking tables](~~98373~~).
+      *
+     */
     CompletableFuture<CreateFreeLockCorrectOrderResponse> createFreeLockCorrectOrder(CreateFreeLockCorrectOrderRequest request);
 
+    /**
+      * *   The workspace name must be unique within a tenant. If a workspace with the same name already exists within the tenant, the call may fail.
+      * *   You can call the [GetLhSpaceByName](~~424379~~) operation to query whether a workspace with a specific name already exists as a DMS administrator or database administrator (DBA).
+      *
+     */
     CompletableFuture<CreateLakeHouseSpaceResponse> createLakeHouseSpace(CreateLakeHouseSpaceRequest request);
 
     CompletableFuture<CreateLogicDatabaseResponse> createLogicDatabase(CreateLogicDatabaseRequest request);
 
+    /**
+      * To facilitate ticket creation, you can call the following dedicated operations to create some types of tickets:
+      * *   [CreateDataCorrectOrder](~~208388~~): creates a regular data change ticket.
+      * *   [CreateDataCronClearOrder](~~208385~~): creates a ticket to clear historical data.
+      * *   [CreateDataImportOrder](~~208387~~): creates a data import ticket.
+      * *   [CreateFreeLockCorrectOrder](~~208386~~): creates a lock-free change ticket.
+      *
+     */
     CompletableFuture<CreateOrderResponse> createOrder(CreateOrderRequest request);
 
+    /**
+      * - The database instance runs the MySQL or MariaDB database engine. For example, the database instance can be an ApsaraDB RDS for MySQL instance, a PolarDB for MySQL cluster, a Distributed Relational Database Service (DRDS) cluster, or an AnalyticDB for MySQL cluster. The database instance can also be a self-managed MySQL or MariaDB database, or a MySQL or MariaDB database in a third-party cloud.
+      * - The database instance resides in the China (Hangzhou) or China (Beijing) region.
+      * - You are a Data Management (DMS) administrator, a database administrator (DBA), or the owner of the database instance.
+      *
+     */
     CompletableFuture<CreateProxyResponse> createProxy(CreateProxyRequest request);
 
+    /**
+      * - The data security protection feature is enabled for the instance.
+      * - Your user role is the administrator role, DBA role, or the owner of data security protection for the current instance.
+      *
+     */
     CompletableFuture<CreateProxyAccessResponse> createProxyAccess(CreateProxyAccessRequest request);
 
     CompletableFuture<CreatePublishGroupTaskResponse> createPublishGroupTask(CreatePublishGroupTaskRequest request);
 
+    /**
+      * For more instructions on this feature, see [SQL audit](~~60374~~) .
+      *
+     */
     CompletableFuture<CreateSQLReviewOrderResponse> createSQLReviewOrder(CreateSQLReviewOrderRequest request);
 
     CompletableFuture<CreateScenarioResponse> createScenario(CreateScenarioRequest request);
@@ -74,42 +139,88 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateUploadOSSFileJobResponse> createUploadOSSFileJob(CreateUploadOSSFileJobRequest request);
 
+    /**
+      * Note: You can call this operation only to remove a database instance from the instance list of DMS. The instance is not deleted or shut down.
+      *
+     */
     CompletableFuture<DeleteInstanceResponse> deleteInstance(DeleteInstanceRequest request);
 
     CompletableFuture<DeleteLakeHouseSpaceResponse> deleteLakeHouseSpace(DeleteLakeHouseSpaceRequest request);
 
+    /**
+      * You must call this operation as a DMS administrator, a database administrator (DBA), or a workspace administrator.
+      * You cannot call this operation to transfer the ownership of a task flow. To transfer the ownership of a task flow, call the [ChangLhDagOwner](~~424761~~) operation.
+      *
+     */
     CompletableFuture<DeleteLhMembersResponse> deleteLhMembers(DeleteLhMembersRequest request);
 
     CompletableFuture<DeleteLogicDatabaseResponse> deleteLogicDatabase(DeleteLogicDatabaseRequest request);
 
     CompletableFuture<DeleteLogicTableRouteConfigResponse> deleteLogicTableRouteConfig(DeleteLogicTableRouteConfigRequest request);
 
+    /**
+      * After you disable this feature, your DB instance loses the JDBC protocol. All authorization information is recycled.
+      *
+     */
     CompletableFuture<DeleteProxyResponse> deleteProxy(DeleteProxyRequest request);
 
     CompletableFuture<DeleteProxyAccessResponse> deleteProxyAccess(DeleteProxyAccessRequest request);
 
+    /**
+      * ### Usage notes
+      * When you call this operation, make sure that no task flow is specified in the business scenario.
+      *
+     */
     CompletableFuture<DeleteScenarioResponse> deleteScenario(DeleteScenarioRequest request);
 
     CompletableFuture<DeleteTaskResponse> deleteTask(DeleteTaskRequest request);
 
     CompletableFuture<DeleteTaskFlowResponse> deleteTaskFlow(DeleteTaskFlowRequest request);
 
+    /**
+      * This operation is used for multi-condition query. You can call it to delete the edges of a specified task flow that meet all specified conditions.
+      *
+     */
     CompletableFuture<DeleteTaskFlowEdgesByConditionResponse> deleteTaskFlowEdgesByCondition(DeleteTaskFlowEdgesByConditionRequest request);
 
+    /**
+      * The effect of deleting a user by calling this operation is the same as that of deleting a user by choosing System Management > User Management in the DMS Enterprise console. The administrator of DMS Enterprise can call this operation to delete a user that is no longer used from DMS Enterprise. After the user is deleted, the data source permission, data owner configuration, and database administrator (DBA) configuration of the corresponding Alibaba Cloud account or Resource Access Management (RAM) user are revoked and become invalid.
+      * >  This operation only removes the association of the Alibaba Cloud account or RAM user with DMS Enterprise of the enterprise, rather than actually deleting the Alibaba Cloud account or RAM user. After the user is deleted, the Alibaba Cloud account or RAM user cannot log on to DMS Enterprise, unless the user is added to DMS Enterprise again.
+      *
+     */
     CompletableFuture<DeleteUserResponse> deleteUser(DeleteUserRequest request);
 
+    /**
+      * The effect of disabling a user by calling this operation is the same as that of disabling a user by choosing System Management > User Management in the DMS Enterprise console. The administrator of DMS Enterprise can call this operation to disable a user that is temporarily not used in DMS Enterprise. After the user is disabled, the data source permission, data owner configuration, and database administrator (DBA) configuration of the corresponding Alibaba Cloud account or Resource Access Management (RAM) user are revoked and become invalid.
+      * >  This operation only stops the Alibaba Cloud account or RAM user from logging on to DMS Enterprise of the enterprise, rather than actually disabling the Alibaba Cloud account or RAM user. After the user is disabled, the Alibaba Cloud account or RAM user cannot log on to DMS Enterprise, unless the user is enabled again. The disabled user, however, still exists in DMS Enterprise.
+      *
+     */
     CompletableFuture<DisableUserResponse> disableUser(DisableUserRequest request);
 
     CompletableFuture<EditLogicDatabaseResponse> editLogicDatabase(EditLogicDatabaseRequest request);
 
+    /**
+      * The effect of enabling a user by calling this operation is the same as that of enabling a user by choosing System Management > User Management in the DMS Enterprise console. The administrator of DMS Enterprise can call this operation to enable a user that has been disabled in DMS Enterprise. After the user is enabled, the corresponding Alibaba Cloud account or Resource Access Management (RAM) user can continue to log on to DMS Enterprise and perform relevant operations.
+      * >  This operation only enables the Alibaba Cloud account or RAM user to log on to DMS Enterprise of the enterprise and perform relevant operations, rather than granting other permissions to the Alibaba Cloud account or RAM user.
+      *
+     */
     CompletableFuture<EnableUserResponse> enableUser(EnableUserRequest request);
 
     CompletableFuture<ExecuteDataCorrectResponse> executeDataCorrect(ExecuteDataCorrectRequest request);
 
     CompletableFuture<ExecuteDataExportResponse> executeDataExport(ExecuteDataExportRequest request);
 
+    /**
+      * You can call this operation only for instances that are managed in Security Collaboration mode.
+      *
+     */
     CompletableFuture<ExecuteScriptResponse> executeScript(ExecuteScriptRequest request);
 
+    /**
+      * If the security rules of the instance need to be approved for synchronization, call [SubmitStructSyncOrderApproval](~~206166~~) The interface initiates an approval process and completes the approval.
+      * >  You can call [GetStructSyncJobDetail](~~206160~~) You can call this operation to query whether the target instance requires an approval.
+      *
+     */
     CompletableFuture<ExecuteStructSyncResponse> executeStructSync(ExecuteStructSyncRequest request);
 
     CompletableFuture<GetApprovalDetailResponse> getApprovalDetail(GetApprovalDetailRequest request);
@@ -124,6 +235,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetDataCorrectRollbackFileResponse> getDataCorrectRollbackFile(GetDataCorrectRollbackFileRequest request);
 
+    /**
+      * This interface applies to: [Common data change](~~58419~~) and [Batch Data import](~~144643~~) .
+      *
+     */
     CompletableFuture<GetDataCorrectSQLFileResponse> getDataCorrectSQLFile(GetDataCorrectSQLFileRequest request);
 
     CompletableFuture<GetDataCorrectTaskDetailResponse> getDataCorrectTaskDetail(GetDataCorrectTaskDetailRequest request);
@@ -142,6 +257,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetIntervalLimitOfSLAResponse> getIntervalLimitOfSLA(GetIntervalLimitOfSLARequest request);
 
+    /**
+      * You are a DMS administrator or a database administrator (DBA).
+      *
+     */
     CompletableFuture<GetLhSpaceByNameResponse> getLhSpaceByName(GetLhSpaceByNameRequest request);
 
     CompletableFuture<GetLogicDatabaseResponse> getLogicDatabase(GetLogicDatabaseRequest request);
@@ -152,6 +271,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetOnlineDDLProgressResponse> getOnlineDDLProgress(GetOnlineDDLProgressRequest request);
 
+    /**
+      * Prerequisites: You are an administrator of Data Management (DMS) or a security administrator. You can call the [ListUsers](~~141938~~) or [GetUser](~~147098~~) operation to obtain your user role from the RoleIdList parameter that is returned.
+      *
+     */
     CompletableFuture<GetOpLogResponse> getOpLog(GetOpLogRequest request);
 
     CompletableFuture<GetOrderAttachmentFileResponse> getOrderAttachmentFile(GetOrderAttachmentFileRequest request);
@@ -160,16 +283,30 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetOwnerApplyOrderDetailResponse> getOwnerApplyOrderDetail(GetOwnerApplyOrderDetailRequest request);
 
+    /**
+      * This interface is applicable to obtaining: **Database-permission** , **Table-permissions** , **sensitive column-permission** .
+      *
+     */
     CompletableFuture<GetPermApplyOrderDetailResponse> getPermApplyOrderDetail(GetPermApplyOrderDetailRequest request);
 
     CompletableFuture<GetPhysicalDatabaseResponse> getPhysicalDatabase(GetPhysicalDatabaseRequest request);
 
     CompletableFuture<GetProxyResponse> getProxy(GetProxyRequest request);
 
+    CompletableFuture<GetProxyAccessResponse> getProxyAccess(GetProxyAccessRequest request);
+
     CompletableFuture<GetRuleNumLimitOfSLAResponse> getRuleNumLimitOfSLA(GetRuleNumLimitOfSLARequest request);
 
+    /**
+      * For more instructions on this feature, see [SQL audit](~~60374~~) .
+      *
+     */
     CompletableFuture<GetSQLReviewCheckResultStatusResponse> getSQLReviewCheckResultStatus(GetSQLReviewCheckResultStatusRequest request);
 
+    /**
+      * For more information about the SQL review feature, see [SQL review](https://icms.alibaba-inc.com/content/dms/doc?l=1\\&m=61777\\&n=2433364).
+      *
+     */
     CompletableFuture<GetSQLReviewOptimizeDetailResponse> getSQLReviewOptimizeDetail(GetSQLReviewOptimizeDetailRequest request);
 
     CompletableFuture<GetStructSyncExecSqlDetailResponse> getStructSyncExecSqlDetail(GetStructSyncExecSqlDetailRequest request);
@@ -214,8 +351,16 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListDDLPublishRecordsResponse> listDDLPublishRecords(ListDDLPublishRecordsRequest request);
 
+    /**
+      * For more information about the Normal Data Modify feature, see [Change regular data](~~58419~~).
+      *
+     */
     CompletableFuture<ListDataCorrectPreCheckDBResponse> listDataCorrectPreCheckDB(ListDataCorrectPreCheckDBRequest request);
 
+    /**
+      * For more information about the Normal Data Modify feature, see [Change regular data](~~58419~~).
+      *
+     */
     CompletableFuture<ListDataCorrectPreCheckSQLResponse> listDataCorrectPreCheckSQL(ListDataCorrectPreCheckSQLRequest request);
 
     CompletableFuture<ListDatabaseUserPermssionsResponse> listDatabaseUserPermssions(ListDatabaseUserPermssionsRequest request);
@@ -236,6 +381,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListInstancesResponse> listInstances(ListInstancesRequest request);
 
+    /**
+      * *   Before you call this operation, make sure that you have the access permissions on the workspace. If you do not have the access permissions on the workspace, you can contact a DMS administrator, database administrator (DBA), or workspace administrator to add you as a member of the workspace. The [AddLhMembers](~~424759~~) operation can be called to add a workspace member.
+      * *   If you are a DMS administrator or a workspace administrator, you can query the business scenarios and task flows related to a user in a workspace based on the user ID.
+      *
+     */
     CompletableFuture<ListLhTaskFlowAndScenarioResponse> listLhTaskFlowAndScenario(ListLhTaskFlowAndScenarioRequest request);
 
     CompletableFuture<ListLogicDatabasesResponse> listLogicDatabases(ListLogicDatabasesRequest request);
@@ -256,6 +406,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListSQLExecAuditLogResponse> listSQLExecAuditLog(ListSQLExecAuditLogRequest request);
 
+    /**
+      * For more information about the SQL review feature, see [SQL review](~~60374~~).
+      *
+     */
     CompletableFuture<ListSQLReviewOriginSQLResponse> listSQLReviewOriginSQL(ListSQLReviewOriginSQLRequest request);
 
     CompletableFuture<ListScenariosResponse> listScenarios(ListScenariosRequest request);
@@ -276,6 +430,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListTaskFlowCooperatorsResponse> listTaskFlowCooperators(ListTaskFlowCooperatorsRequest request);
 
+    /**
+      * This operation is used for multi-condition query. You can call this operation to query the edges of a specified task flow that meet all specified conditions.
+      *
+     */
     CompletableFuture<ListTaskFlowEdgesByConditionResponse> listTaskFlowEdgesByCondition(ListTaskFlowEdgesByConditionRequest request);
 
     CompletableFuture<ListTaskFlowInstanceResponse> listTaskFlowInstance(ListTaskFlowInstanceRequest request);
@@ -316,8 +474,17 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<RefundPayAsYouGoOrderResponse> refundPayAsYouGoOrder(RefundPayAsYouGoOrderRequest request);
 
+    /**
+      * Prerequisites:
+      * You are a DMS administrator or a database administrator (DBA). You can call the [ListUsers](~~141938~~) or [GetUser](~~147098~~) operation to obtain your user role from the RoleIdList parameter that is returned.
+      *
+     */
     CompletableFuture<RegisterInstanceResponse> registerInstance(RegisterInstanceRequest request);
 
+    /**
+      * If you are an **administrator** in Data Management (DMS), you can call this operation to register a user for your enterprise. To view users that are assigned the administrator role, perform the following steps: Log on to the DMS console. In the top navigation bar, click O&M. In the left-side navigation pane, click User.
+      *
+     */
     CompletableFuture<RegisterUserResponse> registerUser(RegisterUserRequest request);
 
     CompletableFuture<RestartDataCorrectSQLJobResponse> restartDataCorrectSQLJob(RestartDataCorrectSQLJobRequest request);
@@ -346,6 +513,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<SyncInstanceMetaResponse> syncInstanceMeta(SyncInstanceMetaRequest request);
 
+    /**
+      * Before you call the UpdateInstance operation, call the [GetInstance](~~141567~~) or [ListInstances](~~141936~~) operation to obtain the complete information about the instance.
+      *
+     */
     CompletableFuture<UpdateInstanceResponse> updateInstance(UpdateInstanceRequest request);
 
     CompletableFuture<UpdateSLARulesResponse> updateSLARules(UpdateSLARulesRequest request);
@@ -354,20 +525,40 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<UpdateTaskConfigResponse> updateTaskConfig(UpdateTaskConfigRequest request);
 
+    /**
+      * You can call this operation to modify node configurations.
+      *
+     */
     CompletableFuture<UpdateTaskContentResponse> updateTaskContent(UpdateTaskContentRequest request);
 
     CompletableFuture<UpdateTaskFlowConstantsResponse> updateTaskFlowConstants(UpdateTaskFlowConstantsRequest request);
 
     CompletableFuture<UpdateTaskFlowCooperatorsResponse> updateTaskFlowCooperators(UpdateTaskFlowCooperatorsRequest request);
 
+    /**
+      * ## Usage notes
+      * The edges can be updated only when the following conditions are met:
+      * 1\\. The specified edge exists in the Directed Acyclic Graph (DAG) of the task flow. The DAG is identified by DagId.
+      * 2\\. The end points of the specified edge exist in the DAG of the task flow. The DAG is identified by DagId.
+      * 3\\. After the update, no loop appears in the DAG.
+      *
+     */
     CompletableFuture<UpdateTaskFlowEdgesResponse> updateTaskFlowEdges(UpdateTaskFlowEdgesRequest request);
 
     CompletableFuture<UpdateTaskFlowNameAndDescResponse> updateTaskFlowNameAndDesc(UpdateTaskFlowNameAndDescRequest request);
 
     CompletableFuture<UpdateTaskFlowNotificationResponse> updateTaskFlowNotification(UpdateTaskFlowNotificationRequest request);
 
+    /**
+      * Note: The new owner of the task flow must belong to the same tenant as the previous owner.
+      *
+     */
     CompletableFuture<UpdateTaskFlowOwnerResponse> updateTaskFlowOwner(UpdateTaskFlowOwnerRequest request);
 
+    /**
+      * You can call this operation to perform a full update. For incremental updates, see AddTaskFlowEdges, UpdateTaskFlowEdges, and DeleteTaskFlowEdgesByMultiCondition.
+      *
+     */
     CompletableFuture<UpdateTaskFlowRelationsResponse> updateTaskFlowRelations(UpdateTaskFlowRelationsRequest request);
 
     CompletableFuture<UpdateTaskFlowScheduleResponse> updateTaskFlowSchedule(UpdateTaskFlowScheduleRequest request);
@@ -376,6 +567,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<UpdateTaskNameResponse> updateTaskName(UpdateTaskNameRequest request);
 
+    /**
+      * ## Usage notes
+      * Only nodes of single-instance SQL assignment, script code, and ECS remote command have output variables.
+      *
+     */
     CompletableFuture<UpdateTaskOutputResponse> updateTaskOutput(UpdateTaskOutputRequest request);
 
     CompletableFuture<UpdateTaskTimeVariablesResponse> updateTaskTimeVariables(UpdateTaskTimeVariablesRequest request);

@@ -86,7 +86,7 @@ public class ListTaskFlowResponseBody extends TeaModel {
         private TaskFlowList taskFlowList; 
 
         /**
-         * ErrorCode.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class ListTaskFlowResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class ListTaskFlowResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,11 @@ public class ListTaskFlowResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -118,7 +122,7 @@ public class ListTaskFlowResponseBody extends TeaModel {
         }
 
         /**
-         * TaskFlowList.
+         * The information about the task flows returned.
          */
         public Builder taskFlowList(TaskFlowList taskFlowList) {
             this.taskFlowList = taskFlowList;
@@ -242,7 +246,7 @@ public class ListTaskFlowResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * CreatorId.
+             * The ID of the user who creates the task flow.
              */
             public Builder creatorId(String creatorId) {
                 this.creatorId = creatorId;
@@ -250,7 +254,7 @@ public class ListTaskFlowResponseBody extends TeaModel {
             }
 
             /**
-             * CreatorNickName.
+             * The name of the user who creates the task flow.
              */
             public Builder creatorNickName(String creatorNickName) {
                 this.creatorNickName = creatorNickName;
@@ -258,7 +262,7 @@ public class ListTaskFlowResponseBody extends TeaModel {
             }
 
             /**
-             * DagOwnerNickName.
+             * The name of the task flow owner.
              */
             public Builder dagOwnerNickName(String dagOwnerNickName) {
                 this.dagOwnerNickName = dagOwnerNickName;
@@ -266,7 +270,7 @@ public class ListTaskFlowResponseBody extends TeaModel {
             }
 
             /**
-             * DeployId.
+             * The ID of the latest deployment record.
              */
             public Builder deployId(Long deployId) {
                 this.deployId = deployId;
@@ -274,7 +278,7 @@ public class ListTaskFlowResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the task flow.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -282,7 +286,12 @@ public class ListTaskFlowResponseBody extends TeaModel {
             }
 
             /**
-             * LatestInstanceStatus.
+             * The status of the latest execution. Valid values:
+             * <p>
+             * 
+             * *   **0**: invalid.
+             * *   **1**: scheduling disabled.
+             * *   **2**: waiting to be scheduled.
              */
             public Builder latestInstanceStatus(Integer latestInstanceStatus) {
                 this.latestInstanceStatus = latestInstanceStatus;
@@ -290,7 +299,7 @@ public class ListTaskFlowResponseBody extends TeaModel {
             }
 
             /**
-             * LatestInstanceTime.
+             * The time when the latest execution record was generated.
              */
             public Builder latestInstanceTime(String latestInstanceTime) {
                 this.latestInstanceTime = latestInstanceTime;
@@ -298,7 +307,12 @@ public class ListTaskFlowResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the task flow. Valid values:
+             * <p>
+             * 
+             * *   **0**: The task flow is invalid.
+             * *   **1**: Scheduling is disabled for the task flow.
+             * *   **2**: The task flow is waiting to be scheduled.
              */
             public Builder status(Integer status) {
                 this.status = status;

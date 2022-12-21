@@ -121,7 +121,7 @@ public class GetInstanceRequest extends Request {
         }
 
         /**
-         * Host.
+         * The endpoint of the database instance. You can call the [ListInstances](~~141936~~) operation to obtain the endpoint.
          */
         public Builder host(String host) {
             this.putQueryParameter("Host", host);
@@ -130,7 +130,7 @@ public class GetInstanceRequest extends Request {
         }
 
         /**
-         * Port.
+         * The port number that is used to connect to the database instance. You can call the [ListInstances](~~141936~~) operation to obtain the port number.
          */
         public Builder port(Integer port) {
             this.putQueryParameter("Port", port);
@@ -139,7 +139,7 @@ public class GetInstanceRequest extends Request {
         }
 
         /**
-         * Sid.
+         * The system ID (SID) of the database instance. You can call the [ListInstances](~~141936~~) operation to obtain the SID.
          */
         public Builder sid(String sid) {
             this.putQueryParameter("Sid", sid);
@@ -148,7 +148,7 @@ public class GetInstanceRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to obtain the tenant ID.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

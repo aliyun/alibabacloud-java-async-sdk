@@ -86,7 +86,7 @@ public class GetUserResponseBody extends TeaModel {
         private User user; 
 
         /**
-         * ErrorCode.
+         * The error code returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class GetUserResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class GetUserResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,11 @@ public class GetUserResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -118,7 +122,7 @@ public class GetUserResponseBody extends TeaModel {
         }
 
         /**
-         * User.
+         * The information about the user.
          */
         public Builder user(User user) {
             this.user = user;
@@ -444,7 +448,7 @@ public class GetUserResponseBody extends TeaModel {
             private String webhook; 
 
             /**
-             * CurExecuteCount.
+             * The number of queries that are performed on the current day.
              */
             public Builder curExecuteCount(Long curExecuteCount) {
                 this.curExecuteCount = curExecuteCount;
@@ -452,7 +456,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * CurResultCount.
+             * The number of rows that are queried on the current day.
              */
             public Builder curResultCount(Long curResultCount) {
                 this.curResultCount = curResultCount;
@@ -460,7 +464,12 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * DingRobot.
+             * The DingTalk chatbot URL that is used to receive notifications.
+             * <p>
+             * 
+             * > 
+             * *   The system returns this parameter if the user has set a DingTalk chatbot URL in the console. To set a DingTalk chatbot URL in the console, move the pointer over the profile picture in the upper-right corner and click the Edit icon next to **Notice**.
+             * *   The system does not return this parameter if the user has not set a DingTalk chatbot URL.
              */
             public Builder dingRobot(String dingRobot) {
                 this.dingRobot = dingRobot;
@@ -468,7 +477,12 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * Email.
+             * The email address that is used to receive notifications.
+             * <p>
+             * 
+             * > 
+             * *   The system returns this parameter if the user has set an email address in the console. To set an email address in the console, move the pointer over the profile picture in the upper-right corner and click the Edit icon next to **Notice**.
+             * *   The system does not return this parameter if the user has not set an email address.
              */
             public Builder email(String email) {
                 this.email = email;
@@ -476,7 +490,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * LastLoginTime.
+             * The last time when the user logged on to the console.
              */
             public Builder lastLoginTime(String lastLoginTime) {
                 this.lastLoginTime = lastLoginTime;
@@ -484,7 +498,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * MaxExecuteCount.
+             * The maximum number of queries that can be performed on the current day.
              */
             public Builder maxExecuteCount(Long maxExecuteCount) {
                 this.maxExecuteCount = maxExecuteCount;
@@ -492,7 +506,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * MaxResultCount.
+             * The maximum number of rows that can be queried on the current day.
              */
             public Builder maxResultCount(Long maxResultCount) {
                 this.maxResultCount = maxResultCount;
@@ -500,7 +514,12 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * Mobile.
+             * The mobile phone number that is used to receive notifications.
+             * <p>
+             * 
+             * > 
+             * *   The system returns this parameter if the user has set a mobile phone number in the console. To set a mobile phone number in the console, move the pointer over the profile picture in the upper-right corner and click the Edit icon next to **Notice**.
+             * *   The system does not return this parameter if the user has not set a mobile phone number.
              */
             public Builder mobile(String mobile) {
                 this.mobile = mobile;
@@ -508,7 +527,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * NickName.
+             * The nickname of the user.
              */
             public Builder nickName(String nickName) {
                 this.nickName = nickName;
@@ -516,7 +535,14 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * NotificationMode.
+             * The notification method. The system returns one or more values. Valid values:
+             * <p>
+             * 
+             * *   **SMS**: text message.
+             * *   **EMAIL**: email.
+             * *   **DingTalk**: DingTalk.
+             * *   **DINGROBOT**: DingTalk chatbot.
+             * *   **WEBHOOK**: webhook.
              */
             public Builder notificationMode(String notificationMode) {
                 this.notificationMode = notificationMode;
@@ -524,7 +550,10 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * ParentUid.
+             * The UID of the Alibaba Cloud account of the user.
+             * <p>
+             * 
+             * >  An Alibaba Cloud account can contain one or more RAM users.
              */
             public Builder parentUid(Long parentUid) {
                 this.parentUid = parentUid;
@@ -532,7 +561,14 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * RoleIdList.
+             * The ID of the role that is assigned to the user. Valid values:
+             * <p>
+             * 
+             * *   **1**: a regular user role.
+             * *   **2**: a database administrator (DBA) role.
+             * *   **3**: a DMS administrator role.
+             * *   **4**: a security administrator role.
+             * *   **6**: a schema read-only user role.
              */
             public Builder roleIdList(RoleIdList roleIdList) {
                 this.roleIdList = roleIdList;
@@ -540,7 +576,14 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * RoleNameList.
+             * The name of the role that is assigned to the user. Valid values:
+             * <p>
+             * 
+             * *   **USER**: a regular user.
+             * *   **DBA** : a DBA.
+             * *   **ADMIN**: a DMS administrator.
+             * *   **SECURITY_ADMIN**: a security administrator.
+             * *   **STRUCT_READ_ONLY**: a schema read-only user.
              */
             public Builder roleNameList(RoleNameList roleNameList) {
                 this.roleNameList = roleNameList;
@@ -548,7 +591,11 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * SignatureMethod.
+             * The signature method that is used to secure connections when a webhook URL is used. Valid values:
+             * <p>
+             * 
+             * *   **NONE**: no signature.
+             * *   **HMAC_SHA1**: HMAC_SHA1.
              */
             public Builder signatureMethod(String signatureMethod) {
                 this.signatureMethod = signatureMethod;
@@ -556,7 +603,12 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * The status of the user. Valid values:
+             * <p>
+             * 
+             * *   **NORMAL**: The user is normal.
+             * *   **DISABLE**: The user is disabled.
+             * *   **DELETE**: The user is deleted.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -564,7 +616,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * Uid.
+             * The UID of the user.
              */
             public Builder uid(String uid) {
                 this.uid = uid;
@@ -572,7 +624,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * The ID of the user.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -580,7 +632,12 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * Webhook.
+             * The webhook URL that is used to receive notifications.
+             * <p>
+             * 
+             * > 
+             * *   If the user has set a webhook URL, DMS sends notifications to the specified URL.
+             * *   The system does not return this parameter if the user has not set a webhook URL.
              */
             public Builder webhook(String webhook) {
                 this.webhook = webhook;

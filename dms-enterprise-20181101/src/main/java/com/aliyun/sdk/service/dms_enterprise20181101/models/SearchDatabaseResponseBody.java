@@ -98,7 +98,7 @@ public class SearchDatabaseResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * ErrorCode.
+         * The error code returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -106,7 +106,7 @@ public class SearchDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -114,7 +114,7 @@ public class SearchDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class SearchDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * SearchDatabaseList.
+         * The information about the databases.
          */
         public Builder searchDatabaseList(SearchDatabaseList searchDatabaseList) {
             this.searchDatabaseList = searchDatabaseList;
@@ -130,7 +130,11 @@ public class SearchDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * - **true**: The request was successful.
+         * - **false**: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,7 +142,7 @@ public class SearchDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -428,7 +432,7 @@ public class SearchDatabaseResponseBody extends TeaModel {
             private String sid; 
 
             /**
-             * Alias.
+             * The alias of the database.
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -436,7 +440,7 @@ public class SearchDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * DatabaseId.
+             * The ID of the database.
              */
             public Builder databaseId(String databaseId) {
                 this.databaseId = databaseId;
@@ -444,7 +448,7 @@ public class SearchDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * DatalinkName.
+             * The name of the data link for cross-database queries.
              */
             public Builder datalinkName(String datalinkName) {
                 this.datalinkName = datalinkName;
@@ -452,7 +456,7 @@ public class SearchDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * DbType.
+             * The type of the database.
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -460,7 +464,7 @@ public class SearchDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * DbaId.
+             * The ID of the user who assumes the database administrator (DBA) role.
              */
             public Builder dbaId(String dbaId) {
                 this.dbaId = dbaId;
@@ -468,7 +472,7 @@ public class SearchDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Encoding.
+             * The encoding method of the database.
              */
             public Builder encoding(String encoding) {
                 this.encoding = encoding;
@@ -476,7 +480,7 @@ public class SearchDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * EnvType.
+             * The type of the environment to which the database belongs. For more information, see [Change the environment type of an instance](~~163309~~).
              */
             public Builder envType(String envType) {
                 this.envType = envType;
@@ -484,7 +488,7 @@ public class SearchDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Host.
+             * The endpoint of the instance in which the database resides.
              */
             public Builder host(String host) {
                 this.host = host;
@@ -492,7 +496,11 @@ public class SearchDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Logic.
+             * Indicates whether the database is a logical database. Valid values:
+             * <p>
+             * 
+             * *   **true**: The database is a logical database.
+             * *   **false**: The database is not a logical database.
              */
             public Builder logic(Boolean logic) {
                 this.logic = logic;
@@ -500,7 +508,7 @@ public class SearchDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerIdList.
+             * The IDs of the owners of the database.
              */
             public Builder ownerIdList(OwnerIdList ownerIdList) {
                 this.ownerIdList = ownerIdList;
@@ -508,7 +516,7 @@ public class SearchDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerNameList.
+             * The nicknames of the database owners.
              */
             public Builder ownerNameList(OwnerNameList ownerNameList) {
                 this.ownerNameList = ownerNameList;
@@ -516,7 +524,7 @@ public class SearchDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The port number of the instance in which the database resides.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -524,7 +532,7 @@ public class SearchDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * SchemaName.
+             * The name of the database.
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -532,7 +540,7 @@ public class SearchDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * SearchName.
+             * The name that is used to search for the database.
              */
             public Builder searchName(String searchName) {
                 this.searchName = searchName;
@@ -540,7 +548,7 @@ public class SearchDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Sid.
+             * The system ID (Sid) of the instance in which the database resides.
              */
             public Builder sid(String sid) {
                 this.sid = sid;

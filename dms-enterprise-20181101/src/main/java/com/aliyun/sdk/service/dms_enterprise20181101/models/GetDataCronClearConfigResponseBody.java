@@ -102,7 +102,7 @@ public class GetDataCronClearConfigResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned if the request failed.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +110,7 @@ public class GetDataCronClearConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class GetDataCronClearConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true: The request was successful.
+         * *   false: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -242,7 +246,7 @@ public class GetDataCronClearConfigResponseBody extends TeaModel {
             private Long optimizeTableAfterEveryClearTimes; 
 
             /**
-             * CronCallTimes.
+             * The number of times that the task is run.
              */
             public Builder cronCallTimes(String cronCallTimes) {
                 this.cronCallTimes = cronCallTimes;
@@ -250,7 +254,7 @@ public class GetDataCronClearConfigResponseBody extends TeaModel {
             }
 
             /**
-             * CronFormat.
+             * The crontab expression that you can use to run the task at a specified time. For more information, see [Crontab expression](~~206581~~).
              */
             public Builder cronFormat(String cronFormat) {
                 this.cronFormat = cronFormat;
@@ -258,7 +262,7 @@ public class GetDataCronClearConfigResponseBody extends TeaModel {
             }
 
             /**
-             * CronLastCallStartTime.
+             * The time when the task was last run.
              */
             public Builder cronLastCallStartTime(String cronLastCallStartTime) {
                 this.cronLastCallStartTime = cronLastCallStartTime;
@@ -266,7 +270,7 @@ public class GetDataCronClearConfigResponseBody extends TeaModel {
             }
 
             /**
-             * CronNextCallTime.
+             * The time when the task is run next time. This parameter is displayed only when the status of the scheduled task is SUCCESS.
              */
             public Builder cronNextCallTime(String cronNextCallTime) {
                 this.cronNextCallTime = cronNextCallTime;
@@ -274,7 +278,12 @@ public class GetDataCronClearConfigResponseBody extends TeaModel {
             }
 
             /**
-             * CronStatus.
+             * The status of the scheduled task. If this parameter is empty, it indicates the task is not run. Valid values:
+             * <p>
+             * 
+             * *   PAUSE: The task is suspended.
+             * *   WAITING: The task is waiting to be run.
+             * *   SUCCESS: The task is complete.
              */
             public Builder cronStatus(String cronStatus) {
                 this.cronStatus = cronStatus;
@@ -282,7 +291,7 @@ public class GetDataCronClearConfigResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentClearTaskCount.
+             * The number of times that the Optimize Table statement is automatically exeuted. This parameter is valid only when the value of the OptimizeTableAfterEveryClearTimes parameter is greater than 0.
              */
             public Builder currentClearTaskCount(Long currentClearTaskCount) {
                 this.currentClearTaskCount = currentClearTaskCount;
@@ -290,7 +299,7 @@ public class GetDataCronClearConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * The execution duration of the task. Unit: hours. If the value is 0, it indicates the duration is not specified.
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -298,7 +307,11 @@ public class GetDataCronClearConfigResponseBody extends TeaModel {
             }
 
             /**
-             * OptimizeTableAfterEveryClearTimes.
+             * Specifies whether to enable automatic execution of the OPTIMIZE TABLE statement. Valid values:
+             * <p>
+             * 
+             * *   0: disables automatic execution
+             * *   A number greater than 0: enables automatic execution. The number specifies the number of times that cleanup operations must be performed before the OPTIMIZE TABLE statement is automatically executed.
              */
             public Builder optimizeTableAfterEveryClearTimes(Long optimizeTableAfterEveryClearTimes) {
                 this.optimizeTableAfterEveryClearTimes = optimizeTableAfterEveryClearTimes;

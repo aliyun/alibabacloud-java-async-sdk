@@ -93,7 +93,11 @@ public class GetMetaTableColumnRequest extends Request {
         }
 
         /**
-         * TableGuid.
+         * The globally unique identifier (GUID) of the table in Data Management (DMS).
+         * <p>
+         * 
+         * *   If the database to which the table belongs is a logical database, you can call the [ListLogicTables](~~141875~~) operation to obtain the value of this parameter.
+         * *   If the database to which the table belongs is a physical database, you can call the [ListTables](~~141878~~) operation to obtain the value of this parameter.
          */
         public Builder tableGuid(String tableGuid) {
             this.putQueryParameter("TableGuid", tableGuid);
@@ -102,7 +106,7 @@ public class GetMetaTableColumnRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the tenant ID.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

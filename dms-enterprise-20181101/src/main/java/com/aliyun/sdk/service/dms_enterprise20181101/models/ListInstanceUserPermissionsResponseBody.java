@@ -98,7 +98,7 @@ public class ListInstanceUserPermissionsResponseBody extends TeaModel {
         private UserPermissions userPermissions; 
 
         /**
-         * ErrorCode.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -106,7 +106,7 @@ public class ListInstanceUserPermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -114,7 +114,7 @@ public class ListInstanceUserPermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,11 @@ public class ListInstanceUserPermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * 
+         * - true: The request is successful.
+         * - false: The request fails.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,7 +134,7 @@ public class ListInstanceUserPermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of returned entries.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -138,7 +142,7 @@ public class ListInstanceUserPermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * UserPermissions.
+         * The permissions of the user on the instance.
          */
         public Builder userPermissions(UserPermissions userPermissions) {
             this.userPermissions = userPermissions;
@@ -238,7 +242,7 @@ public class ListInstanceUserPermissionsResponseBody extends TeaModel {
             private String userAccessId; 
 
             /**
-             * CreateDate.
+             * The time when the permissions were granted.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -246,7 +250,7 @@ public class ListInstanceUserPermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireDate.
+             * The time when the permissions expire.
              */
             public Builder expireDate(String expireDate) {
                 this.expireDate = expireDate;
@@ -254,7 +258,7 @@ public class ListInstanceUserPermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * ExtraData.
+             * This parameter is reserved.
              */
             public Builder extraData(String extraData) {
                 this.extraData = extraData;
@@ -262,7 +266,7 @@ public class ListInstanceUserPermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * OriginFrom.
+             * The user who grants the permissions.
              */
             public Builder originFrom(String originFrom) {
                 this.originFrom = originFrom;
@@ -270,7 +274,11 @@ public class ListInstanceUserPermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * PermType.
+             * The type of the permissions. Valid values:
+             * <p>
+             * 
+             * *   LOGIN: the logon permissions
+             * *   PERF: the query permissions on the instance
              */
             public Builder permType(String permType) {
                 this.permType = permType;
@@ -278,7 +286,7 @@ public class ListInstanceUserPermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * UserAccessId.
+             * The ID of the authorization record.
              */
             public Builder userAccessId(String userAccessId) {
                 this.userAccessId = userAccessId;
@@ -396,7 +404,7 @@ public class ListInstanceUserPermissionsResponseBody extends TeaModel {
             private String userNickName; 
 
             /**
-             * InstanceId.
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -404,7 +412,7 @@ public class ListInstanceUserPermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * PermDetails.
+             * The details of permissions.
              */
             public Builder permDetails(PermDetails permDetails) {
                 this.permDetails = permDetails;
@@ -412,7 +420,7 @@ public class ListInstanceUserPermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * The ID of the user.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -420,7 +428,7 @@ public class ListInstanceUserPermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * UserNickName.
+             * The nickname of the user.
              */
             public Builder userNickName(String userNickName) {
                 this.userNickName = userNickName;

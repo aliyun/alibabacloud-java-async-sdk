@@ -106,7 +106,7 @@ public class GetProxyRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the database instance. You can call the [ListInstances](https://www.alibabacloud.com/help/en/data-management-service/latest/listinstances) or [GetInstance](https://www.alibabacloud.com/help/en/data-management-service/latest/getinstance) operation to query the database instance ID.
          */
         public Builder instanceId(Long instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -115,7 +115,7 @@ public class GetProxyRequest extends Request {
         }
 
         /**
-         * ProxyId.
+         * The ID of the secure access proxy. You can call the [ListProxies](https://www.alibabacloud.com/help/en/data-management-service/latest/listproxies) operation to query the ID of the secure access proxy.
          */
         public Builder proxyId(Long proxyId) {
             this.putQueryParameter("ProxyId", proxyId);
@@ -124,7 +124,7 @@ public class GetProxyRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The ID of the tenant. You can call the [GetUserActiveTenant](https://www.alibabacloud.com/help/en/data-management-service/latest/getuseractivetenant) operation to query the tenant ID.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

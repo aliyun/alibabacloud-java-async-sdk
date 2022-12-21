@@ -98,7 +98,7 @@ public class ListDBTaskSQLJobDetailResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * DBTaskSQLJobDetailList.
+         * The details of SQL tasks.
          */
         public Builder DBTaskSQLJobDetailList(java.util.List < DBTaskSQLJobDetailList> DBTaskSQLJobDetailList) {
             this.DBTaskSQLJobDetailList = DBTaskSQLJobDetailList;
@@ -106,7 +106,7 @@ public class ListDBTaskSQLJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code that is returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +114,7 @@ public class ListDBTaskSQLJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message that is returned.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +122,7 @@ public class ListDBTaskSQLJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,11 @@ public class ListDBTaskSQLJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request is successful.
+         * *   **false**: The request fails.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,7 +142,7 @@ public class ListDBTaskSQLJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of SQL tasks.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -334,7 +338,7 @@ public class ListDBTaskSQLJobDetailResponseBody extends TeaModel {
             private Long timeDelay; 
 
             /**
-             * AffectRows.
+             * The number of rows affected by the SQL task.
              */
             public Builder affectRows(Long affectRows) {
                 this.affectRows = affectRows;
@@ -342,7 +346,7 @@ public class ListDBTaskSQLJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentSql.
+             * The SQL statement that was executed in the SQL task.
              */
             public Builder currentSql(String currentSql) {
                 this.currentSql = currentSql;
@@ -350,7 +354,7 @@ public class ListDBTaskSQLJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DbId.
+             * The ID of the physical database.
              */
             public Builder dbId(Long dbId) {
                 this.dbId = dbId;
@@ -358,7 +362,7 @@ public class ListDBTaskSQLJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * The point in time when the SQL task ended.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -366,7 +370,7 @@ public class ListDBTaskSQLJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ExecuteCount.
+             * The number of times that the SQL statement was executed.
              */
             public Builder executeCount(Long executeCount) {
                 this.executeCount = executeCount;
@@ -374,7 +378,7 @@ public class ListDBTaskSQLJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * JobDetailId.
+             * The ID of the details of the SQL task.
              */
             public Builder jobDetailId(Long jobDetailId) {
                 this.jobDetailId = jobDetailId;
@@ -382,7 +386,7 @@ public class ListDBTaskSQLJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * The ID of the SQL task.
              */
             public Builder jobId(Long jobId) {
                 this.jobId = jobId;
@@ -390,7 +394,7 @@ public class ListDBTaskSQLJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Log.
+             * The details of the operational log.
              */
             public Builder log(String log) {
                 this.log = log;
@@ -398,7 +402,11 @@ public class ListDBTaskSQLJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Logic.
+             * Indicates whether the database is a logical database. Valid values:
+             * <p>
+             * 
+             * *   **true**: The database is a logical database.
+             * *   **false**: The database is a physical database.
              */
             public Builder logic(Boolean logic) {
                 this.logic = logic;
@@ -406,7 +414,11 @@ public class ListDBTaskSQLJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Skip.
+             * Indicates whether the SQL statement was skipped. Valid values:
+             * <p>
+             * 
+             * *   **true**: The SQL statement was skipped.
+             * *   **false**: The SQL statement was not skipped.
              */
             public Builder skip(Boolean skip) {
                 this.skip = skip;
@@ -414,7 +426,7 @@ public class ListDBTaskSQLJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SqlType.
+             * The type of the SQL statement, such as DELETE, UPDATE, or ALTER_TABLE.
              */
             public Builder sqlType(String sqlType) {
                 this.sqlType = sqlType;
@@ -422,7 +434,7 @@ public class ListDBTaskSQLJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The point in time when the SQL task started.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -430,7 +442,17 @@ public class ListDBTaskSQLJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the SQL task. Valid values:
+             * <p>
+             * 
+             * *   **INIT**: The SQL task was initialized.
+             * *   **PENDING**: The SQL task waited to be run.
+             * *   **BE_SCHEDULED**: The SQL task waited to be scheduled.
+             * *   **FAIL**: The SQL task failed.
+             * *   **SUCCESS**: The SQL task was successful.
+             * *   **PAUSE**: The SQL task was paused.
+             * *   **DELETE**: The SQL task was deleted.
+             * *   **RUNNING**: The SQL task was being run.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -438,7 +460,7 @@ public class ListDBTaskSQLJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TimeDelay.
+             * The duration of the SQL task. Unit: milliseconds.
              */
             public Builder timeDelay(Long timeDelay) {
                 this.timeDelay = timeDelay;

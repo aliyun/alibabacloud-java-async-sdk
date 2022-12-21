@@ -86,7 +86,7 @@ public class ListDataCorrectPreCheckSQLResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * ErrorCode.
+         * The error code returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class ListDataCorrectPreCheckSQLResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class ListDataCorrectPreCheckSQLResponseBody extends TeaModel {
         }
 
         /**
-         * PreCheckSQLList.
+         * The precheck information about SQL statements.
          */
         public Builder preCheckSQLList(java.util.List < PreCheckSQLList> preCheckSQLList) {
             this.preCheckSQLList = preCheckSQLList;
@@ -110,7 +110,7 @@ public class ListDataCorrectPreCheckSQLResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class ListDataCorrectPreCheckSQLResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request is successful.
+         * *   **false**: The request fails.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -230,7 +234,7 @@ public class ListDataCorrectPreCheckSQLResponseBody extends TeaModel {
             private String tableNames; 
 
             /**
-             * AffectRows.
+             * The estimated number of affected rows.
              */
             public Builder affectRows(Long affectRows) {
                 this.affectRows = affectRows;
@@ -238,7 +242,7 @@ public class ListDataCorrectPreCheckSQLResponseBody extends TeaModel {
             }
 
             /**
-             * CheckSQL.
+             * The SQL statement.
              */
             public Builder checkSQL(String checkSQL) {
                 this.checkSQL = checkSQL;
@@ -246,7 +250,7 @@ public class ListDataCorrectPreCheckSQLResponseBody extends TeaModel {
             }
 
             /**
-             * DbId.
+             * The ID of the database.
              */
             public Builder dbId(Long dbId) {
                 this.dbId = dbId;
@@ -254,7 +258,7 @@ public class ListDataCorrectPreCheckSQLResponseBody extends TeaModel {
             }
 
             /**
-             * SQLReviewQueryKey.
+             * The key that is used to query the details of optimization suggestions. You can call the [GetSQLReviewOptimizeDetail](~~265977~~) operation to query the details of optimization suggestions based on the key.
              */
             public Builder SQLReviewQueryKey(String SQLReviewQueryKey) {
                 this.SQLReviewQueryKey = SQLReviewQueryKey;
@@ -262,7 +266,14 @@ public class ListDataCorrectPreCheckSQLResponseBody extends TeaModel {
             }
 
             /**
-             * SqlReviewStatus.
+             * The review status of the SQL statement. Valid values:
+             * <p>
+             * 
+             * *   **WAITING**: The SQL statement is pending for review.
+             * *   **RUNNING**: The SQL statement is being reviewed.
+             * *   **IGNORE**: The SQL statement review is skipped.
+             * *   **PASS**: The SQL statement passed the review.
+             * *   **BLOCK**: The SQL statement failed the review.
              */
             public Builder sqlReviewStatus(String sqlReviewStatus) {
                 this.sqlReviewStatus = sqlReviewStatus;
@@ -270,7 +281,7 @@ public class ListDataCorrectPreCheckSQLResponseBody extends TeaModel {
             }
 
             /**
-             * SqlType.
+             * The type of the SQL statement, such as DELETE, UPDATE, or ALTER_TABLE.
              */
             public Builder sqlType(String sqlType) {
                 this.sqlType = sqlType;
@@ -278,7 +289,7 @@ public class ListDataCorrectPreCheckSQLResponseBody extends TeaModel {
             }
 
             /**
-             * TableNames.
+             * The name of the table whose data is changed.
              */
             public Builder tableNames(String tableNames) {
                 this.tableNames = tableNames;

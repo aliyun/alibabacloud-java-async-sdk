@@ -86,7 +86,7 @@ public class ListEffectiveOrdersResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * ErrorCode.
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class ListEffectiveOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned if the request failed.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class ListEffectiveOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * OrderSummary.
+         * The information about orders.
          */
         public Builder orderSummary(java.util.List < OrderSummary> orderSummary) {
             this.orderSummary = orderSummary;
@@ -110,7 +110,7 @@ public class ListEffectiveOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class ListEffectiveOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -218,7 +222,7 @@ public class ListEffectiveOrdersResponseBody extends TeaModel {
             private String startTime; 
 
             /**
-             * 购买用户UID
+             * The UID of the user who placed the order.
              */
             public Builder buyerId(String buyerId) {
                 this.buyerId = buyerId;
@@ -226,7 +230,7 @@ public class ListEffectiveOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * 订单到期时间
+             * The time when the instance expires.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -234,7 +238,7 @@ public class ListEffectiveOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * 订单购买规格
+             * The maximum number of database instances that you can use DMS to manage.
              */
             public Builder insNum(String insNum) {
                 this.insNum = insNum;
@@ -242,7 +246,7 @@ public class ListEffectiveOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * 购买商品实例ID
+             * The ID of the instance for the purchased service.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -250,7 +254,7 @@ public class ListEffectiveOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * 购买订单ID
+             * The ID of the order.
              */
             public Builder orderId(String orderId) {
                 this.orderId = orderId;
@@ -258,7 +262,7 @@ public class ListEffectiveOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * 订单开始时间
+             * The time when the instance is started.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -347,10 +351,11 @@ public class ListEffectiveOrdersResponseBody extends TeaModel {
             private String versionType; 
 
             /**
-             * DMS的商品Code
+             * The commodity code of DMS.
              * <p>
-             * - 中国站：dms_pre_public_cn（包年包月）、dms_post_public_cn（按量付费）
-             * - 国际站：dms_pre_public_intl（包年包月）、dms_post_public_intl（按量付费）
+             * 
+             * *   dms_pre_public_cn: DMS that uses the subscription billing method
+             * *   dms_post_public_cn: DMS that uses the pay-as-you-go billing method
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -358,10 +363,11 @@ public class ListEffectiveOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * 商品类型
+             * The type of the service.
              * <p>
-             * - versionType：管控模式
-             * - SensitiveDataProtection：敏感数据保护
+             * 
+             * *   **VersionType**: DMS that supports control modes
+             * *   **SensitiveDataProtection**: DMS that supports sensitive data protection
              */
             public Builder commodityType(String commodityType) {
                 this.commodityType = commodityType;
@@ -369,7 +375,7 @@ public class ListEffectiveOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * 订单明细
+             * Details about the orders.
              */
             public Builder orderList(java.util.List < OrderList> orderList) {
                 this.orderList = orderList;
@@ -377,7 +383,7 @@ public class ListEffectiveOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * OrderList订单明细额度总和
+             * The sum of the number of instances that you can use DMS to manage in all orders.
              */
             public Builder totalQuota(Integer totalQuota) {
                 this.totalQuota = totalQuota;
@@ -385,10 +391,11 @@ public class ListEffectiveOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * 商品类型为管控模式时（CommodityType = versionType ），区分管控模式的类型：
+             * The control mode of DMS. Valid values:
              * <p>
-             * - stand：稳定变更
-             * - safety：安全协同
+             * 
+             * *   **stand**: Stable Change
+             * *   **safety**: Security Collaboration
              */
             public Builder versionType(String versionType) {
                 this.versionType = versionType;

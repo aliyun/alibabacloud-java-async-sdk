@@ -98,7 +98,7 @@ public class ListProxySQLExecAuditLogResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * ErrorCode.
+         * The error code returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -106,7 +106,7 @@ public class ListProxySQLExecAuditLogResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -114,7 +114,7 @@ public class ListProxySQLExecAuditLogResponseBody extends TeaModel {
         }
 
         /**
-         * ProxySQLExecAuditLogList.
+         * The audit information about the database instance that is provided by the secure access proxy feature.
          */
         public Builder proxySQLExecAuditLogList(ProxySQLExecAuditLogList proxySQLExecAuditLogList) {
             this.proxySQLExecAuditLogList = proxySQLExecAuditLogList;
@@ -122,7 +122,7 @@ public class ListProxySQLExecAuditLogResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,11 @@ public class ListProxySQLExecAuditLogResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,7 +142,7 @@ public class ListProxySQLExecAuditLogResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The number of entries returned.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -310,7 +314,7 @@ public class ListProxySQLExecAuditLogResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * AffectRows.
+             * Indicates the total number of rows returned after the SQL statement was executed. If an SELECT SQL statement is executed, the return value of this parameter indicates the total number of the queried data rows.
              */
             public Builder affectRows(Long affectRows) {
                 this.affectRows = affectRows;
@@ -318,7 +322,7 @@ public class ListProxySQLExecAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * ElapsedTime.
+             * The amount of time that is consumed to execute the SQL statement. Unit: milliseconds.
              */
             public Builder elapsedTime(Long elapsedTime) {
                 this.elapsedTime = elapsedTime;
@@ -326,7 +330,12 @@ public class ListProxySQLExecAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * ExecState.
+             * The execution status of the SQL statement. Valid values:
+             * <p>
+             * 
+             * *   **FAIL**: The execution of the SQL statement fails.
+             * *   **CANCEL**: The execution of the SQL statement is canceled.
+             * *   **SUCCESS**: The SQL statement is executed.
              */
             public Builder execState(String execState) {
                 this.execState = execState;
@@ -334,7 +343,7 @@ public class ListProxySQLExecAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the database instance.
              */
             public Builder instanceId(Long instanceId) {
                 this.instanceId = instanceId;
@@ -342,7 +351,7 @@ public class ListProxySQLExecAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * The name of the database instance.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -350,7 +359,7 @@ public class ListProxySQLExecAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * OpTime.
+             * The time at which the user executes the SQL statement on the database instance. The value of this parameter must be a timestamp that follows the UNIX time format.
              */
             public Builder opTime(String opTime) {
                 this.opTime = opTime;
@@ -358,7 +367,7 @@ public class ListProxySQLExecAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * Remark.
+             * The description.
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -366,7 +375,7 @@ public class ListProxySQLExecAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * SQL.
+             * The SQL statement that was executed.
              */
             public Builder SQL(String SQL) {
                 this.SQL = SQL;
@@ -374,7 +383,15 @@ public class ListProxySQLExecAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * SQLType.
+             * The type of the SQL statement. Valid values:
+             * <p>
+             * 
+             * *   **SELECT**
+             * *   **INSERT**
+             * *   **DELETE**
+             * *   **CREATE_TABLE**
+             * 
+             * >  You can choose Operation Audit > Secure Access Proxy in the top navigation bar of the DMS console to view more types of SQL statements.
              */
             public Builder SQLType(String SQLType) {
                 this.SQLType = SQLType;
@@ -382,7 +399,7 @@ public class ListProxySQLExecAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * SchemaName.
+             * The name of the database.
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -390,7 +407,7 @@ public class ListProxySQLExecAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * The ID of the user.
              */
             public Builder userId(Long userId) {
                 this.userId = userId;
@@ -398,7 +415,7 @@ public class ListProxySQLExecAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * The nickname of the user.
              */
             public Builder userName(String userName) {
                 this.userName = userName;
