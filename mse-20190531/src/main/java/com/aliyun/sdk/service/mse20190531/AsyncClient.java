@@ -32,6 +32,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AddGatewaySlbResponse> addGatewaySlb(AddGatewaySlbRequest request);
 
+    CompletableFuture<AddMigrationTaskResponse> addMigrationTask(AddMigrationTaskRequest request);
+
     CompletableFuture<AddMockRuleResponse> addMockRule(AddMockRuleRequest request);
 
     CompletableFuture<AddSSLCertResponse> addSSLCert(AddSSLCertRequest request);
@@ -322,6 +324,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<QueryClusterDiskSpecificationResponse> queryClusterDiskSpecification(QueryClusterDiskSpecificationRequest request);
 
+    CompletableFuture<QueryClusterInfoResponse> queryClusterInfo(QueryClusterInfoRequest request);
+
     CompletableFuture<QueryClusterSpecificationResponse> queryClusterSpecification(QueryClusterSpecificationRequest request);
 
     CompletableFuture<QueryConfigResponse> queryConfig(QueryConfigRequest request);
@@ -331,6 +335,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryGatewayTypeResponse> queryGatewayType(QueryGatewayTypeRequest request);
 
     CompletableFuture<QueryGovernanceKubernetesClusterResponse> queryGovernanceKubernetesCluster(QueryGovernanceKubernetesClusterRequest request);
+
+    CompletableFuture<QueryInstancesInfoResponse> queryInstancesInfo(QueryInstancesInfoRequest request);
 
     CompletableFuture<QueryMonitorResponse> queryMonitor(QueryMonitorRequest request);
 
