@@ -112,7 +112,12 @@ public class DescribeVodAIDataRequest extends Request {
         } 
 
         /**
-         * AIType.
+         * The type of video AI. If you do not set this parameter, the data of all video AI types is returned. You can specify multiple types. Separate them with commas (,). Valid values:
+         * <p>
+         * 
+         * *   **AIVideoCensor**: automated review
+         * *   **AIVideoFPShot**: media fingerprinting
+         * *   **AIVideoTag**: smart tag
          */
         public Builder AIType(String AIType) {
             this.putQueryParameter("AIType", AIType);
@@ -121,7 +126,7 @@ public class DescribeVodAIDataRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -139,7 +144,13 @@ public class DescribeVodAIDataRequest extends Request {
         }
 
         /**
-         * Region.
+         * The region where the processed file is stored. If you do not set this parameter, the data in all regions is returned. You can specify multiple regions. Separate them with commas (,). Valid values:
+         * <p>
+         * 
+         * *   **cn-shanghai**: China (Shanghai)
+         * *   **cn-beijing**: China (Beijing)
+         * *   **eu-central-1**: Germany (Frankfurt)
+         * *   **ap-southeast-1**: Singapore
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -148,7 +159,7 @@ public class DescribeVodAIDataRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

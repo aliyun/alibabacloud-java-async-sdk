@@ -74,7 +74,7 @@ public class GetCategoriesResponseBody extends TeaModel {
         private Long subTotal; 
 
         /**
-         * Category.
+         * The information about the specified category.
          */
         public Builder category(Category category) {
             this.category = category;
@@ -82,7 +82,7 @@ public class GetCategoriesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,7 +90,7 @@ public class GetCategoriesResponseBody extends TeaModel {
         }
 
         /**
-         * SubCategories.
+         * The list of subcategories.
          */
         public Builder subCategories(SubCategories subCategories) {
             this.subCategories = subCategories;
@@ -98,7 +98,7 @@ public class GetCategoriesResponseBody extends TeaModel {
         }
 
         /**
-         * SubTotal.
+         * The total number of subcategories.
          */
         public Builder subTotal(Long subTotal) {
             this.subTotal = subTotal;
@@ -186,7 +186,7 @@ public class GetCategoriesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * CateId.
+             * The ID of the video category.
              */
             public Builder cateId(Long cateId) {
                 this.cateId = cateId;
@@ -194,7 +194,10 @@ public class GetCategoriesResponseBody extends TeaModel {
             }
 
             /**
-             * CateName.
+             * The name of the category.
+             * <p>
+             * *   The value can be up to 64 bytes in length.
+             * *   The string must be encoded in the UTF-8 format.
              */
             public Builder cateName(String cateName) {
                 this.cateName = cateName;
@@ -202,7 +205,7 @@ public class GetCategoriesResponseBody extends TeaModel {
             }
 
             /**
-             * Level.
+             * The level of the category. A value of **0** indicates a level 1 category.
              */
             public Builder level(Long level) {
                 this.level = level;
@@ -210,7 +213,7 @@ public class GetCategoriesResponseBody extends TeaModel {
             }
 
             /**
-             * ParentId.
+             * The ID of the parent category. The parent category ID of a level 1 category is **-1**.
              */
             public Builder parentId(Long parentId) {
                 this.parentId = parentId;
@@ -218,7 +221,10 @@ public class GetCategoriesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the category. Valid values:
+             * <p>
+             * *   **default** (default): default category
+             * *   **material**: material category
              */
             public Builder type(String type) {
                 this.type = type;
@@ -319,7 +325,7 @@ public class GetCategoriesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * CateId.
+             * The ID of the video category.
              */
             public Builder cateId(Long cateId) {
                 this.cateId = cateId;
@@ -327,7 +333,10 @@ public class GetCategoriesResponseBody extends TeaModel {
             }
 
             /**
-             * CateName.
+             * The name of the category.
+             * <p>
+             * *   The value can be up to 64 bytes in length.
+             * *   The string must be encoded in the UTF-8 format.
              */
             public Builder cateName(String cateName) {
                 this.cateName = cateName;
@@ -335,7 +344,7 @@ public class GetCategoriesResponseBody extends TeaModel {
             }
 
             /**
-             * Level.
+             * The level of the category. A value of **0** indicates a level 1 category.
              */
             public Builder level(Long level) {
                 this.level = level;
@@ -343,7 +352,7 @@ public class GetCategoriesResponseBody extends TeaModel {
             }
 
             /**
-             * ParentId.
+             * The ID of the parent category. The parent category ID of a level 1 category is **-1**.
              */
             public Builder parentId(Long parentId) {
                 this.parentId = parentId;
@@ -351,7 +360,7 @@ public class GetCategoriesResponseBody extends TeaModel {
             }
 
             /**
-             * SubTotal.
+             * The total number of subcategories.
              */
             public Builder subTotal(Long subTotal) {
                 this.subTotal = subTotal;
@@ -359,7 +368,11 @@ public class GetCategoriesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the category. Valid values:
+             * <p>
+             * 
+             * *   **default** (default): default category
+             * *   **material**: material category
              */
             public Builder type(String type) {
                 this.type = type;
@@ -400,7 +413,7 @@ public class GetCategoriesResponseBody extends TeaModel {
             private java.util.List < SubCategoriesCategory> category; 
 
             /**
-             * Category.
+             * The information about the specified category.
              */
             public Builder category(java.util.List < SubCategoriesCategory> category) {
                 this.category = category;

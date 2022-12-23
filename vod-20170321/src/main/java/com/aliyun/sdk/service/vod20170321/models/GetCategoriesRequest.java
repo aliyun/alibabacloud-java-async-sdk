@@ -110,7 +110,7 @@ public class GetCategoriesRequest extends Request {
         } 
 
         /**
-         * CateId.
+         * The ID of the category. Default value: **-1**, which indicates the parent category ID of a level 1 category.
          */
         public Builder cateId(Long cateId) {
             this.putQueryParameter("CateId", cateId);
@@ -119,7 +119,7 @@ public class GetCategoriesRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * The number of the page where the subcategories to be returned are listed. Default value: **1**.
          */
         public Builder pageNo(Long pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -128,7 +128,7 @@ public class GetCategoriesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page of the subcategory list. Default value: **10**. Maximum value: **100**.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -137,7 +137,11 @@ public class GetCategoriesRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * The method for sorting the results. Valid values:
+         * <p>
+         * 
+         * *   **CreationTime:Desc** (default): The results are sorted in reverse chronological order based on the creation time.
+         * *   **CreationTime:Asc**: The results are sorted in chronological order based on the creation time.
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -146,7 +150,11 @@ public class GetCategoriesRequest extends Request {
         }
 
         /**
-         * Type.
+         * The type of the category. Valid values:
+         * <p>
+         * 
+         * *   **default** (default): default category
+         * *   **material**: material category
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

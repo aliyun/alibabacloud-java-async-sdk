@@ -113,7 +113,7 @@ public class AddWatermarkRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * The ID of the application. Default value: **app-1000000**. For more information, see [Overview](~~113600~~).
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -122,7 +122,7 @@ public class AddWatermarkRequest extends Request {
         }
 
         /**
-         * FileUrl.
+         * The Object Storage Service (OSS) URL of the watermark file. You must set this parameter if you add image watermarks.
          */
         public Builder fileUrl(String fileUrl) {
             this.putQueryParameter("FileUrl", fileUrl);
@@ -131,7 +131,10 @@ public class AddWatermarkRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the watermark. Only letters and digits are supported.
+         * <p>
+         * *   The name can be up to 128 bytes in length.
+         * *   The value must be encoded in UTF-8.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -140,7 +143,10 @@ public class AddWatermarkRequest extends Request {
         }
 
         /**
-         * Type.
+         * The type of the watermark. Valid values:
+         * <p>
+         * *   **Image**: This is the default value.
+         * *   **Text**
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -149,7 +155,9 @@ public class AddWatermarkRequest extends Request {
         }
 
         /**
-         * WatermarkConfig.
+         * The configurations such as the position and effect of the text watermark or image watermark. The value is a JSON-formatted string.
+         * <p>
+         * > The value of this parameter varies with the watermark type. For more information about the data structure, see the "WatermarkConfig" section of the [Media processing parameters](~~98618~~) topic.
          */
         public Builder watermarkConfig(String watermarkConfig) {
             this.putQueryParameter("WatermarkConfig", watermarkConfig);

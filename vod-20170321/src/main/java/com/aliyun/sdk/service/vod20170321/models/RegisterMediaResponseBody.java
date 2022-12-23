@@ -62,7 +62,7 @@ public class RegisterMediaResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * FailedFileURLs.
+         * The URLs of the media files that failed to be registered.
          */
         public Builder failedFileURLs(java.util.List < String > failedFileURLs) {
             this.failedFileURLs = failedFileURLs;
@@ -70,7 +70,7 @@ public class RegisterMediaResponseBody extends TeaModel {
         }
 
         /**
-         * RegisteredMediaList.
+         * The media files that are registered, including newly registered and repeatedly registered media files.
          */
         public Builder registeredMediaList(java.util.List < RegisteredMediaList> registeredMediaList) {
             this.registeredMediaList = registeredMediaList;
@@ -78,7 +78,7 @@ public class RegisterMediaResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -142,7 +142,7 @@ public class RegisterMediaResponseBody extends TeaModel {
             private Boolean newRegister; 
 
             /**
-             * FileURL.
+             * The OSS URL of the media file.
              */
             public Builder fileURL(String fileURL) {
                 this.fileURL = fileURL;
@@ -150,7 +150,7 @@ public class RegisterMediaResponseBody extends TeaModel {
             }
 
             /**
-             * MediaId.
+             * The ID of the media file that is registered with ApsaraVideo VOD. If the registered media file is an audio or video file, the value of the VideoId parameter returned by ApsaraVideo VOD takes effect.
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;
@@ -158,7 +158,10 @@ public class RegisterMediaResponseBody extends TeaModel {
             }
 
             /**
-             * NewRegister.
+             * Indicates whether the media file is newly registered or repeatedly registered. Valid values:  
+             * <p>
+             * - **true**: The media file is newly registered.
+             * - **false**: The media file is repeatedly registered.
              */
             public Builder newRegister(Boolean newRegister) {
                 this.newRegister = newRegister;

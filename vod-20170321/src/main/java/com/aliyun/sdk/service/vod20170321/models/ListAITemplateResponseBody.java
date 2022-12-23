@@ -50,7 +50,7 @@ public class ListAITemplateResponseBody extends TeaModel {
         private java.util.List < TemplateInfoList> templateInfoList; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ListAITemplateResponseBody extends TeaModel {
         }
 
         /**
-         * TemplateInfoList.
+         * The information about the AI templates.
          */
         public Builder templateInfoList(java.util.List < TemplateInfoList> templateInfoList) {
             this.templateInfoList = templateInfoList;
@@ -182,7 +182,7 @@ public class ListAITemplateResponseBody extends TeaModel {
             private String templateType; 
 
             /**
-             * CreationTime.
+             * The time when the AI template was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -190,7 +190,11 @@ public class ListAITemplateResponseBody extends TeaModel {
             }
 
             /**
-             * IsDefault.
+             * Indicates whether the template is the default AI template. Valid values:
+             * <p>
+             * 
+             * *   **Default**
+             * *   **NotDefault**
              */
             public Builder isDefault(String isDefault) {
                 this.isDefault = isDefault;
@@ -198,7 +202,7 @@ public class ListAITemplateResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * The time when the AI template was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -206,7 +210,11 @@ public class ListAITemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * The source of the AI template. Valid values:
+             * <p>
+             * 
+             * *   **System**
+             * *   **Custom**
              */
             public Builder source(String source) {
                 this.source = source;
@@ -214,7 +222,7 @@ public class ListAITemplateResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateConfig.
+             * The detailed configurations of the AI template. The value is a JSON string.
              */
             public Builder templateConfig(String templateConfig) {
                 this.templateConfig = templateConfig;
@@ -222,7 +230,7 @@ public class ListAITemplateResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * The ID of the AI template.
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -230,7 +238,7 @@ public class ListAITemplateResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateName.
+             * The name of the AI template.
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -238,7 +246,11 @@ public class ListAITemplateResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateType.
+             * The type of the AI template. Valid values:
+             * <p>
+             * 
+             * *   **AIMediaAudit**: automated review
+             * *   **AIImage**: smart thumbnail
              */
             public Builder templateType(String templateType) {
                 this.templateType = templateType;

@@ -152,7 +152,7 @@ public class ListLiveRecordVideoRequest extends Request {
         } 
 
         /**
-         * AppName.
+         * The name of the application that was used to record the live stream.
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -161,7 +161,7 @@ public class ListLiveRecordVideoRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * The domain name of the recorded live stream.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -170,7 +170,7 @@ public class ListLiveRecordVideoRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. The query is performed based on the time range during which the required live streams were recorded. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -179,7 +179,7 @@ public class ListLiveRecordVideoRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -188,7 +188,7 @@ public class ListLiveRecordVideoRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Maximum value: **100**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -197,7 +197,10 @@ public class ListLiveRecordVideoRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * The sorting rule of results. Valid values:
+         * <p>
+         * *   **CreationTime:Desc**: sorts the results based on the creation time in descending order. This is the default value.
+         * *   **CreationTime:Asc**: sorts the results based on the creation time in ascending order.
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -206,7 +209,7 @@ public class ListLiveRecordVideoRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. The query is performed based on the time range during which the required live streams were recorded. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -215,7 +218,7 @@ public class ListLiveRecordVideoRequest extends Request {
         }
 
         /**
-         * StreamName.
+         * The name of the recorded live stream.
          */
         public Builder streamName(String streamName) {
             this.putQueryParameter("StreamName", streamName);

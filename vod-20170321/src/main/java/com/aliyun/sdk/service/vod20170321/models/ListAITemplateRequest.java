@@ -55,7 +55,11 @@ public class ListAITemplateRequest extends Request {
         } 
 
         /**
-         * TemplateType.
+         * The type of the AI template. Valid values:
+         * <p>
+         * 
+         * *   **AIMediaAudit**: automated review
+         * *   **AIImage**: smart thumbnail
          */
         public Builder templateType(String templateType) {
             this.putQueryParameter("TemplateType", templateType);

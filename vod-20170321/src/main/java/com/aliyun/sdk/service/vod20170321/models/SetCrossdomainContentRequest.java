@@ -140,7 +140,7 @@ public class SetCrossdomainContentRequest extends Request {
         } 
 
         /**
-         * Content.
+         * The content of the cross-domain policy file. The file must be in the XML format and can contain up to 2,048 characters.
          */
         public Builder content(String content) {
             this.putQueryParameter("Content", content);
@@ -185,7 +185,7 @@ public class SetCrossdomainContentRequest extends Request {
         }
 
         /**
-         * ResourceRealOwnerId.
+         * The ID of the resource owner.
          */
         public Builder resourceRealOwnerId(String resourceRealOwnerId) {
             this.putQueryParameter("ResourceRealOwnerId", resourceRealOwnerId);
@@ -194,7 +194,7 @@ public class SetCrossdomainContentRequest extends Request {
         }
 
         /**
-         * StorageLocation.
+         * The URL of the Object Storage Service (OSS) bucket.
          */
         public Builder storageLocation(String storageLocation) {
             this.putQueryParameter("StorageLocation", storageLocation);

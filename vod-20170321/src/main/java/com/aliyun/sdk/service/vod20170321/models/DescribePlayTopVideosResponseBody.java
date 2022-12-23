@@ -86,7 +86,7 @@ public class DescribePlayTopVideosResponseBody extends TeaModel {
         private Long totalNum; 
 
         /**
-         * PageNo.
+         * The page number of the returned page.
          */
         public Builder pageNo(Long pageNo) {
             this.pageNo = pageNo;
@@ -94,7 +94,7 @@ public class DescribePlayTopVideosResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class DescribePlayTopVideosResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribePlayTopVideosResponseBody extends TeaModel {
         }
 
         /**
-         * TopPlayVideos.
+         * The daily playback statistics on each top video.
          */
         public Builder topPlayVideos(TopPlayVideos topPlayVideos) {
             this.topPlayVideos = topPlayVideos;
@@ -118,7 +118,7 @@ public class DescribePlayTopVideosResponseBody extends TeaModel {
         }
 
         /**
-         * TotalNum.
+         * The total number of entries that were collected in playback statistics on top videos.
          */
         public Builder totalNum(Long totalNum) {
             this.totalNum = totalNum;
@@ -206,7 +206,7 @@ public class DescribePlayTopVideosResponseBody extends TeaModel {
             private String videoId; 
 
             /**
-             * PlayDuration.
+             * The playback duration. Unit: milliseconds.
              */
             public Builder playDuration(String playDuration) {
                 this.playDuration = playDuration;
@@ -214,7 +214,7 @@ public class DescribePlayTopVideosResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * The title of the video.
              */
             public Builder title(String title) {
                 this.title = title;
@@ -222,7 +222,7 @@ public class DescribePlayTopVideosResponseBody extends TeaModel {
             }
 
             /**
-             * UV.
+             * The number of unique visitors.
              */
             public Builder uv(String uv) {
                 this.uv = uv;
@@ -230,7 +230,7 @@ public class DescribePlayTopVideosResponseBody extends TeaModel {
             }
 
             /**
-             * VV.
+             * The number of video views.
              */
             public Builder vv(String vv) {
                 this.vv = vv;
@@ -238,7 +238,7 @@ public class DescribePlayTopVideosResponseBody extends TeaModel {
             }
 
             /**
-             * VideoId.
+             * The ID of the video.
              */
             public Builder videoId(String videoId) {
                 this.videoId = videoId;

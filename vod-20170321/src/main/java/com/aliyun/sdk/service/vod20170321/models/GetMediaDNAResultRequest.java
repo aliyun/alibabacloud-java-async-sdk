@@ -111,7 +111,7 @@ public class GetMediaDNAResultRequest extends Request {
         } 
 
         /**
-         * MediaId.
+         * The ID of the video.
          */
         public Builder mediaId(String mediaId) {
             this.putQueryParameter("MediaId", mediaId);

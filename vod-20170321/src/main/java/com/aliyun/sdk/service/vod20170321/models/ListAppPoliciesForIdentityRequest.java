@@ -82,7 +82,7 @@ public class ListAppPoliciesForIdentityRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * The ID of the application. Default value: **app-1000000**. For more information, see [Overview](~~113600~~).
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -91,7 +91,11 @@ public class ListAppPoliciesForIdentityRequest extends Request {
         }
 
         /**
-         * IdentityName.
+         * The name of the identity.
+         * <p>
+         * 
+         * *   Specifies the ID of the RAM user when the IdentityType parameter is set to RamUser.
+         * *   Specifies the name of the RAM role when the IdentityType parameter is set to RamRole.
          */
         public Builder identityName(String identityName) {
             this.putQueryParameter("IdentityName", identityName);
@@ -100,7 +104,11 @@ public class ListAppPoliciesForIdentityRequest extends Request {
         }
 
         /**
-         * IdentityType.
+         * The type of the identity. Valid values:
+         * <p>
+         * 
+         * *   **RamUser**: a RAM user.
+         * *   **RamRole**: a RAM role.
          */
         public Builder identityType(String identityType) {
             this.putQueryParameter("IdentityType", identityType);

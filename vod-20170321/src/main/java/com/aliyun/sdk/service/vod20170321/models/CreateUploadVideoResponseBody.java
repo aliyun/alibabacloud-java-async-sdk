@@ -74,7 +74,7 @@ public class CreateUploadVideoResponseBody extends TeaModel {
         private String videoId; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -82,7 +82,10 @@ public class CreateUploadVideoResponseBody extends TeaModel {
         }
 
         /**
-         * UploadAddress.
+         * The upload URL.
+         * <p>
+         * 
+         * > The upload URL returned by this operation is Base64-encoded. Before you can use an SDK or an API operation to upload a media asset based on the upload URL, you must decode the upload URL by using the Base64 algorithm. You must parse the upload URL only if you use native OSS SDKs or OSS API for uploads.
          */
         public Builder uploadAddress(String uploadAddress) {
             this.uploadAddress = uploadAddress;
@@ -90,7 +93,10 @@ public class CreateUploadVideoResponseBody extends TeaModel {
         }
 
         /**
-         * UploadAuth.
+         * The upload credential.
+         * <p>
+         * 
+         * > The upload credential returned by this operation is Base64-encoded. Before you can use an SDK or an API operation to upload a media asset based on the upload credential, you must decode the upload credential by using the Base64 algorithm. You must parse the upload credential only if you use native OSS SDKs or OSS API for uploads.
          */
         public Builder uploadAuth(String uploadAuth) {
             this.uploadAuth = uploadAuth;
@@ -98,7 +104,7 @@ public class CreateUploadVideoResponseBody extends TeaModel {
         }
 
         /**
-         * VideoId.
+         * The ID of the audio or video file. You can set the request parameter VideoId to this ID when you call an operation for media asset management, media processing, or media review.
          */
         public Builder videoId(String videoId) {
             this.videoId = videoId;

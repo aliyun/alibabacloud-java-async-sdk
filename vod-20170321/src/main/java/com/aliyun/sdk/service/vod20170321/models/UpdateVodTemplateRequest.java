@@ -83,7 +83,11 @@ public class UpdateVodTemplateRequest extends Request {
         } 
 
         /**
-         * Name.
+         * The name of the template.
+         * <p>
+         * 
+         * *   The name can be up to 128 bytes in length.
+         * *   The value must be encoded in UTF-8.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -92,7 +96,7 @@ public class UpdateVodTemplateRequest extends Request {
         }
 
         /**
-         * TemplateConfig.
+         * The configurations of the snapshot template. The value is a JSON-formatted string. For more information about the data structure, see the "SnapshotTemplateConfig" section of the [Media processing parameters](~~98618~~) topic.
          */
         public Builder templateConfig(String templateConfig) {
             this.putQueryParameter("TemplateConfig", templateConfig);
@@ -101,7 +105,7 @@ public class UpdateVodTemplateRequest extends Request {
         }
 
         /**
-         * VodTemplateId.
+         * The ID of the snapshot template.
          */
         public Builder vodTemplateId(String vodTemplateId) {
             this.putQueryParameter("VodTemplateId", vodTemplateId);

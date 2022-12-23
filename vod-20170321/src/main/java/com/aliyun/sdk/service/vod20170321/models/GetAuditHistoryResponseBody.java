@@ -74,7 +74,7 @@ public class GetAuditHistoryResponseBody extends TeaModel {
         private Long total; 
 
         /**
-         * Histories.
+         * The review records.
          */
         public Builder histories(java.util.List < Histories> histories) {
             this.histories = histories;
@@ -82,7 +82,7 @@ public class GetAuditHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,7 +90,10 @@ public class GetAuditHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The manual review result. Valid values:
+         * <p>
+         * - **Normal**: The video can be played.
+         * - **Blocked**: The video is blocked.
          */
         public Builder status(String status) {
             this.status = status;
@@ -98,7 +101,7 @@ public class GetAuditHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * The total number of review records.
          */
         public Builder total(Long total) {
             this.total = total;
@@ -186,7 +189,7 @@ public class GetAuditHistoryResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * Auditor.
+             * The reviewer.
              */
             public Builder auditor(String auditor) {
                 this.auditor = auditor;
@@ -194,7 +197,7 @@ public class GetAuditHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * Comment.
+             * The review comments, which are provided by the reviewer.
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -202,7 +205,7 @@ public class GetAuditHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * The time when the review record was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -210,7 +213,7 @@ public class GetAuditHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * The reason why the video failed the review. If the video failed the review, specify the reason.
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -218,7 +221,10 @@ public class GetAuditHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The manual review result. Valid values:
+             * <p>
+             * - **Normal**: The video can be played.
+             * - **Blocked**: The video is blocked.
              */
             public Builder status(String status) {
                 this.status = status;

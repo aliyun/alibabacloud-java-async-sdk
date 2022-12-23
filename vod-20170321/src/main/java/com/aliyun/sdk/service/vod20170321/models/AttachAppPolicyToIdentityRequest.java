@@ -99,7 +99,9 @@ public class AttachAppPolicyToIdentityRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * The ID of the application. Default value: **app-1000000**. For more information, see [Overview](~~113600~~).
+         * <p>
+         * > This parameter is optional when the PolicyNames parameter is set to VODAppAdministratorAccess. This parameter is required when the PolicyNames parameter is set to other values.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -108,7 +110,10 @@ public class AttachAppPolicyToIdentityRequest extends Request {
         }
 
         /**
-         * IdentityName.
+         * The name of the identity.
+         * <p>
+         * *   Specifies the ID of the RAM user when the IdentityType parameter is set to RamUser.
+         * *   Specifies the name of the RAM role when the IdentityType parameter is set to RamRole.
          */
         public Builder identityName(String identityName) {
             this.putQueryParameter("IdentityName", identityName);
@@ -117,7 +122,10 @@ public class AttachAppPolicyToIdentityRequest extends Request {
         }
 
         /**
-         * IdentityType.
+         * The type of the identity. Valid values:
+         * <p>
+         * *   **RamUser**: a RAM user.
+         * *   **RamRole**: a RAM role.
          */
         public Builder identityType(String identityType) {
             this.putQueryParameter("IdentityType", identityType);
@@ -126,7 +134,11 @@ public class AttachAppPolicyToIdentityRequest extends Request {
         }
 
         /**
-         * PolicyNames.
+         * The name of the policy. Only system policies are supported. Separate multiple policies with commas (,). Valid values:
+         * <p>
+         * *   **VODAppFullAccess**: authorizes an identity to manage all resources in an application.
+         * *   **VODAppReadOnlyAccess**: authorizes an identity to access all resources in an application in read-only mode.
+         * *   **VODAppAdministratorAccess**: assigns the application administrator role to an identity.
          */
         public Builder policyNames(String policyNames) {
             this.putQueryParameter("PolicyNames", policyNames);

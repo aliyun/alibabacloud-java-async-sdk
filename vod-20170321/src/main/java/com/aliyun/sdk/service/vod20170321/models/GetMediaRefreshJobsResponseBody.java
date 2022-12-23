@@ -50,7 +50,7 @@ public class GetMediaRefreshJobsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * MediaRefreshJobs.
+         * The media refresh or prefetch jobs.
          */
         public Builder mediaRefreshJobs(java.util.List < MediaRefreshJobs> mediaRefreshJobs) {
             this.mediaRefreshJobs = mediaRefreshJobs;
@@ -58,7 +58,7 @@ public class GetMediaRefreshJobsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -230,7 +230,7 @@ public class GetMediaRefreshJobsResponseBody extends TeaModel {
             private String userData; 
 
             /**
-             * ErrorCode.
+             * The error code. This parameter is returned if the refresh or prefetch task fails.
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -238,7 +238,7 @@ public class GetMediaRefreshJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * The error message. This parameter is returned if the refresh or prefetch task fails.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -246,7 +246,7 @@ public class GetMediaRefreshJobsResponseBody extends TeaModel {
             }
 
             /**
-             * FilterPolicy.
+             * The filtering conditions for stream playback. The value is a JSON string. This parameter is used as a request parameter of the [RefreshMediaPlayUrls](~~RefreshMediaPlayUrls~~) operation.
              */
             public Builder filterPolicy(String filterPolicy) {
                 this.filterPolicy = filterPolicy;
@@ -254,7 +254,7 @@ public class GetMediaRefreshJobsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The time when the task was created.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -262,7 +262,7 @@ public class GetMediaRefreshJobsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The time when the task was modified.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -270,7 +270,7 @@ public class GetMediaRefreshJobsResponseBody extends TeaModel {
             }
 
             /**
-             * MediaId.
+             * The ID of the media file.
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;
@@ -278,7 +278,7 @@ public class GetMediaRefreshJobsResponseBody extends TeaModel {
             }
 
             /**
-             * MediaRefreshJobId.
+             * The ID of the job.
              */
             public Builder mediaRefreshJobId(String mediaRefreshJobId) {
                 this.mediaRefreshJobId = mediaRefreshJobId;
@@ -286,7 +286,11 @@ public class GetMediaRefreshJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the job. Valid values:
+             * <p>
+             * 
+             * *   **success**
+             * *   **fail**
              */
             public Builder status(String status) {
                 this.status = status;
@@ -294,7 +298,7 @@ public class GetMediaRefreshJobsResponseBody extends TeaModel {
             }
 
             /**
-             * SuccessPlayUrls.
+             * The playback URLs that were refreshed or prefetched.
              */
             public Builder successPlayUrls(String successPlayUrls) {
                 this.successPlayUrls = successPlayUrls;
@@ -302,7 +306,7 @@ public class GetMediaRefreshJobsResponseBody extends TeaModel {
             }
 
             /**
-             * TaskIds.
+             * The IDs of the refresh or prefetch tasks for the playback URLs of media files. Only one URL can be refreshed or prefetched in a task. This value is used in the [DescribeVodRefreshTasks](~~DescribeVodRefreshTasks~~) operation, which queries the status of refresh or prefetch tasks for playback URLs of media files.
              */
             public Builder taskIds(String taskIds) {
                 this.taskIds = taskIds;
@@ -310,7 +314,11 @@ public class GetMediaRefreshJobsResponseBody extends TeaModel {
             }
 
             /**
-             * TaskType.
+             * The type of the job. Valid values:
+             * <p>
+             * 
+             * *   **Refresh**
+             * *   **Preload**
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;
@@ -318,7 +326,7 @@ public class GetMediaRefreshJobsResponseBody extends TeaModel {
             }
 
             /**
-             * UserData.
+             * The user data that you passed when you submit a refresh or prefetch task.
              */
             public Builder userData(String userData) {
                 this.userData = userData;

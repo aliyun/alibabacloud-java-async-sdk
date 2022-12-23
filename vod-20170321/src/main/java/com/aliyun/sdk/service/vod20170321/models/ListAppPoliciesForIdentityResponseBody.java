@@ -50,7 +50,10 @@ public class ListAppPoliciesForIdentityResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AppPolicyList.
+         * The details of each policy.
+         * <p>
+         * 
+         * > A maximum of 100 entries can be returned.
          */
         public Builder appPolicyList(java.util.List < AppPolicyList> appPolicyList) {
             this.appPolicyList = appPolicyList;
@@ -58,7 +61,7 @@ public class ListAppPoliciesForIdentityResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +173,7 @@ public class ListAppPoliciesForIdentityResponseBody extends TeaModel {
             private String policyValue; 
 
             /**
-             * AppId.
+             * The ID of the application.
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -178,7 +181,7 @@ public class ListAppPoliciesForIdentityResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * The time when the application policy was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -186,7 +189,7 @@ public class ListAppPoliciesForIdentityResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the policy.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -194,7 +197,7 @@ public class ListAppPoliciesForIdentityResponseBody extends TeaModel {
             }
 
             /**
-             * ModificationTime.
+             * The last time when the application policy was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder modificationTime(String modificationTime) {
                 this.modificationTime = modificationTime;
@@ -202,7 +205,7 @@ public class ListAppPoliciesForIdentityResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyName.
+             * The name of the policy.
              */
             public Builder policyName(String policyName) {
                 this.policyName = policyName;
@@ -210,7 +213,11 @@ public class ListAppPoliciesForIdentityResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyType.
+             * The type of the policy. Valid values:
+             * <p>
+             * 
+             * *   **System**
+             * *   **Custom**
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
@@ -218,7 +225,7 @@ public class ListAppPoliciesForIdentityResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyValue.
+             * The content of the policy.
              */
             public Builder policyValue(String policyValue) {
                 this.policyValue = policyValue;

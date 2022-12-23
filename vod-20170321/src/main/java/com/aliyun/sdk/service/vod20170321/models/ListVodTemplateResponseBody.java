@@ -50,7 +50,7 @@ public class ListVodTemplateResponseBody extends TeaModel {
         private java.util.List < VodTemplateInfoList> vodTemplateInfoList; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ListVodTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * VodTemplateInfoList.
+         * The snapshot templates.
          */
         public Builder vodTemplateInfoList(java.util.List < VodTemplateInfoList> vodTemplateInfoList) {
             this.vodTemplateInfoList = vodTemplateInfoList;
@@ -182,7 +182,7 @@ public class ListVodTemplateResponseBody extends TeaModel {
             private String vodTemplateId; 
 
             /**
-             * AppId.
+             * The ID of the application.
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -190,7 +190,7 @@ public class ListVodTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * The time when the template was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -198,7 +198,11 @@ public class ListVodTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * IsDefault.
+             * Indicates whether the template is the default one. Valid values:
+             * <p>
+             * 
+             * *   **Default**: The template is the default one.
+             * *   **NotDefault**: The template is not the default one.
              */
             public Builder isDefault(String isDefault) {
                 this.isDefault = isDefault;
@@ -206,7 +210,7 @@ public class ListVodTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * The time when the template was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -214,7 +218,7 @@ public class ListVodTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the template.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -222,7 +226,7 @@ public class ListVodTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateConfig.
+             * The detailed configurations of the template. The value is a JSON-formatted string. For more information about the data structure, see the "SnapshotTemplateConfig" section of the [Media processing parameters](~~98618~~) topic.
              */
             public Builder templateConfig(String templateConfig) {
                 this.templateConfig = templateConfig;
@@ -230,7 +234,11 @@ public class ListVodTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateType.
+             * The type of the template. Valid values:
+             * <p>
+             * 
+             * *   **Snapshot**
+             * *   **DynamicImage**
              */
             public Builder templateType(String templateType) {
                 this.templateType = templateType;
@@ -238,7 +246,7 @@ public class ListVodTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * VodTemplateId.
+             * The ID of the template.
              */
             public Builder vodTemplateId(String vodTemplateId) {
                 this.vodTemplateId = vodTemplateId;

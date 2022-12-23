@@ -55,7 +55,7 @@ public class GetMediaAuditResultRequest extends Request {
         } 
 
         /**
-         * MediaId.
+         * The ID of the video or image.
          */
         public Builder mediaId(String mediaId) {
             this.putQueryParameter("MediaId", mediaId);

@@ -196,7 +196,7 @@ public class DescribeVodRefreshTasksRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * The domain name.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -205,7 +205,7 @@ public class DescribeVodRefreshTasksRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -214,7 +214,7 @@ public class DescribeVodRefreshTasksRequest extends Request {
         }
 
         /**
-         * ObjectPath.
+         * The object URL based on which the query is performed. The URL is used as a condition for an exact match.
          */
         public Builder objectPath(String objectPath) {
             this.putQueryParameter("ObjectPath", objectPath);
@@ -223,7 +223,14 @@ public class DescribeVodRefreshTasksRequest extends Request {
         }
 
         /**
-         * ObjectType.
+         * The type of the task. Valid values:
+         * <p>
+         * 
+         * *   **file**: refreshes one or more files.
+         * *   **directory**: refreshes the files under one or more directories.
+         * *   **preload**: prefetches one or more files.
+         * 
+         * > If you specify the DomainName or TaskStatus parameter, you must also specify the ObjectType parameter.
          */
         public Builder objectType(String objectType) {
             this.putQueryParameter("ObjectType", objectType);
@@ -241,7 +248,7 @@ public class DescribeVodRefreshTasksRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -250,7 +257,7 @@ public class DescribeVodRefreshTasksRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: **20**. Maximum value: **50**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -268,7 +275,10 @@ public class DescribeVodRefreshTasksRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+         * <p>
+         * 
+         * > You can query data that is collected in the last three days.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -277,7 +287,12 @@ public class DescribeVodRefreshTasksRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the task. Valid values:
+         * <p>
+         * 
+         * *   **Complete**: indicates that the task is complete.
+         * *   **Refreshing**: indicates that the task is in progress.
+         * *   **Failed**: indicates that the task failed.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -286,7 +301,7 @@ public class DescribeVodRefreshTasksRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * The task ID based on which the query is performed.
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

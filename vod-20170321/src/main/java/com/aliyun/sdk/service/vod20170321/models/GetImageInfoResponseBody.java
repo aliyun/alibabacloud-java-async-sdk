@@ -50,7 +50,7 @@ public class GetImageInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ImageInfo.
+         * The information about the image.
          */
         public Builder imageInfo(ImageInfo imageInfo) {
             this.imageInfo = imageInfo;
@@ -58,7 +58,7 @@ public class GetImageInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,7 +146,7 @@ public class GetImageInfoResponseBody extends TeaModel {
             private Integer width; 
 
             /**
-             * FileSize.
+             * The size of the file. Unit: byte.
              */
             public Builder fileSize(String fileSize) {
                 this.fileSize = fileSize;
@@ -154,7 +154,7 @@ public class GetImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * FileURL.
+             * The OSS URL of the image.
              */
             public Builder fileURL(String fileURL) {
                 this.fileURL = fileURL;
@@ -162,7 +162,7 @@ public class GetImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Height.
+             * The height of the image. Unit: pixel.
              */
             public Builder height(Integer height) {
                 this.height = height;
@@ -170,7 +170,7 @@ public class GetImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * OriginalFileName.
+             * The name of the uploaded file.
              */
             public Builder originalFileName(String originalFileName) {
                 this.originalFileName = originalFileName;
@@ -178,7 +178,7 @@ public class GetImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Width.
+             * The width of the image. Unit: pixel.
              */
             public Builder width(Integer width) {
                 this.width = width;
@@ -363,7 +363,7 @@ public class GetImageInfoResponseBody extends TeaModel {
             private String URL; 
 
             /**
-             * AppId.
+             * The ID of the application.
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -371,7 +371,7 @@ public class GetImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CateId.
+             * The ID of the category.
              */
             public Builder cateId(Long cateId) {
                 this.cateId = cateId;
@@ -379,7 +379,7 @@ public class GetImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CateName.
+             * The name of the category.
              */
             public Builder cateName(String cateName) {
                 this.cateName = cateName;
@@ -387,7 +387,7 @@ public class GetImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * The time when the image file was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -395,7 +395,7 @@ public class GetImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the image.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -403,7 +403,7 @@ public class GetImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ImageId.
+             * The ID of the image.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -411,7 +411,14 @@ public class GetImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ImageType.
+             * The type of the image. Valid values:
+             * <p>
+             * 
+             * - **CoverSnapshot**: thumbnail snapshot.
+             * - **NormalSnapshot**: normal snapshot.
+             * - **SpriteSnapshot**: sprite snapshot.
+             * - **SpriteOriginSnapshot**: sprite source snapshot.
+             * - **All**: images of all the preceding types. If this parameter is not set to All, you can specify multiple types and separate them with commas (,).
              */
             public Builder imageType(String imageType) {
                 this.imageType = imageType;
@@ -419,7 +426,7 @@ public class GetImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Mezzanine.
+             * The information about the image mezzanine file.
              */
             public Builder mezzanine(Mezzanine mezzanine) {
                 this.mezzanine = mezzanine;
@@ -427,7 +434,12 @@ public class GetImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the image. Valid values:
+             * <p>
+             * 
+             * - **Uploading**: The image is being uploaded. This is the initial status.
+             * - **Normal**: The image is uploaded.
+             * - **UploadFail**: The image fails to be uploaded.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -435,7 +447,7 @@ public class GetImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * StorageLocation.
+             * The OSS bucket where the image is stored.
              */
             public Builder storageLocation(String storageLocation) {
                 this.storageLocation = storageLocation;
@@ -443,7 +455,7 @@ public class GetImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tag of the image. Multiple tags are separated by commas (,).
              */
             public Builder tags(String tags) {
                 this.tags = tags;
@@ -451,7 +463,7 @@ public class GetImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * The title of the image.
              */
             public Builder title(String title) {
                 this.title = title;
@@ -459,7 +471,7 @@ public class GetImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * URL.
+             * The URL of the image. If a CDN domain name is specified, a CDN URL is returned. Otherwise, an OSS URL is returned.
              */
             public Builder URL(String URL) {
                 this.URL = URL;

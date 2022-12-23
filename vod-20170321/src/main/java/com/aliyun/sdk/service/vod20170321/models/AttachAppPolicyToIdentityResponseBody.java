@@ -62,7 +62,7 @@ public class AttachAppPolicyToIdentityResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * FailedPolicyNames.
+         * The name of the policy that failed to be attached to the identity.
          */
         public Builder failedPolicyNames(java.util.List < String > failedPolicyNames) {
             this.failedPolicyNames = failedPolicyNames;
@@ -70,7 +70,7 @@ public class AttachAppPolicyToIdentityResponseBody extends TeaModel {
         }
 
         /**
-         * NonExistPolicyNames.
+         * The name of the policy that was not found.
          */
         public Builder nonExistPolicyNames(java.util.List < String > nonExistPolicyNames) {
             this.nonExistPolicyNames = nonExistPolicyNames;
@@ -78,7 +78,7 @@ public class AttachAppPolicyToIdentityResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

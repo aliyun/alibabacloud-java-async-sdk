@@ -62,7 +62,7 @@ public class ListAIJobResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AIJobList.
+         * The information about the jobs.
          */
         public Builder AIJobList(AIJobList AIJobList) {
             this.AIJobList = AIJobList;
@@ -70,7 +70,7 @@ public class ListAIJobResponseBody extends TeaModel {
         }
 
         /**
-         * NonExistAIJobIds.
+         * The IDs of the jobs that do not exist.
          */
         public Builder nonExistAIJobIds(NonExistAIJobIds nonExistAIJobIds) {
             this.nonExistAIJobIds = nonExistAIJobIds;
@@ -78,7 +78,7 @@ public class ListAIJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -214,7 +214,7 @@ public class ListAIJobResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Code.
+             * The error code. This parameter is returned if the value of Status is fail.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -222,7 +222,7 @@ public class ListAIJobResponseBody extends TeaModel {
             }
 
             /**
-             * CompleteTime.
+             * The time when the job is complete. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder completeTime(String completeTime) {
                 this.completeTime = completeTime;
@@ -230,7 +230,7 @@ public class ListAIJobResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * The time when the job was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -238,7 +238,7 @@ public class ListAIJobResponseBody extends TeaModel {
             }
 
             /**
-             * Data.
+             * The returned data. The value is a JSON string.
              */
             public Builder data(String data) {
                 this.data = data;
@@ -246,7 +246,7 @@ public class ListAIJobResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * The ID of the job.
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -254,7 +254,7 @@ public class ListAIJobResponseBody extends TeaModel {
             }
 
             /**
-             * MediaId.
+             * The ID of the video.
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;
@@ -262,7 +262,7 @@ public class ListAIJobResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * The error message. This parameter is returned if the value of Status is fail.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -270,7 +270,13 @@ public class ListAIJobResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the job. Valid values:
+             * <p>
+             * 
+             * *   **success**: The job is complete.
+             * *   **fail**: The job failed.
+             * *   **init**: The job is being initialized.
+             * *   **Processing**: The job is in progress.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -278,7 +284,11 @@ public class ListAIJobResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the job. Valid values:
+             * <p>
+             * 
+             * *   **AIMediaDNA**: The media fingerprinting job.
+             * *   **AIVideoTag**: The smart tagging job.
              */
             public Builder type(String type) {
                 this.type = type;

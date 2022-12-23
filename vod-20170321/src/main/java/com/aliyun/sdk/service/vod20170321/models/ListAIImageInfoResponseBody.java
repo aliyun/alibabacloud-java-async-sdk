@@ -50,7 +50,7 @@ public class ListAIImageInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AIImageInfoList.
+         * The image files that are uploaded for AI processing.
          */
         public Builder AIImageInfoList(java.util.List < AIImageInfoList> AIImageInfoList) {
             this.AIImageInfoList = AIImageInfoList;
@@ -58,7 +58,7 @@ public class ListAIImageInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -182,7 +182,7 @@ public class ListAIImageInfoResponseBody extends TeaModel {
             private String videoId; 
 
             /**
-             * AIImageInfoId.
+             * The ID of the image information.
              */
             public Builder AIImageInfoId(String AIImageInfoId) {
                 this.AIImageInfoId = AIImageInfoId;
@@ -190,7 +190,7 @@ public class ListAIImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * The time when the file was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -198,7 +198,7 @@ public class ListAIImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * FileURL.
+             * The URL of the image file.
              */
             public Builder fileURL(String fileURL) {
                 this.fileURL = fileURL;
@@ -206,7 +206,7 @@ public class ListAIImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Format.
+             * The format of the image. Valid values: **gif** and **png**.
              */
             public Builder format(String format) {
                 this.format = format;
@@ -214,7 +214,7 @@ public class ListAIImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * The ID of the image AI processing job.
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -222,7 +222,7 @@ public class ListAIImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Score.
+             * The score of the image.
              */
             public Builder score(String score) {
                 this.score = score;
@@ -230,7 +230,7 @@ public class ListAIImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * The data version ID.
              */
             public Builder version(String version) {
                 this.version = version;
@@ -238,7 +238,7 @@ public class ListAIImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * VideoId.
+             * The ID of the video.
              */
             public Builder videoId(String videoId) {
                 this.videoId = videoId;

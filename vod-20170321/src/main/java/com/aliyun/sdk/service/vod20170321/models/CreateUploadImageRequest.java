@@ -181,7 +181,7 @@ public class CreateUploadImageRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * The ID of the application. Default value: **app-1000000**. For more information, see [Overview](~~113600~~).
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -190,7 +190,12 @@ public class CreateUploadImageRequest extends Request {
         }
 
         /**
-         * CateId.
+         * The category ID of the image. You can use one of the following methods to obtain the category ID:
+         * <p>
+         * 
+         * *   Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). In the left-side navigation pane, choose **Configuration Management** > **Media Management** > **Categories**. On the Categories page, you can view the category ID of the image.
+         * *   Obtain the value of CateId from the response to the [AddCategory](~~56401~~) operation.
+         * *   Obtain the value of CateId from the response to the [GetCategories](~~56406~~) operation.
          */
         public Builder cateId(Long cateId) {
             this.putQueryParameter("CateId", cateId);
@@ -199,7 +204,11 @@ public class CreateUploadImageRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the image.
+         * <p>
+         * 
+         * *   The description can be up to 1,024 characters in length.
+         * *   The value must be encoded in UTF-8.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -208,7 +217,13 @@ public class CreateUploadImageRequest extends Request {
         }
 
         /**
-         * ImageExt.
+         * The file name extension of the image. Default value: png. Valid values:
+         * <p>
+         * 
+         * *   **png**
+         * *   **jpg**
+         * *   **jpeg**
+         * *   **gif**
          */
         public Builder imageExt(String imageExt) {
             this.putQueryParameter("ImageExt", imageExt);
@@ -217,7 +232,13 @@ public class CreateUploadImageRequest extends Request {
         }
 
         /**
-         * ImageType.
+         * The type of the image. Valid values:
+         * <p>
+         * 
+         * *   **default**: the default image type.
+         * *   **cover**: the thumbnail.
+         * 
+         * > Only images of the **default** type can be managed in the ApsaraVideo VOD console.
          */
         public Builder imageType(String imageType) {
             this.putQueryParameter("ImageType", imageType);
@@ -235,7 +256,12 @@ public class CreateUploadImageRequest extends Request {
         }
 
         /**
-         * StorageLocation.
+         * The storage location. Perform the following operations to obtain the storage location:
+         * <p>
+         * 
+         * Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). In the left-side navigation pane, choose **Configuration Management** > **Media Management** > **Storage**. On the Storage page, view the storage location.
+         * 
+         * > If you specify a storage location, video files are uploaded to the specified location.
          */
         public Builder storageLocation(String storageLocation) {
             this.putQueryParameter("StorageLocation", storageLocation);
@@ -244,7 +270,13 @@ public class CreateUploadImageRequest extends Request {
         }
 
         /**
-         * Tags.
+         * The tags of the image. Take note of the following items:
+         * <p>
+         * 
+         * *   Each tag can be up to 32 characters in length.
+         * *   You can specify a maximum of 16 tags for an image.
+         * *   Separate multiple tags with commas (,).
+         * *   The value must be encoded in UTF-8.
          */
         public Builder tags(String tags) {
             this.putQueryParameter("Tags", tags);
@@ -253,7 +285,11 @@ public class CreateUploadImageRequest extends Request {
         }
 
         /**
-         * Title.
+         * The title of the image. Take note of the following items:
+         * <p>
+         * 
+         * *   The title can be up to 128 characters in length.
+         * *   The value must be encoded in UTF-8.
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);
@@ -262,7 +298,11 @@ public class CreateUploadImageRequest extends Request {
         }
 
         /**
-         * UserData.
+         * The custom configurations. For example, you can specify callback configurations and upload acceleration configurations. The value is a JSON string. For more information, see the "UserData: specifies the custom configurations for media upload" section of the [Request parameters](~~86952~~) topic.
+         * <p>
+         * 
+         * > *   The callback configurations take effect only after you specify the HTTP callback URL and select specific callback events in the ApsaraVideo VOD console. For more information about how to configure HTTP callback settings in the ApsaraVideo VOD console, see [Configure callback settings](~~86071~~).
+         * > *   To use the upload acceleration feature, submit a [ticket](https://ticket-intl.console.aliyun.com/#/ticket/createIndex) to enable this feature. For more information, see [Overview](~~55396~~).
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);

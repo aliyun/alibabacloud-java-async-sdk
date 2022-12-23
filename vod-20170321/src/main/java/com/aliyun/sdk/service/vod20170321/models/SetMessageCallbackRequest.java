@@ -166,7 +166,7 @@ public class SetMessageCallbackRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * The ID of the application. If you do not set this parameter, the default value **app-1000000** is used.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -175,7 +175,7 @@ public class SetMessageCallbackRequest extends Request {
         }
 
         /**
-         * AuthKey.
+         * The cryptographic key. This parameter only takes effect when the CallbackType parameter is set to HTTP. The key can be up to 32 characters in length and must contain uppercase letters, lowercase letters, and digits.
          */
         public Builder authKey(String authKey) {
             this.putQueryParameter("AuthKey", authKey);
@@ -184,7 +184,11 @@ public class SetMessageCallbackRequest extends Request {
         }
 
         /**
-         * AuthSwitch.
+         * Specifies whether to enable callback authentication. This parameter only takes effect when the CallbackType parameter is set to HTTP. Valid values:
+         * <p>
+         * 
+         * *   **on**: enables authentication.
+         * *   **off**: disables authentication.
          */
         public Builder authSwitch(String authSwitch) {
             this.putQueryParameter("AuthSwitch", authSwitch);
@@ -193,7 +197,11 @@ public class SetMessageCallbackRequest extends Request {
         }
 
         /**
-         * CallbackType.
+         * The callback method. Valid values:
+         * <p>
+         * 
+         * *   **HTTP**
+         * *   **MNS**
          */
         public Builder callbackType(String callbackType) {
             this.putQueryParameter("CallbackType", callbackType);
@@ -202,7 +210,7 @@ public class SetMessageCallbackRequest extends Request {
         }
 
         /**
-         * CallbackURL.
+         * The callback URL. This parameter only takes effect when the CallbackType parameter is set to HTTP.
          */
         public Builder callbackURL(String callbackURL) {
             this.putQueryParameter("CallbackURL", callbackURL);
@@ -211,7 +219,7 @@ public class SetMessageCallbackRequest extends Request {
         }
 
         /**
-         * EventTypeList.
+         * The type of the callback event. If you do not set this parameter, notifications for all types of events are disabled. If you set this parameter to ALL, notifications for all types of events are enabled. You can specify the event types for which notifications are enabled. Separate multiple event types with commas (,). For more information about the valid values of this parameter, see [Event type](~~55627~~).
          */
         public Builder eventTypeList(String eventTypeList) {
             this.putQueryParameter("EventTypeList", eventTypeList);
@@ -220,7 +228,7 @@ public class SetMessageCallbackRequest extends Request {
         }
 
         /**
-         * MnsEndpoint.
+         * The public endpoint of Message Service (MNS). This parameter only takes effect when the CallbackType parameter is set to MNS. For more information, see [Endpoint](~~27480#concept-2028913~~ "An endpoint is the address that you specify for a subscription to receive messages. When messages are published to a topic, Message Service (MNS) pushes the messages to the specified endpoints. You can specify the same endpoint for multiple subscriptions.").
          */
         public Builder mnsEndpoint(String mnsEndpoint) {
             this.putQueryParameter("MnsEndpoint", mnsEndpoint);
@@ -229,7 +237,7 @@ public class SetMessageCallbackRequest extends Request {
         }
 
         /**
-         * MnsQueueName.
+         * The name of the MNS queue. This parameter only takes effect when the CallbackType parameter is set to MNS.
          */
         public Builder mnsQueueName(String mnsQueueName) {
             this.putQueryParameter("MnsQueueName", mnsQueueName);

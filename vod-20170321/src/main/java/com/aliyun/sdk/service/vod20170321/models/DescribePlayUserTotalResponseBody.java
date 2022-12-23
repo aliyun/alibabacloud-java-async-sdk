@@ -50,7 +50,7 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
         private UserPlayStatisTotals userPlayStatisTotals; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
         }
 
         /**
-         * UserPlayStatisTotals.
+         * The statistics on total playback each day.
          */
         public Builder userPlayStatisTotals(UserPlayStatisTotals userPlayStatisTotals) {
             this.userPlayStatisTotals = userPlayStatisTotals;
@@ -134,7 +134,7 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
             private String iOS; 
 
             /**
-             * Android.
+             * The total number of unique visitors who use ApsaraVideo Player SDK for Android.
              */
             public Builder android(String android) {
                 this.android = android;
@@ -142,7 +142,7 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
             }
 
             /**
-             * Flash.
+             * The total number of unique visitors who use ApsaraVideo Player SDK for Flash.
              */
             public Builder flash(String flash) {
                 this.flash = flash;
@@ -150,7 +150,7 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
             }
 
             /**
-             * HTML5.
+             * The total number of unique visitors who use ApsaraVideo Player SDK for HTML5.
              */
             public Builder HTML5(String HTML5) {
                 this.HTML5 = HTML5;
@@ -158,7 +158,7 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
             }
 
             /**
-             * iOS.
+             * The total number of unique visitors who use ApsaraVideo Player SDK for iOS.
              */
             public Builder iOS(String iOS) {
                 this.iOS = iOS;
@@ -235,7 +235,7 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
             private String iOS; 
 
             /**
-             * Android.
+             * The total number of video views that is collected for videos that are played by using ApsaraVideo Player SDK for Android.
              */
             public Builder android(String android) {
                 this.android = android;
@@ -243,7 +243,7 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
             }
 
             /**
-             * Flash.
+             * The total number of video views that is collected for videos that are played by using ApsaraVideo Player SDK for Flash.
              */
             public Builder flash(String flash) {
                 this.flash = flash;
@@ -251,7 +251,7 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
             }
 
             /**
-             * HTML5.
+             * The total number of video views that is collected for videos that are played by using ApsaraVideo Player SDK for HTML5.
              */
             public Builder HTML5(String HTML5) {
                 this.HTML5 = HTML5;
@@ -259,7 +259,7 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
             }
 
             /**
-             * iOS.
+             * The total number of video views that is collected for videos that are played by using ApsaraVideo Player SDK for iOS.
              */
             public Builder iOS(String iOS) {
                 this.iOS = iOS;
@@ -348,7 +348,7 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
             private Vv vv; 
 
             /**
-             * Date.
+             * The date when the statistics were generated. The date follows the *yyyy-MM-dd* format.
              */
             public Builder date(String date) {
                 this.date = date;
@@ -356,7 +356,7 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
             }
 
             /**
-             * PlayDuration.
+             * The total playback duration. Unit: milliseconds.
              */
             public Builder playDuration(String playDuration) {
                 this.playDuration = playDuration;
@@ -364,7 +364,7 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
             }
 
             /**
-             * PlayRange.
+             * The distribution of the playback duration.
              */
             public Builder playRange(String playRange) {
                 this.playRange = playRange;
@@ -372,7 +372,7 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
             }
 
             /**
-             * UV.
+             * The total number of unique visitors.
              */
             public Builder uv(Uv uv) {
                 this.uv = uv;
@@ -380,7 +380,7 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
             }
 
             /**
-             * VV.
+             * The total number of video views.
              */
             public Builder vv(Vv vv) {
                 this.vv = vv;

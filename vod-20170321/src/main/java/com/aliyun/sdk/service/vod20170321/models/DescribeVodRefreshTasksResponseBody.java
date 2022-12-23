@@ -86,7 +86,7 @@ public class DescribeVodRefreshTasksResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class DescribeVodRefreshTasksResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class DescribeVodRefreshTasksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeVodRefreshTasksResponseBody extends TeaModel {
         }
 
         /**
-         * Tasks.
+         * The information about the returned tasks.
          */
         public Builder tasks(Tasks tasks) {
             this.tasks = tasks;
@@ -118,7 +118,7 @@ public class DescribeVodRefreshTasksResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -230,7 +230,7 @@ public class DescribeVodRefreshTasksResponseBody extends TeaModel {
             private String taskId; 
 
             /**
-             * CreationTime.
+             * The time when the task was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -238,7 +238,12 @@ public class DescribeVodRefreshTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The type of the error that was returned when the refresh or prefetch task failed. Valid values:
+             * <p>
+             * 
+             * *   **Internal Error**: indicates that an internal error occurred.
+             * *   **Origin Timeout**: indicates that the response from the origin server timed out.
+             * *   **Origin Return StatusCode 5XX**: indicates that the origin server returned a 5XX error.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -246,7 +251,7 @@ public class DescribeVodRefreshTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ObjectPath.
+             * The URL of the object to which the refresh or prefetch task is applied.
              */
             public Builder objectPath(String objectPath) {
                 this.objectPath = objectPath;
@@ -254,7 +259,12 @@ public class DescribeVodRefreshTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ObjectType.
+             * The type of the task. Valid values:
+             * <p>
+             * 
+             * *   **file**: refreshes one or more files. This is the default value.
+             * *   **directory**: refreshes the files under one or more directories.
+             * *   **preload**: prefetches one or more files.
              */
             public Builder objectType(String objectType) {
                 this.objectType = objectType;
@@ -262,7 +272,7 @@ public class DescribeVodRefreshTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Process.
+             * The progress of the task, in percentage.
              */
             public Builder process(String process) {
                 this.process = process;
@@ -270,7 +280,13 @@ public class DescribeVodRefreshTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the task. Valid values:
+             * <p>
+             * 
+             * *   **Complete**: indicates that the task is complete.
+             * *   **Refreshing**: indicates that the task is in progress.
+             * *   **Failed**: indicates that the task failed.
+             * *   **Pending**: indicates that the task is pending.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -278,7 +294,7 @@ public class DescribeVodRefreshTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * The ID of the task.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

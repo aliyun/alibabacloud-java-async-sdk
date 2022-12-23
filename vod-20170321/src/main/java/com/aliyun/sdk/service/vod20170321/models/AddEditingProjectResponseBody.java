@@ -50,7 +50,7 @@ public class AddEditingProjectResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Project.
+         * The information about the online editing project. For more information about the structure, see [EditingProject](~~52839~~).
          */
         public Builder project(Project project) {
             this.project = project;
@@ -58,7 +58,7 @@ public class AddEditingProjectResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,7 @@ public class AddEditingProjectResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * CreationTime.
+             * The time when the online editing project was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -166,7 +166,7 @@ public class AddEditingProjectResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the online editing project.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -174,7 +174,7 @@ public class AddEditingProjectResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * The last time when the online editing project was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -182,7 +182,7 @@ public class AddEditingProjectResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * The ID of the online editing project.
              */
             public Builder projectId(String projectId) {
                 this.projectId = projectId;
@@ -190,7 +190,13 @@ public class AddEditingProjectResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the online editing project. Valid values:
+             * <p>
+             * 
+             * - **Normal**: indicates that the online editing project is in draft.
+             * - **Producing**: indicates that the video is being produced.
+             * - **Produced**: indicates that the video was produced.
+             * - **ProduceFailed**: indicates that the video failed to be produced.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -198,7 +204,7 @@ public class AddEditingProjectResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * The title of the online editing project.
              */
             public Builder title(String title) {
                 this.title = title;

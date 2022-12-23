@@ -69,7 +69,11 @@ public class CreateAppInfoRequest extends Request {
         } 
 
         /**
-         * AppName.
+         * The name of the application, which must be unique. 
+         * <p>
+         * 
+         * - The name can contain up to 128 characters in length, including Chinese letters, digits, and periods (.), dash (-), and at character (@).
+         * - The name can contain only UTF-8 characters.
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -78,7 +82,10 @@ public class CreateAppInfoRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the application. 
+         * <p>
+         * - The description can contain up to 512 characters in length.
+         * - The description can contain only UTF-8 characters.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);

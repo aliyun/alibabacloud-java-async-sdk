@@ -55,7 +55,7 @@ public class GetAppInfosRequest extends Request {
         } 
 
         /**
-         * AppIds.
+         * The ID of the application. You can specify a maximum of 10 application IDs. Separate them with commas (,).
          */
         public Builder appIds(String appIds) {
             this.putQueryParameter("AppIds", appIds);

@@ -111,7 +111,12 @@ public class DeleteImageRequest extends Request {
         } 
 
         /**
-         * DeleteImageType.
+         * The method that is used to delete images. Valid values:
+         * <p>
+         * 
+         * *   **ImageURL**: Delete the specified image based on the image URL.
+         * *   **ImageId**: Delete the specified image based on the image ID.
+         * *   **VideoId**: Delete the image that is associated with a video ID.
          */
         public Builder deleteImageType(String deleteImageType) {
             this.putQueryParameter("DeleteImageType", deleteImageType);
@@ -120,7 +125,11 @@ public class DeleteImageRequest extends Request {
         }
 
         /**
-         * ImageIds.
+         * The ID of the image.
+         * <p>
+         * 
+         * *   This parameter only takes effect when the **DeleteImageType** parameter is set to **ImageId**. In this case, you must set this parameter.
+         * *   Separate multiple IDs with commas (,).
          */
         public Builder imageIds(String imageIds) {
             this.putQueryParameter("ImageIds", imageIds);
@@ -129,7 +138,14 @@ public class DeleteImageRequest extends Request {
         }
 
         /**
-         * ImageType.
+         * The type of the image. This parameter only takes effect when the **DeleteImageType** parameter is set to **VideoId**. In this case, you must set this parameter. Valid values:
+         * <p>
+         * 
+         * *   **CoverSnapshot**: thumbnail snapshot.
+         * *   **NormalSnapshot**: normal snapshot.
+         * *   **SpriteSnapshot**: sprite snapshot.
+         * *   **SpriteOriginSnapshot**: sprite source snapshot.
+         * *   **All**: images of all the preceding types. If this parameter is not set to All, you can specify multiple types and separate them with commas (,).
          */
         public Builder imageType(String imageType) {
             this.putQueryParameter("ImageType", imageType);
@@ -138,7 +154,12 @@ public class DeleteImageRequest extends Request {
         }
 
         /**
-         * ImageURLs.
+         * The URL of the image.
+         * <p>
+         * 
+         * *   This parameter only takes effect when the **DeleteImageType** parameter is set to **ImageURL**. In this case, you must set this parameter.
+         * *   Encode multiple image URLs and separate them with commas (,).
+         * *   The use of special characters in image URLs may lead to the failure to delete the images. To prevent such failure, you must encode the image URLs before you concatenate them into a string with commas (,).
          */
         public Builder imageURLs(String imageURLs) {
             this.putQueryParameter("ImageURLs", imageURLs);
@@ -147,7 +168,7 @@ public class DeleteImageRequest extends Request {
         }
 
         /**
-         * VideoId.
+         * The ID of the video. This parameter only takes effect when the **DeleteImageType** parameter is set to **VideoId**. In this case, you must set this parameter.
          */
         public Builder videoId(String videoId) {
             this.putQueryParameter("VideoId", videoId);

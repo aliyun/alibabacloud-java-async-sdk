@@ -50,7 +50,7 @@ public class GetWatermarkResponseBody extends TeaModel {
         private WatermarkInfo watermarkInfo; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class GetWatermarkResponseBody extends TeaModel {
         }
 
         /**
-         * WatermarkInfo.
+         * The information about the watermark.
          */
         public Builder watermarkInfo(WatermarkInfo watermarkInfo) {
             this.watermarkInfo = watermarkInfo;
@@ -182,7 +182,7 @@ public class GetWatermarkResponseBody extends TeaModel {
             private String watermarkId; 
 
             /**
-             * AppId.
+             * The ID of the application.
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -190,7 +190,7 @@ public class GetWatermarkResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * The time when the watermark was added. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -198,7 +198,7 @@ public class GetWatermarkResponseBody extends TeaModel {
             }
 
             /**
-             * FileUrl.
+             * The Object Storage Service (OSS) URL or Content Delivery Network (CDN) URL of the watermark file. A text watermark does not have a file URL.
              */
             public Builder fileUrl(String fileUrl) {
                 this.fileUrl = fileUrl;
@@ -206,7 +206,11 @@ public class GetWatermarkResponseBody extends TeaModel {
             }
 
             /**
-             * IsDefault.
+             * Indicates whether the watermark is the default one. Valid values:
+             * <p>
+             * 
+             * *   **Default**: The watermark is the default one.
+             * *   **NotDefault**: The watermark is not the default one.
              */
             public Builder isDefault(String isDefault) {
                 this.isDefault = isDefault;
@@ -214,7 +218,7 @@ public class GetWatermarkResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the watermark.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -222,7 +226,11 @@ public class GetWatermarkResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the watermark. Valid values:
+             * <p>
+             * 
+             * *   **Image**
+             * *   **Text**
              */
             public Builder type(String type) {
                 this.type = type;
@@ -230,7 +238,7 @@ public class GetWatermarkResponseBody extends TeaModel {
             }
 
             /**
-             * WatermarkConfig.
+             * The configurations such as the position and effect of the text watermark or image watermark. The value is a JSON-formatted string. For more information about the data structure, see the "WatermarkConfig" section of the [Media processing parameters](~~98618~~) topic.
              */
             public Builder watermarkConfig(String watermarkConfig) {
                 this.watermarkConfig = watermarkConfig;
@@ -238,7 +246,7 @@ public class GetWatermarkResponseBody extends TeaModel {
             }
 
             /**
-             * WatermarkId.
+             * The ID of the watermark.
              */
             public Builder watermarkId(String watermarkId) {
                 this.watermarkId = watermarkId;

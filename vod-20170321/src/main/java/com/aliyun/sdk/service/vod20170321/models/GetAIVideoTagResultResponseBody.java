@@ -50,7 +50,7 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
         private VideoTagResult videoTagResult; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
         }
 
         /**
-         * VideoTagResult.
+         * The returned result.
          */
         public Builder videoTagResult(VideoTagResult videoTagResult) {
             this.videoTagResult = videoTagResult;
@@ -98,7 +98,7 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
             private String tag; 
 
             /**
-             * Tag.
+             * The tag string.
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -151,7 +151,7 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
             private java.util.List < String > times; 
 
             /**
-             * Tag.
+             * The tag string.
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -159,7 +159,7 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
             }
 
             /**
-             * Times.
+             * The points in time when the tags are displayed. Unit: milliseconds.
              */
             public Builder times(java.util.List < String > times) {
                 this.times = times;
@@ -212,7 +212,7 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
             private java.util.List < String > times; 
 
             /**
-             * Tag.
+             * The tag string.
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -220,7 +220,7 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
             }
 
             /**
-             * Times.
+             * The points in time when the tags are displayed. Unit: milliseconds.
              */
             public Builder times(java.util.List < String > times) {
                 this.times = times;
@@ -285,7 +285,10 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
             private java.util.List < String > times; 
 
             /**
-             * FaceUrl.
+             * The URL of the profile photo.
+             * <p>
+             * 
+             * > This parameter is returned only when a figure tag was used.
              */
             public Builder faceUrl(String faceUrl) {
                 this.faceUrl = faceUrl;
@@ -293,7 +296,7 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
             }
 
             /**
-             * Tag.
+             * The tag string.
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -301,7 +304,7 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
             }
 
             /**
-             * Times.
+             * The points in time when the tags are displayed. Unit: milliseconds.
              */
             public Builder times(java.util.List < String > times) {
                 this.times = times;
@@ -354,7 +357,7 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
             private java.util.List < String > times; 
 
             /**
-             * Tag.
+             * The tag string.
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -362,7 +365,7 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
             }
 
             /**
-             * Times.
+             * The points in time when the tags are displayed. Unit: milliseconds.
              */
             public Builder times(java.util.List < String > times) {
                 this.times = times;
@@ -451,7 +454,7 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
             private java.util.List < Time> time; 
 
             /**
-             * Category.
+             * The video categories.
              */
             public Builder category(java.util.List < Category> category) {
                 this.category = category;
@@ -459,7 +462,7 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
             }
 
             /**
-             * Keyword.
+             * The keyword tags.
              */
             public Builder keyword(java.util.List < Keyword> keyword) {
                 this.keyword = keyword;
@@ -467,7 +470,7 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
             }
 
             /**
-             * Location.
+             * The location tags.
              */
             public Builder location(java.util.List < Location> location) {
                 this.location = location;
@@ -475,7 +478,7 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
             }
 
             /**
-             * Person.
+             * The figure tags.
              */
             public Builder person(java.util.List < Person> person) {
                 this.person = person;
@@ -483,7 +486,7 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
             }
 
             /**
-             * Time.
+             * The time tags.
              */
             public Builder time(java.util.List < Time> time) {
                 this.time = time;

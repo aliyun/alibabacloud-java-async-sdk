@@ -126,7 +126,7 @@ public class DescribeVodStorageDataRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -144,7 +144,13 @@ public class DescribeVodStorageDataRequest extends Request {
         }
 
         /**
-         * Region.
+         * The region where media assets are stored. If you do not set this parameter, the data in all regions is returned. You can specify multiple regions. Separate them with commas (,). Valid values:
+         * <p>
+         * 
+         * *   **cn-shanghai**: China (Shanghai)
+         * *   **cn-beijing**: China (Beijing)
+         * *   **eu-central-1**: Germany (Frankfurt)
+         * *   **ap-southeast-1**: Singapore
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -153,7 +159,7 @@ public class DescribeVodStorageDataRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -162,7 +168,7 @@ public class DescribeVodStorageDataRequest extends Request {
         }
 
         /**
-         * Storage.
+         * The name of the Object Storage Service (OSS) bucket. If you do not set this parameter, the data of all buckets is returned. You can specify multiple buckets. Separate them with commas (,).
          */
         public Builder storage(String storage) {
             this.putQueryParameter("Storage", storage);
@@ -171,7 +177,7 @@ public class DescribeVodStorageDataRequest extends Request {
         }
 
         /**
-         * StorageType.
+         * The storage type. Set the value to **OSS**.
          */
         public Builder storageType(String storageType) {
             this.putQueryParameter("StorageType", storageType);

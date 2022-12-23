@@ -152,7 +152,7 @@ public class GetVideoListRequest extends Request {
         } 
 
         /**
-         * CateId.
+         * The ID of the video category.
          */
         public Builder cateId(Long cateId) {
             this.putQueryParameter("CateId", cateId);
@@ -161,7 +161,7 @@ public class GetVideoListRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range for querying videos based on their creation time. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -170,7 +170,7 @@ public class GetVideoListRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -179,7 +179,7 @@ public class GetVideoListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * Optional. The number of entries to return on each page. Default value: **10**. Maximum value: **100**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -188,7 +188,11 @@ public class GetVideoListRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * The method for sorting the results. Valid values:
+         * <p>
+         * 
+         * *   **CreationTime:Desc** (default): The results are sorted in reverse chronological order based on the creation time.
+         * *   **CreationTime:Asc**: The results are sorted in chronological order based on the creation time.
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -197,7 +201,7 @@ public class GetVideoListRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range for querying videos based on their creation time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -206,7 +210,16 @@ public class GetVideoListRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the video. By default, you can obtain videos in all states. Separate multiple states with commas (,). Valid values:
+         * <p>
+         * 
+         * *   **Uploading**: The video is being uploaded.
+         * *   **UploadFail**: The video fails to be uploaded.
+         * *   **UploadSucc**: The video is uploaded.
+         * *   **Transcoding**: The video is being transcoded.
+         * *   **TranscodeFail**: The video fails to be transcoded.
+         * *   **Blocked**: The video is blocked.
+         * *   **Normal**: The video can be played.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -215,7 +228,7 @@ public class GetVideoListRequest extends Request {
         }
 
         /**
-         * StorageLocation.
+         * The Object Storage Service (OSS) bucket where the video file is stored.
          */
         public Builder storageLocation(String storageLocation) {
             this.putQueryParameter("StorageLocation", storageLocation);

@@ -140,7 +140,7 @@ public class SetVodDomainCertificateRequest extends Request {
         } 
 
         /**
-         * CertName.
+         * The name of the certificate.
          */
         public Builder certName(String certName) {
             this.putQueryParameter("CertName", certName);
@@ -149,7 +149,7 @@ public class SetVodDomainCertificateRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * The domain name that is secured by the certificate. The domain name uses HTTPS acceleration.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -167,7 +167,7 @@ public class SetVodDomainCertificateRequest extends Request {
         }
 
         /**
-         * SSLPri.
+         * The private key. This parameter is required only if you enable the SSL certificate.
          */
         public Builder SSLPri(String SSLPri) {
             this.putQueryParameter("SSLPri", SSLPri);
@@ -176,7 +176,11 @@ public class SetVodDomainCertificateRequest extends Request {
         }
 
         /**
-         * SSLProtocol.
+         * Specifies whether to enable the SSL certificate. Valid values:
+         * <p>
+         * 
+         * *   **on**: enables the SSL certificate.
+         * *   **off**: disables the SSL certificate. Default value: off.
          */
         public Builder SSLProtocol(String SSLProtocol) {
             this.putQueryParameter("SSLProtocol", SSLProtocol);
@@ -185,7 +189,7 @@ public class SetVodDomainCertificateRequest extends Request {
         }
 
         /**
-         * SSLPub.
+         * The content of the certificate. This parameter is required only if you enable the SSL certificate.
          */
         public Builder SSLPub(String SSLPub) {
             this.putQueryParameter("SSLPub", SSLPub);

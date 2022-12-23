@@ -69,7 +69,11 @@ public class DeleteDynamicImageRequest extends Request {
         } 
 
         /**
-         * DynamicImageIds.
+         * The IDs of the animated stickers.
+         * <p>
+         * 
+         * - Separate multiple IDs with commas (,). You can specify a maximum of 10 IDs.
+         * - If you do not set this parameter, the system finds the video specified by the VideoId parameter and deletes the information about the animated stickers associated with the video. If more than 10 animated stickers are associated with the video specified by the VideoId parameter, the deletion request is denied.
          */
         public Builder dynamicImageIds(String dynamicImageIds) {
             this.putQueryParameter("DynamicImageIds", dynamicImageIds);
@@ -78,7 +82,7 @@ public class DeleteDynamicImageRequest extends Request {
         }
 
         /**
-         * VideoId.
+         * The ID of the video associated with the animated stickers whose information you want to delete.
          */
         public Builder videoId(String videoId) {
             this.putQueryParameter("VideoId", videoId);

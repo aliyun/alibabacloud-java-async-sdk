@@ -62,7 +62,7 @@ public class GetURLUploadInfosResponseBody extends TeaModel {
         private java.util.List < URLUploadInfoList> URLUploadInfoList; 
 
         /**
-         * NonExists.
+         * The job IDs or upload URLs that do not exist.
          */
         public Builder nonExists(java.util.List < String > nonExists) {
             this.nonExists = nonExists;
@@ -70,7 +70,7 @@ public class GetURLUploadInfosResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class GetURLUploadInfosResponseBody extends TeaModel {
         }
 
         /**
-         * URLUploadInfoList.
+         * The information about URL-based upload jobs. For more information, see the "URLUploadInfo: the information about a URL-based upload job" section of the [Basic structures](~~52839~~) topic.
          */
         public Builder URLUploadInfoList(java.util.List < URLUploadInfoList> URLUploadInfoList) {
             this.URLUploadInfoList = URLUploadInfoList;
@@ -226,7 +226,7 @@ public class GetURLUploadInfosResponseBody extends TeaModel {
             private String userData; 
 
             /**
-             * CompleteTime.
+             * The time when the upload job was complete. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder completeTime(String completeTime) {
                 this.completeTime = completeTime;
@@ -234,7 +234,7 @@ public class GetURLUploadInfosResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * The time when the upload job was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -242,7 +242,7 @@ public class GetURLUploadInfosResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorCode.
+             * The error code returned.
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -250,7 +250,7 @@ public class GetURLUploadInfosResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * The error message returned.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -258,7 +258,7 @@ public class GetURLUploadInfosResponseBody extends TeaModel {
             }
 
             /**
-             * FileSize.
+             * The size of the uploaded media file. Unit: byte.
              */
             public Builder fileSize(String fileSize) {
                 this.fileSize = fileSize;
@@ -266,7 +266,7 @@ public class GetURLUploadInfosResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * The ID of the upload job.
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -274,7 +274,7 @@ public class GetURLUploadInfosResponseBody extends TeaModel {
             }
 
             /**
-             * MediaId.
+             * The ID of the uploaded media file.
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;
@@ -282,7 +282,7 @@ public class GetURLUploadInfosResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the URL-based upload job. For more information about the valid values and value description of the parameter, see the "Status: the status of a video" section of the [Basic structures](~~52839~~) topic.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -290,7 +290,10 @@ public class GetURLUploadInfosResponseBody extends TeaModel {
             }
 
             /**
-             * UploadURL.
+             * The upload URL of the source file.
+             * <p>
+             * 
+             * > A maximum of 100 URLs can be returned.
              */
             public Builder uploadURL(String uploadURL) {
                 this.uploadURL = uploadURL;
@@ -298,7 +301,7 @@ public class GetURLUploadInfosResponseBody extends TeaModel {
             }
 
             /**
-             * UserData.
+             * The custom configurations. The value is a JSON string. For more information, see the "UserData: specifies the custom configurations for media upload" section of the [Request parameters](~~86952~~) topic.
              */
             public Builder userData(String userData) {
                 this.userData = userData;

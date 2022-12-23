@@ -62,7 +62,7 @@ public class GetVideoListResponseBody extends TeaModel {
         private VideoList videoList; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class GetVideoListResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * The total number of videos.
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -78,7 +78,7 @@ public class GetVideoListResponseBody extends TeaModel {
         }
 
         /**
-         * VideoList.
+         * The information about the video. The information about a maximum of first 5,000 video records can be obtained in a single request.
          */
         public Builder videoList(VideoList videoList) {
             this.videoList = videoList;
@@ -327,7 +327,7 @@ public class GetVideoListResponseBody extends TeaModel {
             private String videoId; 
 
             /**
-             * AppId.
+             * The ID of the application. Default value: **app-1000000**.
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -335,7 +335,7 @@ public class GetVideoListResponseBody extends TeaModel {
             }
 
             /**
-             * CateId.
+             * The ID of the video category.
              */
             public Builder cateId(Long cateId) {
                 this.cateId = cateId;
@@ -343,7 +343,7 @@ public class GetVideoListResponseBody extends TeaModel {
             }
 
             /**
-             * CateName.
+             * The name of the video category.
              */
             public Builder cateName(String cateName) {
                 this.cateName = cateName;
@@ -351,7 +351,7 @@ public class GetVideoListResponseBody extends TeaModel {
             }
 
             /**
-             * CoverURL.
+             * The URL of the video thumbnail.
              */
             public Builder coverURL(String coverURL) {
                 this.coverURL = coverURL;
@@ -359,7 +359,7 @@ public class GetVideoListResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * The time when the video file was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -367,7 +367,7 @@ public class GetVideoListResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the video.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -375,7 +375,7 @@ public class GetVideoListResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * The duration of the video. Unit: seconds.
              */
             public Builder duration(Float duration) {
                 this.duration = duration;
@@ -383,7 +383,7 @@ public class GetVideoListResponseBody extends TeaModel {
             }
 
             /**
-             * ModificationTime.
+             * The time when the video file was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder modificationTime(String modificationTime) {
                 this.modificationTime = modificationTime;
@@ -391,7 +391,7 @@ public class GetVideoListResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * The size of the video mezzanine file. Unit: byte.
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -399,7 +399,7 @@ public class GetVideoListResponseBody extends TeaModel {
             }
 
             /**
-             * Snapshots.
+             * The URL array of video snapshots.
              */
             public Builder snapshots(Snapshots snapshots) {
                 this.snapshots = snapshots;
@@ -407,7 +407,16 @@ public class GetVideoListResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the video. By default, videos in all states are returned. Multiple states are separated by commas (,). Valid values:
+             * <p>
+             * 
+             * *   **Uploading**: The video is being uploaded.
+             * *   **UploadFail**: The video fails to be uploaded.
+             * *   **UploadSucc**: The video is uploaded.
+             * *   **Transcoding**: The video is being transcoded.
+             * *   **TranscodeFail**: The video fails to be transcoded.
+             * *   **Blocked**: The video is blocked.
+             * *   **Normal**: The video can be played.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -415,7 +424,7 @@ public class GetVideoListResponseBody extends TeaModel {
             }
 
             /**
-             * StorageLocation.
+             * The OSS bucket where the video file is stored.
              */
             public Builder storageLocation(String storageLocation) {
                 this.storageLocation = storageLocation;
@@ -423,7 +432,7 @@ public class GetVideoListResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tags of the video. Multiple tags are separated by commas (,).
              */
             public Builder tags(String tags) {
                 this.tags = tags;
@@ -431,7 +440,7 @@ public class GetVideoListResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * The title of the video.
              */
             public Builder title(String title) {
                 this.title = title;
@@ -439,7 +448,7 @@ public class GetVideoListResponseBody extends TeaModel {
             }
 
             /**
-             * VideoId.
+             * The ID of the video.
              */
             public Builder videoId(String videoId) {
                 this.videoId = videoId;

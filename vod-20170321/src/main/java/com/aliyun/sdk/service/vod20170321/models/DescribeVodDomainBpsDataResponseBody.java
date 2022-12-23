@@ -122,7 +122,7 @@ public class DescribeVodDomainBpsDataResponseBody extends TeaModel {
         private String startTime; 
 
         /**
-         * BpsDataPerInterval.
+         * The bandwidth data that is collected for each interval.
          */
         public Builder bpsDataPerInterval(BpsDataPerInterval bpsDataPerInterval) {
             this.bpsDataPerInterval = bpsDataPerInterval;
@@ -130,7 +130,7 @@ public class DescribeVodDomainBpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * DataInterval.
+         * The time interval between the returned entries. Unit: seconds.
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -138,7 +138,7 @@ public class DescribeVodDomainBpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * DomainName.
+         * The domain name for CDN.
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -146,7 +146,7 @@ public class DescribeVodDomainBpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * The end of the time range in which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -154,7 +154,7 @@ public class DescribeVodDomainBpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * IspNameEn.
+         * The name of the ISP. By default, the data of all ISPs is returned.
          */
         public Builder ispNameEn(String ispNameEn) {
             this.ispNameEn = ispNameEn;
@@ -162,7 +162,7 @@ public class DescribeVodDomainBpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * LocationNameEn.
+         * The name of the region. By default, the data in all regions is returned.
          */
         public Builder locationNameEn(String locationNameEn) {
             this.locationNameEn = locationNameEn;
@@ -170,7 +170,7 @@ public class DescribeVodDomainBpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -178,7 +178,7 @@ public class DescribeVodDomainBpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range in which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -290,7 +290,7 @@ public class DescribeVodDomainBpsDataResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * DomesticValue.
+             * The bandwidth in mainland China. Unit: bit/s. When the bandwidth data is queried by ISP, no value is returned.
              */
             public Builder domesticValue(String domesticValue) {
                 this.domesticValue = domesticValue;
@@ -298,7 +298,7 @@ public class DescribeVodDomainBpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * HttpsDomesticValue.
+             * The HTTPS bandwidth on L1 nodes in mainland China. Unit: bit/s. When the bandwidth data is queried by ISP, no value is returned.
              */
             public Builder httpsDomesticValue(String httpsDomesticValue) {
                 this.httpsDomesticValue = httpsDomesticValue;
@@ -306,7 +306,7 @@ public class DescribeVodDomainBpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * HttpsOverseasValue.
+             * The HTTPS bandwidth on L1 nodes outside mainland China. Unit: bit/s. When the bandwidth data is queried by ISP, no value is returned.
              */
             public Builder httpsOverseasValue(String httpsOverseasValue) {
                 this.httpsOverseasValue = httpsOverseasValue;
@@ -314,7 +314,7 @@ public class DescribeVodDomainBpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * HttpsValue.
+             * The total HTTPS bandwidth on L1 nodes. Unit: bit/s.
              */
             public Builder httpsValue(String httpsValue) {
                 this.httpsValue = httpsValue;
@@ -322,7 +322,7 @@ public class DescribeVodDomainBpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * OverseasValue.
+             * The bandwidth outside mainland China. Unit: bit/s. When the bandwidth data is queried by ISP, no value is returned.
              */
             public Builder overseasValue(String overseasValue) {
                 this.overseasValue = overseasValue;
@@ -330,7 +330,7 @@ public class DescribeVodDomainBpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * TimeStamp.
+             * The timestamp of the returned data. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -338,7 +338,7 @@ public class DescribeVodDomainBpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The bandwidth. Unit: bit/s.
              */
             public Builder value(String value) {
                 this.value = value;

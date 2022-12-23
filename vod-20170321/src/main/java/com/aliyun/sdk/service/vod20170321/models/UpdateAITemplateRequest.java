@@ -85,7 +85,7 @@ public class UpdateAITemplateRequest extends Request {
         } 
 
         /**
-         * TemplateConfig.
+         * The detailed configurations of the AI template. The value is a JSON string.
          */
         public Builder templateConfig(String templateConfig) {
             this.putQueryParameter("TemplateConfig", templateConfig);
@@ -94,7 +94,11 @@ public class UpdateAITemplateRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * The ID of the AI template. You can use one of the following methods to obtain the ID of the AI template:
+         * <p>
+         * 
+         * *   Call the [AddAITemplate](~~102930~~) operation to add an AI template if no AI template exists. The value of TemplateId from the response is the ID of the AI template.
+         * *   Call the [ListAITemplate](~~102936~~) operation if the template already exists. The value of TemplateId from the response is the ID of the AI template.
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -103,7 +107,7 @@ public class UpdateAITemplateRequest extends Request {
         }
 
         /**
-         * TemplateName.
+         * The name of the AI template. The name can be up to 128 bytes in length.
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);

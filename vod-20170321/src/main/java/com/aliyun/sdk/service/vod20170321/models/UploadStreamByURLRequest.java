@@ -127,7 +127,10 @@ public class UploadStreamByURLRequest extends Request {
         } 
 
         /**
-         * Definition.
+         * The quality of the video stream.
+         * <p>
+         * 
+         * For more information about valid values of this parameter, see [Parameters for media assets](~~124671~~).
          */
         public Builder definition(String definition) {
             this.putQueryParameter("Definition", definition);
@@ -136,7 +139,14 @@ public class UploadStreamByURLRequest extends Request {
         }
 
         /**
-         * FileExtension.
+         * The file name extension of the transcoded stream.
+         * <p>
+         * 
+         * For more information, see the Supported media file formats section in [Overview](~~55396~~).
+         * 
+         * If you set a value for this parameter, the file name extension specified in StreamURL is overwritten.
+         * 
+         * >  This parameter is required if you do not specify a file name extension in StreamURL.
          */
         public Builder fileExtension(String fileExtension) {
             this.putQueryParameter("FileExtension", fileExtension);
@@ -145,7 +155,21 @@ public class UploadStreamByURLRequest extends Request {
         }
 
         /**
-         * 视频流HDR类型
+         * The HDR type of the transcoded stream. Valid values:
+         * <p>
+         * 
+         * *   HDR
+         * *   HDR10
+         * *   HLG
+         * *   DolbyVision
+         * *   HDRVivid
+         * *   SDR+
+         * 
+         * > 
+         * 
+         * *   The HDR type of the transcoded stream is not case-sensitive.
+         * 
+         * *   You can leave this parameter empty for non-HDR streams.
          */
         public Builder HDRType(String HDRType) {
             this.putQueryParameter("HDRType", HDRType);
@@ -154,7 +178,7 @@ public class UploadStreamByURLRequest extends Request {
         }
 
         /**
-         * MediaId.
+         * The media ID in ApsaraVideo VOD.
          */
         public Builder mediaId(String mediaId) {
             this.putQueryParameter("MediaId", mediaId);
@@ -163,7 +187,10 @@ public class UploadStreamByURLRequest extends Request {
         }
 
         /**
-         * StreamURL.
+         * The URL of the transcoded stream.
+         * <p>
+         * 
+         * If URL authentication is required, you must pass authentication information in this parameter and make sure that the URL can be accessed over the Internet.
          */
         public Builder streamURL(String streamURL) {
             this.putQueryParameter("StreamURL", streamURL);
@@ -172,7 +199,10 @@ public class UploadStreamByURLRequest extends Request {
         }
 
         /**
-         * UserData.
+         * The user-defined parameter. For more information, see the "UserData: specifies the custom configurations for media upload" section of the [Request parameters](~~86952~~) topic.
+         * <p>
+         * 
+         * >  The callback configurations you specify for this parameter take effect only after you specify the HTTP callback URL and select specific callback events in the ApsaraVideo VOD console. For more information about how to configure HTTP callback settings in the ApsaraVideo VOD console, see [Configure callback settings](~~86071~~).
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);

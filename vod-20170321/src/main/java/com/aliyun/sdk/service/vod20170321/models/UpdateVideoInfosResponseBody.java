@@ -62,7 +62,7 @@ public class UpdateVideoInfosResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ForbiddenVideoIds.
+         * The IDs of the videos that cannot be modified. Generally, videos cannot be modified if you do not have required [permissions](~~113600~~).
          */
         public Builder forbiddenVideoIds(java.util.List < String > forbiddenVideoIds) {
             this.forbiddenVideoIds = forbiddenVideoIds;
@@ -70,7 +70,7 @@ public class UpdateVideoInfosResponseBody extends TeaModel {
         }
 
         /**
-         * NonExistVideoIds.
+         * The IDs of the videos that do not exist.
          */
         public Builder nonExistVideoIds(java.util.List < String > nonExistVideoIds) {
             this.nonExistVideoIds = nonExistVideoIds;
@@ -78,7 +78,7 @@ public class UpdateVideoInfosResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

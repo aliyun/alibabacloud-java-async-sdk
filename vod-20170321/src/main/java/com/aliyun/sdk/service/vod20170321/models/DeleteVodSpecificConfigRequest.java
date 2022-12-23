@@ -98,7 +98,7 @@ public class DeleteVodSpecificConfigRequest extends Request {
         } 
 
         /**
-         * ConfigId.
+         * The ID of the configuration.
          */
         public Builder configId(String configId) {
             this.putQueryParameter("ConfigId", configId);
@@ -107,7 +107,7 @@ public class DeleteVodSpecificConfigRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * The domain name for CDN.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);

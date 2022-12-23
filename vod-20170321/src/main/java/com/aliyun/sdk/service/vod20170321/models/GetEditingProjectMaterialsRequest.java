@@ -139,7 +139,12 @@ public class GetEditingProjectMaterialsRequest extends Request {
         } 
 
         /**
-         * MaterialType.
+         * The type of the material. Valid values:
+         * <p>
+         * 
+         * *   **video**
+         * *   **audio**
+         * *   **image**
          */
         public Builder materialType(String materialType) {
             this.putQueryParameter("MaterialType", materialType);
@@ -166,7 +171,11 @@ public class GetEditingProjectMaterialsRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * The ID of the online editing project. You can use one of the following methods to obtain the ID of the online editing project:
+         * <p>
+         * 
+         * *   Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). In the left-side navigation pane, choose **Production Center** > **Video Editing** to obtain the ID of the specified online editing project.
+         * *   Call the **AddEditingProject** operation. The value of the response parameter ProjectId is the ID of the specified online editing project.
          */
         public Builder projectId(String projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -193,7 +202,11 @@ public class GetEditingProjectMaterialsRequest extends Request {
         }
 
         /**
-         * Type.
+         * The type of the material. Valid values:
+         * <p>
+         * 
+         * *   **video**
+         * *   **audio**
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

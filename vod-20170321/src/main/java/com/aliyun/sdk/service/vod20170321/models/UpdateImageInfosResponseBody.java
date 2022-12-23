@@ -50,7 +50,7 @@ public class UpdateImageInfosResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * NonExistImageIds.
+         * The IDs of the images that do not exist.
          */
         public Builder nonExistImageIds(NonExistImageIds nonExistImageIds) {
             this.nonExistImageIds = nonExistImageIds;
@@ -58,7 +58,7 @@ public class UpdateImageInfosResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

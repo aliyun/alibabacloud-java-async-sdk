@@ -50,7 +50,7 @@ public class CreateAppInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AppId.
+         * The ID of the application.
          */
         public Builder appId(String appId) {
             this.appId = appId;
@@ -58,7 +58,7 @@ public class CreateAppInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -97,7 +97,7 @@ public class RefreshVodObjectCachesRequest extends Request {
         } 
 
         /**
-         * ObjectPath.
+         * The path of the resource to be refreshed. Separate multiple paths with line breaks (\n or \r\n).
          */
         public Builder objectPath(String objectPath) {
             this.putQueryParameter("ObjectPath", objectPath);
@@ -106,7 +106,11 @@ public class RefreshVodObjectCachesRequest extends Request {
         }
 
         /**
-         * ObjectType.
+         * The granularity of the resources to be refreshed. Valid values:
+         * <p>
+         * 
+         * *   **File**: refreshes one or more files. This is the default value.
+         * *   **Directory**: refreshes the files under one or more directories.
          */
         public Builder objectType(String objectType) {
             this.putQueryParameter("ObjectType", objectType);

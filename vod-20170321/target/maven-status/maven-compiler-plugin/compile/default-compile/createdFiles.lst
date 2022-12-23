@@ -142,6 +142,7 @@ com/aliyun/sdk/service/vod20170321/models/UpdateWatermarkResponse.class
 com/aliyun/sdk/service/vod20170321/models/CreateAppInfoResponse$1.class
 com/aliyun/sdk/service/vod20170321/models/SetCrossdomainContentResponse$1.class
 com/aliyun/sdk/service/vod20170321/models/UpdateCategoryResponse$BuilderImpl.class
+com/aliyun/sdk/service/vod20170321/models/DescribeVodDomainSrcBpsDataRequest$Builder.class
 com/aliyun/sdk/service/vod20170321/models/GetPlayInfoResponseBody$VideoBase.class
 com/aliyun/sdk/service/vod20170321/models/ListWatermarkRequest$Builder.class
 com/aliyun/sdk/service/vod20170321/models/AddVodTemplateRequest.class
@@ -191,6 +192,7 @@ com/aliyun/sdk/service/vod20170321/models/UpdateImageInfosRequest$Builder.class
 com/aliyun/sdk/service/vod20170321/models/DecryptKMSDataKeyRequest$Builder.class
 com/aliyun/sdk/service/vod20170321/models/DescribeVodDomainLogResponseBody$DomainLogDetail$Builder.class
 com/aliyun/sdk/service/vod20170321/models/AddVodDomainResponseBody$1.class
+com/aliyun/sdk/service/vod20170321/models/DescribeVodDomainSrcTrafficDataResponseBody$1.class
 com/aliyun/sdk/service/vod20170321/models/GetAIMediaAuditJobRequest.class
 com/aliyun/sdk/service/vod20170321/models/GetAITemplateResponse.class
 com/aliyun/sdk/service/vod20170321/models/SubmitMediaDNADeleteJobResponseBody$Builder.class
@@ -207,6 +209,7 @@ com/aliyun/sdk/service/vod20170321/models/DeleteWatermarkResponseBody$Builder.cl
 com/aliyun/sdk/service/vod20170321/models/GetMediaAuditResultResponseBody$TerrorismResultTopList$Builder.class
 com/aliyun/sdk/service/vod20170321/models/GetMediaDNAResultRequest.class
 com/aliyun/sdk/service/vod20170321/models/CancelUrlUploadJobsResponse$BuilderImpl.class
+com/aliyun/sdk/service/vod20170321/models/DescribeVodDomainSrcTrafficDataResponseBody$DataModule$Builder.class
 com/aliyun/sdk/service/vod20170321/models/GetAIMediaAuditJobResponseBody$PornResultTopList.class
 com/aliyun/sdk/service/vod20170321/models/SubmitAIImageJobResponse.class
 com/aliyun/sdk/service/vod20170321/models/UploadMediaByURLResponseBody$Builder.class
@@ -349,13 +352,16 @@ com/aliyun/sdk/service/vod20170321/models/ListWatermarkResponse$1.class
 com/aliyun/sdk/service/vod20170321/models/DetachAppPolicyFromIdentityRequest$Builder.class
 com/aliyun/sdk/service/vod20170321/models/DescribeVodDomainCertificateInfoResponse$1.class
 com/aliyun/sdk/service/vod20170321/models/GetAIMediaAuditJobResponseBody$LiveResult.class
+com/aliyun/sdk/service/vod20170321/models/DescribeVodDomainSrcBpsDataResponseBody$SrcBpsDataPerInterval$Builder.class
 com/aliyun/sdk/service/vod20170321/models/VerifyVodDomainOwnerRequest$Builder.class
 com/aliyun/sdk/service/vod20170321/models/ListAppInfoResponseBody$1.class
 com/aliyun/sdk/service/vod20170321/models/SubmitTranscodeJobsResponse$Builder.class
 com/aliyun/sdk/service/vod20170321/models/GetAIMediaAuditJobResponseBody$LogoResultTopList$Builder.class
 com/aliyun/sdk/service/vod20170321/models/GetImageInfoResponse.class
+com/aliyun/sdk/service/vod20170321/models/DescribeVodDomainSrcBpsDataResponse$Builder.class
 com/aliyun/sdk/service/vod20170321/models/DeleteMultipartUploadResponseBody$Builder.class
 com/aliyun/sdk/service/vod20170321/models/SubmitWorkflowJobRequest$1.class
+com/aliyun/sdk/service/vod20170321/models/DescribeVodDomainSrcBpsDataResponseBody$1.class
 com/aliyun/sdk/service/vod20170321/models/GetWatermarkResponse$BuilderImpl.class
 com/aliyun/sdk/service/vod20170321/models/SubmitSnapshotJobResponseBody$1.class
 com/aliyun/sdk/service/vod20170321/models/SearchMediaResponseBody$Video$Builder.class
@@ -373,6 +379,7 @@ com/aliyun/sdk/service/vod20170321/models/DescribeVodCertificateListRequest$Buil
 com/aliyun/sdk/service/vod20170321/models/DescribeVodRefreshTasksResponseBody$1.class
 com/aliyun/sdk/service/vod20170321/models/UpdateImageInfosRequest$1.class
 com/aliyun/sdk/service/vod20170321/models/UpdateAppInfoRequest$Builder.class
+com/aliyun/sdk/service/vod20170321/models/DescribeVodDomainSrcBpsDataRequest$1.class
 com/aliyun/sdk/service/vod20170321/models/DeleteWatermarkResponse$1.class
 com/aliyun/sdk/service/vod20170321/models/DeleteMultipartUploadResponse$Builder.class
 com/aliyun/sdk/service/vod20170321/models/GetURLUploadInfosRequest$1.class
@@ -407,6 +414,7 @@ com/aliyun/sdk/service/vod20170321/models/GetVideoListRequest$1.class
 com/aliyun/sdk/service/vod20170321/models/GetMediaAuditResultResponseBody$ImageResult.class
 com/aliyun/sdk/service/vod20170321/models/GetTranscodeTaskResponseBody.class
 com/aliyun/sdk/service/vod20170321/models/ListAITemplateResponseBody$TemplateInfoList$Builder.class
+com/aliyun/sdk/service/vod20170321/models/DescribeVodDomainSrcTrafficDataResponse.class
 com/aliyun/sdk/service/vod20170321/models/DeleteAppInfoResponseBody.class
 com/aliyun/sdk/service/vod20170321/models/GetEditingProjectMaterialsRequest$1.class
 com/aliyun/sdk/service/vod20170321/models/DeleteMezzaninesRequest.class
@@ -420,6 +428,7 @@ com/aliyun/sdk/service/vod20170321/models/BatchSetVodDomainConfigsResponse$1.cla
 com/aliyun/sdk/service/vod20170321/models/GetEditingProjectMaterialsResponseBody$Snapshots$Builder.class
 com/aliyun/sdk/service/vod20170321/models/ListAppPoliciesForIdentityResponseBody$Builder.class
 com/aliyun/sdk/service/vod20170321/models/CreateUploadAttachedMediaResponse.class
+com/aliyun/sdk/service/vod20170321/models/DescribeVodDomainSrcBpsDataResponseBody$DataModule.class
 com/aliyun/sdk/service/vod20170321/models/DescribeVodAIDataResponseBody$Builder.class
 com/aliyun/sdk/service/vod20170321/models/DescribeVodRefreshQuotaRequest.class
 com/aliyun/sdk/service/vod20170321/models/GetVodTemplateResponse$BuilderImpl.class
@@ -471,6 +480,7 @@ com/aliyun/sdk/service/vod20170321/models/DescribePlayUserAvgResponse$1.class
 com/aliyun/sdk/service/vod20170321/models/SetDefaultWatermarkRequest$1.class
 com/aliyun/sdk/service/vod20170321/models/DetachAppPolicyFromIdentityResponseBody$Builder.class
 com/aliyun/sdk/service/vod20170321/models/UpdateVideoInfosResponse$BuilderImpl.class
+com/aliyun/sdk/service/vod20170321/models/DescribeVodDomainSrcTrafficDataResponse$Builder.class
 com/aliyun/sdk/service/vod20170321/models/UpdateVideoInfoResponse$BuilderImpl.class
 com/aliyun/sdk/service/vod20170321/models/DescribeVodDomainLogRequest$1.class
 com/aliyun/sdk/service/vod20170321/models/GetVodTemplateResponse$1.class
@@ -526,15 +536,18 @@ com/aliyun/sdk/service/vod20170321/models/SubmitDynamicImageJobResponse$1.class
 com/aliyun/sdk/service/vod20170321/models/GetMessageCallbackResponse$BuilderImpl.class
 com/aliyun/sdk/service/vod20170321/models/ListAIJobResponseBody$AIJob.class
 com/aliyun/sdk/service/vod20170321/models/CreateAppInfoResponseBody$1.class
+com/aliyun/sdk/service/vod20170321/models/DescribeVodDomainSrcTrafficDataRequest$1.class
 com/aliyun/sdk/service/vod20170321/models/SetVodDomainCertificateResponseBody$Builder.class
 com/aliyun/sdk/service/vod20170321/models/DeleteVodDomainResponse$BuilderImpl.class
 com/aliyun/sdk/service/vod20170321/models/DeleteVideoRequest.class
 com/aliyun/sdk/service/vod20170321/models/GetVideoListResponse$1.class
 com/aliyun/sdk/service/vod20170321/models/DeleteMessageCallbackResponse.class
 com/aliyun/sdk/service/vod20170321/models/GetAIVideoTagResultResponseBody$Location.class
+com/aliyun/sdk/service/vod20170321/models/DescribeVodDomainSrcBpsDataResponseBody$DataModule$Builder.class
 com/aliyun/sdk/service/vod20170321/models/DescribeVodRefreshTasksResponse.class
 com/aliyun/sdk/service/vod20170321/models/ListAuditSecurityIpResponseBody$1.class
 com/aliyun/sdk/service/vod20170321/models/RefreshMediaPlayUrlsResponseBody$1.class
+com/aliyun/sdk/service/vod20170321/models/DescribeVodDomainSrcBpsDataResponseBody.class
 com/aliyun/sdk/service/vod20170321/models/VerifyVodDomainOwnerResponse$Builder.class
 com/aliyun/sdk/service/vod20170321/models/GetDefaultAITemplateResponseBody.class
 com/aliyun/sdk/service/vod20170321/models/AttachAppPolicyToIdentityResponseBody$1.class
@@ -613,6 +626,7 @@ com/aliyun/sdk/service/vod20170321/models/ListAppPoliciesForIdentityRequest$Buil
 com/aliyun/sdk/service/vod20170321/models/GetMediaDNAResultResponse$Builder.class
 com/aliyun/sdk/service/vod20170321/models/DescribePlayUserAvgResponse.class
 com/aliyun/sdk/service/vod20170321/models/MoveAppResourceResponse.class
+com/aliyun/sdk/service/vod20170321/models/DescribeVodDomainSrcTrafficDataResponseBody.class
 com/aliyun/sdk/service/vod20170321/models/GetVideoInfosResponse$1.class
 com/aliyun/sdk/service/vod20170321/models/ListAIJobResponseBody$AIJobList.class
 com/aliyun/sdk/service/vod20170321/models/GetAIMediaAuditJobResponseBody$LogoResultCounterList$Builder.class
@@ -826,6 +840,7 @@ com/aliyun/sdk/service/vod20170321/models/DescribeVodDomainLogResponseBody$PageI
 com/aliyun/sdk/service/vod20170321/models/SetMessageCallbackRequest.class
 com/aliyun/sdk/service/vod20170321/models/GetUploadDetailsResponseBody$1.class
 com/aliyun/sdk/service/vod20170321/models/GetMediaAuditResultResponseBody$PornResultCounterList.class
+com/aliyun/sdk/service/vod20170321/models/DescribeVodDomainSrcTrafficDataRequest$Builder.class
 com/aliyun/sdk/service/vod20170321/models/UpdateWatermarkRequest$1.class
 com/aliyun/sdk/service/vod20170321/models/ListTranscodeTemplateGroupRequest.class
 com/aliyun/sdk/service/vod20170321/models/SetDefaultTranscodeTemplateGroupResponse$Builder.class
@@ -940,6 +955,7 @@ com/aliyun/sdk/service/vod20170321/models/ListSnapshotsResponse$Builder.class
 com/aliyun/sdk/service/vod20170321/models/GetMediaDNAResultResponseBody$Detail.class
 com/aliyun/sdk/service/vod20170321/models/DescribePlayUserTotalResponseBody$Uv$Builder.class
 com/aliyun/sdk/service/vod20170321/models/GetAIVideoTagResultResponseBody$1.class
+com/aliyun/sdk/service/vod20170321/models/DescribeVodDomainSrcTrafficDataResponse$1.class
 com/aliyun/sdk/service/vod20170321/models/GetCategoriesResponseBody.class
 com/aliyun/sdk/service/vod20170321/models/ListAIJobResponseBody$NonExistAIJobIds$Builder.class
 com/aliyun/sdk/service/vod20170321/models/GetImageInfosResponse$Builder.class
@@ -976,6 +992,7 @@ com/aliyun/sdk/service/vod20170321/models/DescribeVodTranscodeDataResponse$Build
 com/aliyun/sdk/service/vod20170321/models/SubmitAIJobResponseBody$AIJob$Builder.class
 com/aliyun/sdk/service/vod20170321/models/DescribeVodAIDataResponseBody$AIData.class
 com/aliyun/sdk/service/vod20170321/models/DescribeVodDomainUsageDataResponseBody$DataModule$Builder.class
+com/aliyun/sdk/service/vod20170321/models/DescribeVodDomainSrcBpsDataResponseBody$SrcBpsDataPerInterval.class
 com/aliyun/sdk/service/vod20170321/models/BatchStartVodDomainRequest$1.class
 com/aliyun/sdk/service/vod20170321/models/UpdateVideoInfosResponse$Builder.class
 com/aliyun/sdk/service/vod20170321/models/ListWatermarkResponse$Builder.class
@@ -989,10 +1006,12 @@ com/aliyun/sdk/service/vod20170321/models/GetURLUploadInfosResponse.class
 com/aliyun/sdk/service/vod20170321/models/GetPlayInfoResponseBody.class
 com/aliyun/sdk/service/vod20170321/models/DescribeVodStorageDataResponse$Builder.class
 com/aliyun/sdk/service/vod20170321/models/GetAIMediaAuditJobResponseBody$TerrorismResult$Builder.class
+com/aliyun/sdk/service/vod20170321/models/DescribeVodDomainSrcBpsDataResponseBody$Builder.class
 com/aliyun/sdk/service/vod20170321/models/GetImageInfoResponseBody$Builder.class
 com/aliyun/sdk/service/vod20170321/models/DescribeVodRefreshQuotaRequest$1.class
 com/aliyun/sdk/service/vod20170321/models/GetImageInfosResponseBody.class
 com/aliyun/sdk/service/vod20170321/models/UpdateVodTemplateResponse.class
+com/aliyun/sdk/service/vod20170321/models/DescribeVodDomainSrcTrafficDataResponseBody$SrcTrafficDataPerInterval.class
 com/aliyun/sdk/service/vod20170321/models/BatchSetVodDomainConfigsResponse$Builder.class
 com/aliyun/sdk/service/vod20170321/models/GetUploadDetailsRequest$1.class
 com/aliyun/sdk/service/vod20170321/models/AddAITemplateRequest.class
@@ -1006,6 +1025,7 @@ com/aliyun/sdk/service/vod20170321/models/DescribeVodAIDataResponseBody.class
 com/aliyun/sdk/service/vod20170321/models/DescribeVodDomainConfigsRequest$1.class
 com/aliyun/sdk/service/vod20170321/models/GetVodTemplateRequest$1.class
 com/aliyun/sdk/service/vod20170321/models/DeleteEditingProjectResponse$BuilderImpl.class
+com/aliyun/sdk/service/vod20170321/models/DescribeVodDomainSrcBpsDataResponse$1.class
 com/aliyun/sdk/service/vod20170321/models/DescribeVodAIDataResponseBody$AIData$Builder.class
 com/aliyun/sdk/service/vod20170321/models/UpdateAppInfoResponseBody$1.class
 com/aliyun/sdk/service/vod20170321/models/SubmitAIImageJobResponseBody$1.class
@@ -1072,6 +1092,7 @@ com/aliyun/sdk/service/vod20170321/models/GetVideoInfoResponse$Builder.class
 com/aliyun/sdk/service/vod20170321/models/SubmitPreprocessJobsResponseBody$PreprocessJob$Builder.class
 com/aliyun/sdk/service/vod20170321/models/GetMezzanineInfoRequest.class
 com/aliyun/sdk/service/vod20170321/models/SearchMediaResponseBody.class
+com/aliyun/sdk/service/vod20170321/models/DescribeVodDomainSrcTrafficDataResponseBody$Builder.class
 com/aliyun/sdk/service/vod20170321/models/AddWatermarkResponseBody.class
 com/aliyun/sdk/service/vod20170321/models/ListAuditSecurityIpResponse$Builder.class
 com/aliyun/sdk/service/vod20170321/models/DescribePlayUserTotalResponse.class
@@ -1191,6 +1212,7 @@ com/aliyun/sdk/service/vod20170321/models/DescribePlayUserTotalResponseBody$User
 com/aliyun/sdk/service/vod20170321/models/GetVodTemplateResponseBody$VodTemplateInfo$Builder.class
 com/aliyun/sdk/service/vod20170321/models/SubmitAIMediaAuditJobResponse$Builder.class
 com/aliyun/sdk/service/vod20170321/models/DescribeVodDomainTrafficDataRequest.class
+com/aliyun/sdk/service/vod20170321/models/DescribeVodDomainSrcBpsDataResponse.class
 com/aliyun/sdk/service/vod20170321/models/DescribeVodDomainLogResponseBody$LogInfoDetail$Builder.class
 com/aliyun/sdk/service/vod20170321/models/SetVodDomainCertificateRequest.class
 com/aliyun/sdk/service/vod20170321/models/GetAITemplateResponse$1.class
@@ -1307,6 +1329,7 @@ com/aliyun/sdk/service/vod20170321/models/GetPlayInfoResponse$Builder.class
 com/aliyun/sdk/service/vod20170321/models/GetEditingProjectResponseBody$Project.class
 com/aliyun/sdk/service/vod20170321/models/GetMediaAuditResultResponse$Builder.class
 com/aliyun/sdk/service/vod20170321/models/RegisterMediaRequest$Builder.class
+com/aliyun/sdk/service/vod20170321/models/DescribeVodDomainSrcTrafficDataResponseBody$DataModule.class
 com/aliyun/sdk/service/vod20170321/models/CreateAuditResponseBody.class
 com/aliyun/sdk/service/vod20170321/models/UpdateVodDomainResponseBody$Builder.class
 com/aliyun/sdk/service/vod20170321/models/GetAIMediaAuditJobResponseBody$TextResult$Builder.class
@@ -1529,6 +1552,7 @@ com/aliyun/sdk/service/vod20170321/models/SubmitTranscodeJobsRequest.class
 com/aliyun/sdk/service/vod20170321/models/ListAIJobResponseBody$AIJob$Builder.class
 com/aliyun/sdk/service/vod20170321/models/DeleteDynamicImageResponse.class
 com/aliyun/sdk/service/vod20170321/models/DeleteDynamicImageResponse$1.class
+com/aliyun/sdk/service/vod20170321/models/DescribeVodDomainSrcTrafficDataResponse$BuilderImpl.class
 com/aliyun/sdk/service/vod20170321/models/GetAIMediaAuditJobResponseBody.class
 com/aliyun/sdk/service/vod20170321/models/ListTranscodeTaskResponseBody.class
 com/aliyun/sdk/service/vod20170321/models/ListDynamicImageResponseBody$DynamicImageList$Builder.class
@@ -1629,6 +1653,7 @@ com/aliyun/sdk/service/vod20170321/models/CancelUrlUploadJobsResponse$Builder.cl
 com/aliyun/sdk/service/vod20170321/models/MoveAppResourceResponseBody.class
 com/aliyun/sdk/service/vod20170321/models/GetAIMediaAuditJobResponseBody$LogoResult$Builder.class
 com/aliyun/sdk/service/vod20170321/models/DescribeVodCertificateListResponseBody$Cert.class
+com/aliyun/sdk/service/vod20170321/models/DescribeVodDomainSrcBpsDataRequest.class
 com/aliyun/sdk/service/vod20170321/models/ListAIJobResponseBody$NonExistAIJobIds.class
 com/aliyun/sdk/service/vod20170321/models/DescribePlayTopVideosResponse.class
 com/aliyun/sdk/service/vod20170321/models/GetMediaAuditResultRequest.class
@@ -1752,6 +1777,7 @@ com/aliyun/sdk/service/vod20170321/models/UploadMediaByURLRequest.class
 com/aliyun/sdk/service/vod20170321/models/ListAppPoliciesForIdentityResponse$BuilderImpl.class
 com/aliyun/sdk/service/vod20170321/models/GetAITemplateRequest$Builder.class
 com/aliyun/sdk/service/vod20170321/models/AddWatermarkRequest$1.class
+com/aliyun/sdk/service/vod20170321/models/DescribeVodDomainSrcTrafficDataResponseBody$SrcTrafficDataPerInterval$Builder.class
 com/aliyun/sdk/service/vod20170321/models/SubmitAIImageJobRequest$Builder.class
 com/aliyun/sdk/service/vod20170321/models/GetMediaAuditResultTimelineResponseBody$Porn$Builder.class
 com/aliyun/sdk/service/vod20170321/models/GetDefaultAITemplateRequest$1.class
@@ -1783,6 +1809,7 @@ com/aliyun/sdk/service/vod20170321/models/DescribePlayUserAvgResponseBody$UserPl
 com/aliyun/sdk/service/vod20170321/models/DecryptKMSDataKeyResponse$BuilderImpl.class
 com/aliyun/sdk/service/vod20170321/models/DeleteMultipartUploadResponse$BuilderImpl.class
 com/aliyun/sdk/service/vod20170321/models/GetPlayInfoResponseBody$PlayInfoList$Builder.class
+com/aliyun/sdk/service/vod20170321/models/DescribeVodDomainSrcTrafficDataRequest.class
 com/aliyun/sdk/service/vod20170321/models/ListLiveRecordVideoResponseBody$Snapshots$Builder.class
 com/aliyun/sdk/service/vod20170321/models/SetVodDomainCertificateResponseBody$1.class
 com/aliyun/sdk/service/vod20170321/models/GetEditingProjectRequest.class
@@ -1802,6 +1829,7 @@ com/aliyun/sdk/service/vod20170321/models/DeleteVideoResponseBody.class
 com/aliyun/sdk/service/vod20170321/models/GetImageInfoResponse$BuilderImpl.class
 com/aliyun/sdk/service/vod20170321/models/DescribeVodDomainLogRequest$Builder.class
 com/aliyun/sdk/service/vod20170321/models/UpdateEditingProjectResponse$BuilderImpl.class
+com/aliyun/sdk/service/vod20170321/models/DescribeVodDomainSrcBpsDataResponse$BuilderImpl.class
 com/aliyun/sdk/service/vod20170321/models/GetAIVideoTagResultResponseBody$Location$Builder.class
 com/aliyun/sdk/service/vod20170321/models/VerifyVodDomainOwnerResponse$BuilderImpl.class
 com/aliyun/sdk/service/vod20170321/models/GetAppInfosResponseBody.class

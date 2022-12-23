@@ -125,7 +125,7 @@ public class GetMediaAuditAudioResultDetailRequest extends Request {
         } 
 
         /**
-         * MediaId.
+         * The ID of the video. You can query the video ID by using the ApsaraVideo VOD console or calling the [SearchMedia](~~86044~~) operation.
          */
         public Builder mediaId(String mediaId) {
             this.putQueryParameter("MediaId", mediaId);
@@ -152,7 +152,7 @@ public class GetMediaAuditAudioResultDetailRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * The number of the page to return. This parameter is optional. If you do not specify this parameter, all results are returned without pagination.
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);

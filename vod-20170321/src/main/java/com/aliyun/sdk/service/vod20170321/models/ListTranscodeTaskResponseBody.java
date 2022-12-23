@@ -50,7 +50,7 @@ public class ListTranscodeTaskResponseBody extends TeaModel {
         private java.util.List < TranscodeTaskList> transcodeTaskList; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ListTranscodeTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TranscodeTaskList.
+         * Details about transcoding tasks.
          */
         public Builder transcodeTaskList(java.util.List < TranscodeTaskList> transcodeTaskList) {
             this.transcodeTaskList = transcodeTaskList;
@@ -170,7 +170,7 @@ public class ListTranscodeTaskResponseBody extends TeaModel {
             private String videoId; 
 
             /**
-             * CompleteTime.
+             * The time when the transcoding task was complete. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder completeTime(String completeTime) {
                 this.completeTime = completeTime;
@@ -178,7 +178,7 @@ public class ListTranscodeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * The time when the transcoding task was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -186,7 +186,13 @@ public class ListTranscodeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskStatus.
+             * The status of the transcoding task. Valid values:
+             * <p>
+             * *   **Processing**: In progress.
+             * *   **Partial**: Some transcoding jobs were complete.
+             * *   **CompleteAllSucc**: All transcoding jobs were successful.
+             * *   **CompleteAllFail**: All transcoding jobs failed. If an exception occurs in the source file, no transcoding job is initiated and the transcoding task fails.
+             * *   **CompletePartialSucc**: All transcoding jobs were complete but only some were successful.
              */
             public Builder taskStatus(String taskStatus) {
                 this.taskStatus = taskStatus;
@@ -194,7 +200,7 @@ public class ListTranscodeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TranscodeTaskId.
+             * The ID of the transcoding task.
              */
             public Builder transcodeTaskId(String transcodeTaskId) {
                 this.transcodeTaskId = transcodeTaskId;
@@ -202,7 +208,7 @@ public class ListTranscodeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TranscodeTemplateGroupId.
+             * The ID of the transcoding template group.
              */
             public Builder transcodeTemplateGroupId(String transcodeTemplateGroupId) {
                 this.transcodeTemplateGroupId = transcodeTemplateGroupId;
@@ -210,7 +216,10 @@ public class ListTranscodeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Trigger.
+             * The mode in which the transcoding task is triggered. Valid values:
+             * <p>
+             * *   **Auto**: The transcoding task is automatically triggered when the video is uploaded.
+             * *   **Manual**: The transcoding task is triggered by calling the SubmitTranscodeJobs operation.
              */
             public Builder trigger(String trigger) {
                 this.trigger = trigger;
@@ -218,7 +227,7 @@ public class ListTranscodeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * VideoId.
+             * The ID of the audio or video file.
              */
             public Builder videoId(String videoId) {
                 this.videoId = videoId;

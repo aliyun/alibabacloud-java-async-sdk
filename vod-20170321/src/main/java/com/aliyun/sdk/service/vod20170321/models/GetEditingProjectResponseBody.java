@@ -50,7 +50,7 @@ public class GetEditingProjectResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Project.
+         * The information about the online editing project.
          */
         public Builder project(Project project) {
             this.project = project;
@@ -58,7 +58,7 @@ public class GetEditingProjectResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -206,7 +206,7 @@ public class GetEditingProjectResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * CoverURL.
+             * The thumbnail URL of the online editing project.
              */
             public Builder coverURL(String coverURL) {
                 this.coverURL = coverURL;
@@ -214,7 +214,7 @@ public class GetEditingProjectResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * The time when the online editing project was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -222,7 +222,7 @@ public class GetEditingProjectResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the online editing project.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -230,7 +230,7 @@ public class GetEditingProjectResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * The last time when the online editing project was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -238,7 +238,7 @@ public class GetEditingProjectResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * The ID of the online editing project.
              */
             public Builder projectId(String projectId) {
                 this.projectId = projectId;
@@ -246,7 +246,7 @@ public class GetEditingProjectResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region where the online editing project was created.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -254,7 +254,13 @@ public class GetEditingProjectResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the online editing project. Separate multiple states with commas (,). By default, all online editing projects were queried. Valid values:
+             * <p>
+             * 
+             * *   **Normal**: indicates that the online editing project is in draft.
+             * *   **Producing**: indicates that the video is being produced.
+             * *   **Produced**: indicates that the video was produced.
+             * *   **ProduceFailed**: indicates that the video failed to be produced.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -262,7 +268,10 @@ public class GetEditingProjectResponseBody extends TeaModel {
             }
 
             /**
-             * StorageLocation.
+             * The path of the Object Storage Service (OSS) bucket where the online editing project is stored.
+             * <p>
+             * 
+             * > To view the path of the OSS bucket, log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com/?spm=a2c4g.11186623.2.15.6948257eaZ4m54#/vod/settings/censored), and choose **Configuration Management** > **Media Management** > **Storage**. On the Storage page, you can view the path of the OSS bucket.
              */
             public Builder storageLocation(String storageLocation) {
                 this.storageLocation = storageLocation;
@@ -270,7 +279,7 @@ public class GetEditingProjectResponseBody extends TeaModel {
             }
 
             /**
-             * Timeline.
+             * The timeline of the online editing project.
              */
             public Builder timeline(String timeline) {
                 this.timeline = timeline;
@@ -278,7 +287,7 @@ public class GetEditingProjectResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * The title of the online editing project.
              */
             public Builder title(String title) {
                 this.title = title;

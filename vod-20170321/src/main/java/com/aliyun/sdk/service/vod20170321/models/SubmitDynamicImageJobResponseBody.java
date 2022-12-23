@@ -50,7 +50,7 @@ public class SubmitDynamicImageJobResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DynamicImageJob.
+         * The information about the animated image job.
          */
         public Builder dynamicImageJob(DynamicImageJob dynamicImageJob) {
             this.dynamicImageJob = dynamicImageJob;
@@ -58,7 +58,7 @@ public class SubmitDynamicImageJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class SubmitDynamicImageJobResponseBody extends TeaModel {
             private String jobId; 
 
             /**
-             * JobId.
+             * The ID of the animated image job.
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;

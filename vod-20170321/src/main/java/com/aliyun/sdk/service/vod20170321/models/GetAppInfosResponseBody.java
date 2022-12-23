@@ -15,6 +15,9 @@ public class GetAppInfosResponseBody extends TeaModel {
     @NameInMap("AppInfoList")
     private java.util.List < AppInfoList> appInfoList;
 
+    @NameInMap("Code")
+    private String code;
+
     @NameInMap("NonExistAppIds")
     private java.util.List < String > nonExistAppIds;
 
@@ -23,6 +26,7 @@ public class GetAppInfosResponseBody extends TeaModel {
 
     private GetAppInfosResponseBody(Builder builder) {
         this.appInfoList = builder.appInfoList;
+        this.code = builder.code;
         this.nonExistAppIds = builder.nonExistAppIds;
         this.requestId = builder.requestId;
     }
@@ -43,6 +47,13 @@ public class GetAppInfosResponseBody extends TeaModel {
     }
 
     /**
+     * @return code
+     */
+    public String getCode() {
+        return this.code;
+    }
+
+    /**
      * @return nonExistAppIds
      */
     public java.util.List < String > getNonExistAppIds() {
@@ -58,11 +69,12 @@ public class GetAppInfosResponseBody extends TeaModel {
 
     public static final class Builder {
         private java.util.List < AppInfoList> appInfoList; 
+        private String code; 
         private java.util.List < String > nonExistAppIds; 
         private String requestId; 
 
         /**
-         * AppInfoList.
+         * The details of each application.
          */
         public Builder appInfoList(java.util.List < AppInfoList> appInfoList) {
             this.appInfoList = appInfoList;
@@ -70,7 +82,15 @@ public class GetAppInfosResponseBody extends TeaModel {
         }
 
         /**
-         * NonExistAppIds.
+         * Code.
+         */
+        public Builder code(String code) {
+            this.code = code;
+            return this;
+        }
+
+        /**
+         * The ID of the application that was not found.
          */
         public Builder nonExistAppIds(java.util.List < String > nonExistAppIds) {
             this.nonExistAppIds = nonExistAppIds;
@@ -78,7 +98,7 @@ public class GetAppInfosResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -190,7 +210,7 @@ public class GetAppInfosResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * AppId.
+             * The ID of the application.
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -198,7 +218,7 @@ public class GetAppInfosResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * The name of the application.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -206,7 +226,7 @@ public class GetAppInfosResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * The time when the application was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -214,7 +234,7 @@ public class GetAppInfosResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the application.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -222,7 +242,7 @@ public class GetAppInfosResponseBody extends TeaModel {
             }
 
             /**
-             * ModificationTime.
+             * The last time when the application was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder modificationTime(String modificationTime) {
                 this.modificationTime = modificationTime;
@@ -230,7 +250,10 @@ public class GetAppInfosResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the application. Valid values:
+             * <p>
+             * - **Normal**
+             * - **Disable**
              */
             public Builder status(String status) {
                 this.status = status;
@@ -238,7 +261,10 @@ public class GetAppInfosResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the application. Valid values:
+             * <p>
+             * - **System**
+             * - **Custom**
              */
             public Builder type(String type) {
                 this.type = type;

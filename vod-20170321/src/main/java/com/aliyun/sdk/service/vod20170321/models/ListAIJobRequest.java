@@ -111,7 +111,10 @@ public class ListAIJobRequest extends Request {
         } 
 
         /**
-         * JobIds.
+         * The list of job IDs. You can obtain the job ID from the PlayInfo parameter in the response to the [GetPlayInfo](~~56124~~) operation.
+         * <p>
+         * 
+         * >  You can specify a maximum of 10 job IDs in a request. Separate multiple IDs with commas (,).
          */
         public Builder jobIds(String jobIds) {
             this.putQueryParameter("JobIds", jobIds);

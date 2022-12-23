@@ -168,7 +168,10 @@ public class RefreshMediaPlayUrlsRequest extends Request {
         } 
 
         /**
-         * 播放流清晰度
+         * Specifies the resolutions of the media streams you want to refresh or prefetch. You can specify multiple resolutions. Separate multiple resolutions with commas (,). If you leave this parameter empty, media streams in all resolutions are refreshed or prefetched by default.
+         * <p>
+         * 
+         * >  The value must be supported in the **Definition** section in [Parameters for media assets](~~124671~~).
          */
         public Builder definitions(String definitions) {
             this.putQueryParameter("Definitions", definitions);
@@ -177,7 +180,15 @@ public class RefreshMediaPlayUrlsRequest extends Request {
         }
 
         /**
-         * 播放流格式
+         * The formats of the media streams you want to refresh or prefetch. You can specify multiple formats. Separate multiple formats with commas (,). If you leave this parameter empty, media streams in all formats are refreshed or prefetched by default. Valid values:
+         * <p>
+         * 
+         * *   **mp4**
+         * *   **m3u8**
+         * *   **mp3**
+         * *   **flv**
+         * *   **webm**
+         * *   **ts**
          */
         public Builder formats(String formats) {
             this.putQueryParameter("Formats", formats);
@@ -186,7 +197,12 @@ public class RefreshMediaPlayUrlsRequest extends Request {
         }
 
         /**
-         * 媒资ID列表
+         * The IDs of the media files that you want to refresh or prefetch. You can specify a maximum of 20 IDs. Separate multiple IDs with commas (,). You can use one of the following methods to obtain the ID:
+         * <p>
+         * 
+         * *   Log on to the [ApsaraVideo VOD](https://vod.console.aliyun.com) console. In the left-side navigation pane, choose **Media Files** > **Audio/Video**. On the Video and Audio page, view the ID of the audio or video file. This method is applicable to files that are uploaded by using the ApsaraVideo VOD console.
+         * *   Obtain the value of VideoId from the response to the [CreateUploadVideo](~~55407~~) operation that you call to upload media files.
+         * *   Obtain the value of VideoId from the response to the [SearchMedia](~~86044~~) operation that you call to query the media ID after the media file is uploaded.
          */
         public Builder mediaIds(String mediaIds) {
             this.putQueryParameter("MediaIds", mediaIds);
@@ -195,7 +211,11 @@ public class RefreshMediaPlayUrlsRequest extends Request {
         }
 
         /**
-         * 结果类型：Single或Multiple
+         * Specifies the type of the refresh or prefetch operation. Default value: Single. Valid values:
+         * <p>
+         * 
+         * *   **Single**: Only one latest transcoded stream is refreshed or prefetched for each resolution and format.
+         * *   **Multiple**: All transcoded streams are refreshed or prefetched for each resolution and format.
          */
         public Builder resultType(String resultType) {
             this.putQueryParameter("ResultType", resultType);
@@ -204,7 +224,7 @@ public class RefreshMediaPlayUrlsRequest extends Request {
         }
 
         /**
-         * M3U8文件的ts链接数量
+         * Specifies the number of the playback URLs of the TS files for the M3U8 media stream you want to refresh or prefetch. After you set this parameter, only the playback URLs of the first N TS files will be refreshed or prefetched. Valid values: 1 to 20. Default value: 5.
          */
         public Builder sliceCount(Integer sliceCount) {
             this.putQueryParameter("SliceCount", sliceCount);
@@ -213,7 +233,11 @@ public class RefreshMediaPlayUrlsRequest extends Request {
         }
 
         /**
-         * M3U8文件是否获取ts链接
+         * Specifies whether to refresh or prefetch the playback URLs of the TS files of the M3U8 media stream. Default value: false. Valid values:
+         * <p>
+         * 
+         * *   **false**
+         * *   **true**
          */
         public Builder sliceFlag(Boolean sliceFlag) {
             this.putQueryParameter("SliceFlag", sliceFlag);
@@ -222,7 +246,11 @@ public class RefreshMediaPlayUrlsRequest extends Request {
         }
 
         /**
-         * 播放流类型：视频或音频
+         * Specifies the types of media streams you want to refresh or prefetch. You can specify multiple types. Separate multiple types with commas (,). If you leave this parameter empty, media streams in all types are refreshed or prefetched by default. Valid values:
+         * <p>
+         * 
+         * *   **video**
+         * *   **audio**
          */
         public Builder streamType(String streamType) {
             this.putQueryParameter("StreamType", streamType);
@@ -231,7 +259,11 @@ public class RefreshMediaPlayUrlsRequest extends Request {
         }
 
         /**
-         * Refresh: 刷新。Preload: 预热
+         * The type of the task that you want to create. Valid values:
+         * <p>
+         * 
+         * *   **Refresh**
+         * *   **Preload**
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);
@@ -240,7 +272,11 @@ public class RefreshMediaPlayUrlsRequest extends Request {
         }
 
         /**
-         * 回调设置
+         * The custom configurations such as callback configurations and upload acceleration configurations. The value is a JSON string. For more information, see [Request parameter](~~86952~~).
+         * <p>
+         * > 
+         * - The callback configurations take effect only after you specify the HTTP callback URL and select specific callback events in the ApsaraVideo VOD console. For more information about how to configure HTTP callback settings in the ApsaraVideo VOD console, see [Configure callback settings](~~86071~~).
+         * - You must submit a ticket to enable the upload acceleration feature. For more information, see [Overview](~~55396~~).
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);

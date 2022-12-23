@@ -1,3 +1,6 @@
+2022-12-23 Version: 1.0.3
+- Support resourcegroup.
+
 2022-10-27 Version: 1.0.2
 - Modify DescribeVodUserDomains api.
 - Modify CreateUploadImage api.

@@ -82,7 +82,7 @@ public class ListAppInfoRequest extends Request {
         } 
 
         /**
-         * PageNo.
+         * The number of the page to return. By default, pages start from page 1.
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -91,7 +91,7 @@ public class ListAppInfoRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: **10**. Maximum value: **100**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -100,7 +100,11 @@ public class ListAppInfoRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the application. After an application is created, it enters the **Normal** state. Valid values:
+         * <p>
+         * 
+         * *   **Normal**
+         * *   **Disable**
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

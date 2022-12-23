@@ -111,7 +111,7 @@ public class UpdateVodDomainRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * The domain name for CDN.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -138,7 +138,7 @@ public class UpdateVodDomainRequest extends Request {
         }
 
         /**
-         * Sources.
+         * The information about the address of the origin server.
          */
         public Builder sources(String sources) {
             this.putQueryParameter("Sources", sources);
@@ -147,7 +147,7 @@ public class UpdateVodDomainRequest extends Request {
         }
 
         /**
-         * TopLevelDomain.
+         * The top-level domain name.
          */
         public Builder topLevelDomain(String topLevelDomain) {
             this.putQueryParameter("TopLevelDomain", topLevelDomain);

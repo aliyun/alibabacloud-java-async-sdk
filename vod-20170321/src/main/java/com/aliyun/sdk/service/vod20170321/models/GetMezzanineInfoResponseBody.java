@@ -50,7 +50,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Mezzanine.
+         * The information about the mezzanine file.
          */
         public Builder mezzanine(Mezzanine mezzanine) {
             this.mezzanine = mezzanine;
@@ -58,7 +58,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -278,7 +278,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
             private String timebase; 
 
             /**
-             * Bitrate.
+             * The bitrate.
              */
             public Builder bitrate(String bitrate) {
                 this.bitrate = bitrate;
@@ -286,7 +286,11 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ChannelLayout.
+             * The output layout of the sound channels. Valid values:
+             * <p>
+             * 
+             * *   **mono**: mono sound channel
+             * *   **stereo**: two sound channels
              */
             public Builder channelLayout(String channelLayout) {
                 this.channelLayout = channelLayout;
@@ -294,7 +298,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Channels.
+             * The number of sound channels.
              */
             public Builder channels(String channels) {
                 this.channels = channels;
@@ -302,7 +306,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CodecLongName.
+             * The full name of the codec format.
              */
             public Builder codecLongName(String codecLongName) {
                 this.codecLongName = codecLongName;
@@ -310,7 +314,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CodecName.
+             * The short name of the codec format.
              */
             public Builder codecName(String codecName) {
                 this.codecName = codecName;
@@ -318,7 +322,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CodecTag.
+             * The tag of the codec format.
              */
             public Builder codecTag(String codecTag) {
                 this.codecTag = codecTag;
@@ -326,7 +330,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CodecTagString.
+             * The tag string of the codec format.
              */
             public Builder codecTagString(String codecTagString) {
                 this.codecTagString = codecTagString;
@@ -334,7 +338,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CodecTimeBase.
+             * The codec time base.
              */
             public Builder codecTimeBase(String codecTimeBase) {
                 this.codecTimeBase = codecTimeBase;
@@ -342,7 +346,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * The duration of the audio stream.
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -350,7 +354,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Index.
+             * The sequence number of the audio stream, which specifies the position of the audio stream in all audio streams.
              */
             public Builder index(String index) {
                 this.index = index;
@@ -358,7 +362,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Lang.
+             * The language.
              */
             public Builder lang(String lang) {
                 this.lang = lang;
@@ -366,7 +370,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
             }
 
             /**
-             * NumFrames.
+             * The total number of frames.
              */
             public Builder numFrames(String numFrames) {
                 this.numFrames = numFrames;
@@ -374,7 +378,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
             }
 
             /**
-             * SampleFmt.
+             * The sampling format.
              */
             public Builder sampleFmt(String sampleFmt) {
                 this.sampleFmt = sampleFmt;
@@ -382,7 +386,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
             }
 
             /**
-             * SampleRate.
+             * The sample rate.
              */
             public Builder sampleRate(String sampleRate) {
                 this.sampleRate = sampleRate;
@@ -390,7 +394,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The beginning of the time range that was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -398,7 +402,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Timebase.
+             * The time base.
              */
             public Builder timebase(String timebase) {
                 this.timebase = timebase;
@@ -715,7 +719,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
             private String width; 
 
             /**
-             * AvgFPS.
+             * The average frame rate.
              */
             public Builder avgFPS(String avgFPS) {
                 this.avgFPS = avgFPS;
@@ -723,7 +727,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Bitrate.
+             * The bitrate of the file. Unit: Kbit/s.
              */
             public Builder bitrate(String bitrate) {
                 this.bitrate = bitrate;
@@ -731,7 +735,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CodecLongName.
+             * The full name of the codec format.
              */
             public Builder codecLongName(String codecLongName) {
                 this.codecLongName = codecLongName;
@@ -739,7 +743,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CodecName.
+             * The short name of the codec format.
              */
             public Builder codecName(String codecName) {
                 this.codecName = codecName;
@@ -747,7 +751,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CodecTag.
+             * The tag of the codec format.
              */
             public Builder codecTag(String codecTag) {
                 this.codecTag = codecTag;
@@ -755,7 +759,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CodecTagString.
+             * The tag string of the codec format.
              */
             public Builder codecTagString(String codecTagString) {
                 this.codecTagString = codecTagString;
@@ -763,7 +767,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CodecTimeBase.
+             * The codec time base.
              */
             public Builder codecTimeBase(String codecTimeBase) {
                 this.codecTimeBase = codecTimeBase;
@@ -771,7 +775,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Dar.
+             * The display aspect ratio.
              */
             public Builder dar(String dar) {
                 this.dar = dar;
@@ -779,7 +783,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * The duration of the video stream.
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -787,7 +791,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Fps.
+             * The target frame rate.
              */
             public Builder fps(String fps) {
                 this.fps = fps;
@@ -795,7 +799,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 视频流HDR类型
+             * The HDR type.
              */
             public Builder HDRType(String HDRType) {
                 this.HDRType = HDRType;
@@ -803,7 +807,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
             }
 
             /**
-             * HasBFrames.
+             * Indicates whether the video stream contains bidirectional frames (B-frames).
              */
             public Builder hasBFrames(String hasBFrames) {
                 this.hasBFrames = hasBFrames;
@@ -811,7 +815,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Height.
+             * The height of the video resolution.
              */
             public Builder height(String height) {
                 this.height = height;
@@ -819,7 +823,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Index.
+             * The sequence number of the video stream, which indicates the position of the video stream in all video streams.
              */
             public Builder index(String index) {
                 this.index = index;
@@ -827,7 +831,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Lang.
+             * The language.
              */
             public Builder lang(String lang) {
                 this.lang = lang;
@@ -835,7 +839,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Level.
+             * The codec level.
              */
             public Builder level(String level) {
                 this.level = level;
@@ -843,7 +847,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
             }
 
             /**
-             * NumFrames.
+             * The total number of frames.
              */
             public Builder numFrames(String numFrames) {
                 this.numFrames = numFrames;
@@ -851,7 +855,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
             }
 
             /**
-             * PixFmt.
+             * The pixel format.
              */
             public Builder pixFmt(String pixFmt) {
                 this.pixFmt = pixFmt;
@@ -859,7 +863,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Profile.
+             * The codec profile.
              */
             public Builder profile(String profile) {
                 this.profile = profile;
@@ -867,7 +871,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Rotate.
+             * The rotation angle of the video. Valid values: **\[0, 360)**.
              */
             public Builder rotate(String rotate) {
                 this.rotate = rotate;
@@ -875,7 +879,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Sar.
+             * The sample aspect ratio.
              */
             public Builder sar(String sar) {
                 this.sar = sar;
@@ -883,7 +887,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The beginning of the time range that was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -891,7 +895,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Timebase.
+             * The time base.
              */
             public Builder timebase(String timebase) {
                 this.timebase = timebase;
@@ -899,7 +903,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Width.
+             * The width of the video resolution.
              */
             public Builder width(String width) {
                 this.width = width;
@@ -1096,7 +1100,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
             private Long width; 
 
             /**
-             * AudioStreamList.
+             * The information about the audio stream.
              */
             public Builder audioStreamList(java.util.List < AudioStreamList> audioStreamList) {
                 this.audioStreamList = audioStreamList;
@@ -1104,7 +1108,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Bitrate.
+             * The bitrate of the file. Unit: Kbit/s.
              */
             public Builder bitrate(String bitrate) {
                 this.bitrate = bitrate;
@@ -1112,7 +1116,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * The time when the file was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -1120,7 +1124,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * The duration of the file. Unit: seconds.
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -1128,7 +1132,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
             }
 
             /**
-             * FileName.
+             * The name of the file.
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -1136,7 +1140,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
             }
 
             /**
-             * FileURL.
+             * The URL of the file.
              */
             public Builder fileURL(String fileURL) {
                 this.fileURL = fileURL;
@@ -1144,7 +1148,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Fps.
+             * The frame rate of the file. Unit: frames per second.
              */
             public Builder fps(String fps) {
                 this.fps = fps;
@@ -1152,7 +1156,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Height.
+             * The height of the file. Unit: pixel.
              */
             public Builder height(Long height) {
                 this.height = height;
@@ -1160,7 +1164,13 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
             }
 
             /**
-             * OutputType.
+             * The type of the mezzanine file URL. Valid values:
+             * <p>
+             * 
+             * - **oss**: OSS URL
+             * - **cdn** (default): CDN URL
+             * 
+             * > If you specify an OSS URL for the video stream, the video stream must be in the MP4 format.
              */
             public Builder outputType(String outputType) {
                 this.outputType = outputType;
@@ -1168,7 +1178,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * The size of the file. Unit: byte.
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -1176,7 +1186,13 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the file. Valid values:
+             * <p>
+             * 
+             * *   **Uploading**: The file is being uploaded. This is the initial status.
+             * *   **Normal**: The file is uploaded.
+             * *   **UploadFail**: The file fails to be uploaded.
+             * *   **Deleted**: The file is deleted.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1184,7 +1200,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
             }
 
             /**
-             * VideoId.
+             * The ID of the video.
              */
             public Builder videoId(String videoId) {
                 this.videoId = videoId;
@@ -1192,7 +1208,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
             }
 
             /**
-             * VideoStreamList.
+             * The information about the video stream.
              */
             public Builder videoStreamList(java.util.List < VideoStreamList> videoStreamList) {
                 this.videoStreamList = videoStreamList;
@@ -1200,7 +1216,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Width.
+             * The width of the file. Unit: pixel.
              */
             public Builder width(Long width) {
                 this.width = width;

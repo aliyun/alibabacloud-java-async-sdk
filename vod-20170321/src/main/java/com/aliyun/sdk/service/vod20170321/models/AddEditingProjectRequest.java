@@ -167,7 +167,7 @@ public class AddEditingProjectRequest extends Request {
         } 
 
         /**
-         * CoverURL.
+         * The thumbnail URL of the online editing project. If you do not specify this parameter and the video track in the timeline has mezzanine files, the thumbnail of the first mezzanine file in the timeline is used.
          */
         public Builder coverURL(String coverURL) {
             this.putQueryParameter("CoverURL", coverURL);
@@ -176,7 +176,7 @@ public class AddEditingProjectRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the online editing project.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -185,7 +185,7 @@ public class AddEditingProjectRequest extends Request {
         }
 
         /**
-         * Division.
+         * The region where you want to create the online editing project.
          */
         public Builder division(String division) {
             this.putQueryParameter("Division", division);
@@ -230,7 +230,10 @@ public class AddEditingProjectRequest extends Request {
         }
 
         /**
-         * Timeline.
+         * The timeline of the online editing project, in JSON format. For more information about the structure, see [Timeline](~~52839~~).
+         * <p>
+         * 
+         * If you do not specify this parameter, an empty timeline is created and the duration of the online editing project is zero.
          */
         public Builder timeline(String timeline) {
             this.putQueryParameter("Timeline", timeline);
@@ -239,7 +242,7 @@ public class AddEditingProjectRequest extends Request {
         }
 
         /**
-         * Title.
+         * The title of the online editing project.
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);

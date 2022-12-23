@@ -85,7 +85,7 @@ public class AddAITemplateRequest extends Request {
         } 
 
         /**
-         * TemplateConfig.
+         * The detailed configurations of the AI template. The value is a JSON string.
          */
         public Builder templateConfig(String templateConfig) {
             this.putQueryParameter("TemplateConfig", templateConfig);
@@ -94,7 +94,7 @@ public class AddAITemplateRequest extends Request {
         }
 
         /**
-         * TemplateName.
+         * The name of the AI template. The name can be up to 128 bytes in length.
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);
@@ -103,7 +103,11 @@ public class AddAITemplateRequest extends Request {
         }
 
         /**
-         * TemplateType.
+         * The type of the AI template. Valid values:
+         * <p>
+         * 
+         * *   **AIMediaAudit**: automated review
+         * *   **AIImage**: smart thumbnail
          */
         public Builder templateType(String templateType) {
             this.putQueryParameter("TemplateType", templateType);

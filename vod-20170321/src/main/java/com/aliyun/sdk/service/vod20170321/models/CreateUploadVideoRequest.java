@@ -210,7 +210,7 @@ public class CreateUploadVideoRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * The ID of the application. Default value: **app-1000000**. For more information, see [Overview](~~113600~~).
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -219,7 +219,12 @@ public class CreateUploadVideoRequest extends Request {
         }
 
         /**
-         * CateId.
+         * The category ID of the audio or video file. You can use one of the following methods to obtain the category ID:
+         * <p>
+         * 
+         * * Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). In the left-side navigation pane, choose **Configuration Management** > **Media Management** > **Categories**. On the Categories page, you can view the category ID.
+         * * View the value of the CateId parameter returned by the [AddCategory](~~56401~~) operation that you called to create a category.
+         * * View the value of the CateId parameter returned by the [GetCategories](~~56406~~) operation that you called to query a category.
          */
         public Builder cateId(Long cateId) {
             this.putQueryParameter("CateId", cateId);
@@ -228,7 +233,7 @@ public class CreateUploadVideoRequest extends Request {
         }
 
         /**
-         * CoverURL.
+         * The URL of the custom video thumbnail.
          */
         public Builder coverURL(String coverURL) {
             this.putQueryParameter("CoverURL", coverURL);
@@ -237,7 +242,11 @@ public class CreateUploadVideoRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the audio or video file.
+         * <p>
+         * 
+         * * The description can be up to 1,024 characters in length.
+         * * The value must be encoded in UTF-8.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -246,7 +255,11 @@ public class CreateUploadVideoRequest extends Request {
         }
 
         /**
-         * FileName.
+         * The name of the audio or video file.
+         * <p>
+         * 
+         * * The name must contain a file name extension, which is not case-sensitive.
+         * * For more information about file name extensions supported by ApsaraVideo VOD, see [Overview](~~55396~~).
          */
         public Builder fileName(String fileName) {
             this.putQueryParameter("FileName", fileName);
@@ -255,7 +268,7 @@ public class CreateUploadVideoRequest extends Request {
         }
 
         /**
-         * FileSize.
+         * The size of the audio or video file. Unit: byte.
          */
         public Builder fileSize(Long fileSize) {
             this.putQueryParameter("FileSize", fileSize);
@@ -264,7 +277,12 @@ public class CreateUploadVideoRequest extends Request {
         }
 
         /**
-         * StorageLocation.
+         * The storage location. You can use one of the following methods to obtain the storage location:
+         * <p>
+         * 
+         * Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). In the left-side navigation pane, choose **Configuration Management** > **Media Management** > **Storage**. On the Storage page, you can view the storage location.
+         * 
+         * > If this parameter is set to a specific value, the audio or video file is uploaded to the specified storage location.
          */
         public Builder storageLocation(String storageLocation) {
             this.putQueryParameter("StorageLocation", storageLocation);
@@ -273,7 +291,13 @@ public class CreateUploadVideoRequest extends Request {
         }
 
         /**
-         * Tags.
+         * The one or more tags of the audio or video file.
+         * <p>
+         * 
+         * * You can specify a maximum of 16 tags.
+         * * If you need to specify multiple tags, separate the tags with commas (,).
+         * * Each tag can be up to 32 characters in length.
+         * * The value must be encoded in UTF-8.
          */
         public Builder tags(String tags) {
             this.putQueryParameter("Tags", tags);
@@ -282,7 +306,14 @@ public class CreateUploadVideoRequest extends Request {
         }
 
         /**
-         * TemplateGroupId.
+         * The ID of the transcoding template group. You can use one of the following methods to obtain the ID of the transcoding template group:
+         * <p>
+         * 
+         * * Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). In the left-side navigation pane, choose **Configuration Management** > **Media Processing** > **Transcoding Template Groups**. On the Transcoding Template Groups page, you can view the ID of the transcoding template group.
+         * * View the value of the TranscodeTemplateGroupId parameter returned by the [AddTranscodeTemplateGroup](~~102665~~) operation that you called to create a transcoding template group.
+         * * View the value of the TranscodeTemplateGroupId parameter returned by the [ListTranscodeTemplateGroup](~~102669~~) operation that you called to query a transcoding template group.
+         * 
+         * > If you leave this parameter empty, the default transcoding template group is used for transcoding. If you set this parameter to the ID of a specific transcoding template group, the specified transcoding template group is used for transcoding.
          */
         public Builder templateGroupId(String templateGroupId) {
             this.putQueryParameter("TemplateGroupId", templateGroupId);
@@ -291,7 +322,11 @@ public class CreateUploadVideoRequest extends Request {
         }
 
         /**
-         * Title.
+         * The title of the audio or video file.
+         * <p>
+         * 
+         * * The title can be up to 128 characters in length.
+         * * The value must be encoded in UTF-8.
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);
@@ -300,7 +335,11 @@ public class CreateUploadVideoRequest extends Request {
         }
 
         /**
-         * UserData.
+         * The custom configurations, including callback configurations and upload acceleration configurations. The value is a JSON string. For more information, see the "UserData: specifies the custom configurations for media upload" section of the [Request parameters](~~86952~~) topic.
+         * <p>
+         * 
+         * > * The callback configurations take effect only after you specify the HTTP callback URL and select the specific callback events in the ApsaraVideo VOD console. For more information about how to configure an HTTP callback in the ApsaraVideo VOD console, see [Configure callback settings](~~86071~~).
+         * > * To use the upload acceleration feature, submit a [ticket](https://ticket-intl.console.aliyun.com/#/ticket/createIndex) to enable this feature. For more information, see [Overview](~~55396~~).
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);
@@ -309,7 +348,10 @@ public class CreateUploadVideoRequest extends Request {
         }
 
         /**
-         * WorkflowId.
+         * The ID of the workflow. To view the ID of the workflow, log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). In the left-side navigation pane, choose **Configuration Management** > **Media Processing** > **Workflows**.
+         * <p>
+         * 
+         * > If both the WorkflowId and TemplateGroupId parameters are set, the value of the WorkflowId parameter takes effect. For more information, see [Workflows](~~115347~~).
          */
         public Builder workflowId(String workflowId) {
             this.putQueryParameter("WorkflowId", workflowId);

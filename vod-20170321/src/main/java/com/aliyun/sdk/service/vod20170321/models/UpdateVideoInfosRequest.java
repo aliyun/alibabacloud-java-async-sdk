@@ -55,7 +55,10 @@ public class UpdateVideoInfosRequest extends Request {
         } 
 
         /**
-         * UpdateContent.
+         * The new information about audios or videos. You can modify the information about up to 20 audios or videos at a time. Separate multiple audios or videos with commas (,). When you modify the information exceed 20 audios or videos at a time, the update will fail with an error code **CountExceededMax**.
+         * <p>
+         * 
+         * The value is a JSON string. For more information, see the **UpdateContent** section of this topic.
          */
         public Builder updateContent(String updateContent) {
             this.putQueryParameter("UpdateContent", updateContent);

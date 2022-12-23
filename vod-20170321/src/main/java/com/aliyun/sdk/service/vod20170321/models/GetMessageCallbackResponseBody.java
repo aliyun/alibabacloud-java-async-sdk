@@ -50,7 +50,7 @@ public class GetMessageCallbackResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * MessageCallback.
+         * The configuration of the event notification.
          */
         public Builder messageCallback(MessageCallback messageCallback) {
             this.messageCallback = messageCallback;
@@ -58,7 +58,7 @@ public class GetMessageCallbackResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -182,7 +182,7 @@ public class GetMessageCallbackResponseBody extends TeaModel {
             private String mnsQueueName; 
 
             /**
-             * AppId.
+             * The ID of the application.
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -190,7 +190,7 @@ public class GetMessageCallbackResponseBody extends TeaModel {
             }
 
             /**
-             * AuthKey.
+             * The cryptographic key. This parameter is returned only for HTTP callbacks.
              */
             public Builder authKey(String authKey) {
                 this.authKey = authKey;
@@ -198,7 +198,11 @@ public class GetMessageCallbackResponseBody extends TeaModel {
             }
 
             /**
-             * AuthSwitch.
+             * Indicates whether callback authentication is enabled. This parameter is returned only for HTTP callbacks. Valid values:
+             * <p>
+             * 
+             * *   **on**: indicates that authentication is enabled.
+             * *   **off**: indicates that authentication is disabled.
              */
             public Builder authSwitch(String authSwitch) {
                 this.authSwitch = authSwitch;
@@ -206,7 +210,11 @@ public class GetMessageCallbackResponseBody extends TeaModel {
             }
 
             /**
-             * CallbackType.
+             * The callback method. Valid values:
+             * <p>
+             * 
+             * *   **HTTP**
+             * *   **MNS**
              */
             public Builder callbackType(String callbackType) {
                 this.callbackType = callbackType;
@@ -214,7 +222,7 @@ public class GetMessageCallbackResponseBody extends TeaModel {
             }
 
             /**
-             * CallbackURL.
+             * The callback URL. This parameter is returned only for HTTP callbacks.
              */
             public Builder callbackURL(String callbackURL) {
                 this.callbackURL = callbackURL;
@@ -222,7 +230,7 @@ public class GetMessageCallbackResponseBody extends TeaModel {
             }
 
             /**
-             * EventTypeList.
+             * The type of the callback event.
              */
             public Builder eventTypeList(String eventTypeList) {
                 this.eventTypeList = eventTypeList;
@@ -230,7 +238,7 @@ public class GetMessageCallbackResponseBody extends TeaModel {
             }
 
             /**
-             * MnsEndpoint.
+             * The public endpoint of Message Service (MNS). This parameter is returned only for MNS callbacks.
              */
             public Builder mnsEndpoint(String mnsEndpoint) {
                 this.mnsEndpoint = mnsEndpoint;
@@ -238,7 +246,7 @@ public class GetMessageCallbackResponseBody extends TeaModel {
             }
 
             /**
-             * MnsQueueName.
+             * The name of the MNS queue. This parameter is returned only for MNS callbacks.
              */
             public Builder mnsQueueName(String mnsQueueName) {
                 this.mnsQueueName = mnsQueueName;

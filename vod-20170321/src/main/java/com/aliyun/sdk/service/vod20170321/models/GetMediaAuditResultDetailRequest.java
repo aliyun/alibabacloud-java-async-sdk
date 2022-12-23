@@ -70,7 +70,7 @@ public class GetMediaAuditResultDetailRequest extends Request {
         } 
 
         /**
-         * MediaId.
+         * The ID of the video.
          */
         public Builder mediaId(String mediaId) {
             this.putQueryParameter("MediaId", mediaId);
@@ -79,7 +79,7 @@ public class GetMediaAuditResultDetailRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * The page number of the review result to return. The default value is **1**. A maximum of **20** records can be returned on each page.
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);

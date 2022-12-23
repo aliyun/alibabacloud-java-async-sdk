@@ -166,7 +166,7 @@ public class SubmitSnapshotJobRequest extends Request {
         } 
 
         /**
-         * Count.
+         * The maximum number of snapshots. Default value: **1**.
          */
         public Builder count(Long count) {
             this.putQueryParameter("Count", count);
@@ -175,7 +175,7 @@ public class SubmitSnapshotJobRequest extends Request {
         }
 
         /**
-         * Height.
+         * The height of each snapshot. Valid values: `[8,4096]`. By default, the height of the video mezzanine file is used. Unit: pixel.
          */
         public Builder height(String height) {
             this.putQueryParameter("Height", height);
@@ -184,7 +184,7 @@ public class SubmitSnapshotJobRequest extends Request {
         }
 
         /**
-         * Interval.
+         * The snapshot interval. The value must be **greater than or equal to 0**. Unit: seconds. If you set this parameter to **0**, snapshots are taken at even intervals based on the video duration divided by the value of the Count parameter. Default value: **1**.
          */
         public Builder interval(Long interval) {
             this.putQueryParameter("Interval", interval);
@@ -193,7 +193,12 @@ public class SubmitSnapshotJobRequest extends Request {
         }
 
         /**
-         * SnapshotTemplateId.
+         * The ID of the snapshot template.
+         * <p>
+         * 
+         * *   We recommend that you create a snapshot template before you specify the ID of the snapshot template.
+         * *   If you set the SnapshotTemplateId parameter, all the other request parameters except the Action and VideoId parameters are ignored.
+         * *   For more information about how to create a snapshot template, see [AddVodTemplate](~~99406~~).
          */
         public Builder snapshotTemplateId(String snapshotTemplateId) {
             this.putQueryParameter("SnapshotTemplateId", snapshotTemplateId);
@@ -202,7 +207,11 @@ public class SubmitSnapshotJobRequest extends Request {
         }
 
         /**
-         * SpecifiedOffsetTime.
+         * The start time of the specified snapshot time period.
+         * <p>
+         * 
+         * *   Unit: milliseconds.
+         * *   Default value: **0**.
          */
         public Builder specifiedOffsetTime(Long specifiedOffsetTime) {
             this.putQueryParameter("SpecifiedOffsetTime", specifiedOffsetTime);
@@ -211,7 +220,7 @@ public class SubmitSnapshotJobRequest extends Request {
         }
 
         /**
-         * SpriteSnapshotConfig.
+         * The sprite snapshot configuration. If you set this parameter, sprite snapshots are generated. For more information, see [SpriteSnapshotConfig](~~86952~~).
          */
         public Builder spriteSnapshotConfig(String spriteSnapshotConfig) {
             this.putQueryParameter("SpriteSnapshotConfig", spriteSnapshotConfig);
@@ -220,7 +229,12 @@ public class SubmitSnapshotJobRequest extends Request {
         }
 
         /**
-         * UserData.
+         * The custom configurations, including the configuration of transparent data transmission and callback configurations. The value is a JSON-formatted string. For more information, see [UserData](~~86952~~).
+         * <p>
+         * 
+         * **
+         * 
+         * **Note** The callback configurations take effect only when you specify the HTTP callback URL and select the specific callback events in the ApsaraVideo VOD console.
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);
@@ -229,7 +243,7 @@ public class SubmitSnapshotJobRequest extends Request {
         }
 
         /**
-         * VideoId.
+         * The ID of the video.
          */
         public Builder videoId(String videoId) {
             this.putQueryParameter("VideoId", videoId);
@@ -238,7 +252,7 @@ public class SubmitSnapshotJobRequest extends Request {
         }
 
         /**
-         * Width.
+         * The width of each snapshot. Valid values: `[8,4096]`. By default, the width of the video mezzanine file is used. Unit: pixel.
          */
         public Builder width(String width) {
             this.putQueryParameter("Width", width);

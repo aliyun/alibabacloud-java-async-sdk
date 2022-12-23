@@ -62,7 +62,7 @@ public class DescribeVodAIDataResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AIData.
+         * The statistics on video AI.
          */
         public Builder AIData(AIData AIData) {
             this.AIData = AIData;
@@ -70,7 +70,11 @@ public class DescribeVodAIDataResponseBody extends TeaModel {
         }
 
         /**
-         * DataInterval.
+         * The time granularity at which the data was queried. Valid values:
+         * <p>
+         * 
+         * - **hour**
+         * - **day**
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -78,7 +82,7 @@ public class DescribeVodAIDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +134,12 @@ public class DescribeVodAIDataResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Name.
+             * The type of video AI. Valid values:
+             * <p>
+             * 
+             * - **AIVideoCensor**: automated review
+             * - **AIVideoFPShot**: media fingerprinting
+             * - **AIVideoTag**: smart tag
              */
             public Builder name(String name) {
                 this.name = name;
@@ -138,7 +147,7 @@ public class DescribeVodAIDataResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The processing duration. Unit: seconds.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -232,7 +241,7 @@ public class DescribeVodAIDataResponseBody extends TeaModel {
             private String timeStamp; 
 
             /**
-             * Data.
+             * The statistics on video AI of each type.
              */
             public Builder data(Data data) {
                 this.data = data;
@@ -240,7 +249,7 @@ public class DescribeVodAIDataResponseBody extends TeaModel {
             }
 
             /**
-             * TimeStamp.
+             * The timestamp of the returned data. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;

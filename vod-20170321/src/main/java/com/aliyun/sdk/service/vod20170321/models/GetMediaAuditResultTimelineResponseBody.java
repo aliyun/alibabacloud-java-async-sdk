@@ -50,7 +50,7 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * MediaAuditResultTimeline.
+         * The collection of review result timelines.
          */
         public Builder mediaAuditResultTimeline(MediaAuditResultTimeline mediaAuditResultTimeline) {
             this.mediaAuditResultTimeline = mediaAuditResultTimeline;
@@ -58,7 +58,7 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,11 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
             private String timestamp; 
 
             /**
-             * Label.
+             * The category of the review result. Valid values:
+             * <p>
+             * 
+             * *   **normal**: normal content
+             * *   **ad**: ad or text violation
              */
             public Builder label(String label) {
                 this.label = label;
@@ -130,7 +134,7 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
             }
 
             /**
-             * Score.
+             * The score of the review result category. Valid values: `[0, 100]`. The value is rounded down to 10 decimal places. The score is representative of the confidence.
              */
             public Builder score(String score) {
                 this.score = score;
@@ -138,7 +142,7 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
             }
 
             /**
-             * Timestamp.
+             * The position in the video. Unit: milliseconds.
              */
             public Builder timestamp(String timestamp) {
                 this.timestamp = timestamp;
@@ -203,7 +207,11 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
             private String timestamp; 
 
             /**
-             * Label.
+             * The category of the review result. Valid values:
+             * <p>
+             * 
+             * *   **normal**
+             * *   **terrorism**
              */
             public Builder label(String label) {
                 this.label = label;
@@ -211,7 +219,7 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
             }
 
             /**
-             * Score.
+             * The score of the review result category. Valid values: `[0, 100]`. The value is rounded down to 10 decimal places. The score is representative of the confidence.
              */
             public Builder score(String score) {
                 this.score = score;
@@ -219,7 +227,7 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
             }
 
             /**
-             * Timestamp.
+             * The position in the video. Unit: milliseconds.
              */
             public Builder timestamp(String timestamp) {
                 this.timestamp = timestamp;
@@ -284,7 +292,11 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
             private String timestamp; 
 
             /**
-             * Label.
+             * The category of the review result. Valid values:
+             * <p>
+             * 
+             * *   **normal**
+             * *   **logo**
              */
             public Builder label(String label) {
                 this.label = label;
@@ -292,7 +304,7 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
             }
 
             /**
-             * Score.
+             * The score of the review result category. Valid values: `[0, 100]`. The value is rounded down to 10 decimal places. The score is representative of the confidence.
              */
             public Builder score(String score) {
                 this.score = score;
@@ -300,7 +312,7 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
             }
 
             /**
-             * Timestamp.
+             * The position in the video. Unit: milliseconds.
              */
             public Builder timestamp(String timestamp) {
                 this.timestamp = timestamp;
@@ -365,7 +377,12 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
             private String timestamp; 
 
             /**
-             * Label.
+             * The category of the review result. Valid values:
+             * <p>
+             * 
+             * *   **porn**
+             * *   **sexy**
+             * *   **normal**
              */
             public Builder label(String label) {
                 this.label = label;
@@ -373,7 +390,7 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
             }
 
             /**
-             * Score.
+             * The score of the review result category. Valid values: `[0, 100]`. The value is rounded down to 10 decimal places. The score is representative of the confidence.
              */
             public Builder score(String score) {
                 this.score = score;
@@ -381,7 +398,7 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
             }
 
             /**
-             * Timestamp.
+             * The position in the video. Unit: milliseconds.
              */
             public Builder timestamp(String timestamp) {
                 this.timestamp = timestamp;
@@ -446,7 +463,16 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
             private String timestamp; 
 
             /**
-             * Label.
+             * The category of the review result. Valid values:
+             * <p>
+             * 
+             * *   **terrorism**: terrorist content
+             * *   **outfit**: special costume
+             * *   **logo**: special logo
+             * *   **weapon**: weapon
+             * *   **politics**: politically sensitive content
+             * *   **others**: other terrorist and politically sensitive content
+             * *   **normal**: normal content
              */
             public Builder label(String label) {
                 this.label = label;
@@ -454,7 +480,7 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
             }
 
             /**
-             * Score.
+             * The score of the review result category.
              */
             public Builder score(String score) {
                 this.score = score;
@@ -462,7 +488,7 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
             }
 
             /**
-             * Timestamp.
+             * The position in the video. Unit: milliseconds.
              */
             public Builder timestamp(String timestamp) {
                 this.timestamp = timestamp;
@@ -551,7 +577,7 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
             private java.util.List < Terrorism> terrorism; 
 
             /**
-             * Ad.
+             * The collection of ad timelines.
              */
             public Builder ad(java.util.List < Ad> ad) {
                 this.ad = ad;
@@ -559,7 +585,7 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
             }
 
             /**
-             * Live.
+             * The collection of undesirable scene timelines.
              */
             public Builder live(java.util.List < Live> live) {
                 this.live = live;
@@ -567,7 +593,7 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
             }
 
             /**
-             * Logo.
+             * The collection of logo timelines.
              */
             public Builder logo(java.util.List < Logo> logo) {
                 this.logo = logo;
@@ -575,7 +601,7 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
             }
 
             /**
-             * Porn.
+             * The collection of pornographic content timelines.
              */
             public Builder porn(java.util.List < Porn> porn) {
                 this.porn = porn;
@@ -583,7 +609,7 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
             }
 
             /**
-             * Terrorism.
+             * The collection of terrorist content timelines.
              */
             public Builder terrorism(java.util.List < Terrorism> terrorism) {
                 this.terrorism = terrorism;

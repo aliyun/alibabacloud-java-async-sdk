@@ -54,7 +54,7 @@ public class ListAuditSecurityIpRequest extends Request {
         } 
 
         /**
-         * SecurityGroupName.
+         * The name of the review security group where you want to query IP addresses. If you do not set this parameter, IP addresses in all review security groups are queried.
          */
         public Builder securityGroupName(String securityGroupName) {
             this.putQueryParameter("SecurityGroupName", securityGroupName);

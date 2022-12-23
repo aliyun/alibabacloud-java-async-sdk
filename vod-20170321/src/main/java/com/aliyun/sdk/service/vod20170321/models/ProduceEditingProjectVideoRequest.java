@@ -194,7 +194,7 @@ public class ProduceEditingProjectVideoRequest extends Request {
         } 
 
         /**
-         * CoverURL.
+         * The thumbnail URL of the online editing project.
          */
         public Builder coverURL(String coverURL) {
             this.putQueryParameter("CoverURL", coverURL);
@@ -203,7 +203,7 @@ public class ProduceEditingProjectVideoRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the online editing project.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -212,7 +212,7 @@ public class ProduceEditingProjectVideoRequest extends Request {
         }
 
         /**
-         * MediaMetadata.
+         * The metadata of the produced video, in JSON format. For more information about the structure, see [MediaMetadata](~~52839~~).
          */
         public Builder mediaMetadata(String mediaMetadata) {
             this.putQueryParameter("MediaMetadata", mediaMetadata);
@@ -230,7 +230,7 @@ public class ProduceEditingProjectVideoRequest extends Request {
         }
 
         /**
-         * ProduceConfig.
+         * The configuration of video production, in JSON format. For more information about the structure, see [ProduceConfig](~~52839~~).
          */
         public Builder produceConfig(String produceConfig) {
             this.putQueryParameter("ProduceConfig", produceConfig);
@@ -239,7 +239,7 @@ public class ProduceEditingProjectVideoRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * The ID of the online editing project.
          */
         public Builder projectId(String projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -266,7 +266,7 @@ public class ProduceEditingProjectVideoRequest extends Request {
         }
 
         /**
-         * Timeline.
+         * The timeline of the online editing project, in JSON format. For more information about the structure, see [Timeline](~~52839~~).
          */
         public Builder timeline(String timeline) {
             this.putQueryParameter("Timeline", timeline);
@@ -275,7 +275,7 @@ public class ProduceEditingProjectVideoRequest extends Request {
         }
 
         /**
-         * Title.
+         * The title of the online editing project.
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);
@@ -284,7 +284,10 @@ public class ProduceEditingProjectVideoRequest extends Request {
         }
 
         /**
-         * UserData.
+         * The custom configuration, such as the callback configuration. The value is a JSON-formatted string. For more information about the structure, see [UserData](~~86952~~).
+         * <p>
+         * 
+         * > To use the MessageCallback parameter, you must set an HTTP callback URL and select a callback event type in the ApsaraVideo VOD console. Otherwise, the callback configuration does not take effect.
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);

@@ -55,7 +55,7 @@ public class ListDynamicImageRequest extends Request {
         } 
 
         /**
-         * VideoId.
+         * The ID of the video.
          */
         public Builder videoId(String videoId) {
             this.putQueryParameter("VideoId", videoId);

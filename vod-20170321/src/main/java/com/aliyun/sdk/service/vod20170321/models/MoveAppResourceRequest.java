@@ -85,7 +85,7 @@ public class MoveAppResourceRequest extends Request {
         } 
 
         /**
-         * ResourceIds.
+         * The ID of the resource. You can specify a maximum of 20 IDs at a time. Separate them with commas (,).
          */
         public Builder resourceIds(String resourceIds) {
             this.putQueryParameter("ResourceIds", resourceIds);
@@ -94,7 +94,12 @@ public class MoveAppResourceRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of the resource. Valid values:
+         * <p>
+         * 
+         * *   **video**
+         * *   **image**
+         * *   **attached**
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -103,7 +108,7 @@ public class MoveAppResourceRequest extends Request {
         }
 
         /**
-         * TargetAppId.
+         * The ID of the application to which resources are migrated. Default value: **app-1000000**. For more information, see [Overview](~~113600~~).
          */
         public Builder targetAppId(String targetAppId) {
             this.putQueryParameter("TargetAppId", targetAppId);

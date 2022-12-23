@@ -50,7 +50,7 @@ public class UpdateVodTemplateResponseBody extends TeaModel {
         private String vodTemplateId; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class UpdateVodTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * VodTemplateId.
+         * The ID of the snapshot template.
          */
         public Builder vodTemplateId(String vodTemplateId) {
             this.vodTemplateId = vodTemplateId;

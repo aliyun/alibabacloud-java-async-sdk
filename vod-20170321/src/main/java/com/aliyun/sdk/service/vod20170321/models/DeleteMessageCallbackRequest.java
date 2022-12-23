@@ -68,7 +68,7 @@ public class DeleteMessageCallbackRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * The ID of the application. If you do not set this parameter, the default value **app-1000000** is used.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);

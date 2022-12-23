@@ -99,7 +99,7 @@ public class AddVodTemplateRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * The ID of the application. Default value: **app-1000000**. For more information, see [Overview](~~113600~~).
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -108,7 +108,11 @@ public class AddVodTemplateRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the template.
+         * <p>
+         * 
+         * *   The name can be up to 128 bytes in length.
+         * *   The value must be encoded in UTF-8.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -117,7 +121,7 @@ public class AddVodTemplateRequest extends Request {
         }
 
         /**
-         * TemplateConfig.
+         * The configurations of the snapshot template. The value is a JSON-formatted string. For more information about the data structure, see the "SnapshotTemplateConfig" section of the [Media processing parameters](~~98618~~) topic.
          */
         public Builder templateConfig(String templateConfig) {
             this.putQueryParameter("TemplateConfig", templateConfig);
@@ -126,7 +130,7 @@ public class AddVodTemplateRequest extends Request {
         }
 
         /**
-         * TemplateType.
+         * The type of the template. Set the value to **Snapshot**.
          */
         public Builder templateType(String templateType) {
             this.putQueryParameter("TemplateType", templateType);

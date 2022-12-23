@@ -126,7 +126,7 @@ public class SetEditingProjectMaterialsRequest extends Request {
         } 
 
         /**
-         * MaterialIds.
+         * The ID of the material. A material is a media asset, such as a video, an image, or an auxiliary media asset. Separate multiple material IDs with commas (,).
          */
         public Builder materialIds(String materialIds) {
             this.putQueryParameter("MaterialIds", materialIds);
@@ -153,7 +153,7 @@ public class SetEditingProjectMaterialsRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * The ID of the online editing project.
          */
         public Builder projectId(String projectId) {
             this.putQueryParameter("ProjectId", projectId);

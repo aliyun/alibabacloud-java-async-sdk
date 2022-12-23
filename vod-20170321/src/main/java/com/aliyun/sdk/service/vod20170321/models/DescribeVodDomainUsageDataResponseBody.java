@@ -122,7 +122,7 @@ public class DescribeVodDomainUsageDataResponseBody extends TeaModel {
         private UsageDataPerInterval usageDataPerInterval; 
 
         /**
-         * Area.
+         * The region where the data was queried.
          */
         public Builder area(String area) {
             this.area = area;
@@ -130,7 +130,7 @@ public class DescribeVodDomainUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * DataInterval.
+         * The time interval between the returned entries. Unit: seconds.
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -138,7 +138,7 @@ public class DescribeVodDomainUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * DomainName.
+         * The domain name for CDN.
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -146,7 +146,7 @@ public class DescribeVodDomainUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * The end of the time range in which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -154,7 +154,7 @@ public class DescribeVodDomainUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -162,7 +162,7 @@ public class DescribeVodDomainUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range in which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -170,7 +170,12 @@ public class DescribeVodDomainUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * Type.
+         * The type of the content based on which the data is generated. Valid values:
+         * <p>
+         * 
+         * *   **static**
+         * *   **dynamic**
+         * *   **all**
          */
         public Builder type(String type) {
             this.type = type;
@@ -178,7 +183,7 @@ public class DescribeVodDomainUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * UsageDataPerInterval.
+         * The details of traffic or bandwidth data.
          */
         public Builder usageDataPerInterval(UsageDataPerInterval usageDataPerInterval) {
             this.usageDataPerInterval = usageDataPerInterval;
@@ -230,7 +235,7 @@ public class DescribeVodDomainUsageDataResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * TimeStamp.
+             * The timestamp of the returned data. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -238,7 +243,7 @@ public class DescribeVodDomainUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The traffic or bandwidth data. The unit of bandwidth is bit/s.
              */
             public Builder value(String value) {
                 this.value = value;

@@ -62,7 +62,11 @@ public class DescribeVodStorageDataResponseBody extends TeaModel {
         private StorageData storageData; 
 
         /**
-         * DataInterval.
+         * The time granularity at which the data was queried. Valid values:
+         * <p>
+         * 
+         * *   **hour**
+         * *   **day**
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -70,7 +74,7 @@ public class DescribeVodStorageDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +82,7 @@ public class DescribeVodStorageDataResponseBody extends TeaModel {
         }
 
         /**
-         * StorageData.
+         * The detailed usage of storage-related resources.
          */
         public Builder storageData(StorageData storageData) {
             this.storageData = storageData;
@@ -142,7 +146,7 @@ public class DescribeVodStorageDataResponseBody extends TeaModel {
             private String timeStamp; 
 
             /**
-             * NetworkOut.
+             * The outbound traffic. Unit: byte. The outbound traffic is generated when videos are directly downloaded or played from OSS buckets without Alibaba Cloud CDN acceleration.
              */
             public Builder networkOut(String networkOut) {
                 this.networkOut = networkOut;
@@ -150,7 +154,7 @@ public class DescribeVodStorageDataResponseBody extends TeaModel {
             }
 
             /**
-             * StorageUtilization.
+             * The storage volume. Unit: byte.
              */
             public Builder storageUtilization(String storageUtilization) {
                 this.storageUtilization = storageUtilization;
@@ -158,7 +162,7 @@ public class DescribeVodStorageDataResponseBody extends TeaModel {
             }
 
             /**
-             * TimeStamp.
+             * The timestamp of the returned data. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;

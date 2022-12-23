@@ -62,7 +62,7 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AttachedMediaList.
+         * The information about the media asset.
          */
         public Builder attachedMediaList(java.util.List < AttachedMediaList> attachedMediaList) {
             this.attachedMediaList = attachedMediaList;
@@ -70,7 +70,7 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
         }
 
         /**
-         * NonExistMediaIds.
+         * The IDs of the auxiliary media assets that do not exist.
          */
         public Builder nonExistMediaIds(java.util.List < String > nonExistMediaIds) {
             this.nonExistMediaIds = nonExistMediaIds;
@@ -78,7 +78,7 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +154,7 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
             private Long parentId; 
 
             /**
-             * CateId.
+             * The ID of the video category.
              */
             public Builder cateId(Long cateId) {
                 this.cateId = cateId;
@@ -162,7 +162,10 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CateName.
+             * The name of the category.
+             * <p>
+             * - The value can be up to 64 bytes in length.
+             * - The string must be encoded in the UTF-8 format.
              */
             public Builder cateName(String cateName) {
                 this.cateName = cateName;
@@ -170,7 +173,7 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Level.
+             * The level of the category. A value of 0 indicates a level 1 category.
              */
             public Builder level(Long level) {
                 this.level = level;
@@ -178,7 +181,7 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ParentId.
+             * The ID of the parent category. The parent category ID of a level 1 category is -1.
              */
             public Builder parentId(Long parentId) {
                 this.parentId = parentId;
@@ -351,7 +354,7 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
             private String URL; 
 
             /**
-             * AppId.
+             * The ID of the application.
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -359,7 +362,7 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Categories.
+             * The list of categories.
              */
             public Builder categories(java.util.List < Categories> categories) {
                 this.categories = categories;
@@ -367,7 +370,7 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * The time when the auxiliary media asset was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -375,7 +378,7 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the auxiliary media asset.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -383,7 +386,7 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * MediaId.
+             * The ID of the auxiliary media asset.
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;
@@ -391,7 +394,7 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ModificationTime.
+             * The time when the auxiliary media asset was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder modificationTime(String modificationTime) {
                 this.modificationTime = modificationTime;
@@ -399,7 +402,11 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the auxiliary media asset. Valid values:
+             * <p>
+             * - **Uploading**: The auxiliary media asset is being uploaded. This is the initial status.
+             * - **Normal**: The auxiliary media asset is uploaded.
+             * - **UploadFail**: The auxiliary media asset fails to be uploaded.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -407,7 +414,7 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * StorageLocation.
+             * The OSS bucket where the auxiliary media asset is stored.
              */
             public Builder storageLocation(String storageLocation) {
                 this.storageLocation = storageLocation;
@@ -415,7 +422,7 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tags of the auxiliary media asset.
              */
             public Builder tags(String tags) {
                 this.tags = tags;
@@ -423,7 +430,7 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * The title of the auxiliary media asset.
              */
             public Builder title(String title) {
                 this.title = title;
@@ -431,7 +438,11 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the auxiliary media asset. Valid values:
+             * <p>
+             * - **watermark**
+             * - **subtitle**
+             * - **material**
              */
             public Builder type(String type) {
                 this.type = type;
@@ -439,7 +450,9 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * URL.
+             * The URL of the auxiliary media asset.
+             * <p>
+             * > If a CDN domain name is specified, a CDN URL is returned. Otherwise, an OSS URL is returned.
              */
             public Builder URL(String URL) {
                 this.URL = URL;

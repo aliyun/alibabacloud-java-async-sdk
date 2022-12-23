@@ -50,7 +50,7 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DomainLogDetails.
+         * The detailed data of Alibaba Cloud CDN logs.
          */
         public Builder domainLogDetails(DomainLogDetails domainLogDetails) {
             this.domainLogDetails = domainLogDetails;
@@ -58,7 +58,7 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,7 +146,7 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
             private String startTime; 
 
             /**
-             * EndTime.
+             * The end of the time range in which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -154,7 +154,7 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
             }
 
             /**
-             * LogName.
+             * The name of the log file.
              */
             public Builder logName(String logName) {
                 this.logName = logName;
@@ -162,7 +162,7 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
             }
 
             /**
-             * LogPath.
+             * The path of the log file.
              */
             public Builder logPath(String logPath) {
                 this.logPath = logPath;
@@ -170,7 +170,7 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
             }
 
             /**
-             * LogSize.
+             * The size of the log file.
              */
             public Builder logSize(Long logSize) {
                 this.logSize = logSize;
@@ -178,7 +178,7 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The beginning of the time range in which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -284,7 +284,7 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * PageNumber.
+             * The page number of the returned page.
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -292,7 +292,7 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page.
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -300,7 +300,7 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * The total number of entries returned.
              */
             public Builder total(Long total) {
                 this.total = total;
@@ -377,7 +377,7 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
             private PageInfos pageInfos; 
 
             /**
-             * DomainName.
+             * The domain name.
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -385,7 +385,7 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
             }
 
             /**
-             * LogCount.
+             * The total number of entries returned on the current page.
              */
             public Builder logCount(Long logCount) {
                 this.logCount = logCount;
@@ -393,7 +393,7 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
             }
 
             /**
-             * LogInfos.
+             * The detailed information about Alibaba Cloud CDN logs.
              */
             public Builder logInfos(LogInfos logInfos) {
                 this.logInfos = logInfos;
@@ -401,7 +401,7 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
             }
 
             /**
-             * PageInfos.
+             * The pagination settings of Alibaba Cloud CDN logs.
              */
             public Builder pageInfos(PageInfos pageInfos) {
                 this.pageInfos = pageInfos;

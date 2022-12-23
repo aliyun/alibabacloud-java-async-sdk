@@ -50,7 +50,7 @@ public class PreloadVodObjectCachesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PreloadTaskId.
+         * The ID of the prefetch task. Separate multiple task IDs with commas (,).
          */
         public Builder preloadTaskId(String preloadTaskId) {
             this.preloadTaskId = preloadTaskId;
@@ -58,7 +58,7 @@ public class PreloadVodObjectCachesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -55,7 +55,11 @@ public class DeleteAIImageInfosRequest extends Request {
         } 
 
         /**
-         * AIImageInfoIds.
+         * The IDs of the images that are submitted for AI processing. You can obtain the value of AIImageInfoId from the response to the [ListAIImageInfo](~~ListAIImageInfo~~) operation.
+         * <p>
+         * 
+         * - You can specify a maximum of 10 IDs.
+         * - Separate multiple IDs with commas (,).
          */
         public Builder AIImageInfoIds(String AIImageInfoIds) {
             this.putQueryParameter("AIImageInfoIds", AIImageInfoIds);

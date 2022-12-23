@@ -55,7 +55,10 @@ public class UpdateImageInfosRequest extends Request {
         } 
 
         /**
-         * UpdateContent.
+         * The new information about the one or more images. You can modify the information about up to 20 images at a time. For more information, see the **UpdateContent** section of this topic.
+         * <p>
+         * 
+         * > The values of the nested parameters Title, Description, and Tags under the UpdateContent parameter cannot contain emoticons.
          */
         public Builder updateContent(String updateContent) {
             this.putQueryParameter("UpdateContent", updateContent);

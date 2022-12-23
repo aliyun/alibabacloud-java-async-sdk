@@ -154,7 +154,7 @@ public class AddVodDomainRequest extends Request {
         } 
 
         /**
-         * CheckUrl.
+         * The URL that is used for health checks.
          */
         public Builder checkUrl(String checkUrl) {
             this.putQueryParameter("CheckUrl", checkUrl);
@@ -163,7 +163,7 @@ public class AddVodDomainRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * The domain name for CDN that you want to add to ApsaraVideo VOD. Wildcard domain names are supported. Start the domain name with a period (.). Example: .example.com.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -190,7 +190,12 @@ public class AddVodDomainRequest extends Request {
         }
 
         /**
-         * Scope.
+         * This parameter is applicable to users of level 3 or higher in mainland China and users outside mainland China. Valid values:
+         * <p>
+         * 
+         * - **domestic**: mainland China. This is the default value.
+         * - **overseas**: outside mainland China.
+         * - **global**: regions in and outside mainland China.
          */
         public Builder scope(String scope) {
             this.putQueryParameter("Scope", scope);
@@ -208,7 +213,7 @@ public class AddVodDomainRequest extends Request {
         }
 
         /**
-         * Sources.
+         * The information about the address of the origin server. For more information about the Sources parameter, see the **Sources** section.
          */
         public Builder sources(String sources) {
             this.putQueryParameter("Sources", sources);
@@ -217,7 +222,7 @@ public class AddVodDomainRequest extends Request {
         }
 
         /**
-         * TopLevelDomain.
+         * The top-level domain name.
          */
         public Builder topLevelDomain(String topLevelDomain) {
             this.putQueryParameter("TopLevelDomain", topLevelDomain);

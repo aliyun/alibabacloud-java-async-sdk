@@ -98,7 +98,7 @@ public class DescribeVodDomainConfigsRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * The domain name for CDN.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -107,7 +107,7 @@ public class DescribeVodDomainConfigsRequest extends Request {
         }
 
         /**
-         * FunctionNames.
+         * The name of the feature. Separate multiple names with commas (,). For more information, see the **Feature description** section.
          */
         public Builder functionNames(String functionNames) {
             this.putQueryParameter("FunctionNames", functionNames);

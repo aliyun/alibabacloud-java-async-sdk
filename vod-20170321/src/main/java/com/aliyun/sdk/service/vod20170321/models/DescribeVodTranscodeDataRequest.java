@@ -140,7 +140,7 @@ public class DescribeVodTranscodeDataRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -149,7 +149,11 @@ public class DescribeVodTranscodeDataRequest extends Request {
         }
 
         /**
-         * Interval.
+         * The time granularity at which the data is queried. Valid values:
+         * <p>
+         * 
+         * *   **day**
+         * *   **hour**
          */
         public Builder interval(String interval) {
             this.putQueryParameter("Interval", interval);
@@ -167,7 +171,13 @@ public class DescribeVodTranscodeDataRequest extends Request {
         }
 
         /**
-         * Region.
+         * The region where the transcoded file is stored. If you do not set this parameter, the data in all regions is returned. You can specify multiple regions. Separate them with commas (,). Valid values:
+         * <p>
+         * 
+         * *   **cn-shanghai**: China (Shanghai)
+         * *   **cn-beijing**: China (Beijing)
+         * *   **eu-central-1**: Germany (Frankfurt)
+         * *   **ap-southeast-1**: Singapore
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -176,7 +186,12 @@ public class DescribeVodTranscodeDataRequest extends Request {
         }
 
         /**
-         * Specification.
+         * The transcoding specification. If you do not set this parameter, the data of all transcoding specifications is returned. You can specify multiple transcoding specifications. Separate them with commas (,). Valid values:
+         * <p>
+         * 
+         * *   **Audio**: audio transcoding
+         * *   **Segmentation**: container format conversion
+         * *   H.264 and H.265-related video transcoding specifications, such as **H264.LD**, **H264.SD**, **H264.HD**, **H264.2K**, and **H264.4K**
          */
         public Builder specification(String specification) {
             this.putQueryParameter("Specification", specification);
@@ -185,7 +200,7 @@ public class DescribeVodTranscodeDataRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -194,7 +209,7 @@ public class DescribeVodTranscodeDataRequest extends Request {
         }
 
         /**
-         * Storage.
+         * The name of the Object Storage Service (OSS) bucket. If you do not set this parameter, the data of all buckets is returned. You can specify multiple buckets. Separate them with commas (,).
          */
         public Builder storage(String storage) {
             this.putQueryParameter("Storage", storage);
