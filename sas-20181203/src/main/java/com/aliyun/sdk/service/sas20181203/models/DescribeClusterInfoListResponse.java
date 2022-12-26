@@ -1,0 +1,104 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.sas20181203.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link DescribeClusterInfoListResponse} extends {@link TeaModel}
+ *
+ * <p>DescribeClusterInfoListResponse</p>
+ */
+public class DescribeClusterInfoListResponse extends Response {
+    @NameInMap("headers")
+    @Validation(required = true)
+    private java.util.Map < String, String > headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    private DescribeClusterInfoListResponseBody body;
+
+    private DescribeClusterInfoListResponse(BuilderImpl builder) {
+        super(builder);
+        this.headers = builder.headers;
+        this.body = builder.body;
+    }
+
+    public static DescribeClusterInfoListResponse create() {
+        return new BuilderImpl().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new BuilderImpl(this);
+    }
+
+    /**
+     * @return headers
+     */
+    public java.util.Map < String, String > getHeaders() {
+        return this.headers;
+    }
+
+    /**
+     * @return body
+     */
+    public DescribeClusterInfoListResponseBody getBody() {
+        return this.body;
+    }
+
+    public interface Builder extends Response.Builder<DescribeClusterInfoListResponse, Builder> {
+
+        Builder headers(java.util.Map < String, String > headers);
+
+        Builder body(DescribeClusterInfoListResponseBody body);
+
+        @Override
+        DescribeClusterInfoListResponse build();
+
+    } 
+
+    private static final class BuilderImpl
+            extends Response.BuilderImpl<DescribeClusterInfoListResponse, Builder>
+            implements Builder {
+        private java.util.Map < String, String > headers; 
+        private DescribeClusterInfoListResponseBody body; 
+
+        private BuilderImpl() {
+            super();
+        } 
+
+        private BuilderImpl(DescribeClusterInfoListResponse response) {
+            super(response);
+            this.headers = response.headers;
+            this.body = response.body;
+        } 
+
+        /**
+         * headers.
+         */
+        @Override
+        public Builder headers(java.util.Map < String, String > headers) {
+            this.headers = headers;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        @Override
+        public Builder body(DescribeClusterInfoListResponseBody body) {
+            this.body = body;
+            return this;
+        }
+
+        @Override
+        public DescribeClusterInfoListResponse build() {
+            return new DescribeClusterInfoListResponse(this);
+        } 
+
+    } 
+
+}

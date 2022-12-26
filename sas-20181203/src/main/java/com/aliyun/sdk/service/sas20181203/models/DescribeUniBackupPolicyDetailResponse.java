@@ -1,0 +1,104 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.sas20181203.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link DescribeUniBackupPolicyDetailResponse} extends {@link TeaModel}
+ *
+ * <p>DescribeUniBackupPolicyDetailResponse</p>
+ */
+public class DescribeUniBackupPolicyDetailResponse extends Response {
+    @NameInMap("headers")
+    @Validation(required = true)
+    private java.util.Map < String, String > headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    private DescribeUniBackupPolicyDetailResponseBody body;
+
+    private DescribeUniBackupPolicyDetailResponse(BuilderImpl builder) {
+        super(builder);
+        this.headers = builder.headers;
+        this.body = builder.body;
+    }
+
+    public static DescribeUniBackupPolicyDetailResponse create() {
+        return new BuilderImpl().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new BuilderImpl(this);
+    }
+
+    /**
+     * @return headers
+     */
+    public java.util.Map < String, String > getHeaders() {
+        return this.headers;
+    }
+
+    /**
+     * @return body
+     */
+    public DescribeUniBackupPolicyDetailResponseBody getBody() {
+        return this.body;
+    }
+
+    public interface Builder extends Response.Builder<DescribeUniBackupPolicyDetailResponse, Builder> {
+
+        Builder headers(java.util.Map < String, String > headers);
+
+        Builder body(DescribeUniBackupPolicyDetailResponseBody body);
+
+        @Override
+        DescribeUniBackupPolicyDetailResponse build();
+
+    } 
+
+    private static final class BuilderImpl
+            extends Response.BuilderImpl<DescribeUniBackupPolicyDetailResponse, Builder>
+            implements Builder {
+        private java.util.Map < String, String > headers; 
+        private DescribeUniBackupPolicyDetailResponseBody body; 
+
+        private BuilderImpl() {
+            super();
+        } 
+
+        private BuilderImpl(DescribeUniBackupPolicyDetailResponse response) {
+            super(response);
+            this.headers = response.headers;
+            this.body = response.body;
+        } 
+
+        /**
+         * headers.
+         */
+        @Override
+        public Builder headers(java.util.Map < String, String > headers) {
+            this.headers = headers;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        @Override
+        public Builder body(DescribeUniBackupPolicyDetailResponseBody body) {
+            this.body = body;
+            return this;
+        }
+
+        @Override
+        public DescribeUniBackupPolicyDetailResponse build() {
+            return new DescribeUniBackupPolicyDetailResponse(this);
+        } 
+
+    } 
+
+}

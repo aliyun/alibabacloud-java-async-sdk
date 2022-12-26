@@ -1,0 +1,141 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.sas20181203.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link DescribeVulListPageRequest} extends {@link RequestModel}
+ *
+ * <p>DescribeVulListPageRequest</p>
+ */
+public class DescribeVulListPageRequest extends Request {
+    @Query
+    @NameInMap("CurrentPage")
+    private Integer currentPage;
+
+    @Query
+    @NameInMap("CveId")
+    private String cveId;
+
+    @Query
+    @NameInMap("PageSize")
+    private Integer pageSize;
+
+    @Query
+    @NameInMap("VulNameLike")
+    private String vulNameLike;
+
+    private DescribeVulListPageRequest(Builder builder) {
+        super(builder);
+        this.currentPage = builder.currentPage;
+        this.cveId = builder.cveId;
+        this.pageSize = builder.pageSize;
+        this.vulNameLike = builder.vulNameLike;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static DescribeVulListPageRequest create() {
+        return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return currentPage
+     */
+    public Integer getCurrentPage() {
+        return this.currentPage;
+    }
+
+    /**
+     * @return cveId
+     */
+    public String getCveId() {
+        return this.cveId;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    /**
+     * @return vulNameLike
+     */
+    public String getVulNameLike() {
+        return this.vulNameLike;
+    }
+
+    public static final class Builder extends Request.Builder<DescribeVulListPageRequest, Builder> {
+        private Integer currentPage; 
+        private String cveId; 
+        private Integer pageSize; 
+        private String vulNameLike; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(DescribeVulListPageRequest request) {
+            super(request);
+            this.currentPage = request.currentPage;
+            this.cveId = request.cveId;
+            this.pageSize = request.pageSize;
+            this.vulNameLike = request.vulNameLike;
+        } 
+
+        /**
+         * CurrentPage.
+         */
+        public Builder currentPage(Integer currentPage) {
+            this.putQueryParameter("CurrentPage", currentPage);
+            this.currentPage = currentPage;
+            return this;
+        }
+
+        /**
+         * CveId.
+         */
+        public Builder cveId(String cveId) {
+            this.putQueryParameter("CveId", cveId);
+            this.cveId = cveId;
+            return this;
+        }
+
+        /**
+         * PageSize.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * VulNameLike.
+         */
+        public Builder vulNameLike(String vulNameLike) {
+            this.putQueryParameter("VulNameLike", vulNameLike);
+            this.vulNameLike = vulNameLike;
+            return this;
+        }
+
+        @Override
+        public DescribeVulListPageRequest build() {
+            return new DescribeVulListPageRequest(this);
+        } 
+
+    } 
+
+}

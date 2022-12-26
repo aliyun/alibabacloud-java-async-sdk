@@ -1,0 +1,104 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.sas20181203.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link DescribeCustomBlockRecordsResponse} extends {@link TeaModel}
+ *
+ * <p>DescribeCustomBlockRecordsResponse</p>
+ */
+public class DescribeCustomBlockRecordsResponse extends Response {
+    @NameInMap("headers")
+    @Validation(required = true)
+    private java.util.Map < String, String > headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    private DescribeCustomBlockRecordsResponseBody body;
+
+    private DescribeCustomBlockRecordsResponse(BuilderImpl builder) {
+        super(builder);
+        this.headers = builder.headers;
+        this.body = builder.body;
+    }
+
+    public static DescribeCustomBlockRecordsResponse create() {
+        return new BuilderImpl().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new BuilderImpl(this);
+    }
+
+    /**
+     * @return headers
+     */
+    public java.util.Map < String, String > getHeaders() {
+        return this.headers;
+    }
+
+    /**
+     * @return body
+     */
+    public DescribeCustomBlockRecordsResponseBody getBody() {
+        return this.body;
+    }
+
+    public interface Builder extends Response.Builder<DescribeCustomBlockRecordsResponse, Builder> {
+
+        Builder headers(java.util.Map < String, String > headers);
+
+        Builder body(DescribeCustomBlockRecordsResponseBody body);
+
+        @Override
+        DescribeCustomBlockRecordsResponse build();
+
+    } 
+
+    private static final class BuilderImpl
+            extends Response.BuilderImpl<DescribeCustomBlockRecordsResponse, Builder>
+            implements Builder {
+        private java.util.Map < String, String > headers; 
+        private DescribeCustomBlockRecordsResponseBody body; 
+
+        private BuilderImpl() {
+            super();
+        } 
+
+        private BuilderImpl(DescribeCustomBlockRecordsResponse response) {
+            super(response);
+            this.headers = response.headers;
+            this.body = response.body;
+        } 
+
+        /**
+         * headers.
+         */
+        @Override
+        public Builder headers(java.util.Map < String, String > headers) {
+            this.headers = headers;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        @Override
+        public Builder body(DescribeCustomBlockRecordsResponseBody body) {
+            this.body = body;
+            return this;
+        }
+
+        @Override
+        public DescribeCustomBlockRecordsResponse build() {
+            return new DescribeCustomBlockRecordsResponse(this);
+        } 
+
+    } 
+
+}

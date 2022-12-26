@@ -1,0 +1,72 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.sas20181203.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link DescribeScanTaskStatisticsRequest} extends {@link RequestModel}
+ *
+ * <p>DescribeScanTaskStatisticsRequest</p>
+ */
+public class DescribeScanTaskStatisticsRequest extends Request {
+    @Query
+    @NameInMap("Levels")
+    private String levels;
+
+    private DescribeScanTaskStatisticsRequest(Builder builder) {
+        super(builder);
+        this.levels = builder.levels;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static DescribeScanTaskStatisticsRequest create() {
+        return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return levels
+     */
+    public String getLevels() {
+        return this.levels;
+    }
+
+    public static final class Builder extends Request.Builder<DescribeScanTaskStatisticsRequest, Builder> {
+        private String levels; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(DescribeScanTaskStatisticsRequest request) {
+            super(request);
+            this.levels = request.levels;
+        } 
+
+        /**
+         * Levels.
+         */
+        public Builder levels(String levels) {
+            this.putQueryParameter("Levels", levels);
+            this.levels = levels;
+            return this;
+        }
+
+        @Override
+        public DescribeScanTaskStatisticsRequest build() {
+            return new DescribeScanTaskStatisticsRequest(this);
+        } 
+
+    } 
+
+}

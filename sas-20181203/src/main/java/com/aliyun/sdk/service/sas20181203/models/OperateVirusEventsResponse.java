@@ -1,0 +1,104 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.sas20181203.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link OperateVirusEventsResponse} extends {@link TeaModel}
+ *
+ * <p>OperateVirusEventsResponse</p>
+ */
+public class OperateVirusEventsResponse extends Response {
+    @NameInMap("headers")
+    @Validation(required = true)
+    private java.util.Map < String, String > headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    private OperateVirusEventsResponseBody body;
+
+    private OperateVirusEventsResponse(BuilderImpl builder) {
+        super(builder);
+        this.headers = builder.headers;
+        this.body = builder.body;
+    }
+
+    public static OperateVirusEventsResponse create() {
+        return new BuilderImpl().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new BuilderImpl(this);
+    }
+
+    /**
+     * @return headers
+     */
+    public java.util.Map < String, String > getHeaders() {
+        return this.headers;
+    }
+
+    /**
+     * @return body
+     */
+    public OperateVirusEventsResponseBody getBody() {
+        return this.body;
+    }
+
+    public interface Builder extends Response.Builder<OperateVirusEventsResponse, Builder> {
+
+        Builder headers(java.util.Map < String, String > headers);
+
+        Builder body(OperateVirusEventsResponseBody body);
+
+        @Override
+        OperateVirusEventsResponse build();
+
+    } 
+
+    private static final class BuilderImpl
+            extends Response.BuilderImpl<OperateVirusEventsResponse, Builder>
+            implements Builder {
+        private java.util.Map < String, String > headers; 
+        private OperateVirusEventsResponseBody body; 
+
+        private BuilderImpl() {
+            super();
+        } 
+
+        private BuilderImpl(OperateVirusEventsResponse response) {
+            super(response);
+            this.headers = response.headers;
+            this.body = response.body;
+        } 
+
+        /**
+         * headers.
+         */
+        @Override
+        public Builder headers(java.util.Map < String, String > headers) {
+            this.headers = headers;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        @Override
+        public Builder body(OperateVirusEventsResponseBody body) {
+            this.body = body;
+            return this;
+        }
+
+        @Override
+        public OperateVirusEventsResponse build() {
+            return new OperateVirusEventsResponse(this);
+        } 
+
+    } 
+
+}

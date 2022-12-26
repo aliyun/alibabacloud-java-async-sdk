@@ -45,6 +45,10 @@ public class DescribeGroupedInstancesRequest extends Request {
     @NameInMap("Vendor")
     private Integer vendor;
 
+    @Query
+    @NameInMap("Vendors")
+    private String vendors;
+
     private DescribeGroupedInstancesRequest(Builder builder) {
         super(builder);
         this.currentPage = builder.currentPage;
@@ -55,6 +59,7 @@ public class DescribeGroupedInstancesRequest extends Request {
         this.noPage = builder.noPage;
         this.pageSize = builder.pageSize;
         this.vendor = builder.vendor;
+        this.vendors = builder.vendors;
     }
 
     public static Builder builder() {
@@ -126,6 +131,13 @@ public class DescribeGroupedInstancesRequest extends Request {
         return this.vendor;
     }
 
+    /**
+     * @return vendors
+     */
+    public String getVendors() {
+        return this.vendors;
+    }
+
     public static final class Builder extends Request.Builder<DescribeGroupedInstancesRequest, Builder> {
         private Integer currentPage; 
         private String fieldValue; 
@@ -135,6 +147,7 @@ public class DescribeGroupedInstancesRequest extends Request {
         private Boolean noPage; 
         private Integer pageSize; 
         private Integer vendor; 
+        private String vendors; 
 
         private Builder() {
             super();
@@ -150,6 +163,7 @@ public class DescribeGroupedInstancesRequest extends Request {
             this.noPage = request.noPage;
             this.pageSize = request.pageSize;
             this.vendor = request.vendor;
+            this.vendors = request.vendors;
         } 
 
         /**
@@ -241,6 +255,22 @@ public class DescribeGroupedInstancesRequest extends Request {
         public Builder vendor(Integer vendor) {
             this.putQueryParameter("Vendor", vendor);
             this.vendor = vendor;
+            return this;
+        }
+
+        /**
+         * The source of the server. Separate multiple sources with commas (,).Valid values:
+         * <p>
+         * 
+         * *   **0**: an asset provided by Alibaba Cloud.
+         * *   **1**: a third-party cloud server
+         * *   **2**: a server in a data center
+         * *   **3**, **4**, **5**, and **7**: other cloud asset
+         * *   **8**: a lightweight asset
+         */
+        public Builder vendors(String vendors) {
+            this.putQueryParameter("Vendors", vendors);
+            this.vendors = vendors;
             return this;
         }
 

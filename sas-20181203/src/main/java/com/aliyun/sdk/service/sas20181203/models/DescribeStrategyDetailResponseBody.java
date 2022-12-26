@@ -711,6 +711,9 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
         @NameInMap("Name")
         private String name;
 
+        @NameInMap("RiskSubTypeName")
+        private String riskSubTypeName;
+
         @NameInMap("RiskTypeWhiteListQueryResultList")
         private java.util.List < RiskTypeWhiteListQueryResultList> riskTypeWhiteListQueryResultList;
 
@@ -730,6 +733,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             this.endTime = builder.endTime;
             this.id = builder.id;
             this.name = builder.name;
+            this.riskSubTypeName = builder.riskSubTypeName;
             this.riskTypeWhiteListQueryResultList = builder.riskTypeWhiteListQueryResultList;
             this.startTime = builder.startTime;
             this.targetType = builder.targetType;
@@ -787,6 +791,13 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return riskSubTypeName
+         */
+        public String getRiskSubTypeName() {
+            return this.riskSubTypeName;
+        }
+
+        /**
          * @return riskTypeWhiteListQueryResultList
          */
         public java.util.List < RiskTypeWhiteListQueryResultList> getRiskTypeWhiteListQueryResultList() {
@@ -821,6 +832,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             private String endTime; 
             private Integer id; 
             private String name; 
+            private String riskSubTypeName; 
             private java.util.List < RiskTypeWhiteListQueryResultList> riskTypeWhiteListQueryResultList; 
             private String startTime; 
             private String targetType; 
@@ -881,6 +893,14 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * The subtype of the baselines.
+             */
+            public Builder riskSubTypeName(String riskSubTypeName) {
+                this.riskSubTypeName = riskSubTypeName;
                 return this;
             }
 

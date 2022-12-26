@@ -1,0 +1,212 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.sas20181203.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link CreateUniRestorePlanRequest} extends {@link RequestModel}
+ *
+ * <p>CreateUniRestorePlanRequest</p>
+ */
+public class CreateUniRestorePlanRequest extends Request {
+    @Query
+    @NameInMap("Database")
+    private String database;
+
+    @Query
+    @NameInMap("InstanceUuid")
+    private String instanceUuid;
+
+    @Query
+    @NameInMap("PolicyId")
+    @Validation(required = true)
+    private Long policyId;
+
+    @Query
+    @NameInMap("ResetScn")
+    private String resetScn;
+
+    @Query
+    @NameInMap("ResetTime")
+    private String resetTime;
+
+    @Query
+    @NameInMap("RestoreInfo")
+    private String restoreInfo;
+
+    @Query
+    @NameInMap("TimePoint")
+    @Validation(required = true)
+    private Long timePoint;
+
+    private CreateUniRestorePlanRequest(Builder builder) {
+        super(builder);
+        this.database = builder.database;
+        this.instanceUuid = builder.instanceUuid;
+        this.policyId = builder.policyId;
+        this.resetScn = builder.resetScn;
+        this.resetTime = builder.resetTime;
+        this.restoreInfo = builder.restoreInfo;
+        this.timePoint = builder.timePoint;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static CreateUniRestorePlanRequest create() {
+        return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return database
+     */
+    public String getDatabase() {
+        return this.database;
+    }
+
+    /**
+     * @return instanceUuid
+     */
+    public String getInstanceUuid() {
+        return this.instanceUuid;
+    }
+
+    /**
+     * @return policyId
+     */
+    public Long getPolicyId() {
+        return this.policyId;
+    }
+
+    /**
+     * @return resetScn
+     */
+    public String getResetScn() {
+        return this.resetScn;
+    }
+
+    /**
+     * @return resetTime
+     */
+    public String getResetTime() {
+        return this.resetTime;
+    }
+
+    /**
+     * @return restoreInfo
+     */
+    public String getRestoreInfo() {
+        return this.restoreInfo;
+    }
+
+    /**
+     * @return timePoint
+     */
+    public Long getTimePoint() {
+        return this.timePoint;
+    }
+
+    public static final class Builder extends Request.Builder<CreateUniRestorePlanRequest, Builder> {
+        private String database; 
+        private String instanceUuid; 
+        private Long policyId; 
+        private String resetScn; 
+        private String resetTime; 
+        private String restoreInfo; 
+        private Long timePoint; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(CreateUniRestorePlanRequest request) {
+            super(request);
+            this.database = request.database;
+            this.instanceUuid = request.instanceUuid;
+            this.policyId = request.policyId;
+            this.resetScn = request.resetScn;
+            this.resetTime = request.resetTime;
+            this.restoreInfo = request.restoreInfo;
+            this.timePoint = request.timePoint;
+        } 
+
+        /**
+         * Database.
+         */
+        public Builder database(String database) {
+            this.putQueryParameter("Database", database);
+            this.database = database;
+            return this;
+        }
+
+        /**
+         * InstanceUuid.
+         */
+        public Builder instanceUuid(String instanceUuid) {
+            this.putQueryParameter("InstanceUuid", instanceUuid);
+            this.instanceUuid = instanceUuid;
+            return this;
+        }
+
+        /**
+         * PolicyId.
+         */
+        public Builder policyId(Long policyId) {
+            this.putQueryParameter("PolicyId", policyId);
+            this.policyId = policyId;
+            return this;
+        }
+
+        /**
+         * ResetScn.
+         */
+        public Builder resetScn(String resetScn) {
+            this.putQueryParameter("ResetScn", resetScn);
+            this.resetScn = resetScn;
+            return this;
+        }
+
+        /**
+         * ResetTime.
+         */
+        public Builder resetTime(String resetTime) {
+            this.putQueryParameter("ResetTime", resetTime);
+            this.resetTime = resetTime;
+            return this;
+        }
+
+        /**
+         * RestoreInfo.
+         */
+        public Builder restoreInfo(String restoreInfo) {
+            this.putQueryParameter("RestoreInfo", restoreInfo);
+            this.restoreInfo = restoreInfo;
+            return this;
+        }
+
+        /**
+         * TimePoint.
+         */
+        public Builder timePoint(Long timePoint) {
+            this.putQueryParameter("TimePoint", timePoint);
+            this.timePoint = timePoint;
+            return this;
+        }
+
+        @Override
+        public CreateUniRestorePlanRequest build() {
+            return new CreateUniRestorePlanRequest(this);
+        } 
+
+    } 
+
+}

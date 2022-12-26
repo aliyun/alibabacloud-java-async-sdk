@@ -1,0 +1,215 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.sas20181203.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link DescribeEventLevelCountResponseBody} extends {@link TeaModel}
+ *
+ * <p>DescribeEventLevelCountResponseBody</p>
+ */
+public class DescribeEventLevelCountResponseBody extends TeaModel {
+    @NameInMap("Code")
+    private String code;
+
+    @NameInMap("EventLevels")
+    private EventLevels eventLevels;
+
+    @NameInMap("Message")
+    private String message;
+
+    @NameInMap("RequestId")
+    private String requestId;
+
+    @NameInMap("Success")
+    private Boolean success;
+
+    private DescribeEventLevelCountResponseBody(Builder builder) {
+        this.code = builder.code;
+        this.eventLevels = builder.eventLevels;
+        this.message = builder.message;
+        this.requestId = builder.requestId;
+        this.success = builder.success;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static DescribeEventLevelCountResponseBody create() {
+        return builder().build();
+    }
+
+    /**
+     * @return code
+     */
+    public String getCode() {
+        return this.code;
+    }
+
+    /**
+     * @return eventLevels
+     */
+    public EventLevels getEventLevels() {
+        return this.eventLevels;
+    }
+
+    /**
+     * @return message
+     */
+    public String getMessage() {
+        return this.message;
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    /**
+     * @return success
+     */
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public static final class Builder {
+        private String code; 
+        private EventLevels eventLevels; 
+        private String message; 
+        private String requestId; 
+        private Boolean success; 
+
+        /**
+         * Code.
+         */
+        public Builder code(String code) {
+            this.code = code;
+            return this;
+        }
+
+        /**
+         * EventLevels.
+         */
+        public Builder eventLevels(EventLevels eventLevels) {
+            this.eventLevels = eventLevels;
+            return this;
+        }
+
+        /**
+         * Message.
+         */
+        public Builder message(String message) {
+            this.message = message;
+            return this;
+        }
+
+        /**
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * Success.
+         */
+        public Builder success(Boolean success) {
+            this.success = success;
+            return this;
+        }
+
+        public DescribeEventLevelCountResponseBody build() {
+            return new DescribeEventLevelCountResponseBody(this);
+        } 
+
+    } 
+
+    public static class EventLevels extends TeaModel {
+        @NameInMap("Remind")
+        private Integer remind;
+
+        @NameInMap("Serious")
+        private Integer serious;
+
+        @NameInMap("Suspicious")
+        private Integer suspicious;
+
+        private EventLevels(Builder builder) {
+            this.remind = builder.remind;
+            this.serious = builder.serious;
+            this.suspicious = builder.suspicious;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static EventLevels create() {
+            return builder().build();
+        }
+
+        /**
+         * @return remind
+         */
+        public Integer getRemind() {
+            return this.remind;
+        }
+
+        /**
+         * @return serious
+         */
+        public Integer getSerious() {
+            return this.serious;
+        }
+
+        /**
+         * @return suspicious
+         */
+        public Integer getSuspicious() {
+            return this.suspicious;
+        }
+
+        public static final class Builder {
+            private Integer remind; 
+            private Integer serious; 
+            private Integer suspicious; 
+
+            /**
+             * Remind.
+             */
+            public Builder remind(Integer remind) {
+                this.remind = remind;
+                return this;
+            }
+
+            /**
+             * Serious.
+             */
+            public Builder serious(Integer serious) {
+                this.serious = serious;
+                return this;
+            }
+
+            /**
+             * Suspicious.
+             */
+            public Builder suspicious(Integer suspicious) {
+                this.suspicious = suspicious;
+                return this;
+            }
+
+            public EventLevels build() {
+                return new EventLevels(this);
+            } 
+
+        } 
+
+    }
+}

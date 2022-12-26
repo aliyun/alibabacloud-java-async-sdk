@@ -29,6 +29,10 @@ public class DescribeCheckWarningSummaryRequest extends Request {
     private Integer currentPage;
 
     @Query
+    @NameInMap("GroupId")
+    private Long groupId;
+
+    @Query
     @NameInMap("Lang")
     private String lang;
 
@@ -74,6 +78,7 @@ public class DescribeCheckWarningSummaryRequest extends Request {
         this.containerFieldName = builder.containerFieldName;
         this.containerFieldValue = builder.containerFieldValue;
         this.currentPage = builder.currentPage;
+        this.groupId = builder.groupId;
         this.lang = builder.lang;
         this.pageSize = builder.pageSize;
         this.riskName = builder.riskName;
@@ -125,6 +130,13 @@ public class DescribeCheckWarningSummaryRequest extends Request {
      */
     public Integer getCurrentPage() {
         return this.currentPage;
+    }
+
+    /**
+     * @return groupId
+     */
+    public Long getGroupId() {
+        return this.groupId;
     }
 
     /**
@@ -202,6 +214,7 @@ public class DescribeCheckWarningSummaryRequest extends Request {
         private String containerFieldName; 
         private String containerFieldValue; 
         private Integer currentPage; 
+        private Long groupId; 
         private String lang; 
         private Integer pageSize; 
         private String riskName; 
@@ -223,6 +236,7 @@ public class DescribeCheckWarningSummaryRequest extends Request {
             this.containerFieldName = request.containerFieldName;
             this.containerFieldValue = request.containerFieldValue;
             this.currentPage = request.currentPage;
+            this.groupId = request.groupId;
             this.lang = request.lang;
             this.pageSize = request.pageSize;
             this.riskName = request.riskName;
@@ -277,6 +291,15 @@ public class DescribeCheckWarningSummaryRequest extends Request {
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
             this.currentPage = currentPage;
+            return this;
+        }
+
+        /**
+         * GroupId.
+         */
+        public Builder groupId(Long groupId) {
+            this.putQueryParameter("GroupId", groupId);
+            this.groupId = groupId;
             return this;
         }
 

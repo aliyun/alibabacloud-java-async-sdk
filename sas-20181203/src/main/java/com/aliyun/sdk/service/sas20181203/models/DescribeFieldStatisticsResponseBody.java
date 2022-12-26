@@ -132,6 +132,9 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         @NameInMap("TestAssetCount")
         private Integer testAssetCount;
 
+        @NameInMap("TripartiteInstanceCount")
+        private Integer tripartiteInstanceCount;
+
         @NameInMap("UnKnowStatusInstanceCount")
         private Integer unKnowStatusInstanceCount;
 
@@ -162,6 +165,7 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             this.riskInstanceCount = builder.riskInstanceCount;
             this.tencentInstanceCount = builder.tencentInstanceCount;
             this.testAssetCount = builder.testAssetCount;
+            this.tripartiteInstanceCount = builder.tripartiteInstanceCount;
             this.unKnowStatusInstanceCount = builder.unKnowStatusInstanceCount;
             this.unprotectedInstanceCount = builder.unprotectedInstanceCount;
             this.vpcCount = builder.vpcCount;
@@ -316,6 +320,13 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         }
 
         /**
+         * @return tripartiteInstanceCount
+         */
+        public Integer getTripartiteInstanceCount() {
+            return this.tripartiteInstanceCount;
+        }
+
+        /**
          * @return unKnowStatusInstanceCount
          */
         public Integer getUnKnowStatusInstanceCount() {
@@ -357,6 +368,7 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             private Integer riskInstanceCount; 
             private Integer tencentInstanceCount; 
             private Integer testAssetCount; 
+            private Integer tripartiteInstanceCount; 
             private Integer unKnowStatusInstanceCount; 
             private Integer unprotectedInstanceCount; 
             private Integer vpcCount; 
@@ -518,6 +530,14 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
              */
             public Builder testAssetCount(Integer testAssetCount) {
                 this.testAssetCount = testAssetCount;
+                return this;
+            }
+
+            /**
+             * The number of simple application servers.
+             */
+            public Builder tripartiteInstanceCount(Integer tripartiteInstanceCount) {
+                this.tripartiteInstanceCount = tripartiteInstanceCount;
                 return this;
             }
 

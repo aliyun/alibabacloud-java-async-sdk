@@ -158,6 +158,9 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
         @NameInMap("CheckWarningId")
         private Long checkWarningId;
 
+        @NameInMap("ExecErrorMessage")
+        private String execErrorMessage;
+
         @NameInMap("FixStatus")
         private Integer fixStatus;
 
@@ -182,6 +185,7 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
         private CheckWarnings(Builder builder) {
             this.checkId = builder.checkId;
             this.checkWarningId = builder.checkWarningId;
+            this.execErrorMessage = builder.execErrorMessage;
             this.fixStatus = builder.fixStatus;
             this.item = builder.item;
             this.level = builder.level;
@@ -211,6 +215,13 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
          */
         public Long getCheckWarningId() {
             return this.checkWarningId;
+        }
+
+        /**
+         * @return execErrorMessage
+         */
+        public String getExecErrorMessage() {
+            return this.execErrorMessage;
         }
 
         /**
@@ -265,6 +276,7 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
         public static final class Builder {
             private Long checkId; 
             private Long checkWarningId; 
+            private String execErrorMessage; 
             private Integer fixStatus; 
             private String item; 
             private String level; 
@@ -286,6 +298,14 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
              */
             public Builder checkWarningId(Long checkWarningId) {
                 this.checkWarningId = checkWarningId;
+                return this;
+            }
+
+            /**
+             * ExecErrorMessage.
+             */
+            public Builder execErrorMessage(String execErrorMessage) {
+                this.execErrorMessage = execErrorMessage;
                 return this;
             }
 
