@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateSimQuestionRequest</p>
  */
 public class CreateSimQuestionRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("AgentKey")
     private String agentKey;
@@ -21,10 +25,6 @@ public class CreateSimQuestionRequest extends Request {
     @Validation(required = true)
     private Long knowledgeId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Body
     @NameInMap("Title")
     @Validation(required = true)
@@ -32,9 +32,9 @@ public class CreateSimQuestionRequest extends Request {
 
     private CreateSimQuestionRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.agentKey = builder.agentKey;
         this.knowledgeId = builder.knowledgeId;
-        this.regionId = builder.regionId;
         this.title = builder.title;
     }
 
@@ -52,6 +52,13 @@ public class CreateSimQuestionRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return agentKey
      */
     public String getAgentKey() {
@@ -66,13 +73,6 @@ public class CreateSimQuestionRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return title
      */
     public String getTitle() {
@@ -80,9 +80,9 @@ public class CreateSimQuestionRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateSimQuestionRequest, Builder> {
+        private String regionId; 
         private String agentKey; 
         private Long knowledgeId; 
-        private String regionId; 
         private String title; 
 
         private Builder() {
@@ -91,11 +91,20 @@ public class CreateSimQuestionRequest extends Request {
 
         private Builder(CreateSimQuestionRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.agentKey = request.agentKey;
             this.knowledgeId = request.knowledgeId;
-            this.regionId = request.regionId;
             this.title = request.title;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
@@ -112,15 +121,6 @@ public class CreateSimQuestionRequest extends Request {
         public Builder knowledgeId(Long knowledgeId) {
             this.putBodyParameter("KnowledgeId", knowledgeId);
             this.knowledgeId = knowledgeId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

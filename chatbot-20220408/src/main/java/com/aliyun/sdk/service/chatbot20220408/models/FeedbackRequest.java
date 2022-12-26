@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>FeedbackRequest</p>
  */
 public class FeedbackRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("AgentKey")
     private String agentKey;
@@ -32,22 +36,18 @@ public class FeedbackRequest extends Request {
     @NameInMap("MessageId")
     private String messageId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("SessionId")
     private String sessionId;
 
     private FeedbackRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.agentKey = builder.agentKey;
         this.feedback = builder.feedback;
         this.feedbackContent = builder.feedbackContent;
         this.instanceId = builder.instanceId;
         this.messageId = builder.messageId;
-        this.regionId = builder.regionId;
         this.sessionId = builder.sessionId;
     }
 
@@ -62,6 +62,13 @@ public class FeedbackRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -100,13 +107,6 @@ public class FeedbackRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return sessionId
      */
     public String getSessionId() {
@@ -114,12 +114,12 @@ public class FeedbackRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<FeedbackRequest, Builder> {
+        private String regionId; 
         private String agentKey; 
         private String feedback; 
         private String feedbackContent; 
         private String instanceId; 
         private String messageId; 
-        private String regionId; 
         private String sessionId; 
 
         private Builder() {
@@ -128,14 +128,23 @@ public class FeedbackRequest extends Request {
 
         private Builder(FeedbackRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.agentKey = request.agentKey;
             this.feedback = request.feedback;
             this.feedbackContent = request.feedbackContent;
             this.instanceId = request.instanceId;
             this.messageId = request.messageId;
-            this.regionId = request.regionId;
             this.sessionId = request.sessionId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
@@ -179,15 +188,6 @@ public class FeedbackRequest extends Request {
         public Builder messageId(String messageId) {
             this.putQueryParameter("MessageId", messageId);
             this.messageId = messageId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

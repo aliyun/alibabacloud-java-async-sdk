@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GenerateUserAccessTokenRequest</p>
  */
 public class GenerateUserAccessTokenRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("AgentKey")
     private String agentKey;
@@ -22,6 +26,7 @@ public class GenerateUserAccessTokenRequest extends Request {
 
     @Query
     @NameInMap("ExpireTime")
+    @Validation(maximum = 3600)
     private Integer expireTime;
 
     @Query
@@ -36,23 +41,19 @@ public class GenerateUserAccessTokenRequest extends Request {
     @NameInMap("Nick")
     private String nick;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("Telephone")
     private String telephone;
 
     private GenerateUserAccessTokenRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.agentKey = builder.agentKey;
         this.email = builder.email;
         this.expireTime = builder.expireTime;
         this.extraInfo = builder.extraInfo;
         this.foreignId = builder.foreignId;
         this.nick = builder.nick;
-        this.regionId = builder.regionId;
         this.telephone = builder.telephone;
     }
 
@@ -67,6 +68,13 @@ public class GenerateUserAccessTokenRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -112,13 +120,6 @@ public class GenerateUserAccessTokenRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return telephone
      */
     public String getTelephone() {
@@ -126,13 +127,13 @@ public class GenerateUserAccessTokenRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GenerateUserAccessTokenRequest, Builder> {
+        private String regionId; 
         private String agentKey; 
         private String email; 
         private Integer expireTime; 
         private String extraInfo; 
         private String foreignId; 
         private String nick; 
-        private String regionId; 
         private String telephone; 
 
         private Builder() {
@@ -141,15 +142,24 @@ public class GenerateUserAccessTokenRequest extends Request {
 
         private Builder(GenerateUserAccessTokenRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.agentKey = request.agentKey;
             this.email = request.email;
             this.expireTime = request.expireTime;
             this.extraInfo = request.extraInfo;
             this.foreignId = request.foreignId;
             this.nick = request.nick;
-            this.regionId = request.regionId;
             this.telephone = request.telephone;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * AgentKey.
@@ -202,15 +212,6 @@ public class GenerateUserAccessTokenRequest extends Request {
         public Builder nick(String nick) {
             this.putQueryParameter("Nick", nick);
             this.nick = nick;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

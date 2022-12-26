@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateUserSayRequest</p>
  */
 public class UpdateUserSayRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("AgentKey")
     private String agentKey;
@@ -20,10 +24,6 @@ public class UpdateUserSayRequest extends Request {
     @NameInMap("InstanceId")
     @Validation(required = true)
     private String instanceId;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Query
     @NameInMap("UserSayDefinition")
@@ -36,9 +36,9 @@ public class UpdateUserSayRequest extends Request {
 
     private UpdateUserSayRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.agentKey = builder.agentKey;
         this.instanceId = builder.instanceId;
-        this.regionId = builder.regionId;
         this.userSayDefinition = builder.userSayDefinition;
         this.userSayId = builder.userSayId;
     }
@@ -57,6 +57,13 @@ public class UpdateUserSayRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return agentKey
      */
     public String getAgentKey() {
@@ -68,13 +75,6 @@ public class UpdateUserSayRequest extends Request {
      */
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -92,9 +92,9 @@ public class UpdateUserSayRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateUserSayRequest, Builder> {
+        private String regionId; 
         private String agentKey; 
         private String instanceId; 
-        private String regionId; 
         private UserSayDefinition userSayDefinition; 
         private Long userSayId; 
 
@@ -104,12 +104,21 @@ public class UpdateUserSayRequest extends Request {
 
         private Builder(UpdateUserSayRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.agentKey = request.agentKey;
             this.instanceId = request.instanceId;
-            this.regionId = request.regionId;
             this.userSayDefinition = request.userSayDefinition;
             this.userSayId = request.userSayId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
@@ -126,15 +135,6 @@ public class UpdateUserSayRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

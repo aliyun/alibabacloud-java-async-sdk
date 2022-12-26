@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateCategoryRequest</p>
  */
 public class CreateCategoryRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("AgentKey")
     private String agentKey;
@@ -26,16 +30,12 @@ public class CreateCategoryRequest extends Request {
     @Validation()
     private Long parentCategoryId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private CreateCategoryRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.agentKey = builder.agentKey;
         this.name = builder.name;
         this.parentCategoryId = builder.parentCategoryId;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -49,6 +49,13 @@ public class CreateCategoryRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -72,18 +79,11 @@ public class CreateCategoryRequest extends Request {
         return this.parentCategoryId;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<CreateCategoryRequest, Builder> {
+        private String regionId; 
         private String agentKey; 
         private String name; 
         private Long parentCategoryId; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -91,11 +91,20 @@ public class CreateCategoryRequest extends Request {
 
         private Builder(CreateCategoryRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.agentKey = request.agentKey;
             this.name = request.name;
             this.parentCategoryId = request.parentCategoryId;
-            this.regionId = request.regionId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
@@ -121,15 +130,6 @@ public class CreateCategoryRequest extends Request {
         public Builder parentCategoryId(Long parentCategoryId) {
             this.putBodyParameter("ParentCategoryId", parentCategoryId);
             this.parentCategoryId = parentCategoryId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

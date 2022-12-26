@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateFaqRequest</p>
  */
 public class CreateFaqRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("AgentKey")
     private String agentKey;
@@ -24,10 +28,6 @@ public class CreateFaqRequest extends Request {
     @Body
     @NameInMap("EndDate")
     private String endDate;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Body
     @NameInMap("SolutionContent")
@@ -48,10 +48,10 @@ public class CreateFaqRequest extends Request {
 
     private CreateFaqRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.agentKey = builder.agentKey;
         this.categoryId = builder.categoryId;
         this.endDate = builder.endDate;
-        this.regionId = builder.regionId;
         this.solutionContent = builder.solutionContent;
         this.solutionType = builder.solutionType;
         this.startDate = builder.startDate;
@@ -69,6 +69,13 @@ public class CreateFaqRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -90,13 +97,6 @@ public class CreateFaqRequest extends Request {
      */
     public String getEndDate() {
         return this.endDate;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -128,10 +128,10 @@ public class CreateFaqRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateFaqRequest, Builder> {
+        private String regionId; 
         private String agentKey; 
         private Long categoryId; 
         private String endDate; 
-        private String regionId; 
         private String solutionContent; 
         private Integer solutionType; 
         private String startDate; 
@@ -143,15 +143,24 @@ public class CreateFaqRequest extends Request {
 
         private Builder(CreateFaqRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.agentKey = request.agentKey;
             this.categoryId = request.categoryId;
             this.endDate = request.endDate;
-            this.regionId = request.regionId;
             this.solutionContent = request.solutionContent;
             this.solutionType = request.solutionType;
             this.startDate = request.startDate;
             this.title = request.title;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
@@ -177,15 +186,6 @@ public class CreateFaqRequest extends Request {
         public Builder endDate(String endDate) {
             this.putBodyParameter("EndDate", endDate);
             this.endDate = endDate;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

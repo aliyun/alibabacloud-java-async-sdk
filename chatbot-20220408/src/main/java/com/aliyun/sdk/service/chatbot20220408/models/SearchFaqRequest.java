@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SearchFaqRequest</p>
  */
 public class SearchFaqRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("AgentKey")
     private String agentKey;
@@ -64,10 +68,6 @@ public class SearchFaqRequest extends Request {
     @NameInMap("PageSize")
     private Integer pageSize;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Body
     @NameInMap("SearchScope")
     private Integer searchScope;
@@ -86,6 +86,7 @@ public class SearchFaqRequest extends Request {
 
     private SearchFaqRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.agentKey = builder.agentKey;
         this.categoryIds = builder.categoryIds;
         this.createTimeBegin = builder.createTimeBegin;
@@ -99,7 +100,6 @@ public class SearchFaqRequest extends Request {
         this.modifyUserName = builder.modifyUserName;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
         this.searchScope = builder.searchScope;
         this.startTimeBegin = builder.startTimeBegin;
         this.startTimeEnd = builder.startTimeEnd;
@@ -117,6 +117,13 @@ public class SearchFaqRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -211,13 +218,6 @@ public class SearchFaqRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return searchScope
      */
     public Integer getSearchScope() {
@@ -246,6 +246,7 @@ public class SearchFaqRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SearchFaqRequest, Builder> {
+        private String regionId; 
         private String agentKey; 
         private java.util.List < Long > categoryIds; 
         private String createTimeBegin; 
@@ -259,7 +260,6 @@ public class SearchFaqRequest extends Request {
         private String modifyUserName; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private String regionId; 
         private Integer searchScope; 
         private String startTimeBegin; 
         private String startTimeEnd; 
@@ -271,6 +271,7 @@ public class SearchFaqRequest extends Request {
 
         private Builder(SearchFaqRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.agentKey = request.agentKey;
             this.categoryIds = request.categoryIds;
             this.createTimeBegin = request.createTimeBegin;
@@ -284,12 +285,20 @@ public class SearchFaqRequest extends Request {
             this.modifyUserName = request.modifyUserName;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
-            this.regionId = request.regionId;
             this.searchScope = request.searchScope;
             this.startTimeBegin = request.startTimeBegin;
             this.startTimeEnd = request.startTimeEnd;
             this.status = request.status;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
@@ -406,15 +415,6 @@ public class SearchFaqRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
             this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

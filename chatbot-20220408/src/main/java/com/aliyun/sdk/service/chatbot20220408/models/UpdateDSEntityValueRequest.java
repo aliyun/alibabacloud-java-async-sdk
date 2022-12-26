@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateDSEntityValueRequest</p>
  */
 public class UpdateDSEntityValueRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("AgentKey")
     private String agentKey;
@@ -36,22 +40,18 @@ public class UpdateDSEntityValueRequest extends Request {
     @Validation(required = true)
     private String instanceId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Body
     @NameInMap("Synonyms")
     private java.util.List < String > synonyms;
 
     private UpdateDSEntityValueRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.agentKey = builder.agentKey;
         this.content = builder.content;
         this.entityId = builder.entityId;
         this.entityValueId = builder.entityValueId;
         this.instanceId = builder.instanceId;
-        this.regionId = builder.regionId;
         this.synonyms = builder.synonyms;
     }
 
@@ -66,6 +66,13 @@ public class UpdateDSEntityValueRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -104,13 +111,6 @@ public class UpdateDSEntityValueRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return synonyms
      */
     public java.util.List < String > getSynonyms() {
@@ -118,12 +118,12 @@ public class UpdateDSEntityValueRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateDSEntityValueRequest, Builder> {
+        private String regionId; 
         private String agentKey; 
         private String content; 
         private Long entityId; 
         private Long entityValueId; 
         private String instanceId; 
-        private String regionId; 
         private java.util.List < String > synonyms; 
 
         private Builder() {
@@ -132,14 +132,23 @@ public class UpdateDSEntityValueRequest extends Request {
 
         private Builder(UpdateDSEntityValueRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.agentKey = request.agentKey;
             this.content = request.content;
             this.entityId = request.entityId;
             this.entityValueId = request.entityValueId;
             this.instanceId = request.instanceId;
-            this.regionId = request.regionId;
             this.synonyms = request.synonyms;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
@@ -183,15 +192,6 @@ public class UpdateDSEntityValueRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

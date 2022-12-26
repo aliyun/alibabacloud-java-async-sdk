@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>NluRequest</p>
  */
 public class NluRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("AgentKey")
     private String agentKey;
@@ -20,19 +24,15 @@ public class NluRequest extends Request {
     @NameInMap("InstanceId")
     private String instanceId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("Utterance")
     private String utterance;
 
     private NluRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.agentKey = builder.agentKey;
         this.instanceId = builder.instanceId;
-        this.regionId = builder.regionId;
         this.utterance = builder.utterance;
     }
 
@@ -50,6 +50,13 @@ public class NluRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return agentKey
      */
     public String getAgentKey() {
@@ -64,13 +71,6 @@ public class NluRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return utterance
      */
     public String getUtterance() {
@@ -78,9 +78,9 @@ public class NluRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<NluRequest, Builder> {
+        private String regionId; 
         private String agentKey; 
         private String instanceId; 
-        private String regionId; 
         private String utterance; 
 
         private Builder() {
@@ -89,11 +89,20 @@ public class NluRequest extends Request {
 
         private Builder(NluRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.agentKey = request.agentKey;
             this.instanceId = request.instanceId;
-            this.regionId = request.regionId;
             this.utterance = request.utterance;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
@@ -110,15 +119,6 @@ public class NluRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

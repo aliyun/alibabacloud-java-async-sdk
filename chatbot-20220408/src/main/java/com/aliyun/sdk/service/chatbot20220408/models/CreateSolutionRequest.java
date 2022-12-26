@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateSolutionRequest</p>
  */
 public class CreateSolutionRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("AgentKey")
     private String agentKey;
@@ -35,18 +39,14 @@ public class CreateSolutionRequest extends Request {
     @Validation(required = true)
     private java.util.List < String > perspectiveCodes;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private CreateSolutionRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.agentKey = builder.agentKey;
         this.content = builder.content;
         this.contentType = builder.contentType;
         this.knowledgeId = builder.knowledgeId;
         this.perspectiveCodes = builder.perspectiveCodes;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -60,6 +60,13 @@ public class CreateSolutionRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -97,20 +104,13 @@ public class CreateSolutionRequest extends Request {
         return this.perspectiveCodes;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<CreateSolutionRequest, Builder> {
+        private String regionId; 
         private String agentKey; 
         private String content; 
         private Integer contentType; 
         private Long knowledgeId; 
         private java.util.List < String > perspectiveCodes; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -118,13 +118,22 @@ public class CreateSolutionRequest extends Request {
 
         private Builder(CreateSolutionRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.agentKey = request.agentKey;
             this.content = request.content;
             this.contentType = request.contentType;
             this.knowledgeId = request.knowledgeId;
             this.perspectiveCodes = request.perspectiveCodes;
-            this.regionId = request.regionId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
@@ -168,15 +177,6 @@ public class CreateSolutionRequest extends Request {
         public Builder perspectiveCodes(java.util.List < String > perspectiveCodes) {
             this.putQueryParameter("PerspectiveCodes", perspectiveCodes);
             this.perspectiveCodes = perspectiveCodes;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

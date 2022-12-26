@@ -50,7 +50,7 @@ public class CreateLgfResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * LgfId.
+         * LGF ID
          */
         public Builder lgfId(Long lgfId) {
             this.lgfId = lgfId;

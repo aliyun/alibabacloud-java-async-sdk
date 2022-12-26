@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListSolutionRequest</p>
  */
 public class ListSolutionRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("AgentKey")
     private String agentKey;
@@ -21,15 +25,11 @@ public class ListSolutionRequest extends Request {
     @Validation(required = true)
     private Long knowledgeId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private ListSolutionRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.agentKey = builder.agentKey;
         this.knowledgeId = builder.knowledgeId;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -46,6 +46,13 @@ public class ListSolutionRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return agentKey
      */
     public String getAgentKey() {
@@ -59,17 +66,10 @@ public class ListSolutionRequest extends Request {
         return this.knowledgeId;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<ListSolutionRequest, Builder> {
+        private String regionId; 
         private String agentKey; 
         private Long knowledgeId; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -77,10 +77,19 @@ public class ListSolutionRequest extends Request {
 
         private Builder(ListSolutionRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.agentKey = request.agentKey;
             this.knowledgeId = request.knowledgeId;
-            this.regionId = request.regionId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
@@ -97,15 +106,6 @@ public class ListSolutionRequest extends Request {
         public Builder knowledgeId(Long knowledgeId) {
             this.putBodyParameter("KnowledgeId", knowledgeId);
             this.knowledgeId = knowledgeId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

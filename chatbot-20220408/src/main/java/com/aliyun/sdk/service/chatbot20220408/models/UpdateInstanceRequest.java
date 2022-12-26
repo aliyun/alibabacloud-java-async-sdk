@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateInstanceRequest</p>
  */
 public class UpdateInstanceRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("AgentKey")
     private String agentKey;
@@ -28,17 +32,13 @@ public class UpdateInstanceRequest extends Request {
     @NameInMap("Name")
     private String name;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private UpdateInstanceRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.agentKey = builder.agentKey;
         this.instanceId = builder.instanceId;
         this.introduction = builder.introduction;
         this.name = builder.name;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -52,6 +52,13 @@ public class UpdateInstanceRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -82,19 +89,12 @@ public class UpdateInstanceRequest extends Request {
         return this.name;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<UpdateInstanceRequest, Builder> {
+        private String regionId; 
         private String agentKey; 
         private String instanceId; 
         private String introduction; 
         private String name; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -102,12 +102,21 @@ public class UpdateInstanceRequest extends Request {
 
         private Builder(UpdateInstanceRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.agentKey = request.agentKey;
             this.instanceId = request.instanceId;
             this.introduction = request.introduction;
             this.name = request.name;
-            this.regionId = request.regionId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
@@ -142,15 +151,6 @@ public class UpdateInstanceRequest extends Request {
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
             this.name = name;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

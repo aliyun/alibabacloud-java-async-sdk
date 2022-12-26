@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateInstanceRequest</p>
  */
 public class CreateInstanceRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("AgentKey")
     private String agentKey;
@@ -28,21 +32,17 @@ public class CreateInstanceRequest extends Request {
     @NameInMap("Name")
     private String name;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("RobotType")
     private String robotType;
 
     private CreateInstanceRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.agentKey = builder.agentKey;
         this.introduction = builder.introduction;
         this.languageCode = builder.languageCode;
         this.name = builder.name;
-        this.regionId = builder.regionId;
         this.robotType = builder.robotType;
     }
 
@@ -57,6 +57,13 @@ public class CreateInstanceRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -88,13 +95,6 @@ public class CreateInstanceRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return robotType
      */
     public String getRobotType() {
@@ -102,11 +102,11 @@ public class CreateInstanceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateInstanceRequest, Builder> {
+        private String regionId; 
         private String agentKey; 
         private String introduction; 
         private String languageCode; 
         private String name; 
-        private String regionId; 
         private String robotType; 
 
         private Builder() {
@@ -115,13 +115,22 @@ public class CreateInstanceRequest extends Request {
 
         private Builder(CreateInstanceRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.agentKey = request.agentKey;
             this.introduction = request.introduction;
             this.languageCode = request.languageCode;
             this.name = request.name;
-            this.regionId = request.regionId;
             this.robotType = request.robotType;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
@@ -156,15 +165,6 @@ public class CreateInstanceRequest extends Request {
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
             this.name = name;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

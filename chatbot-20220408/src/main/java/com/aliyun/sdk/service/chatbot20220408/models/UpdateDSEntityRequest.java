@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateDSEntityRequest</p>
  */
 public class UpdateDSEntityRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("AgentKey")
     private String agentKey;
@@ -35,18 +39,14 @@ public class UpdateDSEntityRequest extends Request {
     @Validation(required = true)
     private String instanceId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private UpdateDSEntityRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.agentKey = builder.agentKey;
         this.entityId = builder.entityId;
         this.entityName = builder.entityName;
         this.entityType = builder.entityType;
         this.instanceId = builder.instanceId;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -60,6 +60,13 @@ public class UpdateDSEntityRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -97,20 +104,13 @@ public class UpdateDSEntityRequest extends Request {
         return this.instanceId;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<UpdateDSEntityRequest, Builder> {
+        private String regionId; 
         private String agentKey; 
         private Long entityId; 
         private String entityName; 
         private String entityType; 
         private String instanceId; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -118,13 +118,22 @@ public class UpdateDSEntityRequest extends Request {
 
         private Builder(UpdateDSEntityRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.agentKey = request.agentKey;
             this.entityId = request.entityId;
             this.entityName = request.entityName;
             this.entityType = request.entityType;
             this.instanceId = request.instanceId;
-            this.regionId = request.regionId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
@@ -168,15 +177,6 @@ public class UpdateDSEntityRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

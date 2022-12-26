@@ -12,18 +12,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryPerspectivesRequest</p>
  */
 public class QueryPerspectivesRequest extends Request {
-    @Query
-    @NameInMap("AgentKey")
-    private String agentKey;
-
     @Host
     @NameInMap("RegionId")
     private String regionId;
 
+    @Query
+    @NameInMap("AgentKey")
+    private String agentKey;
+
     private QueryPerspectivesRequest(Builder builder) {
         super(builder);
-        this.agentKey = builder.agentKey;
         this.regionId = builder.regionId;
+        this.agentKey = builder.agentKey;
     }
 
     public static Builder builder() {
@@ -40,22 +40,22 @@ public class QueryPerspectivesRequest extends Request {
     }
 
     /**
-     * @return agentKey
-     */
-    public String getAgentKey() {
-        return this.agentKey;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
     }
 
+    /**
+     * @return agentKey
+     */
+    public String getAgentKey() {
+        return this.agentKey;
+    }
+
     public static final class Builder extends Request.Builder<QueryPerspectivesRequest, Builder> {
-        private String agentKey; 
         private String regionId; 
+        private String agentKey; 
 
         private Builder() {
             super();
@@ -63,18 +63,9 @@ public class QueryPerspectivesRequest extends Request {
 
         private Builder(QueryPerspectivesRequest request) {
             super(request);
-            this.agentKey = request.agentKey;
             this.regionId = request.regionId;
+            this.agentKey = request.agentKey;
         } 
-
-        /**
-         * 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
-         */
-        public Builder agentKey(String agentKey) {
-            this.putQueryParameter("AgentKey", agentKey);
-            this.agentKey = agentKey;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -82,6 +73,15 @@ public class QueryPerspectivesRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
+         */
+        public Builder agentKey(String agentKey) {
+            this.putQueryParameter("AgentKey", agentKey);
+            this.agentKey = agentKey;
             return this;
         }
 

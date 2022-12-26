@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateLgfRequest</p>
  */
 public class UpdateLgfRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("AgentKey")
     private String agentKey;
@@ -31,17 +35,13 @@ public class UpdateLgfRequest extends Request {
     @Validation(required = true)
     private Long lgfId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private UpdateLgfRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.agentKey = builder.agentKey;
         this.instanceId = builder.instanceId;
         this.lgfDefinition = builder.lgfDefinition;
         this.lgfId = builder.lgfId;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -55,6 +55,13 @@ public class UpdateLgfRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -85,19 +92,12 @@ public class UpdateLgfRequest extends Request {
         return this.lgfId;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<UpdateLgfRequest, Builder> {
+        private String regionId; 
         private String agentKey; 
         private String instanceId; 
         private LgfDefinition lgfDefinition; 
         private Long lgfId; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -105,12 +105,21 @@ public class UpdateLgfRequest extends Request {
 
         private Builder(UpdateLgfRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.agentKey = request.agentKey;
             this.instanceId = request.instanceId;
             this.lgfDefinition = request.lgfDefinition;
             this.lgfId = request.lgfId;
-            this.regionId = request.regionId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
@@ -146,15 +155,6 @@ public class UpdateLgfRequest extends Request {
         public Builder lgfId(Long lgfId) {
             this.putQueryParameter("LgfId", lgfId);
             this.lgfId = lgfId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

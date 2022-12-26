@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteUserSayRequest</p>
  */
 public class DeleteUserSayRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("AgentKey")
     private String agentKey;
@@ -26,10 +30,6 @@ public class DeleteUserSayRequest extends Request {
     @Validation(required = true)
     private Long intentId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("UserSayId")
     @Validation(required = true)
@@ -37,10 +37,10 @@ public class DeleteUserSayRequest extends Request {
 
     private DeleteUserSayRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.agentKey = builder.agentKey;
         this.instanceId = builder.instanceId;
         this.intentId = builder.intentId;
-        this.regionId = builder.regionId;
         this.userSayId = builder.userSayId;
     }
 
@@ -55,6 +55,13 @@ public class DeleteUserSayRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -79,13 +86,6 @@ public class DeleteUserSayRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return userSayId
      */
     public Long getUserSayId() {
@@ -93,10 +93,10 @@ public class DeleteUserSayRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteUserSayRequest, Builder> {
+        private String regionId; 
         private String agentKey; 
         private String instanceId; 
         private Long intentId; 
-        private String regionId; 
         private Long userSayId; 
 
         private Builder() {
@@ -105,12 +105,21 @@ public class DeleteUserSayRequest extends Request {
 
         private Builder(DeleteUserSayRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.agentKey = request.agentKey;
             this.instanceId = request.instanceId;
             this.intentId = request.intentId;
-            this.regionId = request.regionId;
             this.userSayId = request.userSayId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
@@ -136,15 +145,6 @@ public class DeleteUserSayRequest extends Request {
         public Builder intentId(Long intentId) {
             this.putQueryParameter("IntentId", intentId);
             this.intentId = intentId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

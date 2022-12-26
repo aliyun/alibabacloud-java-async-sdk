@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AssociateRequest</p>
  */
 public class AssociateRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("AgentKey")
     private String agentKey;
@@ -28,10 +32,6 @@ public class AssociateRequest extends Request {
     @NameInMap("RecommendNum")
     private Long recommendNum;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("SessionId")
     private String sessionId;
@@ -42,11 +42,11 @@ public class AssociateRequest extends Request {
 
     private AssociateRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.agentKey = builder.agentKey;
         this.instanceId = builder.instanceId;
         this.perspective = builder.perspective;
         this.recommendNum = builder.recommendNum;
-        this.regionId = builder.regionId;
         this.sessionId = builder.sessionId;
         this.utterance = builder.utterance;
     }
@@ -62,6 +62,13 @@ public class AssociateRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -93,13 +100,6 @@ public class AssociateRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return sessionId
      */
     public String getSessionId() {
@@ -114,11 +114,11 @@ public class AssociateRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AssociateRequest, Builder> {
+        private String regionId; 
         private String agentKey; 
         private String instanceId; 
         private java.util.List < String > perspective; 
         private Long recommendNum; 
-        private String regionId; 
         private String sessionId; 
         private String utterance; 
 
@@ -128,14 +128,23 @@ public class AssociateRequest extends Request {
 
         private Builder(AssociateRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.agentKey = request.agentKey;
             this.instanceId = request.instanceId;
             this.perspective = request.perspective;
             this.recommendNum = request.recommendNum;
-            this.regionId = request.regionId;
             this.sessionId = request.sessionId;
             this.utterance = request.utterance;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
@@ -171,15 +180,6 @@ public class AssociateRequest extends Request {
         public Builder recommendNum(Long recommendNum) {
             this.putQueryParameter("RecommendNum", recommendNum);
             this.recommendNum = recommendNum;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

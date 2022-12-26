@@ -661,6 +661,9 @@ public class ChatResponseBody extends TeaModel {
         @NameInMap("NodeName")
         private String nodeName;
 
+        @NameInMap("ResponseType")
+        private String responseType;
+
         @NameInMap("Score")
         private Double score;
 
@@ -684,6 +687,7 @@ public class ChatResponseBody extends TeaModel {
             this.metaData = builder.metaData;
             this.nodeId = builder.nodeId;
             this.nodeName = builder.nodeName;
+            this.responseType = builder.responseType;
             this.score = builder.score;
             this.slots = builder.slots;
             this.userDefinedChatTitle = builder.userDefinedChatTitle;
@@ -789,6 +793,13 @@ public class ChatResponseBody extends TeaModel {
         }
 
         /**
+         * @return responseType
+         */
+        public String getResponseType() {
+            return this.responseType;
+        }
+
+        /**
          * @return score
          */
         public Double getScore() {
@@ -823,6 +834,7 @@ public class ChatResponseBody extends TeaModel {
             private String metaData; 
             private String nodeId; 
             private String nodeName; 
+            private String responseType; 
             private Double score; 
             private java.util.List < Slots> slots; 
             private String userDefinedChatTitle; 
@@ -928,6 +940,14 @@ public class ChatResponseBody extends TeaModel {
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
+                return this;
+            }
+
+            /**
+             * 当AnswerSource=BotFramework，ResponseType=SSML时，表示命中对话工厂交互式填槽；否则字段不存在
+             */
+            public Builder responseType(String responseType) {
+                this.responseType = responseType;
                 return this;
             }
 

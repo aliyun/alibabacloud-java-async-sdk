@@ -104,6 +104,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetPublishTaskStateResponse> getPublishTaskState(GetPublishTaskStateRequest request);
 
+    CompletableFuture<InitIMConnectResponse> initIMConnect(InitIMConnectRequest request);
+
     CompletableFuture<LinkInstanceCategoryResponse> linkInstanceCategory(LinkInstanceCategoryRequest request);
 
     CompletableFuture<ListAgentResponse> listAgent(ListAgentRequest request);

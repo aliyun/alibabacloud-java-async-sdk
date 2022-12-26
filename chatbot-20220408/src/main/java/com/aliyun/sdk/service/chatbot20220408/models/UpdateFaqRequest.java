@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateFaqRequest</p>
  */
 public class UpdateFaqRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("AgentKey")
     private String agentKey;
@@ -30,10 +34,6 @@ public class UpdateFaqRequest extends Request {
     @Validation(required = true)
     private Long knowledgeId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Body
     @NameInMap("StartDate")
     private String startDate;
@@ -45,11 +45,11 @@ public class UpdateFaqRequest extends Request {
 
     private UpdateFaqRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.agentKey = builder.agentKey;
         this.categoryId = builder.categoryId;
         this.endDate = builder.endDate;
         this.knowledgeId = builder.knowledgeId;
-        this.regionId = builder.regionId;
         this.startDate = builder.startDate;
         this.title = builder.title;
     }
@@ -65,6 +65,13 @@ public class UpdateFaqRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -96,13 +103,6 @@ public class UpdateFaqRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return startDate
      */
     public String getStartDate() {
@@ -117,11 +117,11 @@ public class UpdateFaqRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateFaqRequest, Builder> {
+        private String regionId; 
         private String agentKey; 
         private Long categoryId; 
         private String endDate; 
         private Long knowledgeId; 
-        private String regionId; 
         private String startDate; 
         private String title; 
 
@@ -131,14 +131,23 @@ public class UpdateFaqRequest extends Request {
 
         private Builder(UpdateFaqRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.agentKey = request.agentKey;
             this.categoryId = request.categoryId;
             this.endDate = request.endDate;
             this.knowledgeId = request.knowledgeId;
-            this.regionId = request.regionId;
             this.startDate = request.startDate;
             this.title = request.title;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
@@ -173,15 +182,6 @@ public class UpdateFaqRequest extends Request {
         public Builder knowledgeId(Long knowledgeId) {
             this.putBodyParameter("KnowledgeId", knowledgeId);
             this.knowledgeId = knowledgeId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 
