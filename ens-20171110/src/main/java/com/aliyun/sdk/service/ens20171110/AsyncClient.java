@@ -172,6 +172,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeEnsRegionIdIpv6InfoResponse> describeEnsRegionIdIpv6Info(DescribeEnsRegionIdIpv6InfoRequest request);
 
+    /**
+      * ****
+      *
+     */
     CompletableFuture<DescribeEnsRegionIdResourceResponse> describeEnsRegionIdResource(DescribeEnsRegionIdResourceRequest request);
 
     CompletableFuture<DescribeEnsRegionsResponse> describeEnsRegions(DescribeEnsRegionsRequest request);
@@ -236,6 +240,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeMountTargetsResponse> describeMountTargets(DescribeMountTargetsRequest request);
 
+    CompletableFuture<DescribeNCInformationResponse> describeNCInformation(DescribeNCInformationRequest request);
+
     CompletableFuture<DescribeNatGatewaysResponse> describeNatGateways(DescribeNatGatewaysRequest request);
 
     CompletableFuture<DescribeNetworkAclsResponse> describeNetworkAcls(DescribeNetworkAclsRequest request);
@@ -252,7 +258,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeRegionIspsResponse> describeRegionIsps(DescribeRegionIspsRequest request);
 
+    CompletableFuture<DescribeRegionResourceResponse> describeRegionResource(DescribeRegionResourceRequest request);
+
     CompletableFuture<DescribeReservedResourceResponse> describeReservedResource(DescribeReservedResourceRequest request);
+
+    CompletableFuture<DescribeResourceTimelineResponse> describeResourceTimeline(DescribeResourceTimelineRequest request);
 
     CompletableFuture<DescribeSecurityGroupAttributeResponse> describeSecurityGroupAttribute(DescribeSecurityGroupAttributeRequest request);
 
@@ -332,7 +342,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<RebootInstanceResponse> rebootInstance(RebootInstanceRequest request);
 
+    CompletableFuture<RebootInstancesResponse> rebootInstances(RebootInstancesRequest request);
+
     CompletableFuture<ReinitInstanceResponse> reinitInstance(ReinitInstanceRequest request);
+
+    CompletableFuture<ReinitInstancesResponse> reinitInstances(ReinitInstancesRequest request);
 
     CompletableFuture<ReleaseARMServerInstanceResponse> releaseARMServerInstance(ReleaseARMServerInstanceRequest request);
 
@@ -384,17 +398,25 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<SetLoadBalancerTCPListenerAttributeResponse> setLoadBalancerTCPListenerAttribute(SetLoadBalancerTCPListenerAttributeRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<SetLoadBalancerUDPListenerAttributeResponse> setLoadBalancerUDPListenerAttribute(SetLoadBalancerUDPListenerAttributeRequest request);
 
     CompletableFuture<StartEpnInstanceResponse> startEpnInstance(StartEpnInstanceRequest request);
 
     CompletableFuture<StartInstanceResponse> startInstance(StartInstanceRequest request);
 
+    CompletableFuture<StartInstancesResponse> startInstances(StartInstancesRequest request);
+
     CompletableFuture<StartLoadBalancerListenerResponse> startLoadBalancerListener(StartLoadBalancerListenerRequest request);
 
     CompletableFuture<StopEpnInstanceResponse> stopEpnInstance(StopEpnInstanceRequest request);
 
     CompletableFuture<StopInstanceResponse> stopInstance(StopInstanceRequest request);
+
+    CompletableFuture<StopInstancesResponse> stopInstances(StopInstancesRequest request);
 
     CompletableFuture<StopLoadBalancerListenerResponse> stopLoadBalancerListener(StopLoadBalancerListenerRequest request);
 

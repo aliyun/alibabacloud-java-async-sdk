@@ -230,7 +230,7 @@ public class CreateFileSystemRequest extends Request {
             }
 
             /**
-             * OrderType.
+             * BUY。
              */
             public Builder orderType(String orderType) {
                 this.orderType = orderType;

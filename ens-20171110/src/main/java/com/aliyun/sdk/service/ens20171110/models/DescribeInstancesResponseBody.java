@@ -338,7 +338,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * uuid.
+             * UUID。
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -1069,7 +1069,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * uuid.
+             * UUID。
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -1526,7 +1526,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkAttributes.
+             * Schema of Response
              */
             public Builder networkAttributes(NetworkAttributes networkAttributes) {
                 this.networkAttributes = networkAttributes;
@@ -1590,7 +1590,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * SystemDisk.
+             * Schema of Response
              */
             public Builder systemDisk(SystemDisk systemDisk) {
                 this.systemDisk = systemDisk;

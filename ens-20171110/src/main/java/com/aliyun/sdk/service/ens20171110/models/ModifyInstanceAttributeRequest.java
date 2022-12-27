@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyInstanceAttributeRequest extends Request {
     @Query
+    @NameInMap("HostName")
+    private String hostName;
+
+    @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
     private String instanceId;
@@ -26,16 +30,16 @@ public class ModifyInstanceAttributeRequest extends Request {
     private String password;
 
     @Query
-    @NameInMap("Version")
-    @Validation(required = true)
-    private String version;
+    @NameInMap("UserData")
+    private String userData;
 
     private ModifyInstanceAttributeRequest(Builder builder) {
         super(builder);
+        this.hostName = builder.hostName;
         this.instanceId = builder.instanceId;
         this.instanceName = builder.instanceName;
         this.password = builder.password;
-        this.version = builder.version;
+        this.userData = builder.userData;
     }
 
     public static Builder builder() {
@@ -49,6 +53,13 @@ public class ModifyInstanceAttributeRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return hostName
+     */
+    public String getHostName() {
+        return this.hostName;
     }
 
     /**
@@ -73,17 +84,18 @@ public class ModifyInstanceAttributeRequest extends Request {
     }
 
     /**
-     * @return version
+     * @return userData
      */
-    public String getVersion() {
-        return this.version;
+    public String getUserData() {
+        return this.userData;
     }
 
     public static final class Builder extends Request.Builder<ModifyInstanceAttributeRequest, Builder> {
+        private String hostName; 
         private String instanceId; 
         private String instanceName; 
         private String password; 
-        private String version; 
+        private String userData; 
 
         private Builder() {
             super();
@@ -91,11 +103,21 @@ public class ModifyInstanceAttributeRequest extends Request {
 
         private Builder(ModifyInstanceAttributeRequest request) {
             super(request);
+            this.hostName = request.hostName;
             this.instanceId = request.instanceId;
             this.instanceName = request.instanceName;
             this.password = request.password;
-            this.version = request.version;
+            this.userData = request.userData;
         } 
+
+        /**
+         * HostName.
+         */
+        public Builder hostName(String hostName) {
+            this.putQueryParameter("HostName", hostName);
+            this.hostName = hostName;
+            return this;
+        }
 
         /**
          * InstanceId.
@@ -125,11 +147,11 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * Version.
+         * UserData.
          */
-        public Builder version(String version) {
-            this.putQueryParameter("Version", version);
-            this.version = version;
+        public Builder userData(String userData) {
+            this.putQueryParameter("UserData", userData);
+            this.userData = userData;
             return this;
         }
 

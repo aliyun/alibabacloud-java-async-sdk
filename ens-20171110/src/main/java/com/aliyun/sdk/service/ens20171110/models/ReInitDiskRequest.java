@@ -103,7 +103,7 @@ public class ReInitDiskRequest extends Request {
         }
 
         /**
-         * Version.
+         * 2017-11-10
          */
         public Builder version(String version) {
             this.putQueryParameter("Version", version);
