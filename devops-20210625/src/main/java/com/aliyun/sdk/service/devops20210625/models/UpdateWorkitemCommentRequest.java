@@ -125,8 +125,6 @@ public class UpdateWorkitemCommentRequest extends Request {
 
         /**
          * 工作项id
-         * <p>
-         * 
          */
         public Builder commentId(Long commentId) {
             this.putBodyParameter("commentId", commentId);
@@ -154,8 +152,6 @@ public class UpdateWorkitemCommentRequest extends Request {
 
         /**
          * 工作项id
-         * <p>
-         * 
          */
         public Builder workitemIdentifier(String workitemIdentifier) {
             this.putBodyParameter("workitemIdentifier", workitemIdentifier);

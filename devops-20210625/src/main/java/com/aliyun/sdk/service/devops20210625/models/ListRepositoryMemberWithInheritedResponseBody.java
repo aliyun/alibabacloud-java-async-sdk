@@ -230,7 +230,7 @@ public class ListRepositoryMemberWithInheritedResponseBody extends TeaModel {
             private String visibilityLevel; 
 
             /**
-             * id.
+             * id
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -447,7 +447,7 @@ public class ListRepositoryMemberWithInheritedResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * id
              */
             public Builder id(Long id) {
                 this.id = id;

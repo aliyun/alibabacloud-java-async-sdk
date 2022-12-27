@@ -86,8 +86,6 @@ public class GetWorkitemRelationsRequest extends Request {
 
         /**
          * 企业id
-         * <p>
-         * 
          */
         public Builder organizationId(String organizationId) {
             this.putPathParameter("organizationId", organizationId);

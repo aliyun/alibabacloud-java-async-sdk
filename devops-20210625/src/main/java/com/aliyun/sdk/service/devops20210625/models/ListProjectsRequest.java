@@ -158,7 +158,7 @@ public class ListProjectsRequest extends Request {
         }
 
         /**
-         * conditions.
+         * {"conditionGroups":[[]]}
          */
         public Builder conditions(String conditions) {
             this.putQueryParameter("conditions", conditions);

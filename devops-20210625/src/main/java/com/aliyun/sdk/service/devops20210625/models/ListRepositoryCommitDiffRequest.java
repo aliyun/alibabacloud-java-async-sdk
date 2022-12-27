@@ -131,7 +131,7 @@ public class ListRepositoryCommitDiffRequest extends Request {
         }
 
         /**
-         * accessToken.
+         * accessToken
          */
         public Builder accessToken(String accessToken) {
             this.putQueryParameter("accessToken", accessToken);

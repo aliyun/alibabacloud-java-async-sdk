@@ -444,8 +444,6 @@ public class UpdateWorkitemCommentResponseBody extends TeaModel {
 
             /**
              * 评论唯一id
-             * <p>
-             * 
              */
             public Builder id(String id) {
                 this.id = id;

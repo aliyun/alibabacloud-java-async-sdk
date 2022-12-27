@@ -80,8 +80,6 @@ public class GetWorkitemCommentListRequest extends Request {
 
         /**
          * 工作项id
-         * <p>
-         * 
          */
         public Builder workitemId(String workitemId) {
             this.putPathParameter("workitemId", workitemId);

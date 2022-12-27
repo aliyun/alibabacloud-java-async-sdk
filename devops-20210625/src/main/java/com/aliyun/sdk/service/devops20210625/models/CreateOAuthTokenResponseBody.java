@@ -202,7 +202,7 @@ public class CreateOAuthTokenResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * id
              */
             public Builder id(String id) {
                 this.id = id;

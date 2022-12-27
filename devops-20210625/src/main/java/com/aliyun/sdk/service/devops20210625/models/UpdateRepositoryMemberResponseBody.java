@@ -438,7 +438,7 @@ public class UpdateRepositoryMemberResponseBody extends TeaModel {
             }
 
             /**
-             * webUrl.
+             * web url
              */
             public Builder webUrl(String webUrl) {
                 this.webUrl = webUrl;

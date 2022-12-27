@@ -129,8 +129,6 @@ public class CreateOAuthTokenRequest extends Request {
 
         /**
          * clientId
-         * <p>
-         * 
          */
         public Builder clientId(String clientId) {
             this.putBodyParameter("clientId", clientId);
