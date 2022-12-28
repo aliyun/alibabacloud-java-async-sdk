@@ -55,7 +55,10 @@ public class GetHoneypotNodeRequest extends Request {
         } 
 
         /**
-         * 管理节点id
+         * The ID of the management node.
+         * <p>
+         * 
+         * >  You can call the [ListHoneypotNode](~~ListHoneypotNode~~) operation to query the IDs of management nodes.
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);

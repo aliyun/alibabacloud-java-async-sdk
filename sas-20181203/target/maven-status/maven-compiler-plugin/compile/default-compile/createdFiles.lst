@@ -17,6 +17,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeAlarmEventListResponseBody$1.c
 com/aliyun/sdk/service/sas20181203/models/CreateSuspEventNoteRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/CreateVulAutoRepairConfigRequest$VulAutoRepairConfigList.class
 com/aliyun/sdk/service/sas20181203/models/DeleteGroupResponseBody.class
+com/aliyun/sdk/service/sas20181203/models/ModifyClusterCnnfStatusUserConfirmResponse.class
 com/aliyun/sdk/service/sas20181203/models/CreateFileDetectUploadUrlResponseBody$Context$Builder.class
 com/aliyun/sdk/service/sas20181203/models/GetHoneypotNodeResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/CreateHoneypotNodeResponseBody$Builder.class
@@ -30,6 +31,7 @@ com/aliyun/sdk/service/sas20181203/models/EnableBruteForceRecordRequest$Builder.
 com/aliyun/sdk/service/sas20181203/models/ModifyWebLockStatusRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeAccesskeyLeakListResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/ListCheckStandardRequest.class
+com/aliyun/sdk/service/sas20181203/models/CreateInterceptionRuleResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/DescribeAllImageBaselineResponseBody$BaselineItemList.class
 com/aliyun/sdk/service/sas20181203/models/OperateCommonOverallConfigRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeCheckWarningSummaryResponseBody$WarningSummarys$Builder.class
@@ -112,7 +114,9 @@ com/aliyun/sdk/service/sas20181203/models/OperateSuspiciousOverallConfigRequest$
 com/aliyun/sdk/service/sas20181203/models/GetPropertyScheduleConfigRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/ExecStrategyResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/ListHoneypotAlarmEventsResponseBody$HoneypotAlarmEvents.class
+com/aliyun/sdk/service/sas20181203/models/GetAppNetworkResponseBody$Namespace$Builder.class
 com/aliyun/sdk/service/sas20181203/models/HandleSimilarSecurityEventsResponseBody$1.class
+com/aliyun/sdk/service/sas20181203/models/ListImageRiskResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/SaveSuspEventUserSettingResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeUniBackupPoliciesResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/GetOnceTaskResultInfoResponseBody$TaskInfo$Builder.class
@@ -232,6 +236,7 @@ com/aliyun/sdk/service/sas20181203/models/AdvanceSecurityEventOperationsResponse
 com/aliyun/sdk/service/sas20181203/models/UpdateJenkinsImageRegistryNameResponse.class
 com/aliyun/sdk/service/sas20181203/models/DeleteCycleTaskResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/DescribeVulListResponse$BuilderImpl.class
+com/aliyun/sdk/service/sas20181203/models/ModifyInterceptionTargetRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DeleteClientUserDefineRuleResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/AddTagWithUuidResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/ModifyConcernNecessityResponse.class
@@ -282,6 +287,7 @@ com/aliyun/sdk/service/sas20181203/models/ListSystemAggregationRulesResponseBody
 com/aliyun/sdk/service/sas20181203/models/ListHoneypotNodeResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/DescribeUniBackupDatabaseResponseBody$DatabaseList$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeExposedStatisticsDetailResponseBody.class
+com/aliyun/sdk/service/sas20181203/models/ModifyInterceptionRuleSwitchResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/ExportSuspEventsResponse.class
 com/aliyun/sdk/service/sas20181203/models/AddCheckResultWhiteListResponse.class
 com/aliyun/sdk/service/sas20181203/models/DescribePropertySoftwareDetailResponse$1.class
@@ -302,6 +308,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeCommonTargetResultListResponse
 com/aliyun/sdk/service/sas20181203/models/DescribeUniRecoverableListResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/CreateJenkinsImageRegistryResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeCloudProductFieldStatisticsResponseBody$GroupedFields$Builder.class
+com/aliyun/sdk/service/sas20181203/models/ListInterceptionTargetPageResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeExportInfoResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/DescribeInstanceAntiBruteForceRulesRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeAccessKeyLeakDetailResponse$Builder.class
@@ -319,6 +326,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeOnceTaskLeafRecordPageResponse
 com/aliyun/sdk/service/sas20181203/models/DescribeRiskCheckResultResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/ChangeCheckConfigResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeLoginBaseConfigsResponseBody.class
+com/aliyun/sdk/service/sas20181203/models/ModifyInterceptionRuleResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/ListInterceptionRulePageResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/OperateImageBaselineWhitelistResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/FindContainerNetworkConnectRequest$DstNode$Builder.class
@@ -332,6 +340,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeOnceTaskLeafRecordPageRequest.
 com/aliyun/sdk/service/sas20181203/models/DeleteStrategyResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/DescribeExposedInstanceCriteriaResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeRiskCheckSummaryResponseBody$Groups.class
+com/aliyun/sdk/service/sas20181203/models/DescribeAssetsSecurityEventSummaryResponse.class
 com/aliyun/sdk/service/sas20181203/models/VerifyCheckResultResponse.class
 com/aliyun/sdk/service/sas20181203/models/DeleteHoneypotPresetResponse.class
 com/aliyun/sdk/service/sas20181203/models/DescribePropertyCronDetailResponse.class
@@ -368,11 +377,13 @@ com/aliyun/sdk/service/sas20181203/models/DeleteLoginBaseConfigResponseBody$Buil
 com/aliyun/sdk/service/sas20181203/models/DescribeBackupRestoreCountResponseBody$BackupRestoreCount$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeSuspEventsRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeNsasSuspEventTypeRequest.class
+com/aliyun/sdk/service/sas20181203/models/ListImageRiskResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/DescribeClientConfStrategyResponseBody$TargetList.class
 com/aliyun/sdk/service/sas20181203/models/DescribeOfflineMachinesResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/ExecStrategyResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/ModifyCreateVulWhitelistRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeStrategyDetailResponseBody$ParamList$Builder.class
+com/aliyun/sdk/service/sas20181203/models/ListRuleTargetAllRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/ListHoneypotPresetResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeImageSensitiveFileByKeyResponseBody$PageInfo$Builder.class
 com/aliyun/sdk/service/sas20181203/models/GetHoneypotProbeResponse$BuilderImpl.class
@@ -409,6 +420,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeRiskCheckItemResultResponseBod
 com/aliyun/sdk/service/sas20181203/models/DescribeRiskCheckItemResultResponse.class
 com/aliyun/sdk/service/sas20181203/models/ModifyLoginSwitchConfigRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/GetFileDetectResultResponseBody.class
+com/aliyun/sdk/service/sas20181203/models/ListInterceptionHistoryResponse.class
 com/aliyun/sdk/service/sas20181203/models/RemoveCheckInstanceResultWhiteListResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeAssetSummaryRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/GetAssetsPropertyDetailResponse.class
@@ -418,6 +430,7 @@ com/aliyun/sdk/service/sas20181203/models/DisableCustomBlockRecordResponse$1.cla
 com/aliyun/sdk/service/sas20181203/models/DescribeImageSensitiveFileByKeyRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeMachineCanRebootResponse.class
 com/aliyun/sdk/service/sas20181203/models/ListVulAutoRepairConfigResponseBody$Builder.class
+com/aliyun/sdk/service/sas20181203/models/InstallPmAgentResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/ListUuidsByWebPathResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeVulWhitelistResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/ConfirmVirusEventsResponseBody.class
@@ -433,6 +446,7 @@ com/aliyun/sdk/service/sas20181203/models/ListCheckInstanceResultResponse$Builde
 com/aliyun/sdk/service/sas20181203/models/DescribeDomainCountRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/OperationSuspEventsRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeImageCriteriaRequest$1.class
+com/aliyun/sdk/service/sas20181203/models/GetInterceptionRuleDetailResponseBody$DstTarget$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribePropertyScaDetailRequest.class
 com/aliyun/sdk/service/sas20181203/models/DescribeWebLockFileChangeStatisticsResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/ModifyClientUserDefineRuleResponseBody$1.class
@@ -441,17 +455,22 @@ com/aliyun/sdk/service/sas20181203/models/DescribeInstanceStatisticsResponseBody
 com/aliyun/sdk/service/sas20181203/models/OperateAgentClientInstallResponseBody$AegisCelintInstallResposeList.class
 com/aliyun/sdk/service/sas20181203/models/DescribeExposedInstanceListResponseBody$PageInfo$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeModuleConfigResponseBody$Items$Builder.class
+com/aliyun/sdk/service/sas20181203/models/GetAppNetworkResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/ModifyCreateVulWhitelistRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/GetFileDetectApiInvokeInfoRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/GetClientUserDefineRuleRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeVulWhitelistResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeUserLayoutAuthorizationResponseBody$1.class
+com/aliyun/sdk/service/sas20181203/models/InstallPmAgentRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeUniBackupPoliciesResponseBody$PageInfo$Builder.class
 com/aliyun/sdk/service/sas20181203/models/GetOnceTaskResultInfoResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/ValidateHcWarningsResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/DescribeWebLockFileEventsResponse.class
 com/aliyun/sdk/service/sas20181203/models/DescribeImageBaselineDetailResponse$Builder.class
+com/aliyun/sdk/service/sas20181203/models/ModifyClusterCnnfStatusUserConfirmResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/StartPreCheckDatabaseResponseBody.class
+com/aliyun/sdk/service/sas20181203/models/ListRuleTargetAllResponseBody$Builder.class
+com/aliyun/sdk/service/sas20181203/models/CreateInterceptionTargetResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/ModifyAssetImportantRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeIpTagsRequest.class
 com/aliyun/sdk/service/sas20181203/models/ListCheckItemWarningSummaryResponseBody$PageInfo.class
@@ -475,12 +494,14 @@ com/aliyun/sdk/service/sas20181203/models/DescribePropertyCronItemResponseBody$1
 com/aliyun/sdk/service/sas20181203/models/DescribeContainerCriteriaResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/GetPropertyScheduleConfigResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DeleteInterceptionRuleRequest.class
+com/aliyun/sdk/service/sas20181203/models/ListPodRiskResponseBody$PodRiskList.class
 com/aliyun/sdk/service/sas20181203/models/UpdateHoneypotNodeRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeRiskCheckSummaryResponseBody$RiskCheckSummary$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeClientConfSetupResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/ListClientUserDefineRuleTypesResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/OperationCancelIgnoreSuspEventResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeTraceInfoDetailResponseBody$EntityTypeList$Builder.class
+com/aliyun/sdk/service/sas20181203/models/ListRuleTargetAllRequest.class
 com/aliyun/sdk/service/sas20181203/models/DescribeImageFixTaskResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/PageImageRegistryResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/OperateImageVulResponseBody$1.class
@@ -529,6 +550,7 @@ com/aliyun/sdk/service/sas20181203/models/ListSystemAggregationRulesResponseBody
 com/aliyun/sdk/service/sas20181203/models/DescribeRestorePlansResponseBody$RestorePlans$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeInstanceRebootStatusResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeImageInfoListResponseBody$Builder.class
+com/aliyun/sdk/service/sas20181203/models/CreateInterceptionRuleResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/DescribeInstallCodeResponse.class
 com/aliyun/sdk/service/sas20181203/models/DeleteHoneypotPresetResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeVulDetailsResponseBody.class
@@ -573,6 +595,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribePropertyPortDetailResponse$1.c
 com/aliyun/sdk/service/sas20181203/models/SubmitCheckRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeWebLockFileEventsResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/ModifyAccessKeyLeakDealResponse.class
+com/aliyun/sdk/service/sas20181203/models/GetClusterRuleSummaryResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeImageGroupedVulListResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/GetClusterCheckItemWarningStatisticsRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/VerifyCheckResultResponseBody$Data$Builder.class
@@ -598,7 +621,9 @@ com/aliyun/sdk/service/sas20181203/models/ModifyLoginBaseConfigResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeAlarmEventListResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/DescribeAlarmEventStackInfoRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeServiceLinkedRoleStatusResponse.class
+com/aliyun/sdk/service/sas20181203/models/ListImageRegistryRegionRequest.class
 com/aliyun/sdk/service/sas20181203/models/ListHoneypotProbeRequest.class
+com/aliyun/sdk/service/sas20181203/models/CreateInterceptionRuleRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DeleteBackupPolicyRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/ModifyVpcHoneyPotResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/ListInterceptionRulePageResponseBody$SrcTarget.class
@@ -607,8 +632,10 @@ com/aliyun/sdk/service/sas20181203/models/ModifyVpcHoneyPotResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/IgnoreCheckItemsRequest$CheckAndRiskTypeList$Builder.class
 com/aliyun/sdk/service/sas20181203/models/ListInterceptionImageResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/DescribeExcludeSystemPathRequest$Builder.class
+com/aliyun/sdk/service/sas20181203/models/DescribeContainerTagsResponse.class
 com/aliyun/sdk/service/sas20181203/models/HandleSimilarSecurityEventsRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeSimilarSecurityEventsResponseBody.class
+com/aliyun/sdk/service/sas20181203/models/ListPodRiskResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/AddCheckResultWhiteListResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/DescribeTraceInfoNodeResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeEmgVulItemResponseBody$1.class
@@ -622,18 +649,22 @@ com/aliyun/sdk/service/sas20181203/models/DescribePropertyProcItemResponseBody$P
 com/aliyun/sdk/service/sas20181203/models/SetRegistryScanDayNumResponse.class
 com/aliyun/sdk/service/sas20181203/models/DescribeAffectedAssetsRequest.class
 com/aliyun/sdk/service/sas20181203/models/DescribeAffectedMaliciousFileImagesRequest.class
+com/aliyun/sdk/service/sas20181203/models/SetClusterInterceptionConfigResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/DescribeExposedCheckWarningResponseBody$WarningList$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeCheckWarningDetailRequest.class
 com/aliyun/sdk/service/sas20181203/models/GetModuleConfigResponseBody.class
+com/aliyun/sdk/service/sas20181203/models/ModifyClusterCnnfStatusUserConfirmResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/DescribeImageBaselineStrategyResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/DescribePropertyUserItemResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/JoinWebLockProcessWhiteListResponse.class
+com/aliyun/sdk/service/sas20181203/models/ModifyInterceptionTargetResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/DescribePropertyPortDetailRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeGroupedTagsResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/DescribeSearchConditionResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/ModifyPropertyScheduleConfigRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/ModifyClientConfSetupRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/ListPrivateRegistryListRequest.class
+com/aliyun/sdk/service/sas20181203/models/ListRuleTargetAllResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeBackupPoliciesRequest.class
 com/aliyun/sdk/service/sas20181203/models/ListHoneypotAlarmEventsRequest.class
 com/aliyun/sdk/service/sas20181203/models/DescribePropertyProcDetailResponse$1.class
@@ -653,6 +684,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeLatestScanTaskResponseBody$1.c
 com/aliyun/sdk/service/sas20181203/models/ModifyLoginSwitchConfigRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeGroupedInstancesRequest.class
 com/aliyun/sdk/service/sas20181203/models/DescribeBackUpExportInfoResponse$Builder.class
+com/aliyun/sdk/service/sas20181203/models/ModifyInterceptionRuleResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeCycleTaskListResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/DeleteUniBackupPolicyResponse.class
 com/aliyun/sdk/service/sas20181203/models/DescribeNoticeConfigRequest$1.class
@@ -696,6 +728,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeGroupedTagsResponse.class
 com/aliyun/sdk/service/sas20181203/models/FindContainerNetworkConnectResponseBody$DstContainer.class
 com/aliyun/sdk/service/sas20181203/models/ModifyStrategyResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/CheckQuaraFileIdResponse.class
+com/aliyun/sdk/service/sas20181203/models/ListImageRiskResponseBody$EndPointList.class
 com/aliyun/sdk/service/sas20181203/models/UpdateHoneypotResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeContainerCriteriaResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeBackUpExportInfoResponseBody$Builder.class
@@ -736,7 +769,9 @@ com/aliyun/sdk/service/sas20181203/models/DescribeSuspEventQuaraFilesRequest$Bui
 com/aliyun/sdk/service/sas20181203/models/DescribeOnceTaskLeafRecordPageRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeWebLockFileChangeStatisticsResponseBody$List$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribePropertySoftwareItemResponseBody.class
+com/aliyun/sdk/service/sas20181203/models/DeletePrivateRegistryRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeSecurityStatInfoRequest.class
+com/aliyun/sdk/service/sas20181203/models/ModifyInterceptionTargetResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/DeleteUniBackupPolicyRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/VerifyCheckResultRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeImageRepoDetailListResponse.class
@@ -748,6 +783,7 @@ com/aliyun/sdk/service/sas20181203/models/ModifySecurityEventMarkMissIndividuall
 com/aliyun/sdk/service/sas20181203/models/DescribeImageResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/UpdateHoneypotRequest.class
 com/aliyun/sdk/service/sas20181203/models/DescribeLogMetaResponseBody.class
+com/aliyun/sdk/service/sas20181203/models/DescribeAssetsSecurityEventSummaryResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/OpenSensitiveFileScanResponseBody$Data$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeBruteForceSummaryRequest.class
 com/aliyun/sdk/service/sas20181203/models/DescribeVulListPageRequest.class
@@ -778,6 +814,7 @@ com/aliyun/sdk/service/sas20181203/models/DisableCustomBlockRecordResponseBody$1
 com/aliyun/sdk/service/sas20181203/models/DescribeWebLockProcessListResponseBody$List.class
 com/aliyun/sdk/service/sas20181203/models/ListHoneypotAlarmEventsResponseBody$MergeFieldList.class
 com/aliyun/sdk/service/sas20181203/models/AddCheckResultWhiteListRequest.class
+com/aliyun/sdk/service/sas20181203/models/DescribeContainerTagsRequest.class
 com/aliyun/sdk/service/sas20181203/models/SetRegistryScanDayNumResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/CreateFileDetectUploadUrlResponseBody$UploadUrlList$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribePropertySoftwareItemResponse$BuilderImpl.class
@@ -798,6 +835,7 @@ com/aliyun/sdk/service/sas20181203/models/CreateUniBackupPolicyResponseBody$Buil
 com/aliyun/sdk/service/sas20181203/models/DescribeInstallCaptchaResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/DescribeSnapshotsResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeLoginSwitchConfigsResponseBody$1.class
+com/aliyun/sdk/service/sas20181203/models/GetAppNetworkResponseBody$Namespace.class
 com/aliyun/sdk/service/sas20181203/models/DescribeWebLockFileChangeStatisticsResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/CreateOrUpdateAssetGroupResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/DescribeSearchConditionResponse.class
@@ -807,6 +845,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeCheckWarningsResponseBody.clas
 com/aliyun/sdk/service/sas20181203/models/ListHoneypotAlarmEventsResponseBody$HoneypotAlarmEvents$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeInstanceRebootStatusResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/UpdateHoneypotPresetRequest.class
+com/aliyun/sdk/service/sas20181203/models/ListInterceptionTargetPageResponseBody$PageInfo.class
 com/aliyun/sdk/service/sas20181203/models/CreateSimilarSecurityEventsQueryTaskRequest.class
 com/aliyun/sdk/service/sas20181203/models/DescribeNoticeConfigResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeUuidsByVulNamesRequest$1.class
@@ -818,6 +857,7 @@ com/aliyun/sdk/service/sas20181203/models/StartDiscoverDatabaseTaskResponse$Buil
 com/aliyun/sdk/service/sas20181203/models/DescribeDomainCountResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/ModifyBackupPolicyStatusResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/CreateJenkinsImageRegistryResponseBody.class
+com/aliyun/sdk/service/sas20181203/models/ListInterceptionHistoryResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/ListPrivateRegistryTypeResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/VerifyCheckInstanceResultResponseBody$Data$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeWarningMachinesResponse$BuilderImpl.class
@@ -855,6 +895,7 @@ com/aliyun/sdk/service/sas20181203/models/ListCheckItemWarningMachineRequest.cla
 com/aliyun/sdk/service/sas20181203/models/DisableBruteForceRecordResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeAffectedAssetsResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeWebLockExclusiveFileTypeResponseBody.class
+com/aliyun/sdk/service/sas20181203/models/CreateInterceptionRuleResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/StartPreCheckDatabaseRequest.class
 com/aliyun/sdk/service/sas20181203/models/SubmitCheckResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/ExportSuspEventsResponse$1.class
@@ -870,6 +911,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeBruteForceRecordsResponse.clas
 com/aliyun/sdk/service/sas20181203/models/DescribeImageInfoListRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeSimilarEventScenariosResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/QueryPreCheckDatabaseResponse$BuilderImpl.class
+com/aliyun/sdk/service/sas20181203/models/DeletePrivateRegistryResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeVulTargetConfigResponseBody$TargetConfigs.class
 com/aliyun/sdk/service/sas20181203/models/ListCheckStandardResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/ListClientUserDefineRuleTypesResponse$BuilderImpl.class
@@ -880,6 +922,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeTotalStatisticsResponseBody$1.
 com/aliyun/sdk/service/sas20181203/models/AddInstallCodeResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/ListSystemClientRulesRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DeleteBackupPolicyMachineResponseBody$1.class
+com/aliyun/sdk/service/sas20181203/models/AddPrivateRegistryRequest.class
 com/aliyun/sdk/service/sas20181203/models/DescribeStrategyDetailResponseBody$CheckDetails$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribePropertyPortDetailResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/ListVulAutoRepairConfigResponseBody$PageInfo.class
@@ -910,6 +953,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeConcernNecessityResponse.class
 com/aliyun/sdk/service/sas20181203/models/DescribeStrategyDetailRequest.class
 com/aliyun/sdk/service/sas20181203/models/DescribeAllImageBaselineResponseBody$ImageBaselines$Builder.class
 com/aliyun/sdk/service/sas20181203/models/CreateRestoreJobResponse.class
+com/aliyun/sdk/service/sas20181203/models/GetAppNetworkResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeVendorListRequest.class
 com/aliyun/sdk/service/sas20181203/models/PublicSyncAndCreateImageScanTaskResponseBody$Data.class
 com/aliyun/sdk/service/sas20181203/models/DescribePropertyCountRequest.class
@@ -932,10 +976,12 @@ com/aliyun/sdk/service/sas20181203/models/DescribePropertyUserItemResponseBody.c
 com/aliyun/sdk/service/sas20181203/models/DescribeImageScanAuthCountResponse.class
 com/aliyun/sdk/service/sas20181203/models/DescribeWebLockBindListResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/GetBackupStorageCountResponseBody$BackupStorageCount$Builder.class
+com/aliyun/sdk/service/sas20181203/models/AddPrivateRegistryRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/QueryGroupIdByGroupNameResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/GetModuleConfigResponseBody$ModuleConfigList.class
 com/aliyun/sdk/service/sas20181203/models/DescribeSuspiciousUUIDConfigResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/ModifyClientUserDefineRuleResponseBody.class
+com/aliyun/sdk/service/sas20181203/models/ModifyClusterCnnfStatusUserConfirmResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/ExportVulRequest.class
 com/aliyun/sdk/service/sas20181203/models/DescribeSecurityEventOperationsResponseBody$MarkFieldsSource$Builder.class
 com/aliyun/sdk/service/sas20181203/models/SetRegistryScanDayNumRequest.class
@@ -948,6 +994,7 @@ com/aliyun/sdk/service/sas20181203/models/GetCloudAssetSummaryResponse.class
 com/aliyun/sdk/service/sas20181203/models/ListCheckItemWarningMachineRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/ModifyVulTargetResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/DescribeCheckWarningSummaryResponseBody$1.class
+com/aliyun/sdk/service/sas20181203/models/ModifyInterceptionRuleSwitchRequest.class
 com/aliyun/sdk/service/sas20181203/models/DescribeWebLockFileTypeSummaryRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeTraceInfoNodeResponseBody$Node.class
 com/aliyun/sdk/service/sas20181203/models/DescribeRiskCheckSummaryResponse$BuilderImpl.class
@@ -963,6 +1010,7 @@ com/aliyun/sdk/service/sas20181203/models/ModifyVulTargetResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeTraceInfoDetailResponseBody$NeighborList$Builder.class
 com/aliyun/sdk/service/sas20181203/models/CreateHoneypotProbeRequest.class
 com/aliyun/sdk/service/sas20181203/models/ModifyLogMetaStatusResponse.class
+com/aliyun/sdk/service/sas20181203/models/ModifyInterceptionRuleRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/OperateVulsResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribePropertyPortItemResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeInstanceStatisticsRequest.class
@@ -996,6 +1044,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeTaskErrorLogResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribePropertyScaItemResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/ModifyRiskSingleResultStatusResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeWebLockProcessBlockStatisticsResponse$1.class
+com/aliyun/sdk/service/sas20181203/models/InstallPmAgentRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/GetAlarmMachineCountResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/UninstallBackupClientResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeCommonTargetResultListResponseBody$Builder.class
@@ -1018,9 +1067,12 @@ com/aliyun/sdk/service/sas20181203/models/GetModuleConfigRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeSecurityEventOperationsResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/AddCheckInstanceResultWhiteListResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/CreateCustomBlockRecordResponseBody$1.class
+com/aliyun/sdk/service/sas20181203/models/DeletePrivateRegistryResponseBody.class
+com/aliyun/sdk/service/sas20181203/models/DeletePrivateRegistryResponse.class
 com/aliyun/sdk/service/sas20181203/models/DescribeFieldStatisticsResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/ListInterceptionRulePageResponseBody$InterceptionRuleList.class
 com/aliyun/sdk/service/sas20181203/models/DescribeAgentInstallStatusRequest.class
+com/aliyun/sdk/service/sas20181203/models/ListInterceptionHistoryResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeUniBackupDatabaseResponseBody$DatabaseList.class
 com/aliyun/sdk/service/sas20181203/models/CheckUserHasEcsResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/PageImageRegistryResponseBody$PageInfo$Builder.class
@@ -1111,6 +1163,7 @@ com/aliyun/sdk/service/sas20181203/models/ModifyRiskCheckStatusRequest.class
 com/aliyun/sdk/service/sas20181203/models/ModifyVulTargetResponse.class
 com/aliyun/sdk/service/sas20181203/models/DescribeVulExportInfoRequest.class
 com/aliyun/sdk/service/sas20181203/models/DescribeDingTalkResponseBody.class
+com/aliyun/sdk/service/sas20181203/models/AddPrivateRegistryResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribePropertyUsageNewestResponseBody$NewestStatisticItems$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeUuidsByVulNamesResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/ListCheckInstanceResultResponseBody$BasicData.class
@@ -1163,8 +1216,10 @@ com/aliyun/sdk/service/sas20181203/models/ListUninstallAegisMachinesResponseBody
 com/aliyun/sdk/service/sas20181203/models/GetCheckSummaryRequest.class
 com/aliyun/sdk/service/sas20181203/models/ListInterceptionImageResponseBody$ImageList$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeMachineCanRebootResponse$1.class
+com/aliyun/sdk/service/sas20181203/models/CreateInterceptionTargetRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/FixCheckWarningsResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeEmgVulItemRequest$1.class
+com/aliyun/sdk/service/sas20181203/models/ListInterceptionTargetPageRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeCountNotScannedImageResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/DescribeOnceTaskResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/OperateImageVulResponse$1.class
@@ -1175,6 +1230,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeCycleTaskListResponseBody.clas
 com/aliyun/sdk/service/sas20181203/models/DescribeImageBaselineDetailResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/DescribeSummaryInfoRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribePropertyTypeScaItemResponse$1.class
+com/aliyun/sdk/service/sas20181203/models/ListInterceptionHistoryRequest.class
 com/aliyun/sdk/service/sas20181203/models/DescribeSuspiciousOverallConfigResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/UnbindAegisResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeWarningExportInfoResponseBody$1.class
@@ -1206,6 +1262,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeGroupedMaliciousFilesResponse$
 com/aliyun/sdk/service/sas20181203/models/GetLastOnceTaskInfoRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeClusterVulStatisticsResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/CreateVulAutoRepairConfigResponseBody$Builder.class
+com/aliyun/sdk/service/sas20181203/models/ListImageRiskResponseBody$PageInfo.class
 com/aliyun/sdk/service/sas20181203/models/DescribeImageRepoDetailListResponseBody$PageInfo$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeServiceLinkedRoleStatusResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/DeleteHoneypotProbeResponse$Builder.class
@@ -1234,6 +1291,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeVulListPageResponse$BuilderImp
 com/aliyun/sdk/service/sas20181203/models/DescribeDomainDetailResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/ModifySecurityCheckScheduleConfigResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/CreateFileDetectUploadUrlRequest$HashKeyContextList.class
+com/aliyun/sdk/service/sas20181203/models/ModifyInterceptionRuleSwitchResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/AddCheckResultWhiteListResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeInstallCodesResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/EnableCustomBlockRecordRequest$1.class
@@ -1289,6 +1347,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeImageInstancesResponseBody$Ima
 com/aliyun/sdk/service/sas20181203/models/ModifyWebLockStartRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeHoneyPotAuthRequest.class
 com/aliyun/sdk/service/sas20181203/models/CreateServiceLinkedRoleRequest$Builder.class
+com/aliyun/sdk/service/sas20181203/models/ListInterceptionTargetPageResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/DescribeAlarmEventListResponseBody$TacticItems$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeImageFixTaskResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeVulTargetStatisticsResponse.class
@@ -1305,6 +1364,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribePropertyScaDetailResponseBody$
 com/aliyun/sdk/service/sas20181203/models/PauseClientRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DeleteUniBackupPolicyResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/DescribeWebLockFileEventsRequest.class
+com/aliyun/sdk/service/sas20181203/models/GetInterceptionRuleDetailResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeVulWhitelistRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/DeleteInstallCodeRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/OperateSuspiciousTargetConfigResponse$1.class
@@ -1313,6 +1373,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeInstallCodeResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/DescribeWebLockBindListResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/DescribeImageFixTaskRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DeleteBackupPolicyResponse$BuilderImpl.class
+com/aliyun/sdk/service/sas20181203/models/GetAppNetworkResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/ModifyVulConfigResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/GetLastOnceTaskInfoResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/ListUuidsByWebPathResponse$BuilderImpl.class
@@ -1322,6 +1383,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribePropertyScheduleConfigRequest.
 com/aliyun/sdk/service/sas20181203/models/GetClusterCheckItemWarningStatisticsResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/RemoveCheckResultWhiteListRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeHoneyPotSuspStatisticsResponse$BuilderImpl.class
+com/aliyun/sdk/service/sas20181203/models/ListImageRiskResponseBody$PageInfo$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DeleteHoneypotPresetResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/DescribeStrategyExecDetailRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeWebLockInclusiveFileTypeRequest.class
@@ -1329,10 +1391,12 @@ com/aliyun/sdk/service/sas20181203/models/ListSystemClientRuleTypesRequest.class
 com/aliyun/sdk/service/sas20181203/models/DescribeSuspEventsResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeInstanceRebootStatusResponse.class
 com/aliyun/sdk/service/sas20181203/models/DescribeHoneyPotSuspStatisticsResponseBody.class
+com/aliyun/sdk/service/sas20181203/models/GetClusterRuleSummaryRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeDomainCountRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeLogMetaResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/DescribeUniSupportRegionResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/GetClusterCheckItemWarningStatisticsResponse.class
+com/aliyun/sdk/service/sas20181203/models/GetClusterRuleSummaryResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/DescribeAllGroupsRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/CreateFileDetectRequest.class
 com/aliyun/sdk/service/sas20181203/models/GetRulesCountResponse$BuilderImpl.class
@@ -1358,6 +1422,7 @@ com/aliyun/sdk/service/sas20181203/models/GetCheckRiskStatisticsResponseBody$Dat
 com/aliyun/sdk/service/sas20181203/models/ListCheckItemWarningMachineResponseBody$WarningRiskList.class
 com/aliyun/sdk/service/sas20181203/AsyncClient.class
 com/aliyun/sdk/service/sas20181203/models/DescribeSecurityEventOperationsRequest$Builder.class
+com/aliyun/sdk/service/sas20181203/models/DeletePrivateRegistryResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/ModifyStartVulScanResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/ListHoneypotPresetRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DeleteInterceptionTargetResponse.class
@@ -1377,6 +1442,7 @@ com/aliyun/sdk/service/sas20181203/models/DeleteCustomBlockRecordResponseBody.cl
 com/aliyun/sdk/service/sas20181203/models/DescribePropertyScaItemResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeCloudCenterInstancesResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeAffectedAssetsRequest$Builder.class
+com/aliyun/sdk/service/sas20181203/models/ListPodRiskResponseBody$PageInfo$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeWebLockExclusiveFileTypeRequest.class
 com/aliyun/sdk/service/sas20181203/models/DescribeWebLockProcessBlockStatisticsResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/DeleteInterceptionTargetResponse$1.class
@@ -1387,6 +1453,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeWebLockInclusiveFileTypeReques
 com/aliyun/sdk/service/sas20181203/models/HandleSecurityEventsRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeVulFixStatisticsResponseBody$FixTotal.class
 com/aliyun/sdk/service/sas20181203/models/ListAvailableHoneypotResponse.class
+com/aliyun/sdk/service/sas20181203/models/InstallPmAgentResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/DescribeConcernNecessityResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeUserLayoutAuthorizationResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/ListCheckStandardRequest$Builder.class
@@ -1417,6 +1484,7 @@ com/aliyun/sdk/service/sas20181203/models/DeleteCustomBlockRecordResponse$1.clas
 com/aliyun/sdk/service/sas20181203/models/UpdateHoneypotPresetResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/PublicSyncAndCreateImageScanTaskResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/DescribeUniBackupDatabaseResponseBody.class
+com/aliyun/sdk/service/sas20181203/models/ModifyInterceptionTargetResponse.class
 com/aliyun/sdk/service/sas20181203/models/DescribeHcExportInfoRequest.class
 com/aliyun/sdk/service/sas20181203/models/DescribeOnceTaskLeafRecordPageResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/DescribeGroupedInstancesResponse.class
@@ -1438,6 +1506,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeSimilarSecurityEventsResponseB
 com/aliyun/sdk/service/sas20181203/models/ListCheckStandardResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/ModifyAutoDelConfigResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeWebPathResponseBody$TargetList$Builder.class
+com/aliyun/sdk/service/sas20181203/models/ListPodRiskRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeAccesskeyLeakListRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeExposedInstanceListResponseBody$ExposedInstances.class
 com/aliyun/sdk/service/sas20181203/models/DescribeUserBaselineAuthorizationResponse.class
@@ -1483,6 +1552,7 @@ com/aliyun/sdk/service/sas20181203/models/DeleteSecurityEventMarkMissListRespons
 com/aliyun/sdk/service/sas20181203/models/DescribeSecurityEventOperationsResponseBody$SecurityEventOperationsResponse.class
 com/aliyun/sdk/service/sas20181203/models/GetBackupStorageCountResponseBody$BackupStorageCount.class
 com/aliyun/sdk/service/sas20181203/models/DescribeVulTargetStatisticsResponseBody$Builder.class
+com/aliyun/sdk/service/sas20181203/models/ListPodRiskResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeVulListResponseBody$RpmEntityList.class
 com/aliyun/sdk/service/sas20181203/models/DeleteSuspEventNodeResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/ValidateHcWarningsRequest$Builder.class
@@ -1492,6 +1562,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeClusterNetworkRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/ModifyAssetImportantRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeTraceInfoDetailResponseBody$EntityTypeList.class
 com/aliyun/sdk/service/sas20181203/models/DescribeUniBackupPolicyDetailResponseBody$IncPlan.class
+com/aliyun/sdk/service/sas20181203/models/ListPodRiskResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/ModifyClearLogstoreStorageResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeRestoreJobsRequest.class
 com/aliyun/sdk/service/sas20181203/models/DescribeTraceInfoNodeResponse$BuilderImpl.class
@@ -1514,12 +1585,15 @@ com/aliyun/sdk/service/sas20181203/models/RemoveCheckResultWhiteListResponse$Bui
 com/aliyun/sdk/service/sas20181203/models/DescribeRestorePlansResponseBody$PageInfo.class
 com/aliyun/sdk/service/sas20181203/models/ModifyInstanceAntiBruteForceRuleResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/ModifyCreateVulWhitelistResponseBody$1.class
+com/aliyun/sdk/service/sas20181203/models/CreateInterceptionRuleResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/ModifyAssetGroupResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/DescribeHcExportInfoResponse.class
 com/aliyun/sdk/service/sas20181203/models/UninstallUniBackupAgentResponse.class
+com/aliyun/sdk/service/sas20181203/models/ModifyInterceptionRuleResponse.class
 com/aliyun/sdk/service/sas20181203/models/DescribeVulNumStatisticsResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/GetAssetsPropertyItemResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/CreateContainerScanTaskRequest$Builder.class
+com/aliyun/sdk/service/sas20181203/models/ListImageRiskResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/ListPluginForUuidRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/CreateVulAutoRepairConfigResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/OperateSuspiciousTargetConfigResponse$BuilderImpl.class
@@ -1538,6 +1612,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeGroupedVulResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/DescribePropertyUsageNewestResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeWebLockBindListResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/ModifyLoginSwitchConfigResponseBody$Builder.class
+com/aliyun/sdk/service/sas20181203/models/ListPodRiskResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/GetHoneypotNodeResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/DescribeCriteriaResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/PublicPreCheckImageScanTaskResponse$BuilderImpl.class
@@ -1547,6 +1622,7 @@ com/aliyun/sdk/service/sas20181203/models/QueryJenkinsImageRegistryPersistenceDa
 com/aliyun/sdk/service/sas20181203/models/DescribeVpcHoneyPotListResponseBody$VpcSwitchIdList$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeClusterInfoListRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/UpgradeBackupPolicyVersionRequest$Builder.class
+com/aliyun/sdk/service/sas20181203/models/ModifyInterceptionTargetResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/OperateAgentClientInstallRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/ModifyAssetImportantResponse.class
 com/aliyun/sdk/service/sas20181203/models/ModifyPushAllTaskResponse$1.class
@@ -1578,6 +1654,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeInstallCaptchaResponse.class
 com/aliyun/sdk/service/sas20181203/models/DescribeInstallCodeResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/GetFileDetectResultResponseBody$ResultList.class
 com/aliyun/sdk/service/sas20181203/models/DescribeVendorListResponse$BuilderImpl.class
+com/aliyun/sdk/service/sas20181203/models/DescribeAssetsSecurityEventSummaryResponseBody$Assets.class
 com/aliyun/sdk/service/sas20181203/models/DescribeImageSensitiveFileByKeyResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/DescribeExposedCheckWarningResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/ListCheckResultResponseBody$PageInfo$Builder.class
@@ -1640,12 +1717,15 @@ com/aliyun/sdk/service/sas20181203/models/DescribeContainerStatisticsResponse$1.
 com/aliyun/sdk/service/sas20181203/models/ModifyAntiBruteForceRuleResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeStrategyDetailResponseBody$SubTypes.class
 com/aliyun/sdk/service/sas20181203/models/DescribeBackupFilesResponseBody$1.class
+com/aliyun/sdk/service/sas20181203/models/ModifyInterceptionRuleRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/GetClusterSuspEventStatisticsResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/GetBackupStorageCountRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeExposedInstanceDetailResponseBody.class
+com/aliyun/sdk/service/sas20181203/models/ListRuleTargetAllResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/DescribeImageListWithBaselineNameResponseBody$ImageInfos.class
 com/aliyun/sdk/service/sas20181203/models/DeleteVulWhitelistResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/AddClientUserDefineRuleResponseBody$UserDefineRuleAddResult.class
+com/aliyun/sdk/service/sas20181203/models/ModifyInterceptionTargetResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeCommonTargetConfigResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeImageInstancesRequest.class
 com/aliyun/sdk/service/sas20181203/models/ModifyClientUserDefineRuleResponse$1.class
@@ -1664,6 +1744,7 @@ com/aliyun/sdk/service/sas20181203/models/ListCheckResultResponseBody$CheckPolic
 com/aliyun/sdk/service/sas20181203/models/DescribeRiskCheckResultRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeUniSupportRegionResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeCloudProductFieldStatisticsResponse$1.class
+com/aliyun/sdk/service/sas20181203/models/GetInterceptionRuleDetailResponseBody$InterceptionRuleDetail$Builder.class
 com/aliyun/sdk/service/sas20181203/models/GetInterceptionSummaryResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/BatchOperateCommonOverallConfigResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/InstallBackupClientResponse$1.class
@@ -1675,6 +1756,7 @@ com/aliyun/sdk/service/sas20181203/models/ExecStrategyResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/UpdateHoneypotProbeResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/PauseClientRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeGroupedTagsResponseBody$GroupedFileds.class
+com/aliyun/sdk/service/sas20181203/models/ModifyInterceptionTargetRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/ListInterceptionImageRequest.class
 com/aliyun/sdk/service/sas20181203/models/GetImageScanNumInPeriodRequest.class
 com/aliyun/sdk/service/sas20181203/models/ListPrivateRegistryTypeRequest$Builder.class
@@ -1747,6 +1829,7 @@ com/aliyun/sdk/service/sas20181203/models/ListHoneypotResponseBody$List$Builder.
 com/aliyun/sdk/service/sas20181203/models/DeleteAntiBruteForceRuleRequest.class
 com/aliyun/sdk/service/sas20181203/models/DescribeAllGroupsRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/UpdateJenkinsImageRegistryPersistenceDayResponse$BuilderImpl.class
+com/aliyun/sdk/service/sas20181203/models/DeletePrivateRegistryResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/CreateSimilarSecurityEventsQueryTaskRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeFieldStatisticsResponse.class
 com/aliyun/sdk/service/sas20181203/models/OperateSuspiciousTargetConfigRequest$Builder.class
@@ -1767,11 +1850,13 @@ com/aliyun/sdk/service/sas20181203/models/DescribePropertySoftwareDetailRequest.
 com/aliyun/sdk/service/sas20181203/models/DescribeAlarmEventDetailRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/OperateVirusEventsRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeTraceInfoDetailResponseBody$EdgeList$Builder.class
+com/aliyun/sdk/service/sas20181203/models/DescribeAssetsSecurityEventSummaryRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/ModifyWebLockDeleteConfigResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeLogstoreStorageResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/ModifyOpenLogShipperResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/GetHoneypotNodeRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/CancelOnceTaskResponse$BuilderImpl.class
+com/aliyun/sdk/service/sas20181203/models/ListInterceptionTargetPageResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeImageStatisticsRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DeleteSecurityEventMarkMissListResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeAgentInstallStatusResponse$BuilderImpl.class
@@ -1781,6 +1866,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeWebLockStatusRequest$Builder.c
 com/aliyun/sdk/service/sas20181203/models/GetCheckConfigResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeSecurityEventOperationStatusRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeUniBackupPolicyDetailResponseBody$UniBackupPolicyDTO.class
+com/aliyun/sdk/service/sas20181203/models/ModifyInterceptionRuleSwitchRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/ModifyVulConfigResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/ChangeCheckConfigResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/DescribeSimilarEventScenariosResponse$Builder.class
@@ -1807,6 +1893,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeUniBackupDatabaseRequest$Build
 com/aliyun/sdk/service/sas20181203/models/BindAuthToMachineRequest.class
 com/aliyun/sdk/service/sas20181203/models/DescribeExposedStatisticsResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeImageBaselineCheckSummaryResponse$BuilderImpl.class
+com/aliyun/sdk/service/sas20181203/models/ListImageRegistryRegionRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeSimilarSecurityEventsResponse.class
 com/aliyun/sdk/service/sas20181203/models/GetAssetsPropertyItemRequest.class
 com/aliyun/sdk/service/sas20181203/models/DescribeFrontVulPatchListResponseBody$Builder.class
@@ -1819,6 +1906,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeAffectedAssetsResponseBody$Pag
 com/aliyun/sdk/service/sas20181203/models/CreateHoneypotPresetResponseBody$HoneypotPreset.class
 com/aliyun/sdk/service/sas20181203/models/DescribePropertyUserDetailResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/ListHoneypotResponseBody.class
+com/aliyun/sdk/service/sas20181203/models/DescribeAssetsSecurityEventSummaryRequest.class
 com/aliyun/sdk/service/sas20181203/models/QueryGroupedSecurityEventMarkMissListResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeAllImageBaselineResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/DescribePropertyTypeScaItemResponseBody$PropertyTypeItems$Builder.class
@@ -1877,6 +1965,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeImageBaselineCheckSummaryRespo
 com/aliyun/sdk/service/sas20181203/models/IgnoreCheckItemsResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/GetCheckSummaryResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribePropertyCountRequest$1.class
+com/aliyun/sdk/service/sas20181203/models/SetClusterInterceptionConfigResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeGroupedMaliciousFilesResponseBody$PageInfo.class
 com/aliyun/sdk/service/sas20181203/models/DescribeTraceInfoNodeResponseBody$Node$Builder.class
 com/aliyun/sdk/service/sas20181203/models/ListCheckStandardResponseBody$Builder.class
@@ -1936,6 +2025,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeVulListPageResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/OpenSensitiveFileScanResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeWebLockTotalFileChangeCountResponse.class
 com/aliyun/sdk/service/sas20181203/models/DescribeCustomBlockRecordsResponseBody.class
+com/aliyun/sdk/service/sas20181203/models/ListInterceptionTargetPageResponseBody$RuleTargetList$Builder.class
 com/aliyun/sdk/service/sas20181203/models/GetBackupStorageCountRequest.class
 com/aliyun/sdk/service/sas20181203/models/ListInterceptionRulePageResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeImageBaselineCheckSummaryResponse$1.class
@@ -1978,6 +2068,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeInstanceRebootStatusResponseBo
 com/aliyun/sdk/service/sas20181203/models/ModifyClientConfSetupResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/DescribeSnapshotsResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribePropertyScaDetailResponse$BuilderImpl.class
+com/aliyun/sdk/service/sas20181203/models/SetClusterInterceptionConfigResponse.class
 com/aliyun/sdk/service/sas20181203/models/RefreshAssetsResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeSasPmAgentListRequest.class
 com/aliyun/sdk/service/sas20181203/models/DescribeAllImageBaselineRequest$1.class
@@ -1999,6 +2090,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeExposedStatisticsResponse$Buil
 com/aliyun/sdk/service/sas20181203/models/DescribeClusterVulStatisticsRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeSasPmAgentListResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/DescribeCheckWarningDetailResponseBody.class
+com/aliyun/sdk/service/sas20181203/models/ModifyClusterCnnfStatusUserConfirmResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/GetVulWhitelistRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/GetCheckProcessResponse.class
 com/aliyun/sdk/service/sas20181203/models/DescribeLogShipperStatusRequest.class
@@ -2031,6 +2123,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeContainerCriteriaResponse$Buil
 com/aliyun/sdk/service/sas20181203/models/IgnoreCheckItemsRequest.class
 com/aliyun/sdk/service/sas20181203/models/ListSystemClientRulesResponseBody$RuleList$Builder.class
 com/aliyun/sdk/service/sas20181203/models/GetCheckDetailResponseBody$Solution$Builder.class
+com/aliyun/sdk/service/sas20181203/models/ListInterceptionHistoryRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/CreateCycleTaskRequest.class
 com/aliyun/sdk/service/sas20181203/models/DescribeVulTargetConfigResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeImageBaselineStrategyRequest.class
@@ -2059,6 +2152,7 @@ com/aliyun/sdk/service/sas20181203/models/ModifyStrategyResponse$BuilderImpl.cla
 com/aliyun/sdk/service/sas20181203/models/DescribeFieldStatisticsResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeVulFixStatisticsResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/AddTagWithUuidResponseBody$Builder.class
+com/aliyun/sdk/service/sas20181203/models/ListPodRiskRequest.class
 com/aliyun/sdk/service/sas20181203/models/ListInterceptionImageRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/DisableBruteForceRecordResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/DescribeRestorePlansResponse$BuilderImpl.class
@@ -2084,6 +2178,8 @@ com/aliyun/sdk/service/sas20181203/models/QueryGroupedSecurityEventMarkMissListR
 com/aliyun/sdk/service/sas20181203/models/CreateHoneypotPresetResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeImageScanAuthCountResponseBody$ImageScan$Builder.class
 com/aliyun/sdk/service/sas20181203/models/HandleSecurityEventsResponse.class
+com/aliyun/sdk/service/sas20181203/models/DescribeAssetsSecurityEventSummaryResponseBody.class
+com/aliyun/sdk/service/sas20181203/models/GetInterceptionRuleDetailResponseBody$DstTarget.class
 com/aliyun/sdk/service/sas20181203/models/DescribeNsasSuspEventTypeResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeEmgVulItemResponseBody$GroupedVulItems.class
 com/aliyun/sdk/service/sas20181203/models/CreateRestoreJobResponseBody$1.class
@@ -2141,6 +2237,8 @@ com/aliyun/sdk/service/sas20181203/models/ModifyPropertyScheduleConfigResponseBo
 com/aliyun/sdk/service/sas20181203/models/GetHoneypotNodeResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeEmgVulItemResponse.class
 com/aliyun/sdk/service/sas20181203/models/DeleteGroupRequest.class
+com/aliyun/sdk/service/sas20181203/models/GetAppNetworkResponseBody.class
+com/aliyun/sdk/service/sas20181203/models/ListPodRiskResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/DescribeUniBackupDatabaseResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeImageRepoDetailListRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeImageSensitiveFileListResponseBody$1.class
@@ -2210,6 +2308,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeTargetResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/CreateFileDetectUploadUrlResponseBody$UploadUrlList.class
 com/aliyun/sdk/service/sas20181203/models/DescribeUniBackupPoliciesRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeAutoDelConfigResponse$1.class
+com/aliyun/sdk/service/sas20181203/models/GetClusterRuleSummaryResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribePropertyPortDetailResponseBody$PageInfo$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeHcExportInfoResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/GetAssetsPropertyDetailResponseBody.class
@@ -2225,13 +2324,16 @@ com/aliyun/sdk/service/sas20181203/models/AddCheckResultWhiteListResponse$1.clas
 com/aliyun/sdk/service/sas20181203/models/ModifyWebLockStatusResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeInstallCodesResponseBody$InstallCodes$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribePropertyPortDetailRequest.class
+com/aliyun/sdk/service/sas20181203/models/ListImageRiskResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/UninstallBackupClientResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeIpTagsResponseBody$Builder.class
+com/aliyun/sdk/service/sas20181203/models/ListImageRiskResponse.class
 com/aliyun/sdk/service/sas20181203/models/ModifyLogMetaStatusResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/OperateVulsResponse.class
 com/aliyun/sdk/service/sas20181203/models/UpdateHoneypotResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/InstallBackupClientRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeHoneyPotSuspStatisticsResponseBody$1.class
+com/aliyun/sdk/service/sas20181203/models/ListImageRegistryRegionResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeTaskErrorLogResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/CreateCustomBlockRecordResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/GetModuleConfigResponseBody$Items.class
@@ -2270,6 +2372,7 @@ com/aliyun/sdk/service/sas20181203/models/GetHoneypotProbeResponseBody$HoneypotP
 com/aliyun/sdk/service/sas20181203/models/DescribeSecurityStatInfoResponseBody$Vulnerability.class
 com/aliyun/sdk/service/sas20181203/models/OperateImageBaselineWhitelistRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/QueryDiscoverDatabaseRequest$Builder.class
+com/aliyun/sdk/service/sas20181203/models/ModifyInterceptionRuleSwitchResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeVulConfigResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeImageScanAuthCountRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeAntiBruteForceRulesRequest$Builder.class
@@ -2279,10 +2382,12 @@ com/aliyun/sdk/service/sas20181203/models/DescribePropertyScaItemResponseBody$Pr
 com/aliyun/sdk/service/sas20181203/models/DescribeLogMetaResponse.class
 com/aliyun/sdk/service/sas20181203/models/AddTagWithUuidRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeImageBaselineItemListRequest$Builder.class
+com/aliyun/sdk/service/sas20181203/models/GetClusterRuleSummaryResponse.class
 com/aliyun/sdk/service/sas20181203/models/DescribeWebPathResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/DeleteSecurityEventMarkMissListRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/GetPropertyScheduleConfigResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/GetClusterSuspEventStatisticsResponseBody$SuspStatistics.class
+com/aliyun/sdk/service/sas20181203/models/ListRuleTargetAllResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeCriteriaResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/InstallCloudMonitorResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/DeleteCustomBlockRecordRequest$1.class
@@ -2374,6 +2479,8 @@ com/aliyun/sdk/service/sas20181203/models/DescribeImageSensitiveFileByKeyRespons
 com/aliyun/sdk/service/sas20181203/models/GetLastOnceTaskInfoResponse.class
 com/aliyun/sdk/service/sas20181203/models/GetPropertyScheduleConfigResponse.class
 com/aliyun/sdk/service/sas20181203/models/DescribeCheckWarningMachinesResponse$Builder.class
+com/aliyun/sdk/service/sas20181203/models/ListInterceptionHistoryResponseBody$PageInfo.class
+com/aliyun/sdk/service/sas20181203/models/InstallPmAgentResponse.class
 com/aliyun/sdk/service/sas20181203/models/CreateCustomBlockRecordResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeUniBackupDatabaseResponseBody$PageInfo.class
 com/aliyun/sdk/service/sas20181203/models/DescribeEmgUserAgreementResponseBody$1.class
@@ -2396,17 +2503,22 @@ com/aliyun/sdk/service/sas20181203/models/ModifyAssetImportantResponse$Builder.c
 com/aliyun/sdk/service/sas20181203/models/DescribeExposedInstanceDetailResponseBody$RealVulList.class
 com/aliyun/sdk/service/sas20181203/models/ModifyVpcHoneyPotRequest.class
 com/aliyun/sdk/service/sas20181203/models/ConfirmVirusEventsResponse$BuilderImpl.class
+com/aliyun/sdk/service/sas20181203/models/GetClusterRuleSummaryResponseBody$ClusterRuleSummary$Builder.class
 com/aliyun/sdk/service/sas20181203/models/ModifyAssetGroupResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribePropertyCronDetailResponseBody$PageInfo$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribePropertyProcDetailRequest.class
 com/aliyun/sdk/service/sas20181203/models/ListUninstallAegisMachinesRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeDomainDetailResponse.class
+com/aliyun/sdk/service/sas20181203/models/SetClusterInterceptionConfigResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/ListHoneypotPresetResponseBody$PageInfo.class
 com/aliyun/sdk/service/sas20181203/models/DeleteStrategyResponseBody$1.class
+com/aliyun/sdk/service/sas20181203/models/ModifyInterceptionRuleResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/DeleteInstallCodeResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/DescribeImageBaselineDetailResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/ChangeCheckConfigResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/UpdateHoneypotProbeResponseBody.class
+com/aliyun/sdk/service/sas20181203/models/InstallPmAgentRequest.class
+com/aliyun/sdk/service/sas20181203/models/ListImageRegistryRegionResponse.class
 com/aliyun/sdk/service/sas20181203/models/DescribeVulTargetStatisticsResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/DescribeImageResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/DeleteSuspEventNodeRequest$Builder.class
@@ -2428,16 +2540,21 @@ com/aliyun/sdk/service/sas20181203/models/BatchOperateCommonOverallConfigRespons
 com/aliyun/sdk/service/sas20181203/models/ListClusterCnnfStatusDetailResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/DeleteBackupPolicyMachineRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribePropertyProcItemRequest.class
+com/aliyun/sdk/service/sas20181203/models/ListImageRiskRequest$Builder.class
+com/aliyun/sdk/service/sas20181203/models/ListPodRiskResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DeleteSecurityEventMarkMissListResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/ModifyWebLockCreateConfigRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeExcludeSystemPathResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/DescribeRiskListCheckResultResponseBody.class
+com/aliyun/sdk/service/sas20181203/models/ListInterceptionHistoryResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/DescribeInstanceRebootStatusRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/AdvanceSecurityEventOperationsResponse.class
 com/aliyun/sdk/service/sas20181203/models/DescribeAntiBruteForceRulesResponseBody$Rules$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeEmgUserAgreementRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/AddInstallCodeResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/DescribeWarningMachinesRequest.class
+com/aliyun/sdk/service/sas20181203/models/DeletePrivateRegistryResponseBody$1.class
+com/aliyun/sdk/service/sas20181203/models/ModifyClusterCnnfStatusUserConfirmResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeContainerInstancesResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/DescribeVulNumStatisticsRequest.class
 com/aliyun/sdk/service/sas20181203/models/ListHoneypotProbeResponse$1.class
@@ -2481,6 +2598,7 @@ com/aliyun/sdk/service/sas20181203/models/VerifyCheckResultResponseBody$Data.cla
 com/aliyun/sdk/service/sas20181203/models/DescribeTargetRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/ExportRecordResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/CreateHoneypotPresetResponse$1.class
+com/aliyun/sdk/service/sas20181203/models/GetInterceptionRuleDetailRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/RefreshAssetsResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/DescribeClusterBasicInfoResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/QueryGroupIdByGroupNameRequest.class
@@ -2512,6 +2630,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeUniBackupDatabaseResponse.clas
 com/aliyun/sdk/service/sas20181203/models/DescribeUniBackupPolicyDetailResponseBody$FullPlan$Builder.class
 com/aliyun/sdk/service/sas20181203/models/GetBackupStorageCountRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeClientConfSetupRequest$1.class
+com/aliyun/sdk/service/sas20181203/models/ModifyClusterCnnfStatusUserConfirmResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DeleteInstallCodeResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeVpcListResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/ListHoneypotResponse$BuilderImpl.class
@@ -2539,6 +2658,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeVulWhitelistResponseBody$Build
 com/aliyun/sdk/service/sas20181203/models/GetLastOnceTaskInfoResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeVulTargetConfigResponseBody$TargetConfigs$Builder.class
 com/aliyun/sdk/service/sas20181203/models/StartPreCheckDatabaseRequest$1.class
+com/aliyun/sdk/service/sas20181203/models/ListRuleTargetAllResponseBody$RuleTargetList.class
 com/aliyun/sdk/service/sas20181203/models/ModifyWebLockUpdateConfigResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeUniRecoverableListResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeConcernNecessityResponseBody$1.class
@@ -2549,6 +2669,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeVulFixStatisticsRequest.class
 com/aliyun/sdk/service/sas20181203/models/OperateAgentClientInstallResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/ModifyClientConfSetupResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeTraceInfoDetailRequest$Builder.class
+com/aliyun/sdk/service/sas20181203/models/GetAppNetworkResponse.class
 com/aliyun/sdk/service/sas20181203/models/DescribeSnapshotsResponseBody$PageInfo$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeSummaryInfoResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/BindAuthToMachineResponseBody$1.class
@@ -2581,6 +2702,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeVulTargetStatisticsResponseBod
 com/aliyun/sdk/service/sas20181203/models/ListCheckItemWarningMachineResponseBody$WarningRiskList$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeExposedInstanceDetailResponse.class
 com/aliyun/sdk/service/sas20181203/models/CreateContainerScanTaskResponse$Builder.class
+com/aliyun/sdk/service/sas20181203/models/ListImageRiskRequest.class
 com/aliyun/sdk/service/sas20181203/models/IgnoreHcCheckWarningsRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/CreateCustomBlockRecordRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeImageScanAuthorizationResponseBody$AuthStatus.class
@@ -2589,6 +2711,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeSupportRegionRequest$Builder.c
 com/aliyun/sdk/service/sas20181203/models/DescribeImageBaselineCheckResultResponseBody$BaselineResult$Builder.class
 com/aliyun/sdk/service/sas20181203/models/HandleSimilarSecurityEventsRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeRiskItemTypeResponse$1.class
+com/aliyun/sdk/service/sas20181203/models/ListInterceptionHistoryResponseBody$InterceptionHistoryList$Builder.class
 com/aliyun/sdk/service/sas20181203/models/ListVulAutoRepairConfigResponseBody$VulAutoRepairConfigList$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeWebLockStatusRequest.class
 com/aliyun/sdk/service/sas20181203/models/DescribeSuspEventUserSettingResponse$1.class
@@ -2630,11 +2753,13 @@ com/aliyun/sdk/service/sas20181203/models/DescribeVulExportInfoResponseBody$1.cl
 com/aliyun/sdk/service/sas20181203/models/DescribeInstallCodeResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/CreateServiceLinkedRoleResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/ListCheckItemWarningMachineResponseBody.class
+com/aliyun/sdk/service/sas20181203/models/ListImageRiskResponseBody$EndPointList$Builder.class
 com/aliyun/sdk/service/sas20181203/models/ListCheckStandardResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/GetLastOnceTaskInfoResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeVulFixStatisticsResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeImageRepoDetailListResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeRiskCheckSummaryResponseBody$1.class
+com/aliyun/sdk/service/sas20181203/models/ModifyClusterCnnfStatusUserConfirmRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/PublicSyncAndCreateImageScanTaskRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/CreateAntiBruteForceRuleRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeImageBaselineStrategyResponseBody$1.class
@@ -2648,8 +2773,10 @@ com/aliyun/sdk/service/sas20181203/models/ModifyEmgVulSubmitResponse$Builder.cla
 com/aliyun/sdk/service/sas20181203/models/ModifyConcernNecessityResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/ConfirmVirusEventsRequest.class
 com/aliyun/sdk/service/sas20181203/models/DescribeWebLockProcessListRequest.class
+com/aliyun/sdk/service/sas20181203/models/ListInterceptionTargetPageResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/DescribePropertySoftwareItemResponseBody$PropertyItems$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeUuidsByVulNamesResponseBody$MachineInfoStatistics$Builder.class
+com/aliyun/sdk/service/sas20181203/models/DescribeContainerTagsResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeAntiBruteForceRulesRequest.class
 com/aliyun/sdk/service/sas20181203/models/ModifyCustomBlockRecordRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/DeleteHoneypotProbeRequest.class
@@ -2666,12 +2793,14 @@ com/aliyun/sdk/service/sas20181203/models/DescribeExposedStatisticsDetailRequest
 com/aliyun/sdk/service/sas20181203/models/DescribeAllGroupsResponseBody$Groups$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeEventOnStageResponseBody$SecurityEventStageResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/ChangeCheckConfigResponse$1.class
+com/aliyun/sdk/service/sas20181203/models/ListImageRegistryRegionResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeFieldStatisticsRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/UpdateHoneypotResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeWebLockExclusiveFileTypeRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/CreateSimilarSecurityEventsQueryTaskResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/DescribeRiskListCheckResultResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/InstallCloudMonitorRequest.class
+com/aliyun/sdk/service/sas20181203/models/GetInterceptionRuleDetailRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeBackupRestoreCountRequest.class
 com/aliyun/sdk/service/sas20181203/models/ModifyVulConfigResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/ListClusterCnnfStatusDetailResponseBody$Data$Builder.class
@@ -2679,6 +2808,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeAntiBruteForceRulesResponseBod
 com/aliyun/sdk/service/sas20181203/models/DescribeRisksResponse.class
 com/aliyun/sdk/service/sas20181203/models/FixCheckWarningsResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/StartBaselineSecurityCheckResponse$1.class
+com/aliyun/sdk/service/sas20181203/models/GetAppNetworkResponseBody$Edge.class
 com/aliyun/sdk/service/sas20181203/models/DescribePropertyUserDetailRequest.class
 com/aliyun/sdk/service/sas20181203/models/DescribeStrategyExecDetailResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/UpdateJenkinsImageRegistryPersistenceDayResponse$Builder.class
@@ -2689,6 +2819,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribePropertyScaDetailResponseBody$
 com/aliyun/sdk/service/sas20181203/models/RebootMachineResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/ModifyVulConfigResponse.class
 com/aliyun/sdk/service/sas20181203/models/DescribeAssetDetailByUuidRequest$1.class
+com/aliyun/sdk/service/sas20181203/models/ListImageRegistryRegionResponseBody$Regions$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeWebLockFileTypeSummaryResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/DeleteTagWithUuidResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/DescribeLoginBaseConfigsResponse$Builder.class
@@ -2734,9 +2865,12 @@ com/aliyun/sdk/service/sas20181203/models/CheckUserHasEcsResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeEventLevelCountResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/GetCheckDetailResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeCheckWarningsResponse$Builder.class
+com/aliyun/sdk/service/sas20181203/models/GetClusterRuleSummaryRequest.class
 com/aliyun/sdk/service/sas20181203/models/DescribeCloudCenterInstancesResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeCheckFixDetailsResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/ListUninstallAegisMachinesRequest$1.class
+com/aliyun/sdk/service/sas20181203/models/ModifyInterceptionTargetResponseBody$Builder.class
+com/aliyun/sdk/service/sas20181203/models/ModifyInterceptionRuleResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/ModifyTagWithUuidRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/ModifyBackupPolicyResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribePropertySoftwareItemRequest.class
@@ -2754,11 +2888,13 @@ com/aliyun/sdk/service/sas20181203/models/DescribeWebLockTotalFileChangeCountRes
 com/aliyun/sdk/service/sas20181203/models/OperateCommonTargetConfigRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeVendorListResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeBackupRestoreCountRequest$Builder.class
+com/aliyun/sdk/service/sas20181203/models/CreateInterceptionTargetResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeCloudCenterInstancesResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/CreateFileDetectResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/DescribeCheckWarningMachinesRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeExportInfoRequest.class
 com/aliyun/sdk/service/sas20181203/models/DescribeScanTaskProgressResponse$1.class
+com/aliyun/sdk/service/sas20181203/models/ListInterceptionHistoryResponseBody$PageInfo$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeExposedStatisticsRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeNsasSuspEventTypeResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeOnceTaskRequest$1.class
@@ -2775,6 +2911,8 @@ com/aliyun/sdk/service/sas20181203/models/DescribeWarningMachinesResponseBody$Wa
 com/aliyun/sdk/service/sas20181203/models/DeleteInterceptionTargetResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeGroupedContainerInstancesResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/ListHoneypotPresetRequest$1.class
+com/aliyun/sdk/service/sas20181203/models/ListPodRiskResponseBody$PodRiskList$Builder.class
+com/aliyun/sdk/service/sas20181203/models/SetClusterInterceptionConfigResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeStrategyDetailResponseBody$Rules$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeStrategyResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeInstallCodesResponseBody$InstallCodes.class
@@ -2782,6 +2920,7 @@ com/aliyun/sdk/service/sas20181203/models/ModifyWebLockStatusRequest.class
 com/aliyun/sdk/service/sas20181203/models/DescribeOnceTaskResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeSuspEventUserSettingResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/DescribeImageBaselineCheckSummaryResponse.class
+com/aliyun/sdk/service/sas20181203/models/GetAppNetworkResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/ExportRecordRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/IgnoreCheckItemsResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/ModifyWebPathResponseBody$1.class
@@ -2846,6 +2985,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeWebLockStatusResponseBody$1.cl
 com/aliyun/sdk/service/sas20181203/models/ListVulAutoRepairConfigResponseBody$PageInfo$Builder.class
 com/aliyun/sdk/service/sas20181203/models/ModifyCycleTaskRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeCheckWarningMachinesResponseBody$Builder.class
+com/aliyun/sdk/service/sas20181203/models/AddPrivateRegistryResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeCheckFixDetailsRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/PublicPreCheckImageScanTaskResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/GetModuleConfigRequest.class
@@ -2892,6 +3032,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeSecurityCheckScheduleConfigRes
 com/aliyun/sdk/service/sas20181203/models/DeleteHoneypotNodeRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/IgnoreCheckItemsResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeLogShipperStatusResponse$BuilderImpl.class
+com/aliyun/sdk/service/sas20181203/models/SetClusterInterceptionConfigResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeClientConfSetupResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/ListInterceptionRulePageRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/QueryIncidentTracingSubNodesCountRequest.class
@@ -2901,6 +3042,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeRiskCheckItemResultResponse$Bu
 com/aliyun/sdk/service/sas20181203/models/OpenSensitiveFileScanRequest.class
 com/aliyun/sdk/service/sas20181203/models/GetModuleConfigResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribePropertyUserDetailRequest$1.class
+com/aliyun/sdk/service/sas20181203/models/ListImageRegistryRegionResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/InstallUniBackupAgentResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/ModifyStartVulScanRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/DeleteBackupPolicyMachineRequest$1.class
@@ -2944,6 +3086,7 @@ com/aliyun/sdk/service/sas20181203/models/GetClientUserDefineRuleResponseBody.cl
 com/aliyun/sdk/service/sas20181203/models/AddInstallCodeResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeSnapshotsResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/ModifyUniBackupPolicyResponseBody$1.class
+com/aliyun/sdk/service/sas20181203/models/GetAppNetworkRequest.class
 com/aliyun/sdk/service/sas20181203/models/DescribeVulListRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeVulCheckTaskStatusDetailResponseBody$TaskStatuses$Builder.class
 com/aliyun/sdk/service/sas20181203/models/UpdateHoneypotProbeRequest$Builder.class
@@ -2965,6 +3108,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeRiskTypeResponseBody$Rules$Bui
 com/aliyun/sdk/service/sas20181203/models/ModifyStartVulScanRequest.class
 com/aliyun/sdk/service/sas20181203/models/DescribeRisksResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/DescribeImageListWithBaselineNameResponse.class
+com/aliyun/sdk/service/sas20181203/models/DescribeAssetsSecurityEventSummaryRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeInstallCodeResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/ListCheckResultResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/DescribeVulListResponseBody$VulRecords.class
@@ -2976,6 +3120,7 @@ com/aliyun/sdk/service/sas20181203/models/IgnoreHcCheckWarningsResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/HandleSecurityEventsResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/CheckUserHasEcsResponse.class
 com/aliyun/sdk/service/sas20181203/models/ListSystemRuleAggregationTypesResponse$1.class
+com/aliyun/sdk/service/sas20181203/models/DescribeContainerTagsRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeConcernNecessityResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeCustomBlockRecordsResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/GetCheckRiskStatisticsResponseBody.class
@@ -3008,6 +3153,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeStrategyTargetResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/GetInterceptionSummaryResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DeleteLoginBaseConfigResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/VerifyCheckResultResponseBody$Builder.class
+com/aliyun/sdk/service/sas20181203/models/AddPrivateRegistryResponse.class
 com/aliyun/sdk/service/sas20181203/models/DescribeUserLayoutAuthorizationResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/RollbackSuspEventQuaraFileRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeClientConfStrategyRequest.class
@@ -3067,6 +3213,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeHoneyPotSuspStatisticsRequest.
 com/aliyun/sdk/service/sas20181203/models/ModifyPushAllTaskResponseBody$PushTaskResultList$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeCommonOverallConfigRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/DeleteLoginBaseConfigRequest$Builder.class
+com/aliyun/sdk/service/sas20181203/models/DescribeAssetsSecurityEventSummaryResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/FindContainerNetworkConnectRequest$SrcNode.class
 com/aliyun/sdk/service/sas20181203/models/DescribeWebLockProcessBlockStatisticsResponse.class
 com/aliyun/sdk/service/sas20181203/models/CreateVulAutoRepairConfigRequest$Builder.class
@@ -3120,6 +3267,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeVulFixStatisticsResponseBody.c
 com/aliyun/sdk/service/sas20181203/models/QueryGroupIdByGroupNameResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeVpcListResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/ListHoneypotAlarmEventsResponseBody$MergeFieldList$Builder.class
+com/aliyun/sdk/service/sas20181203/models/SetClusterInterceptionConfigRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeNsasSuspEventTypeRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/ModifyOperateVulResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribePropertyPortItemResponseBody$Builder.class
@@ -3127,8 +3275,10 @@ com/aliyun/sdk/service/sas20181203/models/ListHoneypotResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/SetRegistryScanDayNumResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/ListClusterInterceptionConfigResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/ListCheckResultResponseBody$PageInfo.class
+com/aliyun/sdk/service/sas20181203/models/GetInterceptionRuleDetailResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeLogMetaRequest.class
 com/aliyun/sdk/service/sas20181203/models/ModifyVulWhitelistTargetResponseBody$Builder.class
+com/aliyun/sdk/service/sas20181203/models/GetInterceptionRuleDetailResponseBody$SrcTarget.class
 com/aliyun/sdk/service/sas20181203/models/ListSystemAggregationRulesResponseBody$AggregationList.class
 com/aliyun/sdk/service/sas20181203/models/DescribeServiceLinkedRoleStatusRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribePropertySoftwareDetailRequest$Builder.class
@@ -3147,6 +3297,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeSasPmAgentListResponse$Builder
 com/aliyun/sdk/service/sas20181203/models/DescribePropertyScaItemResponseBody$PropertyItems.class
 com/aliyun/sdk/service/sas20181203/models/ModifyWebLockProcessStatusRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeLatestScanTaskRequest$Builder.class
+com/aliyun/sdk/service/sas20181203/models/ListInterceptionHistoryResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeImageVulListResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeSecureSuggestionResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeCommonTargetConfigResponseBody$TargetList$Builder.class
@@ -3172,6 +3323,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeVulCheckTaskStatusDetailReques
 com/aliyun/sdk/service/sas20181203/models/GetFileDetectApiInvokeInfoResponse.class
 com/aliyun/sdk/service/sas20181203/models/DescribeAppVulScanCycleResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/ModifyUniBackupPolicyResponse$BuilderImpl.class
+com/aliyun/sdk/service/sas20181203/models/GetInterceptionRuleDetailResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeImageListWithBaselineNameResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/ModifyLogMetaStatusRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeBackupPoliciesRequest$Builder.class
@@ -3199,10 +3351,12 @@ com/aliyun/sdk/service/sas20181203/models/DescribeBackupRestoreCountResponseBody
 com/aliyun/sdk/service/sas20181203/models/DeleteCycleTaskResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeExcludeSystemPathResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeClusterVulStatisticsResponseBody.class
+com/aliyun/sdk/service/sas20181203/models/ListImageRiskResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeWebLockInclusiveFileTypeResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/OperateImageBaselineWhitelistResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/OperateSuspiciousTargetConfigResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeInstallCaptchaRequest$1.class
+com/aliyun/sdk/service/sas20181203/models/InstallPmAgentResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeImageBaselineCheckResultResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeAllGroupsResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/DescribeVulDetailsResponseBody$1.class
@@ -3256,6 +3410,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeBackupClientsResponse$BuilderI
 com/aliyun/sdk/service/sas20181203/models/ModifyStrategyResponseBody$Result.class
 com/aliyun/sdk/service/sas20181203/models/SaveImageBaselineStrategyResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/DescribeWebLockProcessListResponse$Builder.class
+com/aliyun/sdk/service/sas20181203/models/ListInterceptionHistoryResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeAttackAnalysisDataRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/GetInterceptionTargetDetailResponseBody$RuleTarget.class
 com/aliyun/sdk/service/sas20181203/models/PageImageRegistryResponseBody$List.class
@@ -3270,6 +3425,7 @@ com/aliyun/sdk/service/sas20181203/models/ListClientUserDefineRulesResponse.clas
 com/aliyun/sdk/service/sas20181203/models/ExportSuspEventsRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/IgnoreCheckItemsRequest$CheckAndRiskTypeList.class
 com/aliyun/sdk/service/sas20181203/models/DescribeImageListWithBaselineNameResponseBody.class
+com/aliyun/sdk/service/sas20181203/models/InstallPmAgentResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/DeleteVpcHoneyPotResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/OperateVulsResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeWebLockConfigListResponseBody$ConfigList$Builder.class
@@ -3292,6 +3448,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeStrategyExecDetailResponse$1.c
 com/aliyun/sdk/service/sas20181203/models/DescribeImageVulListResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeAllEntityResponseBody$EntityList.class
 com/aliyun/sdk/service/sas20181203/models/DescribePropertyCronItemResponseBody$PageInfo.class
+com/aliyun/sdk/service/sas20181203/models/ListImageRiskResponseBody$ImageRiskList.class
 com/aliyun/sdk/service/sas20181203/models/SaveSuspEventUserSettingRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/DeleteGroupResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/ListClusterInterceptionConfigResponseBody.class
@@ -3307,6 +3464,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeVulFixStatisticsResponse$1.cla
 com/aliyun/sdk/service/sas20181203/models/DescribeLogstoreStorageRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeCountScannedImageRequest.class
 com/aliyun/sdk/service/sas20181203/models/DescribeWebLockFileEventsResponseBody.class
+com/aliyun/sdk/service/sas20181203/models/AddPrivateRegistryResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/ConfirmVirusEventsRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/ModifyPushAllTaskResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/ListClientUserDefineRulesResponseBody.class
@@ -3339,6 +3497,7 @@ com/aliyun/sdk/service/sas20181203/models/ModifyInstanceAntiBruteForceRuleRespon
 com/aliyun/sdk/service/sas20181203/models/CreateContainerScanTaskResponseBody$Data.class
 com/aliyun/sdk/service/sas20181203/models/DescribePropertyPortDetailResponseBody$Propertys$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeCloudProductFieldStatisticsResponse$BuilderImpl.class
+com/aliyun/sdk/service/sas20181203/models/SetClusterInterceptionConfigResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/ListCheckInstanceResultResponseBody$Grids$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeBruteForceRecordsRequest.class
 com/aliyun/sdk/service/sas20181203/models/ListVulAutoRepairConfigRequest$1.class
@@ -3376,6 +3535,7 @@ com/aliyun/sdk/service/sas20181203/models/RefreshContainerAssetsRequest.class
 com/aliyun/sdk/service/sas20181203/models/DescribeSecurityCheckScheduleConfigRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/ModifySecurityEventMarkMissIndividuallyRequest.class
 com/aliyun/sdk/service/sas20181203/models/DescribeVulListPageResponse$Builder.class
+com/aliyun/sdk/service/sas20181203/models/ListRuleTargetAllResponseBody$RuleTargetList$Builder.class
 com/aliyun/sdk/service/sas20181203/models/RemoveCheckResultWhiteListResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeImageSensitiveFileByKeyResponseBody$SensitiveFileList$Builder.class
 com/aliyun/sdk/service/sas20181203/models/CreateCycleTaskResponse$1.class
@@ -3410,6 +3570,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeVersionConfigResponse.class
 com/aliyun/sdk/service/sas20181203/models/DescribeCountNotScannedImageRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/CreateJenkinsImageRegistryResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/SasInstallCodeRequest.class
+com/aliyun/sdk/service/sas20181203/models/InstallPmAgentResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeTraceInfoDetailResponseBody$TraceInfoDetail$Builder.class
 com/aliyun/sdk/service/sas20181203/models/SasInstallCodeResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/DescribeUniBackupDatabaseResponseBody$PageInfo$Builder.class
@@ -3431,6 +3592,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeWebLockFileChangeStatisticsRes
 com/aliyun/sdk/service/sas20181203/models/FindContainerNetworkConnectResponseBody$PageInfo.class
 com/aliyun/sdk/service/sas20181203/models/GetModuleConfigResponseBody$PageInfo.class
 com/aliyun/sdk/service/sas20181203/models/DescribeScanTaskProgressResponseBody.class
+com/aliyun/sdk/service/sas20181203/models/DescribeContainerTagsResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeVulConfigResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/FindContainerNetworkConnectResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/DescribeCheckWarningsResponseBody$CheckWarnings.class
@@ -3439,6 +3601,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeAgentInstallStatusResponseBody
 com/aliyun/sdk/service/sas20181203/models/GetAssetsPropertyItemResponseBody$PropertyItems$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeAntiBruteForceRulesResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/DescribeClusterVulStatisticsResponseBody$VulStat$Builder.class
+com/aliyun/sdk/service/sas20181203/models/GetAppNetworkResponseBody$Node.class
 com/aliyun/sdk/service/sas20181203/models/DescribeWebPathRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeWebLockExclusiveFileTypeRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeBruteForceRecordsResponse$BuilderImpl.class
@@ -3449,10 +3612,12 @@ com/aliyun/sdk/service/sas20181203/models/UpdateHoneypotPresetResponseBody$Build
 com/aliyun/sdk/service/sas20181203/models/CreateUniBackupPolicyResponse.class
 com/aliyun/sdk/service/sas20181203/models/QueryPreCheckDatabaseRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/ModifyBackupPolicyResponseBody$1.class
+com/aliyun/sdk/service/sas20181203/models/GetAppNetworkRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeVulNumStatisticsResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/HandleSecurityEventsRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/CreateHoneypotProbeResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/ModifyAntiBruteForceRuleResponse.class
+com/aliyun/sdk/service/sas20181203/models/GetInterceptionRuleDetailResponseBody$InterceptionRuleDetail.class
 com/aliyun/sdk/service/sas20181203/models/EnableBruteForceRecordResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/DisableCustomBlockRecordResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeLoginSwitchConfigsResponse$BuilderImpl.class
@@ -3466,6 +3631,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeInstallCodesResponseBody$Build
 com/aliyun/sdk/service/sas20181203/models/DescribeBackupMachineStatusResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DeleteAntiBruteForceRuleResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeTraceInfoDetailResponseBody$Builder.class
+com/aliyun/sdk/service/sas20181203/models/CreateInterceptionRuleResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeCheckWarningMachinesRequest.class
 com/aliyun/sdk/service/sas20181203/models/ModifyWebLockDeleteConfigResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribePropertySoftwareItemResponseBody$PropertyItems.class
@@ -3475,6 +3641,7 @@ com/aliyun/sdk/service/sas20181203/models/GetLastOnceTaskInfoResponseBody$TaskIn
 com/aliyun/sdk/service/sas20181203/models/DescribeVulTargetStatisticsRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeBackupFilesResponseBody$PageInfo$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeBackupMachineStatusRequest$Builder.class
+com/aliyun/sdk/service/sas20181203/models/AddPrivateRegistryResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/ModifyBackupPolicyResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribePropertyScaItemResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/CreateSimilarSecurityEventsQueryTaskResponseBody$CreateSimilarSecurityEventsQueryTaskResponse.class
@@ -3486,6 +3653,7 @@ com/aliyun/sdk/service/sas20181203/models/OperateCommonTargetConfigResponseBody.
 com/aliyun/sdk/service/sas20181203/models/DisableBruteForceRecordResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/DescribeAllGroupsRequest.class
 com/aliyun/sdk/service/sas20181203/models/DescribeImageRequest$1.class
+com/aliyun/sdk/service/sas20181203/models/SetClusterInterceptionConfigRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/GetHoneypotNodeResponse.class
 com/aliyun/sdk/service/sas20181203/models/ModifyCreateVulWhitelistResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/ModifyWebLockStatusResponse$1.class
@@ -3523,6 +3691,8 @@ com/aliyun/sdk/service/sas20181203/models/DescribeVpcHoneyPotCriteriaResponseBod
 com/aliyun/sdk/service/sas20181203/models/DescribeAllEntityResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeOnceTaskLeafRecordPageResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/GetCheckRiskStatisticsRequest.class
+com/aliyun/sdk/service/sas20181203/models/GetClusterRuleSummaryResponseBody$1.class
+com/aliyun/sdk/service/sas20181203/models/ListImageRegistryRegionResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeImageBaselineCheckSummaryResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/CancelOnceTaskRequest.class
 com/aliyun/sdk/service/sas20181203/models/ListHoneypotNodeResponse$Builder.class
@@ -3548,6 +3718,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeImageBaselineCheckResultRespon
 com/aliyun/sdk/service/sas20181203/models/PauseClientResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/ModifySecurityCheckScheduleConfigResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeLogMetaResponse$Builder.class
+com/aliyun/sdk/service/sas20181203/models/GetAppNetworkRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeImageResponseBody$Data.class
 com/aliyun/sdk/service/sas20181203/models/ListPrivateRegistryListResponseBody$ImageRegistryInfos.class
 com/aliyun/sdk/service/sas20181203/models/DescribePropertySoftwareItemRequest$Builder.class
@@ -3577,6 +3748,7 @@ com/aliyun/sdk/service/sas20181203/models/ExecStrategyResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/DescribeBackupMachineStatusResponseBody$BackupMachineStatus$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeBackupPolicyResponse.class
 com/aliyun/sdk/service/sas20181203/models/ModifyVulTargetConfigResponse$BuilderImpl.class
+com/aliyun/sdk/service/sas20181203/models/ListInterceptionHistoryResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeVpcHoneyPotCriteriaResponseBody$CriteriaList$Builder.class
 com/aliyun/sdk/service/sas20181203/models/ModifyCycleTaskResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/VerifyCheckResultResponse$1.class
@@ -3606,6 +3778,7 @@ com/aliyun/sdk/service/sas20181203/models/ListUuidsByWebPathResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/DescribeImageInstancesResponseBody$PageInfo.class
 com/aliyun/sdk/service/sas20181203/models/ListUuidsByWebPathRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/CheckSecurityEventIdRequest$Builder.class
+com/aliyun/sdk/service/sas20181203/models/ModifyInterceptionRuleSwitchRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeTraceInfoDetailResponseBody$EdgeList.class
 com/aliyun/sdk/service/sas20181203/models/GetInterceptionTargetDetailResponseBody$RuleTarget$Builder.class
 com/aliyun/sdk/service/sas20181203/models/ModifyPushAllTaskRequest$Builder.class
@@ -3617,6 +3790,7 @@ com/aliyun/sdk/service/sas20181203/models/OperateCommonTargetConfigResponse$Buil
 com/aliyun/sdk/service/sas20181203/models/DescribeSuspiciousOverallConfigResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeSecureSuggestionResponse.class
 com/aliyun/sdk/service/sas20181203/models/StartBaselineSecurityCheckResponseBody$Builder.class
+com/aliyun/sdk/service/sas20181203/models/ListInterceptionTargetPageResponse.class
 com/aliyun/sdk/service/sas20181203/models/AddVpcHoneyPotRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/CreateHoneypotNodeRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/InstallCloudMonitorRequest$Builder.class
@@ -3632,6 +3806,8 @@ com/aliyun/sdk/service/sas20181203/models/UpgradeBackupPolicyVersionResponse$1.c
 com/aliyun/sdk/service/sas20181203/models/DescribeVendorListResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/CancelOnceTaskRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeOnceTaskResponseBody$TaskManageResponseList.class
+com/aliyun/sdk/service/sas20181203/models/ModifyInterceptionRuleResponse$Builder.class
+com/aliyun/sdk/service/sas20181203/models/CreateInterceptionRuleRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/CreateCycleTaskRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeAlarmEventDetailResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeAllGroupsResponseBody$1.class
@@ -3646,6 +3822,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeDomainListResponse$BuilderImpl
 com/aliyun/sdk/service/sas20181203/models/DescribeNoticeConfigResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/DescribeExposedInstanceListResponse.class
 com/aliyun/sdk/service/sas20181203/models/DescribeVpcHoneyPotListResponseBody$Builder.class
+com/aliyun/sdk/service/sas20181203/models/GetAppNetworkResponseBody$AppNetwork$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribePropertyProcItemRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeWebPathResponse.class
 com/aliyun/sdk/service/sas20181203/models/HandleSecurityEventsResponseBody$HandleSecurityEventsResponse.class
@@ -3672,11 +3849,13 @@ com/aliyun/sdk/service/sas20181203/models/DescribePropertySoftwareDetailResponse
 com/aliyun/sdk/service/sas20181203/models/GetCheckSummaryResponseBody$Standards.class
 com/aliyun/sdk/service/sas20181203/models/OperateVulsRequest.class
 com/aliyun/sdk/service/sas20181203/models/GetOnceTaskResultInfoRequest$Builder.class
+com/aliyun/sdk/service/sas20181203/models/DescribeContainerTagsResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribePropertyScaItemRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DeleteHoneypotPresetResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeAssetDetailByUuidResponseBody$AssetDetail$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeSimilarSecurityEventsRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeCloudCenterInstancesRequest.class
+com/aliyun/sdk/service/sas20181203/models/ListInterceptionTargetPageResponseBody$PageInfo$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribePropertyCountResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/DescribeClientConfSetupResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/ModifyBackupPolicyResponseBody$Builder.class
@@ -3724,6 +3903,7 @@ com/aliyun/sdk/service/sas20181203/models/CreateHoneypotProbeRequest$BindPortLis
 com/aliyun/sdk/service/sas20181203/models/DescribeInstanceStatisticsResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeSupportRegionResponse.class
 com/aliyun/sdk/service/sas20181203/models/GetClusterCheckItemWarningStatisticsResponseBody$1.class
+com/aliyun/sdk/service/sas20181203/models/ListInterceptionHistoryResponseBody$InterceptionHistoryList.class
 com/aliyun/sdk/service/sas20181203/models/DescribeCommonOverallConfigListResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/DescribeClusterInfoListRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeAffectedMaliciousFileImagesResponseBody.class
@@ -3741,6 +3921,7 @@ com/aliyun/sdk/service/sas20181203/models/DeleteVulWhitelistResponse$BuilderImpl
 com/aliyun/sdk/service/sas20181203/models/FixCheckWarningsRequest.class
 com/aliyun/sdk/service/sas20181203/models/ListCheckItemWarningSummaryResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribePropertyProcDetailResponseBody$1.class
+com/aliyun/sdk/service/sas20181203/models/CreateInterceptionTargetResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/ModifyClientConfStrategyResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/DescribeServiceLinkedRoleStatusResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DeleteCustomBlockRecordRequest.class
@@ -3763,6 +3944,7 @@ com/aliyun/sdk/service/sas20181203/models/SasInstallCodeRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeImageBaselineStrategyResponse.class
 com/aliyun/sdk/service/sas20181203/models/DeleteLoginBaseConfigResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/DescribeSuspiciousUUIDConfigResponseBody.class
+com/aliyun/sdk/service/sas20181203/models/ListRuleTargetAllRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/GetHoneypotPresetResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeNoticeConfigResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeTotalStatisticsResponse$BuilderImpl.class
@@ -3798,9 +3980,11 @@ com/aliyun/sdk/service/sas20181203/models/DescribeGroupedMaliciousFilesResponseB
 com/aliyun/sdk/service/sas20181203/models/DescribeCountNotScannedImageResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/InstallCloudMonitorResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeScanTaskProgressResponse$BuilderImpl.class
+com/aliyun/sdk/service/sas20181203/models/DescribeContainerTagsRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeDomainListResponseBody$PageInfo.class
 com/aliyun/sdk/service/sas20181203/models/DescribeVulCheckTaskStatusDetailResponseBody$TaskStatusList.class
 com/aliyun/sdk/service/sas20181203/models/DescribeInstallCaptchaResponse$Builder.class
+com/aliyun/sdk/service/sas20181203/models/ListPodRiskResponseBody$PageInfo.class
 com/aliyun/sdk/service/sas20181203/models/HandleSimilarSecurityEventsResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeImageListBySensitiveFileRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/ListCheckItemWarningSummaryResponse.class
@@ -3819,6 +4003,7 @@ com/aliyun/sdk/service/sas20181203/models/GetRulesCountResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/DescribeExcludeSystemPathResponseBody$PageInfo.class
 com/aliyun/sdk/service/sas20181203/models/DescribeConcernNecessityResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/GetBackupStorageCountResponse$1.class
+com/aliyun/sdk/service/sas20181203/models/AddPrivateRegistryResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/DescribeVulFixStatisticsResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeAffectedMaliciousFileImagesResponseBody$PageInfo.class
 com/aliyun/sdk/service/sas20181203/models/DescribeExportInfoResponse.class
@@ -3869,6 +4054,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeContainerStatisticsRequest.cla
 com/aliyun/sdk/service/sas20181203/models/DescribeAlarmEventListResponse.class
 com/aliyun/sdk/service/sas20181203/models/DescribeWebLockFileChangeStatisticsRequest.class
 com/aliyun/sdk/service/sas20181203/models/ModifyPropertyScheduleConfigResponseBody.class
+com/aliyun/sdk/service/sas20181203/models/GetInterceptionRuleDetailResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/SubmitCheckResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/OperationCancelIgnoreSuspEventResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/DescribeRisksResponseBody$Builder.class
@@ -3882,8 +4068,10 @@ com/aliyun/sdk/service/sas20181203/models/DescribeSearchConditionResponse$Builde
 com/aliyun/sdk/service/sas20181203/models/GetModuleConfigResponse.class
 com/aliyun/sdk/service/sas20181203/models/DescribeImageFixTaskResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/CreateRestoreJobResponse$Builder.class
+com/aliyun/sdk/service/sas20181203/models/ModifyClusterCnnfStatusUserConfirmRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/ListSystemClientRulesRequest.class
 com/aliyun/sdk/service/sas20181203/models/EnableCustomBlockRecordResponse$Builder.class
+com/aliyun/sdk/service/sas20181203/models/DescribeAssetsSecurityEventSummaryResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeExposedCheckWarningResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeClientConfSetupResponseBody$ClientConf$Builder.class
 com/aliyun/sdk/service/sas20181203/models/OperateVirusEventsResponse$1.class
@@ -3891,6 +4079,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeExcludeSystemPathResponse.clas
 com/aliyun/sdk/service/sas20181203/models/DescribeEmgUserAgreementRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/GenerateOnceTaskResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/DescribeImageScanAuthCountResponse$1.class
+com/aliyun/sdk/service/sas20181203/models/DescribeAssetsSecurityEventSummaryResponseBody$Assets$Builder.class
 com/aliyun/sdk/service/sas20181203/models/ListCheckInstanceResultResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/QueryJenkinsImageRegistryPersistenceDayResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DeleteSecurityEventMarkMissListResponse.class
@@ -3903,10 +4092,12 @@ com/aliyun/sdk/service/sas20181203/models/SasInstallCodeResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeCheckWarningDetailResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/UpdateJenkinsImageRegistryNameResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/ModifyClientConfStrategyResponse$1.class
+com/aliyun/sdk/service/sas20181203/models/CreateInterceptionTargetRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/CreateFileDetectUploadUrlResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/DescribePropertySoftwareDetailResponse.class
 com/aliyun/sdk/service/sas20181203/models/GetFileDetectApiInvokeInfoResponseBody$Data.class
 com/aliyun/sdk/service/sas20181203/models/DescribeVulDetailsResponse.class
+com/aliyun/sdk/service/sas20181203/models/ListPodRiskResponse.class
 com/aliyun/sdk/service/sas20181203/models/ModifyStrategyResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/ListPluginForUuidResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeImageRepoCriteriaRequest$Builder.class
@@ -3920,6 +4111,7 @@ com/aliyun/sdk/service/sas20181203/models/DeleteVpcHoneyPotResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/DeleteInterceptionRuleResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeUserBackupMachinesResponse.class
 com/aliyun/sdk/service/sas20181203/models/ModifyPushAllTaskResponseBody$PushTaskResultList.class
+com/aliyun/sdk/service/sas20181203/models/ListImageRegistryRegionResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/CreateCustomBlockRecordResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/ModifyClientConfSetupResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeWarningExportInfoResponseBody$Builder.class
@@ -3935,6 +4127,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeImageBaselineStrategyResponseB
 com/aliyun/sdk/service/sas20181203/models/DescribeAssetDetailByUuidsResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/GetCheckRiskStatisticsResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeUserBackupMachinesRequest$Builder.class
+com/aliyun/sdk/service/sas20181203/models/DescribeAssetsSecurityEventSummaryResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeDomainListResponseBody$DomainListResponseList.class
 com/aliyun/sdk/service/sas20181203/models/AddCheckInstanceResultWhiteListResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeInstanceStatisticsRequest$1.class
@@ -3947,6 +4140,7 @@ com/aliyun/sdk/service/sas20181203/models/ModifyNoticeConfigResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/GenerateOnceTaskRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeAgentInstallStatusResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/DescribeWebLockConfigListResponse$Builder.class
+com/aliyun/sdk/service/sas20181203/models/AddPrivateRegistryResponseBody$Data.class
 com/aliyun/sdk/service/sas20181203/models/GetCheckRiskStatisticsResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/GetModuleConfigResponseBody$Items$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeCheckEcsWarningsResponse$1.class
@@ -3956,6 +4150,7 @@ com/aliyun/sdk/service/sas20181203/models/GetCloudAssetDetailResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/ListAvailableHoneypotRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/PublicSyncAndCreateImageScanTaskResponse.class
 com/aliyun/sdk/service/sas20181203/models/DescribeVendorListResponse$1.class
+com/aliyun/sdk/service/sas20181203/models/CreateInterceptionTargetResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/InstallUniBackupAgentResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/DescribeImageInfoListResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/CreateFileDetectResponse$BuilderImpl.class
@@ -3964,6 +4159,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeCommonOverallConfigResponseBod
 com/aliyun/sdk/service/sas20181203/models/UpdateHoneypotResponseBody$Data$Builder.class
 com/aliyun/sdk/service/sas20181203/models/IgnoreHcCheckWarningsResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/DescribeVulConfigRequest$1.class
+com/aliyun/sdk/service/sas20181203/models/ListPodRiskRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/ListPluginForUuidResponseBody$AegisUuidTargetPluginConfigList$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DeleteSecurityEventMarkMissListRequest.class
 com/aliyun/sdk/service/sas20181203/models/DeleteInterceptionRuleResponse.class
@@ -3996,8 +4192,10 @@ com/aliyun/sdk/service/sas20181203/models/GetClientUserDefineRuleResponse$Builde
 com/aliyun/sdk/service/sas20181203/models/DescribeRiskCheckItemResultRequest.class
 com/aliyun/sdk/service/sas20181203/models/DescribeIpTagsResponse.class
 com/aliyun/sdk/service/sas20181203/models/ModifyAssetGroupResponse.class
+com/aliyun/sdk/service/sas20181203/models/ListInterceptionTargetPageResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/GetRulesCountResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeAttackAnalysisDataResponse$Builder.class
+com/aliyun/sdk/service/sas20181203/models/DeletePrivateRegistryRequest.class
 com/aliyun/sdk/service/sas20181203/models/DescribeLoginBaseConfigsRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/ModifyVulConfigRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DeleteHoneypotProbeRequest$Builder.class
@@ -4006,12 +4204,14 @@ com/aliyun/sdk/service/sas20181203/models/DescribeAllGroupsResponseBody$Groups.c
 com/aliyun/sdk/service/sas20181203/models/DescribeSuspiciousUUIDConfigResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/AddVpcHoneyPotResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/ModifyBackupPolicyStatusResponse$BuilderImpl.class
+com/aliyun/sdk/service/sas20181203/models/DescribeContainerTagsResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/DescribeImageInfoListRequest.class
 com/aliyun/sdk/service/sas20181203/models/DeleteInstallCodeRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/ListVulAutoRepairConfigResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/ListClientUserDefineRulesResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/GetRulesCountResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeInstanceAntiBruteForceRulesRequest.class
+com/aliyun/sdk/service/sas20181203/models/InstallPmAgentResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/ListSystemClientRulesResponseBody$Policies$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeRiskCheckItemResultResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/GetCheckSummaryResponseBody$Builder.class
@@ -4043,6 +4243,7 @@ com/aliyun/sdk/service/sas20181203/models/AddCheckResultWhiteListResponseBody$Bu
 com/aliyun/sdk/service/sas20181203/models/CreateUniRestorePlanResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribePropertyScheduleConfigResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeExposedStatisticsResponse$1.class
+com/aliyun/sdk/service/sas20181203/models/ListRuleTargetAllResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/ListCheckResultRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeImageLatestScanTaskRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/ListCheckInstanceResultResponse$1.class
@@ -4100,6 +4301,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeRiskCheckSummaryResponse.class
 com/aliyun/sdk/service/sas20181203/models/PageImageRegistryResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeImageRepoCriteriaResponse.class
 com/aliyun/sdk/service/sas20181203/models/VerifyCheckInstanceResultRequest$Builder.class
+com/aliyun/sdk/service/sas20181203/models/ListInterceptionTargetPageResponseBody$RuleTargetList.class
 com/aliyun/sdk/service/sas20181203/models/ModifyWebPathRequest.class
 com/aliyun/sdk/service/sas20181203/models/CreateJenkinsImageRegistryResponse.class
 com/aliyun/sdk/service/sas20181203/models/DescribeImageListBySensitiveFileResponseBody$ImageInfos$Builder.class
@@ -4137,6 +4339,7 @@ com/aliyun/sdk/service/sas20181203/models/UpdateHoneypotPresetResponse.class
 com/aliyun/sdk/service/sas20181203/models/DescribeVulTargetConfigResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeExposedInstanceCriteriaResponseBody$CriteriaList$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeCheckFixDetailsResponse$BuilderImpl.class
+com/aliyun/sdk/service/sas20181203/models/ModifyInterceptionRuleSwitchResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeImageListWithBaselineNameResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/ChangeCheckConfigRequest.class
 com/aliyun/sdk/service/sas20181203/models/GetAssetsPropertyDetailResponse$1.class
@@ -4178,6 +4381,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeQuaraFileDownloadInfoRequest$1
 com/aliyun/sdk/service/sas20181203/models/DescribeEventOnStageResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeClusterNetworkResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeStrategyResponseBody$Strategies.class
+com/aliyun/sdk/service/sas20181203/models/ModifyInterceptionTargetRequest.class
 com/aliyun/sdk/service/sas20181203/models/DescribeHoneyPotAuthResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/ModifyCreateVulWhitelistResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeSecurityStatInfoResponseBody$AttackEvent.class
@@ -4192,6 +4396,7 @@ com/aliyun/sdk/service/sas20181203/models/ModifyBackupPolicyResponse$BuilderImpl
 com/aliyun/sdk/service/sas20181203/models/FixCheckWarningsResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/GetVulWhitelistResponseBody$VulWhitelist$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeFrontVulPatchListResponse$1.class
+com/aliyun/sdk/service/sas20181203/models/DescribeContainerTagsResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/GetAssetsPropertyItemResponseBody$PageInfo.class
 com/aliyun/sdk/service/sas20181203/models/DescribeSuspEventQuaraFilesResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DeleteInstallCodeResponse$Builder.class
@@ -4201,6 +4406,7 @@ com/aliyun/sdk/service/sas20181203/models/ListPrivateRegistryListResponseBody$1.
 com/aliyun/sdk/service/sas20181203/models/DescribeClusterInfoListResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/FindContainerNetworkConnectRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeAccessKeyLeakDetailResponse$BuilderImpl.class
+com/aliyun/sdk/service/sas20181203/models/CreateInterceptionTargetResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/DeleteSuspEventNodeResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/ExportWarningResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/ModifyAccessKeyLeakDealRequest$Builder.class
@@ -4232,6 +4438,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeAccesskeyLeakListResponseBody$
 com/aliyun/sdk/service/sas20181203/models/DescribePropertySoftwareDetailResponseBody$Propertys.class
 com/aliyun/sdk/service/sas20181203/models/DescribeImageScanAuthorizationResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/DescribeRestorePlansResponseBody$Builder.class
+com/aliyun/sdk/service/sas20181203/models/ListImageRegistryRegionResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/ModifyCreateVulWhitelistResponseBody$VulWhitelistList$Builder.class
 com/aliyun/sdk/service/sas20181203/models/GetCloudAssetDetailRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribePropertySoftwareItemResponse$1.class
@@ -4288,6 +4495,7 @@ com/aliyun/sdk/service/sas20181203/models/VerifyCheckResultRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeRiskCheckItemResultResponseBody$PageContentResource$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeBackupPoliciesResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/DescribeSasPmAgentListRequest$1.class
+com/aliyun/sdk/service/sas20181203/models/SetClusterInterceptionConfigRequest.class
 com/aliyun/sdk/service/sas20181203/models/GetVulStatisticsRequest.class
 com/aliyun/sdk/service/sas20181203/models/DescribeSecureSuggestionResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/ModifyNoticeConfigRequest$1.class
@@ -4296,6 +4504,7 @@ com/aliyun/sdk/service/sas20181203/models/StartBaselineSecurityCheckResponse$Bui
 com/aliyun/sdk/service/sas20181203/models/GenerateOnceTaskResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/DescribeUniSupportRegionResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/SaveSuspEventUserSettingResponseBody.class
+com/aliyun/sdk/service/sas20181203/models/GetClusterRuleSummaryResponseBody$ClusterRuleSummary.class
 com/aliyun/sdk/service/sas20181203/models/DescribeBackUpExportInfoResponseBody$PageInfo.class
 com/aliyun/sdk/service/sas20181203/models/DescribeAlarmEventListResponseBody$SuspEvents.class
 com/aliyun/sdk/service/sas20181203/models/DescribeCountNotScannedImageRequest.class
@@ -4408,6 +4617,7 @@ com/aliyun/sdk/service/sas20181203/models/ListCheckInstanceResultResponse$Builde
 com/aliyun/sdk/service/sas20181203/models/DescribeImageBaselineCheckResultResponseBody$PageInfo$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeSecureSuggestionResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeWebLockConfigListResponseBody$1.class
+com/aliyun/sdk/service/sas20181203/models/ListImageRiskResponseBody$ImageRiskList$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeExposedStatisticsDetailResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/GetImageScanNumInPeriodResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/UpdateHoneypotNodeResponse$1.class
@@ -4432,12 +4642,14 @@ com/aliyun/sdk/service/sas20181203/models/GetCheckRiskStatisticsRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeVulFixStatisticsResponse.class
 com/aliyun/sdk/service/sas20181203/models/DescribeAssetSummaryRequest.class
 com/aliyun/sdk/service/sas20181203/models/DescribeAlarmEventDetailResponseBody$CauseDetails$Builder.class
+com/aliyun/sdk/service/sas20181203/models/CreateInterceptionRuleResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/ModifyWebLockStartRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeAllEntityRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/ModifyTagWithUuidResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/DescribeEventOnStageRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeRestorePlansResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeClusterNetworkResponseBody.class
+com/aliyun/sdk/service/sas20181203/models/GetClusterRuleSummaryRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/UpgradeBackupPolicyVersionResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeCheckWarningDetailResponse.class
 com/aliyun/sdk/service/sas20181203/models/QueryGroupedSecurityEventMarkMissListResponseBody$1.class
@@ -4453,6 +4665,7 @@ com/aliyun/sdk/service/sas20181203/models/ModifyOperateVulResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/ModifyVulWhitelistTargetResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeDomainListRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribePropertyUsageNewestResponseBody$1.class
+com/aliyun/sdk/service/sas20181203/models/GetAppNetworkResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/DescribeTraceInfoDetailRequest.class
 com/aliyun/sdk/service/sas20181203/models/DescribeCustomBlockRecordsResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/GetCheckRiskStatisticsResponse$BuilderImpl.class
@@ -4481,6 +4694,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeTraceInfoDetailResponseBody$Re
 com/aliyun/sdk/service/sas20181203/models/DescribeClientConfSetupResponseBody$ClientConf.class
 com/aliyun/sdk/service/sas20181203/models/DescribeWebLockInclusiveFileTypeResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeWebLockTotalFileChangeCountResponseBody$Builder.class
+com/aliyun/sdk/service/sas20181203/models/GetInterceptionRuleDetailResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/ModifyRiskSingleResultStatusRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeImageBaselineCheckSummaryRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/GetCloudAssetDetailResponseBody$Builder.class
@@ -4522,6 +4736,7 @@ com/aliyun/sdk/service/sas20181203/models/ModifyVulTargetConfigRequest.class
 com/aliyun/sdk/service/sas20181203/models/GetModuleConfigRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeBackupMachineStatusResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/HandleSecurityEventsResponseBody$HandleSecurityEventsResponse$Builder.class
+com/aliyun/sdk/service/sas20181203/models/ListImageRegistryRegionRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/ListClientUserDefineRulesRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeSuspEventExportInfoResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeBackUpExportInfoResponseBody.class
@@ -4564,6 +4779,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeExcludeSystemPathResponseBody$
 com/aliyun/sdk/service/sas20181203/models/DescribeStrategyTargetResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeCountScannedImageResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeSnapshotsRequest$Builder.class
+com/aliyun/sdk/service/sas20181203/models/GetInterceptionRuleDetailResponseBody$SrcTarget$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeBruteForceSummaryResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/ModifyConcernNecessityResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/DescribeVulListPageResponseBody$Builder.class
@@ -4579,6 +4795,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeAccesskeyLeakListResponse.clas
 com/aliyun/sdk/service/sas20181203/models/DescribeInstanceAntiBruteForceRulesResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/DescribeWebLockStatusResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/UninstallBackupClientRequest$1.class
+com/aliyun/sdk/service/sas20181203/models/ListImageRegistryRegionResponseBody$Regions.class
 com/aliyun/sdk/service/sas20181203/models/DescribeVulWhitelistRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/ModifyWebLockProcessStatusResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeDomainCountResponseBody$1.class
@@ -4586,6 +4803,7 @@ com/aliyun/sdk/service/sas20181203/models/ModifyLoginBaseConfigResponse$BuilderI
 com/aliyun/sdk/service/sas20181203/models/DescribeOfflineMachinesResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/OperateWebLockFileEventsRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/OperateSuspiciousTargetConfigResponseBody$Builder.class
+com/aliyun/sdk/service/sas20181203/models/ListImageRiskResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeBackupPoliciesResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/CreateUniBackupPolicyResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/DescribeWarningExportInfoRequest$Builder.class
@@ -4621,6 +4839,7 @@ com/aliyun/sdk/service/sas20181203/models/ModifyRiskCheckStatusResponse$Builder.
 com/aliyun/sdk/service/sas20181203/models/StartVirusScanTaskResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeCommonTargetResultListResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeSuspiciousUUIDConfigRequest$Builder.class
+com/aliyun/sdk/service/sas20181203/models/ListInterceptionTargetPageRequest.class
 com/aliyun/sdk/service/sas20181203/models/GetSuspiciousStatisticsResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/ListClusterInterceptionConfigResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeImageSensitiveFileListResponseBody$SensitiveFileList.class
@@ -4633,10 +4852,12 @@ com/aliyun/sdk/service/sas20181203/models/DescribeAlarmEventStackInfoResponseBod
 com/aliyun/sdk/service/sas20181203/models/DescribeUniSupportRegionRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/ModifyAssetImportantResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeBackUpExportInfoResponseBody$Data$Builder.class
+com/aliyun/sdk/service/sas20181203/models/ListImageRiskRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/ListInterceptionRulePageResponseBody$PageInfo$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeCheckFixDetailsResponseBody$CheckFixDetails$Builder.class
 com/aliyun/sdk/service/sas20181203/models/GetCloudAssetDetailResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/ListCheckItemWarningMachineResponse.class
+com/aliyun/sdk/service/sas20181203/models/GetInterceptionRuleDetailRequest.class
 com/aliyun/sdk/service/sas20181203/models/GetFileDetectResultResponseBody$ResultList$Builder.class
 com/aliyun/sdk/service/sas20181203/models/QueryDiscoverDatabaseResponse.class
 com/aliyun/sdk/service/sas20181203/models/DescribeRiskTypeResponseBody$ParamList.class
@@ -4669,6 +4890,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeImageScanAuthorizationResponse
 com/aliyun/sdk/service/sas20181203/models/DeleteInterceptionRuleResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/QueryDiscoverDatabaseResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/GetClientUserDefineRuleRequest.class
+com/aliyun/sdk/service/sas20181203/models/AddPrivateRegistryResponseBody$Data$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeAffectedAssetsResponse.class
 com/aliyun/sdk/service/sas20181203/models/PublicCreateImageScanTaskResponse.class
 com/aliyun/sdk/service/sas20181203/models/DescribeCloudCenterInstancesResponseBody$Instances.class
@@ -4687,12 +4909,14 @@ com/aliyun/sdk/service/sas20181203/models/DeleteSuspEventNodeResponse$BuilderImp
 com/aliyun/sdk/service/sas20181203/models/DescribeImageGroupedVulListRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeUniBackupPolicyDetailRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/ModifyAssetGroupResponse$BuilderImpl.class
+com/aliyun/sdk/service/sas20181203/models/ModifyClusterCnnfStatusUserConfirmRequest.class
 com/aliyun/sdk/service/sas20181203/models/DescribeRiskItemTypeResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/FindContainerNetworkConnectResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeClusterNetworkResponseBody$Node$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeImageCriteriaResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeUuidsByVulNamesRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeNoticeConfigRequest.class
+com/aliyun/sdk/service/sas20181203/models/CreateInterceptionTargetResponse.class
 com/aliyun/sdk/service/sas20181203/models/DescribeAgentInstallStatusRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeMachineCanRebootResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/GetCheckConfigResponseBody.class
@@ -4705,6 +4929,7 @@ com/aliyun/sdk/service/sas20181203/models/UpdateHoneypotProbeResponseBody$1.clas
 com/aliyun/sdk/service/sas20181203/models/ModifyClientConfStrategyRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeVulListRequest.class
 com/aliyun/sdk/service/sas20181203/models/DescribeCheckWarningsRequest.class
+com/aliyun/sdk/service/sas20181203/models/ModifyInterceptionTargetResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/DescribeAntiBruteForceRulesResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/OpenSensitiveFileScanRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeImageGroupedVulListResponse$BuilderImpl.class
@@ -4752,6 +4977,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribePropertyUsageNewestResponse$Bu
 com/aliyun/sdk/service/sas20181203/models/DescribeExposedInstanceCriteriaRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/OperateWebLockFileEventsResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/ListAvailableHoneypotResponse$Builder.class
+com/aliyun/sdk/service/sas20181203/models/ListInterceptionTargetPageRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeConcernNecessityResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/DescribeClusterVulStatisticsRequest.class
 com/aliyun/sdk/service/sas20181203/models/DescribeDomainDetailRequest$1.class
@@ -4868,6 +5094,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeImageListBySensitiveFileRespon
 com/aliyun/sdk/service/sas20181203/models/DeleteHoneypotPresetRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/RollbackSuspEventQuaraFileResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeSuspEventsResponseBody$Details$Builder.class
+com/aliyun/sdk/service/sas20181203/models/GetInterceptionRuleDetailResponse.class
 com/aliyun/sdk/service/sas20181203/models/ModifyWebLockDeleteConfigRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeAlarmEventListRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeImageInstancesResponse.class
@@ -4909,6 +5136,7 @@ com/aliyun/sdk/service/sas20181203/models/GetHoneypotProbeResponseBody$Data.clas
 com/aliyun/sdk/service/sas20181203/models/DescribeWebLockTotalFileChangeCountRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeImageScanAuthorizationResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeExposedInstanceDetailResponseBody$1.class
+com/aliyun/sdk/service/sas20181203/models/ModifyInterceptionRuleRequest.class
 com/aliyun/sdk/service/sas20181203/models/ListHoneypotRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeVersionConfigResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeContainerCriteriaRequest$1.class
@@ -4941,6 +5169,7 @@ com/aliyun/sdk/service/sas20181203/models/ListPrivateRegistryListResponseBody$Im
 com/aliyun/sdk/service/sas20181203/models/DescribeImageResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/GetHoneypotNodeResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/GetCheckRiskStatisticsResponseBody$Data$Builder.class
+com/aliyun/sdk/service/sas20181203/models/AddPrivateRegistryResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeAssetDetailByUuidsResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/PublicCreateImageScanTaskResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/ListAvailableHoneypotRequest.class
@@ -4953,6 +5182,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeRiskListCheckResultResponse.cl
 com/aliyun/sdk/service/sas20181203/models/DescribeCountScannedImageResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/ModifyVulConfigResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/DeleteHoneypotProbeRequest$1.class
+com/aliyun/sdk/service/sas20181203/models/ModifyInterceptionRuleResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/DescribeCommonOverallConfigListResponseBody$OverallList.class
 com/aliyun/sdk/service/sas20181203/models/DescribeCheckWarningsResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/DeleteTagWithUuidRequest$1.class
@@ -4966,8 +5196,10 @@ com/aliyun/sdk/service/sas20181203/models/DescribeVulConfigResponse.class
 com/aliyun/sdk/service/sas20181203/models/GetCloudAssetDetailResponseBody$Instances$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DeleteInterceptionTargetRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeDomainDetailResponse$BuilderImpl.class
+com/aliyun/sdk/service/sas20181203/models/ModifyInterceptionRuleSwitchResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/CreateUniRestorePlanResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeSasPmAgentListResponse.class
+com/aliyun/sdk/service/sas20181203/models/GetClusterRuleSummaryResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/ListHoneypotProbeResponseBody$PageInfo.class
 com/aliyun/sdk/service/sas20181203/models/DescribeCloudProductFieldStatisticsResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/DescribeImageRepoDetailListResponseBody$ImageRepoResponses.class
@@ -5038,6 +5270,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeStrategyTargetResponseBody.cla
 com/aliyun/sdk/service/sas20181203/models/CreateBackupPolicyRequest.class
 com/aliyun/sdk/service/sas20181203/models/DescribeHcExportInfoResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/AddClientUserDefineRuleRequest$1.class
+com/aliyun/sdk/service/sas20181203/models/CreateInterceptionTargetRequest.class
 com/aliyun/sdk/service/sas20181203/models/GetCloudAssetDetailRequest$CloudAssetInstances.class
 com/aliyun/sdk/service/sas20181203/models/DescribeClusterInfoListResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DeleteStrategyResponse.class
@@ -5085,6 +5318,7 @@ com/aliyun/sdk/service/sas20181203/models/RebootMachineRequest.class
 com/aliyun/sdk/service/sas20181203/models/DescribeVulTargetStatisticsResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeImageCriteriaResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/OperateCommonOverallConfigResponseBody$Builder.class
+com/aliyun/sdk/service/sas20181203/models/GetAppNetworkResponseBody$Node$Builder.class
 com/aliyun/sdk/service/sas20181203/models/OperateWebLockFileEventsRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/CreateHoneypotRequest.class
 com/aliyun/sdk/service/sas20181203/models/SubmitCheckResponse$Builder.class
@@ -5119,6 +5353,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeAssetSummaryResponseBody$Build
 com/aliyun/sdk/service/sas20181203/models/DescribeWebLockProcessBlockStatisticsResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/GetInterceptionTargetDetailResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/GetAlarmMachineCountResponseBody$Builder.class
+com/aliyun/sdk/service/sas20181203/models/ModifyInterceptionRuleSwitchResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/OperateSuspiciousTargetConfigRequest.class
 com/aliyun/sdk/service/sas20181203/models/QueryGroupIdByGroupNameResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/DescribeInstanceAntiBruteForceRulesResponse.class
@@ -5131,11 +5366,13 @@ com/aliyun/sdk/service/sas20181203/models/DeleteInterceptionRuleResponseBody$Bui
 com/aliyun/sdk/service/sas20181203/models/OperateImageVulRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/ValidateHcWarningsResponse.class
 com/aliyun/sdk/service/sas20181203/models/DescribeSuspEventsResponse$Builder.class
+com/aliyun/sdk/service/sas20181203/models/ListRuleTargetAllResponse.class
 com/aliyun/sdk/service/sas20181203/models/PageImageRegistryResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/StartDiscoverDatabaseTaskResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribePropertyPortItemResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/DescribePropertyPortDetailResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/DescribeUserBackupMachinesResponseBody$1.class
+com/aliyun/sdk/service/sas20181203/models/ModifyInterceptionRuleSwitchResponse.class
 com/aliyun/sdk/service/sas20181203/models/DeleteBackupPolicyMachineRequest.class
 com/aliyun/sdk/service/sas20181203/models/DescribeRiskCheckResultResponseBody$List$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeAlarmEventListResponseBody$PageInfo$Builder.class
@@ -5162,22 +5399,26 @@ com/aliyun/sdk/service/sas20181203/models/DescribeSnapshotsResponseBody$Snapshot
 com/aliyun/sdk/service/sas20181203/models/CreateSimilarSecurityEventsQueryTaskResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/ModifyNoticeConfigRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/GetPropertyScheduleConfigResponseBody$PropertyScheduleConfig$Builder.class
+com/aliyun/sdk/service/sas20181203/models/DeletePrivateRegistryResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/DescribeBruteForceRecordsRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DeleteStrategyRequest.class
 com/aliyun/sdk/service/sas20181203/models/DescribeCriteriaRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeExposedInstanceDetailRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeSecurityEventOperationStatusResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeAssetDetailByUuidsResponse.class
+com/aliyun/sdk/service/sas20181203/models/CreateInterceptionRuleRequest.class
 com/aliyun/sdk/service/sas20181203/models/DescribeSecurityStatInfoResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/DescribeClusterInfoListResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/CreateContainerScanTaskResponse.class
 com/aliyun/sdk/service/sas20181203/models/DescribeCriteriaRequest.class
+com/aliyun/sdk/service/sas20181203/models/DescribeAssetsSecurityEventSummaryResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeCheckFixDetailsResponseBody$ParamList.class
 com/aliyun/sdk/service/sas20181203/models/ListInterceptionImageResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeInstallCodesResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeBruteForceRecordsResponseBody$MachineList$Builder.class
 com/aliyun/sdk/service/sas20181203/models/ListVulAutoRepairConfigRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeContainerStatisticsRequest$1.class
+com/aliyun/sdk/service/sas20181203/models/GetAppNetworkResponseBody$AppNetwork.class
 com/aliyun/sdk/service/sas20181203/models/DescribeNoticeConfigResponseBody$NoticeConfigList$Builder.class
 com/aliyun/sdk/service/sas20181203/models/AddUninstallClientsByUuidsResponse.class
 com/aliyun/sdk/service/sas20181203/models/ModifyClientConfSetupResponseBody$1.class
@@ -5195,6 +5436,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeLogstoreStorageResponse.class
 com/aliyun/sdk/service/sas20181203/models/CreateOrUpdateAssetGroupResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeCheckFixDetailsRequest.class
 com/aliyun/sdk/service/sas20181203/models/DescribeCloudCenterInstancesResponseBody$PageInfo.class
+com/aliyun/sdk/service/sas20181203/models/GetClusterRuleSummaryResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/DescribeInstanceAntiBruteForceRulesRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeAlarmEventDetailResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeDomainListResponseBody$Builder.class
@@ -5205,6 +5447,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeExcludeSystemPathRequest$1.cla
 com/aliyun/sdk/service/sas20181203/models/DescribeTraceInfoDetailResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/GetCloudAssetDetailResponse.class
 com/aliyun/sdk/service/sas20181203/models/DescribeCheckWarningMachinesResponseBody$Machines.class
+com/aliyun/sdk/service/sas20181203/models/ListRuleTargetAllResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeBackupClientsResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeImageBaselineDetailResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/ListCheckItemWarningMachineResponseBody$PageInfo$Builder.class
@@ -5215,6 +5458,7 @@ com/aliyun/sdk/service/sas20181203/models/AddCheckInstanceResultWhiteListRespons
 com/aliyun/sdk/service/sas20181203/models/DescribeCommonOverallConfigResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeImageLatestScanTaskResponseBody$Task.class
 com/aliyun/sdk/service/sas20181203/models/DescribeVpcHoneyPotListResponseBody$VpcSwitchIdList.class
+com/aliyun/sdk/service/sas20181203/models/GetAppNetworkResponseBody$Edge$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeCheckWarningSummaryResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/GetCheckDetailResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/ModifyInstanceAntiBruteForceRuleResponseBody.class
@@ -5250,6 +5494,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeCheckFixDetailsResponseBody.cl
 com/aliyun/sdk/service/sas20181203/models/DescribeInstanceStatisticsResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeLatestScanTaskResponse.class
 com/aliyun/sdk/service/sas20181203/models/DescribeWebLockFileEventsResponse$BuilderImpl.class
+com/aliyun/sdk/service/sas20181203/models/CreateInterceptionTargetResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/DescribeExposedCheckWarningResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeUniBackupPoliciesResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/DescribePropertyCronItemResponseBody$PageInfo$Builder.class
@@ -5325,10 +5570,12 @@ com/aliyun/sdk/service/sas20181203/models/DescribeImageResponse.class
 com/aliyun/sdk/service/sas20181203/models/DescribeImageStatisticsResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/ListClusterCnnfStatusDetailResponse$BuilderImpl.class
 com/aliyun/sdk/service/sas20181203/models/DescribeSuspEventUserSettingResponse$BuilderImpl.class
+com/aliyun/sdk/service/sas20181203/models/CreateInterceptionRuleResponse.class
 com/aliyun/sdk/service/sas20181203/models/DeleteCycleTaskResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/ModifyRiskCheckStatusRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeTotalStatisticsRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/GetCheckDetailResponseBody$AssistInfo$Builder.class
+com/aliyun/sdk/service/sas20181203/models/ListInterceptionHistoryRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/GetFileDetectResultResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeRiskItemTypeResponseBody$List.class
 com/aliyun/sdk/service/sas20181203/models/DescribeWebLockInclusiveFileTypeResponseBody$1.class
@@ -5343,12 +5590,15 @@ com/aliyun/sdk/service/sas20181203/models/GetModuleConfigResponseBody$ModuleConf
 com/aliyun/sdk/service/sas20181203/models/GetAlarmMachineCountResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/ModifyStrategyTargetRequest.class
 com/aliyun/sdk/service/sas20181203/models/DescribeLoginBaseConfigsResponse$BuilderImpl.class
+com/aliyun/sdk/service/sas20181203/models/AddPrivateRegistryRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/CreateHoneypotProbeRequest$HoneypotBindList$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeSuspiciousOverallConfigRequest.class
 com/aliyun/sdk/service/sas20181203/models/ListHoneypotAlarmEventsResponse.class
 com/aliyun/sdk/service/sas20181203/models/DescribeStrategyTargetRequest.class
+com/aliyun/sdk/service/sas20181203/models/DescribeContainerTagsResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeBackUpExportInfoResponseBody$1.class
 com/aliyun/sdk/service/sas20181203/models/ModifyVulWhitelistTargetResponse$BuilderImpl.class
+com/aliyun/sdk/service/sas20181203/models/GetInterceptionRuleDetailResponseBody.class
 com/aliyun/sdk/service/sas20181203/models/GetCheckConfigResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/ListPrivateRegistryTypeResponseBody$RegistryTypeInfos$Builder.class
 com/aliyun/sdk/service/sas20181203/models/IgnoreCheckItemsRequest$1.class
@@ -5389,6 +5639,7 @@ com/aliyun/sdk/service/sas20181203/models/DescribeImageVulListResponse$BuilderIm
 com/aliyun/sdk/service/sas20181203/models/DescribeVulFixStatisticsRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/DescribeCycleTaskListResponse$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeSuspEventExportInfoResponseBody.class
+com/aliyun/sdk/service/sas20181203/models/ListInterceptionTargetPageResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/ModifyWebLockStartResponseBody$Builder.class
 com/aliyun/sdk/service/sas20181203/models/CreateBackupPolicyRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/ModifyWebLockProcessStatusResponseBody.class
@@ -5398,6 +5649,7 @@ com/aliyun/sdk/service/sas20181203/models/DeleteTagWithUuidResponseBody$Builder.
 com/aliyun/sdk/service/sas20181203/models/ModifyAutoDelConfigResponse$Builder.class
 com/aliyun/sdk/service/sas20181203/models/ModifyVulWhitelistTargetRequest$1.class
 com/aliyun/sdk/service/sas20181203/models/DescribeWebLockFileChangeStatisticsResponse$BuilderImpl.class
+com/aliyun/sdk/service/sas20181203/models/DeletePrivateRegistryRequest$Builder.class
 com/aliyun/sdk/service/sas20181203/models/ListSystemClientRuleTypesResponse.class
 com/aliyun/sdk/service/sas20181203/models/DescribeOnceTaskLeafRecordPageResponseBody$TaskImageInfo.class
 com/aliyun/sdk/service/sas20181203/models/ModifyClientConfSetupRequest$Builder.class

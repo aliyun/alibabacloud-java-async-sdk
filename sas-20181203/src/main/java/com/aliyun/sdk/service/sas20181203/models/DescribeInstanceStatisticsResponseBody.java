@@ -96,6 +96,9 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
         @NameInMap("CmsNum")
         private Integer cmsNum;
 
+        @NameInMap("CspmNum")
+        private Integer cspmNum;
+
         @NameInMap("CveNum")
         private Integer cveNum;
 
@@ -135,6 +138,7 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
             this.agentlessVulSca = builder.agentlessVulSca;
             this.appNum = builder.appNum;
             this.cmsNum = builder.cmsNum;
+            this.cspmNum = builder.cspmNum;
             this.cveNum = builder.cveNum;
             this.emgNum = builder.emgNum;
             this.health = builder.health;
@@ -209,6 +213,13 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
          */
         public Integer getCmsNum() {
             return this.cmsNum;
+        }
+
+        /**
+         * @return cspmNum
+         */
+        public Integer getCspmNum() {
+            return this.cspmNum;
         }
 
         /**
@@ -290,6 +301,7 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
             private Integer agentlessVulSca; 
             private Integer appNum; 
             private Integer cmsNum; 
+            private Integer cspmNum; 
             private Integer cveNum; 
             private Integer emgNum; 
             private Integer health; 
@@ -362,6 +374,14 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
              */
             public Builder cmsNum(Integer cmsNum) {
                 this.cmsNum = cmsNum;
+                return this;
+            }
+
+            /**
+             * The number of CSPM risks detected on the asset.
+             */
+            public Builder cspmNum(Integer cspmNum) {
+                this.cspmNum = cspmNum;
                 return this;
             }
 
