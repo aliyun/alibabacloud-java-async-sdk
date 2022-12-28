@@ -27,6 +27,7 @@ com/aliyun/sdk/service/elasticsearch20170613/models/DeleteConnectedClusterRespon
 com/aliyun/sdk/service/elasticsearch20170613/models/InterruptLogstashTaskResponse.class
 com/aliyun/sdk/service/elasticsearch20170613/models/ListApmResponseBody$1.class
 com/aliyun/sdk/service/elasticsearch20170613/models/ListInstanceResponseBody$Result.class
+com/aliyun/sdk/service/elasticsearch20170613/models/CreateCollectorRequest$Configs$Builder.class
 com/aliyun/sdk/service/elasticsearch20170613/models/ModifyInstanceMaintainTimeResponse$Builder.class
 com/aliyun/sdk/service/elasticsearch20170613/models/RemoveApmResponse$BuilderImpl.class
 com/aliyun/sdk/service/elasticsearch20170613/models/DescribeConnectableClustersResponse.class
@@ -51,6 +52,7 @@ com/aliyun/sdk/service/elasticsearch20170613/models/UpdateBlackIpsRequest.class
 com/aliyun/sdk/service/elasticsearch20170613/models/UpdateComponentIndexResponse$1.class
 com/aliyun/sdk/service/elasticsearch20170613/models/DescribeSnapshotSettingResponse$1.class
 com/aliyun/sdk/service/elasticsearch20170613/models/CreateILMPolicyResponseBody$1.class
+com/aliyun/sdk/service/elasticsearch20170613/models/CollectorTargetInstance$Builder.class
 com/aliyun/sdk/service/elasticsearch20170613/models/DeactivateZonesResponseBody$Builder.class
 com/aliyun/sdk/service/elasticsearch20170613/models/DescribeKibanaSettingsResponse.class
 com/aliyun/sdk/service/elasticsearch20170613/models/CreateCollectorResponseBody$Result$Builder.class
@@ -249,6 +251,7 @@ com/aliyun/sdk/service/elasticsearch20170613/models/DescribeInstanceResponseBody
 com/aliyun/sdk/service/elasticsearch20170613/models/UpdateIndexTemplateResponseBody.class
 com/aliyun/sdk/service/elasticsearch20170613/models/ShrinkNodeResponse$BuilderImpl.class
 com/aliyun/sdk/service/elasticsearch20170613/models/DescribeCollectorRequest.class
+com/aliyun/sdk/service/elasticsearch20170613/models/CreateCollectorRequest$Configs.class
 com/aliyun/sdk/service/elasticsearch20170613/models/ListLogstashResponseBody$NodeSpec$Builder.class
 com/aliyun/sdk/service/elasticsearch20170613/models/ListLogstashRequest$1.class
 com/aliyun/sdk/service/elasticsearch20170613/models/ListDefaultCollectorConfigurationsResponse$1.class
@@ -338,6 +341,7 @@ com/aliyun/sdk/service/elasticsearch20170613/models/GetRegionConfigurationRespon
 com/aliyun/sdk/service/elasticsearch20170613/models/ValidateSlrPermissionResponse.class
 com/aliyun/sdk/service/elasticsearch20170613/models/InterruptElasticsearchTaskRequest$1.class
 com/aliyun/sdk/service/elasticsearch20170613/models/ListEcsInstancesResponseBody$Headers$Builder.class
+com/aliyun/sdk/service/elasticsearch20170613/models/CollectorDeployMachine$Machines.class
 com/aliyun/sdk/service/elasticsearch20170613/models/ListAllNodeResponse$BuilderImpl.class
 com/aliyun/sdk/service/elasticsearch20170613/models/ListDictInformationResponseBody$1.class
 com/aliyun/sdk/service/elasticsearch20170613/models/DescribeElasticsearchHealthRequest$1.class
@@ -379,6 +383,7 @@ com/aliyun/sdk/service/elasticsearch20170613/models/CreateComponentIndexRequest$
 com/aliyun/sdk/service/elasticsearch20170613/models/UpdateKibanaWhiteIpsRequest$Builder.class
 com/aliyun/sdk/service/elasticsearch20170613/models/ListConnectedClustersRequest.class
 com/aliyun/sdk/service/elasticsearch20170613/models/ReinstallCollectorResponse$BuilderImpl.class
+com/aliyun/sdk/service/elasticsearch20170613/models/CollectorKibanaInstance$Builder.class
 com/aliyun/sdk/service/elasticsearch20170613/models/DescribePipelineResponse$Builder.class
 com/aliyun/sdk/service/elasticsearch20170613/models/UpdateAdvancedSettingResponseBody.class
 com/aliyun/sdk/service/elasticsearch20170613/models/GetEmonGrafanaAlertsRequest$1.class
@@ -410,6 +415,7 @@ com/aliyun/sdk/service/elasticsearch20170613/models/GetOpenStoreUsageRequest$Bui
 com/aliyun/sdk/service/elasticsearch20170613/models/UpdateCollectorResponseBody$Machines$Builder.class
 com/aliyun/sdk/service/elasticsearch20170613/models/StopPipelinesRequest$Builder.class
 com/aliyun/sdk/service/elasticsearch20170613/models/ListAckNamespacesResponse$1.class
+com/aliyun/sdk/service/elasticsearch20170613/models/CreateIndexTemplateRequest$Template.class
 com/aliyun/sdk/service/elasticsearch20170613/models/MigrateToOtherZoneRequest$Builder.class
 com/aliyun/sdk/service/elasticsearch20170613/models/DescribeInstanceResponseBody$NetworkConfig$Builder.class
 com/aliyun/sdk/service/elasticsearch20170613/models/RenewLogstashResponseBody$1.class
@@ -832,6 +838,7 @@ com/aliyun/sdk/service/elasticsearch20170613/models/ListInstanceResponse$1.class
 com/aliyun/sdk/service/elasticsearch20170613/models/DescribePipelineResponseBody$Result$Builder.class
 com/aliyun/sdk/service/elasticsearch20170613/models/ListSnapshotReposByInstanceIdRequest.class
 com/aliyun/sdk/service/elasticsearch20170613/models/ListPipelineRequest.class
+com/aliyun/sdk/service/elasticsearch20170613/models/CollectorTargetInstance.class
 com/aliyun/sdk/service/elasticsearch20170613/models/UpdateLogstashResponse$1.class
 com/aliyun/sdk/service/elasticsearch20170613/models/ListAllNodeResponse.class
 com/aliyun/sdk/service/elasticsearch20170613/models/ListApmResponseBody$Headers.class
@@ -845,6 +852,7 @@ com/aliyun/sdk/service/elasticsearch20170613/models/DescribeInstanceResponseBody
 com/aliyun/sdk/service/elasticsearch20170613/models/DescribeDynamicSettingsRequest$1.class
 com/aliyun/sdk/service/elasticsearch20170613/models/ListConnectedClustersResponse$1.class
 com/aliyun/sdk/service/elasticsearch20170613/models/ShrinkNodeRequest.class
+com/aliyun/sdk/service/elasticsearch20170613/models/CollectorTargetInstance$1.class
 com/aliyun/sdk/service/elasticsearch20170613/models/CancelLogstashDeletionRequest$Builder.class
 com/aliyun/sdk/service/elasticsearch20170613/models/MoveResourceGroupResponseBody$SynonymsDicts$Builder.class
 com/aliyun/sdk/service/elasticsearch20170613/models/DeleteVpcEndpointResponseBody$Builder.class
@@ -1271,6 +1279,7 @@ com/aliyun/sdk/service/elasticsearch20170613/models/InterruptElasticsearchTaskRe
 com/aliyun/sdk/service/elasticsearch20170613/models/UpgradeEngineVersionResponse$BuilderImpl.class
 com/aliyun/sdk/service/elasticsearch20170613/models/DeleteComponentIndexResponse$1.class
 com/aliyun/sdk/service/elasticsearch20170613/models/InstallLogstashSystemPluginRequest$1.class
+com/aliyun/sdk/service/elasticsearch20170613/models/CollectorDeployMachine.class
 com/aliyun/sdk/service/elasticsearch20170613/models/ClientNodeConfiguration$Builder.class
 com/aliyun/sdk/service/elasticsearch20170613/models/ValidateShrinkNodesRequest$ValidateShrinkNodesRequestBody.class
 com/aliyun/sdk/service/elasticsearch20170613/models/ModifyElastictaskRequest$Builder.class
@@ -1286,6 +1295,7 @@ com/aliyun/sdk/service/elasticsearch20170613/models/UpdateTemplateRequest$Builde
 com/aliyun/sdk/service/elasticsearch20170613/models/GetRegionConfigurationResponseBody$SupportVersions.class
 com/aliyun/sdk/service/elasticsearch20170613/models/GetEmonGrafanaAlertsResponse$BuilderImpl.class
 com/aliyun/sdk/service/elasticsearch20170613/models/UpdateLogstashChargeTypeResponseBody$Builder.class
+com/aliyun/sdk/service/elasticsearch20170613/models/CollectorDeployMachine$1.class
 com/aliyun/sdk/service/elasticsearch20170613/models/GetRegionConfigurationResponseBody$NodeSpecList$Builder.class
 com/aliyun/sdk/service/elasticsearch20170613/models/UpdateILMPolicyResponse$Builder.class
 com/aliyun/sdk/service/elasticsearch20170613/models/UpdateInstanceChargeTypeResponse.class
@@ -1421,6 +1431,7 @@ com/aliyun/sdk/service/elasticsearch20170613/models/UpdateCollectorNameResponseB
 com/aliyun/sdk/service/elasticsearch20170613/models/ListEcsInstancesResponseBody$Configs.class
 com/aliyun/sdk/service/elasticsearch20170613/models/UpdateWhiteIpsRequest.class
 com/aliyun/sdk/service/elasticsearch20170613/models/InstallAckOperatorResponse$Builder.class
+com/aliyun/sdk/service/elasticsearch20170613/models/CollectorKibanaInstance$1.class
 com/aliyun/sdk/service/elasticsearch20170613/models/ShrinkNodeRequest$ShrinkNodeRequestBody$Builder.class
 com/aliyun/sdk/service/elasticsearch20170613/models/ValidateConnectionResponse$BuilderImpl.class
 com/aliyun/sdk/service/elasticsearch20170613/models/ListDiagnoseReportResponse$Builder.class
@@ -2014,6 +2025,7 @@ com/aliyun/sdk/service/elasticsearch20170613/models/GetSuggestShrinkableNodesReq
 com/aliyun/sdk/service/elasticsearch20170613/models/UpdateXpackMonitorConfigRequest$Builder.class
 com/aliyun/sdk/service/elasticsearch20170613/models/DeleteSnapshotRepoResponse.class
 com/aliyun/sdk/service/elasticsearch20170613/models/UpdateHotIkDictsResponse$1.class
+com/aliyun/sdk/service/elasticsearch20170613/models/CollectorDeployMachine$Builder.class
 com/aliyun/sdk/service/elasticsearch20170613/models/ListDeprecatedTemplatesRequest.class
 com/aliyun/sdk/service/elasticsearch20170613/models/OpenDiagnosisResponseBody.class
 com/aliyun/sdk/service/elasticsearch20170613/models/GetClusterDataInformationRequest$1.class
@@ -2033,6 +2045,7 @@ com/aliyun/sdk/service/elasticsearch20170613/models/CreateComponentIndexResponse
 com/aliyun/sdk/service/elasticsearch20170613/models/ListTagsResponseBody$Result.class
 com/aliyun/sdk/service/elasticsearch20170613/models/ListDiagnoseReportIdsRequest$1.class
 com/aliyun/sdk/service/elasticsearch20170613/models/DescribeInstanceResponseBody$1.class
+com/aliyun/sdk/service/elasticsearch20170613/models/CollectorDeployMachine$Machines$Builder.class
 com/aliyun/sdk/service/elasticsearch20170613/models/GetOpenStoreUsageRequest$1.class
 com/aliyun/sdk/service/elasticsearch20170613/models/CreateInstanceResponseBody.class
 com/aliyun/sdk/service/elasticsearch20170613/models/DeleteConnectedClusterRequest.class
@@ -2084,6 +2097,7 @@ com/aliyun/sdk/service/elasticsearch20170613/models/UpdateBlackIpsResponseBody$B
 com/aliyun/sdk/service/elasticsearch20170613/models/InstallLogstashSystemPluginRequest.class
 com/aliyun/sdk/service/elasticsearch20170613/models/DescribeElasticsearchHealthResponseBody$Builder.class
 com/aliyun/sdk/service/elasticsearch20170613/models/GetRegionConfigurationResponseBody.class
+com/aliyun/sdk/service/elasticsearch20170613/models/CollectorKibanaInstance.class
 com/aliyun/sdk/service/elasticsearch20170613/models/ListActionRecordsResponse$Builder.class
 com/aliyun/sdk/service/elasticsearch20170613/models/CancelTaskResponseBody$Builder.class
 com/aliyun/sdk/service/elasticsearch20170613/models/CreateVpcEndpointRequest.class
@@ -2205,6 +2219,7 @@ com/aliyun/sdk/service/elasticsearch20170613/models/CreatePipelinesResponseBody$
 com/aliyun/sdk/service/elasticsearch20170613/models/DescribeDiagnosisSettingsResponse$BuilderImpl.class
 com/aliyun/sdk/service/elasticsearch20170613/models/UpdateInstanceResponseBody$KibanaConfiguration$Builder.class
 com/aliyun/sdk/service/elasticsearch20170613/models/DescribeApmResponseBody$Result$Builder.class
+com/aliyun/sdk/service/elasticsearch20170613/models/CreateIndexTemplateRequest$Template$Builder.class
 com/aliyun/sdk/service/elasticsearch20170613/models/ListPluginsResponse$1.class
 com/aliyun/sdk/service/elasticsearch20170613/models/DescribeComponentIndexResponse$BuilderImpl.class
 com/aliyun/sdk/service/elasticsearch20170613/models/UpdateDictResponse$1.class

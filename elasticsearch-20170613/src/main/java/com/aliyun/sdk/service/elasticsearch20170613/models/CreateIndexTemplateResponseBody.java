@@ -58,7 +58,7 @@ public class CreateIndexTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * 索引模版名称
          */
         public Builder result(String result) {
             this.result = result;
