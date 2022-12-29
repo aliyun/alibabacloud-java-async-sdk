@@ -17,9 +17,19 @@ public class GetSexRatioRequest extends Request {
     @Validation(required = true)
     private String cateIds;
 
+    @Query
+    @NameInMap("EndingDate")
+    private String endingDate;
+
+    @Query
+    @NameInMap("StartDate")
+    private String startDate;
+
     private GetSexRatioRequest(Builder builder) {
         super(builder);
         this.cateIds = builder.cateIds;
+        this.endingDate = builder.endingDate;
+        this.startDate = builder.startDate;
     }
 
     public static Builder builder() {
@@ -42,8 +52,24 @@ public class GetSexRatioRequest extends Request {
         return this.cateIds;
     }
 
+    /**
+     * @return endingDate
+     */
+    public String getEndingDate() {
+        return this.endingDate;
+    }
+
+    /**
+     * @return startDate
+     */
+    public String getStartDate() {
+        return this.startDate;
+    }
+
     public static final class Builder extends Request.Builder<GetSexRatioRequest, Builder> {
         private String cateIds; 
+        private String endingDate; 
+        private String startDate; 
 
         private Builder() {
             super();
@@ -52,6 +78,8 @@ public class GetSexRatioRequest extends Request {
         private Builder(GetSexRatioRequest request) {
             super(request);
             this.cateIds = request.cateIds;
+            this.endingDate = request.endingDate;
+            this.startDate = request.startDate;
         } 
 
         /**
@@ -60,6 +88,24 @@ public class GetSexRatioRequest extends Request {
         public Builder cateIds(String cateIds) {
             this.putQueryParameter("CateIds", cateIds);
             this.cateIds = cateIds;
+            return this;
+        }
+
+        /**
+         * EndingDate.
+         */
+        public Builder endingDate(String endingDate) {
+            this.putQueryParameter("EndingDate", endingDate);
+            this.endingDate = endingDate;
+            return this;
+        }
+
+        /**
+         * StartDate.
+         */
+        public Builder startDate(String startDate) {
+            this.putQueryParameter("StartDate", startDate);
+            this.startDate = startDate;
             return this;
         }
 

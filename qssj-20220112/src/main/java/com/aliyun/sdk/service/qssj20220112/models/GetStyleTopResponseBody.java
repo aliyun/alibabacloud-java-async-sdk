@@ -147,6 +147,9 @@ public class GetStyleTopResponseBody extends TeaModel {
         @NameInMap("Color")
         private String color;
 
+        @NameInMap("ExposureValue")
+        private Long exposureValue;
+
         @NameInMap("Images")
         private java.util.List < String > images;
 
@@ -165,6 +168,9 @@ public class GetStyleTopResponseBody extends TeaModel {
         @NameInMap("SearchVolume")
         private Double searchVolume;
 
+        @NameInMap("ShopId")
+        private Long shopId;
+
         @NameInMap("ShopName")
         private String shopName;
 
@@ -180,12 +186,14 @@ public class GetStyleTopResponseBody extends TeaModel {
             this.buyerTags = builder.buyerTags;
             this.cateName = builder.cateName;
             this.color = builder.color;
+            this.exposureValue = builder.exposureValue;
             this.images = builder.images;
             this.material = builder.material;
             this.price = builder.price;
             this.productLink = builder.productLink;
             this.salesVolume = builder.salesVolume;
             this.searchVolume = builder.searchVolume;
+            this.shopId = builder.shopId;
             this.shopName = builder.shopName;
             this.style = builder.style;
             this.title = builder.title;
@@ -235,6 +243,13 @@ public class GetStyleTopResponseBody extends TeaModel {
         }
 
         /**
+         * @return exposureValue
+         */
+        public Long getExposureValue() {
+            return this.exposureValue;
+        }
+
+        /**
          * @return images
          */
         public java.util.List < String > getImages() {
@@ -277,6 +292,13 @@ public class GetStyleTopResponseBody extends TeaModel {
         }
 
         /**
+         * @return shopId
+         */
+        public Long getShopId() {
+            return this.shopId;
+        }
+
+        /**
          * @return shopName
          */
         public String getShopName() {
@@ -303,12 +325,14 @@ public class GetStyleTopResponseBody extends TeaModel {
             private String buyerTags; 
             private String cateName; 
             private String color; 
+            private Long exposureValue; 
             private java.util.List < String > images; 
             private String material; 
             private Double price; 
             private String productLink; 
             private Double salesVolume; 
             private Double searchVolume; 
+            private Long shopId; 
             private String shopName; 
             private String style; 
             private String title; 
@@ -350,6 +374,14 @@ public class GetStyleTopResponseBody extends TeaModel {
              */
             public Builder color(String color) {
                 this.color = color;
+                return this;
+            }
+
+            /**
+             * ExposureValue.
+             */
+            public Builder exposureValue(Long exposureValue) {
+                this.exposureValue = exposureValue;
                 return this;
             }
 
@@ -398,6 +430,14 @@ public class GetStyleTopResponseBody extends TeaModel {
              */
             public Builder searchVolume(Double searchVolume) {
                 this.searchVolume = searchVolume;
+                return this;
+            }
+
+            /**
+             * ShopId.
+             */
+            public Builder shopId(Long shopId) {
+                this.shopId = shopId;
                 return this;
             }
 

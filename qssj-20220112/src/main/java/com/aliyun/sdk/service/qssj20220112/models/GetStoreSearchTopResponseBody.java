@@ -132,11 +132,31 @@ public class GetStoreSearchTopResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
+        @NameInMap("CommodityQuantity")
+        private Long commodityQuantity;
+
+        @NameInMap("SalesVolume")
+        private Long salesVolume;
+
+        @NameInMap("SearchVolume")
+        private Long searchVolume;
+
+        @NameInMap("ShopId")
+        private Long shopId;
+
         @NameInMap("ShopName")
         private String shopName;
 
+        @NameInMap("TotalSales")
+        private Double totalSales;
+
         private Data(Builder builder) {
+            this.commodityQuantity = builder.commodityQuantity;
+            this.salesVolume = builder.salesVolume;
+            this.searchVolume = builder.searchVolume;
+            this.shopId = builder.shopId;
             this.shopName = builder.shopName;
+            this.totalSales = builder.totalSales;
         }
 
         public static Builder builder() {
@@ -148,20 +168,100 @@ public class GetStoreSearchTopResponseBody extends TeaModel {
         }
 
         /**
+         * @return commodityQuantity
+         */
+        public Long getCommodityQuantity() {
+            return this.commodityQuantity;
+        }
+
+        /**
+         * @return salesVolume
+         */
+        public Long getSalesVolume() {
+            return this.salesVolume;
+        }
+
+        /**
+         * @return searchVolume
+         */
+        public Long getSearchVolume() {
+            return this.searchVolume;
+        }
+
+        /**
+         * @return shopId
+         */
+        public Long getShopId() {
+            return this.shopId;
+        }
+
+        /**
          * @return shopName
          */
         public String getShopName() {
             return this.shopName;
         }
 
+        /**
+         * @return totalSales
+         */
+        public Double getTotalSales() {
+            return this.totalSales;
+        }
+
         public static final class Builder {
+            private Long commodityQuantity; 
+            private Long salesVolume; 
+            private Long searchVolume; 
+            private Long shopId; 
             private String shopName; 
+            private Double totalSales; 
+
+            /**
+             * CommodityQuantity.
+             */
+            public Builder commodityQuantity(Long commodityQuantity) {
+                this.commodityQuantity = commodityQuantity;
+                return this;
+            }
+
+            /**
+             * SalesVolume.
+             */
+            public Builder salesVolume(Long salesVolume) {
+                this.salesVolume = salesVolume;
+                return this;
+            }
+
+            /**
+             * SearchVolume.
+             */
+            public Builder searchVolume(Long searchVolume) {
+                this.searchVolume = searchVolume;
+                return this;
+            }
+
+            /**
+             * ShopId.
+             */
+            public Builder shopId(Long shopId) {
+                this.shopId = shopId;
+                return this;
+            }
 
             /**
              * ShopName.
              */
             public Builder shopName(String shopName) {
                 this.shopName = shopName;
+                return this;
+            }
+
+            /**
+             * TotalSales.
+             */
+            public Builder totalSales(Double totalSales) {
+                this.totalSales = totalSales;
                 return this;
             }
 

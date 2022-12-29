@@ -132,8 +132,17 @@ public class GetTrendStatisticResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
+        @NameInMap("BrandCount")
+        private Long brandCount;
+
         @NameInMap("CommodityCount")
         private Long commodityCount;
+
+        @NameInMap("ExposureValue")
+        private Long exposureValue;
+
+        @NameInMap("Hits")
+        private Long hits;
 
         @NameInMap("Sales")
         private Double sales;
@@ -142,7 +151,10 @@ public class GetTrendStatisticResponseBody extends TeaModel {
         private Long shopCount;
 
         private Data(Builder builder) {
+            this.brandCount = builder.brandCount;
             this.commodityCount = builder.commodityCount;
+            this.exposureValue = builder.exposureValue;
+            this.hits = builder.hits;
             this.sales = builder.sales;
             this.shopCount = builder.shopCount;
         }
@@ -156,10 +168,31 @@ public class GetTrendStatisticResponseBody extends TeaModel {
         }
 
         /**
+         * @return brandCount
+         */
+        public Long getBrandCount() {
+            return this.brandCount;
+        }
+
+        /**
          * @return commodityCount
          */
         public Long getCommodityCount() {
             return this.commodityCount;
+        }
+
+        /**
+         * @return exposureValue
+         */
+        public Long getExposureValue() {
+            return this.exposureValue;
+        }
+
+        /**
+         * @return hits
+         */
+        public Long getHits() {
+            return this.hits;
         }
 
         /**
@@ -177,15 +210,42 @@ public class GetTrendStatisticResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Long brandCount; 
             private Long commodityCount; 
+            private Long exposureValue; 
+            private Long hits; 
             private Double sales; 
             private Long shopCount; 
+
+            /**
+             * BrandCount.
+             */
+            public Builder brandCount(Long brandCount) {
+                this.brandCount = brandCount;
+                return this;
+            }
 
             /**
              * CommodityCount.
              */
             public Builder commodityCount(Long commodityCount) {
                 this.commodityCount = commodityCount;
+                return this;
+            }
+
+            /**
+             * ExposureValue.
+             */
+            public Builder exposureValue(Long exposureValue) {
+                this.exposureValue = exposureValue;
+                return this;
+            }
+
+            /**
+             * Hits.
+             */
+            public Builder hits(Long hits) {
+                this.hits = hits;
                 return this;
             }
 

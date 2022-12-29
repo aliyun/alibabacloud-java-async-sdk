@@ -22,6 +22,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetAllTrendCategoryResponse> getAllTrendCategory(GetAllTrendCategoryRequest request);
 
+    CompletableFuture<GetCrowdDataResponse> getCrowdData(GetCrowdDataRequest request);
+
     CompletableFuture<GetCrowdLabelResponse> getCrowdLabel(GetCrowdLabelRequest request);
 
     CompletableFuture<GetCrowdReginResponse> getCrowdRegin(GetCrowdReginRequest request);
@@ -36,6 +38,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetStoreSearchTopResponse> getStoreSearchTop(GetStoreSearchTopRequest request);
 
+    CompletableFuture<GetStyleOnlineResponse> getStyleOnline(GetStyleOnlineRequest request);
+
     CompletableFuture<GetStyleTopResponse> getStyleTop(GetStyleTopRequest request);
 
     CompletableFuture<GetTrendImageDetailResponse> getTrendImageDetail(GetTrendImageDetailRequest request);
@@ -47,5 +51,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetTrendSearchRecordResponse> getTrendSearchRecord(GetTrendSearchRecordRequest request);
 
     CompletableFuture<GetTrendStatisticResponse> getTrendStatistic(GetTrendStatisticRequest request);
+
+    CompletableFuture<GetTrendWordAndIndexResponse> getTrendWordAndIndex(GetTrendWordAndIndexRequest request);
 
 }

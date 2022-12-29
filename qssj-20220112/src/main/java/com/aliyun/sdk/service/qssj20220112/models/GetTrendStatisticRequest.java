@@ -13,13 +13,32 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetTrendStatisticRequest extends Request {
     @Body
+    @NameInMap("BrandNames")
+    private String brandNames;
+
+    @Body
     @NameInMap("CateIds")
-    @Validation(required = true)
     private String cateIds;
+
+    @Body
+    @NameInMap("EndingDate")
+    private String endingDate;
+
+    @Body
+    @NameInMap("ShopIds")
+    private String shopIds;
+
+    @Body
+    @NameInMap("StartDate")
+    private String startDate;
 
     private GetTrendStatisticRequest(Builder builder) {
         super(builder);
+        this.brandNames = builder.brandNames;
         this.cateIds = builder.cateIds;
+        this.endingDate = builder.endingDate;
+        this.shopIds = builder.shopIds;
+        this.startDate = builder.startDate;
     }
 
     public static Builder builder() {
@@ -36,14 +55,46 @@ public class GetTrendStatisticRequest extends Request {
     }
 
     /**
+     * @return brandNames
+     */
+    public String getBrandNames() {
+        return this.brandNames;
+    }
+
+    /**
      * @return cateIds
      */
     public String getCateIds() {
         return this.cateIds;
     }
 
+    /**
+     * @return endingDate
+     */
+    public String getEndingDate() {
+        return this.endingDate;
+    }
+
+    /**
+     * @return shopIds
+     */
+    public String getShopIds() {
+        return this.shopIds;
+    }
+
+    /**
+     * @return startDate
+     */
+    public String getStartDate() {
+        return this.startDate;
+    }
+
     public static final class Builder extends Request.Builder<GetTrendStatisticRequest, Builder> {
+        private String brandNames; 
         private String cateIds; 
+        private String endingDate; 
+        private String shopIds; 
+        private String startDate; 
 
         private Builder() {
             super();
@@ -51,8 +102,21 @@ public class GetTrendStatisticRequest extends Request {
 
         private Builder(GetTrendStatisticRequest request) {
             super(request);
+            this.brandNames = request.brandNames;
             this.cateIds = request.cateIds;
+            this.endingDate = request.endingDate;
+            this.shopIds = request.shopIds;
+            this.startDate = request.startDate;
         } 
+
+        /**
+         * BrandNames.
+         */
+        public Builder brandNames(String brandNames) {
+            this.putBodyParameter("BrandNames", brandNames);
+            this.brandNames = brandNames;
+            return this;
+        }
 
         /**
          * CateIds.
@@ -60,6 +124,33 @@ public class GetTrendStatisticRequest extends Request {
         public Builder cateIds(String cateIds) {
             this.putBodyParameter("CateIds", cateIds);
             this.cateIds = cateIds;
+            return this;
+        }
+
+        /**
+         * EndingDate.
+         */
+        public Builder endingDate(String endingDate) {
+            this.putBodyParameter("EndingDate", endingDate);
+            this.endingDate = endingDate;
+            return this;
+        }
+
+        /**
+         * ShopIds.
+         */
+        public Builder shopIds(String shopIds) {
+            this.putBodyParameter("ShopIds", shopIds);
+            this.shopIds = shopIds;
+            return this;
+        }
+
+        /**
+         * StartDate.
+         */
+        public Builder startDate(String startDate) {
+            this.putBodyParameter("StartDate", startDate);
+            this.startDate = startDate;
             return this;
         }
 
