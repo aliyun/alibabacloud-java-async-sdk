@@ -138,7 +138,11 @@ public class DescribeRegionsRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * Specifies the language of the returned **RegionName** and **ZoneName** values. Default value: zh. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese.
+         * *   **en**: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -165,7 +169,10 @@ public class DescribeRegionsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
+         * <p>
+         * 
+         * >  If you do not specify this parameter, all supported regions are queried.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

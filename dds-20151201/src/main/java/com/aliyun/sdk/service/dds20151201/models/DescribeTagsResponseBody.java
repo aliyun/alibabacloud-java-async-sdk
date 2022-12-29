@@ -62,7 +62,10 @@ public class DescribeTagsResponseBody extends TeaModel {
         private java.util.List < Tags> tags; 
 
         /**
-         * NextToken.
+         * The token used to start the next query.
+         * <p>
+         * 
+         * >  If not all results are returned in the first query, this parameter is returned. You can pass in the value of this parameter in the next query.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -70,7 +73,7 @@ public class DescribeTagsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +81,7 @@ public class DescribeTagsResponseBody extends TeaModel {
         }
 
         /**
-         * Tags.
+         * Details about the tags.
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.tags = tags;
@@ -130,7 +133,7 @@ public class DescribeTagsResponseBody extends TeaModel {
             private java.util.List < String > tagValues; 
 
             /**
-             * TagKey.
+             * The key of the tag.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -138,7 +141,7 @@ public class DescribeTagsResponseBody extends TeaModel {
             }
 
             /**
-             * TagValues.
+             * The values of the tags.
              */
             public Builder tagValues(java.util.List < String > tagValues) {
                 this.tagValues = tagValues;

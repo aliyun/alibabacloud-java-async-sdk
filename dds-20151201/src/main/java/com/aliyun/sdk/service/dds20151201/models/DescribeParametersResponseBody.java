@@ -86,7 +86,7 @@ public class DescribeParametersResponseBody extends TeaModel {
         private RunningParameters runningParameters; 
 
         /**
-         * ConfigParameters.
+         * The list of instance parameters in the configuration template.
          */
         public Builder configParameters(ConfigParameters configParameters) {
             this.configParameters = configParameters;
@@ -94,7 +94,7 @@ public class DescribeParametersResponseBody extends TeaModel {
         }
 
         /**
-         * Engine.
+         * The database engine. Default value: **mongodb**.
          */
         public Builder engine(String engine) {
             this.engine = engine;
@@ -102,7 +102,7 @@ public class DescribeParametersResponseBody extends TeaModel {
         }
 
         /**
-         * EngineVersion.
+         * The version number of the database.
          */
         public Builder engineVersion(String engineVersion) {
             this.engineVersion = engineVersion;
@@ -110,7 +110,7 @@ public class DescribeParametersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeParametersResponseBody extends TeaModel {
         }
 
         /**
-         * RunningParameters.
+         * The list of instance parameters that have taken effect.
          */
         public Builder runningParameters(RunningParameters runningParameters) {
             this.runningParameters = runningParameters;
@@ -218,7 +218,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             private String parameterValue; 
 
             /**
-             * CheckingCode.
+             * The valid values of the parameter.
              */
             public Builder checkingCode(String checkingCode) {
                 this.checkingCode = checkingCode;
@@ -226,7 +226,11 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ForceRestart.
+             * Indicates whether a restart is required for parameter modifications to take effect.
+             * <p>
+             * 
+             * *   **false**: A restart is not required. Modifications take effect immediately.
+             * *   **true**: A restart is required for modifications to take effect.
              */
             public Builder forceRestart(Boolean forceRestart) {
                 this.forceRestart = forceRestart;
@@ -234,7 +238,11 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiableStatus.
+             * Indicates whether the parameter is modifiable.
+             * <p>
+             * 
+             * *   **false**: The parameter is not modifiable.
+             * *   **true**: The parameter is modifiable.
              */
             public Builder modifiableStatus(Boolean modifiableStatus) {
                 this.modifiableStatus = modifiableStatus;
@@ -242,7 +250,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterDescription.
+             * The description of the parameter.
              */
             public Builder parameterDescription(String parameterDescription) {
                 this.parameterDescription = parameterDescription;
@@ -250,7 +258,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterName.
+             * The name of the parameter.
              */
             public Builder parameterName(String parameterName) {
                 this.parameterName = parameterName;
@@ -258,7 +266,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterValue.
+             * The value of the parameter.
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;
@@ -400,7 +408,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             private String parameterValue; 
 
             /**
-             * CheckingCode.
+             * The valid values of the parameter.
              */
             public Builder checkingCode(String checkingCode) {
                 this.checkingCode = checkingCode;
@@ -408,7 +416,11 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ForceRestart.
+             * Indicates whether a restart is required for parameter modifications to take effect.
+             * <p>
+             * 
+             * *   **false**: A restart is not required. Modifications take effect immediately.
+             * *   **true**: A restart is required for modifications to take effect.
              */
             public Builder forceRestart(String forceRestart) {
                 this.forceRestart = forceRestart;
@@ -416,7 +428,11 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiableStatus.
+             * Indicates whether the parameter is modifiable.
+             * <p>
+             * 
+             * *   **false**: The parameter is not modifiable.
+             * *   **true**: The parameter is modifiable.
              */
             public Builder modifiableStatus(String modifiableStatus) {
                 this.modifiableStatus = modifiableStatus;
@@ -424,7 +440,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterDescription.
+             * The description of the parameter.
              */
             public Builder parameterDescription(String parameterDescription) {
                 this.parameterDescription = parameterDescription;
@@ -432,7 +448,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterName.
+             * The name of the parameter.
              */
             public Builder parameterName(String parameterName) {
                 this.parameterName = parameterName;
@@ -440,7 +456,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterValue.
+             * The value of the parameter.
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;

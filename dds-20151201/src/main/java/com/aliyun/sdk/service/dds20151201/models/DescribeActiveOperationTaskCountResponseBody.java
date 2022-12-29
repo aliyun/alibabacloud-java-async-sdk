@@ -62,7 +62,11 @@ public class DescribeActiveOperationTaskCountResponseBody extends TeaModel {
         private Integer taskCount; 
 
         /**
-         * NeedPop.
+         * Indicates whether any O&M tasks need pop-up windows to notify users actions. Valid values: 
+         * <p>
+         * 
+         * - **0**: No O&M tasks need pop-up windows to notify users actions.
+         * - **1**: Some O&M tasks need pop-up windows to notify users actions.
          */
         public Builder needPop(Integer needPop) {
             this.needPop = needPop;
@@ -70,7 +74,7 @@ public class DescribeActiveOperationTaskCountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +82,7 @@ public class DescribeActiveOperationTaskCountResponseBody extends TeaModel {
         }
 
         /**
-         * TaskCount.
+         * The number of pending O&M tasks.
          */
         public Builder taskCount(Integer taskCount) {
             this.taskCount = taskCount;

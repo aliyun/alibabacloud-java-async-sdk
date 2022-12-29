@@ -62,7 +62,7 @@ public class DeleteNodeResponseBody extends TeaModel {
         private Integer taskId; 
 
         /**
-         * OrderId.
+         * The order ID of the instance.
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -70,7 +70,7 @@ public class DeleteNodeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DeleteNodeResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * The ID of the task.
          */
         public Builder taskId(Integer taskId) {
             this.taskId = taskId;

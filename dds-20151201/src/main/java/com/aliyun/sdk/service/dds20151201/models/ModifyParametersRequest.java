@@ -182,7 +182,13 @@ public class ModifyParametersRequest extends Request {
         } 
 
         /**
-         * CharacterType.
+         * The role of the instance. Valid values:
+         * <p>
+         * 
+         * *   **db**: a shard node
+         * *   **cs**: a Configserver node
+         * *   **mongos**: a mongos node
+         * *   **logic**: a sharded cluster instance
          */
         public Builder characterType(String characterType) {
             this.putQueryParameter("CharacterType", characterType);
@@ -191,7 +197,10 @@ public class ModifyParametersRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
+         * <p>
+         * 
+         * >  If you set this parameter to the ID of a sharded cluster instance, you must also specify the NodeId parameter.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -200,7 +209,10 @@ public class ModifyParametersRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * The ID of the mongos or shard node in the specified sharded cluster instance.
+         * <p>
+         * 
+         * >  This parameter is valid only when DBInstanceId is set to the ID of a sharded cluster instance.
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -227,7 +239,10 @@ public class ModifyParametersRequest extends Request {
         }
 
         /**
-         * Parameters.
+         * The instance parameters that you want to modify and their values. Specify this parameter in a JSON string. Sample format: {"ParameterName1":"ParameterValue1","ParameterName2":"ParameterValue2"}.
+         * <p>
+         * 
+         * >  You can call the [DescribeParameterTemplates](~~67618~~) operation to query a list of default parameter templates.
          */
         public Builder parameters(String parameters) {
             this.putQueryParameter("Parameters", parameters);
@@ -236,7 +251,7 @@ public class ModifyParametersRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

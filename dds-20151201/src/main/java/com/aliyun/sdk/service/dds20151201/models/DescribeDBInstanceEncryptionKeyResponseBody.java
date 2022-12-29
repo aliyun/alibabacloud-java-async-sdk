@@ -134,7 +134,7 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Creator.
+         * The UID of the key creator.
          */
         public Builder creator(String creator) {
             this.creator = creator;
@@ -142,7 +142,7 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
         }
 
         /**
-         * DeleteDate.
+         * The scheduled time when the key for the instance will be deleted. If the value is empty, the key will not be deleted.
          */
         public Builder deleteDate(String deleteDate) {
             this.deleteDate = deleteDate;
@@ -150,7 +150,7 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * The description of the key for the instance.
          */
         public Builder description(String description) {
             this.description = description;
@@ -158,7 +158,7 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
         }
 
         /**
-         * EncryptionKey.
+         * The key for the instance.
          */
         public Builder encryptionKey(String encryptionKey) {
             this.encryptionKey = encryptionKey;
@@ -166,7 +166,11 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
         }
 
         /**
-         * EncryptionKeyStatus.
+         * Indicates whether the key for the instance is enabled. Valid values:
+         * <p>
+         * 
+         * *   **Enabled**
+         * *   **Disabled**
          */
         public Builder encryptionKeyStatus(String encryptionKeyStatus) {
             this.encryptionKeyStatus = encryptionKeyStatus;
@@ -174,7 +178,7 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
         }
 
         /**
-         * KeyUsage.
+         * The purpose of the key for the instance.
          */
         public Builder keyUsage(String keyUsage) {
             this.keyUsage = keyUsage;
@@ -182,7 +186,7 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
         }
 
         /**
-         * MaterialExpireTime.
+         * The expiration time of the key for the instance. The time is displayed in UTC. If the value is empty, the key for the instance will not expire.
          */
         public Builder materialExpireTime(String materialExpireTime) {
             this.materialExpireTime = materialExpireTime;
@@ -190,7 +194,7 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
         }
 
         /**
-         * Origin.
+         * The source of the key for the instance.
          */
         public Builder origin(String origin) {
             this.origin = origin;
@@ -198,7 +202,7 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

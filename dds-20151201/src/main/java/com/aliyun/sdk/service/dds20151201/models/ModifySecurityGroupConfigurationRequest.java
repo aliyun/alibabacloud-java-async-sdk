@@ -163,7 +163,7 @@ public class ModifySecurityGroupConfigurationRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -208,7 +208,11 @@ public class ModifySecurityGroupConfigurationRequest extends Request {
         }
 
         /**
-         * SecurityGroupId.
+         * The ID of the ECS security group.
+         * <p>
+         * 
+         * > * You can bind up to 10 ECS security groups to an ApsaraDB for MongoDB instance.
+         * > * You can call the [DescribeSecurityGroup](~~25556~~) operation of ECS to query the security groups in the specified region.
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);

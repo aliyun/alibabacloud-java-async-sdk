@@ -70,6 +70,7 @@ com/aliyun/sdk/service/dds20151201/models/DescribeActiveOperationTaskCountRespon
 com/aliyun/sdk/service/dds20151201/models/DescribeAvailableResourceResponseBody$SupportedNodeType$Builder.class
 com/aliyun/sdk/service/dds20151201/models/CheckCloudResourceAuthorizedRequest$1.class
 com/aliyun/sdk/service/dds20151201/models/DescribeUserEncryptionKeyListResponseBody$1.class
+com/aliyun/sdk/service/dds20151201/models/TransformInstanceChargeTypeResponseBody.class
 com/aliyun/sdk/service/dds20151201/models/DescribeRenewalPriceResponseBody$Coupon$Builder.class
 com/aliyun/sdk/service/dds20151201/models/ModifyDBInstanceSpecResponseBody$1.class
 com/aliyun/sdk/service/dds20151201/models/SwitchDBInstanceHAResponse$Builder.class
@@ -121,6 +122,7 @@ com/aliyun/sdk/service/dds20151201/models/DescribeSecurityIpsResponseBody$Securi
 com/aliyun/sdk/service/dds20151201/models/ModifyNodeSpecBatchResponseBody.class
 com/aliyun/sdk/service/dds20151201/models/DescribeDBInstancePerformanceResponseBody$PerformanceValue.class
 com/aliyun/sdk/service/dds20151201/models/DescribeAccountsRequest$1.class
+com/aliyun/sdk/service/dds20151201/models/TransformInstanceChargeTypeResponseBody$Builder.class
 com/aliyun/sdk/service/dds20151201/models/DescribeBackupPolicyRequest$Builder.class
 com/aliyun/sdk/service/dds20151201/models/ModifyNodeSpecResponse.class
 com/aliyun/sdk/service/dds20151201/models/TagResourcesResponse.class
@@ -484,8 +486,10 @@ com/aliyun/sdk/service/dds20151201/models/DescribeAuditPolicyResponseBody$1.clas
 com/aliyun/sdk/service/dds20151201/models/DescribeDBInstancesResponseBody$Tag.class
 com/aliyun/sdk/service/dds20151201/models/DestroyInstanceResponseBody$Builder.class
 com/aliyun/sdk/service/dds20151201/models/DescribeRoleZoneInfoResponseBody$ZoneInfo$Builder.class
+com/aliyun/sdk/service/dds20151201/models/TransformInstanceChargeTypeRequest$1.class
 com/aliyun/sdk/service/dds20151201/models/ModifyDBInstanceSpecResponse$BuilderImpl.class
 com/aliyun/sdk/service/dds20151201/models/DescribeAuditPolicyRequest.class
+com/aliyun/sdk/service/dds20151201/models/TransformInstanceChargeTypeResponse$BuilderImpl.class
 com/aliyun/sdk/service/dds20151201/models/RenewDBInstanceResponse$Builder.class
 com/aliyun/sdk/service/dds20151201/models/DescribeParameterModificationHistoryResponseBody$HistoricalParameter$Builder.class
 com/aliyun/sdk/service/dds20151201/models/DescribePriceResponseBody$SubOrderRuleIds$Builder.class
@@ -562,6 +566,7 @@ com/aliyun/sdk/service/dds20151201/models/DescribeParameterModificationHistoryRe
 com/aliyun/sdk/service/dds20151201/models/DescribeAvailableResourceResponseBody$SupportedEngineVersions.class
 com/aliyun/sdk/service/dds20151201/models/DescribeDBInstanceAttributeResponseBody$MongosAttribute$Builder.class
 com/aliyun/sdk/service/dds20151201/models/DeleteDBInstanceResponse.class
+com/aliyun/sdk/service/dds20151201/models/TransformInstanceChargeTypeResponse$Builder.class
 com/aliyun/sdk/service/dds20151201/models/DescribeRenewalPriceResponseBody$SubOrders.class
 com/aliyun/sdk/service/dds20151201/models/CheckRecoveryConditionResponse.class
 com/aliyun/sdk/service/dds20151201/models/DescribeDedicatedClusterInstanceListResponseBody.class
@@ -587,6 +592,7 @@ com/aliyun/sdk/service/dds20151201/models/ModifyInstanceAutoRenewalAttributeResp
 com/aliyun/sdk/service/dds20151201/models/DescribeKernelReleaseNotesResponse$BuilderImpl.class
 com/aliyun/sdk/service/dds20151201/models/ReleaseNodePrivateNetworkAddressResponse.class
 com/aliyun/sdk/service/dds20151201/models/EvaluateResourceRequest.class
+com/aliyun/sdk/service/dds20151201/models/TransformInstanceChargeTypeResponseBody$1.class
 com/aliyun/sdk/service/dds20151201/models/CreateDBInstanceResponseBody$Builder.class
 com/aliyun/sdk/service/dds20151201/models/UpgradeDBInstanceEngineVersionResponseBody$1.class
 com/aliyun/sdk/service/dds20151201/models/ModifySecurityIpsRequest$Builder.class
@@ -844,6 +850,7 @@ com/aliyun/sdk/service/dds20151201/models/RenewDBInstanceResponse$1.class
 com/aliyun/sdk/service/dds20151201/models/ListTagResourcesRequest$Tag$Builder.class
 com/aliyun/sdk/service/dds20151201/models/ReleaseNodePrivateNetworkAddressResponseBody$1.class
 com/aliyun/sdk/service/dds20151201/models/DescribeShardingNetworkAddressResponseBody$NetworkAddresses$Builder.class
+com/aliyun/sdk/service/dds20151201/models/TransformInstanceChargeTypeResponse.class
 com/aliyun/sdk/service/dds20151201/models/DescribeTagsRequest.class
 com/aliyun/sdk/service/dds20151201/models/DescribePriceResponseBody$SubOrderRuleIds.class
 com/aliyun/sdk/service/dds20151201/models/DescribeReplicaSetRoleRequest$1.class
@@ -866,6 +873,7 @@ com/aliyun/sdk/service/dds20151201/models/RestoreDBInstanceRequest$Builder.class
 com/aliyun/sdk/service/dds20151201/models/ModifyDBInstanceSpecRequest.class
 com/aliyun/sdk/service/dds20151201/models/DescribeKernelReleaseNotesResponseBody$1.class
 com/aliyun/sdk/service/dds20151201/models/UpgradeDBInstanceEngineVersionRequest$Builder.class
+com/aliyun/sdk/service/dds20151201/models/TransformInstanceChargeTypeRequest.class
 com/aliyun/sdk/service/dds20151201/models/DescribeDBInstanceSSLResponseBody.class
 com/aliyun/sdk/service/dds20151201/models/DescribeAvailableResourceResponseBody$SupportedDBType$Builder.class
 com/aliyun/sdk/service/dds20151201/models/DescribeParametersResponseBody.class
@@ -875,6 +883,7 @@ com/aliyun/sdk/service/dds20151201/models/DescribeDBInstanceTDEInfoResponse$Buil
 com/aliyun/sdk/service/dds20151201/models/ModifyInstanceAutoRenewalAttributeRequest$Builder.class
 com/aliyun/sdk/service/dds20151201/models/ListTagResourcesRequest.class
 com/aliyun/sdk/service/dds20151201/models/DescribeReplicaSetRoleRequest.class
+com/aliyun/sdk/service/dds20151201/models/TransformInstanceChargeTypeResponse$1.class
 com/aliyun/sdk/service/dds20151201/models/ModifyAccountDescriptionRequest$Builder.class
 com/aliyun/sdk/service/dds20151201/models/MigrateAvailableZoneResponseBody.class
 com/aliyun/sdk/service/dds20151201/models/DescribeAvailableEngineVersionResponseBody$EngineVersions$Builder.class
@@ -888,6 +897,7 @@ com/aliyun/sdk/service/dds20151201/models/DescribeAvailableEngineVersionResponse
 com/aliyun/sdk/service/dds20151201/models/DescribeParameterModificationHistoryResponse.class
 com/aliyun/sdk/service/dds20151201/models/CreateNodeBatchRequest$1.class
 com/aliyun/sdk/service/dds20151201/models/RestartDBInstanceResponse.class
+com/aliyun/sdk/service/dds20151201/models/DescribePriceResponseBody$PromotionRuleIdList.class
 com/aliyun/sdk/service/dds20151201/models/DescribeDBInstancesOverviewResponseBody$DBInstances.class
 com/aliyun/sdk/service/dds20151201/models/CreateNodeResponseBody$1.class
 com/aliyun/sdk/service/dds20151201/models/DescribeErrorLogRecordsResponseBody$Builder.class
@@ -970,6 +980,7 @@ com/aliyun/sdk/service/dds20151201/models/DescribeErrorLogRecordsResponseBody$Lo
 com/aliyun/sdk/service/dds20151201/models/DescribeErrorLogRecordsResponseBody$Items$Builder.class
 com/aliyun/sdk/service/dds20151201/models/DescribeSecurityGroupConfigurationResponseBody$1.class
 com/aliyun/sdk/service/dds20151201/models/DescribeRoleZoneInfoResponse$1.class
+com/aliyun/sdk/service/dds20151201/models/TransformInstanceChargeTypeRequest$Builder.class
 com/aliyun/sdk/service/dds20151201/models/ModifyDBInstanceNetExpireTimeResponse$1.class
 com/aliyun/sdk/service/dds20151201/models/DescribeSecurityGroupConfigurationResponse$BuilderImpl.class
 com/aliyun/sdk/service/dds20151201/models/DescribeParametersResponseBody$ConfigParameters$Builder.class
@@ -994,6 +1005,7 @@ com/aliyun/sdk/service/dds20151201/models/DescribeRunningLogRecordsResponse$Buil
 com/aliyun/sdk/service/dds20151201/models/ModifyDBInstanceNetExpireTimeResponse$Builder.class
 com/aliyun/sdk/service/dds20151201/models/DescribeAvailableResourceRequest$Builder.class
 com/aliyun/sdk/service/dds20151201/models/DescribeAvailableResourceResponseBody$AvailableZones$Builder.class
+com/aliyun/sdk/service/dds20151201/models/DescribePriceResponseBody$PromotionRuleIdList$Builder.class
 com/aliyun/sdk/service/dds20151201/models/RestartDBInstanceRequest$Builder.class
 com/aliyun/sdk/service/dds20151201/models/ModifySecurityGroupConfigurationRequest.class
 com/aliyun/sdk/service/dds20151201/models/DescribeDBInstanceAttributeResponseBody$ReplicaSets.class

@@ -74,7 +74,7 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         private String SSLStatus; 
 
         /**
-         * CertCommonName.
+         * The name of the SSL certificate.
          */
         public Builder certCommonName(String certCommonName) {
             this.certCommonName = certCommonName;
@@ -82,7 +82,7 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,7 +90,7 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * SSLExpiredTime.
+         * The time when the SSL certificate expires. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
          */
         public Builder SSLExpiredTime(String SSLExpiredTime) {
             this.SSLExpiredTime = SSLExpiredTime;
@@ -98,7 +98,11 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * SSLStatus.
+         * The status of the SSL feature. Valid values:
+         * <p>
+         * 
+         * *   **Open**: The SSL feature is enabled.
+         * *   **Closed**: The SSL feature is disabled.
          */
         public Builder SSLStatus(String SSLStatus) {
             this.SSLStatus = SSLStatus;

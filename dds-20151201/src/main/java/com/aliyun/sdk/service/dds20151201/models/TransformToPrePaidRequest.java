@@ -219,7 +219,13 @@ public class TransformToPrePaidRequest extends Request {
         }
 
         /**
-         * AutoPay.
+         * Specifies whether to enable automatic payment. Valid values:
+         * <p>
+         * 
+         * *   **true**: enables automatic payment.
+         * *   **false**: disables automatic payment. For more information, see [Renew an ApsaraDB for MongoDB subscription instance](~~85052~~).
+         * 
+         * >  Default value: **true**.
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -228,7 +234,13 @@ public class TransformToPrePaidRequest extends Request {
         }
 
         /**
-         * AutoRenew.
+         * Specifies whether to enable auto-renewal for the instance. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
+         * 
+         * >  Default value: **false**.
          */
         public Builder autoRenew(String autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -237,7 +249,7 @@ public class TransformToPrePaidRequest extends Request {
         }
 
         /**
-         * BusinessInfo.
+         * The business information. This is an additional parameter.
          */
         public Builder businessInfo(String businessInfo) {
             this.putQueryParameter("BusinessInfo", businessInfo);
@@ -246,7 +258,7 @@ public class TransformToPrePaidRequest extends Request {
         }
 
         /**
-         * CouponNo.
+         * The coupon code. Default value: `youhuiquan_promotion_option_id_for_blank`.
          */
         public Builder couponNo(String couponNo) {
             this.putQueryParameter("CouponNo", couponNo);
@@ -255,7 +267,7 @@ public class TransformToPrePaidRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -282,7 +294,7 @@ public class TransformToPrePaidRequest extends Request {
         }
 
         /**
-         * Period.
+         * The subscription duration of the instance. Unit: months. Valid values: **1, 2, 3, 4, 5, 6, 7, 8, 9******, **12**, **24**, and **36**.
          */
         public Builder period(Long period) {
             this.putQueryParameter("Period", period);

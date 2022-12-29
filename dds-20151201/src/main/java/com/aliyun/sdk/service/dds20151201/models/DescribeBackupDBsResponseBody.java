@@ -86,7 +86,7 @@ public class DescribeBackupDBsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Databases.
+         * Details about the databases.
          */
         public Builder databases(Databases databases) {
             this.databases = databases;
@@ -94,7 +94,7 @@ public class DescribeBackupDBsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeBackupDBsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeBackupDBsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeBackupDBsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The number of returned databases.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -158,7 +158,7 @@ public class DescribeBackupDBsResponseBody extends TeaModel {
             private String DBName; 
 
             /**
-             * DBName.
+             * The name of the database.
              */
             public Builder DBName(String DBName) {
                 this.DBName = DBName;

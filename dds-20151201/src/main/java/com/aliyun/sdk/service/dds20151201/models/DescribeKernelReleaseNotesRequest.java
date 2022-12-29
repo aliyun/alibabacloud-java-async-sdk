@@ -147,7 +147,11 @@ public class DescribeKernelReleaseNotesRequest extends Request {
         }
 
         /**
-         * KernelVersion.
+         * The number of the minor database version. For example: **mongodb\_20180522\_0.4.8**.
+         * <p>
+         * 
+         * *   If you specify this parameter, a list of version numbers later than the version specified is returned.
+         * *   If you do not specify this parameter, a list of all the version numbers is returned.
          */
         public Builder kernelVersion(String kernelVersion) {
             this.putQueryParameter("KernelVersion", kernelVersion);

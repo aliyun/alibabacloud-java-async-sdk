@@ -74,7 +74,11 @@ public class EvaluateResourceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DBInstanceAvailable.
+         * Indicates whether the resources are sufficient in the region. Valid values:
+         * <p>
+         * 
+         * *   **1**: The resources are sufficient.
+         * *   **0**: The resources are insufficient.
          */
         public Builder DBInstanceAvailable(String DBInstanceAvailable) {
             this.DBInstanceAvailable = DBInstanceAvailable;
@@ -82,7 +86,7 @@ public class EvaluateResourceResponseBody extends TeaModel {
         }
 
         /**
-         * Engine.
+         * The database engine of the instance. The returned value is MongoDB.
          */
         public Builder engine(String engine) {
             this.engine = engine;
@@ -90,7 +94,7 @@ public class EvaluateResourceResponseBody extends TeaModel {
         }
 
         /**
-         * EngineVersion.
+         * The database engine version of the instance.
          */
         public Builder engineVersion(String engineVersion) {
             this.engineVersion = engineVersion;
@@ -98,7 +102,7 @@ public class EvaluateResourceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

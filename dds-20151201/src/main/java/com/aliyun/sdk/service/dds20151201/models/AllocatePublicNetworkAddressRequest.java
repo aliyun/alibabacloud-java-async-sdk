@@ -162,7 +162,10 @@ public class AllocatePublicNetworkAddressRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
+         * <p>
+         * 
+         * >  If you set this parameter to the ID of a sharded cluster instance, you must also specify the **NodeId** parameter.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -171,7 +174,10 @@ public class AllocatePublicNetworkAddressRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * The ID of the mongos, shard, or Configserver node in the sharded cluster instance. You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to view the ID of the mongos, shard, or Configserver node.
+         * <p>
+         * 
+         * >  This parameter is required only when you specify the **DBInstanceId** parameter to the ID of a sharded cluster instance.
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);

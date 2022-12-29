@@ -205,7 +205,7 @@ public class ModifyDBInstanceTDERequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of an instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -214,7 +214,7 @@ public class ModifyDBInstanceTDERequest extends Request {
         }
 
         /**
-         * EncryptionKey.
+         * The custom key.
          */
         public Builder encryptionKey(String encryptionKey) {
             this.putQueryParameter("EncryptionKey", encryptionKey);
@@ -223,7 +223,10 @@ public class ModifyDBInstanceTDERequest extends Request {
         }
 
         /**
-         * EncryptorName.
+         * The encryption method. Set the value to **AES-256-CBC**.
+         * <p>
+         * 
+         * >  This parameter is valid only when you specify the **TEDStatus** parameter to **enabled**.
          */
         public Builder encryptorName(String encryptorName) {
             this.putQueryParameter("EncryptorName", encryptorName);
@@ -268,7 +271,11 @@ public class ModifyDBInstanceTDERequest extends Request {
         }
 
         /**
-         * RoleARN.
+         * The ARN of the role. It is in the format of `acs:ram::$accountID:role/$roleName`.
+         * <p>
+         * 
+         * > * `$accountID`: indicates the ID of the Alibaba Cloud account that owns the RAM role. To view the account ID, log on to the Alibaba Cloud Management Console, move your pointer over your profile picture in the upper-right corner, and then click Security Settings.
+         * > * `$roleName`: indicates the name of the RAM role. To view the RAM role name, perform the following steps: Log on to the RAM console. In the left-side navigation pane, click RAM Roles. In the RAM Role Name column on the page that appears, you can view the name of the RAM role.
          */
         public Builder roleARN(String roleARN) {
             this.putQueryParameter("RoleARN", roleARN);
@@ -286,7 +293,10 @@ public class ModifyDBInstanceTDERequest extends Request {
         }
 
         /**
-         * TDEStatus.
+         * The TDE status. Set the value to **Enabled**.
+         * <p>
+         * 
+         * >  Exercise caution when enabling TDE. After TDE is enabled, it cannot be disabled.
          */
         public Builder TDEStatus(String TDEStatus) {
             this.putQueryParameter("TDEStatus", TDEStatus);

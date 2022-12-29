@@ -265,7 +265,10 @@ public class DescribeDedicatedClusterInstanceListRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the dedicated cluster to which the instance belongs.
+         * <p>
+         * 
+         * >  Separate multiple IDs with commas (,).
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -274,7 +277,10 @@ public class DescribeDedicatedClusterInstanceListRequest extends Request {
         }
 
         /**
-         * DedicatedHostName.
+         * The name of the dedicated host.
+         * <p>
+         * 
+         * >  Separate multiple names with commas (,).
          */
         public Builder dedicatedHostName(String dedicatedHostName) {
             this.putQueryParameter("DedicatedHostName", dedicatedHostName);
@@ -283,7 +289,7 @@ public class DescribeDedicatedClusterInstanceListRequest extends Request {
         }
 
         /**
-         * Engine.
+         * The database engine. Set the value to MongoDB.
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -292,7 +298,7 @@ public class DescribeDedicatedClusterInstanceListRequest extends Request {
         }
 
         /**
-         * EngineVersion.
+         * The version number of the database engine. Set the value to **4.2**.
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -301,7 +307,10 @@ public class DescribeDedicatedClusterInstanceListRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the ApsaraDB for MongoDB instance.
+         * <p>
+         * 
+         * >  Separate multiple IDs with commas (,).
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -310,7 +319,14 @@ public class DescribeDedicatedClusterInstanceListRequest extends Request {
         }
 
         /**
-         * InstanceNetType.
+         * The network type of the instance. Valid values:
+         * <p>
+         * 
+         * *   0: The instance is connected over the Internet.
+         * *   1: The instance is connected over an internal network.
+         * *   2\. The instance is deployed in a VPC.
+         * 
+         * Default value: 1.
          */
         public Builder instanceNetType(String instanceNetType) {
             this.putQueryParameter("InstanceNetType", instanceNetType);
@@ -319,7 +335,7 @@ public class DescribeDedicatedClusterInstanceListRequest extends Request {
         }
 
         /**
-         * InstanceStatus.
+         * The status of the instance. For information about the valid values of this parameter, see [Valid values of the InstanceStatus parameter for DescribeDedicatedClusterInstanceList](~~190071~~).
          */
         public Builder instanceStatus(String instanceStatus) {
             this.putQueryParameter("InstanceStatus", instanceStatus);
@@ -346,7 +362,7 @@ public class DescribeDedicatedClusterInstanceListRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Valid values: any non-zero positive integer. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -355,7 +371,7 @@ public class DescribeDedicatedClusterInstanceListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Valid values: **30**, **50**, and **100**. Default value: **30**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -364,7 +380,7 @@ public class DescribeDedicatedClusterInstanceListRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -400,7 +416,7 @@ public class DescribeDedicatedClusterInstanceListRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * The ID of the zone. You can call [DescribeZones](~~61933~~) to query the zone ID.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

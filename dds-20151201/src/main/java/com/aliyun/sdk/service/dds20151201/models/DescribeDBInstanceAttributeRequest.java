@@ -176,7 +176,7 @@ public class DescribeDBInstanceAttributeRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -185,7 +185,7 @@ public class DescribeDBInstanceAttributeRequest extends Request {
         }
 
         /**
-         * Engine.
+         * The database engine of the instance. The value is set to **MongoDB**.
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -212,7 +212,10 @@ public class DescribeDBInstanceAttributeRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group. For more information, see [View basic information of a resource group](~~151181~~).
+         * <p>
+         * 
+         * >  This parameter is available only if you use the China site (aliyun.com).
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

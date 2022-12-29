@@ -191,7 +191,7 @@ public class SwitchDBInstanceHARequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -200,7 +200,10 @@ public class SwitchDBInstanceHARequest extends Request {
         }
 
         /**
-         * NodeId.
+         * The ID of the shard in the sharded cluster instance.
+         * <p>
+         * 
+         * >  You must specify this parameter if the value of **DBInstanceId** is the ID of a sharded cluster instance.
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -245,7 +248,11 @@ public class SwitchDBInstanceHARequest extends Request {
         }
 
         /**
-         * RoleIds.
+         * The IDs of the roles that you want to switch. You can call the [DescribeRoleZoneInfo](~~123802~~) operation to query IDs of roles and roles of nodes.
+         * <p>
+         * 
+         * > * Separate role IDs with commas (,). If this parameter is not specified, roles of the primary and secondary nodes are switched.
+         * > * If the value of **DBInstanceId** is the ID of a sharded cluster instance, the roles to be switched must belong to one shard.
          */
         public Builder roleIds(String roleIds) {
             this.putQueryParameter("RoleIds", roleIds);
@@ -263,7 +270,11 @@ public class SwitchDBInstanceHARequest extends Request {
         }
 
         /**
-         * SwitchMode.
+         * The time when roles of the primary and secondary nodes are switched. Valid values:
+         * <p>
+         * 
+         * *   0: The roles are switched immediately.
+         * *   1: The roles are switched during the maintenance period.
          */
         public Builder switchMode(Integer switchMode) {
             this.putQueryParameter("SwitchMode", switchMode);

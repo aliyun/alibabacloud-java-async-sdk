@@ -169,7 +169,13 @@ public class ModifyInstanceAutoRenewalAttributeRequest extends Request {
         } 
 
         /**
-         * AutoRenew.
+         * Specifies whether to enable auto-renewal. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
+         * 
+         * >  If this parameter is set to **true**, you must set the **Duration** parameter.
          */
         public Builder autoRenew(String autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -178,7 +184,7 @@ public class ModifyInstanceAutoRenewalAttributeRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -187,7 +193,10 @@ public class ModifyInstanceAutoRenewalAttributeRequest extends Request {
         }
 
         /**
-         * Duration.
+         * The auto-renewal period. Valid values: **1** to **12**. Unit: month.
+         * <p>
+         * 
+         * >  This parameter is valid only when **AutoRenew** is set to **true**.
          */
         public Builder duration(String duration) {
             this.putQueryParameter("Duration", duration);
@@ -214,7 +223,7 @@ public class ModifyInstanceAutoRenewalAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance. You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to query the region ID of the instance.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

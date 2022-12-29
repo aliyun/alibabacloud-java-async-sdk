@@ -50,7 +50,7 @@ public class DescribeActiveOperationTaskTypeResponseBody extends TeaModel {
         private java.util.List < TypeList> typeList; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeActiveOperationTaskTypeResponseBody extends TeaModel {
         }
 
         /**
-         * TypeList.
+         * The list of tasks.
          */
         public Builder typeList(java.util.List < TypeList> typeList) {
             this.typeList = typeList;
@@ -134,7 +134,7 @@ public class DescribeActiveOperationTaskTypeResponseBody extends TeaModel {
             private String taskTypeInfoZh; 
 
             /**
-             * Count.
+             * The number of pending tasks.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -142,7 +142,11 @@ public class DescribeActiveOperationTaskTypeResponseBody extends TeaModel {
             }
 
             /**
-             * TaskType.
+             * The type of the task. Valid values:
+             * <p>
+             * 
+             * *   **rds_apsaradb_transfer**: instance migration
+             * *   **rds_apsaradb_upgrade**: minor version update
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;
@@ -150,7 +154,7 @@ public class DescribeActiveOperationTaskTypeResponseBody extends TeaModel {
             }
 
             /**
-             * TaskTypeInfoEn.
+             * The task type (English).
              */
             public Builder taskTypeInfoEn(String taskTypeInfoEn) {
                 this.taskTypeInfoEn = taskTypeInfoEn;
@@ -158,7 +162,7 @@ public class DescribeActiveOperationTaskTypeResponseBody extends TeaModel {
             }
 
             /**
-             * TaskTypeInfoZh.
+             * The task type (Chinese).
              */
             public Builder taskTypeInfoZh(String taskTypeInfoZh) {
                 this.taskTypeInfoZh = taskTypeInfoZh;

@@ -86,7 +86,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * DBInstances.
+         * Details of the instances.
          */
         public Builder DBInstances(DBInstances DBInstances) {
             this.DBInstances = DBInstances;
@@ -94,7 +94,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The number of instances in the query results.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -182,7 +182,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             private String nodeId; 
 
             /**
-             * NodeClass.
+             * The type of the mongos node.
              */
             public Builder nodeClass(String nodeClass) {
                 this.nodeClass = nodeClass;
@@ -190,7 +190,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * NodeDescription.
+             * The description of the mongos node.
              */
             public Builder nodeDescription(String nodeDescription) {
                 this.nodeDescription = nodeDescription;
@@ -198,7 +198,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * The ID of the mongos node.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -328,7 +328,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             private Integer readonlyReplicas; 
 
             /**
-             * NodeClass.
+             * The type of the shard node.
              */
             public Builder nodeClass(String nodeClass) {
                 this.nodeClass = nodeClass;
@@ -336,7 +336,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * NodeDescription.
+             * The description of the shard node.
              */
             public Builder nodeDescription(String nodeDescription) {
                 this.nodeDescription = nodeDescription;
@@ -344,7 +344,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * The ID of the shard node.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -352,7 +352,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * NodeStorage.
+             * The storage capacity of the shard node. Unit: GB.
              */
             public Builder nodeStorage(Integer nodeStorage) {
                 this.nodeStorage = nodeStorage;
@@ -360,7 +360,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ReadonlyReplicas.
+             * The number of read-only nodes in the shard node. Valid values: **0** to **5**.
              */
             public Builder readonlyReplicas(Integer readonlyReplicas) {
                 this.readonlyReplicas = readonlyReplicas;
@@ -454,7 +454,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The tag key of the resource.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -462,7 +462,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The tag value of the resource.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -868,7 +868,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * CapacityUnit.
+             * The I/O throughput consumed by the instance.
+             * <p>
+             * 
+             * >  This parameter is returned when the instance is a serverless instance.
              */
             public Builder capacityUnit(String capacityUnit) {
                 this.capacityUnit = capacityUnit;
@@ -876,7 +879,11 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ChargeType.
+             * The billing method of the instance. Valid values:
+             * <p>
+             * 
+             * *   **PrePaid**: subscription
+             * *   **PostPaid**: pay-as-you-go
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -884,7 +891,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * The time when the instance was created. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -892,7 +899,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceClass.
+             * The instance type.
              */
             public Builder DBInstanceClass(String DBInstanceClass) {
                 this.DBInstanceClass = DBInstanceClass;
@@ -900,7 +907,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceDescription.
+             * The description of the instance.
              */
             public Builder DBInstanceDescription(String DBInstanceDescription) {
                 this.DBInstanceDescription = DBInstanceDescription;
@@ -908,7 +915,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceId.
+             * The ID of the instance.
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -916,7 +923,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceStatus.
+             * The state of the instance. For more information, see [Instance states](~~63870~~).
              */
             public Builder DBInstanceStatus(String DBInstanceStatus) {
                 this.DBInstanceStatus = DBInstanceStatus;
@@ -924,7 +931,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceStorage.
+             * The storage capacity of the instance.
              */
             public Builder DBInstanceStorage(Integer DBInstanceStorage) {
                 this.DBInstanceStorage = DBInstanceStorage;
@@ -932,7 +939,11 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceType.
+             * The architecture of the instance.
+             * <p>
+             * 
+             * *   **sharding**: sharded cluster instance
+             * *   **replicate**: replica set or standalone instance
              */
             public Builder DBInstanceType(String DBInstanceType) {
                 this.DBInstanceType = DBInstanceType;
@@ -940,7 +951,11 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * DestroyTime.
+             * The time when the instance data was destroyed. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.  
+             * <p>
+             * 
+             * > - Subscription instances are released 15 days after expiration. After an instance is released, its data is deleted and cannot be restored.
+             * > - Pay-as-you-go instances are locked after the payments have been overdue for longer than 24 hours. The instances are released after the payments have been overdue for longer than 15 days. The data of released instances is deleted and cannot be restored.
              */
             public Builder destroyTime(String destroyTime) {
                 this.destroyTime = destroyTime;
@@ -948,7 +963,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Engine.
+             * The database engine of the instance.
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -956,7 +971,14 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * EngineVersion.
+             * The database engine version of the instance. Valid values:
+             * <p>
+             * 
+             * *   **5.0**
+             * *   **4.4**
+             * *   **4.2**
+             * *   **4.0**
+             * *   **3.4**
              */
             public Builder engineVersion(String engineVersion) {
                 this.engineVersion = engineVersion;
@@ -964,7 +986,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * The time when the instance expires. The time is in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -972,7 +994,32 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * HiddenZoneId.
+             * The ID of the secondary zone 2 of the instance. Valid values:
+             * <p>
+             * 
+             * *   **cn-hangzhou-g**: Hangzhou Zone G
+             * *   **cn-hangzhou-h**: Hangzhou Zone H
+             * *   **cn-hangzhou-i**: Hangzhou Zone I
+             * *   **cn-hongkong-b**: Hongkong Zone B
+             * *   **cn-hongkong-c**: Hongkong Zone C
+             * *   **cn-hongkong-d**: Hongkong Zone D
+             * *   **cn-wulanchabu-a**: Ulanqab Zone A
+             * *   **cn-wulanchabu-b**: Ulanqab Zone B
+             * *   **cn-wulanchabu-c**: Ulanqab Zone C
+             * *   **ap-southeast-1a**: Singapore Zone A
+             * *   **ap-southeast-1b**: Singapore Zone B
+             * *   **ap-southeast-1c**: Singapore Zone C
+             * *   **ap-southeast-5a**: Jakarta Zone A
+             * *   **ap-southeast-5b**: Jakarta Zone B
+             * *   **ap-southeast-5c**: Jakarta Zone C
+             * *   **eu-central-1a**: Frankfurt Zone A
+             * *   **eu-central-1b**: Frankfurt Zone B
+             * *   **eu-central-1c**: Frankfurt Zone C
+             * 
+             * > 
+             * 
+             * *   This parameter is returned if the instance is a replica set or sharded cluster instance that runs MongoDB 4.4 or 5.0 and uses multi-zone deployment.
+             * *   This parameter is returned only if you use the Chine site (aliyun.com).
              */
             public Builder hiddenZoneId(String hiddenZoneId) {
                 this.hiddenZoneId = hiddenZoneId;
@@ -980,7 +1027,13 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * KindCode.
+             * The kind code of the instance. Valid values:
+             * <p>
+             * 
+             * *   **0**: physical machine
+             * *   **1**: Elastic Compute Service (ECS) instance
+             * *   **2**: Docker cluster
+             * *   **18**: Kubernetes cluster
              */
             public Builder kindCode(String kindCode) {
                 this.kindCode = kindCode;
@@ -988,7 +1041,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * LastDowngradeTime.
+             * The date when the last downgrade operation was performed.
              */
             public Builder lastDowngradeTime(String lastDowngradeTime) {
                 this.lastDowngradeTime = lastDowngradeTime;
@@ -996,7 +1049,15 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * LockMode.
+             * The lock state of the instance. Valid values:
+             * <p>
+             * 
+             * *   **Unlock**: The cluster is not locked.
+             * *   **ManualLock**: The instance is manually locked.
+             * *   **LockByExpiration**: The instance is automatically locked due to instance expiration.
+             * *   **LockByRestoration**: The instance is automatically locked before it is rolled back.
+             * *   **LockByDiskQuota**: The instance is automatically locked due to exhausted storage capacity.
+             * *   **Released**: The instance is released. After an instance is released, the instance cannot be unlocked. You can only restore the backup data of the instance to a new instance. This process requires a long period of time.
              */
             public Builder lockMode(String lockMode) {
                 this.lockMode = lockMode;
@@ -1004,7 +1065,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * MongosList.
+             * Details of the mongos nodes.
+             * <p>
+             * 
+             * >  This parameter is returned if the instance is a sharded cluster instance.
              */
             public Builder mongosList(MongosList mongosList) {
                 this.mongosList = mongosList;
@@ -1012,7 +1076,11 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkType.
+             * The network type of the instance. Valid values:
+             * <p>
+             * 
+             * *   **Classic**: classic network
+             * *   **VPC**: VPC
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -1020,7 +1088,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID of the instance.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1028,7 +1096,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ReplicationFactor.
+             * The number of nodes in the instance.
+             * <p>
+             * 
+             * >  This parameter is returned if the instance is a replica set instance.
              */
             public Builder replicationFactor(String replicationFactor) {
                 this.replicationFactor = replicationFactor;
@@ -1036,7 +1107,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -1044,7 +1115,32 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * SecondaryZoneId.
+             * The ID of the secondary zone 1 of the instance. Valid values:
+             * <p>
+             * 
+             * *   **cn-hangzhou-g**: Hangzhou Zone G
+             * *   **cn-hangzhou-h**: Hangzhou Zone H
+             * *   **cn-hangzhou-i**: Hangzhou Zone I
+             * *   **cn-hongkong-b**: Hongkong Zone B
+             * *   **cn-hongkong-c**: Hongkong Zone C
+             * *   **cn-hongkong-d**: Hongkong Zone D
+             * *   **cn-wulanchabu-a**: Ulanqab Zone A
+             * *   **cn-wulanchabu-b**: Ulanqab Zone B
+             * *   **cn-wulanchabu-c**: Ulanqab Zone C
+             * *   **ap-southeast-1a**: Singapore Zone A
+             * *   **ap-southeast-1b**: Singapore Zone B
+             * *   **ap-southeast-1c**: Singapore Zone C
+             * *   **ap-southeast-5a**: Jakarta Zone A
+             * *   **ap-southeast-5b**: Jakarta Zone B
+             * *   **ap-southeast-5c**: Jakarta Zone C
+             * *   **eu-central-1a**: Frankfurt Zone A
+             * *   **eu-central-1b**: Frankfurt Zone B
+             * *   **eu-central-1c**: Frankfurt Zone C
+             * 
+             * > 
+             * 
+             * *   This parameter is returned if the instance is a replica set or sharded cluster instance that runs MongoDB 4.4 or 5.0 and uses multi-zone deployment.
+             * *   This parameter is returned only if you use the Chine site (aliyun.com).
              */
             public Builder secondaryZoneId(String secondaryZoneId) {
                 this.secondaryZoneId = secondaryZoneId;
@@ -1052,7 +1148,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ShardList.
+             * Details of the shard nodes.
+             * <p>
+             * 
+             * >  This parameter is returned if the instance is a sharded cluster instance.
              */
             public Builder shardList(ShardList shardList) {
                 this.shardList = shardList;
@@ -1060,7 +1159,11 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * StorageType.
+             * The storage type of the instance. Valid values:
+             * <p>
+             * 
+             * *   **cloud_essd**: enhanced SSD (ESSD)
+             * *   **local_ssd**: local SSD
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;
@@ -1068,7 +1171,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * Details of the resource tags.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -1076,7 +1179,11 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VpcAuthMode.
+             * Indicates whether password-free access within a VPC is enabled. Valid values:
+             * <p>
+             * 
+             * - **Open**: Password-free access is enabled.
+             * - **Close**: Password-free access is disabled.
              */
             public Builder vpcAuthMode(String vpcAuthMode) {
                 this.vpcAuthMode = vpcAuthMode;
@@ -1084,7 +1191,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * The zone ID of the instance.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

@@ -98,7 +98,7 @@ public class DescribePriceResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * Order.
+         * The list of orders.
          */
         public Builder order(Order order) {
             this.order = order;
@@ -106,7 +106,7 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
-         * OrderParams.
+         * The order parameters. This parameter is returned if the `OrderParamOut` parameter is set to `true`.
          */
         public Builder orderParams(String orderParams) {
             this.orderParams = orderParams;
@@ -114,7 +114,7 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
-         * Rules.
+         * Details about the promotion rules.
          */
         public Builder rules(Rules rules) {
             this.rules = rules;
@@ -130,7 +130,7 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
-         * SubOrders.
+         * Details about the rules that match the coupon.
          */
         public Builder subOrders(SubOrders subOrders) {
             this.subOrders = subOrders;
@@ -138,7 +138,7 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
-         * TraceId.
+         * The ID of the trace.
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -151,7 +151,51 @@ public class DescribePriceResponseBody extends TeaModel {
 
     } 
 
+    public static class PromotionRuleIdList extends TeaModel {
+        @NameInMap("PromotionRuleId")
+        private java.util.List < Long > promotionRuleId;
+
+        private PromotionRuleIdList(Builder builder) {
+            this.promotionRuleId = builder.promotionRuleId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PromotionRuleIdList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return promotionRuleId
+         */
+        public java.util.List < Long > getPromotionRuleId() {
+            return this.promotionRuleId;
+        }
+
+        public static final class Builder {
+            private java.util.List < Long > promotionRuleId; 
+
+            /**
+             * PromotionRuleId.
+             */
+            public Builder promotionRuleId(java.util.List < Long > promotionRuleId) {
+                this.promotionRuleId = promotionRuleId;
+                return this;
+            }
+
+            public PromotionRuleIdList build() {
+                return new PromotionRuleIdList(this);
+            } 
+
+        } 
+
+    }
     public static class Coupon extends TeaModel {
+        @NameInMap("ActivityCategory")
+        private String activityCategory;
+
         @NameInMap("CouponNo")
         private String couponNo;
 
@@ -164,11 +208,24 @@ public class DescribePriceResponseBody extends TeaModel {
         @NameInMap("Name")
         private String name;
 
+        @NameInMap("OptionCode")
+        private String optionCode;
+
+        @NameInMap("PromotionOptionCode")
+        private String promotionOptionCode;
+
+        @NameInMap("PromotionRuleIdList")
+        private PromotionRuleIdList promotionRuleIdList;
+
         private Coupon(Builder builder) {
+            this.activityCategory = builder.activityCategory;
             this.couponNo = builder.couponNo;
             this.description = builder.description;
             this.isSelected = builder.isSelected;
             this.name = builder.name;
+            this.optionCode = builder.optionCode;
+            this.promotionOptionCode = builder.promotionOptionCode;
+            this.promotionRuleIdList = builder.promotionRuleIdList;
         }
 
         public static Builder builder() {
@@ -177,6 +234,13 @@ public class DescribePriceResponseBody extends TeaModel {
 
         public static Coupon create() {
             return builder().build();
+        }
+
+        /**
+         * @return activityCategory
+         */
+        public String getActivityCategory() {
+            return this.activityCategory;
         }
 
         /**
@@ -207,14 +271,47 @@ public class DescribePriceResponseBody extends TeaModel {
             return this.name;
         }
 
+        /**
+         * @return optionCode
+         */
+        public String getOptionCode() {
+            return this.optionCode;
+        }
+
+        /**
+         * @return promotionOptionCode
+         */
+        public String getPromotionOptionCode() {
+            return this.promotionOptionCode;
+        }
+
+        /**
+         * @return promotionRuleIdList
+         */
+        public PromotionRuleIdList getPromotionRuleIdList() {
+            return this.promotionRuleIdList;
+        }
+
         public static final class Builder {
+            private String activityCategory; 
             private String couponNo; 
             private String description; 
             private String isSelected; 
             private String name; 
+            private String optionCode; 
+            private String promotionOptionCode; 
+            private PromotionRuleIdList promotionRuleIdList; 
 
             /**
-             * CouponNo.
+             * ActivityCategory.
+             */
+            public Builder activityCategory(String activityCategory) {
+                this.activityCategory = activityCategory;
+                return this;
+            }
+
+            /**
+             * The coupon number.
              */
             public Builder couponNo(String couponNo) {
                 this.couponNo = couponNo;
@@ -222,7 +319,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the topic.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -230,7 +327,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * IsSelected.
+             * Indicates whether the coupon was selected.
              */
             public Builder isSelected(String isSelected) {
                 this.isSelected = isSelected;
@@ -238,10 +335,34 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the coupon.
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * OptionCode.
+             */
+            public Builder optionCode(String optionCode) {
+                this.optionCode = optionCode;
+                return this;
+            }
+
+            /**
+             * PromotionOptionCode.
+             */
+            public Builder promotionOptionCode(String promotionOptionCode) {
+                this.promotionOptionCode = promotionOptionCode;
+                return this;
+            }
+
+            /**
+             * PromotionRuleIdList.
+             */
+            public Builder promotionRuleIdList(PromotionRuleIdList promotionRuleIdList) {
+                this.promotionRuleIdList = promotionRuleIdList;
                 return this;
             }
 
@@ -421,7 +542,7 @@ public class DescribePriceResponseBody extends TeaModel {
             private String tradeAmount; 
 
             /**
-             * Coupons.
+             * Details about the coupons.
              */
             public Builder coupons(Coupons coupons) {
                 this.coupons = coupons;
@@ -429,7 +550,11 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * Currency.
+             * The type of the currency. Valid values:
+             * <p>
+             * 
+             * *   USD: United States dollar
+             * *   JPY: Japanese Yen.
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -437,7 +562,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * DiscountAmount.
+             * The discount amount of the order.
              */
             public Builder discountAmount(String discountAmount) {
                 this.discountAmount = discountAmount;
@@ -445,7 +570,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * OriginalAmount.
+             * The original price of the order.
              */
             public Builder originalAmount(String originalAmount) {
                 this.originalAmount = originalAmount;
@@ -453,7 +578,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * RuleIds.
+             * The list of one or more promotion rule IDs.
              */
             public Builder ruleIds(RuleIds ruleIds) {
                 this.ruleIds = ruleIds;
@@ -461,7 +586,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * TradeAmount.
+             * The actual price of the order.
              */
             public Builder tradeAmount(String tradeAmount) {
                 this.tradeAmount = tradeAmount;
@@ -526,7 +651,7 @@ public class DescribePriceResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * Name.
+             * The name of the rule. Valid values
              */
             public Builder name(String name) {
                 this.name = name;
@@ -534,7 +659,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * RuleDescId.
+             * The ID of the policy.
              */
             public Builder ruleDescId(Long ruleDescId) {
                 this.ruleDescId = ruleDescId;
@@ -542,7 +667,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * The title of the rule.
              */
             public Builder title(String title) {
                 this.title = title;
@@ -713,7 +838,7 @@ public class DescribePriceResponseBody extends TeaModel {
             private String tradeAmount; 
 
             /**
-             * DiscountAmount.
+             * The discount amount of the order.
              */
             public Builder discountAmount(String discountAmount) {
                 this.discountAmount = discountAmount;
@@ -721,7 +846,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -729,7 +854,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * OriginalAmount.
+             * The original price of the order.
              */
             public Builder originalAmount(String originalAmount) {
                 this.originalAmount = originalAmount;
@@ -737,7 +862,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * RuleIds.
+             * The list of one or more promotion rule IDs.
              */
             public Builder ruleIds(SubOrderRuleIds ruleIds) {
                 this.ruleIds = ruleIds;
@@ -745,7 +870,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * TradeAmount.
+             * The actual price of the order.
              */
             public Builder tradeAmount(String tradeAmount) {
                 this.tradeAmount = tradeAmount;

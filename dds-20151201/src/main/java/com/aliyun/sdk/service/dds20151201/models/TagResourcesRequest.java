@@ -188,7 +188,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance. You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to query the region ID of the instance.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -197,7 +197,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -206,7 +206,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The resource IDs.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -233,7 +233,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The resource type. Set the value to **INSTANCE**.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -242,7 +242,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The list of tags that you want to associate with the resources. You can specify up to 20 tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -298,7 +298,12 @@ public class TagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag.
+             * <p>
+             * 
+             * * The key cannot start with `aliyun`, `acs:`, `http://`, or `https://`.
+             * * It can be up to 64 characters in length.
+             * * The key cannot be an empty string.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -306,7 +311,12 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of tag.
+             * <p>
+             * 
+             * - The value cannot start with `aliyun`, `acs:`, `http://`, or `https://`.
+             * - It can be up to 128 characters in length.
+             * - The value can be an empty string.
              */
             public Builder value(String value) {
                 this.value = value;

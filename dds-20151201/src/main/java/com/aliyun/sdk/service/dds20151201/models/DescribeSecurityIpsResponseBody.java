@@ -62,7 +62,7 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
         private String securityIps; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
         }
 
         /**
-         * SecurityIpGroups.
+         * An array that consists of the information of IP whitelists.
          */
         public Builder securityIpGroups(SecurityIpGroups securityIpGroups) {
             this.securityIpGroups = securityIpGroups;
@@ -78,7 +78,7 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
         }
 
         /**
-         * SecurityIps.
+         * The IP addresses in the default whitelist.
          */
         public Builder securityIps(String securityIps) {
             this.securityIps = securityIps;
@@ -142,7 +142,7 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
             private String securityIpList; 
 
             /**
-             * SecurityIpGroupAttribute.
+             * The attribute of the IP whitelist. This parameter is empty by default.
              */
             public Builder securityIpGroupAttribute(String securityIpGroupAttribute) {
                 this.securityIpGroupAttribute = securityIpGroupAttribute;
@@ -150,7 +150,7 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityIpGroupName.
+             * The name of the IP whitelist.
              */
             public Builder securityIpGroupName(String securityIpGroupName) {
                 this.securityIpGroupName = securityIpGroupName;
@@ -158,7 +158,7 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityIpList.
+             * The IP addresses in the whitelist.
              */
             public Builder securityIpList(String securityIpList) {
                 this.securityIpList = securityIpList;

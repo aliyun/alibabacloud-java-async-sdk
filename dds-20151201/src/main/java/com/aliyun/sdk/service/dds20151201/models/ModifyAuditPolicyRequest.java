@@ -206,7 +206,7 @@ public class ModifyAuditPolicyRequest extends Request {
         }
 
         /**
-         * AuditLogSwitchSource.
+         * The request source for the audit log feature. Set the value to **Console**.
          */
         public Builder auditLogSwitchSource(String auditLogSwitchSource) {
             this.putQueryParameter("AuditLogSwitchSource", auditLogSwitchSource);
@@ -215,7 +215,11 @@ public class ModifyAuditPolicyRequest extends Request {
         }
 
         /**
-         * AuditStatus.
+         * Specifies whether the audit log feature is enabled. Valid values:
+         * <p>
+         * 
+         * *   **enable**
+         * *   **disabled**
          */
         public Builder auditStatus(String auditStatus) {
             this.putQueryParameter("AuditStatus", auditStatus);
@@ -224,7 +228,7 @@ public class ModifyAuditPolicyRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -278,7 +282,13 @@ public class ModifyAuditPolicyRequest extends Request {
         }
 
         /**
-         * ServiceType.
+         * The type of the audit log feature. Valid values:
+         * <p>
+         * 
+         * *   **Trail**: the free trial edition
+         * *   **Standard**: the official edition
+         * 
+         * >  Default value: **Trial**. Starting from January 6, 2022, the official edition of the audit log feature has been launched in all regions, and new applications for the free trial edition have ended. We recommend that you set this parameter to **Standard**.
          */
         public Builder serviceType(String serviceType) {
             this.putQueryParameter("ServiceType", serviceType);
@@ -287,7 +297,7 @@ public class ModifyAuditPolicyRequest extends Request {
         }
 
         /**
-         * StoragePeriod.
+         * The log retention period. Valid values: 1 to 365 days. Default value: 30 days.
          */
         public Builder storagePeriod(Integer storagePeriod) {
             this.putQueryParameter("StoragePeriod", storagePeriod);

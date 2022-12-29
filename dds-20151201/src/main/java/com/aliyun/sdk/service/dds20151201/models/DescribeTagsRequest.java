@@ -153,7 +153,10 @@ public class DescribeTagsRequest extends Request {
         } 
 
         /**
-         * NextToken.
+         * The token used to start the next query to retrieve more results.
+         * <p>
+         * 
+         * >  This parameter is not required in the first query. If not all results are returned in one query, you can pass in the NextToken value returned in the previous query to perform the query again.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -180,7 +183,7 @@ public class DescribeTagsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -189,7 +192,7 @@ public class DescribeTagsRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -216,7 +219,7 @@ public class DescribeTagsRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The resource type. Set the value to **INSTANCE**.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

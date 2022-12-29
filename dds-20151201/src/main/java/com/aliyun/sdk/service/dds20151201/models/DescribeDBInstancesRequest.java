@@ -41,6 +41,10 @@ public class DescribeDBInstancesRequest extends Request {
     private String DBInstanceType;
 
     @Query
+    @NameInMap("DBNodeType")
+    private String DBNodeType;
+
+    @Query
     @NameInMap("Engine")
     private String engine;
 
@@ -125,6 +129,7 @@ public class DescribeDBInstancesRequest extends Request {
         this.DBInstanceId = builder.DBInstanceId;
         this.DBInstanceStatus = builder.DBInstanceStatus;
         this.DBInstanceType = builder.DBInstanceType;
+        this.DBNodeType = builder.DBNodeType;
         this.engine = builder.engine;
         this.engineVersion = builder.engineVersion;
         this.expireTime = builder.expireTime;
@@ -206,6 +211,13 @@ public class DescribeDBInstancesRequest extends Request {
      */
     public String getDBInstanceType() {
         return this.DBInstanceType;
+    }
+
+    /**
+     * @return DBNodeType
+     */
+    public String getDBNodeType() {
+        return this.DBNodeType;
     }
 
     /**
@@ -349,6 +361,7 @@ public class DescribeDBInstancesRequest extends Request {
         private String DBInstanceId; 
         private String DBInstanceStatus; 
         private String DBInstanceType; 
+        private String DBNodeType; 
         private String engine; 
         private String engineVersion; 
         private String expireTime; 
@@ -382,6 +395,7 @@ public class DescribeDBInstancesRequest extends Request {
             this.DBInstanceId = request.DBInstanceId;
             this.DBInstanceStatus = request.DBInstanceStatus;
             this.DBInstanceType = request.DBInstanceType;
+            this.DBNodeType = request.DBNodeType;
             this.engine = request.engine;
             this.engineVersion = request.engineVersion;
             this.expireTime = request.expireTime;
@@ -404,7 +418,11 @@ public class DescribeDBInstancesRequest extends Request {
         } 
 
         /**
-         * ChargeType.
+         * The billing method of the instance. Valid values:
+         * <p>
+         * 
+         * *   **PrePaid**: subscription
+         * *   **PostPaid**: pay-as-you-go
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -413,7 +431,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * ConnectionDomain.
+         * The endpoint of the node. You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to query the endpoint of the node.
          */
         public Builder connectionDomain(String connectionDomain) {
             this.putQueryParameter("ConnectionDomain", connectionDomain);
@@ -422,7 +440,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * DBInstanceClass.
+         * The instance type. For more information about valid values, see [Instance types](~~57141~~).
          */
         public Builder DBInstanceClass(String DBInstanceClass) {
             this.putQueryParameter("DBInstanceClass", DBInstanceClass);
@@ -431,7 +449,12 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * DBInstanceDescription.
+         * The name of the instance. Valid values:
+         * <p>
+         * 
+         * *   The name must start with a letter.
+         * *   The name can contain digits, letters, underscores (\_), and hyphens (-).
+         * *   The name must be 2 to 256 characters in length.
          */
         public Builder DBInstanceDescription(String DBInstanceDescription) {
             this.putQueryParameter("DBInstanceDescription", DBInstanceDescription);
@@ -440,7 +463,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -449,7 +472,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * DBInstanceStatus.
+         * The state of the instance. For more information about valid values, see [Instance states](~~63870~~).
          */
         public Builder DBInstanceStatus(String DBInstanceStatus) {
             this.putQueryParameter("DBInstanceStatus", DBInstanceStatus);
@@ -458,7 +481,11 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * DBInstanceType.
+         * The architecture of the instance. Default value: replicate. Valid values:
+         * <p>
+         * 
+         * *   **sharding**: sharded cluster instance
+         * *   **replicate**: replica set or standalone instance
          */
         public Builder DBInstanceType(String DBInstanceType) {
             this.putQueryParameter("DBInstanceType", DBInstanceType);
@@ -467,7 +494,21 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * Engine.
+         * Used to filter standard instances or test instances
+         * <p>
+         * 
+         * 1. Single node instance and dbfs instance: customized
+         * 2. Standard instance (replicaset and shard cluster): standard
+         * 3. Default (showing all instances): default
+         */
+        public Builder DBNodeType(String DBNodeType) {
+            this.putQueryParameter("DBNodeType", DBNodeType);
+            this.DBNodeType = DBNodeType;
+            return this;
+        }
+
+        /**
+         * The database engine of the instance. Set the value to **MongoDB**.
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -476,7 +517,14 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * EngineVersion.
+         * The database engine version of the instance. Valid values:
+         * <p>
+         * 
+         * * **5.0**
+         * * **4.4**
+         * * **4.2**
+         * * **4.0**
+         * * **3.4**
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -485,7 +533,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * ExpireTime.
+         * The time when the instance expires.
          */
         public Builder expireTime(String expireTime) {
             this.putQueryParameter("ExpireTime", expireTime);
@@ -494,7 +542,11 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * Expired.
+         * Specifies whether the instance has expired. Valid values:
+         * <p>
+         * 
+         * *   **true**: The instance has expired.
+         * *   **false**: The instance has not expired.
          */
         public Builder expired(String expired) {
             this.putQueryParameter("Expired", expired);
@@ -503,7 +555,11 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * NetworkType.
+         * The network type of the instance. Valid values:
+         * <p>
+         * 
+         * *   **Classic**: classic network
+         * *   **VPC**: Virtual Private Cloud (VPC)
          */
         public Builder networkType(String networkType) {
             this.putQueryParameter("NetworkType", networkType);
@@ -530,7 +586,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. The value of this parameter must be an integer that is greater than 0. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -539,7 +595,12 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: 30. Valid values:
+         * <p>
+         * 
+         * *   **30**
+         * *   **50**
+         * *   **100**
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -548,7 +609,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -557,7 +618,12 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * ReplicationFactor.
+         * The number of nodes in the replica set instance. Valid values:
+         * <p>
+         * 
+         * *   **3**
+         * *   **5**
+         * *   **7**
          */
         public Builder replicationFactor(String replicationFactor) {
             this.putQueryParameter("ReplicationFactor", replicationFactor);
@@ -566,7 +632,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -602,7 +668,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags of instances.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -611,7 +677,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * The ID of the vSwitch.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -620,7 +686,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * The ID of the VPC.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -629,7 +695,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * The zone ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent zone list.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -683,7 +749,12 @@ public class DescribeDBInstancesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N of the instance. Valid values of N: **1** to **20**.
+             * <p>
+             * 
+             * *   The key cannot start with `aliyun`, `acs:`, `http://`, or `https://`.
+             * *   The key can be up to 64 characters in length.
+             * *   The key cannot be an empty string.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -691,7 +762,12 @@ public class DescribeDBInstancesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of tag N of the instance. Valid values of N: **1** to **20**.
+             * <p>
+             * 
+             * *   The value cannot start with `aliyun`, `acs:`, `http://`, or `https://`.
+             * *   The value can be up to 128 characters in length.
+             * *   The value can be an empty string.
              */
             public Builder value(String value) {
                 this.value = value;

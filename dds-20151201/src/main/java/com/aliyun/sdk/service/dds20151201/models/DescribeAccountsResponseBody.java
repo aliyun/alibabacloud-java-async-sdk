@@ -50,7 +50,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Accounts.
+         * Details about the accounts.
          */
         public Builder accounts(Accounts accounts) {
             this.accounts = accounts;
@@ -58,7 +58,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,7 +146,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             private String DBInstanceId; 
 
             /**
-             * AccountDescription.
+             * The description of the account.
              */
             public Builder accountDescription(String accountDescription) {
                 this.accountDescription = accountDescription;
@@ -154,7 +154,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * AccountName.
+             * The name of the account.
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -162,7 +162,11 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * AccountStatus.
+             * The status of the account.
+             * <p>
+             * 
+             * *   Unavailable
+             * *   Available
              */
             public Builder accountStatus(String accountStatus) {
                 this.accountStatus = accountStatus;
@@ -170,7 +174,14 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * CharacterType.
+             * The role of the account. Valid values:
+             * <p>
+             * 
+             * *   db: shard
+             * *   cs: Configserver
+             * *   mongos: mongos
+             * *   logic: sharded cluster instance
+             * *   normal: replica set instance
              */
             public Builder characterType(String characterType) {
                 this.characterType = characterType;
@@ -178,7 +189,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceId.
+             * The name of the instance to which the account belongs.
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;

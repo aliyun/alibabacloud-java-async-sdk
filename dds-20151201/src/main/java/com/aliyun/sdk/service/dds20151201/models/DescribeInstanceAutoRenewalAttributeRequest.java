@@ -182,7 +182,7 @@ public class DescribeInstanceAutoRenewalAttributeRequest extends Request {
         } 
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -191,7 +191,13 @@ public class DescribeInstanceAutoRenewalAttributeRequest extends Request {
         }
 
         /**
-         * DBInstanceType.
+         * The category of the instance. Valid values:
+         * <p>
+         * 
+         * *   **replicate**: the standalone or replica set instance
+         * *   **sharding**: the sharded cluster instance
+         * 
+         * Default value: **replicate**.
          */
         public Builder DBInstanceType(String DBInstanceType) {
             this.putQueryParameter("DBInstanceType", DBInstanceType);
@@ -218,7 +224,7 @@ public class DescribeInstanceAutoRenewalAttributeRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. The value must be a positive integer that does not exceed the maximum value of the Integer parameter. Default value: **1**.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -227,7 +233,10 @@ public class DescribeInstanceAutoRenewalAttributeRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Valid values: **30**, **50**, and **100**.
+         * <p>
+         * 
+         * >  Default value: **30**.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -236,7 +245,7 @@ public class DescribeInstanceAutoRenewalAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance. You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to query the region ID of the instance.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

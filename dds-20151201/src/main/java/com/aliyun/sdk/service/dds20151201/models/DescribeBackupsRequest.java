@@ -232,7 +232,10 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
-         * BackupId.
+         * The ID of the backup set. You can call the [CreateBackup](~~62171~~) operation to obtain the value of this parameter.
+         * <p>
+         * 
+         * If you set the DBInstanceId parameter to the ID of a sharded cluster instance, the number of backup IDs is the same as the number of shards. Multiple , with commas (,) in the middle.
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -241,7 +244,10 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
+         * <p>
+         * 
+         * >  If you set this parameter to the ID of a sharded cluster instance, you must also specify the **NodeId** parameter.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -250,7 +256,7 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. Specify the time in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -259,7 +265,10 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * The ID of the shard node in the sharded cluster instance.
+         * <p>
+         * 
+         * >  This parameter is valid only when **DBInstanceId** is set to the ID of a sharded cluster instance.
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -286,7 +295,7 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. The value must be an integer that is greater than 0. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -295,7 +304,7 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Valid values: **30, 50, and 100**. Default value: **30**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -331,7 +340,7 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Specify the time in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

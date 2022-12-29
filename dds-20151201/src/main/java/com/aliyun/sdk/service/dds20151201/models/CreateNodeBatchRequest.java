@@ -275,7 +275,16 @@ public class CreateNodeBatchRequest extends Request {
         }
 
         /**
-         * AccountName.
+         * The username of the account. The username must meet the following requirements:
+         * <p>
+         * 
+         * * The username starts with a lowercase letter.
+         * * The username contains lowercase letters, digits, and underscores (\_).
+         * * The username is 4 to 16 characters in length.
+         * 
+         * > * Keywords cannot be used as account usernames.
+         * > * The permissions of this account are fixed at read-only.
+         * > * The username and password are required to be set only when you apply for an endpoint for the shard node for the first time.
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -284,7 +293,14 @@ public class CreateNodeBatchRequest extends Request {
         }
 
         /**
-         * AccountPassword.
+         * The password of the account. The password must meet the following requirements:
+         * <p>
+         * 
+         * *   The password contains at least three of the following character types: uppercase letters, lowercase letters, digits, and specific special characters.
+         * *   These special characters include ! @ # $ % ^ & \* ( ) \_ + - =
+         * *   The password is 8 to 32 characters in length.
+         * 
+         * >  The account password of the shard node cannot be reset.
          */
         public Builder accountPassword(String accountPassword) {
             this.putQueryParameter("AccountPassword", accountPassword);
@@ -293,7 +309,11 @@ public class CreateNodeBatchRequest extends Request {
         }
 
         /**
-         * AutoPay.
+         * Specifies whether to enable automatic payment. Default value: true. Valid values:
+         * <p>
+         * 
+         * *   **true**: enables automatic payment. Make sure that you have sufficient balance within your account.
+         * *   **false**: disables automatic payment. In this case, you must manually pay for the instance. You can perform the following operations to pay for the instance: Log on to the ApsaraDB for MongoDB console. In the upper-right corner of the page, choose **Expenses** > **Orders**. On the Orders page, find the order and complete the payment.
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -302,7 +322,7 @@ public class CreateNodeBatchRequest extends Request {
         }
 
         /**
-         * BusinessInfo.
+         * The business information.
          */
         public Builder businessInfo(String businessInfo) {
             this.putQueryParameter("BusinessInfo", businessInfo);
@@ -311,7 +331,7 @@ public class CreateNodeBatchRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -320,7 +340,7 @@ public class CreateNodeBatchRequest extends Request {
         }
 
         /**
-         * CouponNo.
+         * The coupon code. Default value: `youhuiquan_promotion_option_id_for_blank`.
          */
         public Builder couponNo(String couponNo) {
             this.putQueryParameter("CouponNo", couponNo);
@@ -329,7 +349,7 @@ public class CreateNodeBatchRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance for which you want to add nodes.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -338,7 +358,11 @@ public class CreateNodeBatchRequest extends Request {
         }
 
         /**
-         * FromApp.
+         * The source of the request. Valid values:
+         * <p>
+         * 
+         * *   **OpenApi**: ApsaraDB for MongoDB API
+         * *   **mongo_buy**: ApsaraDB for MongoDB console
          */
         public Builder fromApp(String fromApp) {
             this.putQueryParameter("FromApp", fromApp);
@@ -347,7 +371,10 @@ public class CreateNodeBatchRequest extends Request {
         }
 
         /**
-         * NodesInfo.
+         * The specifications of the mongos or shard node that you want to add. For more information, see [Instance types](~~57141~~).
+         * <p>
+         * 
+         * >  Up to 32 mongos or shard nodes are supported for each sharded cluster instance.
          */
         public Builder nodesInfo(String nodesInfo) {
             this.putQueryParameter("NodesInfo", nodesInfo);
@@ -401,7 +428,11 @@ public class CreateNodeBatchRequest extends Request {
         }
 
         /**
-         * ShardDirect.
+         * Specifies whether to apply for an endpoint for the shard node. Default value: false. Valid values:
+         * <p>
+         * 
+         * *   **true**: applies for an endpoint for the shard node.
+         * *   **false**: does not apply for an endpoint for the shard node.
          */
         public Builder shardDirect(Boolean shardDirect) {
             this.putQueryParameter("ShardDirect", shardDirect);

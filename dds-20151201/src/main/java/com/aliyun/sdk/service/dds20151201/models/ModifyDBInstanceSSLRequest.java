@@ -163,7 +163,7 @@ public class ModifyDBInstanceSSLRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -208,7 +208,12 @@ public class ModifyDBInstanceSSLRequest extends Request {
         }
 
         /**
-         * SSLAction.
+         * The operation on the SSL feature. Valid values: Valid values:
+         * <p>
+         * 
+         * *   **Open**: enables SSL encryption.
+         * *   **Close**: disables SSL encryption.
+         * *   **Update**: updates the SSL certificate.
          */
         public Builder SSLAction(String SSLAction) {
             this.putQueryParameter("SSLAction", SSLAction);

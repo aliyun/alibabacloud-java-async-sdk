@@ -62,7 +62,7 @@ public class CreateNodeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * NodeId.
+         * The ID of the node.
          */
         public Builder nodeId(String nodeId) {
             this.nodeId = nodeId;
@@ -70,7 +70,7 @@ public class CreateNodeResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * The ID of the order.
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -78,7 +78,7 @@ public class CreateNodeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

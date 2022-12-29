@@ -162,7 +162,7 @@ public class DescribeAccountsRequest extends Request {
         }
 
         /**
-         * AccountName.
+         * The name of the account. Set the value to **root**.
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -171,7 +171,7 @@ public class DescribeAccountsRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

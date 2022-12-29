@@ -195,7 +195,11 @@ public class DescribeBackupDBsRequest extends Request {
         } 
 
         /**
-         * BackupId.
+         * The ID of the backup set.
+         * <p>
+         * 
+         * > * You can call the [DescribeBackups](~~62172~~) operation to query the backup ID.
+         * > * You must specify one of the **RestoreTime** and BackupId parameters.
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -222,7 +226,7 @@ public class DescribeBackupDBsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. The value of this parameter must be an integer that is greater than 0. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -231,7 +235,7 @@ public class DescribeBackupDBsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: 30. Valid values: **30**, **50**, and **100**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -240,7 +244,7 @@ public class DescribeBackupDBsRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -267,7 +271,11 @@ public class DescribeBackupDBsRequest extends Request {
         }
 
         /**
-         * RestoreTime.
+         * The point in time to which the instance is restored. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <p>
+         * 
+         * > * The time can be a point in time within the past seven days. The time must be earlier than the current time, but later than the time when the instance was created.
+         * > * You must specify one of the RestoreTime and **BackupId** parameters.
          */
         public Builder restoreTime(String restoreTime) {
             this.putQueryParameter("RestoreTime", restoreTime);
@@ -285,7 +293,7 @@ public class DescribeBackupDBsRequest extends Request {
         }
 
         /**
-         * SourceDBInstance.
+         * The ID of the source instance.
          */
         public Builder sourceDBInstance(String sourceDBInstance) {
             this.putQueryParameter("SourceDBInstance", sourceDBInstance);

@@ -39,6 +39,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+      * This operation applies only to sharded cluster instances. For more information, see [Apply for an endpoint for a shard or Configserver node](~~134037~~).
+      * >  The requested endpoint can only be accessed over the internal network. If you want to access the endpoint over the Internet, call the [AllocatePublicNetworkAddress](~~67602~~) operation to apply for a public endpoint.
+      *
+     */
     @Override
     public CompletableFuture<AllocateNodePrivateNetworkAddressResponse> allocateNodePrivateNetworkAddress(AllocateNodePrivateNetworkAddressRequest request) {
         try {
@@ -67,6 +72,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Before you enable Transparent Data Encryption (TDE) by calling the [ModifyDBInstanceTDE](~~131267~~) operation, you can call this operation to check whether KMS keys are authorized to ApsaraDB for MongoDB instances.
+      * >  TDE cannot be enabled if KMS keys are not authorized to ApsaraDB for MongoDB instances. You can [submit a ticket](https://workorder-intl.console.aliyun.com/console.htm#/ticket/createIndex) to modify the authorization information.
+      *
+     */
     @Override
     public CompletableFuture<CheckCloudResourceAuthorizedResponse> checkCloudResourceAuthorized(CheckCloudResourceAuthorizedRequest request) {
         try {
@@ -81,6 +91,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * This operation is applicable to replica set instances or sharded cluster instances.
+      * >  After you confirm that the data recovery conditions are met by calling this operation, you can call the [CreateDBInstance](~~61763~~) operation to restore data to a new instance.
+      *
+     */
     @Override
     public CompletableFuture<CheckRecoveryConditionResponse> checkRecoveryCondition(CheckRecoveryConditionRequest request) {
         try {
@@ -95,6 +110,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ## Usage
+      * When you call this operation, the instance must be in the Running state.
+      *
+     */
     @Override
     public CompletableFuture<CreateBackupResponse> createBackup(CreateBackupRequest request) {
         try {
@@ -109,6 +129,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Before you call this operation, make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing).
+      * For more information about the instance types of ApsaraDB for MongoDB instances, see [Instance types](~~57141~~).
+      * To create sharded cluster instances, you can call the [CreateShardingDBInstance](~~61884~~) operation.
+      *
+     */
     @Override
     public CompletableFuture<CreateDBInstanceResponse> createDBInstance(CreateDBInstanceRequest request) {
         try {
@@ -123,6 +149,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Before you call this operation, make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing) of ApsaraDB for MongoDB.
+      * This operation is applicable only to sharded cluster instances.
+      *
+     */
     @Override
     public CompletableFuture<CreateNodeResponse> createNode(CreateNodeRequest request) {
         try {
@@ -137,6 +168,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Before you call this operation, make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing) of ApsaraDB for MongoDB.
+      * This operation is applicable only to sharded cluster instances.
+      *
+     */
     @Override
     public CompletableFuture<CreateNodeBatchResponse> createNodeBatch(CreateNodeBatchRequest request) {
         try {
@@ -151,6 +187,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * *   Before you call this operation, make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing).
+      * *   For more information about the instance types of ApsaraDB for MongoDB instances, see [Instance types](~~57141~~).
+      * *   To create standalone and replica set instances, you can call the [CreateDBInstance](~~61763~~) operation.
+      *
+     */
     @Override
     public CompletableFuture<CreateShardingDBInstanceResponse> createShardingDBInstance(CreateShardingDBInstanceRequest request) {
         try {
@@ -165,6 +207,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Ensure that the instance meets the following conditions when you call this operation:
+      * *   The instance is in the running state.
+      * *   The billing method of the instance is pay-as-you-go.
+      * >  After an instance is released, all the data in the instance is lost and cannot be retrieved. Exercise caution when you release instances.
+      *
+     */
     @Override
     public CompletableFuture<DeleteDBInstanceResponse> deleteDBInstance(DeleteDBInstanceRequest request) {
         try {
@@ -179,6 +228,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Before you call this operation, make sure that the following requirements are met:
+      * *   The instance is in the running state.
+      * *   The instance is a sharded cluster instance.
+      * *   The billing method of the instance is pay-as-you-go.
+      * *   The number of the shard or mongos nodes in the instance is greater than two.
+      *
+     */
     @Override
     public CompletableFuture<DeleteNodeResponse> deleteNode(DeleteNodeRequest request) {
         try {
@@ -193,6 +250,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * >  This operation can query only the information of the root account.
+      *
+     */
     @Override
     public CompletableFuture<DescribeAccountsResponse> describeAccounts(DescribeAccountsRequest request) {
         try {
@@ -235,6 +296,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * *   The instance must be in the running state when you call this operation.
+      * *   This operation is applicable only to **general-purpose local-disk** and **dedicated local-disk** instances.
+      * *   You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see [Manage a Logstore](~~48990~~).
+      *
+     */
     @Override
     public CompletableFuture<DescribeAuditLogFilterResponse> describeAuditLogFilter(DescribeAuditLogFilterRequest request) {
         try {
@@ -249,6 +316,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * *   The instance must be in the running state when you call this operation.
+      * *   This operation is applicable only to **general-purpose local-disk** and **dedicated local-disk** instances.
+      * *   You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see [Manage a Logstore](~~48990~~).
+      *
+     */
     @Override
     public CompletableFuture<DescribeAuditPolicyResponse> describeAuditPolicy(DescribeAuditPolicyRequest request) {
         try {
@@ -263,6 +336,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * *   When you call this operation, ensure that the audit log feature of the instance is enabled. Otherwise, the operation returns an empty audit log.
+      * *   This operation is applicable only to **general-purpose local-disk** and **dedicated local-disk** instances.
+      * *   You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see [Manage a Logstore](~~48990~~).
+      *
+     */
     @Override
     public CompletableFuture<DescribeAuditRecordsResponse> describeAuditRecords(DescribeAuditRecordsRequest request) {
         try {
@@ -305,6 +384,17 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ## Precautions
+      * You can call the [CreateDBInstance](~~61763~~) operation to restore a database for an ApsaraDB for MongoDB instance. For more information, see [Restore one or more databases of an ApsaraDB for MongoDB instance](~~112274~~).
+      * Before you call this operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:
+      * *   The instance was created after March 26, 2019.
+      * *   The instance is located in the China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Hangzhou), China (Shanghai), China (Shenzhen), or Singapore (Singapore) region. Other regions are not supported.
+      * *   The instance is a replica set instance.
+      * *   The version of the database engine is 3.4, 4.0, or 4.2.
+      * *   The storage engine of the instance is WiredTiger.
+      *
+     */
     @Override
     public CompletableFuture<DescribeBackupDBsResponse> describeBackupDBs(DescribeBackupDBsRequest request) {
         try {
@@ -361,6 +451,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ## Usage
+      * When you call the DescribeDBInstanceEncryptionKey operation, the instance must have transparent data encryption (TDE) enabled in BYOK mode. You can call the [ModifyDBInstanceTDE](~~131267~~) operation to enable TDE.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDBInstanceEncryptionKeyResponse> describeDBInstanceEncryptionKey(DescribeDBInstanceEncryptionKeyRequest request) {
         try {
@@ -403,6 +498,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Before you call this operation, make sure that the following requirements are met:
+      * *   The instance is in the running state.
+      * *   The instance is a replica set instance.
+      * *   The database version of the instance is 3.4 or 4.0.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDBInstanceSSLResponse> describeDBInstanceSSL(DescribeDBInstanceSSLRequest request) {
         try {
@@ -417,6 +519,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * >  For more information about this function, see [~~131048~~](~~131048~~)Configure TDE.
+      * Before you call this operation, make sure that the following requirements are met:
+      * *   A replica set or sharded cluster instance is used.
+      * *   The storage engine of the instance is WiredTiger.
+      * *   The database engine version of the instance is 4.0 or 4.2. If the database engine version of your instance is earlier than 4.0, you can call [UpgradeDBInstanceEngineVersion](~~67608~~) to upgrade the database engine.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDBInstanceTDEInfoResponse> describeDBInstanceTDEInfo(DescribeDBInstanceTDEInfoRequest request) {
         try {
@@ -431,6 +541,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * The list of replica set and standalone instances is displayed when the **DBInstanceType** parameter uses the default value **replicate**. To query the list of sharded cluster instances, you must set the **DBInstanceType** parameter to **sharding**.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDBInstancesResponse> describeDBInstances(DescribeDBInstancesRequest request) {
         try {
@@ -445,6 +559,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * *   If you do not specify an instance when you call this operation, the overview information of all instances in the specified region within this account is returned.
+      * *   Paged query is disabled for this operation.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDBInstancesOverviewResponse> describeDBInstancesOverview(DescribeDBInstancesOverviewRequest request) {
         try {
@@ -473,6 +592,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * *   This operation is applicable only to **general-purpose local-disk** and **dedicated local-disk** instances.
+      * *   You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see [Manage a Logstore](~~48990~~).
+      *
+     */
     @Override
     public CompletableFuture<DescribeErrorLogRecordsResponse> describeErrorLogRecords(DescribeErrorLogRecordsRequest request) {
         try {
@@ -487,6 +611,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * This operation is applicable to subscription instances.
+      *
+     */
     @Override
     public CompletableFuture<DescribeInstanceAutoRenewalAttributeResponse> describeInstanceAutoRenewalAttribute(DescribeInstanceAutoRenewalAttributeRequest request) {
         try {
@@ -515,6 +643,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * This operation is applicable only to **general-purpose local-disk** and **dedicated local-disk** instances.
+      * This operation depends on the audit log feature of ApsaraDB for MongoDB. You can enable the audit log feature based on your business needs. For more information, see [Enable the audit log feature](~~59903~~)
+      * *   Starting from January 6, 2022, the official edition of the audit log feature has been launched in all regions, and new applications for the free trial edition have ended. For more information, see [Notice on official launch of the pay-as-you-go audit log feature and no more application for the free trial edition](~~377480~~)
+      * *   The official edition is charged based on the storage usage and retention period. For more information, see the [Pricing](https://www.alibabacloud.com/product/apsaradb-for-mongodb/pricing) tab of the ApsaraDB for MongoDB product page.
+      *
+     */
     @Override
     public CompletableFuture<DescribeMongoDBLogConfigResponse> describeMongoDBLogConfig(DescribeMongoDBLogConfigRequest request) {
         try {
@@ -585,6 +720,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * >  To query available regions and zones where ApsaraDB for MongoDB instances can be created, call the [DescribeAvailableResource](~~149719~~) operation.
+      *
+     */
     @Override
     public CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request) {
         try {
@@ -599,6 +738,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * This operation is applicable to subscription instances.
+      *
+     */
     @Override
     public CompletableFuture<DescribeRenewalPriceResponse> describeRenewalPrice(DescribeRenewalPriceRequest request) {
         try {
@@ -613,6 +756,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * This operation is applicable to replica set instances and standalone instances, but not to sharded cluster instances.
+      *
+     */
     @Override
     public CompletableFuture<DescribeReplicaSetRoleResponse> describeReplicaSetRole(DescribeReplicaSetRoleRequest request) {
         try {
@@ -627,6 +774,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * >  For more information, see [View the zone of a node](~~123825~~).
+      * This operation is applicable only to replica set and sharded cluster instances, but not to standalone instances.
+      *
+     */
     @Override
     public CompletableFuture<DescribeRoleZoneInfoResponse> describeRoleZoneInfo(DescribeRoleZoneInfoRequest request) {
         try {
@@ -641,6 +793,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * *   This operation is applicable only to **general-purpose local-disk** and **dedicated local-disk** instances.
+      * *   You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see [Manage a Logstore](~~48990~~).
+      *
+     */
     @Override
     public CompletableFuture<DescribeRunningLogRecordsResponse> describeRunningLogRecords(DescribeRunningLogRecordsRequest request) {
         try {
@@ -683,6 +840,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * This operation supports sharded cluster instances only.
+      *
+     */
     @Override
     public CompletableFuture<DescribeShardingNetworkAddressResponse> describeShardingNetworkAddress(DescribeShardingNetworkAddressRequest request) {
         try {
@@ -697,6 +858,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * *   This operation is applicable only to **general-purpose local-disk** or **dedicated local-disk** instances.
+      * *   You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see [Manage a Logstore](~~48990~~).
+      *
+     */
     @Override
     public CompletableFuture<DescribeSlowLogRecordsResponse> describeSlowLogRecords(DescribeSlowLogRecordsRequest request) {
         try {
@@ -725,6 +891,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You can use the custom key obtained by calling the DescribeUserEncryptionKeyList operation to enable TDE. For more information, see [ModifyDBInstanceTDE](~~131267~~).
+      *
+     */
     @Override
     public CompletableFuture<DescribeUserEncryptionKeyListResponse> describeUserEncryptionKeyList(DescribeUserEncryptionKeyListRequest request) {
         try {
@@ -739,6 +909,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Before you call this API operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:
+      * *   The billing method of the instance is subscription.
+      * *   The instance has expired and is in the **Locking** state.
+      *
+     */
     @Override
     public CompletableFuture<DestroyInstanceResponse> destroyInstance(DestroyInstanceRequest request) {
         try {
@@ -753,6 +929,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * This operation is applicable to replica set instances and sharded cluster instances. You can call this operation to check whether resources are sufficient for creating an instance, upgrading an instance, or upgrading a single node of a sharded cluster instance.
+      * >  You can call this operation a maximum of 200 times per minute.
+      *
+     */
     @Override
     public CompletableFuture<EvaluateResourceResponse> evaluateResource(EvaluateResourceRequest request) {
         try {
@@ -781,6 +962,15 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ## Precautions
+      * *   This operation is available only for replica set instances that run MongoDB 4.2 or earlier and sharded cluster instances.
+      * *   If you have applied for a public endpoint for the ApsaraDB for MongoDB instance, you must call the [ReleasePublicNetworkAddress](~~67604~~) operation to release the public endpoint before you call the MigrateAvailableZone operation.
+      * *   Transparent data encryption (TDE) is disabled for the instance.
+      * *   The source zone and the destination zone belong to the same region.
+      * *   A vSwitch is created in the destination zone. This prerequisite must be met if the instance resides in a virtual private cloud (VPC). For more information about how to create a vSwitch, see [Work with vSwitches](~~65387~~).
+      *
+     */
     @Override
     public CompletableFuture<MigrateAvailableZoneResponse> migrateAvailableZone(MigrateAvailableZoneRequest request) {
         try {
@@ -795,6 +985,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * This operation is applicable only to replica set instances, but not to standalone instances or sharded cluster instances.
+      * >  If you have applied for a public endpoint of the instance, you must first call the [ReleasePublicNetworkAddress](~~67604~~) operation to release the public endpoint.
+      *
+     */
     @Override
     public CompletableFuture<MigrateToOtherZoneResponse> migrateToOtherZone(MigrateToOtherZoneRequest request) {
         try {
@@ -823,6 +1018,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * *   The instance must be in the running state when you call this operation.
+      * *   This operation is applicable only to **general-purpose local-disk** and **dedicated local-disk** instances.
+      * *   You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see [Manage a Logstore](~~48990~~).
+      *
+     */
     @Override
     public CompletableFuture<ModifyAuditLogFilterResponse> modifyAuditLogFilter(ModifyAuditLogFilterRequest request) {
         try {
@@ -837,6 +1038,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * *   This operation is applicable only to **general-purpose local-disk** and **dedicated local-disk** instances.
+      * *   You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see [Manage a Logstore](~~48990~~).
+      *
+     */
     @Override
     public CompletableFuture<ModifyAuditPolicyResponse> modifyAuditPolicy(ModifyAuditPolicyRequest request) {
         try {
@@ -907,6 +1113,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * >  operation is currently unavailable.
+      * Before you call this operation, make sure that the following requirements are met:
+      * *   A replica set or sharded cluster instance is used.
+      * *   MongoDB 3.4 (the latest minor version) or 4.0 must be selected.
+      *
+     */
     @Override
     public CompletableFuture<ModifyDBInstanceMonitorResponse> modifyDBInstanceMonitor(ModifyDBInstanceMonitorRequest request) {
         try {
@@ -921,6 +1134,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Before you call this operation, make sure that the following requirements are met:
+      * *   The instance is in the running state.
+      * *   The network of the instance is in hybrid access mode.
+      * >  This operation is applicable only to replica set and sharded cluster instances, but not to standalone instances.
+      *
+     */
     @Override
     public CompletableFuture<ModifyDBInstanceNetExpireTimeResponse> modifyDBInstanceNetExpireTime(ModifyDBInstanceNetExpireTimeRequest request) {
         try {
@@ -935,6 +1155,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * This operation is applicable only to replica set instances and sharded cluster instances.
+      *
+     */
     @Override
     public CompletableFuture<ModifyDBInstanceNetworkTypeResponse> modifyDBInstanceNetworkType(ModifyDBInstanceNetworkTypeRequest request) {
         try {
@@ -949,6 +1173,15 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ## Usage
+      * Before you call this operation, make sure that the following requirements are met:
+      * *   The instance is in the running state.
+      * *   The instance is a replica set instance.
+      * *   The engine version of the instance is \\<ph props="intl">3.4 or 4.0\\</ph>\\<ph props="china">3.4, 4.0, or 4.2\\</ph>.
+      * >  When you enable or disable SSL encryption or update the SSL certificate, the instance restarts. We recommend that you call this operation during off-peak hours.
+      *
+     */
     @Override
     public CompletableFuture<ModifyDBInstanceSSLResponse> modifyDBInstanceSSL(ModifyDBInstanceSSLRequest request) {
         try {
@@ -963,6 +1196,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Before you call this operation, make sure that you understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing) of ApsaraDB for MongoDB.
+      * This operation applies only to standalone and replica set instances. To modify the specifications of sharded cluster instances, you can call the [ModifyNodeSpec](~~61923~~), [CreateNode](~~61911~~), [DeleteNode](~~61922~~), or [ModifyNodeSpecBatch](~~61816~~) operation.
+      *
+     */
     @Override
     public CompletableFuture<ModifyDBInstanceSpecResponse> modifyDBInstanceSpec(ModifyDBInstanceSpecRequest request) {
         try {
@@ -977,6 +1215,15 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * TDE can be used to perform real-time I/O encryption and decryption on data files. Data is encrypted before being written to disks, and decrypted before being read from disks to the memory. For more information, see [Configure TDE](~~131048~~).
+      * >  After TDE is enabled, it cannot be disabled.
+      * Before you call this operation, make sure that the following requirements are met:
+      * *   A replica set or sharded cluster instance is used.
+      * *   The storage engine of the instance is WiredTiger.
+      * *   The database engine version of the instance is 4.0 or 4.2. If the database engine version is earlier than 4.0, you can call the [UpgradeDBInstanceEngineVersion](~~67608~~) operation to upgrade the database engine.
+      *
+     */
     @Override
     public CompletableFuture<ModifyDBInstanceTDEResponse> modifyDBInstanceTDE(ModifyDBInstanceTDERequest request) {
         try {
@@ -991,6 +1238,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Before you call this operation, make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing).
+      * This operation is applicable to subscription instances.
+      * >  When auto-renewal is enabled, your payment will be collected nine days before the expiration date of ApsaraDB for MongoDB. Ensure that your account has sufficient balance.
+      *
+     */
     @Override
     public CompletableFuture<ModifyInstanceAutoRenewalAttributeResponse> modifyInstanceAutoRenewalAttribute(ModifyInstanceAutoRenewalAttributeRequest request) {
         try {
@@ -1005,6 +1258,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Before you call this operation, make sure that the following requirements are met:
+      * *   A replica set or sharded cluster instance is used.
+      * *   The database version of the instance is 4.0 (with the minor version of mongodb\\_20190408\\_3.0.11 or later) or 4.2. You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to view the database engine version of the instance. If necessary, you can call the [UpgradeDBInstanceEngineVersion](~~67608~~) operation to upgrade the database engine.
+      * *   The instance is in a VPC. If the network type is Classic Network, you can call the [ModifyDBInstanceNetworkType](~~62138~~) operation to switch the network type to VPC.
+      *
+     */
     @Override
     public CompletableFuture<ModifyInstanceVpcAuthModeResponse> modifyInstanceVpcAuthMode(ModifyInstanceVpcAuthModeRequest request) {
         try {
@@ -1019,6 +1279,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Before you call this operation, make sure that you understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing) of ApsaraDB for MongoDB.
+      * >  This operation applies only to sharded cluster instances.
+      *
+     */
     @Override
     public CompletableFuture<ModifyNodeSpecResponse> modifyNodeSpec(ModifyNodeSpecRequest request) {
         try {
@@ -1033,6 +1298,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Before you call this operation, make sure that you understand the billing methods and pricing of ApsaraDB for MongoDB. For more information, go to the Pricing tab of the ApsaraDB for MongoDB product page at [the international site (alibabacloud.com)](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing).
+      * This operation is applicable only to sharded cluster instances.
+      *
+     */
     @Override
     public CompletableFuture<ModifyNodeSpecBatchResponse> modifyNodeSpecBatch(ModifyNodeSpecBatchRequest request) {
         try {
@@ -1047,6 +1317,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ## Precautions
+      * *   The instance must be in the Running state when you call this operation.
+      * *   If you call this operation to modify specific instance parameters and the modification for part of the parameters can take effect only after an instance restart, the instance is automatically restarted after this operation is called. You can call the [DescribeParameterTemplates](~~67618~~) operation to query the parameters that take effect only after the instance is restarted.
+      *
+     */
     @Override
     public CompletableFuture<ModifyParametersResponse> modifyParameters(ModifyParametersRequest request) {
         try {
@@ -1061,6 +1337,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Resource Management enables you to build an organizational structure for resources based on your business needs. You can use a resource directory, folders, accounts, and resource groups to hierarchically organize and manage resources. For more information, see [What is Resource Management?](~~94475~~)
+      *
+     */
     @Override
     public CompletableFuture<ModifyResourceGroupResponse> modifyResourceGroup(ModifyResourceGroupRequest request) {
         try {
@@ -1075,6 +1355,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * >  For a sharded cluster instance, the bound ECS security group takes effect only for mongos nodes.
+      *
+     */
     @Override
     public CompletableFuture<ModifySecurityGroupConfigurationResponse> modifySecurityGroupConfiguration(ModifySecurityGroupConfigurationRequest request) {
         try {
@@ -1103,6 +1387,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * *   This operation can be used to release the internal endpoint of a shard or Configserver node in a sharded cluster instance. For more information, see [Release the endpoint of a shard or Configserver node](~~134067~~).
+      * *   To release the public endpoint of a shard or Configserver node in a sharded cluster instance, you can call the [ReleasePublicNetworkAddress](~~67604~~) operation.
+      *
+     */
     @Override
     public CompletableFuture<ReleaseNodePrivateNetworkAddressResponse> releaseNodePrivateNetworkAddress(ReleaseNodePrivateNetworkAddressRequest request) {
         try {
@@ -1131,6 +1420,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing) of ApsaraDB for MongoDB before you call this operation.
+      * This parameter is only applicable to Subscription instances.
+      *
+     */
     @Override
     public CompletableFuture<RenewDBInstanceResponse> renewDBInstance(RenewDBInstanceRequest request) {
         try {
@@ -1145,6 +1439,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * >  This operation can reset only the password of the root account of an instance.
+      *
+     */
     @Override
     public CompletableFuture<ResetAccountPasswordResponse> resetAccountPassword(ResetAccountPasswordRequest request) {
         try {
@@ -1159,6 +1457,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * This operation can also be used to restart a shard or mongos node in a sharded cluster instance.
+      *
+     */
     @Override
     public CompletableFuture<RestartDBInstanceResponse> restartDBInstance(RestartDBInstanceRequest request) {
         try {
@@ -1173,6 +1475,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * This operation is applicable to replica set instances, but cannot be called on standalone instances or sharded cluster instances. You can use the following methods to clone an instance: [Create an instance from a backup](~~55013~~) to clone a standalone instance. Call the [CreateShardingDBInstance](~~61884~~) operation to clone a sharded cluster instance.
+      * >  This operation overwrites the data of the current instance, and the data cannot be recovered. Exercise caution when performing this operation.
+      *
+     */
     @Override
     public CompletableFuture<RestoreDBInstanceResponse> restoreDBInstance(RestoreDBInstanceRequest request) {
         try {
@@ -1187,6 +1494,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * The instance must be in the running state when you call this operation.
+      * > * This operation is applicable to replica set instances and sharded cluster instances, but cannot be performed on standalone instances.
+      * > * On replica set instances, the switch is performed between instances. On sharded cluster instances, the switch is performed between shards.
+      *
+     */
     @Override
     public CompletableFuture<SwitchDBInstanceHAResponse> switchDBInstanceHA(SwitchDBInstanceHARequest request) {
         try {
@@ -1201,6 +1514,15 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You can create multiple tags and bind them to multiple instances. This allows you to classify and filter instances by tag.
+      * *   A tag consists of a key and a value. Each key must be unique in a region for an Alibaba Cloud account. Different keys can have the same value.
+      * *   If the tag you specify does not exist, this tag is automatically created and bound to the specified instance.
+      * *   If a tag that has the same key is already bound to the instance, the new tag overwrites the existing tag.
+      * *   You can bind up to 20 tags to each instance.
+      * *   You can bind tags to up to 50 instances each time you call the operation.
+      *
+     */
     @Override
     public CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request) {
         try {
@@ -1215,6 +1537,40 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Please ensure that you have fully understood the charging method and [Price](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing) of MongoDB products before using this API.
+      * When calling this interface, the instance must meet the following conditions:
+      * - The instance status is Running.
+      * - The instance does not have a conversion payment type order that has not been paid.
+      * - The instance type cannot be a historical type (no longer sold). For the list of historical types, see [Instance Type Table](~~57141~~).
+      * > To convert the payment type of the historical type instance, first call the [ModifyDBInstanceSpec] (~~61816~~) or [ModifyNodeSpec] (~~61923~~) interface to change the instance type.
+      *
+     */
+    @Override
+    public CompletableFuture<TransformInstanceChargeTypeResponse> transformInstanceChargeType(TransformInstanceChargeTypeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("TransformInstanceChargeType").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(TransformInstanceChargeTypeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<TransformInstanceChargeTypeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+      * Before you call this operation, make sure that you understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing).
+      * A subscription instance cannot be changed to a pay-as-you-go instance. To avoid wasting resources, proceed with caution.
+      * Before you call this API operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:
+      * *   The instance is in the running state.
+      * *   The billing method of the instance is pay-as-you-go.
+      * *   The instance has no unpaid subscription orders.
+      * *   The instance type is available for purchase. For more information about unavailable instance types, see [Instance types](~~57141~~).
+      * >  To change the billing method of an instance whose instance type is no longer available to subscription, call the [ModifyDBInstanceSpec](~~61816~~) or [ModifyNodeSpec](~~61923~~) operation to first change the instance type.
+      *
+     */
     @Override
     public CompletableFuture<TransformToPrePaidResponse> transformToPrePaid(TransformToPrePaidRequest request) {
         try {
@@ -1229,6 +1585,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > * You can unbind up to 20 tags at a time.
+      * > * When a tag is unbound from all instances, the tag is automatically deleted.
+      *
+     */
     @Override
     public CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request) {
         try {
@@ -1243,6 +1604,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * The instance must be in the running state when you call this operation.
+      * > * The available database versions depend on the storage engine used by the instance. For more information, see [Upgrades of MongoDB major versions](~~398673~~). You can also call the [DescribeAvailableEngineVersion](~~141355~~) operation to query the available database versions.
+      * > * You cannot downgrade the MongoDB version of an instance after you upgrade it.
+      * > * The instance is automatically restarted for two to three times during the upgrade process. Make sure that you upgrade the instance during off-peak hours.
+      *
+     */
     @Override
     public CompletableFuture<UpgradeDBInstanceEngineVersionResponse> upgradeDBInstanceEngineVersion(UpgradeDBInstanceEngineVersionRequest request) {
         try {
@@ -1257,6 +1625,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * When you call the UpgradeDBInstanceKernelVersion operation, the instance must be in the Running state.
+      * > * The UpgradeDBInstanceKernelVersion operation is applicable to replica set and sharded cluster instances, but not to standalone instances.
+      * > * The instance will be restarted once during the upgrade. Call this operation during off-peak hours.
+      *
+     */
     @Override
     public CompletableFuture<UpgradeDBInstanceKernelVersionResponse> upgradeDBInstanceKernelVersion(UpgradeDBInstanceKernelVersionRequest request) {
         try {

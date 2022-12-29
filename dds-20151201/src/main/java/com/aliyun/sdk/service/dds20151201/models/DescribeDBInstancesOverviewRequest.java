@@ -279,7 +279,11 @@ public class DescribeDBInstancesOverviewRequest extends Request {
         } 
 
         /**
-         * ChargeType.
+         * The billing method of the instance. Valid values:
+         * <p>
+         * 
+         * *   **PrePaid**: subscription
+         * *   **PostPaid**: pay-as-you-go
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -288,7 +292,7 @@ public class DescribeDBInstancesOverviewRequest extends Request {
         }
 
         /**
-         * EngineVersion.
+         * The database engine version of the instance. Valid values: **5.0**, **4.4**, **4.2**, **4.0**, and **3.4**.
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -297,7 +301,12 @@ public class DescribeDBInstancesOverviewRequest extends Request {
         }
 
         /**
-         * InstanceClass.
+         * The instance type of the instance. The instance type varies based on the instance architecture. For more information about instance types supported by different instance architectures, see the following topics:
+         * <p>
+         * 
+         * *   [Standalone instance types](~~311407~~)
+         * *   [Replica set instance types](~~311410~~)
+         * *   [Sharded cluster instance types](~~311414~~)
          */
         public Builder instanceClass(String instanceClass) {
             this.putQueryParameter("InstanceClass", instanceClass);
@@ -306,7 +315,11 @@ public class DescribeDBInstancesOverviewRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * The ID of the instance for which you want to query the overview information.
+         * <p>
+         * 
+         * > * If you do not specify this parameter, the overview information of all instances under this account is queried.
+         * > * Separate the instance IDs with commas (,).
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -315,7 +328,7 @@ public class DescribeDBInstancesOverviewRequest extends Request {
         }
 
         /**
-         * InstanceStatus.
+         * The state of the instance. For more information about valid values, see [Instance states](~~63870~~).
          */
         public Builder instanceStatus(String instanceStatus) {
             this.putQueryParameter("InstanceStatus", instanceStatus);
@@ -324,7 +337,14 @@ public class DescribeDBInstancesOverviewRequest extends Request {
         }
 
         /**
-         * InstanceType.
+         * The category of the instance. Valid values:
+         * <p>
+         * 
+         * - **sharding**: sharded cluster instance
+         * - **replicate**: replica set or standalone instance
+         * 
+         * > * To query the overview information of a sharded cluster instance, you must set the parameter to **sharding**.
+         * > * If you do not specify this parameter, the overview information of all instances under this account is queried.
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -333,7 +353,11 @@ public class DescribeDBInstancesOverviewRequest extends Request {
         }
 
         /**
-         * NetworkType.
+         * The network type of the instance. Valid values:
+         * <p>
+         * 
+         * *   **Classic**
+         * *   **VPC**
          */
         public Builder networkType(String networkType) {
             this.putQueryParameter("NetworkType", networkType);
@@ -360,7 +384,7 @@ public class DescribeDBInstancesOverviewRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -369,7 +393,7 @@ public class DescribeDBInstancesOverviewRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group. For more information, see [View basic information of a resource group](~~151181~~).
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -405,7 +429,7 @@ public class DescribeDBInstancesOverviewRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * The ID of the vSwitch.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -414,7 +438,7 @@ public class DescribeDBInstancesOverviewRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * The ID of the virtual private cloud (VPC).
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -423,7 +447,7 @@ public class DescribeDBInstancesOverviewRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * The ID of the zone.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

@@ -86,7 +86,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Engine.
+         * The database engine of the instance.
          */
         public Builder engine(String engine) {
             this.engine = engine;
@@ -94,7 +94,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * EngineVersion.
+         * The database engine version of the instance.
          */
         public Builder engineVersion(String engineVersion) {
             this.engineVersion = engineVersion;
@@ -102,7 +102,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * ParameterCount.
+         * The number of parameters that are supported by the instance.
          */
         public Builder parameterCount(String parameterCount) {
             this.parameterCount = parameterCount;
@@ -110,7 +110,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * Parameters.
+         * Details about the parameter templates.
          */
         public Builder parameters(Parameters parameters) {
             this.parameters = parameters;
@@ -118,7 +118,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -218,7 +218,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             private String parameterValue; 
 
             /**
-             * CheckingCode.
+             * The value range of modifiable parameters.
              */
             public Builder checkingCode(String checkingCode) {
                 this.checkingCode = checkingCode;
@@ -226,7 +226,11 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * ForceModify.
+             * Indicates whether the parameter is modifiable.
+             * <p>
+             * 
+             * *   **false**: The parameter cannot be modified.
+             * *   **true**: The parameter can be modified.
              */
             public Builder forceModify(Boolean forceModify) {
                 this.forceModify = forceModify;
@@ -234,7 +238,11 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * ForceRestart.
+             * Indicates whether a restart is required for parameter modifications to take effect.
+             * <p>
+             * 
+             * *   **false**: A restart is not required. Parameter modifications immediately take effect.
+             * *   **true**: A restart is required for parameter modifications to take effect.
              */
             public Builder forceRestart(Boolean forceRestart) {
                 this.forceRestart = forceRestart;
@@ -242,7 +250,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterDescription.
+             * The description of the parameter.
              */
             public Builder parameterDescription(String parameterDescription) {
                 this.parameterDescription = parameterDescription;
@@ -250,7 +258,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterName.
+             * The name of the parameter.
              */
             public Builder parameterName(String parameterName) {
                 this.parameterName = parameterName;
@@ -258,7 +266,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterValue.
+             * The default value of the parameter.
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;

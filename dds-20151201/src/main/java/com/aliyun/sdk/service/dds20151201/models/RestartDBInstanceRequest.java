@@ -162,7 +162,7 @@ public class RestartDBInstanceRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -171,7 +171,10 @@ public class RestartDBInstanceRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * The ID of the shard or mongos node in the sharded cluster instance.
+         * <p>
+         * 
+         * >  The sharded cluster instance is restarted if you do not specify this parameter.
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);

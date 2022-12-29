@@ -86,7 +86,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * Items.
+         * An array that consists of the information of audit log entries.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -94,7 +94,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * The maximum number of entries on the current page.
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -110,7 +110,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * The total number of entries.
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -254,7 +254,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
             private Long totalExecutionTimes; 
 
             /**
-             * AccountName.
+             * The account of the database.
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -262,7 +262,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * DBName.
+             * The name of the database.
              */
             public Builder DBName(String DBName) {
                 this.DBName = DBName;
@@ -270,7 +270,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ExecuteTime.
+             * The time when the statement was executed. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder executeTime(String executeTime) {
                 this.executeTime = executeTime;
@@ -278,7 +278,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * HostAddress.
+             * The IP address of the client.
              */
             public Builder hostAddress(String hostAddress) {
                 this.hostAddress = hostAddress;
@@ -286,7 +286,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ReturnRowCounts.
+             * The number of SQL audit log entries that are returned.
              */
             public Builder returnRowCounts(Long returnRowCounts) {
                 this.returnRowCounts = returnRowCounts;
@@ -294,7 +294,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Syntax.
+             * The statement that was executed.
              */
             public Builder syntax(String syntax) {
                 this.syntax = syntax;
@@ -302,7 +302,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * The name of the collection.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -310,7 +310,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ThreadID.
+             * The ID of the thread that is recorded in the SQL audit log entry.
              */
             public Builder threadID(String threadID) {
                 this.threadID = threadID;
@@ -318,7 +318,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalExecutionTimes.
+             * The duration of the statement execution. Unit: microseconds.
              */
             public Builder totalExecutionTimes(Long totalExecutionTimes) {
                 this.totalExecutionTimes = totalExecutionTimes;

@@ -50,7 +50,7 @@ public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * KeyIds.
+         * The list of custom keys.
          */
         public Builder keyIds(KeyIds keyIds) {
             this.keyIds = keyIds;
@@ -58,7 +58,7 @@ public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -162,7 +162,13 @@ public class CreateBackupRequest extends Request {
         }
 
         /**
-         * BackupMethod.
+         * The backup method of the instance. Default value: Physical. Valid values:
+         * <p>
+         * 
+         * *   **Logical**
+         * *   **Physical**
+         * 
+         * >  Only replica set instances and sharded cluster instances support this parameter. You do not need to specify this parameter for standalone instances. All standalone instances use snapshot backup.
          */
         public Builder backupMethod(String backupMethod) {
             this.putQueryParameter("BackupMethod", backupMethod);
@@ -171,7 +177,7 @@ public class CreateBackupRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

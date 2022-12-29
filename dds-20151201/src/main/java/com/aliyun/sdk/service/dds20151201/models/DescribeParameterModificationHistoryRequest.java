@@ -206,7 +206,13 @@ public class DescribeParameterModificationHistoryRequest extends Request {
         }
 
         /**
-         * CharacterType.
+         * The role of the instance. Valid values:
+         * <p>
+         * 
+         * *   **db**: shard
+         * *   **cs**: Configserver
+         * *   **mongos**: mongos
+         * *   **logic**: sharded cluster instance
          */
         public Builder characterType(String characterType) {
             this.putQueryParameter("CharacterType", characterType);
@@ -215,7 +221,10 @@ public class DescribeParameterModificationHistoryRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
+         * <p>
+         * 
+         * >  If you set this parameter to the ID of a sharded cluster instance, you must also specify the **NodeId** parameter.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -224,7 +233,7 @@ public class DescribeParameterModificationHistoryRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. The end time must be later than the start time. Specify the time in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -233,7 +242,10 @@ public class DescribeParameterModificationHistoryRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * The ID of the mongos node or shard node whose parameter modification records you want to query in the instance. If the instance is a sharded cluster instance, you must specify this parameter.
+         * <p>
+         * 
+         * >  This parameter is valid only when **DBInstanceId** is set to the ID of a sharded cluster instance.
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -287,7 +299,7 @@ public class DescribeParameterModificationHistoryRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

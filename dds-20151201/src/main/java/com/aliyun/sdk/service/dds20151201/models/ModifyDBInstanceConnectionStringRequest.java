@@ -192,7 +192,7 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
-         * CurrentConnectionString.
+         * The current connection string, which is to be modified.
          */
         public Builder currentConnectionString(String currentConnectionString) {
             this.putQueryParameter("CurrentConnectionString", currentConnectionString);
@@ -201,7 +201,10 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
+         * <p>
+         * 
+         * >  If you set this parameter to the ID of a sharded cluster instance, you must also specify the **NodeId** parameter.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -210,7 +213,10 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
-         * NewConnectionString.
+         * The new connection string. It must be 8 to 64 characters in length and can contain letters and digits. It must start with a lowercase letter.
+         * <p>
+         * 
+         * >  You need only to specify the prefix of the connection string. The content other than the prefix cannot be modified.
          */
         public Builder newConnectionString(String newConnectionString) {
             this.putQueryParameter("NewConnectionString", newConnectionString);
@@ -219,7 +225,10 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * The ID of the mongos in the specified sharded cluster instance. Only one mongos ID can be specified in each call.
+         * <p>
+         * 
+         * >  This parameter is valid only if you set the **DBInstanceId** parameter to the ID of a sharded cluster instance.
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);

@@ -62,7 +62,7 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * CompatibleConnections.
+         * An array that consists of the endpoints of DynamoDB instances.
          */
         public Builder compatibleConnections(CompatibleConnections compatibleConnections) {
             this.compatibleConnections = compatibleConnections;
@@ -70,7 +70,7 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
         }
 
         /**
-         * NetworkAddresses.
+         * An array that consists of the endpoints of ApsaraDB for MongoDB instances.
          */
         public Builder networkAddresses(NetworkAddresses networkAddresses) {
             this.networkAddresses = networkAddresses;
@@ -78,7 +78,7 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -190,7 +190,7 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             private String vswitchId; 
 
             /**
-             * ExpiredTime.
+             * The remaining duration of the classic network address. Unit: seconds.
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -198,7 +198,7 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             }
 
             /**
-             * IPAddress.
+             * The IP address of the instance.
              */
             public Builder IPAddress(String IPAddress) {
                 this.IPAddress = IPAddress;
@@ -206,7 +206,7 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkAddress.
+             * The endpoint of the instance.
              */
             public Builder networkAddress(String networkAddress) {
                 this.networkAddress = networkAddress;
@@ -214,7 +214,12 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkType.
+             * The network type. Valid values:
+             * <p>
+             * 
+             * *   **VPC**
+             * *   **Classic**
+             * *   **Public**: pubic endpoint
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -222,7 +227,7 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The port number.
              */
             public Builder port(String port) {
                 this.port = port;
@@ -230,7 +235,10 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             }
 
             /**
-             * VPCId.
+             * The ID of the VPC.
+             * <p>
+             * 
+             * >  This parameter is returned when the network type is **VPC**.
              */
             public Builder VPCId(String VPCId) {
                 this.VPCId = VPCId;
@@ -238,7 +246,10 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             }
 
             /**
-             * VswitchId.
+             * The vSwitch ID of the VPC.
+             * <p>
+             * 
+             * >  This parameter is returned when the network type is **VPC**.
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;
@@ -428,7 +439,7 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             private String vswitchId; 
 
             /**
-             * ExpiredTime.
+             * The remaining duration of the classic network address. Unit: seconds.
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -436,7 +447,7 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             }
 
             /**
-             * IPAddress.
+             * The IP address of the instance.
              */
             public Builder IPAddress(String IPAddress) {
                 this.IPAddress = IPAddress;
@@ -444,7 +455,7 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkAddress.
+             * The endpoint of the instance.
              */
             public Builder networkAddress(String networkAddress) {
                 this.networkAddress = networkAddress;
@@ -452,7 +463,12 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkType.
+             * The network type. Valid values:
+             * <p>
+             * 
+             * - **VPC**
+             * - **Classic**
+             * - **Public**: pubic endpoint
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -460,7 +476,7 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * The ID of the mongos.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -468,7 +484,12 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             }
 
             /**
-             * NodeType.
+             * The type of the node. Valid values:
+             * <p>
+             * 
+             * - **mongos**
+             * - **shard**
+             * - **configserver**
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -476,7 +497,7 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The port number.
              */
             public Builder port(String port) {
                 this.port = port;
@@ -484,7 +505,11 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             }
 
             /**
-             * Role.
+             * The role of the node. Valid values:
+             * <p>
+             * 
+             * - Primary
+             * - Secondary
              */
             public Builder role(String role) {
                 this.role = role;
@@ -492,7 +517,10 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             }
 
             /**
-             * VPCId.
+             * The ID of the VPC.
+             * <p>
+             * 
+             * >  This parameter is returned when the network type is **VPC**.
              */
             public Builder VPCId(String VPCId) {
                 this.VPCId = VPCId;
@@ -500,7 +528,10 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             }
 
             /**
-             * VswitchId.
+             * The vSwitch ID of the VPC.
+             * <p>
+             * 
+             * >  This parameter is returned when the network type is **VPC**.
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;
@@ -541,7 +572,7 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             private java.util.List < NetworkAddress> networkAddress; 
 
             /**
-             * NetworkAddress.
+             * The endpoint of the instance.
              */
             public Builder networkAddress(java.util.List < NetworkAddress> networkAddress) {
                 this.networkAddress = networkAddress;

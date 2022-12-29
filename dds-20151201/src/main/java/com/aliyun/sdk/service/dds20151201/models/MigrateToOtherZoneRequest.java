@@ -154,7 +154,13 @@ public class MigrateToOtherZoneRequest extends Request {
         } 
 
         /**
-         * EffectiveTime.
+         * The time when the instance is migrated to the destination zone. Valid values:
+         * <p>
+         * 
+         * *   **Immediately**: The instance is immediately migrated to the destination zone.
+         * *   **MaintainTime**: The instance is migrated during the maintenance period of the instance.
+         * 
+         * Default value: **Immediately**.
          */
         public Builder effectiveTime(String effectiveTime) {
             this.putQueryParameter("EffectiveTime", effectiveTime);
@@ -163,7 +169,10 @@ public class MigrateToOtherZoneRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
+         * <p>
+         * 
+         * >  If the network type of the instance is VPC, you must specify the **Vswitch** parameter .
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -208,7 +217,10 @@ public class MigrateToOtherZoneRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * The ID of the vSwitch in the destination zone.
+         * <p>
+         * 
+         * >  This parameter is valid and required only when the network type of the instance is VPC.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -217,7 +229,11 @@ public class MigrateToOtherZoneRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * The ID of the destination zone to which you want to migrate the ApsaraDB for MongoDB instance.
+         * <p>
+         * 
+         * > * The destination and source zones must be in one region.
+         * > * You can call [DescribeRegions](~~61933~~) to query the zone IDs.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

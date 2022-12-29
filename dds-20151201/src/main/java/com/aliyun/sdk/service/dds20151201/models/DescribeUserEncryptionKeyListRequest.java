@@ -162,7 +162,7 @@ public class DescribeUserEncryptionKeyListRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -216,7 +216,7 @@ public class DescribeUserEncryptionKeyListRequest extends Request {
         }
 
         /**
-         * TargetRegionId.
+         * The zone ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent zone list.
          */
         public Builder targetRegionId(String targetRegionId) {
             this.putQueryParameter("TargetRegionId", targetRegionId);

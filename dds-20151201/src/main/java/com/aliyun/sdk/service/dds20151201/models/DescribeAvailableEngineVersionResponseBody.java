@@ -50,7 +50,10 @@ public class DescribeAvailableEngineVersionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * EngineVersions.
+         * The list of one or more engine versions to which an ApsaraDB for MongoDB instance can be upgraded.
+         * <p>
+         * 
+         * >  An empty string is returned if the latest version is being used.
          */
         public Builder engineVersions(EngineVersions engineVersions) {
             this.engineVersions = engineVersions;
@@ -58,7 +61,7 @@ public class DescribeAvailableEngineVersionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

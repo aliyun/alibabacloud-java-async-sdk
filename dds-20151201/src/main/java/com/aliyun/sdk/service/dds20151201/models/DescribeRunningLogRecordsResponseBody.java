@@ -98,7 +98,7 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * Engine.
+         * The database engine.
          */
         public Builder engine(String engine) {
             this.engine = engine;
@@ -106,7 +106,7 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * Details about the operational log entries.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -114,7 +114,7 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +122,7 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * The number of entries returned per page.
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -130,7 +130,7 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * The total number of entries.
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -164,15 +164,11 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Id")
-        private Integer id;
-
         private LogRecords(Builder builder) {
             this.category = builder.category;
             this.connInfo = builder.connInfo;
             this.content = builder.content;
             this.createTime = builder.createTime;
-            this.id = builder.id;
         }
 
         public static Builder builder() {
@@ -211,22 +207,14 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        /**
-         * @return id
-         */
-        public Integer getId() {
-            return this.id;
-        }
-
         public static final class Builder {
             private String category; 
             private String connInfo; 
             private String content; 
             private String createTime; 
-            private Integer id; 
 
             /**
-             * Category.
+             * The category of the log entry. Valid values:
              */
             public Builder category(String category) {
                 this.category = category;
@@ -234,7 +222,7 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ConnInfo.
+             * The connection information of the log entry.
              */
             public Builder connInfo(String connInfo) {
                 this.connInfo = connInfo;
@@ -242,7 +230,7 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Content.
+             * The content of the log entry.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -250,18 +238,10 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the log entry was generated. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
-                return this;
-            }
-
-            /**
-             * Id.
-             */
-            public Builder id(Integer id) {
-                this.id = id;
                 return this;
             }
 

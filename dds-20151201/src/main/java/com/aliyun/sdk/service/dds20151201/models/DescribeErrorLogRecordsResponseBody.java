@@ -98,7 +98,7 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * Engine.
+         * The database engine.
          */
         public Builder engine(String engine) {
             this.engine = engine;
@@ -106,7 +106,7 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * Details about the log entries returned.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -114,7 +114,7 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +122,7 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * The number of entries returned per page.
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -130,7 +130,7 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * The total number of entries.
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -226,7 +226,18 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
             private Integer id; 
 
             /**
-             * Category.
+             * The category of the log entry. Valid values:
+             * <p>
+             * 
+             * *   NETWORK: network connection log
+             * *   ACCESS: access control log
+             * *   \-: general log
+             * *   COMMAND: slow query log
+             * *   SHARDING: sharded cluster log
+             * *   STORAGE: storage engine log
+             * *   CONNPOOL: connection pool log
+             * *   ASIO: asynchronous I/O operation log
+             * *   WRITE: slow update log
              */
             public Builder category(String category) {
                 this.category = category;
@@ -234,7 +245,7 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ConnInfo.
+             * The connection information of the log entry.
              */
             public Builder connInfo(String connInfo) {
                 this.connInfo = connInfo;
@@ -242,7 +253,7 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Content.
+             * The content of the log entry.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -250,7 +261,7 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the log entry was generated. The time is in the *yyyy-MM-dd*T*HH:mm:ss***Z format. The time is displayed in UTC.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -258,7 +269,7 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the log entry.
              */
             public Builder id(Integer id) {
                 this.id = id;

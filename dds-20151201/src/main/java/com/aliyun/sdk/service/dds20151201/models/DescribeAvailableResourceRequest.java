@@ -181,7 +181,11 @@ public class DescribeAvailableResourceRequest extends Request {
         } 
 
         /**
-         * DbType.
+         * The architecture of the instance. Valid values:
+         * <p>
+         * 
+         * *   **normal**: replica set instance
+         * *   **sharding**: sharded cluster instance
          */
         public Builder dbType(String dbType) {
             this.putQueryParameter("DbType", dbType);
@@ -190,7 +194,11 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * InstanceChargeType.
+         * The billing method of the instance. Default value: PrePaid. Valid values:
+         * <p>
+         * 
+         * *   **PrePaid**: subscription
+         * *   **PostPaid**: pay-as-you-go
          */
         public Builder instanceChargeType(String instanceChargeType) {
             this.putQueryParameter("InstanceChargeType", instanceChargeType);
@@ -217,7 +225,7 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -226,7 +234,7 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -262,7 +270,7 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * The zone ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent zone list.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

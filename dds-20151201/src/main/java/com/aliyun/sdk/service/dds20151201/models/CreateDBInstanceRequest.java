@@ -535,7 +535,12 @@ public class CreateDBInstanceRequest extends Request {
         } 
 
         /**
-         * AccountPassword.
+         * The password of the root account. The password must meet the following requirements:
+         * <p>
+         * 
+         * *   The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.
+         * *   These special characters include ! # $ % ^ & \* ( ) \_ + - =
+         * *   The password must be 8 to 32 characters in length.
          */
         public Builder accountPassword(String accountPassword) {
             this.putQueryParameter("AccountPassword", accountPassword);
@@ -544,7 +549,13 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * AutoRenew.
+         * Specifies whether to enable auto-renewal for the instance. Default value: false. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
+         * 
+         * >  If you set the **ChargeType** parameter to **PrePaid**, you must configure this optional parameter.
          */
         public Builder autoRenew(String autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -553,7 +564,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * BackupId.
+         * The ID of the backup set. You can call the [DescribeBackups](~~62172~~) operation to query the backup set ID.
+         * <p>
+         * 
+         * >  This parameter is required only when you call this operation to clone an instance. If you specify this parameter, you must also specify the **SrcDBInstanceId** parameter.
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -562,7 +576,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * BusinessInfo.
+         * The business information. This is an additional parameter.
          */
         public Builder businessInfo(String businessInfo) {
             this.putQueryParameter("BusinessInfo", businessInfo);
@@ -571,7 +585,13 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * ChargeType.
+         * The billing method of the instance. Valid values:
+         * <p>
+         * 
+         * *   **PostPaid**: pay-as-you-go
+         * *   **PrePaid**: subscription
+         * 
+         * >  If you specify this parameter to **PrePaid**, you must also specify the **Period** parameter.
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -580,7 +600,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -598,7 +618,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * CouponNo.
+         * The coupon code. Default value: `youhuiquan_promotion_option_id_for_blank`.
          */
         public Builder couponNo(String couponNo) {
             this.putQueryParameter("CouponNo", couponNo);
@@ -607,7 +627,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * DBInstanceClass.
+         * The instance type. You can also call the [DescribeAvailableResource](~~149719~~) operation to view instance types.
          */
         public Builder DBInstanceClass(String DBInstanceClass) {
             this.putQueryParameter("DBInstanceClass", DBInstanceClass);
@@ -616,7 +636,12 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * DBInstanceDescription.
+         * The name of the instance. Valid values:
+         * <p>
+         * 
+         * *   The name must start with a letter.
+         * *   The name can contain digits, letters, underscores (\_), and hyphens (-).
+         * *   The name must be 2 to 256 characters in length.
          */
         public Builder DBInstanceDescription(String DBInstanceDescription) {
             this.putQueryParameter("DBInstanceDescription", DBInstanceDescription);
@@ -625,7 +650,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * DBInstanceStorage.
+         * The storage capacity of the instance. Unit: GB.
+         * <p>
+         * 
+         * The values that can be specified for this parameter are subject to the instance types. For more information, see [Replica set instance types](~~311410~~).
          */
         public Builder DBInstanceStorage(Integer DBInstanceStorage) {
             this.putQueryParameter("DBInstanceStorage", DBInstanceStorage);
@@ -634,7 +662,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * DatabaseNames.
+         * The name of the database.
+         * <p>
+         * 
+         * >  When you call this operation to clone an instance, you can set the databases that are specified by this parameter for cloning. Otherwise, all databases of the instance are cloned.
          */
         public Builder databaseNames(String databaseNames) {
             this.putQueryParameter("DatabaseNames", databaseNames);
@@ -643,7 +674,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * Engine.
+         * The engine of the instance. The value is set to **MongoDB**.
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -652,7 +683,16 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * EngineVersion.
+         * The engine version of the instance. Valid values:
+         * <p>
+         * 
+         * * **5.0**
+         * * **4.4**
+         * * **4.2**
+         * * **4.0**
+         * * **3.4**
+         * 
+         * > If you call this operation to clone an instance, set the value to the engine of the source instance.
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -670,7 +710,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * NetworkType.
+         * The network type of the instance. Valid values:
+         * <p>
+         * 
+         * **VPC**
          */
         public Builder networkType(String networkType) {
             this.putQueryParameter("NetworkType", networkType);
@@ -697,7 +740,12 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * Period.
+         * The subscription period of the instance. Unit: months.
+         * <p>
+         * 
+         * Valid values: **1** to **9**, **12**, **24**, **36**, and **60**.
+         * 
+         * >  If you set the ChargeType property to PrePaid, you must configure this property.
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -706,7 +754,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * ReadonlyReplicas.
+         * The number of **read-only nodes** in the replica set instance. Default value: **0**. Valid values: **0** to **5**.
          */
         public Builder readonlyReplicas(String readonlyReplicas) {
             this.putQueryParameter("ReadonlyReplicas", readonlyReplicas);
@@ -715,7 +763,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -724,7 +772,12 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * ReplicationFactor.
+         * The number of **nodes** in the replica set instance. Default value: 3. Valid values:
+         * <p>
+         * 
+         * *   **3**
+         * *   **5**
+         * *   **7**
          */
         public Builder replicationFactor(String replicationFactor) {
             this.putQueryParameter("ReplicationFactor", replicationFactor);
@@ -733,7 +786,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -760,7 +813,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * RestoreTime.
+         * The point in time to clone the instance, which must be within seven days. Specify the time in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+         * <p>
+         * 
+         * >  This parameter is required only when you call this operation to clone an instance. If you specify this parameter, you must also specify the **SrcDBInstanceId** parameter.
          */
         public Builder restoreTime(String restoreTime) {
             this.putQueryParameter("RestoreTime", restoreTime);
@@ -778,7 +834,15 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * SecurityIPList.
+         * The IP addresses in an IP address whitelist. Separate multiple IP addresses with commas (,). Each IP address in the IP address whitelist must be unique. The following types of IP addresses are supported:
+         * <p>
+         * 
+         * * 0.0.0.0/0
+         * * IP addresses, such as 10.23.12.24.
+         * * Classless Inter-Domain Routing (CIDR) blocks, such as 10.23.12.0/24. In this case, /24 indicates that the prefix of each IP address is 24-bit long. You can replace 24 with a value within the range of 1 to 32.
+         * 
+         * > * A maximum of 1,000 IP addresses and CIDR blocks can be configured for each instance.
+         * > * If you enter 0.0.0.0/0, all IP addresses can access the instance. This may introduce security risks to the instance.
          */
         public Builder securityIPList(String securityIPList) {
             this.putQueryParameter("SecurityIPList", securityIPList);
@@ -796,7 +860,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * SrcDBInstanceId.
+         * The ID of the source instance.
+         * <p>
+         * 
+         * >  This parameter can only be specified when this operation is called to clone instances. You must also specify the **BackupId** parameter or **RestoreTime** parameter.
          */
         public Builder srcDBInstanceId(String srcDBInstanceId) {
             this.putQueryParameter("SrcDBInstanceId", srcDBInstanceId);
@@ -805,7 +872,15 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * StorageEngine.
+         * The storage engine of the instance. Default value: WiredTiger. Valid values:
+         * <p>
+         * 
+         * * **WiredTiger**
+         * * **RocksDB**
+         * * **TerarkDB**
+         * 
+         * > * If you call this operation to clone an instance, set the value to the engine of the source instance.
+         * > * For more information about the limits on database versions and storage engines, see [MongoDB versions and storage engines](~~61906~~).
          */
         public Builder storageEngine(String storageEngine) {
             this.putQueryParameter("StorageEngine", storageEngine);
@@ -814,7 +889,11 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * StorageType.
+         * The storage type of the instance. Valid values:
+         * <p>
+         * 
+         * *   **cloud_essd**: enhanced SSD (ESSD)
+         * *   **local_ssd**: local SSD
          */
         public Builder storageType(String storageType) {
             this.putQueryParameter("StorageType", storageType);
@@ -823,7 +902,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * The vSwitch ID of the instance.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -832,7 +911,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * The VPC ID of the instance.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -841,7 +920,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * The zone ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent zone list.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

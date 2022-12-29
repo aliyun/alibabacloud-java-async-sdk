@@ -50,7 +50,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Regions.
+         * Details about the regions.
          */
         public Builder regions(Regions regions) {
             this.regions = regions;
@@ -58,7 +58,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,11 @@ public class DescribeRegionsResponseBody extends TeaModel {
             private String zoneName; 
 
             /**
-             * VpcEnabled.
+             * Indicates whether a virtual private cloud (VPC) is supported. Valid values:
+             * <p>
+             * 
+             * *   **true**: VPC is supported.
+             * *   **false**: VPC is not supported.
              */
             public Builder vpcEnabled(Boolean vpcEnabled) {
                 this.vpcEnabled = vpcEnabled;
@@ -130,7 +134,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * The ID of the zone.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -138,7 +142,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneName.
+             * The name of the zone.
+             * <p>
+             * 
+             * The return value of the LocalName parameter is in the language that is specified by the **AcceptLanguage** parameter.
              */
             public Builder zoneName(String zoneName) {
                 this.zoneName = zoneName;
@@ -244,7 +251,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             private Zones zones; 
 
             /**
-             * RegionId.
+             * The ID of the region.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -252,7 +259,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionName.
+             * The name of the region.
+             * <p>
+             * 
+             * The return value of the LocalName parameter is in the language that is specified by the **AcceptLanguage** parameter.
              */
             public Builder regionName(String regionName) {
                 this.regionName = regionName;
@@ -260,7 +270,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * Zones.
+             * Details about the zones.
              */
             public Builder zones(Zones zones) {
                 this.zones = zones;

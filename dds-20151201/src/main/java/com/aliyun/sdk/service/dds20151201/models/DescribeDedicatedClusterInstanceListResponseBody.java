@@ -86,7 +86,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Instances.
+         * Details about the instances.
          */
         public Builder instances(Instances instances) {
             this.instances = instances;
@@ -94,7 +94,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The number of instances in the response.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -242,7 +242,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * DedicatedHostName.
+             * The ID of the host to which the instances in a dedicated cluster belong.
              */
             public Builder dedicatedHostName(String dedicatedHostName) {
                 this.dedicatedHostName = dedicatedHostName;
@@ -250,7 +250,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * InsName.
+             * The name of the shard.
              */
             public Builder insName(String insName) {
                 this.insName = insName;
@@ -258,7 +258,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * The ID of the node.
              */
             public Builder nodeId(Integer nodeId) {
                 this.nodeId = nodeId;
@@ -266,7 +266,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * NodeIp.
+             * The IP address of the node.
              */
             public Builder nodeIp(String nodeIp) {
                 this.nodeIp = nodeIp;
@@ -274,7 +274,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * NodeType.
+             * The type of the node.
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -282,7 +282,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The port number corresponding to the node.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -290,7 +290,11 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * Role.
+             * The role of the node. Valid values:
+             * <p>
+             * 
+             * *   **master**: a primary node.
+             * *   **slave**: a secondary node.
              */
             public Builder role(String role) {
                 this.role = role;
@@ -298,7 +302,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * The zone ID of the instance.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -608,7 +612,10 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * CharacterType.
+             * The type of the ApsaraDB for MongoDB instance. Valid value: **normal**.
+             * <p>
+             * 
+             * **normal**: a replica set instance.
              */
             public Builder characterType(String characterType) {
                 this.characterType = characterType;
@@ -616,7 +623,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterId.
+             * The ID of the dedicated cluster to which the instance belongs.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -624,7 +631,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterName.
+             * The name of the dedicated cluster to which the instance belongs.
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -632,7 +639,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the instance was created. The time is displayed in the *yyyy*-*MM*-*dd*T*HH*:*mm*:*ss*Z format.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -640,7 +647,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * CustomId.
+             * The instance ID of the backend O\&M platform.
              */
             public Builder customId(String customId) {
                 this.customId = customId;
@@ -648,7 +655,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * Engine.
+             * The database engine. Valid value: **MongoDB**.
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -656,7 +663,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * EngineVersion.
+             * The version number of the database engine. Valid value: **4.2**.
              */
             public Builder engineVersion(String engineVersion) {
                 this.engineVersion = engineVersion;
@@ -664,7 +671,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceClass.
+             * The instance type. For more information, see **Table 1. Standalone or replica set instance types** in [Instance types](~~57141~~).
              */
             public Builder instanceClass(String instanceClass) {
                 this.instanceClass = instanceClass;
@@ -672,7 +679,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the ApsaraDB for MongoDB instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -680,7 +687,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * The name of the ApsaraDB for MongoDB instance.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -688,7 +695,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceNodeList.
+             * Details about the instance nodes.
              */
             public Builder instanceNodeList(InstanceNodeList instanceNodeList) {
                 this.instanceNodeList = instanceNodeList;
@@ -696,7 +703,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceStatus.
+             * The status of the instance. More details of status, please see [instance status list](~~190071~~).
              */
             public Builder instanceStatus(String instanceStatus) {
                 this.instanceStatus = instanceStatus;
@@ -704,7 +711,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * MaintainEndTime.
+             * The end time of the maintenance window. The time is in the *HH:mmZ* format. The time is displayed in UTC.
              */
             public Builder maintainEndTime(String maintainEndTime) {
                 this.maintainEndTime = maintainEndTime;
@@ -712,7 +719,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * MaintainStartTime.
+             * The start time of the maintenance window. The time is in the *HH:mm*Z format. The time is displayed in UTC.
              */
             public Builder maintainStartTime(String maintainStartTime) {
                 this.maintainStartTime = maintainStartTime;
@@ -720,7 +727,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * The region where the instance is deployed.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -728,7 +735,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the region where the instance is deployed.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -736,7 +743,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * StorageType.
+             * The type of the storage.
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;
@@ -744,7 +751,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * The ID of the VPC.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -752,7 +759,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * VswitchId.
+             * The vSwitch ID of the VPC.
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;
@@ -760,7 +767,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * The zone ID of the instance.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

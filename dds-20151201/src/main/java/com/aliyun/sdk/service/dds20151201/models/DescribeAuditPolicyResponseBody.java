@@ -50,7 +50,13 @@ public class DescribeAuditPolicyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * LogAuditStatus.
+         * Indicates whether the log audit feature is enabled. Valid values:
+         * <p>
+         * 
+         * *   Enable
+         * *   Disabled
+         * 
+         * Default value: Disabled.
          */
         public Builder logAuditStatus(String logAuditStatus) {
             this.logAuditStatus = logAuditStatus;
@@ -58,7 +64,7 @@ public class DescribeAuditPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

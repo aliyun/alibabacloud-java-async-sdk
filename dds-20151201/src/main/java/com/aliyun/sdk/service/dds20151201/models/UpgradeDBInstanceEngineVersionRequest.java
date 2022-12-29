@@ -163,7 +163,7 @@ public class UpgradeDBInstanceEngineVersionRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -172,7 +172,10 @@ public class UpgradeDBInstanceEngineVersionRequest extends Request {
         }
 
         /**
-         * EngineVersion.
+         * The database version to which you want to upgrade. Valid values: **3.4**, **4.0**, and **4.2**.
+         * <p>
+         * 
+         * >  This database version must be later than the current database version of the instance.
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);

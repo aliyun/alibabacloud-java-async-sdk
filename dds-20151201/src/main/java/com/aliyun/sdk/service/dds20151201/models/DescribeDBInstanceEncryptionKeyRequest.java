@@ -185,7 +185,7 @@ public class DescribeDBInstanceEncryptionKeyRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -194,7 +194,7 @@ public class DescribeDBInstanceEncryptionKeyRequest extends Request {
         }
 
         /**
-         * EncryptionKey.
+         * The custom key for the instance. You can call the [DescribeUserEncryptionKeyList](~~151729~~) operation to query the list of custom keys for an ApsaraDB for MongoDB instance.
          */
         public Builder encryptionKey(String encryptionKey) {
             this.putQueryParameter("EncryptionKey", encryptionKey);

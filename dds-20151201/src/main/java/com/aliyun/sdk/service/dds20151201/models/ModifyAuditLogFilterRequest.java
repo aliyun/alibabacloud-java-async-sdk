@@ -177,7 +177,7 @@ public class ModifyAuditLogFilterRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -186,7 +186,16 @@ public class ModifyAuditLogFilterRequest extends Request {
         }
 
         /**
-         * Filter.
+         * The type of the audit log entries to be collected. Valid values:
+         * <p>
+         * 
+         * *   **admin**: O\&M and management operations
+         * *   **slow**: slow query logs
+         * *   **query**: query operations
+         * *   **insert**: insert operations
+         * *   **update**: update operations
+         * *   **delete**: delete operations
+         * *   **command**: protocol commands such as the aggregate method
          */
         public Builder filter(String filter) {
             this.putQueryParameter("Filter", filter);
@@ -231,7 +240,11 @@ public class ModifyAuditLogFilterRequest extends Request {
         }
 
         /**
-         * RoleType.
+         * The role of the node in the instance. Valid values:
+         * <p>
+         * 
+         * *   **primary**
+         * *   **secondary**
          */
         public Builder roleType(String roleType) {
             this.putQueryParameter("RoleType", roleType);

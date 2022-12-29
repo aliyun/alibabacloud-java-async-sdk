@@ -154,7 +154,7 @@ public class DescribeParameterTemplatesRequest extends Request {
         } 
 
         /**
-         * Engine.
+         * The database engine of the instance. Set the value to **MongoDB**.
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -163,7 +163,14 @@ public class DescribeParameterTemplatesRequest extends Request {
         }
 
         /**
-         * EngineVersion.
+         * The database engine version of the instance. Valid values:
+         * <p>
+         * 
+         * *   **5.0**
+         * *   **4.4**
+         * *   **4.2**
+         * *   **4.0**
+         * *   **3.4**
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -190,7 +197,7 @@ public class DescribeParameterTemplatesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

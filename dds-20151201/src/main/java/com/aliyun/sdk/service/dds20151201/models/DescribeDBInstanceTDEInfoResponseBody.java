@@ -50,7 +50,7 @@ public class DescribeDBInstanceTDEInfoResponseBody extends TeaModel {
         private String TDEStatus; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,11 @@ public class DescribeDBInstanceTDEInfoResponseBody extends TeaModel {
         }
 
         /**
-         * TDEStatus.
+         * The TDE status. Valid values:
+         * <p>
+         * 
+         * *   **enabled**
+         * *   **disabled**
          */
         public Builder TDEStatus(String TDEStatus) {
             this.TDEStatus = TDEStatus;

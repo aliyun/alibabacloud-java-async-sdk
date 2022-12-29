@@ -50,7 +50,7 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Items.
+         * Details about the ECS security groups.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -58,7 +58,7 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,11 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
             private String securityGroupId; 
 
             /**
-             * NetType.
+             * The network type of the ECS security group. Valid values:
+             * <p>
+             * 
+             * *   **vpc**
+             * *   **classic**
              */
             public Builder netType(String netType) {
                 this.netType = netType;
@@ -130,7 +134,7 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID of the ECS security group.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -138,7 +142,7 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroupId.
+             * The ID of the ECS security group.
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;

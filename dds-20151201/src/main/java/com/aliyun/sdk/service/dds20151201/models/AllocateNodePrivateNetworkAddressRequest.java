@@ -205,7 +205,12 @@ public class AllocateNodePrivateNetworkAddressRequest extends Request {
         }
 
         /**
-         * AccountName.
+         * The name of the account.
+         * <p>
+         * 
+         * > * The name must be 4 to 16 characters in length and can contain lowercase letters, digits, and underscores (\_). It must start with a lowercase letter.
+         * > * You need to set the account name and password only when you apply for an endpoint for a shard or Configserver node for the first time. In this case, the account name and password are used for all shard and Configserver nodes.
+         * > * The permissions of this account are fixed to read-only.
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -214,7 +219,11 @@ public class AllocateNodePrivateNetworkAddressRequest extends Request {
         }
 
         /**
-         * AccountPassword.
+         * The password of the account.
+         * <p>
+         * 
+         * *   The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include `!#$%^&*()_+-=`
+         * *   The password must be 8 to 32 characters in length.
          */
         public Builder accountPassword(String accountPassword) {
             this.putQueryParameter("AccountPassword", accountPassword);
@@ -223,7 +232,7 @@ public class AllocateNodePrivateNetworkAddressRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the sharded cluster instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -232,7 +241,10 @@ public class AllocateNodePrivateNetworkAddressRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * The ID of the shard or Configserver node.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to query the ID of the shard or Configserver node.
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -286,7 +298,10 @@ public class AllocateNodePrivateNetworkAddressRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * The zone ID of the instance.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to query the zone ID of the instance.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

@@ -154,7 +154,10 @@ public class MigrateAvailableZoneRequest extends Request {
         } 
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
+         * <p>
+         * 
+         * >  If the instance is deployed in a VPC, you must specify the **Vswitch** parameter.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -163,7 +166,13 @@ public class MigrateAvailableZoneRequest extends Request {
         }
 
         /**
-         * EffectiveTime.
+         * The time when the instance is migrated to the destination zone. Valid values:
+         * <p>
+         * 
+         * *   **Immediately**: The instance is immediately migrated to the destination zone.
+         * *   **MaintainTime**: The instance is migrated to the destination zone during the maintenance window of the instance.
+         * 
+         * Default value: **Immediately**.
          */
         public Builder effectiveTime(String effectiveTime) {
             this.putQueryParameter("EffectiveTime", effectiveTime);
@@ -208,7 +217,10 @@ public class MigrateAvailableZoneRequest extends Request {
         }
 
         /**
-         * Vswitch.
+         * The ID of the vSwitch in the destination zone.
+         * <p>
+         * 
+         * >  If the instance is deployed in a VPC, you must specify this parameter.
          */
         public Builder vswitch(String vswitch) {
             this.putQueryParameter("Vswitch", vswitch);
@@ -217,7 +229,11 @@ public class MigrateAvailableZoneRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * The ID of the destination zone.
+         * <p>
+         * 
+         * > * The source zone and the destination zone belong to the same region.
+         * > * You can call the [DescribeRegions](~~61933~~) operation to query the most recent zone list.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

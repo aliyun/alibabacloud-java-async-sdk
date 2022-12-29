@@ -238,7 +238,7 @@ public class DescribePriceRequest extends Request {
         } 
 
         /**
-         * BusinessInfo.
+         * The business information. This is an additional parameter.
          */
         public Builder businessInfo(String businessInfo) {
             this.putQueryParameter("BusinessInfo", businessInfo);
@@ -247,7 +247,15 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * CommodityCode.
+         * The code of the cluster. Valid values:
+         * <p>
+         * 
+         * *   dds: a replica set instance that uses the pay-as-you-go billing method
+         * *   badds: a replica set instance that uses the subscription billing method
+         * *   dds_sharding: a sharded cluster instance that uses the pay-as-you-go billing method
+         * *   badds_sharding: a sharded cluster instance that uses the subscription billing method
+         * *   badds_sharding_intl: a sharded cluster instance that uses the subscription billing method and is available on the International site (alibabacloud.com)
+         * *   badds_sharding_jp: a sharded cluster instance that uses the subscription billing method and is available on the Japan site (jp.alibabacloud.com)
          */
         public Builder commodityCode(String commodityCode) {
             this.putQueryParameter("CommodityCode", commodityCode);
@@ -256,7 +264,7 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * CouponNo.
+         * The coupon code. Default value: **youhuiquan_promotion_option_id_for_blank**.
          */
         public Builder couponNo(String couponNo) {
             this.putQueryParameter("CouponNo", couponNo);
@@ -265,7 +273,7 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * DBInstances.
+         * A JSON string that contains the details of the ApsaraDB for MongoDB instance. For more information, see Details of the [DBInstances](~~197291~~) parameter in the DescribePrice operation.
          */
         public Builder DBInstances(String DBInstances) {
             this.putQueryParameter("DBInstances", DBInstances);
@@ -274,7 +282,13 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * OrderParamOut.
+         * Specifies whether to return the parameters about the order. Valid values:
+         * <p>
+         * 
+         * *   false
+         * *   true
+         * 
+         * Default value: **false**.
          */
         public Builder orderParamOut(String orderParamOut) {
             this.putQueryParameter("OrderParamOut", orderParamOut);
@@ -283,7 +297,12 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * OrderType.
+         * The type of the order. Valid values:
+         * <p>
+         * 
+         * *   BUY: instance creation
+         * *   UPGRADE: instance configuration change
+         * *   RENEW: instance renewal
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -310,7 +329,7 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * The code of the service to which the instance belongs. Default value: **dds**.
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -319,7 +338,7 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -328,7 +347,7 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group. For more information, see [View basic information of a resource group](~~151181~~).
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

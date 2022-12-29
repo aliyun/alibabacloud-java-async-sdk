@@ -74,7 +74,7 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         private String startTime; 
 
         /**
-         * EndTime.
+         * The end of the time range to query. The time is in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -82,7 +82,7 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * PerformanceKeys.
+         * Details about the performance metrics.
          */
         public Builder performanceKeys(PerformanceKeys performanceKeys) {
             this.performanceKeys = performanceKeys;
@@ -90,7 +90,7 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. The time is in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -150,7 +150,7 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Date.
+             * The date and time when the metric value was generated.
              */
             public Builder date(String date) {
                 this.date = date;
@@ -158,7 +158,7 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the performance metric.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -276,7 +276,7 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
             private String valueFormat; 
 
             /**
-             * Key.
+             * The performance metric.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -284,7 +284,7 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * PerformanceValues.
+             * Details about the performance metric values.
              */
             public Builder performanceValues(PerformanceValues performanceValues) {
                 this.performanceValues = performanceValues;
@@ -292,7 +292,7 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the performance metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -300,7 +300,10 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * ValueFormat.
+             * The format of the performance metric value. If the performance metric contains multiple fields, the fields are separated with **\&amp;** symbols.
+             * <p>
+             * 
+             * For example, if you query disk usage, the returned **ValueFormat** value is in the **ins_size\&amp;data_size\&amp;log_size** format.
              */
             public Builder valueFormat(String valueFormat) {
                 this.valueFormat = valueFormat;

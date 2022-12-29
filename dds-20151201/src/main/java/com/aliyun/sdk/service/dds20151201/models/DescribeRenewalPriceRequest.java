@@ -176,7 +176,7 @@ public class DescribeRenewalPriceRequest extends Request {
         }
 
         /**
-         * BusinessInfo.
+         * The business information. This is an additional parameter.
          */
         public Builder businessInfo(String businessInfo) {
             this.putQueryParameter("BusinessInfo", businessInfo);
@@ -185,7 +185,7 @@ public class DescribeRenewalPriceRequest extends Request {
         }
 
         /**
-         * CouponNo.
+         * The coupon code. Default value: **youhuiquan_promotion_option_id_for_blank**.
          */
         public Builder couponNo(String couponNo) {
             this.putQueryParameter("CouponNo", couponNo);
@@ -194,7 +194,7 @@ public class DescribeRenewalPriceRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

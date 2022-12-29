@@ -163,7 +163,7 @@ public class CheckCloudResourceAuthorizedRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -217,7 +217,7 @@ public class CheckCloudResourceAuthorizedRequest extends Request {
         }
 
         /**
-         * TargetRegionId.
+         * The region ID of the instance. You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to query the region ID of the instance.
          */
         public Builder targetRegionId(String targetRegionId) {
             this.putQueryParameter("TargetRegionId", targetRegionId);

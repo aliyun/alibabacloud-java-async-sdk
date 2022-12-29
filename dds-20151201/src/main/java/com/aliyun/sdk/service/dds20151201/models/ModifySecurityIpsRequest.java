@@ -205,7 +205,7 @@ public class ModifySecurityIpsRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of an instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -214,7 +214,14 @@ public class ModifySecurityIpsRequest extends Request {
         }
 
         /**
-         * ModifyMode.
+         * The method of modification. Valid values:
+         * <p>
+         * 
+         * *   **Cover**: overwrites the whitelist.
+         * *   **Append**: appends data to the whitelist.
+         * *   **Delete**: deletes the whitelist.
+         * 
+         * The default value is **Cover**.
          */
         public Builder modifyMode(String modifyMode) {
             this.putQueryParameter("ModifyMode", modifyMode);
@@ -259,7 +266,10 @@ public class ModifySecurityIpsRequest extends Request {
         }
 
         /**
-         * SecurityIpGroupAttribute.
+         * The attributes of an IP address whitelist. It can contain a maximum of 120 characters in length and can contain uppercase letters, lowercase letters, and digits.
+         * <p>
+         * 
+         * This parameter is empty by default.
          */
         public Builder securityIpGroupAttribute(String securityIpGroupAttribute) {
             this.putQueryParameter("SecurityIpGroupAttribute", securityIpGroupAttribute);
@@ -268,7 +278,7 @@ public class ModifySecurityIpsRequest extends Request {
         }
 
         /**
-         * SecurityIpGroupName.
+         * The name of the IP address whitelist to be modified. The default value is **default**.
          */
         public Builder securityIpGroupName(String securityIpGroupName) {
             this.putQueryParameter("SecurityIpGroupName", securityIpGroupName);
@@ -277,7 +287,11 @@ public class ModifySecurityIpsRequest extends Request {
         }
 
         /**
-         * SecurityIps.
+         * The IP addresses in an IP address whitelist. Separate multiple IP addresses with commas (,). You can add a maximum of 1,000 different IP addresses to a whitelist. You can add IP addresses in one of the following two formats:
+         * <p>
+         * 
+         * *   IP addresses. Example: 10.23.12.24.
+         * *   Classless Inter-Domain Routing (CIDR) blocks, such as 10.23.12.24/24, where 24 indicates that the prefix of the CIDR block is 24-bit long. You can replace 24 with a value within the range of 1 to 32.
          */
         public Builder securityIps(String securityIps) {
             this.putQueryParameter("SecurityIps", securityIps);

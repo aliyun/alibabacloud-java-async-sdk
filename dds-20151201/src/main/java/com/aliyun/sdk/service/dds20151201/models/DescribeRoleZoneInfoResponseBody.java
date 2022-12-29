@@ -50,7 +50,7 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
         private ZoneInfos zoneInfos; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
         }
 
         /**
-         * ZoneInfos.
+         * An array that consists of information of nodes in the zone.
          */
         public Builder zoneInfos(ZoneInfos zoneInfos) {
             this.zoneInfos = zoneInfos;
@@ -146,7 +146,7 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * InsName.
+             * The ID of the node.
              */
             public Builder insName(String insName) {
                 this.insName = insName;
@@ -154,7 +154,15 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
             }
 
             /**
-             * NodeType.
+             * The type of the node. Valid values:
+             * <p>
+             * 
+             * *   **normal**
+             * *   **configServer**
+             * *   **shard**
+             * *   **mongos**
+             * 
+             * >  Valid value for replica set instances: **normal**. Valid values for replica set instances: **configServer**, **shard**, and **mongos**.
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -162,7 +170,7 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
             }
 
             /**
-             * RoleId.
+             * The ID of the role.
              */
             public Builder roleId(String roleId) {
                 this.roleId = roleId;
@@ -170,7 +178,12 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
             }
 
             /**
-             * RoleType.
+             * The role of the node. Valid values:
+             * <p>
+             * 
+             * *   **Primary**
+             * *   **Secondary**
+             * *   **Hidden**
              */
             public Builder roleType(String roleType) {
                 this.roleType = roleType;
@@ -178,7 +191,7 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * The zone ID.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

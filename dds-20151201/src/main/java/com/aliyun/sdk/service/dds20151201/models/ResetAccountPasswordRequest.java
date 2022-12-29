@@ -178,7 +178,7 @@ public class ResetAccountPasswordRequest extends Request {
         }
 
         /**
-         * AccountName.
+         * The account for which you want to reset the password. Set the value to **root**.
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -187,7 +187,11 @@ public class ResetAccountPasswordRequest extends Request {
         }
 
         /**
-         * AccountPassword.
+         * The new password.
+         * <p>
+         * 
+         * *   The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include `! # $ % ^ & * ( ) _ + - =`
+         * *   The password must be 8 to 32 characters in length.
          */
         public Builder accountPassword(String accountPassword) {
             this.putQueryParameter("AccountPassword", accountPassword);
@@ -196,7 +200,7 @@ public class ResetAccountPasswordRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

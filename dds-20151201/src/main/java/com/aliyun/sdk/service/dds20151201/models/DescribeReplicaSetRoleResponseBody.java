@@ -62,7 +62,7 @@ public class DescribeReplicaSetRoleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -70,7 +70,7 @@ public class DescribeReplicaSetRoleResponseBody extends TeaModel {
         }
 
         /**
-         * ReplicaSets.
+         * Details about the replica set roles.
          */
         public Builder replicaSets(ReplicaSets replicaSets) {
             this.replicaSets = replicaSets;
@@ -78,7 +78,7 @@ public class DescribeReplicaSetRoleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -178,7 +178,7 @@ public class DescribeReplicaSetRoleResponseBody extends TeaModel {
             private String roleId; 
 
             /**
-             * ConnectionDomain.
+             * The endpoint of the node.
              */
             public Builder connectionDomain(String connectionDomain) {
                 this.connectionDomain = connectionDomain;
@@ -186,7 +186,7 @@ public class DescribeReplicaSetRoleResponseBody extends TeaModel {
             }
 
             /**
-             * ConnectionPort.
+             * The port of the node.
              */
             public Builder connectionPort(String connectionPort) {
                 this.connectionPort = connectionPort;
@@ -194,7 +194,7 @@ public class DescribeReplicaSetRoleResponseBody extends TeaModel {
             }
 
             /**
-             * ExpiredTime.
+             * The remaining duration of the classic network endpoint. Unit: seconds.
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -202,7 +202,12 @@ public class DescribeReplicaSetRoleResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkType.
+             * The network type. Valid values:
+             * <p>
+             * 
+             * *   **VPC**
+             * *   **Classic**
+             * *   **Public**
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -210,7 +215,11 @@ public class DescribeReplicaSetRoleResponseBody extends TeaModel {
             }
 
             /**
-             * ReplicaSetRole.
+             * The role of the node in the replica set.
+             * <p>
+             * 
+             * *   **Primary**
+             * *   **Secondary**
              */
             public Builder replicaSetRole(String replicaSetRole) {
                 this.replicaSetRole = replicaSetRole;
@@ -218,7 +227,7 @@ public class DescribeReplicaSetRoleResponseBody extends TeaModel {
             }
 
             /**
-             * RoleId.
+             * The role ID of the node.
              */
             public Builder roleId(String roleId) {
                 this.roleId = roleId;

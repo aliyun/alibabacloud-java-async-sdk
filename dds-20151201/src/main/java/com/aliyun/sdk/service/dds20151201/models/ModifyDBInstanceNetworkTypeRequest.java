@@ -219,7 +219,10 @@ public class ModifyDBInstanceNetworkTypeRequest extends Request {
         }
 
         /**
-         * ClassicExpiredDays.
+         * The retention period of the original classic network address when you change the network type to VPC. Valid values: **14**, **30**, **60**, and **120**. Unit: days.
+         * <p>
+         * 
+         * >  This parameter is required when the **NetworkType** parameter is set to **VPC** and the **RetainClassic** parameter is set to **True**.
          */
         public Builder classicExpiredDays(Integer classicExpiredDays) {
             this.putQueryParameter("ClassicExpiredDays", classicExpiredDays);
@@ -228,7 +231,7 @@ public class ModifyDBInstanceNetworkTypeRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -237,7 +240,11 @@ public class ModifyDBInstanceNetworkTypeRequest extends Request {
         }
 
         /**
-         * NetworkType.
+         * The network type to switch to. Valid values:
+         * <p>
+         * 
+         * *   **VPC**
+         * *   **Classic**
          */
         public Builder networkType(String networkType) {
             this.putQueryParameter("NetworkType", networkType);
@@ -282,7 +289,14 @@ public class ModifyDBInstanceNetworkTypeRequest extends Request {
         }
 
         /**
-         * RetainClassic.
+         * Specifies whether to retain the original classic network address when you change the network type to VPC. Valid values:
+         * <p>
+         * 
+         * - **True**: retains the original classic network address.
+         * - **False**: does not retain the original classic network address.
+         * 
+         * > * This parameter is required when the **NetworkType** parameter is set to **VPC**.
+         * > * If you set this parameter to **True**, you must also specify the **ClassicExpiredDays** parameter.
          */
         public Builder retainClassic(String retainClassic) {
             this.putQueryParameter("RetainClassic", retainClassic);
@@ -300,7 +314,10 @@ public class ModifyDBInstanceNetworkTypeRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * The ID of the vSwitch.
+         * <p>
+         * 
+         * >  This parameter is required when the **NetworkType** parameter is set to **VPC**.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -309,7 +326,10 @@ public class ModifyDBInstanceNetworkTypeRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * The ID of the virtual private cloud (VPC).
+         * <p>
+         * 
+         * >  This parameter is required when the **NetworkType** parameter is set to **VPC**.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

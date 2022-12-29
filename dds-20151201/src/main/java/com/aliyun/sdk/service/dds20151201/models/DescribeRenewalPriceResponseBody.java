@@ -74,7 +74,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
         private SubOrders subOrders; 
 
         /**
-         * Order.
+         * The list of orders.
          */
         public Builder order(Order order) {
             this.order = order;
@@ -82,7 +82,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,7 +90,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
         }
 
         /**
-         * Rules.
+         * Details about the promotion rules.
          */
         public Builder rules(Rules rules) {
             this.rules = rules;
@@ -98,7 +98,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
         }
 
         /**
-         * SubOrders.
+         * The rules matching the coupons.
          */
         public Builder subOrders(SubOrders subOrders) {
             this.subOrders = subOrders;
@@ -174,7 +174,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * CouponNo.
+             * The coupon number.
              */
             public Builder couponNo(String couponNo) {
                 this.couponNo = couponNo;
@@ -182,7 +182,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the coupon.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -190,7 +190,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             }
 
             /**
-             * IsSelected.
+             * Indicates whether the coupon was selected.
              */
             public Builder isSelected(String isSelected) {
                 this.isSelected = isSelected;
@@ -198,7 +198,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the coupon.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -381,7 +381,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             private Float tradeAmount; 
 
             /**
-             * Coupons.
+             * Details about the coupons.
              */
             public Builder coupons(Coupons coupons) {
                 this.coupons = coupons;
@@ -389,7 +389,11 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             }
 
             /**
-             * Currency.
+             * The type of the currency. Valid values:
+             * <p>
+             * 
+             * *   USD: United States dollar
+             * *   JPY: Japanese Yen
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -397,7 +401,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             }
 
             /**
-             * DiscountAmount.
+             * The discount amount of the order.
              */
             public Builder discountAmount(Float discountAmount) {
                 this.discountAmount = discountAmount;
@@ -405,7 +409,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             }
 
             /**
-             * OriginalAmount.
+             * The original price of the order.
              */
             public Builder originalAmount(Float originalAmount) {
                 this.originalAmount = originalAmount;
@@ -413,7 +417,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             }
 
             /**
-             * RuleIds.
+             * The IDs of the matched rules.
              */
             public Builder ruleIds(RuleIds ruleIds) {
                 this.ruleIds = ruleIds;
@@ -421,7 +425,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             }
 
             /**
-             * TradeAmount.
+             * The actual price of the order.
              */
             public Builder tradeAmount(Float tradeAmount) {
                 this.tradeAmount = tradeAmount;
@@ -486,7 +490,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * Name.
+             * The name of the rule.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -494,7 +498,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             }
 
             /**
-             * RuleDescId.
+             * The ID of the rule.
              */
             public Builder ruleDescId(Long ruleDescId) {
                 this.ruleDescId = ruleDescId;
@@ -502,7 +506,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * The title of the rule.
              */
             public Builder title(String title) {
                 this.title = title;
@@ -673,7 +677,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             private Float tradeAmount; 
 
             /**
-             * DiscountAmount.
+             * The discount amount of the order.
              */
             public Builder discountAmount(Float discountAmount) {
                 this.discountAmount = discountAmount;
@@ -681,7 +685,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -689,7 +693,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             }
 
             /**
-             * OriginalAmount.
+             * The original price of the order.
              */
             public Builder originalAmount(Float originalAmount) {
                 this.originalAmount = originalAmount;
@@ -697,7 +701,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             }
 
             /**
-             * RuleIds.
+             * The IDs of the matched rules.
              */
             public Builder ruleIds(SubOrderRuleIds ruleIds) {
                 this.ruleIds = ruleIds;
@@ -705,7 +709,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             }
 
             /**
-             * TradeAmount.
+             * The actual price of the order.
              */
             public Builder tradeAmount(Float tradeAmount) {
                 this.tradeAmount = tradeAmount;

@@ -177,7 +177,7 @@ public class ReleaseNodePrivateNetworkAddressRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the sharded cluster instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -186,7 +186,13 @@ public class ReleaseNodePrivateNetworkAddressRequest extends Request {
         }
 
         /**
-         * NetworkType.
+         * The network type of the internal endpoint. Valid values:
+         * <p>
+         * 
+         * *   **VPC**
+         * *   **Classic**
+         * 
+         * >  You can call the [DescribeShardingNetworkAddress](~~62135~~) operation to query the network type of the internal endpoint.
          */
         public Builder networkType(String networkType) {
             this.putQueryParameter("NetworkType", networkType);
@@ -195,7 +201,10 @@ public class ReleaseNodePrivateNetworkAddressRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * The ID of the shard or Configserver node.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to query the ID of the shard or Configserver node.
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);

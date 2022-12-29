@@ -178,7 +178,7 @@ public class ModifyDBInstanceMaintainTimeRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -187,7 +187,10 @@ public class ModifyDBInstanceMaintainTimeRequest extends Request {
         }
 
         /**
-         * MaintainEndTime.
+         * The end time of the maintenance window. Specify the time in the *HH:mmZ* format. The time must be in UTC.
+         * <p>
+         * 
+         * >  The end time must be later than the start time of the maintenance window.
          */
         public Builder maintainEndTime(String maintainEndTime) {
             this.putQueryParameter("MaintainEndTime", maintainEndTime);
@@ -196,7 +199,7 @@ public class ModifyDBInstanceMaintainTimeRequest extends Request {
         }
 
         /**
-         * MaintainStartTime.
+         * The start time of the maintenance window. Specify the time in the *HH:mm*Z format. The time must be in UTC.
          */
         public Builder maintainStartTime(String maintainStartTime) {
             this.putQueryParameter("MaintainStartTime", maintainStartTime);

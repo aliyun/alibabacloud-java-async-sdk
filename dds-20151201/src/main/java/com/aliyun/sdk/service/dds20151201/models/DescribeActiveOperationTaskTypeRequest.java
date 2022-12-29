@@ -161,7 +161,13 @@ public class DescribeActiveOperationTaskTypeRequest extends Request {
         }
 
         /**
-         * IsHistory.
+         * Specifies whether to return all O\&M tasks. Valid values:
+         * <p>
+         * 
+         * *   **0**: returns only pending tasks.
+         * *   **1**: returns all tasks.
+         * 
+         * Default value: **0**.
          */
         public Builder isHistory(Integer isHistory) {
             this.putQueryParameter("IsHistory", isHistory);
@@ -188,7 +194,7 @@ public class DescribeActiveOperationTaskTypeRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

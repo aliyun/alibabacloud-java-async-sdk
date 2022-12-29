@@ -248,7 +248,22 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * BackupInterval.
+         * The frequency at which high-frequency backups are created. Valid values:
+         * <p>
+         * 
+         * *   **-1**: disables high-frequency backup.
+         * *   **15**: every 15 minutes.
+         * *   **30**: every 30 minutes.
+         * *   **60**: every hour.
+         * *   **120**: every 2 hours.
+         * *   **180**: every 3 hours.
+         * *   **240**: every 4 hours.
+         * *   **360**: every 6 hours.
+         * *   **480**: every 8 hours.
+         * *   **720**: every 12 hours.
+         * 
+         * > * If **SnapshotBackupType** is set to **Standard**, this parameter is set to **-1** and cannot be changed.
+         * > * High-frequency backup takes effect only when **SnapshotBackupType** is set to **Flash** and the value of this parameter is greater than 0.
          */
         public Builder backupInterval(String backupInterval) {
             this.putQueryParameter("BackupInterval", backupInterval);
@@ -257,7 +272,11 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * BackupRetentionPeriod.
+         * The retention period of full backups.
+         * <p>
+         * 
+         * > * If your instance is created before September 10, 2021, backups are retained for seven days by default.
+         * > * If your instance is created after September 10, 2021, backups are retained for 30 days by default.
          */
         public Builder backupRetentionPeriod(Long backupRetentionPeriod) {
             this.putQueryParameter("BackupRetentionPeriod", backupRetentionPeriod);
@@ -266,7 +285,7 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -275,7 +294,11 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * EnableBackupLog.
+         * Specifies whether to enable log backup. Default value: 0. Valid values:
+         * <p>
+         * 
+         * *   **0**: disables log backup.
+         * *   **1**: enables log backup.
          */
         public Builder enableBackupLog(Long enableBackupLog) {
             this.putQueryParameter("EnableBackupLog", enableBackupLog);
@@ -284,7 +307,10 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * LogBackupRetentionPeriod.
+         * The number of days for which log backups are retained. Default value: 7.
+         * <p>
+         * 
+         * Valid values: 7 to 730.
          */
         public Builder logBackupRetentionPeriod(Long logBackupRetentionPeriod) {
             this.putQueryParameter("LogBackupRetentionPeriod", logBackupRetentionPeriod);
@@ -311,7 +337,18 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * PreferredBackupPeriod.
+         * The day of a week on which to back up data. Valid values:
+         * <p>
+         * 
+         * *   **Monday**
+         * *   **Tuesday**
+         * *   **Wednesday**
+         * *   **Thursday**
+         * *   **Friday**
+         * *   **Saturday**
+         * *   **Sunday**
+         * 
+         * >  Separate multiple values with commas (,).
          */
         public Builder preferredBackupPeriod(String preferredBackupPeriod) {
             this.putQueryParameter("PreferredBackupPeriod", preferredBackupPeriod);
@@ -320,7 +357,10 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * PreferredBackupTime.
+         * The time range to back up data. Specify the time in the *HH:mm*Z-*HH:mm*Z format. The time must be in UTC.
+         * <p>
+         * 
+         * >  The time range is 1 hour.
          */
         public Builder preferredBackupTime(String preferredBackupTime) {
             this.putQueryParameter("PreferredBackupTime", preferredBackupTime);
@@ -356,7 +396,11 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * SnapshotBackupType.
+         * The snapshot backup type. Default value: Standard. Valid values:
+         * <p>
+         * 
+         * *   **Flash**: single-digit second backup
+         * *   **Standard**: standard backup
          */
         public Builder snapshotBackupType(String snapshotBackupType) {
             this.putQueryParameter("SnapshotBackupType", snapshotBackupType);

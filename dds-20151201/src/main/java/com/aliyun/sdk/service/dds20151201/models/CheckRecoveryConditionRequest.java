@@ -181,7 +181,12 @@ public class CheckRecoveryConditionRequest extends Request {
         } 
 
         /**
-         * BackupId.
+         * The ID of the backup.
+         * <p>
+         * 
+         * > * You can call the [DescribeBackups](~~62172~~) operation to query the ID of the backup.
+         * > * You must specify one of the **RestoreTime** and BackupId parameters.
+         * > * This parameter is not applicable to sharded cluster instances.
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -190,7 +195,10 @@ public class CheckRecoveryConditionRequest extends Request {
         }
 
         /**
-         * DatabaseNames.
+         * The name of the source database. The value is a JSON array.
+         * <p>
+         * 
+         * >  If you do not specify this parameter, all databases are restored.
          */
         public Builder databaseNames(String databaseNames) {
             this.putQueryParameter("DatabaseNames", databaseNames);
@@ -217,7 +225,7 @@ public class CheckRecoveryConditionRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -244,7 +252,11 @@ public class CheckRecoveryConditionRequest extends Request {
         }
 
         /**
-         * RestoreTime.
+         * The point in time to which the instance is restored. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <p>
+         * 
+         * > * The value can be any time within the past seven days. The time must be earlier than the current time, but later than the time when the instance was created.
+         * > * You must specify one of the RestoreTime and **BackupId** parameters.
          */
         public Builder restoreTime(String restoreTime) {
             this.putQueryParameter("RestoreTime", restoreTime);
@@ -262,7 +274,7 @@ public class CheckRecoveryConditionRequest extends Request {
         }
 
         /**
-         * SourceDBInstance.
+         * The ID of the source instance.
          */
         public Builder sourceDBInstance(String sourceDBInstance) {
             this.putQueryParameter("SourceDBInstance", sourceDBInstance);
