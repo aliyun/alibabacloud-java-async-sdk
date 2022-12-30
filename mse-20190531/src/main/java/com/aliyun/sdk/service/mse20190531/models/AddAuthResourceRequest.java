@@ -21,12 +21,20 @@ public class AddAuthResourceRequest extends Request {
     private Long authId;
 
     @Query
+    @NameInMap("AuthResourceHeaderList")
+    private java.util.List < AuthResourceHeaderList> authResourceHeaderList;
+
+    @Query
     @NameInMap("DomainId")
     private Long domainId;
 
     @Query
     @NameInMap("GatewayUniqueId")
     private String gatewayUniqueId;
+
+    @Query
+    @NameInMap("IgnoreCase")
+    private Boolean ignoreCase;
 
     @Query
     @NameInMap("MatchType")
@@ -40,8 +48,10 @@ public class AddAuthResourceRequest extends Request {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
         this.authId = builder.authId;
+        this.authResourceHeaderList = builder.authResourceHeaderList;
         this.domainId = builder.domainId;
         this.gatewayUniqueId = builder.gatewayUniqueId;
+        this.ignoreCase = builder.ignoreCase;
         this.matchType = builder.matchType;
         this.path = builder.path;
     }
@@ -74,6 +84,13 @@ public class AddAuthResourceRequest extends Request {
     }
 
     /**
+     * @return authResourceHeaderList
+     */
+    public java.util.List < AuthResourceHeaderList> getAuthResourceHeaderList() {
+        return this.authResourceHeaderList;
+    }
+
+    /**
      * @return domainId
      */
     public Long getDomainId() {
@@ -85,6 +102,13 @@ public class AddAuthResourceRequest extends Request {
      */
     public String getGatewayUniqueId() {
         return this.gatewayUniqueId;
+    }
+
+    /**
+     * @return ignoreCase
+     */
+    public Boolean getIgnoreCase() {
+        return this.ignoreCase;
     }
 
     /**
@@ -104,8 +128,10 @@ public class AddAuthResourceRequest extends Request {
     public static final class Builder extends Request.Builder<AddAuthResourceRequest, Builder> {
         private String acceptLanguage; 
         private Long authId; 
+        private java.util.List < AuthResourceHeaderList> authResourceHeaderList; 
         private Long domainId; 
         private String gatewayUniqueId; 
+        private Boolean ignoreCase; 
         private String matchType; 
         private String path; 
 
@@ -117,8 +143,10 @@ public class AddAuthResourceRequest extends Request {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
             this.authId = request.authId;
+            this.authResourceHeaderList = request.authResourceHeaderList;
             this.domainId = request.domainId;
             this.gatewayUniqueId = request.gatewayUniqueId;
+            this.ignoreCase = request.ignoreCase;
             this.matchType = request.matchType;
             this.path = request.path;
         } 
@@ -142,6 +170,16 @@ public class AddAuthResourceRequest extends Request {
         }
 
         /**
+         * AuthResourceHeaderList.
+         */
+        public Builder authResourceHeaderList(java.util.List < AuthResourceHeaderList> authResourceHeaderList) {
+            String authResourceHeaderListShrink = shrink(authResourceHeaderList, "AuthResourceHeaderList", "json");
+            this.putQueryParameter("AuthResourceHeaderList", authResourceHeaderListShrink);
+            this.authResourceHeaderList = authResourceHeaderList;
+            return this;
+        }
+
+        /**
          * The ID of the domain name.
          */
         public Builder domainId(Long domainId) {
@@ -156,6 +194,15 @@ public class AddAuthResourceRequest extends Request {
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
             this.gatewayUniqueId = gatewayUniqueId;
+            return this;
+        }
+
+        /**
+         * IgnoreCase.
+         */
+        public Builder ignoreCase(Boolean ignoreCase) {
+            this.putQueryParameter("IgnoreCase", ignoreCase);
+            this.ignoreCase = ignoreCase;
             return this;
         }
 
@@ -184,4 +231,85 @@ public class AddAuthResourceRequest extends Request {
 
     } 
 
+    public static class AuthResourceHeaderList extends TeaModel {
+        @NameInMap("HeaderKey")
+        private String headerKey;
+
+        @NameInMap("HeaderMethod")
+        private String headerMethod;
+
+        @NameInMap("HeaderValue")
+        private String headerValue;
+
+        private AuthResourceHeaderList(Builder builder) {
+            this.headerKey = builder.headerKey;
+            this.headerMethod = builder.headerMethod;
+            this.headerValue = builder.headerValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AuthResourceHeaderList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return headerKey
+         */
+        public String getHeaderKey() {
+            return this.headerKey;
+        }
+
+        /**
+         * @return headerMethod
+         */
+        public String getHeaderMethod() {
+            return this.headerMethod;
+        }
+
+        /**
+         * @return headerValue
+         */
+        public String getHeaderValue() {
+            return this.headerValue;
+        }
+
+        public static final class Builder {
+            private String headerKey; 
+            private String headerMethod; 
+            private String headerValue; 
+
+            /**
+             * HeaderKey.
+             */
+            public Builder headerKey(String headerKey) {
+                this.headerKey = headerKey;
+                return this;
+            }
+
+            /**
+             * HeaderMethod.
+             */
+            public Builder headerMethod(String headerMethod) {
+                this.headerMethod = headerMethod;
+                return this;
+            }
+
+            /**
+             * HeaderValue.
+             */
+            public Builder headerValue(String headerValue) {
+                this.headerValue = headerValue;
+                return this;
+            }
+
+            public AuthResourceHeaderList build() {
+                return new AuthResourceHeaderList(this);
+            } 
+
+        } 
+
+    }
 }

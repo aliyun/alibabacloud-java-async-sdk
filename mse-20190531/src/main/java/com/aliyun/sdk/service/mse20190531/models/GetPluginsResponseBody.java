@@ -142,7 +142,7 @@ public class GetPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * The data entries returned.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -166,7 +166,7 @@ public class GetPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -418,12 +418,12 @@ public class GetPluginsResponseBody extends TeaModel {
             private Integer wasmLang; 
 
             /**
-             * The directory of the plug-in.
+             * The type of the plug-in. Valid values:
              * <p>
              * 
-             * 0: user-defined
+             * 0: custom
              * 
-             * 1: permission authentication
+             * 1: permission authorization
              * 
              * 2: security protection
              * 
@@ -439,7 +439,7 @@ public class GetPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the configuration check.
+             * The information about the plug-in configuration used for checking.
              */
             public Builder configCheck(String configCheck) {
                 this.configCheck = configCheck;
@@ -487,7 +487,7 @@ public class GetPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * The plug-in execution stage.
+             * The execution stage of the plug-in.
              * <p>
              * 
              * *   0: default stage
@@ -509,7 +509,7 @@ public class GetPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * The plug-in execution priority. A larger value indicates a higher priority.
+             * The execution priority of the plug-in. A larger value indicates a higher priority.
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -553,7 +553,7 @@ public class GetPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * The Object Storage Service (OSS) of the WebAssembly plug-in.
+             * The URL of the Object Storage Service (OSS) bucket that stores the WebAssembly plug-in.
              */
             public Builder wasmFile(String wasmFile) {
                 this.wasmFile = wasmFile;
@@ -561,7 +561,7 @@ public class GetPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * The WebAssembly language.
+             * The WebAssembly language. Valid values:
              * <p>
              * 
              * *   0: C++

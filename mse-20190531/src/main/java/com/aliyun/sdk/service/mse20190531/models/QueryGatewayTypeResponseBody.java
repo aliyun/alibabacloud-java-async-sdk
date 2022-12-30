@@ -98,7 +98,7 @@ public class QueryGatewayTypeResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned. A value of 200 indicates that the request is successful. Other values indicate that the request fails.
+         * The status code returned. The value 200 indicates that the request was successful. Other values indicate that the request failed.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class QueryGatewayTypeResponseBody extends TeaModel {
         }
 
         /**
-         * The information about gateway types.
+         * The information about the gateway type. The data type of this parameter is List.
          */
         public Builder data(java.util.List < String > data) {
             this.data = data;
@@ -138,10 +138,11 @@ public class QueryGatewayTypeResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
+         * Indicates whether the request was successful. Valid values:
          * <p>
-         * - `true`: The request is successful. 
-         * - `false`: The request fails.
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -106,6 +106,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteGatewaySlbResponse> deleteGatewaySlb(DeleteGatewaySlbRequest request);
 
+    CompletableFuture<DeleteMigrationTaskResponse> deleteMigrationTask(DeleteMigrationTaskRequest request);
+
     /**
       * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
       *
@@ -250,6 +252,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListClustersResponse> listClusters(ListClustersRequest request);
 
+    CompletableFuture<ListConfigTrackResponse> listConfigTrack(ListConfigTrackRequest request);
+
     CompletableFuture<ListEngineNamespacesResponse> listEngineNamespaces(ListEngineNamespacesRequest request);
 
     CompletableFuture<ListEurekaInstancesResponse> listEurekaInstances(ListEurekaInstancesRequest request);
@@ -280,6 +284,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<ListListenersByIpResponse> listListenersByIp(ListListenersByIpRequest request);
 
+    CompletableFuture<ListMigrationTaskResponse> listMigrationTask(ListMigrationTaskRequest request);
+
     /**
       * > The current API operation is not provided in Nacos SDK. For information about Nacos SDK, see the [official Nacos documentation](https://nacos.io/zh-cn/docs/sdk.html).
       *
@@ -291,6 +297,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<ListNacosHistoryConfigsResponse> listNacosHistoryConfigs(ListNacosHistoryConfigsRequest request);
+
+    CompletableFuture<ListNamingTrackResponse> listNamingTrack(ListNamingTrackRequest request);
 
     CompletableFuture<ListSSLCertResponse> listSSLCert(ListSSLCertRequest request);
 
@@ -406,6 +414,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateImageResponse> updateImage(UpdateImageRequest request);
 
     CompletableFuture<UpdateMessageQueueRouteResponse> updateMessageQueueRoute(UpdateMessageQueueRouteRequest request);
+
+    CompletableFuture<UpdateMigrationTaskResponse> updateMigrationTask(UpdateMigrationTaskRequest request);
 
     CompletableFuture<UpdateNacosClusterResponse> updateNacosCluster(UpdateNacosClusterRequest request);
 

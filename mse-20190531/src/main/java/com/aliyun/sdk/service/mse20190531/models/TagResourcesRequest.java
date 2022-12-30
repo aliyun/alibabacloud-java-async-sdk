@@ -113,7 +113,11 @@ public class TagResourcesRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -122,7 +126,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * 地域
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -131,7 +135,13 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The ID of the instance.
+         * <p>
+         * 
+         * > This parameter specifies the instance ID that is passed. Examples:
+         * 
+         * *   **ResourceId.1** indicates the ID of the first instance.
+         * *   **ResourceId.2** indicates the ID of the second instance.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -140,7 +150,11 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * 资源类型
+         * The type of the resources. Valid values:
+         * <p>
+         * 
+         * *   CLUSTER: MSE instance
+         * *   GATEWAY: cloud-native gateway
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -149,7 +163,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * 标签列表，最多包含20个子项
+         * The list of tags. You can specify a maximum of 20 tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -211,7 +225,7 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * 标签值
+             * The value of a tag.
              */
             public Builder value(String value) {
                 this.value = value;
