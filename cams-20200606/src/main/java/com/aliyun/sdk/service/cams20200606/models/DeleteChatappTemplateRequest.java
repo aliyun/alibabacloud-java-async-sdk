@@ -107,7 +107,7 @@ public class DeleteChatappTemplateRequest extends Request {
         }
 
         /**
-         * ISV客户WabaId, 后续会被弃用，请使用CustSpaceId
+         * The unique identifier of the WhatsApp account that you register.
          */
         public Builder custWabaId(String custWabaId) {
             this.putQueryParameter("CustWabaId", custWabaId);
@@ -116,7 +116,7 @@ public class DeleteChatappTemplateRequest extends Request {
         }
 
         /**
-         * Isv校验码，用于校验子帐号是否由ISV授权
+         * Assigned by ISV for RAM user authentication and authorization.
          */
         public Builder isvCode(String isvCode) {
             this.putQueryParameter("IsvCode", isvCode);
@@ -125,7 +125,7 @@ public class DeleteChatappTemplateRequest extends Request {
         }
 
         /**
-         * 模板编码
+         * The code of the message template.
          */
         public Builder templateCode(String templateCode) {
             this.putQueryParameter("TemplateCode", templateCode);

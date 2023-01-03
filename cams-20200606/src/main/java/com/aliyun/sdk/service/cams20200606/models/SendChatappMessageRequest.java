@@ -22,6 +22,10 @@ public class SendChatappMessageRequest extends Request {
     private String content;
 
     @Body
+    @NameInMap("ContextMessageId")
+    private String contextMessageId;
+
+    @Body
     @NameInMap("CustSpaceId")
     private String custSpaceId;
 
@@ -48,6 +52,10 @@ public class SendChatappMessageRequest extends Request {
     private String isvCode;
 
     @Body
+    @NameInMap("Label")
+    private String label;
+
+    @Body
     @NameInMap("Language")
     private String language;
 
@@ -58,6 +66,10 @@ public class SendChatappMessageRequest extends Request {
     @Query
     @NameInMap("Payload")
     private java.util.List < String > payload;
+
+    @Body
+    @NameInMap("Tag")
+    private String tag;
 
     @Body
     @NameInMap("TemplateCode")
@@ -73,6 +85,14 @@ public class SendChatappMessageRequest extends Request {
     private String to;
 
     @Body
+    @NameInMap("TrackingData")
+    private String trackingData;
+
+    @Body
+    @NameInMap("Ttl")
+    private Integer ttl;
+
+    @Body
     @NameInMap("Type")
     @Validation(required = true)
     private String type;
@@ -81,18 +101,23 @@ public class SendChatappMessageRequest extends Request {
         super(builder);
         this.channelType = builder.channelType;
         this.content = builder.content;
+        this.contextMessageId = builder.contextMessageId;
         this.custSpaceId = builder.custSpaceId;
         this.custWabaId = builder.custWabaId;
         this.fallBackContent = builder.fallBackContent;
         this.fallBackId = builder.fallBackId;
         this.from = builder.from;
         this.isvCode = builder.isvCode;
+        this.label = builder.label;
         this.language = builder.language;
         this.messageType = builder.messageType;
         this.payload = builder.payload;
+        this.tag = builder.tag;
         this.templateCode = builder.templateCode;
         this.templateParams = builder.templateParams;
         this.to = builder.to;
+        this.trackingData = builder.trackingData;
+        this.ttl = builder.ttl;
         this.type = builder.type;
     }
 
@@ -121,6 +146,13 @@ public class SendChatappMessageRequest extends Request {
      */
     public String getContent() {
         return this.content;
+    }
+
+    /**
+     * @return contextMessageId
+     */
+    public String getContextMessageId() {
+        return this.contextMessageId;
     }
 
     /**
@@ -166,6 +198,13 @@ public class SendChatappMessageRequest extends Request {
     }
 
     /**
+     * @return label
+     */
+    public String getLabel() {
+        return this.label;
+    }
+
+    /**
      * @return language
      */
     public String getLanguage() {
@@ -184,6 +223,13 @@ public class SendChatappMessageRequest extends Request {
      */
     public java.util.List < String > getPayload() {
         return this.payload;
+    }
+
+    /**
+     * @return tag
+     */
+    public String getTag() {
+        return this.tag;
     }
 
     /**
@@ -208,6 +254,20 @@ public class SendChatappMessageRequest extends Request {
     }
 
     /**
+     * @return trackingData
+     */
+    public String getTrackingData() {
+        return this.trackingData;
+    }
+
+    /**
+     * @return ttl
+     */
+    public Integer getTtl() {
+        return this.ttl;
+    }
+
+    /**
      * @return type
      */
     public String getType() {
@@ -217,18 +277,23 @@ public class SendChatappMessageRequest extends Request {
     public static final class Builder extends Request.Builder<SendChatappMessageRequest, Builder> {
         private String channelType; 
         private String content; 
+        private String contextMessageId; 
         private String custSpaceId; 
         private String custWabaId; 
         private String fallBackContent; 
         private String fallBackId; 
         private String from; 
         private String isvCode; 
+        private String label; 
         private String language; 
         private String messageType; 
         private java.util.List < String > payload; 
+        private String tag; 
         private String templateCode; 
         private java.util.Map < String, String > templateParams; 
         private String to; 
+        private String trackingData; 
+        private Integer ttl; 
         private String type; 
 
         private Builder() {
@@ -239,23 +304,33 @@ public class SendChatappMessageRequest extends Request {
             super(request);
             this.channelType = request.channelType;
             this.content = request.content;
+            this.contextMessageId = request.contextMessageId;
             this.custSpaceId = request.custSpaceId;
             this.custWabaId = request.custWabaId;
             this.fallBackContent = request.fallBackContent;
             this.fallBackId = request.fallBackId;
             this.from = request.from;
             this.isvCode = request.isvCode;
+            this.label = request.label;
             this.language = request.language;
             this.messageType = request.messageType;
             this.payload = request.payload;
+            this.tag = request.tag;
             this.templateCode = request.templateCode;
             this.templateParams = request.templateParams;
             this.to = request.to;
+            this.trackingData = request.trackingData;
+            this.ttl = request.ttl;
             this.type = request.type;
         } 
 
         /**
-         * 通道类型 whatsapp/viber/line
+         * The type of the message channel. Valid values:
+         * <p>
+         * 
+         * *   **whatsapp**
+         * *   viber (under development)
+         * *   line (under development)
          */
         public Builder channelType(String channelType) {
             this.putBodyParameter("ChannelType", channelType);
@@ -264,11 +339,25 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
-         * 消息内容
+         * The content of the message.
+         * <p>
+         * 
+         * **
+         * 
+         * **Note** The **Content** parameter is required if you set the **Type** parameter to **message**.
          */
         public Builder content(String content) {
             this.putQueryParameter("Content", content);
             this.content = content;
+            return this;
+        }
+
+        /**
+         * 回复的消息ID
+         */
+        public Builder contextMessageId(String contextMessageId) {
+            this.putBodyParameter("ContextMessageId", contextMessageId);
+            this.contextMessageId = contextMessageId;
             return this;
         }
 
@@ -282,7 +371,7 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
-         * ISV客户wabaId
+         * The unique identifier of the WhatsApp account that you register.
          */
         public Builder custWabaId(String custWabaId) {
             this.putBodyParameter("CustWabaId", custWabaId);
@@ -291,7 +380,7 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
-         * 回落内容
+         * Fallback message content.
          */
         public Builder fallBackContent(String fallBackContent) {
             this.putBodyParameter("FallBackContent", fallBackContent);
@@ -300,7 +389,7 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
-         * 回落策略ID
+         * Fallback strategy id. Fallback Strategy can be created on the ChatApp console.
          */
         public Builder fallBackId(String fallBackId) {
             this.putBodyParameter("FallBackId", fallBackId);
@@ -309,7 +398,10 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
-         * 发送方
+         * The mobile phone number of the message sender.
+         * <p>
+         * 
+         * <notice>You can specify a mobile phone number that is registered for a WhatsApp account and is approved in the ChatApp console.</notice>
          */
         public Builder from(String from) {
             this.putBodyParameter("From", from);
@@ -318,7 +410,7 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
-         * Isv校验码，用于校验子帐号是否由ISV授权
+         * Assigned by ISV for RAM user authentication and authorization.
          */
         public Builder isvCode(String isvCode) {
             this.putBodyParameter("IsvCode", isvCode);
@@ -327,7 +419,16 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
-         * 语言
+         * Viber消息类型，取值 pormotion/transation
+         */
+        public Builder label(String label) {
+            this.putBodyParameter("Label", label);
+            this.label = label;
+            return this;
+        }
+
+        /**
+         * The language that is used in the message template.
          */
         public Builder language(String language) {
             this.putBodyParameter("Language", language);
@@ -336,7 +437,14 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
-         * 消息类型
+         * The type of the message. This parameter is required if you set the Type parameter to **message**. Valid values:
+         * <p>
+         * 
+         * *   **text**: a text message. The **Text** parameter is required if you set the MessageType parameter to text.
+         * *   **image**: an image message. The **Link** parameter is required and the **Caption** parameter is optional if you set the MessageType parameter to image.
+         * *   **video**: a video message. The **Link** parameter is required and the **Caption** parameter is optional if you set the MessageType parameter to video.
+         * *   **audio**: an audio message. The **Link** parameter is required and the **Caption** parameter is invalid if you set the MessageType parameter to audio.
+         * *   **document**: a document message. The **Link** and **FileName** parameters are required and the **Caption** parameter is invalid if you set the MessageType parameter to document.
          */
         public Builder messageType(String messageType) {
             this.putBodyParameter("MessageType", messageType);
@@ -345,7 +453,7 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
-         * Payload.
+         * The payload of the button.
          */
         public Builder payload(java.util.List < String > payload) {
             String payloadShrink = shrink(payload, "Payload", "json");
@@ -355,7 +463,16 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
-         * 模板编码
+         * viber消息发送时tag信息
+         */
+        public Builder tag(String tag) {
+            this.putBodyParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
+         * The code of the message template. This parameter is required if you set the Type parameter to **template**.
          */
         public Builder templateCode(String templateCode) {
             this.putBodyParameter("TemplateCode", templateCode);
@@ -364,7 +481,7 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
-         * TemplateParams.
+         * The variables of the message template.
          */
         public Builder templateParams(java.util.Map < String, String > templateParams) {
             String templateParamsShrink = shrink(templateParams, "TemplateParams", "json");
@@ -374,7 +491,7 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
-         * 接收号码
+         * The mobile phone number of the message recipient.
          */
         public Builder to(String to) {
             this.putBodyParameter("To", to);
@@ -383,10 +500,29 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
-         * 消息大类
+         * viber消息跟踪数据值
+         */
+        public Builder trackingData(String trackingData) {
+            this.putBodyParameter("TrackingData", trackingData);
+            this.trackingData = trackingData;
+            return this;
+        }
+
+        /**
+         * Viber消息发送超时时间，单位为秒，取值范围 30 - 1209600
+         */
+        public Builder ttl(Integer ttl) {
+            this.putBodyParameter("Ttl", ttl);
+            this.ttl = ttl;
+            return this;
+        }
+
+        /**
+         * The type of the message. Valid values:
          * <p>
-         * template--模板
-         * message--非模板
+         * 
+         * *   **template**: a template message. A template message is sent based on a template that is created in the ChatApp console and is approved. You can send template messages based on your business requirements.
+         * *   **message**: a custom message. You can send a custom message to a user only within 24 hours after you receive the last message from the user.
          */
         public Builder type(String type) {
             this.putBodyParameter("Type", type);

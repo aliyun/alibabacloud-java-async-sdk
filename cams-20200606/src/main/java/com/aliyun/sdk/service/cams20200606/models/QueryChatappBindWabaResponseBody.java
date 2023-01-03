@@ -74,7 +74,11 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The HTTP status code returned.
+         * <p>
+         * 
+         * *   A value of OK indicates that the call is successful.
+         * *   Other values indicate that the call fails. For more information, see [Error codes](~~196974~~).
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +86,7 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +94,7 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +102,7 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -186,7 +190,7 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * AccountReviewStatus.
+             * The audit status of the WhatApp Business account.
              */
             public Builder accountReviewStatus(String accountReviewStatus) {
                 this.accountReviewStatus = accountReviewStatus;
@@ -194,7 +198,7 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
             }
 
             /**
-             * Currency.
+             * Currency
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -202,7 +206,7 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * WabaID
              */
             public Builder id(String id) {
                 this.id = id;
@@ -210,7 +214,7 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
             }
 
             /**
-             * MessageTemplateNamespace.
+             * The namespace of the message template.
              */
             public Builder messageTemplateNamespace(String messageTemplateNamespace) {
                 this.messageTemplateNamespace = messageTemplateNamespace;
@@ -218,7 +222,7 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the WhatApp Business account.
              */
             public Builder name(String name) {
                 this.name = name;

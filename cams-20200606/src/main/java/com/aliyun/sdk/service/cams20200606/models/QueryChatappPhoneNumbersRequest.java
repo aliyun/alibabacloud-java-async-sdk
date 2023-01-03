@@ -68,7 +68,7 @@ public class QueryChatappPhoneNumbersRequest extends Request {
         } 
 
         /**
-         * ISV子客户的SpaceId
+         * The space ID of the user under the ISV account.
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -77,7 +77,7 @@ public class QueryChatappPhoneNumbersRequest extends Request {
         }
 
         /**
-         * Isv校验码，用于校验子帐号是否由ISV授权
+         * The ISV verification code, which is used to verify whether the user is authorized by ISV.
          */
         public Builder isvCode(String isvCode) {
             this.putQueryParameter("IsvCode", isvCode);

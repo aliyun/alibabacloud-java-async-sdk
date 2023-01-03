@@ -74,7 +74,7 @@ public class BeeBotChatResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 返回结果 OK 为正常
+         * If OK is returned, the request is successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class BeeBotChatResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +90,7 @@ public class BeeBotChatResponseBody extends TeaModel {
         }
 
         /**
-         * 提示信息，当返回异常时有值
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +98,7 @@ public class BeeBotChatResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +150,7 @@ public class BeeBotChatResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * 知识关联知识的ID
+             * The ID of the related knowledge.
              */
             public Builder knowledgeId(String knowledgeId) {
                 this.knowledgeId = knowledgeId;
@@ -158,7 +158,7 @@ public class BeeBotChatResponseBody extends TeaModel {
             }
 
             /**
-             * 知识的关联知识的标题
+             * The title of the related knowledge.
              */
             public Builder title(String title) {
                 this.title = title;
@@ -295,9 +295,7 @@ public class BeeBotChatResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * 区分答案类型。
-             * <p>
-             * KnowledgeBase:知识库条；
+             * The source of the answer.
              */
             public Builder answerSource(String answerSource) {
                 this.answerSource = answerSource;
@@ -305,7 +303,7 @@ public class BeeBotChatResponseBody extends TeaModel {
             }
 
             /**
-             * 知识类目
+             * The category of the knowledge.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -313,7 +311,7 @@ public class BeeBotChatResponseBody extends TeaModel {
             }
 
             /**
-             * 命中问题的内容
+             * The content of the hit question.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -321,7 +319,7 @@ public class BeeBotChatResponseBody extends TeaModel {
             }
 
             /**
-             * 纯文本/富文本答案的标示
+             * Indicates whether the answer is in plain text or rich text.
              */
             public Builder contentType(String contentType) {
                 this.contentType = contentType;
@@ -329,7 +327,7 @@ public class BeeBotChatResponseBody extends TeaModel {
             }
 
             /**
-             * 命中语句
+             * The hit text.
              */
             public Builder hitStatement(String hitStatement) {
                 this.hitStatement = hitStatement;
@@ -337,7 +335,7 @@ public class BeeBotChatResponseBody extends TeaModel {
             }
 
             /**
-             * 命中问题在知识库中的ID
+             * The ID of the hit problem in the knowledge base.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -345,7 +343,7 @@ public class BeeBotChatResponseBody extends TeaModel {
             }
 
             /**
-             * 关联知识列表
+             * The list of the related knowledge.
              */
             public Builder relatedKnowledges(java.util.List < RelatedKnowledges> relatedKnowledges) {
                 this.relatedKnowledges = relatedKnowledges;
@@ -353,7 +351,7 @@ public class BeeBotChatResponseBody extends TeaModel {
             }
 
             /**
-             * 命中问题的简介
+             * The summary to the hit question.
              */
             public Builder summary(String summary) {
                 this.summary = summary;
@@ -361,7 +359,7 @@ public class BeeBotChatResponseBody extends TeaModel {
             }
 
             /**
-             * 命中问题的标题
+             * The title of the hit question.
              */
             public Builder title(String title) {
                 this.title = title;
@@ -426,7 +424,7 @@ public class BeeBotChatResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * 澄清来源的标识
+             * The source of the recommended answer.
              */
             public Builder answerSource(String answerSource) {
                 this.answerSource = answerSource;
@@ -434,7 +432,7 @@ public class BeeBotChatResponseBody extends TeaModel {
             }
 
             /**
-             * 澄清的知识id
+             * The ID of the recommended knowledge.
              */
             public Builder knowledgeId(String knowledgeId) {
                 this.knowledgeId = knowledgeId;
@@ -442,11 +440,7 @@ public class BeeBotChatResponseBody extends TeaModel {
             }
 
             /**
-             * 澄清内容，可能是
-             * <p>
-             * 图谱问答的实体、
-             * 知识问答的知识标题、
-             * 表格问答的列值
+             * The recommended content, which may be the entity in graph-based question answering, the standard knowledge in knowledge-based question answering, or the column value in table-based question answering.
              */
             public Builder title(String title) {
                 this.title = title;
@@ -523,7 +517,7 @@ public class BeeBotChatResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Hit.
+             * Indicates whether the slot is hit.
              */
             public Builder hit(Boolean hit) {
                 this.hit = hit;
@@ -531,7 +525,7 @@ public class BeeBotChatResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the slot.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -539,7 +533,7 @@ public class BeeBotChatResponseBody extends TeaModel {
             }
 
             /**
-             * Origin.
+             * The original value.
              */
             public Builder origin(String origin) {
                 this.origin = origin;
@@ -547,7 +541,7 @@ public class BeeBotChatResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The specific value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -732,7 +726,7 @@ public class BeeBotChatResponseBody extends TeaModel {
             private String userDefinedChatTitle; 
 
             /**
-             * 区分答案类型
+             * The source of the answer.
              */
             public Builder answerSource(String answerSource) {
                 this.answerSource = answerSource;
@@ -740,7 +734,7 @@ public class BeeBotChatResponseBody extends TeaModel {
             }
 
             /**
-             * 文本消息的内容
+             * The content of the text message.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -748,7 +742,7 @@ public class BeeBotChatResponseBody extends TeaModel {
             }
 
             /**
-             * 纯文本/富文本答案的标示
+             * Indicates whether the answer is in plain text or rich text.
              */
             public Builder contentType(String contentType) {
                 this.contentType = contentType;
@@ -756,7 +750,7 @@ public class BeeBotChatResponseBody extends TeaModel {
             }
 
             /**
-             * 当AnswerSource为BotFramework时，此字段返回对话单元名称
+             * When the AnswerSource parameter is set to BotFramework, the value of this parameter is returned.
              */
             public Builder dialogName(String dialogName) {
                 this.dialogName = dialogName;
@@ -764,7 +758,7 @@ public class BeeBotChatResponseBody extends TeaModel {
             }
 
             /**
-             * 此字段返回透传参数
+             * The passthrough parameters are returned.
              */
             public Builder ext(java.util.Map < String, ? > ext) {
                 this.ext = ext;
@@ -772,7 +766,7 @@ public class BeeBotChatResponseBody extends TeaModel {
             }
 
             /**
-             * 当AnswerSource为BotFramework时，此字段返回透传参数
+             * When the AnswerSource parameter is set to BotFramework, the value of this parameter is returned.
              */
             public Builder externalFlags(java.util.Map < String, ? > externalFlags) {
                 this.externalFlags = externalFlags;
@@ -780,7 +774,7 @@ public class BeeBotChatResponseBody extends TeaModel {
             }
 
             /**
-             * 命中语句
+             * The hit text.
              */
             public Builder hitStatement(String hitStatement) {
                 this.hitStatement = hitStatement;
@@ -788,7 +782,7 @@ public class BeeBotChatResponseBody extends TeaModel {
             }
 
             /**
-             * 当AnswerSource为BotFramework时，此字段返回意图名称
+             * When the AnswerSource parameter is set to BotFramework, the value of this parameter is returned.
              */
             public Builder intentName(String intentName) {
                 this.intentName = intentName;
@@ -796,7 +790,7 @@ public class BeeBotChatResponseBody extends TeaModel {
             }
 
             /**
-             * MetaData.
+             * The metadata.
              */
             public Builder metaData(String metaData) {
                 this.metaData = metaData;
@@ -804,7 +798,7 @@ public class BeeBotChatResponseBody extends TeaModel {
             }
 
             /**
-             * 当AnswerSource为BotFramework时，此字段返回节点Id
+             * When the AnswerSource parameter is set to BotFramework, the value of this parameter is returned.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -812,7 +806,7 @@ public class BeeBotChatResponseBody extends TeaModel {
             }
 
             /**
-             * 当AnswerSource为BotFramework时，此字段返回节点名称
+             * When the AnswerSource parameter is set to BotFramework, the value of this parameter is returned.
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -820,7 +814,7 @@ public class BeeBotChatResponseBody extends TeaModel {
             }
 
             /**
-             * 当AnswerSource为BotFramework时，此字段返回专有名词列表
+             * The list of slots.
              */
             public Builder slots(java.util.List < Slots> slots) {
                 this.slots = slots;
@@ -828,7 +822,7 @@ public class BeeBotChatResponseBody extends TeaModel {
             }
 
             /**
-             * 自定义闲聊主题title
+             * The title of the chitchat.
              */
             public Builder userDefinedChatTitle(String userDefinedChatTitle) {
                 this.userDefinedChatTitle = userDefinedChatTitle;
@@ -917,7 +911,7 @@ public class BeeBotChatResponseBody extends TeaModel {
             private Text text; 
 
             /**
-             * 当AnswerType为Recommend时，此字段表示推荐的答案来源
+             * If the AnswerType parameter is set to Recommend, this parameter indicates the source of the recommended answer.
              */
             public Builder answerSource(String answerSource) {
                 this.answerSource = answerSource;
@@ -925,7 +919,7 @@ public class BeeBotChatResponseBody extends TeaModel {
             }
 
             /**
-             * 本条消息的类型
+             * The type of the message.
              */
             public Builder answerType(String answerType) {
                 this.answerType = answerType;
@@ -933,7 +927,7 @@ public class BeeBotChatResponseBody extends TeaModel {
             }
 
             /**
-             * 当AnswerType为Knowledge时，此字段包含机器人返回的Knowledge对象
+             * When the AnswerType parameter is set to Knowledge, this parameter contains the Knowledge object returned by the bot.
              */
             public Builder knowledge(Knowledge knowledge) {
                 this.knowledge = knowledge;
@@ -941,7 +935,7 @@ public class BeeBotChatResponseBody extends TeaModel {
             }
 
             /**
-             * 当AnswerType为Recommend时，此字段包含机器人返回的Recommend的列表
+             * When the AnswerType parameter is set to Recommend, this parameter contains a list of recommends returned by the bot.
              */
             public Builder recommends(java.util.List < Recommends> recommends) {
                 this.recommends = recommends;
@@ -949,7 +943,7 @@ public class BeeBotChatResponseBody extends TeaModel {
             }
 
             /**
-             * 当AnswerType为Text时，此字段包含机器人返回的Text对象
+             * When the AnswerType parameter is set to Text, this parameter contains the Text object returned by the bot.
              */
             public Builder text(Text text) {
                 this.text = text;
@@ -1014,7 +1008,7 @@ public class BeeBotChatResponseBody extends TeaModel {
             private String sessionId; 
 
             /**
-             * 本条会话应答消息的ID
+             * The ID of the response message.
              */
             public Builder messageId(String messageId) {
                 this.messageId = messageId;
@@ -1022,7 +1016,7 @@ public class BeeBotChatResponseBody extends TeaModel {
             }
 
             /**
-             * 消息的列表
+             * The list of the message.
              */
             public Builder messages(java.util.List < Messages> messages) {
                 this.messages = messages;
@@ -1030,7 +1024,7 @@ public class BeeBotChatResponseBody extends TeaModel {
             }
 
             /**
-             * 本次会话的ID
+             * The ID of the session.
              */
             public Builder sessionId(String sessionId) {
                 this.sessionId = sessionId;

@@ -74,7 +74,11 @@ public class SendChatappMessageResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The HTTP status code returned.
+         * <p>
+         * 
+         * *   A code of OK indicates that the call is successful.
+         * *   Other codes indicate that the call fails. For more information, see [Error codes](~~196974~~).
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +86,7 @@ public class SendChatappMessageResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +94,7 @@ public class SendChatappMessageResponseBody extends TeaModel {
         }
 
         /**
-         * 消息ID
+         * The ID of the message.
          */
         public Builder messageId(String messageId) {
             this.messageId = messageId;
@@ -98,7 +102,7 @@ public class SendChatappMessageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

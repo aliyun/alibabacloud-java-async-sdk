@@ -74,7 +74,7 @@ public class BeeBotAssociateResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 返回结果 OK 为正常
+         * If OK is returned, the request is successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class BeeBotAssociateResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +90,7 @@ public class BeeBotAssociateResponseBody extends TeaModel {
         }
 
         /**
-         * 提示信息，当返回异常时有值
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +98,7 @@ public class BeeBotAssociateResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +150,7 @@ public class BeeBotAssociateResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * 附带信息
+             * The additional information.
              */
             public Builder meta(String meta) {
                 this.meta = meta;
@@ -158,7 +158,7 @@ public class BeeBotAssociateResponseBody extends TeaModel {
             }
 
             /**
-             * 关联问题的标题
+             * The title of the associated question.
              */
             public Builder title(String title) {
                 this.title = title;
@@ -223,7 +223,7 @@ public class BeeBotAssociateResponseBody extends TeaModel {
             private String sessionId; 
 
             /**
-             * Associate.
+             * The list of associated recommendations.
              */
             public Builder associate(java.util.List < Associate> associate) {
                 this.associate = associate;
@@ -231,7 +231,7 @@ public class BeeBotAssociateResponseBody extends TeaModel {
             }
 
             /**
-             * 本条会话应答消息ID
+             * The ID of the response message.
              */
             public Builder messageId(String messageId) {
                 this.messageId = messageId;
@@ -239,7 +239,7 @@ public class BeeBotAssociateResponseBody extends TeaModel {
             }
 
             /**
-             * 会话ID
+             * The ID of the session.
              */
             public Builder sessionId(String sessionId) {
                 this.sessionId = sessionId;

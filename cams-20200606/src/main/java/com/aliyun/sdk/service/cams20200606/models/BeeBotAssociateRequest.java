@@ -140,7 +140,7 @@ public class BeeBotAssociateRequest extends Request {
         } 
 
         /**
-         * 发送号码
+         * The ID of chatbot instance.
          */
         public Builder chatBotInstanceId(String chatBotInstanceId) {
             this.putBodyParameter("ChatBotInstanceId", chatBotInstanceId);
@@ -158,7 +158,7 @@ public class BeeBotAssociateRequest extends Request {
         }
 
         /**
-         * Isv校验码，用于校验子帐号是否由ISV授权
+         * ISV verification code, which is used to verify whether the sub-account is authorized by ISV.
          */
         public Builder isvCode(String isvCode) {
             this.putBodyParameter("IsvCode", isvCode);
@@ -167,7 +167,7 @@ public class BeeBotAssociateRequest extends Request {
         }
 
         /**
-         * 视角编码，用于调用同一知识库下不同视角的各自答案
+         * The list of codes for answers from different perspectives.
          */
         public Builder perspective(java.util.List < String > perspective) {
             String perspectiveShrink = shrink(perspective, "Perspective", "json");
@@ -177,7 +177,7 @@ public class BeeBotAssociateRequest extends Request {
         }
 
         /**
-         * 推荐问题数量，1 - 10
+         * The number of recommended questions, which ranges from 1 to 10.
          */
         public Builder recommendNum(Integer recommendNum) {
             this.putBodyParameter("RecommendNum", recommendNum);
@@ -186,7 +186,7 @@ public class BeeBotAssociateRequest extends Request {
         }
 
         /**
-         * 会话ID,用于标识一个访问者的会话和保持上下文信息
+         * The ID of the session, which identifies the session and context information of the visitor.
          */
         public Builder sessionId(String sessionId) {
             this.putBodyParameter("SessionId", sessionId);
@@ -195,7 +195,7 @@ public class BeeBotAssociateRequest extends Request {
         }
 
         /**
-         * 机器人访问者输入
+         * The input of the visitor.
          */
         public Builder utterance(String utterance) {
             this.putBodyParameter("Utterance", utterance);

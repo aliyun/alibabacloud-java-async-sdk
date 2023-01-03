@@ -74,7 +74,11 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 返回结果 OK 为正常
+         * The HTTP status code returned.
+         * <p>
+         * 
+         * *   A code of OK indicates that the call is successful.
+         * *   Other codes indicate that the call fails. For more information, see [Error codes](~~196974~~).
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +86,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * TemplateDetail
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +94,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +102,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -186,7 +190,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             private String urlType; 
 
             /**
-             * 电话号码
+             * The mobile phone number. This parameter is valid only if the Type parameter is set to **PHONE_NUMBER**.
              */
             public Builder phoneNumber(String phoneNumber) {
                 this.phoneNumber = phoneNumber;
@@ -194,7 +198,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 所发送消息的文本
+             * The display name of the button.
              */
             public Builder text(String text) {
                 this.text = text;
@@ -202,7 +206,20 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 按钮类型
+             * The type of the button. Valid values:
+             * <p>
+             * 
+             * *   **PHONE_NUMBER**: a phone call button
+             * *   **URL**: a URL button
+             * *   **QUICK_REPLY**: a quick reply button
+             * 
+             * **
+             * 
+             * **Note**
+             * 
+             * *   A quick reply button cannot coexist with a phone call button or a URL button in a message template.
+             * 
+             * *   You can add a combination of two URL buttons or a combination of a URL button and a phone call button to a message template.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -210,9 +227,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 当按钮类型是
-             * <p>
-             * URL 时有效
+             * The URL to be accessed when you click the URL button.
              */
             public Builder url(String url) {
                 this.url = url;
@@ -220,10 +235,11 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * WEB地址类型
+             * The type of the URL. Valid values:
              * <p>
-             * static-静态
-             * dynamic-动态
+             * 
+             * *   **static**: a static URL
+             * *   **dynamic**: a dynamic URL
              */
             public Builder urlType(String urlType) {
                 this.urlType = urlType;
@@ -336,9 +352,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * 仅适用于 BUTTONS 类型。
-             * <p>
-             * 与按钮相关的参数。
+             * This parameter applies only to components of the **BUTTONS** type. This parameter is passed in by converting its original JSON structure into a string.
              */
             public Builder buttons(java.util.List < Buttons> buttons) {
                 this.buttons = buttons;
@@ -346,7 +360,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 描述，当Type为Header，且Format为IMGAGE/DOCUMENT/VIDEO 可以增加描述
+             * The description of the file.
              */
             public Builder caption(String caption) {
                 this.caption = caption;
@@ -354,7 +368,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 文件名称，当Type为Header，且Format为DOCUMENT时可以给文件指定名称
+             * The name of the file.
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -362,7 +376,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 格式
+             * The format.
              */
             public Builder format(String format) {
                 this.format = format;
@@ -370,7 +384,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 所发送消息的文本
+             * The text of the message to be sent.
              */
             public Builder text(String text) {
                 this.text = text;
@@ -378,7 +392,17 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 组件类型
+             * The type of the component. Valid values:
+             * <p>
+             * 
+             * *   **BODY**
+             * *   **HEADER**
+             * *   **FOOTER**
+             * *   **BUTTONS**
+             * 
+             * **
+             * 
+             * **Note** A component of the **BODY** type cannot exceed 1,024 characters in length. A component of the **HEADER** or **FOOTER** type cannot exceed 60 characters in length.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -386,7 +410,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 素材路径
+             * The URL of the material.
              */
             public Builder url(String url) {
                 this.url = url;
@@ -499,7 +523,13 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             private String templateCode; 
 
             /**
-             * 审核状态
+             * The review status of the message template. Valid values:
+             * <p>
+             * 
+             * *   **pass**: The message template is approved.
+             * *   **fail**: The message template is rejected.
+             * *   **auditing**: The message template is being reviewed.
+             * *   **unaudit**: The review is suspended.
              */
             public Builder auditStatus(String auditStatus) {
                 this.auditStatus = auditStatus;
@@ -507,7 +537,20 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 模板分类
+             * The category of the message template. Valid values:
+             * <p>
+             * 
+             * *   **ACCOUNT_UPDATE**: account update
+             * *   **PAYMENT_UPDATE**: payment update
+             * *   **PERSONAL_FINANCE\_UPDATE**: personal finance update
+             * *   **SHIPPING_UPDATE**: traffic update
+             * *   **RESERVATION_UPDATE**: reservation update
+             * *   **ISSUE_RESOLUTION**: issue resolution
+             * *   **APPOINTMENT_UPDATE**: appointment update
+             * *   **TRANSPORTATION_UPDATE**: logistics information update
+             * *   **TICKET_UPDATE**: ticket update
+             * *   **ALERT_UPDATE**: alert update
+             * *   **AUTO_REPLY**: auto reply
              */
             public Builder category(String category) {
                 this.category = category;
@@ -515,7 +558,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 消息模板组件
+             * The components of the message template.
              */
             public Builder components(java.util.List < Components> components) {
                 this.components = components;
@@ -523,7 +566,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 变量例子
+             * The examples of variables.
              */
             public Builder example(java.util.Map < String, String > example) {
                 this.example = example;
@@ -531,7 +574,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 语言
+             * The language that is used in the message template.
              */
             public Builder language(String language) {
                 this.language = language;
@@ -539,7 +582,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 模板名称
+             * The name of the message template.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -547,7 +590,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 模板编码
+             * The code of the message template.
              */
             public Builder templateCode(String templateCode) {
                 this.templateCode = templateCode;

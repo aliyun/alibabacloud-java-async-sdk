@@ -200,7 +200,12 @@ public class SendChatappMassMessageRequest extends Request {
         } 
 
         /**
-         * 通道类型 whatsapp/viber/line
+         * The type of the message channel. Valid values:
+         * <p>
+         * 
+         * *   **whatsapp**
+         * *   viber (under development)
+         * *   line (under development)
          */
         public Builder channelType(String channelType) {
             this.putBodyParameter("ChannelType", channelType);
@@ -218,7 +223,7 @@ public class SendChatappMassMessageRequest extends Request {
         }
 
         /**
-         * ISV客户wabaId
+         * The unique identifier of the WhatsApp account that you register.
          */
         public Builder custWabaId(String custWabaId) {
             this.putBodyParameter("CustWabaId", custWabaId);
@@ -227,7 +232,7 @@ public class SendChatappMassMessageRequest extends Request {
         }
 
         /**
-         * 回落内容
+         * Fallback message content.
          */
         public Builder fallBackContent(String fallBackContent) {
             this.putBodyParameter("FallBackContent", fallBackContent);
@@ -236,7 +241,7 @@ public class SendChatappMassMessageRequest extends Request {
         }
 
         /**
-         * 回落策略ID
+         * Fallback strategy id. Fallback Strategy can be created on the ChatApp console.
          */
         public Builder fallBackId(String fallBackId) {
             this.putBodyParameter("FallBackId", fallBackId);
@@ -245,7 +250,10 @@ public class SendChatappMassMessageRequest extends Request {
         }
 
         /**
-         * 发送方
+         * The mobile phone number of the message sender.
+         * <p>
+         * 
+         * <notice>You can specify a mobile phone number that is registered for a WhatsApp account and is approved in the ChatApp console.</notice>
          */
         public Builder from(String from) {
             this.putBodyParameter("From", from);
@@ -254,7 +262,7 @@ public class SendChatappMassMessageRequest extends Request {
         }
 
         /**
-         * Isv校验码，用于校验子帐号是否由ISV授权
+         * Assigned by ISV for RAM user authentication and authorization.
          */
         public Builder isvCode(String isvCode) {
             this.putBodyParameter("IsvCode", isvCode);
@@ -263,7 +271,7 @@ public class SendChatappMassMessageRequest extends Request {
         }
 
         /**
-         * 语言
+         * The language that is used in the message template.
          */
         public Builder language(String language) {
             this.putBodyParameter("Language", language);
@@ -272,7 +280,7 @@ public class SendChatappMassMessageRequest extends Request {
         }
 
         /**
-         * SenderList.
+         * Target number and parameter list.
          */
         public Builder senderList(java.util.List < SenderList> senderList) {
             String senderListShrink = shrink(senderList, "SenderList", "json");
@@ -282,7 +290,7 @@ public class SendChatappMassMessageRequest extends Request {
         }
 
         /**
-         * 任务ID
+         * User-define ID to identify a single batch of messages.
          */
         public Builder taskId(String taskId) {
             this.putBodyParameter("TaskId", taskId);
@@ -291,7 +299,7 @@ public class SendChatappMassMessageRequest extends Request {
         }
 
         /**
-         * 模板编码
+         * The code of the message template.
          */
         public Builder templateCode(String templateCode) {
             this.putBodyParameter("TemplateCode", templateCode);
@@ -358,7 +366,7 @@ public class SendChatappMassMessageRequest extends Request {
             private String to; 
 
             /**
-             * payload
+             * Payload list.
              */
             public Builder payload(java.util.List < String > payload) {
                 this.payload = payload;
@@ -366,7 +374,7 @@ public class SendChatappMassMessageRequest extends Request {
             }
 
             /**
-             * 变量参数
+             * Template parameters.
              */
             public Builder templateParams(java.util.Map < String, String > templateParams) {
                 this.templateParams = templateParams;
@@ -374,7 +382,7 @@ public class SendChatappMassMessageRequest extends Request {
             }
 
             /**
-             * 号码
+             * Target number.
              */
             public Builder to(String to) {
                 this.to = to;

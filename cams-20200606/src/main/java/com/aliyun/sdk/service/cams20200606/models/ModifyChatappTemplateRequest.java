@@ -142,7 +142,7 @@ public class ModifyChatappTemplateRequest extends Request {
         } 
 
         /**
-         * Components.
+         * The list of components of the message template.
          */
         public Builder components(java.util.List < Components> components) {
             String componentsShrink = shrink(components, "Components", "json");
@@ -152,7 +152,7 @@ public class ModifyChatappTemplateRequest extends Request {
         }
 
         /**
-         * ISV子客户的SpaceId
+         * Isv customer space id
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putBodyParameter("CustSpaceId", custSpaceId);
@@ -161,7 +161,7 @@ public class ModifyChatappTemplateRequest extends Request {
         }
 
         /**
-         * ISV客户WabaId, 后续会被弃用，请使用CustSpaceId
+         * The ID of the WhatApp Business account of the ISV customer.
          */
         public Builder custWabaId(String custWabaId) {
             this.putBodyParameter("CustWabaId", custWabaId);
@@ -170,7 +170,7 @@ public class ModifyChatappTemplateRequest extends Request {
         }
 
         /**
-         * 变量，KEY-VALUE结构
+         * The examples of variables that are used when you create the message template.
          */
         public Builder example(java.util.Map < String, String > example) {
             String exampleShrink = shrink(example, "Example", "json");
@@ -180,7 +180,7 @@ public class ModifyChatappTemplateRequest extends Request {
         }
 
         /**
-         * Isv校验码，用于校验子帐号是否由ISV授权
+         * ISV verification code, which is used to verify whether the sub-account is authorized by ISV.
          */
         public Builder isvCode(String isvCode) {
             this.putBodyParameter("IsvCode", isvCode);
@@ -189,7 +189,7 @@ public class ModifyChatappTemplateRequest extends Request {
         }
 
         /**
-         * 语言
+         * The language.
          */
         public Builder language(String language) {
             this.putBodyParameter("Language", language);
@@ -198,7 +198,7 @@ public class ModifyChatappTemplateRequest extends Request {
         }
 
         /**
-         * 消息模板编码
+         * The code of the message template.
          */
         public Builder templateCode(String templateCode) {
             this.putBodyParameter("TemplateCode", templateCode);
@@ -289,7 +289,7 @@ public class ModifyChatappTemplateRequest extends Request {
             private String urlType; 
 
             /**
-             * 号码
+             * The phone number.
              */
             public Builder phoneNumber(String phoneNumber) {
                 this.phoneNumber = phoneNumber;
@@ -297,7 +297,7 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * 所发送消息的文本
+             * The text of the message to be sent.
              */
             public Builder text(String text) {
                 this.text = text;
@@ -305,9 +305,12 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * 按钮类型
+             * The type of the button.
              * <p>
-             * PHONE_NUMBER（电话）,URL（网页按钮）和QUICK_REPLY（快速回复）
+             * 
+             * *   **PHONE_NUMBER**: the phone call button
+             * *   **URL**: the URL button
+             * *   **QUICK_REPLY**: the quick reply button
              */
             public Builder type(String type) {
                 this.type = type;
@@ -315,7 +318,7 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * 点击按钮后将访问的网址
+             * The URL to be visited after clicking the button.
              */
             public Builder url(String url) {
                 this.url = url;
@@ -323,7 +326,11 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * 网址类型 static-静态dynamic-动态
+             * The type of the URL. Valid values:
+             * <p>
+             * 
+             * *   **static**: the static URL
+             * *   **dynamic**: the dynamic URL
              */
             public Builder urlType(String urlType) {
                 this.urlType = urlType;
@@ -437,7 +444,7 @@ public class ModifyChatappTemplateRequest extends Request {
             private String url; 
 
             /**
-             * 按钮
+             * The list of buttons, which applies only to the **BUTTONS** component.
              */
             public Builder buttons(java.util.List < Buttons> buttons) {
                 this.buttons = buttons;
@@ -445,7 +452,10 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * 描述，当Type为Header，且Format为IMGAGE/DOCUMENT/VIDEO 可以增加描述
+             * The description.
+             * <p>
+             * 
+             * >  When the Type parameter is set to **HEADER** and the Format parameter is set to **IMAGE/DOCUMENT/VIDEO**, you can specify the description.
              */
             public Builder caption(String caption) {
                 this.caption = caption;
@@ -453,7 +463,10 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * 文件名称，当Type为Header，且Format为DOCUMENT时可以给文件指定名称
+             * The name of the file.
+             * <p>
+             * 
+             * > : When the Type parameter is set to **HEADER** and the Format parameter is set to **DOCUMENT**, you can specify a name of the file.
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -461,9 +474,13 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * 格式
+             * The type of the media resource.
              * <p>
-             * TEXT-文本 IMGAGE-图片 DOCUMENT-文档 VIDEO-视频
+             * 
+             * *   **TEXT**: text
+             * *   **IMAGE**: image
+             * *   **DOCUMENT**: document
+             * *   **VIDEO**: video
              */
             public Builder format(String format) {
                 this.format = format;
@@ -471,7 +488,7 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * 所发送消息的文本
+             * The text of the message to be sent.
              */
             public Builder text(String text) {
                 this.text = text;
@@ -479,9 +496,13 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * 组件类型
+             * The type of the component.
              * <p>
-             * 值：BODY、HEADER、FOOTER 和 BUTTONS
+             * 
+             * *   **BODY**
+             * *   **HEADER**
+             * *   **FOOTER**
+             * *   **BUTTONS**
              */
             public Builder type(String type) {
                 this.type = type;
@@ -489,7 +510,7 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * 素材路径
+             * The URL of the material.
              */
             public Builder url(String url) {
                 this.url = url;

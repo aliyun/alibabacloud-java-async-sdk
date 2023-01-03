@@ -74,7 +74,11 @@ public class ListChatappTemplateResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The HTTP status code returned.
+         * <p>
+         * 
+         * *   A code of OK indicates that the call is successful.
+         * *   Other codes indicate that the call fails. For more information, see [Error codes](~~196974~~).
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +86,7 @@ public class ListChatappTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * 模板列表
+         * The message templates.
          */
         public Builder listTemplate(java.util.List < ListTemplate> listTemplate) {
             this.listTemplate = listTemplate;
@@ -90,7 +94,7 @@ public class ListChatappTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +102,7 @@ public class ListChatappTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -186,7 +190,13 @@ public class ListChatappTemplateResponseBody extends TeaModel {
             private String templateName; 
 
             /**
-             * 审核状态
+             * The review status of the message template. Valid values:
+             * <p>
+             * 
+             * *   **pass**: The message template is approved.
+             * *   **fail**: The message template is rejected.
+             * *   **auditing**: The message template is being reviewed.
+             * *   **unaudit**: The review is suspended.
              */
             public Builder auditStatus(String auditStatus) {
                 this.auditStatus = auditStatus;
@@ -194,7 +204,20 @@ public class ListChatappTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * 模板分类
+             * The category of the message template. Valid values:
+             * <p>
+             * 
+             * *   **ACCOUNT_UPDATE**: account update
+             * *   **PAYMENT_UPDATE**: payment update
+             * *   **PERSONAL_FINANCE\_UPDATE**: personal finance update
+             * *   **SHIPPING_UPDATE**: traffic update
+             * *   **RESERVATION_UPDATE**: reservation update
+             * *   **ISSUE_RESOLUTION**: issue resolution
+             * *   **APPOINTMENT_UPDATE**: appointment update
+             * *   **TRANSPORTATION_UPDATE**: logistics information update
+             * *   **TICKET_UPDATE**: ticket update
+             * *   **ALERT_UPDATE**: alert update
+             * *   **AUTO_REPLY**: auto reply
              */
             public Builder category(String category) {
                 this.category = category;
@@ -202,7 +225,7 @@ public class ListChatappTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * 语言
+             * The language that is used in the message template.
              */
             public Builder language(String language) {
                 this.language = language;
@@ -210,7 +233,7 @@ public class ListChatappTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * 模板编码
+             * The code of the message template.
              */
             public Builder templateCode(String templateCode) {
                 this.templateCode = templateCode;
@@ -218,7 +241,7 @@ public class ListChatappTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * 模板名称
+             * The name of the message template.
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;

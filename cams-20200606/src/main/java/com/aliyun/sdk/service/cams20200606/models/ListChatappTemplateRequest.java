@@ -139,7 +139,13 @@ public class ListChatappTemplateRequest extends Request {
         } 
 
         /**
-         * 审核状态
+         * The review status of the message template. Valid values:
+         * <p>
+         * 
+         * *   **pass**: The message template is approved.
+         * *   **fail**: The message template is rejected.
+         * *   **auditing**: The message template is being reviewed.
+         * *   **unaudit**: The review is suspended.
          */
         public Builder auditStatus(String auditStatus) {
             this.putQueryParameter("AuditStatus", auditStatus);
@@ -157,7 +163,7 @@ public class ListChatappTemplateRequest extends Request {
         }
 
         /**
-         * ISV客户WabaId, 后续会被弃用，请使用CustSpaceId
+         * The unique identifier of the WhatsApp account that you register.
          */
         public Builder custWabaId(String custWabaId) {
             this.putQueryParameter("CustWabaId", custWabaId);
@@ -166,7 +172,7 @@ public class ListChatappTemplateRequest extends Request {
         }
 
         /**
-         * Isv校验码，用于校验子帐号是否由ISV授权
+         * Assigned by ISV for RAM user authentication and authorization.
          */
         public Builder isvCode(String isvCode) {
             this.putQueryParameter("IsvCode", isvCode);
@@ -175,7 +181,7 @@ public class ListChatappTemplateRequest extends Request {
         }
 
         /**
-         * 语言
+         * The language that is used in the message template.
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -184,7 +190,7 @@ public class ListChatappTemplateRequest extends Request {
         }
 
         /**
-         * 模板名称
+         * The name of the message template.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -193,7 +199,7 @@ public class ListChatappTemplateRequest extends Request {
         }
 
         /**
-         * Page.
+         * The paging settings.
          */
         public Builder page(Page page) {
             String pageShrink = shrink(page, "Page", "json");
@@ -250,7 +256,7 @@ public class ListChatappTemplateRequest extends Request {
             private Integer size; 
 
             /**
-             * 查询开始数
+             * The number of the page to return. Default value: 1.
              */
             public Builder index(Integer index) {
                 this.index = index;
@@ -258,7 +264,7 @@ public class ListChatappTemplateRequest extends Request {
             }
 
             /**
-             * 每次查询返回的条数
+             * The number of message templates to return on each page. Default value: 10.
              */
             public Builder size(Integer size) {
                 this.size = size;

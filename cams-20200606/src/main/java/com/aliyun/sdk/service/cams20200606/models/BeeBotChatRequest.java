@@ -196,7 +196,7 @@ public class BeeBotChatRequest extends Request {
         } 
 
         /**
-         * 发送号码
+         * The ID of chatbot instance.
          */
         public Builder chatBotInstanceId(String chatBotInstanceId) {
             this.putBodyParameter("ChatBotInstanceId", chatBotInstanceId);
@@ -214,7 +214,7 @@ public class BeeBotChatRequest extends Request {
         }
 
         /**
-         * 对话流中意图名称，若指定此名称，机器人会直接进入此意图做问答
+         * The name of the intent in the dialog flow. When this parameter is specified, the bot will conduct a Q\&A according to the intent.
          */
         public Builder intentName(String intentName) {
             this.putBodyParameter("IntentName", intentName);
@@ -223,7 +223,7 @@ public class BeeBotChatRequest extends Request {
         }
 
         /**
-         * Isv校验码，用于校验子帐号是否由ISV授权
+         * ISV verification code, which is used to verify whether the sub-account is authorized by ISV.
          */
         public Builder isvCode(String isvCode) {
             this.putBodyParameter("IsvCode", isvCode);
@@ -232,7 +232,7 @@ public class BeeBotChatRequest extends Request {
         }
 
         /**
-         * 知识库中知识标题ID
+         * The ID of the knowledge title in the knowledge base.
          */
         public Builder knowledgeId(String knowledgeId) {
             this.putBodyParameter("KnowledgeId", knowledgeId);
@@ -241,7 +241,7 @@ public class BeeBotChatRequest extends Request {
         }
 
         /**
-         * 视觉编码，用于调用同一知识标题下不同视角的答案
+         * The list of codes for answers from different perspectives.
          */
         public Builder perspective(java.util.List < String > perspective) {
             String perspectiveShrink = shrink(perspective, "Perspective", "json");
@@ -251,7 +251,7 @@ public class BeeBotChatRequest extends Request {
         }
 
         /**
-         * 访问者ID。用于识别当前会话中的用户
+         * The ID of the visitor, which is used to identify users in the current session.
          */
         public Builder senderId(String senderId) {
             this.putBodyParameter("SenderId", senderId);
@@ -260,7 +260,7 @@ public class BeeBotChatRequest extends Request {
         }
 
         /**
-         * 当前会话中访问的昵称
+         * The nickname of the visitor in the current session.
          */
         public Builder senderNick(String senderNick) {
             this.putBodyParameter("SenderNick", senderNick);
@@ -269,7 +269,7 @@ public class BeeBotChatRequest extends Request {
         }
 
         /**
-         * 会话ID, 用于标识一个访问者的会话和上下文信息
+         * The ID of the session, which identifies the session and context information of the visitor.
          */
         public Builder sessionId(String sessionId) {
             this.putBodyParameter("SessionId", sessionId);
@@ -278,7 +278,7 @@ public class BeeBotChatRequest extends Request {
         }
 
         /**
-         * 机器人访问者输入
+         * The input of the visitor.
          */
         public Builder utterance(String utterance) {
             this.putBodyParameter("Utterance", utterance);
@@ -287,7 +287,7 @@ public class BeeBotChatRequest extends Request {
         }
 
         /**
-         * 用户自定义参数集，可以传入用户自定义参数到圣诞工厂
+         * The user-defined parameter set in JSON format. You can specify user-defined parameters for conversation engines.
          */
         public Builder vendorParam(java.util.Map < String, ? > vendorParam) {
             String vendorParamShrink = shrink(vendorParam, "VendorParam", "json");

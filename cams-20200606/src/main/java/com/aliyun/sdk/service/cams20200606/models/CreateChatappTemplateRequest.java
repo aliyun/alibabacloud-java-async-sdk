@@ -172,7 +172,20 @@ public class CreateChatappTemplateRequest extends Request {
         } 
 
         /**
-         * 模板分类
+         * The category of the message template. Valid values:
+         * <p>
+         * 
+         * *   **ACCOUNT_UPDATE**: account update
+         * *   **PAYMENT_UPDATE**: payment update
+         * *   **PERSONAL_FINANCE\_UPDATE**: personal finance update
+         * *   **SHIPPING_UPDATE**: traffic update
+         * *   **RESERVATION_UPDATE**: reservation update
+         * *   **ISSUE_RESOLUTION**: issue resolution
+         * *   **APPOINTMENT_UPDATE**: appointment update
+         * *   **TRANSPORTATION_UPDATE**: logistics information update
+         * *   **TICKET_UPDATE**: ticket update
+         * *   **ALERT_UPDATE**: alert update
+         * *   **AUTO_REPLY**: auto reply
          */
         public Builder category(String category) {
             this.putBodyParameter("Category", category);
@@ -181,7 +194,7 @@ public class CreateChatappTemplateRequest extends Request {
         }
 
         /**
-         * Components.
+         * The components of the message template.
          */
         public Builder components(java.util.List < Components> components) {
             String componentsShrink = shrink(components, "Components", "json");
@@ -200,7 +213,7 @@ public class CreateChatappTemplateRequest extends Request {
         }
 
         /**
-         * ISV客户WabaId, 后续会被弃用，请使用CustSpaceId
+         * The unique identifier of the WhatsApp account that you register.
          */
         public Builder custWabaId(String custWabaId) {
             this.putBodyParameter("CustWabaId", custWabaId);
@@ -209,7 +222,7 @@ public class CreateChatappTemplateRequest extends Request {
         }
 
         /**
-         * 变量，KEY-VALUE结构
+         * The examples of variables that are used when you create the message template.
          */
         public Builder example(java.util.Map < String, String > example) {
             String exampleShrink = shrink(example, "Example", "json");
@@ -219,7 +232,7 @@ public class CreateChatappTemplateRequest extends Request {
         }
 
         /**
-         * Isv校验码，用于校验子帐号是否由ISV授权
+         * Assigned by ISV for RAM user authentication and authorization.
          */
         public Builder isvCode(String isvCode) {
             this.putBodyParameter("IsvCode", isvCode);
@@ -228,7 +241,7 @@ public class CreateChatappTemplateRequest extends Request {
         }
 
         /**
-         * 语言
+         * The language that is used in the message template.
          */
         public Builder language(String language) {
             this.putBodyParameter("Language", language);
@@ -237,7 +250,7 @@ public class CreateChatappTemplateRequest extends Request {
         }
 
         /**
-         * 模板名称
+         * The name of the message template.
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -246,7 +259,12 @@ public class CreateChatappTemplateRequest extends Request {
         }
 
         /**
-         * 模板类型
+         * The type of the message template. Valid values:
+         * <p>
+         * 
+         * *   **WHATSAPP**
+         * *   VIBER (under development)
+         * *   LINE (under development)
          */
         public Builder templateType(String templateType) {
             this.putBodyParameter("TemplateType", templateType);
@@ -337,7 +355,7 @@ public class CreateChatappTemplateRequest extends Request {
             private String urlType; 
 
             /**
-             * 号码
+             * The mobile phone number. This parameter is valid only if the Type parameter is set to **PHONE_NUMBER**.
              */
             public Builder phoneNumber(String phoneNumber) {
                 this.phoneNumber = phoneNumber;
@@ -345,7 +363,7 @@ public class CreateChatappTemplateRequest extends Request {
             }
 
             /**
-             * 所发送消息的文本
+             * The display name of the button.
              */
             public Builder text(String text) {
                 this.text = text;
@@ -353,9 +371,15 @@ public class CreateChatappTemplateRequest extends Request {
             }
 
             /**
-             * 按钮类型
+             * The type of the button. Valid values:
              * <p>
-             * PHONE_NUMBER（电话）,URL（网页按钮）和QUICK_REPLY（快速回复）
+             * 
+             * *   **PHONE_NUMBER**: a phone call button
+             * *   **URL**: a URL button
+             * *   **QUICK_REPLY**: a quick reply button
+             * 
+             * > *   A quick reply button cannot coexist with a phone call button or a URL button in a message template.
+             * > *   You can add a combination of two URL buttons or a combination of a URL button and a phone call button to a message template.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -363,7 +387,7 @@ public class CreateChatappTemplateRequest extends Request {
             }
 
             /**
-             * 点击按钮后将访问的网址
+             * The URL to be accessed when you click the URL button.
              */
             public Builder url(String url) {
                 this.url = url;
@@ -371,7 +395,11 @@ public class CreateChatappTemplateRequest extends Request {
             }
 
             /**
-             * 网址类型 static-静态dynamic-动态
+             * The type of the URL. Valid values:
+             * <p>
+             * 
+             * *   **static**: a static URL
+             * *   **dynamic**: a dynamic URL
              */
             public Builder urlType(String urlType) {
                 this.urlType = urlType;
@@ -485,7 +513,7 @@ public class CreateChatappTemplateRequest extends Request {
             private String url; 
 
             /**
-             * 按钮
+             * This parameter applies only to components of the **BUTTONS** type.
              */
             public Builder buttons(java.util.List < Buttons> buttons) {
                 this.buttons = buttons;
@@ -493,7 +521,7 @@ public class CreateChatappTemplateRequest extends Request {
             }
 
             /**
-             * 描述，当Type为Header，且Format为IMGAGE/DOCUMENT/VIDEO 可以增加描述
+             * The description of the file.
              */
             public Builder caption(String caption) {
                 this.caption = caption;
@@ -501,7 +529,7 @@ public class CreateChatappTemplateRequest extends Request {
             }
 
             /**
-             * 文件名称，当Type为Header，且Format为DOCUMENT时可以给文件指定名称
+             * The name of the file.
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -509,9 +537,13 @@ public class CreateChatappTemplateRequest extends Request {
             }
 
             /**
-             * 格式
+             * The format of the message.
              * <p>
-             * TEXT-文本 IMGAGE-图片 DOCUMENT-文档 VIDEO-视频
+             * 
+             * *   **TEXT**: text
+             * *   **IMGAGE**: image
+             * *   **DOCUMENT**: document
+             * *   **VIDEO**: video
              */
             public Builder format(String format) {
                 this.format = format;
@@ -519,7 +551,7 @@ public class CreateChatappTemplateRequest extends Request {
             }
 
             /**
-             * 所发送消息的文本
+             * The text of the message to be sent.
              */
             public Builder text(String text) {
                 this.text = text;
@@ -527,9 +559,15 @@ public class CreateChatappTemplateRequest extends Request {
             }
 
             /**
-             * 组件类型
+             * The type of the component. Valid values:
              * <p>
-             * 值：BODY、HEADER、FOOTER 和 BUTTONS
+             * 
+             * *   **BODY**
+             * *   **HEADER**
+             * *   **FOOTER**
+             * *   **BUTTONS**
+             * 
+             * > A component of the **BODY** type cannot exceed 1,024 characters in length. A component of the **HEADER** or **FOOTER** type cannot exceed 60 characters in length.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -537,7 +575,7 @@ public class CreateChatappTemplateRequest extends Request {
             }
 
             /**
-             * 素材路径
+             * The URL of the material.
              */
             public Builder url(String url) {
                 this.url = url;

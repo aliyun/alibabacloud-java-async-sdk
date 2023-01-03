@@ -62,7 +62,11 @@ public class DeleteChatappTemplateResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 返回结果 OK 为正常
+         * The HTTP status code returned.
+         * <p>
+         * 
+         * *   A code of OK indicates that the call is successful.
+         * *   Other codes indicate that the call fails. For more information, see [Error codes](~~196974~~).
          */
         public Builder code(String code) {
             this.code = code;
@@ -70,7 +74,7 @@ public class DeleteChatappTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * 提示信息，当返回异常时有值
+         * The error message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -78,7 +82,7 @@ public class DeleteChatappTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
