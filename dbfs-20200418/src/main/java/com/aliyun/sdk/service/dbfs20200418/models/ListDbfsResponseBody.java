@@ -233,6 +233,107 @@ public class ListDbfsResponseBody extends TeaModel {
         } 
 
     }
+    public static class SnapshotInfo extends TeaModel {
+        @NameInMap("LinkId")
+        private String linkId;
+
+        @NameInMap("PolicyId")
+        private String policyId;
+
+        @NameInMap("SnapshotCount")
+        private Integer snapshotCount;
+
+        @NameInMap("TotalSize")
+        private Long totalSize;
+
+        private SnapshotInfo(Builder builder) {
+            this.linkId = builder.linkId;
+            this.policyId = builder.policyId;
+            this.snapshotCount = builder.snapshotCount;
+            this.totalSize = builder.totalSize;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SnapshotInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return linkId
+         */
+        public String getLinkId() {
+            return this.linkId;
+        }
+
+        /**
+         * @return policyId
+         */
+        public String getPolicyId() {
+            return this.policyId;
+        }
+
+        /**
+         * @return snapshotCount
+         */
+        public Integer getSnapshotCount() {
+            return this.snapshotCount;
+        }
+
+        /**
+         * @return totalSize
+         */
+        public Long getTotalSize() {
+            return this.totalSize;
+        }
+
+        public static final class Builder {
+            private String linkId; 
+            private String policyId; 
+            private Integer snapshotCount; 
+            private Long totalSize; 
+
+            /**
+             * LinkId.
+             */
+            public Builder linkId(String linkId) {
+                this.linkId = linkId;
+                return this;
+            }
+
+            /**
+             * PolicyId.
+             */
+            public Builder policyId(String policyId) {
+                this.policyId = policyId;
+                return this;
+            }
+
+            /**
+             * SnapshotCount.
+             */
+            public Builder snapshotCount(Integer snapshotCount) {
+                this.snapshotCount = snapshotCount;
+                return this;
+            }
+
+            /**
+             * TotalSize.
+             */
+            public Builder totalSize(Long totalSize) {
+                this.totalSize = totalSize;
+                return this;
+            }
+
+            public SnapshotInfo build() {
+                return new SnapshotInfo(this);
+            } 
+
+        } 
+
+    }
     public static class Tags extends TeaModel {
         @NameInMap("Id")
         private Long id;
@@ -375,6 +476,9 @@ public class ListDbfsResponseBody extends TeaModel {
         @NameInMap("SizeG")
         private Integer sizeG;
 
+        @NameInMap("SnapshotInfo")
+        private SnapshotInfo snapshotInfo;
+
         @NameInMap("Status")
         private String status;
 
@@ -408,6 +512,7 @@ public class ListDbfsResponseBody extends TeaModel {
             this.raidStrip = builder.raidStrip;
             this.regionId = builder.regionId;
             this.sizeG = builder.sizeG;
+            this.snapshotInfo = builder.snapshotInfo;
             this.status = builder.status;
             this.tags = builder.tags;
             this.usedScene = builder.usedScene;
@@ -563,6 +668,13 @@ public class ListDbfsResponseBody extends TeaModel {
         }
 
         /**
+         * @return snapshotInfo
+         */
+        public SnapshotInfo getSnapshotInfo() {
+            return this.snapshotInfo;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -611,6 +723,7 @@ public class ListDbfsResponseBody extends TeaModel {
             private Integer raidStrip; 
             private String regionId; 
             private Integer sizeG; 
+            private SnapshotInfo snapshotInfo; 
             private String status; 
             private java.util.List < Tags> tags; 
             private String usedScene; 
@@ -773,6 +886,14 @@ public class ListDbfsResponseBody extends TeaModel {
              */
             public Builder sizeG(Integer sizeG) {
                 this.sizeG = sizeG;
+                return this;
+            }
+
+            /**
+             * SnapshotInfo.
+             */
+            public Builder snapshotInfo(SnapshotInfo snapshotInfo) {
+                this.snapshotInfo = snapshotInfo;
                 return this;
             }
 

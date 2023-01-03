@@ -20,6 +20,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AddTagsBatchResponse> addTagsBatch(AddTagsBatchRequest request);
 
+    CompletableFuture<ApplyAutoSnapshotPolicyResponse> applyAutoSnapshotPolicy(ApplyAutoSnapshotPolicyRequest request);
+
     CompletableFuture<AttachDbfsResponse> attachDbfs(AttachDbfsRequest request);
 
     CompletableFuture<CancelAutoSnapshotPolicyResponse> cancelAutoSnapshotPolicy(CancelAutoSnapshotPolicyRequest request);
@@ -31,6 +33,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateServiceLinkedRoleResponse> createServiceLinkedRole(CreateServiceLinkedRoleRequest request);
 
     CompletableFuture<CreateSnapshotResponse> createSnapshot(CreateSnapshotRequest request);
+
+    CompletableFuture<DeleteAutoSnapshotPolicyResponse> deleteAutoSnapshotPolicy(DeleteAutoSnapshotPolicyRequest request);
 
     CompletableFuture<DeleteDbfsResponse> deleteDbfs(DeleteDbfsRequest request);
 
@@ -44,9 +48,17 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DetachDbfsResponse> detachDbfs(DetachDbfsRequest request);
 
+    CompletableFuture<GetAutoSnapshotPolicyResponse> getAutoSnapshotPolicy(GetAutoSnapshotPolicyRequest request);
+
     CompletableFuture<GetDbfsResponse> getDbfs(GetDbfsRequest request);
 
     CompletableFuture<GetServiceLinkedRoleResponse> getServiceLinkedRole(GetServiceLinkedRoleRequest request);
+
+    CompletableFuture<ListAutoSnapshotPoliciesResponse> listAutoSnapshotPolicies(ListAutoSnapshotPoliciesRequest request);
+
+    CompletableFuture<ListAutoSnapshotPolicyAppliedDbfsResponse> listAutoSnapshotPolicyAppliedDbfs(ListAutoSnapshotPolicyAppliedDbfsRequest request);
+
+    CompletableFuture<ListAutoSnapshotPolicyUnappliedDbfsResponse> listAutoSnapshotPolicyUnappliedDbfs(ListAutoSnapshotPolicyUnappliedDbfsRequest request);
 
     CompletableFuture<ListDbfsResponse> listDbfs(ListDbfsRequest request);
 
@@ -59,6 +71,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListTagKeysResponse> listTagKeys(ListTagKeysRequest request);
 
     CompletableFuture<ListTagValuesResponse> listTagValues(ListTagValuesRequest request);
+
+    CompletableFuture<ModifyAutoSnapshotPolicyResponse> modifyAutoSnapshotPolicy(ModifyAutoSnapshotPolicyRequest request);
+
+    CompletableFuture<ModifySnapshotAttributeResponse> modifySnapshotAttribute(ModifySnapshotAttributeRequest request);
 
     CompletableFuture<RenameDbfsResponse> renameDbfs(RenameDbfsRequest request);
 
