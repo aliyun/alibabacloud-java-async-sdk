@@ -221,6 +221,9 @@ public class QueryConfigResponseBody extends TeaModel {
         @NameInMap("ConfigSecretSupported")
         private Boolean configSecretSupported;
 
+        @NameInMap("ExtendedTypesEnable")
+        private Boolean extendedTypesEnable;
+
         @NameInMap("InitLimit")
         private String initLimit;
 
@@ -287,6 +290,7 @@ public class QueryConfigResponseBody extends TeaModel {
             this.configContentLimit = builder.configContentLimit;
             this.configSecretEnabled = builder.configSecretEnabled;
             this.configSecretSupported = builder.configSecretSupported;
+            this.extendedTypesEnable = builder.extendedTypesEnable;
             this.initLimit = builder.initLimit;
             this.juteMaxbuffer = builder.juteMaxbuffer;
             this.jvmFlagsCustom = builder.jvmFlagsCustom;
@@ -370,6 +374,13 @@ public class QueryConfigResponseBody extends TeaModel {
          */
         public Boolean getConfigSecretSupported() {
             return this.configSecretSupported;
+        }
+
+        /**
+         * @return extendedTypesEnable
+         */
+        public Boolean getExtendedTypesEnable() {
+            return this.extendedTypesEnable;
         }
 
         /**
@@ -514,6 +525,7 @@ public class QueryConfigResponseBody extends TeaModel {
             private Long configContentLimit; 
             private Boolean configSecretEnabled; 
             private Boolean configSecretSupported; 
+            private Boolean extendedTypesEnable; 
             private String initLimit; 
             private String juteMaxbuffer; 
             private String jvmFlagsCustom; 
@@ -611,6 +623,14 @@ public class QueryConfigResponseBody extends TeaModel {
              */
             public Builder configSecretSupported(Boolean configSecretSupported) {
                 this.configSecretSupported = configSecretSupported;
+                return this;
+            }
+
+            /**
+             * ExtendedTypesEnable.
+             */
+            public Builder extendedTypesEnable(Boolean extendedTypesEnable) {
+                this.extendedTypesEnable = extendedTypesEnable;
                 return this;
             }
 

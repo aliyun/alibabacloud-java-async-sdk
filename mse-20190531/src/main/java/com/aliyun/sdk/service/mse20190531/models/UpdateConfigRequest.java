@@ -41,6 +41,10 @@ public class UpdateConfigRequest extends Request {
     private String configType;
 
     @Query
+    @NameInMap("ExtendedTypesEnable")
+    private String extendedTypesEnable;
+
+    @Query
     @NameInMap("InitLimit")
     private String initLimit;
 
@@ -109,6 +113,7 @@ public class UpdateConfigRequest extends Request {
         this.configAuthEnabled = builder.configAuthEnabled;
         this.configSecretEnabled = builder.configSecretEnabled;
         this.configType = builder.configType;
+        this.extendedTypesEnable = builder.extendedTypesEnable;
         this.initLimit = builder.initLimit;
         this.instanceId = builder.instanceId;
         this.juteMaxbuffer = builder.juteMaxbuffer;
@@ -186,6 +191,13 @@ public class UpdateConfigRequest extends Request {
      */
     public String getConfigType() {
         return this.configType;
+    }
+
+    /**
+     * @return extendedTypesEnable
+     */
+    public String getExtendedTypesEnable() {
+        return this.extendedTypesEnable;
     }
 
     /**
@@ -301,6 +313,7 @@ public class UpdateConfigRequest extends Request {
         private Boolean configAuthEnabled; 
         private Boolean configSecretEnabled; 
         private String configType; 
+        private String extendedTypesEnable; 
         private String initLimit; 
         private String instanceId; 
         private String juteMaxbuffer; 
@@ -330,6 +343,7 @@ public class UpdateConfigRequest extends Request {
             this.configAuthEnabled = request.configAuthEnabled;
             this.configSecretEnabled = request.configSecretEnabled;
             this.configType = request.configType;
+            this.extendedTypesEnable = request.extendedTypesEnable;
             this.initLimit = request.initLimit;
             this.instanceId = request.instanceId;
             this.juteMaxbuffer = request.juteMaxbuffer;
@@ -423,6 +437,15 @@ public class UpdateConfigRequest extends Request {
         public Builder configType(String configType) {
             this.putQueryParameter("ConfigType", configType);
             this.configType = configType;
+            return this;
+        }
+
+        /**
+         * ExtendedTypesEnable.
+         */
+        public Builder extendedTypesEnable(String extendedTypesEnable) {
+            this.putQueryParameter("ExtendedTypesEnable", extendedTypesEnable);
+            this.extendedTypesEnable = extendedTypesEnable;
             return this;
         }
 
