@@ -83,7 +83,7 @@ public class GetProductQuotaDimensionRequest extends Request {
         } 
 
         /**
-         * DependentDimensions.
+         * The dimension details that are supported by the cloud service.
          */
         public Builder dependentDimensions(java.util.List < DependentDimensions> dependentDimensions) {
             this.putBodyParameter("DependentDimensions", dependentDimensions);
@@ -92,7 +92,7 @@ public class GetProductQuotaDimensionRequest extends Request {
         }
 
         /**
-         * DimensionKey.
+         * The dimension key.
          */
         public Builder dimensionKey(String dimensionKey) {
             this.putBodyParameter("DimensionKey", dimensionKey);
@@ -101,7 +101,10 @@ public class GetProductQuotaDimensionRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * The abbreviation of the cloud service name.
+         * <p>
+         * 
+         * >  For more information, see [Alibaba Cloud services that support Quota Center](~~182368~~).
          */
         public Builder productCode(String productCode) {
             this.putBodyParameter("ProductCode", productCode);
@@ -155,7 +158,10 @@ public class GetProductQuotaDimensionRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The dimension keys that are supported by the cloud service.
+             * <p>
+             * 
+             * >  The value range of N varies based on the number of dimensions that are supported by the related cloud service.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -163,7 +169,10 @@ public class GetProductQuotaDimensionRequest extends Request {
             }
 
             /**
-             * Value.
+             * The dimension values that are supported by the cloud service.
+             * <p>
+             * 
+             * >  The value range of N varies based on the number of dimensions that are supported by the related cloud service.
              */
             public Builder value(String value) {
                 this.value = value;

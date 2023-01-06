@@ -26,8 +26,16 @@ public class CreateQuotaApplicationRequest extends Request {
     private java.util.List < Dimensions> dimensions;
 
     @Body
+    @NameInMap("EffectiveTime")
+    private String effectiveTime;
+
+    @Body
     @NameInMap("EnvLanguage")
     private String envLanguage;
+
+    @Body
+    @NameInMap("ExpireTime")
+    private String expireTime;
 
     @Body
     @NameInMap("NoticeType")
@@ -57,7 +65,9 @@ public class CreateQuotaApplicationRequest extends Request {
         this.auditMode = builder.auditMode;
         this.desireValue = builder.desireValue;
         this.dimensions = builder.dimensions;
+        this.effectiveTime = builder.effectiveTime;
         this.envLanguage = builder.envLanguage;
+        this.expireTime = builder.expireTime;
         this.noticeType = builder.noticeType;
         this.productCode = builder.productCode;
         this.quotaActionCode = builder.quotaActionCode;
@@ -100,10 +110,24 @@ public class CreateQuotaApplicationRequest extends Request {
     }
 
     /**
+     * @return effectiveTime
+     */
+    public String getEffectiveTime() {
+        return this.effectiveTime;
+    }
+
+    /**
      * @return envLanguage
      */
     public String getEnvLanguage() {
         return this.envLanguage;
+    }
+
+    /**
+     * @return expireTime
+     */
+    public String getExpireTime() {
+        return this.expireTime;
     }
 
     /**
@@ -145,7 +169,9 @@ public class CreateQuotaApplicationRequest extends Request {
         private String auditMode; 
         private Float desireValue; 
         private java.util.List < Dimensions> dimensions; 
+        private String effectiveTime; 
         private String envLanguage; 
+        private String expireTime; 
         private Integer noticeType; 
         private String productCode; 
         private String quotaActionCode; 
@@ -161,7 +187,9 @@ public class CreateQuotaApplicationRequest extends Request {
             this.auditMode = request.auditMode;
             this.desireValue = request.desireValue;
             this.dimensions = request.dimensions;
+            this.effectiveTime = request.effectiveTime;
             this.envLanguage = request.envLanguage;
+            this.expireTime = request.expireTime;
             this.noticeType = request.noticeType;
             this.productCode = request.productCode;
             this.quotaActionCode = request.quotaActionCode;
@@ -170,7 +198,13 @@ public class CreateQuotaApplicationRequest extends Request {
         } 
 
         /**
-         * AuditMode.
+         * The mode in which you want the application to be reviewed. Valid values:
+         * <p>
+         * 
+         * *   Sync: The application is reviewed in a synchronous manner. Quota Center automatically reviews the application. The result is returned immediately after you submit the application. However, the chance of an approval for an application that is reviewed in Sync mode is lower than the chance of an approval for an application that is reviewed in Async mode. The validity period of the new quota value is 1 hour.
+         * *   Async: The application is reviewed in an asynchronous manner. An Alibaba Cloud support engineer reviews the application. The chance of an approval for an application that is reviewed in Async mode is higher than the chance of an approval for an application that is reviewed in Sync mode. The validity period of the new quota value is one month.
+         * 
+         * > This parameter is available only for ECS Quotas by Instance Type.
          */
         public Builder auditMode(String auditMode) {
             this.putBodyParameter("AuditMode", auditMode);
@@ -179,7 +213,10 @@ public class CreateQuotaApplicationRequest extends Request {
         }
 
         /**
-         * DesireValue.
+         * The requested value of the quota.
+         * <p>
+         * 
+         * > Applications are reviewed by the technical support team of each Alibaba Cloud service. To increase the success rate of your application, you must specify a reasonable quota value and detailed reasons when you submit an application to increase the value of the quota.
          */
         public Builder desireValue(Float desireValue) {
             this.putBodyParameter("DesireValue", desireValue);
@@ -188,7 +225,7 @@ public class CreateQuotaApplicationRequest extends Request {
         }
 
         /**
-         * Dimensions.
+         * The quota dimensions.
          */
         public Builder dimensions(java.util.List < Dimensions> dimensions) {
             this.putBodyParameter("Dimensions", dimensions);
@@ -197,7 +234,23 @@ public class CreateQuotaApplicationRequest extends Request {
         }
 
         /**
-         * EnvLanguage.
+         * The end time of the validity period of the quota. Specify the value in UTC. This parameter is valid only if you set the QuotaCategory parameter to WhiteListLabel.
+         * <p>
+         * 
+         * > If you do not specify an end time, the default end time is 99 years after the quota application is submitted.
+         */
+        public Builder effectiveTime(String effectiveTime) {
+            this.putBodyParameter("EffectiveTime", effectiveTime);
+            this.effectiveTime = effectiveTime;
+            return this;
+        }
+
+        /**
+         * The language of the quota alert notification. Valid values:
+         * <p>
+         * 
+         * *   zh (default value): Chinese
+         * *   en: English
          */
         public Builder envLanguage(String envLanguage) {
             this.putBodyParameter("EnvLanguage", envLanguage);
@@ -206,7 +259,23 @@ public class CreateQuotaApplicationRequest extends Request {
         }
 
         /**
-         * NoticeType.
+         * The start time of the validity period of the quota. Specify the value in UTC. This parameter is valid only if you set the QuotaCategory parameter to WhiteListLabel.
+         * <p>
+         * 
+         * > If you do not specify a start time, the default start time is the time when the quota application is submitted.
+         */
+        public Builder expireTime(String expireTime) {
+            this.putBodyParameter("ExpireTime", expireTime);
+            this.expireTime = expireTime;
+            return this;
+        }
+
+        /**
+         * Specifies whether to send a notification about the application result. Valid values:
+         * <p>
+         * 
+         * *   0 (default value): no
+         * *   3: yes
          */
         public Builder noticeType(Integer noticeType) {
             this.putBodyParameter("NoticeType", noticeType);
@@ -215,7 +284,10 @@ public class CreateQuotaApplicationRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * The abbreviation of the Alibaba Cloud service name.
+         * <p>
+         * 
+         * > For more information, see [Alibaba Cloud services that support Quota Center](~~182368~~).
          */
         public Builder productCode(String productCode) {
             this.putBodyParameter("ProductCode", productCode);
@@ -224,7 +296,7 @@ public class CreateQuotaApplicationRequest extends Request {
         }
 
         /**
-         * QuotaActionCode.
+         * The ID of the quota.
          */
         public Builder quotaActionCode(String quotaActionCode) {
             this.putBodyParameter("QuotaActionCode", quotaActionCode);
@@ -233,7 +305,12 @@ public class CreateQuotaApplicationRequest extends Request {
         }
 
         /**
-         * QuotaCategory.
+         * The type of the quota.
+         * <p>
+         * 
+         * *   CommonQuota: general quota
+         * *   FlowControl: API rate limit
+         * *   WhiteListLabel: whitelist quota
          */
         public Builder quotaCategory(String quotaCategory) {
             this.putBodyParameter("QuotaCategory", quotaCategory);
@@ -242,7 +319,10 @@ public class CreateQuotaApplicationRequest extends Request {
         }
 
         /**
-         * Reason.
+         * The reason for the application.
+         * <p>
+         * 
+         * > Applications are reviewed by the technical support team of each Alibaba Cloud service. To increase the success rate of your application, you must specify a reasonable quota value and detailed reasons when you submit an application to increase the value of the quota.
          */
         public Builder reason(String reason) {
             this.putBodyParameter("Reason", reason);
@@ -296,7 +376,12 @@ public class CreateQuotaApplicationRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The dimension keys.
+             * <p>
+             * 
+             * The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
+             * 
+             * > This parameter is required if you set the ProductCode parameter to ecs, ecs-spec, actiontrail, or ess.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -304,7 +389,12 @@ public class CreateQuotaApplicationRequest extends Request {
             }
 
             /**
-             * Value.
+             * The dimension values.
+             * <p>
+             * 
+             * The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
+             * 
+             * > This parameter is required if you set the ProductCode parameter to ecs, ecs-spec, actiontrail, or ess.
              */
             public Builder value(String value) {
                 this.value = value;

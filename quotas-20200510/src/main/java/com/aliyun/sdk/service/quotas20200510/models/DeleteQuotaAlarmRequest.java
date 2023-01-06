@@ -55,7 +55,7 @@ public class DeleteQuotaAlarmRequest extends Request {
         } 
 
         /**
-         * AlarmId.
+         * The ID of the quota alert.
          */
         public Builder alarmId(String alarmId) {
             this.putBodyParameter("AlarmId", alarmId);

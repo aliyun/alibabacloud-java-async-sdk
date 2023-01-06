@@ -86,7 +86,7 @@ public class ListAlarmHistoriesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * AlarmHistories.
+         * The details of the alert records.
          */
         public Builder alarmHistories(java.util.List < AlarmHistories> alarmHistories) {
             this.alarmHistories = alarmHistories;
@@ -94,7 +94,7 @@ public class ListAlarmHistoriesResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * The maximum number of records returned for the query.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -102,7 +102,7 @@ public class ListAlarmHistoriesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The token that is used to mark the location where the query is ended. An empty value indicates that all the data is queried.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -110,7 +110,7 @@ public class ListAlarmHistoriesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListAlarmHistoriesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of records returned for the query.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -254,7 +254,7 @@ public class ListAlarmHistoriesResponseBody extends TeaModel {
             private Float thresholdPercent; 
 
             /**
-             * AlarmName.
+             * The name of the quota alert.
              */
             public Builder alarmName(String alarmName) {
                 this.alarmName = alarmName;
@@ -262,7 +262,7 @@ public class ListAlarmHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the quota alert was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -270,7 +270,11 @@ public class ListAlarmHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * NotifyChannels.
+             * The notification methods of the quota alert. Valid values:
+             * <p>
+             * 
+             * *   sms: short messages
+             * *   email: emails
              */
             public Builder notifyChannels(java.util.List < String > notifyChannels) {
                 this.notifyChannels = notifyChannels;
@@ -278,7 +282,7 @@ public class ListAlarmHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * NotifyTarget.
+             * The alert contact.
              */
             public Builder notifyTarget(String notifyTarget) {
                 this.notifyTarget = notifyTarget;
@@ -286,7 +290,7 @@ public class ListAlarmHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * ProductCode.
+             * The abbreviation of the cloud service name.
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -294,7 +298,7 @@ public class ListAlarmHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * QuotaActionCode.
+             * The ID of the quota.
              */
             public Builder quotaActionCode(String quotaActionCode) {
                 this.quotaActionCode = quotaActionCode;
@@ -302,7 +306,7 @@ public class ListAlarmHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * QuotaUsage.
+             * The used quota.
              */
             public Builder quotaUsage(Float quotaUsage) {
                 this.quotaUsage = quotaUsage;
@@ -310,7 +314,7 @@ public class ListAlarmHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * Threshold.
+             * The numeric value of the alert threshold.
              */
             public Builder threshold(Float threshold) {
                 this.threshold = threshold;
@@ -318,7 +322,7 @@ public class ListAlarmHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * ThresholdPercent.
+             * The percentage of the alert threshold.
              */
             public Builder thresholdPercent(Float thresholdPercent) {
                 this.thresholdPercent = thresholdPercent;

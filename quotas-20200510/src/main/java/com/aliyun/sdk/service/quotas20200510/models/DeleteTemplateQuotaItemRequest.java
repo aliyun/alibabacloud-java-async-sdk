@@ -55,7 +55,7 @@ public class DeleteTemplateQuotaItemRequest extends Request {
         } 
 
         /**
-         * 配额项ID
+         * The ID of the quota template.
          */
         public Builder id(String id) {
             this.putBodyParameter("Id", id);

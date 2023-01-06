@@ -163,7 +163,7 @@ public class ListQuotaApplicationsRequest extends Request {
         }
 
         /**
-         * KeyWord.
+         * The keyword that you want to use to search for the application.
          */
         public Builder keyWord(String keyWord) {
             this.putBodyParameter("KeyWord", keyWord);
@@ -172,7 +172,10 @@ public class ListQuotaApplicationsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The maximum number of records that you want to return for the query.
+         * <p>
+         * 
+         * Valid values: 1 to 200. Default value: 30.
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -181,7 +184,7 @@ public class ListQuotaApplicationsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that marks the position from which you want to start the query. An empty value indicates that the query starts from the beginning.
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -190,7 +193,10 @@ public class ListQuotaApplicationsRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * The abbreviation of the cloud service name.
+         * <p>
+         * 
+         * >  For more information, see [Alibaba Cloud services that support Quota Center](~~182368~~).
          */
         public Builder productCode(String productCode) {
             this.putBodyParameter("ProductCode", productCode);
@@ -199,7 +205,7 @@ public class ListQuotaApplicationsRequest extends Request {
         }
 
         /**
-         * QuotaActionCode.
+         * The ID of the quota.
          */
         public Builder quotaActionCode(String quotaActionCode) {
             this.putBodyParameter("QuotaActionCode", quotaActionCode);
@@ -208,7 +214,11 @@ public class ListQuotaApplicationsRequest extends Request {
         }
 
         /**
-         * QuotaCategory.
+         * The type of the quota. Valid values:
+         * <p>
+         * 
+         * *   FlowControl: API rate limit
+         * *   CommonQuota: general quota
          */
         public Builder quotaCategory(String quotaCategory) {
             this.putBodyParameter("QuotaCategory", quotaCategory);
@@ -217,7 +227,13 @@ public class ListQuotaApplicationsRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the application. Valid values:
+         * <p>
+         * 
+         * *   Disagree: The application is rejected.
+         * *   Agree: The application is approved.
+         * *   Process: The application is pending approval.
+         * *   Cancel: The application is closed.
          */
         public Builder status(String status) {
             this.putBodyParameter("Status", status);
@@ -271,7 +287,10 @@ public class ListQuotaApplicationsRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The dimension keys.
+             * <p>
+             * 
+             * >  The value range of N varies based on the number of dimensions that are supported by the related cloud service.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -279,7 +298,10 @@ public class ListQuotaApplicationsRequest extends Request {
             }
 
             /**
-             * Value.
+             * The dimension values.
+             * <p>
+             * 
+             * >  The value range of N varies based on the number of dimensions that are supported by the related cloud service.
              */
             public Builder value(String value) {
                 this.value = value;

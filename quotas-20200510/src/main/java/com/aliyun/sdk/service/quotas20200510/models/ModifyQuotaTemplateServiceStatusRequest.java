@@ -55,7 +55,11 @@ public class ModifyQuotaTemplateServiceStatusRequest extends Request {
         } 
 
         /**
-         * ServiceStatus.
+         * The status of the quota template. Valid values:
+         * <p>
+         * 
+         * *   \-1: disabled
+         * *   1: enabled
          */
         public Builder serviceStatus(Integer serviceStatus) {
             this.putBodyParameter("ServiceStatus", serviceStatus);

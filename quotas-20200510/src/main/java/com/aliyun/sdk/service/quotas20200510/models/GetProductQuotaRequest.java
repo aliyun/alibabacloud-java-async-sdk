@@ -84,7 +84,7 @@ public class GetProductQuotaRequest extends Request {
         } 
 
         /**
-         * Dimensions.
+         * The details of dimensions.
          */
         public Builder dimensions(java.util.List < Dimensions> dimensions) {
             this.putBodyParameter("Dimensions", dimensions);
@@ -93,7 +93,10 @@ public class GetProductQuotaRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * The abbreviation of the cloud service name.
+         * <p>
+         * 
+         * >  For more information, see [Alibaba Cloud services that support Quota Center](~~182368~~).
          */
         public Builder productCode(String productCode) {
             this.putBodyParameter("ProductCode", productCode);
@@ -102,7 +105,7 @@ public class GetProductQuotaRequest extends Request {
         }
 
         /**
-         * QuotaActionCode.
+         * The ID of the quota.
          */
         public Builder quotaActionCode(String quotaActionCode) {
             this.putBodyParameter("QuotaActionCode", quotaActionCode);
@@ -156,7 +159,12 @@ public class GetProductQuotaRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The dimension keys.
+             * <p>
+             * 
+             * > 
+             * *   The value range of N varies based on the number of dimensions that are supported by the related cloud service.
+             * *   If you call the operation to query the details about a quota that belongs to a cloud service that supports dimensions, you must configure this parameter. You must configure the `Dimensions.N.Key` and `Dimensions.N.Value` parameters at the same time. The following cloud services support dimensions: Elastic Compute Service (ECS) whose service code is ecs, Enterprise Distributed Application Service (EDAS) whose service code is edas, ECS Quotas by Instance Type whose service code is ecs-spec, and Auto Scaling (ESS) whose service code is ess.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -164,7 +172,12 @@ public class GetProductQuotaRequest extends Request {
             }
 
             /**
-             * Value.
+             * The dimension values.
+             * <p>
+             * 
+             * > 
+             * *   The value range of N varies based on the number of dimensions that are supported by the related cloud service.
+             * *   If you call the operation to query the details about a quota that belongs to a cloud service that supports dimensions, you must configure this parameter. You must configure the `Dimensions.N.Key` and `Dimensions.N.Value` parameters at the same time. The following cloud services support dimensions: Elastic Compute Service (ECS) whose service code is ecs, Enterprise Distributed Application Service (EDAS) whose service code is edas, ECS Quotas by Instance Type whose service code is ecs-spec, and Auto Scaling (ESS) whose service code is ess.
              */
             public Builder value(String value) {
                 this.value = value;

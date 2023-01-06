@@ -84,7 +84,10 @@ public class ListProductDimensionGroupsRequest extends Request {
         } 
 
         /**
-         * MaxResults.
+         * The maximum number of records that can be returned for the query.
+         * <p>
+         * 
+         * Valid values: 1 to 200. Default value: 30.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -93,7 +96,7 @@ public class ListProductDimensionGroupsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that marks the position from which you want to start the query. If you leave this parameter empty, the query starts from the beginning.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -102,7 +105,10 @@ public class ListProductDimensionGroupsRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * The service code.
+         * <p>
+         * 
+         * >  For more information, see [Alibaba Cloud services that support Quota Center](~~182368~~).
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);

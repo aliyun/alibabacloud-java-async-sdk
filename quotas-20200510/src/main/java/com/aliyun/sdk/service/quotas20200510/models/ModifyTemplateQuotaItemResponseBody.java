@@ -50,7 +50,7 @@ public class ModifyTemplateQuotaItemResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Id.
+         * The ID of the quota template.
          */
         public Builder id(String id) {
             this.id = id;
@@ -58,7 +58,7 @@ public class ModifyTemplateQuotaItemResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

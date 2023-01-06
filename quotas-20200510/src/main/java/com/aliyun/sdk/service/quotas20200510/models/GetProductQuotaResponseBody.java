@@ -50,7 +50,7 @@ public class GetProductQuotaResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Quota.
+         * The details about the quota.
          */
         public Builder quota(Quota quota) {
             this.quota = quota;
@@ -58,7 +58,7 @@ public class GetProductQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,14 @@ public class GetProductQuotaResponseBody extends TeaModel {
             private Integer periodValue; 
 
             /**
-             * PeriodUnit.
+             * The unit of the calculation cycle of the quota. Valid values:
+             * <p>
+             * 
+             * *   second
+             * *   minute
+             * *   hour
+             * *   day
+             * *   week
              */
             public Builder periodUnit(String periodUnit) {
                 this.periodUnit = periodUnit;
@@ -118,7 +125,7 @@ public class GetProductQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * PeriodValue.
+             * The value of the calculation cycle of the quota.
              */
             public Builder periodValue(Integer periodValue) {
                 this.periodValue = periodValue;
@@ -195,7 +202,7 @@ public class GetProductQuotaResponseBody extends TeaModel {
             private String usage; 
 
             /**
-             * Quota.
+             * The value of the quota.
              */
             public Builder quota(String quota) {
                 this.quota = quota;
@@ -203,7 +210,10 @@ public class GetProductQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * QuotaUnit.
+             * The unit of the quota. 
+             * <p>
+             * 
+             * >  The unit of each quota is unique. For example, the quota whose ID is `q_cbdch3` represents the maximum number of Container Service for Kubernetes (ACK) clusters. The unit of this quota is clusters. The quota whose ID is `q_security-groups` represents the maximum number of security groups. The unit of this quota is Number of security groups.
              */
             public Builder quotaUnit(String quotaUnit) {
                 this.quotaUnit = quotaUnit;
@@ -211,7 +221,11 @@ public class GetProductQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The category of the quota. Valid values:
+             * <p>
+             * 
+             * *   BaseQuota: base quota
+             * *   ReservedQuota: reserved quota
              */
             public Builder type(String type) {
                 this.type = type;
@@ -219,7 +233,7 @@ public class GetProductQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * Usage.
+             * The used quota.
              */
             public Builder usage(String usage) {
                 this.usage = usage;
@@ -249,6 +263,12 @@ public class GetProductQuotaResponseBody extends TeaModel {
         @NameInMap("Dimensions")
         private java.util.Map < String, ? > dimensions;
 
+        @NameInMap("EffectiveTime")
+        private String effectiveTime;
+
+        @NameInMap("ExpireTime")
+        private String expireTime;
+
         @NameInMap("Period")
         private Period period;
 
@@ -260,6 +280,9 @@ public class GetProductQuotaResponseBody extends TeaModel {
 
         @NameInMap("QuotaArn")
         private String quotaArn;
+
+        @NameInMap("QuotaCategory")
+        private String quotaCategory;
 
         @NameInMap("QuotaDescription")
         private String quotaDescription;
@@ -276,6 +299,9 @@ public class GetProductQuotaResponseBody extends TeaModel {
         @NameInMap("QuotaUnit")
         private String quotaUnit;
 
+        @NameInMap("SupportedRange")
+        private java.util.List < Float > supportedRange;
+
         @NameInMap("TotalQuota")
         private Float totalQuota;
 
@@ -291,15 +317,19 @@ public class GetProductQuotaResponseBody extends TeaModel {
             this.applicableType = builder.applicableType;
             this.consumable = builder.consumable;
             this.dimensions = builder.dimensions;
+            this.effectiveTime = builder.effectiveTime;
+            this.expireTime = builder.expireTime;
             this.period = builder.period;
             this.productCode = builder.productCode;
             this.quotaActionCode = builder.quotaActionCode;
             this.quotaArn = builder.quotaArn;
+            this.quotaCategory = builder.quotaCategory;
             this.quotaDescription = builder.quotaDescription;
             this.quotaItems = builder.quotaItems;
             this.quotaName = builder.quotaName;
             this.quotaType = builder.quotaType;
             this.quotaUnit = builder.quotaUnit;
+            this.supportedRange = builder.supportedRange;
             this.totalQuota = builder.totalQuota;
             this.totalUsage = builder.totalUsage;
             this.unadjustableDetail = builder.unadjustableDetail;
@@ -349,6 +379,20 @@ public class GetProductQuotaResponseBody extends TeaModel {
         }
 
         /**
+         * @return effectiveTime
+         */
+        public String getEffectiveTime() {
+            return this.effectiveTime;
+        }
+
+        /**
+         * @return expireTime
+         */
+        public String getExpireTime() {
+            return this.expireTime;
+        }
+
+        /**
          * @return period
          */
         public Period getPeriod() {
@@ -374,6 +418,13 @@ public class GetProductQuotaResponseBody extends TeaModel {
          */
         public String getQuotaArn() {
             return this.quotaArn;
+        }
+
+        /**
+         * @return quotaCategory
+         */
+        public String getQuotaCategory() {
+            return this.quotaCategory;
         }
 
         /**
@@ -412,6 +463,13 @@ public class GetProductQuotaResponseBody extends TeaModel {
         }
 
         /**
+         * @return supportedRange
+         */
+        public java.util.List < Float > getSupportedRange() {
+            return this.supportedRange;
+        }
+
+        /**
          * @return totalQuota
          */
         public Float getTotalQuota() {
@@ -438,21 +496,29 @@ public class GetProductQuotaResponseBody extends TeaModel {
             private String applicableType; 
             private Boolean consumable; 
             private java.util.Map < String, ? > dimensions; 
+            private String effectiveTime; 
+            private String expireTime; 
             private Period period; 
             private String productCode; 
             private String quotaActionCode; 
             private String quotaArn; 
+            private String quotaCategory; 
             private String quotaDescription; 
             private java.util.List < QuotaItems> quotaItems; 
             private String quotaName; 
             private String quotaType; 
             private String quotaUnit; 
+            private java.util.List < Float > supportedRange; 
             private Float totalQuota; 
             private Float totalUsage; 
             private String unadjustableDetail; 
 
             /**
-             * Adjustable.
+             * Indicates whether the quota is adjustable. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder adjustable(Boolean adjustable) {
                 this.adjustable = adjustable;
@@ -460,7 +526,7 @@ public class GetProductQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * ApplicableRange.
+             * The range of the quota value, for example, `[802,10000]`.
              */
             public Builder applicableRange(java.util.List < Float > applicableRange) {
                 this.applicableRange = applicableRange;
@@ -468,7 +534,11 @@ public class GetProductQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * ApplicableType.
+             * The type of the adjustable value. Valid values:
+             * <p>
+             * 
+             * *   continuous
+             * *   discontinuous
              */
             public Builder applicableType(String applicableType) {
                 this.applicableType = applicableType;
@@ -476,7 +546,11 @@ public class GetProductQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * Consumable.
+             * Indicates whether the system shows the used value of the quota. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder consumable(Boolean consumable) {
                 this.consumable = consumable;
@@ -484,7 +558,7 @@ public class GetProductQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * Dimensions.
+             * The quota dimensions. Format: `{"regionId":"Region"}`.
              */
             public Builder dimensions(java.util.Map < String, ? > dimensions) {
                 this.dimensions = dimensions;
@@ -492,7 +566,23 @@ public class GetProductQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * Period.
+             * EffectiveTime.
+             */
+            public Builder effectiveTime(String effectiveTime) {
+                this.effectiveTime = effectiveTime;
+                return this;
+            }
+
+            /**
+             * ExpireTime.
+             */
+            public Builder expireTime(String expireTime) {
+                this.expireTime = expireTime;
+                return this;
+            }
+
+            /**
+             * The calculation cycle of the quota.
              */
             public Builder period(Period period) {
                 this.period = period;
@@ -500,7 +590,7 @@ public class GetProductQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * ProductCode.
+             * The abbreviation of the Alibaba Cloud service name.
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -508,7 +598,7 @@ public class GetProductQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * QuotaActionCode.
+             * The ID of the quota.
              */
             public Builder quotaActionCode(String quotaActionCode) {
                 this.quotaActionCode = quotaActionCode;
@@ -516,7 +606,7 @@ public class GetProductQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * QuotaArn.
+             * The Alibaba Cloud Resource Name (ARN) of the quota.
              */
             public Builder quotaArn(String quotaArn) {
                 this.quotaArn = quotaArn;
@@ -524,7 +614,15 @@ public class GetProductQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * QuotaDescription.
+             * QuotaCategory.
+             */
+            public Builder quotaCategory(String quotaCategory) {
+                this.quotaCategory = quotaCategory;
+                return this;
+            }
+
+            /**
+             * The description of the quota.
              */
             public Builder quotaDescription(String quotaDescription) {
                 this.quotaDescription = quotaDescription;
@@ -532,7 +630,7 @@ public class GetProductQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * QuotaItems.
+             * The details about the quota.
              */
             public Builder quotaItems(java.util.List < QuotaItems> quotaItems) {
                 this.quotaItems = quotaItems;
@@ -540,7 +638,7 @@ public class GetProductQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * QuotaName.
+             * The name of the quota.
              */
             public Builder quotaName(String quotaName) {
                 this.quotaName = quotaName;
@@ -548,7 +646,11 @@ public class GetProductQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * QuotaType.
+             * The type of the quota. Valid values:
+             * <p>
+             * 
+             * - privilege
+             * - normal (default value)
              */
             public Builder quotaType(String quotaType) {
                 this.quotaType = quotaType;
@@ -556,7 +658,10 @@ public class GetProductQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * QuotaUnit.
+             * The unit of the quota.
+             * <p>
+             * 
+             * >  The unit of each quota is unique. For example, the quota whose ID is `q_cbdch3` represents the maximum number of Container Service for Kubernetes (ACK) clusters. The unit of this quota is clusters. The quota whose ID is `q_security-groups` represents the maximum number of security groups. The unit of this quota is security groups.
              */
             public Builder quotaUnit(String quotaUnit) {
                 this.quotaUnit = quotaUnit;
@@ -564,7 +669,19 @@ public class GetProductQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * TotalQuota.
+             * The range of the quota value that can be requested for the current quota item. When you configure a quota template, you can use the range as a reference.  
+             * <p>
+             * 
+             * - If the value of the ApplicableType parameter is continuous and the value of the ApplicableRange parameter is [802,1000], the quota value ranges from 802 to 1,000.
+             * - If the value of the ApplicableType parameter is discontinuous and the value of the ApplicableRange parameter is [10,20,50,100], the quota value is 10, 20, 50, or 100.
+             */
+            public Builder supportedRange(java.util.List < Float > supportedRange) {
+                this.supportedRange = supportedRange;
+                return this;
+            }
+
+            /**
+             * The value of the quota.
              */
             public Builder totalQuota(Float totalQuota) {
                 this.totalQuota = totalQuota;
@@ -572,7 +689,7 @@ public class GetProductQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * TotalUsage.
+             * The used quota.
              */
             public Builder totalUsage(Float totalUsage) {
                 this.totalUsage = totalUsage;
@@ -580,7 +697,13 @@ public class GetProductQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * UnadjustableDetail.
+             * The reason why the quota is not adjustable. Valid values:
+             * <p>
+             * 
+             * *   nonactivated: The service is not activated.
+             * *   applicationProcess: The application is being processed.
+             * *   limitReached: The quota limit is reached.
+             * *   supportTicketRequired: The quota can be increased only by submitting a ticket.
              */
             public Builder unadjustableDetail(String unadjustableDetail) {
                 this.unadjustableDetail = unadjustableDetail;

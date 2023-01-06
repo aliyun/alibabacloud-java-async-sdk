@@ -70,7 +70,10 @@ public class ListDependentQuotasRequest extends Request {
         } 
 
         /**
-         * ProductCode.
+         * The abbreviation of the cloud service name.
+         * <p>
+         * 
+         * >  For more information about the Alibaba Cloud services that support Quota Center, see [Alibaba Cloud services that support Quota Center](~~182368~~).
          */
         public Builder productCode(String productCode) {
             this.putBodyParameter("ProductCode", productCode);
@@ -79,7 +82,7 @@ public class ListDependentQuotasRequest extends Request {
         }
 
         /**
-         * QuotaActionCode.
+         * The ID of the quota.
          */
         public Builder quotaActionCode(String quotaActionCode) {
             this.putBodyParameter("QuotaActionCode", quotaActionCode);

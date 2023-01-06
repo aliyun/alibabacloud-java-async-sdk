@@ -86,7 +86,7 @@ public class ListProductDimensionGroupsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * DimensionGroups.
+         * The dimension groups.
          */
         public Builder dimensionGroups(java.util.List < DimensionGroups> dimensionGroups) {
             this.dimensionGroups = dimensionGroups;
@@ -94,7 +94,7 @@ public class ListProductDimensionGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * The number of entries returned per page.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -102,7 +102,7 @@ public class ListProductDimensionGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The token that marks the position at which the query ends. An empty value indicates that all data is returned.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -110,7 +110,7 @@ public class ListProductDimensionGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListProductDimensionGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of records that are returned for the query.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -194,7 +194,7 @@ public class ListProductDimensionGroupsResponseBody extends TeaModel {
             private String productCode; 
 
             /**
-             * DimensionKeys.
+             * The keys of the dimension group.
              */
             public Builder dimensionKeys(java.util.List < String > dimensionKeys) {
                 this.dimensionKeys = dimensionKeys;
@@ -202,7 +202,7 @@ public class ListProductDimensionGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * GroupCode.
+             * The code of the dimension group.
              */
             public Builder groupCode(String groupCode) {
                 this.groupCode = groupCode;
@@ -210,7 +210,7 @@ public class ListProductDimensionGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * The name of the dimension group.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -218,7 +218,7 @@ public class ListProductDimensionGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ProductCode.
+             * The service code.
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;

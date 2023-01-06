@@ -98,7 +98,10 @@ public class ListProductQuotaDimensionsRequest extends Request {
         } 
 
         /**
-         * MaxResults.
+         * The maximum number of records that you want to return for the query.
+         * <p>
+         * 
+         * Valid values: 1 to 200. Default value: 30.
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -107,7 +110,7 @@ public class ListProductQuotaDimensionsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that marks the position where you want to start the query. An empty value indicates that the query starts from the beginning.
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -116,7 +119,10 @@ public class ListProductQuotaDimensionsRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * The abbreviation of the cloud service name.
+         * <p>
+         * 
+         * >  For more information, see [Alibaba Cloud services that support Quota Center](~~182368~~).
          */
         public Builder productCode(String productCode) {
             this.putBodyParameter("ProductCode", productCode);
@@ -125,7 +131,11 @@ public class ListProductQuotaDimensionsRequest extends Request {
         }
 
         /**
-         * QuotaCategory.
+         * The type of the quota. Valid values:
+         * <p>
+         * 
+         * *   FlowControl: API rate limit
+         * *   CommonQuota: general quota
          */
         public Builder quotaCategory(String quotaCategory) {
             this.putBodyParameter("QuotaCategory", quotaCategory);

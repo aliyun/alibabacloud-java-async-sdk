@@ -22,8 +22,16 @@ public class CreateTemplateQuotaItemRequest extends Request {
     private java.util.List < Dimensions> dimensions;
 
     @Body
+    @NameInMap("EffectiveTime")
+    private String effectiveTime;
+
+    @Body
     @NameInMap("EnvLanguage")
     private String envLanguage;
+
+    @Body
+    @NameInMap("ExpireTime")
+    private String expireTime;
 
     @Body
     @NameInMap("NoticeType")
@@ -39,14 +47,21 @@ public class CreateTemplateQuotaItemRequest extends Request {
     @Validation(required = true)
     private String quotaActionCode;
 
+    @Body
+    @NameInMap("QuotaCategory")
+    private String quotaCategory;
+
     private CreateTemplateQuotaItemRequest(Builder builder) {
         super(builder);
         this.desireValue = builder.desireValue;
         this.dimensions = builder.dimensions;
+        this.effectiveTime = builder.effectiveTime;
         this.envLanguage = builder.envLanguage;
+        this.expireTime = builder.expireTime;
         this.noticeType = builder.noticeType;
         this.productCode = builder.productCode;
         this.quotaActionCode = builder.quotaActionCode;
+        this.quotaCategory = builder.quotaCategory;
     }
 
     public static Builder builder() {
@@ -77,10 +92,24 @@ public class CreateTemplateQuotaItemRequest extends Request {
     }
 
     /**
+     * @return effectiveTime
+     */
+    public String getEffectiveTime() {
+        return this.effectiveTime;
+    }
+
+    /**
      * @return envLanguage
      */
     public String getEnvLanguage() {
         return this.envLanguage;
+    }
+
+    /**
+     * @return expireTime
+     */
+    public String getExpireTime() {
+        return this.expireTime;
     }
 
     /**
@@ -104,13 +133,23 @@ public class CreateTemplateQuotaItemRequest extends Request {
         return this.quotaActionCode;
     }
 
+    /**
+     * @return quotaCategory
+     */
+    public String getQuotaCategory() {
+        return this.quotaCategory;
+    }
+
     public static final class Builder extends Request.Builder<CreateTemplateQuotaItemRequest, Builder> {
         private Float desireValue; 
         private java.util.List < Dimensions> dimensions; 
+        private String effectiveTime; 
         private String envLanguage; 
+        private String expireTime; 
         private Long noticeType; 
         private String productCode; 
         private String quotaActionCode; 
+        private String quotaCategory; 
 
         private Builder() {
             super();
@@ -120,14 +159,17 @@ public class CreateTemplateQuotaItemRequest extends Request {
             super(request);
             this.desireValue = request.desireValue;
             this.dimensions = request.dimensions;
+            this.effectiveTime = request.effectiveTime;
             this.envLanguage = request.envLanguage;
+            this.expireTime = request.expireTime;
             this.noticeType = request.noticeType;
             this.productCode = request.productCode;
             this.quotaActionCode = request.quotaActionCode;
+            this.quotaCategory = request.quotaCategory;
         } 
 
         /**
-         * 配额申请的值。
+         * The requested value of the quota.
          */
         public Builder desireValue(Float desireValue) {
             this.putBodyParameter("DesireValue", desireValue);
@@ -136,7 +178,7 @@ public class CreateTemplateQuotaItemRequest extends Request {
         }
 
         /**
-         * 配额维度。
+         * The quota dimensions.
          */
         public Builder dimensions(java.util.List < Dimensions> dimensions) {
             this.putBodyParameter("Dimensions", dimensions);
@@ -145,7 +187,23 @@ public class CreateTemplateQuotaItemRequest extends Request {
         }
 
         /**
-         * EnvLanguage.
+         * The start time of the validity period of the quota. Specify the value in UTC. This parameter is valid only if you set the QuotaCategory parameter to WhiteListLabel.
+         * <p>
+         * 
+         * > If you do not specify this parameter, the quota takes effect immediately.
+         */
+        public Builder effectiveTime(String effectiveTime) {
+            this.putBodyParameter("EffectiveTime", effectiveTime);
+            this.effectiveTime = effectiveTime;
+            return this;
+        }
+
+        /**
+         * The language of the quota alert notification. Valid values:
+         * <p>
+         * 
+         * *   zh (default value): Chinese
+         * *   en: English
          */
         public Builder envLanguage(String envLanguage) {
             this.putBodyParameter("EnvLanguage", envLanguage);
@@ -154,7 +212,23 @@ public class CreateTemplateQuotaItemRequest extends Request {
         }
 
         /**
-         * 配额申请结果是否发送通知
+         * The end time of the validity period of the quota. Specify the value in UTC. This parameter is valid only if you set the QuotaCategory parameter to WhiteListLabel.
+         * <p>
+         * 
+         * > If the value of this parameter is empty, no end time is specified.
+         */
+        public Builder expireTime(String expireTime) {
+            this.putBodyParameter("ExpireTime", expireTime);
+            this.expireTime = expireTime;
+            return this;
+        }
+
+        /**
+         * Specifies whether to send a notification about the application result. Valid values:
+         * <p>
+         * 
+         * *   0 (default value): no
+         * *   3: yes
          */
         public Builder noticeType(Long noticeType) {
             this.putBodyParameter("NoticeType", noticeType);
@@ -163,7 +237,10 @@ public class CreateTemplateQuotaItemRequest extends Request {
         }
 
         /**
-         * 云服务名称缩写。
+         * The abbreviation of the Alibaba Cloud service name.
+         * <p>
+         * 
+         * > For more information, see [Alibaba Cloud services that support Quota Center](~~182368~~).
          */
         public Builder productCode(String productCode) {
             this.putBodyParameter("ProductCode", productCode);
@@ -172,11 +249,24 @@ public class CreateTemplateQuotaItemRequest extends Request {
         }
 
         /**
-         * 配额ID。
+         * The ID of the quota.
          */
         public Builder quotaActionCode(String quotaActionCode) {
             this.putBodyParameter("QuotaActionCode", quotaActionCode);
             this.quotaActionCode = quotaActionCode;
+            return this;
+        }
+
+        /**
+         * The type of the quota. Valid values:
+         * <p>
+         * 
+         * *   CommonQuota: general quota
+         * *   WhiteListLabel: whitelist quota
+         */
+        public Builder quotaCategory(String quotaCategory) {
+            this.putBodyParameter("QuotaCategory", quotaCategory);
+            this.quotaCategory = quotaCategory;
             return this;
         }
 
@@ -226,7 +316,12 @@ public class CreateTemplateQuotaItemRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The dimension keys.
+             * <p>
+             * 
+             * The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
+             * 
+             * > This parameter is required if you set the ProductCode parameter to ecs, ecs-spec, actiontrail, or ess.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -234,7 +329,12 @@ public class CreateTemplateQuotaItemRequest extends Request {
             }
 
             /**
-             * Value.
+             * The dimension values.
+             * <p>
+             * 
+             * The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
+             * 
+             * > This parameter is required if you set the ProductCode parameter to ecs, ecs-spec, actiontrail, or ess.
              */
             public Builder value(String value) {
                 this.value = value;

@@ -50,7 +50,7 @@ public class GetQuotaAlarmResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * QuotaAlarm.
+         * The details of the quota alert.
          */
         public Builder quotaAlarm(QuotaAlarm quotaAlarm) {
             this.quotaAlarm = quotaAlarm;
@@ -58,7 +58,7 @@ public class GetQuotaAlarmResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -242,7 +242,7 @@ public class GetQuotaAlarmResponseBody extends TeaModel {
             private String thresholdType; 
 
             /**
-             * AlarmId.
+             * The ID of the quota alert.
              */
             public Builder alarmId(String alarmId) {
                 this.alarmId = alarmId;
@@ -250,7 +250,7 @@ public class GetQuotaAlarmResponseBody extends TeaModel {
             }
 
             /**
-             * AlarmName.
+             * The name of the quota alert.
              */
             public Builder alarmName(String alarmName) {
                 this.alarmName = alarmName;
@@ -258,7 +258,7 @@ public class GetQuotaAlarmResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the quota alert was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -266,7 +266,11 @@ public class GetQuotaAlarmResponseBody extends TeaModel {
             }
 
             /**
-             * NotifyChannels.
+             * The notification methods of the quota alert. Valid values:
+             * <p>
+             * 
+             * *   sms: SMS messages
+             * *   email: emails
              */
             public Builder notifyChannels(java.util.List < String > notifyChannels) {
                 this.notifyChannels = notifyChannels;
@@ -274,7 +278,7 @@ public class GetQuotaAlarmResponseBody extends TeaModel {
             }
 
             /**
-             * NotifyTarget.
+             * The alert contact.
              */
             public Builder notifyTarget(String notifyTarget) {
                 this.notifyTarget = notifyTarget;
@@ -282,7 +286,7 @@ public class GetQuotaAlarmResponseBody extends TeaModel {
             }
 
             /**
-             * ProductCode.
+             * The abbreviation of the cloud service name.
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -290,7 +294,7 @@ public class GetQuotaAlarmResponseBody extends TeaModel {
             }
 
             /**
-             * QuotaActionCode.
+             * The ID of the quota.
              */
             public Builder quotaActionCode(String quotaActionCode) {
                 this.quotaActionCode = quotaActionCode;
@@ -298,7 +302,7 @@ public class GetQuotaAlarmResponseBody extends TeaModel {
             }
 
             /**
-             * QuotaDimension.
+             * The quota dimension.
              */
             public Builder quotaDimension(java.util.Map < String, ? > quotaDimension) {
                 this.quotaDimension = quotaDimension;
@@ -306,7 +310,7 @@ public class GetQuotaAlarmResponseBody extends TeaModel {
             }
 
             /**
-             * QuotaUsage.
+             * The used quota.
              */
             public Builder quotaUsage(Float quotaUsage) {
                 this.quotaUsage = quotaUsage;
@@ -314,7 +318,7 @@ public class GetQuotaAlarmResponseBody extends TeaModel {
             }
 
             /**
-             * QuotaValue.
+             * The quota value.
              */
             public Builder quotaValue(Float quotaValue) {
                 this.quotaValue = quotaValue;
@@ -322,7 +326,7 @@ public class GetQuotaAlarmResponseBody extends TeaModel {
             }
 
             /**
-             * Threshold.
+             * The numeric value of the alert threshold.
              */
             public Builder threshold(Float threshold) {
                 this.threshold = threshold;
@@ -330,7 +334,7 @@ public class GetQuotaAlarmResponseBody extends TeaModel {
             }
 
             /**
-             * ThresholdPercent.
+             * The percentage of the alert threshold.
              */
             public Builder thresholdPercent(Float thresholdPercent) {
                 this.thresholdPercent = thresholdPercent;
@@ -338,7 +342,11 @@ public class GetQuotaAlarmResponseBody extends TeaModel {
             }
 
             /**
-             * ThresholdType.
+             * The type of the quota alert. Valid values:
+             * <p>
+             * 
+             * *   used: The alert is created for the used quota.
+             * *   usable: The alert is created for the available quota.
              */
             public Builder thresholdType(String thresholdType) {
                 this.thresholdType = thresholdType;

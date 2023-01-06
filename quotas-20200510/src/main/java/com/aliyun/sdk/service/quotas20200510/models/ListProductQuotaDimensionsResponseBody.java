@@ -86,7 +86,7 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * MaxResults.
+         * The number of records returned for the query.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -94,7 +94,7 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The token that marks the position where the query ends. An empty value indicates that all the data is returned.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -102,7 +102,7 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
         }
 
         /**
-         * QuotaDimensions.
+         * The quota dimensions.
          */
         public Builder quotaDimensions(java.util.List < QuotaDimensions> quotaDimensions) {
             this.quotaDimensions = quotaDimensions;
@@ -110,7 +110,7 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of records returned for the query.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -170,7 +170,7 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Name.
+             * The name of the dimension value.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -178,7 +178,7 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The dimension value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -279,7 +279,7 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
             private Boolean requisite; 
 
             /**
-             * DependentDimensions.
+             * The quota dimensions that are supported by the cloud service.
              */
             public Builder dependentDimensions(java.util.List < String > dependentDimensions) {
                 this.dependentDimensions = dependentDimensions;
@@ -287,7 +287,13 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
             }
 
             /**
-             * DimensionKey.
+             * The dimension key. Valid values:
+             * <p>
+             * 
+             * *   RegionId: the region ID
+             * *   zoneId: the zone ID
+             * *   chargeType: the billing method
+             * *   networkType: the network type
              */
             public Builder dimensionKey(String dimensionKey) {
                 this.dimensionKey = dimensionKey;
@@ -295,7 +301,7 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
             }
 
             /**
-             * DimensionValueDetail.
+             * The details about the dimension value.
              */
             public Builder dimensionValueDetail(java.util.List < DimensionValueDetail> dimensionValueDetail) {
                 this.dimensionValueDetail = dimensionValueDetail;
@@ -303,7 +309,7 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
             }
 
             /**
-             * DimensionValues.
+             * The list of the dimension values.
              */
             public Builder dimensionValues(java.util.List < String > dimensionValues) {
                 this.dimensionValues = dimensionValues;
@@ -311,7 +317,7 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the quota dimension.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -319,7 +325,11 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
             }
 
             /**
-             * Requisite.
+             * Indicates whether the quota dimension is required when you query quota dimensions. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder requisite(Boolean requisite) {
                 this.requisite = requisite;

@@ -54,7 +54,7 @@ public class GetQuotaTemplateServiceStatusRequest extends Request {
         } 
 
         /**
-         * ResourceDirectoryId.
+         * The ID of the resource directory.
          */
         public Builder resourceDirectoryId(String resourceDirectoryId) {
             this.putBodyParameter("ResourceDirectoryId", resourceDirectoryId);

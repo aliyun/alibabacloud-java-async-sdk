@@ -17,6 +17,10 @@ public class ListQuotaApplicationTemplatesRequest extends Request {
     private java.util.List < Dimensions> dimensions;
 
     @Body
+    @NameInMap("Id")
+    private String id;
+
+    @Body
     @NameInMap("MaxResults")
     private Integer maxResults;
 
@@ -32,13 +36,19 @@ public class ListQuotaApplicationTemplatesRequest extends Request {
     @NameInMap("QuotaActionCode")
     private String quotaActionCode;
 
+    @Body
+    @NameInMap("QuotaCategory")
+    private String quotaCategory;
+
     private ListQuotaApplicationTemplatesRequest(Builder builder) {
         super(builder);
         this.dimensions = builder.dimensions;
+        this.id = builder.id;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.productCode = builder.productCode;
         this.quotaActionCode = builder.quotaActionCode;
+        this.quotaCategory = builder.quotaCategory;
     }
 
     public static Builder builder() {
@@ -59,6 +69,13 @@ public class ListQuotaApplicationTemplatesRequest extends Request {
      */
     public java.util.List < Dimensions> getDimensions() {
         return this.dimensions;
+    }
+
+    /**
+     * @return id
+     */
+    public String getId() {
+        return this.id;
     }
 
     /**
@@ -89,12 +106,21 @@ public class ListQuotaApplicationTemplatesRequest extends Request {
         return this.quotaActionCode;
     }
 
+    /**
+     * @return quotaCategory
+     */
+    public String getQuotaCategory() {
+        return this.quotaCategory;
+    }
+
     public static final class Builder extends Request.Builder<ListQuotaApplicationTemplatesRequest, Builder> {
         private java.util.List < Dimensions> dimensions; 
+        private String id; 
         private Integer maxResults; 
         private String nextToken; 
         private String productCode; 
         private String quotaActionCode; 
+        private String quotaCategory; 
 
         private Builder() {
             super();
@@ -103,14 +129,16 @@ public class ListQuotaApplicationTemplatesRequest extends Request {
         private Builder(ListQuotaApplicationTemplatesRequest request) {
             super(request);
             this.dimensions = request.dimensions;
+            this.id = request.id;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.productCode = request.productCode;
             this.quotaActionCode = request.quotaActionCode;
+            this.quotaCategory = request.quotaCategory;
         } 
 
         /**
-         * 配额维度
+         * The quota dimensions.
          */
         public Builder dimensions(java.util.List < Dimensions> dimensions) {
             this.putBodyParameter("Dimensions", dimensions);
@@ -119,7 +147,16 @@ public class ListQuotaApplicationTemplatesRequest extends Request {
         }
 
         /**
-         * 最大记录条数
+         * The ID of the quota item.
+         */
+        public Builder id(String id) {
+            this.putBodyParameter("Id", id);
+            this.id = id;
+            return this;
+        }
+
+        /**
+         * The maximum number of records that can be returned for the query. Valid values: 1 to 100. Default value: 30.
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -128,7 +165,10 @@ public class ListQuotaApplicationTemplatesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that marks the position from which you want to start the query.
+         * <p>
+         * 
+         * > An empty value indicates that the query starts from the beginning.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -137,7 +177,10 @@ public class ListQuotaApplicationTemplatesRequest extends Request {
         }
 
         /**
-         * 产品名称
+         * The abbreviation of the Alibaba Cloud service name.
+         * <p>
+         * 
+         * > For more information, see [Alibaba Cloud services that support Quota Center](~~182368~~).
          */
         public Builder productCode(String productCode) {
             this.putBodyParameter("ProductCode", productCode);
@@ -146,11 +189,23 @@ public class ListQuotaApplicationTemplatesRequest extends Request {
         }
 
         /**
-         * 配额操作code
+         * The ID of the quota.
          */
         public Builder quotaActionCode(String quotaActionCode) {
             this.putBodyParameter("QuotaActionCode", quotaActionCode);
             this.quotaActionCode = quotaActionCode;
+            return this;
+        }
+
+        /**
+         * 配额种类。取值：
+         * <p>
+         * - CommonQuota：通用配额。
+         * - WhiteListLabel：权益配额。
+         */
+        public Builder quotaCategory(String quotaCategory) {
+            this.putBodyParameter("QuotaCategory", quotaCategory);
+            this.quotaCategory = quotaCategory;
             return this;
         }
 
@@ -200,7 +255,10 @@ public class ListQuotaApplicationTemplatesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of the dimension.
+             * <p>
+             * 
+             * > The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -208,7 +266,10 @@ public class ListQuotaApplicationTemplatesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the dimension.
+             * <p>
+             * 
+             * > The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
              */
             public Builder value(String value) {
                 this.value = value;

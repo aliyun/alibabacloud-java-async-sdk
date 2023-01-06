@@ -86,7 +86,7 @@ public class ListProductQuotasResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * MaxResults.
+         * The maximum number of records that are returned for the query.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -94,7 +94,7 @@ public class ListProductQuotasResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The token that marks the position at which the query ends. An empty value indicates that all data is returned.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -102,7 +102,7 @@ public class ListProductQuotasResponseBody extends TeaModel {
         }
 
         /**
-         * Quotas.
+         * The details of the quotas.
          */
         public Builder quotas(java.util.List < Quotas> quotas) {
             this.quotas = quotas;
@@ -110,7 +110,7 @@ public class ListProductQuotasResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListProductQuotasResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of records that are returned for the query.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -170,7 +170,14 @@ public class ListProductQuotasResponseBody extends TeaModel {
             private Integer periodValue; 
 
             /**
-             * PeriodUnit.
+             * The unit of the calculation cycle. Valid values:
+             * <p>
+             * 
+             * *   second
+             * *   minute
+             * *   hour
+             * *   day
+             * *   week
              */
             public Builder periodUnit(String periodUnit) {
                 this.periodUnit = periodUnit;
@@ -178,7 +185,7 @@ public class ListProductQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * PeriodValue.
+             * The value of the calculation cycle.
              */
             public Builder periodValue(Integer periodValue) {
                 this.periodValue = periodValue;
@@ -255,7 +262,7 @@ public class ListProductQuotasResponseBody extends TeaModel {
             private String usage; 
 
             /**
-             * Quota.
+             * The value of the quota.
              */
             public Builder quota(String quota) {
                 this.quota = quota;
@@ -263,7 +270,12 @@ public class ListProductQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * QuotaUnit.
+             * The unit of the new quota value.
+             * <p>
+             * 
+             * **
+             * 
+             * **The unit of each quota is unique.** For example, the quota whose ID is `q_cbdch3` represents the maximum number of Container Service for Kubernetes (ACK) clusters. The unit of this quota is clusters. The quota whose ID is `q_security-groups` represents the maximum number of security groups. The unit of this quota is security groups.
              */
             public Builder quotaUnit(String quotaUnit) {
                 this.quotaUnit = quotaUnit;
@@ -271,7 +283,11 @@ public class ListProductQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The category of the quota. Valid values:
+             * <p>
+             * 
+             * *   BaseQuota: base quota
+             * *   ReservedQuota: reserved quota
              */
             public Builder type(String type) {
                 this.type = type;
@@ -279,7 +295,7 @@ public class ListProductQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * Usage.
+             * The used quota.
              */
             public Builder usage(String usage) {
                 this.usage = usage;
@@ -309,6 +325,12 @@ public class ListProductQuotasResponseBody extends TeaModel {
         @NameInMap("Dimensions")
         private java.util.Map < String, ? > dimensions;
 
+        @NameInMap("EffectiveTime")
+        private String effectiveTime;
+
+        @NameInMap("ExpireTime")
+        private String expireTime;
+
         @NameInMap("Period")
         private Period period;
 
@@ -320,6 +342,9 @@ public class ListProductQuotasResponseBody extends TeaModel {
 
         @NameInMap("QuotaArn")
         private String quotaArn;
+
+        @NameInMap("QuotaCategory")
+        private String quotaCategory;
 
         @NameInMap("QuotaDescription")
         private String quotaDescription;
@@ -336,6 +361,9 @@ public class ListProductQuotasResponseBody extends TeaModel {
         @NameInMap("QuotaUnit")
         private String quotaUnit;
 
+        @NameInMap("SupportedRange")
+        private java.util.List < Float > supportedRange;
+
         @NameInMap("TotalQuota")
         private Float totalQuota;
 
@@ -351,15 +379,19 @@ public class ListProductQuotasResponseBody extends TeaModel {
             this.applicableType = builder.applicableType;
             this.consumable = builder.consumable;
             this.dimensions = builder.dimensions;
+            this.effectiveTime = builder.effectiveTime;
+            this.expireTime = builder.expireTime;
             this.period = builder.period;
             this.productCode = builder.productCode;
             this.quotaActionCode = builder.quotaActionCode;
             this.quotaArn = builder.quotaArn;
+            this.quotaCategory = builder.quotaCategory;
             this.quotaDescription = builder.quotaDescription;
             this.quotaItems = builder.quotaItems;
             this.quotaName = builder.quotaName;
             this.quotaType = builder.quotaType;
             this.quotaUnit = builder.quotaUnit;
+            this.supportedRange = builder.supportedRange;
             this.totalQuota = builder.totalQuota;
             this.totalUsage = builder.totalUsage;
             this.unadjustableDetail = builder.unadjustableDetail;
@@ -409,6 +441,20 @@ public class ListProductQuotasResponseBody extends TeaModel {
         }
 
         /**
+         * @return effectiveTime
+         */
+        public String getEffectiveTime() {
+            return this.effectiveTime;
+        }
+
+        /**
+         * @return expireTime
+         */
+        public String getExpireTime() {
+            return this.expireTime;
+        }
+
+        /**
          * @return period
          */
         public Period getPeriod() {
@@ -434,6 +480,13 @@ public class ListProductQuotasResponseBody extends TeaModel {
          */
         public String getQuotaArn() {
             return this.quotaArn;
+        }
+
+        /**
+         * @return quotaCategory
+         */
+        public String getQuotaCategory() {
+            return this.quotaCategory;
         }
 
         /**
@@ -472,6 +525,13 @@ public class ListProductQuotasResponseBody extends TeaModel {
         }
 
         /**
+         * @return supportedRange
+         */
+        public java.util.List < Float > getSupportedRange() {
+            return this.supportedRange;
+        }
+
+        /**
          * @return totalQuota
          */
         public Float getTotalQuota() {
@@ -498,21 +558,29 @@ public class ListProductQuotasResponseBody extends TeaModel {
             private String applicableType; 
             private Boolean consumable; 
             private java.util.Map < String, ? > dimensions; 
+            private String effectiveTime; 
+            private String expireTime; 
             private Period period; 
             private String productCode; 
             private String quotaActionCode; 
             private String quotaArn; 
+            private String quotaCategory; 
             private String quotaDescription; 
             private java.util.List < QuotaItems> quotaItems; 
             private String quotaName; 
             private String quotaType; 
             private String quotaUnit; 
+            private java.util.List < Float > supportedRange; 
             private Float totalQuota; 
             private Float totalUsage; 
             private String unadjustableDetail; 
 
             /**
-             * Adjustable.
+             * Indicates whether the quota is adjustable. Valid values:
+             * <p>
+             * 
+             * *   true: The quota is adjustable.
+             * *   false: The quota is not adjustable.
              */
             public Builder adjustable(Boolean adjustable) {
                 this.adjustable = adjustable;
@@ -520,7 +588,7 @@ public class ListProductQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * ApplicableRange.
+             * None.
              */
             public Builder applicableRange(java.util.List < Float > applicableRange) {
                 this.applicableRange = applicableRange;
@@ -528,7 +596,11 @@ public class ListProductQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * ApplicableType.
+             * The type of the adjustable value. Valid values:
+             * <p>
+             * 
+             * *   continuous
+             * *   discontinuous
              */
             public Builder applicableType(String applicableType) {
                 this.applicableType = applicableType;
@@ -536,7 +608,11 @@ public class ListProductQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * Consumable.
+             * Indicates whether the system shows the used value of the quota. Valid values:
+             * <p>
+             * 
+             * *   true: The system shows the used value of the quota.
+             * *   false: The system does not show the used value of the quota.
              */
             public Builder consumable(Boolean consumable) {
                 this.consumable = consumable;
@@ -544,7 +620,7 @@ public class ListProductQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * Dimensions.
+             * The quota dimensions. Format: `{"regionId":"Region"}`.
              */
             public Builder dimensions(java.util.Map < String, ? > dimensions) {
                 this.dimensions = dimensions;
@@ -552,7 +628,23 @@ public class ListProductQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * Period.
+             * The start time of the validity period of the quota. The value is displayed in UTC.
+             */
+            public Builder effectiveTime(String effectiveTime) {
+                this.effectiveTime = effectiveTime;
+                return this;
+            }
+
+            /**
+             * The end time of the validity period of the quota. The value is displayed in UTC.
+             */
+            public Builder expireTime(String expireTime) {
+                this.expireTime = expireTime;
+                return this;
+            }
+
+            /**
+             * The calculation cycle of the quota.
              */
             public Builder period(Period period) {
                 this.period = period;
@@ -560,7 +652,7 @@ public class ListProductQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * ProductCode.
+             * The abbreviation of the Alibaba Cloud service name.
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -568,7 +660,7 @@ public class ListProductQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * QuotaActionCode.
+             * The ID of the quota.
              */
             public Builder quotaActionCode(String quotaActionCode) {
                 this.quotaActionCode = quotaActionCode;
@@ -576,7 +668,7 @@ public class ListProductQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * QuotaArn.
+             * The Alibaba Cloud Resource Name (ARN) of the quota.
              */
             public Builder quotaArn(String quotaArn) {
                 this.quotaArn = quotaArn;
@@ -584,7 +676,20 @@ public class ListProductQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * QuotaDescription.
+             * The type of the quota.
+             * <p>
+             * 
+             * *   CommonQuota: general quota
+             * *   FlowControl: API rate limit
+             * *   WhiteListLabel: whitelist quota
+             */
+            public Builder quotaCategory(String quotaCategory) {
+                this.quotaCategory = quotaCategory;
+                return this;
+            }
+
+            /**
+             * The description of the quota.
              */
             public Builder quotaDescription(String quotaDescription) {
                 this.quotaDescription = quotaDescription;
@@ -592,7 +697,7 @@ public class ListProductQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * QuotaItems.
+             * The details of the quotas.
              */
             public Builder quotaItems(java.util.List < QuotaItems> quotaItems) {
                 this.quotaItems = quotaItems;
@@ -600,7 +705,7 @@ public class ListProductQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * QuotaName.
+             * The name of the quota.
              */
             public Builder quotaName(String quotaName) {
                 this.quotaName = quotaName;
@@ -608,7 +713,11 @@ public class ListProductQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * QuotaType.
+             * The type of the quota. Valid values:
+             * <p>
+             * 
+             * *   privilege
+             * *   normal
              */
             public Builder quotaType(String quotaType) {
                 this.quotaType = quotaType;
@@ -616,7 +725,12 @@ public class ListProductQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * QuotaUnit.
+             * The unit of the new quota value.
+             * <p>
+             * 
+             * **
+             * 
+             * **The unit of each quota is unique.** For example, the quota whose ID is `q_cbdch3` represents the maximum number of Container Service for Kubernetes (ACK) clusters. The unit of this quota is clusters. The quota whose ID is `q_security-groups` represents the maximum number of security groups. The unit of this quota is security groups.
              */
             public Builder quotaUnit(String quotaUnit) {
                 this.quotaUnit = quotaUnit;
@@ -624,7 +738,15 @@ public class ListProductQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * TotalQuota.
+             * None.
+             */
+            public Builder supportedRange(java.util.List < Float > supportedRange) {
+                this.supportedRange = supportedRange;
+                return this;
+            }
+
+            /**
+             * The value of the quota.
              */
             public Builder totalQuota(Float totalQuota) {
                 this.totalQuota = totalQuota;
@@ -632,7 +754,7 @@ public class ListProductQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * TotalUsage.
+             * The used quota.
              */
             public Builder totalUsage(Float totalUsage) {
                 this.totalUsage = totalUsage;
@@ -640,7 +762,12 @@ public class ListProductQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * UnadjustableDetail.
+             * The reason why the quota is not adjustable. Valid values:
+             * <p>
+             * 
+             * *   nonactivated: The service is not activated.
+             * *   applicationProcess: The application is being processed.
+             * *   limitReached: The quota limit is reached.
              */
             public Builder unadjustableDetail(String unadjustableDetail) {
                 this.unadjustableDetail = unadjustableDetail;

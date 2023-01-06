@@ -86,7 +86,7 @@ public class ListProductsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * MaxResults.
+         * The maximum number of records returned for the query.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -94,7 +94,7 @@ public class ListProductsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The token that is used to mark the location where the query is ended. An empty value indicates that all the data is queried.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -102,7 +102,7 @@ public class ListProductsResponseBody extends TeaModel {
         }
 
         /**
-         * ProductInfo.
+         * The information of the cloud service.
          */
         public Builder productInfo(java.util.List < ProductInfo> productInfo) {
             this.productInfo = productInfo;
@@ -110,7 +110,7 @@ public class ListProductsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListProductsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of records returned for the query.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -159,6 +159,9 @@ public class ListProductsResponseBody extends TeaModel {
         @NameInMap("SecondCategoryNameEn")
         private String secondCategoryNameEn;
 
+        @NameInMap("WhiteListLabelQuotaSupport")
+        private String whiteListLabelQuotaSupport;
+
         private ProductInfo(Builder builder) {
             this.commonQuotaSupport = builder.commonQuotaSupport;
             this.dynamic = builder.dynamic;
@@ -169,6 +172,7 @@ public class ListProductsResponseBody extends TeaModel {
             this.secondCategoryId = builder.secondCategoryId;
             this.secondCategoryName = builder.secondCategoryName;
             this.secondCategoryNameEn = builder.secondCategoryNameEn;
+            this.whiteListLabelQuotaSupport = builder.whiteListLabelQuotaSupport;
         }
 
         public static Builder builder() {
@@ -242,6 +246,13 @@ public class ListProductsResponseBody extends TeaModel {
             return this.secondCategoryNameEn;
         }
 
+        /**
+         * @return whiteListLabelQuotaSupport
+         */
+        public String getWhiteListLabelQuotaSupport() {
+            return this.whiteListLabelQuotaSupport;
+        }
+
         public static final class Builder {
             private String commonQuotaSupport; 
             private Boolean dynamic; 
@@ -252,9 +263,14 @@ public class ListProductsResponseBody extends TeaModel {
             private Long secondCategoryId; 
             private String secondCategoryName; 
             private String secondCategoryNameEn; 
+            private String whiteListLabelQuotaSupport; 
 
             /**
-             * 通用配额是否支持
+             * Indicates whether the cloud service supports general quotas. Valid values:
+             * <p>
+             * 
+             * *   support: The cloud service supports general quotas.
+             * *   unsupport: The cloud service does not support general quotas.
              */
             public Builder commonQuotaSupport(String commonQuotaSupport) {
                 this.commonQuotaSupport = commonQuotaSupport;
@@ -262,7 +278,11 @@ public class ListProductsResponseBody extends TeaModel {
             }
 
             /**
-             * Dynamic.
+             * Indicates whether the cloud service supports dynamic quota adjustment. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder dynamic(Boolean dynamic) {
                 this.dynamic = dynamic;
@@ -270,7 +290,11 @@ public class ListProductsResponseBody extends TeaModel {
             }
 
             /**
-             * 是否支持流程
+             * Indicates whether the cloud service supports API rate limits. Valid values:
+             * <p>
+             * 
+             * *   support: The cloud service supports API rate limits.
+             * *   unsupport: The cloud service does not support API rate limits.
              */
             public Builder flowControlSupport(String flowControlSupport) {
                 this.flowControlSupport = flowControlSupport;
@@ -278,7 +302,7 @@ public class ListProductsResponseBody extends TeaModel {
             }
 
             /**
-             * ProductCode.
+             * The abbreviation of the cloud service name.
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -286,7 +310,7 @@ public class ListProductsResponseBody extends TeaModel {
             }
 
             /**
-             * ProductName.
+             * The name of the cloud service.
              */
             public Builder productName(String productName) {
                 this.productName = productName;
@@ -294,7 +318,7 @@ public class ListProductsResponseBody extends TeaModel {
             }
 
             /**
-             * ProductNameEn.
+             * The name of the cloud service.
              */
             public Builder productNameEn(String productNameEn) {
                 this.productNameEn = productNameEn;
@@ -302,7 +326,7 @@ public class ListProductsResponseBody extends TeaModel {
             }
 
             /**
-             * SecondCategoryId.
+             * The ID of the service category.
              */
             public Builder secondCategoryId(Long secondCategoryId) {
                 this.secondCategoryId = secondCategoryId;
@@ -310,7 +334,7 @@ public class ListProductsResponseBody extends TeaModel {
             }
 
             /**
-             * SecondCategoryName.
+             * The name of the service category.
              */
             public Builder secondCategoryName(String secondCategoryName) {
                 this.secondCategoryName = secondCategoryName;
@@ -318,10 +342,18 @@ public class ListProductsResponseBody extends TeaModel {
             }
 
             /**
-             * SecondCategoryNameEn.
+             * The name of the service category.
              */
             public Builder secondCategoryNameEn(String secondCategoryNameEn) {
                 this.secondCategoryNameEn = secondCategoryNameEn;
+                return this;
+            }
+
+            /**
+             * WhiteListLabelQuotaSupport.
+             */
+            public Builder whiteListLabelQuotaSupport(String whiteListLabelQuotaSupport) {
+                this.whiteListLabelQuotaSupport = whiteListLabelQuotaSupport;
                 return this;
             }
 

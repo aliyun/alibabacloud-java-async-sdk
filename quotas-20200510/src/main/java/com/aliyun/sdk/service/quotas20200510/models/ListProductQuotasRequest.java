@@ -181,7 +181,7 @@ public class ListProductQuotasRequest extends Request {
         } 
 
         /**
-         * Dimensions.
+         * The quota dimensions.
          */
         public Builder dimensions(java.util.List < Dimensions> dimensions) {
             this.putBodyParameter("Dimensions", dimensions);
@@ -190,7 +190,7 @@ public class ListProductQuotasRequest extends Request {
         }
 
         /**
-         * GroupCode.
+         * The code of the dimension group.
          */
         public Builder groupCode(String groupCode) {
             this.putBodyParameter("GroupCode", groupCode);
@@ -199,7 +199,7 @@ public class ListProductQuotasRequest extends Request {
         }
 
         /**
-         * KeyWord.
+         * The keyword that you want to use to search for the quotas.
          */
         public Builder keyWord(String keyWord) {
             this.putBodyParameter("KeyWord", keyWord);
@@ -208,7 +208,10 @@ public class ListProductQuotasRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The maximum number of records that can be returned for the query.
+         * <p>
+         * 
+         * Valid values: 1 to 100. Default value: 30.
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -217,7 +220,7 @@ public class ListProductQuotasRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that marks the position from which you want to start the query. If you leave this parameter empty, the query starts from the beginning.
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -226,7 +229,10 @@ public class ListProductQuotasRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * The abbreviation of the Alibaba Cloud service name.
+         * <p>
+         * 
+         * > For more information, see [Alibaba Cloud services that support Quota Center](~~182368~~).
          */
         public Builder productCode(String productCode) {
             this.putBodyParameter("ProductCode", productCode);
@@ -235,7 +241,7 @@ public class ListProductQuotasRequest extends Request {
         }
 
         /**
-         * QuotaActionCode.
+         * The ID of the quota.
          */
         public Builder quotaActionCode(String quotaActionCode) {
             this.putBodyParameter("QuotaActionCode", quotaActionCode);
@@ -244,7 +250,12 @@ public class ListProductQuotasRequest extends Request {
         }
 
         /**
-         * QuotaCategory.
+         * The type of the quota. Valid values:
+         * <p>
+         * 
+         * *   CommonQuota: general quota
+         * *   FlowControl: API rate limit
+         * *   WhiteListLabel: whitelist quota
          */
         public Builder quotaCategory(String quotaCategory) {
             this.putBodyParameter("QuotaCategory", quotaCategory);
@@ -253,7 +264,12 @@ public class ListProductQuotasRequest extends Request {
         }
 
         /**
-         * SortField.
+         * The field based on which you want to sort the returned records. This parameter is available only for quotas that belong to ECS Quotas by Instance Type. Valid values:
+         * <p>
+         * 
+         * *   TIME: The returned records are sorted by the last update time.
+         * *   TOTAL: The returned records are sorted by the usage of the total quota.
+         * *   RESERVED: The returned records are sorted by the usage of the reserved quota.
          */
         public Builder sortField(String sortField) {
             this.putBodyParameter("SortField", sortField);
@@ -262,7 +278,11 @@ public class ListProductQuotasRequest extends Request {
         }
 
         /**
-         * SortOrder.
+         * The order in which you want to sort the returned records. This parameter is available only for quotas that belong to ECS Quotas by Instance Type. Valid values:
+         * <p>
+         * 
+         * *   Ascending: ascending order
+         * *   Descending: descending order
          */
         public Builder sortOrder(String sortOrder) {
             this.putBodyParameter("SortOrder", sortOrder);
@@ -316,7 +336,10 @@ public class ListProductQuotasRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of the dimension.
+             * <p>
+             * 
+             * > The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -324,7 +347,10 @@ public class ListProductQuotasRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the dimension.
+             * <p>
+             * 
+             * > The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
              */
             public Builder value(String value) {
                 this.value = value;

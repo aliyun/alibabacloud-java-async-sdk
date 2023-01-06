@@ -69,7 +69,10 @@ public class ListProductsRequest extends Request {
         } 
 
         /**
-         * MaxResults.
+         * The maximum number of records to be returned for the query.
+         * <p>
+         * 
+         * Valid values: 1 to 200. Default value: 30.
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -78,7 +81,7 @@ public class ListProductsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that is used to mark the location where the query is started. An empty value indicates that the query is executed from the start.
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);

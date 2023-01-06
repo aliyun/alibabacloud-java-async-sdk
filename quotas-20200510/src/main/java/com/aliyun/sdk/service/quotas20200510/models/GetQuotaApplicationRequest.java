@@ -54,7 +54,7 @@ public class GetQuotaApplicationRequest extends Request {
         } 
 
         /**
-         * ApplicationId.
+         * The ID of the application.
          */
         public Builder applicationId(String applicationId) {
             this.putBodyParameter("ApplicationId", applicationId);

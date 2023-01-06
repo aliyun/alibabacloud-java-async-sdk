@@ -50,7 +50,7 @@ public class GetQuotaTemplateServiceStatusResponseBody extends TeaModel {
         private TemplateServiceStatus templateServiceStatus; 
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class GetQuotaTemplateServiceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * TemplateServiceStatus.
+         * The status of the quota template.
          */
         public Builder templateServiceStatus(TemplateServiceStatus templateServiceStatus) {
             this.templateServiceStatus = templateServiceStatus;
@@ -110,7 +110,7 @@ public class GetQuotaTemplateServiceStatusResponseBody extends TeaModel {
             private Integer serviceStatus; 
 
             /**
-             * ResourceDirectoryId.
+             * The ID of the resource directory.
              */
             public Builder resourceDirectoryId(String resourceDirectoryId) {
                 this.resourceDirectoryId = resourceDirectoryId;
@@ -118,7 +118,11 @@ public class GetQuotaTemplateServiceStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceStatus.
+             * The status of the quota template. Valid values:
+             * <p>
+             * 
+             * *   \-1: disabled
+             * *   1: enabled
              */
             public Builder serviceStatus(Integer serviceStatus) {
                 this.serviceStatus = serviceStatus;
