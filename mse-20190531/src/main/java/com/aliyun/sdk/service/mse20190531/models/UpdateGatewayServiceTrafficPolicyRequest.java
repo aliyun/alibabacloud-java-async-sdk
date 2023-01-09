@@ -114,8 +114,8 @@ public class UpdateGatewayServiceTrafficPolicyRequest extends Request {
          * The language of the response. Valid values:
          * <p>
          * 
-         * *   **zh**: Chinese. This is the default value.
-         * *   **en**: English.
+         * *   **zh-CN**: Chinese. This is the default value.
+         * *   **en-US**: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);

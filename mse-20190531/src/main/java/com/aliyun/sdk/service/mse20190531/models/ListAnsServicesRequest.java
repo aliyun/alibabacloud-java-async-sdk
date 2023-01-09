@@ -195,7 +195,7 @@ public class ListAnsServicesRequest extends Request {
         }
 
         /**
-         * The ID of the cluster.
+         * The ID of the instance.
          * <p>
          * 
          * > This operation contains both the InstanceId and ClusterId parameters. You must specify one of them.
@@ -264,7 +264,7 @@ public class ListAnsServicesRequest extends Request {
         }
 
         /**
-         * The extended request parameter in the JSON format.
+         * The extended request parameters in the JSON format.
          */
         public Builder requestPars(String requestPars) {
             this.putQueryParameter("RequestPars", requestPars);

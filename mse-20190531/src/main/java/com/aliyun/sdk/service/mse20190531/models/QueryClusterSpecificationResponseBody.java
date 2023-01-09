@@ -110,7 +110,7 @@ public class QueryClusterSpecificationResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned.
+         * The return value.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -126,7 +126,7 @@ public class QueryClusterSpecificationResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -134,7 +134,7 @@ public class QueryClusterSpecificationResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;

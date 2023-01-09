@@ -143,7 +143,7 @@ public class QueryGovernanceKubernetesClusterRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * The page number of the page to return.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);

@@ -62,6 +62,10 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
     private String name;
 
     @Query
+    @NameInMap("Namespace")
+    private String namespace;
+
+    @Query
     @NameInMap("Region")
     private String region;
 
@@ -91,6 +95,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         this.messageQueueFilterSide = builder.messageQueueFilterSide;
         this.messageQueueGrayEnable = builder.messageQueueGrayEnable;
         this.name = builder.name;
+        this.namespace = builder.namespace;
         this.region = builder.region;
         this.source = builder.source;
         this.status = builder.status;
@@ -195,6 +200,13 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
     }
 
     /**
+     * @return namespace
+     */
+    public String getNamespace() {
+        return this.namespace;
+    }
+
+    /**
      * @return region
      */
     public String getRegion() {
@@ -235,6 +247,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         private String messageQueueFilterSide; 
         private Boolean messageQueueGrayEnable; 
         private String name; 
+        private String namespace; 
         private String region; 
         private String source; 
         private Integer status; 
@@ -258,6 +271,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
             this.messageQueueFilterSide = request.messageQueueFilterSide;
             this.messageQueueGrayEnable = request.messageQueueGrayEnable;
             this.name = request.name;
+            this.namespace = request.namespace;
             this.region = request.region;
             this.source = request.source;
             this.status = request.status;
@@ -268,7 +282,8 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
          * The language of the response. Valid values:
          * <p>
          * 
-         * zh: Chinese en: English Default value: zh
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -376,7 +391,16 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * Region.
+         * Namespace.
+         */
+        public Builder namespace(String namespace) {
+            this.putQueryParameter("Namespace", namespace);
+            this.namespace = namespace;
+            return this;
+        }
+
+        /**
+         * The region ID.
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -385,7 +409,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * The service source. Set the value to edasmsc.
+         * The service source. Valid value: edasmsc.
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -394,7 +418,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * The status of the lane group. The value 0 indicates that the lane group is disabled. The value 1 indicates that the lane group is enabled.
+         * The status of the lane group. The value 0 specifies that the lane group is disabled. The value 1 specifies that the lane group is enabled.
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);

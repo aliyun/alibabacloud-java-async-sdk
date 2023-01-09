@@ -138,9 +138,10 @@ public class ImportNacosConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The dynamic part in the error message. This parameter is used to replace the **%s** variable in the **Message** parameter. 
+         * The dynamic part in the error message. This parameter is used to replace the \*\*%s\*\* variable in the **ErrMessage** parameter.
          * <p>
-         * > If the specified **InstanceId** parameter is invalid, **The Value of Input Parameter %s is not valid** is returned for **Message** and **InstanceId** is returned for **DynamicMessage**.
+         * 
+         * > If the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **DtsJobId**, the specified **DtsJobId** parameter is invalid.
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -148,7 +149,7 @@ public class ImportNacosConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request fails.
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -180,10 +181,11 @@ public class ImportNacosConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
+         * Indicates whether the request was successful. Valid values:
          * <p>
-         * - `true`: The request is successful. 
-         * - `false`: The request fails.
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -235,7 +237,7 @@ public class ImportNacosConfigResponseBody extends TeaModel {
             private String group; 
 
             /**
-             * The ID of the configuration.
+             * The ID of the data.
              */
             public Builder dataId(String dataId) {
                 this.dataId = dataId;
@@ -296,7 +298,7 @@ public class ImportNacosConfigResponseBody extends TeaModel {
             private String group; 
 
             /**
-             * The ID of the configuration.
+             * The ID of the data.
              */
             public Builder dataId(String dataId) {
                 this.dataId = dataId;

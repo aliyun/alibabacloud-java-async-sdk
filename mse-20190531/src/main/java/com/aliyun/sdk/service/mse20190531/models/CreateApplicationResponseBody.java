@@ -98,7 +98,7 @@ public class CreateApplicationResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The status code returned.
+         * The response code returned.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class CreateApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the data.
+         * The data of the node.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -138,11 +138,11 @@ public class CreateApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
+         * Indicates whether the request was successful. Valid values:
          * <p>
          * 
-         * - `true`: The request is successful. 
-         * - `false`: The request fails.
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(String success) {
             this.success = success;
@@ -318,7 +318,7 @@ public class CreateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the application was created.
+             * The creation time.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -350,7 +350,7 @@ public class CreateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -358,11 +358,11 @@ public class CreateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The service where the application is deployed. Valid values: 
+             * The service where the application is deployed. Valid values:
              * <p>
              * 
-             * - ACK: Container Service for Kubernetes 
-             * - Normal: another service
+             * *   \- ACK: Container Service for Kubernetes
+             * *   \- Normal: another service
              */
             public Builder source(String source) {
                 this.source = source;
@@ -378,7 +378,7 @@ public class CreateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the application was last modified.
+             * The update time.
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

@@ -456,7 +456,7 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the service source.
+             * The source type.
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -626,7 +626,7 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The header value.
+             * The value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1851,7 +1851,7 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The destination type.
+             * The destination service type.
              */
             public Builder destinationType(String destinationType) {
                 this.destinationType = destinationType;
@@ -1875,7 +1875,7 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The list of domain IDs.
+             * The IDs of domains.
              */
             public Builder domainIdList(java.util.List < Long > domainIdList) {
                 this.domainIdList = domainIdList;
@@ -1899,7 +1899,7 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether Web Application Firewall (WAF) is activated.
+             * Specifies whether to activate Web Application Firewall (WAF).
              */
             public Builder enableWaf(String enableWaf) {
                 this.enableWaf = enableWaf;
@@ -1907,7 +1907,7 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the Fallback service is enabled.
+             * Specifies whether to enable the Fallback service.
              */
             public Builder fallback(Boolean fallback) {
                 this.fallback = fallback;
@@ -1955,7 +1955,7 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * ID.
+             * The ID.
              */
             public Builder id(Long id) {
                 this.id = id;

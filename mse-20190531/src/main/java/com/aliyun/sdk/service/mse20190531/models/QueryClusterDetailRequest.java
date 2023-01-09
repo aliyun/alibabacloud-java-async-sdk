@@ -99,8 +99,8 @@ public class QueryClusterDetailRequest extends Request {
          * The language of the response. Valid values:
          * <p>
          * 
-         * - zh: Chinese
-         * - en: English
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -109,7 +109,7 @@ public class QueryClusterDetailRequest extends Request {
         }
 
         /**
-         * AclSwitch.
+         * Specifies whether to query access control lists (ACLs).
          */
         public Builder aclSwitch(Boolean aclSwitch) {
             this.putQueryParameter("AclSwitch", aclSwitch);

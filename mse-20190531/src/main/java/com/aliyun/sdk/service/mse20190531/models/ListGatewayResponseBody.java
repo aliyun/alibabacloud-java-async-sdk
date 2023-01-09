@@ -114,7 +114,7 @@ public class ListGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class ListGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -363,7 +363,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * SLB ID.
+             * The ID of the SLB instance.
              */
             public Builder slbId(String slbId) {
                 this.slbId = slbId;
@@ -371,7 +371,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * SLB IP.
+             * The IP address of the SLB instance.
              */
             public Builder slbIp(String slbIp) {
                 this.slbIp = slbIp;
@@ -544,7 +544,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * SLB ID.
+             * The ID of the SLB instance.
              */
             public Builder slbId(String slbId) {
                 this.slbId = slbId;
@@ -552,7 +552,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * SLB IP.
+             * The IP address of the SLB instance.
              */
             public Builder slbIp(String slbIp) {
                 this.slbIp = slbIp;
@@ -997,7 +997,7 @@ public class ListGatewayResponseBody extends TeaModel {
             private String vswitch2; 
 
             /**
-             * Indicates whether Application High Availability Service (AHAS) is enabled.
+             * Indicates whether Application High Availability Service (AHAS) is activated.
              */
             public Builder ahasOn(Boolean ahasOn) {
                 this.ahasOn = ahasOn;
@@ -1013,7 +1013,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether Application Real-Time Monitoring Service (ARMS) is enabled.
+             * Indicates whether Application Real-Time Monitoring Service (ARMS) is activated.
              */
             public Builder armsOn(Boolean armsOn) {
                 this.armsOn = armsOn;
@@ -1061,7 +1061,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * GatewayVersion.
+             * The version of the gateway.
              */
             public Builder gatewayVersion(String gatewayVersion) {
                 this.gatewayVersion = gatewayVersion;
@@ -1125,7 +1125,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * MseTag.
+             * The tag of the instance.
              */
             public Builder mseTag(String mseTag) {
                 this.mseTag = mseTag;
@@ -1157,7 +1157,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * The region ID.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -1173,7 +1173,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -1181,7 +1181,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * RollBack.
+             * Indicates whether rollbacks are allowed.
              */
             public Builder rollBack(Boolean rollBack) {
                 this.rollBack = rollBack;
@@ -1352,7 +1352,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The returned data.
+             * The data entries returned.
              */
             public Builder result(java.util.List < Result> result) {
                 this.result = result;

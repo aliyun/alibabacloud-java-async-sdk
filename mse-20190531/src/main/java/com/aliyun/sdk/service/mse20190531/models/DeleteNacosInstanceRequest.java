@@ -185,7 +185,7 @@ public class DeleteNacosInstanceRequest extends Request {
         }
 
         /**
-         * The name of the instance.
+         * The alias of the instance.
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("ClusterName", clusterName);
@@ -194,10 +194,10 @@ public class DeleteNacosInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether the instance is a temporary node. Valid values:
+         * Specifies whether the instance is marked as a temporary node. Valid values:
          * <p>
          * 
-         * *   `true`: yes
+         * *   `true`: monitors the task status.
          * *   `false`: no
          */
         public Builder ephemeral(Boolean ephemeral) {
@@ -225,7 +225,7 @@ public class DeleteNacosInstanceRequest extends Request {
         }
 
         /**
-         * The IP address of the instance.
+         * The IP address of the Nacos instance.
          */
         public Builder ip(String ip) {
             this.putQueryParameter("Ip", ip);
@@ -243,7 +243,7 @@ public class DeleteNacosInstanceRequest extends Request {
         }
 
         /**
-         * The port number of the instance.
+         * The port of the Nacos instance.
          */
         public Builder port(Integer port) {
             this.putQueryParameter("Port", port);

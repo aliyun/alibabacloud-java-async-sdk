@@ -134,7 +134,7 @@ public class ListListenersByIpResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The error code returned.
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;

@@ -75,7 +75,9 @@ com/aliyun/sdk/service/mse20190531/models/UpdateGatewayServiceVersionResponseBod
 com/aliyun/sdk/service/mse20190531/models/GetGatewayDomainDetailResponseBody$Data.class
 com/aliyun/sdk/service/mse20190531/models/AddAuthResourceRequest$AuthResourceHeaderList.class
 com/aliyun/sdk/service/mse20190531/models/UpdateClusterSpecRequest$1.class
+com/aliyun/sdk/service/mse20190531/models/OrderClusterHealthCheckRiskNoticeRequest.class
 com/aliyun/sdk/service/mse20190531/models/QuerySlbSpecResponse$1.class
+com/aliyun/sdk/service/mse20190531/models/PutClusterHealthCheckTaskRequest$Builder.class
 com/aliyun/sdk/service/mse20190531/models/ListClusterTypesResponseBody$Data.class
 com/aliyun/sdk/service/mse20190531/models/ImportNacosConfigResponse$Builder.class
 com/aliyun/sdk/service/mse20190531/models/AddGatewayResponse$Builder.class
@@ -215,6 +217,7 @@ com/aliyun/sdk/service/mse20190531/models/ListGatewayServiceResponseBody$HealthC
 com/aliyun/sdk/service/mse20190531/models/AddMigrationTaskRequest$Builder.class
 com/aliyun/sdk/service/mse20190531/models/QueryClusterSpecificationResponse$BuilderImpl.class
 com/aliyun/sdk/service/mse20190531/models/ListAnsServicesResponseBody$Data$Builder.class
+com/aliyun/sdk/service/mse20190531/models/PutClusterHealthCheckTaskRequest.class
 com/aliyun/sdk/service/mse20190531/models/DeleteSwimmingLaneResponse$BuilderImpl.class
 com/aliyun/sdk/service/mse20190531/models/DeleteNacosInstanceResponse$Builder.class
 com/aliyun/sdk/service/mse20190531/models/UpdatePluginConfigRequest$1.class
@@ -231,6 +234,7 @@ com/aliyun/sdk/service/mse20190531/models/DeleteMigrationTaskResponse$BuilderImp
 com/aliyun/sdk/service/mse20190531/models/UpdateGatewayRouteWafStatusResponse.class
 com/aliyun/sdk/service/mse20190531/models/CreateNacosInstanceResponse$BuilderImpl.class
 com/aliyun/sdk/service/mse20190531/models/TagResourcesResponseBody$1.class
+com/aliyun/sdk/service/mse20190531/models/OrderClusterHealthCheckRiskNoticeResponse$BuilderImpl.class
 com/aliyun/sdk/service/mse20190531/models/DeleteGatewaySlbRequest$Builder.class
 com/aliyun/sdk/service/mse20190531/models/CreateNacosConfigResponseBody$1.class
 com/aliyun/sdk/service/mse20190531/models/ImportNacosConfigRequest$Builder.class
@@ -452,6 +456,7 @@ com/aliyun/sdk/service/mse20190531/models/UpdateGatewayRouteHeaderOpRequest.clas
 com/aliyun/sdk/service/mse20190531/models/DeleteZnodeResponse$1.class
 com/aliyun/sdk/service/mse20190531/models/ListServiceSourceResponseBody$IngressOptions.class
 com/aliyun/sdk/service/mse20190531/models/ListGatewayRouteResponseBody$ParamMapsList$Builder.class
+com/aliyun/sdk/service/mse20190531/models/OrderClusterHealthCheckRiskNoticeResponse$1.class
 com/aliyun/sdk/service/mse20190531/models/UpdateNacosConfigResponse.class
 com/aliyun/sdk/service/mse20190531/models/QuerySwimmingLaneByIdResponse$BuilderImpl.class
 com/aliyun/sdk/service/mse20190531/models/ListClustersRequest$1.class
@@ -510,6 +515,7 @@ com/aliyun/sdk/service/mse20190531/models/GetGatewayDomainDetailResponse$1.class
 com/aliyun/sdk/service/mse20190531/models/QueryGovernanceKubernetesClusterResponseBody$1.class
 com/aliyun/sdk/service/mse20190531/models/DeleteGatewayServiceVersionResponse.class
 com/aliyun/sdk/service/mse20190531/models/QueryBusinessLocationsResponseBody$Builder.class
+com/aliyun/sdk/service/mse20190531/models/PutClusterHealthCheckTaskRequest$1.class
 com/aliyun/sdk/service/mse20190531/models/CloneNacosConfigRequest$Builder.class
 com/aliyun/sdk/service/mse20190531/models/GetApplicationListWithMetircsResponseBody$1.class
 com/aliyun/sdk/service/mse20190531/models/DeleteServiceSourceResponse.class
@@ -573,6 +579,7 @@ com/aliyun/sdk/service/mse20190531/models/GetPluginConfigResponseBody$Builder.cl
 com/aliyun/sdk/service/mse20190531/models/CloneNacosConfigResponseBody$SkipData.class
 com/aliyun/sdk/service/mse20190531/models/AddSSLCertResponse$Builder.class
 com/aliyun/sdk/service/mse20190531/models/ListAppBySwimmingLaneGroupTagRequest$Builder.class
+com/aliyun/sdk/service/mse20190531/models/OrderClusterHealthCheckRiskNoticeRequest$Builder.class
 com/aliyun/sdk/service/mse20190531/models/ListZkTrackResponse$Builder.class
 com/aliyun/sdk/service/mse20190531/models/AddGatewayRouteRequest$RedirectJSON$Builder.class
 com/aliyun/sdk/service/mse20190531/models/GetGatewayOptionResponseBody.class
@@ -586,6 +593,7 @@ com/aliyun/sdk/service/mse20190531/models/GetMseSourceResponse$1.class
 com/aliyun/sdk/service/mse20190531/models/UpdateEngineNamespaceResponse$Builder.class
 com/aliyun/sdk/service/mse20190531/models/GetApplicationListWithMetircsRequest$Builder.class
 com/aliyun/sdk/service/mse20190531/models/CreateNacosServiceResponseBody$Builder.class
+com/aliyun/sdk/service/mse20190531/models/OrderClusterHealthCheckRiskNoticeResponse.class
 com/aliyun/sdk/service/mse20190531/models/GetBlackWhiteListResponseBody$Data.class
 com/aliyun/sdk/service/mse20190531/models/ExportNacosConfigResponse$1.class
 com/aliyun/sdk/service/mse20190531/models/UpdateGatewayDomainRequest$1.class
@@ -603,6 +611,7 @@ com/aliyun/sdk/service/mse20190531/models/ExportNacosConfigResponseBody$Data$Bui
 com/aliyun/sdk/service/mse20190531/models/ListGatewayServiceResponseBody$HttpCookie$Builder.class
 com/aliyun/sdk/service/mse20190531/models/ListServiceSourceRequest$Builder.class
 com/aliyun/sdk/service/mse20190531/models/AddGatewayRouteRequest$Predicates$Builder.class
+com/aliyun/sdk/service/mse20190531/models/OrderClusterHealthCheckRiskNoticeResponseBody$1.class
 com/aliyun/sdk/service/mse20190531/models/DeleteMigrationTaskResponseBody$1.class
 com/aliyun/sdk/service/mse20190531/models/ListServiceSourceResponse$1.class
 com/aliyun/sdk/service/mse20190531/models/ApplyTagPoliciesRequest$1.class
@@ -633,6 +642,7 @@ com/aliyun/sdk/service/mse20190531/models/DeleteNacosConfigResponseBody$Builder.
 com/aliyun/sdk/service/mse20190531/models/QueryZnodeDetailResponse$1.class
 com/aliyun/sdk/service/mse20190531/models/UpdateGatewayRouteRequest$DirectResponseJSON.class
 com/aliyun/sdk/service/mse20190531/models/CreateZnodeRequest$1.class
+com/aliyun/sdk/service/mse20190531/models/PutClusterHealthCheckTaskResponseBody$Builder.class
 com/aliyun/sdk/service/mse20190531/models/UpdateGatewayRouteWafStatusResponseBody$HeaderOpItems.class
 com/aliyun/sdk/service/mse20190531/models/UpdateGatewayDomainResponse.class
 com/aliyun/sdk/service/mse20190531/models/UpdateNacosConfigResponseBody$1.class
@@ -667,6 +677,7 @@ com/aliyun/sdk/service/mse20190531/models/ListAnsInstancesResponse$Builder.class
 com/aliyun/sdk/service/mse20190531/models/DeleteServiceSourceResponseBody$1.class
 com/aliyun/sdk/service/mse20190531/models/CreateOrUpdateSwimmingLaneRequest$RestItems$Builder.class
 com/aliyun/sdk/service/mse20190531/models/ListApplicationsWithTagRulesResponse$Builder.class
+com/aliyun/sdk/service/mse20190531/models/PutClusterHealthCheckTaskResponse.class
 com/aliyun/sdk/service/mse20190531/models/ListMigrationTaskResponse.class
 com/aliyun/sdk/service/mse20190531/models/CreateClusterRequest$1.class
 com/aliyun/sdk/service/mse20190531/models/GetZookeeperDataImportUrlResponseBody.class
@@ -822,6 +833,7 @@ com/aliyun/sdk/service/mse20190531/models/CloneNacosConfigResponseBody.class
 com/aliyun/sdk/service/mse20190531/models/GetApplicationListWithMetircsResponseBody$Builder.class
 com/aliyun/sdk/service/mse20190531/models/QueryClusterDetailResponseBody$Builder.class
 com/aliyun/sdk/service/mse20190531/models/AddMigrationTaskResponseBody$Builder.class
+com/aliyun/sdk/service/mse20190531/models/PutClusterHealthCheckTaskResponse$Builder.class
 com/aliyun/sdk/service/mse20190531/models/ListAnsServicesResponseBody$Data.class
 com/aliyun/sdk/service/mse20190531/models/GetGovernanceKubernetesClusterRequest$1.class
 com/aliyun/sdk/service/mse20190531/models/ListServiceSourceRequest$1.class
@@ -903,6 +915,7 @@ com/aliyun/sdk/service/mse20190531/models/QueryClusterSpecificationResponse$Buil
 com/aliyun/sdk/service/mse20190531/models/ExportNacosConfigResponse$Builder.class
 com/aliyun/sdk/service/mse20190531/models/GetImportFileUrlResponseBody$1.class
 com/aliyun/sdk/service/mse20190531/models/UpdateGatewaySpecResponseBody$Builder.class
+com/aliyun/sdk/service/mse20190531/models/PutClusterHealthCheckTaskResponse$1.class
 com/aliyun/sdk/service/mse20190531/models/DeleteGatewaySlbResponseBody$Builder.class
 com/aliyun/sdk/service/mse20190531/models/ListAnsServicesResponse$Builder.class
 com/aliyun/sdk/service/mse20190531/models/QueryMonitorResponse$Builder.class
@@ -1028,6 +1041,7 @@ com/aliyun/sdk/service/mse20190531/models/ListGatewayRouteResponseBody$DirectRes
 com/aliyun/sdk/service/mse20190531/models/GetGatewayServiceDetailRequest.class
 com/aliyun/sdk/service/mse20190531/models/ImportServicesRequest.class
 com/aliyun/sdk/service/mse20190531/models/QueryConfigResponseBody$Data$Builder.class
+com/aliyun/sdk/service/mse20190531/models/OrderClusterHealthCheckRiskNoticeResponseBody.class
 com/aliyun/sdk/service/mse20190531/models/GetGatewayRouteDetailResponseBody$HeaderOpItems.class
 com/aliyun/sdk/service/mse20190531/models/OfflineGatewayRouteResponseBody$1.class
 com/aliyun/sdk/service/mse20190531/models/GetMseSourceResponse.class
@@ -1210,6 +1224,7 @@ com/aliyun/sdk/service/mse20190531/models/GetNacosConfigResponseBody.class
 com/aliyun/sdk/service/mse20190531/models/GetTagsBySwimmingLaneGroupIdRequest.class
 com/aliyun/sdk/service/mse20190531/models/AddMockRuleResponse$BuilderImpl.class
 com/aliyun/sdk/service/mse20190531/models/GetGatewayDomainDetailRequest$1.class
+com/aliyun/sdk/service/mse20190531/models/OrderClusterHealthCheckRiskNoticeRequest$1.class
 com/aliyun/sdk/service/mse20190531/models/ListSecurityGroupResponseBody$1.class
 com/aliyun/sdk/service/mse20190531/models/UpdateClusterResponse$Builder.class
 com/aliyun/sdk/service/mse20190531/models/ListServiceSourceResponse$BuilderImpl.class
@@ -1271,6 +1286,7 @@ com/aliyun/sdk/service/mse20190531/models/GetPluginConfigResponseBody$1.class
 com/aliyun/sdk/service/mse20190531/models/TrafficPolicy$TlsSetting.class
 com/aliyun/sdk/service/mse20190531/models/ListApplicationsWithTagRulesRequest.class
 com/aliyun/sdk/service/mse20190531/models/ListGatewayServiceResponseBody$Versions.class
+com/aliyun/sdk/service/mse20190531/models/PutClusterHealthCheckTaskResponseBody$1.class
 com/aliyun/sdk/service/mse20190531/models/ListListenersByIpResponseBody$Builder.class
 com/aliyun/sdk/service/mse20190531/models/UpdateNacosServiceResponseBody$Builder.class
 com/aliyun/sdk/service/mse20190531/models/ListApplicationsWithTagRulesResponseBody$Data.class
@@ -1436,6 +1452,7 @@ com/aliyun/sdk/service/mse20190531/models/UpdateGatewayRouteHTTPRewriteResponse$
 com/aliyun/sdk/service/mse20190531/models/RestartClusterRequest.class
 com/aliyun/sdk/service/mse20190531/models/QueryClusterDiskSpecificationRequest$1.class
 com/aliyun/sdk/service/mse20190531/models/GetGatewayDomainDetailResponse$Builder.class
+com/aliyun/sdk/service/mse20190531/models/PutClusterHealthCheckTaskResponseBody.class
 com/aliyun/sdk/service/mse20190531/models/GetImportFileUrlResponse$BuilderImpl.class
 com/aliyun/sdk/service/mse20190531/models/ImportServicesRequest$Builder.class
 com/aliyun/sdk/service/mse20190531/models/DeleteAuthResourceResponseBody$Data$Builder.class
@@ -1527,6 +1544,7 @@ com/aliyun/sdk/service/mse20190531/models/OfflineGatewayRouteRequest$1.class
 com/aliyun/sdk/service/mse20190531/models/ImportServicesRequest$ServiceList.class
 com/aliyun/sdk/service/mse20190531/models/DeleteSecurityGroupRuleRequest$1.class
 com/aliyun/sdk/service/mse20190531/models/CreateZnodeResponseBody$Data$Builder.class
+com/aliyun/sdk/service/mse20190531/models/PutClusterHealthCheckTaskResponse$BuilderImpl.class
 com/aliyun/sdk/service/mse20190531/models/GetNacosHistoryConfigResponseBody$Builder.class
 com/aliyun/sdk/service/mse20190531/models/GetGatewayRouteDetailResponseBody$DirectResponse$Builder.class
 com/aliyun/sdk/service/mse20190531/models/QuerySwimmingLaneByIdResponseBody$1.class
@@ -1623,6 +1641,7 @@ com/aliyun/sdk/service/mse20190531/models/ListNamingTrackResponse$BuilderImpl.cl
 com/aliyun/sdk/service/mse20190531/models/CreateEngineNamespaceResponseBody$Builder.class
 com/aliyun/sdk/service/mse20190531/models/ApplyGatewayRouteResponse$Builder.class
 com/aliyun/sdk/service/mse20190531/models/ListEurekaServicesResponseBody$Data.class
+com/aliyun/sdk/service/mse20190531/models/OrderClusterHealthCheckRiskNoticeResponseBody$Builder.class
 com/aliyun/sdk/service/mse20190531/models/DeleteNacosConfigsRequest.class
 com/aliyun/sdk/service/mse20190531/models/UpdateMessageQueueRouteResponse$1.class
 com/aliyun/sdk/service/mse20190531/models/DeleteNacosConfigsResponse$Builder.class
@@ -1784,6 +1803,7 @@ com/aliyun/sdk/service/mse20190531/models/QueryClusterDiskSpecificationResponse.
 com/aliyun/sdk/service/mse20190531/models/QueryGatewayTypeResponseBody.class
 com/aliyun/sdk/service/mse20190531/models/QueryClusterInfoResponse$Builder.class
 com/aliyun/sdk/service/mse20190531/models/AddGatewayRouteRequest$QueryPredicates$Builder.class
+com/aliyun/sdk/service/mse20190531/models/OrderClusterHealthCheckRiskNoticeResponse$Builder.class
 com/aliyun/sdk/service/mse20190531/models/ListGatewayServiceResponseBody$Versions$Builder.class
 com/aliyun/sdk/service/mse20190531/models/GetApplicationListRequest$1.class
 com/aliyun/sdk/service/mse20190531/models/ListNacosHistoryConfigsResponseBody.class

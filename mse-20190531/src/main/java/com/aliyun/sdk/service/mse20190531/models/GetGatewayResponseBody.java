@@ -114,7 +114,7 @@ public class GetGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -206,7 +206,7 @@ public class GetGatewayResponseBody extends TeaModel {
             private String projectName; 
 
             /**
-             * Indicates whether log shipping is enabled.
+             * Indicates whether Log Service is activated.
              */
             public Builder logEnabled(Boolean logEnabled) {
                 this.logEnabled = logEnabled;
@@ -640,7 +640,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The tag of the instance.
+             * The tag of the resource.
              */
             public Builder mseTag(String mseTag) {
                 this.mseTag = mseTag;
@@ -664,7 +664,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * The region ID.
              */
             public Builder region(String region) {
                 this.region = region;

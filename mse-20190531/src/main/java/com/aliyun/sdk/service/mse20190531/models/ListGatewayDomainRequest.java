@@ -85,8 +85,8 @@ public class ListGatewayDomainRequest extends Request {
          * The language of the response. Valid values:
          * <p>
          * 
-         * - zh: Chinese
-         * - en: English
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -104,7 +104,7 @@ public class ListGatewayDomainRequest extends Request {
         }
 
         /**
-         * Type.
+         * The type of the domain name.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

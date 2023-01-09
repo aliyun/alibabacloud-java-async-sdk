@@ -104,7 +104,7 @@ public class DeleteAuthResourceRequest extends Request {
         }
 
         /**
-         * The ID of the authorization record.
+         * The destination ID.
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);

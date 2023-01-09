@@ -113,8 +113,8 @@ public class GetBlackWhiteListRequest extends Request {
          * The language of the response. Valid values:
          * <p>
          * 
-         * - zh: Chinese
-         * - en: English
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -132,7 +132,7 @@ public class GetBlackWhiteListRequest extends Request {
         }
 
         /**
-         * Specifies whether to query the whitelist.
+         * Specifies whether to enable the whitelist.
          */
         public Builder isWhite(Boolean isWhite) {
             this.putQueryParameter("IsWhite", isWhite);
@@ -150,7 +150,7 @@ public class GetBlackWhiteListRequest extends Request {
         }
 
         /**
-         * The type of the blacklist or whitelist.
+         * The type.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

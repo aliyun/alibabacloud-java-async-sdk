@@ -122,7 +122,7 @@ public class UpdateGatewayRouteHeaderOpResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,10 +138,11 @@ public class UpdateGatewayRouteHeaderOpResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
+         * Indicates whether the request was successful. Valid values:
          * <p>
-         * - `true`: The request is successful. 
-         * - `false`: The request fails.
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;

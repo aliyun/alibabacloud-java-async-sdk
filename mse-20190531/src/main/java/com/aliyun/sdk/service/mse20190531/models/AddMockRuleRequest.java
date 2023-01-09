@@ -218,8 +218,8 @@ public class AddMockRuleRequest extends Request {
          * The language of the response. Valid values:
          * <p>
          * 
-         * - zh: Chinese
-         * - en: English
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -246,11 +246,11 @@ public class AddMockRuleRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the rule. Valid values:
+         * Specifies whether to enable the alert rule. Valid values:
          * <p>
          * 
-         * - `true`: enables the rule. 
-         * - `false`: disables the rule.
+         * *   `true`: enables the alert rule.
+         * *   `false`: disables the alert rule.
          */
         public Builder enable(Boolean enable) {
             this.putQueryParameter("Enable", enable);
@@ -268,13 +268,13 @@ public class AddMockRuleRequest extends Request {
         }
 
         /**
-         * The response time threshold of slow calls. Valid values:
+         * The response time (RT) threshold of slow calls. Valid values:
          * <p>
          * 
-         * - 15: 15 ms
-         * - 30: 30 ms
-         * - 60: 60 ms
-         * - 120: 120 ms
+         * *   \- 15: 15 ms
+         * *   \- 30: 30 ms
+         * *   \- 60: 60 ms
+         * *   \- 120: 120 ms
          */
         public Builder mockType(Long mockType) {
             this.putQueryParameter("MockType", mockType);
@@ -328,7 +328,7 @@ public class AddMockRuleRequest extends Request {
         }
 
         /**
-         * The source of the rule. Valid values: -custom_fc: The rule is based on a custom function. -system_custom: The rule is based on a system function.
+         * The rule source.
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);

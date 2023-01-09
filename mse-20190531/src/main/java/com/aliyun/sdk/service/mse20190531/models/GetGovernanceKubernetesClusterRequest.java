@@ -87,8 +87,8 @@ public class GetGovernanceKubernetesClusterRequest extends Request {
          * The language of the response. Valid values:
          * <p>
          * 
-         * - zh: Chinese
-         * - en: English
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -97,7 +97,7 @@ public class GetGovernanceKubernetesClusterRequest extends Request {
         }
 
         /**
-         * The ID of the cluster.
+         * The ID of the instance.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -106,7 +106,7 @@ public class GetGovernanceKubernetesClusterRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the cluster resides.
+         * The ID of the region in which the instance resides. The region is supported by MSE.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

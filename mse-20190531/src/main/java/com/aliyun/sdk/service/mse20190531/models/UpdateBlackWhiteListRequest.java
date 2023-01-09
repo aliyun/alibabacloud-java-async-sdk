@@ -197,8 +197,8 @@ public class UpdateBlackWhiteListRequest extends Request {
          * The language of the response. Valid values:
          * <p>
          * 
-         * - zh: Chinese
-         * - en: English
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -243,7 +243,7 @@ public class UpdateBlackWhiteListRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -252,7 +252,7 @@ public class UpdateBlackWhiteListRequest extends Request {
         }
 
         /**
-         * Note.
+         * The description.
          */
         public Builder note(String note) {
             this.putQueryParameter("Note", note);
@@ -261,7 +261,7 @@ public class UpdateBlackWhiteListRequest extends Request {
         }
 
         /**
-         * ResourceIdJsonList.
+         * The resource IDs in the JSON format.
          */
         public Builder resourceIdJsonList(String resourceIdJsonList) {
             this.putQueryParameter("ResourceIdJsonList", resourceIdJsonList);

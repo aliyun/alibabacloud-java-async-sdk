@@ -172,7 +172,7 @@ public class QueryMonitorRequest extends Request {
         }
 
         /**
-         * The metric type. The following metrics are supported:
+         * The metric type. The following metric types are supported:
          * <p>
          * 
          * \[Basic system metrics]
@@ -188,18 +188,18 @@ public class QueryMonitorRequest extends Request {
          * *   serviceCount
          * *   writeCostTime
          * *   readCostTime
-         * *   regCenterTps
-         * *   regCenterQps
+         * *   TPS regCenterTps
+         * *   QPS regCenterQps
          * 
          * \[Nacos configuration center]
          * 
          * *   publish
          * *   getConfig
          * 
-         * \[Zookeeper]
+         * \[zookeeper]
          * 
-         * *   zk_TpsCount
-         * *   zk_QpsCount
+         * *   TPS zk_TpsCount
+         * *   QPS zk_QpsCount
          * *   zookeeper_AvgRequestLatency
          */
         public Builder monitorType(String monitorType) {

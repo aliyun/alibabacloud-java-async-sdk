@@ -106,7 +106,7 @@ public class UpdateClusterSpecResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * A reserved parameter.
          */
         public Builder data(String data) {
             this.data = data;
@@ -130,7 +130,7 @@ public class UpdateClusterSpecResponseBody extends TeaModel {
         }
 
         /**
-         * ID of the Request.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,11 +138,11 @@ public class UpdateClusterSpecResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful. Valid values:
+         * Indicates whether the request was successful. Valid values:
          * <p>
          * 
-         * *   `true`: The call was successful.
-         * *   `false`: The call failed.
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;

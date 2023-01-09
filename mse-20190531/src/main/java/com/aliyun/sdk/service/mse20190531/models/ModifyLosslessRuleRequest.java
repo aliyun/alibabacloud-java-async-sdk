@@ -50,6 +50,10 @@ public class ModifyLosslessRuleRequest extends Request {
     private Boolean lossLessDetail;
 
     @Query
+    @NameInMap("Namespace")
+    private String namespace;
+
+    @Query
     @NameInMap("Notice")
     private Boolean notice;
 
@@ -86,6 +90,7 @@ public class ModifyLosslessRuleRequest extends Request {
         this.enable = builder.enable;
         this.funcType = builder.funcType;
         this.lossLessDetail = builder.lossLessDetail;
+        this.namespace = builder.namespace;
         this.notice = builder.notice;
         this.regionId = builder.regionId;
         this.related = builder.related;
@@ -164,6 +169,13 @@ public class ModifyLosslessRuleRequest extends Request {
     }
 
     /**
+     * @return namespace
+     */
+    public String getNamespace() {
+        return this.namespace;
+    }
+
+    /**
      * @return notice
      */
     public Boolean getNotice() {
@@ -214,6 +226,7 @@ public class ModifyLosslessRuleRequest extends Request {
         private Boolean enable; 
         private Long funcType; 
         private Boolean lossLessDetail; 
+        private String namespace; 
         private Boolean notice; 
         private String regionId; 
         private Boolean related; 
@@ -235,6 +248,7 @@ public class ModifyLosslessRuleRequest extends Request {
             this.enable = request.enable;
             this.funcType = request.funcType;
             this.lossLessDetail = request.lossLessDetail;
+            this.namespace = request.namespace;
             this.notice = request.notice;
             this.regionId = request.regionId;
             this.related = request.related;
@@ -320,6 +334,15 @@ public class ModifyLosslessRuleRequest extends Request {
         public Builder lossLessDetail(Boolean lossLessDetail) {
             this.putQueryParameter("LossLessDetail", lossLessDetail);
             this.lossLessDetail = lossLessDetail;
+            return this;
+        }
+
+        /**
+         * Namespace.
+         */
+        public Builder namespace(String namespace) {
+            this.putQueryParameter("Namespace", namespace);
+            this.namespace = namespace;
             return this;
         }
 

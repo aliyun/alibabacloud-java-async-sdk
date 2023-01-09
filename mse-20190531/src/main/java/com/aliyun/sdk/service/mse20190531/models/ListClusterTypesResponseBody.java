@@ -122,7 +122,7 @@ public class ListClusterTypesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The return value.
+         * The status code returned.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -130,7 +130,7 @@ public class ListClusterTypesResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * The data entries returned.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -141,7 +141,7 @@ public class ListClusterTypesResponseBody extends TeaModel {
          * The dynamic part in the error message. This parameter is used to replace the \*\*%s\*\* variable in the **ErrMessage** parameter.
          * <p>
          * 
-         * >  If the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **DtsJobId**, the specified **DtsJobId** parameter is invalid.
+         * > If the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **DtsJobId**, the specified **DtsJobId** parameter is invalid.
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -157,7 +157,7 @@ public class ListClusterTypesResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -165,7 +165,7 @@ public class ListClusterTypesResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;

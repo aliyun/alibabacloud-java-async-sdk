@@ -114,7 +114,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The response message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +130,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
         }
 
         /**
-         * ID of the Request.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -383,7 +383,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The return value.
+             * The status code returned.
              */
             public Builder code(Integer code) {
                 this.code = code;
@@ -609,7 +609,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Header Key.
+             * The header key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -852,7 +852,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTP status code.
+             * The HTTP status code returned.
              */
             public Builder httpCodes(java.util.List < String > httpCodes) {
                 this.httpCodes = httpCodes;
@@ -1867,7 +1867,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the domain name.
+             * The domain ID.
              */
             public Builder domainId(Long domainId) {
                 this.domainId = domainId;
@@ -1875,7 +1875,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the domain names.
+             * The IDs of domains.
              */
             public Builder domainIdList(java.util.List < Long > domainIdList) {
                 this.domainIdList = domainIdList;
@@ -1891,7 +1891,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The domain names.
+             * The list of domain names.
              */
             public Builder domainNameList(java.util.List < String > domainNameList) {
                 this.domainNameList = domainNameList;
@@ -1899,7 +1899,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether WAF is enabled.
+             * Indicates whether WAF is activated.
              */
             public Builder enableWaf(Boolean enableWaf) {
                 this.enableWaf = enableWaf;
@@ -1947,7 +1947,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the header configuration policy.
+             * The header settings.
              */
             public Builder headerOp(HeaderOp headerOp) {
                 this.headerOp = headerOp;

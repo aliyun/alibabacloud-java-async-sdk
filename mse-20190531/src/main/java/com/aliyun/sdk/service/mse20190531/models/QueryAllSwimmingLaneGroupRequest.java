@@ -16,9 +16,14 @@ public class QueryAllSwimmingLaneGroupRequest extends Request {
     @NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
+    @Query
+    @NameInMap("Namespace")
+    private String namespace;
+
     private QueryAllSwimmingLaneGroupRequest(Builder builder) {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
+        this.namespace = builder.namespace;
     }
 
     public static Builder builder() {
@@ -41,8 +46,16 @@ public class QueryAllSwimmingLaneGroupRequest extends Request {
         return this.acceptLanguage;
     }
 
+    /**
+     * @return namespace
+     */
+    public String getNamespace() {
+        return this.namespace;
+    }
+
     public static final class Builder extends Request.Builder<QueryAllSwimmingLaneGroupRequest, Builder> {
         private String acceptLanguage; 
+        private String namespace; 
 
         private Builder() {
             super();
@@ -51,18 +64,28 @@ public class QueryAllSwimmingLaneGroupRequest extends Request {
         private Builder(QueryAllSwimmingLaneGroupRequest request) {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
+            this.namespace = request.namespace;
         } 
 
         /**
          * The language of the response. Valid values:
          * <p>
          * 
-         * - zh: Chinese
-         * - en: English
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
             this.acceptLanguage = acceptLanguage;
+            return this;
+        }
+
+        /**
+         * Namespace.
+         */
+        public Builder namespace(String namespace) {
+            this.putQueryParameter("Namespace", namespace);
+            this.namespace = namespace;
             return this;
         }
 

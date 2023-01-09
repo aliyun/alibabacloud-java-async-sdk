@@ -200,9 +200,9 @@ public class UpdateGatewayDomainRequest extends Request {
          * Specifies whether to enable `HTTP/2`.
          * <p>
          * 
-         * *   `open`: enables `HTTP/2`
-         * *   `close`: disables `HTTP/2`
-         * *   `globalConfig`: uses global configurations
+         * *   `open`: `HTTP/2` is enabled.
+         * *   `close`: `HTTP/2` is disabled.
+         * *   `globalConfig`: Global configurations are used.
          */
         public Builder http2(String http2) {
             this.putQueryParameter("Http2", http2);
@@ -211,7 +211,7 @@ public class UpdateGatewayDomainRequest extends Request {
         }
 
         /**
-         * The ID of the domain name.
+         * The ID of the domain name that you want to update.
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);

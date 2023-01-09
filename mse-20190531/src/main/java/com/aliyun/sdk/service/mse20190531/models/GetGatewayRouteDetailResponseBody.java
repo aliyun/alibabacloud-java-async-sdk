@@ -114,7 +114,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -588,7 +588,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The service port.
+             * The service port number.
              */
             public Builder servicePort(Integer servicePort) {
                 this.servicePort = servicePort;
@@ -596,7 +596,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the service source.
+             * The source type.
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -737,7 +737,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the policy.
+             * The status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -830,7 +830,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Header Key.
+             * The header key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1073,7 +1073,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTP status code.
+             * The HTTP status code returned.
              */
             public Builder httpCodes(java.util.List < String > httpCodes) {
                 this.httpCodes = httpCodes;
@@ -1638,7 +1638,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The service port.
+             * The service port number.
              */
             public Builder servicePort(Integer servicePort) {
                 this.servicePort = servicePort;
@@ -2172,7 +2172,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the domain name.
+             * The domain ID.
              */
             public Builder domainId(Long domainId) {
                 this.domainId = domainId;
@@ -2180,7 +2180,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The domain names.
+             * The IDs of domains.
              */
             public Builder domainIdList(java.util.List < Long > domainIdList) {
                 this.domainIdList = domainIdList;
@@ -2196,7 +2196,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The domain names.
+             * The list of domain names.
              */
             public Builder domainNameList(java.util.List < String > domainNameList) {
                 this.domainNameList = domainNameList;
@@ -2204,7 +2204,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether Web Application Firewall (WAF) is enabled.
+             * Indicates whether WAF is activated.
              */
             public Builder enableWaf(Boolean enableWaf) {
                 this.enableWaf = enableWaf;
@@ -2220,7 +2220,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The information of the Fallback service.
+             * The information about the Fallback service.
              */
             public Builder fallbackServices(java.util.List < FallbackServices> fallbackServices) {
                 this.fallbackServices = fallbackServices;
@@ -2268,7 +2268,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the header configuration policy.
+             * The header settings.
              */
             public Builder headerOp(HeaderOp headerOp) {
                 this.headerOp = headerOp;
@@ -2276,7 +2276,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ID.
+             * The ID.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -2348,7 +2348,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the route.
+             * The status of the route. Valid values:
              * <p>
              * 
              * *   0: unpublished

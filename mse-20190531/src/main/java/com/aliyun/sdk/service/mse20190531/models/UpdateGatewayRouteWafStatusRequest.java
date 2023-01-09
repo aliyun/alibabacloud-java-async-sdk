@@ -109,7 +109,7 @@ public class UpdateGatewayRouteWafStatusRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable Web Application Firewall (WAF).
+         * Specifies whether to activate Web Application Firewall (WAF).
          */
         public Builder enableWaf(Boolean enableWaf) {
             this.putQueryParameter("EnableWaf", enableWaf);
@@ -127,7 +127,7 @@ public class UpdateGatewayRouteWafStatusRequest extends Request {
         }
 
         /**
-         * The ID of the route entry.
+         * The ID of the route.
          */
         public Builder routeId(Long routeId) {
             this.putQueryParameter("RouteId", routeId);

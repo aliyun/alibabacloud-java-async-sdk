@@ -85,8 +85,8 @@ public class UpdateAclRequest extends Request {
          * The language of the response. Valid values:
          * <p>
          * 
-         * - zh: Chinese
-         * - en: English
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -95,7 +95,7 @@ public class UpdateAclRequest extends Request {
         }
 
         /**
-         * The IP addresses in the whitelist.
+         * The IP addresses or CIDR blocks in the IP address whitelist.
          */
         public Builder aclEntryList(String aclEntryList) {
             this.putQueryParameter("AclEntryList", aclEntryList);

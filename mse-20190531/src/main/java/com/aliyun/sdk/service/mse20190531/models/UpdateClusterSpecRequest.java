@@ -135,7 +135,7 @@ public class UpdateClusterSpecRequest extends Request {
         }
 
         /**
-         * The specifications of the engine.
+         * The destination engine specifications.
          */
         public Builder clusterSpecification(String clusterSpecification) {
             this.putQueryParameter("ClusterSpecification", clusterSpecification);
@@ -144,7 +144,7 @@ public class UpdateClusterSpecRequest extends Request {
         }
 
         /**
-         * The number of nodes.
+         * The number of destination nodes.
          */
         public Builder instanceCount(Integer instanceCount) {
             this.putQueryParameter("InstanceCount", instanceCount);

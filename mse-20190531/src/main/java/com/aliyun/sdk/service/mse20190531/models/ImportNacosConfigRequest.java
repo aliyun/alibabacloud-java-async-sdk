@@ -115,8 +115,8 @@ public class ImportNacosConfigRequest extends Request {
          * The language of the response. Valid values:
          * <p>
          * 
-         * - zh: Chinese
-         * - en: English
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -152,7 +152,7 @@ public class ImportNacosConfigRequest extends Request {
         }
 
         /**
-         * The policy used to handle write conflicts.
+         * The policy.
          */
         public Builder policy(String policy) {
             this.putQueryParameter("Policy", policy);

@@ -134,7 +134,7 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The error code returned if the request fails.
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -142,7 +142,7 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * The information about configurations.
+         * The configuration items.
          */
         public Builder historyItems(java.util.List < HistoryItems> historyItems) {
             this.historyItems = historyItems;
@@ -190,10 +190,11 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
+         * Indicates whether the request was successful. Valid values:
          * <p>
-         * - `true`: The request is successful. 
-         * - `false`: The request fails.
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -301,7 +302,7 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
             private String opType; 
 
             /**
-             * The name of the application.
+             * The tags of the application.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -309,7 +310,7 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the configuration.
+             * The ID of the data.
              */
             public Builder dataId(String dataId) {
                 this.dataId = dataId;
@@ -341,7 +342,7 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the configuration.
+             * The type of the configuration file.
              */
             public Builder opType(String opType) {
                 this.opType = opType;

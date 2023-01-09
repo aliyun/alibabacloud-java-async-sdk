@@ -86,7 +86,7 @@ public class GetMseFeatureSwitchResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code returned if the request fails.
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -110,7 +110,7 @@ public class GetMseFeatureSwitchResponseBody extends TeaModel {
         }
 
         /**
-         * The returned results.
+         * The returned result.
          */
         public Builder result(java.util.Map < String, ? > result) {
             this.result = result;
@@ -118,10 +118,11 @@ public class GetMseFeatureSwitchResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
+         * Indicates whether the request was successful. Valid values:
          * <p>
-         * - `true`: The request is successful. 
-         * - `false`: The request fails.
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;

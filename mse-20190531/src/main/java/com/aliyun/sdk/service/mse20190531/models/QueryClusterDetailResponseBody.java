@@ -94,7 +94,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request fails.
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -118,10 +118,11 @@ public class QueryClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
+         * Indicates whether the request was successful. Valid values:
          * <p>
-         * - `true`: The request is successful. 
-         * - `false`: The request fails.
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -245,7 +246,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             private String zone; 
 
             /**
-             * The timestamp when the node was created.
+             * The timestamp when the instance node was created.
              */
             public Builder creationTimestamp(String creationTimestamp) {
                 this.creationTimestamp = creationTimestamp;
@@ -253,7 +254,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The health status of the node.
+             * The health status of the instance node.
              */
             public Builder healthStatus(String healthStatus) {
                 this.healthStatus = healthStatus;
@@ -285,7 +286,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The role of the node.
+             * The role.
              */
             public Builder role(String role) {
                 this.role = role;
@@ -301,7 +302,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Zone.
+             * The zone.
              */
             public Builder zone(String zone) {
                 this.zone = zone;
@@ -774,7 +775,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * The whitelist of the cluster.
+             * The whitelist.
              */
             public Builder aclEntryList(String aclEntryList) {
                 this.aclEntryList = aclEntryList;
@@ -790,7 +791,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the application.
+             * The application version.
              */
             public Builder appVersion(String appVersion) {
                 this.appVersion = appVersion;
@@ -806,7 +807,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The alias of the cluster.
+             * The alias of the instance.
              */
             public Builder clusterAliasName(String clusterAliasName) {
                 this.clusterAliasName = clusterAliasName;
@@ -814,7 +815,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cluster.
+             * The name of the instance.
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -822,7 +823,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The specifications of the engine.
+             * The engine specifications.
              */
             public Builder clusterSpecification(String clusterSpecification) {
                 this.clusterSpecification = clusterSpecification;
@@ -830,7 +831,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the cluster. Valid values: ZooKeeper, Nacos-Ans, and Eureka.
+             * The type of the instance. Valid values: ZooKeeper, Nacos-Ans, and Eureka.
              */
             public Builder clusterType(String clusterType) {
                 this.clusterType = clusterType;
@@ -838,7 +839,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the cluster.
+             * The version of the instance.
              */
             public Builder clusterVersion(String clusterVersion) {
                 this.clusterVersion = clusterVersion;
@@ -846,11 +847,11 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The connection type. Valid values:
+             * The network connection type. Valid values:
              * <p>
              * 
-             * - slb
-             * - eni
+             * *   slb
+             * *   eni
              */
             public Builder connectionType(String connectionType) {
                 this.connectionType = connectionType;
@@ -858,7 +859,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The number of CPUs.
+             * The number of vCPUs.
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -866,7 +867,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the cluster was created.
+             * The time when the instance was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -890,7 +891,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The health status of the cluster.
+             * The health status of the instance.
              */
             public Builder healthStatus(String healthStatus) {
                 this.healthStatus = healthStatus;
@@ -898,7 +899,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of time taken to create the cluster. Unit: milliseconds.
+             * The amount of time taken to create the instance. Unit: milliseconds.
              */
             public Builder initCostTime(Long initCostTime) {
                 this.initCostTime = initCostTime;
@@ -906,7 +907,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The creation status of the cluster.
+             * The creation status of the instance.
              */
             public Builder initStatus(String initStatus) {
                 this.initStatus = initStatus;
@@ -914,7 +915,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The number of nodes.
+             * The number of instance nodes.
              */
             public Builder instanceCount(Integer instanceCount) {
                 this.instanceCount = instanceCount;
@@ -930,7 +931,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The information about nodes.
+             * The list of instance nodes.
              */
             public Builder instanceModels(java.util.List < InstanceModels> instanceModels) {
                 this.instanceModels = instanceModels;
@@ -938,7 +939,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address.
+             * The public IP address of the instance.
              */
             public Builder internetAddress(String internetAddress) {
                 this.internetAddress = internetAddress;
@@ -946,7 +947,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The public domain name.
+             * The public endpoint of the instance.
              */
             public Builder internetDomain(String internetDomain) {
                 this.internetDomain = internetDomain;
@@ -954,7 +955,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The private port.
+             * The private port number.
              */
             public Builder internetPort(String internetPort) {
                 this.internetPort = internetPort;
@@ -962,7 +963,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address.
+             * The internal IP address.
              */
             public Builder intranetAddress(String intranetAddress) {
                 this.intranetAddress = intranetAddress;
@@ -970,7 +971,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The private domain name.
+             * The internal endpoint of the instance.
              */
             public Builder intranetDomain(String intranetDomain) {
                 this.intranetDomain = intranetDomain;
@@ -978,7 +979,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The private port.
+             * The private port number.
              */
             public Builder intranetPort(String intranetPort) {
                 this.intranetPort = intranetPort;
@@ -994,7 +995,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The version category of the cluster.
+             * The edition of Microservices Engine (MSE).
              */
             public Builder mseVersion(String mseVersion) {
                 this.mseVersion = mseVersion;
@@ -1002,11 +1003,11 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The network type of the cluster. Valid values:
+             * The network type of the instance. Valid values:
              * <p>
              * 
-             * - `privatenet`: private network 
-             * - `pubnet`: the Internet
+             * *   `privatenet`: VPC
+             * *   `pubnet`: Internet
              */
             public Builder netType(String netType) {
                 this.netType = netType;
@@ -1014,7 +1015,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * OrderClusterVersion.
+             * The version number of the original order.
              */
             public Builder orderClusterVersion(String orderClusterVersion) {
                 this.orderClusterVersion = orderClusterVersion;
@@ -1030,9 +1031,9 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The public bandwidth. Unit: Mbit/s.    
+             * The public bandwidth. Unit: Mbit/s.\
              * <p>
-             * Valid values: 0 to 5000. A value of 0 indicates no access to the Internet.
+             * Valid values: 0 to 5000. The value 0 indicates no access to the Internet.
              */
             public Builder pubNetworkFlow(String pubNetworkFlow) {
                 this.pubNetworkFlow = pubNetworkFlow;
@@ -1040,7 +1041,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1048,7 +1049,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -1056,7 +1057,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tags that are attached to the instance.
              */
             public Builder tags(java.util.Map < String, ? > tags) {
                 this.tags = tags;
@@ -1072,7 +1073,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * VPC ID.
+             * The ID of the virtual private cloud (VPC).
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

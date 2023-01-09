@@ -155,7 +155,7 @@ public class UpdateNacosServiceRequest extends Request {
          * The ID of the cluster.
          * <p>
          * 
-         * > This operation contains both the InstanceId and ClusterId parameters. You must configure either InstanceId or ClusterId.
+         * > This operation contains both the InstanceId and ClusterId parameters. You must specify one of them.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -176,7 +176,7 @@ public class UpdateNacosServiceRequest extends Request {
          * The ID of the instance.
          * <p>
          * 
-         * > This operation contains both the InstanceId and ClusterId parameters. You must configure either InstanceId or ClusterId.
+         * >  This operation contains both the InstanceId and ClusterId parameters. You must specify one of them.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

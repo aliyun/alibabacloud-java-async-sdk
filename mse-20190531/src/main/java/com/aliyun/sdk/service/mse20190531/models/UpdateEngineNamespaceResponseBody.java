@@ -94,7 +94,7 @@ public class UpdateEngineNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request fails.
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -118,10 +118,11 @@ public class UpdateEngineNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
+         * Indicates whether the request was successful. Valid values:
          * <p>
-         * - `true`: The request is successful. 
-         * - `false`: The request fails.
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -221,7 +222,7 @@ public class UpdateEngineNamespaceResponseBody extends TeaModel {
             private Integer type; 
 
             /**
-             * The number of configurations.
+             * The quota value.
              */
             public Builder configCount(Integer configCount) {
                 this.configCount = configCount;
@@ -229,7 +230,7 @@ public class UpdateEngineNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the namespace.
+             * The namespace.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -263,9 +264,10 @@ public class UpdateEngineNamespaceResponseBody extends TeaModel {
             /**
              * The type of the namespace. Valid values:
              * <p>
-             * - `0`: global configuration
-             * - `1`: default namespace
-             * - `2`: custom namespace
+             * 
+             * *   `0`: global configuration
+             * *   `1`: default namespace
+             * *   `2`: custom namespace
              */
             public Builder type(Integer type) {
                 this.type = type;

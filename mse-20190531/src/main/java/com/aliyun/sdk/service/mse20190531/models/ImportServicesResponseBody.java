@@ -98,11 +98,7 @@ public class ImportServicesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
-         * 
-         * - `true`: The request is successful. 
-         * - `false`: The request fails.
+         * The status code returned.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -110,7 +106,7 @@ public class ImportServicesResponseBody extends TeaModel {
         }
 
         /**
-         * Import services
+         * The result returned.
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -118,7 +114,7 @@ public class ImportServicesResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -126,7 +122,7 @@ public class ImportServicesResponseBody extends TeaModel {
         }
 
         /**
-         * The request is processed successfully.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -134,7 +130,7 @@ public class ImportServicesResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -142,7 +138,11 @@ public class ImportServicesResponseBody extends TeaModel {
         }
 
         /**
-         * The returned results.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;

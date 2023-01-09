@@ -86,7 +86,7 @@ public class GetNacosHistoryConfigResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The information about the configuration.
+         * The configuration information.
          */
         public Builder configuration(Configuration configuration) {
             this.configuration = configuration;
@@ -94,7 +94,7 @@ public class GetNacosHistoryConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request fails.
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -118,10 +118,11 @@ public class GetNacosHistoryConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
+         * Indicates whether the request was successful. Valid values:
          * <p>
-         * - `true`: The request is successful. 
-         * - `false`: The request fails.
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -265,7 +266,7 @@ public class GetNacosHistoryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the group.
+             * The name of the configuration group.
              */
             public Builder group(String group) {
                 this.group = group;
@@ -281,7 +282,7 @@ public class GetNacosHistoryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the configuration.
+             * The configuration type.
              */
             public Builder opType(String opType) {
                 this.opType = opType;

@@ -166,7 +166,7 @@ public class GetEngineNamepaceResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request fails.
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -190,7 +190,7 @@ public class GetEngineNamepaceResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the namespace.
+         * The ID of the namespace.
          */
         public Builder namespace(String namespace) {
             this.namespace = namespace;
@@ -230,10 +230,11 @@ public class GetEngineNamepaceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
+         * Indicates whether the request was successful. Valid values:
          * <p>
-         * - `true`: The request is successful. 
-         * - `false`: The request fails.
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -244,9 +245,9 @@ public class GetEngineNamepaceResponseBody extends TeaModel {
          * The type of the namespace. Valid values:
          * <p>
          * 
-         * - 0: global configuration                                 
-         * - 1: default namespace                                 
-         * - 2: custom namespace
+         * *   0: global configuration
+         * *   1: default namespace
+         * *   2: custom namespace
          */
         public Builder type(String type) {
             this.type = type;

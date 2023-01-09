@@ -169,9 +169,9 @@ public class AddServiceSourceRequest extends Request {
          * The language in which the returned information is displayed. Valid values:
          * <p>
          * 
-         * - zh-CN: Chinese. This is the default value.
-         * - en-US: English.
-         * - ja: Japanese.
+         * *   zh-CN: Chinese. This is the default value.
+         * *   en-US: English.
+         * *   ja: Japanese.
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -180,7 +180,7 @@ public class AddServiceSourceRequest extends Request {
         }
 
         /**
-         * The address of the service.
+         * The endpoint.
          */
         public Builder address(String address) {
             this.putQueryParameter("Address", address);
@@ -198,7 +198,7 @@ public class AddServiceSourceRequest extends Request {
         }
 
         /**
-         * GroupList.
+         * The list of service groups.
          */
         public Builder groupList(java.util.List < String > groupList) {
             String groupListShrink = shrink(groupList, "GroupList", "json");
@@ -218,7 +218,14 @@ public class AddServiceSourceRequest extends Request {
         }
 
         /**
-         * The name of the service.
+         * The name.
+         * <p>
+         * 
+         * >  The parameter value varies based on the source type.
+         * 
+         * *   If Type is set to K8S, this parameter specifies the name of the ACK cluster.
+         * 
+         * *   If Type is set to NACOS, this parameter specifies the ID of the instance.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -227,7 +234,7 @@ public class AddServiceSourceRequest extends Request {
         }
 
         /**
-         * Service root path array.
+         * An array of service root paths.
          */
         public Builder pathList(java.util.List < String > pathList) {
             String pathListShrink = shrink(pathList, "PathList", "json");
@@ -237,7 +244,11 @@ public class AddServiceSourceRequest extends Request {
         }
 
         /**
-         * The type of the service source.
+         * The service source.
+         * <p>
+         * 
+         * *   K8S: ACK cluster
+         * *   MSE: Nacos instance
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -246,7 +257,11 @@ public class AddServiceSourceRequest extends Request {
         }
 
         /**
-         * The service type.
+         * The type of the service source. Valid values:
+         * <p>
+         * 
+         * *   K8S: ACK cluster
+         * *   NACOS: Nacos instance
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -332,7 +347,7 @@ public class AddServiceSourceRequest extends Request {
             }
 
             /**
-             * Update the Ingress Status.
+             * Specifies whether to update the Ingress status.
              */
             public Builder enableStatus(Boolean enableStatus) {
                 this.enableStatus = enableStatus;
@@ -348,7 +363,7 @@ public class AddServiceSourceRequest extends Request {
             }
 
             /**
-             * The namespace that you want to monitor.
+             * The namespace whose resources you want to monitor.
              */
             public Builder watchNamespace(String watchNamespace) {
                 this.watchNamespace = watchNamespace;

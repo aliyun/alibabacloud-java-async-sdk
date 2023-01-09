@@ -312,7 +312,7 @@ public class ListGatewayRequest extends Request {
             }
 
             /**
-             * MseTag.
+             * The tag of the instance.
              */
             public Builder mseTag(String mseTag) {
                 this.mseTag = mseTag;
@@ -328,7 +328,7 @@ public class ListGatewayRequest extends Request {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;

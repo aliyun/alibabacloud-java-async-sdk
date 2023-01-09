@@ -138,10 +138,11 @@ public class AddMockRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
+         * Indicates whether the request was successful. Valid values:
          * <p>
-         * - `true`: The request is successful. 
-         * - `false`: The request fails.
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -361,11 +362,11 @@ public class AddMockRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the rule is enabled. 
+             * Indicates whether the mock rule is enabled.
              * <p>
              * 
-             * - `true`: enabled 
-             * - `false`: disabled
+             * *   `true`: enabled
+             * *   `false`: disabled
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -389,11 +390,11 @@ public class AddMockRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the model. Valid values:
+             * The mock type. Valid values:
              * <p>
              * 
-             * - `[unk]0[unk]`: desktop client
-             * - `[unk]1[unk]`: mobile client
+             * *   \- `[unk]0[unk]`: desktop client
+             * *   \- `[unk]1[unk]`: mobile client
              */
             public Builder mockType(Long mockType) {
                 this.mockType = mockType;
@@ -401,7 +402,7 @@ public class AddMockRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the rule.
+             * The name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -433,7 +434,7 @@ public class AddMockRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * The region ID.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -449,7 +450,7 @@ public class AddMockRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The source.
+             * The service source.
              */
             public Builder source(String source) {
                 this.source = source;

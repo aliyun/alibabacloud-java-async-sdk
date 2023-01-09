@@ -114,7 +114,7 @@ public class GetAppMessageQueueRouteResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class GetAppMessageQueueRouteResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * The message returned.
          * <p>
          * 
          * *   If the request is successful, a success message is returned.
@@ -258,7 +258,7 @@ public class GetAppMessageQueueRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * The region ID.
              */
             public Builder region(String region) {
                 this.region = region;

@@ -106,7 +106,7 @@ public class UpdateNacosClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The returned result.
+         * The result returned.
          */
         public Builder data(String data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class UpdateNacosClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class UpdateNacosClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The response message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;

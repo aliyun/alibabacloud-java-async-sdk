@@ -265,11 +265,11 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:****
+         * The language that the value of the **LocalName** response parameter uses. Valid values:
          * <p>
          * 
-         * *   **zh-CN**: Chinese
-         * *   **en-US**: English.
+         * *   **zh-cn**: Chinese
+         * *   **en-us**: English.
          * 
          * > Default value: **zh-CN**.
          */
@@ -298,7 +298,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         }
 
         /**
-         * json string.
+         * The JSON string.
          */
         public Builder entryRule(String entryRule) {
             this.putQueryParameter("EntryRule", entryRule);
@@ -307,7 +307,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         }
 
         /**
-         * SwimmingLane.
+         * The lane.
          */
         public Builder entryRules(java.util.List < EntryRules> entryRules) {
             this.putQueryParameter("EntryRules", entryRules);
@@ -740,8 +740,8 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
              * Specifies whether to enable the rule. Valid values:
              * <p>
              * 
-             * *   `true`: yes
-             * *   `false`: no
+             * *   `true`: enables the rule.
+             * *   `false`: disables the rule.
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;

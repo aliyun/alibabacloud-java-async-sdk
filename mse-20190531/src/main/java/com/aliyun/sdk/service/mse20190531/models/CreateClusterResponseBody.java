@@ -98,7 +98,7 @@ public class CreateClusterResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code returned.
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +114,7 @@ public class CreateClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;

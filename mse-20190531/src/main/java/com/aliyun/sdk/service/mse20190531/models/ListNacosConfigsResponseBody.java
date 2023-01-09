@@ -154,7 +154,7 @@ public class ListNacosConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * The information about configurations.
+         * The configurations.
          */
         public Builder configurations(java.util.List < Configurations> configurations) {
             this.configurations = configurations;
@@ -162,7 +162,7 @@ public class ListNacosConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request fails.
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -210,10 +210,11 @@ public class ListNacosConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
+         * Indicates whether the request was successful. Valid values:
          * <p>
-         * - `true`: The request is successful. 
-         * - `false`: The request fails.
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -221,7 +222,7 @@ public class ListNacosConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * The total number of instances.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

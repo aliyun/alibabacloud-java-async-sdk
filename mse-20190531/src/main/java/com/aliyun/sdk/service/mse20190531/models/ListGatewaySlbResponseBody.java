@@ -378,7 +378,7 @@ public class ListGatewaySlbResponseBody extends TeaModel {
             }
 
             /**
-             * The service source.
+             * The mode of the SLB instance.
              */
             public Builder gatewaySlbMode(String gatewaySlbMode) {
                 this.gatewaySlbMode = gatewaySlbMode;

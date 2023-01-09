@@ -98,7 +98,7 @@ public class DeleteGatewayServiceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned.
+         * The response code returned.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -130,7 +130,7 @@ public class DeleteGatewayServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The unique ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,11 +138,11 @@ public class DeleteGatewayServiceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
+         * Indicates whether the request was successful. Valid values:
          * <p>
          * 
-         * - `true`: The request is successful. 
-         * - `false`: The request fails.
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -350,7 +350,7 @@ public class DeleteGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the domain name was last modified.
+             * The last modification time.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -398,7 +398,7 @@ public class DeleteGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace in which the service resides.
+             * The namespace.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -414,7 +414,7 @@ public class DeleteGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The source ID of the service.
+             * The ID of the service source.
              */
             public Builder sourceId(Long sourceId) {
                 this.sourceId = sourceId;

@@ -94,7 +94,7 @@ public class QueryBusinessLocationsResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request fails.
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -118,7 +118,7 @@ public class QueryBusinessLocationsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * The result of the request.
          */
         public Builder success(String success) {
             this.success = success;
@@ -310,7 +310,7 @@ public class QueryBusinessLocationsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the region.
+             * The description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -334,7 +334,7 @@ public class QueryBusinessLocationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the district.
+             * The ID of the region.
              */
             public Builder districtId(String districtId) {
                 this.districtId = districtId;
@@ -374,7 +374,7 @@ public class QueryBusinessLocationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * The name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -390,7 +390,7 @@ public class QueryBusinessLocationsResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the region.
+             * The display name.
              */
             public Builder showName(String showName) {
                 this.showName = showName;
@@ -398,7 +398,7 @@ public class QueryBusinessLocationsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the data.
+             * The type.
              */
             public Builder type(String type) {
                 this.type = type;

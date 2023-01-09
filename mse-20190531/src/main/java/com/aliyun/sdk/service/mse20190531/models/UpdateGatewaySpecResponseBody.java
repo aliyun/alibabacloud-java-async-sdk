@@ -106,7 +106,7 @@ public class UpdateGatewaySpecResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * The returned message.
          */
         public Builder data(String data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class UpdateGatewaySpecResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +130,7 @@ public class UpdateGatewaySpecResponseBody extends TeaModel {
         }
 
         /**
-         * ID of the Request.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

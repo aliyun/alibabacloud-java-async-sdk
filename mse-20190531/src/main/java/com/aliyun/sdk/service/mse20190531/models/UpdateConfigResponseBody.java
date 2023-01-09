@@ -86,7 +86,7 @@ public class UpdateConfigResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The return code.
+         * The status code returned.
          */
         public Builder code(Integer code) {
             this.code = code;

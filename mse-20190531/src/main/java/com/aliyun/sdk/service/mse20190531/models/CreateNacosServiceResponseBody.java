@@ -114,7 +114,7 @@ public class CreateNacosServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class CreateNacosServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;

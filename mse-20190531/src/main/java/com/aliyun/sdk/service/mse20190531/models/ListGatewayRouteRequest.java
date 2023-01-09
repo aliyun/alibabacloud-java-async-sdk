@@ -146,7 +146,7 @@ public class ListGatewayRouteRequest extends Request {
         }
 
         /**
-         * The parameters that specify filter conditions, which are in the format of {"key1":"value1"}.
+         * The parameters that specify filter conditions. The parameters are in the format of {"key1":"value1"}.
          */
         public Builder filterParams(FilterParams filterParams) {
             String filterParamsShrink = shrink(filterParams, "FilterParams", "json");

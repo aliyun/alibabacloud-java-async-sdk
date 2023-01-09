@@ -200,8 +200,8 @@ public class CreateNacosConfigRequest extends Request {
          * The language of the response. Valid values:
          * <p>
          * 
-         * - zh: Chinese
-         * - en: English
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -237,7 +237,7 @@ public class CreateNacosConfigRequest extends Request {
         }
 
         /**
-         * The data ID.
+         * The ID of the data.
          */
         public Builder dataId(String dataId) {
             this.putQueryParameter("DataId", dataId);
@@ -282,7 +282,7 @@ public class CreateNacosConfigRequest extends Request {
         }
 
         /**
-         * The tag of the configuration.
+         * The tags of the configuration.
          */
         public Builder tags(String tags) {
             this.putQueryParameter("Tags", tags);

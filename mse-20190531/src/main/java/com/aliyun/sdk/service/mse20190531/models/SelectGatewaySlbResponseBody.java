@@ -98,7 +98,7 @@ public class SelectGatewaySlbResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code returned.
+         * The status code returned.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -194,7 +194,7 @@ public class SelectGatewaySlbResponseBody extends TeaModel {
             private String slbName; 
 
             /**
-             * SLB ID.
+             * The ID of the SLB instance.
              */
             public Builder slbId(String slbId) {
                 this.slbId = slbId;

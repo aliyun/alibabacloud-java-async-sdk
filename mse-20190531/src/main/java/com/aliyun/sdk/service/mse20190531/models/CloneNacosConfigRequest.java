@@ -130,8 +130,8 @@ public class CloneNacosConfigRequest extends Request {
          * The language of the response. Valid values:
          * <p>
          * 
-         * - zh: Chinese
-         * - en: English
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -167,7 +167,12 @@ public class CloneNacosConfigRequest extends Request {
         }
 
         /**
-         * The policy used to handle write conflicts.
+         * The policy used when a write conflict occurs.
+         * <p>
+         * 
+         * *   ABORT
+         * *   SKIP
+         * *   OVERWRITE
          */
         public Builder policy(String policy) {
             this.putQueryParameter("Policy", policy);

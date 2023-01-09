@@ -82,7 +82,11 @@ public class DeleteServiceSourceRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -100,7 +104,7 @@ public class DeleteServiceSourceRequest extends Request {
         }
 
         /**
-         * The ID of the service source.
+         * The ID of the data source.
          */
         public Builder sourceId(Long sourceId) {
             this.putQueryParameter("SourceId", sourceId);

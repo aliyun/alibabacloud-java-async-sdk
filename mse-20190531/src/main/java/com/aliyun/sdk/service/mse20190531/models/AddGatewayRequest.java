@@ -305,7 +305,7 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable Log Service.
+         * Specifies whether to activate Log Service.
          */
         public Builder enableSls(Boolean enableSls) {
             this.putQueryParameter("EnableSls", enableSls);
@@ -314,7 +314,7 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable Tracing Analysis.
+         * Specifies whether to activate Tracing Analysis.
          */
         public Builder enableXtrace(Boolean enableXtrace) {
             this.putQueryParameter("EnableXtrace", enableXtrace);
@@ -332,7 +332,7 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * The specifications of the Internet-facing SLB instance.
+         * The specifications of the Internet-facing SLB instance. Valid values:
          * <p>
          * 
          * *   slb.s1.small
@@ -358,7 +358,7 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The region ID.
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -385,7 +385,7 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * The specifications of the internal-facing Server Load Balancer (SLB) instance.
+         * The specifications of the internal-facing Server Load Balancer (SLB) instance. Valid values:
          * <p>
          * 
          * *   slb.s1.small
@@ -402,7 +402,7 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * The node specifications.
+         * The node specifications. Valid values:
          * <p>
          * 
          * *   MSE_GTW\_16\_32\_200\_c(16C32G)

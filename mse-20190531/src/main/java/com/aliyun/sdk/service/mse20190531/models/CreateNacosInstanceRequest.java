@@ -216,7 +216,11 @@ public class CreateNacosInstanceRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -225,7 +229,7 @@ public class CreateNacosInstanceRequest extends Request {
         }
 
         /**
-         * The name of the Nacos cluster.
+         * The name of the Nacos instance.
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("ClusterName", clusterName);
@@ -279,7 +283,7 @@ public class CreateNacosInstanceRequest extends Request {
         }
 
         /**
-         * The node metadata of the instance.
+         * The metadata of the instance.
          */
         public Builder metadata(String metadata) {
             this.putBodyParameter("Metadata", metadata);
@@ -315,7 +319,7 @@ public class CreateNacosInstanceRequest extends Request {
         }
 
         /**
-         * The weight of the instance.
+         * The weight. Valid values: 0 to 10000. The value must be an integer. A larger value indicates a higher frequency at which the instance is accessed.
          */
         public Builder weight(String weight) {
             this.putQueryParameter("Weight", weight);

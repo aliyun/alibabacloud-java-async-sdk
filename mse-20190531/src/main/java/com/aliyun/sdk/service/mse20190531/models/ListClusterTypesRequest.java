@@ -122,7 +122,7 @@ public class ListClusterTypesRequest extends Request {
         }
 
         /**
-         * The edition of the MSE instance that you want to activate.
+         * The edition of the MSE instance that you want to purchase.
          * <p>
          * 
          * *   mse_pro: Professional Edition
@@ -135,7 +135,7 @@ public class ListClusterTypesRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the instance resides. The region is supported by Microservices Engine (MSE).
+         * The ID of the region in which the instance resides. The region is supported by MSE.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

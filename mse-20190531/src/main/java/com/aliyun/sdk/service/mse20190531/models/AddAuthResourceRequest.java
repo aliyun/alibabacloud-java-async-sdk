@@ -152,7 +152,11 @@ public class AddAuthResourceRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -180,7 +184,7 @@ public class AddAuthResourceRequest extends Request {
         }
 
         /**
-         * The ID of the domain name.
+         * The domain ID.
          */
         public Builder domainId(Long domainId) {
             this.putQueryParameter("DomainId", domainId);
@@ -207,7 +211,12 @@ public class AddAuthResourceRequest extends Request {
         }
 
         /**
-         * MatchType.
+         * The matching type.
+         * <p>
+         * 
+         * *   exact: exact matching
+         * *   prefix: prefix matching
+         * *   regex: regular expression matching
          */
         public Builder matchType(String matchType) {
             this.putQueryParameter("MatchType", matchType);

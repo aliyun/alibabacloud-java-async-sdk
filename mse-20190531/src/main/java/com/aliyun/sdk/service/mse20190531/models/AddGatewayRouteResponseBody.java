@@ -98,7 +98,7 @@ public class AddGatewayRouteResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The code returned.
+         * The status code returned.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -114,7 +114,7 @@ public class AddGatewayRouteResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class AddGatewayRouteResponseBody extends TeaModel {
         }
 
         /**
-         * The response message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;

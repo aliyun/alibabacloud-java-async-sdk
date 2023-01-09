@@ -142,7 +142,7 @@ public class ListClustersResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -150,7 +150,7 @@ public class ListClustersResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * The HTTP status code returned.
          */
         public Builder httpCode(String httpCode) {
             this.httpCode = httpCode;
@@ -202,7 +202,7 @@ public class ListClustersResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of instances.
+         * The total number of returned instances.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -522,7 +522,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The initialization status of the instance.
+             * The initial status of the instance.
              */
             public Builder initStatus(String initStatus) {
                 this.initStatus = initStatus;

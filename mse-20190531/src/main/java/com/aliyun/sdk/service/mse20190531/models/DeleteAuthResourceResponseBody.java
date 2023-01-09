@@ -290,7 +290,7 @@ public class DeleteAuthResourceResponseBody extends TeaModel {
             private String path; 
 
             /**
-             * The ID of the authorization record.
+             * The authentication ID.
              */
             public Builder authId(Long authId) {
                 this.authId = authId;

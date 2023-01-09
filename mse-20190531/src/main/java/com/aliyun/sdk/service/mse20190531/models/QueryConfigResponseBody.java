@@ -114,7 +114,7 @@ public class QueryConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -563,7 +563,7 @@ public class QueryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cluster.
+             * The name of the instance.
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -571,7 +571,7 @@ public class QueryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether RAM authentication of a configuration center is enabled. This parameter is valid for Nacos instances. Valid values:
+             * Indicates whether RAM authorization of a configuration center is enabled. This parameter is valid for Nacos instances. Valid values:
              * <p>
              * 
              * *   `true`: enabled
@@ -583,7 +583,7 @@ public class QueryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether RAM authentication is supported by a configuration center of the instance. This parameter is valid for Nacos instances. Valid values:
+             * Indicates whether RAM authorization is supported by a configuration center of the instance. This parameter is valid for Nacos instances. Valid values:
              * <p>
              * 
              * *   `true`: supported
@@ -635,7 +635,7 @@ public class QueryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum connection duration of the instance. This parameter is valid for ZooKeeper instances. Unit: seconds.
+             * The maximum connection duration of the instance. Unit: seconds. This parameter is valid for ZooKeeper instances.
              */
             public Builder initLimit(String initLimit) {
                 this.initLimit = initLimit;
@@ -717,7 +717,7 @@ public class QueryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether RAM authentication of a registry is enabled. This parameter is valid for Nacos instances. Valid values:
+             * Indicates whether RAM authorization of a registry is enabled. This parameter is valid for Nacos instances. Valid values:
              * <p>
              * 
              * *   `true`: enabled
@@ -729,7 +729,7 @@ public class QueryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether RAM authentication of services is supported by the instance. This parameter is valid for Nacos instances. Valid values:
+             * Indicates whether RAM authorization of services is supported by the instance. This parameter is valid for Nacos instances. Valid values:
              * <p>
              * 
              * *   `true`: supported
@@ -765,7 +765,7 @@ public class QueryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The password of the user. This parameter is valid only if OpenSuperAcl is set to true.
+             * The user password. This parameter is valid only if OpenSuperAcl is set to true.
              */
             public Builder passWord(String passWord) {
                 this.passWord = passWord;
@@ -809,7 +809,7 @@ public class QueryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The username of the user. This parameter is valid only if OpenSuperAcl is set to true.
+             * The username. This parameter is valid only if OpenSuperAcl is set to true.
              */
             public Builder userName(String userName) {
                 this.userName = userName;

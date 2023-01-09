@@ -122,11 +122,11 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned. Valid values: 
+         * The message returned.
          * <p>
          * 
-         * - If the request is successful, a success message is returned. 
-         * - If the request fails, an error message is returned.
+         * *   If the request is successful, a success message is returned.
+         * *   If the request fails, an error message is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,7 +142,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values: -[unk]true[unk]: The request is successful. -[unk]false[unk]: The request fails.
+         * Indicates whether the request is successful. Valid values: -\[unk]true\[unk]: The request is successful. -\[unk]false\[unk]: The request fails.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -302,7 +302,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             private String tag; 
 
             /**
-             * Indicates whether pass-through is enabled.
+             * Indicates whether the field is a primary key.
              */
             public Builder carryData(Boolean carryData) {
                 this.carryData = carryData;
@@ -310,11 +310,11 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the routing rule is enabled. Valid values:
+             * Indicates whether the alert rule is enabled. Valid values:
              * <p>
              * 
-             * - `true`: enabled 
-             * - `false`: disabled
+             * *   `true`: enabled
+             * *   `false`: disabled
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -322,7 +322,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the routing rule was last modified.
+             * The modification time.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -330,7 +330,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the routing rule.
+             * The ID of the rule.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -346,7 +346,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the routing rule.
+             * The name of the rule.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -378,7 +378,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the routing rule.
+             * The status.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -386,7 +386,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag of the routing rule.
+             * The tag.
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -479,7 +479,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The information about routing rules.
+             * An array that consists of the rules.
              */
             public Builder routeRules(java.util.List < RouteRules> routeRules) {
                 this.routeRules = routeRules;

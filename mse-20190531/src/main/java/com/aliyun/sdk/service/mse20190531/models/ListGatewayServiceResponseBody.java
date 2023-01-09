@@ -98,7 +98,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned.
+         * The return value.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -416,7 +416,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The prefetch time of least connection load balancing.
+             * The prefetch time of the least connection load balancing.
              */
             public Builder warmupDuration(Integer warmupDuration) {
                 this.warmupDuration = warmupDuration;
@@ -624,7 +624,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * TLS.
+             * The Transport Layer Security (TLS).
              */
             public Builder tls(Tls tls) {
                 this.tls = tls;
@@ -1261,7 +1261,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * ID.
+             * The ID.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -1442,7 +1442,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of entries returned per page. Default value: 10.
+             * The number of entries returned per page. Default value: 10.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;

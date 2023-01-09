@@ -200,8 +200,8 @@ public class ListNacosConfigsRequest extends Request {
          * The language of the response. Valid values:
          * <p>
          * 
-         * - zh: Chinese
-         * - en: English
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -219,7 +219,7 @@ public class ListNacosConfigsRequest extends Request {
         }
 
         /**
-         * The ID of the configuration.
+         * The ID of the data.
          */
         public Builder dataId(String dataId) {
             this.putQueryParameter("DataId", dataId);
@@ -228,7 +228,7 @@ public class ListNacosConfigsRequest extends Request {
         }
 
         /**
-         * The name of the group. Default value: `default`.
+         * The name of the group. Default value: `default`
          */
         public Builder group(String group) {
             this.putQueryParameter("Group", group);
@@ -273,7 +273,7 @@ public class ListNacosConfigsRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the cluster resides.
+         * The ID of the region in which the instance resides. The region is supported by Microservices Engine (MSE).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -291,7 +291,7 @@ public class ListNacosConfigsRequest extends Request {
         }
 
         /**
-         * The tags of the configuration.
+         * The tags.
          */
         public Builder tags(String tags) {
             this.putQueryParameter("Tags", tags);

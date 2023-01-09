@@ -174,6 +174,9 @@ public class GetApplicationListResponseBody extends TeaModel {
         @NameInMap("LicenseKey")
         private String licenseKey;
 
+        @NameInMap("Namespace")
+        private String namespace;
+
         @NameInMap("RegionId")
         private String regionId;
 
@@ -193,6 +196,7 @@ public class GetApplicationListResponseBody extends TeaModel {
             this.instancesNumber = builder.instancesNumber;
             this.language = builder.language;
             this.licenseKey = builder.licenseKey;
+            this.namespace = builder.namespace;
             this.regionId = builder.regionId;
             this.source = builder.source;
             this.status = builder.status;
@@ -250,6 +254,13 @@ public class GetApplicationListResponseBody extends TeaModel {
         }
 
         /**
+         * @return namespace
+         */
+        public String getNamespace() {
+            return this.namespace;
+        }
+
+        /**
          * @return regionId
          */
         public String getRegionId() {
@@ -284,6 +295,7 @@ public class GetApplicationListResponseBody extends TeaModel {
             private Integer instancesNumber; 
             private String language; 
             private String licenseKey; 
+            private String namespace; 
             private String regionId; 
             private String source; 
             private Long status; 
@@ -338,7 +350,15 @@ public class GetApplicationListResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * Namespace.
+             */
+            public Builder namespace(String namespace) {
+                this.namespace = namespace;
+                return this;
+            }
+
+            /**
+             * The ID of the region.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

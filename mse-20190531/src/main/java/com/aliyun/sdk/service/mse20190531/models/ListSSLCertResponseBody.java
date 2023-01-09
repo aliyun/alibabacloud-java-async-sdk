@@ -122,7 +122,7 @@ public class ListSSLCertResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request fails.
+         * The error message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,10 +138,11 @@ public class ListSSLCertResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
+         * Indicates whether the request was successful. Valid values:
          * <p>
-         * - `true`: The request is successful. 
-         * - `false`: The request fails.
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -289,7 +290,7 @@ public class ListSSLCertResponseBody extends TeaModel {
             private String sans; 
 
             /**
-             * The effective time of the certificate.
+             * The validation time.
              */
             public Builder afterDate(String afterDate) {
                 this.afterDate = afterDate;
@@ -297,7 +298,7 @@ public class ListSSLCertResponseBody extends TeaModel {
             }
 
             /**
-             * The algorithm of the certificate.
+             * The algorithm.
              */
             public Builder algorithm(String algorithm) {
                 this.algorithm = algorithm;
@@ -305,7 +306,7 @@ public class ListSSLCertResponseBody extends TeaModel {
             }
 
             /**
-             * The expiration time of the certificate.
+             * The expiration time.
              */
             public Builder beforeDate(String beforeDate) {
                 this.beforeDate = beforeDate;
@@ -337,7 +338,7 @@ public class ListSSLCertResponseBody extends TeaModel {
             }
 
             /**
-             * The effective time of the certificate.
+             * The validation time.
              */
             public Builder gmtAfter(String gmtAfter) {
                 this.gmtAfter = gmtAfter;
@@ -345,7 +346,7 @@ public class ListSSLCertResponseBody extends TeaModel {
             }
 
             /**
-             * The expiration time of the certificate.
+             * The expiration time.
              */
             public Builder gmtBefore(String gmtBefore) {
                 this.gmtBefore = gmtBefore;
@@ -353,7 +354,7 @@ public class ListSSLCertResponseBody extends TeaModel {
             }
 
             /**
-             * The issuer of the certificate.
+             * The issuer.
              */
             public Builder issuer(String issuer) {
                 this.issuer = issuer;

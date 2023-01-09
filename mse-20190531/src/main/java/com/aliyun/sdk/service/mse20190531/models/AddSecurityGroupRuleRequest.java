@@ -116,8 +116,8 @@ public class AddSecurityGroupRuleRequest extends Request {
          * The language of the response. Valid values:
          * <p>
          * 
-         * - zh: Chinese
-         * - en: English
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -126,7 +126,7 @@ public class AddSecurityGroupRuleRequest extends Request {
         }
 
         /**
-         * The description of the rule.
+         * The description.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -144,7 +144,7 @@ public class AddSecurityGroupRuleRequest extends Request {
         }
 
         /**
-         * The port range.
+         * The range of port numbers.
          */
         public Builder portRange(String portRange) {
             this.putQueryParameter("PortRange", portRange);

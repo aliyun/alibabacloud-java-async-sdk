@@ -146,7 +146,7 @@ public class CreateOrUpdateSwimmingLaneResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -154,7 +154,7 @@ public class CreateOrUpdateSwimmingLaneResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -162,7 +162,7 @@ public class CreateOrUpdateSwimmingLaneResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;

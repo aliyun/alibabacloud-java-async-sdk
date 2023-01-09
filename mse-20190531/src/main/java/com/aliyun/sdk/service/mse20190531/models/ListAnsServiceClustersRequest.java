@@ -185,8 +185,8 @@ public class ListAnsServiceClustersRequest extends Request {
          * The language of the response. Valid values:
          * <p>
          * 
-         * - zh: Chinese
-         * - en: English
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -195,7 +195,10 @@ public class ListAnsServiceClustersRequest extends Request {
         }
 
         /**
-         * The ID of the cluster.
+         * The ID of the MSE cluster.
+         * <p>
+         * 
+         * > The MSE cluster is different from the cluster of the Nacos service.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -213,7 +216,7 @@ public class ListAnsServiceClustersRequest extends Request {
         }
 
         /**
-         * The name of the contact group.
+         * The name of the group.
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);

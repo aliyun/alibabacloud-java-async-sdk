@@ -82,7 +82,11 @@ public class DeleteGatewayDomainRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -100,7 +104,7 @@ public class DeleteGatewayDomainRequest extends Request {
         }
 
         /**
-         * The ID of the domain name.
+         * The domain ID.
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);

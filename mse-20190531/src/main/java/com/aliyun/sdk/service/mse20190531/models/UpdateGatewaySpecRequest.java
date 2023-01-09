@@ -130,7 +130,7 @@ public class UpdateGatewaySpecRequest extends Request {
         }
 
         /**
-         * The node specifications.
+         * The node specifications of the gateway.
          */
         public Builder spec(String spec) {
             this.putQueryParameter("Spec", spec);

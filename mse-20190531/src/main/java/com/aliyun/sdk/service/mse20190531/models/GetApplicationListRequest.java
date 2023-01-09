@@ -29,6 +29,11 @@ public class GetApplicationListRequest extends Request {
     private String language;
 
     @Query
+    @NameInMap("Namespace")
+    @Validation(maxLength = 64)
+    private String namespace;
+
+    @Query
     @NameInMap("PageNumber")
     @Validation(required = true)
     private Integer pageNumber;
@@ -61,6 +66,7 @@ public class GetApplicationListRequest extends Request {
         this.appId = builder.appId;
         this.appName = builder.appName;
         this.language = builder.language;
+        this.namespace = builder.namespace;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.region = builder.region;
@@ -111,6 +117,13 @@ public class GetApplicationListRequest extends Request {
     }
 
     /**
+     * @return namespace
+     */
+    public String getNamespace() {
+        return this.namespace;
+    }
+
+    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -157,6 +170,7 @@ public class GetApplicationListRequest extends Request {
         private String appId; 
         private String appName; 
         private String language; 
+        private String namespace; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String region; 
@@ -174,6 +188,7 @@ public class GetApplicationListRequest extends Request {
             this.appId = request.appId;
             this.appName = request.appName;
             this.language = request.language;
+            this.namespace = request.namespace;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.region = request.region;
@@ -219,6 +234,15 @@ public class GetApplicationListRequest extends Request {
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
             this.language = language;
+            return this;
+        }
+
+        /**
+         * Namespace.
+         */
+        public Builder namespace(String namespace) {
+            this.putQueryParameter("Namespace", namespace);
+            this.namespace = namespace;
             return this;
         }
 

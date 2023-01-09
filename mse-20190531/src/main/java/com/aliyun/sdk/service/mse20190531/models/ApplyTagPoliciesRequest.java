@@ -144,8 +144,8 @@ public class ApplyTagPoliciesRequest extends Request {
          * The language of the response. Valid values:
          * <p>
          * 
-         * - zh: Chinese
-         * - en: English
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -181,7 +181,7 @@ public class ApplyTagPoliciesRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The region ID.
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -199,7 +199,7 @@ public class ApplyTagPoliciesRequest extends Request {
         }
 
         /**
-         * The source of the routing rule.
+         * The service source.
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);

@@ -106,7 +106,7 @@ public class GetImageResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request fails.
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -138,10 +138,11 @@ public class GetImageResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
+         * Indicates whether the request was successful. Valid values:
          * <p>
-         * - `true`: The request is successful. 
-         * - `false`: The request fails.
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -217,7 +218,7 @@ public class GetImageResponseBody extends TeaModel {
             private String maxVersionFullShowName; 
 
             /**
-             * The full name of the current cluster image version. The full name is in the X.X.X.X format.
+             * The full version number of the current instance image. The parameter is in the X.X.X.X format.
              */
             public Builder currentVersionFullShowName(String currentVersionFullShowName) {
                 this.currentVersionFullShowName = currentVersionFullShowName;
@@ -225,7 +226,7 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of change logs for the latest version that can be updated to.
+             * The URL of the changelog for the maximum version to which the current version can be upgraded.
              */
             public Builder maxVersionChangelogUrl(String maxVersionChangelogUrl) {
                 this.maxVersionChangelogUrl = maxVersionChangelogUrl;
@@ -233,7 +234,7 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the latest version that can be updated to.
+             * The code of the maximum version to which the current version can be upgraded.
              */
             public Builder maxVersionCode(String maxVersionCode) {
                 this.maxVersionCode = maxVersionCode;
@@ -241,7 +242,7 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * The full name of the latest version that can be updated to.
+             * The full number of the maximum version to which the current version can be upgraded.
              */
             public Builder maxVersionFullShowName(String maxVersionFullShowName) {
                 this.maxVersionFullShowName = maxVersionFullShowName;

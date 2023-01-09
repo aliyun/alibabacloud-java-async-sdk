@@ -94,7 +94,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request fails.
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -118,10 +118,11 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
+         * Indicates whether the request was successful. Valid values:
          * <p>
-         * - `true`: The request is successful. 
-         * - `false`: The request fails.
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -249,7 +250,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The type of health check.
+             * The type of health checks.
              */
             public Builder healthCheckerType(String healthCheckerType) {
                 this.healthCheckerType = healthCheckerType;
@@ -257,7 +258,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The metadata.
+             * The metadata of the cluster.
              */
             public Builder metadata(java.util.Map < String, ? > metadata) {
                 this.metadata = metadata;
@@ -273,7 +274,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the service.
+             * The complete name of the service.
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -281,7 +282,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the IP address is used for a health check.
+             * Indicates whether the health check is initiated by the server. This parameter is valid only when the service is a temporary service.
              */
             public Builder useIPPort4Check(Boolean useIPPort4Check) {
                 this.useIPPort4Check = useIPPort4Check;
@@ -394,7 +395,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             private String selectorType; 
 
             /**
-             * The information about clusters.
+             * The information about the clusters.
              */
             public Builder clusters(java.util.List < Clusters> clusters) {
                 this.clusters = clusters;
@@ -402,10 +403,11 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the service is marked as a temporary node. Valid values:
+             * Indicates whether the service is a temporary service. Valid values:
              * <p>
-             * - `true` 
-             * - `false`
+             * 
+             * *   `true`: The service is a temporary service.
+             * *   `false`: The service is not a temporary service.
              */
             public Builder ephemeral(Boolean ephemeral) {
                 this.ephemeral = ephemeral;
@@ -421,7 +423,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The metadata.
+             * The metadata of the service.
              */
             public Builder metadata(java.util.Map < String, ? > metadata) {
                 this.metadata = metadata;

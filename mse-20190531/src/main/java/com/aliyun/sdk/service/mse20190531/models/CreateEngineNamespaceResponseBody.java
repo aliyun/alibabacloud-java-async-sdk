@@ -98,7 +98,7 @@ public class CreateEngineNamespaceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The ID of the cluster.
+         * The ID of the instance.
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -114,7 +114,7 @@ public class CreateEngineNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;

@@ -108,7 +108,7 @@ public class QueryClusterSpecificationRequest extends Request {
         }
 
         /**
-         * The edition of the Microservices Engine (MSE) instance that you want to purchase.
+         * The edition of the MSE instance that you want to purchase.
          * <p>
          * 
          * *   mse_pro: Professional Edition

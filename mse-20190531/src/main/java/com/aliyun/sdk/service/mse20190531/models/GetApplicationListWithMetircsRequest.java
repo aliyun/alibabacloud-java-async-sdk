@@ -25,6 +25,10 @@ public class GetApplicationListWithMetircsRequest extends Request {
     private String appName;
 
     @Query
+    @NameInMap("Namespace")
+    private String namespace;
+
+    @Query
     @NameInMap("PageNumber")
     @Validation(required = true)
     private Integer pageNumber;
@@ -48,6 +52,7 @@ public class GetApplicationListWithMetircsRequest extends Request {
         this.acceptLanguage = builder.acceptLanguage;
         this.appId = builder.appId;
         this.appName = builder.appName;
+        this.namespace = builder.namespace;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.region = builder.region;
@@ -89,6 +94,13 @@ public class GetApplicationListWithMetircsRequest extends Request {
     }
 
     /**
+     * @return namespace
+     */
+    public String getNamespace() {
+        return this.namespace;
+    }
+
+    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -120,6 +132,7 @@ public class GetApplicationListWithMetircsRequest extends Request {
         private String acceptLanguage; 
         private String appId; 
         private String appName; 
+        private String namespace; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String region; 
@@ -134,6 +147,7 @@ public class GetApplicationListWithMetircsRequest extends Request {
             this.acceptLanguage = request.acceptLanguage;
             this.appId = request.appId;
             this.appName = request.appName;
+            this.namespace = request.namespace;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.region = request.region;
@@ -141,7 +155,11 @@ public class GetApplicationListWithMetircsRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -150,7 +168,7 @@ public class GetApplicationListWithMetircsRequest extends Request {
         }
 
         /**
-         * AppId.
+         * The ID of the application.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -159,7 +177,7 @@ public class GetApplicationListWithMetircsRequest extends Request {
         }
 
         /**
-         * AppName.
+         * The name of the application.
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -168,7 +186,16 @@ public class GetApplicationListWithMetircsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * Namespace.
+         */
+        public Builder namespace(String namespace) {
+            this.putQueryParameter("Namespace", namespace);
+            this.namespace = namespace;
+            return this;
+        }
+
+        /**
+         * The number of the page to return.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -177,7 +204,7 @@ public class GetApplicationListWithMetircsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -186,7 +213,14 @@ public class GetApplicationListWithMetircsRequest extends Request {
         }
 
         /**
-         * Region.
+         * The ID of the region where the instance resides. Examples:
+         * <p>
+         * 
+         * *   cn-hangzhou: China (Hangzhou)
+         * *   cn-beijing: China (Beijing)
+         * *   cn-shanghai: China (Shanghai)
+         * *   cn-zhangjiakou: China (Zhangjiakou)
+         * *   cn-shenzhen: China (Shenzhen)
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -195,7 +229,7 @@ public class GetApplicationListWithMetircsRequest extends Request {
         }
 
         /**
-         * Source.
+         * The service source. Valid values:
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);

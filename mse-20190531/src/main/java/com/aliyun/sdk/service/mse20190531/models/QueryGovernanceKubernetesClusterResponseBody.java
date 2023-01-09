@@ -106,7 +106,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * The response data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
         }
 
         /**
-         * HttpCode
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
         }
 
         /**
-         * Message
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -238,7 +238,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
             private String region; 
 
             /**
-             * The ID of the cluster.
+             * The ID of the instance.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -246,7 +246,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cluster.
+             * The name of the instance.
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -254,7 +254,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the cluster.
+             * The Kubernetes version of the instance.
              */
             public Builder k8sVersion(String k8sVersion) {
                 this.k8sVersion = k8sVersion;
@@ -270,7 +270,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the ack-one-pilot component was started.
+             * The time when the ack-onepilot component was started.
              */
             public Builder pilotStartTime(String pilotStartTime) {
                 this.pilotStartTime = pilotStartTime;
@@ -278,7 +278,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Region
+             * The region where the cluster resides.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -371,7 +371,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * The data structure.
              */
             public Builder result(java.util.List < Result> result) {
                 this.result = result;
@@ -379,7 +379,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The number of clusters.
+             * The total number of clusters.
              */
             public Builder totalSize(Integer totalSize) {
                 this.totalSize = totalSize;

@@ -229,7 +229,11 @@ public class AddGatewayDomainRequest extends Request {
         }
 
         /**
-         * The type of the protocol.
+         * The type of the protocol. Valid values:
+         * <p>
+         * 
+         * *   `HTTP`
+         * *   `HTTPS`
          */
         public Builder protocol(String protocol) {
             this.putQueryParameter("Protocol", protocol);

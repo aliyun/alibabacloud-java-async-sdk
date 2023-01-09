@@ -98,7 +98,7 @@ public class UpdateGatewayServiceVersionResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned.
+         * The response code returned.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class UpdateGatewayServiceVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the data.
+         * The data of the node.
          */
         public Builder data(Long data) {
             this.data = data;
@@ -138,10 +138,11 @@ public class UpdateGatewayServiceVersionResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
+         * Indicates whether the request was successful. Valid values:
          * <p>
-         * - `true`: The request is successful. 
-         * - `false`: The request fails.
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -106,7 +106,7 @@ public class GetAppMessageQueueRouteRequest extends Request {
         }
 
         /**
-         * The region where the cluster resides. Examples:
+         * The region where the instance resides. Examples:
          * <p>
          * 
          * *   `cn-hangzhou`: China (Hangzhou)

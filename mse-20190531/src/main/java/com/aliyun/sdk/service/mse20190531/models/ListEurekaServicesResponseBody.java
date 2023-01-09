@@ -142,7 +142,7 @@ public class ListEurekaServicesResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request fails.
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -190,10 +190,11 @@ public class ListEurekaServicesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
+         * Indicates whether the request was successful. Valid values:
          * <p>
-         * - `true`: The request is successful. 
-         * - `false`: The request fails.
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -201,7 +202,7 @@ public class ListEurekaServicesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * The total number of returned instances.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -265,7 +266,7 @@ public class ListEurekaServicesResponseBody extends TeaModel {
             private String upStatus; 
 
             /**
-             * The information about instances.
+             * The details of the instance.
              */
             public Builder instancesId(java.util.List < String > instancesId) {
                 this.instancesId = instancesId;

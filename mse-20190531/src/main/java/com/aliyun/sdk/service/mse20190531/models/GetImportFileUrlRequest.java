@@ -100,8 +100,8 @@ public class GetImportFileUrlRequest extends Request {
          * The language of the response. Valid values:
          * <p>
          * 
-         * - zh: Chinese
-         * - en: English
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -110,7 +110,7 @@ public class GetImportFileUrlRequest extends Request {
         }
 
         /**
-         * The type of the configuration file.
+         * The type of the file.
          */
         public Builder contentType(String contentType) {
             this.putQueryParameter("ContentType", contentType);

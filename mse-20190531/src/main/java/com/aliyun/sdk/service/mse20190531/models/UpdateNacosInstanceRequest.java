@@ -309,7 +309,7 @@ public class UpdateNacosInstanceRequest extends Request {
         }
 
         /**
-         * The port of the Nacos instance.
+         * The port number of the Nacos instance.
          */
         public Builder port(Integer port) {
             this.putQueryParameter("Port", port);

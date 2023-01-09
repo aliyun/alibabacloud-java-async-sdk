@@ -137,7 +137,7 @@ public class QueryConfigRequest extends Request {
         }
 
         /**
-         * The ID of the cluster.
+         * The ID of the instance.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -173,7 +173,7 @@ public class QueryConfigRequest extends Request {
         }
 
         /**
-         * The extended request parameter in the JSON format.
+         * The extended request parameters in the JSON format.
          */
         public Builder requestPars(String requestPars) {
             this.putQueryParameter("RequestPars", requestPars);

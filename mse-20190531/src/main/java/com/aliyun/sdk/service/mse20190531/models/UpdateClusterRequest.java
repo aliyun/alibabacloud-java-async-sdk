@@ -109,7 +109,7 @@ public class UpdateClusterRequest extends Request {
         }
 
         /**
-         * The alias of the cluster.
+         * The alias of the instance.
          */
         public Builder clusterAliasName(String clusterAliasName) {
             this.putQueryParameter("ClusterAliasName", clusterAliasName);
@@ -127,7 +127,7 @@ public class UpdateClusterRequest extends Request {
         }
 
         /**
-         * The extended request parameter in the JSON format.
+         * The extended request parameters in the JSON format.
          */
         public Builder requestPars(String requestPars) {
             this.putQueryParameter("RequestPars", requestPars);

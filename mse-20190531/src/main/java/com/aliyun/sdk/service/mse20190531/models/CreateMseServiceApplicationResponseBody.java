@@ -370,7 +370,7 @@ public class CreateMseServiceApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the service source.
+             * The source type.
              */
             public Builder source(String source) {
                 this.source = source;
@@ -386,7 +386,7 @@ public class CreateMseServiceApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The time of the last modification.
+             * The last modification time.
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

@@ -130,7 +130,7 @@ public class DeleteSecurityGroupRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,10 +138,11 @@ public class DeleteSecurityGroupRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
+         * Indicates whether the request was successful. Valid values:
          * <p>
-         * - `true`: The request is successful. 
-         * - `false`: The request fails.
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -301,7 +302,7 @@ public class DeleteSecurityGroupRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the security group rule was created.
+             * The creation time.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -309,7 +310,7 @@ public class DeleteSecurityGroupRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the security group rule was last modified.
+             * The modification time.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -317,7 +318,7 @@ public class DeleteSecurityGroupRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ID.
+             * The ID.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -325,14 +326,14 @@ public class DeleteSecurityGroupRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The transport layer protocol. The value of this parameter is case-insensitive. Valid values: 
+             * The transport layer protocol. The value of this parameter is case-insensitive. Valid values:
              * <p>
-             *          
-             * - icmp
-             * - gre
-             * - tcp
-             * - udp
-             * - all: All protocols are supported.
+             * 
+             * *   icmp
+             * *   gre
+             * *   tcp
+             * *   udp
+             * *   all: All protocols are supported.
              */
             public Builder ipProtocol(String ipProtocol) {
                 this.ipProtocol = ipProtocol;
@@ -340,13 +341,13 @@ public class DeleteSecurityGroupRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The range of destination ports that correspond to the transport layer protocol. Valid values: 
+             * The range of ports for the transport layer protocol in the destination security group. Valid values:
              * <p>
-             *          
-             * - When the value of the IpProtocol parameter is tcp or udp, the port number range is 1 to 65535. The start port number and the end port number are separated by a forward slash (/). Example: 1/200.
-             * - When the value of the IpProtocol parameter is icmp, the port number range is -1/-1, which indicates all ports.
-             * - When the value of the IpProtocol parameter is gre, the port number range is -1/-1, which indicates all ports.
-             * - When the value of the IpProtocol parameter is all, the port number range is -1/-1, which indicates all ports.
+             * 
+             * *   When the IpProtocol parameter is set to tcp or udp, the port number range is 1 to 65535. The start port number and the end port number are separated by a forward slash (/). Example: 1/200.
+             * *   If the IpProtocol parameter is set to icmp, the port number range is -1/-1, which indicates all ports.
+             * *   If the IpProtocol parameter is set to gre, the port number range is -1/-1, which indicates all ports.
+             * *   If the IpProtocol parameter is set to all, the port number range is -1/-1, which indicates all ports.
              */
             public Builder portRange(String portRange) {
                 this.portRange = portRange;

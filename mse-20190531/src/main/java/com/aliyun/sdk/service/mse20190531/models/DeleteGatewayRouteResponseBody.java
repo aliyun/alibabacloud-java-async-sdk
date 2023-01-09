@@ -122,7 +122,7 @@ public class DeleteGatewayRouteResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,10 +138,11 @@ public class DeleteGatewayRouteResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
+         * Indicates whether the request was successful. Valid values:
          * <p>
-         * - `true`: The request is successful. 
-         * - `false`: The request fails.
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -289,7 +290,7 @@ public class DeleteGatewayRouteResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * The ID of the default service.
+             * The default service ID.
              */
             public Builder defaultServiceId(Long defaultServiceId) {
                 this.defaultServiceId = defaultServiceId;
@@ -313,7 +314,7 @@ public class DeleteGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the route was created.
+             * The creation time.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -321,7 +322,7 @@ public class DeleteGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the route was last modified.
+             * The modification time.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -329,7 +330,7 @@ public class DeleteGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * ID.
+             * The ID.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -337,7 +338,7 @@ public class DeleteGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the route.
+             * The name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -345,7 +346,7 @@ public class DeleteGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The matching rules of the route.
+             * The matching rules.
              */
             public Builder predicates(String predicates) {
                 this.predicates = predicates;
@@ -361,7 +362,7 @@ public class DeleteGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the route.
+             * The status.
              */
             public Builder status(Integer status) {
                 this.status = status;

@@ -99,8 +99,8 @@ public class GetEngineNamepaceRequest extends Request {
          * The language of the response. Valid values:
          * <p>
          * 
-         * - zh: Chinese
-         * - en: English
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -118,7 +118,7 @@ public class GetEngineNamepaceRequest extends Request {
         }
 
         /**
-         * The ID of the namespace.
+         * The destination ID.
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);

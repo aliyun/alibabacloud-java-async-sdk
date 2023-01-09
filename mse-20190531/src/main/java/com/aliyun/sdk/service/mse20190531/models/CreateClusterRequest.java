@@ -420,7 +420,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The name of the instance.
+         * The name of the MSE instance.
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -508,7 +508,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The extended request parameter in the JSON format.
+         * The extended request parameters in the JSON format.
          */
         public Builder requestPars(String requestPars) {
             this.putQueryParameter("RequestPars", requestPars);
@@ -544,7 +544,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * VPC ID.
+         * The ID of the virtual private cloud (VPC).
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

@@ -142,7 +142,7 @@ public class ListEurekaInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request fails.
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -190,10 +190,11 @@ public class ListEurekaInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
+         * Indicates whether the request was successful. Valid values:
          * <p>
-         * - `true`: The request is successful. 
-         * - `false`: The request fails.
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -201,7 +202,7 @@ public class ListEurekaInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * The total number of returned instances.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -405,9 +406,9 @@ public class ListEurekaInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The timeout period of the instance.   
+             * The timeout period of the instance.\
              * <p>
-             * After the specified timeout period expires, the service is unavailable by default and therefore is deleted.
+             * After the specified timeout period expires, the service is unavailable by default and is deleted.
              */
             public Builder durationInSecs(Integer durationInSecs) {
                 this.durationInSecs = durationInSecs;
@@ -439,7 +440,7 @@ public class ListEurekaInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the instance.
+             * The IP address.
              */
             public Builder ipAddr(String ipAddr) {
                 this.ipAddr = ipAddr;
@@ -471,7 +472,7 @@ public class ListEurekaInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The port of the service.
+             * The service port number.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -479,7 +480,7 @@ public class ListEurekaInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum interval between two heartbeat checks after a heartbeat check times out.   
+             * The maximum interval between two heartbeat checks after a heartbeat check times out.\
              * <p>
              * Default value: 10.
              */
@@ -505,7 +506,7 @@ public class ListEurekaInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The virtual hostname.
+             * The virtual IP address (VIP).
              */
             public Builder vipAddress(String vipAddress) {
                 this.vipAddress = vipAddress;

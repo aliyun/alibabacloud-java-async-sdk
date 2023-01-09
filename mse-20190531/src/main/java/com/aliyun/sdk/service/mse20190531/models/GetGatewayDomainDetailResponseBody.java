@@ -531,7 +531,7 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ID.
+             * The ID.
              */
             public Builder id(Long id) {
                 this.id = id;

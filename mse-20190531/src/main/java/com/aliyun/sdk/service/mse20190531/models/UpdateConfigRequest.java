@@ -402,7 +402,7 @@ public class UpdateConfigRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable RAM authentication for a configuration center. This parameter is valid for Nacos instances. Valid values:
+         * Specifies whether to enable RAM authorization for a configuration center. This parameter is valid for Nacos instances. Valid values:
          * <p>
          * 
          * *   `true`: yes
@@ -441,7 +441,7 @@ public class UpdateConfigRequest extends Request {
         }
 
         /**
-         * ExtendedTypesEnable.
+         * zookeeper参数，是否开启TTL配置。
          */
         public Builder extendedTypesEnable(String extendedTypesEnable) {
             this.putQueryParameter("ExtendedTypesEnable", extendedTypesEnable);
@@ -521,7 +521,7 @@ public class UpdateConfigRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable RAM authentication for a registry. This parameter is valid for Nacos instances. Valid values:
+         * Specifies whether to enable RAM authorization for a registry. This parameter is valid for Nacos instances. Valid values:
          * <p>
          * 
          * *   `true`: yes
@@ -561,7 +561,7 @@ public class UpdateConfigRequest extends Request {
         }
 
         /**
-         * The extended request parameter in the JSON format.
+         * The extended request parameters in the JSON format.
          */
         public Builder requestPars(String requestPars) {
             this.putQueryParameter("RequestPars", requestPars);
@@ -597,7 +597,7 @@ public class UpdateConfigRequest extends Request {
         }
 
         /**
-         * The name of the user.
+         * The username.
          * <p>
          * 
          * > You must specify this parameter if OpenSuperAcl is set to true.

@@ -113,8 +113,8 @@ public class UpdateGatewayRouteRetryRequest extends Request {
          * The language of the response. Valid values:
          * <p>
          * 
-         * - zh: Chinese
-         * - en: English
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -141,7 +141,7 @@ public class UpdateGatewayRouteRetryRequest extends Request {
         }
 
         /**
-         * The ID of the route.
+         * The ID of the associated record.
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -229,7 +229,7 @@ public class UpdateGatewayRouteRetryRequest extends Request {
             private String status; 
 
             /**
-             * The number of retries allowed.
+             * The number of retries.
              */
             public Builder attempts(Integer attempts) {
                 this.attempts = attempts;
@@ -237,7 +237,7 @@ public class UpdateGatewayRouteRetryRequest extends Request {
             }
 
             /**
-             * The HTTP status codes returned.
+             * The HTTP status codes.
              */
             public Builder httpCodes(java.util.List < String > httpCodes) {
                 this.httpCodes = httpCodes;

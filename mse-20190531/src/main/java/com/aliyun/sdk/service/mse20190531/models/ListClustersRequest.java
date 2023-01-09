@@ -204,7 +204,7 @@ public class ListClustersRequest extends Request {
         }
 
         /**
-         * The extended request parameter in the JSON format.
+         * The extended request parameters in the JSON format.
          */
         public Builder requestPars(String requestPars) {
             this.putQueryParameter("RequestPars", requestPars);
@@ -213,7 +213,7 @@ public class ListClustersRequest extends Request {
         }
 
         /**
-         * The ID of the resource group. For more information about resource groups, see the topic "View basic information of a resource group."
+         * The ID of the resource group to which the instance belongs. For more information about resource groups, see the topic "View basic information of a resource group."
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -276,7 +276,7 @@ public class ListClustersRequest extends Request {
             private String value; 
 
             /**
-             * The key of a tag.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -284,7 +284,7 @@ public class ListClustersRequest extends Request {
             }
 
             /**
-             * The value of a tag.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;

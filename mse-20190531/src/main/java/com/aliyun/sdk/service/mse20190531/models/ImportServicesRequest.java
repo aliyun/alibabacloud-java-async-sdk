@@ -110,7 +110,11 @@ public class ImportServicesRequest extends Request {
         } 
 
         /**
-         * The data structure.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -138,7 +142,13 @@ public class ImportServicesRequest extends Request {
         }
 
         /**
-         * The source type of the service.
+         * The service source. Valid values:
+         * <p>
+         * 
+         * *   MSE: MSE Nacos instance
+         * *   K8s: ACK cluster
+         * *   VIP: fixed address
+         * *   DNS: DNS domain
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);
@@ -147,7 +157,14 @@ public class ImportServicesRequest extends Request {
         }
 
         /**
-         * TlsSetting.
+         * The Transport Layer Security (TLS) settings. Valid values:
+         * <p>
+         * 
+         * *   mode: TLS mode
+         * *   certId: certificate ID
+         * *   caCertId: CA certificate ID
+         * *   caCertContent: CA certificate public key
+         * *   sni: service name identification
          */
         public Builder tlsSetting(String tlsSetting) {
             this.putQueryParameter("TlsSetting", tlsSetting);
@@ -249,7 +266,7 @@ public class ImportServicesRequest extends Request {
             private String serviceProtocol; 
 
             /**
-             * The name of the group.
+             * The group.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -273,7 +290,7 @@ public class ImportServicesRequest extends Request {
             }
 
             /**
-             * The name of the namespace.
+             * The namespace.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;

@@ -106,7 +106,7 @@ public class ListGatewayDomainResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the data.
+         * The data of the node.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -122,7 +122,7 @@ public class ListGatewayDomainResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request fails.
+         * The error message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,10 +138,11 @@ public class ListGatewayDomainResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
+         * Indicates whether the request was successful. Valid values:
          * <p>
-         * - `true`: The request is successful. 
-         * - `false`: The request fails.
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -181,7 +182,7 @@ public class ListGatewayDomainResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * Status.
+             * The status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -390,7 +391,7 @@ public class ListGatewayDomainResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The expiration time of the certificate.
+             * The expiration time.
              */
             public Builder certBeforeDate(String certBeforeDate) {
                 this.certBeforeDate = certBeforeDate;
@@ -406,7 +407,7 @@ public class ListGatewayDomainResponseBody extends TeaModel {
             }
 
             /**
-             * Comment.
+             * The route comment (ingress).
              */
             public Builder comment(Comment comment) {
                 this.comment = comment;
@@ -422,7 +423,7 @@ public class ListGatewayDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the domain name was associated.
+             * The creation time.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -430,7 +431,7 @@ public class ListGatewayDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the domain name was last modified.
+             * The update time.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -438,11 +439,12 @@ public class ListGatewayDomainResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether to enable `Http2`.
+             * Indicates whether `HTTP/2` is enabled.
              * <p>
-             * - `open`: enables `Http2`.
-             * - `close`: disables `Http2`.
-             * - `globalConfig`: uses global configurations.
+             * 
+             * *   `open`: `HTTP/2` is enabled.
+             * *   `close`: `HTTP/2` is disabled.
+             * *   `globalConfig`: Global configurations are used.
              */
             public Builder http2(String http2) {
                 this.http2 = http2;
@@ -458,7 +460,7 @@ public class ListGatewayDomainResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether HTTPS is forcibly used.
+             * Indicates whether HTTPS is forcefully used.
              */
             public Builder mustHttps(Boolean mustHttps) {
                 this.mustHttps = mustHttps;
@@ -474,7 +476,7 @@ public class ListGatewayDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the protocol.
+             * The protocol.
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -482,7 +484,15 @@ public class ListGatewayDomainResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the domain name. Valid values:
+             * <p>
+             * 
+             * *   0: unpublish
+             * *   2: publishing
+             * *   3: published
+             * *   4: editing
+             * *   5: unpublishing
+             * *   6: unavailable
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -506,7 +516,7 @@ public class ListGatewayDomainResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type.
              */
             public Builder type(String type) {
                 this.type = type;

@@ -110,7 +110,11 @@ public class RestartClusterRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -137,9 +141,8 @@ public class RestartClusterRequest extends Request {
         }
 
         /**
-         * The name of the pod. You can specify the names of multiple pods at a time. Separate multiple pod names with commas (,).
+         * The names of pods. You can specify the names of multiple pods at a time. Separate multiple pod names with commas (,). Example: mse-a8aba010-1629719288255-reg-center-0-1,mse-a8aba010-1629719288255-reg-center-0-2.
          * <p>
-         * Example: mse-a8aba010-1629719288255-reg-center-0-1,mse-a8aba010-1629719288255-reg-center-0-2.
          * 
          * The specified pods must belong to the current cluster and be associated with the specified instance. Otherwise, a restart exception occurs.
          */

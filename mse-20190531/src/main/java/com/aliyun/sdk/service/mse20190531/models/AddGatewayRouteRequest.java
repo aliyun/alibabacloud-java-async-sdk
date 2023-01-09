@@ -282,7 +282,7 @@ public class AddGatewayRouteRequest extends Request {
         }
 
         /**
-         * The ID of the domain name.
+         * The domain ID.
          */
         public Builder domainId(Long domainId) {
             this.putQueryParameter("DomainId", domainId);
@@ -300,7 +300,7 @@ public class AddGatewayRouteRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable Web Application Firewall (WAF).
+         * Specifies whether to activate Web Application Firewall (WAF).
          */
         public Builder enableWaf(Boolean enableWaf) {
             this.putQueryParameter("EnableWaf", enableWaf);
@@ -318,7 +318,7 @@ public class AddGatewayRouteRequest extends Request {
         }
 
         /**
-         * The information of the Fallback service.
+         * The information about the Fallback service.
          */
         public Builder fallbackServices(java.util.List < FallbackServices> fallbackServices) {
             String fallbackServicesShrink = shrink(fallbackServices, "FallbackServices", "json");
@@ -600,7 +600,7 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * The name.
+             * The name of the application.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -632,7 +632,7 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * The service port.
+             * The service port number.
              */
             public Builder servicePort(Integer servicePort) {
                 this.servicePort = servicePort;
@@ -1062,7 +1062,7 @@ public class AddGatewayRouteRequest extends Request {
             private String path; 
 
             /**
-             * The return code.
+             * The status code returned.
              */
             public Builder code(Integer code) {
                 this.code = code;
@@ -1637,7 +1637,7 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * The service port.
+             * The service port number.
              */
             public Builder servicePort(Integer servicePort) {
                 this.servicePort = servicePort;

@@ -112,9 +112,10 @@ public class UpdateGatewayRouteCORSRequest extends Request {
         /**
          * The language of the response. In compliance with [RFC 7231](https://tools.ietf.org/html/rfc7231), the backend service must return a response based on the language used by the user.
          * <p>
-         * This parameter is empty by default. Valid values:
-         * * zh-CN: Chinese
-         * * en-US: English
+         * 
+         * *   No default value
+         * *   zh-CN: Chinese
+         * *   en-US: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -151,7 +152,7 @@ public class UpdateGatewayRouteCORSRequest extends Request {
         }
 
         /**
-         * The ID of the route.
+         * The ID of the associated record.
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);

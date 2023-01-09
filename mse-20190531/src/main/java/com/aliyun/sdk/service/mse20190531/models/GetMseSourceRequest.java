@@ -82,7 +82,11 @@ public class GetMseSourceRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -100,7 +104,11 @@ public class GetMseSourceRequest extends Request {
         }
 
         /**
-         * Type.
+         * The MSE engine type. Valid values:
+         * <p>
+         * 
+         * *   NACOS
+         * *   ZOOKEEPER
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

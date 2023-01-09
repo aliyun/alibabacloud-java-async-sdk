@@ -98,7 +98,7 @@ public class QueryGatewayRegionResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The request is processed successfully.
+         * The status code returned.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,10 +106,7 @@ public class QueryGatewayRegionResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
-         * - `true`: The request is successful. 
-         * - `false`: The request fails.
+         * The returned data.
          */
         public Builder data(java.util.List < String > data) {
             this.data = data;
@@ -117,7 +114,7 @@ public class QueryGatewayRegionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -125,7 +122,7 @@ public class QueryGatewayRegionResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -133,7 +130,7 @@ public class QueryGatewayRegionResponseBody extends TeaModel {
         }
 
         /**
-         * The data structure.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +138,11 @@ public class QueryGatewayRegionResponseBody extends TeaModel {
         }
 
         /**
-         * The status code returned.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;

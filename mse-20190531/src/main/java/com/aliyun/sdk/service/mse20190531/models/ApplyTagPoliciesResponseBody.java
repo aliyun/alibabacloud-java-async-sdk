@@ -106,7 +106,7 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * The details of the data.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -286,7 +286,7 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
             private String tag; 
 
             /**
-             * Indicates whether pass-through is enabled.
+             * Indicates whether the field is the primary key.
              */
             public Builder carryData(Boolean carryData) {
                 this.carryData = carryData;
@@ -294,11 +294,11 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the routing rule is enabled. 
+             * Indicates whether the routing rule is enabled.
              * <p>
              * 
-             * - `true`: enabled 
-             * - `false`: disabled
+             * *   `true`: enabled
+             * *   `false`: disabled
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -322,7 +322,7 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the routing rule.
+             * The policy name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -354,7 +354,7 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the routing rule.
+             * The status.
              */
             public Builder status(Integer status) {
                 this.status = status;

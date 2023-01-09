@@ -118,7 +118,7 @@ public class AddSSLCertRequest extends Request {
         }
 
         /**
-         * The ID of the domain name.
+         * The domain ID.
          */
         public Builder domainId(Long domainId) {
             this.putQueryParameter("DomainId", domainId);

@@ -142,7 +142,7 @@ public class ListAnsInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -150,7 +150,7 @@ public class ListAnsInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * The HTTP status code returned.
          */
         public Builder httpCode(String httpCode) {
             this.httpCode = httpCode;
@@ -514,7 +514,7 @@ public class ListAnsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the service is marked as a temporary node. Valid values:
+             * Indicates whether the information about the temporary node is obtained. Valid values:
              * <p>
              * 
              * *   `true`: yes
@@ -586,7 +586,7 @@ public class ListAnsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance heartbeat was last checked.
+             * The last heartbeat time.
              */
             public Builder lastBeat(Long lastBeat) {
                 this.lastBeat = lastBeat;

@@ -122,7 +122,7 @@ public class ListClusterVersionsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned.
+         * The response code returned.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -146,7 +146,7 @@ public class ListClusterVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request fails.
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -178,10 +178,11 @@ public class ListClusterVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
+         * Indicates whether the request was successful. Valid values:
          * <p>
-         * - `true`: The request is successful. 
-         * - `false`: The request fails.
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -245,7 +246,7 @@ public class ListClusterVersionsResponseBody extends TeaModel {
             private String showName; 
 
             /**
-             * The type of the cluster.
+             * The type of the instance.
              */
             public Builder clusterType(String clusterType) {
                 this.clusterType = clusterType;
@@ -253,7 +254,7 @@ public class ListClusterVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the cluster type.
+             * The code of the instance type.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -261,7 +262,7 @@ public class ListClusterVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the cluster type.
+             * The type of the instance.
              */
             public Builder showName(String showName) {
                 this.showName = showName;

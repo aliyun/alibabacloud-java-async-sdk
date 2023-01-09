@@ -98,7 +98,7 @@ public class QuerySlbSpecResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned.
+         * The return value.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class QuerySlbSpecResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * The data entries returned.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -138,10 +138,11 @@ public class QuerySlbSpecResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
+         * Indicates whether the request was successful. Valid values:
          * <p>
-         * - `true`: The request is successful. 
-         * - `false`: The request fails.
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -257,7 +258,7 @@ public class QuerySlbSpecResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance type.
+             * The name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -273,7 +274,7 @@ public class QuerySlbSpecResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum queries per second (QPS).
+             * The number of queries per second (QPS).
              */
             public Builder qps(String qps) {
                 this.qps = qps;
@@ -281,7 +282,7 @@ public class QuerySlbSpecResponseBody extends TeaModel {
             }
 
             /**
-             * The instance type of the SLB instance.
+             * The specifications.
              */
             public Builder spec(String spec) {
                 this.spec = spec;

@@ -122,7 +122,7 @@ public class AddGatewayDomainResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;

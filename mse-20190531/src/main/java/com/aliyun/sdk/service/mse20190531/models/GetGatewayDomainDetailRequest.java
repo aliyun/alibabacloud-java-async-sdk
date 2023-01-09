@@ -104,7 +104,7 @@ public class GetGatewayDomainDetailRequest extends Request {
         }
 
         /**
-         * The ID of the domain name.
+         * The domain ID.
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);

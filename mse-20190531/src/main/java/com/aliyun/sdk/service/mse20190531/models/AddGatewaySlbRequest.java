@@ -226,7 +226,7 @@ public class AddGatewaySlbRequest extends Request {
         }
 
         /**
-         * SLB ID.
+         * The ID of the SLB instance.
          */
         public Builder slbId(String slbId) {
             this.putQueryParameter("SlbId", slbId);
