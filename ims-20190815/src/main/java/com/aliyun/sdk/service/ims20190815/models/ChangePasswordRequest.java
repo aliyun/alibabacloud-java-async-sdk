@@ -63,10 +63,10 @@ public class ChangePasswordRequest extends Request {
             super();
         } 
 
-        private Builder(ChangePasswordRequest response) {
-            super(response);
-            this.newPassword = response.newPassword;
-            this.oldPassword = response.oldPassword;
+        private Builder(ChangePasswordRequest request) {
+            super(request);
+            this.newPassword = request.newPassword;
+            this.oldPassword = request.oldPassword;
         } 
 
         /**

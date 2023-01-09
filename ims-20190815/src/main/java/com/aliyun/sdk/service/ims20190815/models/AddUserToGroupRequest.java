@@ -62,10 +62,10 @@ public class AddUserToGroupRequest extends Request {
             super();
         } 
 
-        private Builder(AddUserToGroupRequest response) {
-            super(response);
-            this.groupName = response.groupName;
-            this.userPrincipalName = response.userPrincipalName;
+        private Builder(AddUserToGroupRequest request) {
+            super(request);
+            this.groupName = request.groupName;
+            this.userPrincipalName = request.userPrincipalName;
         } 
 
         /**

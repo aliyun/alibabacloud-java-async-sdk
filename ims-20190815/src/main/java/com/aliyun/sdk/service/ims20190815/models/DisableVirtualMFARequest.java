@@ -49,9 +49,9 @@ public class DisableVirtualMFARequest extends Request {
             super();
         } 
 
-        private Builder(DisableVirtualMFARequest response) {
-            super(response);
-            this.userPrincipalName = response.userPrincipalName;
+        private Builder(DisableVirtualMFARequest request) {
+            super(request);
+            this.userPrincipalName = request.userPrincipalName;
         } 
 
         /**

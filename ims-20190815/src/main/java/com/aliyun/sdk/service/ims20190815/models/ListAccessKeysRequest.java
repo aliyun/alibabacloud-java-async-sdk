@@ -48,9 +48,9 @@ public class ListAccessKeysRequest extends Request {
             super();
         } 
 
-        private Builder(ListAccessKeysRequest response) {
-            super(response);
-            this.userPrincipalName = response.userPrincipalName;
+        private Builder(ListAccessKeysRequest request) {
+            super(request);
+            this.userPrincipalName = request.userPrincipalName;
         } 
 
         /**

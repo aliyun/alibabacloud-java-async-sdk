@@ -49,9 +49,9 @@ public class CreateAppSecretRequest extends Request {
             super();
         } 
 
-        private Builder(CreateAppSecretRequest response) {
-            super(response);
-            this.appId = response.appId;
+        private Builder(CreateAppSecretRequest request) {
+            super(request);
+            this.appId = request.appId;
         } 
 
         /**

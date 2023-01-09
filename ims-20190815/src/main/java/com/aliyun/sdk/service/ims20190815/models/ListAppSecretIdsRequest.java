@@ -49,9 +49,9 @@ public class ListAppSecretIdsRequest extends Request {
             super();
         } 
 
-        private Builder(ListAppSecretIdsRequest response) {
-            super(response);
-            this.appId = response.appId;
+        private Builder(ListAppSecretIdsRequest request) {
+            super(request);
+            this.appId = request.appId;
         } 
 
         /**

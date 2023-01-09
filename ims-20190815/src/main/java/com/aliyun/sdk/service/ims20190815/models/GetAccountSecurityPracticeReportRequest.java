@@ -35,8 +35,8 @@ public class GetAccountSecurityPracticeReportRequest extends Request {
             super();
         } 
 
-        private Builder(GetAccountSecurityPracticeReportRequest response) {
-            super(response);
+        private Builder(GetAccountSecurityPracticeReportRequest request) {
+            super(request);
         } 
 
         @Override

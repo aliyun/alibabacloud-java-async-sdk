@@ -61,10 +61,10 @@ public class ListGroupsRequest extends Request {
             super();
         } 
 
-        private Builder(ListGroupsRequest response) {
-            super(response);
-            this.marker = response.marker;
-            this.maxItems = response.maxItems;
+        private Builder(ListGroupsRequest request) {
+            super(request);
+            this.marker = request.marker;
+            this.maxItems = request.maxItems;
         } 
 
         /**

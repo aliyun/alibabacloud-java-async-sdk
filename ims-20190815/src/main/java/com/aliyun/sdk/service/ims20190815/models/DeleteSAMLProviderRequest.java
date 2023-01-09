@@ -49,9 +49,9 @@ public class DeleteSAMLProviderRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteSAMLProviderRequest response) {
-            super(response);
-            this.SAMLProviderName = response.SAMLProviderName;
+        private Builder(DeleteSAMLProviderRequest request) {
+            super(request);
+            this.SAMLProviderName = request.SAMLProviderName;
         } 
 
         /**

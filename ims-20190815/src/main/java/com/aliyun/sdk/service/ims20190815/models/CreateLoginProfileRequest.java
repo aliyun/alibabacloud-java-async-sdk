@@ -101,13 +101,13 @@ public class CreateLoginProfileRequest extends Request {
             super();
         } 
 
-        private Builder(CreateLoginProfileRequest response) {
-            super(response);
-            this.MFABindRequired = response.MFABindRequired;
-            this.password = response.password;
-            this.passwordResetRequired = response.passwordResetRequired;
-            this.status = response.status;
-            this.userPrincipalName = response.userPrincipalName;
+        private Builder(CreateLoginProfileRequest request) {
+            super(request);
+            this.MFABindRequired = request.MFABindRequired;
+            this.password = request.password;
+            this.passwordResetRequired = request.passwordResetRequired;
+            this.status = request.status;
+            this.userPrincipalName = request.userPrincipalName;
         } 
 
         /**

@@ -49,9 +49,9 @@ public class GetSAMLProviderRequest extends Request {
             super();
         } 
 
-        private Builder(GetSAMLProviderRequest response) {
-            super(response);
-            this.SAMLProviderName = response.SAMLProviderName;
+        private Builder(GetSAMLProviderRequest request) {
+            super(request);
+            this.SAMLProviderName = request.SAMLProviderName;
         } 
 
         /**

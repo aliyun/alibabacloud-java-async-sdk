@@ -118,6 +118,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListSAMLProvidersResponse> listSAMLProviders(ListSAMLProvidersRequest request);
 
+    CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
+
     CompletableFuture<ListUserBasicInfosResponse> listUserBasicInfos(ListUserBasicInfosRequest request);
 
     CompletableFuture<ListUsersResponse> listUsers(ListUsersRequest request);
@@ -140,7 +142,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<SetUserSsoSettingsResponse> setUserSsoSettings(SetUserSsoSettingsRequest request);
 
+    CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
+
     CompletableFuture<UnbindMFADeviceResponse> unbindMFADevice(UnbindMFADeviceRequest request);
+
+    CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);
 
     CompletableFuture<UpdateAccessKeyResponse> updateAccessKey(UpdateAccessKeyRequest request);
 

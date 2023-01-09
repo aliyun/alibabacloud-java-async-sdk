@@ -74,11 +74,11 @@ public class GetUserRequest extends Request {
             super();
         } 
 
-        private Builder(GetUserRequest response) {
-            super(response);
-            this.userAccessKeyId = response.userAccessKeyId;
-            this.userId = response.userId;
-            this.userPrincipalName = response.userPrincipalName;
+        private Builder(GetUserRequest request) {
+            super(request);
+            this.userAccessKeyId = request.userAccessKeyId;
+            this.userId = request.userId;
+            this.userPrincipalName = request.userPrincipalName;
         } 
 
         /**

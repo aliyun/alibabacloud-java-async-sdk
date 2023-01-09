@@ -75,11 +75,11 @@ public class UpdateSAMLProviderRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateSAMLProviderRequest response) {
-            super(response);
-            this.newDescription = response.newDescription;
-            this.newEncodedSAMLMetadataDocument = response.newEncodedSAMLMetadataDocument;
-            this.SAMLProviderName = response.SAMLProviderName;
+        private Builder(UpdateSAMLProviderRequest request) {
+            super(request);
+            this.newDescription = request.newDescription;
+            this.newEncodedSAMLMetadataDocument = request.newEncodedSAMLMetadataDocument;
+            this.SAMLProviderName = request.SAMLProviderName;
         } 
 
         /**

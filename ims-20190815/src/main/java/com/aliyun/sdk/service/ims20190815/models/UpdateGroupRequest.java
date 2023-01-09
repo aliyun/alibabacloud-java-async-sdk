@@ -87,12 +87,12 @@ public class UpdateGroupRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateGroupRequest response) {
-            super(response);
-            this.groupName = response.groupName;
-            this.newComments = response.newComments;
-            this.newDisplayName = response.newDisplayName;
-            this.newGroupName = response.newGroupName;
+        private Builder(UpdateGroupRequest request) {
+            super(request);
+            this.groupName = request.groupName;
+            this.newComments = request.newComments;
+            this.newDisplayName = request.newDisplayName;
+            this.newGroupName = request.newGroupName;
         } 
 
         /**

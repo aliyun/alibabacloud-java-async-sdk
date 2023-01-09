@@ -63,10 +63,10 @@ public class DeleteAppSecretRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteAppSecretRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.appSecretId = response.appSecretId;
+        private Builder(DeleteAppSecretRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.appSecretId = request.appSecretId;
         } 
 
         /**

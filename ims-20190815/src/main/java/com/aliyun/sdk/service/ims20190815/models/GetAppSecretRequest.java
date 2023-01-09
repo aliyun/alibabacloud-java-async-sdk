@@ -63,10 +63,10 @@ public class GetAppSecretRequest extends Request {
             super();
         } 
 
-        private Builder(GetAppSecretRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.appSecretId = response.appSecretId;
+        private Builder(GetAppSecretRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.appSecretId = request.appSecretId;
         } 
 
         /**

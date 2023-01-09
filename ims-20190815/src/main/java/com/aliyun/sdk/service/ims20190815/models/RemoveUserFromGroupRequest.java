@@ -62,10 +62,10 @@ public class RemoveUserFromGroupRequest extends Request {
             super();
         } 
 
-        private Builder(RemoveUserFromGroupRequest response) {
-            super(response);
-            this.groupName = response.groupName;
-            this.userPrincipalName = response.userPrincipalName;
+        private Builder(RemoveUserFromGroupRequest request) {
+            super(request);
+            this.groupName = request.groupName;
+            this.userPrincipalName = request.userPrincipalName;
         } 
 
         /**

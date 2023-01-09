@@ -35,8 +35,8 @@ public class GetAccountSummaryRequest extends Request {
             super();
         } 
 
-        private Builder(GetAccountSummaryRequest response) {
-            super(response);
+        private Builder(GetAccountSummaryRequest request) {
+            super(request);
         } 
 
         @Override

@@ -35,8 +35,8 @@ public class GetSecurityPreferenceRequest extends Request {
             super();
         } 
 
-        private Builder(GetSecurityPreferenceRequest response) {
-            super(response);
+        private Builder(GetSecurityPreferenceRequest request) {
+            super(request);
         } 
 
         @Override

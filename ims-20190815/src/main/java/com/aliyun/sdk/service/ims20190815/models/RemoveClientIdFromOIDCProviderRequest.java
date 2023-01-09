@@ -61,10 +61,10 @@ public class RemoveClientIdFromOIDCProviderRequest extends Request {
             super();
         } 
 
-        private Builder(RemoveClientIdFromOIDCProviderRequest response) {
-            super(response);
-            this.clientId = response.clientId;
-            this.OIDCProviderName = response.OIDCProviderName;
+        private Builder(RemoveClientIdFromOIDCProviderRequest request) {
+            super(request);
+            this.clientId = request.clientId;
+            this.OIDCProviderName = request.OIDCProviderName;
         } 
 
         /**

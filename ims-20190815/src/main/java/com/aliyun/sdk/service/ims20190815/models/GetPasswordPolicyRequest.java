@@ -35,8 +35,8 @@ public class GetPasswordPolicyRequest extends Request {
             super();
         } 
 
-        private Builder(GetPasswordPolicyRequest response) {
-            super(response);
+        private Builder(GetPasswordPolicyRequest request) {
+            super(request);
         } 
 
         @Override

@@ -178,19 +178,19 @@ public class SetPasswordPolicyRequest extends Request {
             super();
         } 
 
-        private Builder(SetPasswordPolicyRequest response) {
-            super(response);
-            this.hardExpire = response.hardExpire;
-            this.maxLoginAttemps = response.maxLoginAttemps;
-            this.maxPasswordAge = response.maxPasswordAge;
-            this.minimumPasswordDifferentCharacter = response.minimumPasswordDifferentCharacter;
-            this.minimumPasswordLength = response.minimumPasswordLength;
-            this.passwordNotContainUserName = response.passwordNotContainUserName;
-            this.passwordReusePrevention = response.passwordReusePrevention;
-            this.requireLowercaseCharacters = response.requireLowercaseCharacters;
-            this.requireNumbers = response.requireNumbers;
-            this.requireSymbols = response.requireSymbols;
-            this.requireUppercaseCharacters = response.requireUppercaseCharacters;
+        private Builder(SetPasswordPolicyRequest request) {
+            super(request);
+            this.hardExpire = request.hardExpire;
+            this.maxLoginAttemps = request.maxLoginAttemps;
+            this.maxPasswordAge = request.maxPasswordAge;
+            this.minimumPasswordDifferentCharacter = request.minimumPasswordDifferentCharacter;
+            this.minimumPasswordLength = request.minimumPasswordLength;
+            this.passwordNotContainUserName = request.passwordNotContainUserName;
+            this.passwordReusePrevention = request.passwordReusePrevention;
+            this.requireLowercaseCharacters = request.requireLowercaseCharacters;
+            this.requireNumbers = request.requireNumbers;
+            this.requireSymbols = request.requireSymbols;
+            this.requireUppercaseCharacters = request.requireUppercaseCharacters;
         } 
 
         /**

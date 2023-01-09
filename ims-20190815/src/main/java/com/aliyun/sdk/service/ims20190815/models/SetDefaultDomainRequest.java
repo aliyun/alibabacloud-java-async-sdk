@@ -49,9 +49,9 @@ public class SetDefaultDomainRequest extends Request {
             super();
         } 
 
-        private Builder(SetDefaultDomainRequest response) {
-            super(response);
-            this.defaultDomainName = response.defaultDomainName;
+        private Builder(SetDefaultDomainRequest request) {
+            super(request);
+            this.defaultDomainName = request.defaultDomainName;
         } 
 
         /**

@@ -49,9 +49,9 @@ public class UnbindMFADeviceRequest extends Request {
             super();
         } 
 
-        private Builder(UnbindMFADeviceRequest response) {
-            super(response);
-            this.userPrincipalName = response.userPrincipalName;
+        private Builder(UnbindMFADeviceRequest request) {
+            super(request);
+            this.userPrincipalName = request.userPrincipalName;
         } 
 
         /**

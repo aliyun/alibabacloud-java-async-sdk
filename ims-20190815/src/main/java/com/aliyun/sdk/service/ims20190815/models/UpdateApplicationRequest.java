@@ -140,16 +140,16 @@ public class UpdateApplicationRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateApplicationRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.newAccessTokenValidity = response.newAccessTokenValidity;
-            this.newDisplayName = response.newDisplayName;
-            this.newIsMultiTenant = response.newIsMultiTenant;
-            this.newPredefinedScopes = response.newPredefinedScopes;
-            this.newRedirectUris = response.newRedirectUris;
-            this.newRefreshTokenValidity = response.newRefreshTokenValidity;
-            this.newSecretRequired = response.newSecretRequired;
+        private Builder(UpdateApplicationRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.newAccessTokenValidity = request.newAccessTokenValidity;
+            this.newDisplayName = request.newDisplayName;
+            this.newIsMultiTenant = request.newIsMultiTenant;
+            this.newPredefinedScopes = request.newPredefinedScopes;
+            this.newRedirectUris = request.newRedirectUris;
+            this.newRefreshTokenValidity = request.newRefreshTokenValidity;
+            this.newSecretRequired = request.newSecretRequired;
         } 
 
         /**

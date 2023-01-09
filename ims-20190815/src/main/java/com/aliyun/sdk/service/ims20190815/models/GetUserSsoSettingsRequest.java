@@ -35,8 +35,8 @@ public class GetUserSsoSettingsRequest extends Request {
             super();
         } 
 
-        private Builder(GetUserSsoSettingsRequest response) {
-            super(response);
+        private Builder(GetUserSsoSettingsRequest request) {
+            super(request);
         } 
 
         @Override

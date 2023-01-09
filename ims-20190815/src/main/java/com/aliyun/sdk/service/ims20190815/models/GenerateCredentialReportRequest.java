@@ -35,8 +35,8 @@ public class GenerateCredentialReportRequest extends Request {
             super();
         } 
 
-        private Builder(GenerateCredentialReportRequest response) {
-            super(response);
+        private Builder(GenerateCredentialReportRequest request) {
+            super(request);
         } 
 
         @Override

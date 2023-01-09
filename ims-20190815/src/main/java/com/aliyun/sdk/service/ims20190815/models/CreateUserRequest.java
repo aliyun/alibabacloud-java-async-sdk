@@ -30,6 +30,10 @@ public class CreateUserRequest extends Request {
     private String mobilePhone;
 
     @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
+    @Query
     @NameInMap("UserPrincipalName")
     @Validation(required = true)
     private String userPrincipalName;
@@ -40,6 +44,7 @@ public class CreateUserRequest extends Request {
         this.displayName = builder.displayName;
         this.email = builder.email;
         this.mobilePhone = builder.mobilePhone;
+        this.tag = builder.tag;
         this.userPrincipalName = builder.userPrincipalName;
     }
 
@@ -85,6 +90,13 @@ public class CreateUserRequest extends Request {
     }
 
     /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
      * @return userPrincipalName
      */
     public String getUserPrincipalName() {
@@ -96,19 +108,21 @@ public class CreateUserRequest extends Request {
         private String displayName; 
         private String email; 
         private String mobilePhone; 
+        private java.util.List < Tag> tag; 
         private String userPrincipalName; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateUserRequest response) {
-            super(response);
-            this.comments = response.comments;
-            this.displayName = response.displayName;
-            this.email = response.email;
-            this.mobilePhone = response.mobilePhone;
-            this.userPrincipalName = response.userPrincipalName;
+        private Builder(CreateUserRequest request) {
+            super(request);
+            this.comments = request.comments;
+            this.displayName = request.displayName;
+            this.email = request.email;
+            this.mobilePhone = request.mobilePhone;
+            this.tag = request.tag;
+            this.userPrincipalName = request.userPrincipalName;
         } 
 
         /**
@@ -148,6 +162,15 @@ public class CreateUserRequest extends Request {
         }
 
         /**
+         * 标签列表，最多包含20个子项
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
          * UserPrincipalName.
          */
         public Builder userPrincipalName(String userPrincipalName) {
@@ -163,4 +186,65 @@ public class CreateUserRequest extends Request {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * 标签键
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * 标签值
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

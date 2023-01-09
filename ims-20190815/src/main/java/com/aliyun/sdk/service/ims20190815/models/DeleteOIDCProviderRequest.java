@@ -48,9 +48,9 @@ public class DeleteOIDCProviderRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteOIDCProviderRequest response) {
-            super(response);
-            this.OIDCProviderName = response.OIDCProviderName;
+        private Builder(DeleteOIDCProviderRequest request) {
+            super(request);
+            this.OIDCProviderName = request.OIDCProviderName;
         } 
 
         /**

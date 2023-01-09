@@ -48,9 +48,9 @@ public class GetOIDCProviderRequest extends Request {
             super();
         } 
 
-        private Builder(GetOIDCProviderRequest response) {
-            super(response);
-            this.OIDCProviderName = response.OIDCProviderName;
+        private Builder(GetOIDCProviderRequest request) {
+            super(request);
+            this.OIDCProviderName = request.OIDCProviderName;
         } 
 
         /**

@@ -49,9 +49,9 @@ public class ListGroupsForUserRequest extends Request {
             super();
         } 
 
-        private Builder(ListGroupsForUserRequest response) {
-            super(response);
-            this.userPrincipalName = response.userPrincipalName;
+        private Builder(ListGroupsForUserRequest request) {
+            super(request);
+            this.userPrincipalName = request.userPrincipalName;
         } 
 
         /**

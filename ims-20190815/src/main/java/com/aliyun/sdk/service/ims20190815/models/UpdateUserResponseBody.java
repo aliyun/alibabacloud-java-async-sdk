@@ -90,6 +90,9 @@ public class UpdateUserResponseBody extends TeaModel {
         @NameInMap("MobilePhone")
         private String mobilePhone;
 
+        @NameInMap("ProvisionType")
+        private String provisionType;
+
         @NameInMap("UpdateDate")
         private String updateDate;
 
@@ -106,6 +109,7 @@ public class UpdateUserResponseBody extends TeaModel {
             this.email = builder.email;
             this.lastLoginDate = builder.lastLoginDate;
             this.mobilePhone = builder.mobilePhone;
+            this.provisionType = builder.provisionType;
             this.updateDate = builder.updateDate;
             this.userId = builder.userId;
             this.userPrincipalName = builder.userPrincipalName;
@@ -162,6 +166,13 @@ public class UpdateUserResponseBody extends TeaModel {
         }
 
         /**
+         * @return provisionType
+         */
+        public String getProvisionType() {
+            return this.provisionType;
+        }
+
+        /**
          * @return updateDate
          */
         public String getUpdateDate() {
@@ -189,6 +200,7 @@ public class UpdateUserResponseBody extends TeaModel {
             private String email; 
             private String lastLoginDate; 
             private String mobilePhone; 
+            private String provisionType; 
             private String updateDate; 
             private String userId; 
             private String userPrincipalName; 
@@ -238,6 +250,14 @@ public class UpdateUserResponseBody extends TeaModel {
              */
             public Builder mobilePhone(String mobilePhone) {
                 this.mobilePhone = mobilePhone;
+                return this;
+            }
+
+            /**
+             * ProvisionType.
+             */
+            public Builder provisionType(String provisionType) {
+                this.provisionType = provisionType;
                 return this;
             }
 

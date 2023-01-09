@@ -76,11 +76,11 @@ public class UpdateAccessKeyRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateAccessKeyRequest response) {
-            super(response);
-            this.status = response.status;
-            this.userAccessKeyId = response.userAccessKeyId;
-            this.userPrincipalName = response.userPrincipalName;
+        private Builder(UpdateAccessKeyRequest request) {
+            super(request);
+            this.status = request.status;
+            this.userAccessKeyId = request.userAccessKeyId;
+            this.userPrincipalName = request.userPrincipalName;
         } 
 
         /**

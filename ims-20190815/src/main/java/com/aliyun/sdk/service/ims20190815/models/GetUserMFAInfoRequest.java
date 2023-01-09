@@ -48,9 +48,9 @@ public class GetUserMFAInfoRequest extends Request {
             super();
         } 
 
-        private Builder(GetUserMFAInfoRequest response) {
-            super(response);
-            this.userPrincipalName = response.userPrincipalName;
+        private Builder(GetUserMFAInfoRequest request) {
+            super(request);
+            this.userPrincipalName = request.userPrincipalName;
         } 
 
         /**

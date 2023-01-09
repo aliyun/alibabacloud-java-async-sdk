@@ -154,17 +154,17 @@ public class CreateApplicationRequest extends Request {
             super();
         } 
 
-        private Builder(CreateApplicationRequest response) {
-            super(response);
-            this.accessTokenValidity = response.accessTokenValidity;
-            this.appName = response.appName;
-            this.appType = response.appType;
-            this.displayName = response.displayName;
-            this.isMultiTenant = response.isMultiTenant;
-            this.predefinedScopes = response.predefinedScopes;
-            this.redirectUris = response.redirectUris;
-            this.refreshTokenValidity = response.refreshTokenValidity;
-            this.secretRequired = response.secretRequired;
+        private Builder(CreateApplicationRequest request) {
+            super(request);
+            this.accessTokenValidity = request.accessTokenValidity;
+            this.appName = request.appName;
+            this.appType = request.appType;
+            this.displayName = request.displayName;
+            this.isMultiTenant = request.isMultiTenant;
+            this.predefinedScopes = request.predefinedScopes;
+            this.redirectUris = request.redirectUris;
+            this.refreshTokenValidity = request.refreshTokenValidity;
+            this.secretRequired = request.secretRequired;
         } 
 
         /**

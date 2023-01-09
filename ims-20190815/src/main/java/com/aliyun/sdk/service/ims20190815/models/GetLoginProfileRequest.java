@@ -49,9 +49,9 @@ public class GetLoginProfileRequest extends Request {
             super();
         } 
 
-        private Builder(GetLoginProfileRequest response) {
-            super(response);
-            this.userPrincipalName = response.userPrincipalName;
+        private Builder(GetLoginProfileRequest request) {
+            super(request);
+            this.userPrincipalName = request.userPrincipalName;
         } 
 
         /**

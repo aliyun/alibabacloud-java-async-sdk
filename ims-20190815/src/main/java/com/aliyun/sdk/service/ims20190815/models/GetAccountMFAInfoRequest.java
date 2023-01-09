@@ -35,8 +35,8 @@ public class GetAccountMFAInfoRequest extends Request {
             super();
         } 
 
-        private Builder(GetAccountMFAInfoRequest response) {
-            super(response);
+        private Builder(GetAccountMFAInfoRequest request) {
+            super(request);
         } 
 
         @Override

@@ -49,9 +49,9 @@ public class GetApplicationRequest extends Request {
             super();
         } 
 
-        private Builder(GetApplicationRequest response) {
-            super(response);
-            this.appId = response.appId;
+        private Builder(GetApplicationRequest request) {
+            super(request);
+            this.appId = request.appId;
         } 
 
         /**

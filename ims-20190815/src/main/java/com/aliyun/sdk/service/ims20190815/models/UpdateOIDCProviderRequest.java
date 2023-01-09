@@ -74,11 +74,11 @@ public class UpdateOIDCProviderRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateOIDCProviderRequest response) {
-            super(response);
-            this.clientIds = response.clientIds;
-            this.newDescription = response.newDescription;
-            this.OIDCProviderName = response.OIDCProviderName;
+        private Builder(UpdateOIDCProviderRequest request) {
+            super(request);
+            this.clientIds = request.clientIds;
+            this.newDescription = request.newDescription;
+            this.OIDCProviderName = request.OIDCProviderName;
         } 
 
         /**

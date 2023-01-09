@@ -62,10 +62,10 @@ public class GetAccessKeyLastUsedRequest extends Request {
             super();
         } 
 
-        private Builder(GetAccessKeyLastUsedRequest response) {
-            super(response);
-            this.userAccessKeyId = response.userAccessKeyId;
-            this.userPrincipalName = response.userPrincipalName;
+        private Builder(GetAccessKeyLastUsedRequest request) {
+            super(request);
+            this.userAccessKeyId = request.userAccessKeyId;
+            this.userPrincipalName = request.userPrincipalName;
         } 
 
         /**

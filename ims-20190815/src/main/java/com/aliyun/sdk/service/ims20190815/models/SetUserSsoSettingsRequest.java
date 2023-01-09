@@ -74,11 +74,11 @@ public class SetUserSsoSettingsRequest extends Request {
             super();
         } 
 
-        private Builder(SetUserSsoSettingsRequest response) {
-            super(response);
-            this.auxiliaryDomain = response.auxiliaryDomain;
-            this.metadataDocument = response.metadataDocument;
-            this.ssoEnabled = response.ssoEnabled;
+        private Builder(SetUserSsoSettingsRequest request) {
+            super(request);
+            this.auxiliaryDomain = request.auxiliaryDomain;
+            this.metadataDocument = request.metadataDocument;
+            this.ssoEnabled = request.ssoEnabled;
         } 
 
         /**

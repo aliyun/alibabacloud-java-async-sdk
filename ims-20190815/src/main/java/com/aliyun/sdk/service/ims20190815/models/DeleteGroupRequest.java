@@ -48,9 +48,9 @@ public class DeleteGroupRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteGroupRequest response) {
-            super(response);
-            this.groupName = response.groupName;
+        private Builder(DeleteGroupRequest request) {
+            super(request);
+            this.groupName = request.groupName;
         } 
 
         /**

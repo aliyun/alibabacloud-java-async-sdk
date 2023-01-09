@@ -74,11 +74,11 @@ public class ListUsersForGroupRequest extends Request {
             super();
         } 
 
-        private Builder(ListUsersForGroupRequest response) {
-            super(response);
-            this.groupName = response.groupName;
-            this.marker = response.marker;
-            this.maxItems = response.maxItems;
+        private Builder(ListUsersForGroupRequest request) {
+            super(request);
+            this.groupName = request.groupName;
+            this.marker = request.marker;
+            this.maxItems = request.maxItems;
         } 
 
         /**

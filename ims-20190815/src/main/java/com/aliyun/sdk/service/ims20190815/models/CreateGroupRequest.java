@@ -74,11 +74,11 @@ public class CreateGroupRequest extends Request {
             super();
         } 
 
-        private Builder(CreateGroupRequest response) {
-            super(response);
-            this.comments = response.comments;
-            this.displayName = response.displayName;
-            this.groupName = response.groupName;
+        private Builder(CreateGroupRequest request) {
+            super(request);
+            this.comments = request.comments;
+            this.displayName = request.displayName;
+            this.groupName = request.groupName;
         } 
 
         /**

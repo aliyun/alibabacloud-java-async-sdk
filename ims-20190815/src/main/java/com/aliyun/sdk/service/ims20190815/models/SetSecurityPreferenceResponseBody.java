@@ -119,21 +119,25 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
         @NameInMap("EnableSaveMFATicket")
         private Boolean enableSaveMFATicket;
 
-        @NameInMap("EnforceMFAForLogin")
-        private Boolean enforceMFAForLogin;
-
         @NameInMap("LoginNetworkMasks")
         private String loginNetworkMasks;
 
         @NameInMap("LoginSessionDuration")
         private Integer loginSessionDuration;
 
+        @NameInMap("MFAOperationForLogin")
+        private String MFAOperationForLogin;
+
+        @NameInMap("OperationForRiskLogin")
+        private String operationForRiskLogin;
+
         private LoginProfilePreference(Builder builder) {
             this.allowUserToChangePassword = builder.allowUserToChangePassword;
             this.enableSaveMFATicket = builder.enableSaveMFATicket;
-            this.enforceMFAForLogin = builder.enforceMFAForLogin;
             this.loginNetworkMasks = builder.loginNetworkMasks;
             this.loginSessionDuration = builder.loginSessionDuration;
+            this.MFAOperationForLogin = builder.MFAOperationForLogin;
+            this.operationForRiskLogin = builder.operationForRiskLogin;
         }
 
         public static Builder builder() {
@@ -159,13 +163,6 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
         }
 
         /**
-         * @return enforceMFAForLogin
-         */
-        public Boolean getEnforceMFAForLogin() {
-            return this.enforceMFAForLogin;
-        }
-
-        /**
          * @return loginNetworkMasks
          */
         public String getLoginNetworkMasks() {
@@ -179,12 +176,27 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
             return this.loginSessionDuration;
         }
 
+        /**
+         * @return MFAOperationForLogin
+         */
+        public String getMFAOperationForLogin() {
+            return this.MFAOperationForLogin;
+        }
+
+        /**
+         * @return operationForRiskLogin
+         */
+        public String getOperationForRiskLogin() {
+            return this.operationForRiskLogin;
+        }
+
         public static final class Builder {
             private Boolean allowUserToChangePassword; 
             private Boolean enableSaveMFATicket; 
-            private Boolean enforceMFAForLogin; 
             private String loginNetworkMasks; 
             private Integer loginSessionDuration; 
+            private String MFAOperationForLogin; 
+            private String operationForRiskLogin; 
 
             /**
              * AllowUserToChangePassword.
@@ -203,14 +215,6 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
             }
 
             /**
-             * EnforceMFAForLogin.
-             */
-            public Builder enforceMFAForLogin(Boolean enforceMFAForLogin) {
-                this.enforceMFAForLogin = enforceMFAForLogin;
-                return this;
-            }
-
-            /**
              * LoginNetworkMasks.
              */
             public Builder loginNetworkMasks(String loginNetworkMasks) {
@@ -223,6 +227,22 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
              */
             public Builder loginSessionDuration(Integer loginSessionDuration) {
                 this.loginSessionDuration = loginSessionDuration;
+                return this;
+            }
+
+            /**
+             * MFAOperationForLogin.
+             */
+            public Builder MFAOperationForLogin(String MFAOperationForLogin) {
+                this.MFAOperationForLogin = MFAOperationForLogin;
+                return this;
+            }
+
+            /**
+             * OperationForRiskLogin.
+             */
+            public Builder operationForRiskLogin(String operationForRiskLogin) {
+                this.operationForRiskLogin = operationForRiskLogin;
                 return this;
             }
 
@@ -315,47 +335,6 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
         } 
 
     }
-    public static class VerificationPreference extends TeaModel {
-        @NameInMap("VerificationTypes")
-        private java.util.List < String > verificationTypes;
-
-        private VerificationPreference(Builder builder) {
-            this.verificationTypes = builder.verificationTypes;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static VerificationPreference create() {
-            return builder().build();
-        }
-
-        /**
-         * @return verificationTypes
-         */
-        public java.util.List < String > getVerificationTypes() {
-            return this.verificationTypes;
-        }
-
-        public static final class Builder {
-            private java.util.List < String > verificationTypes; 
-
-            /**
-             * VerificationTypes.
-             */
-            public Builder verificationTypes(java.util.List < String > verificationTypes) {
-                this.verificationTypes = verificationTypes;
-                return this;
-            }
-
-            public VerificationPreference build() {
-                return new VerificationPreference(this);
-            } 
-
-        } 
-
-    }
     public static class SecurityPreference extends TeaModel {
         @NameInMap("AccessKeyPreference")
         private AccessKeyPreference accessKeyPreference;
@@ -369,15 +348,11 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
         @NameInMap("PersonalInfoPreference")
         private PersonalInfoPreference personalInfoPreference;
 
-        @NameInMap("VerificationPreference")
-        private VerificationPreference verificationPreference;
-
         private SecurityPreference(Builder builder) {
             this.accessKeyPreference = builder.accessKeyPreference;
             this.loginProfilePreference = builder.loginProfilePreference;
             this.MFAPreference = builder.MFAPreference;
             this.personalInfoPreference = builder.personalInfoPreference;
-            this.verificationPreference = builder.verificationPreference;
         }
 
         public static Builder builder() {
@@ -416,19 +391,11 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
             return this.personalInfoPreference;
         }
 
-        /**
-         * @return verificationPreference
-         */
-        public VerificationPreference getVerificationPreference() {
-            return this.verificationPreference;
-        }
-
         public static final class Builder {
             private AccessKeyPreference accessKeyPreference; 
             private LoginProfilePreference loginProfilePreference; 
             private MFAPreference MFAPreference; 
             private PersonalInfoPreference personalInfoPreference; 
-            private VerificationPreference verificationPreference; 
 
             /**
              * AccessKeyPreference.
@@ -459,14 +426,6 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
              */
             public Builder personalInfoPreference(PersonalInfoPreference personalInfoPreference) {
                 this.personalInfoPreference = personalInfoPreference;
-                return this;
-            }
-
-            /**
-             * VerificationPreference.
-             */
-            public Builder verificationPreference(VerificationPreference verificationPreference) {
-                this.verificationPreference = verificationPreference;
                 return this;
             }
 

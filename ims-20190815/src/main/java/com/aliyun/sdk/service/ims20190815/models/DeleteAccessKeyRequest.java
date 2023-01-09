@@ -62,10 +62,10 @@ public class DeleteAccessKeyRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteAccessKeyRequest response) {
-            super(response);
-            this.userAccessKeyId = response.userAccessKeyId;
-            this.userPrincipalName = response.userPrincipalName;
+        private Builder(DeleteAccessKeyRequest request) {
+            super(request);
+            this.userAccessKeyId = request.userAccessKeyId;
+            this.userPrincipalName = request.userPrincipalName;
         } 
 
         /**

@@ -33,10 +33,6 @@ public class SetSecurityPreferenceRequest extends Request {
     private Boolean enableSaveMFATicket;
 
     @Query
-    @NameInMap("EnforceMFAForLogin")
-    private Boolean enforceMFAForLogin;
-
-    @Query
     @NameInMap("LoginNetworkMasks")
     private String loginNetworkMasks;
 
@@ -45,8 +41,12 @@ public class SetSecurityPreferenceRequest extends Request {
     private Integer loginSessionDuration;
 
     @Query
-    @NameInMap("VerificationTypes")
-    private java.util.List < String > verificationTypes;
+    @NameInMap("MFAOperationForLogin")
+    private String MFAOperationForLogin;
+
+    @Query
+    @NameInMap("OperationForRiskLogin")
+    private String operationForRiskLogin;
 
     private SetSecurityPreferenceRequest(Builder builder) {
         super(builder);
@@ -55,10 +55,10 @@ public class SetSecurityPreferenceRequest extends Request {
         this.allowUserToManageMFADevices = builder.allowUserToManageMFADevices;
         this.allowUserToManagePersonalDingTalk = builder.allowUserToManagePersonalDingTalk;
         this.enableSaveMFATicket = builder.enableSaveMFATicket;
-        this.enforceMFAForLogin = builder.enforceMFAForLogin;
         this.loginNetworkMasks = builder.loginNetworkMasks;
         this.loginSessionDuration = builder.loginSessionDuration;
-        this.verificationTypes = builder.verificationTypes;
+        this.MFAOperationForLogin = builder.MFAOperationForLogin;
+        this.operationForRiskLogin = builder.operationForRiskLogin;
     }
 
     public static Builder builder() {
@@ -110,13 +110,6 @@ public class SetSecurityPreferenceRequest extends Request {
     }
 
     /**
-     * @return enforceMFAForLogin
-     */
-    public Boolean getEnforceMFAForLogin() {
-        return this.enforceMFAForLogin;
-    }
-
-    /**
      * @return loginNetworkMasks
      */
     public String getLoginNetworkMasks() {
@@ -131,10 +124,17 @@ public class SetSecurityPreferenceRequest extends Request {
     }
 
     /**
-     * @return verificationTypes
+     * @return MFAOperationForLogin
      */
-    public java.util.List < String > getVerificationTypes() {
-        return this.verificationTypes;
+    public String getMFAOperationForLogin() {
+        return this.MFAOperationForLogin;
+    }
+
+    /**
+     * @return operationForRiskLogin
+     */
+    public String getOperationForRiskLogin() {
+        return this.operationForRiskLogin;
     }
 
     public static final class Builder extends Request.Builder<SetSecurityPreferenceRequest, Builder> {
@@ -143,26 +143,26 @@ public class SetSecurityPreferenceRequest extends Request {
         private Boolean allowUserToManageMFADevices; 
         private Boolean allowUserToManagePersonalDingTalk; 
         private Boolean enableSaveMFATicket; 
-        private Boolean enforceMFAForLogin; 
         private String loginNetworkMasks; 
         private Integer loginSessionDuration; 
-        private java.util.List < String > verificationTypes; 
+        private String MFAOperationForLogin; 
+        private String operationForRiskLogin; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(SetSecurityPreferenceRequest response) {
-            super(response);
-            this.allowUserToChangePassword = response.allowUserToChangePassword;
-            this.allowUserToManageAccessKeys = response.allowUserToManageAccessKeys;
-            this.allowUserToManageMFADevices = response.allowUserToManageMFADevices;
-            this.allowUserToManagePersonalDingTalk = response.allowUserToManagePersonalDingTalk;
-            this.enableSaveMFATicket = response.enableSaveMFATicket;
-            this.enforceMFAForLogin = response.enforceMFAForLogin;
-            this.loginNetworkMasks = response.loginNetworkMasks;
-            this.loginSessionDuration = response.loginSessionDuration;
-            this.verificationTypes = response.verificationTypes;
+        private Builder(SetSecurityPreferenceRequest request) {
+            super(request);
+            this.allowUserToChangePassword = request.allowUserToChangePassword;
+            this.allowUserToManageAccessKeys = request.allowUserToManageAccessKeys;
+            this.allowUserToManageMFADevices = request.allowUserToManageMFADevices;
+            this.allowUserToManagePersonalDingTalk = request.allowUserToManagePersonalDingTalk;
+            this.enableSaveMFATicket = request.enableSaveMFATicket;
+            this.loginNetworkMasks = request.loginNetworkMasks;
+            this.loginSessionDuration = request.loginSessionDuration;
+            this.MFAOperationForLogin = request.MFAOperationForLogin;
+            this.operationForRiskLogin = request.operationForRiskLogin;
         } 
 
         /**
@@ -211,15 +211,6 @@ public class SetSecurityPreferenceRequest extends Request {
         }
 
         /**
-         * EnforceMFAForLogin.
-         */
-        public Builder enforceMFAForLogin(Boolean enforceMFAForLogin) {
-            this.putQueryParameter("EnforceMFAForLogin", enforceMFAForLogin);
-            this.enforceMFAForLogin = enforceMFAForLogin;
-            return this;
-        }
-
-        /**
          * LoginNetworkMasks.
          */
         public Builder loginNetworkMasks(String loginNetworkMasks) {
@@ -238,11 +229,20 @@ public class SetSecurityPreferenceRequest extends Request {
         }
 
         /**
-         * VerificationTypes.
+         * MFAOperationForLogin.
          */
-        public Builder verificationTypes(java.util.List < String > verificationTypes) {
-            this.putQueryParameter("VerificationTypes", verificationTypes);
-            this.verificationTypes = verificationTypes;
+        public Builder MFAOperationForLogin(String MFAOperationForLogin) {
+            this.putQueryParameter("MFAOperationForLogin", MFAOperationForLogin);
+            this.MFAOperationForLogin = MFAOperationForLogin;
+            return this;
+        }
+
+        /**
+         * OperationForRiskLogin.
+         */
+        public Builder operationForRiskLogin(String operationForRiskLogin) {
+            this.putQueryParameter("OperationForRiskLogin", operationForRiskLogin);
+            this.operationForRiskLogin = operationForRiskLogin;
             return this;
         }
 

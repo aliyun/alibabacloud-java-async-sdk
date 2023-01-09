@@ -48,9 +48,9 @@ public class ListPredefinedScopesRequest extends Request {
             super();
         } 
 
-        private Builder(ListPredefinedScopesRequest response) {
-            super(response);
-            this.appType = response.appType;
+        private Builder(ListPredefinedScopesRequest request) {
+            super(request);
+            this.appType = request.appType;
         } 
 
         /**

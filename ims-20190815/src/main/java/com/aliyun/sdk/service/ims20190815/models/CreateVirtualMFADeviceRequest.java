@@ -49,9 +49,9 @@ public class CreateVirtualMFADeviceRequest extends Request {
             super();
         } 
 
-        private Builder(CreateVirtualMFADeviceRequest response) {
-            super(response);
-            this.virtualMFADeviceName = response.virtualMFADeviceName;
+        private Builder(CreateVirtualMFADeviceRequest request) {
+            super(request);
+            this.virtualMFADeviceName = request.virtualMFADeviceName;
         } 
 
         /**

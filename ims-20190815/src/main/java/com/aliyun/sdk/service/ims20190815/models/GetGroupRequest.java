@@ -48,9 +48,9 @@ public class GetGroupRequest extends Request {
             super();
         } 
 
-        private Builder(GetGroupRequest response) {
-            super(response);
-            this.groupName = response.groupName;
+        private Builder(GetGroupRequest request) {
+            super(request);
+            this.groupName = request.groupName;
         } 
 
         /**

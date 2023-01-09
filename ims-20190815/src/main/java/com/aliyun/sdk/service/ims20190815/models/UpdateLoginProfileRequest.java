@@ -101,13 +101,13 @@ public class UpdateLoginProfileRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateLoginProfileRequest response) {
-            super(response);
-            this.MFABindRequired = response.MFABindRequired;
-            this.password = response.password;
-            this.passwordResetRequired = response.passwordResetRequired;
-            this.status = response.status;
-            this.userPrincipalName = response.userPrincipalName;
+        private Builder(UpdateLoginProfileRequest request) {
+            super(request);
+            this.MFABindRequired = request.MFABindRequired;
+            this.password = request.password;
+            this.passwordResetRequired = request.passwordResetRequired;
+            this.status = request.status;
+            this.userPrincipalName = request.userPrincipalName;
         } 
 
         /**

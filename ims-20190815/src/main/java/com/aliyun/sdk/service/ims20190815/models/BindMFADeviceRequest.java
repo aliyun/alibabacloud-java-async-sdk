@@ -88,12 +88,12 @@ public class BindMFADeviceRequest extends Request {
             super();
         } 
 
-        private Builder(BindMFADeviceRequest response) {
-            super(response);
-            this.authenticationCode1 = response.authenticationCode1;
-            this.authenticationCode2 = response.authenticationCode2;
-            this.serialNumber = response.serialNumber;
-            this.userPrincipalName = response.userPrincipalName;
+        private Builder(BindMFADeviceRequest request) {
+            super(request);
+            this.authenticationCode1 = request.authenticationCode1;
+            this.authenticationCode2 = request.authenticationCode2;
+            this.serialNumber = request.serialNumber;
+            this.userPrincipalName = request.userPrincipalName;
         } 
 
         /**

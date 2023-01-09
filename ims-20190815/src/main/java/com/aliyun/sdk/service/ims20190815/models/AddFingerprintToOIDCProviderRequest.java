@@ -61,10 +61,10 @@ public class AddFingerprintToOIDCProviderRequest extends Request {
             super();
         } 
 
-        private Builder(AddFingerprintToOIDCProviderRequest response) {
-            super(response);
-            this.fingerprint = response.fingerprint;
-            this.OIDCProviderName = response.OIDCProviderName;
+        private Builder(AddFingerprintToOIDCProviderRequest request) {
+            super(request);
+            this.fingerprint = request.fingerprint;
+            this.OIDCProviderName = request.OIDCProviderName;
         } 
 
         /**

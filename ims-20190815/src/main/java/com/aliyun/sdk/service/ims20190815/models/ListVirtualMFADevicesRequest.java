@@ -61,10 +61,10 @@ public class ListVirtualMFADevicesRequest extends Request {
             super();
         } 
 
-        private Builder(ListVirtualMFADevicesRequest response) {
-            super(response);
-            this.marker = response.marker;
-            this.maxItems = response.maxItems;
+        private Builder(ListVirtualMFADevicesRequest request) {
+            super(request);
+            this.marker = request.marker;
+            this.maxItems = request.maxItems;
         } 
 
         /**

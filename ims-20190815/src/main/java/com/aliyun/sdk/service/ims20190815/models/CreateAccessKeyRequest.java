@@ -48,9 +48,9 @@ public class CreateAccessKeyRequest extends Request {
             super();
         } 
 
-        private Builder(CreateAccessKeyRequest response) {
-            super(response);
-            this.userPrincipalName = response.userPrincipalName;
+        private Builder(CreateAccessKeyRequest request) {
+            super(request);
+            this.userPrincipalName = request.userPrincipalName;
         } 
 
         /**

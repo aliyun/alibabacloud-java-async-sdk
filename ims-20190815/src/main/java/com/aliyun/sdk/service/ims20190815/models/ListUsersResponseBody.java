@@ -111,6 +111,108 @@ public class ListUsersResponseBody extends TeaModel {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @NameInMap("TagKey")
+        private String tagKey;
+
+        @NameInMap("TagValue")
+        private String tagValue;
+
+        private Tag(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            /**
+             * TagKey.
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * TagValue.
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
+    public static class Tags extends TeaModel {
+        @NameInMap("Tag")
+        private java.util.List < Tag> tag;
+
+        private Tags(Builder builder) {
+            this.tag = builder.tag;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tag
+         */
+        public java.util.List < Tag> getTag() {
+            return this.tag;
+        }
+
+        public static final class Builder {
+            private java.util.List < Tag> tag; 
+
+            /**
+             * Tag.
+             */
+            public Builder tag(java.util.List < Tag> tag) {
+                this.tag = tag;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
     public static class User extends TeaModel {
         @NameInMap("Comments")
         private String comments;
@@ -130,6 +232,12 @@ public class ListUsersResponseBody extends TeaModel {
         @NameInMap("MobilePhone")
         private String mobilePhone;
 
+        @NameInMap("ProvisionType")
+        private String provisionType;
+
+        @NameInMap("Tags")
+        private Tags tags;
+
         @NameInMap("UpdateDate")
         private String updateDate;
 
@@ -146,6 +254,8 @@ public class ListUsersResponseBody extends TeaModel {
             this.email = builder.email;
             this.lastLoginDate = builder.lastLoginDate;
             this.mobilePhone = builder.mobilePhone;
+            this.provisionType = builder.provisionType;
+            this.tags = builder.tags;
             this.updateDate = builder.updateDate;
             this.userId = builder.userId;
             this.userPrincipalName = builder.userPrincipalName;
@@ -202,6 +312,20 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
+         * @return provisionType
+         */
+        public String getProvisionType() {
+            return this.provisionType;
+        }
+
+        /**
+         * @return tags
+         */
+        public Tags getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return updateDate
          */
         public String getUpdateDate() {
@@ -229,6 +353,8 @@ public class ListUsersResponseBody extends TeaModel {
             private String email; 
             private String lastLoginDate; 
             private String mobilePhone; 
+            private String provisionType; 
+            private Tags tags; 
             private String updateDate; 
             private String userId; 
             private String userPrincipalName; 
@@ -278,6 +404,22 @@ public class ListUsersResponseBody extends TeaModel {
              */
             public Builder mobilePhone(String mobilePhone) {
                 this.mobilePhone = mobilePhone;
+                return this;
+            }
+
+            /**
+             * ProvisionType.
+             */
+            public Builder provisionType(String provisionType) {
+                this.provisionType = provisionType;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(Tags tags) {
+                this.tags = tags;
                 return this;
             }
 

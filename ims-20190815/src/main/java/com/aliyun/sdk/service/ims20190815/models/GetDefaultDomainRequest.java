@@ -35,8 +35,8 @@ public class GetDefaultDomainRequest extends Request {
             super();
         } 
 
-        private Builder(GetDefaultDomainRequest response) {
-            super(response);
+        private Builder(GetDefaultDomainRequest request) {
+            super(request);
         } 
 
         @Override

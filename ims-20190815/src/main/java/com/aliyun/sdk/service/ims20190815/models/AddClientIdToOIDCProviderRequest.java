@@ -61,10 +61,10 @@ public class AddClientIdToOIDCProviderRequest extends Request {
             super();
         } 
 
-        private Builder(AddClientIdToOIDCProviderRequest response) {
-            super(response);
-            this.clientId = response.clientId;
-            this.OIDCProviderName = response.OIDCProviderName;
+        private Builder(AddClientIdToOIDCProviderRequest request) {
+            super(request);
+            this.clientId = request.clientId;
+            this.OIDCProviderName = request.OIDCProviderName;
         } 
 
         /**

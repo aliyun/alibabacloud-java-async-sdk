@@ -49,9 +49,9 @@ public class DeleteLoginProfileRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteLoginProfileRequest response) {
-            super(response);
-            this.userPrincipalName = response.userPrincipalName;
+        private Builder(DeleteLoginProfileRequest request) {
+            super(request);
+            this.userPrincipalName = request.userPrincipalName;
         } 
 
         /**

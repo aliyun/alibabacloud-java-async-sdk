@@ -100,13 +100,13 @@ public class CreateOIDCProviderRequest extends Request {
             super();
         } 
 
-        private Builder(CreateOIDCProviderRequest response) {
-            super(response);
-            this.clientIds = response.clientIds;
-            this.description = response.description;
-            this.fingerprints = response.fingerprints;
-            this.issuerUrl = response.issuerUrl;
-            this.OIDCProviderName = response.OIDCProviderName;
+        private Builder(CreateOIDCProviderRequest request) {
+            super(request);
+            this.clientIds = request.clientIds;
+            this.description = request.description;
+            this.fingerprints = request.fingerprints;
+            this.issuerUrl = request.issuerUrl;
+            this.OIDCProviderName = request.OIDCProviderName;
         } 
 
         /**

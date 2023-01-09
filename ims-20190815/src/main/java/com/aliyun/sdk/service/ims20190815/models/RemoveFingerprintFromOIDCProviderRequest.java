@@ -61,10 +61,10 @@ public class RemoveFingerprintFromOIDCProviderRequest extends Request {
             super();
         } 
 
-        private Builder(RemoveFingerprintFromOIDCProviderRequest response) {
-            super(response);
-            this.fingerprint = response.fingerprint;
-            this.OIDCProviderName = response.OIDCProviderName;
+        private Builder(RemoveFingerprintFromOIDCProviderRequest request) {
+            super(request);
+            this.fingerprint = request.fingerprint;
+            this.OIDCProviderName = request.OIDCProviderName;
         } 
 
         /**
