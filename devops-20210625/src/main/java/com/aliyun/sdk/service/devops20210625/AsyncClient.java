@@ -118,6 +118,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetCodeupOrganizationResponse> getCodeupOrganization(GetCodeupOrganizationRequest request);
 
+    CompletableFuture<GetCompareDetailResponse> getCompareDetail(GetCompareDetailRequest request);
+
     CompletableFuture<GetCustomFieldOptionResponse> getCustomFieldOption(GetCustomFieldOptionRequest request);
 
     CompletableFuture<GetFileBlobsResponse> getFileBlobs(GetFileBlobsRequest request);
@@ -153,6 +155,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetRepositoryCommitResponse> getRepositoryCommit(GetRepositoryCommitRequest request);
 
     CompletableFuture<GetRepositoryTagResponse> getRepositoryTag(GetRepositoryTagRequest request);
+
+    CompletableFuture<GetSearchCodePreviewResponse> getSearchCodePreview(GetSearchCodePreviewRequest request);
 
     CompletableFuture<GetSprintInfoResponse> getSprintInfo(GetSprintInfoRequest request);
 
@@ -234,6 +238,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListResourceMembersResponse> listResourceMembers(ListResourceMembersRequest request);
 
+    CompletableFuture<ListSearchCommitResponse> listSearchCommit(ListSearchCommitRequest request);
+
+    CompletableFuture<ListSearchRepositoryResponse> listSearchRepository(ListSearchRepositoryRequest request);
+
+    CompletableFuture<ListSearchSourceCodeResponse> listSearchSourceCode(ListSearchSourceCodeRequest request);
+
     CompletableFuture<ListServiceConnectionsResponse> listServiceConnections(ListServiceConnectionsRequest request);
 
     CompletableFuture<ListSprintsResponse> listSprints(ListSprintsRequest request);
@@ -299,6 +309,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateProjectMemberResponse> updateProjectMember(UpdateProjectMemberRequest request);
 
     CompletableFuture<UpdateProtectedBranchesResponse> updateProtectedBranches(UpdateProtectedBranchesRequest request);
+
+    CompletableFuture<UpdatePushReviewOnOffResponse> updatePushReviewOnOff(UpdatePushReviewOnOffRequest request);
 
     CompletableFuture<UpdateRepositoryResponse> updateRepository(UpdateRepositoryRequest request);
 
