@@ -14,10 +14,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DeleteVpcBindingRequest extends Request {
     @Path
     @NameInMap("serviceName")
+    @Validation(required = true)
     private String serviceName;
 
     @Path
     @NameInMap("vpcId")
+    @Validation(required = true)
     private String vpcId;
 
     @Header
@@ -110,7 +112,7 @@ public class DeleteVpcBindingRequest extends Request {
         } 
 
         /**
-         * serviceName.
+         * The name of the service.
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("serviceName", serviceName);
@@ -119,7 +121,7 @@ public class DeleteVpcBindingRequest extends Request {
         }
 
         /**
-         * vpcId.
+         * The ID of the VPC to be unbound.
          */
         public Builder vpcId(String vpcId) {
             this.putPathParameter("vpcId", vpcId);
@@ -128,7 +130,7 @@ public class DeleteVpcBindingRequest extends Request {
         }
 
         /**
-         * X-Fc-Account-Id.
+         * The ID of your Alibaba Cloud account.
          */
         public Builder xFcAccountId(String xFcAccountId) {
             this.putHeaderParameter("X-Fc-Account-Id", xFcAccountId);
@@ -137,7 +139,7 @@ public class DeleteVpcBindingRequest extends Request {
         }
 
         /**
-         * X-Fc-Date.
+         * The time when Function Compute API is called. Specify the time in the **EEE,d MMM yyyy HH:mm:ss GMT** format.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
@@ -146,7 +148,7 @@ public class DeleteVpcBindingRequest extends Request {
         }
 
         /**
-         * X-Fc-Trace-Id.
+         * The custom request ID.
          */
         public Builder xFcTraceId(String xFcTraceId) {
             this.putHeaderParameter("X-Fc-Trace-Id", xFcTraceId);

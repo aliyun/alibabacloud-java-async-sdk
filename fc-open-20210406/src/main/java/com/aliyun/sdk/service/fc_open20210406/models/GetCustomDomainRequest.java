@@ -14,6 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class GetCustomDomainRequest extends Request {
     @Path
     @NameInMap("domainName")
+    @Validation(required = true)
     private String domainName;
 
     @Header
@@ -96,7 +97,7 @@ public class GetCustomDomainRequest extends Request {
         } 
 
         /**
-         * domainName.
+         * The domain name.
          */
         public Builder domainName(String domainName) {
             this.putPathParameter("domainName", domainName);
@@ -105,7 +106,7 @@ public class GetCustomDomainRequest extends Request {
         }
 
         /**
-         * X-Fc-Account-Id.
+         * The ID of your Alibaba Cloud account.
          */
         public Builder xFcAccountId(String xFcAccountId) {
             this.putHeaderParameter("X-Fc-Account-Id", xFcAccountId);
@@ -114,7 +115,7 @@ public class GetCustomDomainRequest extends Request {
         }
 
         /**
-         * X-Fc-Date.
+         * The time when Function Compute API is called. Specify the time in the **EEE,d MMM yyyy HH:mm:ss GMT** format.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
@@ -123,7 +124,7 @@ public class GetCustomDomainRequest extends Request {
         }
 
         /**
-         * X-Fc-Trace-Id.
+         * The custom request ID.
          */
         public Builder xFcTraceId(String xFcTraceId) {
             this.putHeaderParameter("X-Fc-Trace-Id", xFcTraceId);

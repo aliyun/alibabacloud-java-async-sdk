@@ -50,7 +50,10 @@ public class GetResourceTagsResponseBody extends TeaModel {
         private java.util.Map < String, String > tags; 
 
         /**
-         * Resource ARN 全称
+         * The ARN of the resource. 
+         * <p>
+         * 
+         * > You can use the value of this parameter to query the information about the resource, such as the account, service, and region information of the resource.
          */
         public Builder resourceArn(String resourceArn) {
             this.resourceArn = resourceArn;
@@ -58,7 +61,7 @@ public class GetResourceTagsResponseBody extends TeaModel {
         }
 
         /**
-         * tag 列表
+         * The tag dictionary.
          */
         public Builder tags(java.util.Map < String, String > tags) {
             this.tags = tags;

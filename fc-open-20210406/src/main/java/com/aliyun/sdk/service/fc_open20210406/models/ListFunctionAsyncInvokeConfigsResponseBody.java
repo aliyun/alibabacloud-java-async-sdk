@@ -50,7 +50,7 @@ public class ListFunctionAsyncInvokeConfigsResponseBody extends TeaModel {
         private String nextToken; 
 
         /**
-         * 异步配置列表
+         * The list of asynchronous invocation configurations.
          */
         public Builder configs(java.util.List < Configs> configs) {
             this.configs = configs;
@@ -58,7 +58,7 @@ public class ListFunctionAsyncInvokeConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * 下次查询token
+         * The token used to obtain more results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -194,7 +194,7 @@ public class ListFunctionAsyncInvokeConfigsResponseBody extends TeaModel {
             private Boolean statefulInvocation; 
 
             /**
-             * 创建时间
+             * The time when the desktop group was created.
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -202,7 +202,7 @@ public class ListFunctionAsyncInvokeConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * destinationConfig.
+             * The configuration structure of the destination for asynchronous invocations. If you have not configured this parameter, this parameter is null.
              */
             public Builder destinationConfig(DestinationConfig destinationConfig) {
                 this.destinationConfig = destinationConfig;
@@ -210,7 +210,7 @@ public class ListFunctionAsyncInvokeConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * 函数名称
+             * The name of the function.
              */
             public Builder function(String function) {
                 this.function = function;
@@ -218,7 +218,7 @@ public class ListFunctionAsyncInvokeConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * 最后更改时间
+             * The time when the configuration was last modified.
              */
             public Builder lastModifiedTime(String lastModifiedTime) {
                 this.lastModifiedTime = lastModifiedTime;
@@ -226,7 +226,7 @@ public class ListFunctionAsyncInvokeConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * 消息最大存活时长
+             * The maximum validity period of a message. If you have not configured this parameter, this parameter is null.
              */
             public Builder maxAsyncEventAgeInSeconds(Long maxAsyncEventAgeInSeconds) {
                 this.maxAsyncEventAgeInSeconds = maxAsyncEventAgeInSeconds;
@@ -234,7 +234,7 @@ public class ListFunctionAsyncInvokeConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * 异步调用失败后的最大重试次数
+             * The maximum number of retries allowed after an asynchronous invocation fails. If you have not configured this parameter, this parameter is null.
              */
             public Builder maxAsyncRetryAttempts(Long maxAsyncRetryAttempts) {
                 this.maxAsyncRetryAttempts = maxAsyncRetryAttempts;
@@ -242,7 +242,7 @@ public class ListFunctionAsyncInvokeConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * 限定符
+             * The version or alias of the service.
              */
             public Builder qualifier(String qualifier) {
                 this.qualifier = qualifier;
@@ -250,7 +250,7 @@ public class ListFunctionAsyncInvokeConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * 服务名称
+             * The name of the service.
              */
             public Builder service(String service) {
                 this.service = service;
@@ -258,7 +258,13 @@ public class ListFunctionAsyncInvokeConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * statefulInvocation.
+             * Indicates whether the asynchronous task feature is enabled.
+             * <p>
+             * 
+             * *   **true**: The asynchronous task feature is enabled.
+             * *   **false**: The asynchronous task feature is disabled.
+             * 
+             * If you have not configured this parameter, this parameter is null.
              */
             public Builder statefulInvocation(Boolean statefulInvocation) {
                 this.statefulInvocation = statefulInvocation;

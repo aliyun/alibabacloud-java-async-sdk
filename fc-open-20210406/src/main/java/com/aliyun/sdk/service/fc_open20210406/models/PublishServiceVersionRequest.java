@@ -125,7 +125,7 @@ public class PublishServiceVersionRequest extends Request {
         } 
 
         /**
-         * 服务名称
+         * The name of the service.
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("serviceName", serviceName);
@@ -134,7 +134,7 @@ public class PublishServiceVersionRequest extends Request {
         }
 
         /**
-         * 服务的ETag，可通过GetService接口获得。若发布版本时服务的ETag与传入的不一致，则发布版本会失败。
+         * The ETag value of the service. This value is used to ensure that the modified service is consistent with the service to be modified. The ETag value is returned in the responses of the [CreateService](~~175256~~), [UpdateService](~~188167~~), and [GetService](~~189225~~) operations.
          */
         public Builder ifMatch(String ifMatch) {
             this.putHeaderParameter("If-Match", ifMatch);
@@ -143,7 +143,7 @@ public class PublishServiceVersionRequest extends Request {
         }
 
         /**
-         * X-Fc-Account-Id.
+         * The ID of your Alibaba Cloud account.
          */
         public Builder xFcAccountId(String xFcAccountId) {
             this.putHeaderParameter("X-Fc-Account-Id", xFcAccountId);
@@ -152,7 +152,7 @@ public class PublishServiceVersionRequest extends Request {
         }
 
         /**
-         * X-Fc-Date.
+         * The start time when the function is invoked. Specify the time in the yyyy-mm-ddhh:mm:ss format.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
@@ -161,7 +161,7 @@ public class PublishServiceVersionRequest extends Request {
         }
 
         /**
-         * X-Fc-Trace-Id.
+         * The trace ID of the invocation request of Function Compute.
          */
         public Builder xFcTraceId(String xFcTraceId) {
             this.putHeaderParameter("X-Fc-Trace-Id", xFcTraceId);
@@ -170,7 +170,7 @@ public class PublishServiceVersionRequest extends Request {
         }
 
         /**
-         * 版本描述
+         * The description of the service version.
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);

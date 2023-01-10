@@ -182,7 +182,7 @@ public class PutFunctionAsyncInvokeConfigRequest extends Request {
         } 
 
         /**
-         * 服务名称
+         * The name of the service.
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("serviceName", serviceName);
@@ -191,7 +191,7 @@ public class PutFunctionAsyncInvokeConfigRequest extends Request {
         }
 
         /**
-         * 函数名称
+         * The name of the function.
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -200,7 +200,7 @@ public class PutFunctionAsyncInvokeConfigRequest extends Request {
         }
 
         /**
-         * X-Fc-Account-Id.
+         * The ID of your Alibaba Cloud account.
          */
         public Builder xFcAccountId(String xFcAccountId) {
             this.putHeaderParameter("X-Fc-Account-Id", xFcAccountId);
@@ -209,7 +209,7 @@ public class PutFunctionAsyncInvokeConfigRequest extends Request {
         }
 
         /**
-         * X-Fc-Date.
+         * The time when Function Compute API is called. Specify the time in the **EEE,d MMM yyyy HH:mm:ss GMT** format.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
@@ -218,7 +218,7 @@ public class PutFunctionAsyncInvokeConfigRequest extends Request {
         }
 
         /**
-         * X-Fc-Trace-Id.
+         * The trace ID of the invocation request of Function Compute.
          */
         public Builder xFcTraceId(String xFcTraceId) {
             this.putHeaderParameter("X-Fc-Trace-Id", xFcTraceId);
@@ -227,7 +227,7 @@ public class PutFunctionAsyncInvokeConfigRequest extends Request {
         }
 
         /**
-         * destinationConfig.
+         * The configuration structure of the destination for asynchronous invocation.
          */
         public Builder destinationConfig(DestinationConfig destinationConfig) {
             this.putBodyParameter("destinationConfig", destinationConfig);
@@ -236,7 +236,7 @@ public class PutFunctionAsyncInvokeConfigRequest extends Request {
         }
 
         /**
-         * 消息最大存活时长
+         * The maximum validity period of messages. Valid values: 1 to 2592000. Unit: seconds.
          */
         public Builder maxAsyncEventAgeInSeconds(Long maxAsyncEventAgeInSeconds) {
             this.putBodyParameter("maxAsyncEventAgeInSeconds", maxAsyncEventAgeInSeconds);
@@ -245,7 +245,7 @@ public class PutFunctionAsyncInvokeConfigRequest extends Request {
         }
 
         /**
-         * 异步调用失败后的最大重试次数
+         * The maximum number of retries allowed after an asynchronous invocation fails. Default value: 3. Valid values: 0 to 8.
          */
         public Builder maxAsyncRetryAttempts(Long maxAsyncRetryAttempts) {
             this.putBodyParameter("maxAsyncRetryAttempts", maxAsyncRetryAttempts);
@@ -254,7 +254,11 @@ public class PutFunctionAsyncInvokeConfigRequest extends Request {
         }
 
         /**
-         * statefulInvocation.
+         * Specifies whether to enable the asynchronous task feature. 
+         * <p>
+         * 
+         * - **true**: enables the asynchronous task feature. 
+         * - **false**: does not enable the asynchronous task feature.
          */
         public Builder statefulInvocation(Boolean statefulInvocation) {
             this.putBodyParameter("statefulInvocation", statefulInvocation);
@@ -263,7 +267,7 @@ public class PutFunctionAsyncInvokeConfigRequest extends Request {
         }
 
         /**
-         * 别名或版本
+         * The version or alias of the service.
          */
         public Builder qualifier(String qualifier) {
             this.putQueryParameter("qualifier", qualifier);

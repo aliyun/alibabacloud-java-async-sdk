@@ -50,7 +50,7 @@ public class ListOnDemandConfigsResponseBody extends TeaModel {
         private String nextToken; 
 
         /**
-         * 预留实例配置
+         * The information about the provisioned configuration.
          */
         public Builder configs(java.util.List < OnDemandConfig > configs) {
             this.configs = configs;
@@ -58,7 +58,7 @@ public class ListOnDemandConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * 用来返回更多的查询结果。如果这个值没有返回，则说明没有更多结果。
+         * The token used to obtain more results. If this parameter is left empty, all the results are returned.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;

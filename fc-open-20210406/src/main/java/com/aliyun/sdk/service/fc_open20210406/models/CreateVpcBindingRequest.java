@@ -14,6 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class CreateVpcBindingRequest extends Request {
     @Path
     @NameInMap("serviceName")
+    @Validation(required = true)
     private String serviceName;
 
     @Header
@@ -111,7 +112,7 @@ public class CreateVpcBindingRequest extends Request {
         } 
 
         /**
-         * A short description of struct
+         * The name of the service.
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("serviceName", serviceName);
@@ -120,7 +121,7 @@ public class CreateVpcBindingRequest extends Request {
         }
 
         /**
-         * X-Fc-Account-Id.
+         * The ID of your Alibaba Cloud account.
          */
         public Builder xFcAccountId(String xFcAccountId) {
             this.putHeaderParameter("X-Fc-Account-Id", xFcAccountId);
@@ -129,7 +130,7 @@ public class CreateVpcBindingRequest extends Request {
         }
 
         /**
-         * X-Fc-Date.
+         * The time when Function Compute API is called. Specify the time in the **EEE,d MMM yyyy HH:mm:ss GMT** format.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
@@ -138,7 +139,7 @@ public class CreateVpcBindingRequest extends Request {
         }
 
         /**
-         * X-Fc-Trace-Id.
+         * The custom request ID.
          */
         public Builder xFcTraceId(String xFcTraceId) {
             this.putHeaderParameter("X-Fc-Trace-Id", xFcTraceId);
@@ -147,7 +148,7 @@ public class CreateVpcBindingRequest extends Request {
         }
 
         /**
-         * vpcId.
+         * The ID of the VPC to be bound.
          */
         public Builder vpcId(String vpcId) {
             this.putBodyParameter("vpcId", vpcId);

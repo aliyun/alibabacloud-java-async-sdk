@@ -110,7 +110,7 @@ public class ListReservedCapacitiesRequest extends Request {
         } 
 
         /**
-         * X-Fc-Account-Id.
+         * The ID of your Alibaba Cloud account.
          */
         public Builder xFcAccountId(String xFcAccountId) {
             this.putHeaderParameter("X-Fc-Account-Id", xFcAccountId);
@@ -119,7 +119,7 @@ public class ListReservedCapacitiesRequest extends Request {
         }
 
         /**
-         * X-Fc-Date.
+         * The time when the Function Compute API is called. The format is **EEE,d MMM yyyy HH:mm:ss GMT**.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
@@ -128,7 +128,7 @@ public class ListReservedCapacitiesRequest extends Request {
         }
 
         /**
-         * X-Fc-Trace-Id.
+         * The custom request ID.
          */
         public Builder xFcTraceId(String xFcTraceId) {
             this.putHeaderParameter("X-Fc-Trace-Id", xFcTraceId);
@@ -137,7 +137,7 @@ public class ListReservedCapacitiesRequest extends Request {
         }
 
         /**
-         * 一次返回的数量，取值范围[1, 100]
+         * The maximum number of resources to return. Valid values: \[1, 100].
          */
         public Builder limit(String limit) {
             this.putQueryParameter("limit", limit);
@@ -146,7 +146,7 @@ public class ListReservedCapacitiesRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * The token that is required for pagination.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);

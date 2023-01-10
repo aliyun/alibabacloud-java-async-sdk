@@ -98,7 +98,11 @@ public class UpdateAliasResponseBody extends TeaModel {
         private String versionId; 
 
         /**
-         * 额外版本权重
+         * The canary release version to which the alias points and the weight of the canary release version.
+         * <p>
+         * 
+         * *   The canary release version takes effect only when the function is invoked.
+         * *   The value consists of a version number and a specific weight. For example, 2:0.05 indicates that when a function is invoked, Version 2 is the canary release version, 5% of the traffic is distributed to the canary release version, and 95% of the traffic is distributed to the major version.
          */
         public Builder additionalVersionWeight(java.util.Map < String, Float > additionalVersionWeight) {
             this.additionalVersionWeight = additionalVersionWeight;
@@ -106,7 +110,7 @@ public class UpdateAliasResponseBody extends TeaModel {
         }
 
         /**
-         * 别名名称
+         * The name of the alias.
          */
         public Builder aliasName(String aliasName) {
             this.aliasName = aliasName;
@@ -114,7 +118,7 @@ public class UpdateAliasResponseBody extends TeaModel {
         }
 
         /**
-         * 创建时间
+         * The time when the alias was created.
          */
         public Builder createdTime(String createdTime) {
             this.createdTime = createdTime;
@@ -122,7 +126,7 @@ public class UpdateAliasResponseBody extends TeaModel {
         }
 
         /**
-         * 别名描述
+         * The description of the alias.
          */
         public Builder description(String description) {
             this.description = description;
@@ -130,7 +134,7 @@ public class UpdateAliasResponseBody extends TeaModel {
         }
 
         /**
-         * 上次更新时间
+         * The time when the alias was last modified.
          */
         public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
@@ -138,7 +142,7 @@ public class UpdateAliasResponseBody extends TeaModel {
         }
 
         /**
-         * 版本ID
+         * The ID of the version to which the alias points.
          */
         public Builder versionId(String versionId) {
             this.versionId = versionId;

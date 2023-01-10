@@ -122,7 +122,11 @@ public class GetAliasResponseBody extends TeaModel {
         private String versionId; 
 
         /**
-         * 额外版本权重
+         * The canary release version to which the alias points and the weight of the canary release version. 
+         * <p>
+         * 
+         * - The canary release version takes effect only when the function is invoked. 
+         * - The value consists of a version number and the corresponding weight. For example, 2:0.05 indicates that when a function is invoked, Version 2 is the canary release version, 5% of the traffic is distributed to the canary release version, and 95% of the traffic is distributed to the major version.
          */
         public Builder additionalVersionWeight(java.util.Map < String, Float > additionalVersionWeight) {
             this.additionalVersionWeight = additionalVersionWeight;
@@ -130,7 +134,7 @@ public class GetAliasResponseBody extends TeaModel {
         }
 
         /**
-         * 别名名称
+         * The name of the alias.
          */
         public Builder aliasName(String aliasName) {
             this.aliasName = aliasName;
@@ -138,7 +142,7 @@ public class GetAliasResponseBody extends TeaModel {
         }
 
         /**
-         * 创建时间
+         * The time when the alias was created.
          */
         public Builder createdTime(String createdTime) {
             this.createdTime = createdTime;
@@ -146,7 +150,7 @@ public class GetAliasResponseBody extends TeaModel {
         }
 
         /**
-         * 别名描述
+         * The description of the alias.
          */
         public Builder description(String description) {
             this.description = description;
@@ -154,7 +158,7 @@ public class GetAliasResponseBody extends TeaModel {
         }
 
         /**
-         * 上次更新时间
+         * The time when the alias was last modified.
          */
         public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
@@ -162,11 +166,11 @@ public class GetAliasResponseBody extends TeaModel {
         }
 
         /**
-         * 灰度方式：随机灰度或者规则灰度，默认值为随机灰度
+         * The canary release mode. Valid values:
          * <p>
-         * 枚举值：
-         * Random
-         * Content
+         * 
+         * - **Random**: random canary release. This is the default value.
+         * - **Content**: rule-based canary release.
          */
         public Builder resolvePolicy(String resolvePolicy) {
             this.resolvePolicy = resolvePolicy;
@@ -174,7 +178,7 @@ public class GetAliasResponseBody extends TeaModel {
         }
 
         /**
-         * 灰度规则：满足灰度规则条件的流量，会被路由至灰度实例
+         * Canary release rule. The traffic that meets the conditions of the canary release rule is diverted to the canary release instances.
          */
         public Builder routePolicy(RoutePolicy routePolicy) {
             this.routePolicy = routePolicy;
@@ -182,7 +186,7 @@ public class GetAliasResponseBody extends TeaModel {
         }
 
         /**
-         * 版本ID
+         * The version to which the alias points.
          */
         public Builder versionId(String versionId) {
             this.versionId = versionId;

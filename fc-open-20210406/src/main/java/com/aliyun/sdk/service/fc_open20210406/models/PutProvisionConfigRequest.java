@@ -184,7 +184,7 @@ public class PutProvisionConfigRequest extends Request {
         } 
 
         /**
-         * 服务名称
+         * The name of the service.
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("serviceName", serviceName);
@@ -193,7 +193,7 @@ public class PutProvisionConfigRequest extends Request {
         }
 
         /**
-         * 函数名称
+         * The name of the function.
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -202,7 +202,7 @@ public class PutProvisionConfigRequest extends Request {
         }
 
         /**
-         * X-Fc-Account-Id.
+         * The ID of your Alibaba Cloud account.
          */
         public Builder xFcAccountId(String xFcAccountId) {
             this.putHeaderParameter("X-Fc-Account-Id", xFcAccountId);
@@ -211,7 +211,7 @@ public class PutProvisionConfigRequest extends Request {
         }
 
         /**
-         * X-Fc-Date.
+         * The time when Function Compute API is called. Specify the time in the **EEE,d MMM yyyy HH:mm:ss GMT** format.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
@@ -220,7 +220,7 @@ public class PutProvisionConfigRequest extends Request {
         }
 
         /**
-         * X-Fc-Trace-Id.
+         * The trace ID of the invocation request of Function Compute.
          */
         public Builder xFcTraceId(String xFcTraceId) {
             this.putHeaderParameter("X-Fc-Trace-Id", xFcTraceId);
@@ -229,7 +229,7 @@ public class PutProvisionConfigRequest extends Request {
         }
 
         /**
-         * 当实例进入空闲状态时，是否继续分配CPU。
+         * Specifies whether to always allocate CPU resources. Default value: true.
          */
         public Builder alwaysAllocateCPU(Boolean alwaysAllocateCPU) {
             this.putBodyParameter("alwaysAllocateCPU", alwaysAllocateCPU);
@@ -238,7 +238,7 @@ public class PutProvisionConfigRequest extends Request {
         }
 
         /**
-         * 定时策略配置
+         * The configurations of scheduled auto scaling.
          */
         public Builder scheduledActions(java.util.List < ScheduledActions > scheduledActions) {
             this.putBodyParameter("scheduledActions", scheduledActions);
@@ -247,7 +247,7 @@ public class PutProvisionConfigRequest extends Request {
         }
 
         /**
-         * 预留的目标资源个数
+         * The number of provisioned instances. Value range: [1,100000].
          */
         public Builder target(Long target) {
             this.putBodyParameter("target", target);
@@ -256,7 +256,7 @@ public class PutProvisionConfigRequest extends Request {
         }
 
         /**
-         * 指标追踪伸缩策略配置
+         * The configurations of metric-based auto scaling.
          */
         public Builder targetTrackingPolicies(java.util.List < TargetTrackingPolicies > targetTrackingPolicies) {
             this.putBodyParameter("targetTrackingPolicies", targetTrackingPolicies);
@@ -265,7 +265,7 @@ public class PutProvisionConfigRequest extends Request {
         }
 
         /**
-         * 别名名称
+         * The name of the alias.
          */
         public Builder qualifier(String qualifier) {
             this.putQueryParameter("qualifier", qualifier);

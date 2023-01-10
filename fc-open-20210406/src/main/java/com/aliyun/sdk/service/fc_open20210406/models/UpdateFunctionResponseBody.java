@@ -63,6 +63,9 @@ public class UpdateFunctionResponseBody extends TeaModel {
     @NameInMap("initializer")
     private String initializer;
 
+    @NameInMap("instanceConcurrency")
+    private Integer instanceConcurrency;
+
     @NameInMap("instanceLifecycleConfig")
     private InstanceLifecycleConfig instanceLifecycleConfig;
 
@@ -105,6 +108,7 @@ public class UpdateFunctionResponseBody extends TeaModel {
         this.handler = builder.handler;
         this.initializationTimeout = builder.initializationTimeout;
         this.initializer = builder.initializer;
+        this.instanceConcurrency = builder.instanceConcurrency;
         this.instanceLifecycleConfig = builder.instanceLifecycleConfig;
         this.instanceSoftConcurrency = builder.instanceSoftConcurrency;
         this.instanceType = builder.instanceType;
@@ -243,6 +247,13 @@ public class UpdateFunctionResponseBody extends TeaModel {
     }
 
     /**
+     * @return instanceConcurrency
+     */
+    public Integer getInstanceConcurrency() {
+        return this.instanceConcurrency;
+    }
+
+    /**
      * @return instanceLifecycleConfig
      */
     public InstanceLifecycleConfig getInstanceLifecycleConfig() {
@@ -316,6 +327,7 @@ public class UpdateFunctionResponseBody extends TeaModel {
         private String handler; 
         private Integer initializationTimeout; 
         private String initializer; 
+        private Integer instanceConcurrency; 
         private InstanceLifecycleConfig instanceLifecycleConfig; 
         private Integer instanceSoftConcurrency; 
         private String instanceType; 
@@ -326,7 +338,7 @@ public class UpdateFunctionResponseBody extends TeaModel {
         private Integer timeout; 
 
         /**
-         * 自定义、自定义容器运行时 HTTP Server 的监听端口
+         * The port on which the HTTP server listens for the custom runtime or custom container runtime.
          */
         public Builder caPort(Integer caPort) {
             this.caPort = caPort;
@@ -334,7 +346,7 @@ public class UpdateFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * function code包的CRC64值
+         * The CRC-64 value of the function code package.
          */
         public Builder codeChecksum(String codeChecksum) {
             this.codeChecksum = codeChecksum;
@@ -342,7 +354,7 @@ public class UpdateFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * 系统返回的function的code包大小，单位为byte Example : 1024
+         * The size of the function code package that is returned by the system. Unit: byte.
          */
         public Builder codeSize(Long codeSize) {
             this.codeSize = codeSize;
@@ -350,7 +362,7 @@ public class UpdateFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * function的CPU规格，单位为vCPU，为0.05vCPU的倍数
+         * The number of vCPUs of the function. The value must be a multiple of 0.05.
          */
         public Builder cpu(Float cpu) {
             this.cpu = cpu;
@@ -358,7 +370,7 @@ public class UpdateFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * function创建时间
+         * The time when the function was created.
          */
         public Builder createdTime(String createdTime) {
             this.createdTime = createdTime;
@@ -366,7 +378,7 @@ public class UpdateFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * customContainerConfig.
+         * The configurations of the custom container runtime. After you configure the custom container runtime, Function Compute can execute the function in a container created from a custom image.
          */
         public Builder customContainerConfig(CustomContainerConfig customContainerConfig) {
             this.customContainerConfig = customContainerConfig;
@@ -374,7 +386,7 @@ public class UpdateFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * 函数自定义DNS配置
+         * The custom DNS configurations of the function.
          */
         public Builder customDNS(CustomDNS customDNS) {
             this.customDNS = customDNS;
@@ -382,7 +394,7 @@ public class UpdateFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * 函数自定义健康检查配置，仅适用于Custom runtime/container
+         * The custom health check configuration of the function. This parameter is applicable only to custom runtimes and custom containers.
          */
         public Builder customHealthCheckConfig(CustomHealthCheckConfig customHealthCheckConfig) {
             this.customHealthCheckConfig = customHealthCheckConfig;
@@ -390,7 +402,7 @@ public class UpdateFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * Custom Runtime函数详细配置
+         * The configurations of the custom runtime.
          */
         public Builder customRuntimeConfig(CustomRuntimeConfig customRuntimeConfig) {
             this.customRuntimeConfig = customRuntimeConfig;
@@ -398,7 +410,7 @@ public class UpdateFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * 函数描述
+         * The description of the function.
          */
         public Builder description(String description) {
             this.description = description;
@@ -406,7 +418,7 @@ public class UpdateFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * function的磁盘规格，单位为MB，可选值为512MB或10240MB
+         * The disk size of the function. Unit: MB. Valid values: 512 and 10240.
          */
         public Builder diskSize(Integer diskSize) {
             this.diskSize = diskSize;
@@ -414,7 +426,7 @@ public class UpdateFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * 为函数设置的环境变量，可以在函数中获取环境变量的值
+         * The environment variables that you configured for the function. You can obtain the values of the environment variables from the function. For more information, see [Overview](~~69777~~).
          */
         public Builder environmentVariables(java.util.Map < String, String > environmentVariables) {
             this.environmentVariables = environmentVariables;
@@ -422,7 +434,7 @@ public class UpdateFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * 系统为每个function生成的唯一ID
+         * The unique ID generated by the system for the function.
          */
         public Builder functionId(String functionId) {
             this.functionId = functionId;
@@ -430,7 +442,7 @@ public class UpdateFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * 函数名称
+         * The name of the function.
          */
         public Builder functionName(String functionName) {
             this.functionName = functionName;
@@ -438,7 +450,7 @@ public class UpdateFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * function的执行入口
+         * The handler of the function.
          */
         public Builder handler(String handler) {
             this.handler = handler;
@@ -446,7 +458,7 @@ public class UpdateFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * 初始化function运行的超时时间，单位为秒，最小1秒，默认3秒。初始化function超过这个时间后会被终止执行
+         * The timeout period for the execution of the initializer function. Unit: seconds. Default value: 3. Minimum value: 1. When this period ends, the execution of the initializer function is terminated.
          */
         public Builder initializationTimeout(Integer initializationTimeout) {
             this.initializationTimeout = initializationTimeout;
@@ -454,7 +466,7 @@ public class UpdateFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * 初始化 function 执行的入口，具体格式和语言相关
+         * The handler of the initializer function. The format is determined by the programming language.
          */
         public Builder initializer(String initializer) {
             this.initializer = initializer;
@@ -462,7 +474,15 @@ public class UpdateFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * instanceLifecycleConfig.
+         * The number of requests that can be concurrently processed by a single instance.
+         */
+        public Builder instanceConcurrency(Integer instanceConcurrency) {
+            this.instanceConcurrency = instanceConcurrency;
+            return this;
+        }
+
+        /**
+         * The lifecycle configurations of the instance.
          */
         public Builder instanceLifecycleConfig(InstanceLifecycleConfig instanceLifecycleConfig) {
             this.instanceLifecycleConfig = instanceLifecycleConfig;
@@ -470,7 +490,10 @@ public class UpdateFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * instanceSoftConcurrency.
+         * The soft concurrency of the instance. You can use this parameter to implement graceful scale-up of instances. If the number of concurrent requests on an instance is greater than the number of the soft concurrency, the instance scale-up is triggered. For example, if your instance requires a long term to start, you can specify a suitable soft concurrency to start the instance in advance.
+         * <p>
+         * 
+         * The value must be less than or equal to that of **instanceConcurrency**.
          */
         public Builder instanceSoftConcurrency(Integer instanceSoftConcurrency) {
             this.instanceSoftConcurrency = instanceSoftConcurrency;
@@ -478,7 +501,11 @@ public class UpdateFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * instanceType.
+         * The instance type of the function. Valid values:
+         * <p>
+         * 
+         * *   **e1**: elastic instance
+         * *   **c1**: performance instance
          */
         public Builder instanceType(String instanceType) {
             this.instanceType = instanceType;
@@ -486,7 +513,7 @@ public class UpdateFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * function上次修改时间
+         * The time when the function was last modified.
          */
         public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
@@ -494,7 +521,10 @@ public class UpdateFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * layers.
+         * An array that consists of the information of layers.
+         * <p>
+         * 
+         * >  Multiple layers are merged based on the order of array subscripts. The content of a layer with a smaller subscript overwrites the file with the same name in the layer with a larger subscript.
          */
         public Builder layers(java.util.List < String > layers) {
             this.layers = layers;
@@ -502,7 +532,7 @@ public class UpdateFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * function的内存规格，单位为MB，为64MB的倍数
+         * The memory size for the function. Unit: MB.
          */
         public Builder memorySize(Integer memorySize) {
             this.memorySize = memorySize;
@@ -510,7 +540,7 @@ public class UpdateFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * function运行的语言环境，目前支持nodejs6, nodejs8, python2.7, python3, java8
+         * The runtime environment of the function. Valid values: **nodejs14**, **nodejs12**, **nodejs10**, **nodejs8**, **nodejs6**, **nodejs4.4**, **python3.9**, **python3**, **python2.7**, **java11**, **java8**, **go1**, **php7.2**, **dotnetcore2.1**, **custom** and **custom-container**.
          */
         public Builder runtime(String runtime) {
             this.runtime = runtime;
@@ -518,7 +548,7 @@ public class UpdateFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * 运行的超时时间，单位为秒
+         * The timeout period for the execution. Unit: seconds.
          */
         public Builder timeout(Integer timeout) {
             this.timeout = timeout;

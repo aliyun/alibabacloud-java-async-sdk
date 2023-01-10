@@ -126,7 +126,7 @@ public class DeleteFunctionRequest extends Request {
         } 
 
         /**
-         * service名称
+         * The name of the service.
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("serviceName", serviceName);
@@ -135,7 +135,7 @@ public class DeleteFunctionRequest extends Request {
         }
 
         /**
-         * function名称
+         * The name of the function.
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -144,7 +144,7 @@ public class DeleteFunctionRequest extends Request {
         }
 
         /**
-         * 用于确保实际更改的资源和期望更改的资源是一致的，该值来自Create，Get和Update API的响应
+         * The ETag value of the resource. This value is used to ensure that the modified resource is consistent with the resource to be modified. The ETag value is returned in the responses of the CREATE, GET, and UPDATE operations.
          */
         public Builder ifMatch(String ifMatch) {
             this.putHeaderParameter("If-Match", ifMatch);
@@ -153,7 +153,7 @@ public class DeleteFunctionRequest extends Request {
         }
 
         /**
-         * X-Fc-Account-Id.
+         * The ID of your Alibaba Cloud account.
          */
         public Builder xFcAccountId(String xFcAccountId) {
             this.putHeaderParameter("X-Fc-Account-Id", xFcAccountId);
@@ -162,7 +162,7 @@ public class DeleteFunctionRequest extends Request {
         }
 
         /**
-         * X-Fc-Date.
+         * The time when Function Compute API is called. Specify the time in the **EEE,d MMM yyyy HH:mm:ss GMT** format.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
@@ -171,7 +171,7 @@ public class DeleteFunctionRequest extends Request {
         }
 
         /**
-         * X-Fc-Trace-Id.
+         * The trace ID of the request for Function Compute API. The value is the same as that of the requestId parameter in the response.
          */
         public Builder xFcTraceId(String xFcTraceId) {
             this.putHeaderParameter("X-Fc-Trace-Id", xFcTraceId);

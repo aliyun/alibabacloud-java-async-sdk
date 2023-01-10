@@ -153,7 +153,7 @@ public class ListAliasesRequest extends Request {
         } 
 
         /**
-         * 服务名称
+         * The name of the service.
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("serviceName", serviceName);
@@ -162,7 +162,7 @@ public class ListAliasesRequest extends Request {
         }
 
         /**
-         * X-Fc-Account-Id.
+         * The ID of your Alibaba Cloud account.
          */
         public Builder xFcAccountId(String xFcAccountId) {
             this.putHeaderParameter("X-Fc-Account-Id", xFcAccountId);
@@ -171,7 +171,7 @@ public class ListAliasesRequest extends Request {
         }
 
         /**
-         * X-Fc-Date.
+         * The start time when the function is invoked. Specify the time in the yyyy-mm-ddhh:mm:ss format.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
@@ -180,7 +180,7 @@ public class ListAliasesRequest extends Request {
         }
 
         /**
-         * X-Fc-Trace-Id.
+         * The trace ID of the invocation request of Function Compute.
          */
         public Builder xFcTraceId(String xFcTraceId) {
             this.putHeaderParameter("X-Fc-Trace-Id", xFcTraceId);
@@ -189,7 +189,7 @@ public class ListAliasesRequest extends Request {
         }
 
         /**
-         * 最多返回个数
+         * The maximum number of resources to return.
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("limit", limit);
@@ -198,7 +198,7 @@ public class ListAliasesRequest extends Request {
         }
 
         /**
-         * 下次查询token
+         * The token used to obtain more results.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -207,7 +207,7 @@ public class ListAliasesRequest extends Request {
         }
 
         /**
-         * 前缀
+         * The prefix.
          */
         public Builder prefix(String prefix) {
             this.putQueryParameter("prefix", prefix);
@@ -216,7 +216,7 @@ public class ListAliasesRequest extends Request {
         }
 
         /**
-         * 起始key
+         * The starting position of the result list.
          */
         public Builder startKey(String startKey) {
             this.putQueryParameter("startKey", startKey);

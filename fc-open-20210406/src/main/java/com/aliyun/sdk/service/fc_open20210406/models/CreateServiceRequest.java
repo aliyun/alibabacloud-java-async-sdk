@@ -209,7 +209,7 @@ public class CreateServiceRequest extends Request {
         } 
 
         /**
-         * X-Fc-Account-Id.
+         * The ID of your Alibaba Cloud account.
          */
         public Builder xFcAccountId(String xFcAccountId) {
             this.putHeaderParameter("X-Fc-Account-Id", xFcAccountId);
@@ -218,7 +218,7 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * X-Fc-Date.
+         * The time when the function is invoked. The format is **EEE,d MMM yyyy HH:mm:ss GMT**.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
@@ -227,7 +227,7 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * X-Fc-Trace-Id.
+         * The custom request ID.
          */
         public Builder xFcTraceId(String xFcTraceId) {
             this.putHeaderParameter("X-Fc-Trace-Id", xFcTraceId);
@@ -236,7 +236,7 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * 服务描述
+         * The description of the service.
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -245,7 +245,11 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * 公网访问设置
+         * Specifies whether to allow functions to access the Internet. Valid values:
+         * <p>
+         * 
+         * - **true**: allows functions in the specified service to access the Internet. Default value: true.
+         * - **false**: does not allow functions in the specified service to access the Internet.
          */
         public Builder internetAccess(Boolean internetAccess) {
             this.putBodyParameter("internetAccess", internetAccess);
@@ -254,7 +258,7 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * logConfig.
+         * The log configuration. Function Compute writes function execution logs to the specified Logstore.
          */
         public Builder logConfig(LogConfig logConfig) {
             this.putBodyParameter("logConfig", logConfig);
@@ -263,7 +267,7 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * nasConfig.
+         * The configuration of the Apsara File Storage NAS (NAS) file system. The configurations allow functions in the specified service to access the NAS file system.
          */
         public Builder nasConfig(NASConfig nasConfig) {
             this.putBodyParameter("nasConfig", nasConfig);
@@ -272,7 +276,7 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * OSS挂载配置
+         * The OSS mount configurations.
          */
         public Builder ossMountConfig(OSSMountConfig ossMountConfig) {
             this.putBodyParameter("ossMountConfig", ossMountConfig);
@@ -281,7 +285,11 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * 服务角色
+         * The RAM role that is used to grant required permissions to Function Compute. The RAM role is used in the following scenarios:
+         * <p>
+         * 
+         * *   Sends function execution logs to your Logstore.
+         * *   Generates a token for a function to access other cloud resources during function execution.
          */
         public Builder role(String role) {
             this.putBodyParameter("role", role);
@@ -290,7 +298,7 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * 服务名称
+         * The name of the service. The name contains only letters, digits, hyphens (-), and underscores (_). The name must be 1 to 128 characters in length and cannot start with a digit or hyphen (-).
          */
         public Builder serviceName(String serviceName) {
             this.putBodyParameter("serviceName", serviceName);
@@ -299,7 +307,7 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * tracingConfig.
+         * The configurations of Tracing Analysis. After Function Compute is integrated with Tracing Analysis, you can record the duration of a request in Function Compute, view the cold start time of a function, and record the execution duration of a function. For more information, see [Tracing Analysis](~~189804~~).
          */
         public Builder tracingConfig(TracingConfig tracingConfig) {
             this.putBodyParameter("tracingConfig", tracingConfig);
@@ -308,7 +316,7 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * vpcConfig.
+         * The VPC configurations. The configurations allow functions in the specified service to access the specified VPC.
          */
         public Builder vpcConfig(VPCConfig vpcConfig) {
             this.putBodyParameter("vpcConfig", vpcConfig);

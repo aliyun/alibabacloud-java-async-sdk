@@ -50,7 +50,7 @@ public class ListAliasesResponseBody extends TeaModel {
         private String nextToken; 
 
         /**
-         * 别名列表
+         * The list of aliases.
          */
         public Builder aliases(java.util.List < Aliases> aliases) {
             this.aliases = aliases;
@@ -58,7 +58,7 @@ public class ListAliasesResponseBody extends TeaModel {
         }
 
         /**
-         * 下次查询token
+         * The token used to obtain more results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -182,7 +182,7 @@ public class ListAliasesResponseBody extends TeaModel {
             private String versionId; 
 
             /**
-             * 额外版本权重
+             * The weight of the canary release version.
              */
             public Builder additionalVersionWeight(java.util.Map < String, Float > additionalVersionWeight) {
                 this.additionalVersionWeight = additionalVersionWeight;
@@ -190,7 +190,7 @@ public class ListAliasesResponseBody extends TeaModel {
             }
 
             /**
-             * 别名名称
+             * The name of the alias.
              */
             public Builder aliasName(String aliasName) {
                 this.aliasName = aliasName;
@@ -198,7 +198,7 @@ public class ListAliasesResponseBody extends TeaModel {
             }
 
             /**
-             * 创建时间
+             * The creation time.
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -206,7 +206,7 @@ public class ListAliasesResponseBody extends TeaModel {
             }
 
             /**
-             * 别名描述
+             * The description of the alias.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -214,7 +214,7 @@ public class ListAliasesResponseBody extends TeaModel {
             }
 
             /**
-             * 上次更新时间
+             * The last update time.
              */
             public Builder lastModifiedTime(String lastModifiedTime) {
                 this.lastModifiedTime = lastModifiedTime;
@@ -242,7 +242,7 @@ public class ListAliasesResponseBody extends TeaModel {
             }
 
             /**
-             * 版本ID
+             * The ID of the version.
              */
             public Builder versionId(String versionId) {
                 this.versionId = versionId;

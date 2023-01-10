@@ -50,7 +50,7 @@ public class ListStatefulAsyncInvocationFunctionsResponseBody extends TeaModel {
         private String nextToken; 
 
         /**
-         * 返回的实际数据列表。
+         * The details of returned data.
          */
         public Builder data(java.util.List < AsyncConfigMeta > data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class ListStatefulAsyncInvocationFunctionsResponseBody extends TeaModel {
         }
 
         /**
-         * 用来表示当前调用返回读取到的位置，空代表数据已经读取完毕。
+         * The token used to obtain more results. If this parameter is left empty, all the results are returned.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;

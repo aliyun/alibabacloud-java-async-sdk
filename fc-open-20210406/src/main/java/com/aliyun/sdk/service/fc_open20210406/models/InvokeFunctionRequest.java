@@ -182,7 +182,7 @@ public class InvokeFunctionRequest extends Request {
         } 
 
         /**
-         * service名称
+         * The name of the service.
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("serviceName", serviceName);
@@ -191,7 +191,7 @@ public class InvokeFunctionRequest extends Request {
         }
 
         /**
-         * function名称
+         * The name of the function.
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -200,7 +200,7 @@ public class InvokeFunctionRequest extends Request {
         }
 
         /**
-         * X-Fc-Account-Id.
+         * The ID of your Alibaba Cloud account.
          */
         public Builder xFcAccountId(String xFcAccountId) {
             this.putHeaderParameter("X-Fc-Account-Id", xFcAccountId);
@@ -209,7 +209,7 @@ public class InvokeFunctionRequest extends Request {
         }
 
         /**
-         * X-Fc-Date.
+         * The time when the function is invoked. The format is **EEE,d MMM yyyy HH:mm:ss GMT**.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
@@ -218,7 +218,11 @@ public class InvokeFunctionRequest extends Request {
         }
 
         /**
-         * 调用方式:Sync或者Async，默认值：Sync
+         * The method used to invoke the function. Valid values:
+         * <p>
+         * 
+         * *   **Sync**: synchronous
+         * *   **Async**: asynchronous
          */
         public Builder xFcInvocationType(String xFcInvocationType) {
             this.putHeaderParameter("X-Fc-Invocation-Type", xFcInvocationType);
@@ -227,7 +231,11 @@ public class InvokeFunctionRequest extends Request {
         }
 
         /**
-         * 请求返回日志类型, Tail 为返回函数日志最后 4KB 数据，None 或空值则返回不带有日志，默认为 None
+         * The method used to return logs. Valid values:
+         * <p>
+         * 
+         * *   **Tail**: returns the last 4 KB of logs that are generated for the current request.
+         * *   **None**: No logs are returned for the current request. Default value: None.
          */
         public Builder xFcLogType(String xFcLogType) {
             this.putHeaderParameter("X-Fc-Log-Type", xFcLogType);
@@ -236,7 +244,10 @@ public class InvokeFunctionRequest extends Request {
         }
 
         /**
-         * X-Fc-Stateful-Async-Invocation-Id.
+         * The ID of the asynchronous task. You must enable the asynchronous task feature in advance.
+         * <p>
+         * 
+         * > When you use an SDK to invoke a function, we recommend that you specify a business-related ID to facilitate subsequent operations. For example, you can use the video name as the invocation ID for a video-processing function. This way, you can use the ID to check whether the video is processed or terminate the processing of the video. The ID must start with a letter or an underscore (\_) and can contain letters, digits, underscores (\_), and hyphens (-). The ID can be up to 128 characters in length. If you do not specify the ID of the asynchronous invocation, Function Compute automatically generates an ID.
          */
         public Builder xFcStatefulAsyncInvocationId(String xFcStatefulAsyncInvocationId) {
             this.putHeaderParameter("X-Fc-Stateful-Async-Invocation-Id", xFcStatefulAsyncInvocationId);
@@ -245,7 +256,7 @@ public class InvokeFunctionRequest extends Request {
         }
 
         /**
-         * X-Fc-Trace-Id.
+         * The trace ID of the request for Function Compute API. The value is the same as that of the **requestId** parameter in the response.
          */
         public Builder xFcTraceId(String xFcTraceId) {
             this.putHeaderParameter("X-Fc-Trace-Id", xFcTraceId);
@@ -254,7 +265,7 @@ public class InvokeFunctionRequest extends Request {
         }
 
         /**
-         * 事件（event），binary type。函数计算服务将event传递给用户function来处理
+         * The event to be processed by the function. Set this parameter to a binary string. Function Compute passes the event to the function for processing.
          */
         public Builder body(byte[] body) {
             this.putBodyParameter("body", body);
@@ -263,7 +274,7 @@ public class InvokeFunctionRequest extends Request {
         }
 
         /**
-         * service版本, 可以是versionId或者aliasName
+         * The version or alias of the service.
          */
         public Builder qualifier(String qualifier) {
             this.putQueryParameter("qualifier", qualifier);

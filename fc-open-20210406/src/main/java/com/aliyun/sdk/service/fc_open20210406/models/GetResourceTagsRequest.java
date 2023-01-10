@@ -97,7 +97,7 @@ public class GetResourceTagsRequest extends Request {
         } 
 
         /**
-         * X-Fc-Account-Id.
+         * The ID of your Alibaba Cloud account.
          */
         public Builder xFcAccountId(String xFcAccountId) {
             this.putHeaderParameter("X-Fc-Account-Id", xFcAccountId);
@@ -106,7 +106,7 @@ public class GetResourceTagsRequest extends Request {
         }
 
         /**
-         * X-Fc-Date.
+         * The time when Function Compute API is called. Specify the time in the **EEE,d MMM yyyy HH:mm:ss GMT** format.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
@@ -115,7 +115,7 @@ public class GetResourceTagsRequest extends Request {
         }
 
         /**
-         * X-Fc-Trace-Id.
+         * The custom request ID.
          */
         public Builder xFcTraceId(String xFcTraceId) {
             this.putHeaderParameter("X-Fc-Trace-Id", xFcTraceId);
@@ -124,7 +124,10 @@ public class GetResourceTagsRequest extends Request {
         }
 
         /**
-         * Resource ARN 全称或者简称
+         * The Alibaba Cloud Resource Name (ARN) of the resource. 
+         * <p>
+         * 
+         * > You can use the value of this parameter to query the information about the resource, such as the account, service, and region information of the resource. You can manage tags only for services for top level resources.
          */
         public Builder resourceArn(String resourceArn) {
             this.putQueryParameter("resourceArn", resourceArn);

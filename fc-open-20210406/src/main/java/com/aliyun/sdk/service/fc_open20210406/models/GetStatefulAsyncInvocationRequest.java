@@ -27,10 +27,6 @@ public class GetStatefulAsyncInvocationRequest extends Request {
     @Validation(required = true)
     private String invocationId;
 
-    @Host
-    @NameInMap("AccountID")
-    private String accountID;
-
     @Header
     @NameInMap("X-Fc-Account-Id")
     private String xFcAccountId;
@@ -64,7 +60,6 @@ public class GetStatefulAsyncInvocationRequest extends Request {
         this.serviceName = builder.serviceName;
         this.functionName = builder.functionName;
         this.invocationId = builder.invocationId;
-        this.accountID = builder.accountID;
         this.xFcAccountId = builder.xFcAccountId;
         this.xFcCodeChecksum = builder.xFcCodeChecksum;
         this.xFcDate = builder.xFcDate;
@@ -106,13 +101,6 @@ public class GetStatefulAsyncInvocationRequest extends Request {
      */
     public String getInvocationId() {
         return this.invocationId;
-    }
-
-    /**
-     * @return accountID
-     */
-    public String getAccountID() {
-        return this.accountID;
     }
 
     /**
@@ -168,7 +156,6 @@ public class GetStatefulAsyncInvocationRequest extends Request {
         private String serviceName; 
         private String functionName; 
         private String invocationId; 
-        private String accountID; 
         private String xFcAccountId; 
         private String xFcCodeChecksum; 
         private String xFcDate; 
@@ -186,7 +173,6 @@ public class GetStatefulAsyncInvocationRequest extends Request {
             this.serviceName = request.serviceName;
             this.functionName = request.functionName;
             this.invocationId = request.invocationId;
-            this.accountID = request.accountID;
             this.xFcAccountId = request.xFcAccountId;
             this.xFcCodeChecksum = request.xFcCodeChecksum;
             this.xFcDate = request.xFcDate;
@@ -197,7 +183,7 @@ public class GetStatefulAsyncInvocationRequest extends Request {
         } 
 
         /**
-         * serviceName.
+         * The name of the service to which the asynchronous task belongs.
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("serviceName", serviceName);
@@ -206,7 +192,7 @@ public class GetStatefulAsyncInvocationRequest extends Request {
         }
 
         /**
-         * functionName.
+         * The name of the function to which the asynchronous task belongs.
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -215,7 +201,9 @@ public class GetStatefulAsyncInvocationRequest extends Request {
         }
 
         /**
-         * invocationId.
+         * The ID of the asynchronous task. 
+         * <p>
+         * > When you use an SDK to invoke a function, we recommend that you specify a business-related ID to facilitate subsequent operations. For example, a function that processes a video can use the file name of the video as the invocation ID. Then, you can use this ID to check whether the video is processed or terminate the processing of the video. The ID must start with a letter or an underscore (\_), and can contain letters, digits, underscores (\_), and hyphens (-). The ID can be up to 128 characters in length. If you do not specify the ID of the asynchronous invocation, Function Compute automatically generates an ID.
          */
         public Builder invocationId(String invocationId) {
             this.putPathParameter("invocationId", invocationId);
@@ -224,16 +212,7 @@ public class GetStatefulAsyncInvocationRequest extends Request {
         }
 
         /**
-         * AccountID.
-         */
-        public Builder accountID(String accountID) {
-            this.putHostParameter("AccountID", accountID);
-            this.accountID = accountID;
-            return this;
-        }
-
-        /**
-         * X-Fc-Account-Id.
+         * The ID of your Alibaba Cloud account.
          */
         public Builder xFcAccountId(String xFcAccountId) {
             this.putHeaderParameter("X-Fc-Account-Id", xFcAccountId);
@@ -242,7 +221,7 @@ public class GetStatefulAsyncInvocationRequest extends Request {
         }
 
         /**
-         * X-Fc-Code-Checksum.
+         * The CRC-64 value of the function code package. This value is used to check data integrity. The value is automatically calculated by the tool.
          */
         public Builder xFcCodeChecksum(String xFcCodeChecksum) {
             this.putHeaderParameter("X-Fc-Code-Checksum", xFcCodeChecksum);
@@ -251,7 +230,7 @@ public class GetStatefulAsyncInvocationRequest extends Request {
         }
 
         /**
-         * X-Fc-Date.
+         * The time when Function Compute API is called. Specify the time in the **EEE,d MMM yyyy HH:mm:ss GMT** format.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
@@ -260,7 +239,11 @@ public class GetStatefulAsyncInvocationRequest extends Request {
         }
 
         /**
-         * X-Fc-Invocation-Type.
+         * The invocation method. 
+         * <p>
+         * 
+         * - **Sync**: synchronous invocation 
+         * - **Async**: asynchronous invocation
          */
         public Builder xFcInvocationType(String xFcInvocationType) {
             this.putHeaderParameter("X-Fc-Invocation-Type", xFcInvocationType);
@@ -269,7 +252,11 @@ public class GetStatefulAsyncInvocationRequest extends Request {
         }
 
         /**
-         * X-Fc-Log-Type.
+         * The method used to return logs. Valid values: 
+         * <p>
+         * 
+         * - **Tail**: returns the last 4 KB of logs that are generated for the current request. 
+         * - **None**: does not return logs for the current request. This is the default value.
          */
         public Builder xFcLogType(String xFcLogType) {
             this.putHeaderParameter("X-Fc-Log-Type", xFcLogType);
@@ -278,7 +265,7 @@ public class GetStatefulAsyncInvocationRequest extends Request {
         }
 
         /**
-         * X-Fc-Trace-Id.
+         * The trace ID of the invocation request of Function Compute.
          */
         public Builder xFcTraceId(String xFcTraceId) {
             this.putHeaderParameter("X-Fc-Trace-Id", xFcTraceId);
@@ -287,7 +274,7 @@ public class GetStatefulAsyncInvocationRequest extends Request {
         }
 
         /**
-         * qualifier.
+         * The version or alias of the service to which the asynchronous task belongs.
          */
         public Builder qualifier(String qualifier) {
             this.putQueryParameter("qualifier", qualifier);

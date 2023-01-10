@@ -153,7 +153,7 @@ public class ListServiceVersionsRequest extends Request {
         } 
 
         /**
-         * 服务名称
+         * The name of the service.
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("serviceName", serviceName);
@@ -162,7 +162,7 @@ public class ListServiceVersionsRequest extends Request {
         }
 
         /**
-         * X-Fc-Account-Id.
+         * The ID of your Alibaba Cloud account.
          */
         public Builder xFcAccountId(String xFcAccountId) {
             this.putHeaderParameter("X-Fc-Account-Id", xFcAccountId);
@@ -171,7 +171,7 @@ public class ListServiceVersionsRequest extends Request {
         }
 
         /**
-         * X-Fc-Date.
+         * The time when Function Compute API is called. Specify the time in the **EEE,d MMM yyyy HH:mm:ss GMT** format.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
@@ -180,7 +180,7 @@ public class ListServiceVersionsRequest extends Request {
         }
 
         /**
-         * X-Fc-Trace-Id.
+         * The trace ID of the invocation request of Function Compute.
          */
         public Builder xFcTraceId(String xFcTraceId) {
             this.putHeaderParameter("X-Fc-Trace-Id", xFcTraceId);
@@ -189,7 +189,10 @@ public class ListServiceVersionsRequest extends Request {
         }
 
         /**
-         * 排序方向
+         * The order in which the returned versions are sorted. Valid values:
+         * <p>
+         *   - **FORWARD**: in ascending order. 
+         *   - **BACKWARD**: in descending order. This is the default value.
          */
         public Builder direction(String direction) {
             this.putQueryParameter("direction", direction);
@@ -198,7 +201,7 @@ public class ListServiceVersionsRequest extends Request {
         }
 
         /**
-         * 最多返回个数
+         * The maximum number of resources to return. Default value: 20. Maximum value: 100. The number of returned resources is less than or equal to the specified number.
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("limit", limit);
@@ -207,7 +210,7 @@ public class ListServiceVersionsRequest extends Request {
         }
 
         /**
-         * 下次查询token
+         * The token used to obtain more results. If the number of resources exceeds the limit, the nextToken parameter is returned. You can include the parameter in subsequent calls to obtain more results. You do not need to provide this parameter in the first call.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -216,7 +219,7 @@ public class ListServiceVersionsRequest extends Request {
         }
 
         /**
-         * 起始key
+         * The starting position of the result list. The returned resources are sorted based on the version number, and the resources that include and follow the resource specified by the startKey parameter are returned.
          */
         public Builder startKey(String startKey) {
             this.putQueryParameter("startKey", startKey);

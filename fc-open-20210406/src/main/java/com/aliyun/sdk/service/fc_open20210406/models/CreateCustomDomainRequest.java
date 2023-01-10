@@ -153,7 +153,7 @@ public class CreateCustomDomainRequest extends Request {
         } 
 
         /**
-         * X-Fc-Account-Id.
+         * The ID of your Alibaba Cloud account.
          */
         public Builder xFcAccountId(String xFcAccountId) {
             this.putHeaderParameter("X-Fc-Account-Id", xFcAccountId);
@@ -162,7 +162,7 @@ public class CreateCustomDomainRequest extends Request {
         }
 
         /**
-         * X-Fc-Date.
+         * The time when Function Compute API is called. Specify the time in the **EEE,d MMM yyyy HH:mm:ss GMT** format.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
@@ -171,7 +171,7 @@ public class CreateCustomDomainRequest extends Request {
         }
 
         /**
-         * X-Fc-Trace-Id.
+         * The custom request ID.
          */
         public Builder xFcTraceId(String xFcTraceId) {
             this.putHeaderParameter("X-Fc-Trace-Id", xFcTraceId);
@@ -180,7 +180,7 @@ public class CreateCustomDomainRequest extends Request {
         }
 
         /**
-         * certConfig.
+         * The configurations of the HTTPS certificate.
          */
         public Builder certConfig(CertConfig certConfig) {
             this.putBodyParameter("certConfig", certConfig);
@@ -189,7 +189,7 @@ public class CreateCustomDomainRequest extends Request {
         }
 
         /**
-         * domainName.
+         * The domain name.
          */
         public Builder domainName(String domainName) {
             this.putBodyParameter("domainName", domainName);
@@ -198,7 +198,12 @@ public class CreateCustomDomainRequest extends Request {
         }
 
         /**
-         * protocol.
+         * The protocol types supported by the domain name. Valid values:
+         * <p>
+         * 
+         * - **HTTP**: Only HTTP is supported. 
+         * - **HTTPS**: Only HTTPS is supported. 
+         * - **HTTP,HTTPS**: Both HTTP and HTTPS are supported.
          */
         public Builder protocol(String protocol) {
             this.putBodyParameter("protocol", protocol);
@@ -207,7 +212,7 @@ public class CreateCustomDomainRequest extends Request {
         }
 
         /**
-         * routeConfig.
+         * The route table that maps the paths to functions when the functions are invoked by using the custom domain name.
          */
         public Builder routeConfig(RouteConfig routeConfig) {
             this.putBodyParameter("routeConfig", routeConfig);
@@ -216,7 +221,7 @@ public class CreateCustomDomainRequest extends Request {
         }
 
         /**
-         * tlsConfig.
+         * The configurations of the TLS.
          */
         public Builder tlsConfig(TLSConfig tlsConfig) {
             this.putBodyParameter("tlsConfig", tlsConfig);

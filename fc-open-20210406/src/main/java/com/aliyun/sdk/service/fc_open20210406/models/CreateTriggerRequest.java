@@ -213,7 +213,7 @@ public class CreateTriggerRequest extends Request {
         } 
 
         /**
-         * service名称
+         * The name of the service.
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("serviceName", serviceName);
@@ -222,7 +222,7 @@ public class CreateTriggerRequest extends Request {
         }
 
         /**
-         * function名称
+         * The name of the function.
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -231,7 +231,7 @@ public class CreateTriggerRequest extends Request {
         }
 
         /**
-         * X-Fc-Account-Id.
+         * The ID of your Alibaba Cloud account.
          */
         public Builder xFcAccountId(String xFcAccountId) {
             this.putHeaderParameter("X-Fc-Account-Id", xFcAccountId);
@@ -240,7 +240,7 @@ public class CreateTriggerRequest extends Request {
         }
 
         /**
-         * X-Fc-Date.
+         * The time when the request is initiated on the client. The format of the value is: **EEE,d MMM yyyy HH:mm:ss GMT**.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
@@ -249,7 +249,7 @@ public class CreateTriggerRequest extends Request {
         }
 
         /**
-         * X-Fc-Trace-Id.
+         * The custom request ID.
          */
         public Builder xFcTraceId(String xFcTraceId) {
             this.putHeaderParameter("X-Fc-Trace-Id", xFcTraceId);
@@ -258,7 +258,7 @@ public class CreateTriggerRequest extends Request {
         }
 
         /**
-         * description.
+         * The description of the trigger.
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -267,7 +267,7 @@ public class CreateTriggerRequest extends Request {
         }
 
         /**
-         * event source，如OSS，使用该role去invoke function
+         * The role that is used by the event source such as OSS to invoke the function. For more information, see [Overview](~~53102~~).
          */
         public Builder invocationRole(String invocationRole) {
             this.putBodyParameter("invocationRole", invocationRole);
@@ -276,7 +276,7 @@ public class CreateTriggerRequest extends Request {
         }
 
         /**
-         * service版本
+         * The version or alias of the service.
          */
         public Builder qualifier(String qualifier) {
             this.putBodyParameter("qualifier", qualifier);
@@ -285,7 +285,7 @@ public class CreateTriggerRequest extends Request {
         }
 
         /**
-         * event source的Aliyun Resource Name（ARN
+         * The Alibaba Cloud Resource Name (ARN) of the event source for the trigger.
          */
         public Builder sourceArn(String sourceArn) {
             this.putBodyParameter("sourceArn", sourceArn);
@@ -294,7 +294,16 @@ public class CreateTriggerRequest extends Request {
         }
 
         /**
-         * trigger配置，针对不同的trigger类型，trigger配置会有所不同
+         * The configurations of the trigger. The configurations vary based on the trigger type. For more information about the format, see the following topics:
+         * <p>
+         * 
+         * *   OSS trigger: [OSSTriggerConfig](javascript:void\(0\)).
+         * *   Log Service trigger: [LogTriggerConfig](javascript:void\(0\)).
+         * *   Time trigger: [TimeTriggerConfig](javascript:void\(0\)).
+         * *   HTTP trigger: [HTTPTriggerConfig](javascript:void\(0\)).
+         * *   Tablestore trigger: Specify the **SourceArn** parameter and leave this parameter empty.
+         * *   Alibaba Cloud CDN event trigger: [CDNEventsTriggerConfig](javascript:void\(0\)).
+         * *   MNS topic trigger: [MnsTopicTriggerConfig](javascript:void\(0\)).
          */
         public Builder triggerConfig(String triggerConfig) {
             this.putBodyParameter("triggerConfig", triggerConfig);
@@ -303,7 +312,7 @@ public class CreateTriggerRequest extends Request {
         }
 
         /**
-         * trigger名称
+         * The name of the trigger. The name contains only letters, digits, hyphens (-), and underscores (\_). The name must be 1 to 128 characters in length and cannot start with a digit or hyphen (-).
          */
         public Builder triggerName(String triggerName) {
             this.putBodyParameter("triggerName", triggerName);
@@ -312,7 +321,16 @@ public class CreateTriggerRequest extends Request {
         }
 
         /**
-         * trigger类型，如 oss, log, tablestore, timer, http, cdn_events, mns_topic
+         * The type of the trigger. Valid values:
+         * <p>
+         * 
+         * *   **oss**: OSS event trigger. For more information, see [Overview](~~62922~~).
+         * *   **log**: Log Service trigger. For more information, see [Overview](~~84386~~).
+         * *   **timer**: time trigger. For more information, see [Overview](~~68172~~).
+         * *   **http**: HTTP trigger. For more information, see [Overview](~~71229~~).
+         * *   **tablestore**: Tablestore trigger. For more information, see [Overview](~~100092~~).
+         * *   **cdn_events**: CDN event trigger. For more information, see [Overview](~~73333~~).
+         * *   **mns_topic**: MNS topic trigger. For more information, see [Overview](~~97032~~).
          */
         public Builder triggerType(String triggerType) {
             this.putBodyParameter("triggerType", triggerType);

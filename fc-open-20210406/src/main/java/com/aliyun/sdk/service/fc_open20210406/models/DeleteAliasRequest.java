@@ -126,7 +126,7 @@ public class DeleteAliasRequest extends Request {
         } 
 
         /**
-         * 服务名称
+         * The name of the service.
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("serviceName", serviceName);
@@ -135,7 +135,7 @@ public class DeleteAliasRequest extends Request {
         }
 
         /**
-         * 别名
+         * The name of the alias.
          */
         public Builder aliasName(String aliasName) {
             this.putPathParameter("aliasName", aliasName);
@@ -144,7 +144,10 @@ public class DeleteAliasRequest extends Request {
         }
 
         /**
-         * If-Match.
+         * If the ETag specified in the request matches the ETag value of the object, OSS transmits the object and returns 200 OK. If the ETag specified in the request does not match the ETag value of the object, OSS returns 412 Precondition Failed. 
+         * <p>
+         * The ETag value of a resource is used to check whether the resource has changed. You can check data integrity by using the ETag value. 
+         * Default value: null
          */
         public Builder ifMatch(String ifMatch) {
             this.putHeaderParameter("If-Match", ifMatch);
@@ -153,7 +156,7 @@ public class DeleteAliasRequest extends Request {
         }
 
         /**
-         * X-Fc-Account-Id.
+         * The ID of your Alibaba Cloud account.
          */
         public Builder xFcAccountId(String xFcAccountId) {
             this.putHeaderParameter("X-Fc-Account-Id", xFcAccountId);
@@ -162,7 +165,7 @@ public class DeleteAliasRequest extends Request {
         }
 
         /**
-         * X-Fc-Date.
+         * The time when Function Compute API is called. Specify the time in the **EEE,d MMM yyyy HH:mm:ss GMT** format.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
@@ -171,7 +174,7 @@ public class DeleteAliasRequest extends Request {
         }
 
         /**
-         * X-Fc-Trace-Id.
+         * The trace ID of the invocation request of Function Compute.
          */
         public Builder xFcTraceId(String xFcTraceId) {
             this.putHeaderParameter("X-Fc-Trace-Id", xFcTraceId);

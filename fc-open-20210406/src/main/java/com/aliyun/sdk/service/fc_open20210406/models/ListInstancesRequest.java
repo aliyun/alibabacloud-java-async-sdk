@@ -127,7 +127,7 @@ public class ListInstancesRequest extends Request {
         } 
 
         /**
-         * 服务的名称
+         * The name of the service.
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("serviceName", serviceName);
@@ -136,7 +136,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * 函数的名称
+         * The name of the function.
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -145,7 +145,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * X-Fc-Account-Id.
+         * The ID of your Alibaba Cloud account.
          */
         public Builder xFcAccountId(String xFcAccountId) {
             this.putHeaderParameter("X-Fc-Account-Id", xFcAccountId);
@@ -154,7 +154,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * 实例ID
+         * The IDs of the instance.
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             this.putQueryParameter("instanceIds", instanceIds);
@@ -163,10 +163,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * 限定此次返回资源的数量，取值范围[0,1000]。
+         * The maximum number of resources to return. Valid values: \[0,1000].
          * <p>
          * 
-         * 返回结果可以小于指定的数量，但不能多于指定的数量。
+         * The number of returned resources is less than or equal to the specified number.
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("limit", limit);
@@ -175,10 +175,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * 服务的版本或别名。默认是LATEST。
-         * <p>
-         * 
-         * 此处的qualifier同InvokeFunction的qualifier含义一致，即调用ListInstances时指定qualifier=test查询出来的实例，就是调用InvokeFunction时qualifier=test链路上的实例。
+         * The version or alias.
          */
         public Builder qualifier(String qualifier) {
             this.putQueryParameter("qualifier", qualifier);

@@ -138,7 +138,7 @@ public class ListProvisionConfigsRequest extends Request {
         } 
 
         /**
-         * X-Fc-Account-Id.
+         * The ID of your Alibaba Cloud account.
          */
         public Builder xFcAccountId(String xFcAccountId) {
             this.putHeaderParameter("X-Fc-Account-Id", xFcAccountId);
@@ -147,7 +147,7 @@ public class ListProvisionConfigsRequest extends Request {
         }
 
         /**
-         * X-Fc-Date.
+         * The time when Function Compute API is called. Specify the time in the **EEE,d MMM yyyy HH:mm:ss GMT** format.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
@@ -156,7 +156,7 @@ public class ListProvisionConfigsRequest extends Request {
         }
 
         /**
-         * X-Fc-Trace-Id.
+         * The trace ID of the invocation request of Function Compute.
          */
         public Builder xFcTraceId(String xFcTraceId) {
             this.putHeaderParameter("X-Fc-Trace-Id", xFcTraceId);
@@ -165,7 +165,7 @@ public class ListProvisionConfigsRequest extends Request {
         }
 
         /**
-         * 限定此次返回资源的数量。如果不设定，默认返回20，最大不能超过100。返回结果可能小于指定的数量，但不会多于指定的数量	
+         * The maximum number of resources to return. Default value: 20. Maximum value: 100. The number of returned resources is less than or equal to the specified number.
          */
         public Builder limit(Long limit) {
             this.putQueryParameter("limit", limit);
@@ -174,7 +174,7 @@ public class ListProvisionConfigsRequest extends Request {
         }
 
         /**
-         * 用来返回更多结果。第一次查询不需要提供这个参数，后续查询的token从返回结果中获取
+         * The token used to obtain more results. You do not need to provide this parameter in the first call. The tokens for subsequent queries are obtained from the returned results.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -183,7 +183,7 @@ public class ListProvisionConfigsRequest extends Request {
         }
 
         /**
-         * 限定返回的资源名称必须属于该qualifier。qualifier只能是aliasName，且必须和serviceName共同使用
+         * The qualifier of the service to which resources belong. The qualifier must be aliasName and used together with the serviceName parameter.
          */
         public Builder qualifier(String qualifier) {
             this.putQueryParameter("qualifier", qualifier);
@@ -192,7 +192,7 @@ public class ListProvisionConfigsRequest extends Request {
         }
 
         /**
-         * 限定返回的资源名称必须属于该service
+         * The name of the service to which resources belong.
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("serviceName", serviceName);

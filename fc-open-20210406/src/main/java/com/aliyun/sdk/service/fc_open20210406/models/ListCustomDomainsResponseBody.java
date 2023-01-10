@@ -50,7 +50,7 @@ public class ListCustomDomainsResponseBody extends TeaModel {
         private String nextToken; 
 
         /**
-         * customDomains.
+         * The information about custom domain names.
          */
         public Builder customDomains(java.util.List < CustomDomains> customDomains) {
             this.customDomains = customDomains;
@@ -58,7 +58,7 @@ public class ListCustomDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * The token used to obtain more results. If the number of resources exceeds the limit, the nextToken parameter is returned. You can include the parameter in subsequent calls to obtain more results. You do not need to provide this parameter in the first call.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -194,7 +194,7 @@ public class ListCustomDomainsResponseBody extends TeaModel {
             private TLSConfig tlsConfig; 
 
             /**
-             * accountId.
+             * The ID of the account.
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -202,7 +202,7 @@ public class ListCustomDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * apiVersion.
+             * The version of the API.
              */
             public Builder apiVersion(String apiVersion) {
                 this.apiVersion = apiVersion;
@@ -210,7 +210,7 @@ public class ListCustomDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * certConfig.
+             * The configurations of the HTTPS certificate.
              */
             public Builder certConfig(CertConfig certConfig) {
                 this.certConfig = certConfig;
@@ -218,7 +218,7 @@ public class ListCustomDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * createdTime.
+             * The time when the domain name was added.
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -226,7 +226,7 @@ public class ListCustomDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * domainName.
+             * The domain name.
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -234,7 +234,7 @@ public class ListCustomDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * lastModifiedTime.
+             * The time when the domain name was last modified.
              */
             public Builder lastModifiedTime(String lastModifiedTime) {
                 this.lastModifiedTime = lastModifiedTime;
@@ -242,7 +242,12 @@ public class ListCustomDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * protocol.
+             * The protocol types supported by the domain name. Valid values: 
+             * <p>
+             * 
+             * - **HTTP**: Only HTTP is supported. 
+             * - **HTTPS**: Only HTTPS is supported. 
+             * - **HTTP,HTTPS**: Both HTTP and HTTPS are supported.
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -250,7 +255,7 @@ public class ListCustomDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * routeConfig.
+             * The route table that maps the paths to functions when the functions are invoked by using the custom domain name.
              */
             public Builder routeConfig(RouteConfig routeConfig) {
                 this.routeConfig = routeConfig;
@@ -258,7 +263,7 @@ public class ListCustomDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * tlsConfig.
+             * The configurations of the TLS.
              */
             public Builder tlsConfig(TLSConfig tlsConfig) {
                 this.tlsConfig = tlsConfig;

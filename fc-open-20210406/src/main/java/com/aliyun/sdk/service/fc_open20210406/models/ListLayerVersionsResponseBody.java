@@ -50,7 +50,7 @@ public class ListLayerVersionsResponseBody extends TeaModel {
         private Integer nextVersion; 
 
         /**
-         * 层版本列表
+         * The information about layer versions.
          */
         public Builder layers(java.util.List < Layer > layers) {
             this.layers = layers;
@@ -58,7 +58,7 @@ public class ListLayerVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * 剩余列表起始版本号
+         * The initial version of the layer for the next query.
          */
         public Builder nextVersion(Integer nextVersion) {
             this.nextVersion = nextVersion;

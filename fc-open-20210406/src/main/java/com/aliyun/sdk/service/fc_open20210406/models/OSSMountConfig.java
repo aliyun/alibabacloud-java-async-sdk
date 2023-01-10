@@ -55,6 +55,9 @@ public class OSSMountConfig extends TeaModel {
         @NameInMap("bucketName")
         private String bucketName;
 
+        @NameInMap("bucketPath")
+        private String bucketPath;
+
         @NameInMap("endpoint")
         private String endpoint;
 
@@ -66,6 +69,7 @@ public class OSSMountConfig extends TeaModel {
 
         private MountPoints(Builder builder) {
             this.bucketName = builder.bucketName;
+            this.bucketPath = builder.bucketPath;
             this.endpoint = builder.endpoint;
             this.mountDir = builder.mountDir;
             this.readOnly = builder.readOnly;
@@ -84,6 +88,13 @@ public class OSSMountConfig extends TeaModel {
          */
         public String getBucketName() {
             return this.bucketName;
+        }
+
+        /**
+         * @return bucketPath
+         */
+        public String getBucketPath() {
+            return this.bucketPath;
         }
 
         /**
@@ -109,6 +120,7 @@ public class OSSMountConfig extends TeaModel {
 
         public static final class Builder {
             private String bucketName; 
+            private String bucketPath; 
             private String endpoint; 
             private String mountDir; 
             private Boolean readOnly; 
@@ -118,6 +130,14 @@ public class OSSMountConfig extends TeaModel {
              */
             public Builder bucketName(String bucketName) {
                 this.bucketName = bucketName;
+                return this;
+            }
+
+            /**
+             * 挂载的OSS bucket路径
+             */
+            public Builder bucketPath(String bucketPath) {
+                this.bucketPath = bucketPath;
                 return this;
             }
 

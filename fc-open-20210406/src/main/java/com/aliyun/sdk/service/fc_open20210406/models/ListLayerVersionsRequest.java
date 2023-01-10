@@ -125,7 +125,7 @@ public class ListLayerVersionsRequest extends Request {
         } 
 
         /**
-         * 层名称
+         * The name of the layer.
          */
         public Builder layerName(String layerName) {
             this.putPathParameter("layerName", layerName);
@@ -134,7 +134,7 @@ public class ListLayerVersionsRequest extends Request {
         }
 
         /**
-         * X-Fc-Account-Id.
+         * The ID of your Alibaba Cloud account.
          */
         public Builder xFcAccountId(String xFcAccountId) {
             this.putHeaderParameter("X-Fc-Account-Id", xFcAccountId);
@@ -143,7 +143,7 @@ public class ListLayerVersionsRequest extends Request {
         }
 
         /**
-         * X-Fc-Date.
+         * The time when Function Compute API is called. Specify the time in the **EEE,d MMM yyyy HH:mm:ss GMT** format.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
@@ -152,7 +152,7 @@ public class ListLayerVersionsRequest extends Request {
         }
 
         /**
-         * X-Fc-Trace-Id.
+         * The trace ID of the request for Function Compute API.
          */
         public Builder xFcTraceId(String xFcTraceId) {
             this.putHeaderParameter("X-Fc-Trace-Id", xFcTraceId);
@@ -161,7 +161,7 @@ public class ListLayerVersionsRequest extends Request {
         }
 
         /**
-         * 本次读取的最大数据记录数量
+         * The maximum number of resources to return. Default value: 20. Maximum value: 100. The number of returned resources is less than or equal to the specified number.
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("limit", limit);
@@ -170,7 +170,7 @@ public class ListLayerVersionsRequest extends Request {
         }
 
         /**
-         * 起始版本
+         * The initial version of the layer.
          */
         public Builder startVersion(Integer startVersion) {
             this.putQueryParameter("startVersion", startVersion);

@@ -134,7 +134,7 @@ public class PutFunctionAsyncInvokeConfigResponseBody extends TeaModel {
         private Boolean statefulInvocation; 
 
         /**
-         * 创建时间
+         * The creation time.
          */
         public Builder createdTime(String createdTime) {
             this.createdTime = createdTime;
@@ -142,7 +142,7 @@ public class PutFunctionAsyncInvokeConfigResponseBody extends TeaModel {
         }
 
         /**
-         * destinationConfig.
+         * The configuration structure of the destination for asynchronous invocation.
          */
         public Builder destinationConfig(DestinationConfig destinationConfig) {
             this.destinationConfig = destinationConfig;
@@ -150,7 +150,7 @@ public class PutFunctionAsyncInvokeConfigResponseBody extends TeaModel {
         }
 
         /**
-         * 函数名称
+         * The name of the function.
          */
         public Builder function(String function) {
             this.function = function;
@@ -158,7 +158,7 @@ public class PutFunctionAsyncInvokeConfigResponseBody extends TeaModel {
         }
 
         /**
-         * 最后更改时间
+         * The time when the configuration was last modified.
          */
         public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
@@ -166,7 +166,7 @@ public class PutFunctionAsyncInvokeConfigResponseBody extends TeaModel {
         }
 
         /**
-         * 消息最大存活时长
+         * The maximum validity period of messages.
          */
         public Builder maxAsyncEventAgeInSeconds(Long maxAsyncEventAgeInSeconds) {
             this.maxAsyncEventAgeInSeconds = maxAsyncEventAgeInSeconds;
@@ -174,7 +174,7 @@ public class PutFunctionAsyncInvokeConfigResponseBody extends TeaModel {
         }
 
         /**
-         * 异步调用失败后的最大重试次数
+         * The maximum number of retries allowed after an asynchronous invocation fails.
          */
         public Builder maxAsyncRetryAttempts(Long maxAsyncRetryAttempts) {
             this.maxAsyncRetryAttempts = maxAsyncRetryAttempts;
@@ -182,7 +182,7 @@ public class PutFunctionAsyncInvokeConfigResponseBody extends TeaModel {
         }
 
         /**
-         * 限定符
+         * The qualifier.
          */
         public Builder qualifier(String qualifier) {
             this.qualifier = qualifier;
@@ -190,7 +190,7 @@ public class PutFunctionAsyncInvokeConfigResponseBody extends TeaModel {
         }
 
         /**
-         * 服务名称
+         * The name of the service.
          */
         public Builder service(String service) {
             this.service = service;
@@ -198,7 +198,11 @@ public class PutFunctionAsyncInvokeConfigResponseBody extends TeaModel {
         }
 
         /**
-         * statefulInvocation.
+         * Specifies whether to enable the asynchronous task feature. 
+         * <p>
+         * 
+         * - **true**: enables the asynchronous task feature. 
+         * - **false**: does not enable the asynchronous task feature.
          */
         public Builder statefulInvocation(Boolean statefulInvocation) {
             this.statefulInvocation = statefulInvocation;

@@ -182,7 +182,7 @@ public class UpdateTriggerResponseBody extends TeaModel {
         private String urlIntranet; 
 
         /**
-         * 创建时间
+         * The time when the audio or video file was created.
          */
         public Builder createdTime(String createdTime) {
             this.createdTime = createdTime;
@@ -190,7 +190,7 @@ public class UpdateTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * description.
+         * The description of the trigger.
          */
         public Builder description(String description) {
             this.description = description;
@@ -198,7 +198,7 @@ public class UpdateTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * 域名名称，使用域名名称拼接上函数计算域名，可以采用HTTP协议调用到触发器对应版本的函数。例如{domainName}.cn-shanghai.fc.aliyuncs.com
+         * The domain name used to invoke the function by using HTTP. You can add this domain name as the prefix to the endpoint of Function Compute. This way, you can invoke the function that corresponds to the trigger by using HTTP. For example, `{domainName}.cn-shanghai.fc.aliyuncs.com`.
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -206,7 +206,7 @@ public class UpdateTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * 调用函数使用的RAM角色的ARN
+         * The ARN of the RAM role that is used by the event source to invoke the function.
          */
         public Builder invocationRole(String invocationRole) {
             this.invocationRole = invocationRole;
@@ -214,7 +214,7 @@ public class UpdateTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * 上次修改时间
+         * The last modification time.
          */
         public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
@@ -222,7 +222,7 @@ public class UpdateTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * service版本
+         * The version or alias of the service.
          */
         public Builder qualifier(String qualifier) {
             this.qualifier = qualifier;
@@ -230,7 +230,7 @@ public class UpdateTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * event source的Aliyun Resource Name（ARN
+         * The ARN of the event source.
          */
         public Builder sourceArn(String sourceArn) {
             this.sourceArn = sourceArn;
@@ -238,7 +238,7 @@ public class UpdateTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * trigger配置对象
+         * The configurations of the trigger. The configurations vary based on the trigger type.
          */
         public Builder triggerConfig(String triggerConfig) {
             this.triggerConfig = triggerConfig;
@@ -246,7 +246,7 @@ public class UpdateTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * triggerId.
+         * The unique ID of the trigger.
          */
         public Builder triggerId(String triggerId) {
             this.triggerId = triggerId;
@@ -254,7 +254,7 @@ public class UpdateTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * trigger名称
+         * The name of the trigger.
          */
         public Builder triggerName(String triggerName) {
             this.triggerName = triggerName;
@@ -262,7 +262,7 @@ public class UpdateTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * trigger类型，如 oss, log, tablestore, timer, http, cdn_events, mns_topic
+         * The trigger type, such as **oss**, **log**, **tablestore**, **timer**, **http**, **cdn_events**, and **mns_topic**.
          */
         public Builder triggerType(String triggerType) {
             this.triggerType = triggerType;
@@ -270,7 +270,7 @@ public class UpdateTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * 公网域名地址。在互联网可以通过HTTP协议或者HTTPS协议访问HTTP Trigger。
+         * The public domain address. You can access HTTP triggers over the Internet by using HTTP or HTTPS.
          */
         public Builder urlInternet(String urlInternet) {
             this.urlInternet = urlInternet;
@@ -278,7 +278,7 @@ public class UpdateTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * 私网域名地址。在VPC可以通过HTTP协议或者HTTPS协议访问HTTP Trigger。
+         * The private endpoint. In a VPC, you can access HTTP triggers by using HTTP or HTTPS.
          */
         public Builder urlIntranet(String urlIntranet) {
             this.urlIntranet = urlIntranet;

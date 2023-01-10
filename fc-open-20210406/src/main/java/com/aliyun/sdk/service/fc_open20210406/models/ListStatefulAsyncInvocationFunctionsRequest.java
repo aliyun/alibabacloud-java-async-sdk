@@ -111,7 +111,7 @@ public class ListStatefulAsyncInvocationFunctionsRequest extends Request {
         } 
 
         /**
-         * 您的阿里云账号（主账号）ID。
+         * The ID of your Alibaba Cloud account.
          */
         public Builder xFcAccountId(String xFcAccountId) {
             this.putHeaderParameter("X-Fc-Account-Id", xFcAccountId);
@@ -120,7 +120,7 @@ public class ListStatefulAsyncInvocationFunctionsRequest extends Request {
         }
 
         /**
-         * 发起API调用的日期，用于对请求签名。格式为yyyy-mm-ddhh:mm:ss。
+         * The time when Function Compute API is called. Specify the time in the **EEE,d MMM yyyy HH:mm:ss GMT** format.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
@@ -129,7 +129,7 @@ public class ListStatefulAsyncInvocationFunctionsRequest extends Request {
         }
 
         /**
-         * 用于链路追踪的ID。
+         * The trace ID of the request for Function Compute API.
          */
         public Builder xFcTraceId(String xFcTraceId) {
             this.putHeaderParameter("X-Fc-Trace-Id", xFcTraceId);
@@ -138,7 +138,7 @@ public class ListStatefulAsyncInvocationFunctionsRequest extends Request {
         }
 
         /**
-         * 限定此次返回资源的数量。如果不设定，默认返回20，最大不能超过100。返回结果可以小于指定的数量，但不会多于指定的数量。
+         * The maximum number of resources to return. Default value: 20. Maximum value: 100. The number of returned resources is less than or equal to the specified number.
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("limit", limit);
@@ -147,7 +147,7 @@ public class ListStatefulAsyncInvocationFunctionsRequest extends Request {
         }
 
         /**
-         * 用来标记当前开始读取的位置，置空表示从头开始。第一次查询不需要提供这个参数，后续查询的Token从前一次查询的返回结果中获取。
+         * The starting position of the query. If this parameter is left empty, the query starts from the beginning. If the number of resources exceeds the limit, the nextToken parameter is returned. You can include the parameter in subsequent calls to obtain more results. You do not need to provide this parameter in the first call.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);

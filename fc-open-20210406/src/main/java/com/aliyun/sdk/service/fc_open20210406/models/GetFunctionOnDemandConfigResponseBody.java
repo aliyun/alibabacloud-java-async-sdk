@@ -50,7 +50,7 @@ public class GetFunctionOnDemandConfigResponseBody extends TeaModel {
         private String resource; 
 
         /**
-         * maximumInstanceCount.
+         * The maximum number of instances.
          */
         public Builder maximumInstanceCount(Long maximumInstanceCount) {
             this.maximumInstanceCount = maximumInstanceCount;
@@ -58,7 +58,7 @@ public class GetFunctionOnDemandConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The description of the resource.
          */
         public Builder resource(String resource) {
             this.resource = resource;

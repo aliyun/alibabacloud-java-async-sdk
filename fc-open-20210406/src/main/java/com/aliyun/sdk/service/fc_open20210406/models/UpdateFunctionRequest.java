@@ -434,7 +434,7 @@ public class UpdateFunctionRequest extends Request {
         } 
 
         /**
-         * service名称
+         * The name of the service.
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("serviceName", serviceName);
@@ -443,7 +443,7 @@ public class UpdateFunctionRequest extends Request {
         }
 
         /**
-         * function名称
+         * The name of the function.
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -452,7 +452,7 @@ public class UpdateFunctionRequest extends Request {
         }
 
         /**
-         * 用于确保实际更改的资源和期望更改的资源是一致的，该值来自Create，Get和Update API的响应
+         * The ETag value of the resource. The value is used to ensure that the modified resource is consistent with the resource to be modified. The ETag value is returned in the responses of the [CreateFunction](~~415747~~), [GetFunction](~~415750~~), and [UpdateFunction](~~415749~~) operations.
          */
         public Builder ifMatch(String ifMatch) {
             this.putHeaderParameter("If-Match", ifMatch);
@@ -461,7 +461,7 @@ public class UpdateFunctionRequest extends Request {
         }
 
         /**
-         * X-Fc-Account-Id.
+         * The ID of your Alibaba Cloud account.
          */
         public Builder xFcAccountId(String xFcAccountId) {
             this.putHeaderParameter("X-Fc-Account-Id", xFcAccountId);
@@ -470,7 +470,7 @@ public class UpdateFunctionRequest extends Request {
         }
 
         /**
-         * X-Fc-Code-Checksum.
+         * The CRC-64 value of the function code package.
          */
         public Builder xFcCodeChecksum(String xFcCodeChecksum) {
             this.putHeaderParameter("X-Fc-Code-Checksum", xFcCodeChecksum);
@@ -479,7 +479,7 @@ public class UpdateFunctionRequest extends Request {
         }
 
         /**
-         * X-Fc-Date.
+         * The time on which the function is invoked. The format of the value is: **EEE,d MMM yyyy HH:mm:ss GMT**.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
@@ -488,7 +488,7 @@ public class UpdateFunctionRequest extends Request {
         }
 
         /**
-         * X-Fc-Trace-Id.
+         * The trace ID of the request. The value is the same as that of the requestId parameter in the response.
          */
         public Builder xFcTraceId(String xFcTraceId) {
             this.putHeaderParameter("X-Fc-Trace-Id", xFcTraceId);
@@ -497,7 +497,7 @@ public class UpdateFunctionRequest extends Request {
         }
 
         /**
-         * InstanceConcurrency.
+         * The number of requests that can be concurrently processed by a single instance.
          */
         public Builder instanceConcurrency(Integer instanceConcurrency) {
             this.putBodyParameter("InstanceConcurrency", instanceConcurrency);
@@ -506,7 +506,7 @@ public class UpdateFunctionRequest extends Request {
         }
 
         /**
-         * 自定义、自定义容器运行时 HTTP Server 的监听端口
+         * The port on which the HTTP server listens for the custom runtime or custom container runtime.
          */
         public Builder caPort(Integer caPort) {
             this.putBodyParameter("caPort", caPort);
@@ -515,7 +515,11 @@ public class UpdateFunctionRequest extends Request {
         }
 
         /**
-         * code.
+         * **Function code packages** can be provided with the following two methods. You must use only one of the methods in a single request.
+         * <p>
+         * 
+         * *   Specify the names of the **Object Storage Service (OSS) bucket** and **object** where the code package is stored.
+         * *   Set the **zipFile** parameter to the Base64-encoded content of the ZIP file.
          */
         public Builder code(Code code) {
             this.putBodyParameter("code", code);
@@ -524,7 +528,7 @@ public class UpdateFunctionRequest extends Request {
         }
 
         /**
-         * function的CPU规格，单位为vCPU，为0.05vCPU的倍数
+         * The number of vCPUs of the function. The value must be a multiple of 0.05.
          */
         public Builder cpu(Float cpu) {
             this.putBodyParameter("cpu", cpu);
@@ -533,7 +537,7 @@ public class UpdateFunctionRequest extends Request {
         }
 
         /**
-         * customContainerConfig.
+         * The configurations of the custom container runtime. After you configure the custom container, Function Compute can execute functions in a container created from a custom image.
          */
         public Builder customContainerConfig(CustomContainerConfig customContainerConfig) {
             this.putBodyParameter("customContainerConfig", customContainerConfig);
@@ -542,7 +546,7 @@ public class UpdateFunctionRequest extends Request {
         }
 
         /**
-         * 函数自定义DNS配置
+         * The custom Domain Name System (DNS) configurations of the function.
          */
         public Builder customDNS(CustomDNS customDNS) {
             this.putBodyParameter("customDNS", customDNS);
@@ -551,7 +555,7 @@ public class UpdateFunctionRequest extends Request {
         }
 
         /**
-         * 函数自定义健康检查配置，仅适用于Custom runtime/container
+         * The custom health check configuration of the function. This parameter is applicable only to custom runtimes and custom containers.
          */
         public Builder customHealthCheckConfig(CustomHealthCheckConfig customHealthCheckConfig) {
             this.putBodyParameter("customHealthCheckConfig", customHealthCheckConfig);
@@ -560,7 +564,7 @@ public class UpdateFunctionRequest extends Request {
         }
 
         /**
-         * Custom Runtime函数详细配置
+         * The configurations of the custom runtime.
          */
         public Builder customRuntimeConfig(CustomRuntimeConfig customRuntimeConfig) {
             this.putBodyParameter("customRuntimeConfig", customRuntimeConfig);
@@ -569,7 +573,7 @@ public class UpdateFunctionRequest extends Request {
         }
 
         /**
-         * 函数描述
+         * The description of the function.
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -578,7 +582,7 @@ public class UpdateFunctionRequest extends Request {
         }
 
         /**
-         * function的磁盘规格，单位为MB，可选值为512MB或10240MB
+         * The disk size of the function. Unit: MB. Valid values: 512 and 10240.
          */
         public Builder diskSize(Integer diskSize) {
             this.putBodyParameter("diskSize", diskSize);
@@ -587,7 +591,7 @@ public class UpdateFunctionRequest extends Request {
         }
 
         /**
-         * 为函数设置的环境变量，可以在函数中获取环境变量的值
+         * The environment variables that you configured for the function. You can obtain the values of the environment variables from the function. For more information, see [Overview](~~69777~~).
          */
         public Builder environmentVariables(java.util.Map < String, String > environmentVariables) {
             this.putBodyParameter("environmentVariables", environmentVariables);
@@ -596,7 +600,7 @@ public class UpdateFunctionRequest extends Request {
         }
 
         /**
-         * function执行的入口，具体格式和语言相关
+         * The handler of the function. The format varies based on the programming language. For more information, see [Function handlers](~~157704~~).
          */
         public Builder handler(String handler) {
             this.putBodyParameter("handler", handler);
@@ -605,7 +609,7 @@ public class UpdateFunctionRequest extends Request {
         }
 
         /**
-         * 初始化function运行的超时时间，单位为秒，最小1秒，默认3秒。初始化function超过这个时间后会被终止执行
+         * The timeout period for the execution of the initializer function. Unit: seconds. Default value: 3. Minimum value: 1. When this period ends, the execution of the initializer function is terminated.
          */
         public Builder initializationTimeout(Integer initializationTimeout) {
             this.putBodyParameter("initializationTimeout", initializationTimeout);
@@ -614,7 +618,7 @@ public class UpdateFunctionRequest extends Request {
         }
 
         /**
-         * 初始化 function 执行的入口，具体格式和语言相关
+         * The handler of the initializer function. The format is determined by the programming language. For more information, see [Function handlers](~~157704~~).
          */
         public Builder initializer(String initializer) {
             this.putBodyParameter("initializer", initializer);
@@ -623,7 +627,7 @@ public class UpdateFunctionRequest extends Request {
         }
 
         /**
-         * instanceLifecycleConfig.
+         * The lifecycle configurations of the instance.
          */
         public Builder instanceLifecycleConfig(InstanceLifecycleConfig instanceLifecycleConfig) {
             this.putBodyParameter("instanceLifecycleConfig", instanceLifecycleConfig);
@@ -632,7 +636,10 @@ public class UpdateFunctionRequest extends Request {
         }
 
         /**
-         * instanceSoftConcurrency.
+         * The soft concurrency of the instance. You can use this parameter to implement graceful scale-up of instances. If the number of concurrent requests on an instance is greater than the number of the soft concurrency, the instance scale-up is triggered. For example, if your instance requires a long term to start, you can specify a suitable soft concurrency to start the instance in advance.
+         * <p>
+         * 
+         * The value must be less than or equal to that of **instanceConcurrency**.
          */
         public Builder instanceSoftConcurrency(Integer instanceSoftConcurrency) {
             this.putBodyParameter("instanceSoftConcurrency", instanceSoftConcurrency);
@@ -641,7 +648,11 @@ public class UpdateFunctionRequest extends Request {
         }
 
         /**
-         * instanceType.
+         * The instance type of the function. Valid values:
+         * <p>
+         * 
+         * *   **e1**: elastic instance
+         * *   **c1**: performance instance
          */
         public Builder instanceType(String instanceType) {
             this.putBodyParameter("instanceType", instanceType);
@@ -650,7 +661,10 @@ public class UpdateFunctionRequest extends Request {
         }
 
         /**
-         * layers.
+         * An array that consists of the information of layers.
+         * <p>
+         * 
+         * >  Multiple layers are merged based on the order of array subscripts. The content of a layer with a smaller subscript overwrites the file with the same name in the layer with a larger subscript.
          */
         public Builder layers(java.util.List < String > layers) {
             this.putBodyParameter("layers", layers);
@@ -659,7 +673,7 @@ public class UpdateFunctionRequest extends Request {
         }
 
         /**
-         * function的内存规格，单位为MB，为64MB的倍数
+         * The memory size for the function. Unit: MB. The memory size must be a multiple of 64 MB. The memory size varies based on the function instance type. For more information, see [Instance types](~~179379~~).
          */
         public Builder memorySize(Integer memorySize) {
             this.putBodyParameter("memorySize", memorySize);
@@ -668,7 +682,7 @@ public class UpdateFunctionRequest extends Request {
         }
 
         /**
-         * runtime
+         * The runtime environment of the function. Valid values: **nodejs14**, **nodejs12**, **nodejs10**, **nodejs8**, **nodejs6**, **nodejs4.4**, **python3.9**, **python3**, **python2.7**, **java11**, **java8**, **go1**, **php7.2**, **dotnetcore2.1**, **custom** and **custom-container**.
          */
         public Builder runtime(String runtime) {
             this.putBodyParameter("runtime", runtime);
@@ -677,7 +691,7 @@ public class UpdateFunctionRequest extends Request {
         }
 
         /**
-         * function运行的超时时间，单位为秒，最小1秒，默认3秒。function超过这个时间后会被终止执行
+         * The timeout period for the execution of the function. Unit: seconds. Default value: 3. Minimum value: 1. When this period ends, the execution of the function is terminated.
          */
         public Builder timeout(Integer timeout) {
             this.putBodyParameter("timeout", timeout);

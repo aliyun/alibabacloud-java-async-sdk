@@ -183,7 +183,7 @@ public class CreateAliasRequest extends Request {
         } 
 
         /**
-         * 服务名称
+         * The name of the service.
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("serviceName", serviceName);
@@ -192,7 +192,7 @@ public class CreateAliasRequest extends Request {
         }
 
         /**
-         * X-Fc-Account-Id.
+         * The ID of your Alibaba Cloud account.
          */
         public Builder xFcAccountId(String xFcAccountId) {
             this.putHeaderParameter("X-Fc-Account-Id", xFcAccountId);
@@ -201,7 +201,7 @@ public class CreateAliasRequest extends Request {
         }
 
         /**
-         * X-Fc-Date.
+         * The time on which the function is invoked. The format of the value is: **EEE,d MMM yyyy HH:mm:ss GMT**.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
@@ -210,7 +210,7 @@ public class CreateAliasRequest extends Request {
         }
 
         /**
-         * X-Fc-Trace-Id.
+         * The trace ID of the invocation request of Function Compute.
          */
         public Builder xFcTraceId(String xFcTraceId) {
             this.putHeaderParameter("X-Fc-Trace-Id", xFcTraceId);
@@ -219,7 +219,11 @@ public class CreateAliasRequest extends Request {
         }
 
         /**
-         * 额外版本权重
+         * The canary release version to which the alias points and the weight of the canary release version.
+         * <p>
+         * 
+         * *   The canary release version takes effect only when the function is invoked.
+         * *   The value consists of a version number and a specific weight. For example, 2:0.05 indicates that when a function is invoked, Version 2 is the canary release version, 5% of the traffic is distributed to the canary release version, and 95% of the traffic is distributed to the major version.
          */
         public Builder additionalVersionWeight(java.util.Map < String, Float > additionalVersionWeight) {
             this.putBodyParameter("additionalVersionWeight", additionalVersionWeight);
@@ -228,7 +232,7 @@ public class CreateAliasRequest extends Request {
         }
 
         /**
-         * 别名名称
+         * The name of the alias.  The name contains only letters, digits, hyphens (-), and underscores (\_). The name must be 1 to 128 characters in length and cannot start with a digit or hyphen (-).  The name cannot be **LATEST**.
          */
         public Builder aliasName(String aliasName) {
             this.putBodyParameter("aliasName", aliasName);
@@ -237,7 +241,7 @@ public class CreateAliasRequest extends Request {
         }
 
         /**
-         * 别名描述
+         * The description of the alias.
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -246,11 +250,11 @@ public class CreateAliasRequest extends Request {
         }
 
         /**
-         * 灰度方式：随机灰度或者规则灰度，默认值为随机灰度
+         * The canary release mode. Valid values:
          * <p>
-         * 枚举值：
-         * Random
-         * Content
+         * 
+         * *   **Random**: random canary release. This is the default value.
+         * *   **Content**: rule-based canary release.
          */
         public Builder resolvePolicy(String resolvePolicy) {
             this.putBodyParameter("resolvePolicy", resolvePolicy);
@@ -259,7 +263,7 @@ public class CreateAliasRequest extends Request {
         }
 
         /**
-         * 灰度规则：满足灰度规则条件的流量，会被路由至灰度实例
+         * The canary release rule. Traffic that meets the canary release rule is routed to the canary release instance.
          */
         public Builder routePolicy(RoutePolicy routePolicy) {
             this.putBodyParameter("routePolicy", routePolicy);
@@ -268,7 +272,7 @@ public class CreateAliasRequest extends Request {
         }
 
         /**
-         * 版本ID
+         * The ID of the version to which the alias points.
          */
         public Builder versionId(String versionId) {
             this.putBodyParameter("versionId", versionId);

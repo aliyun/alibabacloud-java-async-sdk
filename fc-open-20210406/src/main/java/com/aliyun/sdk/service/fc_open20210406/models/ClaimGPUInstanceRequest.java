@@ -51,6 +51,14 @@ public class ClaimGPUInstanceRequest extends Request {
     private String password;
 
     @Body
+    @NameInMap("role")
+    private String role;
+
+    @Body
+    @NameInMap("sgId")
+    private String sgId;
+
+    @Body
     @NameInMap("sourceCidrIp")
     @Validation(required = true)
     private String sourceCidrIp;
@@ -63,6 +71,14 @@ public class ClaimGPUInstanceRequest extends Request {
     @NameInMap("udpPortRange")
     private java.util.List < String > udpPortRange;
 
+    @Body
+    @NameInMap("vpcId")
+    private String vpcId;
+
+    @Body
+    @NameInMap("vswId")
+    private String vswId;
+
     private ClaimGPUInstanceRequest(Builder builder) {
         super(builder);
         this.xFcAccountId = builder.xFcAccountId;
@@ -74,9 +90,13 @@ public class ClaimGPUInstanceRequest extends Request {
         this.instanceType = builder.instanceType;
         this.internetBandwidthOut = builder.internetBandwidthOut;
         this.password = builder.password;
+        this.role = builder.role;
+        this.sgId = builder.sgId;
         this.sourceCidrIp = builder.sourceCidrIp;
         this.tcpPortRange = builder.tcpPortRange;
         this.udpPortRange = builder.udpPortRange;
+        this.vpcId = builder.vpcId;
+        this.vswId = builder.vswId;
     }
 
     public static Builder builder() {
@@ -156,6 +176,20 @@ public class ClaimGPUInstanceRequest extends Request {
     }
 
     /**
+     * @return role
+     */
+    public String getRole() {
+        return this.role;
+    }
+
+    /**
+     * @return sgId
+     */
+    public String getSgId() {
+        return this.sgId;
+    }
+
+    /**
      * @return sourceCidrIp
      */
     public String getSourceCidrIp() {
@@ -176,6 +210,20 @@ public class ClaimGPUInstanceRequest extends Request {
         return this.udpPortRange;
     }
 
+    /**
+     * @return vpcId
+     */
+    public String getVpcId() {
+        return this.vpcId;
+    }
+
+    /**
+     * @return vswId
+     */
+    public String getVswId() {
+        return this.vswId;
+    }
+
     public static final class Builder extends Request.Builder<ClaimGPUInstanceRequest, Builder> {
         private String xFcAccountId; 
         private String xFcDate; 
@@ -186,9 +234,13 @@ public class ClaimGPUInstanceRequest extends Request {
         private String instanceType; 
         private String internetBandwidthOut; 
         private String password; 
+        private String role; 
+        private String sgId; 
         private String sourceCidrIp; 
         private java.util.List < String > tcpPortRange; 
         private java.util.List < String > udpPortRange; 
+        private String vpcId; 
+        private String vswId; 
 
         private Builder() {
             super();
@@ -205,9 +257,13 @@ public class ClaimGPUInstanceRequest extends Request {
             this.instanceType = request.instanceType;
             this.internetBandwidthOut = request.internetBandwidthOut;
             this.password = request.password;
+            this.role = request.role;
+            this.sgId = request.sgId;
             this.sourceCidrIp = request.sourceCidrIp;
             this.tcpPortRange = request.tcpPortRange;
             this.udpPortRange = request.udpPortRange;
+            this.vpcId = request.vpcId;
+            this.vswId = request.vswId;
         } 
 
         /**
@@ -292,6 +348,24 @@ public class ClaimGPUInstanceRequest extends Request {
         }
 
         /**
+         * 用户角色
+         */
+        public Builder role(String role) {
+            this.putBodyParameter("role", role);
+            this.role = role;
+            return this;
+        }
+
+        /**
+         * 安全组ID
+         */
+        public Builder sgId(String sgId) {
+            this.putBodyParameter("sgId", sgId);
+            this.sgId = sgId;
+            return this;
+        }
+
+        /**
          * GPU渲染实例源端IPv4 CIDR地址块
          */
         public Builder sourceCidrIp(String sourceCidrIp) {
@@ -315,6 +389,24 @@ public class ClaimGPUInstanceRequest extends Request {
         public Builder udpPortRange(java.util.List < String > udpPortRange) {
             this.putBodyParameter("udpPortRange", udpPortRange);
             this.udpPortRange = udpPortRange;
+            return this;
+        }
+
+        /**
+         * 专有网络ID
+         */
+        public Builder vpcId(String vpcId) {
+            this.putBodyParameter("vpcId", vpcId);
+            this.vpcId = vpcId;
+            return this;
+        }
+
+        /**
+         * 交换机ID
+         */
+        public Builder vswId(String vswId) {
+            this.putBodyParameter("vswId", vswId);
+            this.vswId = vswId;
             return this;
         }
 

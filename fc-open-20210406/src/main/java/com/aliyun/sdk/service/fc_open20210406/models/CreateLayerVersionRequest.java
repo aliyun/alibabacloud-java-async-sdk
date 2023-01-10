@@ -14,6 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class CreateLayerVersionRequest extends Request {
     @Path
     @NameInMap("layerName")
+    @Validation(required = true)
     private String layerName;
 
     @Header
@@ -30,6 +31,7 @@ public class CreateLayerVersionRequest extends Request {
 
     @Body
     @NameInMap("Code")
+    @Validation(required = true)
     private Code code;
 
     @Body
@@ -138,7 +140,7 @@ public class CreateLayerVersionRequest extends Request {
         } 
 
         /**
-         * A short description of struct
+         * The name of the layer.
          */
         public Builder layerName(String layerName) {
             this.putPathParameter("layerName", layerName);
@@ -147,7 +149,7 @@ public class CreateLayerVersionRequest extends Request {
         }
 
         /**
-         * X-Fc-Account-Id.
+         * The ID of your Alibaba Cloud account.
          */
         public Builder xFcAccountId(String xFcAccountId) {
             this.putHeaderParameter("X-Fc-Account-Id", xFcAccountId);
@@ -156,7 +158,7 @@ public class CreateLayerVersionRequest extends Request {
         }
 
         /**
-         * X-Fc-Date.
+         * The time when Function Compute API is called. Specify the time in the **EEE,d MMM yyyy HH:mm:ss GMT** format.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
@@ -165,7 +167,7 @@ public class CreateLayerVersionRequest extends Request {
         }
 
         /**
-         * X-Fc-Trace-Id.
+         * The trace ID of the invocation request of Function Compute.
          */
         public Builder xFcTraceId(String xFcTraceId) {
             this.putHeaderParameter("X-Fc-Trace-Id", xFcTraceId);
@@ -174,7 +176,7 @@ public class CreateLayerVersionRequest extends Request {
         }
 
         /**
-         * Code.
+         * The code of the layer.
          */
         public Builder code(Code code) {
             this.putBodyParameter("Code", code);
@@ -183,7 +185,7 @@ public class CreateLayerVersionRequest extends Request {
         }
 
         /**
-         * compatibleRuntime.
+         * The list of runtime environments that are supported by the layer.
          */
         public Builder compatibleRuntime(java.util.List < String > compatibleRuntime) {
             this.putBodyParameter("compatibleRuntime", compatibleRuntime);
@@ -192,7 +194,7 @@ public class CreateLayerVersionRequest extends Request {
         }
 
         /**
-         * description.
+         * The description of the layer.
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);

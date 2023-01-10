@@ -98,7 +98,7 @@ public class PutProvisionConfigResponseBody extends TeaModel {
         private java.util.List < TargetTrackingPolicies > targetTrackingPolicies; 
 
         /**
-         * 是否始终分配CPU给函数实例。
+         * Specifies whether to always allocate CPU to a function instance.
          */
         public Builder alwaysAllocateCPU(Boolean alwaysAllocateCPU) {
             this.alwaysAllocateCPU = alwaysAllocateCPU;
@@ -106,7 +106,7 @@ public class PutProvisionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * 实际资源个数
+         * The actual number of provisioned instances.
          */
         public Builder current(Long current) {
             this.current = current;
@@ -114,7 +114,7 @@ public class PutProvisionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * 资源描述
+         * The description of the resource.
          */
         public Builder resource(String resource) {
             this.resource = resource;
@@ -122,7 +122,7 @@ public class PutProvisionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * 定时策略配置
+         * The configurations of scheduled auto scaling.
          */
         public Builder scheduledActions(java.util.List < ScheduledActions > scheduledActions) {
             this.scheduledActions = scheduledActions;
@@ -130,7 +130,7 @@ public class PutProvisionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * 目标资源个数
+         * The expected number of provisioned instances.
          */
         public Builder target(Long target) {
             this.target = target;
@@ -138,7 +138,7 @@ public class PutProvisionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * 指标追踪伸缩策略配置
+         * The configurations of metric-based auto scaling.
          */
         public Builder targetTrackingPolicies(java.util.List < TargetTrackingPolicies > targetTrackingPolicies) {
             this.targetTrackingPolicies = targetTrackingPolicies;

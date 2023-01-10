@@ -14,6 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListFunctionsRequest extends Request {
     @Path
     @NameInMap("serviceName")
+    @Validation(required = true)
     private String serviceName;
 
     @Header
@@ -166,7 +167,7 @@ public class ListFunctionsRequest extends Request {
         } 
 
         /**
-         * service名称
+         * The name of the service.
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("serviceName", serviceName);
@@ -175,7 +176,7 @@ public class ListFunctionsRequest extends Request {
         }
 
         /**
-         * X-Fc-Account-Id.
+         * The ID of your Alibaba Cloud account.
          */
         public Builder xFcAccountId(String xFcAccountId) {
             this.putHeaderParameter("X-Fc-Account-Id", xFcAccountId);
@@ -184,7 +185,7 @@ public class ListFunctionsRequest extends Request {
         }
 
         /**
-         * X-Fc-Date.
+         * The time on which the function is invoked. The format of the value is: **EEE,d MMM yyyy HH:mm:ss GMT**.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
@@ -193,7 +194,7 @@ public class ListFunctionsRequest extends Request {
         }
 
         /**
-         * X-Fc-Trace-Id.
+         * The custom request ID.
          */
         public Builder xFcTraceId(String xFcTraceId) {
             this.putHeaderParameter("X-Fc-Trace-Id", xFcTraceId);
@@ -202,7 +203,7 @@ public class ListFunctionsRequest extends Request {
         }
 
         /**
-         * 限定此次返回资源的数量。如果不设定，默认返回20，最大不能超过100。返回结果可能小于指定的数量，但不会多于指定的数量
+         * The maximum number of resources to return. Default value: 20. Maximum value: 100. The number of returned resources is less than or equal to the specified number.
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("limit", limit);
@@ -211,7 +212,7 @@ public class ListFunctionsRequest extends Request {
         }
 
         /**
-         * 用来返回更多结果。第一次查询不需要提供这个参数，后续查询的token从返回结果中获取
+         * The token required to obtain more results. If the number of resources exceeds the limit, the nextToken parameter is returned. You can include the parameter in subsequent calls to obtain more results. You do not need to provide this parameter in the first call.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -220,7 +221,7 @@ public class ListFunctionsRequest extends Request {
         }
 
         /**
-         * 限定返回的资源名称必须以prefix作为前缀
+         * The prefix that the names of returned resources must contain.
          */
         public Builder prefix(String prefix) {
             this.putQueryParameter("prefix", prefix);
@@ -229,7 +230,7 @@ public class ListFunctionsRequest extends Request {
         }
 
         /**
-         * service版本, 可以是versionId或者aliasName
+         * The version or alias of the service.
          */
         public Builder qualifier(String qualifier) {
             this.putQueryParameter("qualifier", qualifier);
@@ -238,7 +239,7 @@ public class ListFunctionsRequest extends Request {
         }
 
         /**
-         * 设定结果从startKey之后（包括startKey）按字母排序的第一个开始返回
+         * The returned resources are sorted in alphabetical order, and the resources that include and follow the resource specified by the startKey parameter are returned.
          */
         public Builder startKey(String startKey) {
             this.putQueryParameter("startKey", startKey);

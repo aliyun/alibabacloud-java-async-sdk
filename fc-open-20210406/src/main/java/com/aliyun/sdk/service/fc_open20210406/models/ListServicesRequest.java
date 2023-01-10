@@ -138,7 +138,7 @@ public class ListServicesRequest extends Request {
         } 
 
         /**
-         * X-Fc-Account-Id.
+         * The ID of your Alibaba Cloud account.
          */
         public Builder xFcAccountId(String xFcAccountId) {
             this.putHeaderParameter("X-Fc-Account-Id", xFcAccountId);
@@ -147,7 +147,7 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * X-Fc-Date.
+         * The time when the function is invoked. The format is **EEE,d MMM yyyy HH:mm:ss GMT**.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
@@ -156,7 +156,7 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * X-Fc-Trace-Id.
+         * The custom request ID.
          */
         public Builder xFcTraceId(String xFcTraceId) {
             this.putHeaderParameter("X-Fc-Trace-Id", xFcTraceId);
@@ -165,7 +165,7 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * 最多返回个数
+         * The maximum number of resources to return. Default value: 20. Maximum value: 100. The number of returned configurations is less than or equal to the specified number.
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("limit", limit);
@@ -174,7 +174,7 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * 下次查询token
+         * The starting position of the query. If this parameter is left empty, the query starts from the beginning. You do not need to specify this parameter in the first query. If the number of asynchronous tasks exceeds the limit, the nextToken parameter is returned, the value of which can be used in subsequent calls to obtain more results.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -183,7 +183,7 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * 前缀
+         * The prefix that the names of returned resources must contain. If the name prefix is a, the names of returned resources must start with a.
          */
         public Builder prefix(String prefix) {
             this.putQueryParameter("prefix", prefix);
@@ -192,7 +192,7 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * 起始key
+         * The returned resources are sorted in alphabetical order, and the resources that include and follow the resource specified by the startKey parameter are returned.
          */
         public Builder startKey(String startKey) {
             this.putQueryParameter("startKey", startKey);

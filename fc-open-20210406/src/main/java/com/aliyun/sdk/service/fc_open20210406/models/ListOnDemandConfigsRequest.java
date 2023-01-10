@@ -138,7 +138,7 @@ public class ListOnDemandConfigsRequest extends Request {
         } 
 
         /**
-         * X-Fc-Account-Id.
+         * The ID of your Alibaba Cloud account.
          */
         public Builder xFcAccountId(String xFcAccountId) {
             this.putHeaderParameter("X-Fc-Account-Id", xFcAccountId);
@@ -147,7 +147,7 @@ public class ListOnDemandConfigsRequest extends Request {
         }
 
         /**
-         * X-Fc-Date.
+         * The time when Function Compute API is called. Specify the time in the **EEE,d MMM yyyy HH:mm:ss GMT** format.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
@@ -156,7 +156,7 @@ public class ListOnDemandConfigsRequest extends Request {
         }
 
         /**
-         * X-Fc-Trace-Id.
+         * The trace ID of the invocation request of Function Compute.
          */
         public Builder xFcTraceId(String xFcTraceId) {
             this.putHeaderParameter("X-Fc-Trace-Id", xFcTraceId);
@@ -165,7 +165,7 @@ public class ListOnDemandConfigsRequest extends Request {
         }
 
         /**
-         * 限定此次返回资源的数量。如果不设定，默认返回20，最大不能超过100。返回结果可以小于指定的数量，但不会多于指定的数量。
+         * The maximum number of resources to return. Default value: 20. Maximum value: 100. The number of returned resources is less than or equal to the specified number.
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("limit", limit);
@@ -174,7 +174,7 @@ public class ListOnDemandConfigsRequest extends Request {
         }
 
         /**
-         * 用来返回更多结果。第一次查询不需要提供这个参数，后续查询的Token从返回结果中获取。
+         * The token used to obtain more results. If the number of resources exceeds the limit, the nextToken parameter is returned. You can include the parameter in subsequent calls to obtain more results. You do not need to provide this parameter in the first call.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -183,7 +183,7 @@ public class ListOnDemandConfigsRequest extends Request {
         }
 
         /**
-         * 限定返回的资源名称，名称必须以Prefix作为前缀，例如Prefix是a，则返回的资源名均是以a开始的。
+         * The prefix that the names of returned resources must contain. If the name prefix is a, the names of returned resources must start with a.
          */
         public Builder prefix(String prefix) {
             this.putQueryParameter("prefix", prefix);
@@ -192,7 +192,7 @@ public class ListOnDemandConfigsRequest extends Request {
         }
 
         /**
-         * 设定结果从startKey之后（包括startKey）按字母排序的第一个开始返回。
+         * The returned resources are sorted in alphabetical order, and the resources that include and follow the resource specified by the startKey parameter are returned.
          */
         public Builder startKey(String startKey) {
             this.putQueryParameter("startKey", startKey);

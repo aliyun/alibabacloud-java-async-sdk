@@ -50,7 +50,7 @@ public class ListReservedCapacitiesResponseBody extends TeaModel {
         private java.util.List < OpenReservedCapacity > reservedCapacities; 
 
         /**
-         * nextToken
+         * The pagination token to request the next page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -58,7 +58,7 @@ public class ListReservedCapacitiesResponseBody extends TeaModel {
         }
 
         /**
-         * reservedCapacities
+         * The information about subscription instances.
          */
         public Builder reservedCapacities(java.util.List < OpenReservedCapacity > reservedCapacities) {
             this.reservedCapacities = reservedCapacities;

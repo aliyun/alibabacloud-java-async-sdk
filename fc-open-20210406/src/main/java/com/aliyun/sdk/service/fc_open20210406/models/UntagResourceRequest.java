@@ -125,7 +125,7 @@ public class UntagResourceRequest extends Request {
         } 
 
         /**
-         * X-Fc-Account-Id.
+         * The ID of your Alibaba Cloud account.
          */
         public Builder xFcAccountId(String xFcAccountId) {
             this.putHeaderParameter("X-Fc-Account-Id", xFcAccountId);
@@ -134,7 +134,7 @@ public class UntagResourceRequest extends Request {
         }
 
         /**
-         * X-Fc-Date.
+         * The time when Function Compute API is called. Specify the time in the **EEE,d MMM yyyy HH:mm:ss GMT** format.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
@@ -143,7 +143,7 @@ public class UntagResourceRequest extends Request {
         }
 
         /**
-         * X-Fc-Trace-Id.
+         * The custom request ID.
          */
         public Builder xFcTraceId(String xFcTraceId) {
             this.putHeaderParameter("X-Fc-Trace-Id", xFcTraceId);
@@ -152,7 +152,10 @@ public class UntagResourceRequest extends Request {
         }
 
         /**
-         * 删除所有 tag，默认值为 false
+         * Specifies whether to remove all tags. This parameter takes effect only when no tag key is specified. Valid values:
+         * <p>
+         *   - **true**: removes all tags. 
+         *   - **false**: does not remove all tags.
          */
         public Builder all(Boolean all) {
             this.putBodyParameter("all", all);
@@ -161,7 +164,10 @@ public class UntagResourceRequest extends Request {
         }
 
         /**
-         * 目前只能给 top level 资源 service 进行标签的相关操作, ARN 可以是类似 services/foo 或者 acs:fc:cn-shanghai:123456789:services/foo
+         * The ARN of the resource. 
+         * <p>
+         * 
+         * > You can use the value of this parameter to query the information about the resource, such as the account, service, and region information of the resource. You can manage tags only for services for top level resources.
          */
         public Builder resourceArn(String resourceArn) {
             this.putBodyParameter("resourceArn", resourceArn);
@@ -170,7 +176,7 @@ public class UntagResourceRequest extends Request {
         }
 
         /**
-         * tag key 值列表， 最大为 20，当 all=false， length 至少为 1. 当 length 大于 1 时， 可以忽略 all 值
+         * The keys of the tags that you want to remove.
          */
         public Builder tagKeys(java.util.List < String > tagKeys) {
             this.putBodyParameter("tagKeys", tagKeys);
