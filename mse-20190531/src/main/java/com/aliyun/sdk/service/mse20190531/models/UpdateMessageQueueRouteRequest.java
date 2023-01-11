@@ -22,6 +22,10 @@ public class UpdateMessageQueueRouteRequest extends Request {
     private String appId;
 
     @Query
+    @NameInMap("AppName")
+    private String appName;
+
+    @Query
     @NameInMap("Enable")
     private Boolean enable;
 
@@ -30,21 +34,26 @@ public class UpdateMessageQueueRouteRequest extends Request {
     private String filterSide;
 
     @Query
+    @NameInMap("Namespace")
+    private String namespace;
+
+    @Query
     @NameInMap("Region")
     @Validation(required = true)
     private String region;
 
     @Query
     @NameInMap("Tags")
-    @Validation(required = true)
     private java.util.List < String > tags;
 
     private UpdateMessageQueueRouteRequest(Builder builder) {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
         this.appId = builder.appId;
+        this.appName = builder.appName;
         this.enable = builder.enable;
         this.filterSide = builder.filterSide;
+        this.namespace = builder.namespace;
         this.region = builder.region;
         this.tags = builder.tags;
     }
@@ -77,6 +86,13 @@ public class UpdateMessageQueueRouteRequest extends Request {
     }
 
     /**
+     * @return appName
+     */
+    public String getAppName() {
+        return this.appName;
+    }
+
+    /**
      * @return enable
      */
     public Boolean getEnable() {
@@ -88,6 +104,13 @@ public class UpdateMessageQueueRouteRequest extends Request {
      */
     public String getFilterSide() {
         return this.filterSide;
+    }
+
+    /**
+     * @return namespace
+     */
+    public String getNamespace() {
+        return this.namespace;
     }
 
     /**
@@ -107,8 +130,10 @@ public class UpdateMessageQueueRouteRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateMessageQueueRouteRequest, Builder> {
         private String acceptLanguage; 
         private String appId; 
+        private String appName; 
         private Boolean enable; 
         private String filterSide; 
+        private String namespace; 
         private String region; 
         private java.util.List < String > tags; 
 
@@ -120,8 +145,10 @@ public class UpdateMessageQueueRouteRequest extends Request {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
             this.appId = request.appId;
+            this.appName = request.appName;
             this.enable = request.enable;
             this.filterSide = request.filterSide;
+            this.namespace = request.namespace;
             this.region = request.region;
             this.tags = request.tags;
         } 
@@ -149,6 +176,15 @@ public class UpdateMessageQueueRouteRequest extends Request {
         }
 
         /**
+         * AppName.
+         */
+        public Builder appName(String appName) {
+            this.putQueryParameter("AppName", appName);
+            this.appName = appName;
+            return this;
+        }
+
+        /**
          * Specifies whether the canary release for messaging feature is enabled for the application. Valid values:
          * <p>
          * 
@@ -167,6 +203,15 @@ public class UpdateMessageQueueRouteRequest extends Request {
         public Builder filterSide(String filterSide) {
             this.putQueryParameter("FilterSide", filterSide);
             this.filterSide = filterSide;
+            return this;
+        }
+
+        /**
+         * Namespace.
+         */
+        public Builder namespace(String namespace) {
+            this.putQueryParameter("Namespace", namespace);
+            this.namespace = namespace;
             return this;
         }
 

@@ -22,12 +22,12 @@ public class CreateApplicationRequest extends Request {
     private String appName;
 
     @Query
-    @NameInMap("ExtraInfo")
-    private String extraInfo;
-
-    @Query
     @NameInMap("Language")
     private String language;
+
+    @Query
+    @NameInMap("Namespace")
+    private String namespace;
 
     @Query
     @NameInMap("Region")
@@ -50,8 +50,8 @@ public class CreateApplicationRequest extends Request {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
         this.appName = builder.appName;
-        this.extraInfo = builder.extraInfo;
         this.language = builder.language;
+        this.namespace = builder.namespace;
         this.region = builder.region;
         this.sentinelEnable = builder.sentinelEnable;
         this.source = builder.source;
@@ -86,17 +86,17 @@ public class CreateApplicationRequest extends Request {
     }
 
     /**
-     * @return extraInfo
-     */
-    public String getExtraInfo() {
-        return this.extraInfo;
-    }
-
-    /**
      * @return language
      */
     public String getLanguage() {
         return this.language;
+    }
+
+    /**
+     * @return namespace
+     */
+    public String getNamespace() {
+        return this.namespace;
     }
 
     /**
@@ -130,8 +130,8 @@ public class CreateApplicationRequest extends Request {
     public static final class Builder extends Request.Builder<CreateApplicationRequest, Builder> {
         private String acceptLanguage; 
         private String appName; 
-        private String extraInfo; 
         private String language; 
+        private String namespace; 
         private String region; 
         private String sentinelEnable; 
         private String source; 
@@ -145,8 +145,8 @@ public class CreateApplicationRequest extends Request {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
             this.appName = request.appName;
-            this.extraInfo = request.extraInfo;
             this.language = request.language;
+            this.namespace = request.namespace;
             this.region = request.region;
             this.sentinelEnable = request.sentinelEnable;
             this.source = request.source;
@@ -176,20 +176,20 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * The additional information.
-         */
-        public Builder extraInfo(String extraInfo) {
-            this.putQueryParameter("ExtraInfo", extraInfo);
-            this.extraInfo = extraInfo;
-            return this;
-        }
-
-        /**
          * The programming language of the application.
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
             this.language = language;
+            return this;
+        }
+
+        /**
+         * Namespace.
+         */
+        public Builder namespace(String namespace) {
+            this.putQueryParameter("Namespace", namespace);
+            this.namespace = namespace;
             return this;
         }
 

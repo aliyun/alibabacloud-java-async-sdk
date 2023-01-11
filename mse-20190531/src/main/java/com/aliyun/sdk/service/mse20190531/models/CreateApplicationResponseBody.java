@@ -174,6 +174,9 @@ public class CreateApplicationResponseBody extends TeaModel {
         @NameInMap("LicenseKey")
         private String licenseKey;
 
+        @NameInMap("Namespace")
+        private String namespace;
+
         @NameInMap("RegionId")
         private String regionId;
 
@@ -189,6 +192,9 @@ public class CreateApplicationResponseBody extends TeaModel {
         @NameInMap("UserId")
         private String userId;
 
+        @NameInMap("Version")
+        private String version;
+
         private Data(Builder builder) {
             this.appId = builder.appId;
             this.appName = builder.appName;
@@ -196,11 +202,13 @@ public class CreateApplicationResponseBody extends TeaModel {
             this.extraInfo = builder.extraInfo;
             this.language = builder.language;
             this.licenseKey = builder.licenseKey;
+            this.namespace = builder.namespace;
             this.regionId = builder.regionId;
             this.source = builder.source;
             this.status = builder.status;
             this.updateTime = builder.updateTime;
             this.userId = builder.userId;
+            this.version = builder.version;
         }
 
         public static Builder builder() {
@@ -254,6 +262,13 @@ public class CreateApplicationResponseBody extends TeaModel {
         }
 
         /**
+         * @return namespace
+         */
+        public String getNamespace() {
+            return this.namespace;
+        }
+
+        /**
          * @return regionId
          */
         public String getRegionId() {
@@ -288,6 +303,13 @@ public class CreateApplicationResponseBody extends TeaModel {
             return this.userId;
         }
 
+        /**
+         * @return version
+         */
+        public String getVersion() {
+            return this.version;
+        }
+
         public static final class Builder {
             private String appId; 
             private String appName; 
@@ -295,11 +317,13 @@ public class CreateApplicationResponseBody extends TeaModel {
             private String extraInfo; 
             private String language; 
             private String licenseKey; 
+            private String namespace; 
             private String regionId; 
             private String source; 
             private Integer status; 
             private Long updateTime; 
             private String userId; 
+            private String version; 
 
             /**
              * The ID of the application.
@@ -350,6 +374,14 @@ public class CreateApplicationResponseBody extends TeaModel {
             }
 
             /**
+             * Namespace.
+             */
+            public Builder namespace(String namespace) {
+                this.namespace = namespace;
+                return this;
+            }
+
+            /**
              * The region ID.
              */
             public Builder regionId(String regionId) {
@@ -390,6 +422,14 @@ public class CreateApplicationResponseBody extends TeaModel {
              */
             public Builder userId(String userId) {
                 this.userId = userId;
+                return this;
+            }
+
+            /**
+             * Version.
+             */
+            public Builder version(String version) {
+                this.version = version;
                 return this;
             }
 

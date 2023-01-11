@@ -62,6 +62,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateEngineNamespaceResponse> createEngineNamespace(CreateEngineNamespaceRequest request);
 
+    /**
+      * @deprecated : CreateMseServiceApplication is deprecated, please use mse::2019-05-31::CreateApplication instead.
+      *
+     */
     CompletableFuture<CreateMseServiceApplicationResponse> createMseServiceApplication(CreateMseServiceApplicationRequest request);
 
     /**
