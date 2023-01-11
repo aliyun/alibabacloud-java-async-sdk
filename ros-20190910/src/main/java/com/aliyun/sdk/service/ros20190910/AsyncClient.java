@@ -18,6 +18,8 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
+    CompletableFuture<CancelStackOperationResponse> cancelStackOperation(CancelStackOperationRequest request);
+
     CompletableFuture<CancelUpdateStackResponse> cancelUpdateStack(CancelUpdateStackRequest request);
 
     CompletableFuture<ContinueCreateStackResponse> continueCreateStack(ContinueCreateStackRequest request);

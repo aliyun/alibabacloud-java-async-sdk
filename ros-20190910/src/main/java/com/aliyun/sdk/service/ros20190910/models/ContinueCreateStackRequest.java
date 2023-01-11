@@ -251,7 +251,7 @@ public class ContinueCreateStackRequest extends Request {
         }
 
         /**
-         * Parameters.
+         * test
          */
         public Builder parameters(java.util.List < Parameters> parameters) {
             this.putQueryParameter("Parameters", parameters);

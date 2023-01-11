@@ -118,7 +118,7 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
             }
 
             /**
-             * RdFolderIds.
+             * test
              */
             public Builder rdFolderIds(java.util.List < String > rdFolderIds) {
                 this.rdFolderIds = rdFolderIds;
@@ -239,7 +239,7 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
             }
 
             /**
-             * RegionIdsOrder.
+             * test
              */
             public Builder regionIdsOrder(java.util.List < String > regionIdsOrder) {
                 this.regionIdsOrder = regionIdsOrder;

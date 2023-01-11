@@ -390,7 +390,7 @@ public class CreateStackRequest extends Request {
         }
 
         /**
-         * Parameters.
+         * test
          */
         public Builder parameters(java.util.List < Parameters> parameters) {
             this.putQueryParameter("Parameters", parameters);
@@ -453,7 +453,7 @@ public class CreateStackRequest extends Request {
         }
 
         /**
-         * Tags.
+         * test
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putQueryParameter("Tags", tags);

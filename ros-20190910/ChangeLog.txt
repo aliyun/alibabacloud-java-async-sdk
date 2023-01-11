@@ -1,3 +1,6 @@
+2023-01-11 Version: 1.2.19
+- Add API CancelStackOperation.
+
 2022-12-08 Version: 1.2.18
 - GenerateTemplatePolicy adds parameter OperationTypes.
 

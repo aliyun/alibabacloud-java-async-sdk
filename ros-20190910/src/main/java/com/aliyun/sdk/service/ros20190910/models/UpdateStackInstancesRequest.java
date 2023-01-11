@@ -232,7 +232,7 @@ public class UpdateStackInstancesRequest extends Request {
         }
 
         /**
-         * ParameterOverrides.
+         * test
          */
         public Builder parameterOverrides(java.util.List < ParameterOverrides> parameterOverrides) {
             this.putQueryParameter("ParameterOverrides", parameterOverrides);
@@ -331,7 +331,7 @@ public class UpdateStackInstancesRequest extends Request {
             }
 
             /**
-             * RdFolderIds.
+             * test
              */
             public Builder rdFolderIds(java.util.List < String > rdFolderIds) {
                 this.rdFolderIds = rdFolderIds;

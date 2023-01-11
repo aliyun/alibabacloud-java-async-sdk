@@ -379,7 +379,7 @@ public class UpdateStackGroupRequest extends Request {
         }
 
         /**
-         * Parameters.
+         * test
          */
         public Builder parameters(java.util.List < Parameters> parameters) {
             this.putQueryParameter("Parameters", parameters);
@@ -575,7 +575,7 @@ public class UpdateStackGroupRequest extends Request {
             }
 
             /**
-             * RdFolderIds.
+             * test
              */
             public Builder rdFolderIds(java.util.List < String > rdFolderIds) {
                 this.rdFolderIds = rdFolderIds;

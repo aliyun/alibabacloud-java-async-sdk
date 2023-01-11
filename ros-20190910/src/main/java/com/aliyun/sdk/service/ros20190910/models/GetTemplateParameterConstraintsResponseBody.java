@@ -71,6 +71,67 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
 
     } 
 
+    public static class NotSupportResources extends TeaModel {
+        @NameInMap("PropertyName")
+        private String propertyName;
+
+        @NameInMap("ResourceType")
+        private String resourceType;
+
+        private NotSupportResources(Builder builder) {
+            this.propertyName = builder.propertyName;
+            this.resourceType = builder.resourceType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NotSupportResources create() {
+            return builder().build();
+        }
+
+        /**
+         * @return propertyName
+         */
+        public String getPropertyName() {
+            return this.propertyName;
+        }
+
+        /**
+         * @return resourceType
+         */
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+        public static final class Builder {
+            private String propertyName; 
+            private String resourceType; 
+
+            /**
+             * PropertyName.
+             */
+            public Builder propertyName(String propertyName) {
+                this.propertyName = propertyName;
+                return this;
+            }
+
+            /**
+             * ResourceType.
+             */
+            public Builder resourceType(String resourceType) {
+                this.resourceType = resourceType;
+                return this;
+            }
+
+            public NotSupportResources build() {
+                return new NotSupportResources(this);
+            } 
+
+        } 
+
+    }
     public static class ParameterConstraints extends TeaModel {
         @NameInMap("AllowedValues")
         private java.util.List < String > allowedValues;
@@ -90,6 +151,9 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
         @NameInMap("IllegalValueByRules")
         private java.util.List < ? > illegalValueByRules;
 
+        @NameInMap("NotSupportResources")
+        private java.util.List < NotSupportResources> notSupportResources;
+
         @NameInMap("ParameterKey")
         private String parameterKey;
 
@@ -103,6 +167,7 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
             this.behaviorReason = builder.behaviorReason;
             this.illegalValueByParameterConstraints = builder.illegalValueByParameterConstraints;
             this.illegalValueByRules = builder.illegalValueByRules;
+            this.notSupportResources = builder.notSupportResources;
             this.parameterKey = builder.parameterKey;
             this.type = builder.type;
         }
@@ -158,6 +223,13 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
         }
 
         /**
+         * @return notSupportResources
+         */
+        public java.util.List < NotSupportResources> getNotSupportResources() {
+            return this.notSupportResources;
+        }
+
+        /**
          * @return parameterKey
          */
         public String getParameterKey() {
@@ -178,6 +250,7 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
             private String behaviorReason; 
             private java.util.List < ? > illegalValueByParameterConstraints; 
             private java.util.List < ? > illegalValueByRules; 
+            private java.util.List < NotSupportResources> notSupportResources; 
             private String parameterKey; 
             private String type; 
 
@@ -226,6 +299,14 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
              */
             public Builder illegalValueByRules(java.util.List < ? > illegalValueByRules) {
                 this.illegalValueByRules = illegalValueByRules;
+                return this;
+            }
+
+            /**
+             * NotSupportResources.
+             */
+            public Builder notSupportResources(java.util.List < NotSupportResources> notSupportResources) {
+                this.notSupportResources = notSupportResources;
                 return this;
             }
 
