@@ -38,7 +38,17 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetCardFlowInfoResponse> getCardFlowInfo(GetCardFlowInfoRequest request);
 
+    CompletableFuture<GetCardLatestFlowResponse> getCardLatestFlow(GetCardLatestFlowRequest request);
+
+    CompletableFuture<GetCardStatusStatisticsResponse> getCardStatusStatistics(GetCardStatusStatisticsRequest request);
+
     CompletableFuture<GetCredentialPoolStatisticsResponse> getCredentialPoolStatistics(GetCredentialPoolStatisticsRequest request);
+
+    CompletableFuture<GetOperateResultResponse> getOperateResult(GetOperateResultRequest request);
+
+    CompletableFuture<GetRealNameStatusResponse> getRealNameStatus(GetRealNameStatusRequest request);
+
+    CompletableFuture<GetSimCardStateDistributionResponse> getSimCardStateDistribution(GetSimCardStateDistributionRequest request);
 
     CompletableFuture<ListCardInfoResponse> listCardInfo(ListCardInfoRequest request);
 

@@ -137,7 +137,7 @@ public class AddCardToDirectionalGroupRequest extends Request {
         }
 
         /**
-         * ApiProduct.
+         * Linkcard
          */
         public Builder apiProduct(String apiProduct) {
             this.putBodyParameter("ApiProduct", apiProduct);

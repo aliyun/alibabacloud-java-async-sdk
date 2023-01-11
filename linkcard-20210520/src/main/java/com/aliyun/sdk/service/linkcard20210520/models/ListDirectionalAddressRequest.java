@@ -19,12 +19,12 @@ public class ListDirectionalAddressRequest extends Request {
 
     @Query
     @NameInMap("PageNo")
-    @Validation(required = true)
+    @Validation(required = true, minimum = 1)
     private Integer pageNo;
 
     @Query
     @NameInMap("PageSize")
-    @Validation(required = true)
+    @Validation(required = true, maximum = 200, minimum = 1)
     private Integer pageSize;
 
     private ListDirectionalAddressRequest(Builder builder) {
