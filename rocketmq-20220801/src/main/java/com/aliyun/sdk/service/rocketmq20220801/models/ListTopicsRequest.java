@@ -22,6 +22,10 @@ public class ListTopicsRequest extends Request {
     private String filter;
 
     @Query
+    @NameInMap("messageTypes")
+    private java.util.List < String > messageTypes;
+
+    @Query
     @NameInMap("pageNumber")
     @Validation(required = true, maximum = 100000000, minimum = 1)
     private Integer pageNumber;
@@ -35,6 +39,7 @@ public class ListTopicsRequest extends Request {
         super(builder);
         this.instanceId = builder.instanceId;
         this.filter = builder.filter;
+        this.messageTypes = builder.messageTypes;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
     }
@@ -67,6 +72,13 @@ public class ListTopicsRequest extends Request {
     }
 
     /**
+     * @return messageTypes
+     */
+    public java.util.List < String > getMessageTypes() {
+        return this.messageTypes;
+    }
+
+    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -83,6 +95,7 @@ public class ListTopicsRequest extends Request {
     public static final class Builder extends Request.Builder<ListTopicsRequest, Builder> {
         private String instanceId; 
         private String filter; 
+        private java.util.List < String > messageTypes; 
         private Integer pageNumber; 
         private Integer pageSize; 
 
@@ -94,6 +107,7 @@ public class ListTopicsRequest extends Request {
             super(request);
             this.instanceId = request.instanceId;
             this.filter = request.filter;
+            this.messageTypes = request.messageTypes;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
         } 
@@ -113,6 +127,16 @@ public class ListTopicsRequest extends Request {
         public Builder filter(String filter) {
             this.putQueryParameter("filter", filter);
             this.filter = filter;
+            return this;
+        }
+
+        /**
+         * messageTypes.
+         */
+        public Builder messageTypes(java.util.List < String > messageTypes) {
+            String messageTypesShrink = shrink(messageTypes, "messageTypes", "simple");
+            this.putQueryParameter("messageTypes", messageTypesShrink);
+            this.messageTypes = messageTypes;
             return this;
         }
 

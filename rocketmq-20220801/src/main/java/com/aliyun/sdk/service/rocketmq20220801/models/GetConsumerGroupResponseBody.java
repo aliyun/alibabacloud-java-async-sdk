@@ -192,6 +192,9 @@ public class GetConsumerGroupResponseBody extends TeaModel {
     } 
 
     public static class ConsumeRetryPolicy extends TeaModel {
+        @NameInMap("deadLetterTargetTopic")
+        private String deadLetterTargetTopic;
+
         @NameInMap("maxRetryTimes")
         private Integer maxRetryTimes;
 
@@ -199,6 +202,7 @@ public class GetConsumerGroupResponseBody extends TeaModel {
         private String retryPolicy;
 
         private ConsumeRetryPolicy(Builder builder) {
+            this.deadLetterTargetTopic = builder.deadLetterTargetTopic;
             this.maxRetryTimes = builder.maxRetryTimes;
             this.retryPolicy = builder.retryPolicy;
         }
@@ -209,6 +213,13 @@ public class GetConsumerGroupResponseBody extends TeaModel {
 
         public static ConsumeRetryPolicy create() {
             return builder().build();
+        }
+
+        /**
+         * @return deadLetterTargetTopic
+         */
+        public String getDeadLetterTargetTopic() {
+            return this.deadLetterTargetTopic;
         }
 
         /**
@@ -226,8 +237,17 @@ public class GetConsumerGroupResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String deadLetterTargetTopic; 
             private Integer maxRetryTimes; 
             private String retryPolicy; 
+
+            /**
+             * deadLetterTargetTopic.
+             */
+            public Builder deadLetterTargetTopic(String deadLetterTargetTopic) {
+                this.deadLetterTargetTopic = deadLetterTargetTopic;
+                return this;
+            }
 
             /**
              * 最大重试次数
