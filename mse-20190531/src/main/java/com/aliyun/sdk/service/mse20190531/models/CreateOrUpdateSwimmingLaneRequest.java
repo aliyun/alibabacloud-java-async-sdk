@@ -33,6 +33,10 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
     private java.util.List < EntryRules> entryRules;
 
     @Query
+    @NameInMap("GatewaySwimmingLaneRouteJson")
+    private GatewaySwimmingLaneRouteJson gatewaySwimmingLaneRouteJson;
+
+    @Query
     @NameInMap("GmtCreate")
     private String gmtCreate;
 
@@ -84,6 +88,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         this.enableRules = builder.enableRules;
         this.entryRule = builder.entryRule;
         this.entryRules = builder.entryRules;
+        this.gatewaySwimmingLaneRouteJson = builder.gatewaySwimmingLaneRouteJson;
         this.gmtCreate = builder.gmtCreate;
         this.gmtModified = builder.gmtModified;
         this.groupId = builder.groupId;
@@ -143,6 +148,13 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
      */
     public java.util.List < EntryRules> getEntryRules() {
         return this.entryRules;
+    }
+
+    /**
+     * @return gatewaySwimmingLaneRouteJson
+     */
+    public GatewaySwimmingLaneRouteJson getGatewaySwimmingLaneRouteJson() {
+        return this.gatewaySwimmingLaneRouteJson;
     }
 
     /**
@@ -228,6 +240,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         private Boolean enableRules; 
         private String entryRule; 
         private java.util.List < EntryRules> entryRules; 
+        private GatewaySwimmingLaneRouteJson gatewaySwimmingLaneRouteJson; 
         private String gmtCreate; 
         private String gmtModified; 
         private Long groupId; 
@@ -251,6 +264,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             this.enableRules = request.enableRules;
             this.entryRule = request.entryRule;
             this.entryRules = request.entryRules;
+            this.gatewaySwimmingLaneRouteJson = request.gatewaySwimmingLaneRouteJson;
             this.gmtCreate = request.gmtCreate;
             this.gmtModified = request.gmtModified;
             this.groupId = request.groupId;
@@ -312,6 +326,16 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         public Builder entryRules(java.util.List < EntryRules> entryRules) {
             this.putQueryParameter("EntryRules", entryRules);
             this.entryRules = entryRules;
+            return this;
+        }
+
+        /**
+         * GatewaySwimmingLaneRouteJson.
+         */
+        public Builder gatewaySwimmingLaneRouteJson(GatewaySwimmingLaneRouteJson gatewaySwimmingLaneRouteJson) {
+            String gatewaySwimmingLaneRouteJsonShrink = shrink(gatewaySwimmingLaneRouteJson, "GatewaySwimmingLaneRouteJson", "json");
+            this.putQueryParameter("GatewaySwimmingLaneRouteJson", gatewaySwimmingLaneRouteJsonShrink);
+            this.gatewaySwimmingLaneRouteJson = gatewaySwimmingLaneRouteJson;
             return this;
         }
 
@@ -782,6 +806,208 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
 
             public EntryRules build() {
                 return new EntryRules(this);
+            } 
+
+        } 
+
+    }
+    public static class Conditions extends TeaModel {
+        @NameInMap("Cond")
+        private String cond;
+
+        @NameInMap("Name")
+        private String name;
+
+        @NameInMap("Type")
+        private String type;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Conditions(Builder builder) {
+            this.cond = builder.cond;
+            this.name = builder.name;
+            this.type = builder.type;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Conditions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cond
+         */
+        public String getCond() {
+            return this.cond;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String cond; 
+            private String name; 
+            private String type; 
+            private String value; 
+
+            /**
+             * The expression. =, >, <, >=, <=
+             */
+            public Builder cond(String cond) {
+                this.cond = cond;
+                return this;
+            }
+
+            /**
+             * The name of the rule. This parameter corresponds to the key of the type parameter.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * The type of the rule. Valid values: cookie, param, and header.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            /**
+             * The content of the rule.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Conditions build() {
+                return new Conditions(this);
+            } 
+
+        } 
+
+    }
+    public static class GatewaySwimmingLaneRouteJson extends TeaModel {
+        @NameInMap("Conditions")
+        private java.util.List < Conditions> conditions;
+
+        @NameInMap("GatewayId")
+        private Long gatewayId;
+
+        @NameInMap("GatewayUniqueId")
+        private String gatewayUniqueId;
+
+        @NameInMap("RouteIdList")
+        private java.util.List < Long > routeIdList;
+
+        private GatewaySwimmingLaneRouteJson(Builder builder) {
+            this.conditions = builder.conditions;
+            this.gatewayId = builder.gatewayId;
+            this.gatewayUniqueId = builder.gatewayUniqueId;
+            this.routeIdList = builder.routeIdList;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static GatewaySwimmingLaneRouteJson create() {
+            return builder().build();
+        }
+
+        /**
+         * @return conditions
+         */
+        public java.util.List < Conditions> getConditions() {
+            return this.conditions;
+        }
+
+        /**
+         * @return gatewayId
+         */
+        public Long getGatewayId() {
+            return this.gatewayId;
+        }
+
+        /**
+         * @return gatewayUniqueId
+         */
+        public String getGatewayUniqueId() {
+            return this.gatewayUniqueId;
+        }
+
+        /**
+         * @return routeIdList
+         */
+        public java.util.List < Long > getRouteIdList() {
+            return this.routeIdList;
+        }
+
+        public static final class Builder {
+            private java.util.List < Conditions> conditions; 
+            private Long gatewayId; 
+            private String gatewayUniqueId; 
+            private java.util.List < Long > routeIdList; 
+
+            /**
+             * Conditions.
+             */
+            public Builder conditions(java.util.List < Conditions> conditions) {
+                this.conditions = conditions;
+                return this;
+            }
+
+            /**
+             * GatewayId.
+             */
+            public Builder gatewayId(Long gatewayId) {
+                this.gatewayId = gatewayId;
+                return this;
+            }
+
+            /**
+             * GatewayUniqueId.
+             */
+            public Builder gatewayUniqueId(String gatewayUniqueId) {
+                this.gatewayUniqueId = gatewayUniqueId;
+                return this;
+            }
+
+            /**
+             * RouteIdList.
+             */
+            public Builder routeIdList(java.util.List < Long > routeIdList) {
+                this.routeIdList = routeIdList;
+                return this;
+            }
+
+            public GatewaySwimmingLaneRouteJson build() {
+                return new GatewaySwimmingLaneRouteJson(this);
             } 
 
         } 

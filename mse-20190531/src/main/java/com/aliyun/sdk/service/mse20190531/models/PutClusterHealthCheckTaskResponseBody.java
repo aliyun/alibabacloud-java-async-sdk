@@ -169,7 +169,7 @@ public class PutClusterHealthCheckTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * The error code returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -189,7 +189,7 @@ public class PutClusterHealthCheckTaskResponseBody extends TeaModel {
          * <p>
          * 
          * *   If the request is successful, a success message is returned.
-         * *   If the request fails, an error message, such as the "TaskId not found" message, is returned.
+         * *   If the request fails, an error message is returned, such as the "TaskId not found" message.
          */
         public Builder message(String message) {
             this.message = message;

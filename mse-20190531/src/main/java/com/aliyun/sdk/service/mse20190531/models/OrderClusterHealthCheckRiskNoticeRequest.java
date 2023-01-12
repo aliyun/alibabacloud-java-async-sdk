@@ -138,7 +138,11 @@ public class OrderClusterHealthCheckRiskNoticeRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -147,7 +151,7 @@ public class OrderClusterHealthCheckRiskNoticeRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -156,7 +160,11 @@ public class OrderClusterHealthCheckRiskNoticeRequest extends Request {
         }
 
         /**
-         * Mute.
+         * Specifies whether to disable the risk item notification feature.
+         * <p>
+         * 
+         * *   true: disabled
+         * *   false: enabled
          */
         public Builder mute(Boolean mute) {
             this.putQueryParameter("Mute", mute);
@@ -165,7 +173,7 @@ public class OrderClusterHealthCheckRiskNoticeRequest extends Request {
         }
 
         /**
-         * NoticeType.
+         * A reserved parameter.
          */
         public Builder noticeType(String noticeType) {
             this.putQueryParameter("NoticeType", noticeType);
@@ -174,7 +182,7 @@ public class OrderClusterHealthCheckRiskNoticeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region in which the cluster resides.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -183,7 +191,7 @@ public class OrderClusterHealthCheckRiskNoticeRequest extends Request {
         }
 
         /**
-         * RequestPars.
+         * The extended request parameters in the JSON format.
          */
         public Builder requestPars(String requestPars) {
             this.putQueryParameter("RequestPars", requestPars);
@@ -192,7 +200,7 @@ public class OrderClusterHealthCheckRiskNoticeRequest extends Request {
         }
 
         /**
-         * RiskCode.
+         * The code of the risk.
          */
         public Builder riskCode(String riskCode) {
             this.putQueryParameter("RiskCode", riskCode);

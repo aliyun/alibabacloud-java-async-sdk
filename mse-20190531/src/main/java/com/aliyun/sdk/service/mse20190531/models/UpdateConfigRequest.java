@@ -405,10 +405,10 @@ public class UpdateConfigRequest extends Request {
          * Specifies whether to enable RAM authorization for a configuration center. This parameter is valid for Nacos instances. Valid values:
          * <p>
          * 
-         * *   `true`: yes
-         * *   `false`: no
+         * *   `true`: enabled
+         * *   `false`: disabled
          * 
-         * > Before you set this parameter, you must call the QueryConfig operation to obtain the ConfigAuthSupported parameter value to check whether the instance supports this feature.
+         * > Before you configure this parameter, you must call the QueryConfig operation to obtain the ConfigAuthSupported parameter value to check whether the instance supports this feature.
          */
         public Builder configAuthEnabled(Boolean configAuthEnabled) {
             this.putQueryParameter("ConfigAuthEnabled", configAuthEnabled);
@@ -420,10 +420,10 @@ public class UpdateConfigRequest extends Request {
          * Specifies whether to enable configuration encryption for a configuration center. This parameter is valid for Nacos instances. Valid values:
          * <p>
          * 
-         * *   `true`: yes
-         * *   `false`: no
+         * *   `true`: enabled
+         * *   `false`: disabled
          * 
-         * > Before you set this parameter, you must call the QueryConfig operation to obtain the ConfigSecretSupported parameter value to check whether the instance supports this feature.
+         * > Before you configure this parameter, you must call the QueryConfig operation to obtain the ConfigSecretSupported parameter value to check whether the instance supports this feature.
          */
         public Builder configSecretEnabled(Boolean configSecretEnabled) {
             this.putQueryParameter("ConfigSecretEnabled", configSecretEnabled);
@@ -441,7 +441,7 @@ public class UpdateConfigRequest extends Request {
         }
 
         /**
-         * zookeeper参数，是否开启TTL配置。
+         * Specifies whether to enable the time to live (TTL) configuration.
          */
         public Builder extendedTypesEnable(String extendedTypesEnable) {
             this.putQueryParameter("ExtendedTypesEnable", extendedTypesEnable);
@@ -480,10 +480,10 @@ public class UpdateConfigRequest extends Request {
          * Specifies whether to enable Mesh Configuration Protocol (MCP). This parameter is valid for Nacos instances. Valid values:
          * <p>
          * 
-         * *   `true`: yes
-         * *   `false`: no
+         * *   `true`: enabled
+         * *   `false`: disabled
          * 
-         * > Before you set this parameter, you must call the QueryConfig operation to obtain the MCPSupported parameter value to check whether the instance supports this feature.
+         * > Before you configure this parameter, you must call the QueryConfig operation to obtain the MCPSupported parameter value to check whether the instance supports this feature.
          */
         public Builder MCPEnabled(Boolean MCPEnabled) {
             this.putQueryParameter("MCPEnabled", MCPEnabled);
@@ -524,10 +524,10 @@ public class UpdateConfigRequest extends Request {
          * Specifies whether to enable RAM authorization for a registry. This parameter is valid for Nacos instances. Valid values:
          * <p>
          * 
-         * *   `true`: yes
-         * *   `false`: no
+         * *   `true`: enabled
+         * *   `false`: disabled
          * 
-         * > Before you set this parameter, you must call the QueryConfig operation to obtain the NamingAuthSupported parameter value to check whether the instance supports this feature.
+         * > Before you configure this parameter, you must call the QueryConfig operation to obtain the NamingAuthSupporte parameter value to check whether the instance supports this feature.
          */
         public Builder namingAuthEnabled(Boolean namingAuthEnabled) {
             this.putQueryParameter("NamingAuthEnabled", namingAuthEnabled);
@@ -539,8 +539,8 @@ public class UpdateConfigRequest extends Request {
          * Specifies whether to enable super permissions. This parameter is valid for ZooKeeper instances. Valid values:
          * <p>
          * 
-         * *   `true`: yes
-         * *   `false`: no
+         * *   `true`: enabled
+         * *   `false`: disabled
          */
         public Builder openSuperAcl(String openSuperAcl) {
             this.putBodyParameter("OpenSuperAcl", openSuperAcl);
@@ -597,7 +597,7 @@ public class UpdateConfigRequest extends Request {
         }
 
         /**
-         * The username.
+         * The name of the user.
          * <p>
          * 
          * > You must specify this parameter if OpenSuperAcl is set to true.

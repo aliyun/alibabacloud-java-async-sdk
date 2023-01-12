@@ -252,6 +252,7 @@ com/aliyun/sdk/service/mse20190531/models/CloneNacosConfigResponse.class
 com/aliyun/sdk/service/mse20190531/models/ListClustersRequest$Tag$Builder.class
 com/aliyun/sdk/service/mse20190531/models/ApplyTagPoliciesResponse$Builder.class
 com/aliyun/sdk/service/mse20190531/models/CreateNacosInstanceResponse.class
+com/aliyun/sdk/service/mse20190531/models/CreateOrUpdateSwimmingLaneRequest$GatewaySwimmingLaneRouteJson$Builder.class
 com/aliyun/sdk/service/mse20190531/models/GetImageRequest$1.class
 com/aliyun/sdk/service/mse20190531/models/DeleteNacosServiceResponse$Builder.class
 com/aliyun/sdk/service/mse20190531/models/CreateOrUpdateSwimmingLaneGroupResponse$Builder.class
@@ -1422,6 +1423,7 @@ com/aliyun/sdk/service/mse20190531/models/ListAnsServicesResponseBody.class
 com/aliyun/sdk/service/mse20190531/models/DeleteAuthResourceResponse.class
 com/aliyun/sdk/service/mse20190531/models/ListClusterHealthCheckTaskResponseBody$Data.class
 com/aliyun/sdk/service/mse20190531/models/CreateOrUpdateSwimmingLaneGroupResponse.class
+com/aliyun/sdk/service/mse20190531/models/CreateOrUpdateSwimmingLaneRequest$Conditions$Builder.class
 com/aliyun/sdk/service/mse20190531/models/DeleteGatewayDomainRequest$Builder.class
 com/aliyun/sdk/service/mse20190531/models/UpdateZnodeRequest$Builder.class
 com/aliyun/sdk/service/mse20190531/models/ImportZookeeperDataResponse$BuilderImpl.class
@@ -1496,6 +1498,7 @@ com/aliyun/sdk/service/mse20190531/models/UpdateClusterSpecResponse$1.class
 com/aliyun/sdk/service/mse20190531/models/ListEurekaServicesResponseBody$Data$Builder.class
 com/aliyun/sdk/service/mse20190531/models/QueryZnodeDetailResponseBody$Data.class
 com/aliyun/sdk/service/mse20190531/models/UpdateGatewayNameResponseBody.class
+com/aliyun/sdk/service/mse20190531/models/CreateOrUpdateSwimmingLaneRequest$Conditions.class
 com/aliyun/sdk/service/mse20190531/models/ApplyGatewayRouteResponse.class
 com/aliyun/sdk/service/mse20190531/models/RetryClusterRequest.class
 com/aliyun/sdk/service/mse20190531/models/ListSSLCertResponse$Builder.class
@@ -1995,6 +1998,7 @@ com/aliyun/sdk/service/mse20190531/models/ListClustersResponseBody$Data$Builder.
 com/aliyun/sdk/service/mse20190531/models/GatewayOption$TraceDetails$Builder.class
 com/aliyun/sdk/service/mse20190531/models/AddMockRuleRequest.class
 com/aliyun/sdk/service/mse20190531/models/GatewayDomain$Builder.class
+com/aliyun/sdk/service/mse20190531/models/CreateOrUpdateSwimmingLaneRequest$GatewaySwimmingLaneRouteJson.class
 com/aliyun/sdk/service/mse20190531/models/GetGatewayResponseBody$XtraceDetails.class
 com/aliyun/sdk/service/mse20190531/models/QueryBusinessLocationsRequest$1.class
 com/aliyun/sdk/service/mse20190531/models/UpdateNacosClusterResponse$BuilderImpl.class
