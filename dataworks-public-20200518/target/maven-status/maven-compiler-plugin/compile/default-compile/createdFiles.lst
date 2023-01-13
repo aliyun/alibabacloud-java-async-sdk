@@ -4,6 +4,7 @@ com/aliyun/sdk/service/dataworks_public20200518/models/GetQualityFollowerRespons
 com/aliyun/sdk/service/dataworks_public20200518/models/ListDataServiceGroupsResponseBody$Groups$Builder.class
 com/aliyun/sdk/service/dataworks_public20200518/models/GetDataServiceApplicationResponse$BuilderImpl.class
 com/aliyun/sdk/service/dataworks_public20200518/models/TopTenElapsedTimeInstanceResponse$Builder.class
+com/aliyun/sdk/service/dataworks_public20200518/models/MountDirectoryResponseBody$1.class
 com/aliyun/sdk/service/dataworks_public20200518/models/OfflineNodeRequest$1.class
 com/aliyun/sdk/service/dataworks_public20200518/models/ExportDataSourcesResponse.class
 com/aliyun/sdk/service/dataworks_public20200518/models/ListTableThemeRequest$Builder.class
@@ -101,6 +102,7 @@ com/aliyun/sdk/service/dataworks_public20200518/models/StopInstanceRequest$1.cla
 com/aliyun/sdk/service/dataworks_public20200518/models/GetIDEEventDetailResponse$1.class
 com/aliyun/sdk/service/dataworks_public20200518/models/GetDataServiceFolderResponseBody.class
 com/aliyun/sdk/service/dataworks_public20200518/models/GetNodeChildrenResponse$BuilderImpl.class
+com/aliyun/sdk/service/dataworks_public20200518/models/MountDirectoryResponseBody.class
 com/aliyun/sdk/service/dataworks_public20200518/models/ListAlertMessagesRequest$Builder.class
 com/aliyun/sdk/service/dataworks_public20200518/models/ListQualityResultsByEntityResponseBody$Data$Builder.class
 com/aliyun/sdk/service/dataworks_public20200518/models/UpdateFileResponseBody$1.class
@@ -448,6 +450,7 @@ com/aliyun/sdk/service/dataworks_public20200518/models/GetRemindResponseBody$Dat
 com/aliyun/sdk/service/dataworks_public20200518/models/ListNodesByOutputRequest$Builder.class
 com/aliyun/sdk/service/dataworks_public20200518/models/ListDagsResponseBody$Dags$Builder.class
 com/aliyun/sdk/service/dataworks_public20200518/models/AddProjectMemberToRoleResponse$Builder.class
+com/aliyun/sdk/service/dataworks_public20200518/models/MountDirectoryResponse$Builder.class
 com/aliyun/sdk/service/dataworks_public20200518/models/QueryPublicModelEngineRequest$1.class
 com/aliyun/sdk/service/dataworks_public20200518/models/ListProjectRolesResponseBody$ProjectRoleList$Builder.class
 com/aliyun/sdk/service/dataworks_public20200518/models/StopDISyncInstanceResponse$Builder.class
@@ -592,6 +595,7 @@ com/aliyun/sdk/service/dataworks_public20200518/models/ListTableLevelResponse$Bu
 com/aliyun/sdk/service/dataworks_public20200518/models/ListEnabledExtensionsForProjectRequest$1.class
 com/aliyun/sdk/service/dataworks_public20200518/models/GetFileTypeStatisticRequest$Builder.class
 com/aliyun/sdk/service/dataworks_public20200518/models/ListMetaCollectionsResponseBody$Data$Builder.class
+com/aliyun/sdk/service/dataworks_public20200518/models/UmountDirectoryResponse$1.class
 com/aliyun/sdk/service/dataworks_public20200518/models/QueryDISyncTaskConfigProcessResultResponse$BuilderImpl.class
 com/aliyun/sdk/service/dataworks_public20200518/models/UpdateDataSourceRequest$Builder.class
 com/aliyun/sdk/service/dataworks_public20200518/models/GetDataServiceApiResponseBody$RegistrationDetails$Builder.class
@@ -633,6 +637,7 @@ com/aliyun/sdk/service/dataworks_public20200518/models/ListProjectMembersRespons
 com/aliyun/sdk/service/dataworks_public20200518/models/CheckMetaTableResponse$Builder.class
 com/aliyun/sdk/service/dataworks_public20200518/models/GetDataServiceApiResponseBody$ScriptRequestParameters$Builder.class
 com/aliyun/sdk/service/dataworks_public20200518/models/ListNodeInputOrOutputResponse$Builder.class
+com/aliyun/sdk/service/dataworks_public20200518/models/MountDirectoryResponse$1.class
 com/aliyun/sdk/service/dataworks_public20200518/models/CheckMetaPartitionResponse$BuilderImpl.class
 com/aliyun/sdk/service/dataworks_public20200518/models/CreateBaselineRequest$Builder.class
 com/aliyun/sdk/service/dataworks_public20200518/models/GetFileTypeStatisticResponseBody.class
@@ -842,6 +847,7 @@ com/aliyun/sdk/service/dataworks_public20200518/models/GetInstanceStatusStatisti
 com/aliyun/sdk/service/dataworks_public20200518/models/GetMetaTableThemeLevelResponse.class
 com/aliyun/sdk/service/dataworks_public20200518/models/GetExtensionResponse$BuilderImpl.class
 com/aliyun/sdk/service/dataworks_public20200518/models/UpdateTableAddColumnRequest.class
+com/aliyun/sdk/service/dataworks_public20200518/models/UmountDirectoryResponseBody$Builder.class
 com/aliyun/sdk/service/dataworks_public20200518/models/GetFolderResponse$1.class
 com/aliyun/sdk/service/dataworks_public20200518/models/UpdateUdfFileRequest$Builder.class
 com/aliyun/sdk/service/dataworks_public20200518/models/UpdateTableModelInfoResponse$Builder.class
@@ -1255,6 +1261,7 @@ com/aliyun/sdk/service/dataworks_public20200518/models/ListInstanceHistoryRespon
 com/aliyun/sdk/service/dataworks_public20200518/models/UpdateUdfFileResponseBody.class
 com/aliyun/sdk/service/dataworks_public20200518/models/CreateRemindResponse.class
 com/aliyun/sdk/service/dataworks_public20200518/models/ListMigrationsResponseBody$Migrations.class
+com/aliyun/sdk/service/dataworks_public20200518/models/UmountDirectoryResponse.class
 com/aliyun/sdk/service/dataworks_public20200518/models/GetMetaTableIntroWikiResponse$BuilderImpl.class
 com/aliyun/sdk/service/dataworks_public20200518/models/GetSensitiveDataResponse$1.class
 com/aliyun/sdk/service/dataworks_public20200518/models/ListInnerNodesResponse$Builder.class
@@ -1308,6 +1315,7 @@ com/aliyun/sdk/service/dataworks_public20200518/models/CreateDataServiceFolderRe
 com/aliyun/sdk/service/dataworks_public20200518/models/TestNetworkConnectionResponse$1.class
 com/aliyun/sdk/service/dataworks_public20200518/models/GetMetaColumnLineageResponse$1.class
 com/aliyun/sdk/service/dataworks_public20200518/models/DeleteMetaCategoryResponse$Builder.class
+com/aliyun/sdk/service/dataworks_public20200518/models/UmountDirectoryRequest$1.class
 com/aliyun/sdk/service/dataworks_public20200518/models/ListBaselineConfigsResponseBody$1.class
 com/aliyun/sdk/service/dataworks_public20200518/models/GetDeploymentResponse$1.class
 com/aliyun/sdk/service/dataworks_public20200518/models/DeleteRemindResponse$1.class
@@ -1368,6 +1376,7 @@ com/aliyun/sdk/service/dataworks_public20200518/models/GetPermissionApplyOrderDe
 com/aliyun/sdk/service/dataworks_public20200518/models/ListDataServiceFoldersRequest$1.class
 com/aliyun/sdk/service/dataworks_public20200518/models/GetBaselineResponseBody$OverTimeSettings.class
 com/aliyun/sdk/service/dataworks_public20200518/models/ListPermissionApplyOrdersResponseBody$ObjectMetaList$Builder.class
+com/aliyun/sdk/service/dataworks_public20200518/models/MountDirectoryRequest$1.class
 com/aliyun/sdk/service/dataworks_public20200518/models/RunTriggerNodeRequest$1.class
 com/aliyun/sdk/service/dataworks_public20200518/models/TopTenElapsedTimeInstanceResponseBody$InstanceConsumeTimeRank.class
 com/aliyun/sdk/service/dataworks_public20200518/models/GetBusinessResponseBody$Data$Builder.class
@@ -1591,6 +1600,7 @@ com/aliyun/sdk/service/dataworks_public20200518/models/UpdateDataServiceApiReque
 com/aliyun/sdk/service/dataworks_public20200518/models/GetDISyncTaskResponseBody$SolutionDetail.class
 com/aliyun/sdk/service/dataworks_public20200518/models/ImportDataSourcesResponseBody$1.class
 com/aliyun/sdk/service/dataworks_public20200518/models/StopInstanceResponseBody.class
+com/aliyun/sdk/service/dataworks_public20200518/models/UmountDirectoryResponseBody.class
 com/aliyun/sdk/service/dataworks_public20200518/models/ListBaselineStatusesResponseBody$Builder.class
 com/aliyun/sdk/service/dataworks_public20200518/models/ListProjectRolesResponseBody.class
 com/aliyun/sdk/service/dataworks_public20200518/models/RevokeColumnPermissionResponse.class
@@ -1912,6 +1922,7 @@ com/aliyun/sdk/service/dataworks_public20200518/models/CreateDataServiceGroupRes
 com/aliyun/sdk/service/dataworks_public20200518/models/ResumeInstanceRequest$Builder.class
 com/aliyun/sdk/service/dataworks_public20200518/models/GetOptionValueForProjectRequest$Builder.class
 com/aliyun/sdk/service/dataworks_public20200518/models/DeleteQualityEntityResponse$Builder.class
+com/aliyun/sdk/service/dataworks_public20200518/models/UmountDirectoryResponse$BuilderImpl.class
 com/aliyun/sdk/service/dataworks_public20200518/models/GetBusinessRequest.class
 com/aliyun/sdk/service/dataworks_public20200518/models/ExportDataSourcesResponseBody.class
 com/aliyun/sdk/service/dataworks_public20200518/models/ListMetaCollectionsResponseBody$1.class
@@ -2057,6 +2068,7 @@ com/aliyun/sdk/service/dataworks_public20200518/models/DeleteTableLevelResponseB
 com/aliyun/sdk/service/dataworks_public20200518/models/UpdateIDEEventResultRequest$1.class
 com/aliyun/sdk/service/dataworks_public20200518/models/CreateQualityRuleRequest.class
 com/aliyun/sdk/service/dataworks_public20200518/models/ListFoldersRequest.class
+com/aliyun/sdk/service/dataworks_public20200518/models/MountDirectoryRequest$Builder.class
 com/aliyun/sdk/service/dataworks_public20200518/models/DeleteFromMetaCategoryResponseBody.class
 com/aliyun/sdk/service/dataworks_public20200518/models/GetNodeCodeResponse.class
 com/aliyun/sdk/service/dataworks_public20200518/models/GetMetaCategoryResponse$Builder.class
@@ -2315,6 +2327,7 @@ com/aliyun/sdk/service/dataworks_public20200518/models/CheckFileDeploymentReques
 com/aliyun/sdk/service/dataworks_public20200518/models/GetNodeTypeListInfoResponseBody$NodeTypeInfoList.class
 com/aliyun/sdk/service/dataworks_public20200518/models/CreateConnectionResponse.class
 com/aliyun/sdk/service/dataworks_public20200518/models/UpdateTableLevelRequest.class
+com/aliyun/sdk/service/dataworks_public20200518/models/MountDirectoryResponseBody$Builder.class
 com/aliyun/sdk/service/dataworks_public20200518/models/RestartInstanceRequest$1.class
 com/aliyun/sdk/service/dataworks_public20200518/models/DeleteTableLevelRequest$1.class
 com/aliyun/sdk/service/dataworks_public20200518/models/GetDataServiceApiResponseBody$RegistrationErrorCodes.class
@@ -2407,6 +2420,7 @@ com/aliyun/sdk/service/dataworks_public20200518/models/GetInstanceStatusCountRes
 com/aliyun/sdk/service/dataworks_public20200518/models/CreateTableLevelResponseBody$1.class
 com/aliyun/sdk/service/dataworks_public20200518/models/DeleteQualityRuleResponse$Builder.class
 com/aliyun/sdk/service/dataworks_public20200518/models/ListDataServicePublishedApisResponseBody$Data$Builder.class
+com/aliyun/sdk/service/dataworks_public20200518/models/MountDirectoryResponse.class
 com/aliyun/sdk/service/dataworks_public20200518/models/ListDataServiceApisResponseBody$ScriptRequestParameters$Builder.class
 com/aliyun/sdk/service/dataworks_public20200518/models/ListMetaCollectionsResponse$Builder.class
 com/aliyun/sdk/service/dataworks_public20200518/models/ListBusinessResponse$BuilderImpl.class
@@ -2467,6 +2481,7 @@ com/aliyun/sdk/service/dataworks_public20200518/models/ListDataServiceApisRespon
 com/aliyun/sdk/service/dataworks_public20200518/models/CreateTableLevelResponse$Builder.class
 com/aliyun/sdk/service/dataworks_public20200518/models/DeleteQualityRelativeNodeResponse$Builder.class
 com/aliyun/sdk/service/dataworks_public20200518/models/UpdateUdfFileResponse$1.class
+com/aliyun/sdk/service/dataworks_public20200518/models/UmountDirectoryRequest$Builder.class
 com/aliyun/sdk/service/dataworks_public20200518/models/ListDataServiceAuthorizedApisResponseBody$Data.class
 com/aliyun/sdk/service/dataworks_public20200518/models/ListExtensionsResponseBody$1.class
 com/aliyun/sdk/service/dataworks_public20200518/models/UpdateMetaCategoryResponseBody.class
@@ -2657,6 +2672,7 @@ com/aliyun/sdk/service/dataworks_public20200518/models/ListInnerNodesResponse.cl
 com/aliyun/sdk/service/dataworks_public20200518/models/ListFileTypeResponseBody.class
 com/aliyun/sdk/service/dataworks_public20200518/models/GetMetaTableOutputResponse$1.class
 com/aliyun/sdk/service/dataworks_public20200518/models/CreateManualDagResponseBody$1.class
+com/aliyun/sdk/service/dataworks_public20200518/models/MountDirectoryResponse$BuilderImpl.class
 com/aliyun/sdk/service/dataworks_public20200518/models/ListQualityResultsByEntityResponseBody$Builder.class
 com/aliyun/sdk/service/dataworks_public20200518/models/ListNodesByOutputResponse$Builder.class
 com/aliyun/sdk/service/dataworks_public20200518/models/EstablishRelationTableToBusinessRequest.class
@@ -2745,6 +2761,7 @@ com/aliyun/sdk/service/dataworks_public20200518/models/GetDeploymentRequest.clas
 com/aliyun/sdk/service/dataworks_public20200518/models/UpdateBaselineRequest.class
 com/aliyun/sdk/service/dataworks_public20200518/models/GetMetaTableIntroWikiResponse$Builder.class
 com/aliyun/sdk/service/dataworks_public20200518/models/RunManualDagNodesResponse$BuilderImpl.class
+com/aliyun/sdk/service/dataworks_public20200518/models/UmountDirectoryRequest.class
 com/aliyun/sdk/service/dataworks_public20200518/models/GetMetaCategoryResponseBody.class
 com/aliyun/sdk/service/dataworks_public20200518/models/GetInstanceStatusStatisticResponseBody$StatusCount.class
 com/aliyun/sdk/service/dataworks_public20200518/models/GetMetaTableListByCategoryResponse.class
@@ -2873,6 +2890,7 @@ com/aliyun/sdk/service/dataworks_public20200518/models/ListInstancesResponse$1.c
 com/aliyun/sdk/service/dataworks_public20200518/models/ListProjectRolesRequest$Builder.class
 com/aliyun/sdk/service/dataworks_public20200518/models/GetBaselineConfigResponse$1.class
 com/aliyun/sdk/service/dataworks_public20200518/models/CreateMetaCollectionResponse$BuilderImpl.class
+com/aliyun/sdk/service/dataworks_public20200518/models/UmountDirectoryResponseBody$1.class
 com/aliyun/sdk/service/dataworks_public20200518/models/DeleteMetaCategoryRequest$1.class
 com/aliyun/sdk/service/dataworks_public20200518/models/DeleteBaselineResponseBody$1.class
 com/aliyun/sdk/service/dataworks_public20200518/models/AddMetaCollectionEntityResponseBody$Builder.class
@@ -2883,6 +2901,7 @@ com/aliyun/sdk/service/dataworks_public20200518/models/AddMetaCollectionEntityRe
 com/aliyun/sdk/service/dataworks_public20200518/models/CreateDataServiceFolderResponseBody.class
 com/aliyun/sdk/service/dataworks_public20200518/models/GetSuccessInstanceTrendResponse$Builder.class
 com/aliyun/sdk/service/dataworks_public20200518/models/GetDDLJobStatusResponse$1.class
+com/aliyun/sdk/service/dataworks_public20200518/models/MountDirectoryRequest.class
 com/aliyun/sdk/service/dataworks_public20200518/models/ListRemindsResponseBody$1.class
 com/aliyun/sdk/service/dataworks_public20200518/models/GetRemindResponseBody$Robots.class
 com/aliyun/sdk/service/dataworks_public20200518/models/RemoveProjectMemberFromRoleResponse$BuilderImpl.class
@@ -2942,6 +2961,7 @@ com/aliyun/sdk/service/dataworks_public20200518/models/ListResourceGroupsRequest
 com/aliyun/sdk/service/dataworks_public20200518/models/GetRemindResponseBody$Builder.class
 com/aliyun/sdk/service/dataworks_public20200518/models/UpdateTableThemeRequest$Builder.class
 com/aliyun/sdk/service/dataworks_public20200518/models/GetDeploymentResponseBody$DeployedItems$Builder.class
+com/aliyun/sdk/service/dataworks_public20200518/models/UmountDirectoryResponse$Builder.class
 com/aliyun/sdk/service/dataworks_public20200518/models/DeleteQualityEntityResponseBody.class
 com/aliyun/sdk/service/dataworks_public20200518/models/GetOptionValueForProjectResponse$Builder.class
 com/aliyun/sdk/service/dataworks_public20200518/models/GetIDEEventDetailResponseBody$FilePropertyContent.class

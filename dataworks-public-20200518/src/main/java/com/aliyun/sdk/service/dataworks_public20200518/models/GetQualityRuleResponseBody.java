@@ -191,6 +191,9 @@ public class GetQualityRuleResponseBody extends TeaModel {
         @NameInMap("OnDutyAccountName")
         private String onDutyAccountName;
 
+        @NameInMap("OpenSwitch")
+        private Boolean openSwitch;
+
         @NameInMap("Operator")
         private String operator;
 
@@ -235,6 +238,7 @@ public class GetQualityRuleResponseBody extends TeaModel {
             this.methodName = builder.methodName;
             this.onDuty = builder.onDuty;
             this.onDutyAccountName = builder.onDutyAccountName;
+            this.openSwitch = builder.openSwitch;
             this.operator = builder.operator;
             this.predictType = builder.predictType;
             this.property = builder.property;
@@ -347,6 +351,13 @@ public class GetQualityRuleResponseBody extends TeaModel {
         }
 
         /**
+         * @return openSwitch
+         */
+        public Boolean getOpenSwitch() {
+            return this.openSwitch;
+        }
+
+        /**
          * @return operator
          */
         public String getOperator() {
@@ -430,6 +441,7 @@ public class GetQualityRuleResponseBody extends TeaModel {
             private String methodName; 
             private String onDuty; 
             private String onDutyAccountName; 
+            private Boolean openSwitch; 
             private String operator; 
             private Integer predictType; 
             private String property; 
@@ -542,6 +554,14 @@ public class GetQualityRuleResponseBody extends TeaModel {
              */
             public Builder onDutyAccountName(String onDutyAccountName) {
                 this.onDutyAccountName = onDutyAccountName;
+                return this;
+            }
+
+            /**
+             * OpenSwitch.
+             */
+            public Builder openSwitch(Boolean openSwitch) {
+                this.openSwitch = openSwitch;
                 return this;
             }
 

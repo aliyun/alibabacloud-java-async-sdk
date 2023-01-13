@@ -46,6 +46,10 @@ public class UpdateBaselineRequest extends Request {
     private Boolean enabled;
 
     @Body
+    @NameInMap("NodeIds")
+    private String nodeIds;
+
+    @Body
     @NameInMap("OvertimeSettings")
     private java.util.List < OvertimeSettings> overtimeSettings;
 
@@ -63,12 +67,8 @@ public class UpdateBaselineRequest extends Request {
     private Long projectId;
 
     @Body
-    @NameInMap("RemoveTaskIds")
-    private String removeTaskIds;
-
-    @Body
-    @NameInMap("TaskIds")
-    private String taskIds;
+    @NameInMap("RemoveNodeIds")
+    private String removeNodeIds;
 
     private UpdateBaselineRequest(Builder builder) {
         super(builder);
@@ -80,12 +80,12 @@ public class UpdateBaselineRequest extends Request {
         this.baselineName = builder.baselineName;
         this.baselineType = builder.baselineType;
         this.enabled = builder.enabled;
+        this.nodeIds = builder.nodeIds;
         this.overtimeSettings = builder.overtimeSettings;
         this.owner = builder.owner;
         this.priority = builder.priority;
         this.projectId = builder.projectId;
-        this.removeTaskIds = builder.removeTaskIds;
-        this.taskIds = builder.taskIds;
+        this.removeNodeIds = builder.removeNodeIds;
     }
 
     public static Builder builder() {
@@ -158,6 +158,13 @@ public class UpdateBaselineRequest extends Request {
     }
 
     /**
+     * @return nodeIds
+     */
+    public String getNodeIds() {
+        return this.nodeIds;
+    }
+
+    /**
      * @return overtimeSettings
      */
     public java.util.List < OvertimeSettings> getOvertimeSettings() {
@@ -186,17 +193,10 @@ public class UpdateBaselineRequest extends Request {
     }
 
     /**
-     * @return removeTaskIds
+     * @return removeNodeIds
      */
-    public String getRemoveTaskIds() {
-        return this.removeTaskIds;
-    }
-
-    /**
-     * @return taskIds
-     */
-    public String getTaskIds() {
-        return this.taskIds;
+    public String getRemoveNodeIds() {
+        return this.removeNodeIds;
     }
 
     public static final class Builder extends Request.Builder<UpdateBaselineRequest, Builder> {
@@ -208,12 +208,12 @@ public class UpdateBaselineRequest extends Request {
         private String baselineName; 
         private String baselineType; 
         private Boolean enabled; 
+        private String nodeIds; 
         private java.util.List < OvertimeSettings> overtimeSettings; 
         private String owner; 
         private Integer priority; 
         private Long projectId; 
-        private String removeTaskIds; 
-        private String taskIds; 
+        private String removeNodeIds; 
 
         private Builder() {
             super();
@@ -229,12 +229,12 @@ public class UpdateBaselineRequest extends Request {
             this.baselineName = request.baselineName;
             this.baselineType = request.baselineType;
             this.enabled = request.enabled;
+            this.nodeIds = request.nodeIds;
             this.overtimeSettings = request.overtimeSettings;
             this.owner = request.owner;
             this.priority = request.priority;
             this.projectId = request.projectId;
-            this.removeTaskIds = request.removeTaskIds;
-            this.taskIds = request.taskIds;
+            this.removeNodeIds = request.removeNodeIds;
         } 
 
         /**
@@ -311,6 +311,15 @@ public class UpdateBaselineRequest extends Request {
         }
 
         /**
+         * NodeIds.
+         */
+        public Builder nodeIds(String nodeIds) {
+            this.putBodyParameter("NodeIds", nodeIds);
+            this.nodeIds = nodeIds;
+            return this;
+        }
+
+        /**
          * 基线承诺时间
          */
         public Builder overtimeSettings(java.util.List < OvertimeSettings> overtimeSettings) {
@@ -348,20 +357,11 @@ public class UpdateBaselineRequest extends Request {
         }
 
         /**
-         * RemoveTaskIds.
+         * RemoveNodeIds.
          */
-        public Builder removeTaskIds(String removeTaskIds) {
-            this.putBodyParameter("RemoveTaskIds", removeTaskIds);
-            this.removeTaskIds = removeTaskIds;
-            return this;
-        }
-
-        /**
-         * TaskIds.
-         */
-        public Builder taskIds(String taskIds) {
-            this.putBodyParameter("TaskIds", taskIds);
-            this.taskIds = taskIds;
+        public Builder removeNodeIds(String removeNodeIds) {
+            this.putBodyParameter("RemoveNodeIds", removeNodeIds);
+            this.removeNodeIds = removeNodeIds;
             return this;
         }
 

@@ -484,6 +484,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListTopicsResponse> listTopics(ListTopicsRequest request);
 
+    CompletableFuture<MountDirectoryResponse> mountDirectory(MountDirectoryRequest request);
+
     CompletableFuture<OfflineNodeResponse> offlineNode(OfflineNodeRequest request);
 
     CompletableFuture<PublishDataServiceApiResponse> publishDataServiceApi(PublishDataServiceApiRequest request);
@@ -549,6 +551,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<TopTenElapsedTimeInstanceResponse> topTenElapsedTimeInstance(TopTenElapsedTimeInstanceRequest request);
 
     CompletableFuture<TopTenErrorTimesInstanceResponse> topTenErrorTimesInstance(TopTenErrorTimesInstanceRequest request);
+
+    CompletableFuture<UmountDirectoryResponse> umountDirectory(UmountDirectoryRequest request);
 
     CompletableFuture<UpdateBaselineResponse> updateBaseline(UpdateBaselineRequest request);
 

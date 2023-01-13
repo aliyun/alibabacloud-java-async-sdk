@@ -31,6 +31,10 @@ public class CreateBaselineRequest extends Request {
     private String baselineType;
 
     @Body
+    @NameInMap("NodeIds")
+    private String nodeIds;
+
+    @Body
     @NameInMap("OvertimeSettings")
     @Validation(required = true)
     private java.util.List < OvertimeSettings> overtimeSettings;
@@ -50,21 +54,17 @@ public class CreateBaselineRequest extends Request {
     @Validation(required = true)
     private Long projectId;
 
-    @Body
-    @NameInMap("TaskIds")
-    private String taskIds;
-
     private CreateBaselineRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.alertMarginThreshold = builder.alertMarginThreshold;
         this.baselineName = builder.baselineName;
         this.baselineType = builder.baselineType;
+        this.nodeIds = builder.nodeIds;
         this.overtimeSettings = builder.overtimeSettings;
         this.owner = builder.owner;
         this.priority = builder.priority;
         this.projectId = builder.projectId;
-        this.taskIds = builder.taskIds;
     }
 
     public static Builder builder() {
@@ -109,6 +109,13 @@ public class CreateBaselineRequest extends Request {
     }
 
     /**
+     * @return nodeIds
+     */
+    public String getNodeIds() {
+        return this.nodeIds;
+    }
+
+    /**
      * @return overtimeSettings
      */
     public java.util.List < OvertimeSettings> getOvertimeSettings() {
@@ -136,23 +143,16 @@ public class CreateBaselineRequest extends Request {
         return this.projectId;
     }
 
-    /**
-     * @return taskIds
-     */
-    public String getTaskIds() {
-        return this.taskIds;
-    }
-
     public static final class Builder extends Request.Builder<CreateBaselineRequest, Builder> {
         private String regionId; 
         private Integer alertMarginThreshold; 
         private String baselineName; 
         private String baselineType; 
+        private String nodeIds; 
         private java.util.List < OvertimeSettings> overtimeSettings; 
         private String owner; 
         private Integer priority; 
         private Long projectId; 
-        private String taskIds; 
 
         private Builder() {
             super();
@@ -164,11 +164,11 @@ public class CreateBaselineRequest extends Request {
             this.alertMarginThreshold = request.alertMarginThreshold;
             this.baselineName = request.baselineName;
             this.baselineType = request.baselineType;
+            this.nodeIds = request.nodeIds;
             this.overtimeSettings = request.overtimeSettings;
             this.owner = request.owner;
             this.priority = request.priority;
             this.projectId = request.projectId;
-            this.taskIds = request.taskIds;
         } 
 
         /**
@@ -208,6 +208,15 @@ public class CreateBaselineRequest extends Request {
         }
 
         /**
+         * NodeIds.
+         */
+        public Builder nodeIds(String nodeIds) {
+            this.putBodyParameter("NodeIds", nodeIds);
+            this.nodeIds = nodeIds;
+            return this;
+        }
+
+        /**
          * 基线承诺时间
          */
         public Builder overtimeSettings(java.util.List < OvertimeSettings> overtimeSettings) {
@@ -240,15 +249,6 @@ public class CreateBaselineRequest extends Request {
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
             this.projectId = projectId;
-            return this;
-        }
-
-        /**
-         * TaskIds.
-         */
-        public Builder taskIds(String taskIds) {
-            this.putBodyParameter("TaskIds", taskIds);
-            this.taskIds = taskIds;
             return this;
         }
 

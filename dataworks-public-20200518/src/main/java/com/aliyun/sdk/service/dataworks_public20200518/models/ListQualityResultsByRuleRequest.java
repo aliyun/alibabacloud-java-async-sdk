@@ -39,7 +39,7 @@ public class ListQualityResultsByRuleRequest extends Request {
     @Body
     @NameInMap("RuleId")
     @Validation(required = true, maximum = 2147483647, minimum = 1)
-    private Integer ruleId;
+    private Long ruleId;
 
     @Body
     @NameInMap("StartDate")
@@ -108,7 +108,7 @@ public class ListQualityResultsByRuleRequest extends Request {
     /**
      * @return ruleId
      */
-    public Integer getRuleId() {
+    public Long getRuleId() {
         return this.ruleId;
     }
 
@@ -125,7 +125,7 @@ public class ListQualityResultsByRuleRequest extends Request {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String projectName; 
-        private Integer ruleId; 
+        private Long ruleId; 
         private String startDate; 
 
         private Builder() {
@@ -191,7 +191,7 @@ public class ListQualityResultsByRuleRequest extends Request {
         /**
          * RuleId.
          */
-        public Builder ruleId(Integer ruleId) {
+        public Builder ruleId(Long ruleId) {
             this.putBodyParameter("RuleId", ruleId);
             this.ruleId = ruleId;
             return this;

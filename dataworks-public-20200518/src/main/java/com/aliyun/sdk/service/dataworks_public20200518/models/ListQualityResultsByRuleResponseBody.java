@@ -397,7 +397,7 @@ public class ListQualityResultsByRuleResponseBody extends TeaModel {
         private Long endTime;
 
         @NameInMap("EntityId")
-        private Integer entityId;
+        private Long entityId;
 
         @NameInMap("ExpectValue")
         private Float expectValue;
@@ -412,7 +412,7 @@ public class ListQualityResultsByRuleResponseBody extends TeaModel {
         private Boolean fixedCheck;
 
         @NameInMap("Id")
-        private Integer id;
+        private Long id;
 
         @NameInMap("IsPrediction")
         private Boolean isPrediction;
@@ -429,6 +429,9 @@ public class ListQualityResultsByRuleResponseBody extends TeaModel {
         @NameInMap("Op")
         private String op;
 
+        @NameInMap("Open")
+        private Boolean open;
+
         @NameInMap("ProjectName")
         private String projectName;
 
@@ -442,7 +445,7 @@ public class ListQualityResultsByRuleResponseBody extends TeaModel {
         private String resultString;
 
         @NameInMap("RuleId")
-        private Integer ruleId;
+        private Long ruleId;
 
         @NameInMap("RuleName")
         private String ruleName;
@@ -503,6 +506,7 @@ public class ListQualityResultsByRuleResponseBody extends TeaModel {
             this.matchExpression = builder.matchExpression;
             this.methodName = builder.methodName;
             this.op = builder.op;
+            this.open = builder.open;
             this.projectName = builder.projectName;
             this.property = builder.property;
             this.referenceValue = builder.referenceValue;
@@ -630,7 +634,7 @@ public class ListQualityResultsByRuleResponseBody extends TeaModel {
         /**
          * @return entityId
          */
-        public Integer getEntityId() {
+        public Long getEntityId() {
             return this.entityId;
         }
 
@@ -665,7 +669,7 @@ public class ListQualityResultsByRuleResponseBody extends TeaModel {
         /**
          * @return id
          */
-        public Integer getId() {
+        public Long getId() {
             return this.id;
         }
 
@@ -705,6 +709,13 @@ public class ListQualityResultsByRuleResponseBody extends TeaModel {
         }
 
         /**
+         * @return open
+         */
+        public Boolean getOpen() {
+            return this.open;
+        }
+
+        /**
          * @return projectName
          */
         public String getProjectName() {
@@ -735,7 +746,7 @@ public class ListQualityResultsByRuleResponseBody extends TeaModel {
         /**
          * @return ruleId
          */
-        public Integer getRuleId() {
+        public Long getRuleId() {
             return this.ruleId;
         }
 
@@ -831,22 +842,23 @@ public class ListQualityResultsByRuleResponseBody extends TeaModel {
             private String dateType; 
             private Boolean discreteCheck; 
             private Long endTime; 
-            private Integer entityId; 
+            private Long entityId; 
             private Float expectValue; 
             private String externalId; 
             private String externalType; 
             private Boolean fixedCheck; 
-            private Integer id; 
+            private Long id; 
             private Boolean isPrediction; 
             private Float lowerValue; 
             private String matchExpression; 
             private String methodName; 
             private String op; 
+            private Boolean open; 
             private String projectName; 
             private String property; 
             private java.util.List < ReferenceValue> referenceValue; 
             private String resultString; 
-            private Integer ruleId; 
+            private Long ruleId; 
             private String ruleName; 
             private java.util.List < SampleValue> sampleValue; 
             private String tableName; 
@@ -974,7 +986,7 @@ public class ListQualityResultsByRuleResponseBody extends TeaModel {
             /**
              * EntityId.
              */
-            public Builder entityId(Integer entityId) {
+            public Builder entityId(Long entityId) {
                 this.entityId = entityId;
                 return this;
             }
@@ -1014,7 +1026,7 @@ public class ListQualityResultsByRuleResponseBody extends TeaModel {
             /**
              * Id.
              */
-            public Builder id(Integer id) {
+            public Builder id(Long id) {
                 this.id = id;
                 return this;
             }
@@ -1060,6 +1072,14 @@ public class ListQualityResultsByRuleResponseBody extends TeaModel {
             }
 
             /**
+             * Open.
+             */
+            public Builder open(Boolean open) {
+                this.open = open;
+                return this;
+            }
+
+            /**
              * ProjectName.
              */
             public Builder projectName(String projectName) {
@@ -1094,7 +1114,7 @@ public class ListQualityResultsByRuleResponseBody extends TeaModel {
             /**
              * RuleId.
              */
-            public Builder ruleId(Integer ruleId) {
+            public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
                 return this;
             }

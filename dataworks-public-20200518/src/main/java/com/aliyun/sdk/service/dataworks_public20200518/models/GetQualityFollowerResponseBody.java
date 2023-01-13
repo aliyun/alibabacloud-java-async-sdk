@@ -155,6 +155,9 @@ public class GetQualityFollowerResponseBody extends TeaModel {
         @NameInMap("AlarmMode")
         private Integer alarmMode;
 
+        @NameInMap("CreateTime")
+        private Long createTime;
+
         @NameInMap("EntityId")
         private String entityId;
 
@@ -167,6 +170,9 @@ public class GetQualityFollowerResponseBody extends TeaModel {
         @NameInMap("Id")
         private Long id;
 
+        @NameInMap("ModifyTime")
+        private Long modifyTime;
+
         @NameInMap("ProjectName")
         private String projectName;
 
@@ -175,10 +181,12 @@ public class GetQualityFollowerResponseBody extends TeaModel {
 
         private Data(Builder builder) {
             this.alarmMode = builder.alarmMode;
+            this.createTime = builder.createTime;
             this.entityId = builder.entityId;
             this.follower = builder.follower;
             this.followerAccountName = builder.followerAccountName;
             this.id = builder.id;
+            this.modifyTime = builder.modifyTime;
             this.projectName = builder.projectName;
             this.tableName = builder.tableName;
         }
@@ -196,6 +204,13 @@ public class GetQualityFollowerResponseBody extends TeaModel {
          */
         public Integer getAlarmMode() {
             return this.alarmMode;
+        }
+
+        /**
+         * @return createTime
+         */
+        public Long getCreateTime() {
+            return this.createTime;
         }
 
         /**
@@ -227,6 +242,13 @@ public class GetQualityFollowerResponseBody extends TeaModel {
         }
 
         /**
+         * @return modifyTime
+         */
+        public Long getModifyTime() {
+            return this.modifyTime;
+        }
+
+        /**
          * @return projectName
          */
         public String getProjectName() {
@@ -242,10 +264,12 @@ public class GetQualityFollowerResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer alarmMode; 
+            private Long createTime; 
             private String entityId; 
             private String follower; 
             private String followerAccountName; 
             private Long id; 
+            private Long modifyTime; 
             private String projectName; 
             private String tableName; 
 
@@ -254,6 +278,14 @@ public class GetQualityFollowerResponseBody extends TeaModel {
              */
             public Builder alarmMode(Integer alarmMode) {
                 this.alarmMode = alarmMode;
+                return this;
+            }
+
+            /**
+             * CreateTime.
+             */
+            public Builder createTime(Long createTime) {
+                this.createTime = createTime;
                 return this;
             }
 
@@ -286,6 +318,14 @@ public class GetQualityFollowerResponseBody extends TeaModel {
              */
             public Builder id(Long id) {
                 this.id = id;
+                return this;
+            }
+
+            /**
+             * ModifyTime.
+             */
+            public Builder modifyTime(Long modifyTime) {
+                this.modifyTime = modifyTime;
                 return this;
             }
 
