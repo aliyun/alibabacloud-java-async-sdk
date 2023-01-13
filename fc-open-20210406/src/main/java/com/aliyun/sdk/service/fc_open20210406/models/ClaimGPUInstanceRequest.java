@@ -267,7 +267,7 @@ public class ClaimGPUInstanceRequest extends Request {
         } 
 
         /**
-         * X-Fc-Account-Id.
+         * The ID of your Alibaba Cloud account.
          */
         public Builder xFcAccountId(String xFcAccountId) {
             this.putHeaderParameter("X-Fc-Account-Id", xFcAccountId);
@@ -276,7 +276,7 @@ public class ClaimGPUInstanceRequest extends Request {
         }
 
         /**
-         * X-Fc-Date.
+         * The time on which the function is invoked. The format of the value is: **EEE,d MMM yyyy HH:mm:ss GMT**.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
@@ -285,7 +285,7 @@ public class ClaimGPUInstanceRequest extends Request {
         }
 
         /**
-         * X-Fc-Trace-Id.
+         * The custom request ID.
          */
         public Builder xFcTraceId(String xFcTraceId) {
             this.putHeaderParameter("X-Fc-Trace-Id", xFcTraceId);
@@ -294,7 +294,7 @@ public class ClaimGPUInstanceRequest extends Request {
         }
 
         /**
-         * GPU渲染实例磁盘性能级别
+         * The disk performance level of the GPU rendering instance.
          */
         public Builder diskPerformanceLevel(String diskPerformanceLevel) {
             this.putBodyParameter("diskPerformanceLevel", diskPerformanceLevel);
@@ -303,7 +303,7 @@ public class ClaimGPUInstanceRequest extends Request {
         }
 
         /**
-         * GPU渲染实例系统盘空间
+         * The system disk space of the GPU rendering instance.
          */
         public Builder diskSizeGigabytes(String diskSizeGigabytes) {
             this.putBodyParameter("diskSizeGigabytes", diskSizeGigabytes);
@@ -312,7 +312,7 @@ public class ClaimGPUInstanceRequest extends Request {
         }
 
         /**
-         * GPU渲染实例镜像ID
+         * The image ID of the GPU-rendered instance.
          */
         public Builder imageId(String imageId) {
             this.putBodyParameter("imageId", imageId);
@@ -321,7 +321,7 @@ public class ClaimGPUInstanceRequest extends Request {
         }
 
         /**
-         * GPU渲染实例规格
+         * The specifications of the GPU rendering instance.
          */
         public Builder instanceType(String instanceType) {
             this.putBodyParameter("instanceType", instanceType);
@@ -330,7 +330,7 @@ public class ClaimGPUInstanceRequest extends Request {
         }
 
         /**
-         * GPU渲染实例公网出向带宽
+         * The outbound Internet bandwidth of the GPU rendering instance.
          */
         public Builder internetBandwidthOut(String internetBandwidthOut) {
             this.putBodyParameter("internetBandwidthOut", internetBandwidthOut);
@@ -339,7 +339,7 @@ public class ClaimGPUInstanceRequest extends Request {
         }
 
         /**
-         * GPU渲染实例密码
+         * The password of the GPU rendering instance.
          */
         public Builder password(String password) {
             this.putBodyParameter("password", password);
@@ -348,7 +348,7 @@ public class ClaimGPUInstanceRequest extends Request {
         }
 
         /**
-         * 用户角色
+         * The role of the user.
          */
         public Builder role(String role) {
             this.putBodyParameter("role", role);
@@ -357,7 +357,7 @@ public class ClaimGPUInstanceRequest extends Request {
         }
 
         /**
-         * 安全组ID
+         * The ID of the security group.
          */
         public Builder sgId(String sgId) {
             this.putBodyParameter("sgId", sgId);
@@ -366,7 +366,7 @@ public class ClaimGPUInstanceRequest extends Request {
         }
 
         /**
-         * GPU渲染实例源端IPv4 CIDR地址块
+         * The source IPv4 CIDR block of the GPU rendering instance.
          */
         public Builder sourceCidrIp(String sourceCidrIp) {
             this.putBodyParameter("sourceCidrIp", sourceCidrIp);
@@ -375,7 +375,7 @@ public class ClaimGPUInstanceRequest extends Request {
         }
 
         /**
-         * GPU渲染实例安全组开放的TCP协议端口范围
+         * The range of TCP ports that are open to the security group of the GPU-rendered instance.
          */
         public Builder tcpPortRange(java.util.List < String > tcpPortRange) {
             this.putBodyParameter("tcpPortRange", tcpPortRange);
@@ -384,7 +384,7 @@ public class ClaimGPUInstanceRequest extends Request {
         }
 
         /**
-         * GPU渲染实例安全组开放的UDP协议端口范围
+         * The range of UDP ports that are open to the security group of the GPU rendering instance.
          */
         public Builder udpPortRange(java.util.List < String > udpPortRange) {
             this.putBodyParameter("udpPortRange", udpPortRange);
@@ -393,7 +393,7 @@ public class ClaimGPUInstanceRequest extends Request {
         }
 
         /**
-         * 专有网络ID
+         * The ID of the virtual private cloud (VPC).
          */
         public Builder vpcId(String vpcId) {
             this.putBodyParameter("vpcId", vpcId);
@@ -402,7 +402,7 @@ public class ClaimGPUInstanceRequest extends Request {
         }
 
         /**
-         * 交换机ID
+         * The ID of the vSwitch.
          */
         public Builder vswId(String vswId) {
             this.putBodyParameter("vswId", vswId);

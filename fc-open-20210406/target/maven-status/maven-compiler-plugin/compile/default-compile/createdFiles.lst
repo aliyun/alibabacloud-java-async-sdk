@@ -290,6 +290,7 @@ com/aliyun/sdk/service/fc_open20210406/models/ListLayerVersionsResponseBody.clas
 com/aliyun/sdk/service/fc_open20210406/models/GetFunctionOnDemandConfigResponseBody.class
 com/aliyun/sdk/service/fc_open20210406/models/ListFunctionAsyncInvokeConfigsRequest.class
 com/aliyun/sdk/service/fc_open20210406/models/NASConfig$MountPoints$Builder.class
+com/aliyun/sdk/service/fc_open20210406/models/WAFConfig.class
 com/aliyun/sdk/service/fc_open20210406/models/CreateCustomDomainResponseBody$1.class
 com/aliyun/sdk/service/fc_open20210406/models/ListReservedCapacitiesResponse$Builder.class
 com/aliyun/sdk/service/fc_open20210406/models/PutProvisionConfigResponseBody$Builder.class
@@ -490,6 +491,7 @@ com/aliyun/sdk/service/fc_open20210406/models/ListFunctionAsyncInvokeConfigsResp
 com/aliyun/sdk/service/fc_open20210406/models/UpdateCustomDomainResponseBody$1.class
 com/aliyun/sdk/service/fc_open20210406/models/GetProvisionConfigRequest$Builder.class
 com/aliyun/sdk/service/fc_open20210406/models/DeleteServiceVersionRequest.class
+com/aliyun/sdk/service/fc_open20210406/models/WAFConfig$1.class
 com/aliyun/sdk/service/fc_open20210406/models/UntagResourceRequest.class
 com/aliyun/sdk/service/fc_open20210406/models/GetServiceResponse$1.class
 com/aliyun/sdk/service/fc_open20210406/models/UpdateCustomDomainResponse$Builder.class
@@ -750,6 +752,7 @@ com/aliyun/sdk/service/fc_open20210406/models/DeleteServiceVersionResponse$Build
 com/aliyun/sdk/service/fc_open20210406/models/ListReservedCapacitiesResponseBody$Builder.class
 com/aliyun/sdk/service/fc_open20210406/models/ListLayerVersionsRequest$1.class
 com/aliyun/sdk/service/fc_open20210406/models/ListServicesResponseBody$1.class
+com/aliyun/sdk/service/fc_open20210406/models/WAFConfig$Builder.class
 com/aliyun/sdk/service/fc_open20210406/models/DeleteFunctionResponse.class
 com/aliyun/sdk/service/fc_open20210406/models/StopStatefulAsyncInvocationRequest.class
 com/aliyun/sdk/service/fc_open20210406/models/PutFunctionOnDemandConfigResponse$Builder.class

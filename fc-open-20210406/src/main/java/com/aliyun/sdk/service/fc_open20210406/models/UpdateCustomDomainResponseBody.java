@@ -39,6 +39,9 @@ public class UpdateCustomDomainResponseBody extends TeaModel {
     @NameInMap("tlsConfig")
     private TLSConfig tlsConfig;
 
+    @NameInMap("wafConfig")
+    private WAFConfig wafConfig;
+
     private UpdateCustomDomainResponseBody(Builder builder) {
         this.accountId = builder.accountId;
         this.apiVersion = builder.apiVersion;
@@ -49,6 +52,7 @@ public class UpdateCustomDomainResponseBody extends TeaModel {
         this.protocol = builder.protocol;
         this.routeConfig = builder.routeConfig;
         this.tlsConfig = builder.tlsConfig;
+        this.wafConfig = builder.wafConfig;
     }
 
     public static Builder builder() {
@@ -122,6 +126,13 @@ public class UpdateCustomDomainResponseBody extends TeaModel {
         return this.tlsConfig;
     }
 
+    /**
+     * @return wafConfig
+     */
+    public WAFConfig getWafConfig() {
+        return this.wafConfig;
+    }
+
     public static final class Builder {
         private String accountId; 
         private String apiVersion; 
@@ -132,6 +143,7 @@ public class UpdateCustomDomainResponseBody extends TeaModel {
         private String protocol; 
         private RouteConfig routeConfig; 
         private TLSConfig tlsConfig; 
+        private WAFConfig wafConfig; 
 
         /**
          * The ID of the account.
@@ -207,6 +219,14 @@ public class UpdateCustomDomainResponseBody extends TeaModel {
          */
         public Builder tlsConfig(TLSConfig tlsConfig) {
             this.tlsConfig = tlsConfig;
+            return this;
+        }
+
+        /**
+         * wafConfig.
+         */
+        public Builder wafConfig(WAFConfig wafConfig) {
+            this.wafConfig = wafConfig;
             return this;
         }
 

@@ -62,7 +62,7 @@ public class ClaimGPUInstanceResponseBody extends TeaModel {
         private String publicIp; 
 
         /**
-         * createdTime.
+         * The time when the product instance was created.
          */
         public Builder createdTime(String createdTime) {
             this.createdTime = createdTime;
@@ -70,7 +70,7 @@ public class ClaimGPUInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * instanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -78,7 +78,7 @@ public class ClaimGPUInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The public IP address.
          */
         public Builder publicIp(String publicIp) {
             this.publicIp = publicIp;

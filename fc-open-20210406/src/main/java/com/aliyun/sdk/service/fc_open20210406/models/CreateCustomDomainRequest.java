@@ -45,6 +45,10 @@ public class CreateCustomDomainRequest extends Request {
     @NameInMap("tlsConfig")
     private TLSConfig tlsConfig;
 
+    @Body
+    @NameInMap("wafConfig")
+    private WAFConfig wafConfig;
+
     private CreateCustomDomainRequest(Builder builder) {
         super(builder);
         this.xFcAccountId = builder.xFcAccountId;
@@ -55,6 +59,7 @@ public class CreateCustomDomainRequest extends Request {
         this.protocol = builder.protocol;
         this.routeConfig = builder.routeConfig;
         this.tlsConfig = builder.tlsConfig;
+        this.wafConfig = builder.wafConfig;
     }
 
     public static Builder builder() {
@@ -126,6 +131,13 @@ public class CreateCustomDomainRequest extends Request {
         return this.tlsConfig;
     }
 
+    /**
+     * @return wafConfig
+     */
+    public WAFConfig getWafConfig() {
+        return this.wafConfig;
+    }
+
     public static final class Builder extends Request.Builder<CreateCustomDomainRequest, Builder> {
         private String xFcAccountId; 
         private String xFcDate; 
@@ -135,6 +147,7 @@ public class CreateCustomDomainRequest extends Request {
         private String protocol; 
         private RouteConfig routeConfig; 
         private TLSConfig tlsConfig; 
+        private WAFConfig wafConfig; 
 
         private Builder() {
             super();
@@ -150,6 +163,7 @@ public class CreateCustomDomainRequest extends Request {
             this.protocol = request.protocol;
             this.routeConfig = request.routeConfig;
             this.tlsConfig = request.tlsConfig;
+            this.wafConfig = request.wafConfig;
         } 
 
         /**
@@ -226,6 +240,15 @@ public class CreateCustomDomainRequest extends Request {
         public Builder tlsConfig(TLSConfig tlsConfig) {
             this.putBodyParameter("tlsConfig", tlsConfig);
             this.tlsConfig = tlsConfig;
+            return this;
+        }
+
+        /**
+         * wafConfig.
+         */
+        public Builder wafConfig(WAFConfig wafConfig) {
+            this.putBodyParameter("wafConfig", wafConfig);
+            this.wafConfig = wafConfig;
             return this;
         }
 
