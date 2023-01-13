@@ -93,7 +93,7 @@ public class GetTaskRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * The ID of the task node. You can call the [GetTaskInstanceRelation](~~424711~~) operation to query the node ID.
          */
         public Builder nodeId(Long nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -102,7 +102,10 @@ public class GetTaskRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The ID of the tenant.
+         * <p>
+         * 
+         * > : To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

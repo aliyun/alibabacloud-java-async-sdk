@@ -120,7 +120,7 @@ public class ListTaskFlowsByPageRequest extends Request {
         }
 
         /**
-         * PageIndex.
+         * The number of the page to return.
          */
         public Builder pageIndex(Integer pageIndex) {
             this.putQueryParameter("PageIndex", pageIndex);
@@ -129,7 +129,7 @@ public class ListTaskFlowsByPageRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -138,7 +138,7 @@ public class ListTaskFlowsByPageRequest extends Request {
         }
 
         /**
-         * SearchKey.
+         * The keyword that is used to search for task flow names.
          */
         public Builder searchKey(String searchKey) {
             this.putQueryParameter("SearchKey", searchKey);
@@ -147,7 +147,10 @@ public class ListTaskFlowsByPageRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The ID of the tenant.
+         * <p>
+         * 
+         * > : To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

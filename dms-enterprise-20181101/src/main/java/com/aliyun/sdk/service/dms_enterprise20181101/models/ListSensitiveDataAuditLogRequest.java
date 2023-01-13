@@ -205,7 +205,7 @@ public class ListSensitiveDataAuditLogRequest extends Request {
         }
 
         /**
-         * ColumnName.
+         * The name of the column that contains sensitive data.
          */
         public Builder columnName(String columnName) {
             this.putQueryParameter("ColumnName", columnName);
@@ -214,7 +214,7 @@ public class ListSensitiveDataAuditLogRequest extends Request {
         }
 
         /**
-         * DbName.
+         * The name of the database that stores the sensitive data.
          */
         public Builder dbName(String dbName) {
             this.putQueryParameter("DbName", dbName);
@@ -223,7 +223,7 @@ public class ListSensitiveDataAuditLogRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range for which you want to query the audit logs for sensitive information. Specify the time in the yyyy-MM-DD HH:mm:ss format.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -232,7 +232,13 @@ public class ListSensitiveDataAuditLogRequest extends Request {
         }
 
         /**
-         * ModuleName.
+         * The function module whose audit logs you want to query for sensitive data. If you do not specify this parameter, all audit logs are queried. Valid values:
+         * <p>
+         * 
+         * *   **SQL_CONSOLE**: data query
+         * *   **SQL_CONSOLE_EXPORT**: query result export
+         * *   **DATA_CHANGE**: data change
+         * *   **DATA_EXPORT**: data export
          */
         public Builder moduleName(String moduleName) {
             this.putQueryParameter("ModuleName", moduleName);
@@ -241,7 +247,7 @@ public class ListSensitiveDataAuditLogRequest extends Request {
         }
 
         /**
-         * OpUserName.
+         * The username of the requester.
          */
         public Builder opUserName(String opUserName) {
             this.putQueryParameter("OpUserName", opUserName);
@@ -250,7 +256,7 @@ public class ListSensitiveDataAuditLogRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -259,7 +265,7 @@ public class ListSensitiveDataAuditLogRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Example: 100
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -268,7 +274,7 @@ public class ListSensitiveDataAuditLogRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range for which you want to query the audit logs for sensitive information. Specify the time in the yyyy-MM-DD HH:mm:ss format.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -277,7 +283,7 @@ public class ListSensitiveDataAuditLogRequest extends Request {
         }
 
         /**
-         * TableName.
+         * The name of the table that stores the sensitive data.
          */
         public Builder tableName(String tableName) {
             this.putQueryParameter("TableName", tableName);
@@ -286,7 +292,7 @@ public class ListSensitiveDataAuditLogRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The ID of the tenant.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

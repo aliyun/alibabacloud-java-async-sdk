@@ -98,7 +98,7 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * ErrorCode.
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -106,7 +106,7 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned if the request failed.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -114,7 +114,7 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,11 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,7 +134,7 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
         }
 
         /**
-         * TaskFlowList.
+         * The details of the returned task flows.
          */
         public Builder taskFlowList(TaskFlowList taskFlowList) {
             this.taskFlowList = taskFlowList;
@@ -138,7 +142,7 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -286,7 +290,7 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * CreatorId.
+             * The ID of the user who created the task flow.
              */
             public Builder creatorId(String creatorId) {
                 this.creatorId = creatorId;
@@ -294,7 +298,7 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
             }
 
             /**
-             * CreatorNickName.
+             * The username of the user who created the task flow.
              */
             public Builder creatorNickName(String creatorNickName) {
                 this.creatorNickName = creatorNickName;
@@ -302,7 +306,7 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
             }
 
             /**
-             * DagName.
+             * The name of the task flow.
              */
             public Builder dagName(String dagName) {
                 this.dagName = dagName;
@@ -310,7 +314,7 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
             }
 
             /**
-             * DagOwnerNickName.
+             * The username of the owner of the task flow.
              */
             public Builder dagOwnerNickName(String dagOwnerNickName) {
                 this.dagOwnerNickName = dagOwnerNickName;
@@ -318,7 +322,7 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
             }
 
             /**
-             * DeployId.
+             * The ID of the last deployment record of the task flow.
              */
             public Builder deployId(Long deployId) {
                 this.deployId = deployId;
@@ -326,7 +330,7 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the task flow.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -334,7 +338,7 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the task flow.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -342,7 +346,12 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
             }
 
             /**
-             * LatestInstanceStatus.
+             * The status of the last execution of the task flow. Valid values:
+             * <p>
+             * 
+             * *   **0**: invalid
+             * *   **1**: scheduling disabled
+             * *   **2**: waiting to be scheduled
              */
             public Builder latestInstanceStatus(Integer latestInstanceStatus) {
                 this.latestInstanceStatus = latestInstanceStatus;
@@ -350,7 +359,7 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
             }
 
             /**
-             * LatestInstanceTime.
+             * The time when the last execution record was created.
              */
             public Builder latestInstanceTime(String latestInstanceTime) {
                 this.latestInstanceTime = latestInstanceTime;
@@ -358,7 +367,12 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the task flow. Valid values:
+             * <p>
+             * 
+             * *   **0**: invalid
+             * *   **1**: scheduling disabled
+             * *   **2**: waiting to be scheduled
              */
             public Builder status(Integer status) {
                 this.status = status;

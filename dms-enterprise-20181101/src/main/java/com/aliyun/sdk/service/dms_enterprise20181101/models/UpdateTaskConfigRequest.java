@@ -108,7 +108,7 @@ public class UpdateTaskConfigRequest extends Request {
         }
 
         /**
-         * NodeConfig.
+         * The advanced configuration for the node. The value of this parameter must be a JSON string.
          */
         public Builder nodeConfig(String nodeConfig) {
             this.putQueryParameter("NodeConfig", nodeConfig);
@@ -117,7 +117,7 @@ public class UpdateTaskConfigRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * The ID of the task node. You can call the [GetTaskInstanceRelation](~~424711~~) operation to query the node ID.
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -126,7 +126,7 @@ public class UpdateTaskConfigRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to query the tenant ID.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

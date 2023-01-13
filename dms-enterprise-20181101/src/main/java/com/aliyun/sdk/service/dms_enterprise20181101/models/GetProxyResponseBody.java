@@ -51,6 +51,9 @@ public class GetProxyResponseBody extends TeaModel {
     @NameInMap("PublicHost")
     private String publicHost;
 
+    @NameInMap("RegionId")
+    private String regionId;
+
     @NameInMap("RequestId")
     private String requestId;
 
@@ -71,6 +74,7 @@ public class GetProxyResponseBody extends TeaModel {
         this.proxyId = builder.proxyId;
         this.publicEnable = builder.publicEnable;
         this.publicHost = builder.publicHost;
+        this.regionId = builder.regionId;
         this.requestId = builder.requestId;
         this.success = builder.success;
     }
@@ -175,6 +179,13 @@ public class GetProxyResponseBody extends TeaModel {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -202,6 +213,7 @@ public class GetProxyResponseBody extends TeaModel {
         private Long proxyId; 
         private Boolean publicEnable; 
         private String publicHost; 
+        private String regionId; 
         private String requestId; 
         private Boolean success; 
 
@@ -310,10 +322,18 @@ public class GetProxyResponseBody extends TeaModel {
          * <p>
          * 
          * > - If the value of the PublicEnable parameter is **true**, a valid public endpoint that can be resolved by using Alibaba Cloud DNS (DNS) is returned.
-         * - If the value of the PublicEnable parameter is **false**, an invalid public endpoint that cannot be resolved by using DNS is returned.
+         * > - If the value of the PublicEnable parameter is **false**, an invalid public endpoint that cannot be resolved by using DNS is returned.
          */
         public Builder publicHost(String publicHost) {
             this.publicHost = publicHost;
+            return this;
+        }
+
+        /**
+         * 区域
+         */
+        public Builder regionId(String regionId) {
+            this.regionId = regionId;
             return this;
         }
 

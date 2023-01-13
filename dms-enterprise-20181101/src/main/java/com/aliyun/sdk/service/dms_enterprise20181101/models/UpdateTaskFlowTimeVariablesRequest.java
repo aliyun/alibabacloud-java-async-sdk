@@ -108,7 +108,7 @@ public class UpdateTaskFlowTimeVariablesRequest extends Request {
         }
 
         /**
-         * DagId.
+         * The ID of the task node. You can call the [GetTaskInstanceRelation](~~424711~~) operation to query the node ID.
          */
         public Builder dagId(Long dagId) {
             this.putQueryParameter("DagId", dagId);
@@ -117,7 +117,10 @@ public class UpdateTaskFlowTimeVariablesRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The ID of the tenant.
+         * <p>
+         * 
+         * > :To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -126,7 +129,7 @@ public class UpdateTaskFlowTimeVariablesRequest extends Request {
         }
 
         /**
-         * TimeVariables.
+         * The time variables for the task flow.
          */
         public Builder timeVariables(String timeVariables) {
             this.putQueryParameter("TimeVariables", timeVariables);

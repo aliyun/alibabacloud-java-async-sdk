@@ -241,6 +241,9 @@ public class SearchDatabaseResponseBody extends TeaModel {
         @NameInMap("Alias")
         private String alias;
 
+        @NameInMap("CatalogName")
+        private String catalogName;
+
         @NameInMap("DatabaseId")
         private String databaseId;
 
@@ -285,6 +288,7 @@ public class SearchDatabaseResponseBody extends TeaModel {
 
         private SearchDatabase(Builder builder) {
             this.alias = builder.alias;
+            this.catalogName = builder.catalogName;
             this.databaseId = builder.databaseId;
             this.datalinkName = builder.datalinkName;
             this.dbType = builder.dbType;
@@ -314,6 +318,13 @@ public class SearchDatabaseResponseBody extends TeaModel {
          */
         public String getAlias() {
             return this.alias;
+        }
+
+        /**
+         * @return catalogName
+         */
+        public String getCatalogName() {
+            return this.catalogName;
         }
 
         /**
@@ -416,6 +427,7 @@ public class SearchDatabaseResponseBody extends TeaModel {
 
         public static final class Builder {
             private String alias; 
+            private String catalogName; 
             private String databaseId; 
             private String datalinkName; 
             private String dbType; 
@@ -436,6 +448,14 @@ public class SearchDatabaseResponseBody extends TeaModel {
              */
             public Builder alias(String alias) {
                 this.alias = alias;
+                return this;
+            }
+
+            /**
+             * CatalogName.
+             */
+            public Builder catalogName(String catalogName) {
+                this.catalogName = catalogName;
                 return this;
             }
 

@@ -107,7 +107,7 @@ public class UpdateSLARulesRequest extends Request {
         }
 
         /**
-         * DagId.
+         * The ID of the task flow. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to query the task flow ID.
          */
         public Builder dagId(Long dagId) {
             this.putQueryParameter("DagId", dagId);
@@ -116,7 +116,7 @@ public class UpdateSLARulesRequest extends Request {
         }
 
         /**
-         * SlaRuleList.
+         * The list of SLA rules.
          */
         public Builder slaRuleList(java.util.List < SlaRuleList> slaRuleList) {
             String slaRuleListShrink = shrink(slaRuleList, "SlaRuleList", "json");
@@ -126,7 +126,10 @@ public class UpdateSLARulesRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The ID of the tenant.
+         * <p>
+         * 
+         * > :To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -207,7 +210,7 @@ public class UpdateSLARulesRequest extends Request {
             private Integer type; 
 
             /**
-             * DagId.
+             * The ID of the task flow.
              */
             public Builder dagId(Long dagId) {
                 this.dagId = dagId;
@@ -215,7 +218,7 @@ public class UpdateSLARulesRequest extends Request {
             }
 
             /**
-             * IntervalMinutes.
+             * The timeout period. Unit: minutes.
              */
             public Builder intervalMinutes(Integer intervalMinutes) {
                 this.intervalMinutes = intervalMinutes;
@@ -223,7 +226,7 @@ public class UpdateSLARulesRequest extends Request {
             }
 
             /**
-             * NodeId.
+             * The ID of the task node.
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;
@@ -231,7 +234,11 @@ public class UpdateSLARulesRequest extends Request {
             }
 
             /**
-             * Type.
+             * The rule type. Valid values:
+             * <p>
+             * 
+             * *   **0**: SLA rules for task flows
+             * *   **1**: SLA rules for nodes
              */
             public Builder type(Integer type) {
                 this.type = type;

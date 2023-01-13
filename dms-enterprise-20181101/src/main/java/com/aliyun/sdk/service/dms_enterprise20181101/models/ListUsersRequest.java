@@ -175,7 +175,7 @@ public class ListUsersRequest extends Request {
          * *   **DBA**: a database administrator (DBA) role.
          * *   **ADMIN**: a Data Management (DMS) administrator role.
          * *   **SECURITY_ADMIN**: a security administrator role.
-         * *   **STRUCT_READ_ONLY**: a schema read-only user role.
+         * *   **STRUCT\_READ\_ONLY**: a schema read-only user role.
          * 
          * >  To check your role, move the pointer over the profile picture in the upper-right corner of the DMS console.
          */

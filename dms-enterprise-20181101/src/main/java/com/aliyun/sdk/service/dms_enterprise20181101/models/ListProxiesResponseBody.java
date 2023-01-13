@@ -169,6 +169,9 @@ public class ListProxiesResponseBody extends TeaModel {
         @NameInMap("PublicHost")
         private String publicHost;
 
+        @NameInMap("RegionId")
+        private String regionId;
+
         private ProxyList(Builder builder) {
             this.creatorId = builder.creatorId;
             this.creatorName = builder.creatorName;
@@ -181,6 +184,7 @@ public class ListProxiesResponseBody extends TeaModel {
             this.proxyId = builder.proxyId;
             this.publicEnable = builder.publicEnable;
             this.publicHost = builder.publicHost;
+            this.regionId = builder.regionId;
         }
 
         public static Builder builder() {
@@ -268,6 +272,13 @@ public class ListProxiesResponseBody extends TeaModel {
             return this.publicHost;
         }
 
+        /**
+         * @return regionId
+         */
+        public String getRegionId() {
+            return this.regionId;
+        }
+
         public static final class Builder {
             private Long creatorId; 
             private String creatorName; 
@@ -280,6 +291,7 @@ public class ListProxiesResponseBody extends TeaModel {
             private Long proxyId; 
             private Boolean publicEnable; 
             private String publicHost; 
+            private String regionId; 
 
             /**
              * The ID of the user who enabled the secure access proxy feature.
@@ -370,10 +382,18 @@ public class ListProxiesResponseBody extends TeaModel {
              * <p>
              * 
              * > - If the value of the PublicEnable parameter is **true**, a valid public endpoint that can be resolved by using Alibaba Cloud DNS (DNS) is returned.
-             * - If the value of the PublicEnable parameter is **false**, an invalid public endpoint that cannot be resolved by using DNS is returned.
+             * > - If the value of the PublicEnable parameter is **false**, an invalid public endpoint that cannot be resolved by using DNS is returned.
              */
             public Builder publicHost(String publicHost) {
                 this.publicHost = publicHost;
+                return this;
+            }
+
+            /**
+             * 区域
+             */
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
                 return this;
             }
 

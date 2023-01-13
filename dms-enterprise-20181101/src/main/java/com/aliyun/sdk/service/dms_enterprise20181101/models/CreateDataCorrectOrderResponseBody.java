@@ -86,7 +86,7 @@ public class CreateDataCorrectOrderResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The ID of the ticket.
+         * The IDs of the tickets.
          */
         public Builder createOrderResult(java.util.List < Long > createOrderResult) {
             this.createOrderResult = createOrderResult;

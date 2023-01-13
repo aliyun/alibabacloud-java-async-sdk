@@ -248,12 +248,11 @@ public class RevokeUserPermissionRequest extends Request {
          * Specifies whether the database is a logical database. Valid values:
          * <p>
          * 
-         * *   **true**: The database is a logical database.
-         * *   **false**: The database is a physical database.
+         * * **true**: The database is a logical database.
+         * * **false**: The database is a physical database.
          * 
-         * > 
-         * *   If the database is a logical database, set this parameter to **true**.
-         * *   If the database is a physical database, set this parameter to **false**.
+         * > * If the database is a logical database, set this parameter to **true**.
+         * > * If the database is a physical database, set this parameter to **false**.
          */
         public Builder logic(Boolean logic) {
             this.putQueryParameter("Logic", logic);

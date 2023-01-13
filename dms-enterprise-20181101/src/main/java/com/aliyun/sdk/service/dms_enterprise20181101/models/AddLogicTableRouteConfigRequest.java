@@ -136,7 +136,7 @@ public class AddLogicTableRouteConfigRequest extends Request {
          * <p>
          * 
          * > - You can create a custom unique key for the routing algorithm. No requirements are imposed on custom unique keys.
-         * - The unique key of the routing algorithm in the same logical table must be unique.
+         * > - The unique key of the routing algorithm in the same logical table must be unique.
          */
         public Builder routeKey(String routeKey) {
             this.putQueryParameter("RouteKey", routeKey);

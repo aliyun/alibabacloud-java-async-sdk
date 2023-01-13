@@ -101,7 +101,7 @@ public class DisableUserRequest extends Request {
         }
 
         /**
-         * Uid.
+         * The UID of the Alibaba Cloud account.
          */
         public Builder uid(String uid) {
             this.putQueryParameter("Uid", uid);

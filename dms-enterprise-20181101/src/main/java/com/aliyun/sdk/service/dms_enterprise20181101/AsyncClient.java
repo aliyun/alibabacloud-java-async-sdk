@@ -32,12 +32,17 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AddLogicTableRouteConfigResponse> addLogicTableRouteConfig(AddLogicTableRouteConfigRequest request);
 
+    /**
+      * When you add directed edges for a task node, take note of the following limits:
+      * 1. The endpoints of the specified edge exist in the Directed Acyclic Graph (DAG) of the task flow specified by DagId.
+      * 2. After a backward edge is added, the DAG does not contain loops.
+      *
+     */
     CompletableFuture<AddTaskFlowEdgesResponse> addTaskFlowEdges(AddTaskFlowEdgesRequest request);
 
     CompletableFuture<ApproveOrderResponse> approveOrder(ApproveOrderRequest request);
 
     /**
-      * ## Description
       * During a data backfill, task flows are run in sequence based on their dates. You can specify whether task flows are run in chronological or reverse chronological order. After the data backfill is complete, you can specify a date or date range, and a node range to run task flows.
       *
      */
@@ -167,7 +172,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteProxyAccessResponse> deleteProxyAccess(DeleteProxyAccessRequest request);
 
     /**
-      * ### Usage notes
       * When you call this operation, make sure that no task flow is specified in the business scenario.
       *
      */
@@ -255,6 +259,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetInstanceResponse> getInstance(GetInstanceRequest request);
 
+    /**
+      * The scheduling cycle of a task flow must be greater than the minimum scheduling cycle configured in the SLA rule for the task flow.
+      *
+     */
     CompletableFuture<GetIntervalLimitOfSLAResponse> getIntervalLimitOfSLA(GetIntervalLimitOfSLARequest request);
 
     /**
@@ -475,8 +483,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RefundPayAsYouGoOrderResponse> refundPayAsYouGoOrder(RefundPayAsYouGoOrderRequest request);
 
     /**
-      * Prerequisites:
-      * You are a DMS administrator or a database administrator (DBA). You can call the [ListUsers](~~141938~~) or [GetUser](~~147098~~) operation to obtain your user role from the RoleIdList parameter that is returned.
+      * Prerequisites: You are a DMS administrator or a database administrator (DBA). You can call the [ListUsers](~~141938~~) or [GetUser](~~147098~~) operation to query your user role from the RoleIdList parameter that is returned.
       *
      */
     CompletableFuture<RegisterInstanceResponse> registerInstance(RegisterInstanceRequest request);
@@ -489,6 +496,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<RestartDataCorrectSQLJobResponse> restartDataCorrectSQLJob(RestartDataCorrectSQLJobRequest request);
 
+    /**
+      * You can call this operation only for task flows that are suspended.
+      *
+     */
     CompletableFuture<ResumeTaskFlowInstanceResponse> resumeTaskFlowInstance(ResumeTaskFlowInstanceRequest request);
 
     CompletableFuture<RetryDataCorrectPreCheckResponse> retryDataCorrectPreCheck(RetryDataCorrectPreCheckRequest request);
@@ -519,10 +530,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<UpdateInstanceResponse> updateInstance(UpdateInstanceRequest request);
 
+    /**
+      * SLA rules take effect after task flows are deployed and published.
+      *
+     */
     CompletableFuture<UpdateSLARulesResponse> updateSLARules(UpdateSLARulesRequest request);
 
     CompletableFuture<UpdateScenarioResponse> updateScenario(UpdateScenarioRequest request);
 
+    /**
+      * You can call this operation to configure a failed task or rerun a task.
+      *
+     */
     CompletableFuture<UpdateTaskConfigResponse> updateTaskConfig(UpdateTaskConfigRequest request);
 
     /**
@@ -536,11 +555,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateTaskFlowCooperatorsResponse> updateTaskFlowCooperators(UpdateTaskFlowCooperatorsRequest request);
 
     /**
-      * ## Usage notes
       * The edges can be updated only when the following conditions are met:
-      * 1\\. The specified edge exists in the Directed Acyclic Graph (DAG) of the task flow. The DAG is identified by DagId.
-      * 2\\. The end points of the specified edge exist in the DAG of the task flow. The DAG is identified by DagId.
-      * 3\\. After the update, no loop appears in the DAG.
+      * 1. The specified edge exists in the Directed Acyclic Graph (DAG) of the task flow. The DAG is identified by DagId.
+      * 2. The end points of the specified edge exist in the DAG of the task flow. The DAG is identified by DagId.
+      * 3. After the update, no loop appears in the DAG.
       *
      */
     CompletableFuture<UpdateTaskFlowEdgesResponse> updateTaskFlowEdges(UpdateTaskFlowEdgesRequest request);
@@ -561,6 +579,11 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<UpdateTaskFlowRelationsResponse> updateTaskFlowRelations(UpdateTaskFlowRelationsRequest request);
 
+    /**
+      * You can call this operation to update the scheduling properties for a task flow in the editing state. You can configure a **timed scheduling** task flow or an **event scheduling** task flow. When you configure a **timed scheduling** task flow, you can choose from one-time scheduling or periodic scheduling. When you configure an **event scheduling** task flow, you can subscribe to task flows or task flow nodes.****\\
+      * After you update the scheduling properties, you need to publish and deploy the task flow again. The new task flow instance will run based on the updated scheduling properties.
+      *
+     */
     CompletableFuture<UpdateTaskFlowScheduleResponse> updateTaskFlowSchedule(UpdateTaskFlowScheduleRequest request);
 
     CompletableFuture<UpdateTaskFlowTimeVariablesResponse> updateTaskFlowTimeVariables(UpdateTaskFlowTimeVariablesRequest request);
@@ -568,7 +591,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateTaskNameResponse> updateTaskName(UpdateTaskNameRequest request);
 
     /**
-      * ## Usage notes
       * Only nodes of single-instance SQL assignment, script code, and ECS remote command have output variables.
       *
      */

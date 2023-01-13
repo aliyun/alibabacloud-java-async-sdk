@@ -86,7 +86,7 @@ public class BuyPayAsYouGoOrderResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * ErrorCode.
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class BuyPayAsYouGoOrderResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned if the request failed.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class BuyPayAsYouGoOrderResponseBody extends TeaModel {
         }
 
         /**
-         * 购买成功后，返回购买的订单实例ID
+         * If the purchase is successful, the ID of the purchased instance is returned.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -110,7 +110,7 @@ public class BuyPayAsYouGoOrderResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class BuyPayAsYouGoOrderResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -122,10 +122,11 @@ public class BuyPayAsYouGoOrderRequest extends Request {
         }
 
         /**
-         * 商品类型
+         * The type of the resource that you want to purchase.
          * <p>
-         * - versionType：管控模式
-         * - SensitiveDataProtection：敏感数据保护
+         * 
+         * *   **VersionType**: DMS that supports control modes
+         * *   **SensitiveDataProtection**: DMS that supports sensitive data protection
          */
         public Builder commodityType(String commodityType) {
             this.putQueryParameter("CommodityType", commodityType);
@@ -134,7 +135,10 @@ public class BuyPayAsYouGoOrderRequest extends Request {
         }
 
         /**
-         * 购买额度（一个额度可用于一个数据库实例）
+         * The number of database instances that you want to use DMS to manage.
+         * <p>
+         * 
+         * > A quota can be used for only one database instance.
          */
         public Builder insNum(Integer insNum) {
             this.putQueryParameter("InsNum", insNum);
@@ -143,7 +147,10 @@ public class BuyPayAsYouGoOrderRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The ID of the tenant.
+         * <p>
+         * 
+         * > To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -152,10 +159,11 @@ public class BuyPayAsYouGoOrderRequest extends Request {
         }
 
         /**
-         * 购买管控模式时（CommodityType = versionType ），区分管控模式的类型：
+         * The control mode of DMS. Valid values:
          * <p>
-         * - stand：稳定变更
-         * - safety：安全协同
+         * 
+         * *   **stand**: Stable Change
+         * *   **safety**: Security Collaboration
          */
         public Builder versionType(String versionType) {
             this.putQueryParameter("VersionType", versionType);

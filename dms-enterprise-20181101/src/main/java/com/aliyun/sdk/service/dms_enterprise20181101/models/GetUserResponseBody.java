@@ -467,9 +467,8 @@ public class GetUserResponseBody extends TeaModel {
              * The DingTalk chatbot URL that is used to receive notifications.
              * <p>
              * 
-             * > 
-             * *   The system returns this parameter if the user has set a DingTalk chatbot URL in the console. To set a DingTalk chatbot URL in the console, move the pointer over the profile picture in the upper-right corner and click the Edit icon next to **Notice**.
-             * *   The system does not return this parameter if the user has not set a DingTalk chatbot URL.
+             * > * The system returns this parameter if the user has set a DingTalk chatbot URL in the console. To set a DingTalk chatbot URL in the console, move the pointer over the profile picture in the upper-right corner and click the Edit icon next to **Notice**.
+             * > * The system does not return this parameter if the user has not set a DingTalk chatbot URL.
              */
             public Builder dingRobot(String dingRobot) {
                 this.dingRobot = dingRobot;
@@ -480,9 +479,8 @@ public class GetUserResponseBody extends TeaModel {
              * The email address that is used to receive notifications.
              * <p>
              * 
-             * > 
-             * *   The system returns this parameter if the user has set an email address in the console. To set an email address in the console, move the pointer over the profile picture in the upper-right corner and click the Edit icon next to **Notice**.
-             * *   The system does not return this parameter if the user has not set an email address.
+             * > * The system returns this parameter if the user has set an email address in the console. To set an email address in the console, move the pointer over the profile picture in the upper-right corner and click the Edit icon next to **Notice**.
+             * > * The system does not return this parameter if the user has not set an email address.
              */
             public Builder email(String email) {
                 this.email = email;
@@ -517,9 +515,8 @@ public class GetUserResponseBody extends TeaModel {
              * The mobile phone number that is used to receive notifications.
              * <p>
              * 
-             * > 
-             * *   The system returns this parameter if the user has set a mobile phone number in the console. To set a mobile phone number in the console, move the pointer over the profile picture in the upper-right corner and click the Edit icon next to **Notice**.
-             * *   The system does not return this parameter if the user has not set a mobile phone number.
+             * > * The system returns this parameter if the user has set a mobile phone number in the console. To set a mobile phone number in the console, move the pointer over the profile picture in the upper-right corner and click the Edit icon next to **Notice**.
+             * > * The system does not return this parameter if the user has not set a mobile phone number.
              */
             public Builder mobile(String mobile) {
                 this.mobile = mobile;
@@ -595,7 +592,7 @@ public class GetUserResponseBody extends TeaModel {
              * <p>
              * 
              * *   **NONE**: no signature.
-             * *   **HMAC_SHA1**: HMAC_SHA1.
+             * *   **HMAC\_SHA1**: HMAC_SHA1.
              */
             public Builder signatureMethod(String signatureMethod) {
                 this.signatureMethod = signatureMethod;
@@ -635,9 +632,8 @@ public class GetUserResponseBody extends TeaModel {
              * The webhook URL that is used to receive notifications.
              * <p>
              * 
-             * > 
-             * *   If the user has set a webhook URL, DMS sends notifications to the specified URL.
-             * *   The system does not return this parameter if the user has not set a webhook URL.
+             * > * If the user has set a webhook URL, DMS sends notifications to the specified URL.
+             * > * The system does not return this parameter if the user has not set a webhook URL.
              */
             public Builder webhook(String webhook) {
                 this.webhook = webhook;

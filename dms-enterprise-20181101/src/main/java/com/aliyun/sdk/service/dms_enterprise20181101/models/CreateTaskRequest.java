@@ -179,7 +179,7 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
-         * DagId.
+         * The ID of the task flow. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to query the task flow ID.
          */
         public Builder dagId(Long dagId) {
             this.putQueryParameter("DagId", dagId);
@@ -188,7 +188,7 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
-         * GraphParam.
+         * The position of the node on the Directed Acyclic Graph (DAG).
          */
         public Builder graphParam(String graphParam) {
             this.putQueryParameter("GraphParam", graphParam);
@@ -197,7 +197,7 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
-         * NodeContent.
+         * The configuration for the node.
          */
         public Builder nodeContent(String nodeContent) {
             this.putQueryParameter("NodeContent", nodeContent);
@@ -206,7 +206,7 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
-         * NodeName.
+         * The name of the node you want to create.
          */
         public Builder nodeName(String nodeName) {
             this.putQueryParameter("NodeName", nodeName);
@@ -215,7 +215,7 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
-         * NodeOutput.
+         * The output variables for the task.
          */
         public Builder nodeOutput(String nodeOutput) {
             this.putQueryParameter("NodeOutput", nodeOutput);
@@ -224,7 +224,7 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
-         * NodeType.
+         * The type of the node you want to create. For more information about the valid values for this parameter, see [NodeType parameter](~~424705~~).
          */
         public Builder nodeType(String nodeType) {
             this.putQueryParameter("NodeType", nodeType);
@@ -233,7 +233,10 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The ID of the tenant.
+         * <p>
+         * 
+         * > To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -242,7 +245,7 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
-         * TimeVariables.
+         * The time variables configured for the node.
          */
         public Builder timeVariables(String timeVariables) {
             this.putQueryParameter("TimeVariables", timeVariables);

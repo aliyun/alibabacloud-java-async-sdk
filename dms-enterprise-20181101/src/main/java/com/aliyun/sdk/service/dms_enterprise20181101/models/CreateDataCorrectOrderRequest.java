@@ -471,8 +471,7 @@ public class CreateDataCorrectOrderRequest extends Request {
              * The SQL statements used to roll back the data change.
              * <p>
              * 
-             * > 
-             * *   This parameter is required if you set the **RollbackSqlType** parameter to **TEXT**.
+             * > This parameter is required if you set the **RollbackSqlType** parameter to **TEXT**.
              */
             public Builder rollbackSQL(String rollbackSQL) {
                 this.rollbackSQL = rollbackSQL;

@@ -166,7 +166,7 @@ public class GetOpLogRequest extends Request {
          * *   **PERMISSION**: permissions
          * *   **OWNER**: data owner
          * *   **SQL_CONSOLE**: data query
-         * *   **SQL_CONSOLE_EXPORT**: query result export
+         * *   **SQL\_CONSOLE\_EXPORT**: query result export
          * *   **DATA_CHANGE**: data change
          * *   **DATA_EXPORT**: data export
          * *   **SQL_REVIEW**: SQL review
@@ -178,7 +178,7 @@ public class GetOpLogRequest extends Request {
          * *   **SECURITY_RULE**: security rule
          * *   **CONFIG_MANAGE**: configuration management
          * *   **RESOURCE_AUTH**: resource authorization
-         * *   **ACCESS_WHITE_IP**: access IP address allowlist
+         * *   **ACCESS\_WHITE\_IP**: access IP address allowlist
          */
         public Builder module(String module) {
             this.putQueryParameter("Module", module);

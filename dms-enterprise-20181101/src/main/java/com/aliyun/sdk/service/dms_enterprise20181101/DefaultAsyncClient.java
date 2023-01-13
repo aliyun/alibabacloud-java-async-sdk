@@ -89,6 +89,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * When you add directed edges for a task node, take note of the following limits:
+      * 1. The endpoints of the specified edge exist in the Directed Acyclic Graph (DAG) of the task flow specified by DagId.
+      * 2. After a backward edge is added, the DAG does not contain loops.
+      *
+     */
     @Override
     public CompletableFuture<AddTaskFlowEdgesResponse> addTaskFlowEdges(AddTaskFlowEdgesRequest request) {
         try {
@@ -118,7 +124,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Description
       * During a data backfill, task flows are run in sequence based on their dates. You can specify whether task flows are run in chronological or reverse chronological order. After the data backfill is complete, you can specify a date or date range, and a node range to run task flows.
       *
      */
@@ -608,7 +613,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ### Usage notes
       * When you call this operation, make sure that no task flow is specified in the business scenario.
       *
      */
@@ -1008,6 +1012,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * The scheduling cycle of a task flow must be greater than the minimum scheduling cycle configured in the SLA rule for the task flow.
+      *
+     */
     @Override
     public CompletableFuture<GetIntervalLimitOfSLAResponse> getIntervalLimitOfSLA(GetIntervalLimitOfSLARequest request) {
         try {
@@ -2296,8 +2304,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Prerequisites:
-      * You are a DMS administrator or a database administrator (DBA). You can call the [ListUsers](~~141938~~) or [GetUser](~~147098~~) operation to obtain your user role from the RoleIdList parameter that is returned.
+      * Prerequisites: You are a DMS administrator or a database administrator (DBA). You can call the [ListUsers](~~141938~~) or [GetUser](~~147098~~) operation to query your user role from the RoleIdList parameter that is returned.
       *
      */
     @Override
@@ -2346,6 +2353,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You can call this operation only for task flows that are suspended.
+      *
+     */
     @Override
     public CompletableFuture<ResumeTaskFlowInstanceResponse> resumeTaskFlowInstance(ResumeTaskFlowInstanceRequest request) {
         try {
@@ -2532,6 +2543,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * SLA rules take effect after task flows are deployed and published.
+      *
+     */
     @Override
     public CompletableFuture<UpdateSLARulesResponse> updateSLARules(UpdateSLARulesRequest request) {
         try {
@@ -2560,6 +2575,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You can call this operation to configure a failed task or rerun a task.
+      *
+     */
     @Override
     public CompletableFuture<UpdateTaskConfigResponse> updateTaskConfig(UpdateTaskConfigRequest request) {
         try {
@@ -2621,11 +2640,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Usage notes
       * The edges can be updated only when the following conditions are met:
-      * 1\\. The specified edge exists in the Directed Acyclic Graph (DAG) of the task flow. The DAG is identified by DagId.
-      * 2\\. The end points of the specified edge exist in the DAG of the task flow. The DAG is identified by DagId.
-      * 3\\. After the update, no loop appears in the DAG.
+      * 1. The specified edge exists in the Directed Acyclic Graph (DAG) of the task flow. The DAG is identified by DagId.
+      * 2. The end points of the specified edge exist in the DAG of the task flow. The DAG is identified by DagId.
+      * 3. After the update, no loop appears in the DAG.
       *
      */
     @Override
@@ -2706,6 +2724,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You can call this operation to update the scheduling properties for a task flow in the editing state. You can configure a **timed scheduling** task flow or an **event scheduling** task flow. When you configure a **timed scheduling** task flow, you can choose from one-time scheduling or periodic scheduling. When you configure an **event scheduling** task flow, you can subscribe to task flows or task flow nodes.****\\
+      * After you update the scheduling properties, you need to publish and deploy the task flow again. The new task flow instance will run based on the updated scheduling properties.
+      *
+     */
     @Override
     public CompletableFuture<UpdateTaskFlowScheduleResponse> updateTaskFlowSchedule(UpdateTaskFlowScheduleRequest request) {
         try {
@@ -2749,7 +2772,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Usage notes
       * Only nodes of single-instance SQL assignment, script code, and ECS remote command have output variables.
       *
      */
