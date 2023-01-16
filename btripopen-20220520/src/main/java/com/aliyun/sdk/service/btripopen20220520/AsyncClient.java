@@ -80,11 +80,25 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<FlightBillSettlementQueryResponse> flightBillSettlementQuery(FlightBillSettlementQueryRequest request);
 
+    CompletableFuture<FlightCancelOrderResponse> flightCancelOrder(FlightCancelOrderRequest request);
+
+    CompletableFuture<FlightCreateOrderResponse> flightCreateOrder(FlightCreateOrderRequest request);
+
     CompletableFuture<FlightExceedApplyQueryResponse> flightExceedApplyQuery(FlightExceedApplyQueryRequest request);
+
+    CompletableFuture<FlightOrderDetailInfoResponse> flightOrderDetailInfo(FlightOrderDetailInfoRequest request);
 
     CompletableFuture<FlightOrderListQueryResponse> flightOrderListQuery(FlightOrderListQueryRequest request);
 
     CompletableFuture<FlightOrderQueryResponse> flightOrderQuery(FlightOrderQueryRequest request);
+
+    CompletableFuture<FlightPayOrderResponse> flightPayOrder(FlightPayOrderRequest request);
+
+    CompletableFuture<FlightRefundApplyResponse> flightRefundApply(FlightRefundApplyRequest request);
+
+    CompletableFuture<FlightRefundDetailResponse> flightRefundDetail(FlightRefundDetailRequest request);
+
+    CompletableFuture<FlightRefundPreCalResponse> flightRefundPreCal(FlightRefundPreCalRequest request);
 
     CompletableFuture<HotelBillSettlementQueryResponse> hotelBillSettlementQuery(HotelBillSettlementQueryRequest request);
 
@@ -117,6 +131,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ProjectModifyResponse> projectModify(ProjectModifyRequest request);
 
     CompletableFuture<SyncSingleUserResponse> syncSingleUser(SyncSingleUserRequest request);
+
+    CompletableFuture<TicketChangingApplyResponse> ticketChangingApply(TicketChangingApplyRequest request);
+
+    CompletableFuture<TicketChangingCancelResponse> ticketChangingCancel(TicketChangingCancelRequest request);
+
+    CompletableFuture<TicketChangingDetailResponse> ticketChangingDetail(TicketChangingDetailRequest request);
+
+    CompletableFuture<TicketChangingEnquiryResponse> ticketChangingEnquiry(TicketChangingEnquiryRequest request);
+
+    CompletableFuture<TicketChangingFlightListResponse> ticketChangingFlightList(TicketChangingFlightListRequest request);
+
+    CompletableFuture<TicketChangingPayResponse> ticketChangingPay(TicketChangingPayRequest request);
 
     CompletableFuture<TrainBillSettlementQueryResponse> trainBillSettlementQuery(TrainBillSettlementQueryRequest request);
 

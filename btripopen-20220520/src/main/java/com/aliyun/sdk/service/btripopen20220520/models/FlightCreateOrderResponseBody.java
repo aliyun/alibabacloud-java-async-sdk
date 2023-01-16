@@ -1,0 +1,335 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.btripopen20220520.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link FlightCreateOrderResponseBody} extends {@link TeaModel}
+ *
+ * <p>FlightCreateOrderResponseBody</p>
+ */
+public class FlightCreateOrderResponseBody extends TeaModel {
+    @NameInMap("code")
+    private String code;
+
+    @NameInMap("message")
+    private String message;
+
+    @NameInMap("module")
+    private Module module;
+
+    @NameInMap("requestId")
+    private String requestId;
+
+    @NameInMap("success")
+    private Boolean success;
+
+    @NameInMap("traceId")
+    private String traceId;
+
+    private FlightCreateOrderResponseBody(Builder builder) {
+        this.code = builder.code;
+        this.message = builder.message;
+        this.module = builder.module;
+        this.requestId = builder.requestId;
+        this.success = builder.success;
+        this.traceId = builder.traceId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static FlightCreateOrderResponseBody create() {
+        return builder().build();
+    }
+
+    /**
+     * @return code
+     */
+    public String getCode() {
+        return this.code;
+    }
+
+    /**
+     * @return message
+     */
+    public String getMessage() {
+        return this.message;
+    }
+
+    /**
+     * @return module
+     */
+    public Module getModule() {
+        return this.module;
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    /**
+     * @return success
+     */
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    /**
+     * @return traceId
+     */
+    public String getTraceId() {
+        return this.traceId;
+    }
+
+    public static final class Builder {
+        private String code; 
+        private String message; 
+        private Module module; 
+        private String requestId; 
+        private Boolean success; 
+        private String traceId; 
+
+        /**
+         * code.
+         */
+        public Builder code(String code) {
+            this.code = code;
+            return this;
+        }
+
+        /**
+         * message.
+         */
+        public Builder message(String message) {
+            this.message = message;
+            return this;
+        }
+
+        /**
+         * module.
+         */
+        public Builder module(Module module) {
+            this.module = module;
+            return this;
+        }
+
+        /**
+         * requestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * success.
+         */
+        public Builder success(Boolean success) {
+            this.success = success;
+            return this;
+        }
+
+        /**
+         * traceId.
+         */
+        public Builder traceId(String traceId) {
+            this.traceId = traceId;
+            return this;
+        }
+
+        public FlightCreateOrderResponseBody build() {
+            return new FlightCreateOrderResponseBody(this);
+        } 
+
+    } 
+
+    public static class Module extends TeaModel {
+        @NameInMap("alipay_trade_no")
+        private String alipayTradeNo;
+
+        @NameInMap("btrip_order_id")
+        private Long btripOrderId;
+
+        @NameInMap("dis_order_id")
+        private String disOrderId;
+
+        @NameInMap("last_pay_time")
+        private String lastPayTime;
+
+        @NameInMap("order_status")
+        private Integer orderStatus;
+
+        @NameInMap("pay_status")
+        private Integer payStatus;
+
+        @NameInMap("payment_price")
+        private Long paymentPrice;
+
+        @NameInMap("total_price")
+        private Long totalPrice;
+
+        private Module(Builder builder) {
+            this.alipayTradeNo = builder.alipayTradeNo;
+            this.btripOrderId = builder.btripOrderId;
+            this.disOrderId = builder.disOrderId;
+            this.lastPayTime = builder.lastPayTime;
+            this.orderStatus = builder.orderStatus;
+            this.payStatus = builder.payStatus;
+            this.paymentPrice = builder.paymentPrice;
+            this.totalPrice = builder.totalPrice;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Module create() {
+            return builder().build();
+        }
+
+        /**
+         * @return alipayTradeNo
+         */
+        public String getAlipayTradeNo() {
+            return this.alipayTradeNo;
+        }
+
+        /**
+         * @return btripOrderId
+         */
+        public Long getBtripOrderId() {
+            return this.btripOrderId;
+        }
+
+        /**
+         * @return disOrderId
+         */
+        public String getDisOrderId() {
+            return this.disOrderId;
+        }
+
+        /**
+         * @return lastPayTime
+         */
+        public String getLastPayTime() {
+            return this.lastPayTime;
+        }
+
+        /**
+         * @return orderStatus
+         */
+        public Integer getOrderStatus() {
+            return this.orderStatus;
+        }
+
+        /**
+         * @return payStatus
+         */
+        public Integer getPayStatus() {
+            return this.payStatus;
+        }
+
+        /**
+         * @return paymentPrice
+         */
+        public Long getPaymentPrice() {
+            return this.paymentPrice;
+        }
+
+        /**
+         * @return totalPrice
+         */
+        public Long getTotalPrice() {
+            return this.totalPrice;
+        }
+
+        public static final class Builder {
+            private String alipayTradeNo; 
+            private Long btripOrderId; 
+            private String disOrderId; 
+            private String lastPayTime; 
+            private Integer orderStatus; 
+            private Integer payStatus; 
+            private Long paymentPrice; 
+            private Long totalPrice; 
+
+            /**
+             * 支付宝交易编号
+             */
+            public Builder alipayTradeNo(String alipayTradeNo) {
+                this.alipayTradeNo = alipayTradeNo;
+                return this;
+            }
+
+            /**
+             * 商旅订单号
+             */
+            public Builder btripOrderId(Long btripOrderId) {
+                this.btripOrderId = btripOrderId;
+                return this;
+            }
+
+            /**
+             * 分销外部订单号
+             */
+            public Builder disOrderId(String disOrderId) {
+                this.disOrderId = disOrderId;
+                return this;
+            }
+
+            /**
+             * 最后支付时间
+             */
+            public Builder lastPayTime(String lastPayTime) {
+                this.lastPayTime = lastPayTime;
+                return this;
+            }
+
+            /**
+             * 支付状态
+             */
+            public Builder orderStatus(Integer orderStatus) {
+                this.orderStatus = orderStatus;
+                return this;
+            }
+
+            /**
+             * 订单状态
+             */
+            public Builder payStatus(Integer payStatus) {
+                this.payStatus = payStatus;
+                return this;
+            }
+
+            /**
+             * 应支付价格
+             */
+            public Builder paymentPrice(Long paymentPrice) {
+                this.paymentPrice = paymentPrice;
+                return this;
+            }
+
+            /**
+             * 总价格
+             */
+            public Builder totalPrice(Long totalPrice) {
+                this.totalPrice = totalPrice;
+                return this;
+            }
+
+            public Module build() {
+                return new Module(this);
+            } 
+
+        } 
+
+    }
+}

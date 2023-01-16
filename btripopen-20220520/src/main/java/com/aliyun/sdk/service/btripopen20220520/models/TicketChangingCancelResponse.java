@@ -1,0 +1,104 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.btripopen20220520.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link TicketChangingCancelResponse} extends {@link TeaModel}
+ *
+ * <p>TicketChangingCancelResponse</p>
+ */
+public class TicketChangingCancelResponse extends Response {
+    @NameInMap("headers")
+    @Validation(required = true)
+    private java.util.Map < String, String > headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    private TicketChangingCancelResponseBody body;
+
+    private TicketChangingCancelResponse(BuilderImpl builder) {
+        super(builder);
+        this.headers = builder.headers;
+        this.body = builder.body;
+    }
+
+    public static TicketChangingCancelResponse create() {
+        return new BuilderImpl().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new BuilderImpl(this);
+    }
+
+    /**
+     * @return headers
+     */
+    public java.util.Map < String, String > getHeaders() {
+        return this.headers;
+    }
+
+    /**
+     * @return body
+     */
+    public TicketChangingCancelResponseBody getBody() {
+        return this.body;
+    }
+
+    public interface Builder extends Response.Builder<TicketChangingCancelResponse, Builder> {
+
+        Builder headers(java.util.Map < String, String > headers);
+
+        Builder body(TicketChangingCancelResponseBody body);
+
+        @Override
+        TicketChangingCancelResponse build();
+
+    } 
+
+    private static final class BuilderImpl
+            extends Response.BuilderImpl<TicketChangingCancelResponse, Builder>
+            implements Builder {
+        private java.util.Map < String, String > headers; 
+        private TicketChangingCancelResponseBody body; 
+
+        private BuilderImpl() {
+            super();
+        } 
+
+        private BuilderImpl(TicketChangingCancelResponse response) {
+            super(response);
+            this.headers = response.headers;
+            this.body = response.body;
+        } 
+
+        /**
+         * headers.
+         */
+        @Override
+        public Builder headers(java.util.Map < String, String > headers) {
+            this.headers = headers;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        @Override
+        public Builder body(TicketChangingCancelResponseBody body) {
+            this.body = body;
+            return this;
+        }
+
+        @Override
+        public TicketChangingCancelResponse build() {
+            return new TicketChangingCancelResponse(this);
+        } 
+
+    } 
+
+}
