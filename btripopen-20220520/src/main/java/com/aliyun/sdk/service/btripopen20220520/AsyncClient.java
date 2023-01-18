@@ -100,6 +100,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<FlightRefundPreCalResponse> flightRefundPreCal(FlightRefundPreCalRequest request);
 
+    CompletableFuture<FlightSearchListResponse> flightSearchList(FlightSearchListRequest request);
+
     CompletableFuture<HotelBillSettlementQueryResponse> hotelBillSettlementQuery(HotelBillSettlementQueryRequest request);
 
     CompletableFuture<HotelExceedApplyQueryResponse> hotelExceedApplyQuery(HotelExceedApplyQueryRequest request);
