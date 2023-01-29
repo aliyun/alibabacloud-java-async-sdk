@@ -9078,6 +9078,9 @@ public class FlightSearchListResponseBody extends TeaModel {
         @NameInMap("arr_date")
         private String arrDate;
 
+        @NameInMap("basic_cabin_price")
+        private Integer basicCabinPrice;
+
         @NameInMap("build_price")
         private Integer buildPrice;
 
@@ -9199,6 +9202,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             this.airlineInfo = builder.airlineInfo;
             this.arrAirportInfo = builder.arrAirportInfo;
             this.arrDate = builder.arrDate;
+            this.basicCabinPrice = builder.basicCabinPrice;
             this.buildPrice = builder.buildPrice;
             this.cabin = builder.cabin;
             this.cabinClass = builder.cabinClass;
@@ -9267,6 +9271,13 @@ public class FlightSearchListResponseBody extends TeaModel {
          */
         public String getArrDate() {
             return this.arrDate;
+        }
+
+        /**
+         * @return basicCabinPrice
+         */
+        public Integer getBasicCabinPrice() {
+            return this.basicCabinPrice;
         }
 
         /**
@@ -9546,6 +9557,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             private AirlineInfo airlineInfo; 
             private ArrAirportInfo arrAirportInfo; 
             private String arrDate; 
+            private Integer basicCabinPrice; 
             private Integer buildPrice; 
             private String cabin; 
             private String cabinClass; 
@@ -9607,6 +9619,14 @@ public class FlightSearchListResponseBody extends TeaModel {
              */
             public Builder arrDate(String arrDate) {
                 this.arrDate = arrDate;
+                return this;
+            }
+
+            /**
+             * basic_cabin_price.
+             */
+            public Builder basicCabinPrice(Integer basicCabinPrice) {
+                this.basicCabinPrice = basicCabinPrice;
                 return this;
             }
 
