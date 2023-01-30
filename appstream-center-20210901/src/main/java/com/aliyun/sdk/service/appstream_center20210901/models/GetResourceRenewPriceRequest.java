@@ -1,0 +1,145 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.appstream_center20210901.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link GetResourceRenewPriceRequest} extends {@link RequestModel}
+ *
+ * <p>GetResourceRenewPriceRequest</p>
+ */
+public class GetResourceRenewPriceRequest extends Request {
+    @Query
+    @NameInMap("AppInstanceGroupId")
+    @Validation(required = true)
+    private String appInstanceGroupId;
+
+    @Query
+    @NameInMap("Period")
+    @Validation(required = true)
+    private Long period;
+
+    @Query
+    @NameInMap("PeriodUnit")
+    @Validation(required = true)
+    private String periodUnit;
+
+    @Query
+    @NameInMap("ProductType")
+    @Validation(required = true)
+    private String productType;
+
+    private GetResourceRenewPriceRequest(Builder builder) {
+        super(builder);
+        this.appInstanceGroupId = builder.appInstanceGroupId;
+        this.period = builder.period;
+        this.periodUnit = builder.periodUnit;
+        this.productType = builder.productType;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static GetResourceRenewPriceRequest create() {
+        return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return appInstanceGroupId
+     */
+    public String getAppInstanceGroupId() {
+        return this.appInstanceGroupId;
+    }
+
+    /**
+     * @return period
+     */
+    public Long getPeriod() {
+        return this.period;
+    }
+
+    /**
+     * @return periodUnit
+     */
+    public String getPeriodUnit() {
+        return this.periodUnit;
+    }
+
+    /**
+     * @return productType
+     */
+    public String getProductType() {
+        return this.productType;
+    }
+
+    public static final class Builder extends Request.Builder<GetResourceRenewPriceRequest, Builder> {
+        private String appInstanceGroupId; 
+        private Long period; 
+        private String periodUnit; 
+        private String productType; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(GetResourceRenewPriceRequest request) {
+            super(request);
+            this.appInstanceGroupId = request.appInstanceGroupId;
+            this.period = request.period;
+            this.periodUnit = request.periodUnit;
+            this.productType = request.productType;
+        } 
+
+        /**
+         * AppInstanceGroupId.
+         */
+        public Builder appInstanceGroupId(String appInstanceGroupId) {
+            this.putQueryParameter("AppInstanceGroupId", appInstanceGroupId);
+            this.appInstanceGroupId = appInstanceGroupId;
+            return this;
+        }
+
+        /**
+         * Period.
+         */
+        public Builder period(Long period) {
+            this.putQueryParameter("Period", period);
+            this.period = period;
+            return this;
+        }
+
+        /**
+         * PeriodUnit.
+         */
+        public Builder periodUnit(String periodUnit) {
+            this.putQueryParameter("PeriodUnit", periodUnit);
+            this.periodUnit = periodUnit;
+            return this;
+        }
+
+        /**
+         * ProductType.
+         */
+        public Builder productType(String productType) {
+            this.putQueryParameter("ProductType", productType);
+            this.productType = productType;
+            return this;
+        }
+
+        @Override
+        public GetResourceRenewPriceRequest build() {
+            return new GetResourceRenewPriceRequest(this);
+        } 
+
+    } 
+
+}

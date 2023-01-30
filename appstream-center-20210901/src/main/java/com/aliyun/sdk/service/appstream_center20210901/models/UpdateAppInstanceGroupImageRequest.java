@@ -32,12 +32,17 @@ public class UpdateAppInstanceGroupImageRequest extends Request {
     @Validation(required = true)
     private String productType;
 
+    @Query
+    @NameInMap("UpdateMode")
+    private String updateMode;
+
     private UpdateAppInstanceGroupImageRequest(Builder builder) {
         super(builder);
         this.appCenterImageId = builder.appCenterImageId;
         this.appInstanceGroupId = builder.appInstanceGroupId;
         this.bizRegionId = builder.bizRegionId;
         this.productType = builder.productType;
+        this.updateMode = builder.updateMode;
     }
 
     public static Builder builder() {
@@ -81,11 +86,19 @@ public class UpdateAppInstanceGroupImageRequest extends Request {
         return this.productType;
     }
 
+    /**
+     * @return updateMode
+     */
+    public String getUpdateMode() {
+        return this.updateMode;
+    }
+
     public static final class Builder extends Request.Builder<UpdateAppInstanceGroupImageRequest, Builder> {
         private String appCenterImageId; 
         private String appInstanceGroupId; 
         private String bizRegionId; 
         private String productType; 
+        private String updateMode; 
 
         private Builder() {
             super();
@@ -97,6 +110,7 @@ public class UpdateAppInstanceGroupImageRequest extends Request {
             this.appInstanceGroupId = request.appInstanceGroupId;
             this.bizRegionId = request.bizRegionId;
             this.productType = request.productType;
+            this.updateMode = request.updateMode;
         } 
 
         /**
@@ -132,6 +146,15 @@ public class UpdateAppInstanceGroupImageRequest extends Request {
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);
             this.productType = productType;
+            return this;
+        }
+
+        /**
+         * UpdateMode.
+         */
+        public Builder updateMode(String updateMode) {
+            this.putQueryParameter("UpdateMode", updateMode);
+            this.updateMode = updateMode;
             return this;
         }
 

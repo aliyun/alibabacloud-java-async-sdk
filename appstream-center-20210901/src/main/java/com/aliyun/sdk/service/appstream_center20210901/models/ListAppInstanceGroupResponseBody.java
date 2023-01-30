@@ -839,6 +839,9 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
         @NameInMap("RegionId")
         private String regionId;
 
+        @NameInMap("ResourceStatus")
+        private String resourceStatus;
+
         @NameInMap("SessionTimeout")
         private String sessionTimeout;
 
@@ -863,6 +866,7 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
             this.otaInfo = builder.otaInfo;
             this.productType = builder.productType;
             this.regionId = builder.regionId;
+            this.resourceStatus = builder.resourceStatus;
             this.sessionTimeout = builder.sessionTimeout;
             this.specId = builder.specId;
             this.status = builder.status;
@@ -975,6 +979,13 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceStatus
+         */
+        public String getResourceStatus() {
+            return this.resourceStatus;
+        }
+
+        /**
          * @return sessionTimeout
          */
         public String getSessionTimeout() {
@@ -1010,6 +1021,7 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
             private OtaInfo otaInfo; 
             private String productType; 
             private String regionId; 
+            private String resourceStatus; 
             private String sessionTimeout; 
             private String specId; 
             private String status; 
@@ -1123,6 +1135,14 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * ResourceStatus.
+             */
+            public Builder resourceStatus(String resourceStatus) {
+                this.resourceStatus = resourceStatus;
                 return this;
             }
 

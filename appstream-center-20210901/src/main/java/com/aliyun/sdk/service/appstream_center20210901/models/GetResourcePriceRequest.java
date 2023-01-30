@@ -14,7 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class GetResourcePriceRequest extends Request {
     @Query
     @NameInMap("Amount")
-    @Validation(required = true, maximum = 100)
+    @Validation(required = true)
     private Long amount;
 
     @Query
