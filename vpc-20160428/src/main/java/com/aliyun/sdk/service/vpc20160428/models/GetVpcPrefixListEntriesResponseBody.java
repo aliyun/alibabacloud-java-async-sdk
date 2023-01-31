@@ -141,10 +141,14 @@ public class GetVpcPrefixListEntriesResponseBody extends TeaModel {
         @NameInMap("PrefixListId")
         private String prefixListId;
 
+        @NameInMap("RegionId")
+        private String regionId;
+
         private PrefixListEntry(Builder builder) {
             this.cidr = builder.cidr;
             this.description = builder.description;
             this.prefixListId = builder.prefixListId;
+            this.regionId = builder.regionId;
         }
 
         public static Builder builder() {
@@ -176,10 +180,18 @@ public class GetVpcPrefixListEntriesResponseBody extends TeaModel {
             return this.prefixListId;
         }
 
+        /**
+         * @return regionId
+         */
+        public String getRegionId() {
+            return this.regionId;
+        }
+
         public static final class Builder {
             private String cidr; 
             private String description; 
             private String prefixListId; 
+            private String regionId; 
 
             /**
              * 状态
@@ -202,6 +214,14 @@ public class GetVpcPrefixListEntriesResponseBody extends TeaModel {
              */
             public Builder prefixListId(String prefixListId) {
                 this.prefixListId = prefixListId;
+                return this;
+            }
+
+            /**
+             * RegionId.
+             */
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
                 return this;
             }
 

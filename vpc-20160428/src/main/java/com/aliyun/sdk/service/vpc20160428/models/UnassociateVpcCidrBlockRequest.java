@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UnassociateVpcCidrBlockRequest extends Request {
     @Query
+    @NameInMap("IPv6CidrBlock")
+    private String iPv6CidrBlock;
+
+    @Query
     @NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -44,6 +48,7 @@ public class UnassociateVpcCidrBlockRequest extends Request {
 
     private UnassociateVpcCidrBlockRequest(Builder builder) {
         super(builder);
+        this.iPv6CidrBlock = builder.iPv6CidrBlock;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
@@ -64,6 +69,13 @@ public class UnassociateVpcCidrBlockRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return iPv6CidrBlock
+     */
+    public String getIPv6CidrBlock() {
+        return this.iPv6CidrBlock;
     }
 
     /**
@@ -116,6 +128,7 @@ public class UnassociateVpcCidrBlockRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UnassociateVpcCidrBlockRequest, Builder> {
+        private String iPv6CidrBlock; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
@@ -130,6 +143,7 @@ public class UnassociateVpcCidrBlockRequest extends Request {
 
         private Builder(UnassociateVpcCidrBlockRequest request) {
             super(request);
+            this.iPv6CidrBlock = request.iPv6CidrBlock;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
@@ -138,6 +152,15 @@ public class UnassociateVpcCidrBlockRequest extends Request {
             this.secondaryCidrBlock = request.secondaryCidrBlock;
             this.vpcId = request.vpcId;
         } 
+
+        /**
+         * IPv6CidrBlock.
+         */
+        public Builder iPv6CidrBlock(String iPv6CidrBlock) {
+            this.putQueryParameter("IPv6CidrBlock", iPv6CidrBlock);
+            this.iPv6CidrBlock = iPv6CidrBlock;
+            return this;
+        }
 
         /**
          * OwnerAccount.

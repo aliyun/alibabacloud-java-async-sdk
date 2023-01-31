@@ -193,6 +193,9 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
         @NameInMap("FullNatEntryStatus")
         private String fullNatEntryStatus;
 
+        @NameInMap("FullNatTableId")
+        private String fullNatTableId;
+
         @NameInMap("IpProtocol")
         private String ipProtocol;
 
@@ -216,6 +219,7 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
             this.fullNatEntryId = builder.fullNatEntryId;
             this.fullNatEntryName = builder.fullNatEntryName;
             this.fullNatEntryStatus = builder.fullNatEntryStatus;
+            this.fullNatTableId = builder.fullNatTableId;
             this.ipProtocol = builder.ipProtocol;
             this.natIp = builder.natIp;
             this.natIpPort = builder.natIpPort;
@@ -281,6 +285,13 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
         }
 
         /**
+         * @return fullNatTableId
+         */
+        public String getFullNatTableId() {
+            return this.fullNatTableId;
+        }
+
+        /**
          * @return ipProtocol
          */
         public String getIpProtocol() {
@@ -323,6 +334,7 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
             private String fullNatEntryId; 
             private String fullNatEntryName; 
             private String fullNatEntryStatus; 
+            private String fullNatTableId; 
             private String ipProtocol; 
             private String natIp; 
             private String natIpPort; 
@@ -382,6 +394,14 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
              */
             public Builder fullNatEntryStatus(String fullNatEntryStatus) {
                 this.fullNatEntryStatus = fullNatEntryStatus;
+                return this;
+            }
+
+            /**
+             * FullNatTableId.
+             */
+            public Builder fullNatTableId(String fullNatTableId) {
+                this.fullNatTableId = fullNatTableId;
                 return this;
             }
 

@@ -66,6 +66,10 @@ public class CreateFlowLogRequest extends Request {
     private String resourceType;
 
     @Query
+    @NameInMap("TrafficPath")
+    private java.util.List < String > trafficPath;
+
+    @Query
     @NameInMap("TrafficType")
     @Validation(required = true)
     private String trafficType;
@@ -84,6 +88,7 @@ public class CreateFlowLogRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.resourceType = builder.resourceType;
+        this.trafficPath = builder.trafficPath;
         this.trafficType = builder.trafficType;
     }
 
@@ -185,6 +190,13 @@ public class CreateFlowLogRequest extends Request {
     }
 
     /**
+     * @return trafficPath
+     */
+    public java.util.List < String > getTrafficPath() {
+        return this.trafficPath;
+    }
+
+    /**
      * @return trafficType
      */
     public String getTrafficType() {
@@ -204,6 +216,7 @@ public class CreateFlowLogRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String resourceType; 
+        private java.util.List < String > trafficPath; 
         private String trafficType; 
 
         private Builder() {
@@ -224,6 +237,7 @@ public class CreateFlowLogRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.resourceType = request.resourceType;
+            this.trafficPath = request.trafficPath;
             this.trafficType = request.trafficType;
         } 
 
@@ -332,6 +346,15 @@ public class CreateFlowLogRequest extends Request {
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
             this.resourceType = resourceType;
+            return this;
+        }
+
+        /**
+         * TrafficPath.
+         */
+        public Builder trafficPath(java.util.List < String > trafficPath) {
+            this.putQueryParameter("TrafficPath", trafficPath);
+            this.trafficPath = trafficPath;
             return this;
         }
 

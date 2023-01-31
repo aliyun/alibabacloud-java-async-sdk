@@ -39,9 +39,6 @@ public class DescribeIpv6GatewayAttributeResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Spec")
-    private String spec;
-
     @NameInMap("Status")
     private String status;
 
@@ -58,7 +55,6 @@ public class DescribeIpv6GatewayAttributeResponseBody extends TeaModel {
         this.name = builder.name;
         this.regionId = builder.regionId;
         this.requestId = builder.requestId;
-        this.spec = builder.spec;
         this.status = builder.status;
         this.vpcId = builder.vpcId;
     }
@@ -135,13 +131,6 @@ public class DescribeIpv6GatewayAttributeResponseBody extends TeaModel {
     }
 
     /**
-     * @return spec
-     */
-    public String getSpec() {
-        return this.spec;
-    }
-
-    /**
      * @return status
      */
     public String getStatus() {
@@ -165,7 +154,6 @@ public class DescribeIpv6GatewayAttributeResponseBody extends TeaModel {
         private String name; 
         private String regionId; 
         private String requestId; 
-        private String spec; 
         private String status; 
         private String vpcId; 
 
@@ -238,14 +226,6 @@ public class DescribeIpv6GatewayAttributeResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * Spec.
-         */
-        public Builder spec(String spec) {
-            this.spec = spec;
             return this;
         }
 

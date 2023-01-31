@@ -34,6 +34,10 @@ public class DeleteVpnPbrRouteEntryRequest extends Request {
     private Long ownerId;
 
     @Query
+    @NameInMap("Priority")
+    private Integer priority;
+
+    @Query
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
@@ -73,6 +77,7 @@ public class DeleteVpnPbrRouteEntryRequest extends Request {
         this.overlayMode = builder.overlayMode;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.priority = builder.priority;
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
@@ -131,6 +136,13 @@ public class DeleteVpnPbrRouteEntryRequest extends Request {
     }
 
     /**
+     * @return priority
+     */
+    public Integer getPriority() {
+        return this.priority;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -185,6 +197,7 @@ public class DeleteVpnPbrRouteEntryRequest extends Request {
         private String overlayMode; 
         private String ownerAccount; 
         private Long ownerId; 
+        private Integer priority; 
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
@@ -204,6 +217,7 @@ public class DeleteVpnPbrRouteEntryRequest extends Request {
             this.overlayMode = request.overlayMode;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.priority = request.priority;
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
@@ -255,6 +269,15 @@ public class DeleteVpnPbrRouteEntryRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * Priority.
+         */
+        public Builder priority(Integer priority) {
+            this.putQueryParameter("Priority", priority);
+            this.priority = priority;
             return this;
         }
 

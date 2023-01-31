@@ -253,9 +253,6 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
 
     }
     public static class DhcpOptions extends TeaModel {
-        @NameInMap("BootFileName")
-        private String bootFileName;
-
         @NameInMap("DomainName")
         private String domainName;
 
@@ -268,16 +265,11 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
         @NameInMap("LeaseTime")
         private String leaseTime;
 
-        @NameInMap("TFTPServerName")
-        private String TFTPServerName;
-
         private DhcpOptions(Builder builder) {
-            this.bootFileName = builder.bootFileName;
             this.domainName = builder.domainName;
             this.domainNameServers = builder.domainNameServers;
             this.ipv6LeaseTime = builder.ipv6LeaseTime;
             this.leaseTime = builder.leaseTime;
-            this.TFTPServerName = builder.TFTPServerName;
         }
 
         public static Builder builder() {
@@ -286,13 +278,6 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
 
         public static DhcpOptions create() {
             return builder().build();
-        }
-
-        /**
-         * @return bootFileName
-         */
-        public String getBootFileName() {
-            return this.bootFileName;
         }
 
         /**
@@ -323,28 +308,11 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
             return this.leaseTime;
         }
 
-        /**
-         * @return TFTPServerName
-         */
-        public String getTFTPServerName() {
-            return this.TFTPServerName;
-        }
-
         public static final class Builder {
-            private String bootFileName; 
             private String domainName; 
             private String domainNameServers; 
             private String ipv6LeaseTime; 
             private String leaseTime; 
-            private String TFTPServerName; 
-
-            /**
-             * BootFileName.
-             */
-            public Builder bootFileName(String bootFileName) {
-                this.bootFileName = bootFileName;
-                return this;
-            }
 
             /**
              * DomainName.
@@ -375,14 +343,6 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
              */
             public Builder leaseTime(String leaseTime) {
                 this.leaseTime = leaseTime;
-                return this;
-            }
-
-            /**
-             * TFTPServerName.
-             */
-            public Builder TFTPServerName(String TFTPServerName) {
-                this.TFTPServerName = TFTPServerName;
                 return this;
             }
 

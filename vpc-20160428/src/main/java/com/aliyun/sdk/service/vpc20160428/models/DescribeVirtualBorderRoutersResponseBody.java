@@ -628,6 +628,9 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         @NameInMap("AssociatedPhysicalConnections")
         private AssociatedPhysicalConnections associatedPhysicalConnections;
 
+        @NameInMap("Bandwidth")
+        private Integer bandwidth;
+
         @NameInMap("CircuitCode")
         private String circuitCode;
 
@@ -723,6 +726,7 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             this.activationTime = builder.activationTime;
             this.associatedCens = builder.associatedCens;
             this.associatedPhysicalConnections = builder.associatedPhysicalConnections;
+            this.bandwidth = builder.bandwidth;
             this.circuitCode = builder.circuitCode;
             this.cloudBoxInstanceId = builder.cloudBoxInstanceId;
             this.creationTime = builder.creationTime;
@@ -789,6 +793,13 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
          */
         public AssociatedPhysicalConnections getAssociatedPhysicalConnections() {
             return this.associatedPhysicalConnections;
+        }
+
+        /**
+         * @return bandwidth
+         */
+        public Integer getBandwidth() {
+            return this.bandwidth;
         }
 
         /**
@@ -1006,6 +1017,7 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             private String activationTime; 
             private AssociatedCens associatedCens; 
             private AssociatedPhysicalConnections associatedPhysicalConnections; 
+            private Integer bandwidth; 
             private String circuitCode; 
             private String cloudBoxInstanceId; 
             private String creationTime; 
@@ -1066,6 +1078,14 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
              */
             public Builder associatedPhysicalConnections(AssociatedPhysicalConnections associatedPhysicalConnections) {
                 this.associatedPhysicalConnections = associatedPhysicalConnections;
+                return this;
+            }
+
+            /**
+             * Bandwidth.
+             */
+            public Builder bandwidth(Integer bandwidth) {
+                this.bandwidth = bandwidth;
                 return this;
             }
 

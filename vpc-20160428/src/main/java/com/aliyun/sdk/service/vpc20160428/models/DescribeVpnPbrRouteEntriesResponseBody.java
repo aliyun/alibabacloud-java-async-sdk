@@ -138,6 +138,9 @@ public class DescribeVpnPbrRouteEntriesResponseBody extends TeaModel {
         @NameInMap("NextHop")
         private String nextHop;
 
+        @NameInMap("Priority")
+        private Integer priority;
+
         @NameInMap("RouteDest")
         private String routeDest;
 
@@ -156,6 +159,7 @@ public class DescribeVpnPbrRouteEntriesResponseBody extends TeaModel {
         private VpnPbrRouteEntry(Builder builder) {
             this.createTime = builder.createTime;
             this.nextHop = builder.nextHop;
+            this.priority = builder.priority;
             this.routeDest = builder.routeDest;
             this.routeSource = builder.routeSource;
             this.state = builder.state;
@@ -183,6 +187,13 @@ public class DescribeVpnPbrRouteEntriesResponseBody extends TeaModel {
          */
         public String getNextHop() {
             return this.nextHop;
+        }
+
+        /**
+         * @return priority
+         */
+        public Integer getPriority() {
+            return this.priority;
         }
 
         /**
@@ -223,6 +234,7 @@ public class DescribeVpnPbrRouteEntriesResponseBody extends TeaModel {
         public static final class Builder {
             private Long createTime; 
             private String nextHop; 
+            private Integer priority; 
             private String routeDest; 
             private String routeSource; 
             private String state; 
@@ -242,6 +254,14 @@ public class DescribeVpnPbrRouteEntriesResponseBody extends TeaModel {
              */
             public Builder nextHop(String nextHop) {
                 this.nextHop = nextHop;
+                return this;
+            }
+
+            /**
+             * Priority.
+             */
+            public Builder priority(Integer priority) {
+                this.priority = priority;
                 return this;
             }
 

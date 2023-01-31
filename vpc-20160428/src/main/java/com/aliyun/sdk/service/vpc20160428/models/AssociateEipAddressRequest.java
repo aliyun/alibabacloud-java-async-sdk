@@ -62,6 +62,10 @@ public class AssociateEipAddressRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
+    @Query
+    @NameInMap("VpcId")
+    private String vpcId;
+
     private AssociateEipAddressRequest(Builder builder) {
         super(builder);
         this.allocationId = builder.allocationId;
@@ -76,6 +80,7 @@ public class AssociateEipAddressRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.vpcId = builder.vpcId;
     }
 
     public static Builder builder() {
@@ -175,6 +180,13 @@ public class AssociateEipAddressRequest extends Request {
         return this.resourceOwnerId;
     }
 
+    /**
+     * @return vpcId
+     */
+    public String getVpcId() {
+        return this.vpcId;
+    }
+
     public static final class Builder extends Request.Builder<AssociateEipAddressRequest, Builder> {
         private String allocationId; 
         private String clientToken; 
@@ -188,6 +200,7 @@ public class AssociateEipAddressRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String vpcId; 
 
         private Builder() {
             super();
@@ -207,6 +220,7 @@ public class AssociateEipAddressRequest extends Request {
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.vpcId = request.vpcId;
         } 
 
         /**
@@ -314,6 +328,15 @@ public class AssociateEipAddressRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * VpcId.
+         */
+        public Builder vpcId(String vpcId) {
+            this.putQueryParameter("VpcId", vpcId);
+            this.vpcId = vpcId;
             return this;
         }
 

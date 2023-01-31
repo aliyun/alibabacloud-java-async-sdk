@@ -22,6 +22,10 @@ public class ModifyBgpGroupAttributeRequest extends Request {
     private String bgpGroupId;
 
     @Query
+    @NameInMap("ClearAuthKey")
+    private Boolean clearAuthKey;
+
+    @Query
     @NameInMap("ClientToken")
     private String clientToken;
 
@@ -66,6 +70,7 @@ public class ModifyBgpGroupAttributeRequest extends Request {
         super(builder);
         this.authKey = builder.authKey;
         this.bgpGroupId = builder.bgpGroupId;
+        this.clearAuthKey = builder.clearAuthKey;
         this.clientToken = builder.clientToken;
         this.description = builder.description;
         this.isFakeAsn = builder.isFakeAsn;
@@ -103,6 +108,13 @@ public class ModifyBgpGroupAttributeRequest extends Request {
      */
     public String getBgpGroupId() {
         return this.bgpGroupId;
+    }
+
+    /**
+     * @return clearAuthKey
+     */
+    public Boolean getClearAuthKey() {
+        return this.clearAuthKey;
     }
 
     /**
@@ -178,6 +190,7 @@ public class ModifyBgpGroupAttributeRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyBgpGroupAttributeRequest, Builder> {
         private String authKey; 
         private String bgpGroupId; 
+        private Boolean clearAuthKey; 
         private String clientToken; 
         private String description; 
         private Boolean isFakeAsn; 
@@ -197,6 +210,7 @@ public class ModifyBgpGroupAttributeRequest extends Request {
             super(request);
             this.authKey = request.authKey;
             this.bgpGroupId = request.bgpGroupId;
+            this.clearAuthKey = request.clearAuthKey;
             this.clientToken = request.clientToken;
             this.description = request.description;
             this.isFakeAsn = request.isFakeAsn;
@@ -224,6 +238,15 @@ public class ModifyBgpGroupAttributeRequest extends Request {
         public Builder bgpGroupId(String bgpGroupId) {
             this.putQueryParameter("BgpGroupId", bgpGroupId);
             this.bgpGroupId = bgpGroupId;
+            return this;
+        }
+
+        /**
+         * ClearAuthKey.
+         */
+        public Builder clearAuthKey(Boolean clearAuthKey) {
+            this.putQueryParameter("ClearAuthKey", clearAuthKey);
+            this.clearAuthKey = clearAuthKey;
             return this;
         }
 

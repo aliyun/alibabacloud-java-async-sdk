@@ -204,6 +204,9 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
         @NameInMap("RedundantPhysicalConnectionId")
         private String redundantPhysicalConnectionId;
 
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
         @NameInMap("Spec")
         private String spec;
 
@@ -244,6 +247,7 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
             this.portType = builder.portType;
             this.productType = builder.productType;
             this.redundantPhysicalConnectionId = builder.redundantPhysicalConnectionId;
+            this.resourceGroupId = builder.resourceGroupId;
             this.spec = builder.spec;
             this.status = builder.status;
             this.type = builder.type;
@@ -428,6 +432,13 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return spec
          */
         public String getSpec() {
@@ -487,6 +498,7 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
             private String portType; 
             private String productType; 
             private String redundantPhysicalConnectionId; 
+            private String resourceGroupId; 
             private String spec; 
             private String status; 
             private String type; 
@@ -682,6 +694,14 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
              */
             public Builder redundantPhysicalConnectionId(String redundantPhysicalConnectionId) {
                 this.redundantPhysicalConnectionId = redundantPhysicalConnectionId;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 

@@ -155,7 +155,7 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionRequest extends Re
         } 
 
         /**
-         * Filter.
+         * 25425
          */
         public Builder filter(java.util.List < Filter> filter) {
             this.putQueryParameter("Filter", filter);

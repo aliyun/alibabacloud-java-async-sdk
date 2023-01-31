@@ -141,11 +141,17 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
         @NameInMap("Reason")
         private String reason;
 
+        @NameInMap("RegionId")
+        private String regionId;
+
         @NameInMap("ResourceId")
         private String resourceId;
 
         @NameInMap("ResourceType")
         private String resourceType;
+
+        @NameInMap("ResourceUid")
+        private String resourceUid;
 
         @NameInMap("Status")
         private String status;
@@ -154,8 +160,10 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
             this.ownerId = builder.ownerId;
             this.prefixListId = builder.prefixListId;
             this.reason = builder.reason;
+            this.regionId = builder.regionId;
             this.resourceId = builder.resourceId;
             this.resourceType = builder.resourceType;
+            this.resourceUid = builder.resourceUid;
             this.status = builder.status;
         }
 
@@ -189,6 +197,13 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
         }
 
         /**
+         * @return regionId
+         */
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        /**
          * @return resourceId
          */
         public String getResourceId() {
@@ -203,6 +218,13 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceUid
+         */
+        public String getResourceUid() {
+            return this.resourceUid;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -213,8 +235,10 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
             private String ownerId; 
             private String prefixListId; 
             private String reason; 
+            private String regionId; 
             private String resourceId; 
             private String resourceType; 
+            private String resourceUid; 
             private String status; 
 
             /**
@@ -242,6 +266,14 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
             }
 
             /**
+             * RegionId.
+             */
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
+                return this;
+            }
+
+            /**
              * 状态
              */
             public Builder resourceId(String resourceId) {
@@ -254,6 +286,14 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
+                return this;
+            }
+
+            /**
+             * ResourceUid.
+             */
+            public Builder resourceUid(String resourceUid) {
+                this.resourceUid = resourceUid;
                 return this;
             }
 

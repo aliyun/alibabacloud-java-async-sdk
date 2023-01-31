@@ -27,6 +27,7 @@ public class CreateNatIpCidrRequest extends Request {
 
     @Query
     @NameInMap("NatIpCidr")
+    @Validation(required = true)
     private String natIpCidr;
 
     @Query

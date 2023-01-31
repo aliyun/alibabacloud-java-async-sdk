@@ -216,6 +216,9 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
         @NameInMap("ReservationOrderType")
         private String reservationOrderType;
 
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
         @NameInMap("Spec")
         private String spec;
 
@@ -263,6 +266,7 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
             this.reservationActiveTime = builder.reservationActiveTime;
             this.reservationInternetChargeType = builder.reservationInternetChargeType;
             this.reservationOrderType = builder.reservationOrderType;
+            this.resourceGroupId = builder.resourceGroupId;
             this.spec = builder.spec;
             this.status = builder.status;
             this.type = builder.type;
@@ -476,6 +480,13 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return spec
          */
         public String getSpec() {
@@ -546,6 +557,7 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
             private String reservationActiveTime; 
             private String reservationInternetChargeType; 
             private String reservationOrderType; 
+            private String resourceGroupId; 
             private String spec; 
             private String status; 
             private String type; 
@@ -774,6 +786,14 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
              */
             public Builder reservationOrderType(String reservationOrderType) {
                 this.reservationOrderType = reservationOrderType;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 

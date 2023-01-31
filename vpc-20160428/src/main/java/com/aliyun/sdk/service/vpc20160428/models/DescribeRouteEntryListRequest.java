@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeRouteEntryListRequest extends Request {
     @Query
+    @NameInMap("DestCidrBlockList")
+    private java.util.List < String > destCidrBlockList;
+
+    @Query
     @NameInMap("DestinationCidrBlock")
     private String destinationCidrBlock;
 
@@ -75,8 +79,13 @@ public class DescribeRouteEntryListRequest extends Request {
     @Validation(required = true)
     private String routeTableId;
 
+    @Query
+    @NameInMap("ServiceType")
+    private String serviceType;
+
     private DescribeRouteEntryListRequest(Builder builder) {
         super(builder);
+        this.destCidrBlockList = builder.destCidrBlockList;
         this.destinationCidrBlock = builder.destinationCidrBlock;
         this.ipVersion = builder.ipVersion;
         this.maxResult = builder.maxResult;
@@ -92,6 +101,7 @@ public class DescribeRouteEntryListRequest extends Request {
         this.routeEntryName = builder.routeEntryName;
         this.routeEntryType = builder.routeEntryType;
         this.routeTableId = builder.routeTableId;
+        this.serviceType = builder.serviceType;
     }
 
     public static Builder builder() {
@@ -105,6 +115,13 @@ public class DescribeRouteEntryListRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return destCidrBlockList
+     */
+    public java.util.List < String > getDestCidrBlockList() {
+        return this.destCidrBlockList;
     }
 
     /**
@@ -212,7 +229,15 @@ public class DescribeRouteEntryListRequest extends Request {
         return this.routeTableId;
     }
 
+    /**
+     * @return serviceType
+     */
+    public String getServiceType() {
+        return this.serviceType;
+    }
+
     public static final class Builder extends Request.Builder<DescribeRouteEntryListRequest, Builder> {
+        private java.util.List < String > destCidrBlockList; 
         private String destinationCidrBlock; 
         private String ipVersion; 
         private Integer maxResult; 
@@ -228,6 +253,7 @@ public class DescribeRouteEntryListRequest extends Request {
         private String routeEntryName; 
         private String routeEntryType; 
         private String routeTableId; 
+        private String serviceType; 
 
         private Builder() {
             super();
@@ -235,6 +261,7 @@ public class DescribeRouteEntryListRequest extends Request {
 
         private Builder(DescribeRouteEntryListRequest request) {
             super(request);
+            this.destCidrBlockList = request.destCidrBlockList;
             this.destinationCidrBlock = request.destinationCidrBlock;
             this.ipVersion = request.ipVersion;
             this.maxResult = request.maxResult;
@@ -250,7 +277,17 @@ public class DescribeRouteEntryListRequest extends Request {
             this.routeEntryName = request.routeEntryName;
             this.routeEntryType = request.routeEntryType;
             this.routeTableId = request.routeTableId;
+            this.serviceType = request.serviceType;
         } 
+
+        /**
+         * DestCidrBlockList.
+         */
+        public Builder destCidrBlockList(java.util.List < String > destCidrBlockList) {
+            this.putQueryParameter("DestCidrBlockList", destCidrBlockList);
+            this.destCidrBlockList = destCidrBlockList;
+            return this;
+        }
 
         /**
          * DestinationCidrBlock.
@@ -384,6 +421,15 @@ public class DescribeRouteEntryListRequest extends Request {
         public Builder routeTableId(String routeTableId) {
             this.putQueryParameter("RouteTableId", routeTableId);
             this.routeTableId = routeTableId;
+            return this;
+        }
+
+        /**
+         * ServiceType.
+         */
+        public Builder serviceType(String serviceType) {
+            this.putQueryParameter("ServiceType", serviceType);
+            this.serviceType = serviceType;
             return this;
         }
 

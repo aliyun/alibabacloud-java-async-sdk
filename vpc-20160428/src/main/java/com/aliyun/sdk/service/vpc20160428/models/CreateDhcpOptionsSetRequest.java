@@ -13,10 +13,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateDhcpOptionsSetRequest extends Request {
     @Query
-    @NameInMap("BootFileName")
-    private String bootFileName;
-
-    @Query
     @NameInMap("ClientToken")
     private String clientToken;
 
@@ -69,13 +65,8 @@ public class CreateDhcpOptionsSetRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("TFTPServerName")
-    private String TFTPServerName;
-
     private CreateDhcpOptionsSetRequest(Builder builder) {
         super(builder);
-        this.bootFileName = builder.bootFileName;
         this.clientToken = builder.clientToken;
         this.dhcpOptionsSetDescription = builder.dhcpOptionsSetDescription;
         this.dhcpOptionsSetName = builder.dhcpOptionsSetName;
@@ -89,7 +80,6 @@ public class CreateDhcpOptionsSetRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.TFTPServerName = builder.TFTPServerName;
     }
 
     public static Builder builder() {
@@ -103,13 +93,6 @@ public class CreateDhcpOptionsSetRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return bootFileName
-     */
-    public String getBootFileName() {
-        return this.bootFileName;
     }
 
     /**
@@ -203,15 +186,7 @@ public class CreateDhcpOptionsSetRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    /**
-     * @return TFTPServerName
-     */
-    public String getTFTPServerName() {
-        return this.TFTPServerName;
-    }
-
     public static final class Builder extends Request.Builder<CreateDhcpOptionsSetRequest, Builder> {
-        private String bootFileName; 
         private String clientToken; 
         private String dhcpOptionsSetDescription; 
         private String dhcpOptionsSetName; 
@@ -225,7 +200,6 @@ public class CreateDhcpOptionsSetRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String TFTPServerName; 
 
         private Builder() {
             super();
@@ -233,7 +207,6 @@ public class CreateDhcpOptionsSetRequest extends Request {
 
         private Builder(CreateDhcpOptionsSetRequest request) {
             super(request);
-            this.bootFileName = request.bootFileName;
             this.clientToken = request.clientToken;
             this.dhcpOptionsSetDescription = request.dhcpOptionsSetDescription;
             this.dhcpOptionsSetName = request.dhcpOptionsSetName;
@@ -247,17 +220,7 @@ public class CreateDhcpOptionsSetRequest extends Request {
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.TFTPServerName = request.TFTPServerName;
         } 
-
-        /**
-         * BootFileName.
-         */
-        public Builder bootFileName(String bootFileName) {
-            this.putQueryParameter("BootFileName", bootFileName);
-            this.bootFileName = bootFileName;
-            return this;
-        }
 
         /**
          * ClientToken.
@@ -373,15 +336,6 @@ public class CreateDhcpOptionsSetRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * TFTPServerName.
-         */
-        public Builder TFTPServerName(String TFTPServerName) {
-            this.putQueryParameter("TFTPServerName", TFTPServerName);
-            this.TFTPServerName = TFTPServerName;
             return this;
         }
 

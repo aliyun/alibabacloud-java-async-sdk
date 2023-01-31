@@ -34,6 +34,10 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("Tags")
     private java.util.List < Tags> tags;
 
@@ -64,6 +68,7 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
         this.nextToken = builder.nextToken;
         this.physicalConnectionId = builder.physicalConnectionId;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.tags = builder.tags;
         this.virtualPhysicalConnectionAliUids = builder.virtualPhysicalConnectionAliUids;
         this.virtualPhysicalConnectionBusinessStatus = builder.virtualPhysicalConnectionBusinessStatus;
@@ -121,6 +126,13 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return tags
      */
     public java.util.List < Tags> getTags() {
@@ -168,6 +180,7 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
         private String nextToken; 
         private String physicalConnectionId; 
         private String regionId; 
+        private String resourceGroupId; 
         private java.util.List < Tags> tags; 
         private java.util.List < String > virtualPhysicalConnectionAliUids; 
         private String virtualPhysicalConnectionBusinessStatus; 
@@ -186,6 +199,7 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
             this.nextToken = request.nextToken;
             this.physicalConnectionId = request.physicalConnectionId;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.tags = request.tags;
             this.virtualPhysicalConnectionAliUids = request.virtualPhysicalConnectionAliUids;
             this.virtualPhysicalConnectionBusinessStatus = request.virtualPhysicalConnectionBusinessStatus;
@@ -236,6 +250,15 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

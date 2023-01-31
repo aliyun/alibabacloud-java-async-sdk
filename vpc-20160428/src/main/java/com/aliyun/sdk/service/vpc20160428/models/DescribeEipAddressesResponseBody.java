@@ -131,47 +131,6 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
 
     } 
 
-    public static class AvailableRegions extends TeaModel {
-        @NameInMap("AvailableRegion")
-        private java.util.List < String > availableRegion;
-
-        private AvailableRegions(Builder builder) {
-            this.availableRegion = builder.availableRegion;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static AvailableRegions create() {
-            return builder().build();
-        }
-
-        /**
-         * @return availableRegion
-         */
-        public java.util.List < String > getAvailableRegion() {
-            return this.availableRegion;
-        }
-
-        public static final class Builder {
-            private java.util.List < String > availableRegion; 
-
-            /**
-             * AvailableRegion.
-             */
-            public Builder availableRegion(java.util.List < String > availableRegion) {
-                this.availableRegion = availableRegion;
-                return this;
-            }
-
-            public AvailableRegions build() {
-                return new AvailableRegions(this);
-            } 
-
-        } 
-
-    }
     public static class LockReason extends TeaModel {
         @NameInMap("LockReason")
         private String lockReason;
@@ -404,9 +363,6 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
         @NameInMap("AllocationTime")
         private String allocationTime;
 
-        @NameInMap("AvailableRegions")
-        private AvailableRegions availableRegions;
-
         @NameInMap("Bandwidth")
         private String bandwidth;
 
@@ -509,10 +465,15 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
         @NameInMap("Tags")
         private Tags tags;
 
+        @NameInMap("VpcId")
+        private String vpcId;
+
+        @NameInMap("Zone")
+        private String zone;
+
         private EipAddress(Builder builder) {
             this.allocationId = builder.allocationId;
             this.allocationTime = builder.allocationTime;
-            this.availableRegions = builder.availableRegions;
             this.bandwidth = builder.bandwidth;
             this.bandwidthPackageBandwidth = builder.bandwidthPackageBandwidth;
             this.bandwidthPackageId = builder.bandwidthPackageId;
@@ -547,6 +508,8 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             this.serviceManaged = builder.serviceManaged;
             this.status = builder.status;
             this.tags = builder.tags;
+            this.vpcId = builder.vpcId;
+            this.zone = builder.zone;
         }
 
         public static Builder builder() {
@@ -569,13 +532,6 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
          */
         public String getAllocationTime() {
             return this.allocationTime;
-        }
-
-        /**
-         * @return availableRegions
-         */
-        public AvailableRegions getAvailableRegions() {
-            return this.availableRegions;
         }
 
         /**
@@ -816,10 +772,23 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             return this.tags;
         }
 
+        /**
+         * @return vpcId
+         */
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        /**
+         * @return zone
+         */
+        public String getZone() {
+            return this.zone;
+        }
+
         public static final class Builder {
             private String allocationId; 
             private String allocationTime; 
-            private AvailableRegions availableRegions; 
             private String bandwidth; 
             private String bandwidthPackageBandwidth; 
             private String bandwidthPackageId; 
@@ -854,6 +823,8 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             private Integer serviceManaged; 
             private String status; 
             private Tags tags; 
+            private String vpcId; 
+            private String zone; 
 
             /**
              * AllocationId.
@@ -868,14 +839,6 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
              */
             public Builder allocationTime(String allocationTime) {
                 this.allocationTime = allocationTime;
-                return this;
-            }
-
-            /**
-             * AvailableRegions.
-             */
-            public Builder availableRegions(AvailableRegions availableRegions) {
-                this.availableRegions = availableRegions;
                 return this;
             }
 
@@ -1148,6 +1111,22 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
+                return this;
+            }
+
+            /**
+             * VpcId.
+             */
+            public Builder vpcId(String vpcId) {
+                this.vpcId = vpcId;
+                return this;
+            }
+
+            /**
+             * Zone.
+             */
+            public Builder zone(String zone) {
+                this.zone = zone;
                 return this;
             }
 

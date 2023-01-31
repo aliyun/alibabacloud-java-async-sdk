@@ -24,6 +24,9 @@ public class CreateVpnPbrRouteEntryResponseBody extends TeaModel {
     @NameInMap("OverlayMode")
     private String overlayMode;
 
+    @NameInMap("Priority")
+    private Integer priority;
+
     @NameInMap("RequestId")
     private String requestId;
 
@@ -47,6 +50,7 @@ public class CreateVpnPbrRouteEntryResponseBody extends TeaModel {
         this.description = builder.description;
         this.nextHop = builder.nextHop;
         this.overlayMode = builder.overlayMode;
+        this.priority = builder.priority;
         this.requestId = builder.requestId;
         this.routeDest = builder.routeDest;
         this.routeSource = builder.routeSource;
@@ -89,6 +93,13 @@ public class CreateVpnPbrRouteEntryResponseBody extends TeaModel {
      */
     public String getOverlayMode() {
         return this.overlayMode;
+    }
+
+    /**
+     * @return priority
+     */
+    public Integer getPriority() {
+        return this.priority;
     }
 
     /**
@@ -138,6 +149,7 @@ public class CreateVpnPbrRouteEntryResponseBody extends TeaModel {
         private String description; 
         private String nextHop; 
         private String overlayMode; 
+        private Integer priority; 
         private String requestId; 
         private String routeDest; 
         private String routeSource; 
@@ -174,6 +186,14 @@ public class CreateVpnPbrRouteEntryResponseBody extends TeaModel {
          */
         public Builder overlayMode(String overlayMode) {
             this.overlayMode = overlayMode;
+            return this;
+        }
+
+        /**
+         * Priority.
+         */
+        public Builder priority(Integer priority) {
+            this.priority = priority;
             return this;
         }
 

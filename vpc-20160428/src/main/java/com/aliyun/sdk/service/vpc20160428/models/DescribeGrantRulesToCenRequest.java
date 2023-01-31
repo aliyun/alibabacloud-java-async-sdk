@@ -35,6 +35,15 @@ public class DescribeGrantRulesToCenRequest extends Request {
     private Long ownerId;
 
     @Query
+    @NameInMap("PageNumber")
+    private Integer pageNumber;
+
+    @Query
+    @NameInMap("PageSize")
+    @Validation(maximum = 50, minimum = 1)
+    private Integer pageSize;
+
+    @Query
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
@@ -58,6 +67,8 @@ public class DescribeGrantRulesToCenRequest extends Request {
         this.instanceType = builder.instanceType;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.pageNumber = builder.pageNumber;
+        this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -113,6 +124,20 @@ public class DescribeGrantRulesToCenRequest extends Request {
     }
 
     /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -146,6 +171,8 @@ public class DescribeGrantRulesToCenRequest extends Request {
         private String instanceType; 
         private String ownerAccount; 
         private Long ownerId; 
+        private Integer pageNumber; 
+        private Integer pageSize; 
         private String regionId; 
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
@@ -162,6 +189,8 @@ public class DescribeGrantRulesToCenRequest extends Request {
             this.instanceType = request.instanceType;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
@@ -210,6 +239,24 @@ public class DescribeGrantRulesToCenRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * PageNumber.
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.putQueryParameter("PageNumber", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * PageSize.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
             return this;
         }
 

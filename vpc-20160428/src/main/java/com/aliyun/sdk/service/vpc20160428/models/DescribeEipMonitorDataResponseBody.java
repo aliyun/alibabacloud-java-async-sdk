@@ -76,7 +76,7 @@ public class DescribeEipMonitorDataResponseBody extends TeaModel {
         private Integer eipBandwidth;
 
         @NameInMap("EipFlow")
-        private Integer eipFlow;
+        private Long eipFlow;
 
         @NameInMap("EipPackets")
         private Integer eipPackets;
@@ -117,7 +117,7 @@ public class DescribeEipMonitorDataResponseBody extends TeaModel {
         /**
          * @return eipFlow
          */
-        public Integer getEipFlow() {
+        public Long getEipFlow() {
             return this.eipFlow;
         }
 
@@ -151,7 +151,7 @@ public class DescribeEipMonitorDataResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer eipBandwidth; 
-            private Integer eipFlow; 
+            private Long eipFlow; 
             private Integer eipPackets; 
             private Long eipRX; 
             private Long eipTX; 
@@ -168,7 +168,7 @@ public class DescribeEipMonitorDataResponseBody extends TeaModel {
             /**
              * EipFlow.
              */
-            public Builder eipFlow(Integer eipFlow) {
+            public Builder eipFlow(Long eipFlow) {
                 this.eipFlow = eipFlow;
                 return this;
             }

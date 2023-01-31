@@ -29,6 +29,10 @@ public class CreateRouterInterfaceRequest extends Request {
     private String description;
 
     @Query
+    @NameInMap("FastLinkMode")
+    private Boolean fastLinkMode;
+
+    @Query
     @NameInMap("HealthCheckSourceIp")
     private String healthCheckSourceIp;
 
@@ -124,6 +128,7 @@ public class CreateRouterInterfaceRequest extends Request {
         this.autoPay = builder.autoPay;
         this.clientToken = builder.clientToken;
         this.description = builder.description;
+        this.fastLinkMode = builder.fastLinkMode;
         this.healthCheckSourceIp = builder.healthCheckSourceIp;
         this.healthCheckTargetIp = builder.healthCheckTargetIp;
         this.instanceChargeType = builder.instanceChargeType;
@@ -186,6 +191,13 @@ public class CreateRouterInterfaceRequest extends Request {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return fastLinkMode
+     */
+    public Boolean getFastLinkMode() {
+        return this.fastLinkMode;
     }
 
     /**
@@ -340,6 +352,7 @@ public class CreateRouterInterfaceRequest extends Request {
         private Boolean autoPay; 
         private String clientToken; 
         private String description; 
+        private Boolean fastLinkMode; 
         private String healthCheckSourceIp; 
         private String healthCheckTargetIp; 
         private String instanceChargeType; 
@@ -372,6 +385,7 @@ public class CreateRouterInterfaceRequest extends Request {
             this.autoPay = request.autoPay;
             this.clientToken = request.clientToken;
             this.description = request.description;
+            this.fastLinkMode = request.fastLinkMode;
             this.healthCheckSourceIp = request.healthCheckSourceIp;
             this.healthCheckTargetIp = request.healthCheckTargetIp;
             this.instanceChargeType = request.instanceChargeType;
@@ -428,6 +442,15 @@ public class CreateRouterInterfaceRequest extends Request {
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * FastLinkMode.
+         */
+        public Builder fastLinkMode(Boolean fastLinkMode) {
+            this.putQueryParameter("FastLinkMode", fastLinkMode);
+            this.fastLinkMode = fastLinkMode;
             return this;
         }
 

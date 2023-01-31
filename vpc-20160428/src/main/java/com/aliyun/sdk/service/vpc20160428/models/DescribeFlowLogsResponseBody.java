@@ -151,6 +151,47 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
 
     } 
 
+    public static class TrafficPath extends TeaModel {
+        @NameInMap("trafficPathList")
+        private java.util.List < String > trafficPathList;
+
+        private TrafficPath(Builder builder) {
+            this.trafficPathList = builder.trafficPathList;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TrafficPath create() {
+            return builder().build();
+        }
+
+        /**
+         * @return trafficPathList
+         */
+        public java.util.List < String > getTrafficPathList() {
+            return this.trafficPathList;
+        }
+
+        public static final class Builder {
+            private java.util.List < String > trafficPathList; 
+
+            /**
+             * trafficPathList.
+             */
+            public Builder trafficPathList(java.util.List < String > trafficPathList) {
+                this.trafficPathList = trafficPathList;
+                return this;
+            }
+
+            public TrafficPath build() {
+                return new TrafficPath(this);
+            } 
+
+        } 
+
+    }
     public static class FlowLog extends TeaModel {
         @NameInMap("AggregationInterval")
         private Integer aggregationInterval;
@@ -185,8 +226,14 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         @NameInMap("ResourceType")
         private String resourceType;
 
+        @NameInMap("ServiceType")
+        private String serviceType;
+
         @NameInMap("Status")
         private String status;
+
+        @NameInMap("TrafficPath")
+        private TrafficPath trafficPath;
 
         @NameInMap("TrafficType")
         private String trafficType;
@@ -203,7 +250,9 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             this.regionId = builder.regionId;
             this.resourceId = builder.resourceId;
             this.resourceType = builder.resourceType;
+            this.serviceType = builder.serviceType;
             this.status = builder.status;
+            this.trafficPath = builder.trafficPath;
             this.trafficType = builder.trafficType;
         }
 
@@ -293,10 +342,24 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         }
 
         /**
+         * @return serviceType
+         */
+        public String getServiceType() {
+            return this.serviceType;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
             return this.status;
+        }
+
+        /**
+         * @return trafficPath
+         */
+        public TrafficPath getTrafficPath() {
+            return this.trafficPath;
         }
 
         /**
@@ -318,7 +381,9 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             private String regionId; 
             private String resourceId; 
             private String resourceType; 
+            private String serviceType; 
             private String status; 
+            private TrafficPath trafficPath; 
             private String trafficType; 
 
             /**
@@ -410,10 +475,26 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
+             * ServiceType.
+             */
+            public Builder serviceType(String serviceType) {
+                this.serviceType = serviceType;
+                return this;
+            }
+
+            /**
              * Status.
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * TrafficPath.
+             */
+            public Builder trafficPath(TrafficPath trafficPath) {
+                this.trafficPath = trafficPath;
                 return this;
             }
 

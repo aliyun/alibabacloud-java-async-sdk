@@ -40,6 +40,10 @@ public class CreateVirtualPhysicalConnectionRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("Spec")
     @Validation(required = true)
     private String spec;
@@ -66,6 +70,7 @@ public class CreateVirtualPhysicalConnectionRequest extends Request {
         this.orderMode = builder.orderMode;
         this.physicalConnectionId = builder.physicalConnectionId;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.spec = builder.spec;
         this.token = builder.token;
         this.vlanId = builder.vlanId;
@@ -128,6 +133,13 @@ public class CreateVirtualPhysicalConnectionRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return spec
      */
     public String getSpec() {
@@ -162,6 +174,7 @@ public class CreateVirtualPhysicalConnectionRequest extends Request {
         private String orderMode; 
         private String physicalConnectionId; 
         private String regionId; 
+        private String resourceGroupId; 
         private String spec; 
         private String token; 
         private Long vlanId; 
@@ -179,6 +192,7 @@ public class CreateVirtualPhysicalConnectionRequest extends Request {
             this.orderMode = request.orderMode;
             this.physicalConnectionId = request.physicalConnectionId;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.spec = request.spec;
             this.token = request.token;
             this.vlanId = request.vlanId;
@@ -236,6 +250,15 @@ public class CreateVirtualPhysicalConnectionRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

@@ -42,6 +42,9 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
     @NameInMap("Name")
     private String name;
 
+    @NameInMap("NetworkType")
+    private String networkType;
+
     @NameInMap("RequestId")
     private String requestId;
 
@@ -89,6 +92,7 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
         this.internetIp = builder.internetIp;
         this.ipsecVpn = builder.ipsecVpn;
         this.name = builder.name;
+        this.networkType = builder.networkType;
         this.requestId = builder.requestId;
         this.reservationData = builder.reservationData;
         this.spec = builder.spec;
@@ -179,6 +183,13 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
      */
     public String getName() {
         return this.name;
+    }
+
+    /**
+     * @return networkType
+     */
+    public String getNetworkType() {
+        return this.networkType;
     }
 
     /**
@@ -276,6 +287,7 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
         private String internetIp; 
         private String ipsecVpn; 
         private String name; 
+        private String networkType; 
         private String requestId; 
         private ReservationData reservationData; 
         private String spec; 
@@ -366,6 +378,14 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
          */
         public Builder name(String name) {
             this.name = name;
+            return this;
+        }
+
+        /**
+         * NetworkType.
+         */
+        public Builder networkType(String networkType) {
+            this.networkType = networkType;
             return this;
         }
 

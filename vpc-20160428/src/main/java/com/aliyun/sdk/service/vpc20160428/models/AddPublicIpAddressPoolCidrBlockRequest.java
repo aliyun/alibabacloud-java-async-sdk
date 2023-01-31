@@ -14,8 +14,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class AddPublicIpAddressPoolCidrBlockRequest extends Request {
     @Query
     @NameInMap("CidrBlock")
-    @Validation(required = true)
     private String cidrBlock;
+
+    @Query
+    @NameInMap("CidrMask")
+    private Integer cidrMask;
 
     @Query
     @NameInMap("ClientToken")
@@ -54,6 +57,7 @@ public class AddPublicIpAddressPoolCidrBlockRequest extends Request {
     private AddPublicIpAddressPoolCidrBlockRequest(Builder builder) {
         super(builder);
         this.cidrBlock = builder.cidrBlock;
+        this.cidrMask = builder.cidrMask;
         this.clientToken = builder.clientToken;
         this.dryRun = builder.dryRun;
         this.ownerAccount = builder.ownerAccount;
@@ -82,6 +86,13 @@ public class AddPublicIpAddressPoolCidrBlockRequest extends Request {
      */
     public String getCidrBlock() {
         return this.cidrBlock;
+    }
+
+    /**
+     * @return cidrMask
+     */
+    public Integer getCidrMask() {
+        return this.cidrMask;
     }
 
     /**
@@ -142,6 +153,7 @@ public class AddPublicIpAddressPoolCidrBlockRequest extends Request {
 
     public static final class Builder extends Request.Builder<AddPublicIpAddressPoolCidrBlockRequest, Builder> {
         private String cidrBlock; 
+        private Integer cidrMask; 
         private String clientToken; 
         private Boolean dryRun; 
         private String ownerAccount; 
@@ -158,6 +170,7 @@ public class AddPublicIpAddressPoolCidrBlockRequest extends Request {
         private Builder(AddPublicIpAddressPoolCidrBlockRequest request) {
             super(request);
             this.cidrBlock = request.cidrBlock;
+            this.cidrMask = request.cidrMask;
             this.clientToken = request.clientToken;
             this.dryRun = request.dryRun;
             this.ownerAccount = request.ownerAccount;
@@ -174,6 +187,15 @@ public class AddPublicIpAddressPoolCidrBlockRequest extends Request {
         public Builder cidrBlock(String cidrBlock) {
             this.putQueryParameter("CidrBlock", cidrBlock);
             this.cidrBlock = cidrBlock;
+            return this;
+        }
+
+        /**
+         * CidrMask.
+         */
+        public Builder cidrMask(Integer cidrMask) {
+            this.putQueryParameter("CidrMask", cidrMask);
+            this.cidrMask = cidrMask;
             return this;
         }
 

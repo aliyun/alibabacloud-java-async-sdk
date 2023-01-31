@@ -111,6 +111,107 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
 
     } 
 
+    public static class NextHops extends TeaModel {
+        @NameInMap("Enabled")
+        private String enabled;
+
+        @NameInMap("NextHopId")
+        private String nextHopId;
+
+        @NameInMap("NextHopType")
+        private String nextHopType;
+
+        @NameInMap("Weight")
+        private String weight;
+
+        private NextHops(Builder builder) {
+            this.enabled = builder.enabled;
+            this.nextHopId = builder.nextHopId;
+            this.nextHopType = builder.nextHopType;
+            this.weight = builder.weight;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NextHops create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enabled
+         */
+        public String getEnabled() {
+            return this.enabled;
+        }
+
+        /**
+         * @return nextHopId
+         */
+        public String getNextHopId() {
+            return this.nextHopId;
+        }
+
+        /**
+         * @return nextHopType
+         */
+        public String getNextHopType() {
+            return this.nextHopType;
+        }
+
+        /**
+         * @return weight
+         */
+        public String getWeight() {
+            return this.weight;
+        }
+
+        public static final class Builder {
+            private String enabled; 
+            private String nextHopId; 
+            private String nextHopType; 
+            private String weight; 
+
+            /**
+             * Enabled.
+             */
+            public Builder enabled(String enabled) {
+                this.enabled = enabled;
+                return this;
+            }
+
+            /**
+             * NextHopId.
+             */
+            public Builder nextHopId(String nextHopId) {
+                this.nextHopId = nextHopId;
+                return this;
+            }
+
+            /**
+             * NextHopType.
+             */
+            public Builder nextHopType(String nextHopType) {
+                this.nextHopType = nextHopType;
+                return this;
+            }
+
+            /**
+             * Weight.
+             */
+            public Builder weight(String weight) {
+                this.weight = weight;
+                return this;
+            }
+
+            public NextHops build() {
+                return new NextHops(this);
+            } 
+
+        } 
+
+    }
     public static class GatewayRouteEntryModels extends TeaModel {
         @NameInMap("Description")
         private String description;
@@ -127,6 +228,9 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
         @NameInMap("NextHopType")
         private String nextHopType;
 
+        @NameInMap("NextHops")
+        private java.util.List < NextHops> nextHops;
+
         @NameInMap("Status")
         private String status;
 
@@ -136,6 +240,7 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
             this.name = builder.name;
             this.nextHopId = builder.nextHopId;
             this.nextHopType = builder.nextHopType;
+            this.nextHops = builder.nextHops;
             this.status = builder.status;
         }
 
@@ -183,6 +288,13 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
         }
 
         /**
+         * @return nextHops
+         */
+        public java.util.List < NextHops> getNextHops() {
+            return this.nextHops;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -195,6 +307,7 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
             private String name; 
             private String nextHopId; 
             private String nextHopType; 
+            private java.util.List < NextHops> nextHops; 
             private String status; 
 
             /**
@@ -234,6 +347,14 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
              */
             public Builder nextHopType(String nextHopType) {
                 this.nextHopType = nextHopType;
+                return this;
+            }
+
+            /**
+             * NextHops.
+             */
+            public Builder nextHops(java.util.List < NextHops> nextHops) {
+                this.nextHops = nextHops;
                 return this;
             }
 

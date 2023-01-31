@@ -50,6 +50,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AssociateEipAddressResponse> associateEipAddress(AssociateEipAddressRequest request);
 
+    CompletableFuture<AssociateEipAddressBatchResponse> associateEipAddressBatch(AssociateEipAddressBatchRequest request);
+
     CompletableFuture<AssociateGlobalAccelerationInstanceResponse> associateGlobalAccelerationInstance(AssociateGlobalAccelerationInstanceRequest request);
 
     CompletableFuture<AssociateHaVipResponse> associateHaVip(AssociateHaVipRequest request);
@@ -75,6 +77,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CancelCommonBandwidthPackageIpBandwidthResponse> cancelCommonBandwidthPackageIpBandwidth(CancelCommonBandwidthPackageIpBandwidthRequest request);
 
     CompletableFuture<CancelPhysicalConnectionResponse> cancelPhysicalConnection(CancelPhysicalConnectionRequest request);
+
+    CompletableFuture<ChangeResourceGroupResponse> changeResourceGroup(ChangeResourceGroupRequest request);
 
     CompletableFuture<CheckCanAllocateVpcPrivateIpAddressResponse> checkCanAllocateVpcPrivateIpAddress(CheckCanAllocateVpcPrivateIpAddressRequest request);
 
@@ -141,6 +145,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreatePhysicalConnectionSetupOrderResponse> createPhysicalConnectionSetupOrder(CreatePhysicalConnectionSetupOrderRequest request);
 
     CompletableFuture<CreatePublicIpAddressPoolResponse> createPublicIpAddressPool(CreatePublicIpAddressPoolRequest request);
+
+    CompletableFuture<CreateRouteEntriesResponse> createRouteEntries(CreateRouteEntriesRequest request);
 
     CompletableFuture<CreateRouteEntryResponse> createRouteEntry(CreateRouteEntryRequest request);
 
@@ -244,6 +250,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeletePublicIpAddressPoolCidrBlockResponse> deletePublicIpAddressPoolCidrBlock(DeletePublicIpAddressPoolCidrBlockRequest request);
 
+    CompletableFuture<DeleteRouteEntriesResponse> deleteRouteEntries(DeleteRouteEntriesRequest request);
+
     CompletableFuture<DeleteRouteEntryResponse> deleteRouteEntry(DeleteRouteEntryRequest request);
 
     CompletableFuture<DeleteRouteTableResponse> deleteRouteTable(DeleteRouteTableRequest request);
@@ -301,6 +309,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeCustomerGatewayResponse> describeCustomerGateway(DescribeCustomerGatewayRequest request);
 
     CompletableFuture<DescribeCustomerGatewaysResponse> describeCustomerGateways(DescribeCustomerGatewaysRequest request);
+
+    CompletableFuture<DescribeEcGrantRelationResponse> describeEcGrantRelation(DescribeEcGrantRelationRequest request);
 
     CompletableFuture<DescribeEipAddressesResponse> describeEipAddresses(DescribeEipAddressesRequest request);
 
@@ -372,6 +382,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeSslVpnServersResponse> describeSslVpnServers(DescribeSslVpnServersRequest request);
 
+    CompletableFuture<DescribeTagKeysResponse> describeTagKeys(DescribeTagKeysRequest request);
+
+    CompletableFuture<DescribeTagKeysForExpressConnectResponse> describeTagKeysForExpressConnect(DescribeTagKeysForExpressConnectRequest request);
+
+    CompletableFuture<DescribeTagsResponse> describeTags(DescribeTagsRequest request);
+
     CompletableFuture<DescribeVRoutersResponse> describeVRouters(DescribeVRoutersRequest request);
 
     CompletableFuture<DescribeVSwitchAttributesResponse> describeVSwitchAttributes(DescribeVSwitchAttributesRequest request);
@@ -394,6 +410,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeVpnConnectionResponse> describeVpnConnection(DescribeVpnConnectionRequest request);
 
+    CompletableFuture<DescribeVpnConnectionLogsResponse> describeVpnConnectionLogs(DescribeVpnConnectionLogsRequest request);
+
     CompletableFuture<DescribeVpnConnectionsResponse> describeVpnConnections(DescribeVpnConnectionsRequest request);
 
     CompletableFuture<DescribeVpnCrossAccountAuthorizationsResponse> describeVpnCrossAccountAuthorizations(DescribeVpnCrossAccountAuthorizationsRequest request);
@@ -411,6 +429,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeZonesResponse> describeZones(DescribeZonesRequest request);
 
     CompletableFuture<DetachDhcpOptionsSetFromVpcResponse> detachDhcpOptionsSetFromVpc(DetachDhcpOptionsSetFromVpcRequest request);
+
+    /**
+      * VPN网关发起诊断
+      *
+     */
+    CompletableFuture<DiagnoseVpnGatewayResponse> diagnoseVpnGateway(DiagnoseVpnGatewayRequest request);
 
     CompletableFuture<DisableNatGatewayEcsMetricResponse> disableNatGatewayEcsMetric(DisableNatGatewayEcsMetricRequest request);
 
@@ -452,7 +476,19 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetVpcPrefixListEntriesResponse> getVpcPrefixListEntries(GetVpcPrefixListEntriesRequest request);
 
+    CompletableFuture<GetVpcRouteEntrySummaryResponse> getVpcRouteEntrySummary(GetVpcRouteEntrySummaryRequest request);
+
+    /**
+      * 查询VPN网关一键诊断结果
+      *
+     */
+    CompletableFuture<GetVpnGatewayDiagnoseResultResponse> getVpnGatewayDiagnoseResult(GetVpnGatewayDiagnoseResultRequest request);
+
     CompletableFuture<GrantInstanceToCenResponse> grantInstanceToCen(GrantInstanceToCenRequest request);
+
+    CompletableFuture<GrantInstanceToVbrResponse> grantInstanceToVbr(GrantInstanceToVbrRequest request);
+
+    CompletableFuture<ListBusinessAccessPointsResponse> listBusinessAccessPoints(ListBusinessAccessPointsRequest request);
 
     CompletableFuture<ListDhcpOptionsSetsResponse> listDhcpOptionsSets(ListDhcpOptionsSetsRequest request);
 
@@ -462,6 +498,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListGatewayRouteTableEntriesResponse> listGatewayRouteTableEntries(ListGatewayRouteTableEntriesRequest request);
 
+    CompletableFuture<ListGeographicSubRegionsResponse> listGeographicSubRegions(ListGeographicSubRegionsRequest request);
+
+    CompletableFuture<ListIpsecServerLogsResponse> listIpsecServerLogs(ListIpsecServerLogsRequest request);
+
     CompletableFuture<ListIpsecServersResponse> listIpsecServers(ListIpsecServersRequest request);
 
     CompletableFuture<ListIpv4GatewaysResponse> listIpv4Gateways(ListIpv4GatewaysRequest request);
@@ -470,6 +510,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListNatIpsResponse> listNatIps(ListNatIpsRequest request);
 
+    /**
+      * **
+      *
+     */
     CompletableFuture<ListPrefixListsResponse> listPrefixLists(ListPrefixListsRequest request);
 
     CompletableFuture<ListPublicIpAddressPoolCidrBlocksResponse> listPublicIpAddressPoolCidrBlocks(ListPublicIpAddressPoolCidrBlocksRequest request);
@@ -584,6 +628,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ModifyVpnGatewayAttributeResponse> modifyVpnGatewayAttribute(ModifyVpnGatewayAttributeRequest request);
 
+    CompletableFuture<ModifyVpnPbrRouteEntryAttributeResponse> modifyVpnPbrRouteEntryAttribute(ModifyVpnPbrRouteEntryAttributeRequest request);
+
+    CompletableFuture<ModifyVpnPbrRouteEntryPriorityResponse> modifyVpnPbrRouteEntryPriority(ModifyVpnPbrRouteEntryPriorityRequest request);
+
     CompletableFuture<ModifyVpnPbrRouteEntryWeightResponse> modifyVpnPbrRouteEntryWeight(ModifyVpnPbrRouteEntryWeightRequest request);
 
     CompletableFuture<ModifyVpnRouteEntryWeightResponse> modifyVpnRouteEntryWeight(ModifyVpnRouteEntryWeightRequest request);
@@ -619,6 +667,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RetryVpcPrefixListAssociationResponse> retryVpcPrefixListAssociation(RetryVpcPrefixListAssociationRequest request);
 
     CompletableFuture<RevokeInstanceFromCenResponse> revokeInstanceFromCen(RevokeInstanceFromCenRequest request);
+
+    CompletableFuture<RevokeInstanceFromVbrResponse> revokeInstanceFromVbr(RevokeInstanceFromVbrRequest request);
+
+    CompletableFuture<SetHighDefinitionMonitorLogStatusResponse> setHighDefinitionMonitorLogStatus(SetHighDefinitionMonitorLogStatusRequest request);
 
     CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
 
@@ -671,5 +723,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateVirtualPhysicalConnectionResponse> updateVirtualPhysicalConnection(UpdateVirtualPhysicalConnectionRequest request);
 
     CompletableFuture<UpdateVpcGatewayEndpointAttributeResponse> updateVpcGatewayEndpointAttribute(UpdateVpcGatewayEndpointAttributeRequest request);
+
+    CompletableFuture<VpcDescribeVpcNatGatewayNetworkInterfaceQuotaResponse> vpcDescribeVpcNatGatewayNetworkInterfaceQuota(VpcDescribeVpcNatGatewayNetworkInterfaceQuotaRequest request);
 
 }

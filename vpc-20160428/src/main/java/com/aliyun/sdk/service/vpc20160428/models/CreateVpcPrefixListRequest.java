@@ -41,8 +41,8 @@ public class CreateVpcPrefixListRequest extends Request {
     private String prefixListDescription;
 
     @Query
-    @NameInMap("PrefixListEntrys")
-    private java.util.List < PrefixListEntrys> prefixListEntrys;
+    @NameInMap("PrefixListEntries")
+    private java.util.List < PrefixListEntries> prefixListEntries;
 
     @Query
     @NameInMap("PrefixListName")
@@ -52,6 +52,10 @@ public class CreateVpcPrefixListRequest extends Request {
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
+
+    @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
 
     @Query
     @NameInMap("ResourceOwnerAccount")
@@ -70,9 +74,10 @@ public class CreateVpcPrefixListRequest extends Request {
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.prefixListDescription = builder.prefixListDescription;
-        this.prefixListEntrys = builder.prefixListEntrys;
+        this.prefixListEntries = builder.prefixListEntries;
         this.prefixListName = builder.prefixListName;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
     }
@@ -140,10 +145,10 @@ public class CreateVpcPrefixListRequest extends Request {
     }
 
     /**
-     * @return prefixListEntrys
+     * @return prefixListEntries
      */
-    public java.util.List < PrefixListEntrys> getPrefixListEntrys() {
-        return this.prefixListEntrys;
+    public java.util.List < PrefixListEntries> getPrefixListEntries() {
+        return this.prefixListEntries;
     }
 
     /**
@@ -158,6 +163,13 @@ public class CreateVpcPrefixListRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     /**
@@ -182,9 +194,10 @@ public class CreateVpcPrefixListRequest extends Request {
         private String ownerAccount; 
         private Long ownerId; 
         private String prefixListDescription; 
-        private java.util.List < PrefixListEntrys> prefixListEntrys; 
+        private java.util.List < PrefixListEntries> prefixListEntries; 
         private String prefixListName; 
         private String regionId; 
+        private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
 
@@ -201,9 +214,10 @@ public class CreateVpcPrefixListRequest extends Request {
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.prefixListDescription = request.prefixListDescription;
-            this.prefixListEntrys = request.prefixListEntrys;
+            this.prefixListEntries = request.prefixListEntries;
             this.prefixListName = request.prefixListName;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
         } 
@@ -272,11 +286,11 @@ public class CreateVpcPrefixListRequest extends Request {
         }
 
         /**
-         * PrefixListEntrys.
+         * PrefixListEntries.
          */
-        public Builder prefixListEntrys(java.util.List < PrefixListEntrys> prefixListEntrys) {
-            this.putQueryParameter("PrefixListEntrys", prefixListEntrys);
-            this.prefixListEntrys = prefixListEntrys;
+        public Builder prefixListEntries(java.util.List < PrefixListEntries> prefixListEntries) {
+            this.putQueryParameter("PrefixListEntries", prefixListEntries);
+            this.prefixListEntries = prefixListEntries;
             return this;
         }
 
@@ -295,6 +309,15 @@ public class CreateVpcPrefixListRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 
@@ -323,14 +346,14 @@ public class CreateVpcPrefixListRequest extends Request {
 
     } 
 
-    public static class PrefixListEntrys extends TeaModel {
+    public static class PrefixListEntries extends TeaModel {
         @NameInMap("Cidr")
         private String cidr;
 
         @NameInMap("Description")
         private String description;
 
-        private PrefixListEntrys(Builder builder) {
+        private PrefixListEntries(Builder builder) {
             this.cidr = builder.cidr;
             this.description = builder.description;
         }
@@ -339,7 +362,7 @@ public class CreateVpcPrefixListRequest extends Request {
             return new Builder();
         }
 
-        public static PrefixListEntrys create() {
+        public static PrefixListEntries create() {
             return builder().build();
         }
 
@@ -377,8 +400,8 @@ public class CreateVpcPrefixListRequest extends Request {
                 return this;
             }
 
-            public PrefixListEntrys build() {
-                return new PrefixListEntrys(this);
+            public PrefixListEntries build() {
+                return new PrefixListEntries(this);
             } 
 
         } 

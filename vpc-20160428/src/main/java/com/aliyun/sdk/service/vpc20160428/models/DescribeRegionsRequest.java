@@ -25,6 +25,10 @@ public class DescribeRegionsRequest extends Request {
     private Long ownerId;
 
     @Query
+    @NameInMap("ProductType")
+    private String productType;
+
+    @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -37,6 +41,7 @@ public class DescribeRegionsRequest extends Request {
         this.acceptLanguage = builder.acceptLanguage;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.productType = builder.productType;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
     }
@@ -76,6 +81,13 @@ public class DescribeRegionsRequest extends Request {
     }
 
     /**
+     * @return productType
+     */
+    public String getProductType() {
+        return this.productType;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -93,6 +105,7 @@ public class DescribeRegionsRequest extends Request {
         private String acceptLanguage; 
         private String ownerAccount; 
         private Long ownerId; 
+        private String productType; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
 
@@ -105,6 +118,7 @@ public class DescribeRegionsRequest extends Request {
             this.acceptLanguage = request.acceptLanguage;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.productType = request.productType;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
         } 
@@ -133,6 +147,15 @@ public class DescribeRegionsRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * ProductType.
+         */
+        public Builder productType(String productType) {
+            this.putQueryParameter("ProductType", productType);
+            this.productType = productType;
             return this;
         }
 

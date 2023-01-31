@@ -25,6 +25,10 @@ public class ModifyVpnAttachmentAttributeRequest extends Request {
     private String clientToken;
 
     @Query
+    @NameInMap("CustomerGatewayId")
+    private String customerGatewayId;
+
+    @Query
     @NameInMap("EffectImmediately")
     private Boolean effectImmediately;
 
@@ -95,6 +99,7 @@ public class ModifyVpnAttachmentAttributeRequest extends Request {
         this.autoConfigRoute = builder.autoConfigRoute;
         this.bgpConfig = builder.bgpConfig;
         this.clientToken = builder.clientToken;
+        this.customerGatewayId = builder.customerGatewayId;
         this.effectImmediately = builder.effectImmediately;
         this.enableDpd = builder.enableDpd;
         this.enableNatTraversal = builder.enableNatTraversal;
@@ -145,6 +150,13 @@ public class ModifyVpnAttachmentAttributeRequest extends Request {
      */
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    /**
+     * @return customerGatewayId
+     */
+    public String getCustomerGatewayId() {
+        return this.customerGatewayId;
     }
 
     /**
@@ -263,6 +275,7 @@ public class ModifyVpnAttachmentAttributeRequest extends Request {
         private Boolean autoConfigRoute; 
         private String bgpConfig; 
         private String clientToken; 
+        private String customerGatewayId; 
         private Boolean effectImmediately; 
         private Boolean enableDpd; 
         private Boolean enableNatTraversal; 
@@ -289,6 +302,7 @@ public class ModifyVpnAttachmentAttributeRequest extends Request {
             this.autoConfigRoute = request.autoConfigRoute;
             this.bgpConfig = request.bgpConfig;
             this.clientToken = request.clientToken;
+            this.customerGatewayId = request.customerGatewayId;
             this.effectImmediately = request.effectImmediately;
             this.enableDpd = request.enableDpd;
             this.enableNatTraversal = request.enableNatTraversal;
@@ -331,6 +345,15 @@ public class ModifyVpnAttachmentAttributeRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * CustomerGatewayId.
+         */
+        public Builder customerGatewayId(String customerGatewayId) {
+            this.putQueryParameter("CustomerGatewayId", customerGatewayId);
+            this.customerGatewayId = customerGatewayId;
             return this;
         }
 

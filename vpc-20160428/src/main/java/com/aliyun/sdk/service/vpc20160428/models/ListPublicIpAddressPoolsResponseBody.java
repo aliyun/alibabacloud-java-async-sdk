@@ -131,122 +131,62 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
 
     } 
 
-    public static class PublicIpCidrBlockList extends TeaModel {
-        @NameInMap("CidrBlock")
-        private String cidrBlock;
+    public static class Tags extends TeaModel {
+        @NameInMap("Key")
+        private String key;
 
-        @NameInMap("CreationTime")
-        private String creationTime;
+        @NameInMap("Value")
+        private String value;
 
-        @NameInMap("Status")
-        private String status;
-
-        @NameInMap("TotalIpNum")
-        private Integer totalIpNum;
-
-        @NameInMap("UsedIpNum")
-        private Integer usedIpNum;
-
-        private PublicIpCidrBlockList(Builder builder) {
-            this.cidrBlock = builder.cidrBlock;
-            this.creationTime = builder.creationTime;
-            this.status = builder.status;
-            this.totalIpNum = builder.totalIpNum;
-            this.usedIpNum = builder.usedIpNum;
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
         }
 
         public static Builder builder() {
             return new Builder();
         }
 
-        public static PublicIpCidrBlockList create() {
+        public static Tags create() {
             return builder().build();
         }
 
         /**
-         * @return cidrBlock
+         * @return key
          */
-        public String getCidrBlock() {
-            return this.cidrBlock;
+        public String getKey() {
+            return this.key;
         }
 
         /**
-         * @return creationTime
+         * @return value
          */
-        public String getCreationTime() {
-            return this.creationTime;
-        }
-
-        /**
-         * @return status
-         */
-        public String getStatus() {
-            return this.status;
-        }
-
-        /**
-         * @return totalIpNum
-         */
-        public Integer getTotalIpNum() {
-            return this.totalIpNum;
-        }
-
-        /**
-         * @return usedIpNum
-         */
-        public Integer getUsedIpNum() {
-            return this.usedIpNum;
+        public String getValue() {
+            return this.value;
         }
 
         public static final class Builder {
-            private String cidrBlock; 
-            private String creationTime; 
-            private String status; 
-            private Integer totalIpNum; 
-            private Integer usedIpNum; 
+            private String key; 
+            private String value; 
 
             /**
-             * CidrBlock.
+             * Key.
              */
-            public Builder cidrBlock(String cidrBlock) {
-                this.cidrBlock = cidrBlock;
+            public Builder key(String key) {
+                this.key = key;
                 return this;
             }
 
             /**
-             * CreationTime.
+             * Value.
              */
-            public Builder creationTime(String creationTime) {
-                this.creationTime = creationTime;
+            public Builder value(String value) {
+                this.value = value;
                 return this;
             }
 
-            /**
-             * Status.
-             */
-            public Builder status(String status) {
-                this.status = status;
-                return this;
-            }
-
-            /**
-             * TotalIpNum.
-             */
-            public Builder totalIpNum(Integer totalIpNum) {
-                this.totalIpNum = totalIpNum;
-                return this;
-            }
-
-            /**
-             * UsedIpNum.
-             */
-            public Builder usedIpNum(Integer usedIpNum) {
-                this.usedIpNum = usedIpNum;
-                return this;
-            }
-
-            public PublicIpCidrBlockList build() {
-                return new PublicIpCidrBlockList(this);
+            public Tags build() {
+                return new Tags(this);
             } 
 
         } 
@@ -268,17 +208,26 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
         @NameInMap("Name")
         private String name;
 
+        @NameInMap("OwnerId")
+        private Long ownerId;
+
         @NameInMap("PublicIpAddressPoolId")
         private String publicIpAddressPoolId;
-
-        @NameInMap("PublicIpCidrBlockList")
-        private java.util.List < PublicIpCidrBlockList> publicIpCidrBlockList;
 
         @NameInMap("RegionId")
         private String regionId;
 
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
+        @NameInMap("ShareType")
+        private String shareType;
+
         @NameInMap("Status")
         private String status;
+
+        @NameInMap("Tags")
+        private java.util.List < Tags> tags;
 
         @NameInMap("TotalIpNum")
         private Integer totalIpNum;
@@ -286,22 +235,21 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
         @NameInMap("UsedIpNum")
         private Integer usedIpNum;
 
-        @NameInMap("UserType")
-        private Boolean userType;
-
         private PublicIpAddressPoolList(Builder builder) {
             this.creationTime = builder.creationTime;
             this.description = builder.description;
             this.ipAddressRemaining = builder.ipAddressRemaining;
             this.isp = builder.isp;
             this.name = builder.name;
+            this.ownerId = builder.ownerId;
             this.publicIpAddressPoolId = builder.publicIpAddressPoolId;
-            this.publicIpCidrBlockList = builder.publicIpCidrBlockList;
             this.regionId = builder.regionId;
+            this.resourceGroupId = builder.resourceGroupId;
+            this.shareType = builder.shareType;
             this.status = builder.status;
+            this.tags = builder.tags;
             this.totalIpNum = builder.totalIpNum;
             this.usedIpNum = builder.usedIpNum;
-            this.userType = builder.userType;
         }
 
         public static Builder builder() {
@@ -348,17 +296,17 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
         }
 
         /**
+         * @return ownerId
+         */
+        public Long getOwnerId() {
+            return this.ownerId;
+        }
+
+        /**
          * @return publicIpAddressPoolId
          */
         public String getPublicIpAddressPoolId() {
             return this.publicIpAddressPoolId;
-        }
-
-        /**
-         * @return publicIpCidrBlockList
-         */
-        public java.util.List < PublicIpCidrBlockList> getPublicIpCidrBlockList() {
-            return this.publicIpCidrBlockList;
         }
 
         /**
@@ -369,10 +317,31 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
+         * @return shareType
+         */
+        public String getShareType() {
+            return this.shareType;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
             return this.status;
+        }
+
+        /**
+         * @return tags
+         */
+        public java.util.List < Tags> getTags() {
+            return this.tags;
         }
 
         /**
@@ -389,26 +358,21 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
             return this.usedIpNum;
         }
 
-        /**
-         * @return userType
-         */
-        public Boolean getUserType() {
-            return this.userType;
-        }
-
         public static final class Builder {
             private String creationTime; 
             private String description; 
             private Boolean ipAddressRemaining; 
             private String isp; 
             private String name; 
+            private Long ownerId; 
             private String publicIpAddressPoolId; 
-            private java.util.List < PublicIpCidrBlockList> publicIpCidrBlockList; 
             private String regionId; 
+            private String resourceGroupId; 
+            private String shareType; 
             private String status; 
+            private java.util.List < Tags> tags; 
             private Integer totalIpNum; 
             private Integer usedIpNum; 
-            private Boolean userType; 
 
             /**
              * CreationTime.
@@ -451,18 +415,18 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * PublicIpAddressPoolId.
+             * OwnerId.
              */
-            public Builder publicIpAddressPoolId(String publicIpAddressPoolId) {
-                this.publicIpAddressPoolId = publicIpAddressPoolId;
+            public Builder ownerId(Long ownerId) {
+                this.ownerId = ownerId;
                 return this;
             }
 
             /**
-             * PublicIpCidrBlockList.
+             * PublicIpAddressPoolId.
              */
-            public Builder publicIpCidrBlockList(java.util.List < PublicIpCidrBlockList> publicIpCidrBlockList) {
-                this.publicIpCidrBlockList = publicIpCidrBlockList;
+            public Builder publicIpAddressPoolId(String publicIpAddressPoolId) {
+                this.publicIpAddressPoolId = publicIpAddressPoolId;
                 return this;
             }
 
@@ -475,10 +439,34 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * ShareType.
+             */
+            public Builder shareType(String shareType) {
+                this.shareType = shareType;
+                return this;
+            }
+
+            /**
              * Status.
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List < Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 
@@ -495,14 +483,6 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
              */
             public Builder usedIpNum(Integer usedIpNum) {
                 this.usedIpNum = usedIpNum;
-                return this;
-            }
-
-            /**
-             * UserType.
-             */
-            public Builder userType(Boolean userType) {
-                this.userType = userType;
                 return this;
             }
 

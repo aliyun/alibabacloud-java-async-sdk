@@ -783,6 +783,9 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         @NameInMap("IkeConfig")
         private IkeConfig ikeConfig;
 
+        @NameInMap("InternetIp")
+        private String internetIp;
+
         @NameInMap("IpsecConfig")
         private IpsecConfig ipsecConfig;
 
@@ -838,6 +841,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
             this.enableDpd = builder.enableDpd;
             this.enableNatTraversal = builder.enableNatTraversal;
             this.ikeConfig = builder.ikeConfig;
+            this.internetIp = builder.internetIp;
             this.ipsecConfig = builder.ipsecConfig;
             this.localSubnet = builder.localSubnet;
             this.name = builder.name;
@@ -924,6 +928,13 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
          */
         public IkeConfig getIkeConfig() {
             return this.ikeConfig;
+        }
+
+        /**
+         * @return internetIp
+         */
+        public String getInternetIp() {
+            return this.internetIp;
         }
 
         /**
@@ -1041,6 +1052,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
             private Boolean enableDpd; 
             private Boolean enableNatTraversal; 
             private IkeConfig ikeConfig; 
+            private String internetIp; 
             private IpsecConfig ipsecConfig; 
             private String localSubnet; 
             private String name; 
@@ -1126,6 +1138,14 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
              */
             public Builder ikeConfig(IkeConfig ikeConfig) {
                 this.ikeConfig = ikeConfig;
+                return this;
+            }
+
+            /**
+             * InternetIp.
+             */
+            public Builder internetIp(String internetIp) {
+                this.internetIp = internetIp;
                 return this;
             }
 

@@ -379,6 +379,9 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
         @NameInMap("RouteTableId")
         private String routeTableId;
 
+        @NameInMap("ServiceType")
+        private String serviceType;
+
         @NameInMap("Status")
         private String status;
 
@@ -394,6 +397,7 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
             this.routeEntryId = builder.routeEntryId;
             this.routeEntryName = builder.routeEntryName;
             this.routeTableId = builder.routeTableId;
+            this.serviceType = builder.serviceType;
             this.status = builder.status;
             this.type = builder.type;
         }
@@ -463,6 +467,13 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
         }
 
         /**
+         * @return serviceType
+         */
+        public String getServiceType() {
+            return this.serviceType;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -485,6 +496,7 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
             private String routeEntryId; 
             private String routeEntryName; 
             private String routeTableId; 
+            private String serviceType; 
             private String status; 
             private String type; 
 
@@ -549,6 +561,14 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
              */
             public Builder routeTableId(String routeTableId) {
                 this.routeTableId = routeTableId;
+                return this;
+            }
+
+            /**
+             * ServiceType.
+             */
+            public Builder serviceType(String serviceType) {
+                this.serviceType = serviceType;
                 return this;
             }
 

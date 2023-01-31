@@ -46,10 +46,6 @@ public class CreateIpv6GatewayRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
-    @NameInMap("Spec")
-    private String spec;
-
-    @Query
     @NameInMap("VpcId")
     @Validation(required = true)
     private String vpcId;
@@ -64,7 +60,6 @@ public class CreateIpv6GatewayRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.spec = builder.spec;
         this.vpcId = builder.vpcId;
     }
 
@@ -138,13 +133,6 @@ public class CreateIpv6GatewayRequest extends Request {
     }
 
     /**
-     * @return spec
-     */
-    public String getSpec() {
-        return this.spec;
-    }
-
-    /**
      * @return vpcId
      */
     public String getVpcId() {
@@ -160,7 +148,6 @@ public class CreateIpv6GatewayRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String spec; 
         private String vpcId; 
 
         private Builder() {
@@ -177,7 +164,6 @@ public class CreateIpv6GatewayRequest extends Request {
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.spec = request.spec;
             this.vpcId = request.vpcId;
         } 
 
@@ -250,15 +236,6 @@ public class CreateIpv6GatewayRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * Spec.
-         */
-        public Builder spec(String spec) {
-            this.putQueryParameter("Spec", spec);
-            this.spec = spec;
             return this;
         }
 

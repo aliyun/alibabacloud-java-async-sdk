@@ -763,6 +763,9 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
         @NameInMap("Interval")
         private Integer interval;
 
+        @NameInMap("Policy")
+        private String policy;
+
         @NameInMap("Retry")
         private Integer retry;
 
@@ -773,6 +776,7 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
             this.dip = builder.dip;
             this.enable = builder.enable;
             this.interval = builder.interval;
+            this.policy = builder.policy;
             this.retry = builder.retry;
             this.sip = builder.sip;
         }
@@ -807,6 +811,13 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return policy
+         */
+        public String getPolicy() {
+            return this.policy;
+        }
+
+        /**
          * @return retry
          */
         public Integer getRetry() {
@@ -824,6 +835,7 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
             private String dip; 
             private String enable; 
             private Integer interval; 
+            private String policy; 
             private Integer retry; 
             private String sip; 
 
@@ -848,6 +860,14 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
              */
             public Builder interval(Integer interval) {
                 this.interval = interval;
+                return this;
+            }
+
+            /**
+             * Policy.
+             */
+            public Builder policy(String policy) {
+                this.policy = policy;
                 return this;
             }
 

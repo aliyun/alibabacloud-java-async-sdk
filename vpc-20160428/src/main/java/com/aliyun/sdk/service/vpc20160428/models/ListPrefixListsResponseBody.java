@@ -131,6 +131,67 @@ public class ListPrefixListsResponseBody extends TeaModel {
 
     } 
 
+    public static class Tags extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
     public static class PrefixLists extends TeaModel {
         @NameInMap("CidrBlocks")
         private java.util.List < String > cidrBlocks;
@@ -159,11 +220,20 @@ public class ListPrefixListsResponseBody extends TeaModel {
         @NameInMap("PrefixListStatus")
         private String prefixListStatus;
 
+        @NameInMap("RegionId")
+        private String regionId;
+
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
         @NameInMap("ShareType")
         private String shareType;
 
         @NameInMap("Status")
         private String status;
+
+        @NameInMap("Tags")
+        private java.util.List < Tags> tags;
 
         private PrefixLists(Builder builder) {
             this.cidrBlocks = builder.cidrBlocks;
@@ -175,8 +245,11 @@ public class ListPrefixListsResponseBody extends TeaModel {
             this.prefixListId = builder.prefixListId;
             this.prefixListName = builder.prefixListName;
             this.prefixListStatus = builder.prefixListStatus;
+            this.regionId = builder.regionId;
+            this.resourceGroupId = builder.resourceGroupId;
             this.shareType = builder.shareType;
             this.status = builder.status;
+            this.tags = builder.tags;
         }
 
         public static Builder builder() {
@@ -251,6 +324,20 @@ public class ListPrefixListsResponseBody extends TeaModel {
         }
 
         /**
+         * @return regionId
+         */
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return shareType
          */
         public String getShareType() {
@@ -264,6 +351,13 @@ public class ListPrefixListsResponseBody extends TeaModel {
             return this.status;
         }
 
+        /**
+         * @return tags
+         */
+        public java.util.List < Tags> getTags() {
+            return this.tags;
+        }
+
         public static final class Builder {
             private java.util.List < String > cidrBlocks; 
             private String creationTime; 
@@ -274,8 +368,11 @@ public class ListPrefixListsResponseBody extends TeaModel {
             private String prefixListId; 
             private String prefixListName; 
             private String prefixListStatus; 
+            private String regionId; 
+            private String resourceGroupId; 
             private String shareType; 
             private String status; 
+            private java.util.List < Tags> tags; 
 
             /**
              * 前缀列表包含的网段
@@ -350,6 +447,22 @@ public class ListPrefixListsResponseBody extends TeaModel {
             }
 
             /**
+             * RegionId.
+             */
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
              * ShareType.
              */
             public Builder shareType(String shareType) {
@@ -362,6 +475,14 @@ public class ListPrefixListsResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List < Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 

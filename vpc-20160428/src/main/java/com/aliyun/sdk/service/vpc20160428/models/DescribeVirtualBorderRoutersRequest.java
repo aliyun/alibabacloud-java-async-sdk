@@ -17,6 +17,10 @@ public class DescribeVirtualBorderRoutersRequest extends Request {
     private java.util.List < Filter> filter;
 
     @Query
+    @NameInMap("IncludeCrossAccountVbr")
+    private Boolean includeCrossAccountVbr;
+
+    @Query
     @NameInMap("OwnerId")
     private Long ownerId;
 
@@ -45,6 +49,7 @@ public class DescribeVirtualBorderRoutersRequest extends Request {
     private DescribeVirtualBorderRoutersRequest(Builder builder) {
         super(builder);
         this.filter = builder.filter;
+        this.includeCrossAccountVbr = builder.includeCrossAccountVbr;
         this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -71,6 +76,13 @@ public class DescribeVirtualBorderRoutersRequest extends Request {
      */
     public java.util.List < Filter> getFilter() {
         return this.filter;
+    }
+
+    /**
+     * @return includeCrossAccountVbr
+     */
+    public Boolean getIncludeCrossAccountVbr() {
+        return this.includeCrossAccountVbr;
     }
 
     /**
@@ -117,6 +129,7 @@ public class DescribeVirtualBorderRoutersRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeVirtualBorderRoutersRequest, Builder> {
         private java.util.List < Filter> filter; 
+        private Boolean includeCrossAccountVbr; 
         private Long ownerId; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -131,6 +144,7 @@ public class DescribeVirtualBorderRoutersRequest extends Request {
         private Builder(DescribeVirtualBorderRoutersRequest request) {
             super(request);
             this.filter = request.filter;
+            this.includeCrossAccountVbr = request.includeCrossAccountVbr;
             this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
@@ -145,6 +159,15 @@ public class DescribeVirtualBorderRoutersRequest extends Request {
         public Builder filter(java.util.List < Filter> filter) {
             this.putQueryParameter("Filter", filter);
             this.filter = filter;
+            return this;
+        }
+
+        /**
+         * IncludeCrossAccountVbr.
+         */
+        public Builder includeCrossAccountVbr(Boolean includeCrossAccountVbr) {
+            this.putQueryParameter("IncludeCrossAccountVbr", includeCrossAccountVbr);
+            this.includeCrossAccountVbr = includeCrossAccountVbr;
             return this;
         }
 
