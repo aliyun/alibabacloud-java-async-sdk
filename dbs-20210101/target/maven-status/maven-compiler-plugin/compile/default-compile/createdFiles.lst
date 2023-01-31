@@ -1,4 +1,5 @@
 com/aliyun/sdk/service/dbs20210101/models/DescribeDownloadSupportResponse.class
+com/aliyun/sdk/service/dbs20210101/models/ChangeResourceGroupResponse$Builder.class
 com/aliyun/sdk/service/dbs20210101/models/ModifyDBTablesRecoveryStateResponse$BuilderImpl.class
 com/aliyun/sdk/service/dbs20210101/models/DescribeDownloadSupportResponseBody.class
 com/aliyun/sdk/service/dbs20210101/AsyncClient.class
@@ -9,6 +10,7 @@ com/aliyun/sdk/service/dbs20210101/models/SupportDBTableRecoveryRequest$Builder.
 com/aliyun/sdk/service/dbs20210101/models/CreateDownloadRequest$Builder.class
 com/aliyun/sdk/service/dbs20210101/models/DescribeSandboxRecoveryTimeResponse.class
 com/aliyun/sdk/service/dbs20210101/models/DescribeDBTablesRecoveryStateResponse.class
+com/aliyun/sdk/service/dbs20210101/models/ChangeResourceGroupRequest$Builder.class
 com/aliyun/sdk/service/dbs20210101/models/DescribeSandboxRecoveryTimeResponseBody$Data$Builder.class
 com/aliyun/sdk/service/dbs20210101/models/DescribeSandboxRecoveryTimeResponse$BuilderImpl.class
 com/aliyun/sdk/service/dbs20210101/models/DescribeSandboxRecoveryTimeResponseBody$1.class
@@ -24,6 +26,7 @@ com/aliyun/sdk/service/dbs20210101/models/ModifyDBTablesRecoveryStateRequest$Bui
 com/aliyun/sdk/service/dbs20210101/models/DescribeSandboxRecoveryTimeResponseBody.class
 com/aliyun/sdk/service/dbs20210101/models/DescribeDBTablesRecoveryStateResponseBody.class
 com/aliyun/sdk/service/dbs20210101/models/DescribeDownloadBackupSetStorageInfoRequest$Builder.class
+com/aliyun/sdk/service/dbs20210101/models/ChangeResourceGroupResponseBody$1.class
 com/aliyun/sdk/service/dbs20210101/models/DescribeDownloadSupportResponseBody$1.class
 com/aliyun/sdk/service/dbs20210101/models/DescribeDBTablesRecoveryBackupSetRequest$Builder.class
 com/aliyun/sdk/service/dbs20210101/models/DescribeDBTablesRecoveryTimeRangeResponseBody$1.class
@@ -51,6 +54,7 @@ com/aliyun/sdk/service/dbs20210101/models/DescribeDownloadSupportRequest.class
 com/aliyun/sdk/service/dbs20210101/models/SupportDBTableRecoveryResponse.class
 com/aliyun/sdk/service/dbs20210101/models/ModifyDBTablesRecoveryStateRequest.class
 com/aliyun/sdk/service/dbs20210101/models/DescribeDownloadBackupSetStorageInfoResponseBody$Builder.class
+com/aliyun/sdk/service/dbs20210101/models/ChangeResourceGroupRequest$1.class
 com/aliyun/sdk/service/dbs20210101/models/DescribeDownloadTaskResponseBody$1.class
 com/aliyun/sdk/service/dbs20210101/models/DescribeDBTablesRecoveryTimeRangeResponse$Builder.class
 com/aliyun/sdk/service/dbs20210101/models/DescribeDBTablesRecoveryStateResponseBody$1.class
@@ -81,6 +85,7 @@ com/aliyun/sdk/service/dbs20210101/models/DescribeSandboxInstancesResponse$Build
 com/aliyun/sdk/service/dbs20210101/models/DescribeSandboxBackupSetsRequest$1.class
 com/aliyun/sdk/service/dbs20210101/models/DescribeDownloadTaskRequest$1.class
 com/aliyun/sdk/service/dbs20210101/models/CreateDownloadResponse$1.class
+com/aliyun/sdk/service/dbs20210101/models/ChangeResourceGroupResponse$1.class
 com/aliyun/sdk/service/dbs20210101/models/DeleteSandboxInstanceRequest.class
 com/aliyun/sdk/service/dbs20210101/models/DescribeDownloadTaskResponseBody$Data.class
 com/aliyun/sdk/service/dbs20210101/models/DescribeDBTablesRecoveryBackupSetResponseBody$1.class
@@ -93,12 +98,14 @@ com/aliyun/sdk/service/dbs20210101/models/DescribeDownloadBackupSetStorageInfoRe
 com/aliyun/sdk/service/dbs20210101/models/DescribeSandboxRecoveryTimeRequest.class
 com/aliyun/sdk/service/dbs20210101/models/DeleteSandboxInstanceRequest$Builder.class
 com/aliyun/sdk/service/dbs20210101/models/CreateSandboxInstanceRequest.class
+com/aliyun/sdk/service/dbs20210101/models/ChangeResourceGroupResponse$BuilderImpl.class
 com/aliyun/sdk/service/dbs20210101/models/CreateSandboxInstanceResponseBody.class
 com/aliyun/sdk/service/dbs20210101/models/DescribeDBTablesRecoveryStateResponse$BuilderImpl.class
 com/aliyun/sdk/service/dbs20210101/models/DeleteSandboxInstanceResponse$1.class
 com/aliyun/sdk/service/dbs20210101/models/DescribeDBTablesRecoveryStateResponse$1.class
 com/aliyun/sdk/service/dbs20210101/models/DeleteSandboxInstanceRequest$1.class
 com/aliyun/sdk/service/dbs20210101/models/DescribeDownloadBackupSetStorageInfoResponse$1.class
+com/aliyun/sdk/service/dbs20210101/models/ChangeResourceGroupRequest.class
 com/aliyun/sdk/service/dbs20210101/models/DescribeSandboxBackupSetsResponse$1.class
 com/aliyun/sdk/service/dbs20210101/models/DescribeDownloadBackupSetStorageInfoRequest$1.class
 com/aliyun/sdk/service/dbs20210101/models/CreateDownloadResponseBody$Builder.class
@@ -110,6 +117,7 @@ com/aliyun/sdk/service/dbs20210101/models/ModifyDBTablesRecoveryStateRequest$1.c
 com/aliyun/sdk/service/dbs20210101/models/DescribeDownloadBackupSetStorageInfoRequest.class
 com/aliyun/sdk/service/dbs20210101/DefaultAsyncClientBuilder.class
 com/aliyun/sdk/service/dbs20210101/models/ModifyDBTablesRecoveryStateResponseBody$1.class
+com/aliyun/sdk/service/dbs20210101/models/ChangeResourceGroupResponse.class
 com/aliyun/sdk/service/dbs20210101/models/DescribeSandboxRecoveryTimeResponse$Builder.class
 com/aliyun/sdk/service/dbs20210101/models/DescribeDownloadSupportResponse$Builder.class
 com/aliyun/sdk/service/dbs20210101/models/DescribeDownloadTaskResponseBody.class
@@ -135,6 +143,7 @@ com/aliyun/sdk/service/dbs20210101/models/DescribeDownloadSupportResponse$1.clas
 com/aliyun/sdk/service/dbs20210101/models/DescribeSandboxRecoveryTimeResponseBody$Data.class
 com/aliyun/sdk/service/dbs20210101/models/CreateSandboxInstanceResponseBody$Data$Builder.class
 com/aliyun/sdk/service/dbs20210101/models/CreateDownloadRequest.class
+com/aliyun/sdk/service/dbs20210101/models/ChangeResourceGroupResponseBody.class
 com/aliyun/sdk/service/dbs20210101/models/DescribeSandboxBackupSetsResponse.class
 com/aliyun/sdk/service/dbs20210101/models/DescribeDBTablesRecoveryTimeRangeRequest$Builder.class
 com/aliyun/sdk/service/dbs20210101/models/DescribeSandboxInstancesResponseBody$1.class
@@ -147,6 +156,7 @@ com/aliyun/sdk/service/dbs20210101/models/DescribeDownloadTaskRequest$Builder.cl
 com/aliyun/sdk/service/dbs20210101/models/DescribeSandboxInstancesResponse$BuilderImpl.class
 com/aliyun/sdk/service/dbs20210101/models/DescribeDBTablesRecoveryTimeRangeResponse.class
 com/aliyun/sdk/service/dbs20210101/models/DescribeDBTablesRecoveryStateRequest$Builder.class
+com/aliyun/sdk/service/dbs20210101/models/ChangeResourceGroupResponseBody$Builder.class
 com/aliyun/sdk/service/dbs20210101/models/DeleteSandboxInstanceResponseBody.class
 com/aliyun/sdk/service/dbs20210101/models/SupportDBTableRecoveryResponseBody$1.class
 com/aliyun/sdk/service/dbs20210101/models/DescribeDBTablesRecoveryBackupSetResponse$Builder.class
