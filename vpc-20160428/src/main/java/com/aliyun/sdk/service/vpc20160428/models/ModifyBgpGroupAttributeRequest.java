@@ -38,6 +38,10 @@ public class ModifyBgpGroupAttributeRequest extends Request {
     private Boolean isFakeAsn;
 
     @Query
+    @NameInMap("LocalAsn")
+    private Long localAsn;
+
+    @Query
     @NameInMap("Name")
     private String name;
 
@@ -66,6 +70,10 @@ public class ModifyBgpGroupAttributeRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
+    @Query
+    @NameInMap("RouteQuota")
+    private Integer routeQuota;
+
     private ModifyBgpGroupAttributeRequest(Builder builder) {
         super(builder);
         this.authKey = builder.authKey;
@@ -74,6 +82,7 @@ public class ModifyBgpGroupAttributeRequest extends Request {
         this.clientToken = builder.clientToken;
         this.description = builder.description;
         this.isFakeAsn = builder.isFakeAsn;
+        this.localAsn = builder.localAsn;
         this.name = builder.name;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -81,6 +90,7 @@ public class ModifyBgpGroupAttributeRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.routeQuota = builder.routeQuota;
     }
 
     public static Builder builder() {
@@ -139,6 +149,13 @@ public class ModifyBgpGroupAttributeRequest extends Request {
     }
 
     /**
+     * @return localAsn
+     */
+    public Long getLocalAsn() {
+        return this.localAsn;
+    }
+
+    /**
      * @return name
      */
     public String getName() {
@@ -187,6 +204,13 @@ public class ModifyBgpGroupAttributeRequest extends Request {
         return this.resourceOwnerId;
     }
 
+    /**
+     * @return routeQuota
+     */
+    public Integer getRouteQuota() {
+        return this.routeQuota;
+    }
+
     public static final class Builder extends Request.Builder<ModifyBgpGroupAttributeRequest, Builder> {
         private String authKey; 
         private String bgpGroupId; 
@@ -194,6 +218,7 @@ public class ModifyBgpGroupAttributeRequest extends Request {
         private String clientToken; 
         private String description; 
         private Boolean isFakeAsn; 
+        private Long localAsn; 
         private String name; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -201,6 +226,7 @@ public class ModifyBgpGroupAttributeRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private Integer routeQuota; 
 
         private Builder() {
             super();
@@ -214,6 +240,7 @@ public class ModifyBgpGroupAttributeRequest extends Request {
             this.clientToken = request.clientToken;
             this.description = request.description;
             this.isFakeAsn = request.isFakeAsn;
+            this.localAsn = request.localAsn;
             this.name = request.name;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -221,6 +248,7 @@ public class ModifyBgpGroupAttributeRequest extends Request {
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.routeQuota = request.routeQuota;
         } 
 
         /**
@@ -274,6 +302,15 @@ public class ModifyBgpGroupAttributeRequest extends Request {
         public Builder isFakeAsn(Boolean isFakeAsn) {
             this.putQueryParameter("IsFakeAsn", isFakeAsn);
             this.isFakeAsn = isFakeAsn;
+            return this;
+        }
+
+        /**
+         * LocalAsn.
+         */
+        public Builder localAsn(Long localAsn) {
+            this.putQueryParameter("LocalAsn", localAsn);
+            this.localAsn = localAsn;
             return this;
         }
 
@@ -337,6 +374,15 @@ public class ModifyBgpGroupAttributeRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * RouteQuota.
+         */
+        public Builder routeQuota(Integer routeQuota) {
+            this.putQueryParameter("RouteQuota", routeQuota);
+            this.routeQuota = routeQuota;
             return this;
         }
 
