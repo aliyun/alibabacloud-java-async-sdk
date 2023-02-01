@@ -86,7 +86,7 @@ public class DescribeApisBySignatureResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * ApiInfos.
+         * The binding time of the API.
          */
         public Builder apiInfos(ApiInfos apiInfos) {
             this.apiInfos = apiInfos;
@@ -94,7 +94,7 @@ public class DescribeApisBySignatureResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The ID of the request.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeApisBySignatureResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The total number of returned entries.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeApisBySignatureResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The number of entries returned per page.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeApisBySignatureResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The returned API information. It is an array consisting of ApiInfo data.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -254,7 +254,7 @@ public class DescribeApisBySignatureResponseBody extends TeaModel {
             private String visibility; 
 
             /**
-             * ApiId.
+             * The description of the API.
              */
             public Builder apiId(String apiId) {
                 this.apiId = apiId;
@@ -262,7 +262,7 @@ public class DescribeApisBySignatureResponseBody extends TeaModel {
             }
 
             /**
-             * ApiName.
+             * The region where the API is located.
              */
             public Builder apiName(String apiName) {
                 this.apiName = apiName;
@@ -270,7 +270,11 @@ public class DescribeApisBySignatureResponseBody extends TeaModel {
             }
 
             /**
-             * BoundTime.
+             * Indicates whether the API is public. Valid values:
+             * <p>
+             * 
+             * *   **PUBLIC**
+             * *   **PRIVATE**
              */
             public Builder boundTime(String boundTime) {
                 this.boundTime = boundTime;
@@ -278,7 +282,7 @@ public class DescribeApisBySignatureResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * Description
              */
             public Builder description(String description) {
                 this.description = description;
@@ -286,7 +290,11 @@ public class DescribeApisBySignatureResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * The name of the runtime environment. Valid values:
+             * <p>
+             * 
+             * *   **RELEASE**
+             * *   **TEST**
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -294,7 +302,7 @@ public class DescribeApisBySignatureResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * The ID of the API group.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -302,7 +310,9 @@ public class DescribeApisBySignatureResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * *   This API is intended for API providers.
+             * <p>
+             * *   The results are returned on separate pages. You can specify PageNumber to obtain the result on the specified page.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -310,7 +320,7 @@ public class DescribeApisBySignatureResponseBody extends TeaModel {
             }
 
             /**
-             * StageName.
+             * The name of the API.
              */
             public Builder stageName(String stageName) {
                 this.stageName = stageName;
@@ -318,7 +328,7 @@ public class DescribeApisBySignatureResponseBody extends TeaModel {
             }
 
             /**
-             * Visibility.
+             * The ID of the API.
              */
             public Builder visibility(String visibility) {
                 this.visibility = visibility;

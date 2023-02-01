@@ -50,7 +50,7 @@ public class DescribeSignaturesByApiResponseBody extends TeaModel {
         private Signatures signatures; 
 
         /**
-         * RequestId.
+         * The returned signature key information. It is an array consisting of SignatureItem data.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeSignaturesByApiResponseBody extends TeaModel {
         }
 
         /**
-         * Signatures.
+         * The time when the key was bound.
          */
         public Builder signatures(Signatures signatures) {
             this.signatures = signatures;
@@ -122,7 +122,7 @@ public class DescribeSignaturesByApiResponseBody extends TeaModel {
             private String signatureName; 
 
             /**
-             * BoundTime.
+             * The ID of the backend signature key.
              */
             public Builder boundTime(String boundTime) {
                 this.boundTime = boundTime;
@@ -130,7 +130,7 @@ public class DescribeSignaturesByApiResponseBody extends TeaModel {
             }
 
             /**
-             * SignatureId.
+             * The name of the backend signature key.
              */
             public Builder signatureId(String signatureId) {
                 this.signatureId = signatureId;
@@ -138,7 +138,7 @@ public class DescribeSignaturesByApiResponseBody extends TeaModel {
             }
 
             /**
-             * SignatureName.
+             * *   This API is intended for API providers.
              */
             public Builder signatureName(String signatureName) {
                 this.signatureName = signatureName;

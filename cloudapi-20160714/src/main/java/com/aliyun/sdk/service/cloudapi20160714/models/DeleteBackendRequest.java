@@ -68,7 +68,7 @@ public class DeleteBackendRequest extends Request {
         } 
 
         /**
-         * BackendId.
+         * The ID of the backend service.
          */
         public Builder backendId(String backendId) {
             this.putQueryParameter("BackendId", backendId);

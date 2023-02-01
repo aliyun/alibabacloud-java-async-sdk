@@ -113,7 +113,11 @@ public class RemoveSignatureApisRequest extends Request {
         } 
 
         /**
-         * ApiIds.
+         * The name of the runtime environment. Valid values:
+         * <p>
+         * 
+         * *   **RELEASE**
+         * *   **TEST**
          */
         public Builder apiIds(String apiIds) {
             this.putQueryParameter("ApiIds", apiIds);
@@ -122,7 +126,11 @@ public class RemoveSignatureApisRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * The IDs of the APIs from which you want to unbind the signature key.
+         * <p>
+         * 
+         * *   If this parameter is not specified, the signature key is unbound from all the APIs in the specified environment of the API group.
+         * *   The IDs of the APIs that you want to manage. Separate multiple API IDs with commas (,). A maximum of 100 API IDs can be entered.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -140,7 +148,7 @@ public class RemoveSignatureApisRequest extends Request {
         }
 
         /**
-         * SignatureId.
+         * The ID of the API group to which the API that you want to manage belongs.
          */
         public Builder signatureId(String signatureId) {
             this.putQueryParameter("SignatureId", signatureId);
@@ -149,7 +157,7 @@ public class RemoveSignatureApisRequest extends Request {
         }
 
         /**
-         * StageName.
+         * The ID of the request.
          */
         public Builder stageName(String stageName) {
             this.putQueryParameter("StageName", stageName);

@@ -50,7 +50,7 @@ public class DescribeApiLatencyDataResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * CallLatencys.
+         * The value corresponding to the monitoring metric.
          */
         public Builder callLatencys(CallLatencys callLatencys) {
             this.callLatencys = callLatencys;
@@ -58,7 +58,7 @@ public class DescribeApiLatencyDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The returned information about API call latency. It is an array consisting of MonitorItem data.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeApiLatencyDataResponseBody extends TeaModel {
             private String itemValue; 
 
             /**
-             * ItemTime.
+             * auditing
              */
             public Builder itemTime(String itemTime) {
                 this.itemTime = itemTime;
@@ -118,7 +118,7 @@ public class DescribeApiLatencyDataResponseBody extends TeaModel {
             }
 
             /**
-             * ItemValue.
+             * The time of the monitoring metric. The time format follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ
              */
             public Builder itemValue(String itemValue) {
                 this.itemValue = itemValue;

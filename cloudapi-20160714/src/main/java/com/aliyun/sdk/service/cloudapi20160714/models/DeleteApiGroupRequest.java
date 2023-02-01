@@ -83,7 +83,7 @@ public class DeleteApiGroupRequest extends Request {
         } 
 
         /**
-         * GroupId.
+         * The object tags that match the lifecycle rule. You can specify multiple tags.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -101,7 +101,7 @@ public class DeleteApiGroupRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The key of the tag.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -157,7 +157,7 @@ public class DeleteApiGroupRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The value of the tag.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -165,7 +165,7 @@ public class DeleteApiGroupRequest extends Request {
             }
 
             /**
-             * Value.
+             * The ID of the request.
              */
             public Builder value(String value) {
                 this.value = value;

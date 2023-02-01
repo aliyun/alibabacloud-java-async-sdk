@@ -50,7 +50,7 @@ public class RemoveVpcAccessResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Apis.
+         * API operations
          */
         public Builder apis(Apis apis) {
             this.apis = apis;
@@ -58,7 +58,7 @@ public class RemoveVpcAccessResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class RemoveVpcAccessResponseBody extends TeaModel {
             private String stageId; 
 
             /**
-             * ApiId.
+             * API Id
              */
             public Builder apiId(String apiId) {
                 this.apiId = apiId;
@@ -130,7 +130,7 @@ public class RemoveVpcAccessResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * The ID of the API group.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -138,7 +138,7 @@ public class RemoveVpcAccessResponseBody extends TeaModel {
             }
 
             /**
-             * StageId.
+             * The ID of the runtime environment.
              */
             public Builder stageId(String stageId) {
                 this.stageId = stageId;

@@ -82,7 +82,7 @@ public class DescribePurchasedApiGroupsRequest extends Request {
         } 
 
         /**
-         * PageNumber.
+         * The number of entries to return on each page. Maximum value: 100. Default value: 10.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -91,7 +91,7 @@ public class DescribePurchasedApiGroupsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The page number of the returned page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

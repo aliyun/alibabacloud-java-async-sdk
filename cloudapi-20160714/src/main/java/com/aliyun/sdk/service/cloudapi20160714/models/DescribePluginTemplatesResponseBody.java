@@ -50,7 +50,7 @@ public class DescribePluginTemplatesResponseBody extends TeaModel {
         private Templates templates; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribePluginTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * Templates.
+         * The templates.
          */
         public Builder templates(Templates templates) {
             this.templates = templates;
@@ -146,7 +146,7 @@ public class DescribePluginTemplatesResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * Description.
+             * The description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -154,7 +154,7 @@ public class DescribePluginTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * DocumentAnchor.
+             * The document anchor point.
              */
             public Builder documentAnchor(String documentAnchor) {
                 this.documentAnchor = documentAnchor;
@@ -162,7 +162,7 @@ public class DescribePluginTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * DocumentId.
+             * The ID of the document.
              */
             public Builder documentId(String documentId) {
                 this.documentId = documentId;
@@ -170,7 +170,7 @@ public class DescribePluginTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Sample.
+             * The sample.
              */
             public Builder sample(String sample) {
                 this.sample = sample;
@@ -178,7 +178,7 @@ public class DescribePluginTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * The title of the plug-in template title.
              */
             public Builder title(String title) {
                 this.title = title;

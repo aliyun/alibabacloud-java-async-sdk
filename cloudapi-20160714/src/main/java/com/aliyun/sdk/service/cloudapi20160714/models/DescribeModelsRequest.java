@@ -111,7 +111,7 @@ public class DescribeModelsRequest extends Request {
         } 
 
         /**
-         * GroupId.
+         * The ID of the API group.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -120,7 +120,7 @@ public class DescribeModelsRequest extends Request {
         }
 
         /**
-         * ModelId.
+         * The ID of the model.
          */
         public Builder modelId(String modelId) {
             this.putQueryParameter("ModelId", modelId);
@@ -129,7 +129,7 @@ public class DescribeModelsRequest extends Request {
         }
 
         /**
-         * ModelName.
+         * The name of the model.
          */
         public Builder modelName(String modelName) {
             this.putQueryParameter("ModelName", modelName);
@@ -138,7 +138,7 @@ public class DescribeModelsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -147,7 +147,7 @@ public class DescribeModelsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Maximum value: 100. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

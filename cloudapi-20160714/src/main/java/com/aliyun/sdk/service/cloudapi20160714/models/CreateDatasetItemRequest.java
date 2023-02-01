@@ -112,7 +112,7 @@ public class CreateDatasetItemRequest extends Request {
         } 
 
         /**
-         * DatasetId.
+         * The ID of the dataset.
          */
         public Builder datasetId(String datasetId) {
             this.putQueryParameter("DatasetId", datasetId);
@@ -121,7 +121,7 @@ public class CreateDatasetItemRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the data entry. The description cannot be more than 180 characters in length.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -130,7 +130,7 @@ public class CreateDatasetItemRequest extends Request {
         }
 
         /**
-         * ExpiredTime.
+         * The time in UTC when the data entry expires. The time is in the **yyyy-MM-ddTHH:mm:ssZ** format. If this parameter is empty, the data entry does not expire.
          */
         public Builder expiredTime(String expiredTime) {
             this.putQueryParameter("ExpiredTime", expiredTime);
@@ -148,7 +148,7 @@ public class CreateDatasetItemRequest extends Request {
         }
 
         /**
-         * Value.
+         * The value of the data entry. The value corresponds to the dataset type.
          */
         public Builder value(String value) {
             this.putQueryParameter("Value", value);

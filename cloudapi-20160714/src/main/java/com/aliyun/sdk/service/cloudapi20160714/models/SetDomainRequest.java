@@ -126,7 +126,11 @@ public class SetDomainRequest extends Request {
         } 
 
         /**
-         * BindStageName.
+         * The network type of the domain name to be bound. Default value: INTERNET. Valid values:
+         * <p>
+         * 
+         * *   INTERNET
+         * *   INTRANET. If you set this parameter to this value, the domain name cannot be used on the Internet.
          */
         public Builder bindStageName(String bindStageName) {
             this.putQueryParameter("BindStageName", bindStageName);
@@ -135,7 +139,7 @@ public class SetDomainRequest extends Request {
         }
 
         /**
-         * CustomDomainType.
+         * Specifies whether this binding relationship takes precedence over the binding relationships between the domain name and other API groups. If you set this parameter to true, this binding relationship takes precedence, and the domain name is automatically unbound from other API groups. This operation brings risks. Proceed with caution.
          */
         public Builder customDomainType(String customDomainType) {
             this.putQueryParameter("CustomDomainType", customDomainType);
@@ -144,7 +148,16 @@ public class SetDomainRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * The environment which you can access by using the domain name. If you do not specify this parameter, the domain name can be used to access all environments.
+         * <p>
+         * 
+         * If you specify an environment, the domain name can be used to access only the specified environment. Valid values:
+         * 
+         * *   TEST
+         * *   PRE
+         * *   RELEASE
+         * 
+         * If you want to use the domain name to access all environments, set this parameter to an empty string ("").
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -153,7 +166,7 @@ public class SetDomainRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * The custom domain name.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -162,7 +175,7 @@ public class SetDomainRequest extends Request {
         }
 
         /**
-         * IsForce.
+         * Specifies whether to redirect HTTP requests to HTTPS requests.
          */
         public Builder isForce(Boolean isForce) {
             this.putQueryParameter("IsForce", isForce);
@@ -171,7 +184,7 @@ public class SetDomainRequest extends Request {
         }
 
         /**
-         * IsHttpRedirectToHttps.
+         * The ID of the request.
          */
         public Builder isHttpRedirectToHttps(Boolean isHttpRedirectToHttps) {
             this.putQueryParameter("IsHttpRedirectToHttps", isHttpRedirectToHttps);

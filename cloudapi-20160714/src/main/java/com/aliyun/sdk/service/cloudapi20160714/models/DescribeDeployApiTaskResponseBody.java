@@ -50,7 +50,7 @@ public class DescribeDeployApiTaskResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DeployedResults.
+         * The result returned.
          */
         public Builder deployedResults(DeployedResults deployedResults) {
             this.deployedResults = deployedResults;
@@ -58,7 +58,7 @@ public class DescribeDeployApiTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The result returned.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,7 +146,7 @@ public class DescribeDeployApiTaskResponseBody extends TeaModel {
             private String stageName; 
 
             /**
-             * ApiUid.
+             * The deployment status of the API.
              */
             public Builder apiUid(String apiUid) {
                 this.apiUid = apiUid;
@@ -154,7 +154,7 @@ public class DescribeDeployApiTaskResponseBody extends TeaModel {
             }
 
             /**
-             * DeployedStatus.
+             * auditing
              */
             public Builder deployedStatus(String deployedStatus) {
                 this.deployedStatus = deployedStatus;
@@ -162,7 +162,11 @@ public class DescribeDeployApiTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMsg.
+             * The runtime environment of the API. Valid values:
+             * <p>
+             * 
+             * *   **RELEASE**
+             * *   **TEST**
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
@@ -170,7 +174,7 @@ public class DescribeDeployApiTaskResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * The ID of the API.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -178,7 +182,7 @@ public class DescribeDeployApiTaskResponseBody extends TeaModel {
             }
 
             /**
-             * StageName.
+             * The ID of the API group.
              */
             public Builder stageName(String stageName) {
                 this.stageName = stageName;

@@ -38,7 +38,7 @@ public class DeleteApiStageVariableResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * Deletes a specified variable in a specified environment.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

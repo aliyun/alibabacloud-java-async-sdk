@@ -50,7 +50,7 @@ public class DescribeUpdateBackendTaskResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ApiUpdateBackendResults.
+         * The update result of the API.
          */
         public Builder apiUpdateBackendResults(ApiUpdateBackendResults apiUpdateBackendResults) {
             this.apiUpdateBackendResults = apiUpdateBackendResults;
@@ -58,7 +58,7 @@ public class DescribeUpdateBackendTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -194,7 +194,7 @@ public class DescribeUpdateBackendTaskResponseBody extends TeaModel {
             private String updateStatus; 
 
             /**
-             * ApiName.
+             * The name of the API.
              */
             public Builder apiName(String apiName) {
                 this.apiName = apiName;
@@ -202,7 +202,7 @@ public class DescribeUpdateBackendTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ApiUid.
+             * The ID of the API.
              */
             public Builder apiUid(String apiUid) {
                 this.apiUid = apiUid;
@@ -210,7 +210,7 @@ public class DescribeUpdateBackendTaskResponseBody extends TeaModel {
             }
 
             /**
-             * BackendId.
+             * The ID of the backend service.
              */
             public Builder backendId(String backendId) {
                 this.backendId = backendId;
@@ -218,7 +218,7 @@ public class DescribeUpdateBackendTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMsg.
+             * The information about the rows that fail to be updated.
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
@@ -226,7 +226,7 @@ public class DescribeUpdateBackendTaskResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * The ID of the API group.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -234,7 +234,7 @@ public class DescribeUpdateBackendTaskResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * The name of the API group.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -242,7 +242,7 @@ public class DescribeUpdateBackendTaskResponseBody extends TeaModel {
             }
 
             /**
-             * StageId.
+             * The ID of the runtime environment.
              */
             public Builder stageId(String stageId) {
                 this.stageId = stageId;
@@ -250,7 +250,7 @@ public class DescribeUpdateBackendTaskResponseBody extends TeaModel {
             }
 
             /**
-             * StageName.
+             * The name of the environment.
              */
             public Builder stageName(String stageName) {
                 this.stageName = stageName;
@@ -258,7 +258,7 @@ public class DescribeUpdateBackendTaskResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateStatus.
+             * The update result of the API.
              */
             public Builder updateStatus(String updateStatus) {
                 this.updateStatus = updateStatus;

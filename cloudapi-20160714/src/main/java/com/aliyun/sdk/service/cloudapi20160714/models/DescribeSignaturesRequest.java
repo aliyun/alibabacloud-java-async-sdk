@@ -110,7 +110,7 @@ public class DescribeSignaturesRequest extends Request {
         } 
 
         /**
-         * PageNumber.
+         * The number of entries to return on each page. Maximum value: 100. Default value: 10.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -119,7 +119,7 @@ public class DescribeSignaturesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The page number of the returned page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -137,7 +137,7 @@ public class DescribeSignaturesRequest extends Request {
         }
 
         /**
-         * SignatureId.
+         * The names of the keys to query.
          */
         public Builder signatureId(String signatureId) {
             this.putQueryParameter("SignatureId", signatureId);
@@ -146,7 +146,7 @@ public class DescribeSignaturesRequest extends Request {
         }
 
         /**
-         * SignatureName.
+         * The number of the page to return. Pages start from page 1. Default value: 1.
          */
         public Builder signatureName(String signatureName) {
             this.putQueryParameter("SignatureName", signatureName);

@@ -50,7 +50,7 @@ public class CreateMonitorGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * MonitorGroupId.
+         * The ID of the request.
          */
         public Builder monitorGroupId(Long monitorGroupId) {
             this.monitorGroupId = monitorGroupId;
@@ -58,7 +58,7 @@ public class CreateMonitorGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * auditing
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

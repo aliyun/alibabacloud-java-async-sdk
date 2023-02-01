@@ -153,7 +153,7 @@ public class DescribeTrafficControlsRequest extends Request {
         } 
 
         /**
-         * ApiId.
+         * The specified API ID. This parameter must be specified together with GroupId and StageName.
          */
         public Builder apiId(String apiId) {
             this.putQueryParameter("ApiId", apiId);
@@ -162,7 +162,7 @@ public class DescribeTrafficControlsRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * The specified group ID. This parameter must be specified together with ApiId and StageName.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -171,7 +171,7 @@ public class DescribeTrafficControlsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -180,7 +180,7 @@ public class DescribeTrafficControlsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Maximum value: 100. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -198,7 +198,11 @@ public class DescribeTrafficControlsRequest extends Request {
         }
 
         /**
-         * StageName.
+         * The environment name. This parameter must be specified together with GroupId and ApiId. Valid values:********
+         * <p>
+         * 
+         * *   **RELEASE**
+         * *   **TEST**
          */
         public Builder stageName(String stageName) {
             this.putQueryParameter("StageName", stageName);
@@ -207,7 +211,7 @@ public class DescribeTrafficControlsRequest extends Request {
         }
 
         /**
-         * TrafficControlId.
+         * The ID of the throttling policy.
          */
         public Builder trafficControlId(String trafficControlId) {
             this.putQueryParameter("TrafficControlId", trafficControlId);
@@ -216,7 +220,7 @@ public class DescribeTrafficControlsRequest extends Request {
         }
 
         /**
-         * TrafficControlName.
+         * The name of the throttling policy.
          */
         public Builder trafficControlName(String trafficControlName) {
             this.putQueryParameter("TrafficControlName", trafficControlName);

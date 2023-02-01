@@ -50,7 +50,7 @@ public class SdkGenerateByAppResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DownloadLink.
+         * The code of the SDK by using the Base64 scheme. You can obtain the file by using the Base64 decoding scheme.
          */
         public Builder downloadLink(String downloadLink) {
             this.downloadLink = downloadLink;
@@ -58,7 +58,7 @@ public class SdkGenerateByAppResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

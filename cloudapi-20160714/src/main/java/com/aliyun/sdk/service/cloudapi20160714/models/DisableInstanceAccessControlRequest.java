@@ -98,7 +98,7 @@ public class DisableInstanceAccessControlRequest extends Request {
         } 
 
         /**
-         * AclId.
+         * The ID of the access control policy.
          */
         public Builder aclId(String aclId) {
             this.putQueryParameter("AclId", aclId);
@@ -116,7 +116,7 @@ public class DisableInstanceAccessControlRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

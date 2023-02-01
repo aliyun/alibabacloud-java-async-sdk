@@ -97,7 +97,7 @@ public class ModifyIpControlRequest extends Request {
         } 
 
         /**
-         * Description.
+         * The description. The description can be up to 200 characters in length.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -106,7 +106,7 @@ public class ModifyIpControlRequest extends Request {
         }
 
         /**
-         * IpControlId.
+         * The ID of the ACL. The ID is unique.
          */
         public Builder ipControlId(String ipControlId) {
             this.putQueryParameter("IpControlId", ipControlId);
@@ -115,7 +115,7 @@ public class ModifyIpControlRequest extends Request {
         }
 
         /**
-         * IpControlName.
+         * The name of the ACL. The name must be 4 to 50 characters in length, and can contain letters, digits, and underscores (\_). The name cannot start with an underscore (\_).
          */
         public Builder ipControlName(String ipControlName) {
             this.putQueryParameter("IpControlName", ipControlName);

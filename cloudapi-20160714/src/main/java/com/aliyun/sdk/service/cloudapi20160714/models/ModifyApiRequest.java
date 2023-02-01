@@ -437,7 +437,7 @@ public class ModifyApiRequest extends Request {
         } 
 
         /**
-         * AllowSignatureMethod.
+         * The returned description of the API.
          */
         public Builder allowSignatureMethod(String allowSignatureMethod) {
             this.putQueryParameter("AllowSignatureMethod", allowSignatureMethod);
@@ -446,7 +446,7 @@ public class ModifyApiRequest extends Request {
         }
 
         /**
-         * ApiId.
+         * The name of the API. The name must be unique within the API group. The name must be 4 to 50 characters in length. It must start with a letter and can contain letters, digits, and underscores (\_).
          */
         public Builder apiId(String apiId) {
             this.putQueryParameter("ApiId", apiId);
@@ -455,7 +455,7 @@ public class ModifyApiRequest extends Request {
         }
 
         /**
-         * ApiName.
+         * The description of the API. The description can be up to 180 characters in length.
          */
         public Builder apiName(String apiName) {
             this.putQueryParameter("ApiName", apiName);
@@ -464,7 +464,7 @@ public class ModifyApiRequest extends Request {
         }
 
         /**
-         * AppCodeAuthType.
+         * Specifies whether to enable backend services.
          */
         public Builder appCodeAuthType(String appCodeAuthType) {
             this.putQueryParameter("AppCodeAuthType", appCodeAuthType);
@@ -473,7 +473,7 @@ public class ModifyApiRequest extends Request {
         }
 
         /**
-         * AuthType.
+         * The configuration items of API requests sent by API Gateway to the backend service.
          */
         public Builder authType(String authType) {
             this.putQueryParameter("AuthType", authType);
@@ -482,7 +482,7 @@ public class ModifyApiRequest extends Request {
         }
 
         /**
-         * BackendEnable.
+         * auditing
          */
         public Builder backendEnable(Boolean backendEnable) {
             this.putQueryParameter("BackendEnable", backendEnable);
@@ -491,7 +491,7 @@ public class ModifyApiRequest extends Request {
         }
 
         /**
-         * BackendId.
+         * The ID of the request.
          */
         public Builder backendId(String backendId) {
             this.putQueryParameter("BackendId", backendId);
@@ -500,7 +500,7 @@ public class ModifyApiRequest extends Request {
         }
 
         /**
-         * ConstantParameters.
+         * The mappings between parameters of requests sent by the consumer to API Gateway and parameters of requests sent by API Gateway to the backend service.
          */
         public Builder constantParameters(String constantParameters) {
             this.putQueryParameter("ConstantParameters", constantParameters);
@@ -509,7 +509,11 @@ public class ModifyApiRequest extends Request {
         }
 
         /**
-         * Description.
+         * Specifies whether the API is public. Valid values:
+         * <p>
+         * 
+         * *   **PUBLIC**: Make the API public. If you set this parameter to PUBLIC, this API is displayed on the APIs page for all users after the API is published to the production environment.
+         * *   **PRIVATE**: Make the API private. Private APIs are not displayed in the Alibaba Cloud Marketplace after the API group to which they belong is made available.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -518,7 +522,7 @@ public class ModifyApiRequest extends Request {
         }
 
         /**
-         * DisableInternet.
+         * The ID of the backend service.
          */
         public Builder disableInternet(Boolean disableInternet) {
             this.putQueryParameter("DisableInternet", disableInternet);
@@ -527,7 +531,7 @@ public class ModifyApiRequest extends Request {
         }
 
         /**
-         * ErrorCodeSamples.
+         * The configuration items of the third-party OpenID Connect authentication method.
          */
         public Builder errorCodeSamples(String errorCodeSamples) {
             this.putQueryParameter("ErrorCodeSamples", errorCodeSamples);
@@ -536,7 +540,7 @@ public class ModifyApiRequest extends Request {
         }
 
         /**
-         * FailResultSample.
+         * The returned description of the API.
          */
         public Builder failResultSample(String failResultSample) {
             this.putQueryParameter("FailResultSample", failResultSample);
@@ -545,7 +549,13 @@ public class ModifyApiRequest extends Request {
         }
 
         /**
-         * ForceNonceCheck.
+         * The AppCode authentication type supported. Valid values:
+         * <p>
+         * 
+         * *   DEFAULT: supported after being made available in Alibaba Cloud Marketplace
+         * *   DISABLE: not supported
+         * *   HEADER : supported only in the Header parameter
+         * *   HEADER_QUERY: supported in the Header or Query parameter
          */
         public Builder forceNonceCheck(Boolean forceNonceCheck) {
             this.putQueryParameter("ForceNonceCheck", forceNonceCheck);
@@ -554,7 +564,7 @@ public class ModifyApiRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * The ID of the API.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -563,7 +573,13 @@ public class ModifyApiRequest extends Request {
         }
 
         /**
-         * OpenIdConnectConfig.
+         * The type of the two-way communication API. Valid values:
+         * <p>
+         * 
+         * *   **COMMON**: general APIs
+         * *   **REGISTER**: registered APIs
+         * *   **UNREGISTER**: unregistered APIs
+         * *   **NOTIFY**: downstream notification
          */
         public Builder openIdConnectConfig(String openIdConnectConfig) {
             this.putQueryParameter("OpenIdConnectConfig", openIdConnectConfig);
@@ -572,7 +588,7 @@ public class ModifyApiRequest extends Request {
         }
 
         /**
-         * RequestConfig.
+         * The parameters of API requests sent by the consumer to API Gateway.
          */
         public Builder requestConfig(String requestConfig) {
             this.putQueryParameter("RequestConfig", requestConfig);
@@ -581,7 +597,7 @@ public class ModifyApiRequest extends Request {
         }
 
         /**
-         * RequestParameters.
+         * System parameter
          */
         public Builder requestParameters(String requestParameters) {
             this.putQueryParameter("RequestParameters", requestParameters);
@@ -590,7 +606,11 @@ public class ModifyApiRequest extends Request {
         }
 
         /**
-         * ResultBodyModel.
+         * *   Specifies whether to set DisableInternet to **true** to limit API calls to within the VPC.
+         * <p>
+         * *   If you set DisableInternet to **false**, the limit if lifted.
+         * 
+         * >  If you do not set this parameter, the original value is used.
          */
         public Builder resultBodyModel(String resultBodyModel) {
             this.putQueryParameter("ResultBodyModel", resultBodyModel);
@@ -599,7 +619,11 @@ public class ModifyApiRequest extends Request {
         }
 
         /**
-         * ResultDescriptions.
+         * The client-side request signature method of the API. Valid values:
+         * <p>
+         * 
+         * *   HmacSHA256
+         * *   HmacSHA1,HmacSHA256
          */
         public Builder resultDescriptions(String resultDescriptions) {
             this.putQueryParameter("ResultDescriptions", resultDescriptions);
@@ -608,7 +632,7 @@ public class ModifyApiRequest extends Request {
         }
 
         /**
-         * ResultSample.
+         * The sample error codes returned by the backend service.
          */
         public Builder resultSample(String resultSample) {
             this.putQueryParameter("ResultSample", resultSample);
@@ -617,7 +641,7 @@ public class ModifyApiRequest extends Request {
         }
 
         /**
-         * ResultType.
+         * The sample error response from the backend service.
          */
         public Builder resultType(String resultType) {
             this.putQueryParameter("ResultType", resultType);
@@ -635,7 +659,7 @@ public class ModifyApiRequest extends Request {
         }
 
         /**
-         * ServiceConfig.
+         * \[{"ParameterType":"Number","Required":"OPTIONAL","isHide":false,"ApiParameterName":"age","DefaultValue":"20","DemoValue":"20","Description":"age","MinValue":18,"MaxValue":100,"Location":"Head"},{"ParameterType":"String","Required":"OPTIONAL","isHide":false,"ApiParameterName":"sex","DefaultValue":"boy","DemoValue":"boy","Description":"gender","EnumValue":"boy,girl","Location":"Query"},{"ParameterType":"Number","Required":"REQUIRED","isHide":false,"ApiParameterName":"userId","MaxLength":10,"MinValue":10000000,"MaxValue":100000000,"Location":"Path"},{"ApiParameterName":"CaClientIp","ParameterLocation":{"name":"Head","orderNumber":0},"Location":"Head","ParameterType":"String","Required":"REQUIRED","Description":"Client IP"},{"ApiParameterName":"constance","ParameterLocation":{"name":"Head","orderNumber":0},"Location":"Head","ParameterType":"String","Required":"REQUIRED","DefaultValue":"constance","Description":"constance"}]
          */
         public Builder serviceConfig(String serviceConfig) {
             this.putQueryParameter("ServiceConfig", serviceConfig);
@@ -644,7 +668,7 @@ public class ModifyApiRequest extends Request {
         }
 
         /**
-         * ServiceParameters.
+         * The format of the response from the backend service. Valid values: JSON, TEXT, BINARY, XML, and HTML. This value is used only to generate documents. It does not affect the returned results.
          */
         public Builder serviceParameters(String serviceParameters) {
             this.putQueryParameter("ServiceParameters", serviceParameters);
@@ -653,7 +677,7 @@ public class ModifyApiRequest extends Request {
         }
 
         /**
-         * ServiceParametersMap.
+         * The sample response from the backend service.
          */
         public Builder serviceParametersMap(String serviceParametersMap) {
             this.putQueryParameter("ServiceParametersMap", serviceParametersMap);
@@ -662,7 +686,7 @@ public class ModifyApiRequest extends Request {
         }
 
         /**
-         * SystemParameters.
+         * The parameters of API requests sent by API Gateway to the backend service.
          */
         public Builder systemParameters(String systemParameters) {
             this.putQueryParameter("SystemParameters", systemParameters);
@@ -671,7 +695,7 @@ public class ModifyApiRequest extends Request {
         }
 
         /**
-         * Visibility.
+         * The configuration items of API requests sent by the consumer to API Gateway.
          */
         public Builder visibility(String visibility) {
             this.putQueryParameter("Visibility", visibility);
@@ -680,7 +704,9 @@ public class ModifyApiRequest extends Request {
         }
 
         /**
-         * WebSocketApiType.
+         * *   Specifies whether to set **ForceNonceCheck** to **true** to force the check of X-Ca-Nonce during the request. This is the unique identifier of the request and is generally identified by UUID. After receiving this parameter, API Gateway verifies the validity of this parameter. The same value can be used only once within 15 minutes. This helps prevent replay attacks.
+         * <p>
+         * *   If you set **ForceNonceCheck** to **false**, the check is not performed. If you do not set this parameter, the original value is used.
          */
         public Builder webSocketApiType(String webSocketApiType) {
             this.putQueryParameter("WebSocketApiType", webSocketApiType);

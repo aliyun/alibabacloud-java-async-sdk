@@ -112,7 +112,7 @@ public class DetachPluginRequest extends Request {
         } 
 
         /**
-         * ApiId.
+         * The ID of the API.
          */
         public Builder apiId(String apiId) {
             this.putQueryParameter("ApiId", apiId);
@@ -121,7 +121,7 @@ public class DetachPluginRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * The ID of the API group to which the API belongs.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -130,7 +130,7 @@ public class DetachPluginRequest extends Request {
         }
 
         /**
-         * PluginId.
+         * The ID of the plug-in.
          */
         public Builder pluginId(String pluginId) {
             this.putQueryParameter("PluginId", pluginId);
@@ -148,7 +148,12 @@ public class DetachPluginRequest extends Request {
         }
 
         /**
-         * StageName.
+         * The name of the runtime environment. Valid values:
+         * <p>
+         * 
+         * *   **RELEASE**
+         * *   **PRE: the pre-release environment**
+         * *   **TEST**
          */
         public Builder stageName(String stageName) {
             this.putQueryParameter("StageName", stageName);

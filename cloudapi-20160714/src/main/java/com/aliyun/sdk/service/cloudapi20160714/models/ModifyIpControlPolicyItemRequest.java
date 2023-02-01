@@ -113,7 +113,14 @@ public class ModifyIpControlPolicyItemRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * The ID of the application that is restricted by the policy. You can configure the AppId parameter only when the value of the IpControlType parameter is ALLOW.
+         * <p>
+         * 
+         * *   You can add only one application ID at a time.
+         * *   If this parameter is empty, no applications are restricted.
+         * *   If this parameter is not empty, not only IP addresses but also applications are restricted.
+         * *   If this parameter is not empty and no security authentication method is specified for the API, all API calls are restricted.
+         * *   If the value of the IpControlType parameter is REFUSE and the AppId parameter is not empty, API Gateway automatically ignores the AppId parameter and restricts only the IP addresses.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -122,7 +129,7 @@ public class ModifyIpControlPolicyItemRequest extends Request {
         }
 
         /**
-         * CidrIp.
+         * The IP address or CIDR block that is defined in a policy. Separate multiple IP addresses or CIDR blocks with semicolons (;). You can add a maximum of 10 IP addresses or CIDR blocks.
          */
         public Builder cidrIp(String cidrIp) {
             this.putQueryParameter("CidrIp", cidrIp);
@@ -131,7 +138,7 @@ public class ModifyIpControlPolicyItemRequest extends Request {
         }
 
         /**
-         * IpControlId.
+         * The ID of the ACL. The ID is unique.
          */
         public Builder ipControlId(String ipControlId) {
             this.putQueryParameter("IpControlId", ipControlId);
@@ -140,7 +147,7 @@ public class ModifyIpControlPolicyItemRequest extends Request {
         }
 
         /**
-         * PolicyItemId.
+         * The ID of the policy.
          */
         public Builder policyItemId(String policyItemId) {
             this.putQueryParameter("PolicyItemId", policyItemId);

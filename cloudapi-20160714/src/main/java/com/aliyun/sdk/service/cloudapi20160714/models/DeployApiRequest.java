@@ -113,7 +113,7 @@ public class DeployApiRequest extends Request {
         } 
 
         /**
-         * ApiId.
+         * The ID of the API.
          */
         public Builder apiId(String apiId) {
             this.putQueryParameter("ApiId", apiId);
@@ -122,7 +122,7 @@ public class DeployApiRequest extends Request {
         }
 
         /**
-         * Description.
+         * The publishing remarks.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -131,7 +131,7 @@ public class DeployApiRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * The ID of the API group.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -149,7 +149,12 @@ public class DeployApiRequest extends Request {
         }
 
         /**
-         * StageName.
+         * The name of the runtime environment. Valid values:
+         * <p>
+         * 
+         * *   **RELEASE**
+         * *   **PRE: the pre-release environment**
+         * *   **TEST: the test environment**
          */
         public Builder stageName(String stageName) {
             this.putQueryParameter("StageName", stageName);

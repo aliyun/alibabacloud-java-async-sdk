@@ -50,7 +50,7 @@ public class DescribeSystemParametersResponseBody extends TeaModel {
         private SystemParams systemParams; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeSystemParametersResponseBody extends TeaModel {
         }
 
         /**
-         * SystemParams.
+         * The returned information about system parameters. It is an array that consists of SystemParam data.
          */
         public Builder systemParams(SystemParams systemParams) {
             this.systemParams = systemParams;
@@ -134,7 +134,7 @@ public class DescribeSystemParametersResponseBody extends TeaModel {
             private String paramType; 
 
             /**
-             * DemoValue.
+             * Examples
              */
             public Builder demoValue(String demoValue) {
                 this.demoValue = demoValue;
@@ -142,7 +142,7 @@ public class DescribeSystemParametersResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of a parameter.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -150,7 +150,7 @@ public class DescribeSystemParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ParamName.
+             * The name of the parameter.
              */
             public Builder paramName(String paramName) {
                 this.paramName = paramName;
@@ -158,7 +158,7 @@ public class DescribeSystemParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ParamType.
+             * The type of the parameter.
              */
             public Builder paramType(String paramType) {
                 this.paramType = paramType;

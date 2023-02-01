@@ -86,7 +86,7 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Apps.
+         * The name of the app.
          */
         public Builder apps(Apps apps) {
             this.apps = apps;
@@ -94,7 +94,7 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The ID of the request.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The total number of returned entries.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The number of entries returned per page.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The returned application information. It is an array that consists of AppAttribute data.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -170,7 +170,7 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The value of the tag.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -178,7 +178,7 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * auditing
              */
             public Builder value(String value) {
                 this.value = value;
@@ -320,7 +320,7 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
             private Tags tags; 
 
             /**
-             * AppId.
+             * The tags.
              */
             public Builder appId(Long appId) {
                 this.appId = appId;
@@ -328,7 +328,7 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * The modification time (UTC) of the app.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -336,7 +336,7 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedTime.
+             * The ID of the app.
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -344,7 +344,7 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The creation time (UTC) of the app.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -352,7 +352,7 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * The description of the app.
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -360,7 +360,7 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The key of the tag.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;

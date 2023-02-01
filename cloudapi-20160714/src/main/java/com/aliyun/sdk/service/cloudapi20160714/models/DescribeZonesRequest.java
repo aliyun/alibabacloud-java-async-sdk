@@ -68,7 +68,12 @@ public class DescribeZonesRequest extends Request {
         } 
 
         /**
-         * Language.
+         * The language in which you want to use to return the description of the system policy. Valid values:
+         * <p>
+         * 
+         * *   en: English
+         * *   zh-CN: Chinese
+         * *   ja: Japanese
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);

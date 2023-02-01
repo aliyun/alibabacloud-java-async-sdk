@@ -146,7 +146,7 @@ public class CreateModelResponseBody extends TeaModel {
         private String schema; 
 
         /**
-         * CreatedTime.
+         * The time when the model was created.
          */
         public Builder createdTime(String createdTime) {
             this.createdTime = createdTime;
@@ -154,7 +154,7 @@ public class CreateModelResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * The description of the created model.
          */
         public Builder description(String description) {
             this.description = description;
@@ -162,7 +162,7 @@ public class CreateModelResponseBody extends TeaModel {
         }
 
         /**
-         * GroupId.
+         * The ID of the API group to which the created model belongs.
          */
         public Builder groupId(String groupId) {
             this.groupId = groupId;
@@ -170,7 +170,7 @@ public class CreateModelResponseBody extends TeaModel {
         }
 
         /**
-         * ModelId.
+         * The ID of the created model.
          */
         public Builder modelId(String modelId) {
             this.modelId = modelId;
@@ -178,7 +178,7 @@ public class CreateModelResponseBody extends TeaModel {
         }
 
         /**
-         * ModelName.
+         * The name of the created model.
          */
         public Builder modelName(String modelName) {
             this.modelName = modelName;
@@ -186,7 +186,7 @@ public class CreateModelResponseBody extends TeaModel {
         }
 
         /**
-         * ModelRef.
+         * The URI of the created model.
          */
         public Builder modelRef(String modelRef) {
             this.modelRef = modelRef;
@@ -194,7 +194,7 @@ public class CreateModelResponseBody extends TeaModel {
         }
 
         /**
-         * ModifiedTime.
+         * The time when the model is last modified.
          */
         public Builder modifiedTime(String modifiedTime) {
             this.modifiedTime = modifiedTime;
@@ -202,7 +202,7 @@ public class CreateModelResponseBody extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * The region to which the created model belongs.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -210,7 +210,7 @@ public class CreateModelResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -218,7 +218,7 @@ public class CreateModelResponseBody extends TeaModel {
         }
 
         /**
-         * Schema.
+         * The definition of the created model.
          */
         public Builder schema(String schema) {
             this.schema = schema;

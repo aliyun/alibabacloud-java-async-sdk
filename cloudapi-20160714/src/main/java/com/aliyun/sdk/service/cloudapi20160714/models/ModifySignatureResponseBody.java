@@ -62,7 +62,7 @@ public class ModifySignatureResponseBody extends TeaModel {
         private String signatureName; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class ModifySignatureResponseBody extends TeaModel {
         }
 
         /**
-         * SignatureId.
+         * The ID of the key.
          */
         public Builder signatureId(String signatureId) {
             this.signatureId = signatureId;
@@ -78,7 +78,7 @@ public class ModifySignatureResponseBody extends TeaModel {
         }
 
         /**
-         * SignatureName.
+         * The name of the key.
          */
         public Builder signatureName(String signatureName) {
             this.signatureName = signatureName;

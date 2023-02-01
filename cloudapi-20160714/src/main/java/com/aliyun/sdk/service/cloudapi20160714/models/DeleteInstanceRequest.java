@@ -69,7 +69,7 @@ public class DeleteInstanceRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The tag of objects that match the lifecycle rule. You can specify multiple tags.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -78,7 +78,7 @@ public class DeleteInstanceRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The key of the tag.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -134,7 +134,7 @@ public class DeleteInstanceRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The value of the tag.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -142,7 +142,7 @@ public class DeleteInstanceRequest extends Request {
             }
 
             /**
-             * Value.
+             * The ID of the request.
              */
             public Builder value(String value) {
                 this.value = value;

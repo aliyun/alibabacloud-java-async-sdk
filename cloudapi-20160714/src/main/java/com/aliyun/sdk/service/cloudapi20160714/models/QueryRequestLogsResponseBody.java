@@ -50,7 +50,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
         private RequestLogs requestLogs; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestLogs.
+         * Details about request logs returned.
          */
         public Builder requestLogs(RequestLogs requestLogs) {
             this.requestLogs = requestLogs;
@@ -506,7 +506,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             private String plugin; 
 
             /**
-             * ApiId.
+             * The ID of the API.
              */
             public Builder apiId(String apiId) {
                 this.apiId = apiId;
@@ -514,7 +514,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ApiName.
+             * The name of the API.
              */
             public Builder apiName(String apiName) {
                 this.apiName = apiName;
@@ -522,7 +522,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ClientIp.
+             * The IP address of the client that sent the request.
              */
             public Builder clientIp(String clientIp) {
                 this.clientIp = clientIp;
@@ -530,7 +530,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ClientNonce.
+             * The X-Ca-Nonce header included in the request from the client.
              */
             public Builder clientNonce(String clientNonce) {
                 this.clientNonce = clientNonce;
@@ -538,7 +538,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ConsumerAppId.
+             * The ID of the application from which an API request is sent.
              */
             public Builder consumerAppId(String consumerAppId) {
                 this.consumerAppId = consumerAppId;
@@ -546,7 +546,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ConsumerAppKey.
+             * The application key used by the caller.
              */
             public Builder consumerAppKey(String consumerAppKey) {
                 this.consumerAppKey = consumerAppKey;
@@ -554,7 +554,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * CustomTraceId.
+             * The ID of the custom trace.
              */
             public Builder customTraceId(String customTraceId) {
                 this.customTraceId = customTraceId;
@@ -562,7 +562,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Domain.
+             * The requested domain name.
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -570,7 +570,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorCode.
+             * The error code.
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -578,7 +578,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * The error message returned if the request fails.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -586,7 +586,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Exception.
+             * The specific error message that was returned by the backend service.
              */
             public Builder exception(String exception) {
                 this.exception = exception;
@@ -594,7 +594,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * The ID of the group to which the API belongs.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -602,7 +602,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * The name of the API group.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -610,7 +610,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * HttpMethod.
+             * The HTTP method used to send the request.
              */
             public Builder httpMethod(String httpMethod) {
                 this.httpMethod = httpMethod;
@@ -618,7 +618,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * HttpPath.
+             * The path of the request.
              */
             public Builder httpPath(String httpPath) {
                 this.httpPath = httpPath;
@@ -626,7 +626,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * InitialRequestId.
+             * The initial request ID when API Gateway calls an API. For example, if API-1 calls API-2, initialRequestId in the log of API-2 represents the ID of the request from API-1.
              */
             public Builder initialRequestId(String initialRequestId) {
                 this.initialRequestId = initialRequestId;
@@ -634,7 +634,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the gateway instance to which the API belongs.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -642,7 +642,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * JwtClaims.
+             * The JSON web token (JWT) claims. The claims can be configured at the group level.
              */
             public Builder jwtClaims(String jwtClaims) {
                 this.jwtClaims = jwtClaims;
@@ -650,7 +650,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * The ID of the region.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -658,7 +658,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * RequestBody.
+             * The request body. The maximum size of the request body is 1,024 bytes.
              */
             public Builder requestBody(String requestBody) {
                 this.requestBody = requestBody;
@@ -666,7 +666,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * RequestHeaders.
+             * The request headers.
              */
             public Builder requestHeaders(String requestHeaders) {
                 this.requestHeaders = requestHeaders;
@@ -674,7 +674,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * RequestId.
+             * The ID of the request.
              */
             public Builder requestId(String requestId) {
                 this.requestId = requestId;
@@ -682,7 +682,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * RequestProtocol.
+             * The protocol used by the client to send the request. Valid values: HTTP, HTTPS, and WS.
              */
             public Builder requestProtocol(String requestProtocol) {
                 this.requestProtocol = requestProtocol;
@@ -690,7 +690,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * RequestQueryString.
+             * The query string for the request.
              */
             public Builder requestQueryString(String requestQueryString) {
                 this.requestQueryString = requestQueryString;
@@ -698,7 +698,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * RequestSize.
+             * The size of the request. Unit: bytes.
              */
             public Builder requestSize(String requestSize) {
                 this.requestSize = requestSize;
@@ -706,7 +706,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * RequestTime.
+             * The request time. The time is displayed in UTC.
              */
             public Builder requestTime(String requestTime) {
                 this.requestTime = requestTime;
@@ -714,7 +714,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ResponseBody.
+             * The response body. The maximum size of the response body is 1,024 bytes.
              */
             public Builder responseBody(String responseBody) {
                 this.responseBody = responseBody;
@@ -722,7 +722,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ResponseHeaders.
+             * The response headers.
              */
             public Builder responseHeaders(String responseHeaders) {
                 this.responseHeaders = responseHeaders;
@@ -730,7 +730,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ResponseSize.
+             * The size of returned data. Unit: bytes.
              */
             public Builder responseSize(String responseSize) {
                 this.responseSize = responseSize;
@@ -738,7 +738,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceLatency.
+             * The total time that was consumed to access backend resources. The total time includes the time consumed to request a connection to the resources, the time consumed to establish the connection, and the time consumed to call the backend service. Unit: milliseconds.
              */
             public Builder serviceLatency(String serviceLatency) {
                 this.serviceLatency = serviceLatency;
@@ -746,7 +746,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * StageId.
+             * The ID of the API environment.
              */
             public Builder stageId(String stageId) {
                 this.stageId = stageId;
@@ -754,7 +754,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * StageName.
+             * The name of the API environment.
              */
             public Builder stageName(String stageName) {
                 this.stageName = stageName;
@@ -762,7 +762,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * StatusCode.
+             * The HTTP status code.
              */
             public Builder statusCode(String statusCode) {
                 this.statusCode = statusCode;
@@ -770,7 +770,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalLatency.
+             * The total period of time that the request consumed. Unit: milliseconds.
              */
             public Builder totalLatency(String totalLatency) {
                 this.totalLatency = totalLatency;
@@ -778,7 +778,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * plugin.
+             * The list of plug-ins hit by the request and the relevant context.
              */
             public Builder plugin(String plugin) {
                 this.plugin = plugin;

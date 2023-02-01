@@ -82,7 +82,12 @@ public class DescribePluginTemplatesRequest extends Request {
         } 
 
         /**
-         * Language.
+         * The language that is used to return the description of the system policy. Valid values:
+         * <p>
+         * 
+         * *   en: English
+         * *   zh-CN: Chinese.
+         * *   ja: Japanese
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -91,7 +96,7 @@ public class DescribePluginTemplatesRequest extends Request {
         }
 
         /**
-         * PluginName.
+         * The name of the plug-in.
          */
         public Builder pluginName(String pluginName) {
             this.putQueryParameter("PluginName", pluginName);

@@ -86,7 +86,7 @@ public class DescribeApisResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * ApiSummarys.
+         * The returned API definition. It is an array that consists of ApiSummary data.
          */
         public Builder apiSummarys(ApiSummarys apiSummarys) {
             this.apiSummarys = apiSummarys;
@@ -94,7 +94,7 @@ public class DescribeApisResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeApisResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeApisResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeApisResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of returned entries.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,6 +131,128 @@ public class DescribeApisResponseBody extends TeaModel {
 
     } 
 
+    public static class DeployedInfo extends TeaModel {
+        @NameInMap("DeployedStatus")
+        private String deployedStatus;
+
+        @NameInMap("EffectiveVersion")
+        private String effectiveVersion;
+
+        @NameInMap("StageName")
+        private String stageName;
+
+        private DeployedInfo(Builder builder) {
+            this.deployedStatus = builder.deployedStatus;
+            this.effectiveVersion = builder.effectiveVersion;
+            this.stageName = builder.stageName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DeployedInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return deployedStatus
+         */
+        public String getDeployedStatus() {
+            return this.deployedStatus;
+        }
+
+        /**
+         * @return effectiveVersion
+         */
+        public String getEffectiveVersion() {
+            return this.effectiveVersion;
+        }
+
+        /**
+         * @return stageName
+         */
+        public String getStageName() {
+            return this.stageName;
+        }
+
+        public static final class Builder {
+            private String deployedStatus; 
+            private String effectiveVersion; 
+            private String stageName; 
+
+            /**
+             * DeployedStatus.
+             */
+            public Builder deployedStatus(String deployedStatus) {
+                this.deployedStatus = deployedStatus;
+                return this;
+            }
+
+            /**
+             * EffectiveVersion.
+             */
+            public Builder effectiveVersion(String effectiveVersion) {
+                this.effectiveVersion = effectiveVersion;
+                return this;
+            }
+
+            /**
+             * StageName.
+             */
+            public Builder stageName(String stageName) {
+                this.stageName = stageName;
+                return this;
+            }
+
+            public DeployedInfo build() {
+                return new DeployedInfo(this);
+            } 
+
+        } 
+
+    }
+    public static class DeployedInfos extends TeaModel {
+        @NameInMap("DeployedInfo")
+        private java.util.List < DeployedInfo> deployedInfo;
+
+        private DeployedInfos(Builder builder) {
+            this.deployedInfo = builder.deployedInfo;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DeployedInfos create() {
+            return builder().build();
+        }
+
+        /**
+         * @return deployedInfo
+         */
+        public java.util.List < DeployedInfo> getDeployedInfo() {
+            return this.deployedInfo;
+        }
+
+        public static final class Builder {
+            private java.util.List < DeployedInfo> deployedInfo; 
+
+            /**
+             * DeployedInfo.
+             */
+            public Builder deployedInfo(java.util.List < DeployedInfo> deployedInfo) {
+                this.deployedInfo = deployedInfo;
+                return this;
+            }
+
+            public DeployedInfos build() {
+                return new DeployedInfos(this);
+            } 
+
+        } 
+
+    }
     public static class ApiSummary extends TeaModel {
         @NameInMap("ApiId")
         private String apiId;
@@ -146,6 +268,9 @@ public class DescribeApisResponseBody extends TeaModel {
 
         @NameInMap("CreatedTime")
         private String createdTime;
+
+        @NameInMap("DeployedInfos")
+        private DeployedInfos deployedInfos;
 
         @NameInMap("Description")
         private String description;
@@ -171,6 +296,7 @@ public class DescribeApisResponseBody extends TeaModel {
             this.apiName = builder.apiName;
             this.apiPath = builder.apiPath;
             this.createdTime = builder.createdTime;
+            this.deployedInfos = builder.deployedInfos;
             this.description = builder.description;
             this.groupId = builder.groupId;
             this.groupName = builder.groupName;
@@ -223,6 +349,13 @@ public class DescribeApisResponseBody extends TeaModel {
         }
 
         /**
+         * @return deployedInfos
+         */
+        public DeployedInfos getDeployedInfos() {
+            return this.deployedInfos;
+        }
+
+        /**
          * @return description
          */
         public String getDescription() {
@@ -270,6 +403,7 @@ public class DescribeApisResponseBody extends TeaModel {
             private String apiName; 
             private String apiPath; 
             private String createdTime; 
+            private DeployedInfos deployedInfos; 
             private String description; 
             private String groupId; 
             private String groupName; 
@@ -278,7 +412,7 @@ public class DescribeApisResponseBody extends TeaModel {
             private String visibility; 
 
             /**
-             * ApiId.
+             * The ID of the API.
              */
             public Builder apiId(String apiId) {
                 this.apiId = apiId;
@@ -294,7 +428,7 @@ public class DescribeApisResponseBody extends TeaModel {
             }
 
             /**
-             * ApiName.
+             * The name of the API operation.
              */
             public Builder apiName(String apiName) {
                 this.apiName = apiName;
@@ -310,7 +444,7 @@ public class DescribeApisResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedTime.
+             * The creation time (UTC) of the query task.
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -318,7 +452,15 @@ public class DescribeApisResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * DeployedInfos.
+             */
+            public Builder deployedInfos(DeployedInfos deployedInfos) {
+                this.deployedInfos = deployedInfos;
+                return this;
+            }
+
+            /**
+             * The description of the API.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -326,7 +468,7 @@ public class DescribeApisResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * The ID of the API group.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -334,7 +476,7 @@ public class DescribeApisResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * The name of the group to which the API belongs.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -342,7 +484,7 @@ public class DescribeApisResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * The modification time (UTC) of the API.
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -350,7 +492,7 @@ public class DescribeApisResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the region in which the API resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -358,7 +500,11 @@ public class DescribeApisResponseBody extends TeaModel {
             }
 
             /**
-             * Visibility.
+             * Indicates whether the API is public. Valid values:
+             * <p>
+             * 
+             * *   **PUBLIC**
+             * *   **PRIVATE**
              */
             public Builder visibility(String visibility) {
                 this.visibility = visibility;

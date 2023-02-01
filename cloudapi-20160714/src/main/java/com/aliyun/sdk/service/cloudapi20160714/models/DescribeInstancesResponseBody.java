@@ -86,7 +86,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Instances.
+         * The details of the instances.
          */
         public Builder instances(Instances instances) {
             this.instances = instances;
@@ -94,7 +94,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of items returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -170,7 +170,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * LocalName.
+             * The variable name.
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -178,7 +178,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The variable value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -656,7 +656,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String zoneLocalName; 
 
             /**
-             * AclId.
+             * The ID of the access control policy.
              */
             public Builder aclId(String aclId) {
                 this.aclId = aclId;
@@ -664,7 +664,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * AclName.
+             * The name of the access control policy.
              */
             public Builder aclName(String aclName) {
                 this.aclName = aclName;
@@ -672,7 +672,11 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * AclStatus.
+             * Indicates whether access control is enabled. Valid values:
+             * <p>
+             * 
+             * *   **on**: yes
+             * *   **off**: no
              */
             public Builder aclStatus(String aclStatus) {
                 this.aclStatus = aclStatus;
@@ -680,7 +684,11 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * AclType.
+             * The type of the access control policy. Valid values:
+             * <p>
+             * 
+             * *   black: blacklist
+             * *   white: whitelist
              */
             public Builder aclType(String aclType) {
                 this.aclType = aclType;
@@ -688,7 +696,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ClassicEgressAddress.
+             * The outbound IP address.
              */
             public Builder classicEgressAddress(String classicEgressAddress) {
                 this.classicEgressAddress = classicEgressAddress;
@@ -696,7 +704,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedTime.
+             * The time when the instance was created.
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -704,7 +712,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * EgressIpv6Enable.
+             * Indicates whether outbound IPv6 is supported.
              */
             public Builder egressIpv6Enable(Boolean egressIpv6Enable) {
                 this.egressIpv6Enable = egressIpv6Enable;
@@ -712,7 +720,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ExpiredTime.
+             * The time when the instance expires.
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -720,7 +728,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * HttpsPolicies.
+             * The HTTPS security policy.
              */
             public Builder httpsPolicies(String httpsPolicies) {
                 this.httpsPolicies = httpsPolicies;
@@ -760,7 +768,11 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceChargeType.
+             * The billing method of the instance. Valid values:
+             * <p>
+             * 
+             * *   PrePaid: subscription
+             * *   PayAsYouGo: pay-as-you-go
              */
             public Builder instanceChargeType(String instanceChargeType) {
                 this.instanceChargeType = instanceChargeType;
@@ -768,7 +780,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -776,7 +788,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * The name of the instance.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -784,7 +796,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceRpsLimit.
+             * The records per second (RPS) limit on the instance.
              */
             public Builder instanceRpsLimit(Integer instanceRpsLimit) {
                 this.instanceRpsLimit = instanceRpsLimit;
@@ -792,7 +804,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceSpec.
+             * The specifications of the instance.
              */
             public Builder instanceSpec(String instanceSpec) {
                 this.instanceSpec = instanceSpec;
@@ -800,7 +812,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceSpecAttributes.
+             * The specifications of the instance.
              */
             public Builder instanceSpecAttributes(InstanceSpecAttributes instanceSpecAttributes) {
                 this.instanceSpecAttributes = instanceSpecAttributes;
@@ -808,7 +820,11 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * The instance type.
+             * <p>
+             * 
+             * *   VPC_SHARED: shared instance (VPC)
+             * *   VPC_DEDICATED: dedicated instance (VPC)
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -816,7 +832,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InternetEgressAddress.
+             * The outbound public IP address.
              */
             public Builder internetEgressAddress(String internetEgressAddress) {
                 this.internetEgressAddress = internetEgressAddress;
@@ -832,7 +848,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region where the instance is located.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -840,7 +856,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The instance status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -848,7 +864,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * SupportIpv6.
+             * Indicates whether IPv6 is supported.
              */
             public Builder supportIpv6(Boolean supportIpv6) {
                 this.supportIpv6 = supportIpv6;
@@ -856,7 +872,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * UserVpcId.
+             * The ID of the user\"s VPC.
              */
             public Builder userVpcId(String userVpcId) {
                 this.userVpcId = userVpcId;
@@ -864,7 +880,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * UserVswitchId.
+             * The ID of the user interaction machine.
              */
             public Builder userVswitchId(String userVswitchId) {
                 this.userVswitchId = userVswitchId;
@@ -880,7 +896,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VpcEgressAddress.
+             * The outbound CIDR block of the VPC.
              */
             public Builder vpcEgressAddress(String vpcEgressAddress) {
                 this.vpcEgressAddress = vpcEgressAddress;
@@ -888,7 +904,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VpcIntranetEnable.
+             * Indicates whether VPC is enabled.
              */
             public Builder vpcIntranetEnable(Boolean vpcIntranetEnable) {
                 this.vpcIntranetEnable = vpcIntranetEnable;
@@ -896,7 +912,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VpcOwnerId.
+             * The ID of the Alibaba Cloud account to which the VPC belongs.
              */
             public Builder vpcOwnerId(Long vpcOwnerId) {
                 this.vpcOwnerId = vpcOwnerId;
@@ -904,7 +920,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VpcSlbIntranetEnable.
+             * Indicates whether VPC SLB is enabled.
              */
             public Builder vpcSlbIntranetEnable(Boolean vpcSlbIntranetEnable) {
                 this.vpcSlbIntranetEnable = vpcSlbIntranetEnable;
@@ -912,7 +928,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * The zone ID.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -920,7 +936,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneLocalName.
+             * The zone.
              */
             public Builder zoneLocalName(String zoneLocalName) {
                 this.zoneLocalName = zoneLocalName;

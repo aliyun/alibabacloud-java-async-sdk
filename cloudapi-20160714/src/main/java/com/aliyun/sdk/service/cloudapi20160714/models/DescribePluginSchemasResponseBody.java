@@ -50,7 +50,7 @@ public class DescribePluginSchemasResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PluginSchemas.
+         * The plug-in modes.
          */
         public Builder pluginSchemas(PluginSchemas pluginSchemas) {
             this.pluginSchemas = pluginSchemas;
@@ -58,7 +58,7 @@ public class DescribePluginSchemasResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,7 +146,7 @@ public class DescribePluginSchemasResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * Description.
+             * The plug-in description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -154,7 +154,7 @@ public class DescribePluginSchemasResponseBody extends TeaModel {
             }
 
             /**
-             * DocumentId.
+             * The ID of the document.
              */
             public Builder documentId(String documentId) {
                 this.documentId = documentId;
@@ -162,7 +162,7 @@ public class DescribePluginSchemasResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the plug-in.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -170,7 +170,7 @@ public class DescribePluginSchemasResponseBody extends TeaModel {
             }
 
             /**
-             * SupportClassic.
+             * Indicates whether classification is supported.
              */
             public Builder supportClassic(Boolean supportClassic) {
                 this.supportClassic = supportClassic;
@@ -178,7 +178,7 @@ public class DescribePluginSchemasResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * The plug-in title.
              */
             public Builder title(String title) {
                 this.title = title;

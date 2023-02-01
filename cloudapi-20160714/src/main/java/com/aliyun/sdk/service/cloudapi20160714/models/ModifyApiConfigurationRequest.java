@@ -545,7 +545,11 @@ public class ModifyApiConfigurationRequest extends Request {
         } 
 
         /**
-         * AllowSignatureMethod.
+         * If **AuthType** is set to **APP**, this value must be passed to specify the signature algorithm. If you do not specify a value, HmacSHA256 is used by default. Valid values:
+         * <p>
+         * 
+         * *   HmacSHA256
+         * *   HmacSHA1,HmacSHA256
          */
         public Builder allowSignatureMethod(String allowSignatureMethod) {
             this.putQueryParameter("AllowSignatureMethod", allowSignatureMethod);
@@ -554,7 +558,7 @@ public class ModifyApiConfigurationRequest extends Request {
         }
 
         /**
-         * ApiId.
+         * The ID of the API.
          */
         public Builder apiId(String apiId) {
             this.putQueryParameter("ApiId", apiId);
@@ -563,7 +567,7 @@ public class ModifyApiConfigurationRequest extends Request {
         }
 
         /**
-         * ApiName.
+         * The name of the API.
          */
         public Builder apiName(String apiName) {
             this.putQueryParameter("ApiName", apiName);
@@ -572,7 +576,13 @@ public class ModifyApiConfigurationRequest extends Request {
         }
 
         /**
-         * AppCodeAuthType.
+         * If **AuthType** is set to **APP**, the valid values are:
+         * <p>
+         * 
+         * *   **DEFAULT**: The default value that is used if no other values are passed. This value means that the setting of the group is used.
+         * *   **DISABLE**: The authentication is disabled.
+         * *   **HEADER: AppCode can be placed in the Header parameter for authentication.**
+         * *   **HEADER_QUERY: AppCode can be placed in the Header or Query parameter for authentication.
          */
         public Builder appCodeAuthType(String appCodeAuthType) {
             this.putQueryParameter("AppCodeAuthType", appCodeAuthType);
@@ -581,7 +591,13 @@ public class ModifyApiConfigurationRequest extends Request {
         }
 
         /**
-         * AuthType.
+         * API安全认证类型，目前可以取值：
+         * <p>
+         * 
+         * - **APP**：只允许已授权的APP调用
+         * - **ANONYMOUS**：允许匿名调用，设置为允许匿名调用需要注意：
+         *      - 任何能够获取该API服务信息的人，都将能够调用该API。网关不会对调用者做身份认证，也无法设置按用户的流量控制，若开放该API请设置好按API的流量控制；
+         *      - AppCodeAuthType的值不会生效。
          */
         public Builder authType(String authType) {
             this.putQueryParameter("AuthType", authType);
@@ -590,7 +606,7 @@ public class ModifyApiConfigurationRequest extends Request {
         }
 
         /**
-         * BackendName.
+         * The name of the backend service. This parameter takes effect only when UseBackendService is set to TRUE.
          */
         public Builder backendName(String backendName) {
             this.putQueryParameter("BackendName", backendName);
@@ -599,7 +615,10 @@ public class ModifyApiConfigurationRequest extends Request {
         }
 
         /**
-         * BodyFormat.
+         * This parameter takes effect only when the RequestMode parameter is set to MAPPING.********
+         * <p>
+         * 
+         * The server data transmission method used for POST and PUT requests. Valid values: FORM and STREAM. FORM indicates that data in key-value pairs is transmitted as forms. STREAM indicates that data is transmitted as byte streams.
          */
         public Builder bodyFormat(String bodyFormat) {
             this.putQueryParameter("BodyFormat", bodyFormat);
@@ -608,7 +627,7 @@ public class ModifyApiConfigurationRequest extends Request {
         }
 
         /**
-         * BodyModel.
+         * The body model.
          */
         public Builder bodyModel(String bodyModel) {
             this.putQueryParameter("BodyModel", bodyModel);
@@ -617,7 +636,11 @@ public class ModifyApiConfigurationRequest extends Request {
         }
 
         /**
-         * ContentTypeCategory.
+         * The ContentType configuration of the backend request.
+         * <p>
+         * 
+         * *   DEFAULT: the default configuration in API Gateway
+         * *   CUSTOM: a custom configuration
          */
         public Builder contentTypeCategory(String contentTypeCategory) {
             this.putQueryParameter("ContentTypeCategory", contentTypeCategory);
@@ -626,7 +649,7 @@ public class ModifyApiConfigurationRequest extends Request {
         }
 
         /**
-         * ContentTypeValue.
+         * The value of the ContentType header when the ServiceProtocol parameter is set to HTTP and the ContentTypeCatagory parameter is set to DEFAULT or CUSTOM.
          */
         public Builder contentTypeValue(String contentTypeValue) {
             this.putQueryParameter("ContentTypeValue", contentTypeValue);
@@ -635,7 +658,7 @@ public class ModifyApiConfigurationRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the API.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -644,7 +667,9 @@ public class ModifyApiConfigurationRequest extends Request {
         }
 
         /**
-         * DisableInternet.
+         * *   Specifies whether to set **DisableInternet** to **true** to limit API calls to within the VPC.
+         * <p>
+         * *   If you set **DisableInternet** to **false**, the limit if lifted.
          */
         public Builder disableInternet(Boolean disableInternet) {
             this.putQueryParameter("DisableInternet", disableInternet);
@@ -653,7 +678,10 @@ public class ModifyApiConfigurationRequest extends Request {
         }
 
         /**
-         * ErrorCodeSamples.
+         * The sample error codes returned by the backend service.
+         * <p>
+         * 
+         * For more information, see [ErrorCodeSample](~~44392~~).
          */
         public Builder errorCodeSamples(String errorCodeSamples) {
             this.putQueryParameter("ErrorCodeSamples", errorCodeSamples);
@@ -662,7 +690,7 @@ public class ModifyApiConfigurationRequest extends Request {
         }
 
         /**
-         * FailResultSample.
+         * The sample error response from the backend service. This value is used only to generate documents. It does not affect the returned result.
          */
         public Builder failResultSample(String failResultSample) {
             this.putQueryParameter("FailResultSample", failResultSample);
@@ -671,7 +699,9 @@ public class ModifyApiConfigurationRequest extends Request {
         }
 
         /**
-         * ForceNonceCheck.
+         * *   Specifies whether to set **ForceNonceCheck** to **true** to force the check of X-Ca-Nonce during the request. This is the unique identifier of the request and is generally identified by UUID. After receiving this parameter, API Gateway verifies the validity of this parameter. The same value can be used only once within 15 minutes. This helps prevent replay attacks.
+         * <p>
+         * *   If you set **ForceNonceCheck** to **false**, the check is not performed. If you do not set this parameter, the original value is used.
          */
         public Builder forceNonceCheck(Boolean forceNonceCheck) {
             this.putQueryParameter("ForceNonceCheck", forceNonceCheck);
@@ -680,7 +710,7 @@ public class ModifyApiConfigurationRequest extends Request {
         }
 
         /**
-         * FunctionComputeConfig.
+         * The Function Compute configuration.
          */
         public Builder functionComputeConfig(String functionComputeConfig) {
             this.putQueryParameter("FunctionComputeConfig", functionComputeConfig);
@@ -689,7 +719,7 @@ public class ModifyApiConfigurationRequest extends Request {
         }
 
         /**
-         * HttpConfig.
+         * The HTTP configuration.
          */
         public Builder httpConfig(String httpConfig) {
             this.putQueryParameter("HttpConfig", httpConfig);
@@ -698,7 +728,7 @@ public class ModifyApiConfigurationRequest extends Request {
         }
 
         /**
-         * MockConfig.
+         * The Mock configuration.
          */
         public Builder mockConfig(String mockConfig) {
             this.putQueryParameter("MockConfig", mockConfig);
@@ -707,7 +737,7 @@ public class ModifyApiConfigurationRequest extends Request {
         }
 
         /**
-         * ModelName.
+         * The name of the model.
          */
         public Builder modelName(String modelName) {
             this.putQueryParameter("ModelName", modelName);
@@ -716,7 +746,7 @@ public class ModifyApiConfigurationRequest extends Request {
         }
 
         /**
-         * OssConfig.
+         * The OSS configuration.
          */
         public Builder ossConfig(String ossConfig) {
             this.putQueryParameter("OssConfig", ossConfig);
@@ -725,7 +755,7 @@ public class ModifyApiConfigurationRequest extends Request {
         }
 
         /**
-         * PostBodyDescription.
+         * The description of the request body.
          */
         public Builder postBodyDescription(String postBodyDescription) {
             this.putQueryParameter("PostBodyDescription", postBodyDescription);
@@ -734,7 +764,7 @@ public class ModifyApiConfigurationRequest extends Request {
         }
 
         /**
-         * RequestHttpMethod.
+         * The HTTP method used to make the request. Valid values: GET, POST, DELETE, PUT, HEADER, TRACE, PATCH, CONNECT, and OPTIONS.
          */
         public Builder requestHttpMethod(String requestHttpMethod) {
             this.putQueryParameter("RequestHttpMethod", requestHttpMethod);
@@ -743,7 +773,12 @@ public class ModifyApiConfigurationRequest extends Request {
         }
 
         /**
-         * RequestMode.
+         * The request mode. Valid values:
+         * <p>
+         * 
+         * *   MAPPING: Parameters are mapped. Unknown parameters are filtered out.
+         * *   PASSTHROUGH: Parameters are passed through.
+         * *   MAPPING_PASSTHROUGH: Parameters are mapped. Unknown parameters are passed through.
          */
         public Builder requestMode(String requestMode) {
             this.putQueryParameter("RequestMode", requestMode);
@@ -752,7 +787,10 @@ public class ModifyApiConfigurationRequest extends Request {
         }
 
         /**
-         * RequestParameters.
+         * The parameters of API requests sent by the consumer to API Gateway.
+         * <p>
+         * 
+         * For more information, see [RequestParameter](~~43986~~).
          */
         public Builder requestParameters(String requestParameters) {
             this.putQueryParameter("RequestParameters", requestParameters);
@@ -761,7 +799,7 @@ public class ModifyApiConfigurationRequest extends Request {
         }
 
         /**
-         * RequestPath.
+         * The API request path. If the complete API URL is `http://api.a.com:8080/object/add?key1=value1&key2=value2`, the API request path is ` /object/add  `.
          */
         public Builder requestPath(String requestPath) {
             this.putQueryParameter("RequestPath", requestPath);
@@ -770,7 +808,7 @@ public class ModifyApiConfigurationRequest extends Request {
         }
 
         /**
-         * RequestProtocol.
+         * The protocol type supported by the API. Valid values: HTTP and HTTPS. Separate multiple values with commas (,), such as "HTTP,HTTPS".
          */
         public Builder requestProtocol(String requestProtocol) {
             this.putQueryParameter("RequestProtocol", requestProtocol);
@@ -779,7 +817,7 @@ public class ModifyApiConfigurationRequest extends Request {
         }
 
         /**
-         * ResultSample.
+         * The sample response from the backend service. This value is used only to generate documents. It does not affect the returned result.
          */
         public Builder resultSample(String resultSample) {
             this.putQueryParameter("ResultSample", resultSample);
@@ -788,7 +826,7 @@ public class ModifyApiConfigurationRequest extends Request {
         }
 
         /**
-         * ResultType.
+         * The format of the response from the backend service. Valid values: JSON, TEXT, BINARY, XML, and HTML. This value is used only to generate documents. It does not affect the returned result.
          */
         public Builder resultType(String resultType) {
             this.putQueryParameter("ResultType", resultType);
@@ -806,7 +844,10 @@ public class ModifyApiConfigurationRequest extends Request {
         }
 
         /**
-         * ServiceParameters.
+         * The parameters of API requests sent by API Gateway to the backend service.
+         * <p>
+         * 
+         * For more information, see [ServiceParameter](~~43988~~).
          */
         public Builder serviceParameters(String serviceParameters) {
             this.putQueryParameter("ServiceParameters", serviceParameters);
@@ -815,7 +856,10 @@ public class ModifyApiConfigurationRequest extends Request {
         }
 
         /**
-         * ServiceParametersMap.
+         * The mappings between parameters of requests sent by the consumer to API Gateway and parameters of requests sent by API Gateway to the backend service.
+         * <p>
+         * 
+         * For more information, see [ServiceParameterMap](~~43989~~).
          */
         public Builder serviceParametersMap(String serviceParametersMap) {
             this.putQueryParameter("ServiceParametersMap", serviceParametersMap);
@@ -824,7 +868,17 @@ public class ModifyApiConfigurationRequest extends Request {
         }
 
         /**
-         * ServiceProtocol.
+         * The protocols that are used to access backend services. Valid values:
+         * <p>
+         * 
+         * *   HTTP: for backend services that use HTTP or HTTPS
+         * *   VPC: for backend services that use VPC
+         * *   FC: for Function Compute
+         * *   OSS: for Object Storage Service
+         * *   Mock: for backend services that use the Mock mode
+         * *   EventBridge: for EventBridge
+         * 
+         * You must specify the config value for the corresponding backend service.
          */
         public Builder serviceProtocol(String serviceProtocol) {
             this.putQueryParameter("ServiceProtocol", serviceProtocol);
@@ -833,7 +887,7 @@ public class ModifyApiConfigurationRequest extends Request {
         }
 
         /**
-         * ServiceTimeout.
+         * The timeout period of the backend service, in millisecond.
          */
         public Builder serviceTimeout(Integer serviceTimeout) {
             this.putQueryParameter("ServiceTimeout", serviceTimeout);
@@ -842,7 +896,11 @@ public class ModifyApiConfigurationRequest extends Request {
         }
 
         /**
-         * UseBackendService.
+         * Specifies whether to use the created backend service. Valid values:
+         * <p>
+         * 
+         * *   TRUE: The created backend service is used.
+         * *   FALSE: The custom backend service information is used.
          */
         public Builder useBackendService(Boolean useBackendService) {
             this.putQueryParameter("UseBackendService", useBackendService);
@@ -851,7 +909,11 @@ public class ModifyApiConfigurationRequest extends Request {
         }
 
         /**
-         * Visibility.
+         * Specifies whether to make the API public. Valid values:
+         * <p>
+         * 
+         * *   **PUBLIC: Make the API public. If you set this parameter to PUBLIC, this API is displayed on the APIs page for all users after the API is published to the production environment.**
+         * *   **PRIVATE: Make the API private. Private APIs are not displayed in the Alibaba Cloud Marketplace after the API group to which they belong is made available.
          */
         public Builder visibility(String visibility) {
             this.putQueryParameter("Visibility", visibility);
@@ -860,7 +922,7 @@ public class ModifyApiConfigurationRequest extends Request {
         }
 
         /**
-         * VpcConfig.
+         * The VPC configuration.
          */
         public Builder vpcConfig(String vpcConfig) {
             this.putQueryParameter("VpcConfig", vpcConfig);

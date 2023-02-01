@@ -99,7 +99,7 @@ public class DescribePluginsByApiRequest extends Request {
         } 
 
         /**
-         * ApiId.
+         * The ID of the API.
          */
         public Builder apiId(String apiId) {
             this.putQueryParameter("ApiId", apiId);
@@ -108,7 +108,7 @@ public class DescribePluginsByApiRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * The ID of the group to which the API to be queried belongs.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -126,7 +126,12 @@ public class DescribePluginsByApiRequest extends Request {
         }
 
         /**
-         * StageName.
+         * The runtime environment of the API. Valid values:
+         * <p>
+         * 
+         * *   **RELEASE**
+         * *   **PRE: the pre-release environment**
+         * *   **TEST**
          */
         public Builder stageName(String stageName) {
             this.putQueryParameter("StageName", stageName);

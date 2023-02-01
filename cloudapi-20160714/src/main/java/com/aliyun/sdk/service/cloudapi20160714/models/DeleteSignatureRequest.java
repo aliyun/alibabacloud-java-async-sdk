@@ -78,7 +78,7 @@ public class DeleteSignatureRequest extends Request {
         }
 
         /**
-         * SignatureId.
+         * The ID of the key to be deleted.
          */
         public Builder signatureId(String signatureId) {
             this.putQueryParameter("SignatureId", signatureId);

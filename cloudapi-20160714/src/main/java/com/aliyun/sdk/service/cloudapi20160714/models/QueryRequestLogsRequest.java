@@ -69,7 +69,7 @@ public class QueryRequestLogsRequest extends Request {
         } 
 
         /**
-         * RequestLogId.
+         * The ID of the request log.
          */
         public Builder requestLogId(String requestLogId) {
             this.putQueryParameter("RequestLogId", requestLogId);

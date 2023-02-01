@@ -96,7 +96,7 @@ public class DescribeDatasetListRequest extends Request {
         } 
 
         /**
-         * DatasetIds.
+         * The ID of the dataset. You can enter multiple dataset IDs. Separate the IDs with commas (,).
          */
         public Builder datasetIds(String datasetIds) {
             this.putQueryParameter("DatasetIds", datasetIds);
@@ -105,7 +105,7 @@ public class DescribeDatasetListRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -114,7 +114,7 @@ public class DescribeDatasetListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

@@ -44,6 +44,10 @@ public class CreateInstanceRequest extends Request {
     private String pricingCycle;
 
     @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
+    @Query
     @NameInMap("Token")
     @Validation(required = true)
     private String token;
@@ -61,6 +65,7 @@ public class CreateInstanceRequest extends Request {
         this.instanceName = builder.instanceName;
         this.instanceSpec = builder.instanceSpec;
         this.pricingCycle = builder.pricingCycle;
+        this.tag = builder.tag;
         this.token = builder.token;
         this.zoneId = builder.zoneId;
     }
@@ -128,6 +133,13 @@ public class CreateInstanceRequest extends Request {
     }
 
     /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
      * @return token
      */
     public String getToken() {
@@ -149,6 +161,7 @@ public class CreateInstanceRequest extends Request {
         private String instanceName; 
         private String instanceSpec; 
         private String pricingCycle; 
+        private java.util.List < Tag> tag; 
         private String token; 
         private String zoneId; 
 
@@ -165,12 +178,19 @@ public class CreateInstanceRequest extends Request {
             this.instanceName = request.instanceName;
             this.instanceSpec = request.instanceSpec;
             this.pricingCycle = request.pricingCycle;
+            this.tag = request.tag;
             this.token = request.token;
             this.zoneId = request.zoneId;
         } 
 
         /**
-         * AutoPay.
+         * Specifies whether payment is automatically made during renewal. Valid values:
+         * <p>
+         * 
+         * *   **True**: Automatic payment is enabled. Make sure that your Alibaba Cloud account has adequate balance.
+         * *   **False**: Automatic payment is disabled. You have to manually pay in the console. Log on to the console. In the upper-right corner, choose **Expenses > User Center**. In the left-side navigation pane, click **Orders**. On the page that appears, find your order and complete the payment.
+         * 
+         * Default value: **False**.
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -179,7 +199,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * ChargeType.
+         * The billing method of the instance.
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -197,7 +217,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * HttpsPolicy.
+         * The HTTPS policy.
          */
         public Builder httpsPolicy(String httpsPolicy) {
             this.putQueryParameter("HttpsPolicy", httpsPolicy);
@@ -206,7 +226,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * InstanceName.
+         * The name of the instance.
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -215,7 +235,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * InstanceSpec.
+         * The specifications of the instance.
          */
         public Builder instanceSpec(String instanceSpec) {
             this.putQueryParameter("InstanceSpec", instanceSpec);
@@ -233,7 +253,16 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * Token.
+         * Tag.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
+         * The password.
          */
         public Builder token(String token) {
             this.putQueryParameter("Token", token);
@@ -242,7 +271,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * The zone.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -257,4 +286,65 @@ public class CreateInstanceRequest extends Request {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

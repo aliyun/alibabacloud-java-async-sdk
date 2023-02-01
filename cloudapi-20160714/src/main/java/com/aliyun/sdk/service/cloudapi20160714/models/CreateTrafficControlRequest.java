@@ -141,7 +141,7 @@ public class CreateTrafficControlRequest extends Request {
         } 
 
         /**
-         * ApiDefault.
+         * The default throttling value for each API.
          */
         public Builder apiDefault(Integer apiDefault) {
             this.putQueryParameter("ApiDefault", apiDefault);
@@ -150,7 +150,7 @@ public class CreateTrafficControlRequest extends Request {
         }
 
         /**
-         * AppDefault.
+         * The default throttling value for each app.
          */
         public Builder appDefault(Integer appDefault) {
             this.putQueryParameter("AppDefault", appDefault);
@@ -159,7 +159,7 @@ public class CreateTrafficControlRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the throttling policy.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -177,7 +177,7 @@ public class CreateTrafficControlRequest extends Request {
         }
 
         /**
-         * TrafficControlName.
+         * The name of the throttling policy. The name must be 4 to 50 characters in length and can contain letters, digits, and underscores (\_). It cannot start with an underscore.
          */
         public Builder trafficControlName(String trafficControlName) {
             this.putQueryParameter("TrafficControlName", trafficControlName);
@@ -186,7 +186,13 @@ public class CreateTrafficControlRequest extends Request {
         }
 
         /**
-         * TrafficControlUnit.
+         * The unit to be used in the throttling policy. Valid values:
+         * <p>
+         * 
+         * *   **SECOND**
+         * *   **MINUTE**
+         * *   **HOUR**
+         * *   **DAY**
          */
         public Builder trafficControlUnit(String trafficControlUnit) {
             this.putQueryParameter("TrafficControlUnit", trafficControlUnit);
@@ -195,7 +201,7 @@ public class CreateTrafficControlRequest extends Request {
         }
 
         /**
-         * UserDefault.
+         * The default throttling value for each user.
          */
         public Builder userDefault(Integer userDefault) {
             this.putQueryParameter("UserDefault", userDefault);

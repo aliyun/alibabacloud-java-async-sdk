@@ -50,7 +50,7 @@ public class AddIpControlPolicyItemResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PolicyItemId.
+         * The ID of the policy. The ID is unique.
          */
         public Builder policyItemId(String policyItemId) {
             this.policyItemId = policyItemId;
@@ -58,7 +58,7 @@ public class AddIpControlPolicyItemResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

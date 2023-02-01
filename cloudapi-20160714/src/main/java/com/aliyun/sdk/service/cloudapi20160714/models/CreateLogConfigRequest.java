@@ -121,7 +121,7 @@ public class CreateLogConfigRequest extends Request {
         }
 
         /**
-         * LogType.
+         * The log type.
          */
         public Builder logType(String logType) {
             this.putQueryParameter("LogType", logType);
@@ -139,7 +139,7 @@ public class CreateLogConfigRequest extends Request {
         }
 
         /**
-         * SlsLogStore.
+         * slslogstore
          */
         public Builder slsLogStore(String slsLogStore) {
             this.putQueryParameter("SlsLogStore", slsLogStore);
@@ -148,7 +148,7 @@ public class CreateLogConfigRequest extends Request {
         }
 
         /**
-         * SlsProject.
+         * The name of the Log Service project.
          */
         public Builder slsProject(String slsProject) {
             this.putQueryParameter("SlsProject", slsProject);

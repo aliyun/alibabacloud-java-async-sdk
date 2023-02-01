@@ -83,7 +83,7 @@ public class CreateAccessControlListRequest extends Request {
         } 
 
         /**
-         * AclName.
+         * The name of the ACL. The name must be 1 to 30 characters in length, and can contain letters, digits, periods (.), hyphens (-), forward slashes (/), and underscores (\_). The name must be unique within the region.
          */
         public Builder aclName(String aclName) {
             this.putQueryParameter("AclName", aclName);

@@ -50,7 +50,7 @@ public class CreateApiResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ApiId.
+         * The ID of the API.
          */
         public Builder apiId(String apiId) {
             this.apiId = apiId;
@@ -58,7 +58,7 @@ public class CreateApiResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

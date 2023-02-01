@@ -84,7 +84,7 @@ public class ReactivateDomainRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * The ID of the request.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -93,7 +93,7 @@ public class ReactivateDomainRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * The custom domain name.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);

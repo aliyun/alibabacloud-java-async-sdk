@@ -18,9 +18,13 @@ public class CreateInstanceResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("TagStatus")
+    private Boolean tagStatus;
+
     private CreateInstanceResponseBody(Builder builder) {
         this.instanceId = builder.instanceId;
         this.requestId = builder.requestId;
+        this.tagStatus = builder.tagStatus;
     }
 
     public static Builder builder() {
@@ -45,12 +49,20 @@ public class CreateInstanceResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return tagStatus
+     */
+    public Boolean getTagStatus() {
+        return this.tagStatus;
+    }
+
     public static final class Builder {
         private String instanceId; 
         private String requestId; 
+        private Boolean tagStatus; 
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -58,10 +70,18 @@ public class CreateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * TagStatus.
+         */
+        public Builder tagStatus(Boolean tagStatus) {
+            this.tagStatus = tagStatus;
             return this;
         }
 

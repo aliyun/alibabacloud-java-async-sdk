@@ -86,7 +86,7 @@ public class DescribeApiGroupsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * ApiGroupAttributes.
+         * The basepath.
          */
         public Builder apiGroupAttributes(ApiGroupAttributes apiGroupAttributes) {
             this.apiGroupAttributes = apiGroupAttributes;
@@ -94,7 +94,7 @@ public class DescribeApiGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The ID of the request.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeApiGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The total number of returned entries.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeApiGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The number of entries returned per page.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeApiGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The returned group set.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -170,7 +170,7 @@ public class DescribeApiGroupsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The value of the tag.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -178,7 +178,7 @@ public class DescribeApiGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * auditing
              */
             public Builder value(String value) {
                 this.value = value;
@@ -428,7 +428,11 @@ public class DescribeApiGroupsResponseBody extends TeaModel {
             private Integer trafficLimit; 
 
             /**
-             * BasePath.
+             * The billing status of the API group. Valid values:
+             * <p>
+             * 
+             * *   **NORMAL**: The instance is normal.
+             * *   **LOCKED**: The API group is locked due to overdue payments.
              */
             public Builder basePath(String basePath) {
                 this.basePath = basePath;
@@ -436,7 +440,7 @@ public class DescribeApiGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * BillingStatus.
+             * The upper QPS limit of the API group. The default value is 500. You can increase the upper limit by submitting an application.
              */
             public Builder billingStatus(String billingStatus) {
                 this.billingStatus = billingStatus;
@@ -444,7 +448,7 @@ public class DescribeApiGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedTime.
+             * The list of tags.
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -452,7 +456,11 @@ public class DescribeApiGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The validity status of the API group. Valid values:
+             * <p>
+             * 
+             * *   **NORMAL**: The instance is normal.
+             * *   **LOCKED**: The API group is locked because it is not valid.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -460,7 +468,7 @@ public class DescribeApiGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * The name of the API group.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -468,7 +476,7 @@ public class DescribeApiGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * Group Description
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -476,7 +484,7 @@ public class DescribeApiGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * HttpsPolicy.
+             * The second-level domain name that corresponds to the API group and is used by the CNAME of the custom domain name.
              */
             public Builder httpsPolicy(String httpsPolicy) {
                 this.httpsPolicy = httpsPolicy;
@@ -484,7 +492,7 @@ public class DescribeApiGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * IllegalStatus.
+             * The HTTPS security policy
              */
             public Builder illegalStatus(String illegalStatus) {
                 this.illegalStatus = illegalStatus;
@@ -492,7 +500,7 @@ public class DescribeApiGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The type of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -500,7 +508,7 @@ public class DescribeApiGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * The region to which the API group belongs.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -508,7 +516,7 @@ public class DescribeApiGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * The ID of the API group. This ID is generated by the system and globally unique.
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -516,7 +524,7 @@ public class DescribeApiGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The last modification time (UTC) of the API group.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -524,7 +532,7 @@ public class DescribeApiGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * SubDomain.
+             * The creation time (UTC) of the API group.
              */
             public Builder subDomain(String subDomain) {
                 this.subDomain = subDomain;
@@ -532,7 +540,7 @@ public class DescribeApiGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The key of the tag.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -540,7 +548,7 @@ public class DescribeApiGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * TrafficLimit.
+             * The ID of the instance.
              */
             public Builder trafficLimit(Integer trafficLimit) {
                 this.trafficLimit = trafficLimit;

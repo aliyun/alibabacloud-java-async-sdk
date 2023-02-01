@@ -83,7 +83,7 @@ public class ResetAppCodeRequest extends Request {
         } 
 
         /**
-         * AppCode.
+         * The new AppCode of the app.
          */
         public Builder appCode(String appCode) {
             this.putQueryParameter("AppCode", appCode);
@@ -92,7 +92,7 @@ public class ResetAppCodeRequest extends Request {
         }
 
         /**
-         * NewAppCode.
+         * The ID of the request.
          */
         public Builder newAppCode(String newAppCode) {
             this.putQueryParameter("NewAppCode", newAppCode);

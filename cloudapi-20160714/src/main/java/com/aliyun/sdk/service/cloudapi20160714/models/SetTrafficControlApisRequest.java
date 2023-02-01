@@ -114,7 +114,7 @@ public class SetTrafficControlApisRequest extends Request {
         } 
 
         /**
-         * ApiIds.
+         * The API ID for the specified operation. Separate multiple API IDs with commas (,). A maximum of 100 API IDs can be entered.
          */
         public Builder apiIds(String apiIds) {
             this.putQueryParameter("ApiIds", apiIds);
@@ -123,7 +123,7 @@ public class SetTrafficControlApisRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * The ID of the API group containing the APIs to which you want to bind a specified throttling policy.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -141,7 +141,11 @@ public class SetTrafficControlApisRequest extends Request {
         }
 
         /**
-         * StageName.
+         * The name of the runtime environment. Valid values:
+         * <p>
+         * 
+         * *   **RELEASE**
+         * *   **TEST**
          */
         public Builder stageName(String stageName) {
             this.putQueryParameter("StageName", stageName);
@@ -150,7 +154,7 @@ public class SetTrafficControlApisRequest extends Request {
         }
 
         /**
-         * TrafficControlId.
+         * The ID of the throttling policy.
          */
         public Builder trafficControlId(String trafficControlId) {
             this.putQueryParameter("TrafficControlId", trafficControlId);

@@ -153,7 +153,7 @@ public class ModifyTrafficControlRequest extends Request {
         } 
 
         /**
-         * ApiDefault.
+         * The default throttling value for each API.
          */
         public Builder apiDefault(Integer apiDefault) {
             this.putQueryParameter("ApiDefault", apiDefault);
@@ -162,7 +162,7 @@ public class ModifyTrafficControlRequest extends Request {
         }
 
         /**
-         * AppDefault.
+         * The default throttling value for each app.
          */
         public Builder appDefault(Integer appDefault) {
             this.putQueryParameter("AppDefault", appDefault);
@@ -171,7 +171,7 @@ public class ModifyTrafficControlRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the throttling policy.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -189,7 +189,7 @@ public class ModifyTrafficControlRequest extends Request {
         }
 
         /**
-         * TrafficControlId.
+         * The ID of the throttling policy.
          */
         public Builder trafficControlId(String trafficControlId) {
             this.putQueryParameter("TrafficControlId", trafficControlId);
@@ -198,7 +198,7 @@ public class ModifyTrafficControlRequest extends Request {
         }
 
         /**
-         * TrafficControlName.
+         * The throttling policy name. The name must be 4 to 50 characters in length and can contain letters, digits, and underscores (\_). It cannot start with an underscore.
          */
         public Builder trafficControlName(String trafficControlName) {
             this.putQueryParameter("TrafficControlName", trafficControlName);
@@ -207,7 +207,13 @@ public class ModifyTrafficControlRequest extends Request {
         }
 
         /**
-         * TrafficControlUnit.
+         * The unit to be used in the throttling policy. Valid values:
+         * <p>
+         * 
+         * *   **SECOND**
+         * *   **MINUTE**
+         * *   **HOUR**
+         * *   **DAY**
          */
         public Builder trafficControlUnit(String trafficControlUnit) {
             this.putQueryParameter("TrafficControlUnit", trafficControlUnit);
@@ -216,7 +222,7 @@ public class ModifyTrafficControlRequest extends Request {
         }
 
         /**
-         * UserDefault.
+         * The default throttling value for each user.
          */
         public Builder userDefault(Integer userDefault) {
             this.putQueryParameter("UserDefault", userDefault);

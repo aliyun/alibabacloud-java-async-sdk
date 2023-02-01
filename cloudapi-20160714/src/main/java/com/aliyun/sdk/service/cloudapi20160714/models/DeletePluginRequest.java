@@ -83,7 +83,7 @@ public class DeletePluginRequest extends Request {
         } 
 
         /**
-         * PluginId.
+         * The ID of the plug-in to be deleted.
          */
         public Builder pluginId(String pluginId) {
             this.putQueryParameter("PluginId", pluginId);
@@ -101,7 +101,7 @@ public class DeletePluginRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tag of objects that match the rule. You can specify multiple tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -157,7 +157,10 @@ public class DeletePluginRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of the tag.
+             * <p>
+             * 
+             * N can be an integer from 1 to 20.``
              */
             public Builder key(String key) {
                 this.key = key;
@@ -165,7 +168,10 @@ public class DeletePluginRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the tag.
+             * <p>
+             * 
+             * N can be an integer from 1 to 20.``
              */
             public Builder value(String value) {
                 this.value = value;

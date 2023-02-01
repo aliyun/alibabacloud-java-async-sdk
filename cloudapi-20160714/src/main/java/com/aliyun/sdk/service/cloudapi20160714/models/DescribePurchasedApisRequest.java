@@ -152,7 +152,7 @@ public class DescribePurchasedApisRequest extends Request {
         } 
 
         /**
-         * ApiId.
+         * The name of the API.
          */
         public Builder apiId(String apiId) {
             this.putQueryParameter("ApiId", apiId);
@@ -161,7 +161,7 @@ public class DescribePurchasedApisRequest extends Request {
         }
 
         /**
-         * ApiName.
+         * Cz88IpQuery
          */
         public Builder apiName(String apiName) {
             this.putQueryParameter("ApiName", apiName);
@@ -170,7 +170,12 @@ public class DescribePurchasedApisRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * The name of the runtime environment. Valid values:
+         * <p>
+         * 
+         * *   **RELEASE**
+         * *   **PRE**
+         * *   **TEST**
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -179,7 +184,7 @@ public class DescribePurchasedApisRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -188,7 +193,7 @@ public class DescribePurchasedApisRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The page number of the page to return.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -206,7 +211,7 @@ public class DescribePurchasedApisRequest extends Request {
         }
 
         /**
-         * StageName.
+         * The ID of the API.
          */
         public Builder stageName(String stageName) {
             this.putQueryParameter("StageName", stageName);
@@ -215,7 +220,7 @@ public class DescribePurchasedApisRequest extends Request {
         }
 
         /**
-         * Visibility.
+         * The number of entries to return on each page.
          */
         public Builder visibility(String visibility) {
             this.putQueryParameter("Visibility", visibility);

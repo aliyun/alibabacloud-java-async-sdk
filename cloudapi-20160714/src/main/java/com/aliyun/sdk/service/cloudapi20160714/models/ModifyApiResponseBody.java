@@ -38,7 +38,7 @@ public class ModifyApiResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * ModifyApi
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

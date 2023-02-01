@@ -113,7 +113,7 @@ public class ModifyBackendRequest extends Request {
         } 
 
         /**
-         * BackendId.
+         * The ID of the backend service.
          */
         public Builder backendId(String backendId) {
             this.putQueryParameter("BackendId", backendId);
@@ -122,7 +122,7 @@ public class ModifyBackendRequest extends Request {
         }
 
         /**
-         * BackendName.
+         * The name of the backend service.
          */
         public Builder backendName(String backendName) {
             this.putQueryParameter("BackendName", backendName);
@@ -131,7 +131,7 @@ public class ModifyBackendRequest extends Request {
         }
 
         /**
-         * BackendType.
+         * The type of the backend service.
          */
         public Builder backendType(String backendType) {
             this.putQueryParameter("BackendType", backendType);
@@ -140,7 +140,7 @@ public class ModifyBackendRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the backend service.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);

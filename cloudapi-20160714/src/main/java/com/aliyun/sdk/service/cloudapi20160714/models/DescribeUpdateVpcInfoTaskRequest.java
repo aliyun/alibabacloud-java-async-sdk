@@ -69,7 +69,7 @@ public class DescribeUpdateVpcInfoTaskRequest extends Request {
         } 
 
         /**
-         * OperationUid.
+         * The ID of the task.
          */
         public Builder operationUid(String operationUid) {
             this.putQueryParameter("OperationUid", operationUid);

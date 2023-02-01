@@ -99,7 +99,7 @@ public class DeleteApiStageVariableRequest extends Request {
         } 
 
         /**
-         * GroupId.
+         * The name of the variable to be deleted. This parameter is case-sensitive.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -117,7 +117,7 @@ public class DeleteApiStageVariableRequest extends Request {
         }
 
         /**
-         * StageId.
+         * The ID of the request.
          */
         public Builder stageId(String stageId) {
             this.putQueryParameter("StageId", stageId);
@@ -126,7 +126,7 @@ public class DeleteApiStageVariableRequest extends Request {
         }
 
         /**
-         * VariableName.
+         * *   This operation is intended for API providers.
          */
         public Builder variableName(String variableName) {
             this.putQueryParameter("VariableName", variableName);

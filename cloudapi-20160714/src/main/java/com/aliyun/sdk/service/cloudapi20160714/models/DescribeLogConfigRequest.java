@@ -91,7 +91,7 @@ public class DescribeLogConfigRequest extends Request {
         }
 
         /**
-         * LogType.
+         * The log type.
          */
         public Builder logType(String logType) {
             this.putQueryParameter("LogType", logType);

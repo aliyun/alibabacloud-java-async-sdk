@@ -50,7 +50,7 @@ public class DescribeAbolishApiTaskResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ApiAbolishResults.
+         * The result returned.
          */
         public Builder apiAbolishResults(ApiAbolishResults apiAbolishResults) {
             this.apiAbolishResults = apiAbolishResults;
@@ -58,7 +58,7 @@ public class DescribeAbolishApiTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The result returned.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -182,7 +182,7 @@ public class DescribeAbolishApiTaskResponseBody extends TeaModel {
             private String stageName; 
 
             /**
-             * AbolishStatus.
+             * The ID of the API group.
              */
             public Builder abolishStatus(String abolishStatus) {
                 this.abolishStatus = abolishStatus;
@@ -190,7 +190,7 @@ public class DescribeAbolishApiTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ApiName.
+             * auditing
              */
             public Builder apiName(String apiName) {
                 this.apiName = apiName;
@@ -198,7 +198,7 @@ public class DescribeAbolishApiTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ApiUid.
+             * The error message.
              */
             public Builder apiUid(String apiUid) {
                 this.apiUid = apiUid;
@@ -206,7 +206,11 @@ public class DescribeAbolishApiTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMsg.
+             * The name of the runtime environment. Valid values:
+             * <p>
+             * 
+             * *   **RELEASE**
+             * *   **TEST**
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
@@ -214,7 +218,7 @@ public class DescribeAbolishApiTaskResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * The name of the API group.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -222,7 +226,7 @@ public class DescribeAbolishApiTaskResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * The ID of the API.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -230,7 +234,7 @@ public class DescribeAbolishApiTaskResponseBody extends TeaModel {
             }
 
             /**
-             * StageId.
+             * The unpublishing status.
              */
             public Builder stageId(String stageId) {
                 this.stageId = stageId;
@@ -238,7 +242,7 @@ public class DescribeAbolishApiTaskResponseBody extends TeaModel {
             }
 
             /**
-             * StageName.
+             * The name of the API.
              */
             public Builder stageName(String stageName) {
                 this.stageName = stageName;

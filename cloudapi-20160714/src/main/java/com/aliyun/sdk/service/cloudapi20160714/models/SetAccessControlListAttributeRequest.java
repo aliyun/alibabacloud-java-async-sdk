@@ -84,7 +84,7 @@ public class SetAccessControlListAttributeRequest extends Request {
         } 
 
         /**
-         * AclId.
+         * The ID of the ACL.
          */
         public Builder aclId(String aclId) {
             this.putQueryParameter("AclId", aclId);
@@ -93,7 +93,7 @@ public class SetAccessControlListAttributeRequest extends Request {
         }
 
         /**
-         * AclName.
+         * The name of the ACL.
          */
         public Builder aclName(String aclName) {
             this.putQueryParameter("AclName", aclName);

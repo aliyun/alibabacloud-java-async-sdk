@@ -139,7 +139,7 @@ public class DescribeHistoryApisRequest extends Request {
         } 
 
         /**
-         * ApiId.
+         * The ID of the API.
          */
         public Builder apiId(String apiId) {
             this.putQueryParameter("ApiId", apiId);
@@ -148,7 +148,7 @@ public class DescribeHistoryApisRequest extends Request {
         }
 
         /**
-         * ApiName.
+         * The name of the API. The name is used for fuzzy match.
          */
         public Builder apiName(String apiName) {
             this.putQueryParameter("ApiName", apiName);
@@ -157,7 +157,7 @@ public class DescribeHistoryApisRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * The ID of the API group.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -166,7 +166,7 @@ public class DescribeHistoryApisRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number of the current page.
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -175,7 +175,7 @@ public class DescribeHistoryApisRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -193,7 +193,11 @@ public class DescribeHistoryApisRequest extends Request {
         }
 
         /**
-         * StageName.
+         * The name of the runtime environment. Valid values:
+         * <p>
+         * 
+         * *   **RELEASE**
+         * *   **TEST**
          */
         public Builder stageName(String stageName) {
             this.putQueryParameter("StageName", stageName);

@@ -69,7 +69,7 @@ public class CreateIntranetDomainRequest extends Request {
         } 
 
         /**
-         * GroupId.
+         * The custom domain name.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);

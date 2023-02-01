@@ -114,7 +114,12 @@ public class SetSignatureApisRequest extends Request {
         } 
 
         /**
-         * ApiIds.
+         * The name of the runtime environment. Valid values:
+         * <p>
+         * 
+         * *   **RELEASE**
+         * *   **PRE**
+         * *   **TEST**
          */
         public Builder apiIds(String apiIds) {
             this.putQueryParameter("ApiIds", apiIds);
@@ -123,7 +128,7 @@ public class SetSignatureApisRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * The API ID for the specified operation. Separate multiple API IDs with commas (,). A maximum of 100 API IDs can be entered.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -141,7 +146,7 @@ public class SetSignatureApisRequest extends Request {
         }
 
         /**
-         * SignatureId.
+         * The ID of the API group to which the API that you want to manage belongs.
          */
         public Builder signatureId(String signatureId) {
             this.putQueryParameter("SignatureId", signatureId);
@@ -150,7 +155,7 @@ public class SetSignatureApisRequest extends Request {
         }
 
         /**
-         * StageName.
+         * The ID of the request.
          */
         public Builder stageName(String stageName) {
             this.putQueryParameter("StageName", stageName);

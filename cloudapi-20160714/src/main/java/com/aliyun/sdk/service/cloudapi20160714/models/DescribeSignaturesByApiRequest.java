@@ -99,7 +99,11 @@ public class DescribeSignaturesByApiRequest extends Request {
         } 
 
         /**
-         * ApiId.
+         * The runtime environment. Valid values:
+         * <p>
+         * 
+         * *   **RELEASE**
+         * *   **TEST**
          */
         public Builder apiId(String apiId) {
             this.putQueryParameter("ApiId", apiId);
@@ -108,7 +112,7 @@ public class DescribeSignaturesByApiRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * The ID of the API.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -126,7 +130,7 @@ public class DescribeSignaturesByApiRequest extends Request {
         }
 
         /**
-         * StageName.
+         * The ID of the request.
          */
         public Builder stageName(String stageName) {
             this.putQueryParameter("StageName", stageName);

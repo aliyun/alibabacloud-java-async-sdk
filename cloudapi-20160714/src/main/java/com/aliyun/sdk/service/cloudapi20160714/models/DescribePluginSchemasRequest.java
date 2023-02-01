@@ -68,7 +68,12 @@ public class DescribePluginSchemasRequest extends Request {
         } 
 
         /**
-         * Language.
+         * The language that is used to return the descriptions of the access control policies. Default value: zh-CN. Valid values:
+         * <p>
+         * 
+         * *   zh-CN (default value): Chinese
+         * *   en: English
+         * *   ja: Japanese
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);

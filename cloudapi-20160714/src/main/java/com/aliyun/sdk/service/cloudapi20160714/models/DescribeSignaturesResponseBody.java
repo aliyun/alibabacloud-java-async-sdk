@@ -86,7 +86,7 @@ public class DescribeSignaturesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * PageNumber.
+         * The ID of the request.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class DescribeSignaturesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The total number of returned entries.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class DescribeSignaturesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The number of entries returned per page.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeSignaturesResponseBody extends TeaModel {
         }
 
         /**
-         * SignatureInfos.
+         * The last modification time of the key.
          */
         public Builder signatureInfos(SignatureInfos signatureInfos) {
             this.signatureInfos = signatureInfos;
@@ -118,7 +118,7 @@ public class DescribeSignaturesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The returned signature information. It is an array consisting of SignatureInfo data.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -230,7 +230,7 @@ public class DescribeSignaturesResponseBody extends TeaModel {
             private String signatureSecret; 
 
             /**
-             * CreatedTime.
+             * The region where the key is located.
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -238,7 +238,7 @@ public class DescribeSignaturesResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * The ID of the backend signature key.
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -246,7 +246,9 @@ public class DescribeSignaturesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * *   This API is intended for API providers.
+             * <p>
+             * *   This operation is used to query the backend signature keys in a Region. Region is a system parameter.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -254,7 +256,7 @@ public class DescribeSignaturesResponseBody extends TeaModel {
             }
 
             /**
-             * SignatureId.
+             * The Secret value of the backend signature key.
              */
             public Builder signatureId(String signatureId) {
                 this.signatureId = signatureId;
@@ -262,7 +264,7 @@ public class DescribeSignaturesResponseBody extends TeaModel {
             }
 
             /**
-             * SignatureKey.
+             * The creation time of the key.
              */
             public Builder signatureKey(String signatureKey) {
                 this.signatureKey = signatureKey;
@@ -270,7 +272,7 @@ public class DescribeSignaturesResponseBody extends TeaModel {
             }
 
             /**
-             * SignatureName.
+             * The Key value of the backend signature key.
              */
             public Builder signatureName(String signatureName) {
                 this.signatureName = signatureName;
@@ -278,7 +280,7 @@ public class DescribeSignaturesResponseBody extends TeaModel {
             }
 
             /**
-             * SignatureSecret.
+             * The name of the backend signature key.
              */
             public Builder signatureSecret(String signatureSecret) {
                 this.signatureSecret = signatureSecret;

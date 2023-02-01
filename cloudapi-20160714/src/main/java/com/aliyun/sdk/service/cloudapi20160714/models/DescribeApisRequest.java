@@ -53,6 +53,10 @@ public class DescribeApisRequest extends Request {
     private String securityToken;
 
     @Query
+    @NameInMap("StageName")
+    private String stageName;
+
+    @Query
     @NameInMap("Tag")
     private java.util.List < Tag> tag;
 
@@ -76,6 +80,7 @@ public class DescribeApisRequest extends Request {
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.securityToken = builder.securityToken;
+        this.stageName = builder.stageName;
         this.tag = builder.tag;
         this.unDeployed = builder.unDeployed;
         this.visibility = builder.visibility;
@@ -165,6 +170,13 @@ public class DescribeApisRequest extends Request {
     }
 
     /**
+     * @return stageName
+     */
+    public String getStageName() {
+        return this.stageName;
+    }
+
+    /**
      * @return tag
      */
     public java.util.List < Tag> getTag() {
@@ -196,6 +208,7 @@ public class DescribeApisRequest extends Request {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String securityToken; 
+        private String stageName; 
         private java.util.List < Tag> tag; 
         private Boolean unDeployed; 
         private String visibility; 
@@ -216,13 +229,14 @@ public class DescribeApisRequest extends Request {
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.securityToken = request.securityToken;
+            this.stageName = request.stageName;
             this.tag = request.tag;
             this.unDeployed = request.unDeployed;
             this.visibility = request.visibility;
         } 
 
         /**
-         * ApiId.
+         * The ID of the API.
          */
         public Builder apiId(String apiId) {
             this.putQueryParameter("ApiId", apiId);
@@ -240,7 +254,7 @@ public class DescribeApisRequest extends Request {
         }
 
         /**
-         * ApiName.
+         * The name of the API operation. The name is used for fuzzy match.
          */
         public Builder apiName(String apiName) {
             this.putQueryParameter("ApiName", apiName);
@@ -258,7 +272,7 @@ public class DescribeApisRequest extends Request {
         }
 
         /**
-         * CatalogId.
+         * The ID of the category.
          */
         public Builder catalogId(String catalogId) {
             this.putQueryParameter("CatalogId", catalogId);
@@ -267,7 +281,7 @@ public class DescribeApisRequest extends Request {
         }
 
         /**
-         * EnableTagAuth.
+         * Specifies whether to enable tag verification.
          */
         public Builder enableTagAuth(Boolean enableTagAuth) {
             this.putQueryParameter("EnableTagAuth", enableTagAuth);
@@ -276,7 +290,7 @@ public class DescribeApisRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * The ID of the API group.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -285,7 +299,7 @@ public class DescribeApisRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -294,7 +308,7 @@ public class DescribeApisRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Maximum value: 100. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -312,7 +326,16 @@ public class DescribeApisRequest extends Request {
         }
 
         /**
-         * Tag.
+         * StageName.
+         */
+        public Builder stageName(String stageName) {
+            this.putQueryParameter("StageName", stageName);
+            this.stageName = stageName;
+            return this;
+        }
+
+        /**
+         * The tag of objects that match the rule. You can specify multiple tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -330,7 +353,11 @@ public class DescribeApisRequest extends Request {
         }
 
         /**
-         * Visibility.
+         * Specifies whether to make the API public. Valid values:
+         * <p>
+         * 
+         * *   **PUBLIC: Make the API public. If you set this parameter to PUBLIC, this API is displayed on the APIs page for all users after the API is published to the production environment.**
+         * *   **PRIVATE: Make the API private. Private APIs are not displayed in the Alibaba Cloud Marketplace after the API group to which they belong is made available.
          */
         public Builder visibility(String visibility) {
             this.putQueryParameter("Visibility", visibility);
@@ -384,7 +411,7 @@ public class DescribeApisRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -392,7 +419,7 @@ public class DescribeApisRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the tag.
              */
             public Builder value(String value) {
                 this.value = value;

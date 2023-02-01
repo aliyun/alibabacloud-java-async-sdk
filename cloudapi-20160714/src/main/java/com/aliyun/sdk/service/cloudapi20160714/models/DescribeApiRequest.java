@@ -83,7 +83,7 @@ public class DescribeApiRequest extends Request {
         } 
 
         /**
-         * ApiId.
+         * The ID of the API.
          */
         public Builder apiId(String apiId) {
             this.putQueryParameter("ApiId", apiId);
@@ -92,7 +92,7 @@ public class DescribeApiRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * The ID of the API.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);

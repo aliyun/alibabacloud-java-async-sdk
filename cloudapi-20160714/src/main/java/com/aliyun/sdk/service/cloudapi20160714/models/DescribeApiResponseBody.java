@@ -458,7 +458,7 @@ public class DescribeApiResponseBody extends TeaModel {
         private String webSocketApiType; 
 
         /**
-         * AllowSignatureMethod.
+         * The region ID of the API.
          */
         public Builder allowSignatureMethod(String allowSignatureMethod) {
             this.allowSignatureMethod = allowSignatureMethod;
@@ -466,7 +466,7 @@ public class DescribeApiResponseBody extends TeaModel {
         }
 
         /**
-         * ApiId.
+         * The format of the response from the backend service. Valid values: JSON, TEXT, BINARY, XML, and HTML.
          */
         public Builder apiId(String apiId) {
             this.apiId = apiId;
@@ -474,7 +474,7 @@ public class DescribeApiResponseBody extends TeaModel {
         }
 
         /**
-         * ApiName.
+         * Specifies whether to enable backend services.
          */
         public Builder apiName(String apiName) {
             this.apiName = apiName;
@@ -482,7 +482,11 @@ public class DescribeApiResponseBody extends TeaModel {
         }
 
         /**
-         * AppCodeAuthType.
+         * If **AuthType** is set to **APP**, this value must be passed to specify the signature algorithm. If you do not specify a value, HmacSHA256 is used by default. Valid values:
+         * <p>
+         * 
+         * *   HmacSHA256
+         * *   HmacSHA1,HmacSHA256
          */
         public Builder appCodeAuthType(String appCodeAuthType) {
             this.appCodeAuthType = appCodeAuthType;
@@ -490,7 +494,7 @@ public class DescribeApiResponseBody extends TeaModel {
         }
 
         /**
-         * AuthType.
+         * The last modification time of the API.
          */
         public Builder authType(String authType) {
             this.authType = authType;
@@ -498,7 +502,7 @@ public class DescribeApiResponseBody extends TeaModel {
         }
 
         /**
-         * BackendConfig.
+         * The ID of the backend service.
          */
         public Builder backendConfig(BackendConfig backendConfig) {
             this.backendConfig = backendConfig;
@@ -506,7 +510,7 @@ public class DescribeApiResponseBody extends TeaModel {
         }
 
         /**
-         * BackendEnable.
+         * Backend configurations
          */
         public Builder backendEnable(Boolean backendEnable) {
             this.backendEnable = backendEnable;
@@ -514,7 +518,7 @@ public class DescribeApiResponseBody extends TeaModel {
         }
 
         /**
-         * ConstantParameters.
+         * Description
          */
         public Builder constantParameters(ConstantParameters constantParameters) {
             this.constantParameters = constantParameters;
@@ -522,7 +526,7 @@ public class DescribeApiResponseBody extends TeaModel {
         }
 
         /**
-         * CreatedTime.
+         * The name of the API, which is unique in the group.
          */
         public Builder createdTime(String createdTime) {
             this.createdTime = createdTime;
@@ -530,7 +534,7 @@ public class DescribeApiResponseBody extends TeaModel {
         }
 
         /**
-         * CustomSystemParameters.
+         * Examples
          */
         public Builder customSystemParameters(CustomSystemParameters customSystemParameters) {
             this.customSystemParameters = customSystemParameters;
@@ -538,7 +542,7 @@ public class DescribeApiResponseBody extends TeaModel {
         }
 
         /**
-         * DeployedInfos.
+         * The name of the runtime environment. Valid values: RELEASE and TEST.
          */
         public Builder deployedInfos(DeployedInfos deployedInfos) {
             this.deployedInfos = deployedInfos;
@@ -546,7 +550,7 @@ public class DescribeApiResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * The name of the API group.
          */
         public Builder description(String description) {
             this.description = description;
@@ -554,7 +558,7 @@ public class DescribeApiResponseBody extends TeaModel {
         }
 
         /**
-         * DisableInternet.
+         * The returned description of the API.
          */
         public Builder disableInternet(Boolean disableInternet) {
             this.disableInternet = disableInternet;
@@ -562,7 +566,7 @@ public class DescribeApiResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCodeSamples.
+         * Error codes
          */
         public Builder errorCodeSamples(ErrorCodeSamples errorCodeSamples) {
             this.errorCodeSamples = errorCodeSamples;
@@ -570,7 +574,17 @@ public class DescribeApiResponseBody extends TeaModel {
         }
 
         /**
-         * FailResultSample.
+         * The security authentication method of the API. Valid values:
+         * <p>
+         * 
+         * *   **APP**: Only authorized applications can call the API.
+         * 
+         * *   **ANONYMOUS**: The API can be anonymously called. In this mode, you must take note of the following rules:
+         * 
+         *     *   All users who have obtained the API service information can call this API. API Gateway does not authenticate callers and cannot set user-specific throttling policies. If you make this API public, set API-specific throttling policies.
+         *     *   We recommend that you do not make the API whose security authentication method is ANONYMOUS available in Alibaba Cloud Marketplace because API Gateway cannot meter calls on the caller or limit the number of calls on the API. If you want to make the API group to which the API belongs available in Alibaba Cloud Marketplace, we recommend that you move the API to another group, set its type to PRIVATE, or set its security authentication method to APP.
+         * 
+         * *   **APPOPENID**: The OpenID Connect account authentication method is used. Only applications authorized by OpenID Connect can call the API. If this method is selected, the OpenIdConnectConfig parameter is required.
          */
         public Builder failResultSample(String failResultSample) {
             this.failResultSample = failResultSample;
@@ -578,7 +592,11 @@ public class DescribeApiResponseBody extends TeaModel {
         }
 
         /**
-         * ForceNonceCheck.
+         * Specifies whether to make the API public. Valid values:
+         * <p>
+         * 
+         * *   **PUBLIC**: Make the API public. If you set this parameter to PUBLIC, this API is displayed on the APIs page for all users after the API is published to the production environment.
+         * *   **PRIVATE**: Make the API private. Private APIs are not displayed in the Alibaba Cloud Marketplace after the API group to which they belong is made available.
          */
         public Builder forceNonceCheck(Boolean forceNonceCheck) {
             this.forceNonceCheck = forceNonceCheck;
@@ -586,7 +604,11 @@ public class DescribeApiResponseBody extends TeaModel {
         }
 
         /**
-         * GroupId.
+         * Specifies whether to enable the Mock mode. Valid values:
+         * <p>
+         * 
+         * *   OPEN: The Mock mode is enabled.
+         * *   CLOSED: The Mock mode is not enabled.
          */
         public Builder groupId(String groupId) {
             this.groupId = groupId;
@@ -594,7 +616,7 @@ public class DescribeApiResponseBody extends TeaModel {
         }
 
         /**
-         * GroupName.
+         * The ID of the API group.
          */
         public Builder groupName(String groupName) {
             this.groupName = groupName;
@@ -602,7 +624,7 @@ public class DescribeApiResponseBody extends TeaModel {
         }
 
         /**
-         * Mock.
+         * The result returned for service mocking.
          */
         public Builder mock(String mock) {
             this.mock = mock;
@@ -610,7 +632,7 @@ public class DescribeApiResponseBody extends TeaModel {
         }
 
         /**
-         * MockResult.
+         * The creation time of the API.
          */
         public Builder mockResult(String mockResult) {
             this.mockResult = mockResult;
@@ -618,7 +640,7 @@ public class DescribeApiResponseBody extends TeaModel {
         }
 
         /**
-         * ModifiedTime.
+         * The ID of the request.
          */
         public Builder modifiedTime(String modifiedTime) {
             this.modifiedTime = modifiedTime;
@@ -626,7 +648,11 @@ public class DescribeApiResponseBody extends TeaModel {
         }
 
         /**
-         * OpenIdConnectConfig.
+         * The OpenID Connect mode. Valid values:
+         * <p>
+         * 
+         * *   **IDTOKEN**: indicates the APIs that are called by clients to obtain tokens. If you specify this value, the PublicKeyId parameter and the PublicKey parameter are required.
+         * *   **BUSINESS**: indicates business APIs. Tokens are used to call the business APIs. If you specify this value, the IdTokenParamName parameter is required.
          */
         public Builder openIdConnectConfig(OpenIdConnectConfig openIdConnectConfig) {
             this.openIdConnectConfig = openIdConnectConfig;
@@ -634,7 +660,11 @@ public class DescribeApiResponseBody extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * Specifies whether to carry the header : X-Ca-Nonce when calling an API. This is the unique identifier of the request and is generally identified by UUID. After receiving this parameter, API Gateway verifies the validity of this parameter. The same value can be used only once within 15 minutes. This helps prevent reply attacks. Valid values:
+         * <p>
+         * 
+         * *   **true**: This field is forcibly checked when an API is requested to prevent replay attacks.
+         * *   **false**: This field is not checked.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -642,7 +672,7 @@ public class DescribeApiResponseBody extends TeaModel {
         }
 
         /**
-         * RequestConfig.
+         * The body model.
          */
         public Builder requestConfig(RequestConfig requestConfig) {
             this.requestConfig = requestConfig;
@@ -650,7 +680,7 @@ public class DescribeApiResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The description of the API.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -658,7 +688,7 @@ public class DescribeApiResponseBody extends TeaModel {
         }
 
         /**
-         * RequestParameters.
+         * The JSON Schema used for JSON validation when **ParameterType** is set to String.
          */
         public Builder requestParameters(RequestParameters requestParameters) {
             this.requestParameters = requestParameters;
@@ -666,7 +696,7 @@ public class DescribeApiResponseBody extends TeaModel {
         }
 
         /**
-         * ResultBodyModel.
+         * The sample response from the backend service.
          */
         public Builder resultBodyModel(String resultBodyModel) {
             this.resultBodyModel = resultBodyModel;
@@ -674,7 +704,7 @@ public class DescribeApiResponseBody extends TeaModel {
         }
 
         /**
-         * ResultDescriptions.
+         * The returned description of the API.
          */
         public Builder resultDescriptions(ResultDescriptions resultDescriptions) {
             this.resultDescriptions = resultDescriptions;
@@ -682,7 +712,13 @@ public class DescribeApiResponseBody extends TeaModel {
         }
 
         /**
-         * ResultSample.
+         * If **AuthType** is set to **APP**, the valid values are:
+         * <p>
+         * 
+         * *   **DEFAULT**: The default value that is used if no other values are passed. This value means that the setting of the group is used.
+         * *   **DISABLE**: The authentication is disabled.
+         * *   **HEADER**: AppCode can be placed in the Header parameter for authentication.
+         * *   **HEADER_QUERY**: AppCode can be placed in the Header or Query parameter for authentication.
          */
         public Builder resultSample(String resultSample) {
             this.resultSample = resultSample;
@@ -690,7 +726,15 @@ public class DescribeApiResponseBody extends TeaModel {
         }
 
         /**
-         * ResultType.
+         * The type of the two-way communication API. Valid values:
+         * <p>
+         * 
+         * *   **COMMON**: general APIs
+         * *   **REGISTER**: registered APIs
+         * *   **UNREGISTER**: unregistered APIs
+         * *   **NOTIFY**: downstream notification
+         * 
+         * For more information, see [Two-way communication](~~66031~~).
          */
         public Builder resultType(String resultType) {
             this.resultType = resultType;
@@ -698,7 +742,7 @@ public class DescribeApiResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceConfig.
+         * The application name in AONE.
          */
         public Builder serviceConfig(ServiceConfig serviceConfig) {
             this.serviceConfig = serviceConfig;
@@ -706,7 +750,7 @@ public class DescribeApiResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceParameters.
+         * The parameter location. Valid values: BODY, HEAD, QUERY, and PATH.
          */
         public Builder serviceParameters(ServiceParameters serviceParameters) {
             this.serviceParameters = serviceParameters;
@@ -714,7 +758,7 @@ public class DescribeApiResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceParametersMap.
+         * The corresponding frontend parameter name. It must be included in RequestParametersObject and matches ApiParameterName in RequestParameter data.
          */
         public Builder serviceParametersMap(ServiceParametersMap serviceParametersMap) {
             this.serviceParametersMap = serviceParametersMap;
@@ -722,7 +766,7 @@ public class DescribeApiResponseBody extends TeaModel {
         }
 
         /**
-         * SystemParameters.
+         * Examples
          */
         public Builder systemParameters(SystemParameters systemParameters) {
             this.systemParameters = systemParameters;
@@ -730,7 +774,7 @@ public class DescribeApiResponseBody extends TeaModel {
         }
 
         /**
-         * Visibility.
+         * The sample error response from the backend service.
          */
         public Builder visibility(String visibility) {
             this.visibility = visibility;
@@ -738,7 +782,11 @@ public class DescribeApiResponseBody extends TeaModel {
         }
 
         /**
-         * WebSocketApiType.
+         * Specifies whether to limit API calls to within the VPC. Valid values:
+         * <p>
+         * 
+         * *   **true**: Only API calls from the VPC are supported.
+         * *   **false**: API calls from the VPC and Internet are both supported.
          */
         public Builder webSocketApiType(String webSocketApiType) {
             this.webSocketApiType = webSocketApiType;
@@ -802,7 +850,7 @@ public class DescribeApiResponseBody extends TeaModel {
             private String backendType; 
 
             /**
-             * BackendId.
+             * Backend service type
              */
             public Builder backendId(String backendId) {
                 this.backendId = backendId;
@@ -810,7 +858,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * BackendName.
+             * The configuration items of API requests sent by the consumer to API Gateway.
              */
             public Builder backendName(String backendName) {
                 this.backendName = backendName;
@@ -818,7 +866,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * BackendType.
+             * The name of the backend service.
              */
             public Builder backendType(String backendType) {
                 this.backendType = backendType;
@@ -895,7 +943,7 @@ public class DescribeApiResponseBody extends TeaModel {
             private String serviceParameterName; 
 
             /**
-             * ConstantValue.
+             * The parameters of API requests sent by the consumer to API Gateway.
              */
             public Builder constantValue(String constantValue) {
                 this.constantValue = constantValue;
@@ -903,7 +951,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The parameter location. Valid values: BODY, HEAD, QUERY, and PATH.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -911,7 +959,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * Location.
+             * The name of the backend service parameter.
              */
             public Builder location(String location) {
                 this.location = location;
@@ -919,7 +967,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceParameterName.
+             * The value of the parameter.
              */
             public Builder serviceParameterName(String serviceParameterName) {
                 this.serviceParameterName = serviceParameterName;
@@ -1049,7 +1097,7 @@ public class DescribeApiResponseBody extends TeaModel {
             private String serviceParameterName; 
 
             /**
-             * DemoValue.
+             * Description
              */
             public Builder demoValue(String demoValue) {
                 this.demoValue = demoValue;
@@ -1057,7 +1105,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * Client IP Address
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1065,7 +1113,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * Location.
+             * The name of the corresponding backend parameter.
              */
             public Builder location(String location) {
                 this.location = location;
@@ -1073,7 +1121,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterName.
+             * The parameter location. Valid values: BODY, HEAD, QUERY, and PATH.
              */
             public Builder parameterName(String parameterName) {
                 this.parameterName = parameterName;
@@ -1081,7 +1129,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceParameterName.
+             * System parameters sent by API Gateway to the backend service
              */
             public Builder serviceParameterName(String serviceParameterName) {
                 this.serviceParameterName = serviceParameterName;
@@ -1187,7 +1235,7 @@ public class DescribeApiResponseBody extends TeaModel {
             private String stageName; 
 
             /**
-             * DeployedStatus.
+             * auditing
              */
             public Builder deployedStatus(String deployedStatus) {
                 this.deployedStatus = deployedStatus;
@@ -1195,7 +1243,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * EffectiveVersion.
+             * The deployment status. Valid values: DEPLOYED and NONDEPLOYED.
              */
             public Builder effectiveVersion(String effectiveVersion) {
                 this.effectiveVersion = effectiveVersion;
@@ -1203,7 +1251,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * StageName.
+             * The effective version.
              */
             public Builder stageName(String stageName) {
                 this.stageName = stageName;
@@ -1321,7 +1369,7 @@ public class DescribeApiResponseBody extends TeaModel {
             private String model; 
 
             /**
-             * Code.
+             * Model
              */
             public Builder code(String code) {
                 this.code = code;
@@ -1329,7 +1377,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The UserId parameter is missing from the request.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1337,7 +1385,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * Description
              */
             public Builder message(String message) {
                 this.message = message;
@@ -1345,7 +1393,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * Model.
+             * Error message
              */
             public Builder model(String model) {
                 this.model = model;
@@ -1463,7 +1511,7 @@ public class DescribeApiResponseBody extends TeaModel {
             private String publicKeyId; 
 
             /**
-             * IdTokenParamName.
+             * The ID of the public key.
              */
             public Builder idTokenParamName(String idTokenParamName) {
                 this.idTokenParamName = idTokenParamName;
@@ -1471,7 +1519,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * OpenIdApiType.
+             * The name of the parameter that corresponds to the token.
              */
             public Builder openIdApiType(String openIdApiType) {
                 this.openIdApiType = openIdApiType;
@@ -1479,7 +1527,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * PublicKey.
+             * The sample error codes returned by the backend service.
              */
             public Builder publicKey(String publicKey) {
                 this.publicKey = publicKey;
@@ -1487,7 +1535,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * PublicKeyId.
+             * The public key.
              */
             public Builder publicKeyId(String publicKeyId) {
                 this.publicKeyId = publicKeyId;
@@ -1600,7 +1648,7 @@ public class DescribeApiResponseBody extends TeaModel {
             private String requestProtocol; 
 
             /**
-             * BodyFormat.
+             * The request mode. Valid values: MAPPING and PASSTHROUGH.
              */
             public Builder bodyFormat(String bodyFormat) {
                 this.bodyFormat = bodyFormat;
@@ -1608,7 +1656,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * BodyModel.
+             * The API request path. If the complete API URL is `http://api.a.com:8080/object/add?key1=value1&key2=value2`, the API request path is ` /object/add  `.
              */
             public Builder bodyModel(String bodyModel) {
                 this.bodyModel = bodyModel;
@@ -1616,7 +1664,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * PostBodyDescription.
+             * The protocol type supported by the API. Valid values: HTTP and HTTPS. Separate multiple values with commas (,), such as "HTTP,HTTPS".
              */
             public Builder postBodyDescription(String postBodyDescription) {
                 this.postBodyDescription = postBodyDescription;
@@ -1624,7 +1672,10 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * RequestHttpMethod.
+             * This parameter takes effect only when the RequestMode parameter is set to MAPPING.********
+             * <p>
+             * 
+             * The server data transmission method used for POST and PUT requests. Valid values: FORM and STREAM. FORM indicates that data in key-value pairs is transmitted as forms. STREAM indicates that data is transmitted as byte streams.
              */
             public Builder requestHttpMethod(String requestHttpMethod) {
                 this.requestHttpMethod = requestHttpMethod;
@@ -1632,7 +1683,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * RequestMode.
+             * The description of the request body.
              */
             public Builder requestMode(String requestMode) {
                 this.requestMode = requestMode;
@@ -1640,7 +1691,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * RequestPath.
+             * The HTTP method used to make the request. Valid values: GET, POST, DELETE, PUT, HEADER, TRACE, PATCH, CONNECT, and OPTIONS.
              */
             public Builder requestPath(String requestPath) {
                 this.requestPath = requestPath;
@@ -1648,7 +1699,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * RequestProtocol.
+             * The configuration items of API requests sent by API Gateway to the backend service.
              */
             public Builder requestProtocol(String requestProtocol) {
                 this.requestProtocol = requestProtocol;
@@ -1881,7 +1932,7 @@ public class DescribeApiResponseBody extends TeaModel {
             private String required; 
 
             /**
-             * ApiParameterName.
+             * The hash values that can be entered when **ParameterType** is set to Int, Long, Float, Double, or String. Separate different values with commas (,), such as 1,2,3,4,9 or A,B,C,E,F.
              */
             public Builder apiParameterName(String apiParameterName) {
                 this.apiParameterName = apiParameterName;
@@ -1889,7 +1940,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * ArrayItemsType.
+             * The minimum parameter value when **ParameterType** is set to Int, Long, Float, or Double.
              */
             public Builder arrayItemsType(String arrayItemsType) {
                 this.arrayItemsType = arrayItemsType;
@@ -1897,7 +1948,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultValue.
+             * The name of the parameter.
              */
             public Builder defaultValue(String defaultValue) {
                 this.defaultValue = defaultValue;
@@ -1905,7 +1956,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * DemoValue.
+             * Indicates whether the parameter is required. Valid values: **REQUIRED** and **OPTIONAL**.
              */
             public Builder demoValue(String demoValue) {
                 this.demoValue = demoValue;
@@ -1913,7 +1964,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * Age
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1921,7 +1972,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * DocOrder.
+             * The parameter location. Valid values: BODY, HEAD, QUERY, and PATH.
              */
             public Builder docOrder(Integer docOrder) {
                 this.docOrder = docOrder;
@@ -1929,7 +1980,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * DocShow.
+             * The maximum parameter length when **ParameterType** is set to String.
              */
             public Builder docShow(String docShow) {
                 this.docShow = docShow;
@@ -1937,7 +1988,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * EnumValue.
+             * Examples
              */
             public Builder enumValue(String enumValue) {
                 this.enumValue = enumValue;
@@ -1945,7 +1996,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * JsonScheme.
+             * The maximum parameter value when **ParameterType** is set to Int, Long, Float, or Double.
              */
             public Builder jsonScheme(String jsonScheme) {
                 this.jsonScheme = jsonScheme;
@@ -1953,7 +2004,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * Location.
+             * The parameters of API requests sent by API Gateway to the backend service.
              */
             public Builder location(String location) {
                 this.location = location;
@@ -1961,7 +2012,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * MaxLength.
+             * The default value.
              */
             public Builder maxLength(Long maxLength) {
                 this.maxLength = maxLength;
@@ -1969,7 +2020,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * MaxValue.
+             * The type of the array element.
              */
             public Builder maxValue(Long maxValue) {
                 this.maxValue = maxValue;
@@ -1977,7 +2028,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * MinLength.
+             * The order in the document.
              */
             public Builder minLength(Long minLength) {
                 this.minLength = minLength;
@@ -1985,7 +2036,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * MinValue.
+             * Indicates whether the document is public. Valid values: **PUBLIC** and **PRIVATE**.
              */
             public Builder minValue(Long minValue) {
                 this.minValue = minValue;
@@ -1993,7 +2044,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterType.
+             * The regular expression used for parameter validation when **ParameterType** is set to String.
              */
             public Builder parameterType(String parameterType) {
                 this.parameterType = parameterType;
@@ -2001,7 +2052,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * RegularExpression.
+             * The minimum parameter length when **ParameterType** is set to String.
              */
             public Builder regularExpression(String regularExpression) {
                 this.regularExpression = regularExpression;
@@ -2009,7 +2060,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * Required.
+             * Description
              */
             public Builder required(String required) {
                 this.required = required;
@@ -2175,7 +2226,7 @@ public class DescribeApiResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Description.
+             * The ID of the parent node.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2183,7 +2234,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * HasChild.
+             * The description.
              */
             public Builder hasChild(Boolean hasChild) {
                 this.hasChild = hasChild;
@@ -2191,7 +2242,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * System parameters sent by API Gateway to the backend service
              */
             public Builder id(String id) {
                 this.id = id;
@@ -2207,7 +2258,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * Mandatory.
+             * The ID of the result.
              */
             public Builder mandatory(Boolean mandatory) {
                 this.mandatory = mandatory;
@@ -2223,7 +2274,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * Pid.
+             * Indicates whether the request parameter is required.
              */
             public Builder pid(String pid) {
                 this.pid = pid;
@@ -2349,7 +2400,7 @@ public class DescribeApiResponseBody extends TeaModel {
             private String roleArn; 
 
             /**
-             * EventBridgeRegionId.
+             * The Arn that is authorized by a RAM user to EventBridge.
              */
             public Builder eventBridgeRegionId(String eventBridgeRegionId) {
                 this.eventBridgeRegionId = eventBridgeRegionId;
@@ -2357,7 +2408,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * EventBus.
+             * The event source.
              */
             public Builder eventBus(String eventBus) {
                 this.eventBus = eventBus;
@@ -2365,7 +2416,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * EventSource.
+             * The ID of the region where the EventBridge instance is located.
              */
             public Builder eventSource(String eventSource) {
                 this.eventSource = eventSource;
@@ -2373,7 +2424,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * RoleArn.
+             * Configuration items of the third-party OpenID Connect authentication method
              */
             public Builder roleArn(String roleArn) {
                 this.roleArn = roleArn;
@@ -2546,7 +2597,7 @@ public class DescribeApiResponseBody extends TeaModel {
             private String serviceName; 
 
             /**
-             * ContentTypeCatagory.
+             * The API request path.
              */
             public Builder contentTypeCatagory(String contentTypeCatagory) {
                 this.contentTypeCatagory = contentTypeCatagory;
@@ -2554,7 +2605,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * ContentTypeValue.
+             * The region where the Function Compute instance is located.
              */
             public Builder contentTypeValue(String contentTypeValue) {
                 this.contentTypeValue = contentTypeValue;
@@ -2562,7 +2613,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * FcBaseUrl.
+             * The value of the ContentType header when the ContentTypeCatagory parameter is set to DEFAULT or CUSTOM.
              */
             public Builder fcBaseUrl(String fcBaseUrl) {
                 this.fcBaseUrl = fcBaseUrl;
@@ -2570,7 +2621,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * FcType.
+             * The Alibaba Cloud Resource Name (ARN) of the RAM role to be assumed by API Gateway to access Function Compute.
              */
             public Builder fcType(String fcType) {
                 this.fcType = fcType;
@@ -2578,7 +2629,12 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * FunctionName.
+             * The ContentType header type used when you call the backend service over HTTP.
+             * <p>
+             * 
+             * *   **DEFAULT**: the default header type in API Gateway
+             * *   **CUSTOM**: a custom header type
+             * *   **CLIENT**: the ContentType header type of the client
              */
             public Builder functionName(String functionName) {
                 this.functionName = functionName;
@@ -2586,7 +2642,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * Method.
+             * The root path of Function Compute.
              */
             public Builder method(String method) {
                 this.method = method;
@@ -2594,7 +2650,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * OnlyBusinessPath.
+             * The function name defined in Function Compute.
              */
             public Builder onlyBusinessPath(Boolean onlyBusinessPath) {
                 this.onlyBusinessPath = onlyBusinessPath;
@@ -2602,7 +2658,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * Path.
+             * The service name defined in Function Compute.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -2610,7 +2666,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * Qualifier.
+             * Information when the backend service is OSS
              */
             public Builder qualifier(String qualifier) {
                 this.qualifier = qualifier;
@@ -2618,7 +2674,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The backend only receives the service path.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -2626,7 +2682,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * RoleArn.
+             * The request method.
              */
             public Builder roleArn(String roleArn) {
                 this.roleArn = roleArn;
@@ -2634,7 +2690,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceName.
+             * The alias of the function.
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -2687,7 +2743,7 @@ public class DescribeApiResponseBody extends TeaModel {
             private String headerValue; 
 
             /**
-             * HeaderName.
+             * Configuration items related to VPC channels
              */
             public Builder headerName(String headerName) {
                 this.headerName = headerName;
@@ -2695,7 +2751,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * HeaderValue.
+             * The name of the HTTP header.
              */
             public Builder headerValue(String headerValue) {
                 this.headerValue = headerValue;
@@ -2821,7 +2877,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * BucketName.
+             * Configuration items of EventBridge
              */
             public Builder bucketName(String bucketName) {
                 this.bucketName = bucketName;
@@ -2837,7 +2893,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * OssRegionId.
+             * The OSS bucket.
              */
             public Builder ossRegionId(String ossRegionId) {
                 this.ossRegionId = ossRegionId;
@@ -2926,7 +2982,7 @@ public class DescribeApiResponseBody extends TeaModel {
             private String vpcScheme; 
 
             /**
-             * InstanceId.
+             * The port number that corresponds to the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -2934,7 +2990,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * Backend configuration items when the backend service is Function Compute
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2942,7 +2998,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The name of the VPC access authorization.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -2950,7 +3006,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * The VPC protocol.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -2958,7 +3014,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * VpcScheme.
+             * The ID of the ECS or SLB instance in the VPC.
              */
             public Builder vpcScheme(String vpcScheme) {
                 this.vpcScheme = vpcScheme;
@@ -3191,7 +3247,7 @@ public class DescribeApiResponseBody extends TeaModel {
             private VpcConfig vpcConfig; 
 
             /**
-             * AoneAppName.
+             * The status code returned for service mocking.
              */
             public Builder aoneAppName(String aoneAppName) {
                 this.aoneAppName = aoneAppName;
@@ -3199,7 +3255,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * ContentTypeCatagory.
+             * The URL used to call the back-end service. If the complete back-end service URL is `http://api.a.com:8080/object/add?key1=value1&key2=value2`, the value of **ServiceAddress** is `http://api.a.com:8080`.
              */
             public Builder contentTypeCatagory(String contentTypeCatagory) {
                 this.contentTypeCatagory = contentTypeCatagory;
@@ -3207,7 +3263,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * ContentTypeValue.
+             * The protocol used by the backend service. Valid values: HTTP and HTTPS.
              */
             public Builder contentTypeValue(String contentTypeValue) {
                 this.contentTypeValue = contentTypeValue;
@@ -3215,7 +3271,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * EventBridgeConfig.
+             * The event bus.
              */
             public Builder eventBridgeConfig(EventBridgeConfig eventBridgeConfig) {
                 this.eventBridgeConfig = eventBridgeConfig;
@@ -3223,7 +3279,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * FunctionComputeConfig.
+             * The type of the Function Compute instance.
              */
             public Builder functionComputeConfig(FunctionComputeConfig functionComputeConfig) {
                 this.functionComputeConfig = functionComputeConfig;
@@ -3231,7 +3287,11 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * Mock.
+             * Specifies whether to enable the VPC channel. Valid values:
+             * <p>
+             * 
+             * *   **TRUE**: The VPC channel is enabled. You must create the corresponding VPC access authorization before you can enable a VPC channel.
+             * *   **FALSE**: The VPC channel is not enabled.
              */
             public Builder mock(String mock) {
                 this.mock = mock;
@@ -3239,7 +3299,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * MockHeaders.
+             * The value of the HTTP header.
              */
             public Builder mockHeaders(MockHeaders mockHeaders) {
                 this.mockHeaders = mockHeaders;
@@ -3247,7 +3307,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * MockResult.
+             * The HTTP method used to call a backend service. Valid values: GET, POST, DELETE, PUT, HEADER, TRACE, PATCH, CONNECT, and OPTIONS.
              */
             public Builder mockResult(String mockResult) {
                 this.mockResult = mockResult;
@@ -3255,7 +3315,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * MockStatusCode.
+             * The value of the ContentType header when the ServiceProtocol parameter is set to HTTP and the ContentTypeCatagory parameter is set to DEFAULT or CUSTOM.
              */
             public Builder mockStatusCode(Integer mockStatusCode) {
                 this.mockStatusCode = mockStatusCode;
@@ -3263,7 +3323,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * OssConfig.
+             * The ID of the region where the OSS instance is located.
              */
             public Builder ossConfig(OssConfig ossConfig) {
                 this.ossConfig = ossConfig;
@@ -3271,7 +3331,11 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceAddress.
+             * Specifies whether to enable the Mock mode. Valid values:
+             * <p>
+             * 
+             * *   **TRUE**: The Mock mode is enabled.
+             * *   **FALSE**: The Mock mode is not enabled.
              */
             public Builder serviceAddress(String serviceAddress) {
                 this.serviceAddress = serviceAddress;
@@ -3279,7 +3343,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceHttpMethod.
+             * The timeout period of the backend service. Unit: milliseconds.
              */
             public Builder serviceHttpMethod(String serviceHttpMethod) {
                 this.serviceHttpMethod = serviceHttpMethod;
@@ -3287,7 +3351,12 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * ServicePath.
+             * The ContentType header type used when you call the backend service over HTTP.
+             * <p>
+             * 
+             * *   **DEFAULT**: the default header type in API Gateway
+             * *   **CUSTOM**: a custom header type
+             * *   **CLIENT**: the ContentType header type of the client
              */
             public Builder servicePath(String servicePath) {
                 this.servicePath = servicePath;
@@ -3295,7 +3364,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceProtocol.
+             * The path used to call the back-end service. If the complete back-end service path is `http://api.a.com:8080/object/add?key1=value1&key2=value2`, **ServicePath** is `/object/add`.
              */
             public Builder serviceProtocol(String serviceProtocol) {
                 this.serviceProtocol = serviceProtocol;
@@ -3303,7 +3372,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceTimeout.
+             * The simulated headers.
              */
             public Builder serviceTimeout(Integer serviceTimeout) {
                 this.serviceTimeout = serviceTimeout;
@@ -3311,7 +3380,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceVpcEnable.
+             * The result returned when the Mock mode is enabled.
              */
             public Builder serviceVpcEnable(String serviceVpcEnable) {
                 this.serviceVpcEnable = serviceVpcEnable;
@@ -3319,7 +3388,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * VpcConfig.
+             * The ID of the VPC.
              */
             public Builder vpcConfig(VpcConfig vpcConfig) {
                 this.vpcConfig = vpcConfig;
@@ -3384,7 +3453,7 @@ public class DescribeApiResponseBody extends TeaModel {
             private String serviceParameterName; 
 
             /**
-             * Location.
+             * The data type of the back-end service parameter.
              */
             public Builder location(String location) {
                 this.location = location;
@@ -3392,7 +3461,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterType.
+             * The name of the backend service parameter.
              */
             public Builder parameterType(String parameterType) {
                 this.parameterType = parameterType;
@@ -3400,7 +3469,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceParameterName.
+             * The mappings between parameters of requests sent by the consumer to API Gateway and parameters of requests sent by API Gateway to the backend service.
              */
             public Builder serviceParameterName(String serviceParameterName) {
                 this.serviceParameterName = serviceParameterName;
@@ -3494,7 +3563,7 @@ public class DescribeApiResponseBody extends TeaModel {
             private String serviceParameterName; 
 
             /**
-             * RequestParameterName.
+             * The name of the backend service parameter.
              */
             public Builder requestParameterName(String requestParameterName) {
                 this.requestParameterName = requestParameterName;
@@ -3502,7 +3571,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceParameterName.
+             * The API publishing status.
              */
             public Builder serviceParameterName(String serviceParameterName) {
                 this.serviceParameterName = serviceParameterName;
@@ -3632,7 +3701,7 @@ public class DescribeApiResponseBody extends TeaModel {
             private String serviceParameterName; 
 
             /**
-             * DemoValue.
+             * Description
              */
             public Builder demoValue(String demoValue) {
                 this.demoValue = demoValue;
@@ -3640,7 +3709,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * Client IP Address
              */
             public Builder description(String description) {
                 this.description = description;
@@ -3648,7 +3717,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * Location.
+             * The name of the corresponding backend parameter.
              */
             public Builder location(String location) {
                 this.location = location;
@@ -3656,7 +3725,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterName.
+             * The parameter location. Valid values: BODY, HEAD, QUERY, and PATH.
              */
             public Builder parameterName(String parameterName) {
                 this.parameterName = parameterName;
@@ -3664,7 +3733,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceParameterName.
+             * Custom system parameters
              */
             public Builder serviceParameterName(String serviceParameterName) {
                 this.serviceParameterName = serviceParameterName;

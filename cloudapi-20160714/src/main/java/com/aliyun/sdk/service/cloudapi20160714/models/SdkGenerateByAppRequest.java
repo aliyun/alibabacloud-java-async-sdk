@@ -84,7 +84,7 @@ public class SdkGenerateByAppRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * The ID of the app. This ID is unique.
          */
         public Builder appId(Long appId) {
             this.putQueryParameter("AppId", appId);
@@ -93,7 +93,7 @@ public class SdkGenerateByAppRequest extends Request {
         }
 
         /**
-         * Language.
+         * The programming language in which the SDK is generated.
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);

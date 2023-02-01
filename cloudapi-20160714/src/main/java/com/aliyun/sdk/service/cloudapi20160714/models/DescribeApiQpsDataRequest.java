@@ -127,7 +127,7 @@ public class DescribeApiQpsDataRequest extends Request {
         } 
 
         /**
-         * ApiId.
+         * The ID of the API group.
          */
         public Builder apiId(String apiId) {
             this.putQueryParameter("ApiId", apiId);
@@ -136,7 +136,12 @@ public class DescribeApiQpsDataRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The environment. Valid values:
+         * <p>
+         * 
+         * *   **RELEASE**
+         * *   **PRE**: the pre-release environment
+         * *   **TEST**
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -145,7 +150,7 @@ public class DescribeApiQpsDataRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * The start time in UTC. Format: YYYY-MM-DDThh:mm:ssZ
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -163,7 +168,7 @@ public class DescribeApiQpsDataRequest extends Request {
         }
 
         /**
-         * StageName.
+         * The ID of the request.
          */
         public Builder stageName(String stageName) {
             this.putQueryParameter("StageName", stageName);
@@ -172,7 +177,7 @@ public class DescribeApiQpsDataRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The end time in UTC. Format: YYYY-MM-DDThh:mm:ssZ
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

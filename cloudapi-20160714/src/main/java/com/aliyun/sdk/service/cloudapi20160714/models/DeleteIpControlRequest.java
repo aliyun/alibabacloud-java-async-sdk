@@ -69,7 +69,7 @@ public class DeleteIpControlRequest extends Request {
         } 
 
         /**
-         * IpControlId.
+         * The ID of the ACL. The ID is unique.
          */
         public Builder ipControlId(String ipControlId) {
             this.putQueryParameter("IpControlId", ipControlId);

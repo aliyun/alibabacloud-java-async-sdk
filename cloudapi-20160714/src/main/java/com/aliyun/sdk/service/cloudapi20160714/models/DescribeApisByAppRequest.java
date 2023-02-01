@@ -167,7 +167,7 @@ public class DescribeApisByAppRequest extends Request {
         } 
 
         /**
-         * API名称
+         * The name of the API operation.
          */
         public Builder apiName(String apiName) {
             this.putQueryParameter("ApiName", apiName);
@@ -176,7 +176,7 @@ public class DescribeApisByAppRequest extends Request {
         }
 
         /**
-         * API的ID
+         * The ID of the API operation.
          */
         public Builder apiUid(String apiUid) {
             this.putQueryParameter("ApiUid", apiUid);
@@ -185,7 +185,7 @@ public class DescribeApisByAppRequest extends Request {
         }
 
         /**
-         * APP的ID
+         * The ID of the application.
          */
         public Builder appId(Long appId) {
             this.putQueryParameter("AppId", appId);
@@ -194,7 +194,7 @@ public class DescribeApisByAppRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the API.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -203,7 +203,7 @@ public class DescribeApisByAppRequest extends Request {
         }
 
         /**
-         * API的请求HTTP Method
+         * The request HTTP method for the API.
          */
         public Builder method(String method) {
             this.putQueryParameter("Method", method);
@@ -212,7 +212,7 @@ public class DescribeApisByAppRequest extends Request {
         }
 
         /**
-         * 当前页码
+         * The page number of the page to return.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -221,7 +221,7 @@ public class DescribeApisByAppRequest extends Request {
         }
 
         /**
-         * 每页条目
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -230,7 +230,7 @@ public class DescribeApisByAppRequest extends Request {
         }
 
         /**
-         * API请求路径
+         * The API request path.
          */
         public Builder path(String path) {
             this.putQueryParameter("Path", path);

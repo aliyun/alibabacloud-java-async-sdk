@@ -86,7 +86,7 @@ public class DescribeAppsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Apps.
+         * The name of the app.
          */
         public Builder apps(Apps apps) {
             this.apps = apps;
@@ -94,7 +94,7 @@ public class DescribeAppsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The ID of the request.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeAppsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The total number of returned entries.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeAppsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The number of entries returned per page.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeAppsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The returned app information. It is an array consisting of AppItem data.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -182,7 +182,10 @@ public class DescribeAppsResponseBody extends TeaModel {
             private String description; 
 
             /**
-             * AppId.
+             * *   This API is intended for API providers.
+             * <p>
+             * *   API providers can use the app IDs or their Apsara Stack tenant accounts to query app information.
+             * *   Each provider can call this operation for a maximum of 200 times every day in a region.
              */
             public Builder appId(Long appId) {
                 this.appId = appId;
@@ -190,7 +193,7 @@ public class DescribeAppsResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * The description of the app.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -198,7 +201,7 @@ public class DescribeAppsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The ID of the app.
              */
             public Builder description(String description) {
                 this.description = description;

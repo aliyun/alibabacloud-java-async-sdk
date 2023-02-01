@@ -50,7 +50,7 @@ public class CreateIntranetDomainResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DomainName.
+         * The ID of the request.
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -58,7 +58,7 @@ public class CreateIntranetDomainResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * auditing
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

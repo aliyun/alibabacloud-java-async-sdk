@@ -69,7 +69,7 @@ public class DeleteAccessControlListRequest extends Request {
         } 
 
         /**
-         * AclId.
+         * The ID of the access control policy.
          */
         public Builder aclId(String aclId) {
             this.putQueryParameter("AclId", aclId);

@@ -83,7 +83,7 @@ public class ResetAppSecretRequest extends Request {
         } 
 
         /**
-         * AppKey.
+         * The key of the application that is used to make an API call.
          */
         public Builder appKey(String appKey) {
             this.putQueryParameter("AppKey", appKey);
@@ -92,7 +92,7 @@ public class ResetAppSecretRequest extends Request {
         }
 
         /**
-         * NewAppSecret.
+         * The new key of the application. To improve compatibility, we recommend that you use other parameters.
          */
         public Builder newAppSecret(String newAppSecret) {
             this.putQueryParameter("NewAppSecret", newAppSecret);

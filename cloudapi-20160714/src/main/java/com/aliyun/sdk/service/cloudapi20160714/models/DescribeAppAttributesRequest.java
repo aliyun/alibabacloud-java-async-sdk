@@ -181,7 +181,7 @@ public class DescribeAppAttributesRequest extends Request {
         } 
 
         /**
-         * AppCode.
+         * The app key that is used to make an API call.
          */
         public Builder appCode(String appCode) {
             this.putQueryParameter("AppCode", appCode);
@@ -190,7 +190,7 @@ public class DescribeAppAttributesRequest extends Request {
         }
 
         /**
-         * AppId.
+         * The name of the app.
          */
         public Builder appId(Long appId) {
             this.putQueryParameter("AppId", appId);
@@ -199,7 +199,11 @@ public class DescribeAppAttributesRequest extends Request {
         }
 
         /**
-         * AppKey.
+         * The order. Valid values: asc and desc. Default value: desc.
+         * <p>
+         * 
+         * *   asc: The apps are displayed in ascending order of modification time.
+         * *   desc: The apps are displayed in descending order of modification time.
          */
         public Builder appKey(String appKey) {
             this.putQueryParameter("AppKey", appKey);
@@ -208,7 +212,7 @@ public class DescribeAppAttributesRequest extends Request {
         }
 
         /**
-         * AppName.
+         * The number of the page to return. Pages start from page 1. Default value: 1.
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -217,7 +221,7 @@ public class DescribeAppAttributesRequest extends Request {
         }
 
         /**
-         * EnableTagAuth.
+         * The tag of objects that match the rule. You can specify multiple tags.
          */
         public Builder enableTagAuth(Boolean enableTagAuth) {
             this.putQueryParameter("EnableTagAuth", enableTagAuth);
@@ -226,7 +230,7 @@ public class DescribeAppAttributesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of entries to return on each page. Maximum value: 100. Default value: 10.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -235,7 +239,7 @@ public class DescribeAppAttributesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The AppCode of the app.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -253,7 +257,7 @@ public class DescribeAppAttributesRequest extends Request {
         }
 
         /**
-         * Sort.
+         * Specifies whether to enable tag verification.
          */
         public Builder sort(String sort) {
             this.putQueryParameter("Sort", sort);
@@ -262,7 +266,10 @@ public class DescribeAppAttributesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The key of the tag.
+         * <p>
+         * 
+         * N can be an integer from 1 to 20.``
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -317,7 +324,10 @@ public class DescribeAppAttributesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of the tag.
+             * <p>
+             * 
+             * N can be an integer from 1 to 20.``
              */
             public Builder key(String key) {
                 this.key = key;
@@ -325,7 +335,7 @@ public class DescribeAppAttributesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The page number of the returned page.
              */
             public Builder value(String value) {
                 this.value = value;

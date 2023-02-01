@@ -114,7 +114,7 @@ public class SetIpControlApisRequest extends Request {
         } 
 
         /**
-         * ApiIds.
+         * The API IDs. Separate multiple API IDs with commas (,). A maximum of 100 API IDs can be entered.
          */
         public Builder apiIds(String apiIds) {
             this.putQueryParameter("ApiIds", apiIds);
@@ -123,7 +123,7 @@ public class SetIpControlApisRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * The ID of the API group.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -132,7 +132,7 @@ public class SetIpControlApisRequest extends Request {
         }
 
         /**
-         * IpControlId.
+         * The ID of the ACL.
          */
         public Builder ipControlId(String ipControlId) {
             this.putQueryParameter("IpControlId", ipControlId);
@@ -150,7 +150,12 @@ public class SetIpControlApisRequest extends Request {
         }
 
         /**
-         * StageName.
+         * The name of the runtime environment. Valid values:
+         * <p>
+         * 
+         * *   **RELEASE**
+         * *   **PRE**
+         * *   **TEST**
          */
         public Builder stageName(String stageName) {
             this.putQueryParameter("StageName", stageName);

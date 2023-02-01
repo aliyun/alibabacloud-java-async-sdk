@@ -98,7 +98,11 @@ public class AbolishApiRequest extends Request {
         } 
 
         /**
-         * ApiId.
+         * The name of the runtime environment. Valid values:
+         * <p>
+         * 
+         * *   **RELEASE**
+         * *   **TEST**
          */
         public Builder apiId(String apiId) {
             this.putQueryParameter("ApiId", apiId);
@@ -107,7 +111,7 @@ public class AbolishApiRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * The ID of the specified API.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -125,7 +129,7 @@ public class AbolishApiRequest extends Request {
         }
 
         /**
-         * StageName.
+         * The ID of the request.
          */
         public Builder stageName(String stageName) {
             this.putQueryParameter("StageName", stageName);

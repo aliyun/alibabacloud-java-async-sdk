@@ -86,7 +86,7 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
         private TrafficControls trafficControls; 
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of returned entries.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -118,7 +118,7 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
         }
 
         /**
-         * TrafficControls.
+         * The returned throttling policy information. It is an array consisting of TrafficControl data.
          */
         public Builder trafficControls(TrafficControls trafficControls) {
             this.trafficControls = trafficControls;
@@ -170,7 +170,7 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
             private Integer trafficValue; 
 
             /**
-             * SpecialKey.
+             * The AppId or user account corresponding to SpecialType.
              */
             public Builder specialKey(String specialKey) {
                 this.specialKey = specialKey;
@@ -178,7 +178,7 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
             }
 
             /**
-             * TrafficValue.
+             * The throttling value.
              */
             public Builder trafficValue(Integer trafficValue) {
                 this.trafficValue = trafficValue;
@@ -272,7 +272,11 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
             private Specials specials; 
 
             /**
-             * SpecialType.
+             * The type of the special throttling policy. Valid values:
+             * <p>
+             * 
+             * *   **APP**
+             * *   **USER**
              */
             public Builder specialType(String specialType) {
                 this.specialType = specialType;
@@ -280,7 +284,7 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
             }
 
             /**
-             * Specials.
+             * The returned information about a special throttling policy. It is an array consisting of Special data.
              */
             public Builder specials(Specials specials) {
                 this.specials = specials;
@@ -470,7 +474,7 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
             private Integer userDefault; 
 
             /**
-             * ApiDefault.
+             * The default throttling value for each API.
              */
             public Builder apiDefault(Integer apiDefault) {
                 this.apiDefault = apiDefault;
@@ -478,7 +482,7 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
             }
 
             /**
-             * AppDefault.
+             * The default throttling value for each app.
              */
             public Builder appDefault(Integer appDefault) {
                 this.appDefault = appDefault;
@@ -486,7 +490,7 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedTime.
+             * The creation time (UTC) of the throttling policy.
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -494,7 +498,7 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the throttling policy.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -502,7 +506,7 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * The last modification time (UTC) of the throttling policy.
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -510,7 +514,7 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
             }
 
             /**
-             * SpecialPolicies.
+             * The returned information about a special throttling policy. It is an array consisting of SpecialPolicy data.
              */
             public Builder specialPolicies(SpecialPolicies specialPolicies) {
                 this.specialPolicies = specialPolicies;
@@ -518,7 +522,7 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
             }
 
             /**
-             * TrafficControlId.
+             * The ID of the throttling policy.
              */
             public Builder trafficControlId(String trafficControlId) {
                 this.trafficControlId = trafficControlId;
@@ -526,7 +530,7 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
             }
 
             /**
-             * TrafficControlName.
+             * The name of the throttling policy.
              */
             public Builder trafficControlName(String trafficControlName) {
                 this.trafficControlName = trafficControlName;
@@ -534,7 +538,12 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
             }
 
             /**
-             * TrafficControlUnit.
+             * The unit to be used in the throttling policy. Valid values:
+             * <p>
+             * 
+             * *   MINUTE
+             * *   HOUR
+             * *   DAY
              */
             public Builder trafficControlUnit(String trafficControlUnit) {
                 this.trafficControlUnit = trafficControlUnit;
@@ -542,7 +551,7 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
             }
 
             /**
-             * UserDefault.
+             * The default throttling value for each user.
              */
             public Builder userDefault(Integer userDefault) {
                 this.userDefault = userDefault;

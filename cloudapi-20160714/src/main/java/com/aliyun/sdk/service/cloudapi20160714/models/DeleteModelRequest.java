@@ -70,7 +70,7 @@ public class DeleteModelRequest extends Request {
         } 
 
         /**
-         * GroupId.
+         * The ID of the API group to which the model belongs.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -79,7 +79,7 @@ public class DeleteModelRequest extends Request {
         }
 
         /**
-         * ModelName.
+         * The name of the model.
          */
         public Builder modelName(String modelName) {
             this.putQueryParameter("ModelName", modelName);

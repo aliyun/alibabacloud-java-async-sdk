@@ -123,7 +123,7 @@ public class AddTrafficSpecialControlRequest extends Request {
         }
 
         /**
-         * SpecialKey.
+         * The ID of the app or Alibaba Cloud account. Specify this parameter based on the value of the **SpecialType** parameter. You can view your account ID on the [Account Management](https://account.console.aliyun.com/?spm=a2c4g.11186623.2.15.3f053654YpMPwo#/secure) page.
          */
         public Builder specialKey(String specialKey) {
             this.putQueryParameter("SpecialKey", specialKey);
@@ -132,7 +132,11 @@ public class AddTrafficSpecialControlRequest extends Request {
         }
 
         /**
-         * SpecialType.
+         * The type of the special throttling policy. Valid values:
+         * <p>
+         * 
+         * *   **APP**
+         * *   **USER**
          */
         public Builder specialType(String specialType) {
             this.putQueryParameter("SpecialType", specialType);
@@ -141,7 +145,7 @@ public class AddTrafficSpecialControlRequest extends Request {
         }
 
         /**
-         * TrafficControlId.
+         * The ID of the specified throttling policy.
          */
         public Builder trafficControlId(String trafficControlId) {
             this.putQueryParameter("TrafficControlId", trafficControlId);
@@ -150,7 +154,7 @@ public class AddTrafficSpecialControlRequest extends Request {
         }
 
         /**
-         * TrafficValue.
+         * The special throttling value.
          */
         public Builder trafficValue(Integer trafficValue) {
             this.putQueryParameter("TrafficValue", trafficValue);

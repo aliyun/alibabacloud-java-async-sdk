@@ -113,7 +113,11 @@ public class RemoveIpControlApisRequest extends Request {
         } 
 
         /**
-         * ApiIds.
+         * The ID of the API to be managed.
+         * <p>
+         * 
+         * *   If this parameter is not specified, all APIs of the API group are unbound in the specified environment by default.
+         * *   The IDs of the APIs that you want to query. Separate multiple IDs with commas (,). A maximum of 100 IDs can be entered.
          */
         public Builder apiIds(String apiIds) {
             this.putQueryParameter("ApiIds", apiIds);
@@ -122,7 +126,7 @@ public class RemoveIpControlApisRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * The ID of the API group containing the API to be managed.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -131,7 +135,7 @@ public class RemoveIpControlApisRequest extends Request {
         }
 
         /**
-         * IpControlId.
+         * The ID of the ACL.
          */
         public Builder ipControlId(String ipControlId) {
             this.putQueryParameter("IpControlId", ipControlId);
@@ -149,7 +153,11 @@ public class RemoveIpControlApisRequest extends Request {
         }
 
         /**
-         * StageName.
+         * The name of the runtime environment. Valid values:
+         * <p>
+         * 
+         * *   **RELEASE**
+         * *   **TEST**
          */
         public Builder stageName(String stageName) {
             this.putQueryParameter("StageName", stageName);

@@ -97,7 +97,7 @@ public class DescribeDatasetItemInfoRequest extends Request {
         } 
 
         /**
-         * DatasetId.
+         * The ID of the dataset.
          */
         public Builder datasetId(String datasetId) {
             this.putQueryParameter("DatasetId", datasetId);
@@ -106,7 +106,7 @@ public class DescribeDatasetItemInfoRequest extends Request {
         }
 
         /**
-         * DatasetItemId.
+         * The ID of the data entry.
          */
         public Builder datasetItemId(String datasetItemId) {
             this.putQueryParameter("DatasetItemId", datasetItemId);
@@ -124,7 +124,7 @@ public class DescribeDatasetItemInfoRequest extends Request {
         }
 
         /**
-         * Value.
+         * The value of the data entry.
          */
         public Builder value(String value) {
             this.putQueryParameter("Value", value);

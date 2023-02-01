@@ -38,7 +38,7 @@ public class ModifyInstanceSpecResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * auditing
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -58,7 +58,7 @@ public class DescribeDatasetItemInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +170,7 @@ public class DescribeDatasetItemInfoResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * CreatedTime.
+             * The creation time (UTC) of the data entry.
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -178,7 +178,7 @@ public class DescribeDatasetItemInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DatasetId.
+             * The ID of the dataset.
              */
             public Builder datasetId(String datasetId) {
                 this.datasetId = datasetId;
@@ -186,7 +186,7 @@ public class DescribeDatasetItemInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DatasetItemId.
+             * The ID of the data entry.
              */
             public Builder datasetItemId(String datasetItemId) {
                 this.datasetItemId = datasetItemId;
@@ -194,7 +194,7 @@ public class DescribeDatasetItemInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the data entry.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -202,7 +202,7 @@ public class DescribeDatasetItemInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ExpiredTime.
+             * The time in UTC when the data entry expires. The time is in the **yyyy-MM-ddTHH:mm:ssZ** format. If this parameter is empty, the data entry does not expire.
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -210,7 +210,7 @@ public class DescribeDatasetItemInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * The last modification time (UTC) of the data entry.
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -218,7 +218,7 @@ public class DescribeDatasetItemInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the data entry.
              */
             public Builder value(String value) {
                 this.value = value;

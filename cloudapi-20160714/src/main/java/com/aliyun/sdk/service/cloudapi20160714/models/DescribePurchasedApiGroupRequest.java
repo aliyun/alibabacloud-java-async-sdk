@@ -69,7 +69,11 @@ public class DescribePurchasedApiGroupRequest extends Request {
         } 
 
         /**
-         * GroupId.
+         * The status of the API group.
+         * <p>
+         * 
+         * *   **NORMAL**: The API group is normal.
+         * *   **DELETE**: The API group is deleted.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);

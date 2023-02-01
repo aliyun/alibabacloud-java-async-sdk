@@ -99,7 +99,7 @@ public class CreateModelRequest extends Request {
         } 
 
         /**
-         * Description.
+         * The description of the model definition.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -108,7 +108,7 @@ public class CreateModelRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * The ID of the API group to which the model belongs.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -117,7 +117,7 @@ public class CreateModelRequest extends Request {
         }
 
         /**
-         * ModelName.
+         * The name of the model. The name must be unique within the group.
          */
         public Builder modelName(String modelName) {
             this.putQueryParameter("ModelName", modelName);
@@ -126,7 +126,7 @@ public class CreateModelRequest extends Request {
         }
 
         /**
-         * Schema.
+         * The definition of the model in JSON Schema.
          */
         public Builder schema(String schema) {
             this.putQueryParameter("Schema", schema);

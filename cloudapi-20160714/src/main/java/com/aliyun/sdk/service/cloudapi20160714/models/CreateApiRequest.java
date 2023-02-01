@@ -423,7 +423,11 @@ public class CreateApiRequest extends Request {
         } 
 
         /**
-         * AllowSignatureMethod.
+         * If the **AuthType** is **APP** authentication, you need to pass this value to specify the signature algorithm. If you do not specify this parameter, the default value HmacSHA256 is used. Valid values:
+         * <p>
+         * 
+         * *   HmacSHA256
+         * *   HmacSHA1,HmacSHA256
          */
         public Builder allowSignatureMethod(String allowSignatureMethod) {
             this.putQueryParameter("AllowSignatureMethod", allowSignatureMethod);
@@ -432,7 +436,7 @@ public class CreateApiRequest extends Request {
         }
 
         /**
-         * ApiName.
+         * The name of the API that you want to create. The name must be unique within the API group. The name must be 4 to 50 characters in length. It must start with a letter and can contain letters, digits, and underscores (\_).
          */
         public Builder apiName(String apiName) {
             this.putQueryParameter("ApiName", apiName);
@@ -441,7 +445,13 @@ public class CreateApiRequest extends Request {
         }
 
         /**
-         * AppCodeAuthType.
+         * If **AuthType** is set to **APP**, the valid values are:
+         * <p>
+         * 
+         * *   **DEFAULT**: The default value that is used if no other values are passed. This value means that the setting of the group is used.
+         * *   **DISABLE**: The authentication is disabled.
+         * *   **HEADER**: AppCode can be placed in the Header parameter for authentication.
+         * *   **HEADER_QUERY**: AppCode can be placed in the Header or Query parameter for authentication.
          */
         public Builder appCodeAuthType(String appCodeAuthType) {
             this.putQueryParameter("AppCodeAuthType", appCodeAuthType);
@@ -450,7 +460,12 @@ public class CreateApiRequest extends Request {
         }
 
         /**
-         * AuthType.
+         * API安全认证类型，目前可以取值：
+         * <p>
+         * 
+         * - **APP**：只允许已授权的APP调用
+         * - **ANONYMOUS**：允许匿名调用，设置为允许匿名调用需要注意：
+         *   任何能够获取该API服务信息的人，都将能够调用该API。网关不会对调用者做身份认证，也无法设置按用户的流量控制，若开放该API请设置好按API的流量控制。
          */
         public Builder authType(String authType) {
             this.putQueryParameter("AuthType", authType);
@@ -459,7 +474,7 @@ public class CreateApiRequest extends Request {
         }
 
         /**
-         * BackendEnable.
+         * Specifies whether to enable backend services.
          */
         public Builder backendEnable(Boolean backendEnable) {
             this.putQueryParameter("BackendEnable", backendEnable);
@@ -468,7 +483,7 @@ public class CreateApiRequest extends Request {
         }
 
         /**
-         * BackendId.
+         * The IDof the backend service
          */
         public Builder backendId(String backendId) {
             this.putQueryParameter("BackendId", backendId);
@@ -477,7 +492,7 @@ public class CreateApiRequest extends Request {
         }
 
         /**
-         * ConstantParameters.
+         * The parameters of the API.
          */
         public Builder constantParameters(String constantParameters) {
             this.putQueryParameter("ConstantParameters", constantParameters);
@@ -486,7 +501,7 @@ public class CreateApiRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the API. The description can be up to 180 characters in length.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -495,7 +510,9 @@ public class CreateApiRequest extends Request {
         }
 
         /**
-         * DisableInternet.
+         * *   Specifies whether to set **DisableInternet** to **true** to limit API calls to within the VPC.
+         * <p>
+         * *   If you set **DisableInternet** to **false**, the limit is lifted. The default value is false when you create an API.
          */
         public Builder disableInternet(Boolean disableInternet) {
             this.putQueryParameter("DisableInternet", disableInternet);
@@ -504,7 +521,10 @@ public class CreateApiRequest extends Request {
         }
 
         /**
-         * ErrorCodeSamples.
+         * The sample error codes returned by the backend service.
+         * <p>
+         * 
+         * For more information, see [ErrorCodeSample](~~44392~~).
          */
         public Builder errorCodeSamples(String errorCodeSamples) {
             this.putQueryParameter("ErrorCodeSamples", errorCodeSamples);
@@ -513,7 +533,7 @@ public class CreateApiRequest extends Request {
         }
 
         /**
-         * FailResultSample.
+         * The sample error response from the backend service.
          */
         public Builder failResultSample(String failResultSample) {
             this.putQueryParameter("FailResultSample", failResultSample);
@@ -522,7 +542,9 @@ public class CreateApiRequest extends Request {
         }
 
         /**
-         * ForceNonceCheck.
+         * *   Specifies whether to set **ForceNonceCheck** to **true** to force the check of X-Ca-Nonce during the request. This is the unique identifier of the request and is generally identified by UUID. After receiving this parameter, API Gateway verifies the validity of this parameter. The same value can be used only once within 15 minutes. This helps prevent replay attacks.
+         * <p>
+         * *   If you set **ForceNonceCheck** to **false**, the check is not performed. The default value is false when you create an API.
          */
         public Builder forceNonceCheck(Boolean forceNonceCheck) {
             this.putQueryParameter("ForceNonceCheck", forceNonceCheck);
@@ -531,7 +553,7 @@ public class CreateApiRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * The ID of the API group.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -540,7 +562,7 @@ public class CreateApiRequest extends Request {
         }
 
         /**
-         * OpenIdConnectConfig.
+         * The switch status of ACL. Valid values:- **on** and **off**.
          */
         public Builder openIdConnectConfig(String openIdConnectConfig) {
             this.putQueryParameter("OpenIdConnectConfig", openIdConnectConfig);
@@ -549,7 +571,10 @@ public class CreateApiRequest extends Request {
         }
 
         /**
-         * RequestConfig.
+         * The configuration items of API requests sent by the consumer to API Gateway.
+         * <p>
+         * 
+         * For more information, see [RequestConfig](~~43985~~).
          */
         public Builder requestConfig(String requestConfig) {
             this.putQueryParameter("RequestConfig", requestConfig);
@@ -558,7 +583,10 @@ public class CreateApiRequest extends Request {
         }
 
         /**
-         * RequestParameters.
+         * The parameters of API requests sent by the consumer to API Gateway.
+         * <p>
+         * 
+         * For more information, see [RequestParameter](~~43986~~).
          */
         public Builder requestParameters(String requestParameters) {
             this.putQueryParameter("RequestParameters", requestParameters);
@@ -567,7 +595,7 @@ public class CreateApiRequest extends Request {
         }
 
         /**
-         * ResultBodyModel.
+         * The return description of the API.
          */
         public Builder resultBodyModel(String resultBodyModel) {
             this.putQueryParameter("ResultBodyModel", resultBodyModel);
@@ -576,7 +604,7 @@ public class CreateApiRequest extends Request {
         }
 
         /**
-         * ResultDescriptions.
+         * The return description of the API.
          */
         public Builder resultDescriptions(String resultDescriptions) {
             this.putQueryParameter("ResultDescriptions", resultDescriptions);
@@ -585,7 +613,7 @@ public class CreateApiRequest extends Request {
         }
 
         /**
-         * ResultSample.
+         * The sample response from the backend service.
          */
         public Builder resultSample(String resultSample) {
             this.putQueryParameter("ResultSample", resultSample);
@@ -594,7 +622,7 @@ public class CreateApiRequest extends Request {
         }
 
         /**
-         * ResultType.
+         * The format of the response from the backend service. Valid values: JSON, TEXT, BINARY, XML, and HTML. Default value: JSON.
          */
         public Builder resultType(String resultType) {
             this.putQueryParameter("ResultType", resultType);
@@ -612,7 +640,10 @@ public class CreateApiRequest extends Request {
         }
 
         /**
-         * ServiceConfig.
+         * The configuration items of API requests sent by API Gateway to the backend service.
+         * <p>
+         * 
+         * For more information, see [ServiceConfig](~~43987~~).
          */
         public Builder serviceConfig(String serviceConfig) {
             this.putQueryParameter("ServiceConfig", serviceConfig);
@@ -621,7 +652,10 @@ public class CreateApiRequest extends Request {
         }
 
         /**
-         * ServiceParameters.
+         * The parameters of API requests sent by API Gateway to the backend service.
+         * <p>
+         * 
+         * For more information, see [ServiceParameter](~~43988~~).
          */
         public Builder serviceParameters(String serviceParameters) {
             this.putQueryParameter("ServiceParameters", serviceParameters);
@@ -630,7 +664,10 @@ public class CreateApiRequest extends Request {
         }
 
         /**
-         * ServiceParametersMap.
+         * The mappings between parameters of requests sent by the consumer to API Gateway and parameters of requests sent by API Gateway to the backend service.
+         * <p>
+         * 
+         * For more information, see [ServiceParameterMap](~~43989~~).
          */
         public Builder serviceParametersMap(String serviceParametersMap) {
             this.putQueryParameter("ServiceParametersMap", serviceParametersMap);
@@ -639,7 +676,7 @@ public class CreateApiRequest extends Request {
         }
 
         /**
-         * SystemParameters.
+         * The common parameters of APIs in JSON format.
          */
         public Builder systemParameters(String systemParameters) {
             this.putQueryParameter("SystemParameters", systemParameters);
@@ -648,7 +685,11 @@ public class CreateApiRequest extends Request {
         }
 
         /**
-         * Visibility.
+         * Specifies whether to make the API public. Valid values:
+         * <p>
+         * 
+         * *   **PUBLIC**: Make the API public. If you set this parameter to PUBLIC, this API is displayed on the APIs page for all users after the API is published to the production environment.
+         * *   **PRIVATE**: Make the API private. Private APIs are not displayed in the Alibaba Cloud Marketplace after the API group to which they belong is made available.
          */
         public Builder visibility(String visibility) {
             this.putQueryParameter("Visibility", visibility);
@@ -657,7 +698,15 @@ public class CreateApiRequest extends Request {
         }
 
         /**
-         * WebSocketApiType.
+         * The type of the two-way communication API.
+         * <p>
+         * 
+         * *   **COMMON**: normal APIs
+         * *   **REGISTER**: registered APIs
+         * *   **UNREGISTER**: unregistered APIs
+         * *   **NOTIFY**: downstream notification APIs
+         * 
+         * For more information, see [Two-way communication](~~66031~~).
          */
         public Builder webSocketApiType(String webSocketApiType) {
             this.putQueryParameter("WebSocketApiType", webSocketApiType);

@@ -86,7 +86,7 @@ public class DescribeModelsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * ModelDetails.
+         * The returned information about models. It is an array consisting of ModelDetail data.
          */
         public Builder modelDetails(ModelDetails modelDetails) {
             this.modelDetails = modelDetails;
@@ -94,7 +94,7 @@ public class DescribeModelsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeModelsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeModelsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeModelsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of returned entries.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -242,7 +242,7 @@ public class DescribeModelsResponseBody extends TeaModel {
             private String schema; 
 
             /**
-             * CreatedTime.
+             * The time when the model was created.
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -250,7 +250,7 @@ public class DescribeModelsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The definition of the model description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -258,7 +258,7 @@ public class DescribeModelsResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * The ID of the API group to which the model belongs.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -266,7 +266,7 @@ public class DescribeModelsResponseBody extends TeaModel {
             }
 
             /**
-             * ModelId.
+             * The ID of the model.
              */
             public Builder modelId(String modelId) {
                 this.modelId = modelId;
@@ -274,7 +274,7 @@ public class DescribeModelsResponseBody extends TeaModel {
             }
 
             /**
-             * ModelName.
+             * The name of the model.
              */
             public Builder modelName(String modelName) {
                 this.modelName = modelName;
@@ -282,7 +282,7 @@ public class DescribeModelsResponseBody extends TeaModel {
             }
 
             /**
-             * ModelRef.
+             * The URI of the model.
              */
             public Builder modelRef(String modelRef) {
                 this.modelRef = modelRef;
@@ -290,7 +290,7 @@ public class DescribeModelsResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * The last modification time of the model.
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -298,7 +298,7 @@ public class DescribeModelsResponseBody extends TeaModel {
             }
 
             /**
-             * Schema.
+             * The definition of the model.
              */
             public Builder schema(String schema) {
                 this.schema = schema;

@@ -50,7 +50,7 @@ public class DescribeApiGroupVpcWhitelistResponseBody extends TeaModel {
         private String vpcIds; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeApiGroupVpcWhitelistResponseBody extends TeaModel {
         }
 
         /**
-         * VpcIds.
+         * The ID of the VPC.
          */
         public Builder vpcIds(String vpcIds) {
             this.vpcIds = vpcIds;

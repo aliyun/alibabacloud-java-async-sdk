@@ -58,7 +58,7 @@ public class DescribeDatasetInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,7 +146,7 @@ public class DescribeDatasetInfoResponseBody extends TeaModel {
             private String modifiedTime; 
 
             /**
-             * CreatedTime.
+             * The creation time (UTC) of the dataset.
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -154,7 +154,7 @@ public class DescribeDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DatasetId.
+             * The ID of the dataset.
              */
             public Builder datasetId(String datasetId) {
                 this.datasetId = datasetId;
@@ -162,7 +162,7 @@ public class DescribeDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DatasetName.
+             * The name of the dataset.
              */
             public Builder datasetName(String datasetName) {
                 this.datasetName = datasetName;
@@ -170,7 +170,12 @@ public class DescribeDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DatasetType.
+             * The type of the dataset. Valid values:
+             * <p>
+             * 
+             * *   JWT_BLOCKING: a JSON Web Token (JWT) blacklist
+             * *   IP_WHITELIST_CIDR : an IP address whitelist
+             * *   PARAMETER_ACCESS : parameter-based access control
              */
             public Builder datasetType(String datasetType) {
                 this.datasetType = datasetType;
@@ -178,7 +183,7 @@ public class DescribeDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * The last modification time (UTC) of the dataset.
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
