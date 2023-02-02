@@ -114,7 +114,7 @@ public class DeleteNacosConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * The HTTP status code
          */
         public Builder httpCode(String httpCode) {
             this.httpCode = httpCode;

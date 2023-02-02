@@ -22,18 +22,20 @@ public class UpdateClusterSpecRequest extends Request {
 
     @Query
     @NameInMap("ClusterSpecification")
-    @Validation(required = true)
     private String clusterSpecification;
 
     @Query
     @NameInMap("InstanceCount")
-    @Validation(required = true)
     private Integer instanceCount;
 
     @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
     private String instanceId;
+
+    @Query
+    @NameInMap("MseVersion")
+    private String mseVersion;
 
     private UpdateClusterSpecRequest(Builder builder) {
         super(builder);
@@ -42,6 +44,7 @@ public class UpdateClusterSpecRequest extends Request {
         this.clusterSpecification = builder.clusterSpecification;
         this.instanceCount = builder.instanceCount;
         this.instanceId = builder.instanceId;
+        this.mseVersion = builder.mseVersion;
     }
 
     public static Builder builder() {
@@ -92,12 +95,20 @@ public class UpdateClusterSpecRequest extends Request {
         return this.instanceId;
     }
 
+    /**
+     * @return mseVersion
+     */
+    public String getMseVersion() {
+        return this.mseVersion;
+    }
+
     public static final class Builder extends Request.Builder<UpdateClusterSpecRequest, Builder> {
         private String acceptLanguage; 
         private String clusterId; 
         private String clusterSpecification; 
         private Integer instanceCount; 
         private String instanceId; 
+        private String mseVersion; 
 
         private Builder() {
             super();
@@ -110,6 +121,7 @@ public class UpdateClusterSpecRequest extends Request {
             this.clusterSpecification = request.clusterSpecification;
             this.instanceCount = request.instanceCount;
             this.instanceId = request.instanceId;
+            this.mseVersion = request.mseVersion;
         } 
 
         /**
@@ -158,6 +170,15 @@ public class UpdateClusterSpecRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * MseVersion.
+         */
+        public Builder mseVersion(String mseVersion) {
+            this.putQueryParameter("MseVersion", mseVersion);
+            this.mseVersion = mseVersion;
             return this;
         }
 

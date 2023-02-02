@@ -279,11 +279,11 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         } 
 
         /**
-         * The language that the value of the **LocalName** response parameter uses. Valid values:
+         * The language of the response. Valid values:****
          * <p>
          * 
-         * *   **zh-cn**: Chinese
-         * *   **en-us**: English.
+         * *   **zh-CN**: Chinese
+         * *   **en-US**: English.
          * 
          * > Default value: **zh-CN**.
          */
@@ -340,7 +340,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         }
 
         /**
-         * Optional. The time when the lane was created.
+         * The creation time.
          */
         public Builder gmtCreate(String gmtCreate) {
             this.putQueryParameter("GmtCreate", gmtCreate);
@@ -349,7 +349,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         }
 
         /**
-         * Optional. The time when the lane was last modified.
+         * The update time.
          */
         public Builder gmtModified(String gmtModified) {
             this.putQueryParameter("GmtModified", gmtModified);
@@ -394,7 +394,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -604,7 +604,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * The name of the rule. This parameter corresponds to the key of the type parameter.
+             * The name of the rule. This parameter corresponds to the key of the Type parameter.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -882,7 +882,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * The name of the rule. This parameter corresponds to the key of the type parameter.
+             * The name of the rule. This parameter corresponds to the key of the Type parameter.
              */
             public Builder name(String name) {
                 this.name = name;

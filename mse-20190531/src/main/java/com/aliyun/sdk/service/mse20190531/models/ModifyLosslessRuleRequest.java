@@ -329,7 +329,7 @@ public class ModifyLosslessRuleRequest extends Request {
         }
 
         /**
-         * LossLessDetail.
+         * Specifies whether to display online and offline processing details.
          */
         public Builder lossLessDetail(Boolean lossLessDetail) {
             this.putQueryParameter("LossLessDetail", lossLessDetail);
@@ -347,7 +347,7 @@ public class ModifyLosslessRuleRequest extends Request {
         }
 
         /**
-         * Notice.
+         * Specifies whether to enable notification.
          */
         public Builder notice(Boolean notice) {
             this.putQueryParameter("Notice", notice);
@@ -356,7 +356,7 @@ public class ModifyLosslessRuleRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -365,7 +365,7 @@ public class ModifyLosslessRuleRequest extends Request {
         }
 
         /**
-         * Specifies whether to associate readiness probe with service prefetching.
+         * Specifies whether to associate with service prefetching.
          */
         public Builder related(Boolean related) {
             this.putQueryParameter("Related", related);
@@ -383,7 +383,7 @@ public class ModifyLosslessRuleRequest extends Request {
         }
 
         /**
-         * The service source. Valid values:
+         * The service source.
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);

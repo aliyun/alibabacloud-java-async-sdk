@@ -202,7 +202,7 @@ public class ListEngineNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of instances.
+         * The total number of returned instances.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -234,6 +234,9 @@ public class ListEngineNamespacesResponseBody extends TeaModel {
         @NameInMap("ServiceCount")
         private String serviceCount;
 
+        @NameInMap("SourceType")
+        private String sourceType;
+
         @NameInMap("Type")
         private Integer type;
 
@@ -244,6 +247,7 @@ public class ListEngineNamespacesResponseBody extends TeaModel {
             this.namespaceShowName = builder.namespaceShowName;
             this.quota = builder.quota;
             this.serviceCount = builder.serviceCount;
+            this.sourceType = builder.sourceType;
             this.type = builder.type;
         }
 
@@ -298,6 +302,13 @@ public class ListEngineNamespacesResponseBody extends TeaModel {
         }
 
         /**
+         * @return sourceType
+         */
+        public String getSourceType() {
+            return this.sourceType;
+        }
+
+        /**
          * @return type
          */
         public Integer getType() {
@@ -311,6 +322,7 @@ public class ListEngineNamespacesResponseBody extends TeaModel {
             private String namespaceShowName; 
             private Integer quota; 
             private String serviceCount; 
+            private String sourceType; 
             private Integer type; 
 
             /**
@@ -346,7 +358,7 @@ public class ListEngineNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * The quota of configurations.
+             * The quotas.
              */
             public Builder quota(Integer quota) {
                 this.quota = quota;
@@ -358,6 +370,14 @@ public class ListEngineNamespacesResponseBody extends TeaModel {
              */
             public Builder serviceCount(String serviceCount) {
                 this.serviceCount = serviceCount;
+                return this;
+            }
+
+            /**
+             * SourceType.
+             */
+            public Builder sourceType(String sourceType) {
+                this.sourceType = sourceType;
                 return this;
             }
 

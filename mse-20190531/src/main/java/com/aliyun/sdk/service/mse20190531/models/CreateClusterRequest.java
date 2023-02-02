@@ -359,7 +359,7 @@ public class CreateClusterRequest extends Request {
          * The engine version of the instance. Valid values:
          * <p>
          * 
-         * \[Professional Edition]
+         * \[Professional version]
          * 
          * *   `NACOS_2_0_0`: Nacos 2.0.0
          * *   `ZooKeeper_3_8_0`: ZooKeeper 3.8.0
@@ -389,7 +389,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The disk type. Valid values:
+         * The disk type of the MSE instance. Valid values:
          * <p>
          * 
          * *   alicloud-disk-ssd
@@ -429,7 +429,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * Set this parameter unless otherwise specified. Valid values:
+         * Configure this parameter unless otherwise specified. Valid values:
          * <p>
          * 
          * *   `mse_pro`: Professional Edition
@@ -442,7 +442,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The network type of the instance. Valid values:
+         * The network type of the MSE instance. Valid values:
          * <p>
          * 
          * *   `privatenet`: VPC
@@ -492,7 +492,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The region where the MSE instance resides. Examples:
+         * The region where the instance resides. Examples:
          * <p>
          * 
          * *   `cn-hangzhou`: China (Hangzhou)
@@ -517,7 +517,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The ID of the resource group. For more information about resource groups, see the topic "View basic information of a resource group."
+         * The ID of the resource group. For more information, see [View basic information of a resource group](~~457230~~).
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

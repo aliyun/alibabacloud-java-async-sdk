@@ -182,7 +182,7 @@ public class QueryConfigResponseBody extends TeaModel {
             private Boolean emptyProtect; 
 
             /**
-             * emptyProtect.
+             * Indicates whether empty list protection is enabled.
              */
             public Builder emptyProtect(Boolean emptyProtect) {
                 this.emptyProtect = emptyProtect;
@@ -595,7 +595,7 @@ public class QueryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ConfigContentLimit.
+             * The maximum size of a configuration. Unit: KB.
              */
             public Builder configContentLimit(Long configContentLimit) {
                 this.configContentLimit = configContentLimit;
@@ -627,7 +627,7 @@ public class QueryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ExtendedTypesEnable.
+             * Indicates whether the time to live (TTL) configuration is enabled. This parameter is valid for ZooKeeper instances.
              */
             public Builder extendedTypesEnable(Boolean extendedTypesEnable) {
                 this.extendedTypesEnable = extendedTypesEnable;
@@ -709,7 +709,7 @@ public class QueryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * NacosRunningEnv.
+             * The runtime configuration of the Nacos instance.
              */
             public Builder nacosRunningEnv(NacosRunningEnv nacosRunningEnv) {
                 this.nacosRunningEnv = nacosRunningEnv;

@@ -134,7 +134,7 @@ public class ListZkTrackResponseBody extends TeaModel {
         private java.util.List < Traces> traces; 
 
         /**
-         * The error code returned if the request failed.
+         * The error code returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -202,7 +202,7 @@ public class ListZkTrackResponseBody extends TeaModel {
         }
 
         /**
-         * The trajectory data.
+         * The track data.
          */
         public Builder traces(java.util.List < Traces> traces) {
             this.traces = traces;
@@ -418,7 +418,7 @@ public class ListZkTrackResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the event. For trajectory of the notify type:
+             * The type of the event. For tracks of the Notify type:
              * <p>
              * 
              * *   NodeCreated
@@ -440,7 +440,7 @@ public class ListZkTrackResponseBody extends TeaModel {
             }
 
             /**
-             * The recorded time.
+             * The logging time.
              */
             public Builder logDate(String logDate) {
                 this.logDate = logDate;
@@ -456,7 +456,7 @@ public class ListZkTrackResponseBody extends TeaModel {
             }
 
             /**
-             * The operation type. For trajectory of the push type:
+             * The operation type. For tracks of the Push type:
              * <p>
              * 
              * *   Create
@@ -465,7 +465,7 @@ public class ListZkTrackResponseBody extends TeaModel {
              * *   SetAcl
              * *   Multi
              * 
-             * For trajectory of the pull type:
+             * For tracks of the Pull type:
              * 
              * *   GetData
              * *   GetChild
@@ -485,7 +485,7 @@ public class ListZkTrackResponseBody extends TeaModel {
             }
 
             /**
-             * The returned message.
+             * The result.
              */
             public Builder result(String result) {
                 this.result = result;
@@ -509,7 +509,7 @@ public class ListZkTrackResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the trajectory. Valid values:
+             * The type of the track. Valid values:
              * <p>
              * 
              * *   Push
@@ -530,7 +530,7 @@ public class ListZkTrackResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether to enable the listener.
+             * Indicates whether to enable the monitoring feature.
              */
             public Builder watch(Boolean watch) {
                 this.watch = watch;

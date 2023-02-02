@@ -122,7 +122,7 @@ public class DeleteGatewayRouteResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -322,7 +322,7 @@ public class DeleteGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The modification time.
+             * The update time.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -362,7 +362,15 @@ public class DeleteGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The status.
+             * The status of the route. Valid values:
+             * <p>
+             * 
+             * *   0: unpublished
+             * *   2: publishing
+             * *   3: published
+             * *   4: editing (updated but not published)
+             * *   5: unpublishing
+             * *   6: unavailable
              */
             public Builder status(Integer status) {
                 this.status = status;

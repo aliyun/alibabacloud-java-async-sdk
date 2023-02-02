@@ -383,7 +383,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The status code returned.
+             * The return value.
              */
             public Builder code(Integer code) {
                 this.code = code;
@@ -852,7 +852,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTP status code returned.
+             * The information about the HTTP status code.
              */
             public Builder httpCodes(java.util.List < String > httpCodes) {
                 this.httpCodes = httpCodes;
@@ -860,7 +860,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The retry condition.
+             * The information about the retry condition.
              */
             public Builder retryOn(java.util.List < String > retryOn) {
                 this.retryOn = retryOn;
@@ -1188,7 +1188,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             private java.util.List < QueryPredicates> queryPredicates; 
 
             /**
-             * The rules for matching based on request headers.
+             * The information about matching based on request headers.
              */
             public Builder headerPredicates(java.util.List < HeaderPredicates> headerPredicates) {
                 this.headerPredicates = headerPredicates;
@@ -1353,7 +1353,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace.
+             * The namespace to which the service belongs.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -1891,7 +1891,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The list of domain names.
+             * The names of domains.
              */
             public Builder domainNameList(java.util.List < String > domainNameList) {
                 this.domainNameList = domainNameList;
@@ -1931,7 +1931,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The modification time.
+             * The update time.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;

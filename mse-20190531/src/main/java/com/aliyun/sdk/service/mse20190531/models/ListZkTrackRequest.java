@@ -207,7 +207,7 @@ public class ListZkTrackRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -252,7 +252,7 @@ public class ListZkTrackRequest extends Request {
         }
 
         /**
-         * Specifies whether entries are sorted in reverse chronological order.
+         * Specifies whether to enable reverse ordering.
          */
         public Builder reverse(Boolean reverse) {
             this.putQueryParameter("Reverse", reverse);

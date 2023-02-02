@@ -169,7 +169,7 @@ public class ListInstanceCountResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed. If the request failed, the ErrorCode parameter is returned. For more information, see the "Error codes" section of this topic.
+         * The error code returned if the request failed. If the request failed, the ErrorCode parameter is returned. For more information, see the [Error codes](~~456441~~) section of this topic.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;

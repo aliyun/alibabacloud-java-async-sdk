@@ -135,7 +135,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The instance ID.
          * <p>
          * 
          * > This parameter specifies the instance ID that is passed. Examples:

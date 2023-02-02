@@ -122,7 +122,7 @@ public class ListGatewayDomainResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * The error message returned if the request failed.
          */
         public Builder message(String message) {
             this.message = message;
@@ -452,7 +452,7 @@ public class ListGatewayDomainResponseBody extends TeaModel {
             }
 
             /**
-             * ID
+             * The domain ID.
              */
             public Builder id(Long id) {
                 this.id = id;

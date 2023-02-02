@@ -143,8 +143,8 @@ public class DeleteNacosConfigRequest extends Request {
          * Specifies whether to perform a beta release. Valid values:
          * <p>
          * 
-         * *   `true`: performs a beta release.
-         * *   `false`: not performs a beta release.
+         * *   `true`: yes
+         * *   `false`: no
          */
         public Builder beta(Boolean beta) {
             this.putQueryParameter("Beta", beta);
@@ -171,7 +171,7 @@ public class DeleteNacosConfigRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The ID of the instance
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

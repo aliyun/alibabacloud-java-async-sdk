@@ -134,7 +134,7 @@ public class ListNamingTrackResponseBody extends TeaModel {
         private java.util.List < Traces> traces; 
 
         /**
-         * ErrorCode.
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -142,7 +142,7 @@ public class ListNamingTrackResponseBody extends TeaModel {
         }
 
         /**
-         * HttpCode.
+         * The HTTP status code returned.
          */
         public Builder httpCode(String httpCode) {
             this.httpCode = httpCode;
@@ -150,7 +150,7 @@ public class ListNamingTrackResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -158,7 +158,7 @@ public class ListNamingTrackResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -166,7 +166,7 @@ public class ListNamingTrackResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -174,7 +174,7 @@ public class ListNamingTrackResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -182,7 +182,11 @@ public class ListNamingTrackResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -190,7 +194,7 @@ public class ListNamingTrackResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of returned entries.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -198,7 +202,7 @@ public class ListNamingTrackResponseBody extends TeaModel {
         }
 
         /**
-         * Traces.
+         * The data information.
          */
         public Builder traces(java.util.List < Traces> traces) {
             this.traces = traces;
@@ -334,7 +338,7 @@ public class ListNamingTrackResponseBody extends TeaModel {
             private String slaTime; 
 
             /**
-             * ClientIp.
+             * The IP address of the client.
              */
             public Builder clientIp(String clientIp) {
                 this.clientIp = clientIp;
@@ -342,7 +346,7 @@ public class ListNamingTrackResponseBody extends TeaModel {
             }
 
             /**
-             * Group.
+             * The group.
              */
             public Builder group(String group) {
                 this.group = group;
@@ -350,7 +354,7 @@ public class ListNamingTrackResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceSize.
+             * The number of instances.
              */
             public Builder instanceSize(String instanceSize) {
                 this.instanceSize = instanceSize;
@@ -358,7 +362,7 @@ public class ListNamingTrackResponseBody extends TeaModel {
             }
 
             /**
-             * NodeName.
+             * The name of the node.
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -366,7 +370,7 @@ public class ListNamingTrackResponseBody extends TeaModel {
             }
 
             /**
-             * PushTime.
+             * The push time.
              */
             public Builder pushTime(String pushTime) {
                 this.pushTime = pushTime;
@@ -374,7 +378,7 @@ public class ListNamingTrackResponseBody extends TeaModel {
             }
 
             /**
-             * PushTimeAll.
+             * The total push time.
              */
             public Builder pushTimeAll(String pushTimeAll) {
                 this.pushTimeAll = pushTimeAll;
@@ -382,7 +386,7 @@ public class ListNamingTrackResponseBody extends TeaModel {
             }
 
             /**
-             * PushTimeNetwork.
+             * The push time for the network.
              */
             public Builder pushTimeNetwork(String pushTimeNetwork) {
                 this.pushTimeNetwork = pushTimeNetwork;
@@ -390,7 +394,7 @@ public class ListNamingTrackResponseBody extends TeaModel {
             }
 
             /**
-             * ServerName.
+             * The name of the service.
              */
             public Builder serverName(String serverName) {
                 this.serverName = serverName;
@@ -398,7 +402,7 @@ public class ListNamingTrackResponseBody extends TeaModel {
             }
 
             /**
-             * SlaTime.
+             * The duration that is specified in the service-level agreement (SLA).
              */
             public Builder slaTime(String slaTime) {
                 this.slaTime = slaTime;

@@ -180,7 +180,7 @@ public class AddServiceSourceRequest extends Request {
         }
 
         /**
-         * The endpoint.
+         * The address.
          */
         public Builder address(String address) {
             this.putQueryParameter("Address", address);
@@ -208,7 +208,7 @@ public class AddServiceSourceRequest extends Request {
         }
 
         /**
-         * The Ingress configuration.
+         * The configurations of Ingress resources.
          */
         public Builder ingressOptionsRequest(IngressOptionsRequest ingressOptionsRequest) {
             String ingressOptionsRequestShrink = shrink(ingressOptionsRequest, "IngressOptionsRequest", "json");
@@ -221,9 +221,9 @@ public class AddServiceSourceRequest extends Request {
          * The name.
          * <p>
          * 
-         * > The parameter value varies based on the source type.
+         * > The parameter definition varies based on the source type.
          * 
-         * *   If Type is set to K8S, this parameter specifies the name of the ACK cluster.
+         * *   If Type is set to K8S, this parameter specifies the name of the Kubernetes cluster.
          * *   If Type is set to NACOS, this parameter specifies the ID of the instance.
          */
         public Builder name(String name) {
@@ -243,10 +243,10 @@ public class AddServiceSourceRequest extends Request {
         }
 
         /**
-         * The service source.
+         * The service source. Valid values:
          * <p>
          * 
-         * *   K8S: ACK cluster
+         * *   K8S: Kubernetes cluster
          * *   MSE: Nacos instance
          */
         public Builder source(String source) {
@@ -259,7 +259,7 @@ public class AddServiceSourceRequest extends Request {
          * The type of the service source. Valid values:
          * <p>
          * 
-         * *   K8S: ACK cluster
+         * *   K8S: Kubernetes cluster
          * *   NACOS: Nacos instance
          */
         public Builder type(String type) {

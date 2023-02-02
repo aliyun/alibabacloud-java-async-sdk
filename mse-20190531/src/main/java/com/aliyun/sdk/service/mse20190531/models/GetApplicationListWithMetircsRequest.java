@@ -229,7 +229,7 @@ public class GetApplicationListWithMetircsRequest extends Request {
         }
 
         /**
-         * The service source. Valid values:
+         * The service source.
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);

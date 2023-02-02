@@ -18,6 +18,9 @@ public class UpdateClusterSpecResponseBody extends TeaModel {
     @NameInMap("Data")
     private String data;
 
+    @NameInMap("ErrorCode")
+    private String errorCode;
+
     @NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
@@ -33,6 +36,7 @@ public class UpdateClusterSpecResponseBody extends TeaModel {
     private UpdateClusterSpecResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
+        this.errorCode = builder.errorCode;
         this.httpStatusCode = builder.httpStatusCode;
         this.message = builder.message;
         this.requestId = builder.requestId;
@@ -59,6 +63,13 @@ public class UpdateClusterSpecResponseBody extends TeaModel {
      */
     public String getData() {
         return this.data;
+    }
+
+    /**
+     * @return errorCode
+     */
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     /**
@@ -92,6 +103,7 @@ public class UpdateClusterSpecResponseBody extends TeaModel {
     public static final class Builder {
         private Integer code; 
         private String data; 
+        private String errorCode; 
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
@@ -110,6 +122,14 @@ public class UpdateClusterSpecResponseBody extends TeaModel {
          */
         public Builder data(String data) {
             this.data = data;
+            return this;
+        }
+
+        /**
+         * ErrorCode.
+         */
+        public Builder errorCode(String errorCode) {
+            this.errorCode = errorCode;
             return this;
         }
 

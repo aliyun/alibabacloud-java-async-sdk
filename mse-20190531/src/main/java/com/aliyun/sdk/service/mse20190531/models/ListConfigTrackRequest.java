@@ -213,7 +213,11 @@ public class ListConfigTrackRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -222,7 +226,7 @@ public class ListConfigTrackRequest extends Request {
         }
 
         /**
-         * DataId.
+         * The ID of the configuration.
          */
         public Builder dataId(String dataId) {
             this.putQueryParameter("DataId", dataId);
@@ -231,7 +235,7 @@ public class ListConfigTrackRequest extends Request {
         }
 
         /**
-         * EndTs.
+         * The end timestamp. Unit: seconds.
          */
         public Builder endTs(Long endTs) {
             this.putQueryParameter("EndTs", endTs);
@@ -240,7 +244,7 @@ public class ListConfigTrackRequest extends Request {
         }
 
         /**
-         * Group.
+         * The name of the configuration group.
          */
         public Builder group(String group) {
             this.putQueryParameter("Group", group);
@@ -249,7 +253,7 @@ public class ListConfigTrackRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -258,7 +262,7 @@ public class ListConfigTrackRequest extends Request {
         }
 
         /**
-         * Ip.
+         * The IP address of the listener.
          */
         public Builder ip(String ip) {
             this.putQueryParameter("Ip", ip);
@@ -267,7 +271,7 @@ public class ListConfigTrackRequest extends Request {
         }
 
         /**
-         * NamespaceId.
+         * The ID of the namespace.
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
@@ -276,7 +280,7 @@ public class ListConfigTrackRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * The number of the page to return.
          */
         public Builder pageNum(Long pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -285,7 +289,7 @@ public class ListConfigTrackRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -294,7 +298,7 @@ public class ListConfigTrackRequest extends Request {
         }
 
         /**
-         * RequestPars.
+         * The extended request parameters in the JSON format.
          */
         public Builder requestPars(String requestPars) {
             this.putQueryParameter("RequestPars", requestPars);
@@ -303,7 +307,11 @@ public class ListConfigTrackRequest extends Request {
         }
 
         /**
-         * Reverse.
+         * Specifies whether entries are sorted in reverse chronological order.
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder reverse(Boolean reverse) {
             this.putQueryParameter("Reverse", reverse);
@@ -312,7 +320,7 @@ public class ListConfigTrackRequest extends Request {
         }
 
         /**
-         * StartTs.
+         * The start timestamp. Unit: seconds.
          */
         public Builder startTs(Long startTs) {
             this.putQueryParameter("StartTs", startTs);

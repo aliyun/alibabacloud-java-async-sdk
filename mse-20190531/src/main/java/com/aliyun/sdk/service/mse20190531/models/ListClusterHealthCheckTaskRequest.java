@@ -124,7 +124,11 @@ public class ListClusterHealthCheckTaskRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -133,7 +137,7 @@ public class ListClusterHealthCheckTaskRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -142,7 +146,7 @@ public class ListClusterHealthCheckTaskRequest extends Request {
         }
 
         /**
-         * 查询第几页
+         * The number of the page to return.
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -151,7 +155,7 @@ public class ListClusterHealthCheckTaskRequest extends Request {
         }
 
         /**
-         * 每页展示条数
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -160,7 +164,7 @@ public class ListClusterHealthCheckTaskRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region in which the instance resides.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -169,7 +173,7 @@ public class ListClusterHealthCheckTaskRequest extends Request {
         }
 
         /**
-         * RequestPars.
+         * The extended request parameters in the JSON format.
          */
         public Builder requestPars(String requestPars) {
             this.putQueryParameter("RequestPars", requestPars);

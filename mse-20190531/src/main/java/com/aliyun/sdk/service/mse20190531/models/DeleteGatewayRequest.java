@@ -85,8 +85,8 @@ public class DeleteGatewayRequest extends Request {
          * The language of the response. Valid values:
          * <p>
          * 
-         * - zh: Chinese
-         * - en: English
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -95,7 +95,7 @@ public class DeleteGatewayRequest extends Request {
         }
 
         /**
-         * Specifies whether to delete the Server Load Balancer (SLB) instance purchased for the gateway.
+         * Specifies whether to delete the SLB instance purchased for the gateway when you delete the gateway.
          */
         public Builder deleteSlb(Boolean deleteSlb) {
             this.putQueryParameter("DeleteSlb", deleteSlb);

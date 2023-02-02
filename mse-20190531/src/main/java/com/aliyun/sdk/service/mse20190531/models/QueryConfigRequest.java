@@ -137,7 +137,7 @@ public class QueryConfigRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The ID of the cluster.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -146,7 +146,7 @@ public class QueryConfigRequest extends Request {
         }
 
         /**
-         * The format of the configuration. Supported formats include TEXT, JSON, XML, and HTML.
+         * A reserved parameter.
          */
         public Builder configType(String configType) {
             this.putQueryParameter("ConfigType", configType);
@@ -164,7 +164,7 @@ public class QueryConfigRequest extends Request {
         }
 
         /**
-         * NeedRunningConf.
+         * Specifies whether runtime configurations are required.
          */
         public Builder needRunningConf(Boolean needRunningConf) {
             this.putQueryParameter("NeedRunningConf", needRunningConf);

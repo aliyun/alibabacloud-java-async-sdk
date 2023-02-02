@@ -106,7 +106,7 @@ public class UpdateSSLCertResponseBody extends TeaModel {
         }
 
         /**
-         * The data structure.
+         * Indicates whether the update is successful.
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -130,7 +130,7 @@ public class UpdateSSLCertResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
