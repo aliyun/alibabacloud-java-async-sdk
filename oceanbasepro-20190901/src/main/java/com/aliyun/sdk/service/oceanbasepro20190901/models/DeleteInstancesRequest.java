@@ -92,7 +92,13 @@ public class DeleteInstancesRequest extends Request {
         }
 
         /**
-         * 集群删除后的备份保留策略。取值如下： - receive_all：保留全部备份集; - delete_all：删除全部备份集； - receive_last：保留最后一个备份集。 默认值为delete_all。
+         * The backup retention strategy for cluster deletion. Valid values:  
+         * <p>
+         * - receive_all: retains all backup sets.   
+         * - delete_all: deletes all backup sets.   
+         * - receive_last: retains the last backup set.    
+         * 
+         * > <br>Default value: delete_all.
          */
         public Builder backupRetainMode(String backupRetainMode) {
             this.putBodyParameter("BackupRetainMode", backupRetainMode);
@@ -101,7 +107,9 @@ public class DeleteInstancesRequest extends Request {
         }
 
         /**
-         * 要删除的集群ID。格式为son数组的字符串。
+         * The ID of the cluster to be deleted.   
+         * <p>
+         * The value is a string in the JSON format.
          */
         public Builder instanceIds(String instanceIds) {
             this.putBodyParameter("InstanceIds", instanceIds);

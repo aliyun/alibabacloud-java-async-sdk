@@ -123,7 +123,7 @@ public class DescribeAvailableMemResourceRequest extends Request {
         }
 
         /**
-         * CpuNum.
+         * The number of CPU cores.
          */
         public Builder cpuNum(Long cpuNum) {
             this.putBodyParameter("CpuNum", cpuNum);
@@ -132,7 +132,7 @@ public class DescribeAvailableMemResourceRequest extends Request {
         }
 
         /**
-         * Oceanbase集群ID。
+         * The ID of the OceanBase cluster.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -141,7 +141,7 @@ public class DescribeAvailableMemResourceRequest extends Request {
         }
 
         /**
-         * 租户ID。
+         * The ID of the tenant.
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);
@@ -150,7 +150,9 @@ public class DescribeAvailableMemResourceRequest extends Request {
         }
 
         /**
-         * 租户的资源分布节点数。 其与集群的部署模式相耦合，如集群模式为2-2-2，则最后分布节点数最多为2个。
+         * The number of resource distribution nodes in the tenant.   
+         * <p>
+         * The number is determined by the deployment mode of the cluster. If the cluster is deployed in 2-2-2 mode, the maximum number of resource distribution nodes is 2.
          */
         public Builder unitNum(Long unitNum) {
             this.putBodyParameter("UnitNum", unitNum);

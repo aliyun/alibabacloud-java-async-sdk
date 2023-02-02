@@ -50,7 +50,7 @@ public class DescribeSQLDetailsResponseBody extends TeaModel {
         private java.util.List < SQLDetails> SQLDetails; 
 
         /**
-         * 请求ID
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeSQLDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * SQL详情
+         * The details of the SQL statement.
          */
         public Builder SQLDetails(java.util.List < SQLDetails> SQLDetails) {
             this.SQLDetails = SQLDetails;
@@ -122,7 +122,7 @@ public class DescribeSQLDetailsResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * 数据库名
+             * The name of the database.
              */
             public Builder dbName(String dbName) {
                 this.dbName = dbName;
@@ -130,7 +130,7 @@ public class DescribeSQLDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * SQL文本
+             * The SQL text.
              */
             public Builder SQLText(String SQLText) {
                 this.SQLText = SQLText;
@@ -138,7 +138,7 @@ public class DescribeSQLDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * 用户名
+             * The username.
              */
             public Builder userName(String userName) {
                 this.userName = userName;

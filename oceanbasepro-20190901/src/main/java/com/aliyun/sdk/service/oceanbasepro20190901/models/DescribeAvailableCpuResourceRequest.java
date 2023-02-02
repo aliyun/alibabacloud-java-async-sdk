@@ -107,7 +107,7 @@ public class DescribeAvailableCpuResourceRequest extends Request {
         }
 
         /**
-         * Oceanbase集群ID。
+         * The ID of the OceanBase cluster.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -116,7 +116,12 @@ public class DescribeAvailableCpuResourceRequest extends Request {
         }
 
         /**
-         * 用户权限修改类型。 可支持以下几种方式： update：全量更新权限，默认值； add：新增权限； delete：删除权限。 默认值：update。
+         * The type of the privilege modification operation.   
+         * <p>
+         *  Valid values:  
+         * update: updates all privileges. This is the default value.  
+         * add: adds a privilege.   
+         * delete: deletes a privilege.
          */
         public Builder modifyType(String modifyType) {
             this.putBodyParameter("ModifyType", modifyType);
@@ -125,7 +130,7 @@ public class DescribeAvailableCpuResourceRequest extends Request {
         }
 
         /**
-         * 租户ID。
+         * The ID of the tenant.
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);

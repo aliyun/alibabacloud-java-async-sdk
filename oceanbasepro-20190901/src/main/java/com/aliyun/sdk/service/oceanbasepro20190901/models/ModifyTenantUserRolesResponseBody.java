@@ -50,7 +50,7 @@ public class ModifyTenantUserRolesResponseBody extends TeaModel {
         private TenantUser tenantUser; 
 
         /**
-         * 请求ID。
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ModifyTenantUserRolesResponseBody extends TeaModel {
         }
 
         /**
-         * 租户中的数据库账号信息。
+         * The list of database accounts in the tenant.
          */
         public Builder tenantUser(TenantUser tenantUser) {
             this.tenantUser = tenantUser;
@@ -134,7 +134,7 @@ public class ModifyTenantUserRolesResponseBody extends TeaModel {
             private String table; 
 
             /**
-             * 数据库(schema)名称
+             * The name of the database (MySQL mode) or schema (Oracle mode).
              */
             public Builder database(String database) {
                 this.database = database;
@@ -142,7 +142,7 @@ public class ModifyTenantUserRolesResponseBody extends TeaModel {
             }
 
             /**
-             * 是否授权成功。
+             * Indicates whether the privilege was granted to the role.
              */
             public Builder isSuccess(Boolean isSuccess) {
                 this.isSuccess = isSuccess;
@@ -150,7 +150,7 @@ public class ModifyTenantUserRolesResponseBody extends TeaModel {
             }
 
             /**
-             * 拥有的角色。
+             * The role of the account.
              */
             public Builder role(String role) {
                 this.role = role;
@@ -158,7 +158,7 @@ public class ModifyTenantUserRolesResponseBody extends TeaModel {
             }
 
             /**
-             * 表的名称。
+             * The name of the table.
              */
             public Builder table(String table) {
                 this.table = table;
@@ -223,7 +223,7 @@ public class ModifyTenantUserRolesResponseBody extends TeaModel {
             private java.util.List < UserRole> userRole; 
 
             /**
-             * 租户ID。
+             * The ID of the tenant.
              */
             public Builder tenantId(String tenantId) {
                 this.tenantId = tenantId;
@@ -231,7 +231,7 @@ public class ModifyTenantUserRolesResponseBody extends TeaModel {
             }
 
             /**
-             * 账号名称。
+             * The name of the account.
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -239,7 +239,10 @@ public class ModifyTenantUserRolesResponseBody extends TeaModel {
             }
 
             /**
-             * 账号类型。 Admin：超级账户 Normal：普通账户
+             * The type of the account. Valid values:   
+             * <p>
+             * - Admin: the super administrator account.   
+             * - Normal: a general account.
              */
             public Builder userRole(java.util.List < UserRole> userRole) {
                 this.userRole = userRole;

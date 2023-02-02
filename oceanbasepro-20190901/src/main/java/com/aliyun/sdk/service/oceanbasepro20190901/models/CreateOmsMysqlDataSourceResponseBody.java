@@ -50,7 +50,7 @@ public class CreateOmsMysqlDataSourceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The return result of the request.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class CreateOmsMysqlDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class CreateOmsMysqlDataSourceResponseBody extends TeaModel {
             private String endpointId; 
 
             /**
-             * EndpointId.
+             * The ID of the data source record.
              */
             public Builder endpointId(String endpointId) {
                 this.endpointId = endpointId;

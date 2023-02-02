@@ -158,7 +158,7 @@ public class DescribeOmsOpenAPIProjectStepsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * 建议（旧）
+         * The suggestions (old).
          */
         public Builder advice(String advice) {
             this.advice = advice;
@@ -166,7 +166,7 @@ public class DescribeOmsOpenAPIProjectStepsResponseBody extends TeaModel {
         }
 
         /**
-         * 错误码（旧）
+         * The error code (old).
          */
         public Builder code(String code) {
             this.code = code;
@@ -174,7 +174,7 @@ public class DescribeOmsOpenAPIProjectStepsResponseBody extends TeaModel {
         }
 
         /**
-         * 耗时，单位为秒
+         * The time spent in processing the request, in seconds.
          */
         public Builder cost(String cost) {
             this.cost = cost;
@@ -182,7 +182,7 @@ public class DescribeOmsOpenAPIProjectStepsResponseBody extends TeaModel {
         }
 
         /**
-         * 返回的业务数据
+         * The business data returned.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -190,7 +190,7 @@ public class DescribeOmsOpenAPIProjectStepsResponseBody extends TeaModel {
         }
 
         /**
-         * 错误详情
+         * The error details.
          */
         public Builder errorDetail(ErrorDetail errorDetail) {
             this.errorDetail = errorDetail;
@@ -198,7 +198,7 @@ public class DescribeOmsOpenAPIProjectStepsResponseBody extends TeaModel {
         }
 
         /**
-         * 错误描述（旧）
+         * The error description (old).
          */
         public Builder message(String message) {
             this.message = message;
@@ -206,7 +206,7 @@ public class DescribeOmsOpenAPIProjectStepsResponseBody extends TeaModel {
         }
 
         /**
-         * 页序号，分页查询时生效
+         * The page number, which takes effect in a pagination query.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -214,7 +214,7 @@ public class DescribeOmsOpenAPIProjectStepsResponseBody extends TeaModel {
         }
 
         /**
-         * 页大小，分页查询时生效
+         * The page size, which takes effect in a pagination query.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -222,7 +222,7 @@ public class DescribeOmsOpenAPIProjectStepsResponseBody extends TeaModel {
         }
 
         /**
-         * 请求 ID
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -230,7 +230,7 @@ public class DescribeOmsOpenAPIProjectStepsResponseBody extends TeaModel {
         }
 
         /**
-         * 是否调用成功
+         * Indicates whether the call is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -238,7 +238,7 @@ public class DescribeOmsOpenAPIProjectStepsResponseBody extends TeaModel {
         }
 
         /**
-         * 总数，分页查询时生效
+         * The total count, which takes effect in a pagination query.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -314,7 +314,7 @@ public class DescribeOmsOpenAPIProjectStepsResponseBody extends TeaModel {
             private String proposal; 
 
             /**
-             * 错误码（旧）
+             * The error code.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -322,7 +322,7 @@ public class DescribeOmsOpenAPIProjectStepsResponseBody extends TeaModel {
             }
 
             /**
-             * CRITICAL, ERROR, WARN
+             * Valid values: CRITICAL, ERROR, and WARN.
              */
             public Builder level(String level) {
                 this.level = level;
@@ -330,7 +330,7 @@ public class DescribeOmsOpenAPIProjectStepsResponseBody extends TeaModel {
             }
 
             /**
-             * 错误描述（旧）
+             * The error message.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -338,7 +338,7 @@ public class DescribeOmsOpenAPIProjectStepsResponseBody extends TeaModel {
             }
 
             /**
-             * Proposal.
+             * The suggestions.
              */
             public Builder proposal(String proposal) {
                 this.proposal = proposal;
@@ -427,7 +427,7 @@ public class DescribeOmsOpenAPIProjectStepsResponseBody extends TeaModel {
             private String failedTime; 
 
             /**
-             * 错误码（旧） (AUTHENTICATION_ERROR, PARAM_ERROR, PARAM_ERROR_MESSAGE, NOT_IMPLEMENTED_ERROR, SHARD_COLUMNS_CONFLICT_MESSAGE, FAILED_PARSE_TOKEN_MESSAGE, CONNECT_CHECK_ERROR, NOT_SUPPORT_ERROR, CE_NOT_SUPPORT_ERROR, NOT_FOUND_ERROR, SHARDING_COLUMN_NOT_INCLUDED_ERROR, INNER_ERROR, DB_QUERY_ERROR, DATAHUB_QUERY_ERROR, USER_LACK_SYS_PRIV_ERROR, USER_LACK_TABLE_PRIV_ERROR, RM_API_ERROR, RM_TASK_ERROR, CM_API_ERROR, CM_API_NOT_SUCCESS, BAGUALU_API_ERROR, IDB_API_ERROR, SUPERVISOR_API_ERROR, OCP_API_ERROR, OCP_SERVICE_ERROR, OCP_QUERY_VERSION_FAILED, OCP_VERSION_INCORRECT_ERROR, OCP_VERSION_NOT_SUPPORTED_ERROR, OCP_API_USER_PASSWORD_INCORRECT_ERROR, OBSCHEMA_ERROR, EXECUTOR_THREAD_POOL_BUSY, NO_TABLE_SELECTED, NO_VIEW_SELECTED, SOURCE_CRAWLER_START_FAILED, SOURCE_CRAWLER_START_FAILED_DATA_EXPIRED, SOURCE_CRAWLER_START_TIMEOUT, DEST_WRITER_START_FAILED, WRITER_UNKNOWN_STATUS, DRC_TOPIC_EXISTS_ERROR, TOPIC_EMPTY_ERROR, REACH_WRITER_LIMIT_ERROR, FOUND_NO_FEASIBLE_STORE_ERROR, TOO_MANY_STORES_FOR_SUBTOPIC, TIMEOUT_EXCEPTION, KIPP_API_ERROR: KIPP 相关错误信息, KIPP_API_RESOURCE_NOT_FOUND, KIPP_API_INVALID_PARAM, KIPP_API_UNKNOWN_ERROR, KIPP_API_INTERNAL_ERROR, KIPP_API_SERVICE_UNAVAILABLE, OMS_AGENT_API_ERROR, KMS_API_ERROR, OMS_ENCRYPT_API_ERROR, OMS_DECRYPT_API_ERROR, ALIYUN_SDK_ERROR, YAOCHI_API_ERROR, RESOURCE_WITHOUT_STOCK_ERROR, RESOURCE_NO_AVAILABLE_ZONE, CM_SDK_ERROR, MIGRATION_PROJECT_STEP_PRECHECK_FAILED, PRE_CHECK_ERROR, FAILURES_CORRECT_ERROR, EXECUTE_DDL_FAILURE, EXECUTE_DDL_UNSUPPORTED_OR_FAILURE, STRUCT_RECORD_DDL_NOT_FOUND, STRUCT_RECORD_INDEX_NOT_FOUND, STRUCT_RECORD_NOT_FOUND, STRUCT_RECORD_NOT_FOUND_IN_DBCAT, SCHEMA_OBJECT_TYPE_NOT_SUPPORT_ERROR, POLAR_MYSQL_NETWORK_TYPE_NOT_SUPPORT_ERROR, RDS_NETWORK_TYPE_NOT_SUPPORT_ERROR, RDS_VPC_NETWORK_NOT_SUPPORT_ERROR, DB_TYPE_NOT_SUPPORT_ERROR, SYNC_TYPE_NOT_SUPPORT_ERROR, SLAVE_OPERATION_STEP_NOT_SUPPORT_ERROR, BYTE_USED_TYPE_NOT_SUPPORT_ERROR, MANY_TO_ONE_SCHEMA_TABLE_REVERSE_INCR_NOT_SUPPORT_ERROR, DUPLICATE_SCHEMA_TABLE_ERROR, OMS_STEP_NOT_SUPPORT_ERROR, ORACLE_DATABASE_ROLE_NOT_SUPPORT_ERROR, OLD_PRE_CHECK_NOT_SUPPORT_ERROR, SCHEMA_ONE_TO_MANY_NOT_SUPPORT_ERROR, PROJECT_NOT_FOUND_ERROR, ENDPOINT_NOT_FOUND_ERROR, ENDPOINT_NAME_ALREADY_EXIST_ERROR, ENDPOINT_QUERY_ERROR, ENDPOINT_SQL_QUERY_ERROR, PROJECT_NAME_ALREADY_EXIST_ERROR, CHECKER_NOT_FOUND_ERROR, CHECKER_FAILED_ERROR, CHECKER_STATUS_UNEXPECTED_ERROR, CHECKER_NO_TASK_TYPE_ERROR, WORKER_INSTANCE_NOT_FOUND_ERROR, WORKER_INSTANCE_ALLOCATING_ERROR, LOG_SERVICE_TOPIC_NOT_FOUND_ERROR, CLUSTER_NOT_FOUND_ERROR, TENANT_NOT_FOUND_ERROR, DATABASE_NOT_FOUND_ERROR, TABLE_NOT_FOUND_ERROR, COLUMN_NOT_FOUND_ERROR, TABLE_META_NOT_FOUND_ERROR, SYBASE_CHARSET_NOT_FOUND_ERROR, OCP_NOT_FOUND_ERROR, REGION_NOT_FOUND_ERROR, OCP_ALREADY_EXIST_ERROR, ALARM_CHANNEL_NAME_ALREADY_EXIST_ERROR, SEND_MARKDOWN_TEXT_TO_WEBHOOK_FAILED_EXCEPTION_RESPONSE, SEND_MARKDOWN_TEXT_TO_WEBHOOK_FAILED_EXCEPTION_STATUS, LABEL_ALREADY_EXIST_ERROR, LABEL_NOT_EXIST_ERROR, OCP_ALREADY_USED_ERROR, REGION_INFO_INCONSISTENT_ERROR, OCP_NAME_EMPTY_ERROR, MASTER_SLAVE_ENDPOINT_NAME_INCONSISTENT_ERROR, LOG_FILE_NOT_FOUND_ERROR, OPERATION_NOT_ALLOWED_ERROR, PROJECT_OPERATION_NOT_ALLOWED_ERROR, PROJECT_RELEASE_FAILED, STRUCT_MIGRATION_RETRY_NOT_ALLOWED_ERROR, WORKER_INSTANCE_OPERATION_NOT_ALLOWED_ERROR, USER_OPERATION_NOT_ALLOWED_ERROR, OCP_NAME_OR_REGION_NOT_ALLOWED_UPDATE, UPDATE_CONFIG_WITH_NEWLINE_NOT_ALLOWED, EXIST_UNRELEASED_PROJECT_ERROR, EXIST_UNRELEASED_TOPIC_ERROR, LABEL_CREATE_NOT_ALLOWED_ERROR, LABEL_UPDATE_NOT_ALLOWED_ERROR, LABEL_DELETE_NOT_ALLOWED_ERROR, TOPIC_NAME_INVALID_ERROR, INVALID_STATUS_ERROR, INVALID_CSV_HEAD_ERROR, INVALID_CSV_BODY_ERROR, DUPLICATE_SCHEMA_TABLE_SETTING_ERROR, PROJECT_INVALID_STATUS_ERROR, PROJECT_INVALID_CONNECTOR_COUNT_ERROR, WORKER_INSTANCE_INVALID_STATUS_ERROR, LOG_SERVICE_INVALID_STATUS_ERROR, STEP_INVALID_STATUS_ERROR, UPDATE_ALLOW_DEST_TABLE_NOT_EMPTY_NOT_ALLOWED_ERROR, EXIST_INCONSISTENCY_ERROR, OMS_SWITCH_SUBSTEP_FAILED_ERROR, ENDPOINT_ID_INVALID_ERROR, DB_QUERY_VERSION_EMPTY_ERROR, ENDPOINT_NAME_INVALID_ERROR, ENDPOINT_SCHEMA_NOT_ALLOWED_ERROR, ENDPOINT_SCHEMA_CHAR_NOT_ALLOWED_ERROR, NAME_HAS_SPACE_EXCEPTION, CONFIG_CONVERT_VALUE_ERROR, CONFIG_VALUE_EXCEEDS_LIMIT_ERROR, CONFIG_KEY_NOT_FOUND_KEY_ERROR, CONFIG_VALUE_NOT_EMPTY_ERROR, SCHEMA_HAS_CONVERT_INFO, TIME_SERIES_QUERY_SERVICE_ERROR, ETL_VERIFY_ERROR, ETL_SYNTAX_UNSUPPORTED, ETL_FIELD_NOTFOUND, ETL_FAILED_PARSE_SQL, ETL_VAL_TYPE_ERROR, NOT_SUPPORT_GENERATE_COLUMNS, NOT_SUPPORT_UPDATE_ETL, LOCK_FAILED, OMS_USER_EXIST_ERROR, OMS_USER_NOT_FOUND_ERROR, OMS_USER_NAME_LENGTH_CONSTRAINT, OMS_USER_PASSWORD_ERROR, USER_NAME_OR_PASSWORD_ERROR, OMS_USER_PASSWORD_VALIDATION_ERROR, OMS_USER_PASSWORD_DEFAULT_ERROR, OMS_USER_PERMISSION_DENIED_ERROR, OMS_USER_EDIT_ADMIN_ROLE_INFO_PERMISSION_DENIED_ERROR, OMS_USER_ILLEGAL_DELETED_ERROR, CONNECTOR_TASK_NOT_FOUND_ERROR, CONNECTOR_TASK_NUM_LIMIT_ERROR, CONNECTOR_TASK_DELETE_ERROR, METRIC_SERVICE_ERROR, SYNC_PROJECT_TYPE_INVALID_ERROR, SYNC_SHARDING_COLUMNS_INVALID_ERROR, SYNC_PROJECT_PRODUCER_GROUP_INVALID_ERROR, SYNC_PROJECT_PRODUCER_GROUP_LIMIT_EXCEEDS_ERROR, SYNC_PROJECT_COMPLEMENT_CONFIG_ERROR, META_SCHEMA_CREATE_FAILED, RESUME_STEP_FAILED, SCHEMA_INCONSISTENCY, SCHEMA_CASCADE_MAPPING_NOT_SUPPORT_ERROR, SCHEMA_NOT_EXISTED, SCHEMA_EXISTED, SCHEMA_NOT_EXIST, BLACK_LIST_MATCH_ALL, BLACK_LIST_CONTAIN_NON_WHITE_SCHEMA, BLACK_WHITE_LIST_PARAM_INVALID_ERROR, OPERATOR_ERROR, OPERATOR_DIMENSION_NOT_SUPPORT, OPERATOR_PULL_LOG_ERROR, OPERATOR_UPDATE_CONFIG_NOT_SUPPORT, KAFKA_CREATE_TOPIC_ERROR, KAFKA_QUERY_TOPIC_ERROR, KAFKA_BUILD_PROPERTIES_ERROR, ROCKETMQ_CREATE_TOPIC_ERROR, ROCKETMQ_QUERY_TOPIC_ERROR, SYNC_OBJECT_EMPTY_ERROR, WRITER_NUMBER_NOT_UNIQUE, WRITER_NOT_ACTIVE, PROJECT_NAME_DUPLICATE_ERROR, EMPTY_FAILED_STRUCT_MIGRATION_TABLES_ERROR, LOGIC_TABLE_NOT_SUPPORT_UPDATE_OBJECT_ERROR, LOGIC_REQUEST_ERROR, LOGIC_DTO_BUILD_ERROR, UNEXPECTED_REMOTE_API_RESULT, OCEANBASE_USER_UNEXPECTED, STORE_CREATE_FAILED_ERROR, STORE_START_FAILED, STORE_NOT_PULL_LOG_ERROR, ALL_HOSTS_STATUS_ERROR, WORKER_ECS_NOT_FOUND_ERROR, WORKER_ECS_NOT_FOUND_FOR_USER_ERROR, WORKER_POD_NOT_FOUND_ERROR, WORKER_POD_NOT_FOUND_FOR_USER_ERROR, WORKER_INSTANCE_NOT_FOUND_ERROR_V2, WORKER_INSTANCE_NOT_FOUND_FOR_USER_ERROR)
+             * The error code, such as AUTHENTICATION_ERROR, PARAM_ERROR, PARAM_ERROR_MESSAGE, NOT_IMPLEMENTED_ERROR, SHARD_COLUMNS_CONFLICT_MESSAGE, FAILED_PARSE_TOKEN_MESSAGE, CONNECT_CHECK_ERROR, NOT_SUPPORT_ERROR, CE_NOT_SUPPORT_ERROR, NOT_FOUND_ERROR, SHARDING_COLUMN_NOT_INCLUDED_ERROR, INNER_ERROR, DB_QUERY_ERROR, DATAHUB_QUERY_ERROR, USER_LACK_SYS_PRIV_ERROR, USER_LACK_TABLE_PRIV_ERROR, RM_API_ERROR, RM_TASK_ERROR, CM_API_ERROR, CM_API_NOT_SUCCESS, BAGUALU_API_ERROR, IDB_API_ERROR, SUPERVISOR_API_ERROR, OCP_API_ERROR, OCP_SERVICE_ERROR, OCP_QUERY_VERSION_FAILED, OCP_VERSION_INCORRECT_ERROR, OCP_VERSION_NOT_SUPPORTED_ERROR, OCP_API_USER_PASSWORD_INCORRECT_ERROR, OBSCHEMA_ERROR, EXECUTOR_THREAD_POOL_BUSY, NO_TABLE_SELECTED, NO_VIEW_SELECTED, SOURCE_CRAWLER_START_FAILED, SOURCE_CRAWLER_START_FAILED_DATA_EXPIRED, SOURCE_CRAWLER_START_TIMEOUT, DEST_WRITER_START_FAILED, WRITER_UNKNOWN_STATUS, DRC_TOPIC_EXISTS_ERROR, TOPIC_EMPTY_ERROR, REACH_WRITER_LIMIT_ERROR, FOUND_NO_FEASIBLE_STORE_ERROR, TOO_MANY_STORES_FOR_SUBTOPIC, TIMEOUT_EXCEPTION, KIPP_API_ERROR, KIPP_API_RESOURCE_NOT_FOUND, KIPP_API_INVALID_PARAM, KIPP_API_UNKNOWN_ERROR, KIPP_API_INTERNAL_ERROR, KIPP_API_SERVICE_UNAVAILABLE, OMS_AGENT_API_ERROR, KMS_API_ERROR, OMS_ENCRYPT_API_ERROR, OMS_DECRYPT_API_ERROR, ALIYUN_SDK_ERROR, YAOCHI_API_ERROR, RESOURCE_WITHOUT_STOCK_ERROR, RESOURCE_NO_AVAILABLE_ZONE, CM_SDK_ERROR, MIGRATION_PROJECT_STEP_PRECHECK_FAILED, PRE_CHECK_ERROR, FAILURES_CORRECT_ERROR, EXECUTE_DDL_FAILURE, EXECUTE_DDL_UNSUPPORTED_OR_FAILURE, STRUCT_RECORD_DDL_NOT_FOUND, STRUCT_RECORD_INDEX_NOT_FOUND, STRUCT_RECORD_NOT_FOUND, STRUCT_RECORD_NOT_FOUND_IN_DBCAT, SCHEMA_OBJECT_TYPE_NOT_SUPPORT_ERROR, POLAR_MYSQL_NETWORK_TYPE_NOT_SUPPORT_ERROR, RDS_NETWORK_TYPE_NOT_SUPPORT_ERROR, RDS_VPC_NETWORK_NOT_SUPPORT_ERROR, DB_TYPE_NOT_SUPPORT_ERROR, SYNC_TYPE_NOT_SUPPORT_ERROR, SLAVE_OPERATION_STEP_NOT_SUPPORT_ERROR, BYTE_USED_TYPE_NOT_SUPPORT_ERROR, MANY_TO_ONE_SCHEMA_TABLE_REVERSE_INCR_NOT_SUPPORT_ERROR, DUPLICATE_SCHEMA_TABLE_ERROR, OMS_STEP_NOT_SUPPORT_ERROR, ORACLE_DATABASE_ROLE_NOT_SUPPORT_ERROR, OLD_PRE_CHECK_NOT_SUPPORT_ERROR, SCHEMA_ONE_TO_MANY_NOT_SUPPORT_ERROR, PROJECT_NOT_FOUND_ERROR, ENDPOINT_NOT_FOUND_ERROR, ENDPOINT_NAME_ALREADY_EXIST_ERROR, ENDPOINT_QUERY_ERROR, ENDPOINT_SQL_QUERY_ERROR, PROJECT_NAME_ALREADY_EXIST_ERROR, CHECKER_NOT_FOUND_ERROR, CHECKER_FAILED_ERROR, CHECKER_STATUS_UNEXPECTED_ERROR, CHECKER_NO_TASK_TYPE_ERROR, WORKER_INSTANCE_NOT_FOUND_ERROR, WORKER_INSTANCE_ALLOCATING_ERROR, LOG_SERVICE_TOPIC_NOT_FOUND_ERROR, CLUSTER_NOT_FOUND_ERROR, TENANT_NOT_FOUND_ERROR, DATABASE_NOT_FOUND_ERROR, TABLE_NOT_FOUND_ERROR, COLUMN_NOT_FOUND_ERROR, TABLE_META_NOT_FOUND_ERROR, SYBASE_CHARSET_NOT_FOUND_ERROR, OCP_NOT_FOUND_ERROR, REGION_NOT_FOUND_ERROR, OCP_ALREADY_EXIST_ERROR, ALARM_CHANNEL_NAME_ALREADY_EXIST_ERROR, SEND_MARKDOWN_TEXT_TO_WEBHOOK_FAILED_EXCEPTION_RESPONSE, SEND_MARKDOWN_TEXT_TO_WEBHOOK_FAILED_EXCEPTION_STATUS, LABEL_ALREADY_EXIST_ERROR, LABEL_NOT_EXIST_ERROR, OCP_ALREADY_USED_ERROR, REGION_INFO_INCONSISTENT_ERROR, OCP_NAME_EMPTY_ERROR, MASTER_SLAVE_ENDPOINT_NAME_INCONSISTENT_ERROR, LOG_FILE_NOT_FOUND_ERROR, OPERATION_NOT_ALLOWED_ERROR, PROJECT_OPERATION_NOT_ALLOWED_ERROR, PROJECT_RELEASE_FAILED, STRUCT_MIGRATION_RETRY_NOT_ALLOWED_ERROR, WORKER_INSTANCE_OPERATION_NOT_ALLOWED_ERROR, USER_OPERATION_NOT_ALLOWED_ERROR, OCP_NAME_OR_REGION_NOT_ALLOWED_UPDATE, UPDATE_CONFIG_WITH_NEWLINE_NOT_ALLOWED, EXIST_UNRELEASED_PROJECT_ERROR, EXIST_UNRELEASED_TOPIC_ERROR, LABEL_CREATE_NOT_ALLOWED_ERROR, LABEL_UPDATE_NOT_ALLOWED_ERROR, LABEL_DELETE_NOT_ALLOWED_ERROR, TOPIC_NAME_INVALID_ERROR, INVALID_STATUS_ERROR, INVALID_CSV_HEAD_ERROR, INVALID_CSV_BODY_ERROR, DUPLICATE_SCHEMA_TABLE_SETTING_ERROR, PROJECT_INVALID_STATUS_ERROR, PROJECT_INVALID_CONNECTOR_COUNT_ERROR, WORKER_INSTANCE_INVALID_STATUS_ERROR, LOG_SERVICE_INVALID_STATUS_ERROR, STEP_INVALID_STATUS_ERROR, UPDATE_ALLOW_DEST_TABLE_NOT_EMPTY_NOT_ALLOWED_ERROR, EXIST_INCONSISTENCY_ERROR, OMS_SWITCH_SUBSTEP_FAILED_ERROR, ENDPOINT_ID_INVALID_ERROR, DB_QUERY_VERSION_EMPTY_ERROR, ENDPOINT_NAME_INVALID_ERROR, ENDPOINT_SCHEMA_NOT_ALLOWED_ERROR, ENDPOINT_SCHEMA_CHAR_NOT_ALLOWED_ERROR, NAME_HAS_SPACE_EXCEPTION, CONFIG_CONVERT_VALUE_ERROR, CONFIG_VALUE_EXCEEDS_LIMIT_ERROR, CONFIG_KEY_NOT_FOUND_KEY_ERROR, CONFIG_VALUE_NOT_EMPTY_ERROR, SCHEMA_HAS_CONVERT_INFO, TIME_SERIES_QUERY_SERVICE_ERROR, ETL_VERIFY_ERROR, ETL_SYNTAX_UNSUPPORTED, ETL_FIELD_NOTFOUND, ETL_FAILED_PARSE_SQL, ETL_VAL_TYPE_ERROR, NOT_SUPPORT_GENERATE_COLUMNS, NOT_SUPPORT_UPDATE_ETL, LOCK_FAILED, OMS_USER_EXIST_ERROR, OMS_USER_NOT_FOUND_ERROR, OMS_USER_NAME_LENGTH_CONSTRAINT, OMS_USER_PASSWORD_ERROR, USER_NAME_OR_PASSWORD_ERROR, OMS_USER_PASSWORD_VALIDATION_ERROR, OMS_USER_PASSWORD_DEFAULT_ERROR, OMS_USER_PERMISSION_DENIED_ERROR, OMS_USER_EDIT_ADMIN_ROLE_INFO_PERMISSION_DENIED_ERROR, OMS_USER_ILLEGAL_DELETED_ERROR, CONNECTOR_TASK_NOT_FOUND_ERROR, CONNECTOR_TASK_NUM_LIMIT_ERROR, CONNECTOR_TASK_DELETE_ERROR, METRIC_SERVICE_ERROR, SYNC_PROJECT_TYPE_INVALID_ERROR, SYNC_SHARDING_COLUMNS_INVALID_ERROR, SYNC_PROJECT_PRODUCER_GROUP_INVALID_ERROR, SYNC_PROJECT_PRODUCER_GROUP_LIMIT_EXCEEDS_ERROR, SYNC_PROJECT_COMPLEMENT_CONFIG_ERROR, META_SCHEMA_CREATE_FAILED, RESUME_STEP_FAILED, SCHEMA_INCONSISTENCY, SCHEMA_CASCADE_MAPPING_NOT_SUPPORT_ERROR, SCHEMA_NOT_EXISTED, SCHEMA_EXISTED, SCHEMA_NOT_EXIST, BLACK_LIST_MATCH_ALL, BLACK_LIST_CONTAIN_NON_WHITE_SCHEMA, BLACK_WHITE_LIST_PARAM_INVALID_ERROR, OPERATOR_ERROR, OPERATOR_DIMENSION_NOT_SUPPORT, OPERATOR_PULL_LOG_ERROR, OPERATOR_UPDATE_CONFIG_NOT_SUPPORT, KAFKA_CREATE_TOPIC_ERROR, KAFKA_QUERY_TOPIC_ERROR, KAFKA_BUILD_PROPERTIES_ERROR, ROCKETMQ_CREATE_TOPIC_ERROR, ROCKETMQ_QUERY_TOPIC_ERROR, SYNC_OBJECT_EMPTY_ERROR, WRITER_NUMBER_NOT_UNIQUE, WRITER_NOT_ACTIVE, PROJECT_NAME_DUPLICATE_ERROR, EMPTY_FAILED_STRUCT_MIGRATION_TABLES_ERROR, LOGIC_TABLE_NOT_SUPPORT_UPDATE_OBJECT_ERROR, LOGIC_REQUEST_ERROR, LOGIC_DTO_BUILD_ERROR, UNEXPECTED_REMOTE_API_RESULT, OCEANBASE_USER_UNEXPECTED, STORE_CREATE_FAILED_ERROR, STORE_START_FAILED, STORE_NOT_PULL_LOG_ERROR, ALL_HOSTS_STATUS_ERROR, WORKER_ECS_NOT_FOUND_ERROR, WORKER_ECS_NOT_FOUND_FOR_USER_ERROR, WORKER_POD_NOT_FOUND_ERROR, WORKER_POD_NOT_FOUND_FOR_USER_ERROR, WORKER_INSTANCE_NOT_FOUND_ERROR_V2, and WORKER_INSTANCE_NOT_FOUND_FOR_USER_ERROR.
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -435,7 +435,7 @@ public class DescribeOmsOpenAPIProjectStepsResponseBody extends TeaModel {
             }
 
             /**
-             * 错误详情
+             * The error details.
              */
             public Builder errorDetails(java.util.List < ErrorDetails> errorDetails) {
                 this.errorDetails = errorDetails;
@@ -443,7 +443,7 @@ public class DescribeOmsOpenAPIProjectStepsResponseBody extends TeaModel {
             }
 
             /**
-             * 错误消息
+             * The error message.
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
@@ -451,7 +451,7 @@ public class DescribeOmsOpenAPIProjectStepsResponseBody extends TeaModel {
             }
 
             /**
-             * 错误相关参数
+             * The error related parameters.
              */
             public Builder errorParam(java.util.Map < String, String > errorParam) {
                 this.errorParam = errorParam;
@@ -459,7 +459,7 @@ public class DescribeOmsOpenAPIProjectStepsResponseBody extends TeaModel {
             }
 
             /**
-             * 错误时间格式："yyyy-MM-ddTHH:mm:ss"
+             * The time when the error occurred.
              */
             public Builder failedTime(String failedTime) {
                 this.failedTime = failedTime;
@@ -536,7 +536,7 @@ public class DescribeOmsOpenAPIProjectStepsResponseBody extends TeaModel {
             private Integer progress; 
 
             /**
-             * 预计剩余时间，秒单位(MAX)
+             * The estimated maximum time remained, in seconds.
              */
             public Builder estimatedRemainingTimeOfSec(Long estimatedRemainingTimeOfSec) {
                 this.estimatedRemainingTimeOfSec = estimatedRemainingTimeOfSec;
@@ -544,7 +544,7 @@ public class DescribeOmsOpenAPIProjectStepsResponseBody extends TeaModel {
             }
 
             /**
-             * 预估迁移数据量(SUM)
+             * The estimated amount of data to migrate.
              */
             public Builder estimatedTotalCount(Long estimatedTotalCount) {
                 this.estimatedTotalCount = estimatedTotalCount;
@@ -552,7 +552,7 @@ public class DescribeOmsOpenAPIProjectStepsResponseBody extends TeaModel {
             }
 
             /**
-             * 已完成迁移数据量(SUM)
+             * The amount of data migrated.
              */
             public Builder finishedCount(Long finishedCount) {
                 this.finishedCount = finishedCount;
@@ -853,7 +853,7 @@ public class DescribeOmsOpenAPIProjectStepsResponseBody extends TeaModel {
             private Boolean validated; 
 
             /**
-             * 预估总行数。
+             * The estimated total number of rows.
              */
             public Builder capacity(Long capacity) {
                 this.capacity = capacity;
@@ -861,7 +861,7 @@ public class DescribeOmsOpenAPIProjectStepsResponseBody extends TeaModel {
             }
 
             /**
-             * 位点时间，unix timestamp，单位秒
+             * The checkpoint. The value is a unix timestamp in seconds.
              */
             public Builder checkpoint(String checkpoint) {
                 this.checkpoint = checkpoint;
@@ -869,7 +869,7 @@ public class DescribeOmsOpenAPIProjectStepsResponseBody extends TeaModel {
             }
 
             /**
-             * 项目为同步项目时，表示同步项目的全量同步进度信息
+             * The full synchronization progress.
              */
             public Builder connectorFullProgressOverview(ConnectorFullProgressOverview connectorFullProgressOverview) {
                 this.connectorFullProgressOverview = connectorFullProgressOverview;
@@ -877,7 +877,7 @@ public class DescribeOmsOpenAPIProjectStepsResponseBody extends TeaModel {
             }
 
             /**
-             * 资源部署Id
+             * The resource deployment ID.
              */
             public Builder deployId(String deployId) {
                 this.deployId = deployId;
@@ -885,7 +885,7 @@ public class DescribeOmsOpenAPIProjectStepsResponseBody extends TeaModel {
             }
 
             /**
-             * 目标端读取/写入流量，单位：字节数/秒。
+             * The read/write throughput of the destination data source, in bytes per second.
              */
             public Builder dstIops(Long dstIops) {
                 this.dstIops = dstIops;
@@ -893,7 +893,7 @@ public class DescribeOmsOpenAPIProjectStepsResponseBody extends TeaModel {
             }
 
             /**
-             * 目标端读取/写入 rps，单位：记录数/秒。
+             * The read/write RPS of the destination data source.
              */
             public Builder dstRps(Long dstRps) {
                 this.dstRps = dstRps;
@@ -901,7 +901,7 @@ public class DescribeOmsOpenAPIProjectStepsResponseBody extends TeaModel {
             }
 
             /**
-             * 目标端读取/写入 rps 基准值。
+             * The read/write RPS baseline of the destination data source.
              */
             public Builder dstRpsRef(Long dstRpsRef) {
                 this.dstRpsRef = dstRpsRef;
@@ -909,7 +909,7 @@ public class DescribeOmsOpenAPIProjectStepsResponseBody extends TeaModel {
             }
 
             /**
-             * 目标端读取/写入 rt，单位：毫秒/条。
+             * The read/write RT per record of the destination data source, in ms.
              */
             public Builder dstRt(Long dstRt) {
                 this.dstRt = dstRt;
@@ -917,7 +917,7 @@ public class DescribeOmsOpenAPIProjectStepsResponseBody extends TeaModel {
             }
 
             /**
-             * 目标端读取/写入 rt 基准值。
+             * The read/write RT baseline of the destination data source.
              */
             public Builder dstRtRef(Long dstRtRef) {
                 this.dstRtRef = dstRtRef;
@@ -925,7 +925,7 @@ public class DescribeOmsOpenAPIProjectStepsResponseBody extends TeaModel {
             }
 
             /**
-             * 位点采集时间，unix timestamp，单位秒
+             * The checkpoint collection time. The value is a unix timestamp in seconds.
              */
             public Builder gmt(Long gmt) {
                 this.gmt = gmt;
@@ -933,7 +933,7 @@ public class DescribeOmsOpenAPIProjectStepsResponseBody extends TeaModel {
             }
 
             /**
-             * 全量校验不一致的数量
+             * The amount of inconsistent data found during full verification.
              */
             public Builder inconsistencies(Long inconsistencies) {
                 this.inconsistencies = inconsistencies;
@@ -941,7 +941,7 @@ public class DescribeOmsOpenAPIProjectStepsResponseBody extends TeaModel {
             }
 
             /**
-             * 如果是增量场景，会是位点时间，unix timestamp, 单位秒
+             * The checkpoint in incremental synchronization. The value is a unix timestamp in seconds.
              */
             public Builder incrTimestampCheckpoint(Long incrTimestampCheckpoint) {
                 this.incrTimestampCheckpoint = incrTimestampCheckpoint;
@@ -949,7 +949,7 @@ public class DescribeOmsOpenAPIProjectStepsResponseBody extends TeaModel {
             }
 
             /**
-             * 步骤的当前子 job id
+             * The job ID.
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -957,7 +957,7 @@ public class DescribeOmsOpenAPIProjectStepsResponseBody extends TeaModel {
             }
 
             /**
-             * 已完成迁移行数/实际行数。
+             * The number of migrated rows.
              */
             public Builder processedRecords(Long processedRecords) {
                 this.processedRecords = processedRecords;
@@ -965,7 +965,7 @@ public class DescribeOmsOpenAPIProjectStepsResponseBody extends TeaModel {
             }
 
             /**
-             * 子状态，skipped 标识这一步骤是否跳过
+             * A sub-status that indicates whether this step is skipped.
              */
             public Builder skipped(Boolean skipped) {
                 this.skipped = skipped;
@@ -973,7 +973,7 @@ public class DescribeOmsOpenAPIProjectStepsResponseBody extends TeaModel {
             }
 
             /**
-             * 源端读取流量，单位：字节数/秒。
+             * The read throughput of the source data source, in bytes per second.
              */
             public Builder srcIops(Long srcIops) {
                 this.srcIops = srcIops;
@@ -981,7 +981,7 @@ public class DescribeOmsOpenAPIProjectStepsResponseBody extends TeaModel {
             }
 
             /**
-             * 源端读取流量，基准值。
+             * The read throughput baseline of the source data source.
              */
             public Builder srcIopsRef(Long srcIopsRef) {
                 this.srcIopsRef = srcIopsRef;
@@ -989,7 +989,7 @@ public class DescribeOmsOpenAPIProjectStepsResponseBody extends TeaModel {
             }
 
             /**
-             * 源端读取 rps，单位：记录数/秒。
+             * The read requests per second (RPS) of the source data source.
              */
             public Builder srcRps(Long srcRps) {
                 this.srcRps = srcRps;
@@ -997,7 +997,7 @@ public class DescribeOmsOpenAPIProjectStepsResponseBody extends TeaModel {
             }
 
             /**
-             * 源端读取 rps 基准值。
+             * The read RPS baseline of the source data source.
              */
             public Builder srcRpsRef(Long srcRpsRef) {
                 this.srcRpsRef = srcRpsRef;
@@ -1005,7 +1005,7 @@ public class DescribeOmsOpenAPIProjectStepsResponseBody extends TeaModel {
             }
 
             /**
-             * 源端读取 rt，单位：毫秒/条。
+             * The read response time (RT) per record of the source data source, in ms.
              */
             public Builder srcRt(Long srcRt) {
                 this.srcRt = srcRt;
@@ -1013,7 +1013,7 @@ public class DescribeOmsOpenAPIProjectStepsResponseBody extends TeaModel {
             }
 
             /**
-             * 源端读取 rt 基准值。
+             * The read RT baseline of the source data source.
              */
             public Builder srcRtRef(Long srcRtRef) {
                 this.srcRtRef = srcRtRef;
@@ -1021,7 +1021,7 @@ public class DescribeOmsOpenAPIProjectStepsResponseBody extends TeaModel {
             }
 
             /**
-             * 子状态，validated 标识全量校验 checker 是否已完成
+             * A sub-status that indicates whether the checker has completed full verification.
              */
             public Builder validated(Boolean validated) {
                 this.validated = validated;
@@ -1182,7 +1182,7 @@ public class DescribeOmsOpenAPIProjectStepsResponseBody extends TeaModel {
             private String stepStatus; 
 
             /**
-             * 预计剩余时间，全量步骤时生效
+             * The estimated time remained.
              */
             public Builder estimatedRemainingSeconds(Long estimatedRemainingSeconds) {
                 this.estimatedRemainingSeconds = estimatedRemainingSeconds;
@@ -1190,7 +1190,7 @@ public class DescribeOmsOpenAPIProjectStepsResponseBody extends TeaModel {
             }
 
             /**
-             * 补充信息（json）
+             * The additional information. The value is a JSON string.
              */
             public Builder extraInfo(ExtraInfo extraInfo) {
                 this.extraInfo = extraInfo;
@@ -1198,7 +1198,7 @@ public class DescribeOmsOpenAPIProjectStepsResponseBody extends TeaModel {
             }
 
             /**
-             * 步骤结束时间，格式："yyyy-MM-ddTHH:mm:ss"
+             * The end time, in the format of "2020-05-22T17:04:18".
              */
             public Builder finishTime(String finishTime) {
                 this.finishTime = finishTime;
@@ -1206,7 +1206,7 @@ public class DescribeOmsOpenAPIProjectStepsResponseBody extends TeaModel {
             }
 
             /**
-             * 当前步骤是否需要用户确认执行，不由后台调度推进。
+             * Indicates whether the current step must be confirmed by the user, rather than scheduled in the backend.
              */
             public Builder interactive(Boolean interactive) {
                 this.interactive = interactive;
@@ -1214,7 +1214,7 @@ public class DescribeOmsOpenAPIProjectStepsResponseBody extends TeaModel {
             }
 
             /**
-             * 步骤开始时间，格式："yyyy-MM-ddTHH:mm:ss"
+             * The start time, in the format of "2020-05-22T17:04:18".
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -1222,7 +1222,7 @@ public class DescribeOmsOpenAPIProjectStepsResponseBody extends TeaModel {
             }
 
             /**
-             * 步骤描述（结构迁移/全量迁移/全量校验/增量日志拉取/增量同步/增量校验）
+             * The description of the step, for example, schema migration, full migration, full verification, incremental log pull, incremental synchronization, or incremental verification.
              */
             public Builder stepDescription(String stepDescription) {
                 this.stepDescription = stepDescription;
@@ -1230,7 +1230,7 @@ public class DescribeOmsOpenAPIProjectStepsResponseBody extends TeaModel {
             }
 
             /**
-             * 步骤详情（json）
+             * The step details. The value is a JSON string.
              */
             public Builder stepInfo(StepInfo stepInfo) {
                 this.stepInfo = stepInfo;
@@ -1238,7 +1238,7 @@ public class DescribeOmsOpenAPIProjectStepsResponseBody extends TeaModel {
             }
 
             /**
-             * 步骤名（struct_migration/full_migration/full_validation/incr_log_pull/incr_sync/incr_validation） (PRE_CHECK, PREPARE, STRUCT_MIGRATION, INDEX_MIGRATION, STRUCT_SYNC, FULL_MIGRATION, APP_SWITCH, REVERSE_INCR_SYNC, FULL_VALIDATION, INCR_LOG_PULL, INCR_SYNC, INCR_VALIDATION, SYNC_PREPARE, SYNC_INCR_LOG_PULL, CONNECTOR_FULL_SYNC, CONNECTOR_INCR_SYNC)
+             * The step name. Valid values: struct_migration, full_migration, full_validation, incr_log_pull, incr_sync/incr_validation, PRE_CHECK, PREPARE, STRUCT_MIGRATION, INDEX_MIGRATION, STRUCT_SYNC, FULL_MIGRATION, APP_SWITCH, REVERSE_INCR_SYNC, FULL_VALIDATION, INCR_LOG_PULL, INCR_SYNC, INCR_VALIDATION, SYNC_PREPARE, SYNC_INCR_LOG_PULL, CONNECTOR_FULL_SYNC, or CONNECTOR_INCR_SYNC.
              */
             public Builder stepName(String stepName) {
                 this.stepName = stepName;
@@ -1246,7 +1246,7 @@ public class DescribeOmsOpenAPIProjectStepsResponseBody extends TeaModel {
             }
 
             /**
-             * 步骤顺序
+             * The sequence of steps.
              */
             public Builder stepOrder(Integer stepOrder) {
                 this.stepOrder = stepOrder;
@@ -1254,7 +1254,7 @@ public class DescribeOmsOpenAPIProjectStepsResponseBody extends TeaModel {
             }
 
             /**
-             * 步骤进度, 整数单位为 %
+             * The step progress.
              */
             public Builder stepProgress(Integer stepProgress) {
                 this.stepProgress = stepProgress;
@@ -1262,7 +1262,7 @@ public class DescribeOmsOpenAPIProjectStepsResponseBody extends TeaModel {
             }
 
             /**
-             * 步骤状态 (INIT: 初始化, RUNNING: 运行中, FAILED: 失败, FINISHED: 已完成, SUSPEND: 暂停中, MONITORING: 持续监控状态，用于增量同步和增量校验的持续监控态)
+             * The step status. Valid values: INIT, RUNNING, FAILED, FINISHED, SUSPEND, and MONITORING. The value MONITORING indicates the continuous monitoring of incremental synchronization and incremental verification.
              */
             public Builder stepStatus(String stepStatus) {
                 this.stepStatus = stepStatus;
@@ -1339,7 +1339,7 @@ public class DescribeOmsOpenAPIProjectStepsResponseBody extends TeaModel {
             private String proposal; 
 
             /**
-             * 错误码（新）
+             * The error code (new).
              */
             public Builder code(String code) {
                 this.code = code;
@@ -1347,7 +1347,7 @@ public class DescribeOmsOpenAPIProjectStepsResponseBody extends TeaModel {
             }
 
             /**
-             * 错误等级（CRITICAL, ERROR, WARN）
+             * The error level. Valid values: CRITICAL, ERROR, and WARN.
              */
             public Builder level(String level) {
                 this.level = level;
@@ -1355,7 +1355,7 @@ public class DescribeOmsOpenAPIProjectStepsResponseBody extends TeaModel {
             }
 
             /**
-             * 错误描述（新）
+             * The error description (new).
              */
             public Builder message(String message) {
                 this.message = message;
@@ -1363,7 +1363,7 @@ public class DescribeOmsOpenAPIProjectStepsResponseBody extends TeaModel {
             }
 
             /**
-             * 建议（新）
+             * The suggestions (new).
              */
             public Builder proposal(String proposal) {
                 this.proposal = proposal;

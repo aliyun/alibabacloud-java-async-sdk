@@ -50,7 +50,7 @@ public class DescribeTenantResponseBody extends TeaModel {
         private Tenant tenant; 
 
         /**
-         * 请求ID。
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeTenantResponseBody extends TeaModel {
         }
 
         /**
-         * 租户信息。
+         * The information of the tenant.
          */
         public Builder tenant(Tenant tenant) {
             this.tenant = tenant;
@@ -262,7 +262,11 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * 连接地址的服务模式。 ReadWrite：可读可写，提供强一致读写服务 ReadOnly：只读，保证数据最终一致性 Clog：事务日志服务
+             * The service mode of the connection address. Valid values:  
+             * <p>
+             * ReadWrite: provides strong-consistency read and write services.   
+             * ReadOnly: provides the read-only service to ensure ultimate consistency of data.   
+             * Clog: provides transaction log services.
              */
             public Builder connectionRole(String connectionRole) {
                 this.connectionRole = connectionRole;
@@ -270,7 +274,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * 租户连接对应的访问可用区列表。
+             * The list of zones corresponding to the tenant connection.
              */
             public Builder connectionZones(java.util.List < String > connectionZones) {
                 this.connectionZones = connectionZones;
@@ -278,7 +282,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * 访问租户的公网连接地址。
+             * The Internet address for accessing the tenant.
              */
             public Builder internetAddress(String internetAddress) {
                 this.internetAddress = internetAddress;
@@ -286,7 +290,12 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * 访问租户的公网连接开通状态。 CLOSED：关闭 ALLOCATING_INTERNET_ADDRESS：申请中 PENDING_OFFLINE_INTERNET_ADDRESS: 公网地址关闭中 ONLINE：服务中
+             * The status of the Internet address for accessing the tenant. Valid values:   
+             * <p>
+             * Closed: The address is disabled.   
+             * - ALLOCATING_INTERNET_ADDRESS: An address is being applied for.   
+             * - PENDING_OFFLINE_INTERNET_ADDRESS: The address is being disabled.   
+             * - ONLINE: The address is in service.
              */
             public Builder internetAddressStatus(String internetAddressStatus) {
                 this.internetAddressStatus = internetAddressStatus;
@@ -294,7 +303,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * 访问租户的公网连接端口。
+             * The Internet port for accessing the tenant.
              */
             public Builder internetPort(Integer internetPort) {
                 this.internetPort = internetPort;
@@ -302,7 +311,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * 访问租户的私网连接地址。
+             * The intranet address for accessing the tenant.
              */
             public Builder intranetAddress(String intranetAddress) {
                 this.intranetAddress = intranetAddress;
@@ -310,7 +319,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * 访问租户的连接地址对应的主可用区。
+             * The primary zone corresponding to the address for accessing the tenant.
              */
             public Builder intranetAddressMasterZoneId(String intranetAddressMasterZoneId) {
                 this.intranetAddressMasterZoneId = intranetAddressMasterZoneId;
@@ -318,7 +327,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * 访问租户的连接地址对应的备可用区。
+             * The standby zone corresponding to the address for accessing the tenant.
              */
             public Builder intranetAddressSlaveZoneId(String intranetAddressSlaveZoneId) {
                 this.intranetAddressSlaveZoneId = intranetAddressSlaveZoneId;
@@ -326,7 +335,9 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * 访问租户的私网连接地址状态。 ONLINE: 服务中
+             * The status of the intranet address for accessing the tenant.  
+             * <p>
+             * The value ONLINE indicates that the address is in service.
              */
             public Builder intranetAddressStatus(String intranetAddressStatus) {
                 this.intranetAddressStatus = intranetAddressStatus;
@@ -334,7 +345,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * 访问租户的私网连接端口。
+             * The intranet port for accessing the tenant.
              */
             public Builder intranetPort(Integer intranetPort) {
                 this.intranetPort = intranetPort;
@@ -350,7 +361,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * 虚拟交换机（VSwitch） ID。
+             * The ID of the vSwitch.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -358,7 +369,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * 专有网络（VPC） ID。
+             * The ID of the VPC.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -423,7 +434,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             private Float usedCpu; 
 
             /**
-             * 租户总的CPU核数，单位：Core。
+             * The total number of CPU cores of the tenant.
              */
             public Builder totalCpu(Float totalCpu) {
                 this.totalCpu = totalCpu;
@@ -431,7 +442,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * 租户每个Unit的CPU核数，单位：Core。
+             * The number of CPU cores in each resource unit of the tenant.
              */
             public Builder unitCpu(Float unitCpu) {
                 this.unitCpu = unitCpu;
@@ -439,7 +450,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * 租户已使用的CPU核数，单位：Core。
+             * The number of used CPU cores of the tenant.
              */
             public Builder usedCpu(Float usedCpu) {
                 this.usedCpu = usedCpu;
@@ -480,7 +491,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             private Float usedDiskSize; 
 
             /**
-             * 租户已使用的磁盘大小，单位：GB。
+             * The size of used disk space of the tenant, in GB.
              */
             public Builder usedDiskSize(Float usedDiskSize) {
                 this.usedDiskSize = usedDiskSize;
@@ -545,7 +556,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             private Float usedMemory; 
 
             /**
-             * 租户总的内存大小，单位：GB。
+             * The total memory size of the tenant, in GB.
              */
             public Builder totalMemory(Float totalMemory) {
                 this.totalMemory = totalMemory;
@@ -553,7 +564,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * 租户每个Unit的内存大小，单位：GB。
+             * The memory size of each resource unit of the tenant, in GB.
              */
             public Builder unitMemory(Float unitMemory) {
                 this.unitMemory = unitMemory;
@@ -561,7 +572,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * 租户已使用的内存，单位：GB。
+             * The size of used memory of the tenant, in GB.
              */
             public Builder usedMemory(Float usedMemory) {
                 this.usedMemory = usedMemory;
@@ -638,7 +649,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             private Integer unitNum; 
 
             /**
-             * 租户的CPU资源信息。
+             * The information about the CPU resources of the tenant.
              */
             public Builder cpu(Cpu cpu) {
                 this.cpu = cpu;
@@ -646,7 +657,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * 租户磁盘资源信息。
+             * The information about the disk resources of the tenant.
              */
             public Builder diskSize(DiskSize diskSize) {
                 this.diskSize = diskSize;
@@ -654,7 +665,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * 租户内存资源信息。
+             * The information about the memory resources of the tenant.
              */
             public Builder memory(Memory memory) {
                 this.memory = memory;
@@ -662,7 +673,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * 租户的unit个数。
+             * The number of resource units in the tenant.
              */
             public Builder unitNum(Integer unitNum) {
                 this.unitNum = unitNum;
@@ -727,7 +738,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             private String tenantZoneRole; 
 
             /**
-             * 租户可用区所属的地域。
+             * The region where the zone of the tenant resides.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -735,7 +746,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * 租户可用区ID。
+             * The ID of the zone.
              */
             public Builder tenantZoneId(String tenantZoneId) {
                 this.tenantZoneId = tenantZoneId;
@@ -743,7 +754,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * 租户可用区的请求类型。 ReadWrite：可读可写 ReadOnly：只读 对于多机房高可用集群，其主可用区为ReadWrite。备可用区为ReadOnly; 对于单机房高可用集群，其所有可用区均为ReadWrite。
+             * The role of the zone of the tenant.
              */
             public Builder tenantZoneRole(String tenantZoneRole) {
                 this.tenantZoneRole = tenantZoneRole;
@@ -1100,7 +1111,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * Clog服务开启状态。 CLOSED: 关闭 ONLINE：服务中
+             * The enabling status of the Clog service.  
+             * <p>
+             * CLOSED: The Clog service is disabled.   
+             * - ONLINE: The Clog service is running.
              */
             public Builder clogServiceStatus(String clogServiceStatus) {
                 this.clogServiceStatus = clogServiceStatus;
@@ -1116,7 +1130,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * 创建时间
+             * The time when the tenant was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -1124,7 +1138,13 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * 租户的数据副本模式。 对于高可用版本：三地域为N-N-N，两可用区和单可用区均为N-N； 对于基础版为N。 其中，N为单可用区内的节点数。
+             * The data replica distribution mode of the tenant.    
+             * <p>
+             * 
+             * - For the high availability version, N-N-N indicates the three-zone mode, and N-N indicates the dual-zone or single-zone mode.
+             * - For the basic version, N indicates the single-zone mode. 
+             * 
+             * > <br>N represents the number of nodes in a single zone.
              */
             public Builder deployMode(String deployMode) {
                 this.deployMode = deployMode;
@@ -1132,7 +1152,11 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * 集群的部署类型。 multiple：多机房 single：单机房 dual：双机房
+             * The deployment type of the cluster. Valid values:  
+             * <p>
+             * - multiple: multi-IDC deployment   
+             * - single: single-IDC deployment   
+             * - dual: dual-IDC deployment
              */
             public Builder deployType(String deployType) {
                 this.deployType = deployType;
@@ -1140,7 +1164,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * 租户描述信息。
+             * The description of the tenant.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1156,7 +1180,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * 是否可使用Clog服务，如需开启，请工单联系。
+             * Indicates whether the Clog service is available. To enable the Clog service, submit a ticket.
              */
             public Builder enableClogService(Boolean enableClogService) {
                 this.enableClogService = enableClogService;
@@ -1164,7 +1188,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * 是否可开启租户公网地址。
+             * Indicates whether the Internet address can be enabled for the tenant.
              */
             public Builder enableInternetAddressService(Boolean enableInternetAddressService) {
                 this.enableInternetAddressService = enableInternetAddressService;
@@ -1204,7 +1228,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * 租户的主可用区。
+             * The primary zone of the tenant.
              */
             public Builder primaryZone(String primaryZone) {
                 this.primaryZone = primaryZone;
@@ -1228,7 +1252,17 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * 租户的状态。 PENDING_CREATE: 创建中 RESTORE: 恢复中 ONLINE: 运行中 SPEC_MODIFYING: 规格修改中 ALLOCATING_INTERNET_ADDRESS: 公网地址分配中 PENDING_OFFLINE_INTERNET_ADDRESS: 公网地址关闭中 PRIMARY_ZONE_MODIFYING: 切主可用区中 PARAMETER_MODIFYING: 参数修改中 WHITE_LIST_MODIFING: 白名单修改中
+             * The status of the tenant.   
+             * <p>
+             * - PENDING_CREATE: The tenant is being created.   
+             * - RESTORE: The tenant is being recovered.   
+             * - ONLINE: The tenant is running.   
+             * - SPEC_MODIFYING: The specification of the tenant is being modified.   
+             * - ALLOCATING_INTERNET_ADDRESS: An Internet address is being allocated.  
+             * - PENDING_OFFLINE_INTERNET_ADDRESS: The Internet address is being disabled.  
+             * - PRIMARY_ZONE_MODIFYING: The tenant is switching to a new primary zone.  
+             * - PARAMETER_MODIFYING: Parameters are being modified.   
+             * - WHITE_LIST_MODIFYING: The whitelist is being modified.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1236,7 +1270,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * 租户的连接访问信息。
+             * The connection access information of the tenant.
              */
             public Builder tenantConnections(java.util.List < TenantConnections> tenantConnections) {
                 this.tenantConnections = tenantConnections;
@@ -1244,7 +1278,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * 租户ID。
+             * The ID of the tenant.
              */
             public Builder tenantId(String tenantId) {
                 this.tenantId = tenantId;
@@ -1252,7 +1286,11 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * 租户模式。 当前支持： Oracle：Oracle模式 MySQL: MySQL模式
+             * The tenant mode.   
+             * <p>
+             * Valid values: 
+             * Oracle   
+             * MySQL
              */
             public Builder tenantMode(String tenantMode) {
                 this.tenantMode = tenantMode;
@@ -1260,7 +1298,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * 租户名称。
+             * The name of the tenant.
              */
             public Builder tenantName(String tenantName) {
                 this.tenantName = tenantName;
@@ -1268,7 +1306,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * 租户的资源信息。
+             * The resource information of the tenant.
              */
             public Builder tenantResource(TenantResource tenantResource) {
                 this.tenantResource = tenantResource;
@@ -1276,7 +1314,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * 租户可用区信息。
+             * The zone information of the tenant.
              */
             public Builder tenantZones(java.util.List < TenantZones> tenantZones) {
                 this.tenantZones = tenantZones;
@@ -1284,7 +1322,9 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * 专有网络（VPC） ID。 如果没有合适的 VPC，请根据页面提示创建一个 VPC，详情参见 什么是专有网络
+             * The ID of the VPC.    
+             * <p>
+             * If no suitable VPC is available, create a VPC as prompted. For more information, see "What is a VPC".
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

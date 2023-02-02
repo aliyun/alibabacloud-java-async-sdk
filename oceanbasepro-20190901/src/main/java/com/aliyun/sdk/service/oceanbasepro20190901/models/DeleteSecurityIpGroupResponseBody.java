@@ -50,7 +50,7 @@ public class DeleteSecurityIpGroupResponseBody extends TeaModel {
         private SecurityIpGroup securityIpGroup; 
 
         /**
-         * 请求ID。
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DeleteSecurityIpGroupResponseBody extends TeaModel {
         }
 
         /**
-         * 删除的IP白名单分组信息。
+         * The information of the deleted IP whitelist group.
          */
         public Builder securityIpGroup(SecurityIpGroup securityIpGroup) {
             this.securityIpGroup = securityIpGroup;
@@ -110,7 +110,7 @@ public class DeleteSecurityIpGroupResponseBody extends TeaModel {
             private String securityIpGroupName; 
 
             /**
-             * Oceanbase集群ID。
+             * The ID of the OceanBase cluster.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -118,7 +118,7 @@ public class DeleteSecurityIpGroupResponseBody extends TeaModel {
             }
 
             /**
-             * 删除的IP安全白名单组的组名。
+             * The name of the deleted IP address whitelist group.
              */
             public Builder securityIpGroupName(String securityIpGroupName) {
                 this.securityIpGroupName = securityIpGroupName;

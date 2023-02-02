@@ -152,7 +152,9 @@ public class DescribeSQLHistoryListRequest extends Request {
         }
 
         /**
-         * 参数历史查看的结束时间。
+         * The end time of the time range for querying the SQL execution history.   
+         * <p>
+         * The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.
          */
         public Builder endTime(String endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -161,7 +163,7 @@ public class DescribeSQLHistoryListRequest extends Request {
         }
 
         /**
-         * 页码
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -170,7 +172,9 @@ public class DescribeSQLHistoryListRequest extends Request {
         }
 
         /**
-         * 每页数量
+         * The number of entries returned on each page.   
+         * <p>
+         * Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -179,7 +183,7 @@ public class DescribeSQLHistoryListRequest extends Request {
         }
 
         /**
-         * SQLID
+         * SQLID.
          */
         public Builder SQLId(String SQLId) {
             this.putBodyParameter("SQLId", SQLId);
@@ -188,7 +192,9 @@ public class DescribeSQLHistoryListRequest extends Request {
         }
 
         /**
-         * 参数历史查看的起始时间。
+         * The start time of the time range for querying the SQL execution history.   
+         * <p>
+         * The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.
          */
         public Builder startTime(String startTime) {
             this.putBodyParameter("StartTime", startTime);
@@ -197,7 +203,7 @@ public class DescribeSQLHistoryListRequest extends Request {
         }
 
         /**
-         * 租户ID
+         * The ID of the tenant.
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);

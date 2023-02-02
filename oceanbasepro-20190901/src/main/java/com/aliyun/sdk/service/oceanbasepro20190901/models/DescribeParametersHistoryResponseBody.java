@@ -50,7 +50,7 @@ public class DescribeParametersHistoryResponseBody extends TeaModel {
         private java.util.List < Respond> respond; 
 
         /**
-         * 请求ID。
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeParametersHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * 参数修改历史列表。
+         * The list of parameter modification records.
          */
         public Builder respond(java.util.List < Respond> respond) {
             this.respond = respond;
@@ -170,7 +170,7 @@ public class DescribeParametersHistoryResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * 参数修改的发起时间。
+             * The time when the parameter modification was initiated.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -178,7 +178,10 @@ public class DescribeParametersHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * 参数类型的资源标识。 如果为集群则为DEFAULT_DIMENSION_VALUE，若为租户的参数，则传入租户的TenantId。
+             * The resource ID of the parameter type.    
+             * <p>
+             * - When you called this operation to query the modification history of cluster parameters, the value is DEFAULT_DIMENSION_VALUE.   
+             * - When you called this operation to query the modification history of tenant parameters, the value is the tenant ID.
              */
             public Builder dimensionValue(String dimensionValue) {
                 this.dimensionValue = dimensionValue;
@@ -186,7 +189,7 @@ public class DescribeParametersHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * 参数名称。
+             * The name of the parameter.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -194,7 +197,7 @@ public class DescribeParametersHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * 参数修改后的值.
+             * The value of the parameter after the modification.
              */
             public Builder newValue(String newValue) {
                 this.newValue = newValue;
@@ -202,7 +205,7 @@ public class DescribeParametersHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * 参数修改前的值。
+             * The parameter value before modification.
              */
             public Builder oldValue(String oldValue) {
                 this.oldValue = oldValue;
@@ -210,7 +213,10 @@ public class DescribeParametersHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * 修改状态。 - APPLIED：成功 - SCHEDULING：待修改。
+             * The modification status. Valid values:    
+             * <p>
+             * - APPLIED: The modification was successful.   
+             * - SCHEDULING: The modification was to be made.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -218,7 +224,7 @@ public class DescribeParametersHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * 参数修改的生效时间。
+             * The time when the parameter modification took effect.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -283,7 +289,7 @@ public class DescribeParametersHistoryResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * 每页记录数。
+             * The number of returned entries on each page.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -291,7 +297,7 @@ public class DescribeParametersHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * 参数修改历史信息。
+             * The parameter modification history.
              */
             public Builder parameters(java.util.List < Parameters> parameters) {
                 this.parameters = parameters;
@@ -299,7 +305,7 @@ public class DescribeParametersHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * 查询到的参数修改历史记录数。
+             * The number of parameter modification records.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

@@ -291,7 +291,9 @@ public class DescribeAnomalySQLListRequest extends Request {
         }
 
         /**
-         * AcceptLanguage.
+         * The language of the returned data.   
+         * <p>
+         * Default value: CN for a China site and EN for an International site.
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putBodyParameter("AcceptLanguage", acceptLanguage);
@@ -300,7 +302,7 @@ public class DescribeAnomalySQLListRequest extends Request {
         }
 
         /**
-         * 数据库名称
+         * The name of the database.
          */
         public Builder dbName(String dbName) {
             this.putBodyParameter("DbName", dbName);
@@ -309,7 +311,9 @@ public class DescribeAnomalySQLListRequest extends Request {
         }
 
         /**
-         * 结束时间
+         * The end time of the time range for querying suspicious SQL statements.   
+         * <p>
+         * The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.
          */
         public Builder endTime(String endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -318,7 +322,9 @@ public class DescribeAnomalySQLListRequest extends Request {
         }
 
         /**
-         * 过滤条件
+         * The filter condition.   
+         * <p>
+         * > <br> - All fields in OceanBase Database support filtering. <br> - You can write the key-value pair of a parameter in a JSON string in the JSON format to filter the parameter.
          */
         public Builder filterCondition(java.util.Map < String, ? > filterCondition) {
             String filterConditionShrink = shrink(filterCondition, "FilterCondition", "json");
@@ -328,7 +334,7 @@ public class DescribeAnomalySQLListRequest extends Request {
         }
 
         /**
-         * 节点ip
+         * The IP address of the node.
          */
         public Builder nodeIp(String nodeIp) {
             this.putBodyParameter("NodeIp", nodeIp);
@@ -337,7 +343,10 @@ public class DescribeAnomalySQLListRequest extends Request {
         }
 
         /**
-         * 分页查询的页码。 起始值：1 默认值：1
+         * The number of the page to return.    
+         * <p>
+         * - Start value: 1   
+         * - Default value: 1
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -346,7 +355,10 @@ public class DescribeAnomalySQLListRequest extends Request {
         }
 
         /**
-         * 分页查询时设置的每页行数。 最大值：100 默认值：10
+         * The number of rows to return on each page.    
+         * <p>
+         * - Maximum value: 100   
+         * - Default value: 10
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -355,7 +367,7 @@ public class DescribeAnomalySQLListRequest extends Request {
         }
 
         /**
-         * SQLID
+         * SQLID.
          */
         public Builder SQLId(String SQLId) {
             this.putBodyParameter("SQLId", SQLId);
@@ -364,7 +376,7 @@ public class DescribeAnomalySQLListRequest extends Request {
         }
 
         /**
-         * 关键字查询
+         * The search keyword.
          */
         public Builder searchKeyWord(String searchKeyWord) {
             this.putBodyParameter("SearchKeyWord", searchKeyWord);
@@ -373,7 +385,7 @@ public class DescribeAnomalySQLListRequest extends Request {
         }
 
         /**
-         * 参数查询
+         * The search parameter.
          */
         public Builder searchParameter(String searchParameter) {
             this.putBodyParameter("SearchParameter", searchParameter);
@@ -382,7 +394,9 @@ public class DescribeAnomalySQLListRequest extends Request {
         }
 
         /**
-         * 查询规则
+         * The search rule.   
+         * <p>
+         * Valid values: "=", ">", ">=", "<", and "<="
          */
         public Builder searchRule(String searchRule) {
             this.putBodyParameter("SearchRule", searchRule);
@@ -391,7 +405,7 @@ public class DescribeAnomalySQLListRequest extends Request {
         }
 
         /**
-         * 查询值
+         * The search value.
          */
         public Builder searchValue(String searchValue) {
             this.putBodyParameter("SearchValue", searchValue);
@@ -400,7 +414,7 @@ public class DescribeAnomalySQLListRequest extends Request {
         }
 
         /**
-         * 排序列
+         * The sorted column.
          */
         public Builder sortColumn(String sortColumn) {
             this.putBodyParameter("SortColumn", sortColumn);
@@ -409,7 +423,7 @@ public class DescribeAnomalySQLListRequest extends Request {
         }
 
         /**
-         * 排序规则
+         * The sorting rule.
          */
         public Builder sortOrder(String sortOrder) {
             this.putBodyParameter("SortOrder", sortOrder);
@@ -418,7 +432,9 @@ public class DescribeAnomalySQLListRequest extends Request {
         }
 
         /**
-         * 起始时间
+         * The start time of the time range for querying suspicious SQL statements.   
+         * <p>
+         * The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.
          */
         public Builder startTime(String startTime) {
             this.putBodyParameter("StartTime", startTime);
@@ -427,7 +443,7 @@ public class DescribeAnomalySQLListRequest extends Request {
         }
 
         /**
-         * 租户ID
+         * The ID of the tenant.
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);

@@ -50,7 +50,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * OceanBase 集群信息。
+         * The information of the OceanBase cluster.
          */
         public Builder instance(Instance instance) {
             this.instance = instance;
@@ -58,7 +58,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 请求 ID。
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private Long usedCpu; 
 
             /**
-             * 集群总CPU，单位：核数
+             * The total number of CPU cores of the cluster.
              */
             public Builder totalCpu(Long totalCpu) {
                 this.totalCpu = totalCpu;
@@ -130,7 +130,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 集群中每个副本节点的CPU，单位：核数
+             * The number of CPU cores of each replica node in the cluster.
              */
             public Builder unitCpu(Long unitCpu) {
                 this.unitCpu = unitCpu;
@@ -138,7 +138,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 集群已使用的CPU，单位：核数
+             * The number of CPU cores used in the cluster.
              */
             public Builder usedCpu(Long usedCpu) {
                 this.usedCpu = usedCpu;
@@ -239,7 +239,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private Long usedDiskSize; 
 
             /**
-             * DataUsedSize.
+             * The size of the data disk, in GB.
              */
             public Builder dataUsedSize(Double dataUsedSize) {
                 this.dataUsedSize = dataUsedSize;
@@ -247,7 +247,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * MaxDiskUsedObServer.
+             * The server with the highest disk usage.
              */
             public Builder maxDiskUsedObServer(java.util.List < String > maxDiskUsedObServer) {
                 this.maxDiskUsedObServer = maxDiskUsedObServer;
@@ -255,7 +255,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * MaxDiskUsedPercent.
+             * The maximum disk usage, in percentage.
              */
             public Builder maxDiskUsedPercent(Double maxDiskUsedPercent) {
                 this.maxDiskUsedPercent = maxDiskUsedPercent;
@@ -263,7 +263,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 集群总存储空间，单位：GB
+             * The total storage space of the cluster, in GB.
              */
             public Builder totalDiskSize(Long totalDiskSize) {
                 this.totalDiskSize = totalDiskSize;
@@ -271,7 +271,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 集群每个副本的存储空间，单位：GB
+             * The storage space of each replica node in the cluster, in GB.
              */
             public Builder unitDiskSize(Long unitDiskSize) {
                 this.unitDiskSize = unitDiskSize;
@@ -279,7 +279,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 集群已使用的存储空间，单位：GB
+             * The size of used storage space of the cluster, in GB.
              */
             public Builder usedDiskSize(Long usedDiskSize) {
                 this.usedDiskSize = usedDiskSize;
@@ -332,7 +332,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private Long unitDiskSize; 
 
             /**
-             * 集群总日志盘空间，单位GB。
+             * The total log disk space of the cluster, in GB.
              */
             public Builder totalDiskSize(Long totalDiskSize) {
                 this.totalDiskSize = totalDiskSize;
@@ -340,7 +340,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 集群每个副本的日志存储空间，单位：GB
+             * The log disk space of each replica node in the cluster. Unit: GB.
              */
             public Builder unitDiskSize(Long unitDiskSize) {
                 this.unitDiskSize = unitDiskSize;
@@ -405,7 +405,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private Long usedMemory; 
 
             /**
-             * 集群总内存，单位：GB
+             * The total memory size of the cluster, in GB.
              */
             public Builder totalMemory(Long totalMemory) {
                 this.totalMemory = totalMemory;
@@ -413,7 +413,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 集群中每个副本的内存，单位：GB
+             * The memory size of each replica node in the cluster, in GB.
              */
             public Builder unitMemory(Long unitMemory) {
                 this.unitMemory = unitMemory;
@@ -421,7 +421,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 集群已使用的内存，单位：GB
+             * The size of used memory in the cluster, in GB.
              */
             public Builder usedMemory(Long usedMemory) {
                 this.usedMemory = usedMemory;
@@ -510,7 +510,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private Long unitCount; 
 
             /**
-             * 集群的CPU资源信息
+             * The information about the CPU resources of the cluster.
              */
             public Builder cpu(Cpu cpu) {
                 this.cpu = cpu;
@@ -518,7 +518,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 集群的存储资源信息
+             * The information about the storage resources of the cluster.
              */
             public Builder diskSize(DiskSize diskSize) {
                 this.diskSize = diskSize;
@@ -526,7 +526,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 集群的日志盘资源信息
+             * The information about the log disk space of the cluster.
              */
             public Builder logDiskSize(LogDiskSize logDiskSize) {
                 this.logDiskSize = logDiskSize;
@@ -534,7 +534,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 集群的内存资源信息
+             * The information about the memory resources of the cluster.
              */
             public Builder memory(Memory memory) {
                 this.memory = memory;
@@ -542,7 +542,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 集群的资源Unit数量。
+             * The number of resource units in the cluster.
              */
             public Builder unitCount(Long unitCount) {
                 this.unitCount = unitCount;
@@ -835,7 +835,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * 是否开启自动续费。该参数只在预付费（PREPAY）集群有意义。
+             * Indicates whether automatic renewal is enabled. 
+             * <p>
+             * 
+             * This parameter is valid only for clusters whose billing methods are set to PREPAY.
              */
             public Builder autoRenewal(Boolean autoRenewal) {
                 this.autoRenewal = autoRenewal;
@@ -843,7 +846,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 是否开启自动升级 OBServer 版本。
+             * Indicates whether automatic upgrade of the OBServer version is enabled.
              */
             public Builder autoUpgradeObVersion(Boolean autoUpgradeObVersion) {
                 this.autoUpgradeObVersion = autoUpgradeObVersion;
@@ -851,7 +854,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 可用区列表。
+             * The list of zones.
              */
             public Builder availableZones(java.util.List < String > availableZones) {
                 this.availableZones = availableZones;
@@ -859,7 +862,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 集群的创建时间（UTC时间）。
+             * The time in UTC when the cluster was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -867,7 +870,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 集群的数据合并时间。
+             * The time when the major compaction of cluster data is performed.
              */
             public Builder dataMergeTime(String dataMergeTime) {
                 this.dataMergeTime = dataMergeTime;
@@ -875,7 +878,13 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 集群的数据副本模式。 单机房为n，双机房为n-n，多机房为n-n-n，其中n为各机房的observer节点数。
+             * The data replica distribution mode of the cluster. Valid values: 
+             * <p>
+             * - n: indicates the single-IDC mode. 
+             * - n-n: indicates the dual-IDC mode. 
+             * - n-n-n: indicates the multi-IDC mode. 
+             * 
+             * > <br>The integer n represents the number of OBServer nodes in each IDC.
              */
             public Builder deployMode(String deployMode) {
                 this.deployMode = deployMode;
@@ -883,7 +892,11 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 集群的部署类型。<br> - multiple：多机房 <br>- single：单机房 <br>- dual：双机房
+             * The deployment type of the cluster. Valid values:  
+             * <p>
+             * - multiple: multi-IDC deployment   
+             * - single: single-IDC deployment   
+             * - dual: dual-IDC deployment
              */
             public Builder deployType(String deployType) {
                 this.deployType = deployType;
@@ -891,7 +904,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 集群部署的存储类型。默认为cloud_essd_pl1：ESSD云盘。
+             * The type of the storage disk where the cluster is deployed. 
+             * <p>
+             * 
+             * The default value is cloud_essd_pl1, which indicates an ESSD cloud disk.
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -899,7 +915,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 是否允许升级日志盘规格。
+             * Indicates whether the log disk specifications can be upgraded.
              */
             public Builder enableUpgradeLogDisk(Boolean enableUpgradeLogDisk) {
                 this.enableUpgradeLogDisk = enableUpgradeLogDisk;
@@ -907,7 +923,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 集群过期时间（UTC格式）。
+             * The time in UTC when the cluster expires.
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -915,7 +931,12 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 集群规格信息。<br> 当前支持四种套餐：<br> - 8C32G：8核 32GB <br>- 14C70G：14核 70GB<br> - 30C180G：30核 180GB<br> - 62C400G：62核 400GB。
+             * The specifications of the cluster.  You can specify one of the following four plans:    
+             * <p>
+             * - 8C32G: indicates 8 CPU cores and 32 GB of memory. 
+             * - 14C70G: indicates 14 CPU cores and 70 GB of memory. 
+             * - 30C180G: indicates 30 CPU cores and 180 GB of memory. 
+             * - 62C400G: indicates 62 CPU cores and 400 GB of memory.
              */
             public Builder instanceClass(String instanceClass) {
                 this.instanceClass = instanceClass;
@@ -923,7 +944,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * OceanBase 集群 ID。
+             * The ID of the OceanBase cluster.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -931,7 +952,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * OceanBase 集群名称。
+             * The name of the OceanBase cluster.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -939,7 +960,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * OBServer版本是否为最新版本。
+             * Indicates whether the OBServer version is the latest.
              */
             public Builder isLatestObVersion(Boolean isLatestObVersion) {
                 this.isLatestObVersion = isLatestObVersion;
@@ -947,7 +968,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 是否使用可信ecs
+             * Indicates whether trusted ECS instances are used.
              */
             public Builder isTrustEcs(Boolean isTrustEcs) {
                 this.isTrustEcs = isTrustEcs;
@@ -955,7 +976,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 集群的每天例行维护时间，UTC时间。
+             * The time period in UTC for the daily routine maintenance of the cluster.
              */
             public Builder maintainTime(String maintainTime) {
                 this.maintainTime = maintainTime;
@@ -963,7 +984,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * OBServer 详细版本信息。
+             * The detailed information of the OBServer version.
              */
             public Builder obRpmVersion(String obRpmVersion) {
                 this.obRpmVersion = obRpmVersion;
@@ -971,7 +992,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * OceanBase 集群的付费类型 <br>- PREPAY：预付费 <br>- POSTPAY：按量付费
+             * The billing method of the OceanBase cluster. Valid values: 
+             * <p>
+             * - PREPAY: the subscription billing method. 
+             * - POSTPAY: the pay-as-you-go billing method.
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -979,7 +1003,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 集群的资源信息
+             * The information about cluster resources.
              */
             public Builder resource(Resource resource) {
                 this.resource = resource;
@@ -987,7 +1011,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * OceanBase 集群的系列 <br>- NORMAL：高可用版本 <br>- BASIC：基础版本
+             * The series of the OceanBase cluster. Valid values:   
+             * <p>
+             * - NORMAL: the high availability edition.   
+             * - BASIC: the basic edition.
              */
             public Builder series(String series) {
                 this.series = series;
@@ -995,7 +1022,23 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 集群状态。 <br>- PENDING_CREATE: 创建中 <br>- ONLINE: 运行中 <br>- TENANT_CREATING：租户创建中 <br>- TENANT_SPEC_MODIFYING：租户规格修改中 <br>- EXPANDING: 节点扩容中 <br>- REDUCING: 节点缩容中 <br>- SPEC_UPGRADING:套餐规格扩容中 <br>- DISK_UPGRADING:存储规格扩容中 <br>- WHITE_LIST_MODIFYING: 修改白名单中 <br>- PARAMETER_MODIFYING: 修改参数中 <br>- SSL_MODIFYING: SSL变更中 <br>- PREPAID_EXPIRE_CLOSED: 预付费集群欠费中 <br>- ARREARS_CLOSED: 后付费集群欠费中 <br>- PENDING_DELETE: 删除中。 集群一般为运行中的状态（ONLINE）。
+             * The status of the cluster. Valid values: 
+             * <p>
+             *  - PENDING_CREATE: The cluster is being created. 
+             *  - ONLINE: The cluster is running. 
+             *  - TENANT_CREATING: The tenant is being created. 
+             * - TENANT_SPEC_MODIFYING: The tenant specifications are being modified. 
+             * - EXPANDING: Nodes are being added to the cluster to increase its capacity. 
+             * - REDUCING: Nodes are being removed from the cluster to reduce its capacity. 
+             * - SPEC_UPGRADING: The service plan is being upgraded. 
+             * - DISK_UPGRADING: The storage space is being expanded. 
+             * - WHITE_LIST_MODIFYING: The whitelist is being modified. 
+             * - PARAMETER_MODIFYING: Parameters are being modified. 
+             * - SSL_MODIFYING: The SSL certificate is being changed. 
+             * - PREPAID_EXPIRE_CLOSED: The payment is overdue. This parameter is valid for a cluster whose billing method is set to PREPAY. 
+             * - ARREARS_CLOSED: The payment is overdue. This parameter is valid for a cluster whose billing method is set to POSTPAY. 
+             * - PENDING_DELETE: The cluster is being deleted.    
+             * Generally, the cluster is in the ONLINE state.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1003,7 +1046,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * OBServer 版本信息。
+             * The OBServer version.
              */
             public Builder version(String version) {
                 this.version = version;

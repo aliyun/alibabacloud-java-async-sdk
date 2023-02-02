@@ -62,7 +62,7 @@ public class DescribeSecurityIpGroupsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * 请求ID。
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class DescribeSecurityIpGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * IP白名单分组信息。
+         * The information of the IP address whitelist group.
          */
         public Builder securityIpGroups(java.util.List < SecurityIpGroups> securityIpGroups) {
             this.securityIpGroups = securityIpGroups;
@@ -78,7 +78,7 @@ public class DescribeSecurityIpGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * 查询到的白名单分组个数。
+         * The number of whitelist groups returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,7 +130,7 @@ public class DescribeSecurityIpGroupsResponseBody extends TeaModel {
             private String securityIps; 
 
             /**
-             * 安全组名称。
+             * The name of the security group.
              */
             public Builder securityIpGroupName(String securityIpGroupName) {
                 this.securityIpGroupName = securityIpGroupName;
@@ -138,7 +138,9 @@ public class DescribeSecurityIpGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * IP安全白名单列表。其为一个Json格式的数组，数组中每个对象为一个IP字符串或者IP段。
+             * The list of IP addresses and CIDR blocks in the whitelist.   
+             * <p>
+             * It is a JSON array. Each object in the array is an IP address or CIDR block.
              */
             public Builder securityIps(String securityIps) {
                 this.securityIps = securityIps;

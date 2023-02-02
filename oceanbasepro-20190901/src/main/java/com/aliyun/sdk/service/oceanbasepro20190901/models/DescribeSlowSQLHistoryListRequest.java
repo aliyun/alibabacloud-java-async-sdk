@@ -152,7 +152,9 @@ public class DescribeSlowSQLHistoryListRequest extends Request {
         }
 
         /**
-         * 结束时间
+         * The end time of the time range for querying the execution history of the slow SQL statement.   
+         * <p>
+         * The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.
          */
         public Builder endTime(String endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -161,7 +163,10 @@ public class DescribeSlowSQLHistoryListRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.    
+         * <p>
+         * - Start value: 1   
+         * - Default value: 1
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -170,7 +175,10 @@ public class DescribeSlowSQLHistoryListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of rows to return on each page.  
+         * <p>
+         * - Maximum value: 100   
+         * - Default value: 10
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -179,7 +187,7 @@ public class DescribeSlowSQLHistoryListRequest extends Request {
         }
 
         /**
-         * SQL唯一标识
+         * The SQL ID, which uniquely identifies an SQL statement.
          */
         public Builder SQLId(String SQLId) {
             this.putBodyParameter("SQLId", SQLId);
@@ -188,7 +196,9 @@ public class DescribeSlowSQLHistoryListRequest extends Request {
         }
 
         /**
-         * 开始时间
+         * The start time of the time range for querying the execution history of the slow SQL statement.   
+         * <p>
+         * The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.
          */
         public Builder startTime(String startTime) {
             this.putBodyParameter("StartTime", startTime);
@@ -197,7 +207,7 @@ public class DescribeSlowSQLHistoryListRequest extends Request {
         }
 
         /**
-         * 租户名
+         * The ID of the tenant.
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);

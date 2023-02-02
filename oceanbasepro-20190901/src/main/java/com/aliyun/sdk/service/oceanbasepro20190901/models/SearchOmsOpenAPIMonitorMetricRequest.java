@@ -175,7 +175,7 @@ public class SearchOmsOpenAPIMonitorMetricRequest extends Request {
         }
 
         /**
-         * 查询起始时间，秒级时间戳
+         * The query start time, which is a second-level timestamp.
          */
         public Builder beginTime(Long beginTime) {
             this.putBodyParameter("BeginTime", beginTime);
@@ -184,7 +184,7 @@ public class SearchOmsOpenAPIMonitorMetricRequest extends Request {
         }
 
         /**
-         * 查询结束时间，秒级时间戳
+         * The query end time, which is a second-level timestamp.
          */
         public Builder endTime(Long endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -193,7 +193,7 @@ public class SearchOmsOpenAPIMonitorMetricRequest extends Request {
         }
 
         /**
-         * 最多查询点数
+         * The maximum number of query points.
          */
         public Builder maxPointNum(Long maxPointNum) {
             this.putBodyParameter("MaxPointNum", maxPointNum);
@@ -202,7 +202,7 @@ public class SearchOmsOpenAPIMonitorMetricRequest extends Request {
         }
 
         /**
-         * 查询指标，如查询增量 TPS，则指定为 CONNECTOR_TPS (CONNECTOR_TPS: connector TPS, CONNECTOR_DELAY: connector delay, CONNECTOR_SOURCE_QUEUE_SIZE: connector source 端 queue size, CONNECTOR_IOPS: connector iops, CONNECTOR_WRITE_COST: connector sink 端写耗时, CONNECTOR_SOURCE_READ_COST: connector source 端读耗时, JDBCWRITER_DELAY: jdbcwriter 延时, JDBCWRITER_IOPS: jdbcwriter 流量, JDBCWRITER_RPS: jdbcwriter rps, STORE_DELAY: store delay, STORE_CONN: store conn 数目, STORE_IOPS: store 流量, STORE_TPS: store tps, CHECKER_SOURCE_NONE_RPS: 全量迁移 Checker，源端 RPS 瞬时信息。, CHECKER_SOURCE_AVG_RPS: 全量迁移 Checker，源端 RPS 平均信息。, CHECKER_DEST_NONE_RPS: 全量迁移 Checker，目标端 RPS 瞬时信息。, CHECKER_DEST_AVG_RPS: 全量迁移 Checker，目标端 RPS 平均信息。, CHECKER_SOURCE_NONE_RT: 全量迁移 Checker，源端 RT 瞬时信息。, CHECKER_SOURCE_AVG_RT: 全量迁移 Checker，源端 RT 平均信息。, CHECKER_DEST_NONE_RT: 全量迁移 Checker，目标端 RT，瞬时信息。, CHECKER_DEST_AVG_RT: 全量迁移 Checker，目标端 RT，平均信息。, CHECKER_SOURCE_NONE_READ_IOPS: 全量迁移 Checker，源端读取流量，瞬时信息。, CHECKER_SOURCE_AVG_READ_IOPS: 全量迁移 Checker，源端读取流量，平均信息。, CHECKER_DEST_NONE_WRITE_IOPS: 全量迁移 Checker，目标端写入流量，瞬时信息。, CHECKER_DEST_AVG_WRITE_IOPS: 全量迁移 Checker，目标端写入流量，平均信息。, CHECKER_VERIFY_SOURCE_NONE_RPS: 全量校验 Checker-Verify，源端 RPS，瞬时信息。, CHECKER_VERIFY_SOURCE_AVG_RPS: 全量校验 Checker-Verify，源端 RPS，平均信息。, CHECKER_VERIFY_DEST_NONE_RPS: 全量校验 Checker-Verify，目标端 RPS，瞬时信息。, CHECKER_VERIFY_DEST_AVG_RPS: 全量校验 Checker-Verify，目标端 RPS，平均信息。, CHECKER_VERIFY_SOURCE_NONE_RT: 全量校验 Checker-Verify，源端 RT，瞬时信息。, CHECKER_VERIFY_SOURCE_AVG_RT: 全量校验 Checker-Verify，源端 RT，平均信息。, CHECKER_VERIFY_DEST_NONE_RT: 全量校验 Checker-Verify，目标端 RT，瞬时信息。, CHECKER_VERIFY_DEST_AVG_RT: 全量校验 Checker-Verify，目标端 RT，平均信息。, CHECKER_VERIFY_SOURCE_NONE_READ_IOPS: 全量校验 Checker-Verify，源端读取流量，瞬时信息。, CHECKER_VERIFY_SOURCE_AVG_READ_IOPS: 全量校验 Checker-Verify，源端读取流量，平均信息。, CHECKER_VERIFY_DEST_NONE_READ_IOPS: 全量校验 Checker-Verify，目标端读取流量，瞬时信息。, CHECKER_VERIFY_DEST_AVG_READ_IOPS: 全量校验 Checker-Verify，目标端读取流量，平均信息。)
+         * The query metric. For example, if you want to query the incremental transactions per second (TPS), set the value to CONNECTOR_TPS. Valid values: CONNECTOR_TPS: the TPS of the Connector component; CONNECTOR_DELAY: the latency of the Connector component; CONNECTOR_SOURCE_QUEUE_SIZE: the queue size of the Connector source; CONNECTOR_IOPS: the Connector IOPS; CONNECTOR_WRITE_COST: the time spent in writing at the Connector destination; CONNECTOR_SOURCE_READ_COST: the time spent in reading at the Connector source; JDBCWRITER_DELAY: the latency of the JDBCWriter; JDBCWRITER_IOPS: the IOPS of the JDBCWriter; JDBCWRITER_RPS: the requests per second (RPS) of the JDBCWriter; STORE_DELAY: the latency of the Store component; STORE_CONN: the number of store connections; STORE_IOPS: the IOPS of the Store component; STORE_TPS: the TPS of the Store component; CHECKER_SOURCE_NONE_RPS: the instantaneous RPS of the Checker component at the source end during full migration; CHECKER_SOURCE_AVG_RPS: the average RPS of the Checker component at the source end during full migration; CHECKER_DEST_NONE_RPS: the instantaneous RPS of the Checker component at the destination end during full migration; CHECKER_DEST_AVG_RPS: the average RPS of the Checker component at the destination end during full migration; CHECKER_SOURCE_NONE_RT: the instantaneous response time (RT) of the Checker component at the source end during full migration; CHECKER_SOURCE_AVG_RT: the average RT of the Checker component at the source end during full migration; CHECKER_DEST_NONE_RT: the instantaneous RT of the Checker component at the destination end during full migration; CHECKER_DEST_AVG_RT: the average RT of the Checker component at the destination end during full migration; CHECKER_SOURCE_NONE_READ_IOPS: the instantaneous read IOPS of the Checker component at the source end during full migration; CHECKER_SOURCE_AVG_READ_IOPS: the average read IOPS of the Checker component at the source end during full migration; CHECKER_DEST_NONE_WRITE_IOPS: the instantaneous write IOPS of the Checker component at the destination end during full migration; CHECKER_DEST_AVG_WRITE_IOPS: the average write IOPS of the Checker component at the destination end during full migration; CHECKER_VERIFY_SOURCE_NONE_RPS: the instantaneous RPS of the Checker-Verify component at the source end during full verification; CHECKER_VERIFY_SOURCE_AVG_RPS: the average RPS of the Checker-Verify component at the source end during full verification; CHECKER_VERIFY_DEST_NONE_RPS: the instantaneous RPS of the Checker-Verify component at the destination end during full verification; CHECKER_VERIFY_DEST_AVG_RPS: the average RPS of the Checker-Verify component at the destination end during full verification; CHECKER_VERIFY_SOURCE_NONE_RT: the instantaneous RT of the Checker-Verify component at the source end during full verification; CHECKER_VERIFY_SOURCE_AVG_RT: the average RT of the Checker-Verify component at the source end during full verification; CHECKER_VERIFY_DEST_NONE_RT: the instantaneous RT of the Checker-Verify component at the destination end during full verification; CHECKER_VERIFY_DEST_AVG_RT: the average RT of the Checker-Verify component at the destination end during full verification; CHECKER_VERIFY_SOURCE_NONE_READ_IOPS: the instantaneous read IOPS of the Checker-Verify component at the source end during full verification; CHECKER_VERIFY_SOURCE_AVG_READ_IOPS: the average read IOPS of the Checker-Verify component at the source end during full verification; CHECKER_VERIFY_DEST_NONE_READ_IOPS: the instantaneous read IOPS of the Checker-Verify component at the destination end during full verification; and CHECKER_VERIFY_DEST_AVG_READ_IOPS: the average read IOPS of the Checker-Verify component at the destination end during full verification.
          */
         public Builder metric(String metric) {
             this.putBodyParameter("Metric", metric);
@@ -211,7 +211,7 @@ public class SearchOmsOpenAPIMonitorMetricRequest extends Request {
         }
 
         /**
-         * 页序号，分页查询时生效
+         * The page number, which takes effect in a pagination query.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -220,7 +220,7 @@ public class SearchOmsOpenAPIMonitorMetricRequest extends Request {
         }
 
         /**
-         * 页大小，分页查询时生效
+         * The page size, which takes effect in a pagination query.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -229,7 +229,7 @@ public class SearchOmsOpenAPIMonitorMetricRequest extends Request {
         }
 
         /**
-         * 查询项目 id
+         * The ID of the project to query.
          */
         public Builder projectId(String projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -238,7 +238,7 @@ public class SearchOmsOpenAPIMonitorMetricRequest extends Request {
         }
 
         /**
-         * 实例规格 ID，创建项目时生效
+         * The ID of the migration instance. Generally, if you want to create a project on a public cloud, you must first purchase a migration instance.
          */
         public Builder workerGradeId(String workerGradeId) {
             this.putBodyParameter("WorkerGradeId", workerGradeId);

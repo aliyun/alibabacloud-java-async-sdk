@@ -164,7 +164,7 @@ public class ModifyTenantPrimaryZoneRequest extends Request {
         }
 
         /**
-         * Oceanbase集群ID。
+         * The ID of the OceanBase cluster.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -182,7 +182,7 @@ public class ModifyTenantPrimaryZoneRequest extends Request {
         }
 
         /**
-         * 切换模式
+         * The switching mode.
          */
         public Builder modifyType(String modifyType) {
             this.putBodyParameter("ModifyType", modifyType);
@@ -191,7 +191,9 @@ public class ModifyTenantPrimaryZoneRequest extends Request {
         }
 
         /**
-         * 租户的主可用区。 其为集群部署可用区中的一个。
+         * The primary zone of the tenant.    
+         * <p>
+         * It is one of the zones in which the cluster is deployed.
          */
         public Builder primaryZone(String primaryZone) {
             this.putBodyParameter("PrimaryZone", primaryZone);
@@ -209,7 +211,7 @@ public class ModifyTenantPrimaryZoneRequest extends Request {
         }
 
         /**
-         * 租户ID。
+         * The ID of the tenant.
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);
@@ -218,7 +220,7 @@ public class ModifyTenantPrimaryZoneRequest extends Request {
         }
 
         /**
-         * 用户交换机ID
+         * The ID of the vSwitch.
          */
         public Builder userVSwitchId(String userVSwitchId) {
             this.putBodyParameter("UserVSwitchId", userVSwitchId);

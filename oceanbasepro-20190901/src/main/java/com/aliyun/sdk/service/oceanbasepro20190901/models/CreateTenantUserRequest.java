@@ -166,7 +166,7 @@ public class CreateTenantUserRequest extends Request {
         }
 
         /**
-         * 数据库描述信息。
+         * The description of the database.
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -175,7 +175,7 @@ public class CreateTenantUserRequest extends Request {
         }
 
         /**
-         * Oceanbase集群ID。
+         * The ID of the OceanBase cluster.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -184,7 +184,19 @@ public class CreateTenantUserRequest extends Request {
         }
 
         /**
-         * 用户的角色信息。 对于Oracle模式：无需填写。 对于MySQL模式：超级账户默认为ALL PRIVILEGES，无需填写。 普通用户填写账户的信息，其为Json格式的字符串，默认为一个数组，数组内包含schema（Oracle模式）或Database（MySQL模式)信息和角色信息（Role）。 角色包含以下几类： 读写权限（ReadWrite）：ALL PRIVILEGES ； 只读权限（ReadOnly）：SELECT DDL权限（DDL）：CREATE,DROP,ALTER,SHOW VIEW,CREATE VIEW DML权限：SELECT,INSERT,UPDATE,DELETE,SHOW VIEW； DML权限（DML）：SELECT,INSERT,UPDATE,DELETE,SHOW VIEW。
+         * The role of the user account.   
+         * <p>
+         * 
+         * - In Oracle mode, this parameter is left unspecified.    
+         * - In MySQL mode, the super administrator account has ALL PRIVILEGES, and you can leave this parameter unspecified.   
+         *  
+         * You need to specify the account information for a general user account. By default, the account information is a JSON array that contains the information of the role and the schema (Oracle mode) or database (MySQL mode). Valid values:  
+         * 
+         * - ReadWrite: a role that has the read and write privileges, namely ALL PRIVILEGES.    
+         * - ReadOnly: a role that has only the read-only privilege SELECT.   
+         * - DDL: a role that has DDL privileges such as CREATE, DROP, ALTER, SHOW VIEW, and CREATE VIEW.   
+         *    
+         * - DML: a role that has DML privileges such as SELECT, INSERT, UPDATE, DELETE, and SHOW VIEW.
          */
         public Builder roles(String roles) {
             this.putBodyParameter("Roles", roles);
@@ -193,7 +205,7 @@ public class CreateTenantUserRequest extends Request {
         }
 
         /**
-         * 租户ID。
+         * The ID of the tenant.
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);
@@ -202,7 +214,9 @@ public class CreateTenantUserRequest extends Request {
         }
 
         /**
-         * 数据库账号名称。 不能使用某些预留关键字，如 SYS、root等。
+         * The name of the database account.   
+         * <p>
+         * You cannot use reserved keywords, such as SYS and root.
          */
         public Builder userName(String userName) {
             this.putBodyParameter("UserName", userName);
@@ -211,7 +225,10 @@ public class CreateTenantUserRequest extends Request {
         }
 
         /**
-         * 数据库账号访问密码。 必须包含大写英文字符、小写英文字符、数字、特殊字符占三种，长度为 10-32 位； 特殊字符为：!@#$%^&* ()_ +-=
+         * The password of the database account. 
+         * <p>
+         * 
+         * > <br>It must be 10 to 32 characters in length and contain three types of the following characters: uppercase letters, lowercase letters, digits, and special characters. The special characters are ! @ # $ % ^ & \ * ( ) _ + - =
          */
         public Builder userPassword(String userPassword) {
             this.putBodyParameter("UserPassword", userPassword);
@@ -220,7 +237,11 @@ public class CreateTenantUserRequest extends Request {
         }
 
         /**
-         * 数据库账户的类型 Admin：超级账户 Normal：普通账户
+         * The type of the database account. Valid values:   
+         * <p>
+         * 
+         * - Admin: the super administrator account.   
+         * - Normal: a general account.
          */
         public Builder userType(String userType) {
             this.putBodyParameter("UserType", userType);

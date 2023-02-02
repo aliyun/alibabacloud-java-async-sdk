@@ -195,7 +195,9 @@ public class DescribeTenantMetricsRequest extends Request {
         }
 
         /**
-         * 监控数据的结束时间。该时间只支持UTC时间，格式为：YYYY-MM-DDThh:mm:ssZ。
+         * The end time of the time range for querying monitoring data.   
+         * <p>
+         * The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.
          */
         public Builder endTime(String endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -204,7 +206,7 @@ public class DescribeTenantMetricsRequest extends Request {
         }
 
         /**
-         * Oceanbase集群ID。
+         * The ID of the OceanBase cluster.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -213,7 +215,9 @@ public class DescribeTenantMetricsRequest extends Request {
         }
 
         /**
-         * 监控指标。当前可支持的指标及说明参考：https://help.aliyun.com/document_detail/212125.html
+         * The monitoring metrics.   
+         * <p>
+         * For more information about supported metrics, see [View tenant statistics](~~212125~~).
          */
         public Builder metrics(String metrics) {
             this.putBodyParameter("Metrics", metrics);
@@ -222,7 +226,10 @@ public class DescribeTenantMetricsRequest extends Request {
         }
 
         /**
-         * 分页查询的页码。 起始值：1 默认值：1
+         * The number of the page to return.    
+         * <p>
+         * - Start value: 1 
+         * - Default value: 1
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -231,7 +238,10 @@ public class DescribeTenantMetricsRequest extends Request {
         }
 
         /**
-         * 分页查询时设置的每页行数。 最大值：100 默认值：10
+         * The number of rows to return on each page.   
+         * <p>
+         * - Maximum value: 100   
+         * - Default value: 10
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -240,7 +250,9 @@ public class DescribeTenantMetricsRequest extends Request {
         }
 
         /**
-         * 监控数据的起始时间。该时间只支持UTC时间，格式为：YYYY-MM-DDThh:mm:ssZ。
+         * The start time of the time range for querying monitoring data.   
+         * <p>
+         * The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.
          */
         public Builder startTime(String startTime) {
             this.putBodyParameter("StartTime", startTime);
@@ -249,7 +261,9 @@ public class DescribeTenantMetricsRequest extends Request {
         }
 
         /**
-         * 租户ID。该参数待废弃，请使用TenantIdList。
+         * The ID of the tenant.   
+         * <p>
+         * > <br>This parameter will be deprecated. We recommend that you use the TenantIdList parameter instead.
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);
@@ -258,7 +272,7 @@ public class DescribeTenantMetricsRequest extends Request {
         }
 
         /**
-         * 租户ID列表
+         * The list of tenant IDs.
          */
         public Builder tenantIdList(String tenantIdList) {
             this.putBodyParameter("TenantIdList", tenantIdList);
@@ -267,7 +281,10 @@ public class DescribeTenantMetricsRequest extends Request {
         }
 
         /**
-         * 租户名称。 长度为2~20 个字符，支持英文字母、数字和下划线，区分大小写，必须以字母或下划线开头。 不可设置为 sys。参数待废弃，请使用TenantIdList。
+         * The name of the tenant.    
+         * <p>
+         * It must start with a letter or an underscore (_), and contain 2 to 20 characters, which can be uppercase letters, lowercase letters, digits, and underscores (_).  It cannot be set to sys.   
+         * > <br>This parameter will be deprecated. We recommend that you use the TenantIdList parameter instead.
          */
         public Builder tenantName(String tenantName) {
             this.putBodyParameter("TenantName", tenantName);

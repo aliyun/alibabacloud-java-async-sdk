@@ -50,7 +50,7 @@ public class CreateSecurityIpGroupResponseBody extends TeaModel {
         private SecurityIpGroup securityIpGroup; 
 
         /**
-         * 请求ID。
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class CreateSecurityIpGroupResponseBody extends TeaModel {
         }
 
         /**
-         * 白名单分组信息。
+         * The information of the whitelist group.
          */
         public Builder securityIpGroup(SecurityIpGroup securityIpGroup) {
             this.securityIpGroup = securityIpGroup;
@@ -122,7 +122,7 @@ public class CreateSecurityIpGroupResponseBody extends TeaModel {
             private String securityIps; 
 
             /**
-             * Oceanbase集群ID。
+             * The ID of the OceanBase cluster.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -130,7 +130,7 @@ public class CreateSecurityIpGroupResponseBody extends TeaModel {
             }
 
             /**
-             * 白名单分组名称。
+             * The name of the whitelist group.
              */
             public Builder securityIpGroupName(String securityIpGroupName) {
                 this.securityIpGroupName = securityIpGroupName;
@@ -138,7 +138,9 @@ public class CreateSecurityIpGroupResponseBody extends TeaModel {
             }
 
             /**
-             * IP白名单分组中的IP地址或地址段。其为一个Json格式的数组，数组中每个对象为一个IP字符串或者IP段。
+             * The IP addresses or CIDR blocks in the IP address whitelist group.   
+             * <p>
+             * The return values of SecurityIps are strings that are separated with commas (,).
              */
             public Builder securityIps(String securityIps) {
                 this.securityIps = securityIps;

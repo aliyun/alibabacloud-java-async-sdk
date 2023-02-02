@@ -242,7 +242,9 @@ public class CreateTenantRequest extends Request {
         }
 
         /**
-         * 字符集。 详细参见：DescribeCharset。
+         * The character set.    
+         * <p>
+         * For more information, see DescribeCharset.
          */
         public Builder charset(String charset) {
             this.putBodyParameter("Charset", charset);
@@ -251,7 +253,10 @@ public class CreateTenantRequest extends Request {
         }
 
         /**
-         * 租户的CPU大小，单位：核数（Cores）
+         * The number of CPU cores of the tenant.   
+         * <p>
+         * 
+         * > <br>The CPU specification of a single tenant cannot exceed that of the corresponding cluster. <br>For example, if the specification of the cluster is 14 CPU cores and 70 GB of memory, the CPU specification of the tenant cannot exceed 14 cores.
          */
         public Builder cpu(Integer cpu) {
             this.putBodyParameter("Cpu", cpu);
@@ -260,7 +265,7 @@ public class CreateTenantRequest extends Request {
         }
 
         /**
-         * 租户描述信息。
+         * The description of the database.
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -269,7 +274,7 @@ public class CreateTenantRequest extends Request {
         }
 
         /**
-         * Oceanbase集群ID。
+         * The ID of the OceanBase cluster.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -278,7 +283,10 @@ public class CreateTenantRequest extends Request {
         }
 
         /**
-         * 租户内存大小，单位GB。
+         * The memory size of the tenant, in GB.   
+         * <p>
+         * 
+         * > <br>The memory size of a single tenant cannot exceed that of the corresponding cluster. <br>For example, if the specification of the cluster is 14 CPU cores and 70 GB of memory, the memory size of the tenant cannot exceed 70 GB.
          */
         public Builder memory(Integer memory) {
             this.putBodyParameter("Memory", memory);
@@ -287,7 +295,9 @@ public class CreateTenantRequest extends Request {
         }
 
         /**
-         * 租户的主可用区。 其为集群部署可用区中的一个。
+         * The primary zone of the tenant.    
+         * <p>
+         * It is one of the zones in which the cluster is deployed.
          */
         public Builder primaryZone(String primaryZone) {
             this.putBodyParameter("PrimaryZone", primaryZone);
@@ -296,7 +306,10 @@ public class CreateTenantRequest extends Request {
         }
 
         /**
-         * 租户模式。 当前支持Oracle模式（Oracle）、MySQL模式（MySQL） 详细参见：DescribeInstanceTenantModes。
+         * The tenant mode.    
+         * <p>
+         * Valid values: Oracle and MySQL.   
+         * For more information, see [DescribeInstanceTenantModes](~~410354~~).
          */
         public Builder tenantMode(String tenantMode) {
             this.putBodyParameter("TenantMode", tenantMode);
@@ -305,7 +318,9 @@ public class CreateTenantRequest extends Request {
         }
 
         /**
-         * 租户名称。 长度为2~20 个字符，支持英文字母、数字和下划线，区分大小写，必须以字母或下划线开头。 不可设置为 sys。
+         * The name of the tenant.    
+         * <p>
+         * It must start with a letter or an underscore (_), and contain 2 to 20 characters, which can be uppercase letters, lowercase letters, digits, and underscores (_).  It cannot be set to sys.
          */
         public Builder tenantName(String tenantName) {
             this.putBodyParameter("TenantName", tenantName);
@@ -314,7 +329,7 @@ public class CreateTenantRequest extends Request {
         }
 
         /**
-         * 租户所在时区。 详细参见：DescribeTimeZones。
+         * The time zone of the tenant. For more information, see [DescribeTimeZones](~~410361~~).
          */
         public Builder timeZone(String timeZone) {
             this.putBodyParameter("TimeZone", timeZone);
@@ -323,7 +338,9 @@ public class CreateTenantRequest extends Request {
         }
 
         /**
-         * 租户的资源分布节点数。 其与集群的部署模式相耦合，如集群模式为2-2-2，则最后分布节点数最多为2个。
+         * The number of resource distribution nodes in the tenant.    
+         * <p>
+         * The number is determined by the deployment mode of the cluster. If the cluster is deployed in 2-2-2 mode, the maximum number of resource distribution nodes is 2.
          */
         public Builder unitNum(Integer unitNum) {
             this.putBodyParameter("UnitNum", unitNum);
@@ -332,7 +349,10 @@ public class CreateTenantRequest extends Request {
         }
 
         /**
-         * 虚拟交换机（VSwitch） ID。 如果没有合适的 VSwitch，请根据页面提示创建一个，详情参见 使用交换机。
+         * The ID of the vSwitch.    
+         * <p>
+         * If no suitable vSwitch is available, create a vSwitch as prompted.   
+         * For more information, see Use a vSwitch.
          */
         public Builder userVSwitchId(String userVSwitchId) {
             this.putBodyParameter("UserVSwitchId", userVSwitchId);
@@ -341,7 +361,10 @@ public class CreateTenantRequest extends Request {
         }
 
         /**
-         * 专有网络（VPC） ID。 如果没有合适的 VPC，请根据页面提示创建一个 VPC，详情参见 什么是专有网络
+         * The ID of the VPC.   
+         * <p>
+         *  If no suitable VPC is available, create a VPC as prompted.   
+         * For more information, see "What is a VPC".
          */
         public Builder userVpcId(String userVpcId) {
             this.putBodyParameter("UserVpcId", userVpcId);

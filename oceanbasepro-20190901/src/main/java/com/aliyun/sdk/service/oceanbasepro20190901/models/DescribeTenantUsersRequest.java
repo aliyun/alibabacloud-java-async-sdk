@@ -135,7 +135,9 @@ public class DescribeTenantUsersRequest extends Request {
         }
 
         /**
-         * 分页查询的页码。 起始值：1 默认值：1
+         * The number of the page to return.    
+         * <p>
+         * Start value: 1. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -144,7 +146,9 @@ public class DescribeTenantUsersRequest extends Request {
         }
 
         /**
-         * 分页查询时设置的每页行数。 最大值：100 默认值：10
+         * The number of rows to return on each page.    
+         * <p>
+         * Maximum value: 100. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -153,7 +157,7 @@ public class DescribeTenantUsersRequest extends Request {
         }
 
         /**
-         * 查询列表的删选关键字。
+         * The search keyword.
          */
         public Builder searchKey(String searchKey) {
             this.putBodyParameter("SearchKey", searchKey);
@@ -162,7 +166,7 @@ public class DescribeTenantUsersRequest extends Request {
         }
 
         /**
-         * 租户ID。
+         * The ID of the tenant.
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);
@@ -171,7 +175,9 @@ public class DescribeTenantUsersRequest extends Request {
         }
 
         /**
-         * 数据库账号名称。 不能使用某些预留关键字，如 SYS、root等。
+         * The name of the database account.    
+         * <p>
+         * You cannot use reserved keywords, such as SYS and root.
          */
         public Builder userName(String userName) {
             this.putBodyParameter("UserName", userName);

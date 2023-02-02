@@ -50,7 +50,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 集群的拓扑信息。
+         * The topology of the cluster.
          */
         public Builder instanceTopology(InstanceTopology instanceTopology) {
             this.instanceTopology = instanceTopology;
@@ -58,7 +58,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID。
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -194,7 +194,9 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             private String unitStatus; 
 
             /**
-             * 是否可以取消迁移。该字段只对正在手动迁入中或手动迁出中的unit有效。
+             * Indicates whether the migration can be canceled.   
+             * <p>
+             * This field is valid only for units that are being manually immigrated or emigrated.
              */
             public Builder enableCancelMigrateUnit(Boolean enableCancelMigrateUnit) {
                 this.enableCancelMigrateUnit = enableCancelMigrateUnit;
@@ -202,7 +204,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * 是否可做迁移。
+             * Indicates whether migration can be performed.
              */
             public Builder enableMigrateUnit(Boolean enableMigrateUnit) {
                 this.enableMigrateUnit = enableMigrateUnit;
@@ -210,7 +212,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * 是否为手动迁移。
+             * Indicates whether the migration is manually performed.
              */
             public Builder manualMigrate(Boolean manualMigrate) {
                 this.manualMigrate = manualMigrate;
@@ -218,7 +220,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * 资源节点所在的observer节点ID
+             * The ID of the OBServer where the resource unit resides.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -226,7 +228,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * 资源节点CPU，单位：核。
+             * The number of CPU cores of the resource unit.
              */
             public Builder unitCpu(Float unitCpu) {
                 this.unitCpu = unitCpu;
@@ -234,7 +236,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * Unit使用的数据量大小。
+             * The data size of the unit.
              */
             public Builder unitDataSize(Long unitDataSize) {
                 this.unitDataSize = unitDataSize;
@@ -242,7 +244,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * 资源节点ID
+             * The ID of the resource unit.
              */
             public Builder unitId(String unitId) {
                 this.unitId = unitId;
@@ -250,7 +252,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * 资源节点内存大小，单位：GB。
+             * The memory size of the resource unit, in GB.
              */
             public Builder unitMemory(Float unitMemory) {
                 this.unitMemory = unitMemory;
@@ -258,7 +260,15 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * 资源节点的状态。 ONLINE: 运行中 IMMIGRATING 迁入中 EMIGRATING: 迁出中 CANCEL_EMIGRATING: 取消迁入中 CANCEL_EMIGRATING：取消迁出中 DELETING：删除中
+             * The status of the resource unit. Valid values:    
+             * <p>
+             * 
+             * - ONLINE: The resource unit is running.
+             * - IMMIGRATING: The resource unit is being immigrated.
+             * - EMIGRATING: The resource unit is being emigrated.
+             * - CANCEL_EMIGRATING: Resource node immigration is being canceled.
+             * - CANCEL_EMIGRATING: Resource node emigration is being canceled.
+             * - DELETING: The resource unit is being deleted.
              */
             public Builder unitStatus(String unitStatus) {
                 this.unitStatus = unitStatus;
@@ -335,7 +345,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             private java.util.List < Units> units; 
 
             /**
-             * 是否为主可用区
+             * Indicates whether the zone is the primary zone.
              */
             public Builder isPrimaryTenantZone(String isPrimaryTenantZone) {
                 this.isPrimaryTenantZone = isPrimaryTenantZone;
@@ -343,7 +353,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * 可用区ID。
+             * The ID of the zone.
              */
             public Builder tenantZoneId(String tenantZoneId) {
                 this.tenantZoneId = tenantZoneId;
@@ -351,7 +361,10 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * 可用区的访问角色。 - ReadWrite：可读可写 - ReadOnly：只读。
+             * The role to access the zone. Valid values:   
+             * <p>
+             *  - ReadWrite: a role that has the read and write privileges.
+             *  - ReadOnly: a role that has only the read-only privilege.
              */
             public Builder tenantZoneRole(String tenantZoneRole) {
                 this.tenantZoneRole = tenantZoneRole;
@@ -359,7 +372,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * 资源节点信息列表
+             * The information about resource units.
              */
             public Builder units(java.util.List < Units> units) {
                 this.units = units;
@@ -508,7 +521,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             private java.util.List < TenantZones> tenantZones; 
 
             /**
-             * 主可用区部署模式
+             * The primary zone deployment mode.
              */
             public Builder primaryZoneDeployType(String primaryZoneDeployType) {
                 this.primaryZoneDeployType = primaryZoneDeployType;
@@ -516,7 +529,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * 租户CPU，单位：核。
+             * The number of CPU cores of the tenant.
              */
             public Builder tenantCpu(Float tenantCpu) {
                 this.tenantCpu = tenantCpu;
@@ -524,7 +537,11 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * 租户的部署类型。 - multiple：多机房 - single：单机房 - dual：双机房。
+             * The deployment type of the tenant.   
+             * <p>
+             * - multiple: multi-IDC deployment   
+             * - single: single-IDC deployment   
+             * - dual: dual-IDC deployment
              */
             public Builder tenantDeployType(String tenantDeployType) {
                 this.tenantDeployType = tenantDeployType;
@@ -532,7 +549,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * 租户ID。
+             * The ID of the tenant.
              */
             public Builder tenantId(String tenantId) {
                 this.tenantId = tenantId;
@@ -540,7 +557,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * 租户内存大小，单位：GB。
+             * The memory size of the tenant, in GB.
              */
             public Builder tenantMemory(Float tenantMemory) {
                 this.tenantMemory = tenantMemory;
@@ -548,7 +565,10 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * 租户模式。 - Oracle：Oracle模式 - MySQL：MySQL模式。
+             * The tenant mode. Valid values:   
+             * <p>
+             * - Oracle   
+             * - MySQL
              */
             public Builder tenantMode(String tenantMode) {
                 this.tenantMode = tenantMode;
@@ -556,7 +576,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * 租户名称。
+             * The name of the tenant.
              */
             public Builder tenantName(String tenantName) {
                 this.tenantName = tenantName;
@@ -564,7 +584,17 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * 租户状态。 - PENDING_CREATE: 创建中 - RESTORE: 恢复中 - ONLINE: 运行中 - SPEC_MODIFYING: 规格修改中 - ALLOCATING_INTERNET_ADDRESS: 公网地址分配中 - PENDING_OFFLINE_INTERNET_ADDRESS: 公网地址关闭中 - PRIMARY_ZONE_MODIFYING: 切主可用区中 - PARAMETER_MODIFYING: 参数修改中 - WHITE_LIST_MODIFING: 白名单修改中
+             * The status of the tenant.   
+             * <p>
+             * - PENDING_CREATE: The tenant is being created.   
+             * - RESTORE: The tenant is being recovered.   
+             * - ONLINE: The tenant is running.   
+             * - SPEC_MODIFYING: The specification of the tenant is being modified.   
+             * - ALLOCATING_INTERNET_ADDRESS: An Internet address is being allocated.   
+             * - PENDING_OFFLINE_INTERNET_ADDRESS: The Internet address is being disabled.   
+             * - PRIMARY_ZONE_MODIFYING: The tenant is switching to a new primary zone.   
+             * - PARAMETER_MODIFYING: Parameters are being modified.   
+             * - WHITE_LIST_MODIFYING: The whitelist is being modified.
              */
             public Builder tenantStatus(String tenantStatus) {
                 this.tenantStatus = tenantStatus;
@@ -572,7 +602,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * 租户的unit个数。
+             * The number of resource units in the tenant.
              */
             public Builder tenantUnitNum(Integer tenantUnitNum) {
                 this.tenantUnitNum = tenantUnitNum;
@@ -580,7 +610,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * 租户的可用区信息。
+             * The zone information of the tenant.
              */
             public Builder tenantZones(java.util.List < TenantZones> tenantZones) {
                 this.tenantZones = tenantZones;
@@ -633,7 +663,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             private Float usedCpu; 
 
             /**
-             * 节点总的CPU，单位：核。
+             * The total number of CPU cores for the node.
              */
             public Builder totalCpu(Integer totalCpu) {
                 this.totalCpu = totalCpu;
@@ -641,7 +671,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * 节点已使用的CPU，单位：核。
+             * The number of CPU cores used by the node.
              */
             public Builder usedCpu(Float usedCpu) {
                 this.usedCpu = usedCpu;
@@ -694,7 +724,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             private Double usedDiskSize; 
 
             /**
-             * 节点总存储空间，单位：GB。
+             * The total storage space of the node, in GB.
              */
             public Builder totalDiskSize(Double totalDiskSize) {
                 this.totalDiskSize = totalDiskSize;
@@ -702,7 +732,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * 节点已使用的存储空间，单位：GB。
+             * The size of used storage space of the node, in GB.
              */
             public Builder usedDiskSize(Double usedDiskSize) {
                 this.usedDiskSize = usedDiskSize;
@@ -755,7 +785,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             private Float usedMemory; 
 
             /**
-             * 节点的总内存，单位：GB。
+             * The total memory size of the node, in GB.
              */
             public Builder totalMemory(Long totalMemory) {
                 this.totalMemory = totalMemory;
@@ -763,7 +793,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * 节点已使用的内存，单位：GB。
+             * The size of used memory of the node, in GB.
              */
             public Builder usedMemory(Float usedMemory) {
                 this.usedMemory = usedMemory;
@@ -828,7 +858,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             private Memory memory; 
 
             /**
-             * 节点CPU资源信息。
+             * The information about the CPU resources of the node.
              */
             public Builder cpu(Cpu cpu) {
                 this.cpu = cpu;
@@ -836,7 +866,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * 节点存储资源信息。
+             * The information about the storage resources of the node.
              */
             public Builder diskSize(DiskSize diskSize) {
                 this.diskSize = diskSize;
@@ -844,7 +874,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * 节点内存资源信息。
+             * The information about the memory resources of the node.
              */
             public Builder memory(Memory memory) {
                 this.memory = memory;
@@ -921,7 +951,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             private String nodeStatus; 
 
             /**
-             * 节点归属的副本ID。
+             * The ID of the replica node.
              */
             public Builder nodeCopyId(Long nodeCopyId) {
                 this.nodeCopyId = nodeCopyId;
@@ -929,7 +959,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * 节点ID。
+             * The ID of the node.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -937,7 +967,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * 节点资源信息。
+             * The information of node resources.
              */
             public Builder nodeResource(java.util.List < NodeResource> nodeResource) {
                 this.nodeResource = nodeResource;
@@ -945,7 +975,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * 节点运行状态。
+             * The status of the node.
              */
             public Builder nodeStatus(String nodeStatus) {
                 this.nodeStatus = nodeStatus;
@@ -998,7 +1028,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             private Double maxDiskUsedPercent; 
 
             /**
-             * MaxDiskUsedObServer.
+             * The server with the highest disk usage.
              */
             public Builder maxDiskUsedObServer(java.util.List < String > maxDiskUsedObServer) {
                 this.maxDiskUsedObServer = maxDiskUsedObServer;
@@ -1006,7 +1036,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * 最大磁盘使用量百分比
+             * The maximum disk usage, in percentage.
              */
             public Builder maxDiskUsedPercent(Double maxDiskUsedPercent) {
                 this.maxDiskUsedPercent = maxDiskUsedPercent;
@@ -1047,7 +1077,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             private ZoneResourceDiskSize diskSize; 
 
             /**
-             * 存储资源信息
+             * The information about the storage resources of the node.
              */
             public Builder diskSize(ZoneResourceDiskSize diskSize) {
                 this.diskSize = diskSize;
@@ -1136,7 +1166,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             private ZoneResource zoneResource; 
 
             /**
-             * 节点信息。
+             * The information of the nodes.
              */
             public Builder nodes(java.util.List < Nodes> nodes) {
                 this.nodes = nodes;
@@ -1144,7 +1174,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * 地域ID。
+             * The ID of the region.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -1152,7 +1182,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * 可用区的存储容量。
+             * The storage capacity of the zone.
              */
             public Builder zoneDisk(String zoneDisk) {
                 this.zoneDisk = zoneDisk;
@@ -1160,7 +1190,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * 可用区ID。
+             * The ID of the zone.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -1168,7 +1198,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * zone资源信息
+             * The information of zones.
              */
             public Builder zoneResource(ZoneResource zoneResource) {
                 this.zoneResource = zoneResource;
@@ -1221,7 +1251,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             private java.util.List < Zones> zones; 
 
             /**
-             * 租户信息。
+             * The information of the tenant.
              */
             public Builder tenants(java.util.List < Tenants> tenants) {
                 this.tenants = tenants;
@@ -1229,7 +1259,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * 集群的可用区信息。
+             * The zone information of the cluster.
              */
             public Builder zones(java.util.List < Zones> zones) {
                 this.zones = zones;

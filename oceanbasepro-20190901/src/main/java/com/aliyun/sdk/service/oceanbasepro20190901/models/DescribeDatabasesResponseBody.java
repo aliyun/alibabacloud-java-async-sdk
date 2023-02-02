@@ -62,7 +62,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * 租户中的数据库列表。
+         * The list of databases in the tenant.
          */
         public Builder databases(java.util.List < Databases> databases) {
             this.databases = databases;
@@ -70,7 +70,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID。
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         }
 
         /**
-         * 租户中的数据库总数。
+         * The total number of databases in the tenant.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -118,7 +118,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * 数据库表名
+             * The name of the database table.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -183,7 +183,13 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             private String userType; 
 
             /**
-             * 账号赋予该库的角色权限。 对于MySQL模式，角色为数据库（Database）级别，其有以下几类： - ReadWrite：读写权限，包括ALL PRIVILEGES； - ReadOnly：只读权限，包括SELECT - DDL: DDL权限，包括CREATE,DROP,ALTER,SHOW VIEW,CREATE VIEW - DML: DML权限，包括SELECT,INSERT,UPDATE,DELETE,SHOW VIEW。
+             * The role of the account.    
+             * <p>
+             * In MySQL mode, a role is a database-level role. Valid values:  
+             * - ReadWrite: a role that has the read and write privileges, namely ALL PRIVILEGES.  
+             * - ReadOnly: a role that has only the read-only privilege SELECT.   
+             * - DDL: a role that has the DDL privileges such as CREATE, DROP, ALTER, SHOW VIEW, and CREATE VIEW.   
+             * - DML: a role that has the DML privileges such as SELECT, INSERT, UPDATE, DELETE, and SHOW VIEW.
              */
             public Builder role(String role) {
                 this.role = role;
@@ -191,7 +197,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * 账号名称。
+             * The name of the account.
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -199,7 +205,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * 账号类型。 - Admin：超级账户 - Normal：普通账户
+             * The type of the account. Valid values:  - Admin: the super administrator account. - Normal: a general account.
              */
             public Builder userType(String userType) {
                 this.userType = userType;
@@ -235,6 +241,9 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         @NameInMap("Encoding")
         private String encoding;
 
+        @NameInMap("InstanceId")
+        private String instanceId;
+
         @NameInMap("RequiredSize")
         private Double requiredSize;
 
@@ -258,6 +267,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             this.dbType = builder.dbType;
             this.description = builder.description;
             this.encoding = builder.encoding;
+            this.instanceId = builder.instanceId;
             this.requiredSize = builder.requiredSize;
             this.status = builder.status;
             this.tables = builder.tables;
@@ -323,6 +333,13 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         }
 
         /**
+         * @return instanceId
+         */
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        /**
          * @return requiredSize
          */
         public Double getRequiredSize() {
@@ -365,6 +382,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             private String dbType; 
             private String description; 
             private String encoding; 
+            private String instanceId; 
             private Double requiredSize; 
             private String status; 
             private java.util.List < Tables> tables; 
@@ -380,7 +398,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * 创建时间
+             * The time when the database was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -388,7 +406,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * 实际数据大小单位（GB）
+             * The actual data size, in GB.
              */
             public Builder dataSize(Double dataSize) {
                 this.dataSize = dataSize;
@@ -396,7 +414,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * 数据库名称。
+             * The name of the database.
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -404,7 +422,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * 数据库类型
+             * The database type.
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -412,7 +430,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * 数据库的描述信息。
+             * The description of the database.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -420,7 +438,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * 数据库的编码。目前支持utf8mb4、gbk等编码。
+             * The encoding standard of the database. Encoding standards such as utf8mb4 and GBK are supported.
              */
             public Builder encoding(String encoding) {
                 this.encoding = encoding;
@@ -428,7 +446,15 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * 所需容量 单位（GB）
+             * 所属集群Id
+             */
+            public Builder instanceId(String instanceId) {
+                this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * The storage space required, in GB.
              */
             public Builder requiredSize(Double requiredSize) {
                 this.requiredSize = requiredSize;
@@ -436,7 +462,10 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * 数据库的状态。 - ONLINE: 运行中 - DELETING: 删除中
+             * The status of the database. Valid values:    
+             * <p>
+             * - ONLINE: The database is running.  
+             * - DELETING: The database is being deleted.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -444,7 +473,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * 数据库表信息
+             * The information about the database tables.
              */
             public Builder tables(java.util.List < Tables> tables) {
                 this.tables = tables;
@@ -452,7 +481,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * 租户ID。
+             * The ID of the tenant.
              */
             public Builder tenantId(String tenantId) {
                 this.tenantId = tenantId;
@@ -460,7 +489,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * 对该数据库赋权的账号信息。
+             * The accounts that have privileges on the database.
              */
             public Builder users(java.util.List < Users> users) {
                 this.users = users;

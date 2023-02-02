@@ -50,7 +50,7 @@ public class DescribeSQLPlansResponseBody extends TeaModel {
         private java.util.List < SQLPlans> SQLPlans; 
 
         /**
-         * 请求ID
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeSQLPlansResponseBody extends TeaModel {
         }
 
         /**
-         * 执行计划信息
+         * The information about the execution plan.
          */
         public Builder SQLPlans(java.util.List < SQLPlans> SQLPlans) {
             this.SQLPlans = SQLPlans;
@@ -278,7 +278,7 @@ public class DescribeSQLPlansResponseBody extends TeaModel {
             private String querySQL; 
 
             /**
-             * 平均执行时间 (ms)
+             * The average execution duration, in ms.
              */
             public Builder avgExecutionMS(Float avgExecutionMS) {
                 this.avgExecutionMS = avgExecutionMS;
@@ -286,7 +286,7 @@ public class DescribeSQLPlansResponseBody extends TeaModel {
             }
 
             /**
-             * 平均执行时间
+             * The average execution duration when the database uses this execution plan, in ms.
              */
             public Builder avgExecutionTimeMS(Long avgExecutionTimeMS) {
                 this.avgExecutionTimeMS = avgExecutionTimeMS;
@@ -294,7 +294,7 @@ public class DescribeSQLPlansResponseBody extends TeaModel {
             }
 
             /**
-             * 首次加载时间
+             * The time when the plan was loaded for the first time, .
              */
             public Builder firstLoadTime(Long firstLoadTime) {
                 this.firstLoadTime = firstLoadTime;
@@ -302,7 +302,7 @@ public class DescribeSQLPlansResponseBody extends TeaModel {
             }
 
             /**
-             * 首次加载时间(零时区)
+             * The time when the plan was loaded for the first time, in UTC +0.
              */
             public Builder firstLoadTimeUTCString(String firstLoadTimeUTCString) {
                 this.firstLoadTimeUTCString = firstLoadTimeUTCString;
@@ -310,7 +310,7 @@ public class DescribeSQLPlansResponseBody extends TeaModel {
             }
 
             /**
-             * 命中次数
+             * The number of hits.
              */
             public Builder hitCount(Integer hitCount) {
                 this.hitCount = hitCount;
@@ -318,7 +318,7 @@ public class DescribeSQLPlansResponseBody extends TeaModel {
             }
 
             /**
-             * 合并版本
+             * The major compaction version.
              */
             public Builder mergedVersion(Integer mergedVersion) {
                 this.mergedVersion = mergedVersion;
@@ -326,7 +326,7 @@ public class DescribeSQLPlansResponseBody extends TeaModel {
             }
 
             /**
-             * 节点ip
+             * The IP address of the node.
              */
             public Builder nodeIp(String nodeIp) {
                 this.nodeIp = nodeIp;
@@ -334,7 +334,7 @@ public class DescribeSQLPlansResponseBody extends TeaModel {
             }
 
             /**
-             * Outline数据
+             * The outline data.
              */
             public Builder outlineData(String outlineData) {
                 this.outlineData = outlineData;
@@ -342,7 +342,7 @@ public class DescribeSQLPlansResponseBody extends TeaModel {
             }
 
             /**
-             * OutlineID
+             * OutlineID.
              */
             public Builder outlineId(Long outlineId) {
                 this.outlineId = outlineId;
@@ -350,7 +350,7 @@ public class DescribeSQLPlansResponseBody extends TeaModel {
             }
 
             /**
-             * 绑定时间
+             * The time when the plan was bound.
              */
             public Builder outlineTime(Long outlineTime) {
                 this.outlineTime = outlineTime;
@@ -358,7 +358,7 @@ public class DescribeSQLPlansResponseBody extends TeaModel {
             }
 
             /**
-             * 绑定时间(零时区)
+             * The time when the plan was bound, in UTC +0.
              */
             public Builder outlineTimeUTCString(String outlineTimeUTCString) {
                 this.outlineTimeUTCString = outlineTimeUTCString;
@@ -366,7 +366,7 @@ public class DescribeSQLPlansResponseBody extends TeaModel {
             }
 
             /**
-             * SQL的完整执行计划
+             * The complete execution plan of the SQL statement.
              */
             public Builder planFull(String planFull) {
                 this.planFull = planFull;
@@ -374,7 +374,7 @@ public class DescribeSQLPlansResponseBody extends TeaModel {
             }
 
             /**
-             * SQL执行计划在数据库内部的ID
+             * The ID of the SQL execution plan in the database.
              */
             public Builder planId(Integer planId) {
                 this.planId = planId;
@@ -382,7 +382,7 @@ public class DescribeSQLPlansResponseBody extends TeaModel {
             }
 
             /**
-             * 计划信息
+             * The information about the plan.
              */
             public Builder planInfo(String planInfo) {
                 this.planInfo = planInfo;
@@ -390,7 +390,7 @@ public class DescribeSQLPlansResponseBody extends TeaModel {
             }
 
             /**
-             * SQL执行计划在诊断系统内部的唯一标识
+             * The unique identifier of the SQL execution plan in the diagnostic system.
              */
             public Builder planUnionHash(String planUnionHash) {
                 this.planUnionHash = planUnionHash;
@@ -398,7 +398,7 @@ public class DescribeSQLPlansResponseBody extends TeaModel {
             }
 
             /**
-             * 查询sql
+             * The query SQL statement.
              */
             public Builder querySQL(String querySQL) {
                 this.querySQL = querySQL;

@@ -50,7 +50,7 @@ public class DescribeRecommendIndexResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 推荐索引信息
+         * The information about the recommended index.
          */
         public Builder recommendIndex(RecommendIndex recommendIndex) {
             this.recommendIndex = recommendIndex;
@@ -58,7 +58,7 @@ public class DescribeRecommendIndexResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,11 @@ public class DescribeRecommendIndexResponseBody extends TeaModel {
             private String tenantMode; 
 
             /**
-             * 建议索引，如果是主键，就是 PRIMARY，如果不是主键，以用户取名为准
+             * The index recommended for the SQL statement after calculation by the diagnostic system.   
+             * <p>
+             * - If the recommended index is the primary key, PRIMARY is returned.  
+             * - If an index created by the user is recommended, the index name is returned.   
+             * The system recommends only one index for an SQL statement. You can call the DescribeIndexes operation to view the indexes of a table.
              */
             public Builder suggestIndex(String suggestIndex) {
                 this.suggestIndex = suggestIndex;
@@ -130,7 +134,9 @@ public class DescribeRecommendIndexResponseBody extends TeaModel {
             }
 
             /**
-             * 表信息
+             * The tables.   
+             * <p>
+             * The data tables involved in the SQL statement corresponding to the SQL ID are returned. For a single-table query, the data table accessed is returned. For a join query, all data tables accessed by the SQL statement are returned and separated with vertical bars (|), for example, "Table1|Table2".
              */
             public Builder tableList(String tableList) {
                 this.tableList = tableList;
@@ -138,7 +144,10 @@ public class DescribeRecommendIndexResponseBody extends TeaModel {
             }
 
             /**
-             * 租户模式
+             * The tenant mode.   Valid values:  
+             * <p>
+             * Oracle   
+             * MySQL
              */
             public Builder tenantMode(String tenantMode) {
                 this.tenantMode = tenantMode;

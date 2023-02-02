@@ -50,7 +50,7 @@ public class CreateTenantResponseBody extends TeaModel {
         private String tenantId; 
 
         /**
-         * 请求ID。
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class CreateTenantResponseBody extends TeaModel {
         }
 
         /**
-         * 租户ID。
+         * The ID of the tenant.
          */
         public Builder tenantId(String tenantId) {
             this.tenantId = tenantId;

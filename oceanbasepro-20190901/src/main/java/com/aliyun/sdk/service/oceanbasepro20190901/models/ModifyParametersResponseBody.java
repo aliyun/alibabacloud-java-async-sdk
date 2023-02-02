@@ -50,7 +50,7 @@ public class ModifyParametersResponseBody extends TeaModel {
         private Results results; 
 
         /**
-         * 请求ID。
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ModifyParametersResponseBody extends TeaModel {
         }
 
         /**
-         * 修改结果信息。
+         * The modification results.
          */
         public Builder results(Results results) {
             this.results = results;
@@ -110,7 +110,7 @@ public class ModifyParametersResponseBody extends TeaModel {
             private Boolean success; 
 
             /**
-             * 修改失败信息。
+             * The cause of the modification failure.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -118,7 +118,10 @@ public class ModifyParametersResponseBody extends TeaModel {
             }
 
             /**
-             * 是否修改成功。 - true：修改成功 - false：修改失败
+             * Indicates whether the parameter has been modified. Valid values:   
+             * <p>
+             * true: The modification is successful. 
+             * false: The modification failed.
              */
             public Builder success(Boolean success) {
                 this.success = success;

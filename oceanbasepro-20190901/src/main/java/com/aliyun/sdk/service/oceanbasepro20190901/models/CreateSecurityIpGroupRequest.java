@@ -108,7 +108,7 @@ public class CreateSecurityIpGroupRequest extends Request {
         }
 
         /**
-         * Oceanbase集群ID。
+         * The ID of the OceanBase cluster.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -117,7 +117,7 @@ public class CreateSecurityIpGroupRequest extends Request {
         }
 
         /**
-         * IP安全白名单组的组名。 由小写英文字符开头，由小写英文字符或者数字结尾，只能包含小写英文字符，数字和下划线，长度在 2-32 个字符之间。
+         * The name of the whitelist group.
          */
         public Builder securityIpGroupName(String securityIpGroupName) {
             this.putBodyParameter("SecurityIpGroupName", securityIpGroupName);
@@ -126,7 +126,11 @@ public class CreateSecurityIpGroupRequest extends Request {
         }
 
         /**
-         * IP安全白名单列表。 其为一个Json格式的数组，数组中每个对象为一个IP字符串或者IP段。最多可设置 40 个。
+         * The IP addresses or CIDR blocks in the IP address whitelist group.   
+         * <p>
+         * It is a JSON array. Each object in the array is an IP address or CIDR block. The following two formats are supported:  
+         * - IP address: for example, 10.23.12.24. 
+         * - CIDR block: for example, 10.23.12.24/24, where 24 indicates the length of the prefix in the IP address, and the prefix is 1 to 30 characters in length.  Limit: You can set no more than 40 IP addresses or CIDR blocks for a whitelist group. A total of 200 IP addresses or CIDR blocks are supported for all whitelist groups.
          */
         public Builder securityIps(String securityIps) {
             this.putBodyParameter("SecurityIps", securityIps);

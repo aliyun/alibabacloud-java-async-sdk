@@ -222,7 +222,9 @@ public class CreateOmsMysqlDataSourceRequest extends Request {
         }
 
         /**
-         * 数据源的描述。长度为2~256个英文或中文字符。默认值为空。
+         * The description of the data source.   
+         * <p>
+         * It must be 2 to 256 characters in length. The default value is null.
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -231,7 +233,10 @@ public class CreateOmsMysqlDataSourceRequest extends Request {
         }
 
         /**
-         * database gateway，数据库网关实例 id。若Type为 DG，该字段必填。
+         * The ID of the database gateway instance.   
+         * <p>
+         * 
+         * > <br>If Type is set to DG, this parameter is required.
          */
         public Builder dgDatabaseId(String dgDatabaseId) {
             this.putBodyParameter("DgDatabaseId", dgDatabaseId);
@@ -240,7 +245,10 @@ public class CreateOmsMysqlDataSourceRequest extends Request {
         }
 
         /**
-         * 数据源云实例ID。若Type为RDS、POLARDB、DG该字段必填。
+         * The ID of the ECS instance of the data source.   
+         * <p>
+         * 
+         * > <br>If Type is set to RDS, POLARDB, or DG, this parameter is required.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -249,7 +257,10 @@ public class CreateOmsMysqlDataSourceRequest extends Request {
         }
 
         /**
-         * 数据源 ip 地址。若Type为INTERNET、VPC该字段必填。
+         * The IP address of the data source.   
+         * <p>
+         * 
+         * > <br>If Type is set to INTERNET or VPC, this parameter is required.
          */
         public Builder ip(String ip) {
             this.putBodyParameter("Ip", ip);
@@ -258,7 +269,11 @@ public class CreateOmsMysqlDataSourceRequest extends Request {
         }
 
         /**
-         * 数据源名称。长度为2~128个英文或中文字符。可以包含数字、下划线（_）、半角句号（.）或者短划线（-）。不能包含“/”等非法字符
+         * The name of the data source.   
+         * <p>
+         * It must be 2 to 128 characters in length and can contain letters, digits, underscores (_), periods (.), and hyphens (-).   
+         * 
+         * > <br>Invalid characters, such as slashes (/), are not allowed.
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -267,7 +282,9 @@ public class CreateOmsMysqlDataSourceRequest extends Request {
         }
 
         /**
-         * 数据库连接密码，待加密明文（必须经过Base64编码）。
+         * The password of the username that is used to access the database. It must be Base64 encoded.   
+         * <p>
+         * For example, for the password abcd123@!, the Base64-encoded value is YWJjZDEyM0Ah.
          */
         public Builder password(String password) {
             this.putBodyParameter("Password", password);
@@ -276,7 +293,10 @@ public class CreateOmsMysqlDataSourceRequest extends Request {
         }
 
         /**
-         * 数据源端口。若Type为INTERNET、VPC该字段必填。
+         * The port number of the data source.   
+         * <p>
+         * 
+         * > <br>If Type is set to INTERNET or VPC, this parameter is required.
          */
         public Builder port(String port) {
             this.putBodyParameter("Port", port);
@@ -285,7 +305,10 @@ public class CreateOmsMysqlDataSourceRequest extends Request {
         }
 
         /**
-         * 数据库名。若填写，后续迁移或者同步操作，只会针对该数据库操作；
+         * The name of the database.   
+         * <p>
+         * 
+         * > <br>If you specify this parameter, subsequent migration or synchronization operations will take effect on this database only.
          */
         public Builder schema(String schema) {
             this.putBodyParameter("Schema", schema);
@@ -294,9 +317,9 @@ public class CreateOmsMysqlDataSourceRequest extends Request {
         }
 
         /**
-         * 所有 mysql 的类型 枚举：
+         * The type of the MySQL data source.   
          * <p>
-         * INTERNET、VPC、RDS、POLARDB、DG
+         * Valid values: INTERNET, VPC, RDS, POLARDB, and DG.
          */
         public Builder type(String type) {
             this.putBodyParameter("Type", type);
@@ -305,7 +328,7 @@ public class CreateOmsMysqlDataSourceRequest extends Request {
         }
 
         /**
-         * 数据库连接用户名。
+         * The username that is used to access the database.
          */
         public Builder username(String username) {
             this.putBodyParameter("Username", username);
@@ -314,7 +337,10 @@ public class CreateOmsMysqlDataSourceRequest extends Request {
         }
 
         /**
-         * 数据源所属VPC ID。若Type为VPC则该字段必填。
+         * The ID of the VPC to which the data source belongs.   
+         * <p>
+         * 
+         * > <br>If Type is set to VPC, this parameter is required.
          */
         public Builder vpcId(String vpcId) {
             this.putBodyParameter("VpcId", vpcId);

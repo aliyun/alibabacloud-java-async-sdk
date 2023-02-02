@@ -123,7 +123,7 @@ public class ModifyTenantUserPasswordRequest extends Request {
         }
 
         /**
-         * Oceanbase集群ID。
+         * The ID of the OceanBase cluster.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -132,7 +132,7 @@ public class ModifyTenantUserPasswordRequest extends Request {
         }
 
         /**
-         * 租户ID。
+         * The ID of the tenant.
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);
@@ -141,7 +141,9 @@ public class ModifyTenantUserPasswordRequest extends Request {
         }
 
         /**
-         * 数据库账号名称。 不能使用某些预留关键字，如 SYS、root等。
+         * The name of the database account.    
+         * <p>
+         * You cannot use reserved keywords, such as SYS and root.
          */
         public Builder userName(String userName) {
             this.putBodyParameter("UserName", userName);
@@ -150,7 +152,9 @@ public class ModifyTenantUserPasswordRequest extends Request {
         }
 
         /**
-         * 数据库账号访问密码。 必须包含大写英文字符、小写英文字符、数字、特殊字符占三种，长度为 10-32 位； 特殊字符为：!@#$%^&* ()_ +-=
+         * The password of the database account.    
+         * <p>
+         * It must be 10 to 32 characters in length and contain three types of the following characters: uppercase letters, lowercase letters, digits, and special characters. The special characters are ! @ # $ % \ ^ \ & \ * ( ) _ + - =
          */
         public Builder userPassword(String userPassword) {
             this.putBodyParameter("UserPassword", userPassword);

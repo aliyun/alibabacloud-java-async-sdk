@@ -167,7 +167,9 @@ public class DescribeParametersHistoryRequest extends Request {
         }
 
         /**
-         * 参数类型。 当前支持集群（CLUSTER)和租户（TENANT）
+         * The type of the parameter.   
+         * <p>
+         * Valid values: CLUSTER and TENANT.
          */
         public Builder dimension(String dimension) {
             this.putBodyParameter("Dimension", dimension);
@@ -176,7 +178,9 @@ public class DescribeParametersHistoryRequest extends Request {
         }
 
         /**
-         * 参数类型的资源标识。 如果为集群参数可以不填，若为租户的参数，则传入租户的TenantId。
+         * The resource ID of the parameter type.   
+         * <p>
+         * You can leave this parameter unspecified when you call this operation to query the modification history of cluster parameters. In the case of tenant parameters, pass the tenant ID.
          */
         public Builder dimensionValue(String dimensionValue) {
             this.putBodyParameter("DimensionValue", dimensionValue);
@@ -185,7 +189,7 @@ public class DescribeParametersHistoryRequest extends Request {
         }
 
         /**
-         * 参数历史查看的结束时间。
+         * The end time for the query of parameter modification history.
          */
         public Builder endTime(String endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -194,7 +198,7 @@ public class DescribeParametersHistoryRequest extends Request {
         }
 
         /**
-         * Oceanbase集群ID。
+         * The ID of the OceanBase cluster.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -203,7 +207,10 @@ public class DescribeParametersHistoryRequest extends Request {
         }
 
         /**
-         * 分页查询的页码。 起始值：1 默认值：1
+         * The number of the page to return.    
+         * <p>
+         * - Start value: 1   
+         * - Default value: 1
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -212,7 +219,10 @@ public class DescribeParametersHistoryRequest extends Request {
         }
 
         /**
-         * 分页查询时设置的每页行数。 最大值：100 默认值：10
+         * The number of rows to return on each page.   
+         * <p>
+         * - Maximum value: 100   
+         * - Default value: 10
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -221,7 +231,7 @@ public class DescribeParametersHistoryRequest extends Request {
         }
 
         /**
-         * 参数历史查看的起始时间。
+         * The start time of the time range for querying the parameter modification history.
          */
         public Builder startTime(String startTime) {
             this.putBodyParameter("StartTime", startTime);

@@ -124,7 +124,7 @@ public class ModifyTenantUserStatusRequest extends Request {
         }
 
         /**
-         * Oceanbase集群ID。
+         * The ID of the OceanBase cluster.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -133,7 +133,7 @@ public class ModifyTenantUserStatusRequest extends Request {
         }
 
         /**
-         * 租户ID。
+         * The ID of the tenant.
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);
@@ -142,7 +142,9 @@ public class ModifyTenantUserStatusRequest extends Request {
         }
 
         /**
-         * 数据库账号名称。 不能使用某些预留关键字，如 SYS、root等。
+         * The name of the database account.    
+         * <p>
+         * You cannot use reserved keywords, such as SYS and root.
          */
         public Builder userName(String userName) {
             this.putBodyParameter("UserName", userName);
@@ -151,7 +153,10 @@ public class ModifyTenantUserStatusRequest extends Request {
         }
 
         /**
-         * 数据库账号的状态。 Locked：锁定 Normal：解锁
+         * The status of the database account. Valid values:   
+         * <p>
+         * - Locked: The account is locked. 
+         * - Online: The account is unlocked.
          */
         public Builder userStatus(String userStatus) {
             this.putBodyParameter("UserStatus", userStatus);

@@ -148,7 +148,9 @@ public class DescribeDatabasesRequest extends Request {
         }
 
         /**
-         * 数据库名称。 不能使用某些预留关键字，如 test、mysql。
+         * The name of the database.    
+         * <p>
+         * You cannot use reserved keywords, such as test and mysql.
          */
         public Builder databaseName(String databaseName) {
             this.putBodyParameter("DatabaseName", databaseName);
@@ -157,7 +159,10 @@ public class DescribeDatabasesRequest extends Request {
         }
 
         /**
-         * 分页查询的页码。 起始值：1 默认值：1
+         * The number of the page to return.   
+         * <p>
+         * - Start value: 1   
+         * - Default value: 1
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -166,7 +171,10 @@ public class DescribeDatabasesRequest extends Request {
         }
 
         /**
-         * 分页查询时设置的每页行数。 最大值：100 默认值：10
+         * The number of rows to return on each page.   
+         * <p>
+         * - Maximum value: 100.  
+         * - Default value: 10
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -175,7 +183,7 @@ public class DescribeDatabasesRequest extends Request {
         }
 
         /**
-         * 查询列表的删选关键字。
+         * The search keyword.
          */
         public Builder searchKey(String searchKey) {
             this.putBodyParameter("SearchKey", searchKey);
@@ -184,7 +192,7 @@ public class DescribeDatabasesRequest extends Request {
         }
 
         /**
-         * 租户ID。
+         * The ID of the tenant.
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);
@@ -193,7 +201,9 @@ public class DescribeDatabasesRequest extends Request {
         }
 
         /**
-         * 是否返回数据库中的表信息。 Oracle模式使用true，MySQL模式使用false。
+         * Specifies whether to return the information of tables in the database.   
+         * <p>
+         * Default value: false.
          */
         public Builder withTables(Boolean withTables) {
             this.putBodyParameter("WithTables", withTables);

@@ -108,7 +108,7 @@ public class DeleteTenantUsersRequest extends Request {
         }
 
         /**
-         * Oceanbase集群ID。
+         * The ID of the OceanBase cluster.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -117,7 +117,7 @@ public class DeleteTenantUsersRequest extends Request {
         }
 
         /**
-         * 租户ID。
+         * The ID of the tenant.
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);
@@ -126,7 +126,7 @@ public class DeleteTenantUsersRequest extends Request {
         }
 
         /**
-         * 用户名及具备的角色列表。
+         * A list of usernames and their respective roles.
          */
         public Builder users(String users) {
             this.putBodyParameter("Users", users);

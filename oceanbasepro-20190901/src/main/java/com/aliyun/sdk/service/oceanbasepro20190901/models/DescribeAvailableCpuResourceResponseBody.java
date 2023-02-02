@@ -50,7 +50,7 @@ public class DescribeAvailableCpuResourceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 可用的CPU资源信息。
+         * The CPU resources available.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class DescribeAvailableCpuResourceResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID。
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class DescribeAvailableCpuResourceResponseBody extends TeaModel {
             private Long unitNum; 
 
             /**
-             * 单个unit最大可申请的CPU核数。
+             * The maximum number of CPU cores per resource unit.
              */
             public Builder maxCpu(Long maxCpu) {
                 this.maxCpu = maxCpu;
@@ -130,7 +130,7 @@ public class DescribeAvailableCpuResourceResponseBody extends TeaModel {
             }
 
             /**
-             * 单个unit最小需要申请的CPU核数。
+             * The minimum number of CPU cores per resource unit.
              */
             public Builder minCpu(Long minCpu) {
                 this.minCpu = minCpu;
@@ -138,7 +138,7 @@ public class DescribeAvailableCpuResourceResponseBody extends TeaModel {
             }
 
             /**
-             * 租户的unit个数。
+             * The number of resource units in the tenant.
              */
             public Builder unitNum(Long unitNum) {
                 this.unitNum = unitNum;

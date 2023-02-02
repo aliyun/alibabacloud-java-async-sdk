@@ -93,7 +93,7 @@ public class ModifyInstanceNameRequest extends Request {
         }
 
         /**
-         * Oceanbase集群ID。
+         * The ID of the OceanBase cluster.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -102,7 +102,9 @@ public class ModifyInstanceNameRequest extends Request {
         }
 
         /**
-         * Oceanbase集群名称。 长度为1~20个英文或中文字符。如果没有指定该参数，默认值为集群的InstanceId。
+         * The name of the OceanBase cluster.   
+         * <p>
+         * It must be 1 to 20 characters in length.
          */
         public Builder instanceName(String instanceName) {
             this.putBodyParameter("InstanceName", instanceName);

@@ -105,7 +105,7 @@ public class DescribeInstanceRequest extends Request {
         }
 
         /**
-         * OceanBase 集群 ID。
+         * The ID of the OceanBase cluster.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -114,7 +114,10 @@ public class DescribeInstanceRequest extends Request {
         }
 
         /**
-         * 分页查询的页码。<br>起始值：1， 默认值：1
+         * The number of the page to return. 
+         * <p>
+         * - Start value: 1  
+         * - Default value: 1
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -123,7 +126,10 @@ public class DescribeInstanceRequest extends Request {
         }
 
         /**
-         * 分页查询时设置的每页行数。<br>最大值：100，默认值：10
+         * The number of rows to return on each page.   
+         * <p>
+         * - Maximum value: 100   
+         * - Default value: 10
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);

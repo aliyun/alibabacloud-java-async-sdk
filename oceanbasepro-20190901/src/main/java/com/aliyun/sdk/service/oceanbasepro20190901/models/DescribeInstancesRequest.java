@@ -147,7 +147,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * Oceanbase集群ID。
+         * The ID of the OceanBase cluster.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -156,7 +156,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * Oceanbase集群名称。 长度为1~20个英文或中文字符。如果没有指定该参数，默认值为集群的InstanceId。
+         * The name of the OceanBase cluster.    
+         * <p>
+         * It must be 1 to 20 characters in length.   
+         * If this parameter is not specified, the value is the instance ID of the cluster by default.
          */
         public Builder instanceName(String instanceName) {
             this.putBodyParameter("InstanceName", instanceName);
@@ -165,7 +168,11 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * 分页查询的页码。 起始值：1 默认值：1
+         * The number of the page to return.    
+         * <p>
+         * 
+         * - Start value: 1 
+         * - Default value: 1
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -174,7 +181,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * 分页查询时设置的每页行数。 最大值：100 默认值：10
+         * The number of rows to return on each page.    
+         * <p>
+         * - Maximum value: 100   
+         * - Default value: 10
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -183,7 +193,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * 资源组ID信息。如果不填写，返回全部资源。
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);
@@ -192,7 +202,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * 查询列表的删选关键字。
+         * The search keyword.
          */
         public Builder searchKey(String searchKey) {
             this.putBodyParameter("SearchKey", searchKey);

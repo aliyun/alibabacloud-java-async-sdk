@@ -109,7 +109,7 @@ public class DescribeRecommendIndexRequest extends Request {
         }
 
         /**
-         * Oceanbase集群ID。
+         * The ID of the OceanBase cluster.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -118,7 +118,7 @@ public class DescribeRecommendIndexRequest extends Request {
         }
 
         /**
-         * SQLID
+         * You can obtain the SQL ID from the return value of the DescribeSlowSQLList or DescribeTopSQLList operation.
          */
         public Builder SQLId(String SQLId) {
             this.putBodyParameter("SQLId", SQLId);
@@ -127,7 +127,7 @@ public class DescribeRecommendIndexRequest extends Request {
         }
 
         /**
-         * 租户ID
+         * The ID of the tenant.
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);

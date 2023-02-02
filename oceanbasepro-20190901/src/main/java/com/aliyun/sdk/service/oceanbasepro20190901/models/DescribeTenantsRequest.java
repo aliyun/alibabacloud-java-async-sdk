@@ -148,7 +148,7 @@ public class DescribeTenantsRequest extends Request {
         }
 
         /**
-         * Oceanbase集群ID。
+         * The ID of the OceanBase cluster.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -157,7 +157,10 @@ public class DescribeTenantsRequest extends Request {
         }
 
         /**
-         * 分页查询的页码。 起始值：1 默认值：1
+         * The number of the page to return.   
+         * <p>
+         * Start value: 1
+         * - Default value: 1
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -166,7 +169,10 @@ public class DescribeTenantsRequest extends Request {
         }
 
         /**
-         * 分页查询时设置的每页行数。 最大值：100 默认值：10
+         * The number of rows to return on each page.   
+         * <p>
+         * - Maximum value: 100.
+         * - Default value: 10
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -175,7 +181,7 @@ public class DescribeTenantsRequest extends Request {
         }
 
         /**
-         * 查询列表的删选关键字。
+         * The search keyword.
          */
         public Builder searchKey(String searchKey) {
             this.putBodyParameter("SearchKey", searchKey);
@@ -184,7 +190,7 @@ public class DescribeTenantsRequest extends Request {
         }
 
         /**
-         * 租户ID。
+         * The ID of the tenant.
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);
@@ -193,7 +199,9 @@ public class DescribeTenantsRequest extends Request {
         }
 
         /**
-         * 租户名称。 长度为2~20 个字符，支持英文字母、数字和下划线，区分大小写，必须以字母或下划线开头。 不可设置为 sys。
+         * The name of the tenant.   
+         * <p>
+         * It must start with a letter or an underscore (_), and contain 2 to 20 characters, which can be uppercase letters, lowercase letters, digits, and underscores (_).  It cannot be set to sys.
          */
         public Builder tenantName(String tenantName) {
             this.putBodyParameter("TenantName", tenantName);

@@ -50,7 +50,7 @@ public class DescribeAvailableMemResourceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 可用的内存资源信息。
+         * The available memory size.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class DescribeAvailableMemResourceResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID。
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class DescribeAvailableMemResourceResponseBody extends TeaModel {
             private Long usedMem; 
 
             /**
-             * 单个unit最大可申请的内存大小，单位：GB。
+             * The maximum memory size for each resource unit, in GB.
              */
             public Builder maxMem(Long maxMem) {
                 this.maxMem = maxMem;
@@ -130,7 +130,7 @@ public class DescribeAvailableMemResourceResponseBody extends TeaModel {
             }
 
             /**
-             * 单个unit最小需要申请的内存大小，单位：GB。
+             * The minimum memory size required for each resource unit, in GB.
              */
             public Builder minMem(Long minMem) {
                 this.minMem = minMem;
@@ -138,7 +138,7 @@ public class DescribeAvailableMemResourceResponseBody extends TeaModel {
             }
 
             /**
-             * 租户的unit个数。
+             * The number of resource units in the tenant.
              */
             public Builder usedMem(Long usedMem) {
                 this.usedMem = usedMem;

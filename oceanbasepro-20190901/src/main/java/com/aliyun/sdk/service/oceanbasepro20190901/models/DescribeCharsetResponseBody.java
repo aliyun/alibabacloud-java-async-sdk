@@ -50,7 +50,7 @@ public class DescribeCharsetResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 字符集列表。
+         * The list of character sets.
          */
         public Builder charset(java.util.List < Charset> charset) {
             this.charset = charset;
@@ -58,7 +58,7 @@ public class DescribeCharsetResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID。
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeCharsetResponseBody extends TeaModel {
             private java.util.List < String > collations; 
 
             /**
-             * 字符集名称。
+             * The character set name.
              */
             public Builder charset(String charset) {
                 this.charset = charset;
@@ -118,7 +118,7 @@ public class DescribeCharsetResponseBody extends TeaModel {
             }
 
             /**
-             * 字符序集合
+             * The collation set.
              */
             public Builder collations(java.util.List < String > collations) {
                 this.collations = collations;

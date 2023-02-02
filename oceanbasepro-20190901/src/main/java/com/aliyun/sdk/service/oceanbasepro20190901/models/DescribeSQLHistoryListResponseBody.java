@@ -50,7 +50,7 @@ public class DescribeSQLHistoryListResponseBody extends TeaModel {
         private SQLHistoryList SQLHistoryList; 
 
         /**
-         * 请求ID。
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeSQLHistoryListResponseBody extends TeaModel {
         }
 
         /**
-         * SQL历史信息
+         * The execution history of the SQL statement.
          */
         public Builder SQLHistoryList(SQLHistoryList SQLHistoryList) {
             this.SQLHistoryList = SQLHistoryList;
@@ -542,7 +542,7 @@ public class DescribeSQLHistoryListResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * 影响行数
+             * The number of rows affected.
              */
             public Builder affectedRows(Long affectedRows) {
                 this.affectedRows = affectedRows;
@@ -550,7 +550,7 @@ public class DescribeSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * 客户端等待
+             * The wait time of the client.
              */
             public Builder appWaitTime(Float appWaitTime) {
                 this.appWaitTime = appWaitTime;
@@ -558,7 +558,7 @@ public class DescribeSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * BlockCache命中次数
+             * The number of block cache hits.
              */
             public Builder blockCacheHit(Long blockCacheHit) {
                 this.blockCacheHit = blockCacheHit;
@@ -566,7 +566,7 @@ public class DescribeSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * BlockIndexCache命中次数
+             * The number of block index cache hits.
              */
             public Builder blockIndexCacheHit(Long blockIndexCacheHit) {
                 this.blockIndexCacheHit = blockIndexCacheHit;
@@ -574,7 +574,7 @@ public class DescribeSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * BloomFilterCache命中次数
+             * The number of Bloom filter cache hits.
              */
             public Builder bloomFilterCacheHit(Long bloomFilterCacheHit) {
                 this.bloomFilterCacheHit = bloomFilterCacheHit;
@@ -582,7 +582,7 @@ public class DescribeSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * 客户端IP
+             * The IP address of the client.
              */
             public Builder clientIp(String clientIp) {
                 this.clientIp = clientIp;
@@ -590,7 +590,7 @@ public class DescribeSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * 并发等待
+             * The wait time in concurrent execution.
              */
             public Builder concurrencyWaitTime(Float concurrencyWaitTime) {
                 this.concurrencyWaitTime = concurrencyWaitTime;
@@ -598,7 +598,7 @@ public class DescribeSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * 平均CPU时间
+             * The average CPU time.
              */
             public Builder cpuTime(Float cpuTime) {
                 this.cpuTime = cpuTime;
@@ -606,7 +606,7 @@ public class DescribeSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * 数据库名
+             * The name of the database.
              */
             public Builder dbName(String dbName) {
                 this.dbName = dbName;
@@ -614,7 +614,7 @@ public class DescribeSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * 解码等待
+             * The time to wait for decoding.
              */
             public Builder decodeTime(Float decodeTime) {
                 this.decodeTime = decodeTime;
@@ -622,7 +622,7 @@ public class DescribeSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * 物理读
+             * The number of physical reads.
              */
             public Builder diskRead(Long diskRead) {
                 this.diskRead = diskRead;
@@ -630,7 +630,7 @@ public class DescribeSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * 平均响应时间
+             * The average response time.
              */
             public Builder elapsedTime(Float elapsedTime) {
                 this.elapsedTime = elapsedTime;
@@ -638,7 +638,7 @@ public class DescribeSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * 结束时间
+             * The end time.
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -646,7 +646,7 @@ public class DescribeSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * 结束时间（零时区）
+             * The end time in UTC +0.
              */
             public Builder endTimeUTCString(String endTimeUTCString) {
                 this.endTimeUTCString = endTimeUTCString;
@@ -654,7 +654,7 @@ public class DescribeSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * 等待事件
+             * The wait event.
              */
             public Builder event(String event) {
                 this.event = event;
@@ -662,7 +662,7 @@ public class DescribeSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * 每秒次数
+             * The number of executions per second.
              */
             public Builder execPerSecond(Long execPerSecond) {
                 this.execPerSecond = execPerSecond;
@@ -670,7 +670,7 @@ public class DescribeSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * 内部执行时间
+             * The internal execution time.
              */
             public Builder executeTime(Float executeTime) {
                 this.executeTime = executeTime;
@@ -678,7 +678,7 @@ public class DescribeSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * 执行次数
+             * The number of executions.
              */
             public Builder executions(Long executions) {
                 this.executions = executions;
@@ -686,7 +686,7 @@ public class DescribeSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * 失败次数
+             * The number of failures.
              */
             public Builder failTimes(Long failTimes) {
                 this.failTimes = failTimes;
@@ -694,7 +694,7 @@ public class DescribeSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * 硬解析时间
+             * The time spent in hard parsing.
              */
             public Builder getPlanTime(Float getPlanTime) {
                 this.getPlanTime = getPlanTime;
@@ -702,7 +702,7 @@ public class DescribeSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * IO等待
+             * The I/O wait time.
              */
             public Builder IOWaitTime(Float IOWaitTime) {
                 this.IOWaitTime = IOWaitTime;
@@ -710,7 +710,7 @@ public class DescribeSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * 逻辑读
+             * The number of logical reads.
              */
             public Builder logicalRead(Long logicalRead) {
                 this.logicalRead = logicalRead;
@@ -718,7 +718,7 @@ public class DescribeSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * 最大CPU时间
+             * The maximum CPU time.
              */
             public Builder maxCpuTime(Float maxCpuTime) {
                 this.maxCpuTime = maxCpuTime;
@@ -726,7 +726,7 @@ public class DescribeSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * 最大响应时间
+             * The maximum response time.
              */
             public Builder maxElapsedTime(Float maxElapsedTime) {
                 this.maxElapsedTime = maxElapsedTime;
@@ -734,7 +734,7 @@ public class DescribeSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * 读内存行数
+             * The number of rows read from the memory.
              */
             public Builder memstoreReadRowCount(Long memstoreReadRowCount) {
                 this.memstoreReadRowCount = memstoreReadRowCount;
@@ -742,7 +742,7 @@ public class DescribeSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * 未命中计划次数
+             * The number of plan misses.
              */
             public Builder missPlans(Long missPlans) {
                 this.missPlans = missPlans;
@@ -750,7 +750,7 @@ public class DescribeSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * 网络等待
+             * The network latency.
              */
             public Builder netWaitTime(Float netWaitTime) {
                 this.netWaitTime = netWaitTime;
@@ -758,7 +758,7 @@ public class DescribeSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * 节点IP
+             * The IP address of the node.
              */
             public Builder nodeIp(String nodeIp) {
                 this.nodeIp = nodeIp;
@@ -766,7 +766,7 @@ public class DescribeSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * 队列等待
+             * The queuing time.
              */
             public Builder queueTime(Float queueTime) {
                 this.queueTime = queueTime;
@@ -774,7 +774,7 @@ public class DescribeSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * RPC次数
+             * The number of RPCs.
              */
             public Builder RPCCount(Long RPCCount) {
                 this.RPCCount = RPCCount;
@@ -782,7 +782,7 @@ public class DescribeSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * 远程计划数
+             * The number of remote plans.
              */
             public Builder remotePlans(Long remotePlans) {
                 this.remotePlans = remotePlans;
@@ -790,7 +790,7 @@ public class DescribeSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * 重试次数
+             * The number of retries.
              */
             public Builder retryCount(Long retryCount) {
                 this.retryCount = retryCount;
@@ -798,7 +798,7 @@ public class DescribeSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * 返回行数
+             * The number of rows returned.
              */
             public Builder returnRows(Long returnRows) {
                 this.returnRows = returnRows;
@@ -806,7 +806,7 @@ public class DescribeSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * RowCache命中次数
+             * The number of row cache hits.
              */
             public Builder rowCacheHit(Long rowCacheHit) {
                 this.rowCacheHit = rowCacheHit;
@@ -814,7 +814,7 @@ public class DescribeSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * 调度时间
+             * The scheduling duration.
              */
             public Builder scheduleTime(Float scheduleTime) {
                 this.scheduleTime = scheduleTime;
@@ -822,7 +822,7 @@ public class DescribeSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * 读磁盘行数
+             * The number of rows read from the disk.
              */
             public Builder ssstoreReadRowCount(Long ssstoreReadRowCount) {
                 this.ssstoreReadRowCount = ssstoreReadRowCount;
@@ -830,7 +830,7 @@ public class DescribeSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * 内部等待
+             * The internal wait time.
              */
             public Builder totalWaitTime(Float totalWaitTime) {
                 this.totalWaitTime = totalWaitTime;
@@ -838,7 +838,7 @@ public class DescribeSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * 用户名
+             * The username.
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -891,7 +891,7 @@ public class DescribeSQLHistoryListResponseBody extends TeaModel {
             private java.util.List < List> list; 
 
             /**
-             * 数量
+             * The quantity.
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -899,7 +899,7 @@ public class DescribeSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * 列表
+             * List.
              */
             public Builder list(java.util.List < List> list) {
                 this.list = list;

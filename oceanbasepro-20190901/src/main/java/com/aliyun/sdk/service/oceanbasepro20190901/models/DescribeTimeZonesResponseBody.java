@@ -50,7 +50,7 @@ public class DescribeTimeZonesResponseBody extends TeaModel {
         private TimeZones timeZones; 
 
         /**
-         * 请求ID。
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeTimeZonesResponseBody extends TeaModel {
         }
 
         /**
-         * 租户允许的时区信息。
+         * The time zones supported by the tenant.
          */
         public Builder timeZones(TimeZones timeZones) {
             this.timeZones = timeZones;
@@ -110,7 +110,7 @@ public class DescribeTimeZonesResponseBody extends TeaModel {
             private String timeZone; 
 
             /**
-             * 时区描述。
+             * The description of the time zone.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -118,7 +118,7 @@ public class DescribeTimeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * 时区名称。
+             * The name of the time zone.
              */
             public Builder timeZone(String timeZone) {
                 this.timeZone = timeZone;
@@ -171,7 +171,7 @@ public class DescribeTimeZonesResponseBody extends TeaModel {
             private java.util.List < List> list; 
 
             /**
-             * 默认时区。
+             * The default time zone.
              */
             public Builder _default(String _default) {
                 this._default = _default;
@@ -179,7 +179,7 @@ public class DescribeTimeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * 时区列表信息。
+             * The list of time zones.
              */
             public Builder list(java.util.List < List> list) {
                 this.list = list;

@@ -50,7 +50,7 @@ public class DescribeTenantUserRolesResponseBody extends TeaModel {
         private java.util.List < String > role; 
 
         /**
-         * 请求ID。
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,14 @@ public class DescribeTenantUserRolesResponseBody extends TeaModel {
         }
 
         /**
-         * 用户的角色列表。角色包含以下几类： 读写权限（ReadWrite）：ALL PRIVILEGES ； 只读权限（ReadOnly）：SELECT  DDL权限（DDL）：CREATE,DROP,ALTER,SHOW VIEW,CREATE VIEW  DML权限（DML）：SELECT,INSERT,UPDATE,DELETE,SHOW VIEW。
+         * The list of roles of the user.   
+         * <p>
+         * Valid values: 
+         * 
+         * ReadWrite: a role that has the read and write privileges, namely ALL PRIVILEGES.
+         * ReadOnly: a role that has only the read-only privilege SELECT.
+         * DDL: a role that has DDL privileges such as CREATE, DROP, ALTER, SHOW VIEW, and CREATE VIEW.
+         * DML: a role that has DML privileges such as SELECT, INSERT, UPDATE, DELETE, and SHOW VIEW.
          */
         public Builder role(java.util.List < String > role) {
             this.role = role;

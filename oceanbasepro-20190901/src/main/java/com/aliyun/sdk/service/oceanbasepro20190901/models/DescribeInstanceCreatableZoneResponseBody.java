@@ -50,7 +50,7 @@ public class DescribeInstanceCreatableZoneResponseBody extends TeaModel {
         private java.util.List < ZoneList> zoneList; 
 
         /**
-         * 请求ID。
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeInstanceCreatableZoneResponseBody extends TeaModel {
         }
 
         /**
-         * 可用区列表信息。
+         * The list of zones.
          */
         public Builder zoneList(java.util.List < ZoneList> zoneList) {
             this.zoneList = zoneList;
@@ -110,7 +110,7 @@ public class DescribeInstanceCreatableZoneResponseBody extends TeaModel {
             private String zone; 
 
             /**
-             * 是否是集群部署的可用区。
+             * Indicates whether the cluster is deployed in the zone.
              */
             public Builder isInCluster(Boolean isInCluster) {
                 this.isInCluster = isInCluster;
@@ -118,7 +118,7 @@ public class DescribeInstanceCreatableZoneResponseBody extends TeaModel {
             }
 
             /**
-             * 可用区ID。
+             * The ID of the zone.
              */
             public Builder zone(String zone) {
                 this.zone = zone;

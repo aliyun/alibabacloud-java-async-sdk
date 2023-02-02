@@ -158,7 +158,7 @@ public class ResumeOmsOpenAPIProjectResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * 建议（旧）
+         * The suggestions (old).
          */
         public Builder advice(String advice) {
             this.advice = advice;
@@ -166,7 +166,7 @@ public class ResumeOmsOpenAPIProjectResponseBody extends TeaModel {
         }
 
         /**
-         * 错误码（旧）
+         * The error code (old).
          */
         public Builder code(String code) {
             this.code = code;
@@ -174,7 +174,7 @@ public class ResumeOmsOpenAPIProjectResponseBody extends TeaModel {
         }
 
         /**
-         * 耗时，单位为秒
+         * The time spent, in seconds.
          */
         public Builder cost(String cost) {
             this.cost = cost;
@@ -182,7 +182,7 @@ public class ResumeOmsOpenAPIProjectResponseBody extends TeaModel {
         }
 
         /**
-         * 返回的业务数据
+         * Indicates whether the project is resumed.
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -190,7 +190,7 @@ public class ResumeOmsOpenAPIProjectResponseBody extends TeaModel {
         }
 
         /**
-         * 错误详情
+         * The error details.
          */
         public Builder errorDetail(ErrorDetail errorDetail) {
             this.errorDetail = errorDetail;
@@ -198,7 +198,7 @@ public class ResumeOmsOpenAPIProjectResponseBody extends TeaModel {
         }
 
         /**
-         * 错误描述（旧）
+         * The error description (old).
          */
         public Builder message(String message) {
             this.message = message;
@@ -206,7 +206,7 @@ public class ResumeOmsOpenAPIProjectResponseBody extends TeaModel {
         }
 
         /**
-         * 页序号，分页查询时生效
+         * The page number, which takes effect in a pagination query.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -214,7 +214,7 @@ public class ResumeOmsOpenAPIProjectResponseBody extends TeaModel {
         }
 
         /**
-         * 页大小，分页查询时生效
+         * The page size, which takes effect in a pagination query.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -222,7 +222,7 @@ public class ResumeOmsOpenAPIProjectResponseBody extends TeaModel {
         }
 
         /**
-         * 请求 ID
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -230,7 +230,7 @@ public class ResumeOmsOpenAPIProjectResponseBody extends TeaModel {
         }
 
         /**
-         * 是否调用成功
+         * Indicates whether the call is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -238,7 +238,7 @@ public class ResumeOmsOpenAPIProjectResponseBody extends TeaModel {
         }
 
         /**
-         * 总数，分页查询时生效
+         * The total count, which takes effect in a pagination query.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -314,7 +314,7 @@ public class ResumeOmsOpenAPIProjectResponseBody extends TeaModel {
             private String proposal; 
 
             /**
-             * 错误码（新）
+             * The error code (new).
              */
             public Builder code(String code) {
                 this.code = code;
@@ -322,7 +322,7 @@ public class ResumeOmsOpenAPIProjectResponseBody extends TeaModel {
             }
 
             /**
-             * 错误等级（CRITICAL, ERROR, WARN）
+             * The error level. Valid values: CRITICAL, ERROR, and WARN.
              */
             public Builder level(String level) {
                 this.level = level;
@@ -330,7 +330,7 @@ public class ResumeOmsOpenAPIProjectResponseBody extends TeaModel {
             }
 
             /**
-             * 错误描述（新）
+             * The error description (new).
              */
             public Builder message(String message) {
                 this.message = message;
@@ -338,7 +338,7 @@ public class ResumeOmsOpenAPIProjectResponseBody extends TeaModel {
             }
 
             /**
-             * 建议（新）
+             * The suggestions (new).
              */
             public Builder proposal(String proposal) {
                 this.proposal = proposal;

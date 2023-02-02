@@ -62,7 +62,7 @@ public class DescribeAnomalySQLListResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * 可疑SQL列表
+         * The list of suspicious SQL statements.
          */
         public Builder anomalySQLList(java.util.List < AnomalySQLList> anomalySQLList) {
             this.anomalySQLList = anomalySQLList;
@@ -70,7 +70,7 @@ public class DescribeAnomalySQLListResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeAnomalySQLListResponseBody extends TeaModel {
         }
 
         /**
-         * 总数量
+         * The total count.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -250,7 +250,7 @@ public class DescribeAnomalySQLListResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * 平均CPU时间（ms）
+             * The average CPU time, in ms.
              */
             public Builder cpuTime(Float cpuTime) {
                 this.cpuTime = cpuTime;
@@ -258,7 +258,7 @@ public class DescribeAnomalySQLListResponseBody extends TeaModel {
             }
 
             /**
-             * 数据库名
+             * The name of the database.
              */
             public Builder dbName(String dbName) {
                 this.dbName = dbName;
@@ -266,7 +266,7 @@ public class DescribeAnomalySQLListResponseBody extends TeaModel {
             }
 
             /**
-             * 诊断信息
+             * The diagnosis information.
              */
             public Builder diagnosis(String diagnosis) {
                 this.diagnosis = diagnosis;
@@ -274,7 +274,7 @@ public class DescribeAnomalySQLListResponseBody extends TeaModel {
             }
 
             /**
-             * 诊断规则
+             * The diagnostic rule.
              */
             public Builder diagnosisRule(String diagnosisRule) {
                 this.diagnosisRule = diagnosisRule;
@@ -282,7 +282,7 @@ public class DescribeAnomalySQLListResponseBody extends TeaModel {
             }
 
             /**
-             * 执行次数
+             * The number of executions.
              */
             public Builder executions(Long executions) {
                 this.executions = executions;
@@ -290,7 +290,7 @@ public class DescribeAnomalySQLListResponseBody extends TeaModel {
             }
 
             /**
-             * 返回数据序号
+             * The sequence number of the returned SQL statement.
              */
             public Builder key(Long key) {
                 this.key = key;
@@ -298,7 +298,7 @@ public class DescribeAnomalySQLListResponseBody extends TeaModel {
             }
 
             /**
-             * 请求时间
+             * The request time, in ms.
              */
             public Builder requestTime(Float requestTime) {
                 this.requestTime = requestTime;
@@ -306,7 +306,7 @@ public class DescribeAnomalySQLListResponseBody extends TeaModel {
             }
 
             /**
-             * 请求时间（零时区）
+             * The request time in UTC +0.
              */
             public Builder requestTimeUTCString(String requestTimeUTCString) {
                 this.requestTimeUTCString = requestTimeUTCString;
@@ -314,7 +314,7 @@ public class DescribeAnomalySQLListResponseBody extends TeaModel {
             }
 
             /**
-             * SQLID
+             * SQLID.
              */
             public Builder SQLId(String SQLId) {
                 this.SQLId = SQLId;
@@ -322,7 +322,7 @@ public class DescribeAnomalySQLListResponseBody extends TeaModel {
             }
 
             /**
-             * sql文本
+             * The SQL text.
              */
             public Builder SQLText(String SQLText) {
                 this.SQLText = SQLText;
@@ -330,7 +330,7 @@ public class DescribeAnomalySQLListResponseBody extends TeaModel {
             }
 
             /**
-             * 建议
+             * The suggestions.
              */
             public Builder suggestion(String suggestion) {
                 this.suggestion = suggestion;
@@ -338,7 +338,7 @@ public class DescribeAnomalySQLListResponseBody extends TeaModel {
             }
 
             /**
-             * 用户名
+             * The username.
              */
             public Builder userName(String userName) {
                 this.userName = userName;

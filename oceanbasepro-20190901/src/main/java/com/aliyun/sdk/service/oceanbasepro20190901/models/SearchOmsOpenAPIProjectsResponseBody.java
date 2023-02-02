@@ -158,7 +158,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * 建议（旧）
+         * The suggestions (old).
          */
         public Builder advice(String advice) {
             this.advice = advice;
@@ -166,7 +166,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
         }
 
         /**
-         * 错误码（旧）
+         * The error code (old).
          */
         public Builder code(String code) {
             this.code = code;
@@ -174,7 +174,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
         }
 
         /**
-         * 耗时，单位为秒
+         * The time spent in processing the request, in seconds.
          */
         public Builder cost(String cost) {
             this.cost = cost;
@@ -182,7 +182,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
         }
 
         /**
-         * 返回的业务数据
+         * The business data returned.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -190,7 +190,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
         }
 
         /**
-         * 错误详情
+         * The error details.
          */
         public Builder errorDetail(ErrorDetail errorDetail) {
             this.errorDetail = errorDetail;
@@ -198,7 +198,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
         }
 
         /**
-         * 错误描述（旧）
+         * The error description (old).
          */
         public Builder message(String message) {
             this.message = message;
@@ -206,7 +206,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
         }
 
         /**
-         * 页序号，分页查询时生效
+         * The page number, which takes effect in a pagination query.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -214,7 +214,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
         }
 
         /**
-         * 页大小，分页查询时生效
+         * The page size, which takes effect in a pagination query.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -222,7 +222,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
         }
 
         /**
-         * 请求 ID
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -230,7 +230,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
         }
 
         /**
-         * 是否调用成功
+         * Indicates whether the call is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -238,7 +238,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
         }
 
         /**
-         * 总数，分页查询时生效
+         * The total count, which takes effect in a pagination query.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -410,7 +410,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             private String topicType; 
 
             /**
-             * 目标端为 RocketMQ 时，此参数表示是否开启消息追踪
+             * Indicates whether message tracing is enabled when the destination data source is RocketMQ.
              */
             public Builder enableMsgTrace(Boolean enableMsgTrace) {
                 this.enableMsgTrace = enableMsgTrace;
@@ -418,7 +418,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 指定数据源 id
+             * The ID of the data source.
              */
             public Builder endpointId(String endpointId) {
                 this.endpointId = endpointId;
@@ -426,7 +426,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 数据源类型 (MYSQL, MARIADB, OB_MYSQL, OB_MYSQL_CE, OB_ORACLE, ORACLE, DB2_LUW, KAFKA, ROCKETMQ, DATAHUB, SYBASE, LOGPROXY, ADB, DBP_OP_ROUTE, DMS, IDB, TIDB)
+             * The type of the data source. Valid values: MYSQL, MARIADB, OB_MYSQL, OB_MYSQL_CE, OB_ORACLE, ORACLE, DB2_LUW, KAFKA, ROCKETMQ, DATAHUB, SYBASE, LOGPROXY, ADB, DBP_OP_ROUTE, DMS, IDB, and TIDB.
              */
             public Builder endpointType(String endpointType) {
                 this.endpointType = endpointType;
@@ -434,7 +434,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 目标端为 RocketMQ 时，设置投递消息的 tag（标签）
+             * The tag of the Post message when the destination data source is RocketMQ.
              */
             public Builder msgTags(String msgTags) {
                 this.msgTags = msgTags;
@@ -442,7 +442,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 目标端为消息队列（Kafka/DataHub/RocketMQ）时，若 partitionMode 为 ONE 模式，此参数表示分区索引
+             * The partitioned index, which must be specified if the destination data source is a message queue system, such as Kafka, DataHub, and RocketMQ, and the partitioning mode is set to ONE.
              */
             public Builder partition(Integer partition) {
                 this.partition = partition;
@@ -450,7 +450,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 目标端为消息队列（Kafka/DataHub/RocketMQ）时，选择分区模式 (ONE, HASH, TABLE)
+             * The partitioning mode, which must be specified if the destination data source is a message queue system, such as Kafka, DataHub, or RocketMQ. Valid values: ONE, HASH, and TABLE.
              */
             public Builder partitionMode(String partitionMode) {
                 this.partitionMode = partitionMode;
@@ -458,7 +458,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 目标端为 RocketMQ 时，指定投递消息的生产者组
+             * The producer group of the Post message when the destination data source is RocketMQ.
              */
             public Builder producerGroup(String producerGroup) {
                 this.producerGroup = producerGroup;
@@ -466,7 +466,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 目标端为 RocketMQ 时，设置单次投递消息的超时时间，单位为秒
+             * The timeout period in seconds for a single Post message when the destination data source is RocketMQ.
              */
             public Builder sendMsgTimeout(Long sendMsgTimeout) {
                 this.sendMsgTimeout = sendMsgTimeout;
@@ -474,7 +474,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 目标端为 DataHub 时，此参数表示是否开启消息序列
+             * Indicates whether message sequencing is enabled when the destination data source is DataHub.
              */
             public Builder sequenceEnable(Boolean sequenceEnable) {
                 this.sequenceEnable = sequenceEnable;
@@ -482,7 +482,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 目标端为 DataHub 时，若开启消息序列，设置序列起始时间，单位为秒级时间戳
+             * The start time of the sequence, which must be specified if the destination data source is DataHub and message sequencing is enabled. The value is a timestamp in seconds.
              */
             public Builder sequenceStartTimestamp(Long sequenceStartTimestamp) {
                 this.sequenceStartTimestamp = sequenceStartTimestamp;
@@ -490,7 +490,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 目标端为消息队列（Kafka/DataHub/RocketMQ）时，选择文本序列化类型 (DEFAULT, CANAL, DATAWORKS_V2, SHAREPLEX, DEFAULT_WITH_SCHEMA)
+             * The text serialization type, which must be specified if the destination data source is a message queue system, such as Kafka, DataHub, or RocketMQ. Valid values: Default, DefaultExtendColumnType, Canal, Dataworks, and SharePlex.
              */
             public Builder serializerType(String serializerType) {
                 this.serializerType = serializerType;
@@ -498,7 +498,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 目标端为 DataHub 时，投递消息所属 topic 的类型 (TUPLE, BLOB)
+             * The type of the topic to which the Post message belongs when the destination data source is DataHub. Valid values: Tuple and Blob.
              */
             public Builder topicType(String topicType) {
                 this.topicType = topicType;
@@ -575,7 +575,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * 使用此标签的项目数量
+             * The number of projects that use this label.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -583,7 +583,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 创建人(只有在管理员视角下才进行返回)
+             * The creator. This parameter value is returned only when you log on as the administrator.
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -591,7 +591,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 标签id
+             * The ID of a label.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -599,7 +599,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 标签名称
+             * The name of the label.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -772,7 +772,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             private String topicType; 
 
             /**
-             * 目标端为 RocketMQ 时，此参数表示是否开启消息追踪
+             * Indicates whether message tracing is enabled when the destination data source is RocketMQ.
              */
             public Builder enableMsgTrace(Boolean enableMsgTrace) {
                 this.enableMsgTrace = enableMsgTrace;
@@ -780,7 +780,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 指定数据源 id
+             * The ID of the data source.
              */
             public Builder endpointId(String endpointId) {
                 this.endpointId = endpointId;
@@ -788,7 +788,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 数据源类型 (MYSQL, MARIADB, OB_MYSQL, OB_MYSQL_CE, OB_ORACLE, ORACLE, DB2_LUW, KAFKA, ROCKETMQ, DATAHUB, SYBASE, LOGPROXY, ADB, DBP_OP_ROUTE, DMS, IDB, TIDB)
+             * The type of the data source. Valid values: `MYSQL`, `MARIADB`, `OB_MYSQL`, `OB_MYSQL_CE`, `OB_ORACLE`, `ORACLE`, `DB2_LUW`, `KAFKA`, `ROCKETMQ`, `DATAHUB`, `SYBASE`, `LOGPROXY`, `ADB`, `DBP_OP_ROUTE`, `DMS`, `IDB`, and `TIDB`.
              */
             public Builder endpointType(String endpointType) {
                 this.endpointType = endpointType;
@@ -796,7 +796,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 目标端为 RocketMQ 时，设置投递消息的 tag（标签）
+             * The tag of the Post message when the destination data source is RocketMQ.
              */
             public Builder msgTags(String msgTags) {
                 this.msgTags = msgTags;
@@ -804,7 +804,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 目标端为消息队列（Kafka/DataHub/RocketMQ）时，若 partitionMode 为 ONE 模式，此参数表示分区索引
+             * The partitioned index, which must be specified if the destination data source is a message queue system, such as Kafka, DataHub, or RocketMQ, and the partitioning mode is set to ONE.
              */
             public Builder partition(Integer partition) {
                 this.partition = partition;
@@ -812,7 +812,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 目标端为消息队列（Kafka/DataHub/RocketMQ）时，选择分区模式 (ONE, HASH, TABLE)
+             * The partitioning mode, which must be specified if the destination data source is a message queue system, such as Kafka, DataHub, or RocketMQ. Valid values: ONE, HASH, and TABLE.
              */
             public Builder partitionMode(String partitionMode) {
                 this.partitionMode = partitionMode;
@@ -820,7 +820,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 目标端为 RocketMQ 时，指定投递消息的生产者组
+             * The producer group of the Post message when the destination data source is RocketMQ.
              */
             public Builder producerGroup(String producerGroup) {
                 this.producerGroup = producerGroup;
@@ -828,7 +828,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 目标端为 RocketMQ 时，设置单次投递消息的超时时间，单位为秒
+             * The timeout period in seconds for a single Post message when the destination data source is RocketMQ.
              */
             public Builder sendMsgTimeout(Long sendMsgTimeout) {
                 this.sendMsgTimeout = sendMsgTimeout;
@@ -836,7 +836,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 目标端为 DataHub 时，此参数表示是否开启消息序列
+             * Indicates whether message sequencing is enabled when the destination data source is DataHub.
              */
             public Builder sequenceEnable(Boolean sequenceEnable) {
                 this.sequenceEnable = sequenceEnable;
@@ -844,7 +844,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 目标端为 DataHub 时，若开启消息序列，设置序列起始时间，单位为秒级时间戳
+             * The start time of the sequence, which must be specified if the destination data source is DataHub and message sequencing is enabled. The value is a timestamp in seconds.
              */
             public Builder sequenceStartTimestamp(Long sequenceStartTimestamp) {
                 this.sequenceStartTimestamp = sequenceStartTimestamp;
@@ -852,7 +852,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 目标端为消息队列（Kafka/DataHub/RocketMQ）时，选择文本序列化类型 (DEFAULT, CANAL, DATAWORKS_V2, SHAREPLEX, DEFAULT_WITH_SCHEMA)
+             * The text serialization type, which must be specified if the destination data source is a message queue system, such as Kafka, DataHub, or RocketMQ. Valid values: Default, DefaultExtendColumnType, Canal, Dataworks, and SharePlex.
              */
             public Builder serializerType(String serializerType) {
                 this.serializerType = serializerType;
@@ -860,7 +860,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 目标端为 DataHub 时，投递消息所属 topic 的类型 (TUPLE, BLOB)
+             * The type of the topic to which the Post message belongs when the destination data source is DataHub. Valid values: Tuple and Blob.
              */
             public Builder topicType(String topicType) {
                 this.topicType = topicType;
@@ -937,7 +937,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             private String proposal; 
 
             /**
-             * 错误码（旧）
+             * The error code.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -945,7 +945,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * CRITICAL, ERROR, WARN
+             * Valid values: CRITICAL, ERROR, and WARN.
              */
             public Builder level(String level) {
                 this.level = level;
@@ -953,7 +953,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 错误描述（旧）
+             * The error message.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -961,7 +961,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * Proposal.
+             * The suggestions.
              */
             public Builder proposal(String proposal) {
                 this.proposal = proposal;
@@ -1050,7 +1050,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             private String failedTime; 
 
             /**
-             * 错误码（旧） (AUTHENTICATION_ERROR, PARAM_ERROR, PARAM_ERROR_MESSAGE, NOT_IMPLEMENTED_ERROR, SHARD_COLUMNS_CONFLICT_MESSAGE, FAILED_PARSE_TOKEN_MESSAGE, CONNECT_CHECK_ERROR, NOT_SUPPORT_ERROR, CE_NOT_SUPPORT_ERROR, NOT_FOUND_ERROR, SHARDING_COLUMN_NOT_INCLUDED_ERROR, INNER_ERROR, DB_QUERY_ERROR, DATAHUB_QUERY_ERROR, USER_LACK_SYS_PRIV_ERROR, USER_LACK_TABLE_PRIV_ERROR, RM_API_ERROR, RM_TASK_ERROR, CM_API_ERROR, CM_API_NOT_SUCCESS, BAGUALU_API_ERROR, IDB_API_ERROR, SUPERVISOR_API_ERROR, OCP_API_ERROR, OCP_SERVICE_ERROR, OCP_QUERY_VERSION_FAILED, OCP_VERSION_INCORRECT_ERROR, OCP_VERSION_NOT_SUPPORTED_ERROR, OCP_API_USER_PASSWORD_INCORRECT_ERROR, OBSCHEMA_ERROR, EXECUTOR_THREAD_POOL_BUSY, NO_TABLE_SELECTED, NO_VIEW_SELECTED, SOURCE_CRAWLER_START_FAILED, SOURCE_CRAWLER_START_FAILED_DATA_EXPIRED, SOURCE_CRAWLER_START_TIMEOUT, DEST_WRITER_START_FAILED, WRITER_UNKNOWN_STATUS, DRC_TOPIC_EXISTS_ERROR, TOPIC_EMPTY_ERROR, REACH_WRITER_LIMIT_ERROR, FOUND_NO_FEASIBLE_STORE_ERROR, TOO_MANY_STORES_FOR_SUBTOPIC, TIMEOUT_EXCEPTION, KIPP_API_ERROR: KIPP 相关错误信息, KIPP_API_RESOURCE_NOT_FOUND, KIPP_API_INVALID_PARAM, KIPP_API_UNKNOWN_ERROR, KIPP_API_INTERNAL_ERROR, KIPP_API_SERVICE_UNAVAILABLE, OMS_AGENT_API_ERROR, KMS_API_ERROR, OMS_ENCRYPT_API_ERROR, OMS_DECRYPT_API_ERROR, ALIYUN_SDK_ERROR, YAOCHI_API_ERROR, RESOURCE_WITHOUT_STOCK_ERROR, RESOURCE_NO_AVAILABLE_ZONE, CM_SDK_ERROR, MIGRATION_PROJECT_STEP_PRECHECK_FAILED, PRE_CHECK_ERROR, FAILURES_CORRECT_ERROR, EXECUTE_DDL_FAILURE, EXECUTE_DDL_UNSUPPORTED_OR_FAILURE, STRUCT_RECORD_DDL_NOT_FOUND, STRUCT_RECORD_INDEX_NOT_FOUND, STRUCT_RECORD_NOT_FOUND, STRUCT_RECORD_NOT_FOUND_IN_DBCAT, SCHEMA_OBJECT_TYPE_NOT_SUPPORT_ERROR, POLAR_MYSQL_NETWORK_TYPE_NOT_SUPPORT_ERROR, RDS_NETWORK_TYPE_NOT_SUPPORT_ERROR, RDS_VPC_NETWORK_NOT_SUPPORT_ERROR, DB_TYPE_NOT_SUPPORT_ERROR, SYNC_TYPE_NOT_SUPPORT_ERROR, SLAVE_OPERATION_STEP_NOT_SUPPORT_ERROR, BYTE_USED_TYPE_NOT_SUPPORT_ERROR, MANY_TO_ONE_SCHEMA_TABLE_REVERSE_INCR_NOT_SUPPORT_ERROR, DUPLICATE_SCHEMA_TABLE_ERROR, OMS_STEP_NOT_SUPPORT_ERROR, ORACLE_DATABASE_ROLE_NOT_SUPPORT_ERROR, OLD_PRE_CHECK_NOT_SUPPORT_ERROR, SCHEMA_ONE_TO_MANY_NOT_SUPPORT_ERROR, PROJECT_NOT_FOUND_ERROR, ENDPOINT_NOT_FOUND_ERROR, ENDPOINT_NAME_ALREADY_EXIST_ERROR, ENDPOINT_QUERY_ERROR, ENDPOINT_SQL_QUERY_ERROR, PROJECT_NAME_ALREADY_EXIST_ERROR, CHECKER_NOT_FOUND_ERROR, CHECKER_FAILED_ERROR, CHECKER_STATUS_UNEXPECTED_ERROR, CHECKER_NO_TASK_TYPE_ERROR, WORKER_INSTANCE_NOT_FOUND_ERROR, WORKER_INSTANCE_ALLOCATING_ERROR, LOG_SERVICE_TOPIC_NOT_FOUND_ERROR, CLUSTER_NOT_FOUND_ERROR, TENANT_NOT_FOUND_ERROR, DATABASE_NOT_FOUND_ERROR, TABLE_NOT_FOUND_ERROR, COLUMN_NOT_FOUND_ERROR, TABLE_META_NOT_FOUND_ERROR, SYBASE_CHARSET_NOT_FOUND_ERROR, OCP_NOT_FOUND_ERROR, REGION_NOT_FOUND_ERROR, OCP_ALREADY_EXIST_ERROR, ALARM_CHANNEL_NAME_ALREADY_EXIST_ERROR, SEND_MARKDOWN_TEXT_TO_WEBHOOK_FAILED_EXCEPTION_RESPONSE, SEND_MARKDOWN_TEXT_TO_WEBHOOK_FAILED_EXCEPTION_STATUS, LABEL_ALREADY_EXIST_ERROR, LABEL_NOT_EXIST_ERROR, OCP_ALREADY_USED_ERROR, REGION_INFO_INCONSISTENT_ERROR, OCP_NAME_EMPTY_ERROR, MASTER_SLAVE_ENDPOINT_NAME_INCONSISTENT_ERROR, LOG_FILE_NOT_FOUND_ERROR, OPERATION_NOT_ALLOWED_ERROR, PROJECT_OPERATION_NOT_ALLOWED_ERROR, PROJECT_RELEASE_FAILED, STRUCT_MIGRATION_RETRY_NOT_ALLOWED_ERROR, WORKER_INSTANCE_OPERATION_NOT_ALLOWED_ERROR, USER_OPERATION_NOT_ALLOWED_ERROR, OCP_NAME_OR_REGION_NOT_ALLOWED_UPDATE, UPDATE_CONFIG_WITH_NEWLINE_NOT_ALLOWED, EXIST_UNRELEASED_PROJECT_ERROR, EXIST_UNRELEASED_TOPIC_ERROR, LABEL_CREATE_NOT_ALLOWED_ERROR, LABEL_UPDATE_NOT_ALLOWED_ERROR, LABEL_DELETE_NOT_ALLOWED_ERROR, TOPIC_NAME_INVALID_ERROR, INVALID_STATUS_ERROR, INVALID_CSV_HEAD_ERROR, INVALID_CSV_BODY_ERROR, DUPLICATE_SCHEMA_TABLE_SETTING_ERROR, PROJECT_INVALID_STATUS_ERROR, PROJECT_INVALID_CONNECTOR_COUNT_ERROR, WORKER_INSTANCE_INVALID_STATUS_ERROR, LOG_SERVICE_INVALID_STATUS_ERROR, STEP_INVALID_STATUS_ERROR, UPDATE_ALLOW_DEST_TABLE_NOT_EMPTY_NOT_ALLOWED_ERROR, EXIST_INCONSISTENCY_ERROR, OMS_SWITCH_SUBSTEP_FAILED_ERROR, ENDPOINT_ID_INVALID_ERROR, DB_QUERY_VERSION_EMPTY_ERROR, ENDPOINT_NAME_INVALID_ERROR, ENDPOINT_SCHEMA_NOT_ALLOWED_ERROR, ENDPOINT_SCHEMA_CHAR_NOT_ALLOWED_ERROR, NAME_HAS_SPACE_EXCEPTION, CONFIG_CONVERT_VALUE_ERROR, CONFIG_VALUE_EXCEEDS_LIMIT_ERROR, CONFIG_KEY_NOT_FOUND_KEY_ERROR, CONFIG_VALUE_NOT_EMPTY_ERROR, SCHEMA_HAS_CONVERT_INFO, TIME_SERIES_QUERY_SERVICE_ERROR, ETL_VERIFY_ERROR, ETL_SYNTAX_UNSUPPORTED, ETL_FIELD_NOTFOUND, ETL_FAILED_PARSE_SQL, ETL_VAL_TYPE_ERROR, NOT_SUPPORT_GENERATE_COLUMNS, NOT_SUPPORT_UPDATE_ETL, LOCK_FAILED, OMS_USER_EXIST_ERROR, OMS_USER_NOT_FOUND_ERROR, OMS_USER_NAME_LENGTH_CONSTRAINT, OMS_USER_PASSWORD_ERROR, USER_NAME_OR_PASSWORD_ERROR, OMS_USER_PASSWORD_VALIDATION_ERROR, OMS_USER_PASSWORD_DEFAULT_ERROR, OMS_USER_PERMISSION_DENIED_ERROR, OMS_USER_EDIT_ADMIN_ROLE_INFO_PERMISSION_DENIED_ERROR, OMS_USER_ILLEGAL_DELETED_ERROR, CONNECTOR_TASK_NOT_FOUND_ERROR, CONNECTOR_TASK_NUM_LIMIT_ERROR, CONNECTOR_TASK_DELETE_ERROR, METRIC_SERVICE_ERROR, SYNC_PROJECT_TYPE_INVALID_ERROR, SYNC_SHARDING_COLUMNS_INVALID_ERROR, SYNC_PROJECT_PRODUCER_GROUP_INVALID_ERROR, SYNC_PROJECT_PRODUCER_GROUP_LIMIT_EXCEEDS_ERROR, SYNC_PROJECT_COMPLEMENT_CONFIG_ERROR, META_SCHEMA_CREATE_FAILED, RESUME_STEP_FAILED, SCHEMA_INCONSISTENCY, SCHEMA_CASCADE_MAPPING_NOT_SUPPORT_ERROR, SCHEMA_NOT_EXISTED, SCHEMA_EXISTED, SCHEMA_NOT_EXIST, BLACK_LIST_MATCH_ALL, BLACK_LIST_CONTAIN_NON_WHITE_SCHEMA, BLACK_WHITE_LIST_PARAM_INVALID_ERROR, OPERATOR_ERROR, OPERATOR_DIMENSION_NOT_SUPPORT, OPERATOR_PULL_LOG_ERROR, OPERATOR_UPDATE_CONFIG_NOT_SUPPORT, KAFKA_CREATE_TOPIC_ERROR, KAFKA_QUERY_TOPIC_ERROR, KAFKA_BUILD_PROPERTIES_ERROR, ROCKETMQ_CREATE_TOPIC_ERROR, ROCKETMQ_QUERY_TOPIC_ERROR, SYNC_OBJECT_EMPTY_ERROR, WRITER_NUMBER_NOT_UNIQUE, WRITER_NOT_ACTIVE, PROJECT_NAME_DUPLICATE_ERROR, EMPTY_FAILED_STRUCT_MIGRATION_TABLES_ERROR, LOGIC_TABLE_NOT_SUPPORT_UPDATE_OBJECT_ERROR, LOGIC_REQUEST_ERROR, LOGIC_DTO_BUILD_ERROR, UNEXPECTED_REMOTE_API_RESULT, OCEANBASE_USER_UNEXPECTED, STORE_CREATE_FAILED_ERROR, STORE_START_FAILED, STORE_NOT_PULL_LOG_ERROR, ALL_HOSTS_STATUS_ERROR, WORKER_ECS_NOT_FOUND_ERROR, WORKER_ECS_NOT_FOUND_FOR_USER_ERROR, WORKER_POD_NOT_FOUND_ERROR, WORKER_POD_NOT_FOUND_FOR_USER_ERROR, WORKER_INSTANCE_NOT_FOUND_ERROR_V2, WORKER_INSTANCE_NOT_FOUND_FOR_USER_ERROR)
+             * The error code, such as AUTHENTICATION_ERROR, PARAM_ERROR, PARAM_ERROR_MESSAGE, NOT_IMPLEMENTED_ERROR, SHARD_COLUMNS_CONFLICT_MESSAGE, FAILED_PARSE_TOKEN_MESSAGE, CONNECT_CHECK_ERROR, NOT_SUPPORT_ERROR, CE_NOT_SUPPORT_ERROR, NOT_FOUND_ERROR, SHARDING_COLUMN_NOT_INCLUDED_ERROR, INNER_ERROR, DB_QUERY_ERROR, DATAHUB_QUERY_ERROR, USER_LACK_SYS_PRIV_ERROR, USER_LACK_TABLE_PRIV_ERROR, RM_API_ERROR, RM_TASK_ERROR, CM_API_ERROR, CM_API_NOT_SUCCESS, BAGUALU_API_ERROR, IDB_API_ERROR, SUPERVISOR_API_ERROR, OCP_API_ERROR, OCP_SERVICE_ERROR, OCP_QUERY_VERSION_FAILED, OCP_VERSION_INCORRECT_ERROR, OCP_VERSION_NOT_SUPPORTED_ERROR, OCP_API_USER_PASSWORD_INCORRECT_ERROR, OBSCHEMA_ERROR, EXECUTOR_THREAD_POOL_BUSY, NO_TABLE_SELECTED, NO_VIEW_SELECTED, SOURCE_CRAWLER_START_FAILED, SOURCE_CRAWLER_START_FAILED_DATA_EXPIRED, SOURCE_CRAWLER_START_TIMEOUT, DEST_WRITER_START_FAILED, WRITER_UNKNOWN_STATUS, DRC_TOPIC_EXISTS_ERROR, TOPIC_EMPTY_ERROR, REACH_WRITER_LIMIT_ERROR, FOUND_NO_FEASIBLE_STORE_ERROR, TOO_MANY_STORES_FOR_SUBTOPIC, TIMEOUT_EXCEPTION, KIPP_API_ERROR, KIPP_API_RESOURCE_NOT_FOUND, KIPP_API_INVALID_PARAM, KIPP_API_UNKNOWN_ERROR, KIPP_API_INTERNAL_ERROR, KIPP_API_SERVICE_UNAVAILABLE, OMS_AGENT_API_ERROR, KMS_API_ERROR, OMS_ENCRYPT_API_ERROR, OMS_DECRYPT_API_ERROR, ALIYUN_SDK_ERROR, YAOCHI_API_ERROR, RESOURCE_WITHOUT_STOCK_ERROR, RESOURCE_NO_AVAILABLE_ZONE, CM_SDK_ERROR, MIGRATION_PROJECT_STEP_PRECHECK_FAILED, PRE_CHECK_ERROR, FAILURES_CORRECT_ERROR, EXECUTE_DDL_FAILURE, EXECUTE_DDL_UNSUPPORTED_OR_FAILURE, STRUCT_RECORD_DDL_NOT_FOUND, STRUCT_RECORD_INDEX_NOT_FOUND, STRUCT_RECORD_NOT_FOUND, STRUCT_RECORD_NOT_FOUND_IN_DBCAT, SCHEMA_OBJECT_TYPE_NOT_SUPPORT_ERROR, POLAR_MYSQL_NETWORK_TYPE_NOT_SUPPORT_ERROR, RDS_NETWORK_TYPE_NOT_SUPPORT_ERROR, RDS_VPC_NETWORK_NOT_SUPPORT_ERROR, DB_TYPE_NOT_SUPPORT_ERROR, SYNC_TYPE_NOT_SUPPORT_ERROR, SLAVE_OPERATION_STEP_NOT_SUPPORT_ERROR, BYTE_USED_TYPE_NOT_SUPPORT_ERROR, MANY_TO_ONE_SCHEMA_TABLE_REVERSE_INCR_NOT_SUPPORT_ERROR, DUPLICATE_SCHEMA_TABLE_ERROR, OMS_STEP_NOT_SUPPORT_ERROR, ORACLE_DATABASE_ROLE_NOT_SUPPORT_ERROR, OLD_PRE_CHECK_NOT_SUPPORT_ERROR, SCHEMA_ONE_TO_MANY_NOT_SUPPORT_ERROR, PROJECT_NOT_FOUND_ERROR, ENDPOINT_NOT_FOUND_ERROR, ENDPOINT_NAME_ALREADY_EXIST_ERROR, ENDPOINT_QUERY_ERROR, ENDPOINT_SQL_QUERY_ERROR, PROJECT_NAME_ALREADY_EXIST_ERROR, CHECKER_NOT_FOUND_ERROR, CHECKER_FAILED_ERROR, CHECKER_STATUS_UNEXPECTED_ERROR, CHECKER_NO_TASK_TYPE_ERROR, WORKER_INSTANCE_NOT_FOUND_ERROR, WORKER_INSTANCE_ALLOCATING_ERROR, LOG_SERVICE_TOPIC_NOT_FOUND_ERROR, CLUSTER_NOT_FOUND_ERROR, TENANT_NOT_FOUND_ERROR, DATABASE_NOT_FOUND_ERROR, TABLE_NOT_FOUND_ERROR, COLUMN_NOT_FOUND_ERROR, TABLE_META_NOT_FOUND_ERROR, SYBASE_CHARSET_NOT_FOUND_ERROR, OCP_NOT_FOUND_ERROR, REGION_NOT_FOUND_ERROR, OCP_ALREADY_EXIST_ERROR, ALARM_CHANNEL_NAME_ALREADY_EXIST_ERROR, SEND_MARKDOWN_TEXT_TO_WEBHOOK_FAILED_EXCEPTION_RESPONSE, SEND_MARKDOWN_TEXT_TO_WEBHOOK_FAILED_EXCEPTION_STATUS, LABEL_ALREADY_EXIST_ERROR, LABEL_NOT_EXIST_ERROR, OCP_ALREADY_USED_ERROR, REGION_INFO_INCONSISTENT_ERROR, OCP_NAME_EMPTY_ERROR, MASTER_SLAVE_ENDPOINT_NAME_INCONSISTENT_ERROR, LOG_FILE_NOT_FOUND_ERROR, OPERATION_NOT_ALLOWED_ERROR, PROJECT_OPERATION_NOT_ALLOWED_ERROR, PROJECT_RELEASE_FAILED, STRUCT_MIGRATION_RETRY_NOT_ALLOWED_ERROR, WORKER_INSTANCE_OPERATION_NOT_ALLOWED_ERROR, USER_OPERATION_NOT_ALLOWED_ERROR, OCP_NAME_OR_REGION_NOT_ALLOWED_UPDATE, UPDATE_CONFIG_WITH_NEWLINE_NOT_ALLOWED, EXIST_UNRELEASED_PROJECT_ERROR, EXIST_UNRELEASED_TOPIC_ERROR, LABEL_CREATE_NOT_ALLOWED_ERROR, LABEL_UPDATE_NOT_ALLOWED_ERROR, LABEL_DELETE_NOT_ALLOWED_ERROR, TOPIC_NAME_INVALID_ERROR, INVALID_STATUS_ERROR, INVALID_CSV_HEAD_ERROR, INVALID_CSV_BODY_ERROR, DUPLICATE_SCHEMA_TABLE_SETTING_ERROR, PROJECT_INVALID_STATUS_ERROR, PROJECT_INVALID_CONNECTOR_COUNT_ERROR, WORKER_INSTANCE_INVALID_STATUS_ERROR, LOG_SERVICE_INVALID_STATUS_ERROR, STEP_INVALID_STATUS_ERROR, UPDATE_ALLOW_DEST_TABLE_NOT_EMPTY_NOT_ALLOWED_ERROR, EXIST_INCONSISTENCY_ERROR, OMS_SWITCH_SUBSTEP_FAILED_ERROR, ENDPOINT_ID_INVALID_ERROR, DB_QUERY_VERSION_EMPTY_ERROR, ENDPOINT_NAME_INVALID_ERROR, ENDPOINT_SCHEMA_NOT_ALLOWED_ERROR, ENDPOINT_SCHEMA_CHAR_NOT_ALLOWED_ERROR, NAME_HAS_SPACE_EXCEPTION, CONFIG_CONVERT_VALUE_ERROR, CONFIG_VALUE_EXCEEDS_LIMIT_ERROR, CONFIG_KEY_NOT_FOUND_KEY_ERROR, CONFIG_VALUE_NOT_EMPTY_ERROR, SCHEMA_HAS_CONVERT_INFO, TIME_SERIES_QUERY_SERVICE_ERROR, ETL_VERIFY_ERROR, ETL_SYNTAX_UNSUPPORTED, ETL_FIELD_NOTFOUND, ETL_FAILED_PARSE_SQL, ETL_VAL_TYPE_ERROR, NOT_SUPPORT_GENERATE_COLUMNS, NOT_SUPPORT_UPDATE_ETL, LOCK_FAILED, OMS_USER_EXIST_ERROR, OMS_USER_NOT_FOUND_ERROR, OMS_USER_NAME_LENGTH_CONSTRAINT, OMS_USER_PASSWORD_ERROR, USER_NAME_OR_PASSWORD_ERROR, OMS_USER_PASSWORD_VALIDATION_ERROR, OMS_USER_PASSWORD_DEFAULT_ERROR, OMS_USER_PERMISSION_DENIED_ERROR, OMS_USER_EDIT_ADMIN_ROLE_INFO_PERMISSION_DENIED_ERROR, OMS_USER_ILLEGAL_DELETED_ERROR, CONNECTOR_TASK_NOT_FOUND_ERROR, CONNECTOR_TASK_NUM_LIMIT_ERROR, CONNECTOR_TASK_DELETE_ERROR, METRIC_SERVICE_ERROR, SYNC_PROJECT_TYPE_INVALID_ERROR, SYNC_SHARDING_COLUMNS_INVALID_ERROR, SYNC_PROJECT_PRODUCER_GROUP_INVALID_ERROR, SYNC_PROJECT_PRODUCER_GROUP_LIMIT_EXCEEDS_ERROR, SYNC_PROJECT_COMPLEMENT_CONFIG_ERROR, META_SCHEMA_CREATE_FAILED, RESUME_STEP_FAILED, SCHEMA_INCONSISTENCY, SCHEMA_CASCADE_MAPPING_NOT_SUPPORT_ERROR, SCHEMA_NOT_EXISTED, SCHEMA_EXISTED, SCHEMA_NOT_EXIST, BLACK_LIST_MATCH_ALL, BLACK_LIST_CONTAIN_NON_WHITE_SCHEMA, BLACK_WHITE_LIST_PARAM_INVALID_ERROR, OPERATOR_ERROR, OPERATOR_DIMENSION_NOT_SUPPORT, OPERATOR_PULL_LOG_ERROR, OPERATOR_UPDATE_CONFIG_NOT_SUPPORT, KAFKA_CREATE_TOPIC_ERROR, KAFKA_QUERY_TOPIC_ERROR, KAFKA_BUILD_PROPERTIES_ERROR, ROCKETMQ_CREATE_TOPIC_ERROR, ROCKETMQ_QUERY_TOPIC_ERROR, SYNC_OBJECT_EMPTY_ERROR, WRITER_NUMBER_NOT_UNIQUE, WRITER_NOT_ACTIVE, PROJECT_NAME_DUPLICATE_ERROR, EMPTY_FAILED_STRUCT_MIGRATION_TABLES_ERROR, LOGIC_TABLE_NOT_SUPPORT_UPDATE_OBJECT_ERROR, LOGIC_REQUEST_ERROR, LOGIC_DTO_BUILD_ERROR, UNEXPECTED_REMOTE_API_RESULT, OCEANBASE_USER_UNEXPECTED, STORE_CREATE_FAILED_ERROR, STORE_START_FAILED, STORE_NOT_PULL_LOG_ERROR, ALL_HOSTS_STATUS_ERROR, WORKER_ECS_NOT_FOUND_ERROR, WORKER_ECS_NOT_FOUND_FOR_USER_ERROR, WORKER_POD_NOT_FOUND_ERROR, WORKER_POD_NOT_FOUND_FOR_USER_ERROR, WORKER_INSTANCE_NOT_FOUND_ERROR_V2, and WORKER_INSTANCE_NOT_FOUND_FOR_USER_ERROR.
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -1058,7 +1058,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 错误详情
+             * The error details.
              */
             public Builder errorDetails(java.util.List < ErrorDetails> errorDetails) {
                 this.errorDetails = errorDetails;
@@ -1066,7 +1066,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 错误消息
+             * The error message.
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
@@ -1074,7 +1074,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 错误相关参数
+             * The error related parameters.
              */
             public Builder errorParam(java.util.Map < String, String > errorParam) {
                 this.errorParam = errorParam;
@@ -1082,7 +1082,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 错误时间格式："yyyy-MM-ddTHH:mm:ss"
+             * The time when the error occurred.
              */
             public Builder failedTime(String failedTime) {
                 this.failedTime = failedTime;
@@ -1159,7 +1159,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             private Integer progress; 
 
             /**
-             * 预计剩余时间，秒单位(MAX)
+             * The estimated maximum time remained, in seconds.
              */
             public Builder estimatedRemainingTimeOfSec(Long estimatedRemainingTimeOfSec) {
                 this.estimatedRemainingTimeOfSec = estimatedRemainingTimeOfSec;
@@ -1167,7 +1167,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 预估迁移数据量(SUM)
+             * The estimated amount of data to migrate.
              */
             public Builder estimatedTotalCount(Long estimatedTotalCount) {
                 this.estimatedTotalCount = estimatedTotalCount;
@@ -1175,7 +1175,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 已完成迁移数据量(SUM)
+             * The amount of data migrated.
              */
             public Builder finishedCount(Long finishedCount) {
                 this.finishedCount = finishedCount;
@@ -1476,7 +1476,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             private Boolean validated; 
 
             /**
-             * 预估总行数。
+             * The estimated total number of rows.
              */
             public Builder capacity(Long capacity) {
                 this.capacity = capacity;
@@ -1484,7 +1484,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 位点时间，unix timestamp，单位秒
+             * The checkpoint. The value is a unix timestamp in seconds.
              */
             public Builder checkpoint(String checkpoint) {
                 this.checkpoint = checkpoint;
@@ -1492,7 +1492,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 项目为同步项目时，表示同步项目的全量同步进度信息
+             * The full synchronization progress.
              */
             public Builder connectorFullProgressOverview(ConnectorFullProgressOverview connectorFullProgressOverview) {
                 this.connectorFullProgressOverview = connectorFullProgressOverview;
@@ -1500,7 +1500,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 资源部署Id
+             * The resource deployment ID.
              */
             public Builder deployId(String deployId) {
                 this.deployId = deployId;
@@ -1508,7 +1508,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 目标端读取/写入流量，单位：字节数/秒。
+             * The read/write throughput of the destination data source, in bytes per second.
              */
             public Builder dstIops(Long dstIops) {
                 this.dstIops = dstIops;
@@ -1516,7 +1516,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 目标端读取/写入 rps，单位：记录数/秒。
+             * The read/write RPS of the destination data source.
              */
             public Builder dstRps(Long dstRps) {
                 this.dstRps = dstRps;
@@ -1524,7 +1524,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 目标端读取/写入 rps 基准值。
+             * The read/write RPS baseline of the destination data source.
              */
             public Builder dstRpsRef(Long dstRpsRef) {
                 this.dstRpsRef = dstRpsRef;
@@ -1532,7 +1532,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 目标端读取/写入 rt，单位：毫秒/条。
+             * The read/write RT per record of the destination data source, in ms.
              */
             public Builder dstRt(Long dstRt) {
                 this.dstRt = dstRt;
@@ -1540,7 +1540,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 目标端读取/写入 rt 基准值。
+             * The read/write RT baseline of the destination data source.
              */
             public Builder dstRtRef(Long dstRtRef) {
                 this.dstRtRef = dstRtRef;
@@ -1548,7 +1548,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 位点采集时间，unix timestamp，单位秒
+             * The checkpoint collection time. The value is a unix timestamp in seconds.
              */
             public Builder gmt(Long gmt) {
                 this.gmt = gmt;
@@ -1556,7 +1556,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 全量校验不一致的数量
+             * The amount of inconsistent data found during full verification.
              */
             public Builder inconsistencies(Long inconsistencies) {
                 this.inconsistencies = inconsistencies;
@@ -1564,7 +1564,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 如果是增量场景，会是位点时间，unix timestamp, 单位秒
+             * The checkpoint in incremental synchronization. The value is a unix timestamp in seconds.
              */
             public Builder incrTimestampCheckpoint(Long incrTimestampCheckpoint) {
                 this.incrTimestampCheckpoint = incrTimestampCheckpoint;
@@ -1572,7 +1572,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 步骤的当前子 job id
+             * The ID of the current job of the step.
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -1580,7 +1580,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 已完成迁移行数/实际行数。
+             * The number of migrated rows.
              */
             public Builder processedRecords(Long processedRecords) {
                 this.processedRecords = processedRecords;
@@ -1588,7 +1588,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 子状态，skipped 标识这一步骤是否跳过
+             * A sub-status that indicates whether this step is skipped.
              */
             public Builder skipped(Boolean skipped) {
                 this.skipped = skipped;
@@ -1596,7 +1596,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 源端读取流量，单位：字节数/秒。
+             * The read throughput of the source data source, in bytes per second.
              */
             public Builder srcIops(Long srcIops) {
                 this.srcIops = srcIops;
@@ -1604,7 +1604,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 源端读取流量，基准值。
+             * The read throughput baseline of the source data source.
              */
             public Builder srcIopsRef(Long srcIopsRef) {
                 this.srcIopsRef = srcIopsRef;
@@ -1612,7 +1612,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 源端读取 rps，单位：记录数/秒。
+             * The read requests per second (RPS) of the source data source.
              */
             public Builder srcRps(Long srcRps) {
                 this.srcRps = srcRps;
@@ -1620,7 +1620,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 源端读取 rps 基准值。
+             * The read RPS baseline of the source data source.
              */
             public Builder srcRpsRef(Long srcRpsRef) {
                 this.srcRpsRef = srcRpsRef;
@@ -1628,7 +1628,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 源端读取 rt，单位：毫秒/条。
+             * The read response time (RT) per record of the source data source, in ms.
              */
             public Builder srcRt(Long srcRt) {
                 this.srcRt = srcRt;
@@ -1636,7 +1636,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 源端读取 rt 基准值。
+             * The read RT baseline of the source data source.
              */
             public Builder srcRtRef(Long srcRtRef) {
                 this.srcRtRef = srcRtRef;
@@ -1644,7 +1644,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 子状态，validated 标识全量校验 checker 是否已完成
+             * A sub-status that indicates whether the checker has completed full verification.
              */
             public Builder validated(Boolean validated) {
                 this.validated = validated;
@@ -1805,7 +1805,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             private String stepStatus; 
 
             /**
-             * 预计剩余时间，全量步骤时生效
+             * The estimated time remained.
              */
             public Builder estimatedRemainingSeconds(Long estimatedRemainingSeconds) {
                 this.estimatedRemainingSeconds = estimatedRemainingSeconds;
@@ -1813,7 +1813,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 补充信息（json）
+             * The additional information. The value is a JSON string.
              */
             public Builder extraInfo(ExtraInfo extraInfo) {
                 this.extraInfo = extraInfo;
@@ -1821,7 +1821,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 步骤结束时间，格式："yyyy-MM-ddTHH:mm:ss"
+             * The end time, in the format of "2020-05-22T17:04:18".
              */
             public Builder finishTime(String finishTime) {
                 this.finishTime = finishTime;
@@ -1829,7 +1829,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 当前步骤是否需要用户确认执行，不由后台调度推进。
+             * Indicates whether the current step must be confirmed by the user, rather than scheduled in the backend.
              */
             public Builder interactive(Boolean interactive) {
                 this.interactive = interactive;
@@ -1837,7 +1837,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 步骤开始时间，格式："yyyy-MM-ddTHH:mm:ss"
+             * The start time, in the format of "2020-05-22T17:04:18".
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -1845,7 +1845,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 步骤描述（结构迁移/全量迁移/全量校验/增量日志拉取/增量同步/增量校验）
+             * The description of the step, for example, schema migration, full migration, full verification, incremental log pull, incremental synchronization, or incremental verification.
              */
             public Builder stepDescription(String stepDescription) {
                 this.stepDescription = stepDescription;
@@ -1853,7 +1853,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 步骤详情（json）
+             * The step details. The value is a JSON string.
              */
             public Builder stepInfo(StepInfo stepInfo) {
                 this.stepInfo = stepInfo;
@@ -1861,7 +1861,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 步骤名（struct_migration/full_migration/full_validation/incr_log_pull/incr_sync/incr_validation） (PRE_CHECK, PREPARE, STRUCT_MIGRATION, INDEX_MIGRATION, STRUCT_SYNC, FULL_MIGRATION, APP_SWITCH, REVERSE_INCR_SYNC, FULL_VALIDATION, INCR_LOG_PULL, INCR_SYNC, INCR_VALIDATION, SYNC_PREPARE, SYNC_INCR_LOG_PULL, CONNECTOR_FULL_SYNC, CONNECTOR_INCR_SYNC)
+             * The step name. Valid values: struct_migration, full_migration, full_validation, incr_log_pull, incr_sync/incr_validation, PRE_CHECK, PREPARE, STRUCT_MIGRATION, INDEX_MIGRATION, STRUCT_SYNC, FULL_MIGRATION, APP_SWITCH, REVERSE_INCR_SYNC, FULL_VALIDATION, INCR_LOG_PULL, INCR_SYNC, INCR_VALIDATION, SYNC_PREPARE, SYNC_INCR_LOG_PULL, CONNECTOR_FULL_SYNC, or CONNECTOR_INCR_SYNC.
              */
             public Builder stepName(String stepName) {
                 this.stepName = stepName;
@@ -1869,7 +1869,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 步骤顺序
+             * The sequence of steps.
              */
             public Builder stepOrder(Integer stepOrder) {
                 this.stepOrder = stepOrder;
@@ -1877,7 +1877,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 步骤进度, 整数单位为 %
+             * The step progress.
              */
             public Builder stepProgress(Integer stepProgress) {
                 this.stepProgress = stepProgress;
@@ -1885,7 +1885,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 步骤状态 (INIT: 初始化, RUNNING: 运行中, FAILED: 失败, FINISHED: 已完成, SUSPEND: 暂停中, MONITORING: 持续监控状态，用于增量同步和增量校验的持续监控态)
+             * The step status. Valid values: INIT, RUNNING, FAILED, FINISHED, SUSPEND, and MONITORING. The value MONITORING indicates the continuous monitoring of incremental synchronization and incremental verification.
              */
             public Builder stepStatus(String stepStatus) {
                 this.stepStatus = stepStatus;
@@ -1962,7 +1962,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             private java.util.List < String > primaryKeys; 
 
             /**
-             * 分布键列
+             * The list of distribution key columns.
              */
             public Builder distributedKeys(java.util.List < String > distributedKeys) {
                 this.distributedKeys = distributedKeys;
@@ -1970,7 +1970,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 表的生命周期
+             * The lifecycle of the table.
              */
             public Builder partitionLifeCycle(Integer partitionLifeCycle) {
                 this.partitionLifeCycle = partitionLifeCycle;
@@ -1978,7 +1978,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 分区表达式
+             * The partitioning expression.
              */
             public Builder partitionStatement(String partitionStatement) {
                 this.partitionStatement = partitionStatement;
@@ -1986,7 +1986,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 主键列
+             * The list of primary key columns.
              */
             public Builder primaryKeys(java.util.List < String > primaryKeys) {
                 this.primaryKeys = primaryKeys;
@@ -2111,7 +2111,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             private String whereClause; 
 
             /**
-             * ADB table schema，目标端为 ADB 时，额外配置信息，用于结构同步
+             * The schema of the ADB table. If the destination data source is ADB, you need to configure additional information for schema synchronization.
              */
             public Builder adbTableSchema(AdbTableSchema adbTableSchema) {
                 this.adbTableSchema = adbTableSchema;
@@ -2119,7 +2119,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 过滤列列表，即指定同步哪些列
+             * The list of filter columns, which are the columns to be synchronized.
              */
             public Builder filterColumns(java.util.List < String > filterColumns) {
                 this.filterColumns = filterColumns;
@@ -2127,7 +2127,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 映射对象 table/topic，目的端为数据库时，此参数为映射表名，目的端为消息队列时，此参数为映射 topic
+             * The name of the mapped-to table or topic. If the destination data source is a database, this parameter specifies the name of the mapped-to table. If the destination data source is a message queue system, this parameter specifies the name of the mapped-to topic.
              */
             public Builder mappedName(String mappedName) {
                 this.mappedName = mappedName;
@@ -2135,7 +2135,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 分片键列列表，用于目标端为消息队列的场景，安
+             * The list of sharding key columns. This parameter applies to scenarios where the destination data source is a message queue system.
              */
             public Builder shardColumns(java.util.List < String > shardColumns) {
                 this.shardColumns = shardColumns;
@@ -2143,7 +2143,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 表 ID，源端为逻辑数据源 IDB 时生效
+             * The ID of the table. This parameter takes effect when the source data source is IDB.
              */
             public Builder tableId(String tableId) {
                 this.tableId = tableId;
@@ -2151,7 +2151,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 表名
+             * The name of the table.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -2167,7 +2167,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 行过滤表
+             * The row filter conditions.
              */
             public Builder whereClause(String whereClause) {
                 this.whereClause = whereClause;
@@ -2268,7 +2268,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * 库 ID，源端为逻辑数据源 IDB 时生效
+             * The ID of the database. This parameter takes effect when the source data source is IDB.
              */
             public Builder databaseId(String databaseId) {
                 this.databaseId = databaseId;
@@ -2276,7 +2276,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 库名
+             * The name of the database.
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -2284,7 +2284,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 映射对象 database，目标端为数据库时生效
+             * The mapped-to database. This parameter takes effect when the destination data source is a database.
              */
             public Builder mappedName(String mappedName) {
                 this.mappedName = mappedName;
@@ -2292,7 +2292,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 当前库下的传输表对象配置
+             * The settings for the target table objects in the current database.
              */
             public Builder tables(java.util.List < Tables> tables) {
                 this.tables = tables;
@@ -2300,7 +2300,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 映射对象租户，源端为 OceanBase 时生效
+             * The mapped-to tenant. This parameter takes effect when the source data source is OceanBase Database.
              */
             public Builder tenantName(String tenantName) {
                 this.tenantName = tenantName;
@@ -2361,7 +2361,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             private String mode; 
 
             /**
-             * 传统映射（源端库表映射），当且仅当 mode 为 NORMAL 是生效
+             * The table mapping in the source data source, which is a conventional mapping scheme and takes effect only when Mode is set to NORMAL.
              */
             public Builder databases(java.util.List < Databases> databases) {
                 this.databases = databases;
@@ -2369,7 +2369,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 映射类型 (NORMAL, WHITE_AND_BLACK_LIST)
+             * The mapping type. Valid values: \"NORMAL\" and \"WHITE_AND_BLACK_LIST\".
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -2458,7 +2458,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             private String transferStepType; 
 
             /**
-             * 有增量同步阶段时，同步的增量数据类型
+             * The list of data types of incremental data synchronized in incremental synchronization.
              */
             public Builder recordTypeList(java.util.List < String > recordTypeList) {
                 this.recordTypeList = recordTypeList;
@@ -2466,7 +2466,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 有增量同步阶段时，增量起始位点，秒级时间戳
+             * The start time for incremental synchronization. The value is a timestamp in seconds.
              */
             public Builder startTimestamp(Long startTimestamp) {
                 this.startTimestamp = startTimestamp;
@@ -2474,7 +2474,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 有增量同步阶段，且增量日志拉取组件为 Store 时，日志保存时间
+             * The retention time of logs when incremental synchronization is enabled and the incremental log pull component is Store.
              */
             public Builder storeLogKeptHour(Long storeLogKeptHour) {
                 this.storeLogKeptHour = storeLogKeptHour;
@@ -2482,7 +2482,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 有增量同步阶段时，且增量日志拉取组件为 Store 时，是否开启事务内序号编排
+             * Indicates whether intra-transaction sequencing is enabled when incremental synchronization is enabled and the incremental log pull component is Store.
              */
             public Builder storeTransactionEnabled(Boolean storeTransactionEnabled) {
                 this.storeTransactionEnabled = storeTransactionEnabled;
@@ -2567,7 +2567,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             private IncrSyncStepTransferConfig incrSyncStepTransferConfig; 
 
             /**
-             * 开启全量迁移
+             * Indicates whether full migration is enabled.
              */
             public Builder enableFullSync(Boolean enableFullSync) {
                 this.enableFullSync = enableFullSync;
@@ -2575,7 +2575,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 开启增量同步
+             * Indicates whether incremental synchronization is enabled.
              */
             public Builder enableIncrSync(Boolean enableIncrSync) {
                 this.enableIncrSync = enableIncrSync;
@@ -2583,7 +2583,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 开启结构同步
+             * Indicates whether schema synchronization is enabled.
              */
             public Builder enableStructSync(Boolean enableStructSync) {
                 this.enableStructSync = enableStructSync;
@@ -2591,7 +2591,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 增量同步步骤配置
+             * The settings of incremental synchronization steps.
              */
             public Builder incrSyncStepTransferConfig(IncrSyncStepTransferConfig incrSyncStepTransferConfig) {
                 this.incrSyncStepTransferConfig = incrSyncStepTransferConfig;
@@ -2740,7 +2740,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             private TransferStepConfig transferStepConfig; 
 
             /**
-             * 业务系统标识(可选), 投递消息带上的特定字段
+             * The business system identifier, which is optional and is a specific field of the Post message.
              */
             public Builder businessName(String businessName) {
                 this.businessName = businessName;
@@ -2748,7 +2748,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 目标端传输配置
+             * The settings of the destination data source.
              */
             public Builder destConfig(DestConfig destConfig) {
                 this.destConfig = destConfig;
@@ -2756,7 +2756,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 标签id集合
+             * A collection of label IDs.
              */
             public Builder labels(java.util.List < Labels> labels) {
                 this.labels = labels;
@@ -2764,7 +2764,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 项目id
+             * The project ID.
              */
             public Builder projectId(String projectId) {
                 this.projectId = projectId;
@@ -2772,7 +2772,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 项目名称
+             * The name of the project.
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -2780,7 +2780,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 项目 Owner
+             * The project owner.
              */
             public Builder projectOwner(String projectOwner) {
                 this.projectOwner = projectOwner;
@@ -2788,7 +2788,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 源端传输配置
+             * The settings of the source data source.
              */
             public Builder sourceConfig(SourceConfig sourceConfig) {
                 this.sourceConfig = sourceConfig;
@@ -2796,7 +2796,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 项目步骤详情
+             * The detailed project steps.
              */
             public Builder steps(java.util.List < Steps> steps) {
                 this.steps = steps;
@@ -2804,7 +2804,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 传输对象的映射关系
+             * The mappings for the synchronization objects.
              */
             public Builder transferMapping(TransferMapping transferMapping) {
                 this.transferMapping = transferMapping;
@@ -2812,7 +2812,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 传输步骤配置
+             * The settings of synchronization steps
              */
             public Builder transferStepConfig(TransferStepConfig transferStepConfig) {
                 this.transferStepConfig = transferStepConfig;
@@ -2889,7 +2889,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             private String proposal; 
 
             /**
-             * 错误码（新）
+             * The error code (new).
              */
             public Builder code(String code) {
                 this.code = code;
@@ -2897,7 +2897,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 错误等级（CRITICAL, ERROR, WARN）
+             * The error level. Valid values: CRITICAL, ERROR, and WARN.
              */
             public Builder level(String level) {
                 this.level = level;
@@ -2905,7 +2905,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 错误描述（新）
+             * The error description (new).
              */
             public Builder message(String message) {
                 this.message = message;
@@ -2913,7 +2913,7 @@ public class SearchOmsOpenAPIProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 建议（新）
+             * The suggestions (new).
              */
             public Builder proposal(String proposal) {
                 this.proposal = proposal;

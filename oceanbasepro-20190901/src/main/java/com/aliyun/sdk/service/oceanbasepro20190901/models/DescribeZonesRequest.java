@@ -92,7 +92,11 @@ public class DescribeZonesRequest extends Request {
         }
 
         /**
-         * 集群的部署类型。- multiple：多机房 - single：单机房 - dual：双机房
+         * The deployment type of the cluster. Valid values:   
+         * <p>
+         * - multiple: multi-IDC deployment   
+         * - single: single-IDC deployment   
+         * - dual: dual-IDC deployment
          */
         public Builder deployType(String deployType) {
             this.putBodyParameter("DeployType", deployType);
@@ -101,7 +105,9 @@ public class DescribeZonesRequest extends Request {
         }
 
         /**
-         * Oceanbase集群的系列 - normal（默认）：高可用版本 - basic：基础版本
+         * The series of the OceanBase cluster. Valid values:   
+         * <p>
+         * NORMAL: the high availability version. This is the default value.
          */
         public Builder series(String series) {
             this.putBodyParameter("Series", series);

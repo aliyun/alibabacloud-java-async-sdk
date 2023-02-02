@@ -250,7 +250,11 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * 是否要自动续费。当参数ChargeType取值PrePaid时生效。取值范围：  true：自动续费。 false（默认）：不自动续费。
+         * Specifies whether to enable automatic renewal.   
+         * <p>
+         * This parameter is valid only when the ChargeType parameter is set to PrePaid. Valid values: 
+         * - true: enables automatic renewal for the instance.   
+         * - false: disables automatic renewal for the instance. This is the default value.
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putBodyParameter("AutoRenew", autoRenew);
@@ -259,7 +263,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * 每次自动续费的时长，当参数AutoRenew取值True时，该参数为必填参数。  PeriodUnit为Week时，AutoRenewPeriod取值范围为{"1", "2", "3"}。  PeriodUnit为Month时，AutoRenewPeriod取值范围为{"1", "2", "3", "6", "12"}。
+         * The automatic renewal period of the instance. This parameter is required when the AutoRenew parameter is set to true. Valid values:  
+         * <p>
+         * - If the PeriodUnit parameter is set to Week: 1, 2, and 3.   
+         * - If the PeriodUnit parameter is set to Month: 1, 2, 3, 6, and 12.
          */
         public Builder autoRenewPeriod(Long autoRenewPeriod) {
             this.putBodyParameter("AutoRenewPeriod", autoRenewPeriod);
@@ -268,7 +275,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * 实例的付费方式。取值范围：  PrePay：包年包月。选择该类付费方式时，您必须确认自己的账号支持余额支付/信用支付，否则将返回 InvalidPayMethod的错误提示。 PostPay（默认）：按量付费。其默认按小时来计费
+         * The billing method of the instance. Valid values:  
+         * <p>
+         * -PrePay: the subscription billing method. You must ensure that the remaining balance or credit balance of your account can cover the cost of the subscription. Otherwise, you will receive an InvalidPayMethod error. 
+         * - PostPay: the pay-as-you-go billing method. This is the default value. By default, fees are charged on an hourly basis.
          */
         public Builder chargeType(String chargeType) {
             this.putBodyParameter("ChargeType", chargeType);
@@ -277,7 +287,14 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * 存储空间大小，单位GB。  存储空间的限制根据集群规格不同而不同，具体如下：  - 8C32GB：100GB~10000GB  - 14C70GB：200GB~10000GB  - 30C180GB：400GB~10000GB  - 62C400G：800GB-10000GB。  各套餐的存储空间默认值为其最小值。
+         * The size of the storage space, in GB.    
+         * <p>
+         * The limits on the storage space vary with the cluster specifications:   
+         * - 8C32GB: 100 GB to 10000 GB   
+         * - 14C70GB: 200 GB to 10000 GB   
+         * - 30C180GB: 400 GB to 10000 GB   
+         * - 62C400GB: 800 GB to 10000 GB    
+         * The preceding minimum storage space sizes are the default storage space sizes of the corresponding cluster specification plans.
          */
         public Builder diskSize(Long diskSize) {
             this.putBodyParameter("DiskSize", diskSize);
@@ -295,7 +312,13 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * 集群规格信息。  当前支持四种套餐：  - 8C32GB：8核 32GB  - 14C70GB（默认）：14核 70GB  - 30C180GB：30核 180GB  - 62C400GB：62核 400GB
+         * The specifications of the cluster.     
+         * <p>
+         * You can specify one of the following four plans:   
+         *  - 8C32GB: indicates 8 CPU cores and 32 GB of memory.    
+         *  - 14C70GB: indicates 14 CPU cores and 70 GB of memory. This is the default value.     
+         * - 30C180GB: indicates 30 CPU cores and 180 GB of memory.     
+         * - 62C400GB: indicates 62 CPU cores and 400 GB of memory.
          */
         public Builder instanceClass(String instanceClass) {
             this.putBodyParameter("InstanceClass", instanceClass);
@@ -304,7 +327,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * 集群名称。
+         * The name of the OceanBase cluster.    
+         * <p>
+         * It must be 1 to 20 characters in length.   
+         * If this parameter is not specified, the value is the instance ID of the cluster by default.
          */
         public Builder instanceName(String instanceName) {
             this.putBodyParameter("InstanceName", instanceName);
@@ -322,7 +348,13 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * 购买资源的时长，单位由PeriodUnit指定。当参数InstanceChargeType取值为PrePaid时才生效且为必选值。一旦指定了DedicatedHostId，则取值范围不能超过专有宿主机的订阅时长。取值范围：  PeriodUnit=Week时，Period取值：{“1”, “2”, “3”, “4”}。 PeriodUnit=Month时，Period取值：{“1”, “2”, “3”, “4”, “5”, “6”, “7”, “8”, “9”, “12”, “24”, “36”, ”48”, ”60”}。
+         * The valid duration of the purchased resources. The unit is specified by the PeriodUnit parameter.   
+         * <p>
+         * This parameter is valid and required only when the InstanceChargeType parameter is set to PrePaid.   
+         * If the DedicatedHostId parameter is specified, the subscription period of the instance must be shorter than that of the dedicated host.   
+         * Valid values:    
+         * - If the PeriodUnit parameter is set to Week: 1, 2, 3, and 4.   
+         * - If the PeriodUnit parameter is set to Month: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.
          */
         public Builder period(Long period) {
             this.putBodyParameter("Period", period);
@@ -331,7 +363,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * 购买资源的时长。  包年包月取值范围： Month。 默认值：包年包月为Month，按量计费，默认周期为Hour。
+         * The unit of the valid duration of the purchased resources.     
+         * <p>
+         * Valid value for subscription: Month.   
+         * Default value: Month for subscription, and Hour for pay-as-you-go.
          */
         public Builder periodUnit(String periodUnit) {
             this.putBodyParameter("PeriodUnit", periodUnit);
@@ -340,7 +375,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * 实例所在的企业资源组ID
+         * The ID of the resource group to which the instance belongs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);
@@ -349,7 +384,9 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * 实例的系列  - normal（默认）：标准集群版（云盘）  - normal_ssd：标准集群版（本地盘） - history：历史库集群版。
+         * The series of the OceanBase cluster. Valid values:    
+         * <p>
+         * normal: the high availability edition. This is the default value.
          */
         public Builder series(String series) {
             this.putBodyParameter("Series", series);
@@ -358,7 +395,9 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * 实例所属的可用区ID。更多详情，请参见DescribeZones获取可用区列表。
+         * The ID of the zone to which the instance belongs.   
+         * <p>
+         * For more information about how to obtain the list of zones, see [DescribeZones](https://www.alibabacloud.com/help/zh/doc-detail/25610.htm).
          */
         public Builder zones(String zones) {
             this.putBodyParameter("Zones", zones);

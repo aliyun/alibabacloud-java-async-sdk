@@ -50,7 +50,7 @@ public class DescribeInstanceTenantModesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 租户模式列表。Oracle，Mysql
+         * The information of tenants.
          */
         public Builder instanceModes(java.util.List < String > instanceModes) {
             this.instanceModes = instanceModes;
@@ -58,7 +58,7 @@ public class DescribeInstanceTenantModesResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID。
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

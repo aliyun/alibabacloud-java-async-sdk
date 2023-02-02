@@ -94,7 +94,7 @@ public class DeleteTenantsRequest extends Request {
         }
 
         /**
-         * Oceanbase集群ID。
+         * The ID of the OceanBase cluster.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -103,7 +103,9 @@ public class DeleteTenantsRequest extends Request {
         }
 
         /**
-         * 租户的ID列表。 其为Json格式的数组，数组中每个对象都为租户名称的字符串。
+         * The list of tenant IDs.   
+         * <p>
+         * It is a JSON array. Each object in the array is a tenant name string.
          */
         public Builder tenantIds(String tenantIds) {
             this.putBodyParameter("TenantIds", tenantIds);

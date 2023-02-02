@@ -119,7 +119,7 @@ public class DescribeOmsOpenAPIProjectRequest extends Request {
         }
 
         /**
-         * 页序号，分页查询时生效
+         * The page number, which takes effect in a pagination query.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -128,7 +128,7 @@ public class DescribeOmsOpenAPIProjectRequest extends Request {
         }
 
         /**
-         * 页大小，分页查询时生效
+         * The page size, which takes effect in a pagination query.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -137,7 +137,7 @@ public class DescribeOmsOpenAPIProjectRequest extends Request {
         }
 
         /**
-         * 项目 id
+         * The project ID.
          */
         public Builder projectId(String projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -146,7 +146,7 @@ public class DescribeOmsOpenAPIProjectRequest extends Request {
         }
 
         /**
-         * 实例规格 ID，创建项目时生效
+         * The ID of the migration instance. Generally, if you want to create a project on a public cloud, you must first purchase a migration instance.
          */
         public Builder workerGradeId(String workerGradeId) {
             this.putBodyParameter("WorkerGradeId", workerGradeId);

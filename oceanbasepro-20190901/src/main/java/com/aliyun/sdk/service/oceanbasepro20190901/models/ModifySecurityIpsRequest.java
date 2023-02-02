@@ -106,7 +106,7 @@ public class ModifySecurityIpsRequest extends Request {
         }
 
         /**
-         * Oceanbase集群ID。
+         * The ID of the OceanBase cluster.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -115,7 +115,9 @@ public class ModifySecurityIpsRequest extends Request {
         }
 
         /**
-         * IP安全白名单组的组名。 由小写英文字符开头，由小写英文字符或者数字结尾，只能包含小写英文字符，数字和下划线，长度在 2-32 个字符之间。
+         * The name of the IP address whitelist group.   
+         * <p>
+         * It must be 2 to 32 characters in length, start with a lowercase letter, end with a lowercase letter or digit, and contain only lowercase letters, digits, and underscores (_).
          */
         public Builder securityIpGroupName(String securityIpGroupName) {
             this.putBodyParameter("SecurityIpGroupName", securityIpGroupName);
@@ -124,7 +126,9 @@ public class ModifySecurityIpsRequest extends Request {
         }
 
         /**
-         * IP安全白名单列表。 其为一个Json格式的数组，数组中每个对象为一个IP字符串或者IP段。最多可设置 40 个。
+         * The list of IP addresses and CIDR blocks in the whitelist.   
+         * <p>
+         * It is a JSON array. Each object in the array is an IP address or CIDR block. You can specify at most 40 IP addresses or CIDR blocks.
          */
         public Builder securityIps(String securityIps) {
             this.putBodyParameter("SecurityIps", securityIps);

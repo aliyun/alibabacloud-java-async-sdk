@@ -67,6 +67,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * To call this operation, you must add the IP address of the OceanBase Migration Service (OMS) server to the whitelist of the Alibaba Cloud database instance, the security rules of the ECS instance, or the security settings of your self-managed database (usually the firewall of your self-managed database) to ensure that OMS can successfully access your database instance. To obtain the IP address of the OMS server, go to the OMS data source management page in the OMS console.
+      *
+     */
     @Override
     public CompletableFuture<CreateOmsMysqlDataSourceResponse> createOmsMysqlDataSource(CreateOmsMysqlDataSourceRequest request) {
         try {
@@ -165,6 +169,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Before you call this operation, ensure that the following requirements are met:
+      * - The cluster is in the Running state.
+      * - The cluster is a primary cluster and the billing method is pay-as-you-go.
+      *
+     */
     @Override
     public CompletableFuture<DeleteInstancesResponse> deleteInstances(DeleteInstancesRequest request) {
         try {

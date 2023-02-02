@@ -108,7 +108,7 @@ public class CreateTenantReadOnlyConnectionRequest extends Request {
         }
 
         /**
-         * Oceanbase集群ID。
+         * The ID of the OceanBase cluster.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -117,7 +117,7 @@ public class CreateTenantReadOnlyConnectionRequest extends Request {
         }
 
         /**
-         * 租户ID。
+         * The ID of the tenant.
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);
@@ -126,7 +126,10 @@ public class CreateTenantReadOnlyConnectionRequest extends Request {
         }
 
         /**
-         * 可用区的ZoneId。 详细参见DescribeInstance中的AvailableZones。
+         * The ID of the zone.  
+         * <p>
+         * 
+         * For more information, see AvailableZones in DescribeInstance.
          */
         public Builder zoneId(String zoneId) {
             this.putBodyParameter("ZoneId", zoneId);

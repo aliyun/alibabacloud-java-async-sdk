@@ -122,7 +122,9 @@ public class ModifyDatabaseUserRolesRequest extends Request {
         }
 
         /**
-         * 数据库名称。 不能使用某些预留关键字，如 test、mysql。
+         * The name of the database.    
+         * <p>
+         * You cannot use reserved keywords, such as test and mysql.
          */
         public Builder databaseName(String databaseName) {
             this.putBodyParameter("DatabaseName", databaseName);
@@ -131,7 +133,7 @@ public class ModifyDatabaseUserRolesRequest extends Request {
         }
 
         /**
-         * Oceanbase集群ID。
+         * The ID of the OceanBase cluster.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -140,7 +142,7 @@ public class ModifyDatabaseUserRolesRequest extends Request {
         }
 
         /**
-         * 租户ID。
+         * The ID of the tenant.
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);
@@ -149,7 +151,7 @@ public class ModifyDatabaseUserRolesRequest extends Request {
         }
 
         /**
-         * 用户名及具备的角色列表。
+         * A list of usernames and their respective roles.
          */
         public Builder users(String users) {
             this.putBodyParameter("Users", users);

@@ -50,7 +50,7 @@ public class DescribeTenantZonesReadResponseBody extends TeaModel {
         private java.util.List < TenantZones> tenantZones; 
 
         /**
-         * 请求ID。
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeTenantZonesReadResponseBody extends TeaModel {
         }
 
         /**
-         * 租户可用区信息。
+         * The zone information of the tenant.
          */
         public Builder tenantZones(java.util.List < TenantZones> tenantZones) {
             this.tenantZones = tenantZones;
@@ -146,7 +146,7 @@ public class DescribeTenantZonesReadResponseBody extends TeaModel {
             private String zone; 
 
             /**
-             * 是否可选为主库。
+             * Indicates whether the zone can be set as the primary zone.
              */
             public Builder isElectable(Boolean isElectable) {
                 this.isElectable = isElectable;
@@ -154,7 +154,7 @@ public class DescribeTenantZonesReadResponseBody extends TeaModel {
             }
 
             /**
-             * 是否为主可用区。
+             * Indicates whether the zone is the primary zone.
              */
             public Builder isPrimary(Boolean isPrimary) {
                 this.isPrimary = isPrimary;
@@ -162,7 +162,7 @@ public class DescribeTenantZonesReadResponseBody extends TeaModel {
             }
 
             /**
-             * 是否已经创建只读连接。
+             * Indicates whether a read-only connection has been created.
              */
             public Builder isReadOnlyAddressMaster(Boolean isReadOnlyAddressMaster) {
                 this.isReadOnlyAddressMaster = isReadOnlyAddressMaster;
@@ -170,7 +170,7 @@ public class DescribeTenantZonesReadResponseBody extends TeaModel {
             }
 
             /**
-             * 是否可以设置为只读。
+             * Indicates whether a read-only connection needs to be created for the zone.
              */
             public Builder isReadable(String isReadable) {
                 this.isReadable = isReadable;
@@ -178,7 +178,7 @@ public class DescribeTenantZonesReadResponseBody extends TeaModel {
             }
 
             /**
-             * 可用区ID。
+             * The ID of the zone.
              */
             public Builder zone(String zone) {
                 this.zone = zone;

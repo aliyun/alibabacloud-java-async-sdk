@@ -50,7 +50,7 @@ public class DescribeOutlineBindingResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 绑定信息
+         * The binding information.
          */
         public Builder outlineBinding(OutlineBinding outlineBinding) {
             this.outlineBinding = outlineBinding;
@@ -58,7 +58,7 @@ public class DescribeOutlineBindingResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,7 +134,7 @@ public class DescribeOutlineBindingResponseBody extends TeaModel {
             private Long outlineId; 
 
             /**
-             * 绑定索引
+             * The bound index.
              */
             public Builder bindIndex(String bindIndex) {
                 this.bindIndex = bindIndex;
@@ -142,7 +142,7 @@ public class DescribeOutlineBindingResponseBody extends TeaModel {
             }
 
             /**
-             * 绑定计划
+             * The bound plan.
              */
             public Builder bindPlan(String bindPlan) {
                 this.bindPlan = bindPlan;
@@ -150,7 +150,7 @@ public class DescribeOutlineBindingResponseBody extends TeaModel {
             }
 
             /**
-             * 最大并发
+             * The maximum number of concurrent tasks.
              */
             public Builder maxConcurrent(Integer maxConcurrent) {
                 this.maxConcurrent = maxConcurrent;
@@ -158,7 +158,7 @@ public class DescribeOutlineBindingResponseBody extends TeaModel {
             }
 
             /**
-             * OutlineID
+             * OutlineID.
              */
             public Builder outlineId(Long outlineId) {
                 this.outlineId = outlineId;

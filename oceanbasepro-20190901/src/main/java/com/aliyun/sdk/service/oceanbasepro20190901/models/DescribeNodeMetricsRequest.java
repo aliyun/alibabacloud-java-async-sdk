@@ -193,7 +193,9 @@ public class DescribeNodeMetricsRequest extends Request {
         }
 
         /**
-         * 监控数据的结束时间。该时间只支持UTC时间，格式为：YYYY-MM-DDThh:mm:ssZ。
+         * The end time of the time range for querying monitoring data.   
+         * <p>
+         * The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.
          */
         public Builder endTime(String endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -202,7 +204,7 @@ public class DescribeNodeMetricsRequest extends Request {
         }
 
         /**
-         * Oceanbase集群ID。
+         * The ID of the OceanBase cluster.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -211,7 +213,9 @@ public class DescribeNodeMetricsRequest extends Request {
         }
 
         /**
-         * 监控指标项。当前可支持的指标及说明可参考：https://help.aliyun.com/document_detail/212099.html。
+         * The monitoring metrics.     
+         * <p>
+         * For more information about supported metrics, see [Node statistics](~~212099~~).
          */
         public Builder metrics(String metrics) {
             this.putBodyParameter("Metrics", metrics);
@@ -220,7 +224,7 @@ public class DescribeNodeMetricsRequest extends Request {
         }
 
         /**
-         * 节点列表
+         * The list of nodes.
          */
         public Builder nodeIdList(String nodeIdList) {
             this.putBodyParameter("NodeIdList", nodeIdList);
@@ -229,7 +233,7 @@ public class DescribeNodeMetricsRequest extends Request {
         }
 
         /**
-         * 节点名称
+         * The name of the node.
          */
         public Builder nodeName(String nodeName) {
             this.putBodyParameter("NodeName", nodeName);
@@ -238,7 +242,10 @@ public class DescribeNodeMetricsRequest extends Request {
         }
 
         /**
-         * 分页查询的页码。 起始值：1 默认值：1
+         * The number of the page to return.   
+         * <p>
+         * - Start value: 1   
+         * - Default value: 1
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -247,7 +254,10 @@ public class DescribeNodeMetricsRequest extends Request {
         }
 
         /**
-         * 分页查询时设置的每页行数。 最大值：100 默认值：10
+         * The number of rows to return on each page.   
+         * <p>
+         * - Maximum value: 100   
+         * - Default value: 10
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -256,7 +266,9 @@ public class DescribeNodeMetricsRequest extends Request {
         }
 
         /**
-         * 监控数据的起始时间。该时间只支持UTC时间，格式为：YYYY-MM-DDThh:mm:ssZ。
+         * The start time of the time range for querying monitoring data.   
+         * <p>
+         * The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.
          */
         public Builder startTime(String startTime) {
             this.putBodyParameter("StartTime", startTime);
@@ -265,7 +277,7 @@ public class DescribeNodeMetricsRequest extends Request {
         }
 
         /**
-         * 租户ID。
+         * The ID of the tenant.
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);

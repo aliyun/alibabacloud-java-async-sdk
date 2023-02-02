@@ -50,7 +50,7 @@ public class DescribeZonesResponseBody extends TeaModel {
         private java.util.List < Zones> zones; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeZonesResponseBody extends TeaModel {
         }
 
         /**
-         * 可用区列表信息
+         * The list of zones.
          */
         public Builder zones(java.util.List < Zones> zones) {
             this.zones = zones;
@@ -134,7 +134,7 @@ public class DescribeZonesResponseBody extends TeaModel {
             private String zoneName; 
 
             /**
-             * 部署模式
+             * The deployment mode.
              */
             public Builder deployType(String deployType) {
                 this.deployType = deployType;
@@ -142,7 +142,9 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * Oceanbase集群的系列  - NORMAL（默认）：高可用版本  - BASIC：基础版本
+             * The series of the OceanBase cluster. Valid values:   
+             * <p>
+             * NORMAL: the high availability version. This is the default value.
              */
             public Builder series(String series) {
                 this.series = series;
@@ -150,7 +152,9 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * 可用区ID列表。对于多可用区集群，其可用区名称以逗号连接
+             * The list of zone IDs.   
+             * <p>
+             * For a cluster with multiple zones, separate the zone names with commas (,).
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -158,7 +162,7 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * 可用区名称
+             * The name of the zone.
              */
             public Builder zoneName(String zoneName) {
                 this.zoneName = zoneName;

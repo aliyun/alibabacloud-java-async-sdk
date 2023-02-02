@@ -50,7 +50,7 @@ public class ModifyInstanceNameResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Oceanbase集群名称。
+         * The name of the OceanBase cluster.
          */
         public Builder instanceName(String instanceName) {
             this.instanceName = instanceName;
@@ -58,7 +58,7 @@ public class ModifyInstanceNameResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID。
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

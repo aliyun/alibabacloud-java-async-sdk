@@ -175,7 +175,7 @@ public class SearchOmsOpenAPIProjectsRequest extends Request {
         }
 
         /**
-         * 指定目的端类型
+         * The types of destination data sources.
          */
         public Builder destDbTypes(java.util.List < String > destDbTypes) {
             String destDbTypesShrink = shrink(destDbTypes, "DestDbTypes", "json");
@@ -185,7 +185,7 @@ public class SearchOmsOpenAPIProjectsRequest extends Request {
         }
 
         /**
-         * 指定标签
+         * The list of labels.
          */
         public Builder labelIds(java.util.List < String > labelIds) {
             String labelIdsShrink = shrink(labelIds, "LabelIds", "json");
@@ -195,7 +195,7 @@ public class SearchOmsOpenAPIProjectsRequest extends Request {
         }
 
         /**
-         * 页序号，分页查询时生效
+         * The page number, which takes effect in a pagination query.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -204,7 +204,7 @@ public class SearchOmsOpenAPIProjectsRequest extends Request {
         }
 
         /**
-         * 页大小，分页查询时生效
+         * The page size, which takes effect in a pagination query.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -213,7 +213,7 @@ public class SearchOmsOpenAPIProjectsRequest extends Request {
         }
 
         /**
-         * 模糊查询关键字，根据项目 id 和项目名称进行模糊搜索
+         * The keyword for fuzzy search. A fuzzy search is performed based on the project ID and name.
          */
         public Builder searchKey(String searchKey) {
             this.putBodyParameter("SearchKey", searchKey);
@@ -222,7 +222,7 @@ public class SearchOmsOpenAPIProjectsRequest extends Request {
         }
 
         /**
-         * 指定源端类型
+         * The types of source data sources.
          */
         public Builder sourceDbTypes(java.util.List < String > sourceDbTypes) {
             String sourceDbTypesShrink = shrink(sourceDbTypes, "SourceDbTypes", "json");
@@ -232,7 +232,7 @@ public class SearchOmsOpenAPIProjectsRequest extends Request {
         }
 
         /**
-         * 指定项目状态
+         * The list of project statuses.
          */
         public Builder statusList(java.util.List < String > statusList) {
             String statusListShrink = shrink(statusList, "StatusList", "json");
@@ -242,7 +242,7 @@ public class SearchOmsOpenAPIProjectsRequest extends Request {
         }
 
         /**
-         * 实例规格 ID，创建项目时生效
+         * The ID of the migration instance. Generally, if you want to create a project on a public cloud, you must first purchase a migration instance.
          */
         public Builder workerGradeId(String workerGradeId) {
             this.putBodyParameter("WorkerGradeId", workerGradeId);

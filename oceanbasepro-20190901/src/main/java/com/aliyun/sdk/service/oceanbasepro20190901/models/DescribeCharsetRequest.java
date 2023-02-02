@@ -78,7 +78,10 @@ public class DescribeCharsetRequest extends Request {
         }
 
         /**
-         * 租户模式。 当前支持Oracle模式（Oracle）、MySQL模式（MySQL） 详细参见：DescribeInstanceTenantModes。
+         * The tenant mode.    
+         * <p>
+         * Valid values: Oracle and MySQL.   
+         * For more information, see [DescribeInstanceTenantModes](~~410354~~).
          */
         public Builder tenantMode(String tenantMode) {
             this.putBodyParameter("TenantMode", tenantMode);

@@ -50,7 +50,7 @@ public class DescribeSlowSQLHistoryListResponseBody extends TeaModel {
         private SlowSQLHistoryList slowSQLHistoryList; 
 
         /**
-         * 请求ID
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeSlowSQLHistoryListResponseBody extends TeaModel {
         }
 
         /**
-         * 慢SQL历史列表
+         * The execution history of the slow SQL statement.
          */
         public Builder slowSQLHistoryList(SlowSQLHistoryList slowSQLHistoryList) {
             this.slowSQLHistoryList = slowSQLHistoryList;
@@ -566,7 +566,7 @@ public class DescribeSlowSQLHistoryListResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * AffectedRows.
+             * The number of rows affected.
              */
             public Builder affectedRows(Double affectedRows) {
                 this.affectedRows = affectedRows;
@@ -574,7 +574,7 @@ public class DescribeSlowSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * AppWaitTime.
+             * The wait time of the client.
              */
             public Builder appWaitTime(Double appWaitTime) {
                 this.appWaitTime = appWaitTime;
@@ -582,7 +582,7 @@ public class DescribeSlowSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * BlockCacheHit.
+             * The number of block cache hits.
              */
             public Builder blockCacheHit(Double blockCacheHit) {
                 this.blockCacheHit = blockCacheHit;
@@ -590,7 +590,7 @@ public class DescribeSlowSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * BlockIndexCacheHit.
+             * The number of block index cache hits.
              */
             public Builder blockIndexCacheHit(Double blockIndexCacheHit) {
                 this.blockIndexCacheHit = blockIndexCacheHit;
@@ -598,7 +598,7 @@ public class DescribeSlowSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * BloomFilterCacheHit.
+             * The number of Bloom filter cache hits.
              */
             public Builder bloomFilterCacheHit(Double bloomFilterCacheHit) {
                 this.bloomFilterCacheHit = bloomFilterCacheHit;
@@ -606,7 +606,7 @@ public class DescribeSlowSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * ClientIp.
+             * The IP address of the client.
              */
             public Builder clientIp(String clientIp) {
                 this.clientIp = clientIp;
@@ -614,7 +614,7 @@ public class DescribeSlowSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * ConcurrencyWaitTime.
+             * The wait time in concurrent execution.
              */
             public Builder concurrencyWaitTime(Double concurrencyWaitTime) {
                 this.concurrencyWaitTime = concurrencyWaitTime;
@@ -622,7 +622,7 @@ public class DescribeSlowSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * CpuTime.
+             * The average CPU time.
              */
             public Builder cpuTime(Double cpuTime) {
                 this.cpuTime = cpuTime;
@@ -630,7 +630,7 @@ public class DescribeSlowSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * DbName.
+             * The name of the database.
              */
             public Builder dbName(String dbName) {
                 this.dbName = dbName;
@@ -638,7 +638,7 @@ public class DescribeSlowSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * DecodeTime.
+             * The time to wait for decoding.
              */
             public Builder decodeTime(Double decodeTime) {
                 this.decodeTime = decodeTime;
@@ -646,7 +646,7 @@ public class DescribeSlowSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * DiskRead.
+             * The number of physical reads.
              */
             public Builder diskRead(Double diskRead) {
                 this.diskRead = diskRead;
@@ -654,7 +654,7 @@ public class DescribeSlowSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * ElapsedTime.
+             * The average response time.
              */
             public Builder elapsedTime(Double elapsedTime) {
                 this.elapsedTime = elapsedTime;
@@ -662,7 +662,7 @@ public class DescribeSlowSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * EndTimeUTCString.
+             * The end time.
              */
             public Builder endTimeUTCString(String endTimeUTCString) {
                 this.endTimeUTCString = endTimeUTCString;
@@ -670,7 +670,7 @@ public class DescribeSlowSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * Event.
+             * The wait event.
              */
             public Builder event(String event) {
                 this.event = event;
@@ -678,7 +678,7 @@ public class DescribeSlowSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * ExecPerSecond.
+             * The number of executions per second.
              */
             public Builder execPerSecond(Double execPerSecond) {
                 this.execPerSecond = execPerSecond;
@@ -686,7 +686,7 @@ public class DescribeSlowSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * ExecuteTime.
+             * The internal execution time.
              */
             public Builder executeTime(Double executeTime) {
                 this.executeTime = executeTime;
@@ -694,7 +694,7 @@ public class DescribeSlowSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * Executions.
+             * The number of executions.
              */
             public Builder executions(Double executions) {
                 this.executions = executions;
@@ -702,7 +702,7 @@ public class DescribeSlowSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * FailTimes.
+             * The number of failures.
              */
             public Builder failTimes(Double failTimes) {
                 this.failTimes = failTimes;
@@ -710,7 +710,7 @@ public class DescribeSlowSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * GetPlanTime.
+             * Hard parsing time.
              */
             public Builder getPlanTime(Double getPlanTime) {
                 this.getPlanTime = getPlanTime;
@@ -718,7 +718,7 @@ public class DescribeSlowSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * IOWaitTime.
+             * The I/O wait time.
              */
             public Builder IOWaitTime(Double IOWaitTime) {
                 this.IOWaitTime = IOWaitTime;
@@ -726,7 +726,7 @@ public class DescribeSlowSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * LogicalRead.
+             * The number of logical reads.
              */
             public Builder logicalRead(Double logicalRead) {
                 this.logicalRead = logicalRead;
@@ -734,7 +734,7 @@ public class DescribeSlowSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * MaxCpuTime.
+             * The maximum CPU time.
              */
             public Builder maxCpuTime(Double maxCpuTime) {
                 this.maxCpuTime = maxCpuTime;
@@ -742,7 +742,7 @@ public class DescribeSlowSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * MaxElapsedTime.
+             * The maximum response time.
              */
             public Builder maxElapsedTime(Double maxElapsedTime) {
                 this.maxElapsedTime = maxElapsedTime;
@@ -750,7 +750,7 @@ public class DescribeSlowSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * MemstoreReadRowCount.
+             * The number of rows read from the memory.
              */
             public Builder memstoreReadRowCount(Double memstoreReadRowCount) {
                 this.memstoreReadRowCount = memstoreReadRowCount;
@@ -758,7 +758,7 @@ public class DescribeSlowSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * MissPlans.
+             * The number of plan misses.
              */
             public Builder missPlans(Double missPlans) {
                 this.missPlans = missPlans;
@@ -766,7 +766,7 @@ public class DescribeSlowSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * NetWaitTime.
+             * The wait time for network.
              */
             public Builder netWaitTime(Double netWaitTime) {
                 this.netWaitTime = netWaitTime;
@@ -774,7 +774,7 @@ public class DescribeSlowSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * NodeIp.
+             * The IP address of the node.
              */
             public Builder nodeIp(String nodeIp) {
                 this.nodeIp = nodeIp;
@@ -782,7 +782,7 @@ public class DescribeSlowSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * QueueTime.
+             * The queuing time.
              */
             public Builder queueTime(Double queueTime) {
                 this.queueTime = queueTime;
@@ -790,7 +790,7 @@ public class DescribeSlowSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * RPCCount.
+             * The number of RPCs.
              */
             public Builder RPCCount(Double RPCCount) {
                 this.RPCCount = RPCCount;
@@ -798,7 +798,7 @@ public class DescribeSlowSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * RemotePlans.
+             * The number of remote plans.
              */
             public Builder remotePlans(Double remotePlans) {
                 this.remotePlans = remotePlans;
@@ -806,7 +806,7 @@ public class DescribeSlowSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * RetryCount.
+             * The number of retries.
              */
             public Builder retryCount(Double retryCount) {
                 this.retryCount = retryCount;
@@ -814,7 +814,7 @@ public class DescribeSlowSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * ReturnRows.
+             * The number of rows returned.
              */
             public Builder returnRows(Double returnRows) {
                 this.returnRows = returnRows;
@@ -822,7 +822,7 @@ public class DescribeSlowSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * RowCacheHit.
+             * The number of row cache hits.
              */
             public Builder rowCacheHit(Double rowCacheHit) {
                 this.rowCacheHit = rowCacheHit;
@@ -830,7 +830,7 @@ public class DescribeSlowSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * ScheduleTime.
+             * The scheduling duration.
              */
             public Builder scheduleTime(Double scheduleTime) {
                 this.scheduleTime = scheduleTime;
@@ -838,7 +838,7 @@ public class DescribeSlowSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * SqlId.
+             * SQLID.
              */
             public Builder sqlId(String sqlId) {
                 this.sqlId = sqlId;
@@ -846,7 +846,7 @@ public class DescribeSlowSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * SqlType.
+             * The SQL type.
              */
             public Builder sqlType(String sqlType) {
                 this.sqlType = sqlType;
@@ -854,7 +854,7 @@ public class DescribeSlowSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * SsstoreReadRowCount.
+             * The number of rows read from the disk.
              */
             public Builder ssstoreReadRowCount(Double ssstoreReadRowCount) {
                 this.ssstoreReadRowCount = ssstoreReadRowCount;
@@ -862,7 +862,7 @@ public class DescribeSlowSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * TenantName.
+             * The name of the tenant.
              */
             public Builder tenantName(String tenantName) {
                 this.tenantName = tenantName;
@@ -870,7 +870,7 @@ public class DescribeSlowSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * TotalWaitTime.
+             * The internal wait time.
              */
             public Builder totalWaitTime(Double totalWaitTime) {
                 this.totalWaitTime = totalWaitTime;
@@ -878,7 +878,7 @@ public class DescribeSlowSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * The username.
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -931,7 +931,7 @@ public class DescribeSlowSQLHistoryListResponseBody extends TeaModel {
             private java.util.List < List> list; 
 
             /**
-             * Count.
+             * The quantity.
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -939,7 +939,7 @@ public class DescribeSlowSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * List.
+             * The return result of the request.
              */
             public Builder list(java.util.List < List> list) {
                 this.list = list;

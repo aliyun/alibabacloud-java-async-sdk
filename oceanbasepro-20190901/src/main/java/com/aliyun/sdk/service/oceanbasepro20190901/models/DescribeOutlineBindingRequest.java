@@ -152,7 +152,7 @@ public class DescribeOutlineBindingRequest extends Request {
         }
 
         /**
-         * 数据库名称
+         * The name of the database.
          */
         public Builder databaseName(String databaseName) {
             this.putBodyParameter("DatabaseName", databaseName);
@@ -161,7 +161,7 @@ public class DescribeOutlineBindingRequest extends Request {
         }
 
         /**
-         * Oceanbase集群ID。
+         * The ID of the OceanBase cluster.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -170,7 +170,9 @@ public class DescribeOutlineBindingRequest extends Request {
         }
 
         /**
-         * 当值为True时，查询SQLID在数据库中的限流信息
+         * - When the value is set to True, the throttling information in the database is queried based on the SQL ID.   
+         * <p>
+         * - When the value is set to False, the bound index or execution plan in the database is queried based on the SQL ID.
          */
         public Builder isConcurrentLimit(Boolean isConcurrentLimit) {
             this.putBodyParameter("IsConcurrentLimit", isConcurrentLimit);
@@ -179,7 +181,7 @@ public class DescribeOutlineBindingRequest extends Request {
         }
 
         /**
-         * SQLID
+         * SQLID.
          */
         public Builder SQLId(String SQLId) {
             this.putBodyParameter("SQLId", SQLId);
@@ -188,7 +190,9 @@ public class DescribeOutlineBindingRequest extends Request {
         }
 
         /**
-         * 租户名称。 长度为2~20 个字符，支持英文字母、数字和下划线，区分大小写，必须以字母或下划线开头。 不可设置为 sys。
+         * The name of the tenant.    
+         * <p>
+         * It must start with a letter or an underscore (_), and contain 2 to 20 characters, which can be uppercase letters, lowercase letters, digits, and underscores (_). It cannot be set to SYS.
          */
         public Builder tableName(String tableName) {
             this.putBodyParameter("TableName", tableName);
@@ -197,7 +201,7 @@ public class DescribeOutlineBindingRequest extends Request {
         }
 
         /**
-         * 租户ID。
+         * The ID of the tenant.
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);

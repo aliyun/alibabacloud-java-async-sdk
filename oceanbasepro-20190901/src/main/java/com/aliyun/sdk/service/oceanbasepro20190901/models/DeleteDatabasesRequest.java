@@ -107,7 +107,9 @@ public class DeleteDatabasesRequest extends Request {
         }
 
         /**
-         * 数据库名称列表。 其为Json格式的数组，数组中每个对象都为数据库名称的字符串。
+         * The list of database names.    
+         * <p>
+         * It is a JSON array. Each object in the array is a database name string.
          */
         public Builder databaseNames(String databaseNames) {
             this.putBodyParameter("DatabaseNames", databaseNames);
@@ -116,7 +118,7 @@ public class DeleteDatabasesRequest extends Request {
         }
 
         /**
-         * Oceanbase集群ID。
+         * The ID of the OceanBase cluster.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -125,7 +127,7 @@ public class DeleteDatabasesRequest extends Request {
         }
 
         /**
-         * 租户ID。
+         * The ID of the tenant.
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);

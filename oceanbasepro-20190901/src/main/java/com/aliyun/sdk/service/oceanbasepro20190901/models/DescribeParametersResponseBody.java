@@ -50,7 +50,7 @@ public class DescribeParametersResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 参数列表信息
+         * The information of parameters.
          */
         public Builder parameters(java.util.List < Parameters> parameters) {
             this.parameters = parameters;
@@ -58,7 +58,7 @@ public class DescribeParametersResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID。
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -182,7 +182,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             private String valueType; 
 
             /**
-             * 参数的可接受取值范围。 其格式为具备两个字符串元素的数组类型，表示一个范围值，第一个元素为最小值，第二个元素为最大值。
+             * The valid value range of the parameter.  It is an array with two string elements, which represents a range. The first element represents the minimum value and the second element represents the maximum value.
              */
             public Builder acceptableValue(java.util.List < String > acceptableValue) {
                 this.acceptableValue = acceptableValue;
@@ -190,7 +190,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * 参数的当前取值。
+             * The current value of the parameter.
              */
             public Builder currentValue(String currentValue) {
                 this.currentValue = currentValue;
@@ -198,7 +198,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * 参数的默认取值。
+             * The default value of the parameter.
              */
             public Builder defaultValue(String defaultValue) {
                 this.defaultValue = defaultValue;
@@ -206,7 +206,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * 参数的描述信息。
+             * The description of the parameter.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -214,7 +214,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * 参数名称。
+             * The name of the parameter.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -222,7 +222,10 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * 修改此参数是否需要重启 - true：需要重启 - false：不需要重启
+             * Indicates whether a restart is required for changes to the parameter to take effect. Valid values:   
+             * <p>
+             * - true: A restart is required.   
+             * - false: A restart is not required.
              */
             public Builder needReboot(Boolean needReboot) {
                 this.needReboot = needReboot;
@@ -230,7 +233,9 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * 参数的不允许取值范围。 其格式为具备两个字符串元素的数组类型，表示一个范围值，第一个元素为最小值，第二个元素为最大值。
+             * The invalid value range of the parameter.    
+             * <p>
+             * It is an array with two string elements, which represents a range. The first element represents the minimum value and the second element represents the maximum value.
              */
             public Builder rejectedValue(java.util.List < String > rejectedValue) {
                 this.rejectedValue = rejectedValue;
@@ -238,7 +243,12 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * 参数取值的类型。 其支持： - ENUM: 数值枚举 - RANGE: 数值范围 - TIME: 时间 - CAPACITY：存储容量值（K，M，G）
+             * The type of the parameter value.    Valid values:   
+             * <p>
+             * - ENUM: an enumeration value.   
+             * - RANGE: a value range.   
+             * - TIME: a time value.   
+             * - CAPACITY: a storage capacity, in KB, MB, or GB.
              */
             public Builder valueType(String valueType) {
                 this.valueType = valueType;

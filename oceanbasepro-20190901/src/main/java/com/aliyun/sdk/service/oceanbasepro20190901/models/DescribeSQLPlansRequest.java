@@ -94,7 +94,7 @@ public class DescribeSQLPlansRequest extends Request {
         }
 
         /**
-         * SQLID
+         * SQLID.
          */
         public Builder SQLId(String SQLId) {
             this.putBodyParameter("SQLId", SQLId);
@@ -103,7 +103,7 @@ public class DescribeSQLPlansRequest extends Request {
         }
 
         /**
-         * 租户ID
+         * The ID of the tenant.
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);

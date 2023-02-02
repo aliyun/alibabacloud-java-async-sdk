@@ -123,7 +123,7 @@ public class ModifyTenantUserDescriptionRequest extends Request {
         }
 
         /**
-         * 数据库描述信息。
+         * The description of the database.
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -132,7 +132,7 @@ public class ModifyTenantUserDescriptionRequest extends Request {
         }
 
         /**
-         * Oceanbase集群ID。
+         * The ID of the OceanBase cluster.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -141,7 +141,7 @@ public class ModifyTenantUserDescriptionRequest extends Request {
         }
 
         /**
-         * 租户ID。
+         * The ID of the tenant.
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);
@@ -150,7 +150,9 @@ public class ModifyTenantUserDescriptionRequest extends Request {
         }
 
         /**
-         * 数据库账号名称。 不能使用某些预留关键字，如 SYS、root等。
+         * The name of the database account.   
+         * <p>
+         * You cannot use reserved keywords, such as SYS and root.
          */
         public Builder userName(String userName) {
             this.putBodyParameter("UserName", userName);

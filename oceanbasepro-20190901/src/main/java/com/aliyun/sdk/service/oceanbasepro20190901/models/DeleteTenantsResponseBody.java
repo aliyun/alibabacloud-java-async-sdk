@@ -50,7 +50,7 @@ public class DeleteTenantsResponseBody extends TeaModel {
         private java.util.List < String > tenantIds; 
 
         /**
-         * 请求ID。
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DeleteTenantsResponseBody extends TeaModel {
         }
 
         /**
-         * 租户的ID列表。
+         * The list of tenant IDs.
          */
         public Builder tenantIds(java.util.List < String > tenantIds) {
             this.tenantIds = tenantIds;

@@ -203,7 +203,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
         }
 
         /**
-         * 业务系统标识(可选), 投递消息带上的特定字段
+         * The business system identifier, which is optional and is a specific field of the Post message.
          */
         public Builder businessName(String businessName) {
             this.putBodyParameter("BusinessName", businessName);
@@ -212,7 +212,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
         }
 
         /**
-         * 目标端传输配置
+         * The settings of the destination data source.
          */
         public Builder destConfig(DestConfig destConfig) {
             String destConfigShrink = shrink(destConfig, "DestConfig", "json");
@@ -222,7 +222,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
         }
 
         /**
-         * 标签id集合
+         * A collection of label IDs.
          */
         public Builder labelIds(java.util.List < String > labelIds) {
             String labelIdsShrink = shrink(labelIds, "LabelIds", "json");
@@ -232,7 +232,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
         }
 
         /**
-         * 页序号，分页查询时生效
+         * The page number, which takes effect in a pagination query.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -241,7 +241,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
         }
 
         /**
-         * 页大小，分页查询时生效
+         * The page size, which takes effect in a pagination query.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -250,7 +250,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
         }
 
         /**
-         * 项目名称
+         * The name of the project.
          */
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);
@@ -259,7 +259,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
         }
 
         /**
-         * 源端传输配置
+         * The settings of the source data source.
          */
         public Builder sourceConfig(SourceConfig sourceConfig) {
             String sourceConfigShrink = shrink(sourceConfig, "SourceConfig", "json");
@@ -269,7 +269,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
         }
 
         /**
-         * 传输对象的映射关系
+         * The mappings for the synchronization objects.
          */
         public Builder transferMapping(TransferMapping transferMapping) {
             String transferMappingShrink = shrink(transferMapping, "TransferMapping", "json");
@@ -279,7 +279,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
         }
 
         /**
-         * 传输步骤配置
+         * The settings of synchronization steps.
          */
         public Builder transferStepConfig(TransferStepConfig transferStepConfig) {
             String transferStepConfigShrink = shrink(transferStepConfig, "TransferStepConfig", "json");
@@ -289,7 +289,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
         }
 
         /**
-         * 实例规格 ID，创建项目时生效
+         * The ID of the migration instance. Generally, if you want to create a project on a public cloud, you must first purchase a migration instance.
          */
         public Builder workerGradeId(String workerGradeId) {
             this.putBodyParameter("WorkerGradeId", workerGradeId);
@@ -463,7 +463,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             private String topicType; 
 
             /**
-             * 目标端为 RocketMQ 时，此参数表示是否开启消息追踪
+             * Specifies whether to enable message tracing when the destination data source is RocketMQ.
              */
             public Builder enableMsgTrace(Boolean enableMsgTrace) {
                 this.enableMsgTrace = enableMsgTrace;
@@ -471,7 +471,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * 指定数据源 id
+             * The ID of the data source.
              */
             public Builder endpointId(String endpointId) {
                 this.endpointId = endpointId;
@@ -479,7 +479,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * 数据源类型 (MYSQL, MARIADB, OB_MYSQL, OB_MYSQL_CE, OB_ORACLE, ORACLE, DB2_LUW, KAFKA, ROCKETMQ, DATAHUB, SYBASE, LOGPROXY, ADB, DBP_OP_ROUTE, DMS, IDB, TIDB)
+             * The type of the data source. Valid values: `MYSQL`, `MARIADB`, `OB_MYSQL`, `OB_MYSQL_CE`, `OB_ORACLE`, `ORACLE`, `DB2_LUW`, `KAFKA`, `ROCKETMQ`, `DATAHUB`, `SYBASE`, `LOGPROXY`, `ADB`, `DBP_OP_ROUTE`, `DMS`, `IDB`, and `TIDB`.
              */
             public Builder endpointType(String endpointType) {
                 this.endpointType = endpointType;
@@ -487,7 +487,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * 目标端为 RocketMQ 时，设置投递消息的 tag（标签）
+             * The tag of the Post message when the destination data source is RocketMQ.
              */
             public Builder msgTags(String msgTags) {
                 this.msgTags = msgTags;
@@ -495,7 +495,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * 目标端为消息队列（Kafka/DataHub/RocketMQ）时，若 partitionMode 为 ONE 模式，此参数表示分区索引
+             * The partitioned index, which must be specified if the destination data source is a message queue system, such as Kafka, DataHub, or RocketMQ, and the partitioning mode is set to ONE.
              */
             public Builder partition(Integer partition) {
                 this.partition = partition;
@@ -503,7 +503,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * 目标端为消息队列（Kafka/DataHub/RocketMQ）时，选择分区模式 (ONE, HASH, TABLE)
+             * The partitioning mode, which must be specified if the destination data source is a message queue system, such as Kafka, DataHub, or RocketMQ. Valid values: ONE, HASH, and TABLE.
              */
             public Builder partitionMode(String partitionMode) {
                 this.partitionMode = partitionMode;
@@ -511,7 +511,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * 目标端为 RocketMQ 时，指定投递消息的生产者组
+             * The producer group of the Post message when the destination data source is RocketMQ.
              */
             public Builder producerGroup(String producerGroup) {
                 this.producerGroup = producerGroup;
@@ -519,7 +519,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * 目标端为 RocketMQ 时，设置单次投递消息的超时时间，单位为秒
+             * The timeout period for a single Post message when the destination data source is RocketMQ.
              */
             public Builder sendMsgTimeout(Long sendMsgTimeout) {
                 this.sendMsgTimeout = sendMsgTimeout;
@@ -527,7 +527,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * 目标端为 DataHub 时，此参数表示是否开启消息序列
+             * Specifies whether to enable message sequencing when the destination data source is DataHub.
              */
             public Builder sequenceEnable(Boolean sequenceEnable) {
                 this.sequenceEnable = sequenceEnable;
@@ -535,7 +535,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * 目标端为 DataHub 时，若开启消息序列，设置序列起始时间，单位为秒级时间戳
+             * The start time of the sequence, which must be specified if the destination data source is DataHub and message sequencing is enabled. The value is a timestamp in seconds.
              */
             public Builder sequenceStartTimestamp(Long sequenceStartTimestamp) {
                 this.sequenceStartTimestamp = sequenceStartTimestamp;
@@ -543,7 +543,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * 目标端为消息队列（Kafka/DataHub/RocketMQ）时，选择文本序列化类型 (DEFAULT, CANAL, DATAWORKS_V2, SHAREPLEX, DEFAULT_WITH_SCHEMA)
+             * The text serialization type, which must be specified if the destination data source is a message queue system, such as Kafka, DataHub, or RocketMQ. Valid values: Default, Canal, Dataworks, SharePlex, and DefaultExtendColumnType.
              */
             public Builder serializerType(String serializerType) {
                 this.serializerType = serializerType;
@@ -551,7 +551,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * 目标端为 DataHub 时，投递消息所属 topic 的类型 (TUPLE, BLOB)
+             * The type of the topic to which the Post message belongs when the destination data source is DataHub. Valid values: Tuple and Blob.
              */
             public Builder topicType(String topicType) {
                 this.topicType = topicType;
@@ -724,7 +724,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             private String topicType; 
 
             /**
-             * 目标端为 RocketMQ 时，此参数表示是否开启消息追踪
+             * Specifies whether to enable message tracing when the destination data source is RocketMQ.
              */
             public Builder enableMsgTrace(Boolean enableMsgTrace) {
                 this.enableMsgTrace = enableMsgTrace;
@@ -732,7 +732,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * 指定数据源 id
+             * The ID of the data source.
              */
             public Builder endpointId(String endpointId) {
                 this.endpointId = endpointId;
@@ -740,7 +740,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * 数据源类型 (MYSQL, MARIADB, OB_MYSQL, OB_MYSQL_CE, OB_ORACLE, ORACLE, DB2_LUW, KAFKA, ROCKETMQ, DATAHUB, SYBASE, LOGPROXY, ADB, DBP_OP_ROUTE, DMS, IDB, TIDB)
+             * The type of the data source. Valid values: `MYSQL`, `MARIADB`, `OB_MYSQL`, `OB_MYSQL_CE`, `OB_ORACLE`, `ORACLE`, `DB2_LUW`, `KAFKA`, `ROCKETMQ`, `DATAHUB`, `SYBASE`, `LOGPROXY`, `ADB`, `DBP_OP_ROUTE`, `DMS`, `IDB`, and `TIDB`.
              */
             public Builder endpointType(String endpointType) {
                 this.endpointType = endpointType;
@@ -748,7 +748,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * 目标端为 RocketMQ 时，设置投递消息的 tag（标签）
+             * The tag of the Post message when the destination data source is RocketMQ.
              */
             public Builder msgTags(String msgTags) {
                 this.msgTags = msgTags;
@@ -756,7 +756,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * 目标端为消息队列（Kafka/DataHub/RocketMQ）时，若 partitionMode 为 ONE 模式，此参数表示分区索引
+             * The partitioned index, which must be specified if the destination data source is a message queue system, such as Kafka, DataHub, or RocketMQ, and the partitioning mode is set to ONE.
              */
             public Builder partition(Integer partition) {
                 this.partition = partition;
@@ -764,7 +764,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * 目标端为消息队列（Kafka/DataHub/RocketMQ）时，选择分区模式 (ONE, HASH, TABLE)
+             * The partitioning mode, which must be specified if the destination data source is a message queue system, such as Kafka, DataHub, or RocketMQ. Valid values: ONE, HASH, and TABLE.
              */
             public Builder partitionMode(String partitionMode) {
                 this.partitionMode = partitionMode;
@@ -772,7 +772,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * 目标端为 RocketMQ 时，指定投递消息的生产者组
+             * The producer group of the Post message when the destination data source is RocketMQ.
              */
             public Builder producerGroup(String producerGroup) {
                 this.producerGroup = producerGroup;
@@ -780,7 +780,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * 目标端为 RocketMQ 时，设置单次投递消息的超时时间，单位为秒
+             * The timeout period for a single Post message when the destination data source is RocketMQ.
              */
             public Builder sendMsgTimeout(Long sendMsgTimeout) {
                 this.sendMsgTimeout = sendMsgTimeout;
@@ -788,7 +788,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * 目标端为 DataHub 时，此参数表示是否开启消息序列
+             * Specifies whether to enable message sequencing when the destination data source is DataHub.
              */
             public Builder sequenceEnable(Boolean sequenceEnable) {
                 this.sequenceEnable = sequenceEnable;
@@ -796,7 +796,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * 目标端为 DataHub 时，若开启消息序列，设置序列起始时间，单位为秒级时间戳
+             * The start time of the sequence, which must be specified if the destination data source is DataHub and message sequencing is enabled. The value is a timestamp in seconds.
              */
             public Builder sequenceStartTimestamp(Long sequenceStartTimestamp) {
                 this.sequenceStartTimestamp = sequenceStartTimestamp;
@@ -804,7 +804,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * 目标端为消息队列（Kafka/DataHub/RocketMQ）时，选择文本序列化类型 (DEFAULT, CANAL, DATAWORKS_V2, SHAREPLEX, DEFAULT_WITH_SCHEMA)
+             * The text serialization type, which must be specified if the destination data source is a message queue system, such as Kafka, DataHub, or RocketMQ. Valid values: Default, Canal, Dataworks, SharePlex, and DefaultExtendColumnType.
              */
             public Builder serializerType(String serializerType) {
                 this.serializerType = serializerType;
@@ -812,7 +812,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * 目标端为 DataHub 时，投递消息所属 topic 的类型 (TUPLE, BLOB)
+             * The type of the topic to which the Post message belongs when the destination data source is DataHub. Valid values: Tuple and Blob.
              */
             public Builder topicType(String topicType) {
                 this.topicType = topicType;
@@ -889,7 +889,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             private java.util.List < String > primaryKeys; 
 
             /**
-             * 分布键列
+             * The list of distribution key columns.
              */
             public Builder distributedKeys(java.util.List < String > distributedKeys) {
                 this.distributedKeys = distributedKeys;
@@ -897,7 +897,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * 表的生命周期
+             * The lifecycle of the table.
              */
             public Builder partitionLifeCycle(Integer partitionLifeCycle) {
                 this.partitionLifeCycle = partitionLifeCycle;
@@ -905,7 +905,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * 分区表达式
+             * The partitioning expression.
              */
             public Builder partitionStatement(String partitionStatement) {
                 this.partitionStatement = partitionStatement;
@@ -913,7 +913,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * 主键列
+             * The list of primary key columns.
              */
             public Builder primaryKeys(java.util.List < String > primaryKeys) {
                 this.primaryKeys = primaryKeys;
@@ -1038,7 +1038,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             private String whereClause; 
 
             /**
-             * ADB table schema，目标端为 ADB 时，额外配置信息，用于结构同步
+             * The schema of the ADB table. If the destination data source is ADB, you need to configure additional information for schema synchronization.
              */
             public Builder adbTableSchema(AdbTableSchema adbTableSchema) {
                 this.adbTableSchema = adbTableSchema;
@@ -1046,7 +1046,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * 过滤列列表，即指定同步哪些列
+             * The list of filter columns, which are the columns to be synchronized.
              */
             public Builder filterColumns(java.util.List < String > filterColumns) {
                 this.filterColumns = filterColumns;
@@ -1054,7 +1054,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * 映射对象 table/topic，目的端为数据库时，此参数为映射表名，目的端为消息队列时，此参数为映射 topic
+             * The name of the mapped-to table or topic. If the destination data source is a database, this parameter specifies the name of the mapped-to table. If the destination data source is a message queue system, this parameter specifies the name of the mapped-to topic.
              */
             public Builder mappedName(String mappedName) {
                 this.mappedName = mappedName;
@@ -1062,7 +1062,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * 分片键列列表，用于目标端为消息队列的场景，安
+             * The list of sharding key columns. This parameter applies to scenarios where the destination data source is a message queue system.
              */
             public Builder shardColumns(java.util.List < String > shardColumns) {
                 this.shardColumns = shardColumns;
@@ -1070,7 +1070,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * 表 ID，源端为逻辑数据源 IDB 时生效
+             * The ID of the table. This parameter takes effect when the source data source is IDB.
              */
             public Builder tableId(String tableId) {
                 this.tableId = tableId;
@@ -1078,7 +1078,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * 表名
+             * The name of the table.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -1086,7 +1086,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * DATABASE, TABLE
+             * Valid values: DATABASE and TABLE.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1094,7 +1094,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * 行过滤表
+             * The row filter conditions.
              */
             public Builder whereClause(String whereClause) {
                 this.whereClause = whereClause;
@@ -1195,7 +1195,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             private String type; 
 
             /**
-             * 库 ID，源端为逻辑数据源 IDB 时生效
+             * The ID of the database. This parameter takes effect when the source data source is IDB.
              */
             public Builder databaseId(String databaseId) {
                 this.databaseId = databaseId;
@@ -1203,7 +1203,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * 库名
+             * The name of the database.
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -1211,7 +1211,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * 映射对象 database，目标端为数据库时生效
+             * The mapped-to database. This parameter takes effect when the destination data source is a database.
              */
             public Builder mappedName(String mappedName) {
                 this.mappedName = mappedName;
@@ -1219,7 +1219,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * 当前库下的传输表对象配置
+             * The settings for the target table objects in the current database.
              */
             public Builder tables(java.util.List < Tables> tables) {
                 this.tables = tables;
@@ -1227,7 +1227,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * 映射对象租户，源端为 OceanBase 时生效
+             * The mapped-to tenant. This parameter takes effect when the source data source is OceanBase Database.
              */
             public Builder tenantName(String tenantName) {
                 this.tenantName = tenantName;
@@ -1235,7 +1235,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * DATABASE, TABLE
+             * Valid values: DATABASE and TABLE.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1288,7 +1288,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             private String mode; 
 
             /**
-             * 传统映射（源端库表映射），当且仅当 mode 为 NORMAL 是生效
+             * The table mapping in the source data source, which is a conventional mapping scheme and takes effect only when Mode is set to NORMAL.
              */
             public Builder databases(java.util.List < Databases> databases) {
                 this.databases = databases;
@@ -1296,7 +1296,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * 映射类型 (NORMAL, WHITE_AND_BLACK_LIST)
+             * The mapping type. Valid values: \"NORMAL\" and \"WHITE_AND_BLACK_LIST\".
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -1385,7 +1385,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             private String transferStepType; 
 
             /**
-             * 有增量同步阶段时，同步的增量数据类型
+             * The list of data types of incremental data synchronized in incremental synchronization.
              */
             public Builder recordTypeList(java.util.List < String > recordTypeList) {
                 this.recordTypeList = recordTypeList;
@@ -1393,7 +1393,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * 有增量同步阶段时，增量起始位点，秒级时间戳
+             * The start time for incremental synchronization. The value is a timestamp in seconds.
              */
             public Builder startTimestamp(Long startTimestamp) {
                 this.startTimestamp = startTimestamp;
@@ -1401,7 +1401,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * 有增量同步阶段，且增量日志拉取组件为 Store 时，日志保存时间
+             * The retention time of logs when incremental synchronization is enabled and the incremental log pull component is Store.
              */
             public Builder storeLogKeptHour(Long storeLogKeptHour) {
                 this.storeLogKeptHour = storeLogKeptHour;
@@ -1409,7 +1409,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * 有增量同步阶段时，且增量日志拉取组件为 Store 时，是否开启事务内序号编排
+             * Specifies whether to enable intra-transaction sequencing when incremental synchronization is enabled and the incremental log pull component is Store.
              */
             public Builder storeTransactionEnabled(Boolean storeTransactionEnabled) {
                 this.storeTransactionEnabled = storeTransactionEnabled;
@@ -1417,7 +1417,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * STRUCT, FULL, INCR
+             * Valid values: STRUCT, FULL, and INCR.
              */
             public Builder transferStepType(String transferStepType) {
                 this.transferStepType = transferStepType;
@@ -1494,7 +1494,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             private IncrSyncStepTransferConfig incrSyncStepTransferConfig; 
 
             /**
-             * 开启全量迁移
+             * Specifies whether to enable full migration.
              */
             public Builder enableFullSync(Boolean enableFullSync) {
                 this.enableFullSync = enableFullSync;
@@ -1502,7 +1502,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * 开启增量同步
+             * Specifies whether to enable incremental synchronization.
              */
             public Builder enableIncrSync(Boolean enableIncrSync) {
                 this.enableIncrSync = enableIncrSync;
@@ -1510,7 +1510,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * 开启结构同步
+             * Specifies whether to enable schema synchronization.
              */
             public Builder enableStructSync(Boolean enableStructSync) {
                 this.enableStructSync = enableStructSync;
@@ -1518,7 +1518,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * 增量同步步骤配置
+             * The settings of incremental synchronization steps.
              */
             public Builder incrSyncStepTransferConfig(IncrSyncStepTransferConfig incrSyncStepTransferConfig) {
                 this.incrSyncStepTransferConfig = incrSyncStepTransferConfig;

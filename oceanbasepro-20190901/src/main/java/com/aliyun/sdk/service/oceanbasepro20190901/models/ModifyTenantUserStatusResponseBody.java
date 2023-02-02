@@ -50,7 +50,7 @@ public class ModifyTenantUserStatusResponseBody extends TeaModel {
         private java.util.List < TenantUser> tenantUser; 
 
         /**
-         * 请求ID
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ModifyTenantUserStatusResponseBody extends TeaModel {
         }
 
         /**
-         * 租户中的数据库账号信息
+         * The list of database accounts in the tenant.
          */
         public Builder tenantUser(java.util.List < TenantUser> tenantUser) {
             this.tenantUser = tenantUser;
@@ -122,7 +122,7 @@ public class ModifyTenantUserStatusResponseBody extends TeaModel {
             private String userStatus; 
 
             /**
-             * 租户ID。
+             * The ID of the tenant.
              */
             public Builder tenantId(String tenantId) {
                 this.tenantId = tenantId;
@@ -130,7 +130,7 @@ public class ModifyTenantUserStatusResponseBody extends TeaModel {
             }
 
             /**
-             * 账号名称。
+             * The name of the account.
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -138,7 +138,10 @@ public class ModifyTenantUserStatusResponseBody extends TeaModel {
             }
 
             /**
-             * 数据库账号的状态。 - LOCKED：锁定 - ONLINE：解锁
+             * The status of the database account. Valid values:   
+             * <p>
+             * - LOCKED: The account is locked. 
+             * - ONLINE: The account is unlocked.
              */
             public Builder userStatus(String userStatus) {
                 this.userStatus = userStatus;

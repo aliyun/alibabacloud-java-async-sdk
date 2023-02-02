@@ -50,7 +50,7 @@ public class ModifyDatabaseUserRolesResponseBody extends TeaModel {
         private TenantUser tenantUser; 
 
         /**
-         * 请求ID。
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ModifyDatabaseUserRolesResponseBody extends TeaModel {
         }
 
         /**
-         * 账号信息。
+         * The account information.
          */
         public Builder tenantUser(TenantUser tenantUser) {
             this.tenantUser = tenantUser;
@@ -110,7 +110,13 @@ public class ModifyDatabaseUserRolesResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * 账号赋予该库的角色权限。 对于MySQL模式，角色为数据库（Database）级别，其有以下几类： - ReadWrite：读写权限，包括ALL PRIVILEGES； - ReadOnly：只读权限，包括SELECT - DDL: DDL权限，包括CREATE,DROP,ALTER,SHOW VIEW,CREATE VIEW - DML: DML权限，包括SELECT,INSERT,UPDATE,DELETE,SHOW VIEW。
+             * The role of the account.   
+             * <p>
+             * In MySQL mode, a role is a database-level role. Valid values:
+             * - ReadWrite: a role that has the read and write privileges, namely ALL PRIVILEGES.
+             * - ReadOnly: a role that has only the read-only privilege SELECT. 
+             * - DDL: a role that has the DDL privileges such as CREATE, DROP, ALTER, SHOW VIEW, and CREATE VIEW. 
+             * - DML: a role that has the DML privileges such as SELECT, INSERT, UPDATE, DELETE, and SHOW VIEW.
              */
             public Builder role(String role) {
                 this.role = role;
@@ -118,7 +124,7 @@ public class ModifyDatabaseUserRolesResponseBody extends TeaModel {
             }
 
             /**
-             * 账号名称。
+             * The name of the account.
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -183,7 +189,7 @@ public class ModifyDatabaseUserRolesResponseBody extends TeaModel {
             private java.util.List < Users> users; 
 
             /**
-             * 数据库名称。
+             * The name of the database.
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -191,7 +197,7 @@ public class ModifyDatabaseUserRolesResponseBody extends TeaModel {
             }
 
             /**
-             * 租户ID。
+             * The ID of the tenant.
              */
             public Builder tenantId(String tenantId) {
                 this.tenantId = tenantId;
@@ -199,7 +205,7 @@ public class ModifyDatabaseUserRolesResponseBody extends TeaModel {
             }
 
             /**
-             * 对数据库有赋权的账户信息
+             * The accounts that have privileges on the database.
              */
             public Builder users(java.util.List < Users> users) {
                 this.users = users;

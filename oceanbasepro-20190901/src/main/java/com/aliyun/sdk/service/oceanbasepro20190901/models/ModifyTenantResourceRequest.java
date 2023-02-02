@@ -124,7 +124,7 @@ public class ModifyTenantResourceRequest extends Request {
         }
 
         /**
-         * Cpu.
+         * The information about the CPU resources of the tenant.
          */
         public Builder cpu(Integer cpu) {
             this.putBodyParameter("Cpu", cpu);
@@ -133,7 +133,7 @@ public class ModifyTenantResourceRequest extends Request {
         }
 
         /**
-         * Oceanbase集群ID。
+         * The ID of the OceanBase cluster.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -142,7 +142,7 @@ public class ModifyTenantResourceRequest extends Request {
         }
 
         /**
-         * 租户内存大小，单位GB。
+         * The memory size of the tenant, in GB.
          */
         public Builder memory(Integer memory) {
             this.putBodyParameter("Memory", memory);
@@ -151,7 +151,7 @@ public class ModifyTenantResourceRequest extends Request {
         }
 
         /**
-         * 租户ID。
+         * The ID of the tenant.
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);

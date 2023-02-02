@@ -62,7 +62,7 @@ public class DescribeNodeMetricsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * 节点指标信息
+         * The metrics of the node.
          */
         public Builder nodeMetrics(String nodeMetrics) {
             this.nodeMetrics = nodeMetrics;
@@ -70,7 +70,7 @@ public class DescribeNodeMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID。
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeNodeMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * 总数量
+         * The total count.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

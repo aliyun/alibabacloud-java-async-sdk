@@ -122,7 +122,9 @@ public class ModifyParametersRequest extends Request {
         }
 
         /**
-         * 参数类型。 当前支持集群（CLUSTER)和租户（TENANT）
+         * The type of the parameter.   
+         * <p>
+         * Valid values: CLUSTER and TENANT.
          */
         public Builder dimension(String dimension) {
             this.putBodyParameter("Dimension", dimension);
@@ -131,7 +133,9 @@ public class ModifyParametersRequest extends Request {
         }
 
         /**
-         * 参数类型的资源标识。 如果为集群参数可以不填，若为租户的参数，则传入租户的TenantId。
+         * The resource ID of the parameter type.    
+         * <p>
+         * You can leave this parameter unspecified when you call this operation to modify cluster parameters. In the case of tenant parameters, pass the tenant ID.
          */
         public Builder dimensionValue(String dimensionValue) {
             this.putBodyParameter("DimensionValue", dimensionValue);
@@ -140,7 +144,7 @@ public class ModifyParametersRequest extends Request {
         }
 
         /**
-         * Oceanbase集群ID。
+         * The ID of the OceanBase cluster.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -149,7 +153,11 @@ public class ModifyParametersRequest extends Request {
         }
 
         /**
-         * 参数信息。 其为一个Json格式的数组，数组中每个对象包括两个元素：参数名称（Name）和参数值（Value）。 注意：集群和租户可修改的参数名称和参数值的范围不同，详见DescribeParameters。
+         * The parameters.   
+         * <p>
+         * It is a JSON array. Each object in the array has two elements: Name and Value. 
+         * 
+         * > <br>The names and values of cluster parameters that can be modified are different from those of tenant parameters. For more information, see DescribeParameters.
          */
         public Builder parameters(String parameters) {
             this.putBodyParameter("Parameters", parameters);

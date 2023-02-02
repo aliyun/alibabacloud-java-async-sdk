@@ -62,7 +62,7 @@ public class DescribeTenantUsersResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * 请求ID。
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class DescribeTenantUsersResponseBody extends TeaModel {
         }
 
         /**
-         * 租户中的数据库账号信息
+         * The list of database accounts in the tenant.
          */
         public Builder tenantUsers(java.util.List < TenantUsers> tenantUsers) {
             this.tenantUsers = tenantUsers;
@@ -78,7 +78,7 @@ public class DescribeTenantUsersResponseBody extends TeaModel {
         }
 
         /**
-         * 租户中的数据库账号总数。
+         * The total number of database accounts in the tenant.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -142,7 +142,7 @@ public class DescribeTenantUsersResponseBody extends TeaModel {
             private String table; 
 
             /**
-             * 数据库(schema)名称
+             * The name of the database (MySQL mode) or schema (Oracle mode).
              */
             public Builder database(String database) {
                 this.database = database;
@@ -150,10 +150,18 @@ public class DescribeTenantUsersResponseBody extends TeaModel {
             }
 
             /**
-             * 拥有的角色。 对于Oracle模式，角色为schema级别，其可分为 - ReadWrite：读写权限，包括CREATE TABLE CREATE VIEW CREATE PROCEDURE CREATE SYNONYM CREATE SEQUENCE CREATE TRIGGER CREATE TYPE CREATE SESSION EXECUTE ANY PROCEDURE CREATE ANY OUTLINE ALTER ANY OUTLINE DROP ANY OUTLINE CREATE ANY PROCEDURE ALTER ANY PROCEDURE DROP ANY PROCEDURE CREATE ANY SEQUENCE ALTER ANY SEQUENCE DROP ANY SEQUENCE CREATE ANY TYPE ALTER ANY TYPE DROP ANY TYPE SYSKM CREATE ANY TRIGGER ALTER ANY TRIGGER DROP ANY TRIGGER CREATE PROFILE ALTER PROFILE DROP PROFILE； - ReadOnly：只读权限，SELECT
+             * The role of the account.   
              * <p>
-             * 对于MySQL模式，角色为数据库（Database）级别，其有以下几类： - ReadWrite：读写权限，包括ALL PRIVILEGES； - ReadOnly：只读权限，包括SELECT - DDL: DDL权限，包括CREATE,DROP,ALTER,SHOW VIEW,CREATE VIEW - DML: DML权限，包括SELECT,INSERT,UPDATE,DELETE,SHOW VIEW。
-             * * 另外Oracle账户对自己的schema有默认的读写权限，这里不会列出。
+             * In Oracle mode, a role is a schema-level role. Valid values:  
+             * - ReadWrite: a role that has the read and write privileges, including: CREATE TABLE, CREATE VIEW, CREATE PROCEDURE, CREATE SYNONYM, CREATE SEQUENCE, CREATE TRIGGER, CREATE TYPE, CREATE SESSION, EXECUTE ANY PROCEDURE, CREATE ANY OUTLINE, ALTER ANY OUTLINE, DROP ANY OUTLINE, CREATE ANY PROCEDURE, ALTER ANY PROCEDURE, DROP ANY PROCEDURE, CREATE ANY SEQUENCE, ALTER ANY SEQUENCE, DROP ANY SEQUENCE, CREATE ANY TYPE, ALTER ANY TYPE, DROP ANY TYPE, SYSKM, CREATE ANY TRIGGER, ALTER ANY TRIGGER, DROP ANY TRIGGER, CREATE PROFILE, ALTER PROFILE, and DROP PROFILE.  
+             * - ReadOnly: a role that has only the read-only privilege SELECT.
+             * In MySQL mode, a role is a database-level role. Valid values: 
+             * - ReadWrite: a role that has the read and write privileges, namely ALL PRIVILEGES.   
+             * - ReadOnly: a role that has only the read-only privilege SELECT.   
+             * - DDL: a role that has the DDL privileges such as CREATE, DROP, ALTER, SHOW VIEW, and CREATE VIEW.   
+             * - DML: a role that has the DML privileges such as SELECT, INSERT, UPDATE, DELETE, and SHOW VIEW.   
+             * 
+             * > <br>By default, an Oracle account has the read and write privileges on its own schema, which are not listed here.
              */
             public Builder role(String role) {
                 this.role = role;
@@ -161,7 +169,7 @@ public class DescribeTenantUsersResponseBody extends TeaModel {
             }
 
             /**
-             * 表的名称。
+             * The name of the table.
              */
             public Builder table(String table) {
                 this.table = table;
@@ -182,6 +190,12 @@ public class DescribeTenantUsersResponseBody extends TeaModel {
         @NameInMap("Description")
         private String description;
 
+        @NameInMap("InstanceId")
+        private String instanceId;
+
+        @NameInMap("TenantId")
+        private String tenantId;
+
         @NameInMap("UserName")
         private String userName;
 
@@ -194,6 +208,8 @@ public class DescribeTenantUsersResponseBody extends TeaModel {
         private TenantUsers(Builder builder) {
             this.databases = builder.databases;
             this.description = builder.description;
+            this.instanceId = builder.instanceId;
+            this.tenantId = builder.tenantId;
             this.userName = builder.userName;
             this.userStatus = builder.userStatus;
             this.userType = builder.userType;
@@ -222,6 +238,20 @@ public class DescribeTenantUsersResponseBody extends TeaModel {
         }
 
         /**
+         * @return instanceId
+         */
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        /**
+         * @return tenantId
+         */
+        public String getTenantId() {
+            return this.tenantId;
+        }
+
+        /**
          * @return userName
          */
         public String getUserName() {
@@ -245,12 +275,14 @@ public class DescribeTenantUsersResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List < Databases> databases; 
             private String description; 
+            private String instanceId; 
+            private String tenantId; 
             private String userName; 
             private String userStatus; 
             private String userType; 
 
             /**
-             * 账号具备的数据库权限信息。
+             * The database privileges of the account.
              */
             public Builder databases(java.util.List < Databases> databases) {
                 this.databases = databases;
@@ -258,7 +290,7 @@ public class DescribeTenantUsersResponseBody extends TeaModel {
             }
 
             /**
-             * 数据库账号的描述信息。
+             * The description of the database account.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -266,7 +298,23 @@ public class DescribeTenantUsersResponseBody extends TeaModel {
             }
 
             /**
-             * 数据库账号名称。
+             * 所属集群Id
+             */
+            public Builder instanceId(String instanceId) {
+                this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * 所属租户Id
+             */
+            public Builder tenantId(String tenantId) {
+                this.tenantId = tenantId;
+                return this;
+            }
+
+            /**
+             * The name of the database account.
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -274,7 +322,10 @@ public class DescribeTenantUsersResponseBody extends TeaModel {
             }
 
             /**
-             * 数据库账号的状态。 - LOCKED：锁定 - ONLINE：解锁
+             * The status of the database account. Valid values:   
+             * <p>
+             *  - LOCKED: The account is locked.   
+             * - NORMAL: The account is unlocked.
              */
             public Builder userStatus(String userStatus) {
                 this.userStatus = userStatus;
@@ -282,7 +333,10 @@ public class DescribeTenantUsersResponseBody extends TeaModel {
             }
 
             /**
-             * 数据库账号类型。 - Admin：超级账户 - Normal：普通账户
+             * The type of the database account. Valid values:    
+             * <p>
+             * - Admin: the super administrator account.   
+             * - NORMAL: a general account.
              */
             public Builder userType(String userType) {
                 this.userType = userType;

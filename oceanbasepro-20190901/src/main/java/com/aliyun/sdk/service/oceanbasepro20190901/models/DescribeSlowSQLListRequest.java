@@ -277,7 +277,7 @@ public class DescribeSlowSQLListRequest extends Request {
         }
 
         /**
-         * 数据库名称
+         * The name of the database.
          */
         public Builder dbName(String dbName) {
             this.putBodyParameter("DbName", dbName);
@@ -286,7 +286,9 @@ public class DescribeSlowSQLListRequest extends Request {
         }
 
         /**
-         * 结束时间
+         * The end time of the time range for querying slow SQL statements.   
+         * <p>
+         * The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.
          */
         public Builder endTime(String endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -295,7 +297,7 @@ public class DescribeSlowSQLListRequest extends Request {
         }
 
         /**
-         * 过滤条件
+         * The filter condition.
          */
         public Builder filterCondition(java.util.Map < String, ? > filterCondition) {
             String filterConditionShrink = shrink(filterCondition, "FilterCondition", "json");
@@ -305,7 +307,7 @@ public class DescribeSlowSQLListRequest extends Request {
         }
 
         /**
-         * 节点ip
+         * The IP address of the database node.
          */
         public Builder nodeIp(String nodeIp) {
             this.putBodyParameter("NodeIp", nodeIp);
@@ -314,7 +316,10 @@ public class DescribeSlowSQLListRequest extends Request {
         }
 
         /**
-         * 页码
+         * The number of rows to return on each page.  
+         * <p>
+         * - Maximum value: 100  
+         * - Default value: 10
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -323,7 +328,10 @@ public class DescribeSlowSQLListRequest extends Request {
         }
 
         /**
-         * 页大小
+         * The number of the page to return.    
+         * <p>
+         * - Start value: 1   
+         * - Default value: 1
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -332,7 +340,7 @@ public class DescribeSlowSQLListRequest extends Request {
         }
 
         /**
-         * SQL唯一标识
+         * The SQL ID, which uniquely identifies an SQL statement.
          */
         public Builder SQLId(String SQLId) {
             this.putBodyParameter("SQLId", SQLId);
@@ -341,7 +349,7 @@ public class DescribeSlowSQLListRequest extends Request {
         }
 
         /**
-         * 查询关键字
+         * The search keyword.
          */
         public Builder searchKeyWord(String searchKeyWord) {
             this.putBodyParameter("SearchKeyWord", searchKeyWord);
@@ -350,7 +358,7 @@ public class DescribeSlowSQLListRequest extends Request {
         }
 
         /**
-         * 查询参数
+         * The search parameter.
          */
         public Builder searchParameter(String searchParameter) {
             this.putBodyParameter("SearchParameter", searchParameter);
@@ -359,7 +367,7 @@ public class DescribeSlowSQLListRequest extends Request {
         }
 
         /**
-         * 查询规则
+         * The search rule.
          */
         public Builder searchRule(String searchRule) {
             this.putBodyParameter("SearchRule", searchRule);
@@ -368,7 +376,7 @@ public class DescribeSlowSQLListRequest extends Request {
         }
 
         /**
-         * 查询值
+         * The search value.
          */
         public Builder searchValue(String searchValue) {
             this.putBodyParameter("SearchValue", searchValue);
@@ -377,7 +385,7 @@ public class DescribeSlowSQLListRequest extends Request {
         }
 
         /**
-         * 排序列
+         * The sorted column.
          */
         public Builder sortColumn(String sortColumn) {
             this.putBodyParameter("SortColumn", sortColumn);
@@ -386,7 +394,7 @@ public class DescribeSlowSQLListRequest extends Request {
         }
 
         /**
-         * 排序顺序
+         * The sorting rule.
          */
         public Builder sortOrder(String sortOrder) {
             this.putBodyParameter("SortOrder", sortOrder);
@@ -395,7 +403,9 @@ public class DescribeSlowSQLListRequest extends Request {
         }
 
         /**
-         * 开始时间
+         * The start time of the time range for querying slow SQL statements.   
+         * <p>
+         * The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.
          */
         public Builder startTime(String startTime) {
             this.putBodyParameter("StartTime", startTime);
@@ -404,7 +414,7 @@ public class DescribeSlowSQLListRequest extends Request {
         }
 
         /**
-         * 租户ID
+         * The ID of the tenant.
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);
