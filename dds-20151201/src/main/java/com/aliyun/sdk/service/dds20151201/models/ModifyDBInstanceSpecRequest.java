@@ -46,6 +46,10 @@ public class ModifyDBInstanceSpecRequest extends Request {
     private String effectiveTime;
 
     @Query
+    @NameInMap("ExtraParam")
+    private String extraParam;
+
+    @Query
     @NameInMap("OrderType")
     private String orderType;
 
@@ -87,6 +91,7 @@ public class ModifyDBInstanceSpecRequest extends Request {
         this.DBInstanceId = builder.DBInstanceId;
         this.DBInstanceStorage = builder.DBInstanceStorage;
         this.effectiveTime = builder.effectiveTime;
+        this.extraParam = builder.extraParam;
         this.orderType = builder.orderType;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -167,6 +172,13 @@ public class ModifyDBInstanceSpecRequest extends Request {
     }
 
     /**
+     * @return extraParam
+     */
+    public String getExtraParam() {
+        return this.extraParam;
+    }
+
+    /**
      * @return orderType
      */
     public String getOrderType() {
@@ -231,6 +243,7 @@ public class ModifyDBInstanceSpecRequest extends Request {
         private String DBInstanceId; 
         private String DBInstanceStorage; 
         private String effectiveTime; 
+        private String extraParam; 
         private String orderType; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -254,6 +267,7 @@ public class ModifyDBInstanceSpecRequest extends Request {
             this.DBInstanceId = request.DBInstanceId;
             this.DBInstanceStorage = request.DBInstanceStorage;
             this.effectiveTime = request.effectiveTime;
+            this.extraParam = request.extraParam;
             this.orderType = request.orderType;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -348,6 +362,15 @@ public class ModifyDBInstanceSpecRequest extends Request {
         public Builder effectiveTime(String effectiveTime) {
             this.putQueryParameter("EffectiveTime", effectiveTime);
             this.effectiveTime = effectiveTime;
+            return this;
+        }
+
+        /**
+         * ExtraParam.
+         */
+        public Builder extraParam(String extraParam) {
+            this.putQueryParameter("ExtraParam", extraParam);
+            this.extraParam = extraParam;
             return this;
         }
 

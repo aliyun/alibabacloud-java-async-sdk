@@ -180,9 +180,13 @@ public class ModifyDBInstanceDescriptionRequest extends Request {
          * The name of the instance.
          * <p>
          * 
-         * > * The name cannot start with `http://` or `https://`.
-         * > * The name must start with a letter.
-         * > * The name must be 2 to 256 characters in length, and can contain letters, underscores (\_), hyphens (-), and digits.
+         * > 
+         * 
+         * *   The name cannot start with `http://` or `https://`.
+         * 
+         * *   The name must start with a letter.
+         * 
+         * *   The name must be 2 to 256 characters in length, and can contain letters, underscores (\_), hyphens (-), and digits.
          */
         public Builder DBInstanceDescription(String DBInstanceDescription) {
             this.putQueryParameter("DBInstanceDescription", DBInstanceDescription);
@@ -191,10 +195,10 @@ public class ModifyDBInstanceDescriptionRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The ID of the instance
          * <p>
          * 
-         * >  To modify the name of a shard or mongos node in a sharded cluster instance, you must also specify the **NodeId** parameter.
+         * > To modify the name of a shard or mongos node in a sharded cluster instance, you must also specify the **NodeId** parameter.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -206,7 +210,7 @@ public class ModifyDBInstanceDescriptionRequest extends Request {
          * The ID of the shard or mongos node in the sharded cluster instance.
          * <p>
          * 
-         * >  This parameter is valid only if you set the **DBInstanceId** parameter to the ID of a sharded cluster instance.
+         * > This parameter is valid only if you set the **DBInstanceId** parameter to the ID of a sharded cluster instance.
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);

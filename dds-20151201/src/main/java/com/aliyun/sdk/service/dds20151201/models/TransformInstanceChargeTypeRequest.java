@@ -236,10 +236,10 @@ public class TransformInstanceChargeTypeRequest extends Request {
          * Specifies whether to enable automatic payment. Valid values:
          * <p>
          * 
-         * *   **true**: enables automatic payment.
-         * *   **false**: disables automatic payment. For more information, see [Renew an ApsaraDB for MongoDB subscription instance](~~85052~~).
+         * *   **true**
+         * *   **false**
          * 
-         * >  Default value: **true**.
+         * > The default value is **true**.
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -254,7 +254,7 @@ public class TransformInstanceChargeTypeRequest extends Request {
          * *   **true**
          * *   **false**
          * 
-         * >  Default value: **false**.
+         * > The default value is **false**.
          */
         public Builder autoRenew(String autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -275,10 +275,8 @@ public class TransformInstanceChargeTypeRequest extends Request {
          * The billing method of the instance. Valid values:
          * <p>
          * 
-         * *   **PostPaid: pay-as-you-go.**
          * *   **PrePaid**: subscription
-         * 
-         * >  If you specify this parameter to **PrePaid**, you must also specify the **Period** parameter.
+         * *   **PostPaid**: pay-as-you-go
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -296,7 +294,7 @@ public class TransformInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The ID of the instance
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -323,12 +321,7 @@ public class TransformInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * The subscription period of the instance. Unit: months.
-         * <p>
-         * 
-         * Valid values: **1** to **9**, **12**, **24**, **36**, and **60**.
-         * 
-         * >  If you set the ChargeType property to PrePaid, you must configure this property.
+         * The subscription duration of the instance. Unit: months. Valid values: **1, 2, 3, 4, 5, 6, 7, 8, 9******, **12**, **24**, and **36**.
          */
         public Builder period(Long period) {
             this.putQueryParameter("Period", period);

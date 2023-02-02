@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeParametersRequest</p>
  */
 public class DescribeParametersRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("CharacterType")
     private String characterType;
@@ -47,6 +51,7 @@ public class DescribeParametersRequest extends Request {
 
     private DescribeParametersRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.characterType = builder.characterType;
         this.DBInstanceId = builder.DBInstanceId;
         this.nodeId = builder.nodeId;
@@ -68,6 +73,13 @@ public class DescribeParametersRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -127,6 +139,7 @@ public class DescribeParametersRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeParametersRequest, Builder> {
+        private String regionId; 
         private String characterType; 
         private String DBInstanceId; 
         private String nodeId; 
@@ -142,6 +155,7 @@ public class DescribeParametersRequest extends Request {
 
         private Builder(DescribeParametersRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.characterType = request.characterType;
             this.DBInstanceId = request.DBInstanceId;
             this.nodeId = request.nodeId;
@@ -151,6 +165,15 @@ public class DescribeParametersRequest extends Request {
             this.resourceOwnerId = request.resourceOwnerId;
             this.securityToken = request.securityToken;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * The type of the database account. Valid values:

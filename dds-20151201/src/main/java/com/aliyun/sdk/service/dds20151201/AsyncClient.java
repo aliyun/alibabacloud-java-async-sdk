@@ -197,8 +197,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DescribeDBInstancesOverviewResponse> describeDBInstancesOverview(DescribeDBInstancesOverviewRequest request);
 
-    CompletableFuture<DescribeDedicatedClusterInstanceListResponse> describeDedicatedClusterInstanceList(DescribeDedicatedClusterInstanceListRequest request);
-
     /**
       * *   This operation is applicable only to **general-purpose local-disk** and **dedicated local-disk** instances.
       * *   You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see [Manage a Logstore](~~48990~~).
@@ -509,12 +507,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
 
     /**
-      * Please ensure that you have fully understood the charging method and [Price](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing) of MongoDB products before using this API.
-      * When calling this interface, the instance must meet the following conditions:
-      * - The instance status is Running.
-      * - The instance does not have a conversion payment type order that has not been paid.
-      * - The instance type cannot be a historical type (no longer sold). For the list of historical types, see [Instance Type Table](~~57141~~).
-      * > To convert the payment type of the historical type instance, first call the [ModifyDBInstanceSpec] (~~61816~~) or [ModifyNodeSpec] (~~61923~~) interface to change the instance type.
+      * Before you call this operation, make sure that you understand the billing methods and [pricing](https://www.aliyun.com/price/product#/mongodb/detail) of ApsaraDB for MongoDB.
+      * Before you call this API operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:
+      * *   The instance is in the Running state.
+      * *   Your instance has no unpaid billing method change orders.
+      * *   The instance type is available for purchase. For more information about unavailable instance types, see [Instance types](~~57141~~).
+      * > To change the billing method of an instance whose instance type is no longer available to purchase, call the [ModifyDBInstanceSpec](~~61816~~) or [ModifyNodeSpec](~~61923~~) operation to first change the instance type.
       *
      */
     CompletableFuture<TransformInstanceChargeTypeResponse> transformInstanceChargeType(TransformInstanceChargeTypeRequest request);
@@ -533,8 +531,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<TransformToPrePaidResponse> transformToPrePaid(TransformToPrePaidRequest request);
 
     /**
-      * > * You can unbind up to 20 tags at a time.
-      * > * When a tag is unbound from all instances, the tag is automatically deleted.
+      * - You can remove up to 20 tags at a time.
+      * - If you remove a tag from all instances, the tag is automatically deleted.
       *
      */
     CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);

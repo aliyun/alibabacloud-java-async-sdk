@@ -67,6 +67,10 @@ public class EvaluateResourceRequest extends Request {
     private String shardsInfo;
 
     @Query
+    @NameInMap("Storage")
+    private String storage;
+
+    @Query
     @NameInMap("ZoneId")
     @Validation(required = true)
     private String zoneId;
@@ -86,6 +90,7 @@ public class EvaluateResourceRequest extends Request {
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityToken = builder.securityToken;
         this.shardsInfo = builder.shardsInfo;
+        this.storage = builder.storage;
         this.zoneId = builder.zoneId;
     }
 
@@ -194,6 +199,13 @@ public class EvaluateResourceRequest extends Request {
     }
 
     /**
+     * @return storage
+     */
+    public String getStorage() {
+        return this.storage;
+    }
+
+    /**
      * @return zoneId
      */
     public String getZoneId() {
@@ -214,6 +226,7 @@ public class EvaluateResourceRequest extends Request {
         private Long resourceOwnerId; 
         private String securityToken; 
         private String shardsInfo; 
+        private String storage; 
         private String zoneId; 
 
         private Builder() {
@@ -235,6 +248,7 @@ public class EvaluateResourceRequest extends Request {
             this.resourceOwnerId = request.resourceOwnerId;
             this.securityToken = request.securityToken;
             this.shardsInfo = request.shardsInfo;
+            this.storage = request.storage;
             this.zoneId = request.zoneId;
         } 
 
@@ -397,6 +411,15 @@ public class EvaluateResourceRequest extends Request {
         public Builder shardsInfo(String shardsInfo) {
             this.putQueryParameter("ShardsInfo", shardsInfo);
             this.shardsInfo = shardsInfo;
+            return this;
+        }
+
+        /**
+         * Storage.
+         */
+        public Builder storage(String storage) {
+            this.putQueryParameter("Storage", storage);
+            this.storage = storage;
             return this;
         }
 

@@ -145,8 +145,8 @@ public class DescribeActiveOperationTaskTypeResponseBody extends TeaModel {
              * The type of the task. Valid values:
              * <p>
              * 
-             * *   **rds_apsaradb_transfer**: instance migration
-             * *   **rds_apsaradb_upgrade**: minor version update
+             * *   **rds\_apsaradb\_transfer**: instance migration
+             * *   **rds\_apsaradb\_upgrade**: minor version update
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;

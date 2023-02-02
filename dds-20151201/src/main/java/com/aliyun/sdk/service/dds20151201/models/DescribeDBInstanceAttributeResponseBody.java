@@ -1221,6 +1221,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("DBInstanceType")
         private String DBInstanceType;
 
+        @NameInMap("DestroyTime")
+        private String destroyTime;
+
         @NameInMap("Engine")
         private String engine;
 
@@ -1293,6 +1296,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("StorageEngine")
         private String storageEngine;
 
+        @NameInMap("StorageType")
+        private String storageType;
+
         @NameInMap("Tags")
         private Tags tags;
 
@@ -1324,6 +1330,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.DBInstanceStatus = builder.DBInstanceStatus;
             this.DBInstanceStorage = builder.DBInstanceStorage;
             this.DBInstanceType = builder.DBInstanceType;
+            this.destroyTime = builder.destroyTime;
             this.engine = builder.engine;
             this.engineVersion = builder.engineVersion;
             this.expireTime = builder.expireTime;
@@ -1348,6 +1355,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.secondaryZoneId = builder.secondaryZoneId;
             this.shardList = builder.shardList;
             this.storageEngine = builder.storageEngine;
+            this.storageType = builder.storageType;
             this.tags = builder.tags;
             this.VPCCloudInstanceIds = builder.VPCCloudInstanceIds;
             this.VPCId = builder.VPCId;
@@ -1446,6 +1454,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          */
         public String getDBInstanceType() {
             return this.DBInstanceType;
+        }
+
+        /**
+         * @return destroyTime
+         */
+        public String getDestroyTime() {
+            return this.destroyTime;
         }
 
         /**
@@ -1617,6 +1632,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return storageType
+         */
+        public String getStorageType() {
+            return this.storageType;
+        }
+
+        /**
          * @return tags
          */
         public Tags getTags() {
@@ -1671,6 +1693,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String DBInstanceStatus; 
             private Integer DBInstanceStorage; 
             private String DBInstanceType; 
+            private String destroyTime; 
             private String engine; 
             private String engineVersion; 
             private String expireTime; 
@@ -1695,6 +1718,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String secondaryZoneId; 
             private ShardList shardList; 
             private String storageEngine; 
+            private String storageType; 
             private Tags tags; 
             private String VPCCloudInstanceIds; 
             private String VPCId; 
@@ -1810,6 +1834,18 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              */
             public Builder DBInstanceType(String DBInstanceType) {
                 this.DBInstanceType = DBInstanceType;
+                return this;
+            }
+
+            /**
+             * The time when the instance data was destroyed. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.  
+             * <p>
+             * 
+             * > - Subscription instances are released 15 days after expiration. After an instance is released, its data is deleted and cannot be restored.
+             * > - Pay-as-you-go instances are locked after the payments have been overdue for longer than 24 hours. The instances are released after the payments have been overdue for longer than 15 days. The data of released instances is deleted and cannot be restored.
+             */
+            public Builder destroyTime(String destroyTime) {
+                this.destroyTime = destroyTime;
                 return this;
             }
 
@@ -2105,6 +2141,18 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              */
             public Builder storageEngine(String storageEngine) {
                 this.storageEngine = storageEngine;
+                return this;
+            }
+
+            /**
+             * The storage type of the instance. Valid values:
+             * <p>
+             * 
+             * *   **cloud_essd**: enhanced SSD (ESSD)
+             * *   **local_ssd**: local SSD
+             */
+            public Builder storageType(String storageType) {
+                this.storageType = storageType;
                 return this;
             }
 
