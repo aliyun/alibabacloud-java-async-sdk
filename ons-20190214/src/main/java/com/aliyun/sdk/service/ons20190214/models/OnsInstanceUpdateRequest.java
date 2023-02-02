@@ -1,0 +1,124 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.ons20190214.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link OnsInstanceUpdateRequest} extends {@link RequestModel}
+ *
+ * <p>OnsInstanceUpdateRequest</p>
+ */
+public class OnsInstanceUpdateRequest extends Request {
+    @Query
+    @NameInMap("InstanceId")
+    @Validation(required = true)
+    private String instanceId;
+
+    @Query
+    @NameInMap("InstanceName")
+    private String instanceName;
+
+    @Query
+    @NameInMap("Remark")
+    private String remark;
+
+    private OnsInstanceUpdateRequest(Builder builder) {
+        super(builder);
+        this.instanceId = builder.instanceId;
+        this.instanceName = builder.instanceName;
+        this.remark = builder.remark;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static OnsInstanceUpdateRequest create() {
+        return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    /**
+     * @return instanceName
+     */
+    public String getInstanceName() {
+        return this.instanceName;
+    }
+
+    /**
+     * @return remark
+     */
+    public String getRemark() {
+        return this.remark;
+    }
+
+    public static final class Builder extends Request.Builder<OnsInstanceUpdateRequest, Builder> {
+        private String instanceId; 
+        private String instanceName; 
+        private String remark; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(OnsInstanceUpdateRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.instanceName = request.instanceName;
+            this.remark = request.remark;
+        } 
+
+        /**
+         * The ID of the instance whose name or description you want to update.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * The new name of the instance. The name must meet the following rules:
+         * <p>
+         * 
+         * *   The name of the instance must be unique in the region where the instance is deployed.
+         * *   The name must be 3 to 64 characters in length and can contain letters, digits, hyphens (-), and underscores (\_).
+         * *   If you do not configure this parameter, the instance name remains unchanged.
+         */
+        public Builder instanceName(String instanceName) {
+            this.putQueryParameter("InstanceName", instanceName);
+            this.instanceName = instanceName;
+            return this;
+        }
+
+        /**
+         * The updated description of the instance. If you do not configure this parameter, the instance description remains unchanged.
+         */
+        public Builder remark(String remark) {
+            this.putQueryParameter("Remark", remark);
+            this.remark = remark;
+            return this;
+        }
+
+        @Override
+        public OnsInstanceUpdateRequest build() {
+            return new OnsInstanceUpdateRequest(this);
+        } 
+
+    } 
+
+}
