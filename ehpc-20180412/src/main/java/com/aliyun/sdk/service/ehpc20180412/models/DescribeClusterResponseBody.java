@@ -823,6 +823,12 @@ public class DescribeClusterResponseBody extends TeaModel {
         @NameInMap("PostInstallScripts")
         private PostInstallScripts postInstallScripts;
 
+        @NameInMap("RamNodeTypes")
+        private String ramNodeTypes;
+
+        @NameInMap("RamRoleName")
+        private String ramRoleName;
+
         @NameInMap("RegionId")
         private String regionId;
 
@@ -880,6 +886,8 @@ public class DescribeClusterResponseBody extends TeaModel {
             this.onPremiseInfo = builder.onPremiseInfo;
             this.osTag = builder.osTag;
             this.postInstallScripts = builder.postInstallScripts;
+            this.ramNodeTypes = builder.ramNodeTypes;
+            this.ramRoleName = builder.ramRoleName;
             this.regionId = builder.regionId;
             this.remoteDirectory = builder.remoteDirectory;
             this.sccClusterId = builder.sccClusterId;
@@ -1043,6 +1051,20 @@ public class DescribeClusterResponseBody extends TeaModel {
         }
 
         /**
+         * @return ramNodeTypes
+         */
+        public String getRamNodeTypes() {
+            return this.ramNodeTypes;
+        }
+
+        /**
+         * @return ramRoleName
+         */
+        public String getRamRoleName() {
+            return this.ramRoleName;
+        }
+
+        /**
          * @return regionId
          */
         public String getRegionId() {
@@ -1147,6 +1169,8 @@ public class DescribeClusterResponseBody extends TeaModel {
             private ClusterInfoOnPremiseInfo onPremiseInfo; 
             private String osTag; 
             private PostInstallScripts postInstallScripts; 
+            private String ramNodeTypes; 
+            private String ramRoleName; 
             private String regionId; 
             private String remoteDirectory; 
             private String sccClusterId; 
@@ -1317,6 +1341,22 @@ public class DescribeClusterResponseBody extends TeaModel {
              */
             public Builder postInstallScripts(PostInstallScripts postInstallScripts) {
                 this.postInstallScripts = postInstallScripts;
+                return this;
+            }
+
+            /**
+             * RamNodeTypes.
+             */
+            public Builder ramNodeTypes(String ramNodeTypes) {
+                this.ramNodeTypes = ramNodeTypes;
+                return this;
+            }
+
+            /**
+             * RamRoleName.
+             */
+            public Builder ramRoleName(String ramRoleName) {
+                this.ramRoleName = ramRoleName;
                 return this;
             }
 

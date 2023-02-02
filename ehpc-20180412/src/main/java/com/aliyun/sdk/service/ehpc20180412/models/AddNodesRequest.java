@@ -38,6 +38,15 @@ public class AddNodesRequest extends Request {
     private Boolean computeEnableHt;
 
     @Query
+    @NameInMap("ComputeSpotDuration")
+    @Validation(maximum = 6)
+    private Integer computeSpotDuration;
+
+    @Query
+    @NameInMap("ComputeSpotInterruptionBehavior")
+    private String computeSpotInterruptionBehavior;
+
+    @Query
     @NameInMap("ComputeSpotPriceLimit")
     private String computeSpotPriceLimit;
 
@@ -144,6 +153,8 @@ public class AddNodesRequest extends Request {
         this.clientToken = builder.clientToken;
         this.clusterId = builder.clusterId;
         this.computeEnableHt = builder.computeEnableHt;
+        this.computeSpotDuration = builder.computeSpotDuration;
+        this.computeSpotInterruptionBehavior = builder.computeSpotInterruptionBehavior;
         this.computeSpotPriceLimit = builder.computeSpotPriceLimit;
         this.computeSpotStrategy = builder.computeSpotStrategy;
         this.count = builder.count;
@@ -223,6 +234,20 @@ public class AddNodesRequest extends Request {
      */
     public Boolean getComputeEnableHt() {
         return this.computeEnableHt;
+    }
+
+    /**
+     * @return computeSpotDuration
+     */
+    public Integer getComputeSpotDuration() {
+        return this.computeSpotDuration;
+    }
+
+    /**
+     * @return computeSpotInterruptionBehavior
+     */
+    public String getComputeSpotInterruptionBehavior() {
+        return this.computeSpotInterruptionBehavior;
     }
 
     /**
@@ -400,6 +425,8 @@ public class AddNodesRequest extends Request {
         private String clientToken; 
         private String clusterId; 
         private Boolean computeEnableHt; 
+        private Integer computeSpotDuration; 
+        private String computeSpotInterruptionBehavior; 
         private String computeSpotPriceLimit; 
         private String computeSpotStrategy; 
         private Integer count; 
@@ -437,6 +464,8 @@ public class AddNodesRequest extends Request {
             this.clientToken = request.clientToken;
             this.clusterId = request.clusterId;
             this.computeEnableHt = request.computeEnableHt;
+            this.computeSpotDuration = request.computeSpotDuration;
+            this.computeSpotInterruptionBehavior = request.computeSpotInterruptionBehavior;
             this.computeSpotPriceLimit = request.computeSpotPriceLimit;
             this.computeSpotStrategy = request.computeSpotStrategy;
             this.count = request.count;
@@ -514,6 +543,28 @@ public class AddNodesRequest extends Request {
         public Builder computeEnableHt(Boolean computeEnableHt) {
             this.putQueryParameter("ComputeEnableHt", computeEnableHt);
             this.computeEnableHt = computeEnableHt;
+            return this;
+        }
+
+        /**
+         * 抢占式实例的保留时长，单位为小时。取值范围：0~6。
+         * <p>
+         * - 保留时长2~6正在邀测中，如需开通请提交工单。
+         * - 取值为0，则为无保护期模式。
+         * 默认值：1。
+         */
+        public Builder computeSpotDuration(Integer computeSpotDuration) {
+            this.putQueryParameter("ComputeSpotDuration", computeSpotDuration);
+            this.computeSpotDuration = computeSpotDuration;
+            return this;
+        }
+
+        /**
+         * 抢占实例中断模式。目前仅支持Terminate（默认）直接释放实例。
+         */
+        public Builder computeSpotInterruptionBehavior(String computeSpotInterruptionBehavior) {
+            this.putQueryParameter("ComputeSpotInterruptionBehavior", computeSpotInterruptionBehavior);
+            this.computeSpotInterruptionBehavior = computeSpotInterruptionBehavior;
             return this;
         }
 

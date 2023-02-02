@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeJobRequest extends Request {
     @Query
+    @NameInMap("Async")
+    private Boolean async;
+
+    @Query
     @NameInMap("ClusterId")
     @Validation(required = true)
     private String clusterId;
@@ -24,6 +28,7 @@ public class DescribeJobRequest extends Request {
 
     private DescribeJobRequest(Builder builder) {
         super(builder);
+        this.async = builder.async;
         this.clusterId = builder.clusterId;
         this.jobId = builder.jobId;
     }
@@ -42,6 +47,13 @@ public class DescribeJobRequest extends Request {
     }
 
     /**
+     * @return async
+     */
+    public Boolean getAsync() {
+        return this.async;
+    }
+
+    /**
      * @return clusterId
      */
     public String getClusterId() {
@@ -56,6 +68,7 @@ public class DescribeJobRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeJobRequest, Builder> {
+        private Boolean async; 
         private String clusterId; 
         private String jobId; 
 
@@ -65,9 +78,19 @@ public class DescribeJobRequest extends Request {
 
         private Builder(DescribeJobRequest request) {
             super(request);
+            this.async = request.async;
             this.clusterId = request.clusterId;
             this.jobId = request.jobId;
         } 
+
+        /**
+         * Async.
+         */
+        public Builder async(Boolean async) {
+            this.putQueryParameter("Async", async);
+            this.async = async;
+            return this;
+        }
 
         /**
          * ClusterId.

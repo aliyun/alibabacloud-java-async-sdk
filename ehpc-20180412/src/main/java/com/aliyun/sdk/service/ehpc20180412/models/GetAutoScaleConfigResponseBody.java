@@ -580,6 +580,12 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
         @NameInMap("InstanceType")
         private String instanceType;
 
+        @NameInMap("SpotDuration")
+        private Integer spotDuration;
+
+        @NameInMap("SpotInterruptionBehavior")
+        private String spotInterruptionBehavior;
+
         @NameInMap("SpotPriceLimit")
         private Float spotPriceLimit;
 
@@ -595,6 +601,8 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
         private InstanceTypeInfo(Builder builder) {
             this.hostNamePrefix = builder.hostNamePrefix;
             this.instanceType = builder.instanceType;
+            this.spotDuration = builder.spotDuration;
+            this.spotInterruptionBehavior = builder.spotInterruptionBehavior;
             this.spotPriceLimit = builder.spotPriceLimit;
             this.spotStrategy = builder.spotStrategy;
             this.vSwitchId = builder.vSwitchId;
@@ -621,6 +629,20 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
          */
         public String getInstanceType() {
             return this.instanceType;
+        }
+
+        /**
+         * @return spotDuration
+         */
+        public Integer getSpotDuration() {
+            return this.spotDuration;
+        }
+
+        /**
+         * @return spotInterruptionBehavior
+         */
+        public String getSpotInterruptionBehavior() {
+            return this.spotInterruptionBehavior;
         }
 
         /**
@@ -654,6 +676,8 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
         public static final class Builder {
             private String hostNamePrefix; 
             private String instanceType; 
+            private Integer spotDuration; 
+            private String spotInterruptionBehavior; 
             private Float spotPriceLimit; 
             private String spotStrategy; 
             private String vSwitchId; 
@@ -672,6 +696,22 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
+                return this;
+            }
+
+            /**
+             * SpotDuration.
+             */
+            public Builder spotDuration(Integer spotDuration) {
+                this.spotDuration = spotDuration;
+                return this;
+            }
+
+            /**
+             * 抢占实例中断模式。目前仅支持Terminate（默认）直接释放实例。
+             */
+            public Builder spotInterruptionBehavior(String spotInterruptionBehavior) {
+                this.spotInterruptionBehavior = spotInterruptionBehavior;
                 return this;
             }
 

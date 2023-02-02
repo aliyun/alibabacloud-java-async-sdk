@@ -33,6 +33,14 @@ public class ModifyClusterAttributesRequest extends Request {
     @NameInMap("Name")
     private String name;
 
+    @Query
+    @NameInMap("RamNodeTypes")
+    private java.util.List < String > ramNodeTypes;
+
+    @Query
+    @NameInMap("RamRoleName")
+    private String ramRoleName;
+
     private ModifyClusterAttributesRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
@@ -40,6 +48,8 @@ public class ModifyClusterAttributesRequest extends Request {
         this.imageId = builder.imageId;
         this.imageOwnerAlias = builder.imageOwnerAlias;
         this.name = builder.name;
+        this.ramNodeTypes = builder.ramNodeTypes;
+        this.ramRoleName = builder.ramRoleName;
     }
 
     public static Builder builder() {
@@ -90,12 +100,28 @@ public class ModifyClusterAttributesRequest extends Request {
         return this.name;
     }
 
+    /**
+     * @return ramNodeTypes
+     */
+    public java.util.List < String > getRamNodeTypes() {
+        return this.ramNodeTypes;
+    }
+
+    /**
+     * @return ramRoleName
+     */
+    public String getRamRoleName() {
+        return this.ramRoleName;
+    }
+
     public static final class Builder extends Request.Builder<ModifyClusterAttributesRequest, Builder> {
         private String clusterId; 
         private String description; 
         private String imageId; 
         private String imageOwnerAlias; 
         private String name; 
+        private java.util.List < String > ramNodeTypes; 
+        private String ramRoleName; 
 
         private Builder() {
             super();
@@ -108,6 +134,8 @@ public class ModifyClusterAttributesRequest extends Request {
             this.imageId = request.imageId;
             this.imageOwnerAlias = request.imageOwnerAlias;
             this.name = request.name;
+            this.ramNodeTypes = request.ramNodeTypes;
+            this.ramRoleName = request.ramRoleName;
         } 
 
         /**
@@ -152,6 +180,24 @@ public class ModifyClusterAttributesRequest extends Request {
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
             this.name = name;
+            return this;
+        }
+
+        /**
+         * RamNodeTypes.
+         */
+        public Builder ramNodeTypes(java.util.List < String > ramNodeTypes) {
+            this.putQueryParameter("RamNodeTypes", ramNodeTypes);
+            this.ramNodeTypes = ramNodeTypes;
+            return this;
+        }
+
+        /**
+         * RamRoleName.
+         */
+        public Builder ramRoleName(String ramRoleName) {
+            this.putQueryParameter("RamRoleName", ramRoleName);
+            this.ramRoleName = ramRoleName;
             return this;
         }
 
