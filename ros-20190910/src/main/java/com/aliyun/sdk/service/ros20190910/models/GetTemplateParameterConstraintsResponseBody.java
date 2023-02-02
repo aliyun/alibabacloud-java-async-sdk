@@ -132,6 +132,87 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
         } 
 
     }
+    public static class QueryErrors extends TeaModel {
+        @NameInMap("ErrorMessage")
+        private String errorMessage;
+
+        @NameInMap("ResourceName")
+        private String resourceName;
+
+        @NameInMap("ResourceType")
+        private String resourceType;
+
+        private QueryErrors(Builder builder) {
+            this.errorMessage = builder.errorMessage;
+            this.resourceName = builder.resourceName;
+            this.resourceType = builder.resourceType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static QueryErrors create() {
+            return builder().build();
+        }
+
+        /**
+         * @return errorMessage
+         */
+        public String getErrorMessage() {
+            return this.errorMessage;
+        }
+
+        /**
+         * @return resourceName
+         */
+        public String getResourceName() {
+            return this.resourceName;
+        }
+
+        /**
+         * @return resourceType
+         */
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+        public static final class Builder {
+            private String errorMessage; 
+            private String resourceName; 
+            private String resourceType; 
+
+            /**
+             * ErrorMessage.
+             */
+            public Builder errorMessage(String errorMessage) {
+                this.errorMessage = errorMessage;
+                return this;
+            }
+
+            /**
+             * ResourceName.
+             */
+            public Builder resourceName(String resourceName) {
+                this.resourceName = resourceName;
+                return this;
+            }
+
+            /**
+             * ResourceType.
+             */
+            public Builder resourceType(String resourceType) {
+                this.resourceType = resourceType;
+                return this;
+            }
+
+            public QueryErrors build() {
+                return new QueryErrors(this);
+            } 
+
+        } 
+
+    }
     public static class ParameterConstraints extends TeaModel {
         @NameInMap("AllowedValues")
         private java.util.List < String > allowedValues;
@@ -157,6 +238,9 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
         @NameInMap("ParameterKey")
         private String parameterKey;
 
+        @NameInMap("QueryErrors")
+        private java.util.List < QueryErrors> queryErrors;
+
         @NameInMap("Type")
         private String type;
 
@@ -169,6 +253,7 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
             this.illegalValueByRules = builder.illegalValueByRules;
             this.notSupportResources = builder.notSupportResources;
             this.parameterKey = builder.parameterKey;
+            this.queryErrors = builder.queryErrors;
             this.type = builder.type;
         }
 
@@ -237,6 +322,13 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
         }
 
         /**
+         * @return queryErrors
+         */
+        public java.util.List < QueryErrors> getQueryErrors() {
+            return this.queryErrors;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
@@ -252,6 +344,7 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
             private java.util.List < ? > illegalValueByRules; 
             private java.util.List < NotSupportResources> notSupportResources; 
             private String parameterKey; 
+            private java.util.List < QueryErrors> queryErrors; 
             private String type; 
 
             /**
@@ -315,6 +408,14 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
              */
             public Builder parameterKey(String parameterKey) {
                 this.parameterKey = parameterKey;
+                return this;
+            }
+
+            /**
+             * QueryErrors.
+             */
+            public Builder queryErrors(java.util.List < QueryErrors> queryErrors) {
+                this.queryErrors = queryErrors;
                 return this;
             }
 

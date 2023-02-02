@@ -18,6 +18,9 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
     @NameInMap("ResourceCleaner")
     private ResourceCleaner resourceCleaner;
 
+    @NameInMap("TemplateParameterConstraints")
+    private TemplateParameterConstraints templateParameterConstraints;
+
     @NameInMap("TemplateScratch")
     private TemplateScratch templateScratch;
 
@@ -27,6 +30,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
     private GetFeatureDetailsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
         this.resourceCleaner = builder.resourceCleaner;
+        this.templateParameterConstraints = builder.templateParameterConstraints;
         this.templateScratch = builder.templateScratch;
         this.terraform = builder.terraform;
     }
@@ -54,6 +58,13 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
     }
 
     /**
+     * @return templateParameterConstraints
+     */
+    public TemplateParameterConstraints getTemplateParameterConstraints() {
+        return this.templateParameterConstraints;
+    }
+
+    /**
      * @return templateScratch
      */
     public TemplateScratch getTemplateScratch() {
@@ -70,6 +81,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private ResourceCleaner resourceCleaner; 
+        private TemplateParameterConstraints templateParameterConstraints; 
         private TemplateScratch templateScratch; 
         private Terraform terraform; 
 
@@ -86,6 +98,14 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
          */
         public Builder resourceCleaner(ResourceCleaner resourceCleaner) {
             this.resourceCleaner = resourceCleaner;
+            return this;
+        }
+
+        /**
+         * TemplateParameterConstraints.
+         */
+        public Builder templateParameterConstraints(TemplateParameterConstraints templateParameterConstraints) {
+            this.templateParameterConstraints = templateParameterConstraints;
             return this;
         }
 
@@ -228,6 +248,108 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
 
             public ResourceCleaner build() {
                 return new ResourceCleaner(this);
+            } 
+
+        } 
+
+    }
+    public static class TemplateParameterConstraintsSupportedResourceTypes extends TeaModel {
+        @NameInMap("Properties")
+        private java.util.List < String > properties;
+
+        @NameInMap("ResourceType")
+        private String resourceType;
+
+        private TemplateParameterConstraintsSupportedResourceTypes(Builder builder) {
+            this.properties = builder.properties;
+            this.resourceType = builder.resourceType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TemplateParameterConstraintsSupportedResourceTypes create() {
+            return builder().build();
+        }
+
+        /**
+         * @return properties
+         */
+        public java.util.List < String > getProperties() {
+            return this.properties;
+        }
+
+        /**
+         * @return resourceType
+         */
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+        public static final class Builder {
+            private java.util.List < String > properties; 
+            private String resourceType; 
+
+            /**
+             * Properties.
+             */
+            public Builder properties(java.util.List < String > properties) {
+                this.properties = properties;
+                return this;
+            }
+
+            /**
+             * ResourceType.
+             */
+            public Builder resourceType(String resourceType) {
+                this.resourceType = resourceType;
+                return this;
+            }
+
+            public TemplateParameterConstraintsSupportedResourceTypes build() {
+                return new TemplateParameterConstraintsSupportedResourceTypes(this);
+            } 
+
+        } 
+
+    }
+    public static class TemplateParameterConstraints extends TeaModel {
+        @NameInMap("SupportedResourceTypes")
+        private java.util.List < TemplateParameterConstraintsSupportedResourceTypes> supportedResourceTypes;
+
+        private TemplateParameterConstraints(Builder builder) {
+            this.supportedResourceTypes = builder.supportedResourceTypes;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TemplateParameterConstraints create() {
+            return builder().build();
+        }
+
+        /**
+         * @return supportedResourceTypes
+         */
+        public java.util.List < TemplateParameterConstraintsSupportedResourceTypes> getSupportedResourceTypes() {
+            return this.supportedResourceTypes;
+        }
+
+        public static final class Builder {
+            private java.util.List < TemplateParameterConstraintsSupportedResourceTypes> supportedResourceTypes; 
+
+            /**
+             * SupportedResourceTypes.
+             */
+            public Builder supportedResourceTypes(java.util.List < TemplateParameterConstraintsSupportedResourceTypes> supportedResourceTypes) {
+                this.supportedResourceTypes = supportedResourceTypes;
+                return this;
+            }
+
+            public TemplateParameterConstraints build() {
+                return new TemplateParameterConstraints(this);
             } 
 
         } 

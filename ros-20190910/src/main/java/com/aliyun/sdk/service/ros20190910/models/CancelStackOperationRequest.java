@@ -98,7 +98,7 @@ public class CancelStackOperationRequest extends Request {
         } 
 
         /**
-         * AllowedStackOperations.
+         * test
          */
         public Builder allowedStackOperations(java.util.List < String > allowedStackOperations) {
             this.putQueryParameter("AllowedStackOperations", allowedStackOperations);

@@ -30,6 +30,9 @@ public class ValidateTemplateResponseBody extends TeaModel {
     @NameInMap("Resources")
     private java.util.List < Resources> resources;
 
+    @NameInMap("UpdateInfo")
+    private UpdateInfo updateInfo;
+
     private ValidateTemplateResponseBody(Builder builder) {
         this.description = builder.description;
         this.outputs = builder.outputs;
@@ -37,6 +40,7 @@ public class ValidateTemplateResponseBody extends TeaModel {
         this.requestId = builder.requestId;
         this.resourceTypes = builder.resourceTypes;
         this.resources = builder.resources;
+        this.updateInfo = builder.updateInfo;
     }
 
     public static Builder builder() {
@@ -89,6 +93,13 @@ public class ValidateTemplateResponseBody extends TeaModel {
         return this.resources;
     }
 
+    /**
+     * @return updateInfo
+     */
+    public UpdateInfo getUpdateInfo() {
+        return this.updateInfo;
+    }
+
     public static final class Builder {
         private String description; 
         private java.util.List < Outputs> outputs; 
@@ -96,6 +107,7 @@ public class ValidateTemplateResponseBody extends TeaModel {
         private String requestId; 
         private ResourceTypes resourceTypes; 
         private java.util.List < Resources> resources; 
+        private UpdateInfo updateInfo; 
 
         /**
          * Description.
@@ -142,6 +154,14 @@ public class ValidateTemplateResponseBody extends TeaModel {
          */
         public Builder resources(java.util.List < Resources> resources) {
             this.resources = resources;
+            return this;
+        }
+
+        /**
+         * UpdateInfo.
+         */
+        public Builder updateInfo(UpdateInfo updateInfo) {
+            this.updateInfo = updateInfo;
             return this;
         }
 
@@ -369,6 +389,167 @@ public class ValidateTemplateResponseBody extends TeaModel {
 
             public Resources build() {
                 return new Resources(this);
+            } 
+
+        } 
+
+    }
+    public static class UpdateInfo extends TeaModel {
+        @NameInMap("ParametersAllowedToBeModified")
+        private java.util.List < String > parametersAllowedToBeModified;
+
+        @NameInMap("ParametersCauseInterruptionIfModified")
+        private java.util.List < String > parametersCauseInterruptionIfModified;
+
+        @NameInMap("ParametersConditionallyAllowedToBeModified")
+        private java.util.List < String > parametersConditionallyAllowedToBeModified;
+
+        @NameInMap("ParametersConditionallyCauseInterruptionIfModified")
+        private java.util.List < String > parametersConditionallyCauseInterruptionIfModified;
+
+        @NameInMap("ParametersNotAllowedToBeModified")
+        private java.util.List < String > parametersNotAllowedToBeModified;
+
+        @NameInMap("ParametersUncertainlyAllowedToBeModified")
+        private java.util.List < String > parametersUncertainlyAllowedToBeModified;
+
+        @NameInMap("ParametersUncertainlyCauseInterruptionIfModified")
+        private java.util.List < String > parametersUncertainlyCauseInterruptionIfModified;
+
+        private UpdateInfo(Builder builder) {
+            this.parametersAllowedToBeModified = builder.parametersAllowedToBeModified;
+            this.parametersCauseInterruptionIfModified = builder.parametersCauseInterruptionIfModified;
+            this.parametersConditionallyAllowedToBeModified = builder.parametersConditionallyAllowedToBeModified;
+            this.parametersConditionallyCauseInterruptionIfModified = builder.parametersConditionallyCauseInterruptionIfModified;
+            this.parametersNotAllowedToBeModified = builder.parametersNotAllowedToBeModified;
+            this.parametersUncertainlyAllowedToBeModified = builder.parametersUncertainlyAllowedToBeModified;
+            this.parametersUncertainlyCauseInterruptionIfModified = builder.parametersUncertainlyCauseInterruptionIfModified;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static UpdateInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return parametersAllowedToBeModified
+         */
+        public java.util.List < String > getParametersAllowedToBeModified() {
+            return this.parametersAllowedToBeModified;
+        }
+
+        /**
+         * @return parametersCauseInterruptionIfModified
+         */
+        public java.util.List < String > getParametersCauseInterruptionIfModified() {
+            return this.parametersCauseInterruptionIfModified;
+        }
+
+        /**
+         * @return parametersConditionallyAllowedToBeModified
+         */
+        public java.util.List < String > getParametersConditionallyAllowedToBeModified() {
+            return this.parametersConditionallyAllowedToBeModified;
+        }
+
+        /**
+         * @return parametersConditionallyCauseInterruptionIfModified
+         */
+        public java.util.List < String > getParametersConditionallyCauseInterruptionIfModified() {
+            return this.parametersConditionallyCauseInterruptionIfModified;
+        }
+
+        /**
+         * @return parametersNotAllowedToBeModified
+         */
+        public java.util.List < String > getParametersNotAllowedToBeModified() {
+            return this.parametersNotAllowedToBeModified;
+        }
+
+        /**
+         * @return parametersUncertainlyAllowedToBeModified
+         */
+        public java.util.List < String > getParametersUncertainlyAllowedToBeModified() {
+            return this.parametersUncertainlyAllowedToBeModified;
+        }
+
+        /**
+         * @return parametersUncertainlyCauseInterruptionIfModified
+         */
+        public java.util.List < String > getParametersUncertainlyCauseInterruptionIfModified() {
+            return this.parametersUncertainlyCauseInterruptionIfModified;
+        }
+
+        public static final class Builder {
+            private java.util.List < String > parametersAllowedToBeModified; 
+            private java.util.List < String > parametersCauseInterruptionIfModified; 
+            private java.util.List < String > parametersConditionallyAllowedToBeModified; 
+            private java.util.List < String > parametersConditionallyCauseInterruptionIfModified; 
+            private java.util.List < String > parametersNotAllowedToBeModified; 
+            private java.util.List < String > parametersUncertainlyAllowedToBeModified; 
+            private java.util.List < String > parametersUncertainlyCauseInterruptionIfModified; 
+
+            /**
+             * ParametersAllowedToBeModified.
+             */
+            public Builder parametersAllowedToBeModified(java.util.List < String > parametersAllowedToBeModified) {
+                this.parametersAllowedToBeModified = parametersAllowedToBeModified;
+                return this;
+            }
+
+            /**
+             * ParametersCauseInterruptionIfModified.
+             */
+            public Builder parametersCauseInterruptionIfModified(java.util.List < String > parametersCauseInterruptionIfModified) {
+                this.parametersCauseInterruptionIfModified = parametersCauseInterruptionIfModified;
+                return this;
+            }
+
+            /**
+             * ParametersConditionallyAllowedToBeModified.
+             */
+            public Builder parametersConditionallyAllowedToBeModified(java.util.List < String > parametersConditionallyAllowedToBeModified) {
+                this.parametersConditionallyAllowedToBeModified = parametersConditionallyAllowedToBeModified;
+                return this;
+            }
+
+            /**
+             * ParametersConditionallyCauseInterruptionIfModified.
+             */
+            public Builder parametersConditionallyCauseInterruptionIfModified(java.util.List < String > parametersConditionallyCauseInterruptionIfModified) {
+                this.parametersConditionallyCauseInterruptionIfModified = parametersConditionallyCauseInterruptionIfModified;
+                return this;
+            }
+
+            /**
+             * ParametersNotAllowedToBeModified.
+             */
+            public Builder parametersNotAllowedToBeModified(java.util.List < String > parametersNotAllowedToBeModified) {
+                this.parametersNotAllowedToBeModified = parametersNotAllowedToBeModified;
+                return this;
+            }
+
+            /**
+             * ParametersUncertainlyAllowedToBeModified.
+             */
+            public Builder parametersUncertainlyAllowedToBeModified(java.util.List < String > parametersUncertainlyAllowedToBeModified) {
+                this.parametersUncertainlyAllowedToBeModified = parametersUncertainlyAllowedToBeModified;
+                return this;
+            }
+
+            /**
+             * ParametersUncertainlyCauseInterruptionIfModified.
+             */
+            public Builder parametersUncertainlyCauseInterruptionIfModified(java.util.List < String > parametersUncertainlyCauseInterruptionIfModified) {
+                this.parametersUncertainlyCauseInterruptionIfModified = parametersUncertainlyCauseInterruptionIfModified;
+                return this;
+            }
+
+            public UpdateInfo build() {
+                return new UpdateInfo(this);
             } 
 
         } 
