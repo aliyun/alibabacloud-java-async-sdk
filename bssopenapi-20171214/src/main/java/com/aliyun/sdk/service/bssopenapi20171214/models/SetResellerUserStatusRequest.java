@@ -27,11 +27,16 @@ public class SetResellerUserStatusRequest extends Request {
     @Validation(required = true)
     private String status;
 
+    @Query
+    @NameInMap("StopMode")
+    private String stopMode;
+
     private SetResellerUserStatusRequest(Builder builder) {
         super(builder);
         this.businessType = builder.businessType;
         this.ownerId = builder.ownerId;
         this.status = builder.status;
+        this.stopMode = builder.stopMode;
     }
 
     public static Builder builder() {
@@ -68,10 +73,18 @@ public class SetResellerUserStatusRequest extends Request {
         return this.status;
     }
 
+    /**
+     * @return stopMode
+     */
+    public String getStopMode() {
+        return this.stopMode;
+    }
+
     public static final class Builder extends Request.Builder<SetResellerUserStatusRequest, Builder> {
         private String businessType; 
         private String ownerId; 
         private String status; 
+        private String stopMode; 
 
         private Builder() {
             super();
@@ -82,6 +95,7 @@ public class SetResellerUserStatusRequest extends Request {
             this.businessType = request.businessType;
             this.ownerId = request.ownerId;
             this.status = request.status;
+            this.stopMode = request.stopMode;
         } 
 
         /**
@@ -108,6 +122,15 @@ public class SetResellerUserStatusRequest extends Request {
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
             this.status = status;
+            return this;
+        }
+
+        /**
+         * StopMode.
+         */
+        public Builder stopMode(String stopMode) {
+            this.putQueryParameter("StopMode", stopMode);
+            this.stopMode = stopMode;
             return this;
         }
 

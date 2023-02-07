@@ -46,12 +46,33 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteCostUnitResponse> deleteCostUnit(DeleteCostUnitRequest request);
 
+    CompletableFuture<DescribeCostBudgetsSummaryResponse> describeCostBudgetsSummary(DescribeCostBudgetsSummaryRequest request);
+
+    CompletableFuture<DescribeInstanceAmortizedCostByAmortizationPeriodResponse> describeInstanceAmortizedCostByAmortizationPeriod(DescribeInstanceAmortizedCostByAmortizationPeriodRequest request);
+
+    CompletableFuture<DescribeInstanceAmortizedCostByConsumePeriodResponse> describeInstanceAmortizedCostByConsumePeriod(DescribeInstanceAmortizedCostByConsumePeriodRequest request);
+
     CompletableFuture<DescribeInstanceBillResponse> describeInstanceBill(DescribeInstanceBillRequest request);
 
     CompletableFuture<DescribePricingModuleResponse> describePricingModule(DescribePricingModuleRequest request);
 
+    CompletableFuture<DescribeProductAmortizedCostByAmortizationPeriodResponse> describeProductAmortizedCostByAmortizationPeriod(DescribeProductAmortizedCostByAmortizationPeriodRequest request);
+
+    CompletableFuture<DescribeProductAmortizedCostByConsumePeriodResponse> describeProductAmortizedCostByConsumePeriod(DescribeProductAmortizedCostByConsumePeriodRequest request);
+
+    /**
+      * 1\\. The queried coverage details are the same as those displayed in the table on the Coverage tab of the Manage Reserved Instances page in the Billing Management console.
+      * 2\\. You can call this operation to query the coverage details of RIs or SCUs.
+      * 3\\. You can call this operation to query coverage details at an hourly, daily, or monthly granularity.
+      *
+     */
     CompletableFuture<DescribeResourceCoverageDetailResponse> describeResourceCoverageDetail(DescribeResourceCoverageDetailRequest request);
 
+    /**
+      * The queried total coverage data is the same as the aggregated data displayed on the Coverage tab of the Manage Reserved Instances page in the Billing Management console.
+      * You can call this operation to query the total coverage data of RIs or SCUs.
+      *
+     */
     CompletableFuture<DescribeResourceCoverageTotalResponse> describeResourceCoverageTotal(DescribeResourceCoverageTotalRequest request);
 
     CompletableFuture<DescribeResourcePackageProductResponse> describeResourcePackageProduct(DescribeResourcePackageProductRequest request);
@@ -112,6 +133,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<QueryCashCouponsResponse> queryCashCoupons(QueryCashCouponsRequest request);
 
+    CompletableFuture<QueryCommodityListResponse> queryCommodityList(QueryCommodityListRequest request);
+
     CompletableFuture<QueryCostUnitResponse> queryCostUnit(QueryCostUnitRequest request);
 
     CompletableFuture<QueryCostUnitResourceResponse> queryCostUnitResource(QueryCostUnitResourceRequest request);
@@ -132,15 +155,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<QueryInvoicingCustomerListResponse> queryInvoicingCustomerList(QueryInvoicingCustomerListRequest request);
 
-    CompletableFuture<QueryMonthlyBillResponse> queryMonthlyBill(QueryMonthlyBillRequest request);
-
-    CompletableFuture<QueryMonthlyInstanceConsumptionResponse> queryMonthlyInstanceConsumption(QueryMonthlyInstanceConsumptionRequest request);
-
     CompletableFuture<QueryOrdersResponse> queryOrders(QueryOrdersRequest request);
 
     CompletableFuture<QueryPermissionListResponse> queryPermissionList(QueryPermissionListRequest request);
 
     CompletableFuture<QueryPrepaidCardsResponse> queryPrepaidCards(QueryPrepaidCardsRequest request);
+
+    CompletableFuture<QueryPriceEntityListResponse> queryPriceEntityList(QueryPriceEntityListRequest request);
 
     CompletableFuture<QueryProductListResponse> queryProductList(QueryProductListRequest request);
 
@@ -156,11 +177,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<QuerySavingsPlansDeductLogResponse> querySavingsPlansDeductLog(QuerySavingsPlansDeductLogRequest request);
 
+    CompletableFuture<QuerySavingsPlansDiscountResponse> querySavingsPlansDiscount(QuerySavingsPlansDiscountRequest request);
+
     CompletableFuture<QuerySavingsPlansInstanceResponse> querySavingsPlansInstance(QuerySavingsPlansInstanceRequest request);
 
     CompletableFuture<QuerySettleBillResponse> querySettleBill(QuerySettleBillRequest request);
 
-    CompletableFuture<QuerySettlementBillResponse> querySettlementBill(QuerySettlementBillRequest request);
+    CompletableFuture<QuerySkuPriceListResponse> querySkuPriceList(QuerySkuPriceListRequest request);
 
     CompletableFuture<QuerySplitItemBillResponse> querySplitItemBill(QuerySplitItemBillRequest request);
 

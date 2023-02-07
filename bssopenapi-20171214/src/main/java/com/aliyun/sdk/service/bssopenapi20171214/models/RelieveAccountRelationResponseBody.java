@@ -158,7 +158,7 @@ public class RelieveAccountRelationResponseBody extends TeaModel {
             private String hostId; 
 
             /**
-             * HostId.
+             * hostid
              */
             public Builder hostId(String hostId) {
                 this.hostId = hostId;

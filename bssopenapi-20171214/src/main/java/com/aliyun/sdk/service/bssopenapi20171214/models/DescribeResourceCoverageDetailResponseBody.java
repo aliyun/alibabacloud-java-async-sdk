@@ -86,7 +86,7 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the operation was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -386,7 +386,7 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
             private String zoneName; 
 
             /**
-             * CapacityUnit.
+             * The unit that is used to measure the resources deducted from deduction plans.
              */
             public Builder capacityUnit(String capacityUnit) {
                 this.capacityUnit = capacityUnit;
@@ -394,7 +394,7 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CommodityCode.
+             * The code of the service.
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -402,7 +402,7 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CommodityName.
+             * The name and billing method of the service.
              */
             public Builder commodityName(String commodityName) {
                 this.commodityName = commodityName;
@@ -410,7 +410,7 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CoveragePercentage.
+             * The coverage rate of a deduction plan.
              */
             public Builder coveragePercentage(Float coveragePercentage) {
                 this.coveragePercentage = coveragePercentage;
@@ -418,7 +418,7 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Currency.
+             * The currency in which deduction plans were priced.
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -426,7 +426,7 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DeductQuantity.
+             * The amount of the resources deducted from a deduction plan.
              */
             public Builder deductQuantity(Float deductQuantity) {
                 this.deductQuantity = deductQuantity;
@@ -434,7 +434,7 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * The end of the time range in which the coverage details were queried.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -442,7 +442,7 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of a pay-as-you-go instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -450,7 +450,7 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceSpec.
+             * The specifications of a deduction plan.
              */
             public Builder instanceSpec(String instanceSpec) {
                 this.instanceSpec = instanceSpec;
@@ -458,7 +458,7 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PaymentAmount.
+             * The amount of the bill.
              */
             public Builder paymentAmount(Float paymentAmount) {
                 this.paymentAmount = paymentAmount;
@@ -466,7 +466,7 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ProductCode.
+             * The code of the service.
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -474,7 +474,7 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ProductName.
+             * The name of the service.
              */
             public Builder productName(String productName) {
                 this.productName = productName;
@@ -482,7 +482,7 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * The region.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -490,7 +490,7 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RegionNo.
+             * The code of the region.
              */
             public Builder regionNo(String regionNo) {
                 this.regionNo = regionNo;
@@ -498,7 +498,7 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The beginning of the time range in which the coverage details were queried.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -506,7 +506,7 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TotalQuantity.
+             * The total amount of resources consumed.
              */
             public Builder totalQuantity(Float totalQuantity) {
                 this.totalQuantity = totalQuantity;
@@ -514,7 +514,7 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * The ID of the account.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -522,7 +522,7 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * The username of the account.
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -530,7 +530,7 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Zone.
+             * The code of the zone.
              */
             public Builder zone(String zone) {
                 this.zone = zone;
@@ -538,7 +538,7 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneName.
+             * The zone.
              */
             public Builder zoneName(String zoneName) {
                 this.zoneName = zoneName;
@@ -615,7 +615,7 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Items.
+             * The data entries.
              */
             public Builder items(java.util.List < Items> items) {
                 this.items = items;
@@ -623,7 +623,7 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * MaxResults.
+             * The number of entries returned on the current page.
              */
             public Builder maxResults(Integer maxResults) {
                 this.maxResults = maxResults;
@@ -631,7 +631,7 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NextToken.
+             * The token of the next page.
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -639,7 +639,7 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

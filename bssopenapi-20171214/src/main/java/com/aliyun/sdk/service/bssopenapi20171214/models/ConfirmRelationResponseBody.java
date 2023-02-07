@@ -158,7 +158,7 @@ public class ConfirmRelationResponseBody extends TeaModel {
             private String hostId; 
 
             /**
-             * HostId.
+             * HostId
              */
             public Builder hostId(String hostId) {
                 this.hostId = hostId;

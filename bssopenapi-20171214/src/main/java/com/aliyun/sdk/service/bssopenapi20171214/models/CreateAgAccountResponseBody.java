@@ -194,7 +194,7 @@ public class CreateAgAccountResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Mpk.
+             * MPK（UID）
              */
             public Builder mpk(String mpk) {
                 this.mpk = mpk;

@@ -86,7 +86,7 @@ public class DescribeSavingsPlansUsageDetailResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class DescribeSavingsPlansUsageDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The return data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class DescribeSavingsPlansUsageDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class DescribeSavingsPlansUsageDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeSavingsPlansUsageDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the operation was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -302,7 +302,7 @@ public class DescribeSavingsPlansUsageDetailResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * Currency.
+             * The currency.
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -310,7 +310,7 @@ public class DescribeSavingsPlansUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DeductValue.
+             * The used amount of the savings plan.
              */
             public Builder deductValue(Float deductValue) {
                 this.deductValue = deductValue;
@@ -318,7 +318,7 @@ public class DescribeSavingsPlansUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * EndPeriod.
+             * The end time.
              */
             public Builder endPeriod(String endPeriod) {
                 this.endPeriod = endPeriod;
@@ -326,7 +326,7 @@ public class DescribeSavingsPlansUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -334,7 +334,7 @@ public class DescribeSavingsPlansUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PoolValue.
+             * The total amount of the savings plan.
              */
             public Builder poolValue(Float poolValue) {
                 this.poolValue = poolValue;
@@ -342,7 +342,7 @@ public class DescribeSavingsPlansUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PostpaidCost.
+             * The pay-as-you-go cost.
              */
             public Builder postpaidCost(Float postpaidCost) {
                 this.postpaidCost = postpaidCost;
@@ -350,7 +350,7 @@ public class DescribeSavingsPlansUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SavedCost.
+             * The amount that is saved.
              */
             public Builder savedCost(Float savedCost) {
                 this.savedCost = savedCost;
@@ -358,7 +358,7 @@ public class DescribeSavingsPlansUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * StartPeriod.
+             * The start time.
              */
             public Builder startPeriod(String startPeriod) {
                 this.startPeriod = startPeriod;
@@ -366,7 +366,10 @@ public class DescribeSavingsPlansUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the instance.
+             * <p>
+             * 
+             * A value of -1 indicates that the payment is overdue. A value of 1 indicates that the instance is active.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -374,7 +377,7 @@ public class DescribeSavingsPlansUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the savings plan. Valid values: universal and ECS compute.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -382,7 +385,7 @@ public class DescribeSavingsPlansUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * UsagePercentage.
+             * The usage.
              */
             public Builder usagePercentage(Float usagePercentage) {
                 this.usagePercentage = usagePercentage;
@@ -390,7 +393,7 @@ public class DescribeSavingsPlansUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * The ID of the account.
              */
             public Builder userId(Long userId) {
                 this.userId = userId;
@@ -398,7 +401,7 @@ public class DescribeSavingsPlansUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * The username of the account.
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -463,7 +466,7 @@ public class DescribeSavingsPlansUsageDetailResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Items.
+             * The data entries.
              */
             public Builder items(java.util.List < Items> items) {
                 this.items = items;
@@ -471,7 +474,7 @@ public class DescribeSavingsPlansUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NextToken.
+             * The token of the next page.
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -479,7 +482,7 @@ public class DescribeSavingsPlansUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

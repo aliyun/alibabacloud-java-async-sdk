@@ -151,7 +151,7 @@ public class DescribeResourceUsageDetailRequest extends Request {
         }
 
         /**
-         * EndPeriod.
+         * The end of the time range to query. The end is excluded from the time range. If you do not set this parameter, the end time is the current time. Specify the time in the format of yyyy-MM-dd HH:mm:ss.
          */
         public Builder endPeriod(String endPeriod) {
             this.putQueryParameter("EndPeriod", endPeriod);
@@ -160,7 +160,7 @@ public class DescribeResourceUsageDetailRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The maximum number of entries to return. Default value: 20. Maximum value: 300.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -169,7 +169,7 @@ public class DescribeResourceUsageDetailRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that is used to retrieve the next page of results. You do not need to set this parameter if you query usage details within a specific time range for the first time. The response returns a token that you can use to query usage details that are displayed on the next page. If a null value is returned for the NextToken parameter, no more usage details can be queried.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -178,7 +178,7 @@ public class DescribeResourceUsageDetailRequest extends Request {
         }
 
         /**
-         * PeriodType.
+         * The time granularity at which usage details are queried. Valid values: MONTH, DAY, and HOUR.
          */
         public Builder periodType(String periodType) {
             this.putQueryParameter("PeriodType", periodType);
@@ -187,7 +187,7 @@ public class DescribeResourceUsageDetailRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of deduction plans whose usage details are queried. Valid values: RI and SCU.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -196,7 +196,7 @@ public class DescribeResourceUsageDetailRequest extends Request {
         }
 
         /**
-         * StartPeriod.
+         * The beginning of the time range to query. The beginning is included in the time range. Specify the time in the format of yyyy-MM-dd HH:mm:ss.
          */
         public Builder startPeriod(String startPeriod) {
             this.putQueryParameter("StartPeriod", startPeriod);

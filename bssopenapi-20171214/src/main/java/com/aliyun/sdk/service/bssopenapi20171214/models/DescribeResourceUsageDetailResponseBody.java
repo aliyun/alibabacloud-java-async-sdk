@@ -86,7 +86,7 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the operation was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -422,7 +422,7 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
             private String zoneName; 
 
             /**
-             * CapacityUnit.
+             * The unit that is used to measure the resources deducted from deduction plans.
              */
             public Builder capacityUnit(String capacityUnit) {
                 this.capacityUnit = capacityUnit;
@@ -430,7 +430,7 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Currency.
+             * The currency in which deduction plans were priced.
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -438,7 +438,7 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DeductQuantity.
+             * The amount of the resources deducted from deduction plans.
              */
             public Builder deductQuantity(Float deductQuantity) {
                 this.deductQuantity = deductQuantity;
@@ -446,7 +446,7 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * The end of the time range in which the usage details were queried.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -454,7 +454,7 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ImageType.
+             * The operating system.
              */
             public Builder imageType(String imageType) {
                 this.imageType = imageType;
@@ -462,7 +462,7 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceSpec.
+             * The specifications of a deduction plan.
              */
             public Builder instanceSpec(String instanceSpec) {
                 this.instanceSpec = instanceSpec;
@@ -470,7 +470,7 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PostpaidCost.
+             * The equivalent of pay-as-you-go costs.
              */
             public Builder postpaidCost(String postpaidCost) {
                 this.postpaidCost = postpaidCost;
@@ -478,7 +478,7 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PotentialSavedCost.
+             * The potential net savings.
              */
             public Builder potentialSavedCost(String potentialSavedCost) {
                 this.potentialSavedCost = potentialSavedCost;
@@ -486,7 +486,7 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Quantity.
+             * The number of deduction plans.
              */
             public Builder quantity(Long quantity) {
                 this.quantity = quantity;
@@ -494,7 +494,7 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * The region.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -502,7 +502,7 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RegionNo.
+             * The code of the region.
              */
             public Builder regionNo(String regionNo) {
                 this.regionNo = regionNo;
@@ -510,7 +510,7 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ReservationCost.
+             * The fee of purchased deduction plans.
              */
             public Builder reservationCost(String reservationCost) {
                 this.reservationCost = reservationCost;
@@ -518,7 +518,7 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceInstanceId.
+             * The ID of a deduction plan.
              */
             public Builder resourceInstanceId(String resourceInstanceId) {
                 this.resourceInstanceId = resourceInstanceId;
@@ -526,7 +526,7 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SavedCost.
+             * The net savings.
              */
             public Builder savedCost(String savedCost) {
                 this.savedCost = savedCost;
@@ -534,7 +534,7 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The beginning of the time range in which the usage details were queried.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -542,7 +542,7 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the deduction plan.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -550,7 +550,7 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * StatusName.
+             * The name of the state.
              */
             public Builder statusName(String statusName) {
                 this.statusName = statusName;
@@ -558,7 +558,7 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TotalQuantity.
+             * The total capacity of deduction plans.
              */
             public Builder totalQuantity(Float totalQuantity) {
                 this.totalQuantity = totalQuantity;
@@ -566,7 +566,7 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * UsagePercentage.
+             * The usage of deduction plans.
              */
             public Builder usagePercentage(Float usagePercentage) {
                 this.usagePercentage = usagePercentage;
@@ -574,7 +574,7 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * The ID of the account.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -582,7 +582,7 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * The username of the account.
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -590,7 +590,7 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Zone.
+             * The code of the zone.
              */
             public Builder zone(String zone) {
                 this.zone = zone;
@@ -598,7 +598,7 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneName.
+             * The zone.
              */
             public Builder zoneName(String zoneName) {
                 this.zoneName = zoneName;
@@ -675,7 +675,7 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Items.
+             * The data entries.
              */
             public Builder items(java.util.List < Items> items) {
                 this.items = items;
@@ -683,7 +683,7 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * MaxResults.
+             * The number of entries returned on the current page.
              */
             public Builder maxResults(Integer maxResults) {
                 this.maxResults = maxResults;
@@ -691,7 +691,7 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NextToken.
+             * The token of the next page.
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -699,7 +699,7 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

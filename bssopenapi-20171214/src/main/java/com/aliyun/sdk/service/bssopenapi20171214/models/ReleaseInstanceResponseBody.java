@@ -94,7 +94,7 @@ public class ReleaseInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * data
          */
         public Builder data(Data data) {
             this.data = data;

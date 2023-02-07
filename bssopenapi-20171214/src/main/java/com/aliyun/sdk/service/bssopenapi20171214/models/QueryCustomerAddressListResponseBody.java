@@ -330,7 +330,7 @@ public class QueryCustomerAddressListResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * ID。
              */
             public Builder id(Long id) {
                 this.id = id;

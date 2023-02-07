@@ -236,6 +236,9 @@ public class QueryResourcePackageInstancesResponseBody extends TeaModel {
         @NameInMap("ApplicableProducts")
         private ApplicableProducts applicableProducts;
 
+        @NameInMap("CommodityCode")
+        private String commodityCode;
+
         @NameInMap("DeductType")
         private String deductType;
 
@@ -274,6 +277,7 @@ public class QueryResourcePackageInstancesResponseBody extends TeaModel {
 
         private Instance(Builder builder) {
             this.applicableProducts = builder.applicableProducts;
+            this.commodityCode = builder.commodityCode;
             this.deductType = builder.deductType;
             this.effectiveTime = builder.effectiveTime;
             this.expiryTime = builder.expiryTime;
@@ -301,6 +305,13 @@ public class QueryResourcePackageInstancesResponseBody extends TeaModel {
          */
         public ApplicableProducts getApplicableProducts() {
             return this.applicableProducts;
+        }
+
+        /**
+         * @return commodityCode
+         */
+        public String getCommodityCode() {
+            return this.commodityCode;
         }
 
         /**
@@ -389,6 +400,7 @@ public class QueryResourcePackageInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private ApplicableProducts applicableProducts; 
+            private String commodityCode; 
             private String deductType; 
             private String effectiveTime; 
             private String expiryTime; 
@@ -407,6 +419,14 @@ public class QueryResourcePackageInstancesResponseBody extends TeaModel {
              */
             public Builder applicableProducts(ApplicableProducts applicableProducts) {
                 this.applicableProducts = applicableProducts;
+                return this;
+            }
+
+            /**
+             * CommodityCode.
+             */
+            public Builder commodityCode(String commodityCode) {
+                this.commodityCode = commodityCode;
                 return this;
             }
 

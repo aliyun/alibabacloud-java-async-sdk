@@ -170,7 +170,7 @@ public class AddAccountRelationResponseBody extends TeaModel {
             private Long relationId; 
 
             /**
-             * HostId.
+             * HostId
              */
             public Builder hostId(String hostId) {
                 this.hostId = hostId;

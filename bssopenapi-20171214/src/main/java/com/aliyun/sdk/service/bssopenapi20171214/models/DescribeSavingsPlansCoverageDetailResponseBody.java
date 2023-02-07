@@ -86,7 +86,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The return data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the operation was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -290,7 +290,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * CoveragePercentage.
+             * The coverage.
              */
             public Builder coveragePercentage(Float coveragePercentage) {
                 this.coveragePercentage = coveragePercentage;
@@ -298,7 +298,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Currency.
+             * The currency.
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -306,7 +306,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DeductAmount.
+             * The deducted amount.
              */
             public Builder deductAmount(Float deductAmount) {
                 this.deductAmount = deductAmount;
@@ -314,7 +314,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * EndPeriod.
+             * The end time.
              */
             public Builder endPeriod(String endPeriod) {
                 this.endPeriod = endPeriod;
@@ -322,7 +322,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -330,7 +330,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceSpec.
+             * The specifications.
              */
             public Builder instanceSpec(String instanceSpec) {
                 this.instanceSpec = instanceSpec;
@@ -338,7 +338,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PostpaidCost.
+             * The pay-as-you-go cost.
              */
             public Builder postpaidCost(Float postpaidCost) {
                 this.postpaidCost = postpaidCost;
@@ -346,7 +346,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * The region.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -354,7 +354,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * StartPeriod.
+             * The start time.
              */
             public Builder startPeriod(String startPeriod) {
                 this.startPeriod = startPeriod;
@@ -362,7 +362,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TotalAmount.
+             * The total expenditure.
              */
             public Builder totalAmount(Float totalAmount) {
                 this.totalAmount = totalAmount;
@@ -370,7 +370,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * The ID of the account.
              */
             public Builder userId(Long userId) {
                 this.userId = userId;
@@ -378,7 +378,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * The username of the account.
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -443,7 +443,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Items.
+             * The data entries.
              */
             public Builder items(java.util.List < Items> items) {
                 this.items = items;
@@ -451,7 +451,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NextToken.
+             * The token of the next page.
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -459,7 +459,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

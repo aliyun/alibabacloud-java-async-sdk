@@ -139,7 +139,7 @@ public class QuerySavingsPlansDeductLogRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * The end of the time range to query. Specify the time in the format of yyyy-MM-dd HH:mm:ss.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -148,7 +148,7 @@ public class QuerySavingsPlansDeductLogRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -157,7 +157,11 @@ public class QuerySavingsPlansDeductLogRequest extends Request {
         }
 
         /**
-         * InstanceType.
+         * The type of the instance ID based on which the data is queried. Valid values:
+         * <p>
+         * 
+         * *   spn: queries data based on the ID of the savings plan instance.
+         * *   product: queries data based on the ID of the cloud service instance.
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -166,7 +170,11 @@ public class QuerySavingsPlansDeductLogRequest extends Request {
         }
 
         /**
-         * Locale.
+         * The language of the return data. Valid values:
+         * <p>
+         * 
+         * *   ZH: Chinese
+         * *   EN: English
          */
         public Builder locale(String locale) {
             this.putQueryParameter("Locale", locale);
@@ -175,7 +183,7 @@ public class QuerySavingsPlansDeductLogRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * The number of the page to return.
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -184,7 +192,7 @@ public class QuerySavingsPlansDeductLogRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -193,7 +201,7 @@ public class QuerySavingsPlansDeductLogRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Specify the time in the format of yyyy-MM-dd HH:mm:ss.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

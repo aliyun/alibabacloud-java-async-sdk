@@ -138,7 +138,7 @@ public class QuerySavingsPlansInstanceRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * The end of the time range to query. Specify the time in the format of yyyy-MM-dd HH:mm:ss.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -147,7 +147,7 @@ public class QuerySavingsPlansInstanceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the savings plan instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -156,7 +156,11 @@ public class QuerySavingsPlansInstanceRequest extends Request {
         }
 
         /**
-         * Locale.
+         * The language of the return data. Valid values:
+         * <p>
+         * 
+         * *   ZH: Chinese
+         * *   EN: English
          */
         public Builder locale(String locale) {
             this.putQueryParameter("Locale", locale);
@@ -165,7 +169,7 @@ public class QuerySavingsPlansInstanceRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * The number of the page to return.
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -174,7 +178,7 @@ public class QuerySavingsPlansInstanceRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -183,7 +187,7 @@ public class QuerySavingsPlansInstanceRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Specify the time in the format of yyyy-MM-dd HH:mm:ss.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -246,7 +250,7 @@ public class QuerySavingsPlansInstanceRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of the tag to query.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -254,7 +258,7 @@ public class QuerySavingsPlansInstanceRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the tag to query.
              */
             public Builder value(String value) {
                 this.value = value;
