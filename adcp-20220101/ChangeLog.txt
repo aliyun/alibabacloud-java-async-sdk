@@ -1,3 +1,7 @@
+2023-02-07 Version: 1.0.2
+- UpdateHubClusterFeature VSwitches can be configured.
+
+
 2022-09-23 Version: 1.0.1
 - DescribeHubClusters support parameter filtering.
 

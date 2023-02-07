@@ -17,6 +17,10 @@ public class CreateHubClusterRequest extends Request {
     private Boolean apiServerPublicEip;
 
     @Body
+    @NameInMap("ArgoServerEnabled")
+    private Boolean argoServerEnabled;
+
+    @Body
     @NameInMap("AuditLogEnabled")
     private Boolean auditLogEnabled;
 
@@ -27,6 +31,10 @@ public class CreateHubClusterRequest extends Request {
     @Body
     @NameInMap("Name")
     private String name;
+
+    @Body
+    @NameInMap("PriceLimit")
+    private String priceLimit;
 
     @Body
     @NameInMap("Profile")
@@ -47,16 +55,23 @@ public class CreateHubClusterRequest extends Request {
     @Validation(required = true)
     private String vpcId;
 
+    @Body
+    @NameInMap("WorkflowScheduleMode")
+    private String workflowScheduleMode;
+
     private CreateHubClusterRequest(Builder builder) {
         super(builder);
         this.apiServerPublicEip = builder.apiServerPublicEip;
+        this.argoServerEnabled = builder.argoServerEnabled;
         this.auditLogEnabled = builder.auditLogEnabled;
         this.isEnterpriseSecurityGroup = builder.isEnterpriseSecurityGroup;
         this.name = builder.name;
+        this.priceLimit = builder.priceLimit;
         this.profile = builder.profile;
         this.regionId = builder.regionId;
         this.vSwitches = builder.vSwitches;
         this.vpcId = builder.vpcId;
+        this.workflowScheduleMode = builder.workflowScheduleMode;
     }
 
     public static Builder builder() {
@@ -80,6 +95,13 @@ public class CreateHubClusterRequest extends Request {
     }
 
     /**
+     * @return argoServerEnabled
+     */
+    public Boolean getArgoServerEnabled() {
+        return this.argoServerEnabled;
+    }
+
+    /**
      * @return auditLogEnabled
      */
     public Boolean getAuditLogEnabled() {
@@ -98,6 +120,13 @@ public class CreateHubClusterRequest extends Request {
      */
     public String getName() {
         return this.name;
+    }
+
+    /**
+     * @return priceLimit
+     */
+    public String getPriceLimit() {
+        return this.priceLimit;
     }
 
     /**
@@ -128,15 +157,25 @@ public class CreateHubClusterRequest extends Request {
         return this.vpcId;
     }
 
+    /**
+     * @return workflowScheduleMode
+     */
+    public String getWorkflowScheduleMode() {
+        return this.workflowScheduleMode;
+    }
+
     public static final class Builder extends Request.Builder<CreateHubClusterRequest, Builder> {
         private Boolean apiServerPublicEip; 
+        private Boolean argoServerEnabled; 
         private Boolean auditLogEnabled; 
         private Boolean isEnterpriseSecurityGroup; 
         private String name; 
+        private String priceLimit; 
         private String profile; 
         private String regionId; 
         private String vSwitches; 
         private String vpcId; 
+        private String workflowScheduleMode; 
 
         private Builder() {
             super();
@@ -145,17 +184,20 @@ public class CreateHubClusterRequest extends Request {
         private Builder(CreateHubClusterRequest request) {
             super(request);
             this.apiServerPublicEip = request.apiServerPublicEip;
+            this.argoServerEnabled = request.argoServerEnabled;
             this.auditLogEnabled = request.auditLogEnabled;
             this.isEnterpriseSecurityGroup = request.isEnterpriseSecurityGroup;
             this.name = request.name;
+            this.priceLimit = request.priceLimit;
             this.profile = request.profile;
             this.regionId = request.regionId;
             this.vSwitches = request.vSwitches;
             this.vpcId = request.vpcId;
+            this.workflowScheduleMode = request.workflowScheduleMode;
         } 
 
         /**
-         * ApiServerPublicEip.
+         * Specifies whether to use a public IP address to expose the API server. Valid values: - true: uses a public IP address to expose the API server. - true: uses an internal IP address to expose the API server.
          */
         public Builder apiServerPublicEip(Boolean apiServerPublicEip) {
             this.putBodyParameter("ApiServerPublicEip", apiServerPublicEip);
@@ -164,7 +206,16 @@ public class CreateHubClusterRequest extends Request {
         }
 
         /**
-         * AuditLogEnabled.
+         * ArgoServerEnabled.
+         */
+        public Builder argoServerEnabled(Boolean argoServerEnabled) {
+            this.putBodyParameter("ArgoServerEnabled", argoServerEnabled);
+            this.argoServerEnabled = argoServerEnabled;
+            return this;
+        }
+
+        /**
+         * Specifies whether to enable audit logs. Valid values: - true: enables audit logs. - false: disables audit logs.
          */
         public Builder auditLogEnabled(Boolean auditLogEnabled) {
             this.putBodyParameter("AuditLogEnabled", auditLogEnabled);
@@ -173,7 +224,7 @@ public class CreateHubClusterRequest extends Request {
         }
 
         /**
-         * 是否企业安全组
+         * Specifies whether the security group is an advanced security group.
          */
         public Builder isEnterpriseSecurityGroup(Boolean isEnterpriseSecurityGroup) {
             this.putBodyParameter("IsEnterpriseSecurityGroup", isEnterpriseSecurityGroup);
@@ -182,7 +233,7 @@ public class CreateHubClusterRequest extends Request {
         }
 
         /**
-         * 集群名称
+         * The name of the master instance.
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -191,7 +242,22 @@ public class CreateHubClusterRequest extends Request {
         }
 
         /**
-         * 集群配置
+         * PriceLimit.
+         */
+        public Builder priceLimit(String priceLimit) {
+            this.putBodyParameter("PriceLimit", priceLimit);
+            this.priceLimit = priceLimit;
+            return this;
+        }
+
+        /**
+         * Scenario-oriented master control type. The value can be:
+         * <p>
+         * 
+         * - `Default`: Standard scenario Master instance.
+         * - `XFlow`: Workflow scenario master instance.
+         * 
+         * Default Value: `Default`.
          */
         public Builder profile(String profile) {
             this.putBodyParameter("Profile", profile);
@@ -200,7 +266,7 @@ public class CreateHubClusterRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region. You can call the DescribeRegions operation to query available regions.
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -209,7 +275,7 @@ public class CreateHubClusterRequest extends Request {
         }
 
         /**
-         * VSwitches.
+         * The ID of the vSwitch.
          */
         public Builder vSwitches(String vSwitches) {
             this.putBodyParameter("VSwitches", vSwitches);
@@ -218,11 +284,20 @@ public class CreateHubClusterRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * The ID of the virtual private cloud (VPC) to which the master instance belongs. You can call the DescribeVpcs operation to query available VPCs.
          */
         public Builder vpcId(String vpcId) {
             this.putBodyParameter("VpcId", vpcId);
             this.vpcId = vpcId;
+            return this;
+        }
+
+        /**
+         * WorkflowScheduleMode.
+         */
+        public Builder workflowScheduleMode(String workflowScheduleMode) {
+            this.putBodyParameter("WorkflowScheduleMode", workflowScheduleMode);
+            this.workflowScheduleMode = workflowScheduleMode;
             return this;
         }
 

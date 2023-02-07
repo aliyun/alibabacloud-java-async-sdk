@@ -50,7 +50,7 @@ public class DescribeHubClusterLogsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Logs.
+         * Brief information about operation logs.
          */
         public Builder logs(java.util.List < Logs> logs) {
             this.logs = logs;
@@ -58,7 +58,7 @@ public class DescribeHubClusterLogsResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,7 +134,7 @@ public class DescribeHubClusterLogsResponseBody extends TeaModel {
             private String logLevel; 
 
             /**
-             * ClusterId.
+             * The ID of the master instance.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -142,7 +142,7 @@ public class DescribeHubClusterLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterLog.
+             * A log of the master instance.
              */
             public Builder clusterLog(String clusterLog) {
                 this.clusterLog = clusterLog;
@@ -150,7 +150,7 @@ public class DescribeHubClusterLogsResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * The time when the log was created. Format: <i>yyyy-mm-dd</i>t<i>hh:mm:ss</i>z (UTC time).
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -158,7 +158,7 @@ public class DescribeHubClusterLogsResponseBody extends TeaModel {
             }
 
             /**
-             * LogLevel.
+             * The severity level of the log. Valid values: - error: errors. - warn: warnings. - info: information.
              */
             public Builder logLevel(String logLevel) {
                 this.logLevel = logLevel;

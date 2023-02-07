@@ -20,6 +20,7 @@ com/aliyun/sdk/service/adcp20220101/models/DescribeManagedClustersResponseBody$C
 com/aliyun/sdk/service/adcp20220101/models/DescribeRegionsResponse$BuilderImpl.class
 com/aliyun/sdk/service/adcp20220101/models/CreateHubClusterResponseBody.class
 com/aliyun/sdk/service/adcp20220101/models/DeleteHubClusterResponseBody.class
+com/aliyun/sdk/service/adcp20220101/models/DescribeHubClusterDetailsResponseBody$WorkflowConfig$Builder.class
 com/aliyun/sdk/service/adcp20220101/models/DescribeHubClusterDetailsResponseBody$LogConfig$Builder.class
 com/aliyun/sdk/service/adcp20220101/models/DescribeManagedClustersResponseBody$MeshStatus$Builder.class
 com/aliyun/sdk/service/adcp20220101/models/DescribeRegionsResponseBody$Regions.class
@@ -63,8 +64,10 @@ com/aliyun/sdk/service/adcp20220101/models/AttachClusterToHubRequest$Builder.cla
 com/aliyun/sdk/service/adcp20220101/models/DescribeHubClusterDetailsResponseBody$ClusterInfo$Builder.class
 com/aliyun/sdk/service/adcp20220101/models/UpdateHubClusterFeatureResponse$BuilderImpl.class
 com/aliyun/sdk/service/adcp20220101/models/DescribeHubClusterDetailsResponseBody$1.class
+com/aliyun/sdk/service/adcp20220101/models/DescribeHubClusterDetailsResponseBody$VSwitches$Builder.class
 com/aliyun/sdk/service/adcp20220101/DefaultAsyncClientBuilder.class
 com/aliyun/sdk/service/adcp20220101/models/DescribeHubClustersResponseBody$ApiServer.class
+com/aliyun/sdk/service/adcp20220101/models/DescribeHubClusterDetailsResponseBody$WorkflowConfig.class
 com/aliyun/sdk/service/adcp20220101/models/DescribeHubClusterDetailsResponseBody$ClusterInfo.class
 com/aliyun/sdk/service/adcp20220101/models/DescribeHubClusterLogsResponseBody$Builder.class
 com/aliyun/sdk/service/adcp20220101/models/DescribeHubClustersResponseBody$LogConfig$Builder.class
@@ -98,6 +101,7 @@ com/aliyun/sdk/service/adcp20220101/models/DescribeHubClusterLogsRequest$Builder
 com/aliyun/sdk/service/adcp20220101/models/DeleteHubClusterRequest$1.class
 com/aliyun/sdk/service/adcp20220101/models/DeleteHubClusterResponse.class
 com/aliyun/sdk/service/adcp20220101/models/DeleteHubClusterResponse$Builder.class
+com/aliyun/sdk/service/adcp20220101/models/DescribeHubClusterDetailsResponseBody$WorkflowUnits.class
 com/aliyun/sdk/service/adcp20220101/models/DescribeManagedClustersResponseBody$Status.class
 com/aliyun/sdk/service/adcp20220101/models/DescribeHubClustersResponse$Builder.class
 com/aliyun/sdk/service/adcp20220101/models/DetachClusterFromHubRequest.class
@@ -129,6 +133,7 @@ com/aliyun/sdk/service/adcp20220101/models/DescribeHubClusterLogsResponseBody$Lo
 com/aliyun/sdk/service/adcp20220101/models/DescribeManagedClustersResponseBody$Builder.class
 com/aliyun/sdk/service/adcp20220101/models/AttachClusterToHubResponseBody$Builder.class
 com/aliyun/sdk/service/adcp20220101/models/UpdateHubClusterFeatureResponseBody.class
+com/aliyun/sdk/service/adcp20220101/models/DescribeHubClusterDetailsResponseBody$WorkflowUnits$Builder.class
 com/aliyun/sdk/service/adcp20220101/models/DescribeHubClusterDetailsResponseBody$Cluster.class
 com/aliyun/sdk/service/adcp20220101/models/DescribeHubClusterDetailsRequest.class
 com/aliyun/sdk/service/adcp20220101/models/DescribeHubClusterLogsResponse.class
@@ -140,6 +145,7 @@ com/aliyun/sdk/service/adcp20220101/models/CreateHubClusterResponse$1.class
 com/aliyun/sdk/service/adcp20220101/models/UpdateHubClusterFeatureResponse.class
 com/aliyun/sdk/service/adcp20220101/models/DescribeHubClusterLogsResponseBody$Logs$Builder.class
 com/aliyun/sdk/service/adcp20220101/models/DescribeHubClustersResponseBody$Builder.class
+com/aliyun/sdk/service/adcp20220101/models/DescribeHubClusterDetailsResponseBody$VSwitches.class
 com/aliyun/sdk/service/adcp20220101/models/DescribeManagedClustersResponseBody.class
 com/aliyun/sdk/service/adcp20220101/models/DescribeHubClusterDetailsResponseBody$Network$Builder.class
 com/aliyun/sdk/service/adcp20220101/models/DescribeHubClustersResponseBody$Endpoints$Builder.class

@@ -69,7 +69,7 @@ public class DescribeHubClusterKubeconfigRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the master instance.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -78,7 +78,7 @@ public class DescribeHubClusterKubeconfigRequest extends Request {
         }
 
         /**
-         * PrivateIpAddress.
+         * Specifies whether to obtain the credential that is used to connect to the master instance over the internal network. Valid values: - `true`: obtains only the credential that is used to access the master instance over the internal network. - `false`: obtains only the credential that is used to access the master instance over the Internet. Default value: `false`.
          */
         public Builder privateIpAddress(Boolean privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);

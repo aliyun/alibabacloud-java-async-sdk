@@ -74,7 +74,7 @@ public class AttachClusterToHubResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * ClusterId.
+         * The ID of the master instance.
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -82,7 +82,7 @@ public class AttachClusterToHubResponseBody extends TeaModel {
         }
 
         /**
-         * ManagedClusterIds.
+         * A list of the IDs of the clusters that you want to associate with the master instance.
          */
         public Builder managedClusterIds(java.util.List < String > managedClusterIds) {
             this.managedClusterIds = managedClusterIds;
@@ -90,7 +90,7 @@ public class AttachClusterToHubResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class AttachClusterToHubResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * The ID of the task.
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

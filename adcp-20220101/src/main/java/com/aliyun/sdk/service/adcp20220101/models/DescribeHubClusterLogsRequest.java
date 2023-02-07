@@ -55,7 +55,7 @@ public class DescribeHubClusterLogsRequest extends Request {
         } 
 
         /**
-         * 集群ID
+         * The ID of the master instance.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);

@@ -50,7 +50,7 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Cluster.
+         * The details about the master instance.
          */
         public Builder cluster(Cluster cluster) {
             this.cluster = cluster;
@@ -58,7 +58,7 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             private String loadBalancerId; 
 
             /**
-             * ApiServerEipId.
+             * The ID of the elastic IP address (EIP).
              */
             public Builder apiServerEipId(String apiServerEipId) {
                 this.apiServerEipId = apiServerEipId;
@@ -130,7 +130,7 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * EnabledPublic.
+             * Indicates whether a public endpoint is used to expose the API server. Valid values: - true: a public endpoint is used to expose the API server. - false: no public endpoint is used to expose the API server.
              */
             public Builder enabledPublic(Boolean enabledPublic) {
                 this.enabledPublic = enabledPublic;
@@ -138,7 +138,7 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * LoadBalancerId.
+             * The ID of the Server Load Balancer (SLB) instance.
              */
             public Builder loadBalancerId(String loadBalancerId) {
                 this.loadBalancerId = loadBalancerId;
@@ -287,7 +287,7 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * ClusterId.
+             * The ID of the master instance.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -295,7 +295,7 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterSpec.
+             * The specification of the master instance. Valid values: - ack.pro.small: ACK Pro
              */
             public Builder clusterSpec(String clusterSpec) {
                 this.clusterSpec = clusterSpec;
@@ -303,7 +303,7 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * The time when the master instance was created.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -311,7 +311,7 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * The error message that is returned when the system fails to create the master instance.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -319,7 +319,7 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the master instance.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -327,7 +327,7 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Profile.
+             * The configurations of the master instance.
              */
             public Builder profile(String profile) {
                 this.profile = profile;
@@ -335,7 +335,7 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the region in which the master instance resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -343,7 +343,7 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * The status of the master instance. Valid values: - initial: The master instance is being initialized. - failed: The master instance failed to be created. - running: The master instance is running. - inactive: The master instance is inactive. - deleting: The master instance is being deleted. - delete_failed: The master instance failed to be deleted. - deleted: The master instance is deleted.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -351,7 +351,7 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The time when the master instance was updated.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -359,7 +359,7 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * The Kubernetes version of the master instance.
              */
             public Builder version(String version) {
                 this.version = version;
@@ -436,7 +436,7 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Message.
+             * The error message of the deletion condition.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -444,7 +444,7 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * The reason for the deletion condition.
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -452,7 +452,11 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the deletion condition. Valid values:
+             * <p>
+             * - True: The master instance cannot be deleted.
+             * - False: The master instance can be deleted.
+             * - Unknow: Whether the master instance can be deleted is unknown.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -460,7 +464,7 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of deletion condition.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -513,7 +517,7 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             private String publicApiServerEndpoint; 
 
             /**
-             * IntranetApiServerEndpoint.
+             * The internal endpoint of the API server of the master instance.
              */
             public Builder intranetApiServerEndpoint(String intranetApiServerEndpoint) {
                 this.intranetApiServerEndpoint = intranetApiServerEndpoint;
@@ -521,7 +525,7 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * PublicApiServerEndpoint.
+             * The public endpoint of the API server of the master instance.
              */
             public Builder publicApiServerEndpoint(String publicApiServerEndpoint) {
                 this.publicApiServerEndpoint = publicApiServerEndpoint;
@@ -586,7 +590,7 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             private String logStoreTTL; 
 
             /**
-             * EnableLog.
+             * Indicates whether audit logs are enabled. Valid values: - true: audit logs are enabled. - false: audit logs are disabled.
              */
             public Builder enableLog(Boolean enableLog) {
                 this.enableLog = enableLog;
@@ -594,7 +598,7 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * LogProject.
+             * The name of the Log Service project.
              */
             public Builder logProject(String logProject) {
                 this.logProject = logProject;
@@ -602,7 +606,7 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * LogStoreTTL.
+             * The retention period of the logs.
              */
             public Builder logStoreTTL(String logStoreTTL) {
                 this.logStoreTTL = logStoreTTL;
@@ -655,7 +659,7 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             private String meshId; 
 
             /**
-             * EnableMesh.
+             * Indicates whether ASM is enabled. Valid values: - true: ASM is enabled. - false: ASM is disabled.
              */
             public Builder enableMesh(Boolean enableMesh) {
                 this.enableMesh = enableMesh;
@@ -663,7 +667,7 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * MeshId.
+             * The ID of the ASM instance.
              */
             public Builder meshId(String meshId) {
                 this.meshId = meshId;
@@ -752,7 +756,7 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * ClusterDomain.
+             * The domain name of the master instance.
              */
             public Builder clusterDomain(String clusterDomain) {
                 this.clusterDomain = clusterDomain;
@@ -760,7 +764,7 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * IPStack.
+             * The IP version that is supported by the master instance. Valid values: - ipv4: IPv4. - ipv6: IPv6. - dual: IPv4 and IPv6.
              */
             public Builder IPStack(String IPStack) {
                 this.IPStack = IPStack;
@@ -768,7 +772,7 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroupIDs.
+             * The ID of the associated security group.
              */
             public Builder securityGroupIDs(java.util.List < String > securityGroupIDs) {
                 this.securityGroupIDs = securityGroupIDs;
@@ -776,7 +780,7 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitches.
+             * A list of the vSwitches that are used by the master instance.
              */
             public Builder vSwitches(java.util.List < String > vSwitches) {
                 this.vSwitches = vSwitches;
@@ -784,7 +788,7 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * The ID of the virtual private cloud (VPC) in which the master instance resides.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -793,6 +797,249 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
 
             public Network build() {
                 return new Network(this);
+            } 
+
+        } 
+
+    }
+    public static class VSwitches extends TeaModel {
+        @NameInMap("VswitchId")
+        private String vswitchId;
+
+        @NameInMap("ZoneId")
+        private String zoneId;
+
+        private VSwitches(Builder builder) {
+            this.vswitchId = builder.vswitchId;
+            this.zoneId = builder.zoneId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VSwitches create() {
+            return builder().build();
+        }
+
+        /**
+         * @return vswitchId
+         */
+        public String getVswitchId() {
+            return this.vswitchId;
+        }
+
+        /**
+         * @return zoneId
+         */
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
+        public static final class Builder {
+            private String vswitchId; 
+            private String zoneId; 
+
+            /**
+             * VswitchId.
+             */
+            public Builder vswitchId(String vswitchId) {
+                this.vswitchId = vswitchId;
+                return this;
+            }
+
+            /**
+             * ZoneId.
+             */
+            public Builder zoneId(String zoneId) {
+                this.zoneId = zoneId;
+                return this;
+            }
+
+            public VSwitches build() {
+                return new VSwitches(this);
+            } 
+
+        } 
+
+    }
+    public static class WorkflowUnits extends TeaModel {
+        @NameInMap("RegionId")
+        private String regionId;
+
+        @NameInMap("VSwitches")
+        private java.util.List < VSwitches> vSwitches;
+
+        @NameInMap("VpcId")
+        private String vpcId;
+
+        private WorkflowUnits(Builder builder) {
+            this.regionId = builder.regionId;
+            this.vSwitches = builder.vSwitches;
+            this.vpcId = builder.vpcId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static WorkflowUnits create() {
+            return builder().build();
+        }
+
+        /**
+         * @return regionId
+         */
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        /**
+         * @return vSwitches
+         */
+        public java.util.List < VSwitches> getVSwitches() {
+            return this.vSwitches;
+        }
+
+        /**
+         * @return vpcId
+         */
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        public static final class Builder {
+            private String regionId; 
+            private java.util.List < VSwitches> vSwitches; 
+            private String vpcId; 
+
+            /**
+             * The ID of the region in which the master instance resides.
+             */
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * A list of the vSwitches that are used by the master instance.
+             */
+            public Builder vSwitches(java.util.List < VSwitches> vSwitches) {
+                this.vSwitches = vSwitches;
+                return this;
+            }
+
+            /**
+             * The ID of the virtual private cloud (VPC) in which the master instance resides.
+             */
+            public Builder vpcId(String vpcId) {
+                this.vpcId = vpcId;
+                return this;
+            }
+
+            public WorkflowUnits build() {
+                return new WorkflowUnits(this);
+            } 
+
+        } 
+
+    }
+    public static class WorkflowConfig extends TeaModel {
+        @NameInMap("ArgoServerEnabled")
+        private Boolean argoServerEnabled;
+
+        @NameInMap("PriceLimit")
+        private String priceLimit;
+
+        @NameInMap("WorkflowScheduleMode")
+        private String workflowScheduleMode;
+
+        @NameInMap("WorkflowUnits")
+        private java.util.List < WorkflowUnits> workflowUnits;
+
+        private WorkflowConfig(Builder builder) {
+            this.argoServerEnabled = builder.argoServerEnabled;
+            this.priceLimit = builder.priceLimit;
+            this.workflowScheduleMode = builder.workflowScheduleMode;
+            this.workflowUnits = builder.workflowUnits;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static WorkflowConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return argoServerEnabled
+         */
+        public Boolean getArgoServerEnabled() {
+            return this.argoServerEnabled;
+        }
+
+        /**
+         * @return priceLimit
+         */
+        public String getPriceLimit() {
+            return this.priceLimit;
+        }
+
+        /**
+         * @return workflowScheduleMode
+         */
+        public String getWorkflowScheduleMode() {
+            return this.workflowScheduleMode;
+        }
+
+        /**
+         * @return workflowUnits
+         */
+        public java.util.List < WorkflowUnits> getWorkflowUnits() {
+            return this.workflowUnits;
+        }
+
+        public static final class Builder {
+            private Boolean argoServerEnabled; 
+            private String priceLimit; 
+            private String workflowScheduleMode; 
+            private java.util.List < WorkflowUnits> workflowUnits; 
+
+            /**
+             * ArgoServerEnabled.
+             */
+            public Builder argoServerEnabled(Boolean argoServerEnabled) {
+                this.argoServerEnabled = argoServerEnabled;
+                return this;
+            }
+
+            /**
+             * PriceLimit.
+             */
+            public Builder priceLimit(String priceLimit) {
+                this.priceLimit = priceLimit;
+                return this;
+            }
+
+            /**
+             * WorkflowScheduleMode.
+             */
+            public Builder workflowScheduleMode(String workflowScheduleMode) {
+                this.workflowScheduleMode = workflowScheduleMode;
+                return this;
+            }
+
+            /**
+             * WorkflowUnits.
+             */
+            public Builder workflowUnits(java.util.List < WorkflowUnits> workflowUnits) {
+                this.workflowUnits = workflowUnits;
+                return this;
+            }
+
+            public WorkflowConfig build() {
+                return new WorkflowConfig(this);
             } 
 
         } 
@@ -820,6 +1067,9 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
         @NameInMap("Network")
         private Network network;
 
+        @NameInMap("WorkflowConfig")
+        private WorkflowConfig workflowConfig;
+
         private Cluster(Builder builder) {
             this.apiServer = builder.apiServer;
             this.clusterInfo = builder.clusterInfo;
@@ -828,6 +1078,7 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             this.logConfig = builder.logConfig;
             this.meshConfig = builder.meshConfig;
             this.network = builder.network;
+            this.workflowConfig = builder.workflowConfig;
         }
 
         public static Builder builder() {
@@ -887,6 +1138,13 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             return this.network;
         }
 
+        /**
+         * @return workflowConfig
+         */
+        public WorkflowConfig getWorkflowConfig() {
+            return this.workflowConfig;
+        }
+
         public static final class Builder {
             private ApiServer apiServer; 
             private ClusterInfo clusterInfo; 
@@ -895,9 +1153,10 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             private LogConfig logConfig; 
             private MeshConfig meshConfig; 
             private Network network; 
+            private WorkflowConfig workflowConfig; 
 
             /**
-             * ApiServer.
+             * Information about the API server of the master instance.
              */
             public Builder apiServer(ApiServer apiServer) {
                 this.apiServer = apiServer;
@@ -905,7 +1164,7 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterInfo.
+             * The details about the master instance.
              */
             public Builder clusterInfo(ClusterInfo clusterInfo) {
                 this.clusterInfo = clusterInfo;
@@ -913,7 +1172,7 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Conditions.
+             * The list of the deletion conditions of the master instance.
              */
             public Builder conditions(java.util.List < Conditions> conditions) {
                 this.conditions = conditions;
@@ -921,7 +1180,7 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Endpoints.
+             * The endpoint of the master instance.
              */
             public Builder endpoints(Endpoints endpoints) {
                 this.endpoints = endpoints;
@@ -929,7 +1188,7 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * LogConfig.
+             * The logging configuration.
              */
             public Builder logConfig(LogConfig logConfig) {
                 this.logConfig = logConfig;
@@ -937,7 +1196,7 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * MeshConfig.
+             * The Service Mesh (ASM) configurations.
              */
             public Builder meshConfig(MeshConfig meshConfig) {
                 this.meshConfig = meshConfig;
@@ -945,10 +1204,18 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Network.
+             * The network configurations of the master instance.
              */
             public Builder network(Network network) {
                 this.network = network;
+                return this;
+            }
+
+            /**
+             * WorkflowConfig.
+             */
+            public Builder workflowConfig(WorkflowConfig workflowConfig) {
+                this.workflowConfig = workflowConfig;
                 return this;
             }
 

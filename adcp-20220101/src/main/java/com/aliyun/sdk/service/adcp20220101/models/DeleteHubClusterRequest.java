@@ -21,10 +21,15 @@ public class DeleteHubClusterRequest extends Request {
     @NameInMap("Force")
     private Boolean force;
 
+    @Query
+    @NameInMap("RetainResources")
+    private java.util.List < String > retainResources;
+
     private DeleteHubClusterRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
         this.force = builder.force;
+        this.retainResources = builder.retainResources;
     }
 
     public static Builder builder() {
@@ -54,9 +59,17 @@ public class DeleteHubClusterRequest extends Request {
         return this.force;
     }
 
+    /**
+     * @return retainResources
+     */
+    public java.util.List < String > getRetainResources() {
+        return this.retainResources;
+    }
+
     public static final class Builder extends Request.Builder<DeleteHubClusterRequest, Builder> {
         private String clusterId; 
         private Boolean force; 
+        private java.util.List < String > retainResources; 
 
         private Builder() {
             super();
@@ -66,10 +79,11 @@ public class DeleteHubClusterRequest extends Request {
             super(request);
             this.clusterId = request.clusterId;
             this.force = request.force;
+            this.retainResources = request.retainResources;
         } 
 
         /**
-         * ClusterId.
+         * The ID of the master instance.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -78,11 +92,21 @@ public class DeleteHubClusterRequest extends Request {
         }
 
         /**
-         * Force.
+         * Specifies whether to forcefully delete the master instance. Valid values: - true: forcefully delete the master instance. - false: does not forcefully delete the master instance. Default value: false.
          */
         public Builder force(Boolean force) {
             this.putQueryParameter("Force", force);
             this.force = force;
+            return this;
+        }
+
+        /**
+         * RetainResources.
+         */
+        public Builder retainResources(java.util.List < String > retainResources) {
+            String retainResourcesShrink = shrink(retainResources, "RetainResources", "json");
+            this.putQueryParameter("RetainResources", retainResourcesShrink);
+            this.retainResources = retainResources;
             return this;
         }
 
